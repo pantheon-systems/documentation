@@ -1,29 +1,8 @@
 
-
 /* Default menu */
 @media (min-width: 641px) {
-  /* .guide-nav--mobile {
-    display: none;
-  } */
-
-
     .sidenav-compact {
       padding-block-start: var(--pds-spacing-xl);
       padding-inline-end: var(--pds-spacing-xl);
     }
-
-
-  /* h2.manual-guide-toc__heading {
-    font-size: var(--pds-typography-size-l);
-    line-height: var(--pds-typography-line-height-m);
-    margin-block-end: var(--pds-spacing-s);
-  } */
 }
-
-/* .manual-guide-toc__menu {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding: 0;
-  row-gap: var(--pds-spacing-3xs);
-} */

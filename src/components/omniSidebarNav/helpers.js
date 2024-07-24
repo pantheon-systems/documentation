@@ -1,6 +1,8 @@
 import allGuides from './allGuidesQuery';
 import React from 'react';
 import { Link } from 'gatsby';
+import { Icon } from '@pantheon-systems/pds-toolkit-react';
+
 
 /**
  * Converts items into links recursively.
@@ -10,12 +12,24 @@ import { Link } from 'gatsby';
  * @returns {Object} - The converted item with link properties.
  */
 const turnItemsIntoLinks = (item, activePage) => {
+
+  var linkText = item.title;
+  // If the link is external, add an icon to indicate that.
+  // Internal links will start with a slash.
+  if (item.link.startsWith('http')) {
+    linkText = (
+      <>
+        <Icon iconName="externalLink" /> {item.title}
+      </>
+    );
+  }
+
   return {
     isActive: item.link === activePage,
     links: item.children
       ? item.children.map((child) => turnItemsIntoLinks(child, activePage))
       : false,
-    linkContent: React.createElement(Link, { to: item.link }, item.title),
+    linkContent: React.createElement(Link, { to: item.link }, linkText),
   };
 };
 
