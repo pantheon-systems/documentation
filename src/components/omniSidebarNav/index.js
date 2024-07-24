@@ -8,6 +8,9 @@ import {
   turnItemsIntoLinks,
 } from './helpers.js';
 
+import "./style.css"
+
+
 // @todo, run prettier one more time on this directory before removing it from the PR.
 
 const OmniSidebarNav = ({
@@ -17,16 +20,14 @@ const OmniSidebarNav = ({
   submenuPathToUse = '',
 }) => {
   const OmniItems = getOmniItems();
-  console.log('OmniItems', OmniItems);
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
-  console.log('menuItems', menuItems);
 
   // If the caller is asking for a specific submenu, use that directly.
   if (submenuPathToUse.length > 0) {
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
     const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
-      <SideNavCompact
+      <SideNavCompact class="sidenav-compact"
         headingText={submenuLinks.linkContent}
         menuItems={submenuLinks.links}
       />
@@ -34,7 +35,7 @@ const OmniSidebarNav = ({
   } else if (menuItems) {
     const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
     return (
-      <SideNavCompact
+      <SideNavCompact class="sidenav-compact"
         headingText={OmniLinks.linkContent}
         menuItems={OmniLinks.links}
       />
