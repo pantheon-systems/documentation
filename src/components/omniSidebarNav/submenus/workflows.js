@@ -5,13 +5,14 @@ const workflows = () => {
     link: '/develop',
     title: 'Development workflows',
     children: [
+      simpleLink('/pantheon-workflow', "Code Workflow"),
       getGuideDirectory('guides/git', "Git"),
       simpleLink('/hotfixes'),
       getGuideDirectory('guides/multidev'),
       simpleLink('/sftp'),
       simpleLink('/core-updates'),
 
-      simpleLink('/pantheon-workflow'),
+
 
 
 
@@ -31,16 +32,15 @@ const workflows = () => {
 
       simpleLink('/customer-scheduled-cron-jobs'),
 
-      simpleLink('/content-staging'),
 
+      simpleLink('/connection-modes', "Connection Modes", [
+        getGuideDirectory('guides/sftp', 'SFTP'),
 
-      // This page is empty
-      simpleLink('/connection-modes'),
+      ]),
 
       simpleLink('/newrelic'),
       getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
       getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
-      getGuideDirectory('guides/sftp', 'SFTP'),
       getGuideDirectory('guides/wp-cli', 'WP-CLI'),
       getGuideDirectory('guides/drush', 'Drush (the Drupal CLI)'),
 
@@ -56,8 +56,10 @@ const workflows = () => {
         link: '/asdfasdf',
         title: 'Random Tutorials',
         children: [
-          simpleLink('/behat'),
-          simpleLink('/visual-studio-code'),
+          simpleLink('/content-staging', "Content Staging"),
+
+          simpleLink('/behat', "Behat Testing"),
+          simpleLink('/visual-studio-code', "Visual Studio Code"),
         ]
       },
     ],
