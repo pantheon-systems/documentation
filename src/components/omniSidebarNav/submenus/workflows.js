@@ -9,6 +9,7 @@ const workflows = () => {
       getGuideDirectory('guides/git', "Git"),
       simpleLink('/hotfixes'),
       getGuideDirectory('guides/multidev'),
+      // This page has a redirect on the live site??
       simpleLink('/sftp'),
       simpleLink('/core-updates'),
 
