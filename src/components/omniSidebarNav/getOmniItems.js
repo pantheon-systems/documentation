@@ -46,6 +46,8 @@ const getOmniItems = () => {
       children: CertificationItems,
     },
   ];
+
+  // console.log('OmniItems: ', OmniItems);
   return OmniItems;
 };
 

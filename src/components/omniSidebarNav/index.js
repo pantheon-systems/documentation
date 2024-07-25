@@ -7,8 +7,9 @@ import {
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
 } from './helpers.js';
-import allWrittenPaths from './all-written-paths.js';
 
+// @todo, remove the reporting before merging this PR.
+import allWrittenPaths from './all-written-paths.js';
 import { flattenOmniItems, CalculateFilteredPathsInMenu, eliminateExceptions } from './reporting';
 
 import "./style.css"
