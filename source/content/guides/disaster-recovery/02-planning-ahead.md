@@ -4,7 +4,7 @@ subtitle: Planning Ahead
 description: Avert potential site failures
 tags: [webops, workflow]
 contributors: [joshlieb, joan-ing]
-reviewed: "2021-07-26"
+reviewed: "2024-07-25"
 permalink: docs/guides/disaster-recovery/planning-ahead
 editpath: disaster-recovery/02-planning-ahead.md
 contenttype: [guide]
@@ -25,7 +25,7 @@ Keep ahead of performance issues by regularly reviewing performance with the [Ne
 
 New Relic also provides a performance monitoring service that can send notification of downtime or degraded performance by email and other channels. Refer to the documentation on [New Relic Alerts](https://docs.newrelic.com/docs/alerts-applied-intelligence/overview/) for more information.
 
-If you have been assigned a Customer Success Manager, you will receive periodic technical reviews. These sessions include training on how to use New Relic to proactively address performance issues.
+A dedicated CSM is included for all Enterprise (contract) Accounts. Dedicated CSMs will meet with you regularly to provide site performance audits. These sessions include training on how to use New Relic to proactively address performance issues.
 
 All sites are different, and there are many different performance issues that can emerge. Review Pantheon's [Optimizing Performance](/performance) documentation for tips and troubleshooting techniques for all layers of the platform.
 
@@ -35,7 +35,7 @@ The Pantheon Global CDN delivers pages directly to users from the Varnish edge p
 
 ### Process
 
-* Determine the extent to which your site is using the edge cache by requesting a cache hit rate report from support. This report shows the cache hit rate for the full site on a daily basis.
+* Determine the extent to which your site is using the edge cache by reviewing your cache hit rate report from the Metrics tab of the Live environment in the Site Dashboard. For more information on metrics in the Site Dashboard, see [Measuring Site Traffic](/guides/account-mgmt/traffic).
 
 * Test the cacheability of individual pages by examining the page headers using CURL or developer tools. Refer to [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching) for more information.
 
@@ -43,6 +43,7 @@ The Pantheon Global CDN delivers pages directly to users from the Varnish edge p
 
 * The platform average for site caching is ~80%
 
+<!--TODO: SME input wanted on the following line. Is "persistent uptime" a feature we're referencing here? Rephrase this item using the same language as product and marketing for whatever we're talking about here (e.g., Experience Protection via the GCDN or Multizone Failover or some feature of AGCDN or AGCDN + WAF/IO)-->
 * Persistent uptime only works with cacheable content. The higher the caching rate the more protection it will automatically provide you.
 
 ## Notify Support of Potential Risks
