@@ -77,15 +77,7 @@ const webInfrastructure = () => {
 
           getGuideDirectory('guides/filesystem', 'Filesystem'),
 
-
-
-
-
-
           getGuideDirectory('guides/backups'),
-
-
-
 
           // this is a landing page that could hold others.
           simpleLink('/troubleshoot', "Troubleshooting", [
@@ -98,8 +90,6 @@ const webInfrastructure = () => {
             simpleLink('/mime-types'),
 
             simpleLink('/http-to-https'),
-
-
             // @todo, this page is not loading??
             simpleLink('/debug-slow-performance'),
 

@@ -48,8 +48,6 @@ class DocTemplate extends React.Component {
     const node = this.props.data.doc
     const isoDate = this.props.data.date
 
-    // Preprocess content region layout if has TOC or not.
-    const hasTOC = node.frontmatter.showtoc
     const ContainerDiv = ({ children }) => (
       <div className="content-wrapper">{children}</div>
     )
@@ -58,6 +56,8 @@ class DocTemplate extends React.Component {
     return (
       <GuideLayout footerBorder>
         <SEO
+          slot="seo"
+
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}

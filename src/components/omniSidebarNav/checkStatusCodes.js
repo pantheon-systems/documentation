@@ -1506,7 +1506,9 @@ const checkStatusCodes = async () => {
   for (const path of allWrittenPaths) {
     const url = `${fqdn}${path}`;
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, { redirect: 'manual' });
+//  console.log(response);
+
       console.log(`${url} -> ${response.status}`);
     } catch (error) {
       console.error(`Error fetching ${url}:`, error);
