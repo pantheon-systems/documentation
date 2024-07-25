@@ -16,6 +16,7 @@ const accountManagement = () => {
 
       simpleLink('/tax-exempt-status'),
 
+      simpleLink('/resetting-passwords'),
 
       // empty page?
       simpleLink('/platform-notifications'),

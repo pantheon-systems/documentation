@@ -57,10 +57,7 @@ const workflows = () => {
         link: '/asdfasdf',
         title: 'Random Tutorials',
         children: [
-          simpleLink('/content-staging', "Content Staging"),
 
-          simpleLink('/behat', "Behat Testing"),
-          simpleLink('/visual-studio-code', "Visual Studio Code"),
         ]
       },
     ],

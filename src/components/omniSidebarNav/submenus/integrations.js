@@ -24,7 +24,10 @@ const integrations = () => {
       simpleLink('/lockr'),
       simpleLink('/pingdom-uptime-check'),
       simpleLink('/jenkins'),
+      simpleLink('/content-staging', "Content Staging"),
 
+      simpleLink('/behat', "Behat Testing"),
+      simpleLink('/visual-studio-code', "Visual Studio Code"),
 
     ],
   }

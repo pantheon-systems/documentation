@@ -7,7 +7,7 @@ const migrateAndUpgrade = () => {
     children: [
       {
         link: '/migrate-wordpress',
-        title: 'migrate-wordpress',
+        title: 'Migrating WordPress Sites',
         children: [
           getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
           getGuideDirectory('guides/migrate/pagely', 'Pagely'),
