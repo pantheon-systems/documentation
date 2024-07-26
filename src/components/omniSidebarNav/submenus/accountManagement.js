@@ -12,7 +12,7 @@ const accountManagement = () => {
       getGuideDirectory('guides/account-mgmt/traffic'),
       simpleLink('/agency-tips'),
 
-      simpleLink('/enterprise-billing-center'),
+      simpleLink('/enterprise-billing-center', "Enterprise Billing Center"),
 
       simpleLink('/tax-exempt-status'),
 
