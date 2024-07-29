@@ -50,7 +50,7 @@ Some possible causes for this error:
   Possible causes for this error:
 
   - This error happens when [https://packagist.org/packages/pivvenit/acf-pro-installer](https://packagist.org/packages/pivvenit/acf-pro-installer) is used and the ACF_PRO_KEY is not available
-  - Please note that the plugin is no longer supported by the developer as ACF now has built-in composer support. It’s a good idea to recommend customers to switch to it.
+  - Please note that the plugin is no longer supported by the developer as ACF now has built-in composer support. It’s a good idea to switch to the composer-based version.
 
   **Solution:**
 
