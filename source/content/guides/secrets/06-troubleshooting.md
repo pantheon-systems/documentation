@@ -76,7 +76,7 @@ Some possible causes for this error:
 
 ## Rate limiting
 
-[https://github.com/pantheon-systems/terminus-secrets-manager-plugin?tab=readme-ov-file#rate-limiting](https://github.com/pantheon-systems/terminus-secrets-manager-plugin?tab=readme-ov-file#rate-limiting)
+[Refer to the README on rate limiting](https://github.com/pantheon-systems/terminus-secrets-manager-plugin?tab=readme-ov-file#rate-limiting)
 
 ## Still having issues?
 
