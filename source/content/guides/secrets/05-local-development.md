@@ -2,7 +2,6 @@
 title: Pantheon Secrets Guide
 subtitle: Local development using Pantheon Secrets
 description: Developing locally presents some unique challenges once Pantheon Secrets are built into your workflow. These are some tips to help you get past struggling with trying to reproduced secret behavior while developing locally.
-terminuspage: true
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]
@@ -13,7 +12,8 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/local-development
-reviewed: "2024-05-01"
+reviewed: "2024-07-30"
+showtoc: true
 ---
 ## Local Environment Usage
 

@@ -2,7 +2,6 @@
 title: Pantheon Secrets Guide
 subtitle: Troubleshooting
 description: Securely store secrets in the Pantheon Platform.
-terminuspage: true
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]
@@ -13,8 +12,32 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/troubleshooting
-reviewed: "2024-05-01"
+reviewed: "2024-07-30"
+showtoc: true
 ---
+
+## Default secret value does not exist
+Setting an environmental override when no site or organization secret has been set, results in an error like this:
+
+```
+terminus secret:site:set site.dev mysecretnonexist foobar
+[error]  An error happened when trying to set the secret.
+[error]  Secret 'mysecretnonexist' does not exist. You should create the default secret value first.
+```
+
+A site-level or organization-level secret must be set first before you can set an environmental override.
+
+## Invalid key name
+There are some validations in place for the key name based on the key type. As an example, a secret name of type env must match the following regex: `^[a-zA-Z_][a-zA-Z0-9_]*$`. Failure to comply with those validations results in errors like this:
+
+```
+terminus secret:site:set site 1nvalid value --type=env
+ [error]  An error happened when trying to set the secret.
+ [error]  Invalid key name '1nvalid': Environment variable names must start with a letter or underscore, and can only contain letters, numbers, and underscores.
+```
+
+Either make your secret name match the expected pattern or change the type if that’s an option.
+
 ## Integrated Composer Build fails on private packages
 
 This is the most common error when sites are using secrets and Integrated Composer. This may manifest in different ways and may be caused by different problems. This playbook tries to cover them.
@@ -69,15 +92,11 @@ Some possible causes for this error:
   **Solution:** Change the repository definition (in composer.json) to use https instead of ssh. In this example, the repository would be https://github.com/biltmoreco/advanced-custom-fields-pro.git
 
 
-**Problem:** Errors setting or deleting secrets
-
-
-[https://getpantheon.atlassian.net/wiki/spaces/CS/pages/2703163413/Errors+setting+or+deleting+secrets](https://getpantheon.atlassian.net/wiki/spaces/CS/pages/2703163413/Errors+setting+or+deleting+secrets)
-
 ## Rate limiting
+The service supports up to 3 requests per second per user through Terminus. If you hit that limit, the API will return a `429` error code and the plugin will throw an error.
 
-[Refer to the README on rate limiting](https://github.com/pantheon-systems/terminus-secrets-manager-plugin?tab=readme-ov-file#rate-limiting)
+The PHP SDK and `pantheon_get_secret()` function are not affected by this rate limiting.
 
 ## Still having issues?
 
-[Contact support](https://docs.pantheon.io/guides/support/contact-support/)
+[Contact support](/guides/support/contact-support/)

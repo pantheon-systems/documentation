@@ -12,7 +12,8 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/terminus-plugin
-reviewed: "2024-05-01"
+reviewed: "2024-07-30"
+showtoc: true
 ---
 
 **IMPORTANT: When Pantheon Secrets goes into "General Availability," [Terminus Secrets Manager Plugin]( https://github.com/pantheon-systems/terminus-secrets-manager-plugin) will be merged into Terminus core.**
@@ -38,5 +39,4 @@ terminus self:plugin:update terminus-secrets-manager-plugin
 ```
 
 ## Secrets Commands
-
-#### See the [README.md](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#site-secrets-commands) in the plugin's repository
+See the [README.md](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#site-secrets-commands) in the plugin's repository.

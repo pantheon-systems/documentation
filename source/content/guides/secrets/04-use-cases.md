@@ -2,7 +2,6 @@
 title: Pantheon Secrets Guide
 subtitle: Use Cases
 description: Some common uses cases for Pantheon Secrets
-terminuspage: true
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]
@@ -13,12 +12,13 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/use-cases
-reviewed: "2024-05-01"
+reviewed: "2024-07-30"
+showtoc: true
 ---
 
-# ☞ Using secrets with Integrated Composer
+## Using secrets with Integrated Composer
 
-## Mechanism 1: Oauth composer authentication (recommended)
+### Mechanism 1: Oauth composer authentication (recommended)
 
 <TabList>
 
@@ -120,7 +120,7 @@ reviewed: "2024-05-01"
 
 </TabList>
 
-## Mechanism 2: HTTP Basic Authentication
+### Mechanism 2: HTTP Basic Authentication
 
 You may create a `COMPOSER_AUTH json` and make it available via the `COMPOSER_AUTH` environment variable if you have multiple private repositories on multiple private domains.
 
@@ -152,9 +152,9 @@ EOF
 terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=ic
 ```
 
-# ☞ Accessing secrets from your codebase
+## Accessing secrets from your codebase
 
-## Introduction
+### Introduction
 
 It is only possible to read secrets from the Drupal or WordPress site. Secrets are created and modified via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).  Modifying secrets from within the application itself is not supported.
 
@@ -162,7 +162,7 @@ Secrets must have the scope `web` to be visible from your application. Secrets a
 
 Note: this also applies to quicksilver scripts
 
-## Mechanism 1: SDK (composer package)
+### Mechanism 1: SDK (composer package)
 
 This PHP library is the recommended approach for accessing secrets from the Secrets Service.
 
@@ -172,7 +172,7 @@ Use composer to install it:
 composer require pantheon-systems/customer-secrets-php-sdk
 ```
 
-### Usage
+#### Usage
 
 In your PHP code, do the following:
 
@@ -190,7 +190,7 @@ $secrets = $client->getSecrets();
 See the included classes and internal documentation for more examples and use cases.
 [https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage)
 
-## Mechanism 2: get_pantheon_secret
+### Mechanism 2: get_pantheon_secret
 
 For sites that do not use Composer, the function `pantheon_get_secret()` may be used to fetch the value of a single secret.
 
@@ -198,14 +198,14 @@ For sites that do not use Composer, the function `pantheon_get_secret()` may be 
 $secret_value = pantheon_get_secret("SECRET_NAME");
 ```
 
-# ☞ Using secrets with Drupal Key module
+## Using secrets with Drupal Key module
 If you want to use Pantheon Secrets in your Drupal application through the [Key module](https://www.drupal.org/project/key), you should use the [Pantheon Secrets](https://www.drupal.org/project/pantheon_secrets) module.
 
-## Pantheon Secrets detailed example
+### Pantheon Secrets detailed example
 
 In this guide we will go over an end-to-end example on how to setup secrets for a given site and how to use those secrets on a module that integrates with the Key module. For this example, we will use the [Sendgrid API](https://www.drupal.org/project/sendgrid_api) and [Sendgrid Mailer](https://www.drupal.org/project/sendgrid_mailer) modules.
 
-### Prerequisites
+#### Prerequisites
 
 - Make sure you have access to a Drupal >= 9.4 site running PHP >= 8.0 hosted on Pantheon.
 
@@ -213,7 +213,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 - Install the [Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation)
 
-### Steps
+#### Steps
 
 1. Install the required modules in your Drupal site and push the changes to Pantheon:
     ```
@@ -271,6 +271,6 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 1. The email should get to your inbox. Enjoy!
 
 
-# Resources
+## More Resources
 
 See our detailed [Drupal](https://github.com/pantheon-systems/customer-secrets-php-sdk/blob/main/docs/drupal-example.md) or [WordPress](https://github.com/pantheon-systems/customer-secrets-php-sdk/blob/main/docs/wordpress-example.md) examples for more detailed end to end examples.
