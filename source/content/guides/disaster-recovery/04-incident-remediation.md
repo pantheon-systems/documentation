@@ -4,7 +4,7 @@ subtitle: Incident Remediation
 description: Bring a site back from downtime and implement post-recovery actions
 tags: [dashboard, webops, workflow]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-07-25"
+reviewed: "2024-07-30"
 type: guide
 permalink: docs/guides/disaster-recovery/incident-remediation
 editpath: disaster-recovery/04-incident-remediation.md

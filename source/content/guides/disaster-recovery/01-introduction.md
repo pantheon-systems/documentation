@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Address emergency downtime situations on the Pantheon platform
 tags: [webops]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-07-25"
+reviewed: "2024-07-30"
 type: guide
 permalink: docs/guides/disaster-recovery
 editpath: disaster-recovery/01-introduction.md

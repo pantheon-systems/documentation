@@ -4,7 +4,7 @@ subtitle: Planning Ahead
 description: Avert potential site failures
 tags: [webops, workflow]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-07-25"
+reviewed: "2024-07-30"
 permalink: docs/guides/disaster-recovery/planning-ahead
 editpath: disaster-recovery/02-planning-ahead.md
 contenttype: [guide]

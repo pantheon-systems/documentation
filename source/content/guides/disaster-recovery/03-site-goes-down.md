@@ -4,7 +4,7 @@ subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 tags: [webops]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-07-25"
+reviewed: "2024-07-30"
 type: guide
 permalink: docs/guides/disaster-recovery/site-goes-down
 editpath: disaster-recovery/03-site-goes-down.md
