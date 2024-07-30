@@ -21,7 +21,7 @@ Bringing a site back from downtime and remediating the cause of downtime to ensu
 
 ## External Threats
 
-The Signal Sciences and Advanced GCDN layers are primarily managed by Pantheon’s Professional Services team, with some updates and support tasks performed by the Customer Success Engineering team, which also performs intake on the initial request. This ensures that responses can meet the contracted SLA, and Pantheon aims to escalate/reassign to Professional Services on an as needed basis.
+The WAF and Advanced GCDN layers are primarily managed by Pantheon’s Professional Services team, with some updates and support tasks performed by the Customer Success Engineering team, which also performs intake on the initial request. This ensures that responses can meet the contracted SLO, and Pantheon aims to escalate/reassign to Professional Services on an as needed basis.
 
 In the event of an attack, exploit, or other issue related to the global edge, file a ticket via the normal support channels, with an on-call emergency ticket filed in cases where downtime or serious service degradation occurs, and notify the Pantheon account team via Slack.
 
@@ -39,7 +39,6 @@ A set of static pages can be hosted directly and when certain failure conditions
 
 ## Infrastructure Failover
 In cases where the Google Cloud Platform infrastructure becomes compromised, Pantheon support can trigger a Multizone failover to redirect traffic at the load-balancing layer to a backup cluster of application servers on an alternate zone. For more information, refer to the [Multizone Failover](/multizone-failover) documentation.
-
 
 Multizone failover is not designed to protect against issues on the Global CDN, on the load balancing layer, or at the application level. The automated monitoring that triggers a failover condition is focused on infrastructure issues. The zonal redundancy has an identical codebase, a continually replicated database, and uses a common filesystem, application issues would cause the same failure conditions regardless of zone.
 
@@ -61,7 +60,6 @@ In cases where the site code, database, or assets have become corrupted or compr
 #### Managed Updates Deployment Issue
 As part of the Managed Updates deployment process, a Multidev will be cloned from the Live environment. It will be used primarily for testing, but also as a backup. If the Live deployment fails, results in a regression, or compromises the site, this Multidev will be used as the source to restore Live to a pre-deploy state.
 
-
 #### Codebase is Unrecoverable
 The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore Tools** restore all aspects of the site, and cannot be used to selectively restore. For more information, refer to the [Backup Restore](/terminus/commands/backup-restore) documentation information.
 
@@ -69,12 +67,10 @@ The codebase can be restored from a selected backup via Terminus - the Dashboard
 If a bad commit has been deployed to your Pantheon site, you can roll back the commit using Git. The process depends on the nature of the change and whether it involves core updates or upstream updates, etc. For more information, refer to the [Undo Commits](/undo-commits) documentation.
 
 #### Database and Filesystem Issues
-The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). For more information, refer to the [Database Workflow](/database-workflow) docuemntation.
-
+The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). For more information, refer to the [Database Workflow](/database-workflow) documentation.
 
 #### Restoring a Database from a Backup
 The database can be restored from a selected backup via Terminus. The Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. For more information, refer to the [Backup Restore](/terminus/commands/backup-restore) documentation.
 
-
 #### Restoring a Database from an External Dump
-The database can be restored from an external dump using the **Database/files** tools on the Site Dashboard. An archive file can be uploaded, or a MySQL archive accessed on a remote location. For more information, refer to the [Database Workflow](/database-workflow) docuemntation.
+The database can be restored from an external dump using the **Database/files** tools on the Site Dashboard. An archive file can be uploaded, or a MySQL archive accessed on a remote location. For more information, refer to the [Database Workflow](/database-workflow) documentation.
