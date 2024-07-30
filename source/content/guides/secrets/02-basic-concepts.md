@@ -24,9 +24,10 @@ A secret is a key-value pair that should not be exposed to the general public, t
 
 </dd>
 
-<dt>Secret type<sup>1</sup></dt>
+<dt>Secret type</dt>
 
 <dd>
+
 This represents how the secret is used.  A secret can only have one type.
 
 Current types are:
@@ -36,6 +37,12 @@ Current types are:
   * `env`: This type is used to set environment variables. Environment variables are currently only supported for Integrated Composer builds; setting environment variables on the application server is unsupported.
 
   * `composer`: This secret type is specifically used for authentication when pulling Composer packages from private repositories.  This is the recommended method for installing private composer packages.
+
+  <Alert title="Note" type="info" >
+
+  You can only set one type per secret and this cannot be changed later (unless you delete and recreate the secret).
+
+  </Alert>
 
 </dd>
 
@@ -81,6 +88,3 @@ Each secret's value can be no larger than 16k (16384 Bytes)
 </dd>
 
 </dl>
-
-**Notes**
-<sup>1</sup>: Note that you can only set one type per secret and this cannot be changed later (unless you delete and recreate the secret).
