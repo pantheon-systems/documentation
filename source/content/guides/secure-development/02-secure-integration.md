@@ -122,6 +122,10 @@ Yes, it's configured on a site-by-site basis and works from all environments (De
 
 Secure Integration connects to the same external resource from all environments. If you need to connect to a separate resource, or test against a “test” version of the external resource, you will need an additional Integration configured to point to that resource. The additional Integration would be available to all environments.
 
+### Why does Secure Integration use 127.0.0.1 or loopback IP address?
+
+Secure Integration uses the loopback IP address 127.0.0.1 with the PHP constant (i.e. 127.0.0.1:PANTHEON_SOIP_YOURSERVICENAME) to establish communication between the Pantheon-hosted site and the external resource/service.
+
 ### Is Secure Integration a replacement for authentication?
 
 No, Secure Integration is not a replacement for authentication, but rather is a [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
