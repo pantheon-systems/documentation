@@ -3,7 +3,7 @@ title: Object Cache Overview
 description: Learn about the benefits and requirements of Pantheon's Object Cache performance addon.
 permalink: docs/object-cache
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2024-08-01"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -12,7 +12,7 @@ audience: [development]
 product: [--]
 integration: [--]
 showtoc: true
-contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith, jazzsequence]
 ---
 Pantheon's Object Cache performance addon service is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -28,7 +28,7 @@ Object Cache provides an alternative caching backend that resides in memory rath
 
 ## Object Cache Requirements
 
-All plans, except for the Basic plan, can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic the feature will be disabled. Object Cache Pro, the premium WordPress plugin, is not available for Sandbox sites, however you may enable Redis for Sandbox sites and use Pantheon's [wp-redis](https://github.com/pantheon-systems/wp-redis) plugin, or any other reputable Redis plugin for WordPress.
+Pantheon supports two versions of Redis Object Cache, 2.8 and 6.2 (see [Which versions of Redis are available?](/object-cache/faq#which-versions-of-redis-are-available) and [Specify a Redis Version](/pantheon-yml#specify-a-redis-version) for more information). All plans, except for the Basic plan, can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic the feature will be disabled. Object Cache Pro, the premium WordPress plugin, is not available for Sandbox sites, however you may enable Redis for Sandbox sites and use Pantheon's [wp-redis](https://github.com/pantheon-systems/wp-redis) plugin, or any other reputable Redis plugin for WordPress.
 
 | Plans         | Object Cache Support <Popover content="Available across all environments, including Multidevs."/> |
 | ------------- | -------------------------------------- |
