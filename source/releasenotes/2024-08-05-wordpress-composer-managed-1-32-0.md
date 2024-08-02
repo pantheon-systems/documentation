@@ -4,7 +4,7 @@ published_date: "2024-08-05"
 categories: [wordpress, action-required]
 ---
 
-The 1.32.0 update is now available for the [WordPress (composer managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. This release is a maintenance update to resolve some inconsistencies with the upstream distribution of WordPress (composer managed).
+The 1.32.0 update is now available for the [WordPress (composer managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. This release is a maintenance update to resolve some inconsistencies with the upstream distribution of WordPress (composer managed). Most notably, this update includes a removal of decoupled packages that were erroneously being added to the non-decoupled upstream as well as other minor updates.
 
 For more details, refer to the [WordPress (Composer Managed) changelog](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/CHANGELOG.md).
 
