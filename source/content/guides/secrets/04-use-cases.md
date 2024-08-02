@@ -15,6 +15,14 @@ permalink: docs/guides/secrets/use-cases
 reviewed: "2024-07-30"
 showtoc: true
 ---
+<!--
+
+Outstanding todo, convert this subpage into 3 subpages:
+* IC usage how-to
+* Drupal Keys usage how-to
+* PHP usage how-to (WP and sendgrid integration) - should mention advanced usage is possible for requirements like programmatically creating secrets in code and link to examples, but shouldn't attempt to document SDK usage directly
+
+-->
 
 ## Using secrets with Integrated Composer
 
@@ -163,6 +171,7 @@ Secrets must have the scope `web` to be visible from your application. Secrets a
 Note: this also applies to quicksilver scripts
 
 ### Mechanism 1: SDK (composer package)
+** todo: remove/reduce - position php function first, and link out to this secondary for more advanced usage scenarios like programmatically creating secrets in code
 
 This PHP library is the recommended approach for accessing secrets from the Secrets Service.
 
