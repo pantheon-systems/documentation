@@ -68,7 +68,8 @@
     "date-fns": "^2.29.3",
     "mark.js": "^8.11.1",
     "prettier": "^2.8.3",
-    "react-date-range": "^1.4.0"
+    "react-date-range": "^1.4.0",
+    "vitest": "^1.6.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
