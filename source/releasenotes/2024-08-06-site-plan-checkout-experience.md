@@ -11,7 +11,7 @@ Pantheon has revamped the user flow for managing site plans, enhancing the overa
 - **Adhere to accessibility standards:**  We've improved inclusivity and usability by meeting accessibility guidelines and enhancing navigation for all users.
 - **Align with the Pantheon Design System:** This ensures consistent visual design, layout, and user interface elements across our platform.
 
-![New site plan experience](../images/release-notes/2024/new-site-plan-flow.png)
+![New site plan experience](../images/release-notes/2024/new-site-plan-experience.png)
 
 
 For instructions on selecting your site plan, please visit our [documentation](/guides/launch/plans/).
