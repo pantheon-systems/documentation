@@ -1,6 +1,6 @@
 ---
 title: WordPress (composer managed) upstream 1.32.0 update now available
-published_date: "2024-08-05"
+published_date: "2024-08-06"
 categories: [wordpress, action-required]
 ---
 
