@@ -8,9 +8,13 @@ The 1.32.0 update is now available for the [WordPress (composer managed)](/guide
 
 For more details, refer to the [WordPress (Composer Managed) changelog](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/CHANGELOG.md).
 
+#### Action required
+
+To benefit from these updates and ensure your site is using the most current version, you need to apply the update to your WordPress (composer managed) upstream.
+
 #### Applying updates
 
-While this update makes every attempt to fix issues that might lead to merge conflicts, conflicts are always possible, especially as we are still making changes in EA. If you run into merge conflicts with this update, you can manually resolve by running the following command:
+This update aims to resolve known issues that could lead to merge conflicts. However, conflicts may still occur, especially as we are continuing to make changes in the Early Access (EA) phase. If you run into merge conflicts with this update, you can manually resolve them by running the following command:
 
 ```bash
 git pull -Xtheirs https://github.com/pantheon-upstreams/wordpress-composer-managed.git main
