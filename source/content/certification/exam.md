@@ -299,7 +299,7 @@ In addition to [this guide within our documentation](/certification/study-guide)
 
 <Accordion title="What are the directions for launching my exam?" id="directions" icon="wrench">
 
-You can find the directions for launching the exam here: [Exam Instructions](/certification/exam-instructions)
+You can find the directions for launching the exam here: [Exam Instructions](/certification/exam#exam-instructions)
 
 </Accordion>
 
