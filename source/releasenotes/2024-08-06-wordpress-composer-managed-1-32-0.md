@@ -10,7 +10,7 @@ For more details, refer to the [WordPress (Composer Managed) changelog](https://
 
 #### Action required
 
-To benefit from these updates and ensure your site is using the most current version, you need to apply the update to your WordPress (composer managed) upstream.
+To benefit from these updates and ensure your site is using the most current version, you need to apply the update to your WordPress (composer managed) site or upstream.
 
 #### Applying updates
 
