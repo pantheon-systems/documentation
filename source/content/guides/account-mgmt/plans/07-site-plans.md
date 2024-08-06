@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/site-plans
 editpath: docs/guides/account-mgmt/plans/07-site-plans.md
-reviewed: "2022-09-19"
+reviewed: "2024-08-07"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
