@@ -27,7 +27,7 @@ In the event of an attack, exploit, or other issue related to the global edge, f
 
 ## Edge Failover
 
-Recovery of a site may take minutes, but time to recovery can be uncertain. Additional features can be implemented at the edge layer to provide a more immediate solution. These features minimize downtime while the specific issues are remediated.
+Recovery of a site may take minutes, but time to recovery can be uncertain. Additional features can be implemented at the CDN layer to provide a more immediate solution. These features minimize downtime while the specific issues are remediated.
 
 ### Experience Protection
 
