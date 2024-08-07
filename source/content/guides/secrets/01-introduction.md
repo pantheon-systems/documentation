@@ -53,7 +53,7 @@ The new [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/te
 - The new Terminus Secrets Manager Plugin stores secrets in an encrypted backend service.
 - The older secrets plugin simply writes unencrypted values to a json file in `/files/private`.
 
-Once the Pantheon Secrets service becomes generally available and merged into Terminus core, the older terminus-secrets-plugin will be discontinued. If you use the older plugin to manage secrets today, we strongly encourage you to upgrade your security and experience by adopting this new feature.
+Once the Pantheon Secrets service becomes generally available and merged into Terminus core, the older `terminus-secrets-plugin` will be discontinued. If you use the older plugin to manage secrets today, we strongly encourage you to upgrade your security and experience by adopting this new feature.
 
 ## Support
 The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin), [PHP Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk), and [Pantheon Secrets](https://github.com/pantheon-systems/pantheon_secrets) Drupal module are open source. You can view the projects, file issues and feature requests, and contribute in their respective repositories on GitHub.
