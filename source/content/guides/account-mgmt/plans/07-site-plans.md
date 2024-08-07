@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/site-plans
 editpath: docs/guides/account-mgmt/plans/07-site-plans.md
-reviewed: "2022-09-19"
+reviewed: "2024-08-07"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -93,23 +93,30 @@ Pantheon offers savings for sites purchased with annual billing. Refer to [Panth
 
 </Alert>
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+Please note that only Site owners can update plans. There are several places within the Pantheon Dashboard you can upgrade your site plan:
 
-1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
+1.  [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), and click **Upgrade** next to the site's name.
+2.  Within your personal workspace, navigate to Settings>Subscriptions. Click the 'Actions' dropdown and choose, **Change Site Plan**
+3.  If you are in a workspace, you can navigate to **Settings** > **Billing**. Scroll to see **Supported Sites** table. Within that table, if you are the site owner, you'll be able to click the **Site Plan** column to upgrade or downgrade your site.
 
-1. Click **Select** for the plan you wish to purchase.
 
-1. Enter your billing information. Site ownership is designated to the user account entering billing information.
+From the site upgrade and downgrade page, complete the following steps:
 
-1. Make sure the **Plan** details are correct.
+1. Click the **Select** button under the [plan you choose](https://pantheon.io/plans/pricing/). Select the billing frequency: [**Pay Annually**](/guides/account-mgmt/plans/pricing) or **Pay Monthly** at the top of the page.
 
-1. Verify the card shown in **Billing** details.
+  - If you've chosen a **Performance Plan**, choose the size and click **Choose Performance**.
 
-1. Click the **Submit** button.
+  - If you've chosen a **Basic Plan**, click **Continue**.
 
-The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
+  - If you've chosen **Custom**, please fill out the contact field to be contacted by a customer support agent.
 
-Invoices and transaction history related to this change can be found in **<Icon icon="gear" /> Account** > **Billing**.
+2. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information. If you already have a card saved, it should be available in this section.
+
+3. Click **Continue** and review your information carefully, then click **Place Your Order** to confirm your purchase.
+
+   - [Contact Support](/guides/support/contact-support) if you need any help.
+
+As the site owner, you’ll receive an email confirming the change to the site. You’ll receive an updated invoice after the site billing is processed.
 
 ## Enable Add-ons
 
