@@ -27,7 +27,7 @@ In the event of an attack, exploit, or other issue related to the global edge, f
 
 ## Edge Failover
 
-Recovery of a site may take minutes, but time to recovery can be uncertain. Additional features have been implemented at the Global CDN level to provide a more immediate solution. These features minimize downtime while the specific issues are remediated.
+Recovery of a site may take minutes, but time to recovery can be uncertain. Additional features can be implemented at the CDN layer to provide a more immediate solution. These features minimize downtime while the specific issues are remediated.
 
 ### Experience Protection
 
@@ -35,7 +35,7 @@ The Global CDN natively provides a layer of protection via the full-page cache. 
 
 ### Synthetic Responses
 
-A set of static pages can be hosted directly and when certain failure conditions are detected, traffic can be redirected to a placeholder. The placeholder will provide a minimally acceptable user experience rather than error messages and a completely unreachable site.
+A set of static pages can be hosted directly and when certain failure conditions are detected, traffic can be redirected to a placeholder. The placeholder will provide a minimally acceptable user experience rather than error messages and a completely unreachable site. These custom rules require an [Advanced Global CDN](/guides/agcdn) subscription. 
 
 ## Infrastructure Failover
 In cases where the Google Cloud Platform infrastructure becomes compromised, Pantheon support can trigger a Multizone failover to redirect traffic at the load-balancing layer to a backup cluster of application servers on an alternate zone. For more information, refer to the [Multizone Failover](/multizone-failover) documentation.
