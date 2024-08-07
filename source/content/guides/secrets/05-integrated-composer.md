@@ -32,7 +32,7 @@ showtoc: true
 
 1. Set the secret value to the token via terminus:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=ic`
    ```
 
@@ -49,7 +49,7 @@ showtoc: true
 
 1. Require the package defined by your private repository's `composer.json` by either adding a new record to the `require` section of the site's `composer.json` or with a `composer require` command:
 
-    ```bash
+    ```bash{promptUser: user}
     composer require your-organization/your-package-name
     ```
 
@@ -63,7 +63,7 @@ showtoc: true
 
 1. Set the secret value to the token via Terminus:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=ic`
    ```
 
@@ -80,7 +80,7 @@ showtoc: true
 
 1. Require the package defined by your private repository's `composer.json` by either adding a new record to the `require` section of the site's `composer.json` or with a `composer require` command:
 
-    ```bash
+    ```bash{promptUser: user}
     composer require your-group/your-package-name
     ```
 
@@ -93,7 +93,7 @@ showtoc: true
 1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Set the consumer as private and put a (dummy) callback URL.
 
 1. Set the secret value to the consumer info via Terminus:
-   ```bash
+   ```bash{promptUser: user}
    terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=ic
    ```
 
@@ -110,7 +110,7 @@ showtoc: true
 
 1. Require the package defined by your private repository's `composer.json` by either adding a new record to the `require` section of the site's `composer.json` or with a `composer require` command:
 
-    ```bash
+    ```bash{promptUser: user}
     composer require your-organization/your-package-name
     ```
 

@@ -33,7 +33,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 ### Steps
 
 1. Install the required modules in your Drupal site and push the changes to Pantheon:
-    ```
+    ```bash{promptUser: user}
     composer require drupal/pantheon_secrets drupal/sendgrid_api drupal/sendgrid_mailer
     git add composer.json composer.lock
     git commit -m "Add required modules."
@@ -41,7 +41,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
     ```
 
 1. Enable the modules:
-    ```
+    ```bash{promptUser: user}
     terminus drush <site>.<env> -- en -y pantheon_secrets sendgrid_api sendgrid_mailer
     ```
 
@@ -50,7 +50,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 1. Create a Sendgrid API key by following [Sendgrid instructions](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)
 
 1. Store the API key as a site secret:
-    ```
+    ```bash{promptUser: user}
     terminus secret:site:set <site> sendgrid_api <api_key> --scope=web --type=runtime
     ```
 
@@ -69,7 +69,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
         Then, edit the `sendgrid_api` Key and change the type to "Sendgrid"
 
     1. Use the provided drush command to sync all of your secrets into Key entities:
-        ```
+        ```bash{promptUser: user}
         terminus drush <site>.<env> -- pantheon-secrets:sync
         ```
 

@@ -39,7 +39,7 @@ How to get started and use this feature:
 1. [Install & authenticate Terminus](/terminus/install) if you have not done so already.
 1. Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin):
 
-  ```
+  ```bash{promptUser: user}
   terminus self:plugin:install terminus-secrets-manager-plugin
   ```
 

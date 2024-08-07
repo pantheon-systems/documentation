@@ -50,14 +50,15 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 1. Create a Sendgrid API key by following [Sendgrid instructions](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)
 
 1. Store the API key as a site secret:
-    ```
+
+    ```bash{promptUser: user}
     terminus secret:site:set <site> sendgrid_api <api_key> --scope=web --type=runtime
     ```
 
     As a best practice, the non-production environments should be the default and then override that value with a [secret environment override](/guides/secrets/overview#environment-override) to change the API key for the live environment (e.g. you want to use different Sendgrid accounts for live and dev environments)
 1. Add the following to `wp-config.php`, replacing placeholder values (e.g., `example@example.com` and `Example From Name`):
 
-  ```
+  ```php
   define( 'WPMS_ON', true ); // True turns on the WPMS constants for usage below, false turns it off.
   define( 'WPMS_MAIL_FROM', 'example@example.com' );  
   define( 'WPMS_MAIL_FROM_NAME', 'Example From Name');

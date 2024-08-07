@@ -34,12 +34,12 @@ To get this file, you should use the [plugin](https://github.com/pantheon-system
     ```
 
 2. Generate the secrets file like this:
-    ```bash
+    ```bash{promptUser: user}
     terminus secret:site:local-generate --filepath=./secrets.json
     ```
 
 3. And rebuild lando application:
-    ```bash
+    ```bash{promptUser: user}
     lando rebuild -y
     ```
 
@@ -57,12 +57,12 @@ Now, you will be able to use your secrets through the SDK.
     ```
 
 3. Generate the secrets file
-    ```bash
+    ```bash{promptUser: user}
     terminus secret:site:local-generate --filepath=./secrets.json
     ```
 
 4. Restart your ddev environment
-    ```bash
+    ```bash{promptUser: user}
     ddev restart
     ```
 
