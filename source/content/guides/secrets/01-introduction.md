@@ -48,7 +48,7 @@ How to get started and use this feature:
 To see all available commands added by this plugin, refer to the [plugin's README file](https://github.com/pantheon-systems/terminus-secrets-manager-plugin?tab=readme-ov-file#site-secrets-commands).
 
 ### Older plugin now deprecated
-The new [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) replaces the older [terminus-secrets-plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The key differences are:
+The new [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) replaces the older [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The key differences are:
 
 - The new Terminus Secrets Manager Plugin stores secrets in an encrypted backend service.
 - The older secrets plugin simply writes unencrypted values to a json file in `/files/private`.
