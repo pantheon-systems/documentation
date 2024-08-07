@@ -146,7 +146,7 @@ If you're using Cloudflare's IP Geolocation feature, you will need to read the `
 
 ## Access to the /.well-known/ Path Is Needed
 
-If you're using Cloudflare's blocking services to block traffic from specific regions, an exception must be made for the /.well-known/ path in CloudFlare's config. If the /.well-known path is not accessible, Lets Encrypt may not be able to issue a certificate. 
+If you're using Cloudflare's blocking services to block traffic from specific regions, an exception must be made for the `/.well-known` path in CloudFlare's config. If the `/.well-known` path is not accessible, Lets Encrypt may not be able to issue a certificate. 
 
 ## Cache Invalidation Best Practices
 
