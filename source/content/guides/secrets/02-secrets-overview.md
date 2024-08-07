@@ -81,7 +81,7 @@ Due to platform design, the "environment" for Integrated Composer will always be
 
 ### The life of a secret
 
-When a given runtime (e.g. Integrated Composer or an environment php runtime) fetches secrets for a given site (and env), the process will be as follows:
+When a given runtime (e.g. Integrated Composer or an environment PHP runtime) fetches secrets for a given site (and environment), the process will be as follows:
 
 - Fetch secrets for site (of the given type and scopes).
 
