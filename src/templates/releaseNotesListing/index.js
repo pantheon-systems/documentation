@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import debounce from "lodash.debounce"
 import Mark from "mark.js"
+import { useLocation } from "@reach/router"
 
 import Layout from "../../layout/layout/index.js"
 import SEO from "../../layout/seo.js"
@@ -35,6 +36,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     categories: []
   })
   const [currentPage, setCurrentPage] = useState(1)
+  const [queryStrings, setQueryStrings] = useState('')
 
   const notesPerPage = 8
   let totalPagesRef = useRef(0)
@@ -137,14 +139,18 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     filters.categories.forEach(category => {
       params.append('category', category.slug)
     })
-    params.append('page', currentPage)
 
-    // Get current URL and add query string
-    const currentUrl = window.location.href.split('?')[0]
-    const newUrl = filters.categories.length > 0 || currentPage ? currentUrl + '?' + params.toString() : currentUrl
+    if(filters.query){
+      params.append('query', filters.query)
+    }
 
-    // Update URL
-    window.history.replaceState({}, '', newUrl)
+    const newQueryStrings = params.toString()
+    setQueryStrings(newQueryStrings)
+    if(newQueryStrings){
+      navigate(`/release-notes/${currentPage}/?${newQueryStrings}`)
+    } else {
+      navigate(`/release-notes/${currentPage}/`)
+    }
   }
 
   useEffect(() => {
@@ -154,8 +160,9 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     if(!initialLoadRef.current){
       updateQueryStrings()
     }
-
   },[filters, currentPage])
+
+  const location = useLocation()
 
   useEffect(() => {
     // Function to update filters based on URL parameters
@@ -190,14 +197,6 @@ const ReleaseNotesListingTemplate = ({ data }) => {
         ))
       }
 
-      // Check if pageUrl is greater than totalPagesRef.current
-      // If it's greater, go to first page, otherwise go to pageUrl
-      if (pageUrl > totalPagesRef.current) {
-        setCurrentPage(1)
-      } else {
-        setCurrentPage(pageUrl)
-        updateQueryStrings()
-      }
     }
 
     updateFilters()
@@ -206,6 +205,16 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     initialLoadRef.current = false
   },[])
 
+  // Get current page from URL
+  useEffect(() => {
+    const pathSegments = location.pathname.split("/").filter(Boolean)
+    const page = pathSegments[pathSegments.length - 1]
+    const pageNumber = parseInt(page, 10)
+
+    if (!isNaN(pageNumber)) {
+      setCurrentPage(pageNumber)
+    }
+  }, [location.pathname])
 
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
@@ -277,7 +286,13 @@ const ReleaseNotesListingTemplate = ({ data }) => {
               />
             </div>
             <FlexContainer flexWrap='wrap' className='rn-popover-tigger-and-tags' >
-              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} />
+              <ReleaseNotePopoverCategorySelector
+                filters={filters}
+                setFilters={setFilters}
+                setCurrentPage={setCurrentPage}
+                updateQueryStrings={updateQueryStrings}
+                queryStrings={queryStrings}
+              />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {
                   filters && filters.categories.map(item => {
@@ -301,7 +316,13 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           >
             {renderedReleaseNotes}
           </div>
-          <ReleaseNotesPager currentPage={currentPage} setCurrentPage={setCurrentPage} totalPagesRef={totalPagesRef} />
+          <ReleaseNotesPager
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            totalPagesRef={totalPagesRef}
+            queryStrings={queryStrings}
+            updateQueryStrings={updateQueryStrings}
+          />
         </Container>
       </main>
     </Layout>
