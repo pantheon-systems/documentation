@@ -21,10 +21,10 @@ This guide covers features and use cases of the Pantheon Secrets feature; it cou
 
 ## Features
 Key features include:
-* **Secure**: secrets are encrypted at rest and securely hosted on Pantheon.
-* **Easy to use**: create and update secrets via Terminus.
-* **Governable**: secrets could be set at organization level and shared to all the sites owned by that organization.
-* **Overridable**: secrets could be overridden at environment level when needed.
+* **Secure**: Secrets are encrypted at rest and securely hosted on Pantheon.
+* **Easy to use**: Create and update secrets via Terminus.
+* **Governable**: Secrets could be set at organization level and shared to all the sites owned by that organization.
+* **Overridable**: Secrets could be overridden at environment level when needed.
 
 This feature also supports:
 * The use of private repositories in Integrated Composer builds.
