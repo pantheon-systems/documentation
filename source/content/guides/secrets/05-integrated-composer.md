@@ -19,6 +19,7 @@ showtoc: true
 ## Using secrets with Integrated Composer
 
 ### Mechanism 1: Oauth composer authentication (recommended)
+If your Composer-based dependency is private, and the repository supports OAuth authentication, storing your token as a secret in the Pantheon Secrets API is a simpler way to allow access to those private repositories.
 
 <TabList>
 
