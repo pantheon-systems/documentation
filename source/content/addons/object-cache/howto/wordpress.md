@@ -3,7 +3,7 @@ title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
 permalink: docs/object-cache/wordpress
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2024-08-08"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-contributors: [jazzsequence]
+contributors: [jazzsequence, jkudish]
 showtoc: true
 ---
 
@@ -75,7 +75,7 @@ terminus redis:enable <site>
 
   </Alert>
 
-1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
+1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus on your development or multidev environment. NOTE: This workflow cannot be run on test or live environments.
 
 	**WordPress Admin:**
 
@@ -315,6 +315,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
       1. Merge code
       1. Activate OCP
       1. Flush Redis cache
+- The `object-cache.php` drop-in file must be created in your development or multidev environment and committed or pushed to live to work.
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
   - Flushing the network cache from the network admin will flush all caches across the network.
   - Subsites do not get their own configuration or graphs.
