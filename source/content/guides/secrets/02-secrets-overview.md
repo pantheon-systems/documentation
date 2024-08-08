@@ -98,13 +98,13 @@ When a given runtime (e.g. Integrated Composer or an environment PHP runtime) fe
 ### Example Value Resolution
 Given you have an integrated composer site named `my-org-site` which belongs to an organization `my-org`, and you also have another integrated composer site named `my-personal-site` which belongs to your personal Pantheon account.
 
-When Integrated Composer attempts to get secrets for `my-personal-site` it will go like this:
+When Integrated Composer attempts to get secrets for `my-personal-site` it will work like this:
 - Get the secrets of scope `ic` for `my-personal-site`.
 - Apply environment overrides for the current environment.
 - Look at `my-personal-site` owner. In this case, it is NOT an organization so there are no organization secrets to merge.
 - Process the resulting secrets to make them available to Composer.
 
-On the other hand, when Integrated Composer attempts to get secrets for `my-org-site`, it will go like this:
+On the other hand, when Integrated Composer attempts to get secrets for `my-org-site`, it will work like this:
 - Fetch the secrets in the scope of `ic` for `my-org-site`.
 - Apply environment overrides for the current environment.
 - Look at the site owner. The organization `my-org` is identified.
