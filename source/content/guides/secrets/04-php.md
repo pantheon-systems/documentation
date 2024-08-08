@@ -68,7 +68,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
   }
   ```
 
-1. Go to the Sendgrid email test page (`/wp-admin/admin.php?page=wp-mail-smtp-tools&tab=test`) and test your Sendgrid integration by sending a test email.
+1. Go to the SendGrid email test page (`/wp-admin/admin.php?page=wp-mail-smtp-tools&tab=test`) and test your SendGrid integration by sending a test email.
 
 ## More Resources
 For advanced use cases, you may consider leveraging the [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk) library as an alternative to the `pantheon_get_secret` function.
