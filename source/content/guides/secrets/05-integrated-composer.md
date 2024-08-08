@@ -24,7 +24,7 @@ showtoc: true
 
 <Tab title="GitHub" id="github-setup" active={true}>
 
-1. [Generate a Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The Github token must have all "repo" permissions selected.
+1. [Generate a GitHub token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The GitHub token must have all "repo" permissions selected.
 
     **Note:** Check the repo box that selects all child boxes. **Do not** check all child boxes individually as this does not set the correct permissions.
 
