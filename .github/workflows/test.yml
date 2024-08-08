@@ -19,5 +19,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 'latest'
-      - run: npm install
+      - run: npm ci
       - run: npx vitest src/components
