@@ -1,0 +1,41 @@
+name: ESLint
+
+on:
+  pull_request:
+    paths:
+      - 'src/**/*.{js,jsx,ts,tsx}'
+      - '.github/workflows/eslint.yml'
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+      - name: Install Node dependencies
+        run: npm ci
+      - name: Lint only affected files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CHANGED_FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep -E '\.js$|\.jsx$|\.ts$|\.tsx$' || echo "")
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "Linting the following files:"
+            echo "$CHANGED_FILES"
+            echo "$CHANGED_FILES" | xargs npx eslint
+          else
+            echo "No files to lint"
+          fi
+          npx eslint src
