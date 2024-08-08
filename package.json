@@ -92,7 +92,7 @@
     "build": "gatsby build --prefix-paths --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --debug",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "start": "npm run develop",
     "serve": "gatsby serve --prefix-paths",
     "lighthouse-run": "node ./tests/lighthouse/lighthouse.run.js",
