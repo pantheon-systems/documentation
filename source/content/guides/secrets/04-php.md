@@ -21,7 +21,7 @@ It is only possible to read secrets from the Drupal or WordPress site. Modifying
 
 Secrets must have the scope `web` to be visible from your application. Secrets are cached in the server for 15 minutes, so you must wait for a while after modifying secret values before they will be available for use. This cache is also encrypted at rest.
 
-Note: this also applies to quicksilver scripts
+Note: this also applies to quicksilver scripts.
 
 ### Use the pantheon_get_secret PHP function
 
