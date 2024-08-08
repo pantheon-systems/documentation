@@ -3,7 +3,7 @@ title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
 permalink: docs/object-cache/wordpress
 tags: [cache, plugins, modules, database]
-reviewed: "2024-01-10"
+reviewed: "2024-08-08"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
