@@ -24,7 +24,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 ### Prerequisites
 
-- Make sure you have access to a Drupal >= 9.4 site running PHP >= 8.0 hosted on Pantheon.
+- Make sure you have access to a Drupal 9.4 or greater site running PHP 8.0 or above hosted on Pantheon.
 
 - Make sure you have [terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) in your machine
 
