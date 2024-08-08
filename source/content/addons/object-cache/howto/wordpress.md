@@ -316,7 +316,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
       1. Activate OCP
       1. Flush Redis cache
 - The `object-cache.php` drop-in file must be created in your development or multidev environment and committed or pushed to live to work.
-- It is expected to see a warning in the WordPress Site Health Status page on your test and live environments saying that Object Cache Pro is unable to access the local filesystem and cannot manage the object cache drop-in. As long as you set it up as per the steps outlined on this page, it is working as expected.
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
   - Flushing the network cache from the network admin will flush all caches across the network.
   - Subsites do not get their own configuration or graphs.
