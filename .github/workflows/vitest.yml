@@ -1,9 +1,9 @@
-name: Test
+name: JavaScript Unit Tests
 on:
   pull_request:
     paths:
       - 'src/**'
-      - '.github/workflows/test.yml'
+      - '.github/workflows/vitest.yml'
     types:
       - opened
       - synchronize
