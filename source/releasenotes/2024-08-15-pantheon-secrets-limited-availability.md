@@ -1,7 +1,7 @@
 ---
 title: Pantheon Secrets released for Limited Availability
 published_date: "2024-08-15"
-categories: [new-feature, tools-apis, security]
+categories: [new-feature, tools-apis, security, documentation]
 ---
 Previously released for Early Access participants only, the Pantheon Secrets program is now released for Limited Availability which opens up access for anyone to use the feature today at no additional cost.
 
