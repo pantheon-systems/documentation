@@ -32,7 +32,7 @@ $secret_value = pantheon_get_secret("SECRET_NAME");
 ```
 
 ## WordPress detailed example
-In this guide we will go over an end-to-end example on how to setup secrets for a given site and how to read those secrets in `wp-config.php`. For this example, we will use the [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) plugin to setup Sendgrid.
+In this guide we will go over an end-to-end example on how to setup secrets for a given site and how to read those secrets in `wp-config.php`. For this example, we will use the [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) plugin to setup SendGrid.
 
 ### Prerequisites
 
