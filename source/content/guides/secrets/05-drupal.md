@@ -75,7 +75,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
         Then, edit the `sendgrid_api` Key and change the type to "Sendgrid"
 
-1. Go to the Sendgrid API Configuration page (`/admin/config/services/sendgrid`) and select your Key item
+1. Go to the SendGrid API Configuration page (`/admin/config/services/sendgrid`) and select your Key item.
 
     ![Screenshot of Sendgrid API Configuration page in Drupal UI](../../../images/guides/secrets/sendgrid-config.png)
 
