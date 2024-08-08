@@ -45,7 +45,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
     terminus drush <site>.<env> -- en -y pantheon_secrets sendgrid_api sendgrid_mailer
     ```
 
-1. Make sure your Sendgrid account is correctly configured and allows sending email.
+1. Make sure your SendGrid account is correctly configured and allows sending email.
 
 1. Create a Sendgrid API key by following [Sendgrid instructions](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)
 
