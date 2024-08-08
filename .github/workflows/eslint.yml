@@ -38,4 +38,3 @@ jobs:
           else
             echo "No files to lint"
           fi
-          npx eslint src
