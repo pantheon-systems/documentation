@@ -152,25 +152,13 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	git add auth.json && git commit -m "Add Object Cache Pro auth token."
 	```
 
-1. Add the Object Cache Pro repository to your `composer.json` file's `repositories` section. Your final `repositories` section should look something like this:
+1. Add the Object Cache Pro repository to your `composer.json` file's `repositories` section.
 
 	```json
 		repositories: [
 			{
 				"type": "composer",
 				"url": "https://objectcache.pro/repo/"
-			},
-			{
-				"type": "composer",
-				"url": "https://wpackagist.org",
-				"only": [
-					"wpackagist-plugin/*",
-					"wpackagist-theme/*"
-				]
-			},
-			{
-				"type": "path",
-				"url": "upstream-configuration"
 			}
 		],
 	```
