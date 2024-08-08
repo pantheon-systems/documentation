@@ -23,7 +23,7 @@ This section provides information on how to access the SFTP Connection Info in y
 
 1. Click **Connect with SFTP**. Your connection credentials will be displayed along with a button to connect directly with your preferred client.
 
- ![SFTP Connection Data](../../../images/dashboard/sftp-connection-info.png)
+ ![SFTP Connection Data](../../../images/dashboard/sftp-mode-connection-info.png)
 
 The connection information may differ from what you've used in the past. The information is based on your unique Site ID (the long string at the end of your Dashboard URL).
 

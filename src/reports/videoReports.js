@@ -12,7 +12,7 @@ class VideoReport extends React.Component {
           query {
             docsWithVideo: allMdx(
               filter: {
-                frontmatter: { changelog: { ne: true }, title: { ne: "" } }
+                frontmatter: { title: { ne: "" } }
                 fileInfo: { childMdx: { rawBody: { regex: "/Youtube/" } } }
               }
             ) {

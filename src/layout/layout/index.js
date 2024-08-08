@@ -1,12 +1,9 @@
 import React, { Components } from "react"
-import Header from "../header"
-import Footer from "../footer"
-
-import SearchBar from "../SearchBar"
-
-import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
-
 import "./style.css"
+import Header from "../header"
+import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
+import Footer from "../footer"
+import SearchBar from "../SearchBar"
 
 // Content for CTA
 const primaryCTA = {
@@ -22,6 +19,7 @@ const secondaryCTA = {
 const Layout = ({
   children,
   containerWidth,
+  excludeSearch,
   hasCta,
   footerBorder,
   pageType = "default",
@@ -29,9 +27,11 @@ const Layout = ({
   return (
     <div className="pantheon-docs">
       <Header page={pageType} />
-      <Container width={containerWidth}>
-        <SearchBar page={pageType} />
-      </Container>
+      {!excludeSearch && (
+        <Container width={containerWidth}>
+          <SearchBar page={pageType} />
+        </Container>
+      )}
       {children}
       {hasCta && (
         <CTASlice

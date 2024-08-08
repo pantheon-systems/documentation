@@ -1,6 +1,6 @@
 ---
 title: WebOps Certification
-subtitle: Introduction
+subtitle: Study Guide Introduction
 certificationpage: true
 type: certificationpage
 layout: certificationpage
@@ -14,7 +14,6 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
-previousurl: /certification
 nexturl: /certification/study-guide/webops
 ---
 

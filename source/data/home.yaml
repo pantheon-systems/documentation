@@ -102,5 +102,5 @@
       - text: "Drupal Drush Command-Line Utility"
         url: "/guides/drush/"
   changelog-preview:
-    title: "Changelog"
-    url: "/changelog"
+    title: "Release Notes"
+    url: "/release-notes"

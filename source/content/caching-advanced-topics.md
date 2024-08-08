@@ -53,7 +53,9 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of one year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Dev and Multidev environments do not cache static assets. Select one of the options below to ensure a client's browser receives a new version of any static asset after clearing a site's cache:
+Pantheon sets an cache max-age of one year for static assets (e.g. CSS, JS, Images, PDFs) on Live and Test environments with the HTTP header of `cache-control: max-age=31622400`. This setting improves page load times as a visitor browses a site across pages that make requests to the same assets.
+
+However, this setting can prevent changes to static assets from being immediately visible to a client's browser. So select one of the options below to ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
 - Rename the file
 - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
@@ -78,6 +80,13 @@ Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) 
 </TabList>
 
 [Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
+
+
+<Alert title="Note" type="info">
+
+Dev and Multidev environments always set an HTTP header to `cache-control: no-cache, must-revalidate` so that changes to CSS and other assets are always reloaded as developers update them.
+
+</Alert>
 
 ## Using Your Own Session-Style Cookies
 
@@ -148,7 +157,7 @@ A site may need to deliver different content to different users without them log
 
 ### Using Modernizr
 
-[Modernizr](https://modernizr.com/) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362).
+Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362).
 
 ### Device Detection
 
@@ -225,7 +234,7 @@ Pantheon strips cookies for any file ending with the following extensions, even 
 
 ## 404s
 
-Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, the Global CDN will respect them. Depending on your use case, that may be the desired result.
+Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age` headers, the Global CDN will respect them. Depending on your use case, that may be the desired result.
 
 <TabList>
 

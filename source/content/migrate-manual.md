@@ -114,7 +114,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
  - [Drupal 7](https://github.com/pantheon-systems/drops-7)
- - [Drupal 8](https://github.com/pantheon-systems/drops-8)
+ - [Drupal 9+](https://github.com/pantheon-upstreams/drupal-composer-managed)
  - [WordPress](https://github.com/pantheon-systems/wordpress)
 
   <Alert title="Note" type="info">
@@ -240,7 +240,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
   Automatic merge went well; stopped before committing as requested
   ```
 
-  If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
+  If you are prompted for authentication, configure an [SSH Keys](/ssh-keys).
 
 1. Review your current index using `git status`, then commit all changes.
 

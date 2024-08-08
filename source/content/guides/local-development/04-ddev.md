@@ -55,7 +55,7 @@ Be sure that you have:
 
     ```bash{promptUser: user}
     environment_variables:
-    project: de8.live
+      project: de8.live
     ```
 
 1. Run `ddev pull pantheon` to update your local database and content files. You can add the `--skip-files` parameter if you don't want to sync the content files to your local. Remember to specify the site and Pantheon environment you want to target when running the `ddev pull` command, and create a new backup when you need to refresh what you pull.

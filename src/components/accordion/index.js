@@ -10,9 +10,11 @@ const Accordion = ({ id, title, children }) => {
   return (
     <ExpansionPanel
       id={id}
-      items={panelItems}
+      summary={title}
       className="docs-accordion"
-    ></ExpansionPanel>
+    >
+      {children}
+    </ExpansionPanel>
   )
 }
 

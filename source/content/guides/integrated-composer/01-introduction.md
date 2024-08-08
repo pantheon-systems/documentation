@@ -28,6 +28,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 - To convert an existing Drupal site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
+
 <Alert title="Note"  type="info" >
 
 `drupal-composer-managed` is the recommended Composer-based Drupal upstream. The Composer-based Drupal upstreams below have been deprecated.
@@ -43,7 +44,7 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 <Alert title="Note" type="info">
 
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with **Bedrock**. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with **Bedrock**. This upstream is currently in EA.
 
 </Alert>
 

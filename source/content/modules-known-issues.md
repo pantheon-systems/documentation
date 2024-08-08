@@ -160,20 +160,6 @@ ___
 
 ___
 
-## [Feeds](https://www.drupal.org/project/feeds)
-
-<ReviewDate date="2022-01-25" />
-
-**Issue:** When attempting to manually import using the Feeds plugin in cron, the following error message is displayed:
-
-`RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
-
-**Solution:** The [Persistent Temporary Path Workaround](/guides/filesystem/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
-
-We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130) and requesting that the module maintainer fix the module.
-
-___
-
 ## [Front](https://www.drupal.org/project/front)
 
 <ReviewDate date="2018-01-03" />
@@ -265,9 +251,28 @@ ___
 
 ___
 
+## [Ludwig]([https://www.drupal.org/project/ludwig](https://www.drupal.org/project/ludwig))
+
+<ReviewDate date="2024-04-18" />
+
+**Issue**: Ludwig expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
+
+**Solution**: As covered by the [module's project page](https://www.drupal.org/project/ludwig), Composer managed Drupal sites should not use Ludwig. See also, this discussion regarding [Ludwig EOL](https://www.drupal.org/project/ludwig/issues/3377094).
+
+___
+
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 
 **Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
+
+___
+
+## [Media Bulk Upload](https://www.drupal.org/project/media_bulk_upload)
+<ReviewDate date="2024-06-24" />
+
+**Issue**: The default configuration for this module has been known to cause issues related to the "Upload location" setting, which out of the box uses the `/tmp` directory.
+
+**Solution**: Configure the "Upload location" to `public://sites/default/files/private` You must include the `public://` protocol for this solution to work.
 
 ___
 

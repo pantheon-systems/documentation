@@ -21,7 +21,9 @@ This section provides information on how to configure automatic platform Search 
 
 You must have the following to enable Search and Replace:
 
-- A [WordPress Multisite](/guides/multisite)
+- A [WordPress Multisite](/guides/multisite).
+- A PHP version of 7.4 or later.
+- The site is *not* using [Integrated Composer](/guides/integrated-composer).
 
 <Alert title="Note"  type="info" >
 
@@ -62,11 +64,11 @@ search_replace: false
 ```
 
 ## Subdomain WordPress Multisite Search and Replace Configuration
-Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 25 sites that can be configured for Search and Replace via domain mapping.
+Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 75 sites that can be configured for Search and Replace via domain mapping.
 
 <Alert title="We are collecting feedback"  type="info" >
 
-We are collecting feedback about use cases that require more than 25 URLs to be replaced. Please [fill out this form](https://forms.gle/TYvuHYSNrVmptVBW9) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
+We are collecting feedback about use cases that require more than 75 URLs to be replaced. Please [fill out this form](https://forms.gle/TYvuHYSNrVmptVBW9) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
 
 </Alert>
 
@@ -173,9 +175,11 @@ Sites configured for subdomain conversion will _only_ run the conversion step fr
 
 ## Known Issues
 
-* WordPress Multisites that are using the WordPress (Composer Managed) upstream are currently unable to use Multisite Search and Replace. For those sites, we recommend setting the `search_replace` value to `false` and using WP-CLI via Terminus to perform the Search and Replace. See [Run WP-CLI `search-replace` Manually](/guides/multisite/workflows/#run-wp-cli-search-replace-manually) for more information.
+* WordPress Multisites that are using [Integrated Composer](/guides/integrated-composer), such as the WordPress (Composer Managed) upstream, are currently unable to use Multisite Search and Replace. For those sites, we recommend setting the `search_replace` value to `false` and using WP-CLI via Terminus to perform the Search and Replace. See [Run WP-CLI `search-replace` Manually](/guides/multisite/workflows/#run-wp-cli-search-replace-manually) for more information.
 
 * When using the default Subdirectory search and replace, creating a new multidev with database and files pulled from the live environment will only search and replace the platform domain, i.e. `live-{site}.pantheonsite.io`. To search and replace the correct domain on your live site, immediately follow multidev creation with a database clone either through the dashboard or with Terminus, and select the correct domain as the "from" URL. We are working on handling this seamlessly in the future.
+
+* When WordPress Multisite Search and Replace runs, your application filesystem is never mounted. This means that if you have files in the filesystem that are required for some operations to run (e.g. to load secrets from the filesystem), these Search and Replace operations will fail. If you are looking for ways to solve the issue with requiring secrets, you can express interest in the [Secrets Management Early Access Program](https://docs.google.com/forms/d/e/1FAIpQLSdMqVKts_5607LFIX9Oyq-2El04kN40vFYefuzFJoy-byZwfw/viewform) and use the new [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
 
 ## More Resources
 

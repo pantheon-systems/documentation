@@ -1,12 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-import Youtube from "../components/youtube"
-
-const shortcodes = {
-  Youtube,
-}
+import MdxWrapper from "../components/mdxWrapper"
 
 const Partial = props => (
   <StaticQuery
@@ -40,9 +34,7 @@ const Partial = props => (
 
       return (
         <>
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{mdx.node.body}</MDXRenderer>
-          </MDXProvider>
+          <MdxWrapper mdx={mdx.node.body} />
         </>
       )
     }}

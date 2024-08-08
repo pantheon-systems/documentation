@@ -1,8 +1,8 @@
 import { Link, graphql } from "gatsby"
 
-import HeaderBody from "../components/headerBody"
 import Layout from "../layout/layout"
-import Popover from "../components/popover"
+import HeaderBody from "../components/headerBody"
+
 import React from "react"
 import SEO from "../layout/seo"
 import TOC from "../components/toc"
@@ -187,24 +187,25 @@ class Glossary extends React.Component {
                         })
                         .map(({ from, slug, title, definition }) => (
                           <>
-                            <section key={title.replace(/ +/g, "-")}>
+                            <dl key={title.replace(/ +/g, "-")}>
+                              <dt
+                                key={`${title.replace(/ +/g, "-")}-header`}
+                                id={title.toLowerCase().replace(/ +/g, "-")}
+                                name={title.toLowerCase().replace(/ +/g, "-")}
+                                className="glossary__term"
+                              >
                               <Link
                                 to={`#${title
                                   .toLowerCase()
                                   .replace(/ +/g, "-")}`}
                                 className="glossary__term-link"
                               >
-                                <h3
-                                  key={`${title.replace(/ +/g, "-")}-header`}
-                                  id={title.toLowerCase().replace(/ +/g, "-")}
-                                  name={title.toLowerCase().replace(/ +/g, "-")}
-                                  className="glossary__term"
-                                >
                                   {title.charAt(0).toUpperCase() +
                                     title.slice(1)}
-                                </h3>
+
                               </Link>
-                              <div
+                              </dt>
+                              <dd
                                 dangerouslySetInnerHTML={{
                                   __html: converter
                                     .makeHtml(definition)
@@ -225,7 +226,7 @@ class Glossary extends React.Component {
                                   </Link>
                                 </>
                               ) : null}
-                            </section>
+                            </dl>
                           </>
                         ))}
                     </>
@@ -247,7 +248,7 @@ export const pageQuery = graphql`
   query DocsWithDefinitions {
     docsWithDFNs: allMdx(
       filter: {
-        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        frontmatter: { title: { ne: "Style Guide" } }
         rawBody: { regex: "/dfn/" }
       }
     ) {
@@ -265,7 +266,7 @@ export const pageQuery = graphql`
     }
     docsWithDefLists: allMdx(
       filter: {
-        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        frontmatter: { title: { ne: "Style Guide" } }
         rawBody: { regex: "/<dt/" }
       }
     ) {

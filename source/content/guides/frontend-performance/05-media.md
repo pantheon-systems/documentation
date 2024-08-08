@@ -29,10 +29,6 @@ Pantheon supports a maximum upload resolution of 3999 pixels for images.
 
 Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. Lazy-loading media elements, especially images, is a powerful way to increase perceived performance and reduce time-to-first-render.
 
-Lazy-loading images is default behavior in WordPress 5.5 and the latest version of Drupal.
-
-Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/) plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader) module for Drupal.
-
 ### WordPress
 
 WordPress 5.5 [lazy-loads images by default](https://make.wordpress.org/core/2020/04/08/lazy-loading-of-images-is-in-core/).

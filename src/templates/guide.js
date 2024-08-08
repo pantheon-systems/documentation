@@ -1,74 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-
 import GuideLayout from "../layout/GuideLayout"
-import HeaderBody from "../components/headerBody"
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
-import Navbar from "../components/navbar"
-import NavButtons from "../components/navButtons"
 import SEO from "../layout/seo"
-import Releases from "../components/releases"
-import TerminusVersion from "../components/terminusVersion"
-import Commands from "../components/commands"
-import GetFeedback from "../components/getFeedback"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
-import BuildTools from "../components/buildTools.js"
-import BuildToolsChangelog from "../components/buildToolsChangelog.js"
-import Partial from "../components/partial.js"
-import Image from "../layout/image"
-import ReviewDate from "../components/reviewDate"
-import Youtube from "../components/youtube"
-import ResourceSelector from "../components/resourceSelector"
-import DNSProviderDocs from "../components/dns-provider-docs.js"
-import Check from "../components/check.js"
-import LocaldevChangelog from "../components/localdevChangelog"
 import SearchBar from "../layout/SearchBar"
-import Wistia from "../components/wistia"
-
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Releases,
-  TerminusVersion,
-  Commands,
-  Enablement,
-  Download,
-  BuildTools,
-  BuildToolsChangelog,
-  Partial,
-  Image,
-  ReviewDate,
-  Youtube,
-  ResourceSelector,
-  DNSProviderDocs,
-  Check,
-  LocaldevChangelog,
-  Wistia,
-}
+import HeaderBody from "../components/headerBody"
+import Navbar from "../components/navbar"
+import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import NavButtons from "../components/navButtons"
+import TOC from "../components/toc"
+import MdxWrapper from "../components/mdxWrapper"
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
@@ -135,7 +75,7 @@ class GuideTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="docs-main" tabindex="-1">
+          <main slot="content" id="docs-main" tabIndex="-1">
             <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
               <HeaderBody
                 title={node.frontmatter.title}
@@ -148,9 +88,7 @@ class GuideTemplate extends React.Component {
                 reviewDate={node.frontmatter.reviewed}
                 isoDate={isoDate.frontmatter.reviewed}
               />
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{node.body}</MDXRenderer>
-              </MDXProvider>
+              <MdxWrapper mdx={node.body} />
             </article>
           </main>
           <NavButtons

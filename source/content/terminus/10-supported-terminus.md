@@ -23,31 +23,30 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version          | Release Date       | EOL Date           |
 |------------------|--------------------|--------------------|
-| 3.3.0            | November 29, 2023  |                    |
+| 3.5.1            | June 13, 2024      |                    |
+| 3.5.0            | June 6, 2024       | June 13, 2025      |
+| 3.4.0            | April 23, 2024     | June 6, 2025       |
+| 3.3.5            | February 28, 2024  | April 23, 2025     |
+| 3.3.4            | February 27, 2024  | February 28, 2025  |
+| 3.3.3            | January 11, 2024   | February 27, 2025  |
+| 3.3.2            | January 11, 2024   | January 11, 2025   |
+| 3.3.1            | November 30, 2023  | January 11, 2025   |
+| 3.3.0            | November 29, 2023  | November 30, 2024  |
 | 3.2.2            | September 28, 2023 | November 29, 2024  |
 | 3.2.1            | June 1, 2023       | September 28, 2024 |
-| 3.2.0            | May 22 , 2023      | June 1, 2024       |
-| 3.1.5            | April 6, 2023      | May 22, 2024       |
-| 3.1.4            | March 1, 2023      | April 6, 2024      |
-| 3.1.3            | February 1, 2023   | March 1, 2024      |
-| 3.1.2            | January 3, 2023    | February 1, 2024   |
-| 3.1.1            | November 8, 2022   | January 3, 2024    |
-| 3.1.0            | October 18, 2022   | November 8, 2023   |
-| 3.0.9            | October 06, 2022   | October 18, 2023   |
-| 3.0.8            | August 22, 2022    | October 06, 2023   |
-| 3.0.7            | March 29, 2022     | August 22, 2023    |
-| 3.0.6 or earlier | February 18, 2022  | March 29, 2023     |
+| 3.2.0 or earlier | May 22 , 2023      | June 1, 2024       |
+
 
 ### PHP Version Compatibility Matrix
 
-| PHP Version | Terminus 3.x |
-| ---------- | :-----------: |
-| 8.3 | <span style="color:green">✔</span>         |
-| 8.2 | <span style="color:green">✔</span>         |
-| 8.1 | <span style="color:green">✔</span>         |
-| 8.0 | <span style="color:green">✔</span>        |
-| 7.4 | <span style="color:green">✔</span>         |
-| 7.3 or earlier | ❌          |
+| PHP Version |            Terminus 3.x            |
+| ---------- |:----------------------------------:|
+| 8.3 | <span style="color:green">✔</span> |
+| 8.2 | <span style="color:green">✔</span> |
+| 8.1 | <span style="color:green">✔</span> |
+| 8.0 | <span style="color:green">✔</span> |
+| 7.4 | <span style="color:green">✔</span> |
+| 7.3 or earlier |                 ❌                  |
 
 ## More Resources
 

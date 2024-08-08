@@ -49,10 +49,13 @@ You may contact any of our community Administrators to report a Code of Conduct 
 | Name | Email |
 |------|-------|
 | McKenna Regets (She/Her) | <mckenna.regets@pantheon.io> |
+| Steve Persch (He/Him) | <steve.persch@pantheon.io> |
+| Steve Bresnick (He/Him) | <steve.bresnick@pantheon.io> |
+| Rachel Whitton (She/Her) | <rachel.whitton@pantheon.io> |
 
 ## Scope
 
-This Code of Conduct applies both within community spaces (e.g. documentation, mailing lists, or online community spaces) and in public spaces when an individual is representing Pantheon or its community. Examples of representing Pantheon’s community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event (e.g. a meetup or conference). Representation may be further defined and clarified by community admins.
+This Code of Conduct applies for all community spaces (e.g. documentation, mailing lists, or online community spaces) and in public spaces when an individual is representing Pantheon or its community. Examples of representing Pantheon’s community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event (e.g. a meetup or conference). Representation may be further defined and clarified by community admins.
 
 ## Enforcement
 
@@ -61,10 +64,6 @@ This Code of Conduct applies both within community spaces (e.g. documentation, m
 - If a community member engages in unacceptable behavior, we may take any action deemed appropriate, up to and including a temporary ban or permanent expulsion from the community without warning.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the community team at <community@pantheon.io> or by filling out [this anonymous form](https://forms.gle/Rzdb79EpczjU5MRM8). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The community team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately. Community maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project’s leadership.
-
-## Rewards Disclaimer
-
-Community members will be able to accrue “points” that can be redeemed for reward(s) in the storefront. When redeeming a reward(s), you agree to pay any applicable taxes levied based on any rewards received by you under the Pantheon Community Hub, and to comply with any professional rules regarding use of the Program or points or rewards awarded thereunder.This program is open to legal residents of the United States of America and rewards will only be awarded within said locations. Reward redemptions exceeding more than $600 in aggregate payments in a calendar year are considered taxable income by U.S. law. You are also responsible for your compliance with all applicable laws, governmental regulations, and internal corporate policies affecting your business and for any use you may make of the Program.
 
 ## Privacy
 

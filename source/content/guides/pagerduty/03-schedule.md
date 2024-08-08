@@ -66,7 +66,7 @@ Next, we'll create an on-call Schedule, to configure a scalable custom alert wor
 
 4. Click **<Icon icon="check" />Create Schedule**.
 
-  Refer to the the **Final Schedule** at the bottom of the page to see who's on call and the first point of contact:
+  Refer to the **Final Schedule** at the bottom of the page to see who's on call and the first point of contact:
 
   ![Final Schedule](../../../images/pagerduty/pg-final-schedule.png)
 

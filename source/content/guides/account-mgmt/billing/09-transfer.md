@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Transfer Ownership and Billing
 description: Learn how to change who is responsible for managing billing.
 contenttype: [guide]

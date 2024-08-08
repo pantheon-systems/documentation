@@ -44,7 +44,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Open your terminal and enter the following command to generate a key:
 
    ```bash{promptUser: user}
-   ssh-keygen -t rsa
+   ssh-keygen -t rsa -m PEM
    ```
 
   Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
@@ -79,7 +79,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Open your terminal and enter the following command to generate a key. This command works for Windows 10:
 
    ```bash{promptUser: winshell}
-   ssh-keygen -t rsa
+   ssh-keygen -t rsa -m PEM
    ```
 
   Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
@@ -163,8 +163,7 @@ You can use your Dev environment to clone your site code to your workstation:
 ![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
 ### Site Access After Removing Keys
-
-You can still access the sites if you have active sites and no keys remaining. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
+After removing SSH Keys from your user account, you will not be able to interact with the application and codeservers directly through command line interfaces like Git, SFTP, WP-CLI, and Drush. However removing SSH keys is separate from revoking the machine tokens used by Terminus to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.
 
 ## Troubleshooting
 
