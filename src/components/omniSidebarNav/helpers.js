@@ -17,10 +17,12 @@ const turnItemsIntoLinks = (item, activePage) => {
   // If the link is external, add an icon to indicate that.
   // Internal links will start with a slash.
   if (item.link.startsWith('http')) {
-    linkText = (
-      <>
-        <Icon iconName="externalLink" /> {item.title}
-      </>
+    linkText = React.createElement(
+      React.Fragment,
+      null,
+      React.createElement(Icon, { iconName: "externalLink" }),
+      " ",
+      item.title
     );
   }
 
