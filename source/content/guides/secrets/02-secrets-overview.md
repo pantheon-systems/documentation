@@ -105,7 +105,7 @@ When Integrated Composer attempts to get secrets for `my-personal-site` it will 
 - Process the resulting secrets to make them available to Composer.
 
 On the other hand, when Integrated Composer attempts to get secrets for `my-org-site`, it will go like this:
-- Get the secrets of scope `ic` for `my-org-site`.
+- Fetch the secrets in the scope of `ic` for `my-org-site`.
 - Apply environment overrides for the current environment.
 - Look at the site owner. It determines it is the organization `my-org`.
 - Get the secrets for the organization `my-org` with scope `ic`.
