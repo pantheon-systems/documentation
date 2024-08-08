@@ -20,7 +20,7 @@ If you want to use Pantheon Secrets in your Drupal application through the [Key 
 
 ## Pantheon Secrets detailed example
 
-In this guide we will go over an end-to-end example on how to setup secrets for a given site and how to use those secrets on a module that integrates with the Key module. For this example, we will use the [Sendgrid API](https://www.drupal.org/project/sendgrid_api) and [Sendgrid Mailer](https://www.drupal.org/project/sendgrid_mailer) modules.
+In this guide we will go over an end-to-end example on how to setup secrets for a given site and how to use those secrets on a module that integrates with the Key module. For this example, we will use the [SendGrid API](https://www.drupal.org/project/sendgrid_api) and [SendGrid Mailer](https://www.drupal.org/project/sendgrid_mailer) modules.
 
 ### Prerequisites
 
