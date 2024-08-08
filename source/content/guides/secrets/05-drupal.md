@@ -36,7 +36,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
     ```bash{promptUser: user}
     composer require drupal/pantheon_secrets drupal/sendgrid_api drupal/sendgrid_mailer
     git add composer.json composer.lock
-    git commit -m "Add required modules."
+    git commit -m "Add Pantheon Secrets and SendGrid modules."
     git push
     ```
 
