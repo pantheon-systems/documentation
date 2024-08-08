@@ -108,7 +108,7 @@ On the other hand, when Integrated Composer attempts to get secrets for `my-org-
 - Fetch the secrets in the scope of `ic` for `my-org-site`.
 - Apply environment overrides for the current environment.
 - Look at the site owner. The organization `my-org` is identified.
-- Get the secrets for the organization `my-org` with scope `ic`.
+- Fetch the secrets for the organization `my-org` with scope `ic`.
 - Apply the environment overrides to those secrets for the current environment.
 - Merge the resulting organization secrets with the site secrets with the following caveats:
     - Site secrets take precedence over organization secrets. This means that the value for site-owned secret named `foo` will be used instead of the value for an org-owned secret with the same name `foo`.
