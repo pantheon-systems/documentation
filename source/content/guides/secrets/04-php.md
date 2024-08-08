@@ -38,7 +38,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 - Make sure you have access to a WordPress site on Pantheon.
 
-- Make sure you have [terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) in your machine
+- Make sure you have [Terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) on your local machine.
 
 - Install the [Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation)
 
