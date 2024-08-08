@@ -110,6 +110,20 @@ lando start
 
 You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
 
+## Linting and Code Formatting
+We use ESLint and Prettier to enforce code style. On each pull request to the repository, if any `.js`, `.jsx`, `.ts` or `.tsx` files are modified in the `/src` directory, ESLint will run against our Prettier configuration to check for code styling issues on the updated/changed files.
+
+To check for linting issues locally, run:
+```bash
+npm run lint
+```
+
+To automatically fix linting issues across the entire `/src` directory, run:
+```bash
+npm run format
+```
+Be cautious when running this command, as it will automatically fix any linting issues it can.
+
 ## Testing
 
 We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
