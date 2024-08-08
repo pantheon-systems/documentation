@@ -58,7 +58,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 1. Add the Key entity in one of the different available ways:
 
-    1. Add a new key through the Key module UI. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "Sendgrid" as the Key type and "Pantheon" as the Key provider)
+    1. Add a new key through the Key module UI. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "SendGrid" as the Key type and "Pantheon" as the Key provider)
 
         ![Screenshot of creating a new Key entity with type "Sendgrid" and provider "Pantheon"](../../../images/guides/secrets/add-key.png)
 
