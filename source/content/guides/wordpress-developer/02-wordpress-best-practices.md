@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [workflow, security, composer]
-reviewed: "2022-05-16"
+reviewed: "2024-08-12"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-best-practices
 ---
