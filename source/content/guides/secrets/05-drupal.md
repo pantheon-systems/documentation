@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/drupal
-reviewed: "2024-07-30"
+reviewed: "2024-08-15"
 showtoc: true
 ---
 
