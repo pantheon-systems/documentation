@@ -26,7 +26,9 @@ The following table indicates availability of the specified Drupal version, as w
 ## Drupal 11 on Pantheon
 Drupal 11 is not yet an option when creating a new site. It will be added to the Pantheon dashboard in the coming weeks. However, Drupal 11 has been tested and works on Pantheon environments.
 
-To install Drupal 11 on your site, you must [create a new Drupal 10 site](/add-site-dashboard) then [upgrade to Drupal 11 via composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
+If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
+
+To create a new Drupal 11 site on Pantheon, first you have to [create a new Drupal 10 site](/add-site-dashboard) and then [upgrade to Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
 ## Drush Version Support
 
