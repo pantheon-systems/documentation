@@ -1,7 +1,7 @@
 ---
-title: Multisite Configuration
-subtitle: Create a Composer-managed WordPress Site with Bedrock
-description: Learn more about Bedrock and Composer-managed WordPress sites.
+title: WordPress with Composer on Pantheon
+subtitle: Multisite Configuration
+description: Learn how to configure a WordPress multisite with Composer on Pantheon.
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
@@ -10,11 +10,11 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
-contributors: [whitneymeredith, jspellman814, jazzsequence]
+contributors: [jazzsequence]
 layout: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/wordpress-composer-managed
-anchorid: wordpress-composer-managed
+permalink: docs/guides/wordpress-composer/multisite-configuration
+anchorid: multisite-configuration
 ---
 
 <Alert title="Early Access" type="info" icon="leaf">
