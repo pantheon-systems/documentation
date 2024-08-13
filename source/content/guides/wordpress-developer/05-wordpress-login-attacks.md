@@ -67,11 +67,14 @@ SSO often includes or requires [MFA](#add-multi-factor-authentication-mfa) to he
 
 1. Optional. Use plugins, such as [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) or [MiniOrange](https://plugins.miniorange.com/wordpress), to simplify the SSO integration with your IdP.
 
+### Block the `/users` REST Endpoint for Unauthenticated Users
+
+The WordPress REST API endpoint at `/wp-json/wp/v2/users` shows a full list of all usernames on a WordPress site and associated metadata for users who have at least one published post in a public post type. While this information is available elsewhere, it can occasionally be prudent to disallow access to this list of users to unauthenticated users. Note: this should not _replace_ any of the other methods of avoiding attacks described above. Good site security should involve more than simply hiding the list of users on a site (especially when that information is already available, for example, in the site's HTML markup).
+
+Refer to the [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices#option-2-block-only-the-users-wordpress-rest-endpoint) doc for a code snippet that you can use to block anonymous access to `/users`.
+
 ## More Resources
 
 - [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso/)
 - [WordPress Security](/guides/wordpress-pantheon/wp-security)
 - [Secure Development on Pantheon](/guides/secure-development)
-
-
-

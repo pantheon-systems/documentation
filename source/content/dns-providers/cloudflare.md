@@ -110,6 +110,20 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
    ![Example DNS only](../../images/cloudflare-full.png)
 
+#### Restrict Content Based on Geographic Location
+
+If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
+
+#### Access to the /.well-known Path Is Needed
+
+If you're using Cloudflare's services to control or block traffic, an exception must be made for the `/.well-known` path in Cloudflare's config. If the `/.well-known` path is not accessible, Lets Encrypt may not be able to issue a certificate.
+
+#### Cache Invalidation Best Practices
+
+Cloudflare allows you to turn on caching. However, no cache invalidation hook is fired when you make content changes if you have Cloudflare caching turned on. This means that Cloudflare will be unaware of your changes and persist with stale cache.
+
+We recommend that you turn off Cloudflare caching until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
+
 ## CAA Records (Optional)
 
 A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS certificates for a domain.
@@ -139,16 +153,6 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
   ![CAA record](../../images/cf-caa-final.png)
 
 1. Repeat this process for the `www` subdomain.
-
-## Restrict Content Based on Geographic Location
-
-If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
-
-## Cache Invalidation Best Practices
-
-Cloudflare allows you to turn on caching. However, no cache invalidation hook is fired when you make content changes if you have Cloudflare caching turned on. This means that Cloudflare will be unaware of your changes and persist with stale cache.
-
-We recommend that you turn off Cloudflare caching until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
 
 ## Next Steps
 
