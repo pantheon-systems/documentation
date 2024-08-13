@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [workflow, security, composer]
-reviewed: "2024-08-12"
+reviewed: "2022-05-16"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-best-practices
 ---
@@ -66,9 +66,7 @@ There are many plugins and themes in WordPress that require license keys. It is 
 
 - Follow our [Frontend Performance](/guides/frontend-performance) guide to tune your WordPress site.
 
-## Disable Anonymous Access to the WordPress REST API
-
-### Option 1: Block the entire WordPress REST API
+## Disable Anonymous Access to WordPress Rest API
 
 The WordPress REST API is enabled for all users by default. You can disable the WordPress REST API for anonymous requests to improve security and avoid exposing admin users. This action improves site safety and reduces unexpected errors that can result in compromised WordPress core functionalities.
 
@@ -92,30 +90,6 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 	return $result;
 });
 ```
-
-### Option 2: Block only the `/users` WordPress REST endpoint
-
-If blocking the entire REST API is not feasible for your site, you can choose a more selective approach. The WordPress REST API exposes the complete users list at the `/wp-json/wp/v2/users` endpoint. This is by design -- the `/users` endpoint contains data that is public elsewhere on your site and availalbe in other public places in WordPress, notably the HTML output and RSS feeds including name, avatar, etc. These endpoints are public so that the data to view and render content from elsewhere in the REST API is available. For example, since a post links to the author user, making user information easily accessible makes it simpler to access from API tools and integrations.
-
-However, in many cases, exposing the `/user` endpoint is seen as a vulnerability in penetration testing. Additionally, if your site uses email addresses as usernames, it could be exposing every email address of a user that has a published post on the site. You can disable access to `/wp-json/wp/v2/users` with the following filter:
-
-```php
-function restrict_user_endpoints( $access ) {
-	if ( ! is_user_logged_in() || ! current_user_can( 'list_users' ) ) {
-		$requested_route = $_SERVER['REQUEST_URI'];
-		if ( strpos( $requested_route, '/wp/v2/users' ) !== false ) {
-			return new WP_Error( 'rest_forbidden', 'Sorry, you are not allowed to do that.', array( 'status' => 403 ) );
-		}
-	}
-
-  return $access;
-}
-add_filter( 'rest_authentication_errors', 'restrict_user_endpoints' );
-```
-
-This filter checks if a user is logged in and if they have access to the `list_users` capability in the WordPress admin. If neither is true, it returns a REST error and blocks access to `/users` and descendent endpoints (e.g. `/wp-json/wp/v2/users/1` for the user with an ID of 1 in the database) while still allowing access to those endpoints for logged-in users.
-
-For more information about WordPress user roles and capabilities, refer to the [Roles and Capabilities documentation](https://wordpress.org/documentation/article/roles-and-capabilities/) on WordPress.org.
 
 ## Security Headers
 
