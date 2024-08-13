@@ -23,7 +23,7 @@ This guide covers features and use cases of the Pantheon Secrets feature; it cou
 Key features include:
 * **Secure**: Secrets are encrypted at rest and securely hosted on Pantheon.
 * **Easy to use**: Create and update secrets via Terminus.
-* **Governable**: Secrets can be set at organization level and shared to with the sites owned by that organization.
+* **Governable**: Secrets can be set at organization level and shared with all the sites owned by that organization.
 * **Overridable**: Secrets can be overridden at environment level when needed.
 
 This feature also supports:
