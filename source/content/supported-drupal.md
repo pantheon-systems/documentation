@@ -10,6 +10,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2024-08-13"
 ---
 
 The following table indicates availability of the specified Drupal version, as well as our usage recommendations and our support scope.
