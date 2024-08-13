@@ -4,13 +4,13 @@ published_date: "2024-08-14"
 categories: [wordpress, action-required]
 ---
 
-The 1.32.1 update is now available for the [WordPress (composer managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. This release fixes a bug that was causing some WordPress core resources (CSS and JS files, as well as the default favicon image) to 404 due to improper URL construction on single sites.
+The 1.32.1 update is now available for the [WordPress (composer managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. This release fixes a bug that was causing some WordPress core resources (CSS and JS files, as well as the default favicon image) to return a 404 error due to improper URL construction on single sites.
 
 For more details, refer to the [WordPress (Composer Managed) changelog](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/CHANGELOG.md).
 
 #### Action required
 
-To benefit from these updates and ensure your site is using the most current version, you need to apply the update to your WordPress (composer managed) site or upstream.
+To benefit from these updates and ensure your site is using the most current version, apply the update to your WordPress (composer managed) site or upstream.
 
 #### Applying updates
 
