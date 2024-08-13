@@ -81,6 +81,8 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 1. Make sure your site "Email Address" (`/admin/config/system/site-information`) matches a verified Sender Identity in SendGrid.
 
+1. Go to the Default Mail System Configuration page (`/admin/config/system/mailsystem`) and set `Formatter` and `Sender` to `SendGrid Mailer`.
+
 1. Go to the SendGrid email test page (`/admin/config/services/sendgrid/test`) and test your SendGrid integration by sending a test email.
 
     ![Screenshot of Sendgrid email test page in Drupal UI](../../../images/guides/secrets/sendgrid-email-test.png)
