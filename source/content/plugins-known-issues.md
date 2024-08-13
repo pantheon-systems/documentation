@@ -790,7 +790,7 @@ ___
 
 <ReviewDate date="2024-08-13" />
 
-**Issue:** The [PhastPress](https://wordpress.org/plugins/phastpress/) plugin creates an SQLLite database on Pantheon's filesystem, which is problematic. Therefore, it is recommended to not use this plugin on Pantheon.
+**Issue:** [PhastPress](https://wordpress.org/plugins/phastpress/) is a site optimization plugin that creates an SQLite database on Pantheon's filesystem. This is problematic as it can vastly increase the amount of filesystem storage your site consumes and run up against resource limits. This plugin is not recommended on Pantheon.
 
 **Solution**: Consider other optimization plugins, such as [Autoptimize](https://wordpress.org/plugins/autoptimize/) and [Flying Scripts](https://wordpress.org/plugins/flying-scripts/).
 
