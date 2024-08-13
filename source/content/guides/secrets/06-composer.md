@@ -34,7 +34,7 @@ If your Composer-based dependency is private, and the repository supports OAuth 
 1. Set the secret value to the token via terminus:
 
    ```bash{promptUser: user}
-   terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=ic`
+   terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=ic
    ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
@@ -65,7 +65,7 @@ If your Composer-based dependency is private, and the repository supports OAuth 
 1. Set the secret value to the token via Terminus:
 
    ```bash{promptUser: user}
-   terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=ic`
+   terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=ic
    ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
