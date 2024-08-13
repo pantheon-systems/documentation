@@ -1,6 +1,6 @@
 ---
 title: Pantheon Secrets Guide
-subtitle: Local development using Pantheon Secrets
+subtitle: Local Development Usage
 description: Developing locally presents some unique challenges once Pantheon Secrets are built into your workflow. These are some tips to help you get past struggling with trying to reproduced secret behavior while developing locally.
 contributors: [stovak]
 contenttype: [guide]
@@ -11,8 +11,8 @@ audience: [development]
 product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/secrets/local-development
-reviewed: "2024-07-30"
+permalink: docs/guides/secrets/local
+reviewed: "2024-08-15"
 showtoc: true
 ---
 ## Local Environment Usage
@@ -34,12 +34,12 @@ To get this file, you should use the [plugin](https://github.com/pantheon-system
     ```
 
 2. Generate the secrets file like this:
-    ```bash
+    ```bash{promptUser: user}
     terminus secret:site:local-generate --filepath=./secrets.json
     ```
 
 3. And rebuild lando application:
-    ```bash
+    ```bash{promptUser: user}
     lando rebuild -y
     ```
 
@@ -57,12 +57,12 @@ Now, you will be able to use your secrets through the SDK.
     ```
 
 3. Generate the secrets file
-    ```bash
+    ```bash{promptUser: user}
     terminus secret:site:local-generate --filepath=./secrets.json
     ```
 
 4. Restart your ddev environment
-    ```bash
+    ```bash{promptUser: user}
     ddev restart
     ```
 

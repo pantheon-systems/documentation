@@ -1,6 +1,6 @@
 ---
 title: Pantheon Secrets Guide
-subtitle: Basic Concepts
+subtitle: Secrets Overview
 description: Gaining familiarity with some concepts about Pantheon Secrets will help you make the most of this feature.
 contributors: [stovak]
 contenttype: [guide]
@@ -11,8 +11,8 @@ audience: [development]
 product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/secrets/basic-concepts
-reviewed: "2024-07-30"
+permalink: docs/guides/secrets/overview
+reviewed: "2024-08-15"
 showtoc: true
 ---
 
@@ -61,6 +61,13 @@ Site-owned secrets are available to the site and all of its environments. A comm
 ### Environment override
 Environment overrides provide overrides to a secret value for a specific environment. A common use case for this are API keys that are different in production and non-production environments.
 
+<Alert title="Note" type="info" >
+
+Due to platform design, the "environment" for Integrated Composer will always be either `dev` or a multidev. It will never be `test` or `live`. Therefore we do not recommend using environment overrides for Composer access. The primary use-case for environment overrides is for the CMS key-values and environment variables that need to be different between your live and non-live environments.
+
+</Alert>
+
+
 ## Value Resolution
 
 1. Organization values have the lowest priority. They form the base value that is used when there is no more specific value provided for the site or environment.
@@ -70,3 +77,40 @@ Environment overrides provide overrides to a secret value for a specific environ
 4. Environmental overrides have the highest priority. If the override exists, it will become the value provided to the calling function.
 
 ![Secrets Relationships](../../../images/guides/secrets/secrets-relationships.png)
+
+
+### The life of a secret
+
+When a given runtime (e.g. Integrated Composer or an environment PHP runtime) fetches secrets for a given site (and environment), the process will be as follows:
+
+- Fetch secrets for site (of the given type and scopes).
+
+- Apply environment overrides (if any) based on the requesting site environment.
+
+- If the site is owned by an organization:
+
+    - Fetch the organization secrets.
+
+    - Apply environment overrides (if any) based on the requesting site environment.
+
+    - Merge the organization secrets with the site secrets (the following example will describe this process in more detail).
+
+### Example Value Resolution
+Given you have an integrated composer site named `my-org-site` which belongs to an organization `my-org`, and you also have another integrated composer site named `my-personal-site` which belongs to your personal Pantheon account.
+
+When Integrated Composer attempts to get secrets for `my-personal-site` it will work like this:
+- Get the secrets of scope `ic` for `my-personal-site`.
+- Apply environment overrides for the current environment.
+- Look at `my-personal-site` owner. In this case, it is NOT an organization so there are no organization secrets to merge.
+- Process the resulting secrets to make them available to Composer.
+
+On the other hand, when Integrated Composer attempts to get secrets for `my-org-site`, it will work like this:
+- Fetch the secrets in the scope of `ic` for `my-org-site`.
+- Apply environment overrides for the current environment.
+- Look at the site owner. The organization `my-org` is identified.
+- Fetch the secrets for the organization `my-org` with scope `ic`.
+- Apply the environment overrides to those secrets for the current environment.
+- Merge the resulting organization secrets with the site secrets with the following caveats:
+    - Site secrets take precedence over organization secrets. This means that the value for site-owned secret named `foo` will be used instead of the value for an org-owned secret with the same name `foo`.
+    - Only the secrets for the OWNER organization are being merged. If the site has a Supporting Organization, it will be ignored.
+- Process the resulting secrets to make them available to Composer.
