@@ -59,7 +59,6 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 	Config::define( 'SITE_ID_CURRENT_SITE', 1 );
 	Config::define( 'BLOG_ID_CURRENT_SITE', 1 );
 	```
-	![Enabling the Network](../../../images/wordpress-composer/04-multisite-enable-network.png)
 6. Save your changes and commit them to your Git repository.
 7. Log into your site. When you log back into your WordPress admin dashboard, you will see a new **My Sites** menu item in the top left corner. This is where you can manage your network of sites. You now have a WordPress subdirectory multisite network set up on a WordPress (Composer Managed)-based upstream.
 	![My Sites](../../../images/wordpress-composer/04-multisite-my-sites.png)
