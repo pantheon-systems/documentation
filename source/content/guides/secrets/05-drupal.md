@@ -66,14 +66,10 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
         ![Screenshot of Sync Pantheon Secrets page in Drupal UI](../../../images/guides/secrets/sync-keys.png)
 
-        Then, edit the `sendgrid_api` Key and change the type to "SendGrid".
-
     1. Use the provided Drush command to sync all of your secrets into Key entities:
         ```bash{promptUser: user}
         terminus drush <site>.<env> -- pantheon-secrets:sync
         ```
-
-        Then, edit the `sendgrid_api` Key and change the type to "SendGrid"
 
 1. Go to the SendGrid API Configuration page (`/admin/config/services/sendgrid`) and select your Key item.
 
