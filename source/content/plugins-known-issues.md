@@ -2,7 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish, miriamgoldman]
 contenttype: [doc]
 showtoc: true
 innav: [true]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-07-12"
+reviewed: "2024-08-13"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -783,6 +783,16 @@ ___
 **Issue:** The [Object Sync for Salesforce](https://wordpress.org/plugins/object-sync-for-salesforce/) plugin adds dependencies using Composer, and one of these dependencies provides a .gitignore file which prevents files from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution:** Remove the `.gitignore` file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
+
+___
+
+## PhastPress
+
+<ReviewDate date="2024-08-13" />
+
+**Issue:** The [PhastPress](https://wordpress.org/plugins/phastpress/) plugin creates an SQLLite database on Pantheon's filesystem, which is problematic. Therefore, it is recommended to not use this plugin on Pantheon.
+
+**Solution**: Consider other optimization plugins, such as [Autoptimize](https://en-ca.wordpress.org/plugins/autoptimize/) and [Flying Scripts](https://wordpress.org/plugins/flying-scripts/).
 
 ___
 
