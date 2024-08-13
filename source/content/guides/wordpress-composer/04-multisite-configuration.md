@@ -46,7 +46,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 	Config::define( 'WP_ALLOW_MULTISITE', true );
 	```
 3. Visit your development site's WordPress admin and navigate to **Tools** > **Network Setup**.
-    [image]
+    ![Network Setup page](../../../images/wordpress-composer/04-multisite-network-setup.png)
 4. Choose **Sub-domains** or **Sub-directories** (depending on your needs), fill in the Network Title and Admin Email, and click **Install**.
 5. You will be given instructions to update your `config/application.php` file. Below where you added the `WP_ALLOW_MULTISITE` line, copy and paste the code provided. The `SUBDOMAIN_INSTALL` value will be `true` or `false` depending on the option you chose in the previous step. For example, if you chose subdirectories, your `config/application.php` file should look like this:
 
@@ -59,9 +59,10 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 	Config::define( 'SITE_ID_CURRENT_SITE', 1 );
 	Config::define( 'BLOG_ID_CURRENT_SITE', 1 );
 	```
+	![Enabling the Network](../../../images/wordpress-composer/04-multisite-enable-network.png)
 6. Save your changes and commit them to your Git repository.
 7. Log into your site. When you log back into your WordPress admin dashboard, you will see a new **My Sites** menu item in the top left corner. This is where you can manage your network of sites. You now have a WordPress subdirectory multisite network set up on a WordPress (Composer Managed)-based upstream.
-	[image]
+	![My Sites](../../../images/wordpress-composer/04-multisite-my-sites.png)
 	
 ## Using Subdomain Multisite on Pantheon
 
