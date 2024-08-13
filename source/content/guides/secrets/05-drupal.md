@@ -58,18 +58,29 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 1. Add the Key entity in one of the different available ways:
 
-    1. Add a new key through the Key module UI. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "SendGrid" as the Key type and "Pantheon" as the Key provider)
+    * **Option 1: Manually**
 
-        ![Screenshot of creating a new Key entity with type "Sendgrid" and provider "Pantheon"](../../../images/guides/secrets/add-key.png)
+      Go to `/admin/config/system/keys` and click **Add key**. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "SendGrid" as the Key type and "Pantheon" as the Key provider)
 
-    1. Go to `/admin/config/system/keys/pantheon` and click on the "Sync Keys" button to get all of the available secrets into Key entities.
+      ![Screenshot of creating a new Key entity with type "Sendgrid" and provider "Pantheon"](../../../images/guides/secrets/add-key.png)
 
-        ![Screenshot of Sync Pantheon Secrets page in Drupal UI](../../../images/guides/secrets/sync-keys.png)
+    * **Option 2: Sync Keys via Drupal Admin**
 
-    1. Use the provided Drush command to sync all of your secrets into Key entities:
-        ```bash{promptUser: user}
-        terminus drush <site>.<env> -- pantheon-secrets:sync
-        ```
+      Go to `/admin/config/system/keys/pantheon` and click on the "Sync Keys" button to get all of the available secrets into Key entities.
+
+      ![Screenshot of Sync Pantheon Secrets page in Drupal UI](../../../images/guides/secrets/sync-keys.png)
+
+      Then, go to `/admin/config/system/keys` to edit the `sendgrid_api` Key and change the type to "SendGrid".
+
+    * **Option 3: Sync Keys via Terminus**
+
+      Use the provided Drush command to sync all of your secrets into Key entities:
+
+      ```bash{promptUser: user}
+      terminus drush <site>.<env> -- pantheon-secrets:sync
+      ```
+
+      Then, go to `/admin/config/system/keys` to edit the `sendgrid_api` Key and change the type to "SendGrid".
 
 1. Go to the SendGrid API Configuration page (`/admin/config/services/sendgrid`) and select your Key item.
 
