@@ -16,7 +16,7 @@ The following table indicates availability of the specified Drupal version, as w
 
 | Drupal Version | Available | Recommended | Supported |
 | ----------- | :---------: | :---------: | :---------: |
-| 11          | ⚠️ <Popover title="Drupal 11 Availability" content="See the <a href='#drupal-11-on-pantheon'>following section</a> for how to run Drupal 11 on Pantheon today." />        | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
+| 11          | ⚠️ <Popover title="Drupal 11 Availability" content="See the <a href='#drupal-11-on-pantheon'>following section</a> for how to set up Drupal 11 on Pantheon today." />        | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
 | 9           | <span style="color:green">✔</span>          | <span style="color:green">✔</span>           | <span style="color:green">✔</span>         |
 | 8           | <span style="color:green">✔</span>          | ❌           | <span style="color:green">✔</span>         |
