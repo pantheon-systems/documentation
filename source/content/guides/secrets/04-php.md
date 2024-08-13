@@ -17,7 +17,7 @@ showtoc: true
 ---
 
 ## Reading secrets from PHP
-It is only possible to read secrets from the Drupal or WordPress site. Modifying secrets from within the application itself is not supported. Secrets are created and modified via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
+Secrets can be read, updated, created, and deleted via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin). WordPress and Drupal however, can only read secrets at runtime - there is no way to modify secrets via the application or in code.
 
 Secrets must have the scope `web` to be visible from your application. Secrets are cached in the server for 15 minutes, so you must wait for a while after modifying secret values before they will be available for use. This cache is also encrypted at rest.
 
@@ -28,7 +28,9 @@ Note: this also applies to quicksilver scripts.
 The function `pantheon_get_secret()` may be used to fetch the value of a single secret.
 
 ```php
-$secret_value = pantheon_get_secret("SECRET_NAME");
+if ( function_exists('pantheon_get_secret') ) {
+  $secret_value = pantheon_get_secret("SECRET_NAME");
+}
 ```
 
 ## WordPress detailed example
