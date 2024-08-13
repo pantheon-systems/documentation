@@ -17,12 +17,6 @@ permalink: docs/guides/wordpress-composer/multisite-configuration
 anchorid: multisite-configuration
 ---
 
-<Alert title="Early Access" type="info" icon="leaf">
-
-The WordPress Composer Managed upstream is available for [Early Access](/oss-support-levels#early-access) participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [our community Slack](https://pantheon-community.slack.com/) if you don't already have an account) to connect with other Pantheon users also using the upstream (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/)). Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
-
-</Alert>
-
 This section provides information on how to configure your WordPress (Composer Managed) site on Pantheon for WordPress multisite. This guide assumes that you have already set up a [WordPress Multisite upstream](/guides/multisite/#request-a-wordpress-multisite) and created a new site using that upstream. If you haven't already, you should also read through our [guide on WordPress Multisite](/guides/multisite) before beginning this process.
 
 Because Bedrock uses `Config::define()` and `config/application.php` instead of traditional `define()` statements in `wp-config.php`, you will not be able to use WP-CLI via Terminus to enable multisite as documented in our standard [multisite configuration guide](/guides/multisite/config/).
