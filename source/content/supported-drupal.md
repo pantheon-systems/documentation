@@ -24,7 +24,7 @@ The following table indicates availability of the specified Drupal version, as w
 | 6           | ❌          | ❌           | ❌          |
 
 ## Drupal 11 on Pantheon
-Drupal 11 is not yet an option when creating a new site and there is no current ETA for when it will be added. However, Drupal 11 has been tested and is reported to work on Pantheon today.
+Drupal 11 is not yet an option when creating a new site. It will be added to the Pantheon dashboard in the coming weeks. However, Drupal 11 has been tested and works on Pantheon environments.
 
 To run Drupal 11 on the platform, you must [create a new Drupal 10 site](/add-site-dashboard) then [upgrade to Drupal 11 via composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
