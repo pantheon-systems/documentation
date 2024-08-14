@@ -4,7 +4,7 @@ subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 tags: [webops]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-07-30"
+reviewed: "2024-08-13"
 type: guide
 permalink: docs/guides/disaster-recovery/site-goes-down
 editpath: disaster-recovery/03-site-goes-down.md
@@ -21,13 +21,16 @@ integration: [--]
 
 In cases of downtime or significant functional failure in the Live environment, the first step is to open a support ticket. Even if you escalate the incident to your dedicated Customer Success Manager (included for all Enterprise contract customers), our support engineers will be the ones diagnosing the cause of downtime and working to get your site back up, and a ticket is the fastest way to get them up to speed and engaged.
 
-Diamond and Platinum Account customers can report and escalate site downtime by clicking **Trigger Pantheon On-Call** from the Support tab. In cases where the dashboard is inaccessible, a ticket can be filed using a telephone ticketing service, accessible at **1(866)415-7624**. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
-
-All other account types should click **Open Ticket** to open a support interaction to report site downtime.
+* **Diamond** and **Platinum** Account customers can report and escalate site downtime by clicking **Trigger Pantheon On-Call** from the Support tab.
+  * In cases where the dashboard is inaccessible, a ticket can be filed using a telephone ticketing service, accessible at **1(866)415-7624**. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
+* **Gold** customers should click **Open Ticket** to open a support interaction to report site downtime.
+* **Silver** customers should click **Launch Chat**.
 
 ![Show platinum support features in the site dashboard](../../../images/dashboard/new-dashboard/platinum-support-site-dashboard.png)
 
 Please include as much information as possible. A support engineer will work with you to diagnose the cause, and any information that you can provide will shorten the investigation time.
+
+To learn more about support tiers and available features, see our [Scope of Support](/guides/support/#support-features-and-response-times) documentation.
 
 ## Check for Ongoing Platform Incidents
 
