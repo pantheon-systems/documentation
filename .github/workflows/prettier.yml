@@ -1,0 +1,73 @@
+name: Prettier
+
+on:
+  pull_request:
+    paths:
+      - 'src/**/*.{js,jsx,ts,tsx}'
+      - '.github/workflows/eslint.yml'
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+      - name: Install Node dependencies
+        run: npm ci
+      - name: Run Prettier on changed files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CHANGED_FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep -E '\.js$|\.jsx$|\.ts$|\.tsx$' || echo "")
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "Fixing the following files:"
+            echo "$CHANGED_FILES"
+            echo "$CHANGED_FILES" | xargs npx prettier --write
+          else
+            echo "No files to format"
+          fi
+      - name: Commit and push Prettier changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Check for changes.
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "Pantheon Bot"
+            git config user.email "bot@getpantheon.com"
+            git add .
+            git commit -m "Apply Prettier formatting"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+      - name: Set Prettier diff output
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DIFF_OUTPUT=$(git diff HEAD~1 HEAD)
+          CHANGED_FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep -E '\.js$|\.jsx$|\.ts$|\.tsx$' || echo "")
+          if [ -n "$DIFF_OUTPUT" ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "Hi from your friendly robot! 🤖 \n\n
+            I've applied Prettier formatting to the following files: `$CHANGED_FILES` \n\n
+            The full diff is below: \n\n
+            <details> \n
+            <summary>Click to expand</summary> \n\n
+            \`\`\`diff \n
+            $DIFF_OUTPUT \n
+            \`\`\` \n\n
+            </details>"
+          else
+            echo "No Prettier changes"
+          fi
