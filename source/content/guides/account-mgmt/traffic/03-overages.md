@@ -17,6 +17,13 @@ product: [--]
 integration: [--]
 ---
 
+
+<Alert title="Overage charges temporarily waived" type="danger" >
+
+In response to your feedback, Pantheon is temporarily waiving overages charges. Automated overages are now paused. See [related release note](/release-notes/2024/08/overage-charges-updates).
+
+</Alert>
+
 ## Traffic Limits
 Pantheon optimizes the resources and performance of your site based on your choice of [pricing plan](https://pantheon.io/plans/pricing?docs). Your pricing plan determines the [backend resources](/guides/account-mgmt/plans/faq#plan-resources) Pantheon deploys to support site performance and to serve the corresponding traffic levels for each plan.
 
