@@ -20,7 +20,7 @@ integration: [--]
 
 <Alert title="Overage charges temporarily waived" type="danger" >
 
-In response to your feedback, Pantheon is temporarily waiving overages charges. Automated overages are now paused. See [related release note](/release-notes/2024/08/overage-charges-updates).
+In response to your feedback, Pantheon has temporarily paused the automated overage program. See [related release note](/release-notes/2024/08/overage-charges-updates).
 
 </Alert>
 
