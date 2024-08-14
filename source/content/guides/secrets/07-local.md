@@ -67,4 +67,4 @@ Now, you will be able to use your secrets through the SDK.
     ```
 
 ## Restrictions
-This SDK will only read secrets with scope `web`. Secrets get cached in the server for 15 minutes so you should wait (at most) that time if you modified your site secrets.
+For secrets that do not have the "user" scope, the `secret:site:local-generate` command will set the value of the secret to "null". Edit this file and replace the null values with appropriate test values for local development.
