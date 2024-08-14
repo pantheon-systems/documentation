@@ -1,5 +1,5 @@
 ---
-title: "Benefits of Becoming WebOps Certified"
+title: "WebOps Certification: About the program"
 showtoc: true
 contributors: []
 permalink: docs/certification/about

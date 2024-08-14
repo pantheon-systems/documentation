@@ -44,7 +44,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Open your terminal and enter the following command to generate a key:
 
    ```bash{promptUser: user}
-   ssh-keygen -t rsa -m PEM
+   ssh-keygen -t rsa
    ```
 
   Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
@@ -79,7 +79,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Open your terminal and enter the following command to generate a key. This command works for Windows 10:
 
    ```bash{promptUser: winshell}
-   ssh-keygen -t rsa -m PEM
+   ssh-keygen -t rsa
    ```
 
   Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.

@@ -413,24 +413,6 @@ exports.createPages = ({ graphql, actions }) => {
       component: path.resolve("./src/templates/releaseNotesListing/index.js"),
     })
 
-    // Create release notes pages for pagination.
-    const releaseNotesPostsPerPage = 8
-    const releaseNotesNumPages = Math.ceil(result.data.allReleaseNotes.edges.length / releaseNotesPostsPerPage)
-
-    Array.from({ length: releaseNotesNumPages }).forEach((_, i) => {
-      const path2 = `/release-notes/${i+1}/`;
-      createPage({
-        path: path2,
-        component: path.resolve("./src/templates/releaseNotesListing/index.js"),
-        context: {
-          limit: releaseNotesPostsPerPage,
-          skip: i * releaseNotesPostsPerPage,
-          numPages: releaseNotesNumPages,
-          i,
-        },
-      })
-    })
-
     // terminusCommands.forEach(command => {
     //   const slugRegExp = /:/g
     //   const slug = command.name.replace(slugRegExp, "-")

@@ -123,6 +123,10 @@ composer update vendor/package
 
 Replace `vendor/package` with the package name you want to update. This will update only the named package to the latest version that matches the version constraints in your `composer.json` file.
 
+## Known Issues
+
+- There is currently a known issue with WordPress Composer Managed not supporting WordPress Multisite with subdirectories. [Alternative implementations](/wordpress-ic) of WordPress with Composer may be used for this use case.
+
 ## Report an Issue
 
 Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
