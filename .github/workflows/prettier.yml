@@ -54,7 +54,13 @@ jobs:
             git config user.email "bot@getpantheon.com"
             git add .
             git commit -m "Apply Prettier formatting"
-            git push
+
+            # Extract the branch name from GITHUB_REF
+            BRANCH_NAME=${GITHUB_REF#refs/heads/}
+
+            # Push the commit to the branch
+            git push origin HEAD:$BRANCH_NAME
+
             DIFF_OUTPUT=$(git diff HEAD~1 HEAD)
             echo "DIFF_OUTPUT<<EOF" >> $GITHUB_ENV
             echo "$DIFF_OUTPUT" >> $GITHUB_ENV
