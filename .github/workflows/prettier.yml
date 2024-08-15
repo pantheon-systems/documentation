@@ -2,9 +2,9 @@ name: Prettier
 
 on:
   pull_request:
-    # paths:
-    #   - 'src/**/*.{js,jsx,ts,tsx}'
-    #   - '.github/workflows/prettier.yml'
+    paths:
+      - 'src/**/*.js'
+      - '.github/workflows/prettier.yml'
     types:
       - opened
       - synchronize
