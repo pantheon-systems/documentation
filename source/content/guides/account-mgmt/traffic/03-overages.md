@@ -55,6 +55,13 @@ To access nonprofit preferred pricing, the organization will either need to 1) p
 All new Pantheon sites with a Performance or Elite annual plan will have a three-month grace period starting with your service start date (the day a site is first  moved from a Sandbox to a commercial plan) where no overages will be incurred.  New sites include any website that has not had a Pantheon subscription during the past 12 months. This allows you the time to get calibrated on the platform and focus on what is most important: the successful launch of your web site(s) on Pantheon!
 
 ### Overage Processing
+
+<Alert title="Overage charges temporarily waived" type="danger" >
+
+In response to your feedback, Pantheon has temporarily paused the automated overage program. See [related release note](/release-notes/2024/08/overage-charges-updates).
+
+</Alert>
+
 Overages will be processed on a monthly basis.  All customers subject to overages will be notified immediately. For customers paying monthly by credit card- you can expect to receive an invoice for any site in overage right away.  For customers on an annual contract, overages will be invoiced quarterly (processing in March, June, September and December).  
 
 This is intended to ease the administrative burden that comes with the potential for monthly invoices.  For those contract customers on quarterly invoicing- you will still receive monthly notifications on any overages found for the month so as to keep you informed ahead of final processing and invoicing avoiding any surprises.
