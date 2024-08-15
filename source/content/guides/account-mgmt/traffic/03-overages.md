@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/overages
 editpath: docs/guides/account-mgmt/traffic/03-overages.md
-reviewed: "2024-03-28"
+reviewed: "2024-08-15"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
