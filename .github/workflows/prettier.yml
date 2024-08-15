@@ -38,7 +38,9 @@ jobs:
             echo "Fixing the following files:"
             echo "$CHANGED_FILES"
             echo "$CHANGED_FILES" | xargs npx prettier --write
-            echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
+            # Join the filenames into a single line with space separation
+            JOINED_FILES=$(echo "$CHANGED_FILES" | tr '\n' ' ')
+            echo "CHANGED_FILES=$JOINED_FILES" >> $GITHUB_ENV
           else
             echo "No files to format"
           fi
