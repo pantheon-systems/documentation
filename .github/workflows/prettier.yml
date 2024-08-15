@@ -70,6 +70,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ -n "${{ env.DIFF_OUTPUT }}" ]; then
+            CURRENT_COMMIT=$(git rev-parse --short HEAD)
             gh pr comment ${{ github.event.pull_request.number }} --body "$(echo -e "Hi from your friendly robot! 🤖\n\nI've applied Prettier formatting to the following files in $CURRENT_COMMIT:\n\n\`${{ env.CHANGED_FILES }}\`\n\nThe full diff is below. Please review the changes.\n\n<details>\n<summary>Click to expand</summary>\n\n\`\`\`diff\n$DIFF_OUTPUT\n\`\`\`\n</details>")"
           else
             echo "No Prettier changes"
