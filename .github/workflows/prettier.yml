@@ -1,15 +1,15 @@
 name: Prettier
 
 on:
-  pull_request:
-    paths:
-      - 'src/**/*.{js,jsx,ts,tsx}'
-      - '.github/workflows/eslint.yml'
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
+  # pull_request:
+  #   paths:
+  #     - 'src/**/*.{js,jsx,ts,tsx}'
+  #     - '.github/workflows/eslint.yml'
+  #   types:
+  #     - opened
+  #     - synchronize
+  #     - reopened
+  #     - ready_for_review
   workflow_dispatch:
 
 permissions:
