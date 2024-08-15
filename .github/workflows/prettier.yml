@@ -3,7 +3,7 @@ name: Prettier
 on:
   pull_request:
     paths:
-      - 'src/**/*.{js,jsx,ts,tsx}'
+      - 'src/**/*.js'
       - '.github/workflows/prettier.yml'
     types:
       - opened
@@ -38,7 +38,9 @@ jobs:
             echo "Fixing the following files:"
             echo "$CHANGED_FILES"
             echo "$CHANGED_FILES" | xargs npx prettier --write
-            echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
+            # Join the filenames into a single line with space separation
+            JOINED_FILES=$(echo "$CHANGED_FILES" | tr '\n' ' ')
+            echo "CHANGED_FILES=$JOINED_FILES" >> $GITHUB_ENV
           else
             echo "No files to format"
           fi
@@ -52,7 +54,10 @@ jobs:
             git config user.email "bot@getpantheon.com"
             git add .
             git commit -m "Apply Prettier formatting"
-            git push
+
+            # Push the commit to the branch
+            git push origin HEAD:$GITHUB_HEAD_REF
+
             DIFF_OUTPUT=$(git diff HEAD~1 HEAD)
             echo "DIFF_OUTPUT<<EOF" >> $GITHUB_ENV
             echo "$DIFF_OUTPUT" >> $GITHUB_ENV
@@ -65,7 +70,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ -n "${{ env.DIFF_OUTPUT }}" ]; then
-            gh pr comment ${{ github.event.pull_request.number }} --body "$(echo -e "Hi from your friendly robot! 🤖\n\nI've applied Prettier formatting to the following files:\n\n${{ env.CHANGED_FILES }}\n\nThe full diff is below:\n\n<details>\n<summary>Click to expand</summary>\n\n\`\`\`diff\n$DIFF_OUTPUT\n\`\`\`\n</details>")"
+            CURRENT_COMMIT=$(git rev-parse --short HEAD)
+            gh pr comment ${{ github.event.pull_request.number }} --body "$(echo -e "Hi from your friendly robot! 🤖\n\nI've applied Prettier formatting to the following files in $CURRENT_COMMIT:\n\n\`${{ env.CHANGED_FILES }}\`\n\nThe full diff is below. Please review the changes.\n\n<details>\n<summary>Click to expand</summary>\n\n\`\`\`diff\n$DIFF_OUTPUT\n\`\`\`\n</details>")"
           else
             echo "No Prettier changes"
           fi
