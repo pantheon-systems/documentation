@@ -80,6 +80,18 @@ Alternatively, if you'd rather create a classic-style token:
    GITHUB_API=$TOKENHASH
    ```
 
+## Using GitHub Codespaces
+
+A [GitHub Codespace](https://github.com/features/codespaces) can be used to test the site as well. To set up a Codespace, navigate to the branch you want to use as the base (e.g. `main`) and click the Code dropdown.
+
+![Codespaces screenshot](/source/images/assets/codespaces-setup.png)
+
+This will take you to a VSCode-like interface. From here, you can run `npm ci` and `npm start` in the Terminal panel at the bottom of the page. The docs site will build inside the Codespaces container and install Node dependencies just like it would on your local machine. When the Node server is running, a dialog box will appear at the bottom right corner asking if you want to open the Codespace in a browser and if you want to make the Codespace public.
+
+[image]
+
+Clicking on the link will take you to a live site that's running on the current branch of the repository. If you opted to make the Codespace public, you can share the link to others and they will be able to view the site after accepting a warning that they are visiting someone else's Codespace. If the Codespace was not made public, only your GitHub user will be able to see it.
+
 ## Install With The Gatsby Cli
 
 From the `documentation` directory:
