@@ -21,7 +21,7 @@
     {
       "slug": "deprecated",
       "displayName": "Deprecated",
-      "color": "color-20",
+      "color": "color-6",
       "description": "Reserved for updates indicating the phasing out or discontinuation of specific features or functionalities"
     },
     {
@@ -33,7 +33,7 @@
     {
       "slug": "drupal",
       "displayName": "Drupal",
-      "color": "color-11",
+      "color": "color-7",
       "description": "Tailored for updates specific to the Drupal content management system, helping Drupal users stay informed about platform changes that directly impact their workflows"
     },
     {
@@ -99,13 +99,13 @@
     {
       "slug": "user-interface",
       "displayName": "User interface",
-      "color": "color-14",
+      "color": "color-11",
       "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
     },
     {
       "slug": "wordpress",
       "displayName": "WordPress",
-      "color": "color-13",
+      "color": "color-10",
       "description": "Tailored for updates specific to the WordPress content management system, helping WordPress users stay informed about platform changes that directly impact their workflows"
     },
     {
