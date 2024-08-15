@@ -37,6 +37,7 @@ jobs:
             echo "Fixing the following files:"
             echo "$CHANGED_FILES"
             echo "$CHANGED_FILES" | xargs npx prettier --write
+            echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
           else
             echo "No files to format"
           fi
@@ -51,6 +52,10 @@ jobs:
             git add .
             git commit -m "Apply Prettier formatting"
             git push
+            DIFF_OUTPUT=$(git diff HEAD~1 HEAD)
+            echo "DIFF_OUTPUT<<EOF" >> $GITHUB_ENV
+            echo "$DIFF_OUTPUT" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
           else
             echo "No changes to commit"
           fi
@@ -58,10 +63,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          DIFF_OUTPUT=$(git diff HEAD~1 HEAD)
-          CHANGED_FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep -E '\.js$|\.jsx$|\.ts$|\.tsx$' || echo "")
-          if [ -n "$DIFF_OUTPUT" ]; then
-            gh pr comment ${{ github.event.pull_request.number }} --body "$(echo -e "Hi from your friendly robot! 🤖\n\nI've applied Prettier formatting to the following files:\n\n$CHANGED_FILES\n\nThe full diff is below:\n\n<details>\n<summary>Click to expand</summary>\n\n\`\`\`diff\n$DIFF_OUTPUT\n\`\`\`\n</details>")"
+          if [ -n "${{ env.DIFF_OUTPUT }}" ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "$(echo -e "Hi from your friendly robot! 🤖\n\nI've applied Prettier formatting to the following files:\n\n${{ env.CHANGED_FILES }}\n\nThe full diff is below:\n\n<details>\n<summary>Click to expand</summary>\n\n\`\`\`diff\n$DIFF_OUTPUT\n\`\`\`\n</details>")"
           else
             echo "No Prettier changes"
           fi
