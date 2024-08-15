@@ -11,5 +11,4 @@ const Callout = ({ type, children, title, link }) => {
     </div>
   )
 }
-
 export default Callout
