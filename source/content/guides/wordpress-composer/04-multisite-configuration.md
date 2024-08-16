@@ -61,7 +61,8 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 Pantheon does not support sub-subdomains on the `pantheonsite.io` platform domain. This means that sub-sites on a subdomain multisite will not be accessible by default. See the [Mapping Custom Hostnames](/guides/multisite/config/#map-custom-hostnames-subdomain-configurations-only) panel in the Multisite Configuration guide for how to set up a custom domain for your sub-sites.
 
-Alternately, you can use [Subdomain to Subdirectory Multisite Conversion](/guides/multisite/search-replace/#subdomain-to-subdirectory-multisite-conversion) to make your dev and test environments use subdirectory multisite installs while your live site uses subdomains. In this case, your `SUBDOMAIN_INSTALL` value would be conditional based on the `$_ENV['PANTHEON_ENVIRONMENT']` value as documented in the Multisite Search and Replace guide.
+## Multisite Search and Replace with WordPress (Composer Managed)
+Currently, the built-in dashboard [WordPress Multisite Search and Replace](/guides/multisite/search-replace/) does not support Composer-based WordPress multisites. To perform a search and replace on a WordPress (Composer Managed) multisite, you will need to use WP-CLI via Terminus manually. For more information, see our [WordPress Multisite Search and Replace](guides/multisite/workflows/#run-wp-cli-search-replace-manually) guide.
 
 ## More Information
 
