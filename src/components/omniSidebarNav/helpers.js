@@ -19,7 +19,7 @@ const turnItemsIntoLinks = (item, activePage) => {
   if (item.link.startsWith('http')) {
     linkText = (
       <>
-        <Icon iconName="externalLink" /> {item.title}
+        {item.title} <Icon iconName="externalLink" iconSize="sm" />
       </>
     );
   }
