@@ -2,7 +2,7 @@
 title: "Preventing filesystem overload to ensure site stability"
 published_date: "2024-09-19"
 ---
-Starting September 19, 2024, the Pantheon platform will automatically reject file writes (beyond the 100k limit) that could push the filesystem beyond its capacity. This precaution helps avoid catastrophic failures, ensuring the site remains online and operational.
+Writing more than 100,000 files to the same directory can push the Pantheon filesystem beyond its intended design. Starting September 19, 2024, our platform will automatically reject file writes if the directory is at capacity. This precaution helps avoid catastrophic failures to ensure the site remains online and operational.
 
 <img width="999" alt="Screenshot 2024-08-19 at 3 32 29 PM" src="https://github.com/user-attachments/assets/f8d3c57f-d46e-44e3-83c1-6689037d0a4e">
 
