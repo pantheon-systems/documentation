@@ -4,8 +4,6 @@ published_date: "2024-08-21"
 ---
 Writing more than 100,000 files in the same directory can push the Pantheon filesystem beyond its intended design. Starting September 21, 2024, our platform will automatically reject file writes if the directory is at capacity. This precaution helps avoid catastrophic failures to ensure the site remains online and operational.
 
-<img width="999" alt="Screenshot 2024-08-19 at 3 32 29 PM" src="https://github.com/user-attachments/assets/f8d3c57f-d46e-44e3-83c1-6689037d0a4e">
-
 When excessive files are written into a directory due to an owner or developer error, the site may lose access to the filesystem, resulting in a critical failure. Recovery from this issue is complex and often requires manual intervention from the Pantheon Support team. The recovery process can be time-consuming, sometimes taking hours or even days, and full restoration is not always guaranteed.
 
 However, this situation is entirely preventable. By automatically rejecting file writes that exceed the 100k limit, the system prevents catastrophic failures and keeps the site stable.
