@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react"
 import { graphql, navigate } from "gatsby"
 import debounce from "lodash.debounce"
 import Mark from "mark.js"
@@ -37,6 +37,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   })
   const [currentPage, setCurrentPage] = useState(1)
   const [queryStrings, setQueryStrings] = useState('')
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const notesPerPage = 8
   let totalPagesRef = useRef(0)
@@ -241,6 +242,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   // Preprocess intro text.
   const introText = data.releasenotesYaml.introText
 
+  useLayoutEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
@@ -286,7 +291,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
               />
             </div>
             <FlexContainer flexWrap='wrap' className='rn-popover-trigger-and-tags' >
-              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} />
+              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} isDisabled={!isLoaded} />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {
                   filters && filters.categories.map(item => {
@@ -315,7 +320,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             setCurrentPage={setCurrentPage}
             totalPagesRef={totalPagesRef}
             queryStrings={queryStrings}
-            updateQueryStrings={updateQueryStrings}
+            setIsPageLoaded={setIsLoaded}
           />
         </Container>
       </main>
