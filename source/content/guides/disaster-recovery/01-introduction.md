@@ -17,6 +17,6 @@ product: [--]
 integration: [--]
 ---
 
-This guide is focused on the immediate actions a Pantheon customer should take in the event of a catastrophic site failure. In all cases, the first step should be to file an emergency downtime on-call ticket, regular ticket, or open a support chat depending on support tier. Filing an emergency Pantheon On-Call ticket will immediately escalate the incident and ensure the fastest and most effective service.
+This guide is focused on the immediate actions a Pantheon customer should take in the event of a catastrophic site failure. In all cases, the first step should be to file an emergency ticket, a general support ticket, or start a live chat depending on your [account tier](/guides/support/#support-features-and-response-times). Filing an emergency ticket will immediately escalate the incident to our engineering team, and ensure the fastest and most effective service.
 
-This guide does not cover all potential post-disaster recovery processes. Such processes will depend on the nature of the incident and the impact that it has on your site. You must engage with Pantheon support during the incident, and the support team will help determine what remediation steps are required.
+This guide does not cover all potential post-disaster recovery processes, as these will depend on the nature of the incident and its impact on your site. It's essential to engage with Pantheon Support during the incident; our team will help determine the necessary remediation steps.

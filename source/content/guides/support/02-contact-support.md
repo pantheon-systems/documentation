@@ -25,15 +25,13 @@ We recommend you begin your Support journey from the affected [Personal Workspac
 
 </Alert>
 
-## Ticket Support
+## General Ticket Support
 
 The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table](/guides/support/#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) affected by the issue.
 
-1. Click **Support**, then **Open Ticket**. This automatically includes the site/workspace and user information.
-
-1. Choose the **ticket type**.
+1. Go to the **Support** tab, then select **Open Ticket**.
 
 1. Enter a subject (summary of your issue).
 
@@ -48,7 +46,7 @@ The ticket support feature is available to certain Account packages and account 
 
 After a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
 
-## Real Time Chat Support
+## Live Chat
 
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
@@ -56,7 +54,7 @@ To receive the highest level of support available to your site or Workspace, rem
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) affected by the issue.
 
-1. Click **Support**, **Launch Chat**, then **New Conversation**.
+1. Go to the **Support** tab, then select **Start chat**.
 
 1. Provide a detailed summary of your support request, such as:
    - Steps to reproduce the issue (including URLs or paths to files).
@@ -71,12 +69,12 @@ You can download a transcript of your chat with the <Icon icon="arrowDownToLine"
 
 <Alert title="Note" type="info">
 
-Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://www.intercom.com/help/en/articles/2546256-troubleshooting-when-the-messenger-doesn-t-appear) on their site.
+Some in-browser ad or tracking blockers may interfere with the **Start chat** button. If you don't see the button, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has provided more details on [why this happens](https://www.intercom.com/help/en/articles/2546256-troubleshooting-when-the-messenger-doesn-t-appear) on their site.
 
 </Alert>
 
-## Premium Technical Support and On-Call Services
+## Premium Support Hotline and Emergency Ticket
 
-Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab.
+**Diamond** and **Platinum** customers can call the 24/7 Premium Support Hotline for urgent account-related issues. You can find the phone number in the Support tab of your workspace. The phone number can be found in the Support tab of your workspace.
 
-Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+**Diamond** and **Platinum** customers also have the option to open an emergency ticket for business-critical issues. Pantheon escalates emergency tickets to our engineering team, even during off-hours. If your issue is non-business-critical, please open a general support ticket instead.
