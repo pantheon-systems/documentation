@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/composer
-reviewed: "2024-08-15"
+reviewed: "2024-08-22"
 showtoc: true
 ---
 

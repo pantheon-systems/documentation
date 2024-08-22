@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/overview
-reviewed: "2024-08-15"
+reviewed: "2024-08-22"
 showtoc: true
 ---
 
@@ -75,9 +75,6 @@ Due to platform design, the "environment" for Integrated Composer will always be
 3. Site values will replace the organization values when present. To return the secret to it's organization value, simply delete the site value.
 
 4. Environmental overrides have the highest priority. If the override exists, it will become the value provided to the calling function.
-
-![Secrets Relationships](../../../images/guides/secrets/secrets-relationships.png)
-
 
 ### The life of a secret
 
