@@ -166,13 +166,17 @@ array(63) {
 
 ## Setting Environment Variables
 
-It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead.
+You can use the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to write the secrets to Pantheon's secure storage system. The secrets are encrypted at rest and follow all standard practices for the storing of sensitive values.
 
-### Terminus Secrets Manager Plugin
+Learn more about this new feature by exploring our new Pantheon Secrets Guide:
+  * [Introduction](/guides/secrets)
+  * [Secrets Overview](/guides/secrets/overview)
+  * [PHP Usage](/guides/secrets/php)
+  * [Drupal Key Usage](/guides/secrets/drupal)
+  * [Integrated Composer Usage](/guides/secrets/composer)
+  * [Local Development Usage](/guides/secrets/local)
+  * [Troubleshooting](/guides/secrets/troubleshooting)
 
-You can use the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to write the secrets to Pantheon's secure storage system. The secrets are encrypted at rest and follow all standard practices for the storing of sensitive values. 
-
-Please see the README in the plugin's repository for the most up-to-date code examples.
 
 ## More Resources
 
