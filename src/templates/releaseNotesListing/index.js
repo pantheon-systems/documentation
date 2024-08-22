@@ -80,8 +80,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       // If there are selected categories, filter the data to include only items that belong to at least one of those categories
       if(filters.categories.length > 0){
         newFilteredData = newFilteredData.filter(item => {
+          const categories = item.node.frontmatter.categories || []
+
           // Check if any category of the current item matches any of the selected categories
-          return item.node.frontmatter.categories.some(category => {
+          return categories.some(category => {
             return filters.categories.some(filterCategory => filterCategory.slug === category)
           })
         })
