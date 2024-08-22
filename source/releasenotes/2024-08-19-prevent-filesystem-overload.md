@@ -1,6 +1,7 @@
 ---
 title: "Preventing filesystem overload to ensure site stability"
 published_date: "2024-08-21"
+categories: [performance, infrastructure]
 ---
 Writing more than 100,000 files in the same directory can push the Pantheon filesystem beyond its intended design. Starting **September 21, 2024**, our platform will automatically reject file writes if the directory is at capacity. This precaution helps avoid catastrophic failures to ensure the site remains online and operational.
 
