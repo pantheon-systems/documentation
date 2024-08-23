@@ -22,11 +22,11 @@ Yes. For more details, talk to your Customer Success Manager or [contact sales](
 
 ### Is there a support number we can call? Is this service available for all account tiers?
 
-Diamond and Platinum customers can call the 24/7 Premium Support Hotline for urgent account-related issues. You can find the phone number in the Support tab of your workspace.
+Diamond and Platinum customers can call the 24/7 Premium Support Hotline  for any technical issues, escalations, site, billing, or overages queries. You can find the phone number in the Support tab of your workspace. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
 
 ### Is there 24/7 support for emergencies like incidents or outages? Is this service available for all account tiers?
 
-Diamond and Platinum customers can open an emergency ticket for business-critical issues. Pantheon escalates emergency tickets to our engineering team, even during off-hours. To ensure effective triage, please open the emergency ticket from the workspace of the affected site.
+Diamond and Platinum customers can open an emergency ticket for business-critical issues. Pantheon escalates emergency tickets to our support engineers, even during off-hours. To ensure effective triage, please open the emergency ticket from the workspace of the affected site.
 
 ### What if I can't login to the Pantheon Dashboard?
 
