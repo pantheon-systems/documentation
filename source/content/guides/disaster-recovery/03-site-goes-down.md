@@ -28,7 +28,7 @@ In cases of downtime or significant functional failure in the live environment, 
 
 ![Show platinum support features in the site dashboard](../../../images/dashboard/new-dashboard/platinum-support-site-dashboard.png)
 
-Please provide as much detail as possible. Our engineering team will work with you to diagnose the cause of the issue, and any information you provide will help shorten the investigation time.
+Please provide as much detail as possible. Our support engineers will work with you to diagnose the cause of the issue, and any information you provide will help shorten the investigation time.
 
 Learn more about [support features for different account tiers](/guides/support/#support-features-and-response-times).
 
