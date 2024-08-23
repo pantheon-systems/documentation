@@ -48,6 +48,8 @@ Filing an emergency ticket will escalate your downtime incident within the Suppo
 
 * **Ticket**: In cases of downtime or significant functional failure in the live environment, the first step is to open a support ticket. While live chat generally offers a quicker response time, emergency tickets (for **Diamond** and **Platinum** customers) are escalated and should have comparable response times.
 
+* **Slack**: Diamond tier accounts can have access to a dedicated Slack channel in which customers can interact directly with their CSM, AM, and primary support resources. This is primarily intended as a means for quick communication and collaboration, and should not be used in lieu of the ticketing system, as there are no SLOs associated with Slack channels.
+
 * **Phone/Teleconference**: You can request a phone call or teleconference for emergency support. This can be done either when filing the emergency ticket or within the ticket thread once it is open.
 
   <Alert title="Note" type="info" >
@@ -56,7 +58,7 @@ Filing an emergency ticket will escalate your downtime incident within the Suppo
 
   </Alert>
 
-* **Premium Support Hotline**: Diamond and Platinum customers can call the 24/7 Premium Support Hotline for urgent account-related issues. You can find the phone number in the Support tab of your workspace. 
+* **Premium Support Hotline**: Diamond and Platinum customers can call the 24/7 Premium Support Hotline for urgent account-related issues. You can find the phone number in the Support tab of your workspace.
 
 ### Escalation Paths
 
