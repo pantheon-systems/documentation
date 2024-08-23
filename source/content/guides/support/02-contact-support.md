@@ -75,6 +75,6 @@ Some in-browser ad or tracking blockers may interfere with the **Start chat** bu
 
 ## Premium Support Hotline and Emergency Ticket
 
-**Diamond** and **Platinum** customers can call the 24/7 Premium Support Hotline for urgent account-related issues. You can find the phone number in the Support tab of your workspace. The phone number can be found in the Support tab of your workspace.
+**Diamond** and **Platinum** customers can call the 24/7 Premium Support Hotline for any technical issues, escalations, site, billing, or overages queries. You can find the phone number in the Support tab of your workspace. The phone number can be found in the Support tab of your workspace.
 
 **Diamond** and **Platinum** customers also have the option to open an emergency ticket for business-critical issues. Pantheon escalates emergency tickets to our engineering team, even during off-hours. If your issue is non-business-critical, please open a general support ticket instead.
