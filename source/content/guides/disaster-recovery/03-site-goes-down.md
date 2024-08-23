@@ -19,10 +19,10 @@ integration: [--]
 
 ## Open a Support Ticket
 
-In cases of downtime or significant functional failure in the live environment, the first step is to open a support ticket. Even if you escalate the incident to your dedicated Customer Success Manager (available to all Enterprise contract customers), our engineering team will be the ones diagnosing the cause of the downtime and working to restore your site. Opening a ticket is the fastest way to get them up to speed and engaged.
+In cases of downtime or significant functional failure in the live environment, the first step is to open a support ticket. Even if you escalate the incident to your dedicated Customer Success Manager (available to all Enterprise contract customers), our support engineers will be the ones diagnosing the cause of the downtime and working to restore your site. Opening a ticket is the fastest way to get them up to speed and engaged.
 
 * **Diamond** and **Platinum** customers can open an **emergency ticket** to report and escalate business-critical site downtime, from the Support tab in the workspace of the affected site.
-  * In cases where the dashboard is inaccessible, a support ticket can be filed using a telephone ticketing service, accessible at 1(866)415-7624. Note that this is strictly for filing a ticket, and you will not reach our engineering team by using this method.
+  * In cases where the dashboard is inaccessible, a support ticket can be filed using a telephone ticketing service, accessible at 1(866)415-7624. Note that this is strictly for filing a ticket, and you will not reach our support engineers by using this method.
 * **Gold** customers can open a **general support ticket** to report site downtime.
 * **Silver** customers can start a **live chat** to report site downtime.
 
@@ -92,4 +92,4 @@ Key tools that you can use for ongoing diagnosis of issues include:
 
 * AGCDN logs can be piped directly into customer-managed log management applications. Setup by Professional Services is required.
 
-The Customer Success Engineering team will work with you through the existing emergency ticket. If additional issues are uncovered you may want to open a new ticket to allow for a cleaner set of interactions, especially if additional Pantheon resources are brought in for review and assistance.
+Support engineers will work with you through the existing emergency ticket. If additional issues are uncovered you may want to open a new ticket to allow for a cleaner set of interactions, especially if additional Pantheon resources are brought in for review and assistance.
