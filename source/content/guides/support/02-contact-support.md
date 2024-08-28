@@ -25,7 +25,7 @@ We recommend you begin your Support journey from the affected [Personal Workspac
 
 </Alert>
 
-### Provide a detailed description
+#### Provide a detailed description
 For every method of contacting Pantheon Support documented on this page, please prepare and include a **detailed description** for the issue you're experiencing, such as:
 - Steps to reproduce the issue (including URLs or paths to files).
 - Environments affected (Multidev/Dev/Test/Live), if applicable.
