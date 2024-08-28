@@ -57,7 +57,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
    <Alert title="Note" type="info">
 
-  Professional workspaces that have wildcard domain(s) pointed at Pantheon may have a valid use case for opt-ing out of domain verification (e.g., WordPress Multisite with many subdomains). For details, [see this FAQ below](#can-i-opt-out-of-domain-verification).
+  Sites associated with Diamond or Platinum workspaces have the option to skip this step.
 
   </Alert>
 
@@ -100,9 +100,7 @@ For any domain that has been added that is pending verification, clicking on the
 You can get a high-level status view for all custom domains connected to a given environment via Terminus using the [`https:info` command](/terminus/commands/https-info). Domains that are pending verification will have the "Verification Pending" status returned as part of the Terminus `https:info` command.
 
 ### Can I opt-out of Domain Verification?
-Yes, a professional workspace can opt-out from domain verifications across all sites in their organization but only by request. Please [contact support](/guides/support/contact-support/) to request exemption from domain verification, and once granted - you will see an option to skip domain verification when connecting domains to sites in your workspace.
-
-Exemption is only available at the workspace level. For example, you cannot request exemption for just one site in your workspace, or an individual custom domain such as `example.com`.
+Sites associated with Diamond and Platinum workspaces are automatically exempt from domain verification enforcement. For those exempt, there is an option to skip domain verification when connecting domains to sites in your workspace.
 
 ## More Resources
 

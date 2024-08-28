@@ -92,6 +92,10 @@ The new Site Plan will be billed immediately.
 
 ## Relaunch Procedure
 
+<TabList>
+
+<Tab title="All others" id="all-others" active={true}>
+
 For a fast, smooth relaunch, consider having two browser tabs open, one with the old Site Dashboard, and one with the new.
 
 1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan#purchase-a-new-plan).
@@ -123,6 +127,62 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
 
 1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
+
+
+</Tab>
+
+<Tab title="Diamond and Platinum Customers" id="diamond-and-platinum">
+
+For a fast, smooth relaunch, consider having two browser tabs open, one with the old Site Dashboard, and one with the new.
+
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan#purchase-a-new-plan).
+
+1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
+
+  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details** > **Remove Domain**
+
+1. In the new Site Dashboard, connect the custom domain affected by the relaunch and **skip** ownership verification.
+
+  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
+  <Alert title="Warning" type="danger">
+
+  Do *not* update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 7 below.
+
+  Once you make this change, traffic will be routed to the new site. However, if you do not complete the rest of the steps as outlined here, you may run into cases where the new site has an invalid HTTPS certificate.
+
+  </Alert>
+
+1. In the Live environment tab of the Site Dashboard for the old site, click **Clear Caches**.
+
+1. Repeat on the Live environment of the new site.
+
+1. Wait for HTTPS to provision for the newly connected domains:
+
+  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details**
+
+   This process typically takes about an hour.
+
+1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
+
+ <Partial file="standard-dns-config.md" />
+
+1. Wait for TTL to expire.
+
+1. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
+
+1. Repeat steps 2-6 above for each affected domain. Note `www.example.com` and `example.com` are different domains.
+
+1. In the new Site Dashboard, [standardize traffic for the primary domain](/guides/domains).
+
+1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
+
+1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
+
+
+</Tab>
+
+</TabList>
+
 
 ## Frequently Asked Questions
 
