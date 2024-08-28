@@ -21,16 +21,21 @@ integration: [--]
 
 In cases of downtime or significant functional failure in the live environment, the first step is to open a support ticket. Even if you escalate the incident to your dedicated Customer Success Manager (available to all Enterprise contract customers), our support engineers will be the ones diagnosing the cause of the downtime and working to restore your site. Opening a ticket is the fastest way to get them up to speed and engaged.
 
-* **Diamond** and **Platinum** customers can open an **emergency ticket** to report and escalate business-critical site downtime, from the Support tab in the workspace of the affected site.
+
+From the Support tab in the workspace of the affected site:
+
+* **Diamond** and **Platinum** customers can open an **emergency ticket** to report and escalate business-critical site downtime.
   * In cases where the dashboard is inaccessible, a support ticket can be filed using a telephone ticketing service, accessible at 1(866)415-7624. Note that this is strictly for filing a ticket, and you will not reach our support engineers by using this method.
 * **Gold** customers can open a **general support ticket** to report site downtime.
 * **Silver** customers can start a **live chat** to report site downtime.
 
-![Show platinum support features in the site dashboard](../../../images/dashboard/new-dashboard/platinum-support-site-dashboard.png)
+![Show diamond support features in the workspace dashboard](../../../images/dashboard/new-dashboard/diamond-support-workspace-dashboard.png)
 
 Please provide as much detail as possible. Our support engineers will work with you to diagnose the cause of the issue, and any information you provide will help shorten the investigation time.
 
-Learn more about [support features for different account tiers](/guides/support/#support-features-and-response-times).
+To learn more about the support features for different account tiers, see also the following:
+* [Scope of Support](/guides/support/#support-features-and-response-times)
+* [Contact Support](/guides/support/contact-support/)
 
 ## Check for Ongoing Platform Incidents
 
