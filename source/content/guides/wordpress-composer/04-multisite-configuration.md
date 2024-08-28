@@ -34,7 +34,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
     ```bash{promptUser: user}
     terminus connection:set <site>.dev git
     ```
-2. Open the `config/application.php` file in your site's codebase and add the following line:
+2. Open the `config/application.php` file in your site's codebase and add the following line anywhere _above_ the `Config::apply();` line:
 
 	```php
 	Config::define( 'WP_ALLOW_MULTISITE', true );
@@ -53,7 +53,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 	Config::define( 'SITE_ID_CURRENT_SITE', 1 );
 	Config::define( 'BLOG_ID_CURRENT_SITE', 1 );
 	```
-6. Save your changes and commit them to your Git repository.
+6. Save your changes and commit them to your Git repository. WordPress will prompt you to log back in after you push the changes.
 7. Log into your site. When you log back into your WordPress admin dashboard, you will see a new **My Sites** menu item in the top left corner. This is where you can manage your network of sites. You now have a WordPress subdirectory multisite network set up on a WordPress (Composer Managed)-based upstream.
 	![My Sites](../../../images/wordpress-composer/04-multisite-my-sites.png)
 	
