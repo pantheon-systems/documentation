@@ -38,7 +38,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
    <Alert title="Note" type="info">
 
-   Sites associated with Diamond or Platinum workspaces have the option to skip this step.
+   Sites associated with Diamond or Platinum workspaces have the option to skip this step. For details, [see this related FAQ](/guides/domains/custom-domains#can-i-opt-out-of-domain-verification).
 
   </Alert>
 
