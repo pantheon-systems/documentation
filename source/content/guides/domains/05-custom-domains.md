@@ -84,14 +84,14 @@ Note that each custom domain is counted regardless of the environment to which i
    - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
 
 ## FAQ
-### I have existing custom domains which were previously connected and launched prior to the enforcement of Domain Verification, will those be impacted?
+### I have existing custom domains which were previously connected and launched prior to the enforcement of domain verification, will those be impacted?
 No. Any custom domains previously added or launched will not require explicit domain verification. However, if any of those domains are deleted by the customer and then re-added, the process of re-addition (whether to the same environment or any other environment) will trigger domain verification.
 
 ### Is pre-provisioning HTTPS now a requirement to connect a custom domain?
 Yes. Skipping HTTPS provisioning is no longer an option.
 
 
-### Is Wild Card DNS routing supported by Domain Verification?
+### Is Wild Card DNS routing supported by domain verification?
 Pantheon does not allow wild card domains to be directly added as a custom domain. Customers may point wildcard domains (eg: *.example.com) in their own DNS to Pantheon, but are still required to have specific domains (eg: mysite.example.com) added and connected to specific environments on Pantheon.
 
 ### How can I know which domains are still pending ownership verification ?
@@ -99,7 +99,7 @@ For any domain that has been added that is pending verification, clicking on the
 
 You can get a high-level status view for all custom domains connected to a given environment via Terminus using the [`https:info` command](/terminus/commands/https-info). Domains that are pending verification will have the "Verification Pending" status returned as part of the Terminus `https:info` command.
 
-### Can I opt out of Domain Verification?
+### Can I opt out of domain verification?
 Sites associated with Diamond and Platinum workspaces are automatically exempt from domain verification enforcement. All other account tiers can request an exemption for a professional workspace by [contacting support](/guides/support/contact-support/).
 
 Exemption enables the option to skip domain verification when connecting custom domains in the site dashboard, and is only available at the workspace level. For example, you cannot request exemption for just one site in your workspace, or an individual custom domain such as `example.com`.
