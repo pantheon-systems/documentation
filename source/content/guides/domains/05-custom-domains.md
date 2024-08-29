@@ -99,7 +99,7 @@ For any domain that has been added that is pending verification, clicking on the
 
 You can get a high-level status view for all custom domains connected to a given environment via Terminus using the [`https:info` command](/terminus/commands/https-info). Domains that are pending verification will have the "Verification Pending" status returned as part of the Terminus `https:info` command.
 
-### Can I opt-out of Domain Verification?
+### Can I opt out of Domain Verification?
 Sites associated with Diamond and Platinum workspaces are automatically exempt from domain verification enforcement. For those exempt, there is an option to skip domain verification when connecting domains to sites in your workspace.
 
 ## More Resources
