@@ -111,6 +111,15 @@ This is **not** a web application (WordPress or Drupal) maintenance mode error. 
 
 This error typically occurs when a site has been created, but no CMS has been installed. You will also see this error instead of a `403 Directory listing denied` error, if you have no index file.
 
+
+### Error 561: No Site Detected
+
+> No site detected. Make sure your code is pulled into this environment.
+
+This error typically occurs when a site has been created, but no CMS has been installed. Additionally, this error can appear instead of a `403 Directory listing denied` error if no index file is present. 
+
+You will see this error if there is no `index.php` file in the expected location. Ensure that the `index.php` file is in the root of your repository or correctly placed in the `web` directory if you're using a `web_docroot=true` setup, which is the default for Integrated Composer sites. See [Serving Sites from the Web Subdirectory](/nested-docroot) for more details.
+
 ## More Resources
 
 - [PHP Slow Log and FPM Error Log](/guides/php/php-slow-log)
