@@ -124,14 +124,14 @@ composer update vendor/package
 Replace `vendor/package` with the package name you want to update. This will update only the named package to the latest version that matches the version constraints in your `composer.json` file.
 
 ## Troubleshooting
+### Restore overwritten `composer.json`
+Sometimes, when a given upstream update includes changes to the `composer.json` file, it can  conflict with your site's `composer.json` file. In these cases, applying the upstream update could result in the loss of content in your `composer.json` file.
 
-### Merge conflict with upstream `composer.json` file loses all `composer.json` contents
-
-Sometimes, if the upstream update includes changes to the `composer.json` file, it can conflict with your site's `composer.json` file. In these cases, applying the upstream updates could result in the loss of content in your `composer.json` file. You might see something like the following screen in your Pantheon dashboard after applying such an update:
+After applying such an update, check the commit log in the site dashboard. If you see many packages have been **removed**, you'll know the site's `composer.json` file has been overwritten by the upstream and needs to be resotred:
 
 ![Pantheon update removing Composer packages](../../../images/wordpress-composer/02-wordpress-composer-json-removals.png)
 
-The easiest way to resolve this is to simply back up a copy of your current `composer.json` file locally before running `git pull` on your site repository. When you pull down the changes from the site repository, you can then copy the contents of your `composer.json` file back into the file, run a `composer update` and commit the changes.
+The easiest way to resolve this is to simply back up a copy of your current `composer.json` file locally before applying core updates. Then, apply the updates on Pantheon and `git pull` them into your local repository. From there, you can then restore the contents of `composer.json` based on your local back up of the file, run `composer update` and commit the changes.
 
 This may miss out on any actual updates to the `composer.json` in the upstream, so it's a good idea to check the [`composer.json` in the upstream repository](https://github.com/pantheon-upstreams/wordpress-composer-managed/blob/main/composer.json) to see if there are any changes you might want to incorporate into your own `composer.json` file.
 
