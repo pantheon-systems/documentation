@@ -1331,6 +1331,8 @@ ___
 
 ## WP Cerber Security, Antispam & Malware Scan
 
+<ReviewDate date="2024-09-06" />
+
 WP Cerber is a premium security plugin (with a free version available) that is only available through the [WP Cerber website](https://wpcerber.com/). Previously, it was available on the WordPress plugin repository, but it was [removed](https://wordpress.org/plugins/wp-cerber/) due to a violation of the repository's guidelines.
 
 **Issue:** The WP Cerber Anti-Spam Engine makes pages uncacheable on the Pantheon Global CDN. WP Cerber creates a unique, cache-busting cookie for each visitor, which prevents users from seeing cached pages.
@@ -1340,17 +1342,15 @@ WP Cerber is a premium security plugin (with a free version available) that is o
 1. Navigate to the **WP Cerber** menu in the WordPress dashboard and select **Anti-Spam**.
 
 1. Disable the following options:
-  - **Protect registration form**
-  - **Protect comment form**
-  - **Protect other forms**
-  
+   - **Protect registration form**
+   - **Protect comment form**
+   - **Protect other forms**
+
   ![WP Cerber Anti-Spam Engine settings](../images/plugins-known-issues/wp-cerber-anti-spam-settings.png)      
 
 1. In your Pantheon dashboard, clear the cache for the environment.
 
 Your pages should now be cacheable on the Pantheon Global CDN.
-
-<ReviewDate date="2024-09-06" />
 ___
 
 ## WP Reset
