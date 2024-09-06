@@ -21,9 +21,9 @@ This section provides information on how to interpret 5xx errors.
 
 > Upstream sent too big header while reading response header from upstream.
 
-This error occurs when the payload or size of the request sent is greater than the `fastcgi_buffer_size`. Check to see if you are making heavy requests with a number of assets or data being passed if this happens again. 
+This error occurs when the payload or size of the request sent is greater than the `fastcgi_buffer_size`. Check to see if you are making heavy requests with a number of assets or data being passed if this happens again.
 
-Remove additional images to reduce the size of the payload sent to the buffer for nginx to process. This will allow you to post the request. 
+Remove additional images to reduce the size of the payload sent to the buffer for nginx to process. This will allow you to post the request.
 
 ### 502 Timeout/Segfault Error
 
@@ -33,7 +33,7 @@ Complete the steps below to resolve this:
 
 1. Disable Basic Auth and send the request again to see if it works.
 
-1. Re-enable Basic Auth. 
+1. Re-enable Basic Auth.
 
 However, if it is possible to ensure your headers are always passed for JS files, that is the best solution.
 
@@ -79,14 +79,14 @@ This can be a misleading message if you're using AJAX when HTTP Basic Auth is e
 
 ### Pantheon 504 Target Not Responding
 
-> The web page you were looking for could not be delivered. 
+> The web page you were looking for could not be delivered.
 
 A common cause for this error is an [idle container](/application-containers#idle-containers) that has spun down due to inactivity. Wake the environment by loading the home page in your browser or using the [`terminus env:wake` command](/terminus/commands/env-wake).
 
 > No php workers are available to handle the request.
 
-This occurs when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit is reached, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. 
- 
+This occurs when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit is reached, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests.
+
 When the nginx queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. At some point, it's better to turn away requests and serve those already in line. Refer to [Overloaded Workers](/guides/errors-and-server-responses/overloaded-workers) for more information.
 
 This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. Consider [upgrading your site plan](/guides/legacy-dashboard/site-plan) if you have too much traffic for your site's resources.
@@ -105,18 +105,11 @@ Typically the request timeout is much shorter than the hard timeout for PHP. Whi
 
 This is **not** a web application (WordPress or Drupal) maintenance mode error. This is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
 
-### Error 561 No site Detected
-
-> No site detected. Make sure your code is pulled into this environment. 
-
-This error typically occurs when a site has been created, but no CMS has been installed. You will also see this error instead of a `403 Directory listing denied` error, if you have no index file.
-
-
 ### Error 561: No Site Detected
 
 > No site detected. Make sure your code is pulled into this environment.
 
-This error typically occurs when a site has been created, but no CMS has been installed. Additionally, this error can appear instead of a `403 Directory listing denied` error if no index file is present. 
+This error typically occurs when a site has been created, but no CMS has been installed. Additionally, this error can appear instead of a `403 Directory listing denied` error if no index file is present.
 
 You will see this error if there is no `index.php` file in the expected location. Ensure that the `index.php` file is in the root of your repository or correctly placed in the `web` directory if you're using a `web_docroot=true` setup, which is the default for Integrated Composer sites. See [Serving Sites from the Web Subdirectory](/nested-docroot) for more details.
 
