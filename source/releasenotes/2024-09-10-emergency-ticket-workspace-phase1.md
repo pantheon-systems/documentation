@@ -1,6 +1,6 @@
 ---
 title: “On-call help” renamed to “Emergency ticket” (workspace level support)
-published_date: "2024-09-xx"
+published_date: "2024-09-10"
 categories: [general]
 ---
 
