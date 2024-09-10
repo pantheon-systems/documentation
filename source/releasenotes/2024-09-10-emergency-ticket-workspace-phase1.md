@@ -1,10 +1,10 @@
 ---
-title: “On-call help” renamed to “Emergency ticket” (workspace level support)
-published_date: "2024-09-10"
-categories: [general]
+title: '"On-call help" renamed to "Emergency ticket" (workspace level support)'
+published_date: "2024-09-09"
+categories: [user-interface]
 ---
 
-In our ongoing commitment to enhance the clarity of our support options, we are renaming Pantheon's 'On-call help' to 'Emergency ticket.' This phased rollout will first impact support at the workspace level, with changes to site-level support coming in the next phase.
+In our ongoing commitment to enhance the clarity of our support options, we are renaming Pantheon's '**On-call help**' to '**Emergency ticket**.' This phased rollout will first impact support at the workspace level, with changes to site-level support coming in the next phase.
 
 For users accessing support from the site level, you will still see 'On-call help' for now. Rest assured, this is simply a name change, and it does not impact the scope of our service. The same level of support will continue to be provided.
 
