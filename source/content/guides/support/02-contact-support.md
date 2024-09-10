@@ -14,7 +14,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/contact-support/
 editpath: support/02-contact-support.md
-reviewed: "2020-12-13"
+reviewed: "2024-09-10"
 ---
 
 This section provides information on how to open a support ticket as well as other ways to contact support.
@@ -37,7 +37,6 @@ For every method of contacting Pantheon Support documented on this page, please 
 
 The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table](/guides/support/#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
-### From the workspace
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces).
 
 1. Go to the **Support** tab, then select **Open support ticket**.
@@ -46,23 +45,9 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
 
-1. Click **Open Ticket**
+1. Click **Submit ticket**
 
 After a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
-
-### From the site dashboard
-
-1. [Go to the site dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
-
-1. Go to the **Support** tab, then select **Open Ticket**.
-
-1. Choose the **ticket type**.
-
-1. Enter a subject (summary of your issue).
-
-1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
-
-1. Click **Open Ticket**
 
 ## Live Chat
 
@@ -70,7 +55,6 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 
 To receive the highest level of support available to your site or Workspace, remember to access the chat from the Workspace if available.
 
-### From the workspace
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces).
 
 1. Go to the **Support** tab, then select **Start chat**.
@@ -87,18 +71,9 @@ Some in-browser ad or tracking blockers may interfere with the **Start chat** bu
 
 </Alert>
 
-### From the site dashboard
-
-1. [Go to the site dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
-
-1. Go to the **Support** tab, then select **Launch Chat**.
-
-1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
-
 ## Emergency ticket
 **Diamond** and **Platinum** customers also have the option to open an **emergency ticket** (formerly On-call help) for business-critical issues. Pantheon escalates emergency tickets to our support engineers, even during off-hours. If your issue is non-business-critical, please open a [general support](#general-support-ticket) ticket instead.
 
-### From the workspace
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces).
 
 1. Go to the **Support** tab, then select **Open emergency ticket**.
@@ -107,22 +82,9 @@ Some in-browser ad or tracking blockers may interfere with the **Start chat** bu
 
 1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
 
-1. Click **Submit emergency ticket**
+1. Click **Submit ticket**
 
 After a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
-
-### From the site dashboard
-
-1. [Go to the site dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
-
-1. Go to the **Support** tab, then select **Trigger Pantheon On-Call**.
-
-1. Enter a subject (summary of your issue).
-
-1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
-
-1. Click **Submit On-Call Ticket**
-
 
 ## Call Us
 **Diamond** and **Platinum** customers can call the 24/7 Premium Support Hotline for any technical issues, escalations, site, billing, or overages queries. You can find the phone number in the Support tab of your workspace.

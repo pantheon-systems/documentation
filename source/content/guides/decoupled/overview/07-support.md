@@ -7,7 +7,7 @@ contributors: [joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/support
-reviewed: "2023-03-23"
+reviewed: "2024-09-10"
 contenttype: [guide]
 innav: [false]
 categories: [create]

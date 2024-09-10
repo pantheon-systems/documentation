@@ -13,7 +13,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/faq/
 editpath: support/06-faq.md
-reviewed: "2020-12-13"
+reviewed: "2024-09-10"
 ---
 
 ### Can I request a feature be added to the platform?

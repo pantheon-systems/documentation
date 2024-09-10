@@ -23,7 +23,7 @@ Bringing a site back from downtime and remediating the cause of downtime to ensu
 
 The WAF and Advanced GCDN layers are primarily managed by Pantheon’s Professional Services team, with some updates and support tasks performed by the Customer Success Engineering team, which also performs intake on the initial request. This ensures that responses can meet the contracted SLO, and Pantheon aims to escalate/reassign to Professional Services on an as needed basis.
 
-In the event of an attack, exploit, or other issue related to the global edge, file a ticket via the normal support channels, with an on-call emergency ticket filed in cases where downtime or serious service degradation occurs, and notify the Pantheon account team via Slack.
+In the event of an attack, exploit, or other issue related to the global edge, file a ticket via the normal support channels, with an emergency ticket filed in cases where downtime or serious service degradation occurs, and notify the Pantheon account team via Slack.
 
 ## Edge Failover
 
@@ -35,7 +35,7 @@ The Global CDN natively provides a layer of protection via the full-page cache. 
 
 ### Synthetic Responses
 
-A set of static pages can be hosted directly and when certain failure conditions are detected, traffic can be redirected to a placeholder. The placeholder will provide a minimally acceptable user experience rather than error messages and a completely unreachable site. These custom rules require an [Advanced Global CDN](/guides/agcdn) subscription. 
+A set of static pages can be hosted directly and when certain failure conditions are detected, traffic can be redirected to a placeholder. The placeholder will provide a minimally acceptable user experience rather than error messages and a completely unreachable site. These custom rules require an [Advanced Global CDN](/guides/agcdn) subscription.
 
 ## Infrastructure Failover
 In cases where the Google Cloud Platform infrastructure becomes compromised, Pantheon support can trigger a Multizone failover to redirect traffic at the load-balancing layer to a backup cluster of application servers on an alternate zone. For more information, refer to the [Multizone Failover](/multizone-failover) documentation.
