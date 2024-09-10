@@ -4,7 +4,7 @@ subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 tags: [webops]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-08-13"
+reviewed: "2024-09-10"
 type: guide
 permalink: docs/guides/disaster-recovery/site-goes-down
 editpath: disaster-recovery/03-site-goes-down.md
@@ -19,18 +19,23 @@ integration: [--]
 
 ## Open a Support Ticket
 
-In cases of downtime or significant functional failure in the Live environment, the first step is to open a support ticket. Even if you escalate the incident to your dedicated Customer Success Manager (included for all Enterprise contract customers), our support engineers will be the ones diagnosing the cause of downtime and working to get your site back up, and a ticket is the fastest way to get them up to speed and engaged.
+In cases of downtime or significant functional failure in the live environment, the first step is to open a support ticket. Even if you escalate the incident to your dedicated Customer Success Manager (available to all Enterprise contract customers), our support engineers will be the ones diagnosing the cause of the downtime and working to restore your site. Opening a ticket is the fastest way to get them up to speed and engaged.
 
-* **Diamond** and **Platinum** Account customers can report and escalate site downtime by clicking **Trigger Pantheon On-Call** from the Support tab.
-  * In cases where the dashboard is inaccessible, a ticket can be filed using a telephone ticketing service, accessible at **1(866)415-7624**. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
-* **Gold** customers should click **Open Ticket** to open a support interaction to report site downtime.
-* **Silver** customers should click **Launch Chat**.
 
-![Show platinum support features in the site dashboard](../../../images/dashboard/new-dashboard/platinum-support-site-dashboard.png)
+From the Support tab in the workspace of the affected site:
 
-Please include as much information as possible. A support engineer will work with you to diagnose the cause, and any information that you can provide will shorten the investigation time.
+* **Diamond** and **Platinum** customers can open an **emergency ticket** to report and escalate business-critical site downtime.
+  * In cases where the dashboard is inaccessible, a support ticket can be filed using a telephone ticketing service, accessible at 1(866)415-7624. Note that this is strictly for filing a ticket, and you will not reach our support engineers by using this method.
+* **Gold** customers can open a **general support ticket** to report site downtime.
+* **Silver** customers can start a **live chat** to report site downtime.
 
-To learn more about support tiers and available features, see our [Scope of Support](/guides/support/#support-features-and-response-times) documentation.
+![Show diamond support features in the workspace dashboard](../../../images/dashboard/new-dashboard/diamond-support-workspace-dashboard.png)
+
+Please provide as much detail as possible. Our support engineers will work with you to diagnose the cause of the issue, and any information you provide will help shorten the investigation time.
+
+To learn more about the support features for different account tiers, see also the following:
+* [Scope of Support](/guides/support/#support-features-and-response-times)
+* [Contact Support](/guides/support/contact-support/)
 
 ## Check for Ongoing Platform Incidents
 
@@ -42,23 +47,23 @@ Because incidents are declared when a platform issue meets a minimal downtime or
 
 ## Incident Escalation
 
-Although filing an emergency on-call ticket will escalate your downtime incident within the support team and ensure you receive the fastest response, you may also want to alert your broader Pantheon account team. Depending on the situation, your escalation path may differ.
+Filing an emergency ticket will escalate your downtime incident within the Support team and ensure you receive the fastest response. However, you may also want to alert your broader Pantheon account team. Depending on the situation, your escalation path may vary.
 
 ### Support Channels
 
-* **Ticketing**: If your site is suffering downtime on the Live environment, your first step should be to open a support ticket. Chat normally has a quicker response time, but emergency on-call tickets are absolutely escalated and response times to these tickets should be comparable.
+* **Ticket**: In cases of downtime or significant functional failure in the live environment, the first step is to open a support ticket. While live chat generally offers a quicker response time, emergency tickets (for **Diamond** and **Platinum** customers) are escalated and should have comparable response times.
 
 * **Slack**: Diamond tier accounts can have access to a dedicated Slack channel in which customers can interact directly with their CSM, AM, and primary support resources. This is primarily intended as a means for quick communication and collaboration, and should not be used in lieu of the ticketing system, as there are no SLOs associated with Slack channels.
 
-* **Phone/teleconference**: A phone call or teleconference can be requested for emergency support. This can be done either when filing the emergency ticket, or in the ticket thread once open.
+* **Phone/Teleconference**: You can request a phone call or teleconference for emergency support. This can be done either when filing the emergency ticket or within the ticket thread once it is open.
 
   <Alert title="Note" type="info" >
 
-  Tickets and chat have tier-specific response time objectives, while email, phone, and Slack channels do not. Refer to the [Support Features and Response Times](/guides/support/#support-features-and-response-times) table for details.
+  Tickets and live chat have account tier-specific response times, whereas email, phone, and Slack channels do not. Learn more about [support features for different account tiers](/guides/support/#support-features-and-response-times).
 
   </Alert>
 
-* **Diamond and Platinum Account customers** can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
+* **Premium Support Hotline**: Diamond and Platinum customers can call the 24/7 Premium Support Hotline for any technical issues, escalations, site, billing, or overages queries. You can find the phone number in the Support tab of your workspace.
 
 ### Escalation Paths
 
@@ -92,4 +97,4 @@ Key tools that you can use for ongoing diagnosis of issues include:
 
 * AGCDN logs can be piped directly into customer-managed log management applications. Setup by Professional Services is required.
 
-The Customer Success Engineering team will work with you through the existing emergency ticket. If additional issues are uncovered you may want to open a new ticket to allow for a cleaner set of interactions, especially if additional Pantheon resources are brought in for review and assistance.
+Support engineers will work with you through the existing emergency ticket. If additional issues are uncovered you may want to open a new ticket to allow for a cleaner set of interactions, especially if additional Pantheon resources are brought in for review and assistance.

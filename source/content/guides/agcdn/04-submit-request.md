@@ -28,7 +28,7 @@ Follow the steps below to submit a ticket for a configuration change or support 
 
 1. Review [Support Ticket Best Practices](/guides/support/support-ticket/#best-practices).
 
-1. Complete the steps in [Ticket Support](/guides/support/contact-support/#ticket-support). 
+1. Complete the steps in [Ticket Support](/guides/support/contact-support/#general-support-ticket). 
 
     ![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
 
