@@ -20,7 +20,6 @@ This section provides information on how to use Apache Solr with your WordPress 
 
 [Apache Solr](/solr) is a system for indexing and searching site content. All plans except for Basic can use Pantheon Solr.
 
-<!--<Partial file="solr-version.md" />-->
 Currently, Pantheon provides Apache Solr v3.6 for WordPress search for all plans except the Basic plan.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
