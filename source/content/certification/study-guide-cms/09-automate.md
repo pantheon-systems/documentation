@@ -79,7 +79,7 @@ Pantheon offers several paths to help you launch a Drupal site that leverages In
 * If you are using a deprecated Pantheon Drupal Upstream and would like to convert your site from one of the deprecated upstreams to the supported `drupal-composer-managed` upstream, you can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin).
 
 ### WordPress with Integrated Composer
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with Bedrock. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with Bedrock.
 
 #### Adding and Removing Dependencies with Integrated Composer
 
