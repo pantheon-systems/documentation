@@ -17,7 +17,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-Retrying after the failure will resolve the issue, which is fine enough in the context of a single site but not so easy to handle across hundreds of sites. Those with large site portfolios using continuous integration and automated deployments might see this issue surface as a large spike in failed deployments across many sites.
+Retrying after the failure will resolve the issue, which is fine enough in the context of a single site but not so easy to handle across hundreds of sites. Those with large site portfolios using continuous integration and automated deployments might see this issue surface as a large spike in failed deployments across many sites. The scripts below provide a flexible and automated approach to managing local DNS cache issues when working with Pantheon sites. By flushing stale DNS entries and retrying failed commands, you can ensure smoother SSH / Git operations and reduce the likelihood of deployment failures due to stale DNS entries.
 
 ## Option 1: Eliminate Local DNS Caching
 The first option is to assume the DNS cache is always stale and to flush caches prior to any interaction with a Pantheon codeserver.  In the example below, flush_dns_cache is called prior to executing any git command:
@@ -56,6 +56,14 @@ flush_dns_cache
 
 git clone ssh://codeserver.dev.[id]@codeserver.dev.[id].drush.in:2222/~/repository.git -b master mysite
 ```
+
+### How to Use
+
+1. Create a Script File: Save the above script in a file, e.g., flush_dns_and_clone.sh.
+2. Make the Script Executable: Run chmod +x flush_dns_and_clone.sh to make the script executable.
+3. Run the Script: Execute the script by running ./flush_dns_and_clone.sh.
+
+This script will flush the DNS cache based on your operating system and then proceed with the git clone command.
 
 ## Option 2: Conditionally Flush Stale Local DNS and Retry Git Command Failures
 To resolve git command errors such as `Permission denied (publickey)`, it is recommended to automatically flush stale local DNS caches for Pantheon application containers and retry failed commands in order to prevent CI deployment errors following Pantheon platform maintenance tasks.
@@ -131,3 +139,12 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
 }
 push_code
 ```
+
+### How to Use
+
+1. Create a Script File: Save the above script in a file, e.g., conditional_flush_and_retry.sh.
+2. Make the Script Executable: Run chmod +x conditional_flush_and_retry.sh to make the script executable.
+3. Set Environment Variables: Ensure that SITE_ID, ENV_ID, and BRANCH environment variables are set appropriately.
+4. Run the Script: Execute the script by running ./conditional_flush_and_retry.sh.
+
+This script will check for stale DNS cache and flush it if necessary, then retry the git commands up to 5 times to ensure successful execution.
