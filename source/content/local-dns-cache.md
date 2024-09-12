@@ -37,6 +37,12 @@ Before implementing these solutions, ensure you have:
 - Appropriate permissions to execute system commands (for DNS cache flushing)
 - Git installed and configured for your Pantheon sites
 
+### Best Practices
+1. Implement these scripts in your local development environment to catch issues early
+2. Use Option 2 to minimize unnecessary cache flushes
+3. Regularly update your local Git configurations to match Pantheon's latest recommendations
+
+
 ## Option 1: Eliminate Local DNS Caching
 The first option is to assume the DNS cache is always stale and to flush caches prior to any interaction with a Pantheon codeserver. In the example below, flush_dns_cache is called prior to executing any git command.
 
@@ -52,10 +58,10 @@ The first option is to assume the DNS cache is always stale and to flush caches 
 
 ### Usage
 1. Click the download file button below to download `flush_dns_and_clone.sh`
-1. Update the last line of the `flush_dns_and_clone.sh` file with the [clone command from your site dashboard](/guides/git/git-config#clone-your-site-codebase).
+1. Replace the last line of the `flush_dns_and_clone.sh` file with the [clone command from your site dashboard](/guides/git/git-config#clone-your-site-codebase).
 1. Execute the script as part of your deployment workflows by running:  
   ```bash{promptUser: user}
-  ./flush_dns_and_clone.sh.
+  ./flush_dns_and_clone.sh
   ```
 This script will flush the DNS cache based on your operating system and then proceed with the git clone command.
 
@@ -83,7 +89,7 @@ To resolve git command errors such as `Permission denied (publickey)`, it is rec
 - May increase execution time for Git operations due to potential retries
 - Depends on external commands (dig, terminus) which need to be available in the environment
 
-In the example below, any git clone or push command error results in calling the `check_dns_cache` function to flush stale local DNS entries, and then the respective git command is retried. See [below](#detailed-function-explanations) for a more detailed explanation of the functions used in the script:
+In the example below, any git clone or push command error results in calling the `check_dns_cache` function to flush stale local DNS entries, and then the respective git command is retried. See [below](#detailed-function-explanations) for a more detailed explanation of the functions used in the script.
 
 ### Usage
 1. Click the download file button below to download `conditional_flush_and_retry.sh`
@@ -105,21 +111,16 @@ GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/
 
 3. `push_code()`: This function encapsulates Git clone and push operations with retry logic, calling `check_dns_cache()` on failures.
 
+#### Large Portfolios
+For large site portfolios:
+
+* Consider implementing a cooldown period between retries to prevent overwhelming Pantheon's services
+* Monitor the frequency of DNS cache flushes and adjust the retry logic if necessary
+
+
 ## Troubleshooting
 ### Permission denied when flushing DNS cache
 Ensure your script has sudo privileges or run with elevated permissions.
 
 ### Git commands still failing after DNS flush
 Verify your [SSH keys](/ssh-keys) are correctly set up in your Pantheon account.
-
-## Best Practices
-1. Implement these scripts in your local development environment to catch issues early
-2. Use Option 2 to minimize unnecessary cache flushes
-3. Regularly update your local Git configurations to match Pantheon's latest recommendations
-
-## Performance Considerations
-
-For large site portfolios:
-
-- Consider implementing a cooldown period between retries to prevent overwhelming Pantheon's services
-- Monitor the frequency of DNS cache flushes and adjust the retry logic if necessary
