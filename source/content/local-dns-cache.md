@@ -7,6 +7,7 @@ contenttype: [doc]
 innav: [true]
 categories: [cache]
 ---
+DNS caching issues are critical for Pantheon developers to understand and manage. Stale DNS entries can lead to SSH/Git authentication failures, potentially disrupting your workflow and deployments. This guide provides solutions to mitigate these issues, ensuring smooth operations across your Pantheon sites.
 
 Pantheon application containers are sometimes migrated during routine platform maintenance. Following an application container migration, it is possible for Local DNS cache to cause SSH / Git authentication failures resulting in errors like `Permission denied (publickey)` or the following error, as the result of an operation like `git clone`:
 
@@ -19,8 +20,34 @@ and the repository exists.
 
 Retrying after the failure will resolve the issue, which is fine enough in the context of a single site but not so easy to handle across hundreds of sites. Those with large site portfolios using continuous integration and automated deployments might see this issue surface as a large spike in failed deployments across many sites. The scripts below provide a flexible and automated approach to managing local DNS cache issues when working with Pantheon sites. By flushing stale DNS entries and retrying failed commands, you can ensure smoother SSH / Git operations and reduce the likelihood of deployment failures due to stale DNS entries.
 
+## Context and Use Cases
+These scripts are particularly valuable for:
+
+- Large-scale deployments managing multiple Pantheon sites
+- CI/CD pipelines where automated Git operations are frequent
+- Developers experiencing intermittent SSH/Git authentication failures
+
+## Prerequisites
+Before implementing these solutions, ensure you have:
+
+- Terminus installed and authenticated
+- Appropriate permissions to execute system commands (for DNS cache flushing)
+- Git installed and configured for your Pantheon sites
+
 ## Option 1: Eliminate Local DNS Caching
-The first option is to assume the DNS cache is always stale and to flush caches prior to any interaction with a Pantheon codeserver.  In the example below, flush_dns_cache is called prior to executing any git command:
+The first option is to assume the DNS cache is always stale and to flush caches prior to any interaction with a Pantheon codeserver. In the example below, flush_dns_cache is called prior to executing any git command.
+
+### Pros and Cons
+
+**Pros:**
+
+- Ensures fresh DNS resolution for every Git operation
+- Simplifies troubleshooting by eliminating DNS caching as a variable
+
+**Cons:**
+
+- May introduce slight performance overhead due to frequent cache flushing
+- Requires elevated permissions to flush DNS cache on some systems
 
 ```
 # Function to flush DNS cache based on the operating system
@@ -51,24 +78,48 @@ function flush_dns_cache() {
 # Flush the DNS cache
 flush_dns_cache
 
-
 # Standard Pantheon git commands, eg
-
 git clone ssh://codeserver.dev.[id]@codeserver.dev.[id].drush.in:2222/~/repository.git -b master mysite
 ```
 
-### How to Use
 
-1. Create a Script File: Save the above script in a file, e.g., flush_dns_and_clone.sh.
-2. Make the Script Executable: Run chmod +x flush_dns_and_clone.sh to make the script executable.
-3. Run the Script: Execute the script by running ./flush_dns_and_clone.sh.
+#### How to Use
+
+1. Create a Script File: Save the above script in a file, e.g., `flush_dns_and_clone.sh`.
+2. Make the Script Executable: Run `chmod +x flush_dns_and_clone.sh` to make the script executable.
+3. Run the Script: Execute the script by running `./flush_dns_and_clone.sh`.
 
 This script will flush the DNS cache based on your operating system and then proceed with the git clone command.
 
 ## Option 2: Conditionally Flush Stale Local DNS and Retry Git Command Failures
+
 To resolve git command errors such as `Permission denied (publickey)`, it is recommended to automatically flush stale local DNS caches for Pantheon application containers and retry failed commands in order to prevent CI deployment errors following Pantheon platform maintenance tasks.
 
-In the example below, any git clone or push command error results in calling the check_dns_cache function to flush stale local DNS entries, and then the respective git command is retried up to 5 times:
+In the example below, any git clone or push command error results in calling the check_dns_cache function to flush stale local DNS entries, and then the respective git command is retried.
+
+### Pros and Cons
+
+**Pros:**
+
+- More efficient than Option 1, as it only flushes DNS cache when necessary
+- Automatically retries failed Git commands, reducing manual intervention
+
+**Cons:**
+
+- Slightly more complex implementation compared to Option 1
+- Requires setting up environment variables (SITE_ID, ENV_ID, BRANCH)
+- May increase execution time for Git operations due to potential retries
+- Depends on external commands (dig, terminus) which need to be available in the environment
+
+See below for a more detailed explanation of the functions used in the script:
+
+**Detailed Function Explanations**
+
+1. `flush_dns_cache()`: This function detects the operating system and executes the appropriate DNS cache flushing command.
+
+2. `check_dns_cache()`: This function compares the cached IP with the actual IP of the Git host. If they differ, it triggers a DNS cache flush.
+
+3. `push_code()`: This function encapsulates Git clone and push operations with retry logic, calling `check_dns_cache()` on failures.
 
 ```
 function flush_dns_cache() {
@@ -94,6 +145,7 @@ function flush_dns_cache() {
             ;;
     esac
 }
+
 function check_dns_cache {
   GIT_HOST=$(terminus connection:info ${SITE_ID}.${ENV_ID} --field=git_host)
   CACHED_IP=$(dig +short A $GIT_HOST)
@@ -102,49 +154,66 @@ function check_dns_cache {
   # Check if CACHED_IP does not equal UNCACHED_IP
   if [ "$CACHED_IP" != "$UNCACHED_IP" ]; then
     echo "IP address has changed, flushing DNS cache"
-flush_dns_cache
+    flush_dns_cache
   else
     echo "IP address has not changed, no need to flush DNS cache"
   fi
 }
 
-
 function push_code {
-# Example: if git clone fails, check for stale DNS cache and retry
-MAX_RETRIES=5
-RETRY_COUNT=0
-while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-        git clone --branch $ENV_ID --depth 2 ${{ env.UPSTREAM_GIT_URL }}
- if [ $? -eq 0 ]; then
-	 break
-	 else
-	 RETRY_COUNT=$((RETRY_COUNT+1))
-	 check_dns_cache && echo "Retrying git clone command..."
-	 fi
-	done
-      # Continue existing code
+  # Example: if git clone fails, check for stale DNS cache and retry
+  MAX_RETRIES=5
+  RETRY_COUNT=0
+  while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+    git clone --branch $ENV_ID --depth 2 ${{ env.UPSTREAM_GIT_URL }}
+    if [ $? -eq 0 ]; then
+      break
+    else
+      RETRY_COUNT=$((RETRY_COUNT+1))
+      check_dns_cache && echo "Retrying git clone command..."
+    fi
+  done
+  # Continue existing code
 
- 	# Example: if git push fails, check for stale DNS cache and retry
-MAX_RETRIES=5
-RETRY_COUNT=0
-while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-       git push pantheon $BRANCH -vv
- if [ $? -eq 0 ]; then
-	 break
-	 else
-	 RETRY_COUNT=$((RETRY_COUNT+1))
-	 check_dns_cache && echo "Retrying git push command..."
-	 fi
-	done
+  # Example: if git push fails, check for stale DNS cache and retry
+  MAX_RETRIES=5
+  RETRY_COUNT=0
+  while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+    git push pantheon $BRANCH -vv
+    if [ $? -eq 0 ]; then
+      break
+    else
+      RETRY_COUNT=$((RETRY_COUNT+1))
+      check_dns_cache && echo "Retrying git push command..."
+    fi
+  done
 }
+
 push_code
 ```
 
 ### How to Use
 
-1. Create a Script File: Save the above script in a file, e.g., conditional_flush_and_retry.sh.
-2. Make the Script Executable: Run chmod +x conditional_flush_and_retry.sh to make the script executable.
-3. Set Environment Variables: Ensure that SITE_ID, ENV_ID, and BRANCH environment variables are set appropriately.
-4. Run the Script: Execute the script by running ./conditional_flush_and_retry.sh.
+1. Create a Script File: Save the above script in a file, e.g., `conditional_flush_and_retry.sh`.
+2. Make the Script Executable: Run `chmod +x conditional_flush_and_retry.sh` to make the script executable.
+3. Set Environment Variables: Ensure that `SITE_ID`, `ENV_ID`, and `BRANCH` environment variables are set appropriately.
+4. Run the Script: Execute the script by running `./conditional_flush_and_retry.sh`.
 
-This script will check for stale DNS cache and flush it if necessary, then retry the git commands up to 5 times to ensure successful execution.
+## Troubleshooting
+- Issue: Permission denied when flushing DNS cache
+  Solution: Ensure your script has sudo privileges or run with elevated permissions
+
+- Issue: Git commands still failing after DNS flush
+  Solution: Verify your SSH keys are correctly set up in your Pantheon account
+
+## Best Practices
+1. Implement these scripts in your local development environment to catch issues early
+2. Use Option 2 for production deployments to minimize unnecessary cache flushes
+3. Regularly update your local Git configurations to match Pantheon's latest recommendations
+
+## Performance Considerations
+
+For large site portfolios:
+
+- Consider implementing a cooldown period between retries to prevent overwhelming Pantheon's services
+- Monitor the frequency of DNS cache flushes and adjust the retry logic if necessary
