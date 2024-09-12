@@ -38,9 +38,9 @@ Before implementing these solutions, ensure you have:
 - Git installed and configured for your Pantheon sites
 
 ### Best Practices
-1. Implement these scripts in your local development environment to catch issues early
-2. Use Option 2 to minimize unnecessary cache flushes
-3. Regularly update your local Git configurations to match Pantheon's latest recommendations
+* Implement these scripts in your local development environment to catch issues early
+* Use Option 2 to minimize unnecessary cache flushes
+* Regularly update your local Git configurations to match Pantheon's latest recommendations
 
 
 ## Option 1: Eliminate Local DNS Caching
@@ -105,11 +105,11 @@ GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/
 
 #### Detailed Function Explanations
 
-1. `flush_dns_cache()`: This function detects the operating system and executes the appropriate DNS cache flushing command.
+* `flush_dns_cache()`: This function detects the operating system and executes the appropriate DNS cache flushing command.
 
-2. `check_dns_cache()`: This function compares the cached IP with the actual IP of the Git host. If they differ, it triggers a DNS cache flush.
+* `check_dns_cache()`: This function compares the cached IP with the actual IP of the Git host. If they differ, it triggers a DNS cache flush.
 
-3. `push_code()`: This function encapsulates Git clone and push operations with retry logic, calling `check_dns_cache()` on failures.
+* `push_code()`: This function encapsulates Git clone and push operations with retry logic, calling `check_dns_cache()` on failures.
 
 #### Large Portfolios
 For large site portfolios:
