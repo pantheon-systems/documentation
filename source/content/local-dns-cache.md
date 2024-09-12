@@ -9,6 +9,7 @@ categories: [cache]
 ---
 DNS caching issues are critical for Pantheon developers to understand and manage. Stale DNS entries can lead to SSH/Git authentication failures, potentially disrupting your workflow and deployments. This guide provides solutions to mitigate these issues, ensuring smooth operations across your Pantheon sites.
 
+## Issue Symptoms
 Pantheon application containers are sometimes migrated during routine platform maintenance. Following an application container migration, it is possible for Local DNS cache to cause SSH / Git authentication failures resulting in errors like `Permission denied (publickey)` or the following error, as the result of an operation like `git clone`:
 
 ```
@@ -18,7 +19,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-Retrying after the failure will resolve the issue, which is fine enough in the context of a single site but not so easy to handle across hundreds of sites. Those with large site portfolios using continuous integration and automated deployments might see this issue surface as a large spike in failed deployments across many sites.
+Manually retrying will resolve the issue, which is fine enough in the context of a single site but not so easy to handle across hundreds of sites. Those with large site portfolios using continuous integration and automated deployments might see this issue surface as a large spike in failed deployments across many sites.
 
 ## Before You Begin
 ### Use Cases
@@ -44,7 +45,7 @@ Before implementing these solutions, ensure you have:
 
 
 ## Option 1: Eliminate Local DNS Caching
-The first option is to assume the DNS cache is always stale and to flush caches prior to any interaction with a Pantheon codeserver. In the example below, flush_dns_cache is called prior to executing any git command.
+The first option is to assume the DNS cache is always stale and to flush caches prior to any interaction with a Pantheon codeserver. In the example below, `flush_dns_cache()` is called prior to executing any git command.
 
 ### Considerations
 **Pros:**
@@ -72,8 +73,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/
 
 
 ## Option 2: Conditionally Flush Stale Local DNS and Retry Git Command Failures
-
-To resolve git command errors such as `Permission denied (publickey)`, it is recommended to automatically flush stale local DNS caches for Pantheon application containers and retry failed commands in order to prevent CI deployment errors following Pantheon platform maintenance tasks.
+In the second option, any git clone or push command error results in calling the `check_dns_cache()` function to flush stale local DNS entries, and then the respective git command is retried. See [below](#detailed-function-explanations) for a more detailed explanation of the functions used in the script.
 
 ### Considerations
 
@@ -88,8 +88,6 @@ To resolve git command errors such as `Permission denied (publickey)`, it is rec
 - Requires setting up environment variables (`SITE_ID`, `ENV_ID`, `BRANCH`)
 - May increase execution time for Git operations due to potential retries
 - Depends on external commands (dig, terminus) which need to be available in the environment
-
-In the example below, any git clone or push command error results in calling the `check_dns_cache` function to flush stale local DNS entries, and then the respective git command is retried. See [below](#detailed-function-explanations) for a more detailed explanation of the functions used in the script.
 
 ### Usage
 1. Click the download file button below to download `conditional_flush_and_retry.sh`
