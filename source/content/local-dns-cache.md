@@ -206,7 +206,7 @@ push_code
 
 ## Best Practices
 1. Implement these scripts in your local development environment to catch issues early
-2. Use Option 2 for production deployments to minimize unnecessary cache flushes
+2. Use Option 2 to minimize unnecessary cache flushes
 3. Regularly update your local Git configurations to match Pantheon's latest recommendations
 
 ## Performance Considerations
