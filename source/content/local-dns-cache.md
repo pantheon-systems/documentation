@@ -198,11 +198,11 @@ push_code
 4. Run the Script: Execute the script by running `./conditional_flush_and_retry.sh`.
 
 ## Troubleshooting
-- Issue: Permission denied when flushing DNS cache
-  Solution: Ensure your script has sudo privileges or run with elevated permissions
+**Issue:** Permission denied when flushing DNS cache
+**Solution:** Ensure your script has sudo privileges or run with elevated permissions
 
-- Issue: Git commands still failing after DNS flush
-  Solution: Verify your SSH keys are correctly set up in your Pantheon account
+**Issue:** Git commands still failing after DNS flush
+**Solution:** Verify your SSH keys are correctly set up in your Pantheon account
 
 ## Best Practices
 1. Implement these scripts in your local development environment to catch issues early
