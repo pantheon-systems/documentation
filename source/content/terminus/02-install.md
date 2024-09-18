@@ -66,6 +66,9 @@ Terminus does not work with the following platforms:
 
 ### Recommended Packages
 
+- [OpenSSH 7.8](https://github.com/PowerShell/Win32-OpenSSH/wiki/) or later
+   - You can check your OpenSSH version by running `ssh -V` from a terminal application. 
+   - This is required package for executing nested Drush or WP-CLI commands. 
 - [Drush](https://www.drush.org/12.x/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
 - [WP-CLI](http://wp-cli.org/). This is useful if you need to run WP-CLI commands that are incompatible with Terminus.
 
