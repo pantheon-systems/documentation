@@ -328,6 +328,21 @@ remote: Valid versions are: 1
 
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common reason for an invalid `pantheon.yml` file.
 
+### There was an internal error processing the request
+
+The Platform will throw an "internal error" when you try to push a commit that includes a `pantheon.yml` changes to a **_branch without an associated multidev_**. The error message will resemble:
+
+```none
+remote: PANTHEON ERROR:
+remote:
+remote: The specific error returned was: Internal exception
+remote:
+remote: There was an internal error processing the request
+remote:
+```
+
+To resolve this, create multidev first before pushing the `pantheon.yml` changes.
+
 ### Why can’t I update the PHP version on my Multidev?
 
 The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev:
