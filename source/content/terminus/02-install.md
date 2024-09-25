@@ -56,21 +56,18 @@ Terminus does not work with the following platforms:
 ### Required Packages
 
 - PHP Version 7.4 or later
-   - You can check your PHP version by running `php -v` from a terminal application. You must have the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php) for:
-    - mbstring
-    - XML
-    - [cURL](https://secure.php.net/manual/en/curl.setup.php)
-    - [CLI](http://www.php-cli.com)
+  - You can check your PHP version by running `php -v` from a terminal application.
+  - You must have the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php) for:
+     - mbstring
+     - XML
+     - [cURL](https://secure.php.net/manual/en/curl.setup.php)
+     - [CLI](http://www.php-cli.com)
 - [Composer](https://getcomposer.org/download/)
-- [Git](https://help.github.com/articles/set-up-git/). This may be needed for the plugin manager component.
-
-### Recommended Packages
-
-- [OpenSSH 7.8](https://github.com/PowerShell/Win32-OpenSSH/wiki/) or later
-   - You can check your OpenSSH version by running `ssh -V` from a terminal application. 
-   - This is required package for executing nested Drush or WP-CLI commands. 
-- [Drush](https://www.drush.org/12.x/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
-- [WP-CLI](http://wp-cli.org/). This is useful if you need to run WP-CLI commands that are incompatible with Terminus.
+- [Git](https://help.github.com/articles/set-up-git/)
+  - This may be needed for the plugin manager component.
+- OpenSSH 7.8 or later
+  - You can check your OpenSSH version by running `ssh -V` from a terminal application.
+  - This package is required for executing nested Drush or WP-CLI commands.
 
 ## Install Terminus
 
