@@ -102,8 +102,24 @@ composer update vendor/package
 
 Replace `vendor/package` with the package name you want to update. This will update only the named package to the latest version that matches the version constraints in your `composer.json` file.
 
+## Applying Updates and Pushing Code to Pantheon with Integrated Composer
+
+Integrated Composer on Pantheon runs Composer operations on the server level. Which operations are run depends on what you are doing with your code.
+
+### Pushing Code to Pantheon
+
+When you push code to Pantheon, a `composer install` operation is run. This operation installs the dependencies listed in the `composer.lock` file. This ensures that the same versions of dependencies are installed on all environments.
+
+### Applying Upstream Updates
+
+When you check for an upstream update, the `composer update` operation is run. This operation updates all Composer-managed packages according to the version constraints in your `composer.json` file. This ensures that your site is up-to-date with the latest versions of all Composer-managed packages. Refer to the [Composer Versions](https://getcomposer.org/doc/articles/versions.md) documentation for more information on version constraints.
+
+When you click to _apply_ these upstream updates, the `composer update` operation is run on the Pantheon server. This updates the `composer.lock` file with the new versions of the packages. The `composer.lock` file is then committed to the repository and pushed to Pantheon.
+
 ## More Resources
 
 - [Manage Some Dependencies with Composer](/guides/partial-composer)
 - [Build Tools](/guides/build-tools/)
 - [Composer Dependencies - Basic Usage](https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies)
+- [Composer Versions](https://getcomposer.org/doc/articles/versions.md)
+
