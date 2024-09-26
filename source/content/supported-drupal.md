@@ -35,6 +35,14 @@ To create a new Drupal 11 site on Pantheon, first you have to [create a new Drup
 
 Refer to [Manage Drush Versions on Pantheon](/guides/drush/drush-versions/) for information on Drush versions that are compatible with each Drupal version.
 
+<Alert title="Note"  type="info" >
+
+### Site-local Drush is required for Drupal sites.
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
+
+</Alert>
+
 ## Modules Support
 
 Refer to [Drupal Modules with Known Issues](/modules-known-issues) for a list of known compatibility issues.
