@@ -47,6 +47,10 @@ This error or a similar error message displays when a web browser cannot find th
 
 More specifically, this error occurs when the client (via web browser) successfully connects to the host (website’s application server), but is unable to find the actual resource requested (for example, a specific URL or file name). We recommend confirming that the URL or file name is correct and still exists on the site.
 
+### Error 414 URI Too Long
+
+This message is shown if the size of the requested URI exceeds the 8KB limit.
+
 ## More Resources
 
 - [Unlock a Site's Environment](/security#unlock-a-sites-environment)
