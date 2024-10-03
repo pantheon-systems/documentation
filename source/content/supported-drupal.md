@@ -19,16 +19,22 @@ The following table indicates availability of the specified Drupal version, as w
 | ----------- | :---------: | :---------: | :---------: |
 | 11          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
-| 9           | <span style="color:green">✔</span>          | <span style="color:green">✔</span>           | <span style="color:green">✔</span>         |
-| 8           | <span style="color:green">✔</span>          | ❌           | <span style="color:green">✔</span>         |
+| 9           |⚠️ <Popover title="Drupal 9 Availability" content="Drupal 9 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
+| 8           |⚠️ <Popover title="Drupal 8 Availability" content="Drupal 8 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
 | 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span>          |
 | 6           | ❌          | ❌           | ❌          |
 
-## Drupal 11 on Pantheon
-Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 11 site from the Pantheon dashboard.
+## Drupal 10 and 11 on Pantheon
+Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
 
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
+## Drupal 8 and 9 on Pantheon
+Drupal 8 and 9 are not available as an option during site creation in the Pantheon dashboard, however they can still be created on the platform using Terminus. For example:
+
+```bash{promptUser: user}
+terminus site:create <site> <label> drupal8
+```
 
 ## Drush Version Support
 
