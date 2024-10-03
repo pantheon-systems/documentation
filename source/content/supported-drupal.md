@@ -25,7 +25,7 @@ The following table indicates availability of the specified Drupal version, as w
 | 6           | ❌          | ❌           | ❌          |
 
 ## Drupal 11 on Pantheon
-Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 11 site from the Site Dashboard.
+Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 11 site from the Pantheon dashboard.
 
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
