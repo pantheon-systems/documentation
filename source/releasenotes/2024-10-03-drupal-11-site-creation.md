@@ -1,5 +1,5 @@
 ---
-title: "Drupal 11 site creation from the site dashboard now available"
+title: "Drupal 11 site creation from the Pantheon dashboard now available"
 published_date: "2024-10-03"
 categories: [user-interface, drupal]
 ---
