@@ -18,7 +18,7 @@ reviewed: ""
 
    If you select Drupal, you will have the option to select the Drupal version you want to use.
 
-   ![Select Drupal version](../../images/create-new-site-cms-drupal.png)
+   ![Select Drupal version](../../images/create-new-site-cms-drupal-11crop.png)
 
 1. Enter the following information and click **Continue**:
    - Sitename
@@ -42,6 +42,3 @@ reviewed: ""
    ![Site creation completed](../../images/create-site-done.png)
 
 You've now created the core portion of your Dev environment; now you have to install the CMS.
-
-
-
