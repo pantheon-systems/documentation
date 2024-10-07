@@ -156,4 +156,4 @@ Unit tests for custom logic are written in in Vitest and can be executed with
 npx vitest src/components
 ```
 
-These tests are executed in CI via a [GitHub Action](".github/workflows/vitest.yml").
+These tests are executed in CI via a [GitHub Action](.github/workflows/vitest.yml).
