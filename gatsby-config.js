@@ -267,11 +267,33 @@ module.exports = {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
                 const url = new URL(edge.node.fields.slug, site.siteMetadata.siteUrl).toString();
+                // Simple hash function to turn a string into a numeric value
+                // https://chatgpt.com/share/69aeb001-e00f-41b9-98a4-816aa6a0330d
+                function hashCode(str) {
+                  let hash = 0;
+                  for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = (hash << 5) - hash + char;
+                    hash |= 0; // Convert to 32bit integer
+                  }
+                  return Math.abs(hash);
+                }
+
+                // Generate time based on title hash
+                function getSeededTime(title) {
+                  const hash = hashCode(title);
+
+                  const hours = (hash % 24).toString().padStart(2, '0');
+                  const minutes = (hash % 60).toString().padStart(2, '0');
+                  const seconds = ((hash >> 8) % 60).toString().padStart(2, '0'); // Shift for more variance
+
+                  return `${hours}:${minutes}:${seconds}`;
+                }
 
                 return {
                   title: edge.node.frontmatter.title,
                   description: edge.node.excerpt,
-                  date: edge.node.frontmatter.published_date,
+                  date: `${edge.node.frontmatter.published_date}T${getSeededTime(edge.node.frontmatter.title)}Z`,
                   url: url,
                   guid: edge.node.id,
                 };

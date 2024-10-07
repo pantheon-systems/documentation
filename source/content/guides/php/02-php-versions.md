@@ -74,7 +74,7 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
    ```yaml:title=pantheon.yml
    api_version: 1
 
-   php_version: 8.1
+   php_version: 8.2
    ```
 
    - You do not need to specify the PHP version's exact point release (for example, `8.1.10`), as these are managed by the platform and deployed automatically.

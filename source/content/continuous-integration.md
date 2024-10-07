@@ -57,3 +57,6 @@ At this time, Pantheon does not provide or support:
 - [Build Tools](/guides/build-tools)
 - [Local Development](/guides/local-development)
 - [Pantheon Multidev](/guides/multidev)
+
+### Debug CI pipeline failures
+If your continuous integration pipeline is suddenly failing across a large portfolio of sites due to permission denied errors for Git/SSH authentication, we recommend [debugging local DNS cache](/local-dns-cache) to solve. 
