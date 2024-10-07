@@ -13,9 +13,9 @@ integration: [--]
 reviewed: "2024-10-04"
 ---
 
-The following table indicates availability of the specified Drupal version, as well as our usage recommendations and our support scope.
+The following table indicates availability of the specified Drupal versions, as well as our usage recommendations and our support scope.
 
-| Drupal Version | Available | Recommended | Supported |
+| Drupal version | Available | Recommended | Supported |
 | ----------- | :---------: | :---------: | :---------: |
 | 11          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
@@ -30,7 +30,7 @@ Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Dr
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
 ## Drupal 8 and 9 on Pantheon
-Drupal 8 and 9 are not available as an option during site creation in the Pantheon dashboard, however they can still be created on the platform using [Terminus](/terminus). For example:
+Drupal 8 and 9 are not available as an option during site creation in the Pantheon dashboard. However, they can still be created on the platform using [Terminus](/terminus). For example:
 
 ```bash{promptUser: user}
 terminus site:create <site> <label> drupal8
@@ -39,7 +39,7 @@ terminus site:create <site> <label> drupal8
 ## Drupal 7 on Pantheon
 Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 7 site from the Pantheon dashboard.
 
-### Drupal 7 Long-Term Support
+### Drupal 7 long-term support
 Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with Tag1 Consulting to offer Long-Term Support for Drupal 7 through January 5, 2027.
 
 #### What's included
@@ -51,7 +51,7 @@ To learn more about this partnership, see related blog post: [Pantheon and Tag1 
 
 To learn more about migrating from Drupal 7 to the latest version of Drupal, see [this guide](https://pantheon.io/resources/guide/drupal-7-end-life-why-you-should-start-your-migration-drupal-10-today).
 
-## Drush Version Support
+## Drush version support
 
 Refer to [Manage Drush Versions on Pantheon](/guides/drush/drush-versions/) for information on Drush versions that are compatible with each Drupal version.
 
