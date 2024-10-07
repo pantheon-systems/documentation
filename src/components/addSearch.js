@@ -21,17 +21,14 @@ class AddSearch extends React.Component {
       }
     }
     const script = document.createElement("script")
+    script.setAttribute(
+      "src",
+      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a7b957b7a8f57f4cc544c54f289611c6&id=search_widget${resultPage.includes("search") ? "&type=resultpage" : ""
+      }`
+    )
+    script.setAttribute("defer", true)
 
-    if (!document.querySelector('script[src*="addsearch-ui.min.js"]')) {
-      script.setAttribute(
-        "src",
-        `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a7b957b7a8f57f4cc544c54f289611c6&id=search_widget${resultPage.includes("search") ? "&type=resultpage" : ""
-        }`
-      )
-      script.setAttribute("defer", true)
-
-      document.body.appendChild(script)
-    }
+    document.body.appendChild(script)
   }
   render() {
     return <div className="addsearch-container" />
