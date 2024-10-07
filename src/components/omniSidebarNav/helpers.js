@@ -1,8 +1,7 @@
 import allGuides from './allGuidesQuery';
 import React from 'react';
 import { Link } from 'gatsby';
-import { Icon } from '@pantheon-systems/pds-toolkit-react';
-
+ import { Icon } from '@pantheon-systems/pds-toolkit-react';
 
 /**
  * Converts items into links recursively.
@@ -21,7 +20,6 @@ const turnItemsIntoLinks = (item, activePage) => {
       React.Fragment,
       null,
       item.title,
-
       " ",
       React.createElement(Icon, { iconName: "externalLink", iconSize: "sm" }),
     );
