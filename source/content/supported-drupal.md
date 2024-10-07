@@ -43,7 +43,7 @@ Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Dr
 Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with Tag1 Consulting to offer Long-Term Support for Drupal 7 through January 5, 2027.
 
 #### What's included
-* Security and compatibility updates to Drupal core and core dependencies from Tag1 Consulting by updating their site running on the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7) via [the Pantheon Dashboard or Terminus command line tool](/core-updates).
+* Security and compatibility updates to Drupal core and core dependencies from Tag1 Consulting by updating their site running on the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7) via [the Pantheon Dashboard](core-updates#apply-upstream-updates-via-the-site-dashboard) or [Terminus command line tool](/core-updates#apply-upstream-updates-via-terminus).
 * Security patches and compatibility updates to community-contributed modules that power their site via Tag1’s D7ES module, which will be included in the Upstream.
 * Continued support for Drupal 7-compatible runtime environments on the Pantheon Platform, including PHP, MySQL and other prerequisites.
 
