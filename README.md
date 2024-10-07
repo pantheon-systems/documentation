@@ -145,7 +145,7 @@ To reduced the likelihood of regressions and bugs this site uses a few different
 
 ### Visual Regression Tests
 
-Within [`tests/playwright-tests`](/tests/playwright-tests) there are a number of visual regression tests that can be run to compare the current state of the site to a PR preview or the live site.
+Within the [`tests`](/tests/) directory there are a number of visual regression tests that can be run to compare the current state of the site to a PR preview or the live site.
 These tests are meant to be run locally instead of CI as they have a high rate of false positives.
 
 ### Unit Tests
