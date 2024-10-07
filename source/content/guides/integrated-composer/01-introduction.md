@@ -44,7 +44,7 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 <Alert title="Note" type="info">
 
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with **Bedrock**. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with **Bedrock**.
 
 </Alert>
 

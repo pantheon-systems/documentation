@@ -9,4 +9,4 @@ We redesigned the [Docs home page](https://docs.pantheon.io/). Check it out and 
 [Migrating Sites to Pantheon: Preserve Existing Git History](/migrate-manual/#from-the-command-line-with-git)
 [Serving Sites from the Web Subdirectory](/nested-docroot)
 [Using Lockr to Secure and Manage API and Encryption Keys](/guides/lockr)
-[Using Priority Enterprise Support](/guides/support/contact-support/#premium-technical-support-and-on-call-services)
+[Using Priority Enterprise Support](/guides/support/contact-support/#emergency-ticket)

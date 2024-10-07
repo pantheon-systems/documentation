@@ -2,7 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish, miriamgoldman]
 contenttype: [doc]
 showtoc: true
 innav: [true]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-07-12"
+reviewed: "2024-09-06"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -786,6 +786,16 @@ ___
 
 ___
 
+## PhastPress
+
+<ReviewDate date="2024-08-13" />
+
+**Issue:** [PhastPress](https://wordpress.org/plugins/phastpress/) is a site optimization plugin that creates an SQLite database on Pantheon's filesystem. This is problematic as it can vastly increase the amount of filesystem storage your site consumes and run up against resource limits. This plugin is not recommended on Pantheon.
+
+**Solution**: Consider other optimization plugins, such as [Autoptimize](https://wordpress.org/plugins/autoptimize/) and [Flying Scripts](https://wordpress.org/plugins/flying-scripts/).
+
+___
+
 ## Redirection
 
 <ReviewDate date="2021-07-19" />
@@ -1317,6 +1327,30 @@ You will need to make this change every time the plugin is updated.
 
 **Issue 2:** This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/).
 
+___
+
+## WP Cerber Security, Antispam & Malware Scan
+
+<ReviewDate date="2024-09-06" />
+
+WP Cerber is a premium security plugin (with a free version available) that is only available through the [WP Cerber website](https://wpcerber.com/). Previously, it was available on the WordPress plugin repository, but it was [removed](https://wordpress.org/plugins/wp-cerber/) due to a violation of the repository's guidelines.
+
+**Issue:** The WP Cerber Anti-Spam Engine makes pages uncacheable on the Pantheon Global CDN. WP Cerber creates a unique, cache-busting cookie for each visitor, which prevents users from seeing cached pages.
+
+**Solution:** Disable the Anti-Spam Engine features in the WP Cerber plugin settings.
+
+1. Navigate to the **WP Cerber** menu in the WordPress dashboard and select **Anti-Spam**.
+
+1. Disable the following options:
+   - **Protect registration form**
+   - **Protect comment form**
+   - **Protect other forms**
+
+  ![WP Cerber Anti-Spam Engine settings](../images/plugins-known-issues/wp-cerber-anti-spam-settings.png)      
+
+1. In your Pantheon dashboard, clear the cache for the environment.
+
+Your pages should now be cacheable on the Pantheon Global CDN.
 ___
 
 ## WP Reset

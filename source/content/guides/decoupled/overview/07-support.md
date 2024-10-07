@@ -7,7 +7,7 @@ contributors: [joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/support
-reviewed: "2023-03-23"
+reviewed: "2024-09-10"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -27,8 +27,7 @@ Technical Support covers issues related to the following:
 - Troubleshoot customer cases related to the platform
 - Enable customers by providing related documentation, where to access logs, and when appropriate share similar case studies that provide a solution for the customer in line with the product life cycle.
 - Advocate for customers by validating and reporting bugs, feature requests, and improving platform documentation in line with the product life cycle
-- During customer outages that cannot be resolved by the customers or CSE, escalate to on-call engineers
-
+- For business-critical incidents or outages that cannot be resolved by the customers or Pantheon support, escalate the issue to our support engineers by opening a general support ticket or an emergency ticket. Emergency tickets are only available to **Diamond** and **Platinum** customers.
 
 Technical Support for Pantheon Front-End Sites does not include the following:
 
