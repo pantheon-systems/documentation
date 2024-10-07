@@ -21,7 +21,7 @@ The following table indicates availability of the specified Drupal version, as w
 | 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
 | 9           |<span style="color:green">✔</span> <Popover title="Drupal 9 Availability" content="Drupal 9 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
 | 8           |<span style="color:green">✔</span> <Popover title="Drupal 8 Availability" content="Drupal 8 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
-| 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span>          |
+| 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span> <Popover title="Drupal 7 LTS" content="Pantheon offers Long-Term Support for Drupal 7 sites on the platform at no extra cost. For more information, see the <a href='#drupal-7-long-term-support'>section below.</a>" />        |
 | 6           | ❌          | ❌           | ❌          |
 
 ## Drupal 10 and 11 on Pantheon
@@ -35,6 +35,21 @@ Drupal 8 and 9 are not available as an option during site creation in the Panthe
 ```bash{promptUser: user}
 terminus site:create <site> <label> drupal8
 ```
+
+## Drupal 7 on Pantheon
+Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 7 site from the Pantheon dashboard.
+
+### Drupal 7 Long-Term Support
+Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with Tag1 Consulting to offer Long-Term Support for Drupal 7 through January 5, 2027.
+
+#### What's included
+* Security and compatibility updates to Drupal core and core dependencies from Tag1 Consulting by updating their site running on the [Pantheon Drupal 7 Upstream](/core-updates) via the Pantheon Dashboard or Terminus command line tool.
+* Security patches and compatibility updates to community-contributed modules that power their site via Tag1’s D7ES module, which will be included in the Upstream.
+* Continued support for Drupal 7-compatible runtime environments on the Pantheon Platform, including PHP, MySQL and other prerequisites.
+
+To learn more about this partnership, see related blog post: [Pantheon and Tag1 Consulting Partner to Provide Long-Term Support for Drupal 7 Websites ](https://pantheon.io/blog/pantheon-and-tag1-support-drupal-7-websites).
+
+To learn more about migrating from Drupal 7 to the latest version of Drupal, see [this guide](https://pantheon.io/resources/guide/drupal-7-end-life-why-you-should-start-your-migration-drupal-10-today).
 
 ## Drush Version Support
 
