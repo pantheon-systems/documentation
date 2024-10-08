@@ -21,8 +21,9 @@ Instead of repeating the same technical work on each individual site, you can bu
 
 To create a site using a Custom Upstream:
 
-1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) that contains the Custom Upstream, and select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
-   ![Create new site button](../images/create-new-site-button.png)
+1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) that contains the Custom Upstream, and select the **Create New Site** button:
+
+   ![Create new site button](../images/dashboard/new-dashboard/2024/create-new-site-button.png)
 
 1. Select **Custom Upstream**.
 1. Select the upstream you wish to use.
