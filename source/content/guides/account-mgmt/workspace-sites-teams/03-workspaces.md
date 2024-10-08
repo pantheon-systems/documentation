@@ -69,7 +69,7 @@ You can switch between Workspaces to work on personal projects or to switch betw
 
   Your Personal Workspace is at the top, followed by an Professional Workspaces in which you are a member.
 
-  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
+  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/2024/workspaces-selector.png)
 
 ### Create a Professional Workspace
 
