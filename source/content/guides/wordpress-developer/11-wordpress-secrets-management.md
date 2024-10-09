@@ -82,13 +82,8 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/secrets.jso
 }
 ```
 
-### Via Lockr
-
-Lockr provides a simple-to-use developer interface with a scalable, cloud-based key management system. This allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite plugins. Refer to our documentation on how to use [Lockr on Pantheon to store your keys in WordPress](/guides/lockr#wordpress-installation) for more information.
-
 ## More Resources
 
 - [WordPress Configuration Management](/guides/wordpress-configurations/wp-cfm)
 - [WordPress wp-config Configuration](/guides/php/wp-config-php)
 - [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
-- [Store Your Secret Keys with Lockr](/guides/lockr)
