@@ -44,8 +44,6 @@ Pantheon provides additional security through the following features:
 
 - [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels)
 
-- [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
-
 ## Securing WordPress
 
 `wp-login.php` is the primary WordPress login path and is often subject to abuse by bots or other spammers. Refer to the [Avoid WordPress Login Attacks](/guides/wordpress-developer/wordpress-login-attacks) section of the [WordPress Developer's Guide](/guides/wordpress-developer) for information on steps you can take to help secure your site.
@@ -156,6 +154,4 @@ For detailed information on how to generate and use nonces, review the following
 ## More Resources
 
 - [Secure Development on Pantheon](/guides/secure-development)
-- [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
-- [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
 - [Pantheon Security](/guides/security)
