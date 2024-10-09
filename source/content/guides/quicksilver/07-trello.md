@@ -104,7 +104,7 @@ We use the filesystem private path in this section because we don't want to trac
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Pantheon Secrets](/guides/secrets) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 
@@ -189,5 +189,5 @@ You can also connect your Trello and Pantheon-integrated site to an external rep
 
 - [Git on Pantheon](/guides/git)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
-- [Lockr](/guides/lockr)
+- [Pantheon Secrets](/guides/secrets)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)

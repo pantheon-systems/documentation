@@ -61,7 +61,7 @@ As a best practice, start by creating a new machine user in Tracker. This user i
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Pantheon Secrets](/guides/secrets) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 

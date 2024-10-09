@@ -110,9 +110,9 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"Lockr"} link={"/guides/lockr/"}>
+  <Product title={"Pantheon Secrets"} link={"/guides/secrets/"}>
 
-  [Lockr](https://lockr.io/) works with Pantheon's Secure Integration to provide an additional layer of security to your site.
+  Pantheon Secrets is key to maintaining industry best practices for secrets management, secure builds, and application implementation to provide an additional layer of security to your site.
 
   </Product>
 
