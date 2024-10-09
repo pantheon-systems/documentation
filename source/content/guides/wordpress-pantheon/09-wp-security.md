@@ -36,7 +36,7 @@ Pantheon provides additional security through the following features:
 
 - [Secure Runtime Access](/guides/secure-development/secure-runtime-access)
 
-- [Lockr](/guides/lockr)
+- [Pantheon Secrets](/guides/secrets)
 
 - [Secure Integration](/guides/secure-development/secure-integration)
 
