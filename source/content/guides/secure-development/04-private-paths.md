@@ -68,11 +68,9 @@ Follow the steps below to store data that should be version controlled, such as 
 
 ## Private Path for Files
 
-The best solution to keep production keys secure is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+The best solution to keep production keys secure is to use a key management service like [Pantheon Secrets](/guides/secrets) to automatically encrypt and secure keys.
 
-You can integrate this service using the [Lockr plugin](https://wordpress.org/plugins/lockr/) for WordPress and the [Lockr module](https://www.drupal.org/project/lockr) for Drupal. For more details, see this [related blog post](https://pantheon.io/blog/key-drupal-security).
-
-Alternatively, you can store sensitive data in a JSON or ini-style text file within the following directories:
+Alternatively, you can store unencrypted keys in a JSON or ini-style text file within the following directories:
 
 - WordPress: `wp-content/uploads/private`
 
