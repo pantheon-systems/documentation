@@ -13,7 +13,7 @@ integration: [--]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/secure-development/private-paths
-reviewed: "2022-07-21"
+reviewed: "2024-10-09"
 ---
 
 This section provides information on how to use private paths to keep your files and code secure.
@@ -68,7 +68,11 @@ Follow the steps below to store data that should be version controlled, such as 
 
 ## Private Path for Files
 
+<Alert title="Warning" type="danger">
+
 The best solution to keep production keys secure is to use a key management service like [Pantheon Secrets](/guides/secrets) to automatically encrypt and secure keys.
+
+</Alert>
 
 Alternatively, you can store unencrypted keys in a JSON or ini-style text file within the following directories:
 
