@@ -102,8 +102,8 @@ Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https:/
 Your script may require tokens, passwords, or other information that should be protected. These values can be managed securely using the [Pantheon Secrets](/guides/secrets) platform service. First set the key via Terminus, then use the `pantheon_get_secret()` function in your script, for example:
 
 ```php
-if ( function_exists('pantheon_get_secret') ) {
-  $secret_value = pantheon_get_secret("SECRET_NAME");
+if ( function_exists( 'pantheon_get_secret' ) ) {
+  $secret_value = pantheon_get_secret( 'secret_name' );
 }
 ```
 
