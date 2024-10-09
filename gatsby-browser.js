@@ -1,6 +1,10 @@
 import React from "react"
 import { location, globalHistory } from "@reach/router"
 
+// Import PDS Global wrapper for applying global context providers.
+import { GlobalWrapper } from "@pantheon-systems/pds-toolkit-react"
+import { MOBILE_MENU_BREAKPOINT } from './src/vars/responsive'
+
 // Import PDS core styles.
 import "./node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-core.css"
 import "./node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-layouts.css"
@@ -41,4 +45,9 @@ export const onRouteUpdate = () => {
 // Trigger resize event once rendered
 export const onInitialClientRender = () => {
   window.dispatchEvent(new Event("resize"))
+}
+
+// Global context providers
+export const wrapRootElement = ({ element }) => {
+  return <GlobalWrapper mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>{element}</GlobalWrapper>
 }
