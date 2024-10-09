@@ -45,7 +45,7 @@ Set the key via Terminus, then use the `pantheon_get_secret()` function in your 
 
 ```php
 if ( function_exists('pantheon_get_secret') ) {
-  $secret_value = pantheon_get_secret("SECRET_NAME");
+  $secret_value = pantheon_get_secret( 'secret_name' );
 }
 ```
 ### Use the private files path
