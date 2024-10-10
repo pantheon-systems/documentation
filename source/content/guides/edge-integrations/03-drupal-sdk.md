@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Drupal SDK [Deprecated]
+subtitle: Drupal SDK [Archived]
 description: Install, configure, and use Edge Integrations with Drupal.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, enotick]
@@ -20,7 +20,7 @@ reviewed: "2024-10-09"
 
 <Alert title="Warning" type="danger">
 
-This page is considered deprecated.
+This page has been archived. The content is no longer maintained and may be outdated.
 
 The Pantheon Edge Integrations SDK [for Drupal](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) is no longer maintained and those repositories have been archived.
 

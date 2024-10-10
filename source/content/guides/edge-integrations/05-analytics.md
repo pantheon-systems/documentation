@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Analytics [Deprecated]
+subtitle: Analytics [Archived]
 description: Integrate Edge Integrations with Google Tag Manager and Google Analytics.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -20,7 +20,7 @@ reviewed: "2024-10-09"
 
 <Alert title="Warning" type="danger">
 
-This page is considered deprecated.
+This page has been archived. The content is no longer maintained and may be outdated.
 
 The Pantheon Edge Integrations SDKs [for Drupal](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) and [WordPress](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) are no longer maintained and those repositories have been archived. Additionally, this guide is written for a version of Google Analytics that may no longer be supported.
 

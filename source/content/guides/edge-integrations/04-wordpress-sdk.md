@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: WordPress SDK [Deprecated]
+subtitle: WordPress SDK [Archived]
 description: Install, configure, and use the Edge Integrations with WordPress.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -20,7 +20,7 @@ reviewed: "2024-10-09"
 
 <Alert title="Warning" type="danger">
 
-This page is considered deprecated.
+This page has been archived. The content is no longer maintained and may be outdated.
 
 The Pantheon Edge Integrations SDK for [WordPress](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) is no longer maintained and those repositories have been archived.
 
