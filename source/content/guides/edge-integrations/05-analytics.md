@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Analytics
+subtitle: Analytics [Archived]
 description: Integrate Edge Integrations with Google Tag Manager and Google Analytics.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -15,8 +15,18 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2022-03-09"
+reviewed: "2024-10-09"
 ---
+
+<Alert title="Warning" type="danger">
+
+This page has been archived. The content is no longer maintained and may be outdated.
+
+The Pantheon Edge Integrations SDKs [for Drupal](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) and [WordPress](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) are no longer maintained and those repositories have been archived. Additionally, this guide is written for a version of Google Analytics that may no longer be supported.
+
+While the integrations are still available with Pantheon Advanced Global CDN, and the code remains available, the SDKs are no longer actively developed or supported.
+
+</Alert>
 
 Pantheon’s Edge Integrations offers advanced and powerful features for content personalization. At this time, two key primary features are supported: Geo and Interest. These features allow us to serve different content to each user at given URLs. Google Analytics won’t differentiate between the personalized versions of a page unless you instruct it otherwise. This section aims to help you enhance your configuration to track personalization experiences via Google Tag Manager.
 
