@@ -7,10 +7,7 @@ import {
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
 } from './helpers.js';
-
 import './style.css';
-
-// @todo, run prettier one more time on this directory before removing it from the PR.
 
 const OmniSidebarNav = ({
   activePage,
