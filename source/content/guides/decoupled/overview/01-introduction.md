@@ -50,13 +50,6 @@ You can connect your Front-End Site to your Git repository and choose from selec
 
 You can also start with a clean set up and connect your site account to an existing Git repository.
 
-
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
-
 ## Front-End Sites Benefits
 
 Pantheon's Front-End Sites:
