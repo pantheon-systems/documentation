@@ -15,6 +15,8 @@ The following commands are available with `npm run`:
 * `end-to-end:pull-request-preview`: This command runs the tests against the PR preview site.
 * `end-to-end:local`: This command runs the tests against a local development site. It requires the Docs site to be running locally via `npm run develop` in the root directory.
 * `end-to-end:compare-local-to-live`: Wraps both `end-to-end:update-live-snapshots` and `end-to-end:local` to compare the local site to the live site.
+* `end-to-end:pull-request-preview-snapshots`: This command runs the tests against the PR preview site and updates the screenshot snapshots.
+* `end-to-end:compare-local-to-pr`: Wraps both `end-to-end:pull-request-preview-snapshots` and `end-to-end:local` to compare the local site to the PR preview site.
 
 Use the above commands in a local clone of this project, after navigating to the `tests` subdirectory, for example:
 

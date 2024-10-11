@@ -71,7 +71,12 @@
     "eslint-config-prettier": "^9.1.0",
     "mark.js": "^8.11.1",
     "prettier": "^3.0.0",
-    "react-date-range": "^1.4.0"
+    "react-date-range": "^1.4.0",
+    "rollup": "^4.24.0",
+    "vitest": "^1.6.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
