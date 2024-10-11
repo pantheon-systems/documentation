@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react"
 import { graphql, navigate } from "gatsby"
 import debounce from "lodash.debounce"
 import Mark from "mark.js"
@@ -37,6 +37,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   })
   const [currentPage, setCurrentPage] = useState(1)
   const [queryStrings, setQueryStrings] = useState('')
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const notesPerPage = 8
   let totalPagesRef = useRef(0)
@@ -79,8 +80,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       // If there are selected categories, filter the data to include only items that belong to at least one of those categories
       if(filters.categories.length > 0){
         newFilteredData = newFilteredData.filter(item => {
+          const categories = item.node.frontmatter.categories || []
+
           // Check if any category of the current item matches any of the selected categories
-          return item.node.frontmatter.categories.some(category => {
+          return categories.some(category => {
             return filters.categories.some(filterCategory => filterCategory.slug === category)
           })
         })
@@ -241,6 +244,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   // Preprocess intro text.
   const introText = data.releasenotesYaml.introText
 
+  useLayoutEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
@@ -285,14 +292,8 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer flexWrap='wrap' className='rn-popover-tigger-and-tags' >
-              <ReleaseNotePopoverCategorySelector
-                filters={filters}
-                setFilters={setFilters}
-                setCurrentPage={setCurrentPage}
-                updateQueryStrings={updateQueryStrings}
-                queryStrings={queryStrings}
-              />
+            <FlexContainer flexWrap='wrap' className='rn-popover-trigger-and-tags' >
+              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} isDisabled={!isLoaded} />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {
                   filters && filters.categories.map(item => {
@@ -321,7 +322,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             setCurrentPage={setCurrentPage}
             totalPagesRef={totalPagesRef}
             queryStrings={queryStrings}
-            updateQueryStrings={updateQueryStrings}
+            setIsPageLoaded={setIsLoaded}
           />
         </Container>
       </main>

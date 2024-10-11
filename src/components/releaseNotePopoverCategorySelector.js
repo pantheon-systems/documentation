@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { activeReleaseNoteCategories } from "../data/releaseNoteCategories"
 import { Button, FlexContainer, Popover } from "@pantheon-systems/pds-toolkit-react"
 
-const ReleaseNotePopoverCategorySelector = ({filters, setFilters, setCurrentPage, updateQueryStrings}) => {
+const ReleaseNotePopoverCategorySelector = ({filters, setFilters, setCurrentPage, isDisabled}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
 
   // Get the active categories data.
@@ -25,7 +25,6 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters, setCurrentPage
 
     // Move pager to the first page
     setCurrentPage(1)
-    updateQueryStrings()
   }
 
   const handleClearCategoriesFilters = () => {
@@ -104,6 +103,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters, setCurrentPage
       iconName={popoverTriggerIcon}
       displayType='icon-end'
       onClick={() => setIsPopoverOpen(true)}
+      disabled={isDisabled}
     />
   )
 

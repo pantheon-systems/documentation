@@ -33,7 +33,7 @@ To create a CMS site:
 
    If you select Drupal, you will have the option to select the Drupal version you want to use.
 
-   ![Select Drupal version](../../../images/create-new-site-cms-drupal.png)
+   ![Select Drupal version](../../../images/create-new-site-cms-drupal-11crop.png)
 
 1. Enter the name and select a region for this site. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. Click **Continue**. It can take several minutes to create a new site on Pantheon.
 

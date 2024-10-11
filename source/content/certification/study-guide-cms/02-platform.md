@@ -142,7 +142,7 @@ Moving up to higher levels of value also requires effective collaboration betwee
 [Chapter 7](/certification/study-guide/chapter-7-people) shows how to connect with your team on Pantheon, and most critically, how to connect your DNS so that the public can find your site. It covers:
 
 * **Site Security Tab:** Allows users to** **lock down environments to only be accessible using a username/password, allowing for selective sharing of progress.
-* **Expert Support: **Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
+* **Expert Support: **Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency support, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
 * **Role-base access control:** Users can be automatically provisioned with adherence to** **the principle of least privilege.
 
 Within the workflow of a single site, any number of details can trip up a team on a regular basis or with the occasional disaster. [Chapter 6](/certification/study-guide/chapter-6-deployment) highlights the guardrails Pantheon puts around the workflow of a site as code moves through the deployment pipeline from Multidev environments to Dev to Test to Live.

@@ -71,7 +71,7 @@ terminus redis:enable <site>
 
   <Alert title="Note" type="info">
 
-  If the workflow text in the dashboard turns red, it did not succeed. Please [create a ticket with support](/guides/support/contact-support/#ticket-support) to debug this further.
+  If the workflow text in the dashboard turns red, it did not succeed. Please [create a ticket with support](/guides/support/contact-support/#general-support-ticket) to debug this further.
 
   </Alert>
 

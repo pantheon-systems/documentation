@@ -107,7 +107,7 @@ Otherwise, continue to the next step.
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Pantheon Secrets](/guides/secrets) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 
@@ -193,5 +193,5 @@ You can also connect your Jira and Pantheon-integrated site to an external repos
 ## More Resources
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
-- [Lockr](/guides/lockr)
+- [Pantheon Secrets](/guides/secrets)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)

@@ -11,7 +11,7 @@ product: [--]
 integration: [aws]
 tags: [files]
 contributors: [carl-alberto]
-reviewed: "2023-05-19"
+reviewed: "2024-10-09"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-secrets-management
 ---
@@ -32,43 +32,26 @@ Plugin and theme license keys are unique codes used to activate and authenticate
 
 ## Store Your Keys
 
-### Via wp-config.php
-
 Most plugin and theme author's documentation recommend storing license or API keys within the `wp-config.php` file. This is the most popular approach even though there are noted drawbacks, including:
 
 - Less secure than other methods
 
 - Lack of scalability, especially if you are using version control as this will store sensitive information in the codebase
 
-We recommend that you store your license keys in a secure non-version controlled file location like `~/files/private/wp-config.secrets.php`. This is more secure and allows you to have different values in each environment.
+### Use Pantheon Secrets
+Instead, we recommend using [Pantheon Secrets](/guides/secrets) to securely manage keys on the platform.
+
+Set the key via Terminus, then use the `pantheon_get_secret()` function in your script, for example:
 
 ```php
-if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-secrets.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-  if (!defined('WP_SAMPLE_KEY')) {
-    define( 'WP_SAMPLE_KEY', 'EXAMPLEKEY1234' );
-  }
+if ( function_exists('pantheon_get_secret') ) {
+  $secret_value = pantheon_get_secret( 'secret_name' );
 }
 ```
+### Use the private files path
+Alternatively, you can use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store and retrieve values.
 
-### Via Terminus Secrets Plugin
-
-Pantheon's [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) writes entries into the  `~/files/private/secrets.json` file.
-
-<Alert title="Note"  type="info" >
-
-The Terminus Secrets plugin uses `~/files/private/secrets.json`, which is a different private directory than the private directory used to store your Quicksilver scripts.
-
-</Alert>
-
-This is a JSON file containing multiple keys that are not included in your project's source code. The Terminus Secrets script fetches this file, modifies it as requested, and then writes it back to the Pantheon site.
-
-You can add secret key pairs using this command for each:
-
-```bash{promptUser: user}
-terminus secrets:set examplesite.dev wp_sample_key EXAMPLEKEY1234
-```
-
-You can then parse those values via wp-config and assign them to the corresponding variables and environment using this sample code:
+Create a `secrets.json` file with your key value and name in json format and add it to the private files path at `/wp-content/uploads/private` on Pantheon. Then in your `wp-config.php` file you can retrieve the value, for example:
 
 ```php
 if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/secrets.json' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
@@ -82,13 +65,8 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/secrets.jso
 }
 ```
 
-### Via Lockr
-
-Lockr provides a simple-to-use developer interface with a scalable, cloud-based key management system. This allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite plugins. Refer to our documentation on how to use [Lockr on Pantheon to store your keys in WordPress](/guides/lockr#wordpress-installation) for more information.
-
 ## More Resources
 
 - [WordPress Configuration Management](/guides/wordpress-configurations/wp-cfm)
 - [WordPress wp-config Configuration](/guides/php/wp-config-php)
 - [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
-- [Store Your Secret Keys with Lockr](/guides/lockr)
