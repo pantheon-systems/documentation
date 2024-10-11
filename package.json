@@ -69,7 +69,6 @@
     "date-fns": "^2.29.3",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
     "mark.js": "^8.11.1",
     "prettier": "^3.0.0",
     "react-date-range": "^1.4.0"
