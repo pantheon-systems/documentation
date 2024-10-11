@@ -110,7 +110,7 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Pantheon Secrets](/guides/secrets) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 
@@ -192,5 +192,5 @@ If you use GitHub, you can further integrate with [Unito](https://unito.io/asana
 ## More Resources
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
-- [Lockr](/guides/lockr)
+- [Pantheon Secrets](/guides/secrets)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)

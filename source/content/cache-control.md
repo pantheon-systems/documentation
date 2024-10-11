@@ -118,14 +118,14 @@ $regex_json_path_patterns = array(
 foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
   if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
       // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
-      add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+      add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12 );
       break;
   }
 }
 
 // Re-define the send_header value with any custom Cache-Control header
-function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-    $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+function filter_rest_post_dispatch_send_cache_control( $response ) {
+    $response->header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
     return $response;
 }
 ```
@@ -138,7 +138,7 @@ As an alternative to using HTTP headers to control downstream caching, you can s
 
 <Alert title="Warning" type="danger">
 
-Pantheon does not support manually editing and updating the VCL on Global CDN. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request for [Global CDN](/guides/global-cdn), open a [Support Ticket](/guides/support/contact-support/#ticket-support).
+Pantheon does not support manually editing and updating the VCL on Global CDN. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request for [Global CDN](/guides/global-cdn), open a [Support Ticket](/guides/support/contact-support/#general-support-ticket).
 
 Note some customizations to VCL are available via [Advanced Global CDN](/guides/professional-services/advanced-global-cdn). For more information, [Contact Sales](https://pantheon.io/contact-us).
 

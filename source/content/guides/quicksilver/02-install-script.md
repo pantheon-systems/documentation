@@ -99,17 +99,15 @@ Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https:/
 
 ### Secrets
 
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
+Your script may require tokens, passwords, or other information that should be protected. These values can be managed securely using the [Pantheon Secrets](/guides/secrets) platform service. First set the key via Terminus, then use the `pantheon_get_secret()` function in your script, for example:
 
-You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. Note that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path when storing keys for Quicksilver scripts in the private files path.
-
-Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
-
-This allows you to write and remove key values. The code example below shows you how to write a value to a key:
-
-```bash{promptUser: user}
-terminus secrets:set site.env key value
+```php
+if ( function_exists( 'pantheon_get_secret' ) ) {
+  $secret_value = pantheon_get_secret( 'secret_name' );
+}
 ```
+
+Alternatively, you can use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values.
 
 ### Slack Integration
 
@@ -129,7 +127,6 @@ Use the [Pantheon WP Solr Index repository](https://github.com/pantheon-systems/
 
 ## More Resources
 
-- [Lockr](/guides/lockr)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
 - [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm)
 - [Drush on Pantheon](/guides/drush)

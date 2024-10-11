@@ -80,6 +80,35 @@ Alternatively, if you'd rather create a classic-style token:
    GITHUB_API=$TOKENHASH
    ```
 
+## Using GitHub Codespaces
+
+A [GitHub Codespace](https://github.com/features/codespaces) can be used to test the site as well. To set up a Codespace, navigate to the branch you want to use as the base (e.g. `main`) and click the Code dropdown.
+
+![Codespaces screenshot](/source/images/assets/codespaces-setup.png)
+
+This will take you to a VSCode-like interface with a Terminal window. From here, export your GitHub API token you created in the previous step using the following command (replacing `$TOKENHASH` with your API token):
+
+```bash{promptUser: user}
+export GITHUB_API=$TOKENHASH
+```
+
+Now you can run `npm ci` and `npm start` in the Terminal panel at the bottom of the page. The docs site will build inside the Codespaces container and install Node dependencies just like it would on your local machine. When the Node server is running, a dialog box will appear at the bottom right corner asking if you want to open the Codespace in a browser and if you want to make the Codespace public.
+
+![Codespaces open in browser](/source/images/assets/codespaces-application-available.png)
+
+Clicking on the link will take you to a live site that's running on the current branch of the repository. If you opted to make the Codespace public, you can share the link to others and they will be able to view the site after accepting a warning that they are visiting someone else's Codespace. If the Codespace was not made public, only your GitHub user will be able to see it.
+
+### Working with branches on Codespaces
+You can open a Codespace (or load an existing Codespace) on a particular branch by first navigating to that branch in the GitHub repository. Alternately, if you already have the VSCode editor open, you can select a specific branch by clicking the branch name at the bottom left, then selecting the branch you would like to switch to in the panel that appears at the top of the screen. The Codespace will make the necessary adjustments and rebuild the docs site on that branch.
+
+![Codespaces branch](/source/images/assets/codespaces-branch.png)
+
+![Codespaces branch selection](/source/images/assets/codespaces-branch-list.png)
+
+### Notes on running in Codespaces
+
+Codespaces is free for individuals for [60 hours of runtime for 2 cores](https://github.com/features/codespaces#pricing), after which your _user_ is billed for additional time. It's unclear whether Pantheon's Enterprise account would own billing, but as of this writing it appears to be billed on a per user basis. For this reason, it's important to _not leave your Codespaces running_ when you're done with them.
+
 ## Install With The Gatsby Cli
 
 From the `documentation` directory:
@@ -111,14 +140,14 @@ lando start
 You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
 
 ## Linting and Code Formatting
-We use ESLint and Prettier to enforce code style. On each pull request to the repository, if any `.js`, `.jsx`, `.ts` or `.tsx` files are modified in the `/src` directory, ESLint will run against our Prettier configuration to check for code styling issues on the updated/changed files.
+We use ESLint and Prettier to enforce code style. On each pull request to the repository, if any `.js`, `.jsx`, `.ts` or `.tsx` files are modified in the `/src` directory, We run Prettier to check for code styling issues on the updated/changed files. If Prettier made any changes, those changes are automatically committed back to the PR (see [example PR](https://github.com/pantheon-systems/documentation/pull/9180#issuecomment-2292403319)).
 
 To check for linting issues locally, run:
 ```bash
 npm run lint
 ```
 
-To automatically fix linting issues across the entire `/src` directory, run:
+To automatically fix formatting issues across the entire `/src` directory, run:
 ```bash
 npm run format
 ```

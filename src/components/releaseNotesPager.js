@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon } from "@pantheon-systems/pds-toolkit-react"
 import { navigate } from 'gatsby'
 
-const ReleaseNotesPager = ({currentPage, setCurrentPage, totalPagesRef, queryStrings }) => {
+const ReleaseNotesPager = ({currentPage, setCurrentPage, totalPagesRef, queryStrings, setIsPageLoaded }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -11,6 +11,7 @@ const ReleaseNotesPager = ({currentPage, setCurrentPage, totalPagesRef, queryStr
   }
 
   const handlePageChange = (newPage) => {
+    setIsPageLoaded(false)
     setCurrentPage(newPage)
     navigate(`/release-notes/${newPage}/?${queryStrings}`)
     scrollToTop()
