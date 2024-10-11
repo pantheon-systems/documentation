@@ -7,11 +7,7 @@ import {
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
 } from './helpers.js';
-
-import "./style.css"
-
-
-// @todo, run prettier one more time on this directory before removing it from the PR.
+import './style.css';
 
 const OmniSidebarNav = ({
   activePage,
@@ -27,7 +23,8 @@ const OmniSidebarNav = ({
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
     const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
-      <SideNavCompact className="sidenav-compact"
+      <SideNavCompact
+        className="sidenav-compact"
         headingText={submenuLinks.linkContent}
         menuItems={submenuLinks.links}
       />
@@ -35,7 +32,8 @@ const OmniSidebarNav = ({
   } else if (menuItems) {
     const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
     return (
-      <SideNavCompact className="sidenav-compact"
+      <SideNavCompact
+        className="sidenav-compact"
         headingText={OmniLinks.linkContent}
         menuItems={OmniLinks.links}
       />
