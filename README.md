@@ -151,7 +151,7 @@ To automatically fix formatting issues across the entire `/src` directory, run:
 ```bash
 npm run format
 ```
-Be cautious when running this command, as it will automatically fix any linting issues it can.
+Be cautious when running this command, as it will automatically fix any formatting issues it can.
 
 ## Testing
 
