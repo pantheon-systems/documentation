@@ -139,6 +139,20 @@ lando start
 
 You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
 
+## Linting and Code Formatting
+We use ESLint and Prettier to enforce code style. On each pull request to the repository, if any `.js`, `.jsx`, `.ts` or `.tsx` files are modified in the `/src` directory, We run Prettier to check for code styling issues on the updated/changed files. If Prettier made any changes, those changes are automatically committed back to the PR (see [example PR](https://github.com/pantheon-systems/documentation/pull/9180#issuecomment-2292403319)).
+
+To check for linting issues locally, run:
+```bash
+npm run lint
+```
+
+To automatically fix formatting issues across the entire `/src` directory, run:
+```bash
+npm run format
+```
+Be cautious when running this command, as it will automatically fix any formatting issues it can.
+
 ## Testing
 
 To reduced the likelihood of regressions and bugs this site uses a few different testing tools:
