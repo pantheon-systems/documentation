@@ -22,11 +22,11 @@ This section provide guidance on how to manage plugins that use third party or e
 [Git Updater](https://github.com/afragen/git-updater) is a plugin that allows you to install and update plugins and themes from GitHub, Bitbucket, GitLab, or other self-hosted Git repositories. It provides both a mechanism that plugins can use to suggest updates from a Git-based repository as well as a user interface to install plugins from a Git repository that has not been previously configured to do so. Plugins and themes that use Git Updater can then be updated directly from the WordPress dashboard.
 
 0. Before you begin, make sure your site is set to SFTP mode either from the Pantheon Dashboard or by using the Terminus `connection:set` command.
-	```bash
+	```bash{promptUser: user}
 	terminus connection:set <site>.<env> sftp
 	```
 1. Download the latest zip file for the Git Updater plugin from the [GitHub releases page](https://github.com/afragen/git-updater/releases/) or use Terminus to install the plugin from its zip file in the GitHub repository:
-	```bash
+	```bash{promptUser: user}
 	terminus wp <site>.<env> -- plugin install https://github.com/afragen/git-updater/releases/download/12.6.0/git-updater-12.6.0.zip --force
 	```
 2. Once installed, an option for Git Updater will appear under Settings in your WordPress admin dashboard. Clicking into it for the first time will prompt you to enter a license key or activate the free version. Once you've gone through the initial prompts, you will be presented with the default admin page for Git Updater which includes out-of-the-box support for GitHub-based plugins and themes.
