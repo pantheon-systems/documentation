@@ -39,7 +39,7 @@ Refer this [blog post](https://pantheon.io/blog/wordpress-development-git) for m
 
 [Git Updater](https://github.com/afragen/git-updater) is an open-source plugin developed by [Andy Fragen](https://git-updater.com/) that extends the existing notification and update mechanisms within WordPress to plugins and themes hosted outside of the official WordPress repository on GitHub, Bitbucket, GitLab, Gitea or GitHub Gists. Git Updater displays update notifications within the WordPress dashboard for public and private repositories.
 
-1. Modify your plugin and/or theme to add support for the GitHub Updater by providing the required declarations. The following [plugin example](https://github.com/afragen/github-updater/#plugins) should be placed within the plugin's header:
+1. Add the [relevant header line](https://git-updater.com/knowledge-base/usage/) to your plugin or theme header block to add support for the Git Updater depending on where your code is hosted.(`GitHub Plugin URI`, `). The following [plugin example](https://git-updater.com/knowledge-base/usage/#articleTOC_2) should be placed within the plugin's header:
 
   ```bash
   /*
