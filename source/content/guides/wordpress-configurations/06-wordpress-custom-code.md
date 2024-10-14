@@ -52,7 +52,7 @@ Refer this [blog post](https://pantheon.io/blog/wordpress-development-git) for m
    * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
    * GitHub Plugin URI: https://github.com/wpdeveloper/my-cool-plugin
    * GitHub Languages:  https://github.com/wpdeveloper/my-cool-plugin-translations
-  */
+   */
   ```
 
   [Theme declarations](https://git-updater.com/knowledge-base/usage/#articleTOC_3) are made similarly within the `styles.css` file.
@@ -74,7 +74,7 @@ Refer this [blog post](https://pantheon.io/blog/wordpress-development-git) for m
 1. Navigate to **Settings**, select **Git Updater**, and then select **Install Plugin**/**Install Theme** to install your custom extensions.
 
    Alternatively, you can install the Git Updater plugin directly from the command line using Terminus:
-
+   
    ```bash{promptUser: user}
     terminus wp <site>.<env> -- plugin install https://github.com/afragen/git-updater/releases/download/12.6.0/git-updater-12.6.0.zip
     ```
