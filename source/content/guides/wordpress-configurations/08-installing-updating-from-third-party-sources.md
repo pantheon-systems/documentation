@@ -25,7 +25,7 @@ This section provide guidance on how to manage plugins that use third party or e
 	```bash{promptUser: user}
 	terminus connection:set <site>.<env> sftp
 	```
-1. Download the latest zip file for the Git Updater plugin from the [GitHub releases page](https://github.com/afragen/git-updater/releases/) or use Terminus to install the plugin from its zip file in the GitHub repository:
+1. Download the latest zip file for the Git Updater plugin from the [Git Updater website](https://git-updater.com/) or use Terminus to install the plugin from its zip file in the GitHub repository releases page
 	```bash{promptUser: user}
 	terminus wp <site>.<env> -- plugin install https://github.com/afragen/git-updater/releases/download/12.6.0/git-updater-12.6.0.zip --force
 	```
