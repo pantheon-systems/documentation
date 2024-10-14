@@ -10,7 +10,8 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [workflow, code]
-contributors: [afragen, petersuhm]
+contributors: [afragen, petersuhm, jazzsequence]
+reviewed: "2024-10-14"
 permalink: docs/guides/wordpress-configurations/wordpress-custom-code
 ---
 
