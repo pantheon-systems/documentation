@@ -72,8 +72,7 @@ Composer encourages a mental model where code not written specifically for a giv
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides its own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: <https://wpackagist.org>
-- Drupal (Latest Version): `https://packages.drupal.org/11`
-- Drupal 7: `https://packages.drupal.org/7`
+- Drupal: `https://packages.drupal.org/8`
 
 ## Managing Core as a Project Dependency
 
