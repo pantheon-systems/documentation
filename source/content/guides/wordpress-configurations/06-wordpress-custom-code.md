@@ -42,18 +42,16 @@ Refer this [blog post](https://pantheon.io/blog/wordpress-development-git) for m
 1. Add the [relevant header line](https://git-updater.com/knowledge-base/usage/) to your plugin or theme header block to add support for the Git Updater depending on where your code is hosted.(`GitHub Plugin URI`, `). The following [plugin example](https://git-updater.com/knowledge-base/usage/#articleTOC_2) should be placed within the plugin's header:
 
   ```bash
-  /*
-  Plugin Name:       GitHub Updater
-  Plugin URI:        https://github.com/afragen/github-updater
-  Description:       A plugin to automatically update GitHub, Bitbucket or GitLab hosted plugins and themes. It also allows for remote installation of plugins or themes into WordPress.
-  Version:           1.0.0
-  Author:            Andy Fragen
-  License:           GNU General Public License v2
-  License URI:       https://www.gnu.org/licenses/gpl-2.0.html
-  Domain Path:       /languages
-  Text Domain:       github-updater
-  GitHub Plugin URI: https://github.com/afragen/github-updater
-  GitHub Branch:     master
+  /**
+   * Plugin Name:       My Cool Plugin
+   * Plugin URI:        https://github.com/wpdeveloper/my-cool-plugin
+   * Description:       A cool plugin that does cool things.
+   * Version:           1.0.0
+   * Author:            WordPress Developer
+   * License:           GNU General Public License v2
+   * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+   * GitHub Plugin URI: https://github.com/wpdeveloper/my-cool-plugin
+   * GitHub Languages:  https://github.com/wpdeveloper/my-cool-plugin-translations
   */
   ```
 
