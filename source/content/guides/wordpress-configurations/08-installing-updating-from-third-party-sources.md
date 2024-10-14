@@ -29,7 +29,7 @@ All the guidance in this document is intended to be used in conjunction with Dev
 	```bash{promptUser: user}
 	terminus connection:set <site>.<env> sftp
 	```
-1. Download the latest zip file for the Git Updater plugin from the [Git Updater website](https://git-updater.com/) or use WP-CLI through Terminus to install the plugin from its zip file in the GitHub repository releases page:
+1. Download the latest zip file for the Git Updater plugin from the [Git Updater website](https://git-updater.com/) or use [WP-CLI through Terminus](https://docs.pantheon.io/guides/wp-cli) to install the plugin from its zip file in the GitHub repository releases page:
 	```bash{promptUser: user}
 	terminus wp <site>.<env> -- plugin install https://github.com/afragen/git-updater/releases/download/12.6.0/git-updater-12.6.0.zip --force
 	```
