@@ -17,7 +17,7 @@ permalink: docs/guides/wordpress-configurations/installing-updating-from-third-p
 
 This section provide guidance on how to manage plugins that use third party or external repositories including GitHub, Bitbucket, GitLab or self-hosted sources.
 
-## Using Git Updater
+## Using Git Updater to install and manage plugins (and themes) from Git repositories
 
 [Git Updater](https://github.com/afragen/git-updater) is a plugin that allows you to install and update plugins and themes from GitHub, Bitbucket, GitLab, or other self-hosted Git repositories. It provides both a mechanism that plugins can use to suggest updates from a Git-based repository as well as a user interface to install plugins from a Git repository that has not been previously configured to do so. Plugins and themes that use Git Updater can then be updated directly from the WordPress dashboard.
 
@@ -47,3 +47,15 @@ The Git Updater plugin will now check for updates from the specified repository 
 Git Updater supports other repository hosts such as BitBucket, GitLab, Gitea and even GitHub Gists. To add support for any of these, go to the API Add-Ons page while your site is in SFTP mode and click Install & Activate for the add-on of your choice.
 
 ![Git Updater API Add-Ons](../../../images/wordpress-configurations/08-git-updater-api-addons.png)
+
+## Using plugins and themes with their own self-hosted update mechanism
+
+Some plugins and themes have their own self-hosted update mechanism that allows them to receive updates from a third party source. Usually, you can find a download link from the relevant plugin or theme author and upload the zip file to your WordPress site or unzip locally and add to your Pantheon site using SFTP or Git.
+
+However, you can also use WP-CLI through Terminus to install the plugin or theme from the source directly if there is a direct URL that can be used. The code below shows how to install Advanced Custom Fields from the Advanced Custom Fields site:
+
+```bash
+terminus wp <site>.<env> -- plugin install https://www.advancedcustomfields.com/latest/ --force
+```
+
+Adding the `--force` flag will ensure that the version of Advanced Custom Fields is the one sourced from `www.advancedcustomfields.com` rather than the default WordPress repository.
