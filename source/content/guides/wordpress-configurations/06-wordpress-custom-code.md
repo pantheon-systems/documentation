@@ -57,7 +57,7 @@ Refer this [blog post](https://pantheon.io/blog/wordpress-development-git) for m
   */
   ```
 
-  [Theme declarations](https://github.com/afragen/github-updater#themes) are made similarly within the `styles.css` file.
+  [Theme declarations](https://git-updater.com/knowledge-base/usage/#articleTOC_3) are made similarly within the `styles.css` file.
 
   As an alternative to adding declarations within the headers of plugins and themes, you can use the [Additions functionality inside the Git Updater plugin](https://git-updater.com/knowledge-base/git-updater-additions/), which will add the appropriate data via hooks in Git Updater.
 
@@ -69,13 +69,17 @@ Refer this [blog post](https://pantheon.io/blog/wordpress-development-git) for m
 
 1. Download the [latest release](https://github.com/afragen/git-updater/releases) of the Git Updater plugin.
 
-1. Unzip the archive and rename the folder to `github-updater`, then re-zip the file.
+1. Install the plugin by uploading the zip file within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
 
-1. Install the plugin by uploading the renamed zip file within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
+1. Activate Git Updater from the Plugin page (`/wp-admin/plugins.php`).
 
-1. Activate GitHub Updater from the Plugin page (`/wp-admin/plugins.php`).
+1. Navigate to **Settings**, select **Git Updater**, and then select **Install Plugin**/**Install Theme** to install your custom extensions.
 
-   Alternatively, you can upload your plugin/theme using the same method described above for installing the Git Updater plugin.
+   Alternatively, you can install the Git Updater plugin directly from the command line using Terminus:
+
+   ```bash{promptUser: user}
+    terminus wp <site>.<env> -- plugin install https://github.com/afragen/git-updater/releases/download/12.6.0/git-updater-12.6.0.zip
+    ```
 
 Notifications within the WordPress dashboard will now include updates to your custom code. If expected updates are not found within `/wp-admin/update-core.php`, click **Check Again** to clear [transients](https://codex.wordpress.org/Transients_API), or wait for them to reset automatically.
 
