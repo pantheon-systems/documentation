@@ -151,7 +151,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
 </Alert>
 
-1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases) and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
+1. Download the latest `manual-install.zip` plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases) and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
 
   <Alert title="Warning" type="danger">
 
