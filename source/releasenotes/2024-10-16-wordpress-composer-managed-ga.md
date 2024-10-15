@@ -1,6 +1,6 @@
 ---
-title: WordPress (Composer Manage) is now in general availability
-published_date: "2024-10-15"
+title: WordPress (Composer Managed) is now in general availability
+published_date: "2024-10-16"
 categories: [new-feature, wordpress, documentation]
 ---
 
