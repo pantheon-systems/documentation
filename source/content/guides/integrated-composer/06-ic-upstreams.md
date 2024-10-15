@@ -3,8 +3,8 @@ title: Integrated Composer
 subtitle: Use an Upstream with Integrated Composer
 description: Learn how to use an Upstream with Integrated Composer.
 tags: [composer, workflow]
-contributors: [ari, edwardangert]
-reviewed: "2022-12-13"
+contributors: [ari, edwardangert, jazzsequence]
+reviewed: "2024-10-15"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 contenttype: [guide]
