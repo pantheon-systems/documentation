@@ -63,3 +63,28 @@ terminus wp <site>.<env> -- plugin install https://www.advancedcustomfields.com/
 ```
 
 Adding the `--force` flag will ensure that the version of Advanced Custom Fields is the one sourced from `www.advancedcustomfields.com` rather than the default WordPress repository.
+
+## Using Composer to source plugins and packages
+
+Composer is a dependency manager for PHP similar to NPM for JavaScript projects. A `composer.json` file can be dropped into any project (including an existing WordPress site) to source packages from a specific source. Most often that is a version-controlled repository (e.g. GitHub) through [Packagist](https://packagist.org). The [Composer documentation provides guidance](https://getcomposer.org/doc/05-repositories.md) on how to add projects that may not already be Composer-based or set up in Packagist so that virtually any source can be added to a `composer.json` file. For more information about using WordPress and Composer, refer to our [Integrated Composer documentation](https://docs.pantheon.io/guides/integrated-composer). For an example of how to use a custom Composer repository for a premium plugin, see our [Object Cache Pro documentation for our WordPress (Composer Managed) upstream](https://docs.pantheon.io/object-cache/wordpress#installation-and-configuration-for-composer-managed-wordpress-sites).
+
+For WordPress, [WPackagist.org](https://wpackagist.org) acts as a Composer-based mirror of the WordPress.org plugin and theme repository. WPackagist allows Composer-based WordPress installs to require any plugin or theme that exists in the WordPress repository. For the purpose of this document, we will focus only on including packages from third-party sources.
+
+### Adding a plugin from Packagist.org
+Some packages, like our own [Pantheon Advanced Page Cache](https://github.com/pantheon-systems/pantheon-advanced-page-cache) plugin are distributed both through the [WordPress plugin repository](https://wordpress.org/plugins/pantheon-advanced-page-cache) and [Packagist](https://packagist.org/packages/pantheon-systems/pantheon-advanced-page-cache).
+
+Before you start, make sure you have the `composer/installers` package in your `composer/json` file. [`composer/installers`](https://packagist.org/packages/composer/installers) is a core Composer plugin that adds support for additional types of packages beyond the default package types. In the context of WordPress and Composer, Installers adds support for the `wordpress-plugin`, `wordpress-theme` and `wordpress-muplugin` package types – which means that when packages of those types are installed via Composer, they are stored in `wp-content/plugins`, `wp-content/themes` or `wp-content/mu-plugins`, respectively (as opposed to the default `/vendor` folder for other Composer packages).
+
+If you do not have the Installers package already installed, you can require it with composer using the following command:
+
+```bash{promptUser: user}
+composer require –dev composer/installers
+```
+
+Now, if you would like to source a Composer-based plugin through Packagist, you can do so by running `composer require <vendor>/<package>`, for example:
+
+```bash{promptUser: user}
+composer require pantheon-systems/pantheon-advanced-page-cache
+```
+
+You can use the search on Packagist.org to look for packages if you know the name of the plugin or the vendor (likely the plugin author) to see if there is built-in support for Composer-based installation. However, Composer also supports other VCS-based sources or even static zip files. [Refer to the documentation](https://getcomposer.org/doc/05-repositories.md#vcs) for more information about those types of advanced configuration.
