@@ -29,7 +29,7 @@ The function `pantheon_get_secret()` may be used to fetch the value of a single 
 
 ```php
 if ( function_exists('pantheon_get_secret') ) {
-  $secret_value = pantheon_get_secret("SECRET_NAME");
+  $secret_value = pantheon_get_secret('secret_name');
 }
 ```
 
