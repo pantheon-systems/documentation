@@ -57,9 +57,9 @@ Follow the steps in this section to create a custom upstream that uses Integrate
 ## More Resources
 
 - [Custom Upstreams](/guides/custom-upstream)
-
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
-
 - [Migrate a Custom Upstream to Drupal](/guides/drupal-hosted-createcustom)
-
 - [Pantheon YAML Configuration Files](/pantheon-yml)
+- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
+- [Composer Fundamentals and WebOps Workflows](/guides/composer)
+- [Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed)
