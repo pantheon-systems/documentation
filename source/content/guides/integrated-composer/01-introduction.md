@@ -31,7 +31,7 @@ Understanding how Composer can be used independent of Drupal or WordPress is a g
 
 ### Drupal with Integrated Composer
 
-- Follow the steps to [create a new CMS site](/add-site-dashboard) to spin up a new Drupal site with Integrated Composer built in.
+- Follow the steps to [Create a new Composer-managed CMS site](/guides/integrated-composer/create) to add a new Drupal site with Integrated Composer built in.
 
 - To upgrade or migrate an existing site to Drupal with Integrated Composer, visit the [Migrate to Drupal](/drupal-migration) guide.
 
@@ -40,7 +40,7 @@ Understanding how Composer can be used independent of Drupal or WordPress is a g
 
 <Alert title="Note"  type="info" >
 
-[`drupal-composer-managed`](https://github.com/pantheon-upstreams/drupal-composer-managed) is the recommended Composer-based Drupal upstream. The Composer-based Drupal upstreams below have been deprecated.
+[`drupal-composer-managed`](https://github.com/pantheon-upstreams/drupal-composer-managed) is the recommended Composer-based Drupal upstream. The following Composer-based Drupal upstreams have been deprecated:
 
 - `drupal-project`
 - `drupal-recommended`
@@ -50,14 +50,13 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 </Alert>
 
 ### WordPress with Integrated Composer
-
-- Follow the steps to [create a Composer-managed WordPress site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed) to create a new WordPress site with Integrated Composer built in.
+- Follow the steps to [Create a new Composer-managed CMS site](/guides/integrated-composer/create) to add a new WordPress site with Integrated Composer built in.
 
 - To upgrade or migrate an existing Composer-managed WordPress site to Pantheon with Integrated Composer, please reach out to our [Professional Services](https://pantheon.io/professional-services) team for information on site migration services.
 
 <Alert title="Note" type="info">
 
-[WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed) is the recommended Composer-based WordPress upstream. The Composer-based WordPress upstreams below have been deprecated.
+[`wordpress-composer-managed`](https://github.com/pantheon-systems/wordpress-composer-managed) is the recommended Composer-based WordPress upstream. The following Composer-based WordPress upstreams have been deprecated:
 
 - `wordpress-composer`
 - `example-wordpress-composer`
