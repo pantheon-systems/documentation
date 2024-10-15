@@ -33,12 +33,7 @@ Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-cu
 
 <Partial file="upstream-management-dependencies.md" />
 
-## Add and Remove Packages
-
-1. Use `composer require`in the `upstream-configuration` directory (or `composer upstream-require` if using `upstream-management`) to edit the upstream `composer.json` file.
-    - The WordPress (Composer Managed) repository places a theme in the upstream `composer.json` file. This works well for downstream sites that all use the same theme. You should remove themes from the upstream `composer.json` file if you do not intend to use the upstream to lock downstream sites into a particular theme. You cannot remove installed packages from downstream sites if the packages were included from the upstream site.
-
-## Maintain Your Integrated Composer Fork
+## Maintain Your Integrated Composer Custom Upstream
 
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
 
