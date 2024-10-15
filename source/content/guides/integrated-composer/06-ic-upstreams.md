@@ -1,6 +1,6 @@
 ---
 title: Integrated Composer
-subtitle: Use an Upstream with Integrated Composer
+subtitle: Custom Upstream Usage
 description: Learn how to use an Upstream with Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
@@ -16,14 +16,14 @@ product: [composer]
 integration: [--]
 ---
 
-This section provides information on how to use an Upstream with Integrated Composer, including steps to add dependencies to your Upstream.
+This section provides usage and maintanenance information for composer-managed [Custom Upstreams](/custom-upstreams) on Pantheon, including steps to add upstream dependencies.
 
 
-## Upstreams
+## Custom Upstreams
 
 An Upstream refers to the source code in Git that shares a Git history with "downstream" individual sites made from it. Upstreams includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-project), and some customizations for the Pantheon platform.
 
-### Upstream and Site Structure
+### Custom Upstream and Site Structure
 
 <Partial file="ic-upstream-structure.md" />
 
