@@ -18,7 +18,7 @@ permalink: docs/guides/wordpress-configurations/installing-updating-from-third-p
 This section provides guidance on how to manage plugins that use third-party sources beyond the WordPress plugin ressources. Such places include GitHub, Bitbucket, GitLab or self-hosted sources.
 
 <Alert title="Note" type="info" >
-All the guidance in this document is intended to be used in conjunction with Dev or Multidev environments on Pantheon where version-controlled files can be changed directly. Pantheon's security practices [lock down file permissions in the Test and Live environments](https://docs.pantheon.io/guides/filesystem/files-directories#write-access-on-environments).
+All the guidance in this document is intended to be used in conjunction with Dev or Multidev environments on Pantheon where version-controlled files can be changed directly. [Pantheon's security practices lock down file permissions in the Test and Live environments](https://docs.pantheon.io/guides/filesystem/files-directories#write-access-on-environments).
 </Alert>
 
 ## Using Git Updater to install and manage plugins (and themes) from Git repositories
