@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Learn how to use Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert, jazzsequence]
-reviewed: "2024-09-24"
+reviewed: "2024-10-15"
 showtoc: true
 permalink: docs/guides/integrated-composer
 contenttype: [guide]

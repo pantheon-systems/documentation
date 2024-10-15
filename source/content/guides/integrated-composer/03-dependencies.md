@@ -13,7 +13,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
-reviewed: "2022-12-13"
+reviewed: "2024-10-15"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.

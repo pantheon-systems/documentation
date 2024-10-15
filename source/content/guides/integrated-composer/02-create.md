@@ -15,7 +15,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/create
 anchorid: wordpress-composer-managed
-reviewed: "2024-09-26"
+reviewed: "2024-10-15"
 ---
 
 ## Drupal with Integrated Composer
