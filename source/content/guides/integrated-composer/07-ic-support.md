@@ -31,8 +31,9 @@ Pantheon supports the version of Composer integrated into the Pantheon platform 
 
 ## Report an Issue
 
-### WordPress (Composer Managed)
-Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
+If you discover any issue for either framework, create an issue in the respective GitHub repo for our team to review and address: 
+* [Drupal Composer Managed issue queue](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
+* [WordPress Composer Managed issue queue](https://github.com/pantheon-upstreams/wordpress-composer-managed/issues)
 
 Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account).
 

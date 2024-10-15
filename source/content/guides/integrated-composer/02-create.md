@@ -17,10 +17,6 @@ permalink: docs/guides/integrated-composer/create
 anchorid: wordpress-composer-managed
 reviewed: "2024-09-26"
 ---
-## Requirements
-
-- [PHP version](/guides/php/php-versions#verify-current-php-versions) 8.0 or greater
-- [Composer](https://getcomposer.org/)
 
 ## Drupal with Integrated Composer
 This section provides information on how to use Drupal with Integrated Composer. 
@@ -56,6 +52,11 @@ For more information about managing dependencies with Composer on Pantheon, see 
 This section provides information on how to use Bedrock with Integrated Composer on a WordPress site.
 
 WordPress does not natively support [Composer](https://getcomposer.org/), however, [Bedrock](https://roots.io/bedrock/) is a WordPress-specific framework for using Composer on WordPress sites.
+
+## Requirements
+
+- [PHP version](/guides/php/php-versions#verify-current-php-versions) 8.0 or greater
+- [Composer](https://getcomposer.org/)
 
 ### Create Your Site
 

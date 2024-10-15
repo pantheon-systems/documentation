@@ -215,8 +215,6 @@ If your site contains a binary patch, such as https://www.drupal.org/files/issue
 
 A workaround for this issue is to reconfigure the patch to exclude the binary contents in it.
 
-<Partial file="configure-wp-site-networks-with-integrated-composer.md" />
-
 ### GrumPHP breaks Integrated Composer when using Lando or other local development commands
 
 [GrumPHP](https://github.com/phpro/grumphp) is a code quality tool that installs into Git hooks via a Composer plugin. The hook runs whatever tasks you specify in your `grumphp.yml` file, including unit tests, code sniffing, etc., and allows or prevents a commit as needed.
