@@ -165,6 +165,7 @@ The [Bedrock](https://roots.io/bedrock/)-based [WordPress (Composer Managed)](ht
 	![My Sites](../../../images/wordpress-composer/04-multisite-my-sites.png)
 
 <Alert type="danger" title="Multisite Search and Replace with WordPress (Composer Managed)">
+
 Currently, the built-in dashboard [WordPress Multisite Search and Replace](/guides/multisite/search-replace/) does not support Composer-based WordPress multisites. To perform a search and replace on a WordPress (Composer Managed) multisite, you will need to use WP-CLI via Terminus manually. For more information, see our [WordPress Multisite Search and Replace](guides/multisite/workflows/#run-wp-cli-search-replace-manually) guide.
 </Alert>
 
