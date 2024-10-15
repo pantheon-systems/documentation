@@ -23,21 +23,15 @@ This section provides usage and maintanenance information for composer-managed [
 
 An Upstream refers to the source code in Git that shares a Git history with "downstream" individual sites made from it. Upstreams includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-composer-managed), and some customizations for the Pantheon platform.
 
+### Create Your Integrated Composer Custom Upstream
+
+Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-custom-upstream/) to create and connect a new integrated composer custom upstream. 
+
 ### Custom Upstream and Site Structure
 
 <Partial file="ic-upstream-structure.md" />
 
 <Partial file="upstream-management-dependencies.md" />
-
-## Create Your Integrated Composer Custom Upstream
-
-Follow the steps in this section to create a custom upstream that uses Integrated Composer.
-
-1. Fork the Pantheon-maintained [WordPress (Composer Managed)](https://github.com/pantheon-upstreams/wordpress-composer-managed) or [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) upstream repository.
-
-1. [Connect your repository](/guides/custom-upstream/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
-
-1. Update the **require** section of the root `/composer.json` file to match the name you chose in the preceding step.
 
 ## Add and Remove Packages
 
