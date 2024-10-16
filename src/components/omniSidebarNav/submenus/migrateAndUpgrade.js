@@ -45,7 +45,7 @@ const migrateAndUpgrade = () => {
       getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
       getGuideDirectory('guides/drupal/drupal-unhosted-composer', 'unhosted-composer'),
       getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
-      getGuideDirectory('guides/integrated-composer'),
+
 
 
     ],

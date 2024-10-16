@@ -15,8 +15,6 @@ const about = () => {
         simpleLink('/doc-template', 'Template Docs Page'),
       ]),
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
-      // simpleLink('/'),
-
       simpleLink('/faq', "FAQ"),
       // The glossary page doesn't show the sidebar nav.
       simpleLink('/glossary/', "Glossary"),

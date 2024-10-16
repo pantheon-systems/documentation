@@ -73,41 +73,23 @@ const webInfrastructure = () => {
               ]),
             ]
           },
-
-
           getGuideDirectory('guides/filesystem', 'Filesystem'),
-
           getGuideDirectory('guides/backups'),
-
           // this is a landing page that could hold others.
           simpleLink('/troubleshoot', "Troubleshooting", [
             simpleLink('/basic-troubleshooting'),
             simpleLink('/timeouts'),
-
             simpleLink('/debug-connections'),
             getGuideDirectory('guides/errors-and-server-responses'),
             getGuideDirectory('guides/disaster-recovery', 'Disaster Recovery Playbook'),
             simpleLink('/mime-types'),
-
             simpleLink('/http-to-https'),
             // @todo, this page is not loading??
             simpleLink('/debug-slow-performance'),
-
             simpleLink('/bots-and-indexing'),
             simpleLink('/load-and-performance-testing'),
             simpleLink('/load-testing-with-blazemeter'),
-
-
           ]),
-
-
-
-
-          // This page might fit better in migrate and Upgrade
-          // since it is about reformatting a codebase.
-
-
-
           simpleLink('/pantheon-yml', "pantheon.yml File", [
             simpleLink('/nested-docroot', "Nested Docroot"),
             simpleLink('/pantheon-yml-overview', "Pantheon.yml Overview (Delete?)"),
@@ -125,8 +107,6 @@ const webInfrastructure = () => {
           getGuideDirectory('guides/mariadb-mysql'),
           getGuideDirectory('guides/platform-considerations'),
           getGuideDirectory('guides/frontend-performance'),
-
-
           // This page is oddly short.
           simpleLink('/single-application-sites', "One app per site"),
 
