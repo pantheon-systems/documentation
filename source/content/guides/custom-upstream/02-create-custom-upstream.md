@@ -175,11 +175,18 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
     ```
 
     </Tab>
+    
+    <Tab title="WordPress (Composer Managed)" id="wpcm">
+
+    ```bash{promptUser: user}
+    git remote add pantheon-wordpress https://github.com/pantheon-upstreams/wordpress-composer-managed.git
+    ```
+    </Tab>
 
     <Tab title="Drupal (Latest Version)" id="dlatest">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-10-composer-managed.git
+    git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-11-composer-managed.git
     ```
 
     <Alert title="Note" type="info" >
@@ -214,6 +221,17 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
     git checkout -b master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
+    git push origin master
+    ```
+
+    </Tab>
+
+    <Tab title="WordPress (Composer Managed)" id="wpcm">
+
+    ```bash{promptUser: user}
+    git checkout -b master
+    git fetch pantheon-wordpress main
+    git merge pantheon-wordpress/main
     git push origin master
     ```
 

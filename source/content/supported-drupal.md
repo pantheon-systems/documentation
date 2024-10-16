@@ -10,7 +10,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-10-08"
+reviewed: "2024-10-15"
 ---
 
 The following table indicates availability of the specified Drupal versions, as well as our usage recommendations and our support scope.
@@ -54,6 +54,14 @@ To learn more about migrating from Drupal 7 to the latest version of Drupal, see
 ## Drush version support
 
 Refer to [Manage Drush Versions on Pantheon](/guides/drush/drush-versions/) for information on Drush versions that are compatible with each Drupal version.
+
+<Alert title="Note"  type="info" >
+
+### Site-local Drush is required for Drupal sites.
+
+Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
+
+</Alert>
 
 ## Modules Support
 

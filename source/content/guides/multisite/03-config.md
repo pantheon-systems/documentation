@@ -132,6 +132,43 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
   /* That's all, stop editing! Happy Pressing. */
   ```
 
+## Setting up Multisite on WordPress (Composer Managed) sites
+
+The [Bedrock](https://roots.io/bedrock/)-based [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed) upstream uses `Config::define()` and `config/application.php` instead of traditional `define()` statements in `wp-config.php`. You will not be able to use WP-CLI via Terminus to enable multisite as documented above in a standard multisite configuration. This section provides guidance on how to set up a WordPress Multisite using the WordPress (Composer Managed) upstream.
+
+1. Set the site's connection mode to Git:
+
+    ```bash{promptUser: user}
+    terminus connection:set <site>.dev git
+    ```
+2. Open the `config/application.php` file in your site's codebase and add the following line anywhere _above_ the `Config::apply();` line:
+
+	```php
+	Config::define( 'WP_ALLOW_MULTISITE', true );
+	```
+3. Visit your development site's WordPress admin and navigate to **Tools** > **Network Setup**.
+    ![Network Setup page](../../../images/wordpress-composer/04-multisite-network-setup.png)
+4. Choose **Sub-domains** or **Sub-directories** (depending on your needs), fill in the Network Title and Admin Email, and click **Install**.
+5. You will be given instructions to update your `config/application.php` file. Below where you added the `WP_ALLOW_MULTISITE` line, copy and paste the code provided. The `SUBDOMAIN_INSTALL` value will be `true` or `false` depending on the option you chose in the previous step. For example, if you chose subdirectories, your `config/application.php` file should look like this:
+
+	```php
+	Config::define( 'MULTISITE', true );
+	Config::define( 'SUBDOMAIN_INSTALL', false );
+	// Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+	Config::define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
+	Config::define( 'PATH_CURRENT_SITE', '/' );
+	Config::define( 'SITE_ID_CURRENT_SITE', 1 );
+	Config::define( 'BLOG_ID_CURRENT_SITE', 1 );
+	```
+6. Save your changes and commit them to your Git repository. WordPress will prompt you to log back in after you push the changes.
+7. Log into your site. When you log back into your WordPress admin dashboard, you will see a new **My Sites** menu item in the top left corner. This is where you can manage your network of sites. You now have a WordPress subdirectory multisite network set up on a WordPress (Composer Managed)-based upstream.
+	![My Sites](../../../images/wordpress-composer/04-multisite-my-sites.png)
+
+<Alert type="danger" title="Multisite Search and Replace with WordPress (Composer Managed)">
+
+Currently, the built-in dashboard [WordPress Multisite Search and Replace](/guides/multisite/search-replace/) does not support Composer-based WordPress multisites. To perform a search and replace on a WordPress (Composer Managed) multisite, you will need to use WP-CLI via Terminus manually. For more information, see our [WordPress Multisite Search and Replace](guides/multisite/workflows/#run-wp-cli-search-replace-manually) guide.
+</Alert>
+
 ## Develop the Multisite
 
 Congratulations on setting up your first WordPress Multisite. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
@@ -178,8 +215,8 @@ define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
 
 ## More Resources
 
-- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
-
-- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
-
-- [WordPress with Composer on Pantheon](/guides/wordpress-composer)
+* [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
+* [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
+* [WordPress with Composer on Pantheon](/guides/wordpress-composer)
+* [WordPress Multisite documentation](https://developer.wordpress.org/advanced-administration/multisite/)
+* [WordPress Multisite Domain Mapping](https://developer.wordpress.org/advanced-administration/multisite/domain-mapping/)

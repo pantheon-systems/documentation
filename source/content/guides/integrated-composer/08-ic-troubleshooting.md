@@ -1,10 +1,10 @@
 ---
 title: Integrated Composer
-subtitle: Troubleshoot Integrated Composer
+subtitle: Troubleshooting
 description: Learn how to troubleshoot Integrated Composer issues.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-12-13"
+reviewed: "2024-10-15"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
 contenttype: [guide]
@@ -17,6 +17,20 @@ integration: [--]
 ---
 
 This section provides information on troubleshooting common Integrated Composer errors and issues.
+
+## Restore overwritten `composer.json`
+Sometimes, when a given upstream update includes changes to the `composer.json` file, it can  conflict with your site's `composer.json` file. In these cases, applying the upstream update could result in the loss of content in your `composer.json` file.
+
+After applying such an update, check the commit log in the site dashboard. If you see many packages have been **removed**, you'll know the site's `composer.json` file has been overwritten by the upstream and needs to be resotred:
+
+![Pantheon update removing Composer packages](../../../images/wordpress-composer/02-wordpress-composer-json-removals.png)
+
+The easiest way to resolve this is to simply back up a copy of your current `composer.json` file locally before applying core updates. Then, apply the updates on Pantheon and `git pull` them into your local repository. From there, you can then restore the contents of `composer.json` based on your local back up of the file, run `composer update` and commit the changes.
+
+This may miss out on any actual updates to the `composer.json` in the upstream, so it's a good idea to check the [`composer.json` in the upstream repository](https://github.com/pantheon-upstreams/wordpress-composer-managed/blob/main/composer.json) to see if there are any changes you might want to incorporate into your own `composer.json` file.
+
+**Note:** If your site is using the Decoupled upstream for Front End Sites, the [`composer.json` is in the Decoupled WordPress (Composer Managed) upstream repository](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed/blob/main/composer.json)
+
 
 ## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
@@ -200,8 +214,6 @@ When using Pantheon's Integrated Composer, this plugin often tries to run a `com
 If your site contains a binary patch, such as https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the Composer build step will fail. This is because [cweagans/composer-patches](https://github.com/cweagans/composer-patches) use the patch utility to apply patches. The most recent version of this utility does not support binary patches and fails when deployed.
 
 A workaround for this issue is to reconfigure the patch to exclude the binary contents in it.
-
-<Partial file="configure-wp-site-networks-with-integrated-composer.md" />
 
 ### GrumPHP breaks Integrated Composer when using Lando or other local development commands
 
