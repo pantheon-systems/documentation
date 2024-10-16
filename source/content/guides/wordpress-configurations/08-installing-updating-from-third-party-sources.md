@@ -30,9 +30,16 @@ All the guidance in this document is intended to be used in conjunction with Dev
 	terminus connection:set <site>.<env> sftp
 	```
 1. Download the latest zip file for the Git Updater plugin from the [Git Updater website](https://git-updater.com/) or use [WP-CLI through Terminus](https://docs.pantheon.io/guides/wp-cli) to install the plugin from its zip file in the GitHub repository releases page:
+
 	```bash{promptUser: user}
 	terminus wp <site>.<env> -- plugin install https://github.com/afragen/git-updater/releases/download/12.6.0/git-updater-12.6.0.zip --force
 	```
+
+	If you have [`jq`](https://jqlang.github.io/jq/) installed locally, you can get the latest version of Git Updater from the releases page (rather than a specific version) by using the following variation:
+
+	```bash{promptUser: user}
+	terminus wp <site>.<env> -- plugin install $(curl https://api.github.com/repos/afragen/git-updater/releases/latest | jq -r ‘.zipball_url’)
+	``` 
 2. Once installed, an option for Git Updater will appear under Settings in your WordPress admin dashboard. Clicking into it for the first time will prompt you to enter a license key or activate the free version. Once you've gone through the initial prompts, you will be presented with the default admin page for Git Updater which includes out-of-the-box support for GitHub-based plugins and themes.
 	![Git Updater Settings](../../../images/wordpress-configurations/08-git-updater-admin.png)
 3. To install a plugin or a theme from a GitHub repository, click on the Install Plugin or Install Theme tab and enter the Plugin URI (in the format `<vendor>/<plugin-name>` e.g. `pantheon-systems/pantheon-hud`), the repository branch (default is `master`) and the remote repository host (either GitHub or a zip file). You can also specify a GitHub Personal Access Token for private GitHub repositories. Then click Install Plugin/Theme.
