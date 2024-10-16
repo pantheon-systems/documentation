@@ -64,7 +64,6 @@
     "tocbot": "^4.20.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
     "@octokit/rest": "^16.43.2",
     "date-fns": "^2.29.3",
     "mark.js": "^8.11.1",
