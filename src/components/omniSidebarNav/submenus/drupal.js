@@ -7,19 +7,28 @@ const drupal = () => {
     children: [
       simpleLink('/develop-drupal'),
 
-      simpleLink('/drupal-10'),
+
+      // This page is odd now that D11 is out.
+      simpleLink('/drupal-10', 'Drupal 10'),
+      // This page might belong in s a tutorial section.
       simpleLink('/drupal-advanced-page-cache'),
       simpleLink('/drupal-broken-links'),
+
       simpleLink('/drupal-cache'),
       simpleLink('/drupal-caching-views'),
       simpleLink('/drupal-cloudfront'),
-      simpleLink('/drupal-commerce'),
+      simpleLink('/drupal-commerce', "Drupal Commerce"),
+
+      // This page probably belongs in a different section.
       simpleLink('/drupal-composer-managed'),
+      simpleLink('/drupal-from-dist'),
+      // This is another page that felt necessary in the early days of D8.
       simpleLink('/drupal-configuration-management'),
       simpleLink('/drupal-cron'),
-      simpleLink('/drupal-from-dist'),
+
       simpleLink('/drupal-launch-check'),
       simpleLink('/drupal-migration'),
+      // We have another page on VS Code. Should these be combined?
       simpleLink('/drupal-phpstorm'),
       simpleLink('/drupal-s3'),
       simpleLink('/drupal-security-patches'),
