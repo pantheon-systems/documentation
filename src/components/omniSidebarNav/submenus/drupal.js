@@ -16,6 +16,7 @@ const drupal = () => {
 
       simpleLink('/drupal-cache'),
       simpleLink('/drupal-caching-views'),
+      // This page is more about integrating Cloud front. It might belong in integrations.
       simpleLink('/drupal-cloudfront'),
       simpleLink('/drupal-commerce', "Drupal Commerce"),
 
@@ -29,13 +30,13 @@ const drupal = () => {
       simpleLink('/drupal-launch-check'),
       simpleLink('/drupal-migration'),
       // We have another page on VS Code. Should these be combined?
-      simpleLink('/drupal-phpstorm'),
+      simpleLink('/drupal-phpstorm', "Using PHPStorm"),
       simpleLink('/drupal-s3'),
       simpleLink('/drupal-security-patches'),
       simpleLink('/drupal-updates'),
       simpleLink('/unwind-drupal-multisite'),
       simpleLink('/upgrade-drupal-with-ic-to-latest'),
-      simpleLink('/modules-plugins-known-issues'),
+
 
 
       simpleLink('/switch-drupal-recommended-upstream'),

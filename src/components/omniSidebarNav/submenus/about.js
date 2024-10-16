@@ -6,19 +6,23 @@ const about = () => {
     title: 'About our Docs',
     children: [
       simpleLink('/contribute', "Contribute to the Docs"),
-      simpleLink('/code-of-conduct', "Code of Conduct"),
-      simpleLink('/pantheon-community', "Pantheon Community"),
-      // Should this page be here?
-      simpleLink('/trainers', "Trainers"),
+
+      simpleLink('/pantheon-community', "Pantheon Community",
+        [
+          simpleLink('/code-of-conduct', "Code of Conduct"),
+          simpleLink('/trainers', "Trainers"),
+        ]
+
+      ),
       simpleLink('/style-guide', 'Style Guide', [
+        // The glossary page doesn't show the sidebar nav. @todo Fix this.
+        simpleLink('/glossary/', "Glossary"),
         simpleLink('/inclusive-language', "Inclusive Language"),
         simpleLink('/doc-template', 'Template Docs Page'),
       ]),
-      simpleLink('/oss-support-levels', 'Open Source Support Levels'),
-      simpleLink('/faq', "FAQ"),
-      // The glossary page doesn't show the sidebar nav.
-      simpleLink('/glossary/', "Glossary"),
-      // simpleLink('/search/'),
+
+
+
 
 
 

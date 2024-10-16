@@ -22,6 +22,8 @@ const accountManagement = () => {
       getGuideDirectory('guides/wordpress-google-sso', 'WP SAML Auth'),
       // @todo, this page is oddly short.
       simpleLink('/support', 'Support'),
+      simpleLink('/oss-support-levels', 'Open Source Support Levels'),
+
       getGuideDirectory('guides/support', 'Support'),
       getGuideDirectory('guides/professional-services'),
 

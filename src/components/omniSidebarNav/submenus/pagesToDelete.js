@@ -12,8 +12,11 @@ const dnsProviders = () => {
       simpleLink('/add-site-clone'),
       simpleLink('/supported-wp'),
       simpleLink('/cygwin-windows'),
+      simpleLink('/faq', "FAQ"),
 
-
+      // This page is already deleted in the main branch.
+      simpleLink('/guides/wordpress-composer/pre-ga'),
+      simpleLink('/wordpress', "WordPress changelog"),
       // Deprecated
       simpleLink('/crisis-response-upstream'),
       simpleLink('/static-site-empty-upstream'),
@@ -30,8 +33,12 @@ const dnsProviders = () => {
       simpleLink('/guides/security'),
       simpleLink('/products'),
 
-
-
+      // This page is a bit short. It is also a duplicate of /guides/getstarted/signup
+      simpleLink('/sign-up', "Sign Up for Pantheon"),
+      // This duplicates /guides/getstarted/addsite
+      simpleLink('/add-site', "Adding a Site"),
+      // Non-dupe content on this page should be moved to /guides/getstarted/addsite
+      simpleLink('/add-site-dashboard', "Add a site"),
 
       // Has unsupported "product" upstreams Panopoly and OpenAtrium
       simpleLink('/start-state'),

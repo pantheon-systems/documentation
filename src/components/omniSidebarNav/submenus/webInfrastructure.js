@@ -89,6 +89,7 @@ const webInfrastructure = () => {
             simpleLink('/bots-and-indexing'),
             simpleLink('/load-and-performance-testing'),
             simpleLink('/load-testing-with-blazemeter'),
+            simpleLink('/modules-plugins-known-issues', "Modules and plugins with known issues"),
           ]),
           simpleLink('/pantheon-yml', "pantheon.yml File", [
             simpleLink('/nested-docroot', "Nested Docroot"),

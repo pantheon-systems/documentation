@@ -27,8 +27,9 @@ const getOmniItems = () => {
 
     pagesToDelete(),
     unassignedPages(),
-    getStarted(),
-    wordpress(),
+    getStarted(), // assigned to Chris ✅
+    wordpress(), // assigned to Chris
+    // Assigned to Steve
     drupal(),
     dnsProviders(),
     migrateAndUpgrade(),
@@ -37,6 +38,7 @@ const getOmniItems = () => {
     integrations(),
     frontEndSites(),
     terminus(),
+    // assigned to Rachel
     about(),
     workflows(),
 
