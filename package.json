@@ -67,7 +67,7 @@
     "@octokit/rest": "^16.43.2",
     "date-fns": "^2.29.3",
     "mark.js": "^8.11.1",
-    "prettier": "^2.8.3",
+    "prettier": "3.3.3",
     "react-date-range": "^1.4.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
