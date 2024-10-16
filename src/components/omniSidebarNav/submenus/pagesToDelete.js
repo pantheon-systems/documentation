@@ -39,7 +39,11 @@ const dnsProviders = () => {
       simpleLink('/add-site', "Adding a Site"),
       // Non-dupe content on this page should be moved to /guides/getstarted/addsite
       simpleLink('/add-site-dashboard', "Add a site"),
+      // This should be added as a sub-page of guides/mariadb-mysql
+      simpleLink('/optimize-wp-options-table-autoloaded-data', 'Optimize wp_options Table and Autoloaded Data'),
 
+      // This is actually for google domains and that's no longer a service
+      simpleLink('/google', 'Google Cloud DNS'),
       // Has unsupported "product" upstreams Panopoly and OpenAtrium
       simpleLink('/start-state'),
 

@@ -28,28 +28,28 @@ const getOmniItems = () => {
     pagesToDelete(),
     unassignedPages(),
     getStarted(), // assigned to Chris ✅
-    wordpress(), // assigned to Chris
-    // Assigned to Steve
-    drupal(),
-    dnsProviders(),
+    wordpress(), // assigned to Chris ✅
+
+    drupal(), // Assigned to Steve
+    dnsProviders(), // ?? do we need this at all?
     migrateAndUpgrade(),
     webInfrastructure(),
     accountManagement(),
     integrations(),
-    frontEndSites(),
+    frontEndSites(), // ✅
     terminus(),
-    // assigned to Rachel
-    about(),
+    about(), // assigned to Rachel ✅
     workflows(),
 
+    // @todo, should we have a separate tutorials section?
     {
       link: '/certification',
       title: 'WebOps Certification',
-      children: CertificationItems,
+      children: CertificationItems, // ✅
     },
   ];
 
-  // console.log('OmniItems: ', OmniItems);
+  console.log('OmniItems: ', OmniItems);
   return OmniItems;
 };
 

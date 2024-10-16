@@ -1,31 +1,30 @@
 import { getGuideDirectory, simpleLink } from './../helpers';
 
+// @todo, rename this function and file to something like "goingLive" or "golive"
 const dnsProviders = () => {
+
   return {
-    link: '/dns-providers',
-      title: 'DNS Updates',
+    link: '/go-live',
+      title: 'Going Live',
         children: [
-          // Should these be the parent, and DNS the child?
-          simpleLink('/go-live', 'Going live'),
+          getGuideDirectory('guides/domains', 'Domains'),
+          simpleLink('/dns-providers', 'DNS Providers', [
+            simpleLink('/1-and-1', '1 & 1'),
+            simpleLink('/route53', 'Amazon Route 53'),
+            simpleLink('/cloudflare', 'Cloudflare'),
+            simpleLink('/dreamhost', 'DreamHost'),
+            simpleLink('/dns-made-easy', 'DNS Made Easy'),
+            simpleLink('/dyn', 'Dyn'),
+            simpleLink('/enom', 'eNom'),
+            simpleLink('/gandi', 'Gandi'),
+            simpleLink('/godaddy', 'GoDaddy'),
+            simpleLink('/namecheap', 'Namecheap'),
+            simpleLink('/network-solutions', 'Network Solutions'),
+          ]),
+          getGuideDirectory('guides/launch', 'Launch'),
           simpleLink('/relaunch', 'Relaunch an existing site'),
-          // This page doesn't have a title???
-          simpleLink('/configure-dns', 'Configure DNS'),
-          simpleLink('/1-and-1', '1 & 1'),
-          simpleLink('/route53', 'Amazon Route 53'),
-          simpleLink('/cloudflare', 'Cloudflare'),
-          simpleLink('/dns-made-easy', 'DNS Made Easy'),
-          simpleLink('/dreamhost', 'DreamHost'),
-          simpleLink('/dyn', 'Dyn'),
-          simpleLink('/enom', 'eNom'),
-          simpleLink('/gandi', 'Gandi'),
-          simpleLink('/godaddy', 'GoDaddy'),
-          simpleLink('/namecheap', 'Namecheap'),
-          simpleLink('/network-solutions', 'Network Solutions'),
-          // Does this still exist?
-          simpleLink('/google', 'Google Cloud DNS'),
         ],
     }
-
 };
 
 export default dnsProviders;

@@ -13,14 +13,11 @@ const wordpress = () => {
       simpleLink('/symlinks-assumed-write-access', 'Symlinks and plugins that assume write access'),
       getGuideDirectory('guides/multisite', "WordPress Multisite"),
       getGuideDirectory('guides/woocommerce', "WooCommerce"),
-      simpleLink('/wordpress-known-issues', 'WordPress Known Issues', [
-        // @todo: add installing from third party sources doc here
-        simpleLink('/plugins-known-issues', 'Plugins and Themes with Known Issues'),
-        simpleLink('/optimize-wp-options-table-autoloaded-data', 'Optimize wp_options Table and Autoloaded Data'),
-      ]),
+      // @todo: add installing from third party sources doc here
+      simpleLink('/wordpress-known-issues', 'WordPress Known Issues'),
+      simpleLink('/plugins-known-issues', 'Plugins and Themes with Known Issues'),
     ]
   }
-
 };
 
 export default wordpress;

@@ -14,7 +14,6 @@ const getStarted = () => {
         simpleLink('/personal-settings', "Personal Settings"),
         simpleLink('/add-site-custom-upstream', "Adding a Site with a Custom Upstream"),
       ]),
-      getGuideDirectory('guides/launch', 'Launch'),
     ],
   }
 };
