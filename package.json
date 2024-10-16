@@ -67,8 +67,6 @@
     "@eslint/eslintrc": "^3.1.0",
     "@octokit/rest": "^16.43.2",
     "date-fns": "^2.29.3",
-    "eslint": "^9.8.0",
-    "eslint-config-prettier": "^9.1.0",
     "mark.js": "^8.11.1",
     "prettier": "^3.0.0",
     "react-date-range": "^1.4.0"
@@ -90,7 +88,6 @@
     "build": "gatsby build --prefix-paths --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "start": "npm run develop",
     "serve": "gatsby serve --prefix-paths",
     "lighthouse-run": "node ./tests/lighthouse/lighthouse.run.js",
