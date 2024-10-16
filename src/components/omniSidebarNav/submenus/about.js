@@ -5,23 +5,23 @@ const about = () => {
     link: '/contribute',
     title: 'About our Docs',
     children: [
-      simpleLink('/contribute'),
-      simpleLink('/code-of-conduct'),
-      simpleLink('/pantheon-community'),
+      simpleLink('/contribute', "Contribute to the Docs"),
+      simpleLink('/code-of-conduct', "Code of Conduct"),
+      simpleLink('/pantheon-community', "Pantheon Community"),
       // Should this page be here?
-      simpleLink('/trainers'),
+      simpleLink('/trainers', "Trainers"),
       simpleLink('/style-guide', 'Style Guide', [
-
+        simpleLink('/inclusive-language', "Inclusive Language"),
         simpleLink('/doc-template', 'Template Docs Page'),
       ]),
+      simpleLink('/oss-support-levels', 'Open Source Support Levels'),
+      // simpleLink('/'),
 
-      simpleLink('/oss-support-levels'),
-      simpleLink('/'),
+      simpleLink('/faq', "FAQ"),
+      // The glossary page doesn't show the sidebar nav.
+      simpleLink('/glossary/', "Glossary"),
+      // simpleLink('/search/'),
 
-      simpleLink('/faq'),
-      simpleLink('/glossary/'),
-      simpleLink('/search/'),
-      simpleLink('/inclusive-language'),
 
 
 
