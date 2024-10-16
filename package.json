@@ -86,7 +86,6 @@
   "engines": {
     "node": ">=18.0.0 <20.0.0"
   },
-  "type": "module",
   "scripts": {
     "build": "gatsby build --prefix-paths --log-pages",
     "develop": "gatsby develop",
