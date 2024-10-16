@@ -2,7 +2,7 @@
 title: WordPress Configurations Guide
 subtitle: Installing and Updating Plugins from Third-Party Sources
 description: Learn how to set up plugins that are set up in external repositories.
-contributors: [jazzsequence]
+contributors: [jazzsequence, pwtyler, stevector]
 contenttype: [guide]
 innav: [false]
 categories: [config]
