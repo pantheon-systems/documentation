@@ -69,7 +69,7 @@ However, you can also use WP-CLI through Terminus to install the plugin or theme
 terminus wp <site>.<env> -- plugin install https://www.advancedcustomfields.com/latest/ --force
 ```
 
-Adding the `--force` flag will ensure that the version of Advanced Custom Fields is the one sourced from `www.advancedcustomfields.com` rather than the default WordPress repository.
+Adding the `--force` flag will ensure that the latest version of Advanced Custom Fields is installed even if a plugin with the same slug already exists on your site. (For more information, see the [WP-CLI documentation for `plugin install`](https://developer.wordpress.org/cli/commands/plugin/install/).
 
 ## Using Composer to source plugins and packages
 
