@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [code, plugins]
-reviewed: "2024-10-14"
+reviewed: "2024-10-16"
 permalink: docs/guides/wordpress-configurations/installing-updating-from-third-party-sources
 ---
 
