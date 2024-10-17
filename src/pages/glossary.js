@@ -9,7 +9,7 @@ import TOC from "../components/toc"
 import showdown from "showdown"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-
+// @todo, add omnisidebarnav to this page.
 import "./styles/glossary.css"
 
 const converter = new showdown.Converter()

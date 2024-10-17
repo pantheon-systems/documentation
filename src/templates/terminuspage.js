@@ -10,6 +10,8 @@ import GetFeedback from "../components/getFeedback"
 
 import MdxWrapper from "../components/mdxWrapper"
 import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import OmniSidebarNav from "../components/omniSidebarNav";
+
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
@@ -137,11 +139,10 @@ class TerminusTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-        <Navbar
+        <OmniSidebarNav
           slot="guide-menu"
-          title={node.frontmatter.title}
-          items={items}
           activePage={node.fields.slug}
+          submenuPathToUse="/terminus"
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
@@ -152,6 +153,12 @@ class TerminusTemplate extends React.Component {
             className="terminus"
           >
             <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">
+
+
+
+
+
+
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}

@@ -10,6 +10,7 @@ import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
 import Wistia from "../components/wistia"
+// @todo, implement sidebar on this template
 
 import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 
@@ -69,6 +70,7 @@ class LandingTemplate extends Component {
                 width={containerWidth}
                 className="video-container  pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
               >
+
                 <Youtube src={topic.video_id} title={topic.title} />
               </Container>
             </div>
