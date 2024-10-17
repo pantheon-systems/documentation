@@ -550,6 +550,15 @@ via: 1.1 varnish
 
 ___
 
+## Gravity Forms
+
+<ReviewDate date="2024-10-17" />
+
+**Issue:** Emails from Gravity Forms submissions have content truncated when using the default PHP mailer and PHP versions 8.0 or 8.1.
+
+**Solution:** This issue stems from a change in how line endings are handled by PHP's mail() function. To resolve, upgrade to PHP 8.2+.
+___
+
 ## H5P
 
 <Partial file="h5p-known-issues.md" />
