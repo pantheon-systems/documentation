@@ -15,7 +15,7 @@ reviewed: "2024-10-16"
 permalink: docs/guides/wordpress-configurations/installing-updating-from-third-party-sources
 ---
 
-This section provides guidance on how to manage plugins that use third-party sources beyond the WordPress plugin ressources. Such places include GitHub, Bitbucket, GitLab or self-hosted sources.
+This section provides guidance on how to manage plugins that use third-party sources beyond the WordPress plugin resources. Such places include GitHub, Bitbucket, GitLab or self-hosted sources.
 
 <Alert title="Note" type="info" >
 
