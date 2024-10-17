@@ -139,11 +139,10 @@ class TerminusTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-        <Navbar
+        <OmniSidebarNav
           slot="guide-menu"
-          title={node.frontmatter.title}
-          items={items}
           activePage={node.fields.slug}
+          submenuPathToUse="/terminus"
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
@@ -155,10 +154,6 @@ class TerminusTemplate extends React.Component {
           >
             <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">
 
-
-              <OmniSidebarNav
-                activePage={node.fields.slug}
-              />
 
 
 
