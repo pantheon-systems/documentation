@@ -4,7 +4,7 @@ published_date: "2024-10-17"
 categories: [infrastructure]
 ---
 
-Some customers have reported that emails generated from form plugins, such as Gravity Forms or Contact Form 7, have content truncated after upgrading from PHP 7.4 to PHP 8. A fix has been applied to PHP 8.2 and above. Affected sites can resolve this issue by [upgrading their PHP version](/guides/php/php-versions) to 8.2 or 8.3.
+Some customers have reported that emails generated from form plugins, such as Gravity Forms or Contact Form 7, have content truncated after upgrading their site to PHP 8. A fix has been applied to PHP 8.2 and above. Affected sites can resolve this issue by [upgrading their PHP version](/guides/php/php-versions) to 8.2 or 8.3.
 
 **Important PHP version information**
 
