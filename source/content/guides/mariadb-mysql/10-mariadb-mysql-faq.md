@@ -79,6 +79,18 @@ mysql> SHOW VARIABLES LIKE "max_connections";
 
 There are many other factors that you should consider if you have concerns about maximum database connections. Contact your [CSM](/guides/professional-services#customer-success-management) or [Sales](https://pantheon.io/contact-sales?docs) for more information.
 
+## [Drush package drush-gdpr-dumper](https://github.com/druidfi/drush-gdpr-dumper)
+  <ReviewDate date="2024-10-18" />  
+  
+**Issue:** The druidfi/drush-gdpr-dumper breaks `drush-sql-dump` command. It results with following error `The '--column-statistics' option does not exist.`  
+  This package ships it's own `mysqldump` file being used to do the MySQL dump, which is incompatible with the platform. Specifically, the package overrides the `extra-dump` configuration, which is passed to mysqldump and does not allow it's alteration. The mysqldump used is not compatible with MariaDB.  
+  
+**Solution**: Remove the file `mysqldump` or uninstall the package. Then platform's version of `mysqldump` will be used.  
+  
+Notes: The package likely has other MariaDB incompatibilities!
+
+---
+
 ## More Resources
 
 - [Accessing MariaDB and MySQL Databases](/guides/mariadb-mysql/mysql-access)
