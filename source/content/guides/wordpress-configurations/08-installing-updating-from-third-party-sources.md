@@ -12,10 +12,11 @@ product: [--]
 integration: [plugins]
 tags: [code, plugins]
 reviewed: "2024-10-16"
+showtoc: true
 permalink: docs/guides/wordpress-configurations/installing-updating-from-third-party-sources
 ---
 
-This section provides guidance on how to manage plugins that use third-party sources beyond the WordPress plugin resources. Such places include GitHub, Bitbucket, GitLab or self-hosted sources.
+This section provides guidance on how to manage plugins that use third-party sources beyond the WordPress plugin repository. Such places include GitHub, Bitbucket, GitLab or self-hosted sources.
 
 <Alert title="Note" type="info" >
 
@@ -72,7 +73,7 @@ Git Updater supports other repository hosts such as BitBucket, GitLab, Gitea and
 
 ![Git Updater API Add-Ons](../../../images/wordpress-configurations/08-git-updater-api-addons.png)
 
-## Using plugins and themes with their own self-hosted update mechanism
+## Using WP-CLI to install plugins and themes with their own self-hosted update mechanism
 
 Some plugins and themes have their own self-hosted update mechanism that allows them to receive updates from a third-party source. Usually, you can find a download link from the relevant plugin or theme author and upload the zip file to your WordPress site or unzip locally and add to your Pantheon site using SFTP or Git.
 
