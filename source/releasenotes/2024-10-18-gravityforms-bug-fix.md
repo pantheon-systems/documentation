@@ -1,6 +1,6 @@
 ---
 title: Resolved bug affecting form email content
-published_date: "2024-10-17"
+published_date: "2024-10-18"
 categories: [infrastructure]
 ---
 

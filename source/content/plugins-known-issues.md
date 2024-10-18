@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-09-06"
+reviewed: "2024-10-18"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -552,7 +552,7 @@ ___
 
 ## Gravity Forms
 
-<ReviewDate date="2024-10-17" />
+<ReviewDate date="2024-10-18" />
 
 **Issue:** Emails from Gravity Forms submissions have content truncated when using the default PHP mailer and PHP versions 8.0 or 8.1.
 
