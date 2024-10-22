@@ -45,7 +45,13 @@ You can increase the default page cache max age value to improve the chances tha
 
 1. Click **Save Changes**.
 
-![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
+<Alert title="Note" type="info">
+
+We strongly recommend using the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin to ensure that your site content is always fresh and served quickly from Pantheon's Edge Cache. When Pantheon Advanced Page Cache is active, the Pantheon Page Cache admin page will look like the screenshot below. If the PAPC plugin is not active, the Page Cache Max Age setting will be a text input.
+
+</Alert>
+
+![WordPress Pantheon Cache settings](../../../images/wordpress-configurations/05-pantheon-page-cache-admin.png)
 
 ### Override the default max age
 
