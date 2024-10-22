@@ -27,9 +27,9 @@ You can clear the site cache manually or automatically.
 
 ## Pantheon Page Cache Plugin Configuration
 
-### Increase the Default Time to Live Value
+### Increase the Default Page Cache Max Age Value
 
-You can increase the default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
+You can increase the default page cache max age value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
 
 1. Log in to your WordPress site as an administrator.
 
