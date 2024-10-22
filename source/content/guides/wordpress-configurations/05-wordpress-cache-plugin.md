@@ -40,6 +40,8 @@ You can increase the default page cache max age value to improve the chances tha
 1. Modify the **Default Cache Time**.
 
     When [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) is active, your site content should always be fresh and served quickly from Pantheon's Edge Cache. This is why we recommend caching content for a minimum of 1 week. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+	
+	Since the 2.0 version of Pantheon Advanced Page Cache, the input type for the Page Cache Max Age setting has been changed to a dropdown with the values 1 week, 1 month and 1 year. This setting can be overridden using the `pantheon_cache_default_max_age` filter as described below.
 
 1. Click **Save Changes**.
 
