@@ -150,8 +150,6 @@ ___
 
 ___
 
-___
-
 ## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference/issues/2930423)
 
 <ReviewDate date="2023-06-09" />
