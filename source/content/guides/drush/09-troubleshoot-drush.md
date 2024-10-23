@@ -238,7 +238,7 @@ You can add a compatible Drush version in your `pantheon.yml` file to refresh th
 
 This package ships it's own `mysqldump` file to do the MySQL dump and overrides the `extra-dump` configuration, which is passed to `mysqldump` and does not allow it's alteration.
 
-To fix this error, remove the `mysqldump` file or uninstall the package. Then platform's version of `mysqldump` will be used.
+To fix this error, remove the `mysqldump` file or uninstall the package. Then the platform's version of `mysqldump` will be used instead.
 
 ## More Resources
 
