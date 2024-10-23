@@ -10,8 +10,8 @@ audience: [development]
 product: [--]
 integration: [aws]
 tags: [files]
-contributors: [sarahg,carl-alberto]
-reviewed: "2023-05-19"
+contributors: [sarahg,carl-alberto,jms-pantheon,jazzsequence]
+reviewed: "2024-10-23"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-s3
 ---
@@ -141,77 +141,19 @@ You must configure the service within your [AWS Management Console](https://cons
 
 You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) to integrate S3 with WordPress.
 
-WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
+*WP Offload Media** is configurable in the WordPress admin UI and offers a number of options and features, including multisite support but requires a paid license to use custom domains (as opposed to a direct URL to the S3 bucket). 
+
+**S3 Uploads** is open-source but does not include an admin UI and requires [WP-CLI](/guides/wp-cli) through [Terminus](/terminus) and [Composer](/guides/integrated-composer) for setup and migration.
 
 ### Install and Deploy S3 Uploads Plugin
+
+Follow the [S3 Uploads documentation](https://github.com/humanmade/S3-Uploads) to install and setup this plugin. Note that any WP-CLI commands in the documentation must be run through Terminus for a Pantheon site (e.g. `terminus wp -- <site>.<env> s3-uploads verify`).
 
 <Alert title="Note" type="info">
 
 This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214). Consider [WP Offload Media](#install-and-deploy-wp-offload-media) if you need an alternative plugin with premium support and a multisite version.
 
 </Alert>
-
-1. Download the latest `manual-install.zip` plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases) and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
-
-  <Alert title="Warning" type="danger">
-
-  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform. Refer to the [Git guide](/guides/git/faq-git) for more information.
-
-  </Alert>
-
-1. Rename the extracted folder to remove the version number. For example:
-
-   ```bash{promptUser: user}
-   mv S3-Uploads-2.0.0/ S3-Uploads
-   ```
-
-1. Create and/or copy your **Access Key ID** and **Secret Access Key** from the **My security credentials** section of your AWS account to a text editor on your local computer.
-
-   <Alert title="Note" type="info">
-
-   Consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin as a standard security measure.
-
-   </Alert>
-
-1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend using [Pantheon Secrets](/guides/secrets) to store and retrieve these credentials securely.
-
-1. Commit and push the new plugin and your `wp-config.php` file updates to the Dev environment, then switch to SFTP mode and activate the plugin:
-
-    ```bash{promptUser: user}
-    terminus wp $site.dev plugin activate S3-Uploads
-    ```
-
-1. Use WP-CLI to verify your AWS setup.
-
-    ```bash{promptUser: user}
-    terminus wp $site.dev s3-uploads verify
-    ```
-
-#### Migrate existing media with S3 Uploads and WP-CLI
-
-You can migrate existing media files to S3 with the following command:
-
-```bash{promptUser: user}
-terminus wp $site.dev -- s3-uploads migrate-attachments
-```
-
-Optionally, add the `--delete-local` flag to remove the local copies of the media files.
-
-This command will also provide a search/replace command for your database to update references to the newly-migrated files when completed. Note that you must run this on all Pantheon environments (Dev, Test, and Live).
-
-#### Multisite Compatibility
-
-WP Offload Media plugin is supported.
-
-Refer to the [WP Offload Media documentation](https://deliciousbrains.com/wp-offload-media/doc/multisite-per-subsite-bucket-and-custom-domain-settings/) for more information.
-
-#### URL Rewriting
-
-URLs saved in the database use S3's provided URL (for example, https://bucketname.s3.amazonaws.com/uploads/2023/01/image.jpg) by default. You can use [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) to mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request help with Domain Masking if you have AGCDN.
-
-#### Additional Configuration
-
-Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting, and offline development.
 
 ### Install and Deploy WP Offload Media
 
