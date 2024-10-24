@@ -1,5 +1,21 @@
 import CertificationItems from './submenus/certification';
-import { getGuideDirectory } from './helpers';
+
+
+import getStarted from './submenus/getStarted';
+import dnsProviders from './submenus/dnsProviders';
+import pagesToDelete from './submenus/pagesToDelete';
+import unassignedPages from './submenus/unassignedPages';
+import migrateAndUpgrade from './submenus/migrateAndUpgrade';
+import drupal from './submenus/drupal';
+import wordpress from './submenus/wordpress';
+import webInfrastructure from './submenus/webInfrastructure';
+import accountManagement from './submenus/accountManagement';
+import frontEndSites from './submenus/frontEndSites';
+import terminus from './submenus/terminus';
+import about from './submenus/about';
+import workflows from './submenus/workflows';
+
+
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -7,25 +23,72 @@ import { getGuideDirectory } from './helpers';
  */
 const getOmniItems = () => {
   const OmniItems = [
-    {
-      link: '/guides/decoupled',
-      title: 'Front-End Sites and Starter Kits',
-      children: [
-        getGuideDirectory('guides/decoupled/overview'),
-        getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
-        getGuideDirectory('guides/decoupled/wp-backend-starters'),
-        getGuideDirectory('guides/decoupled/wp-gatsby-frontend-starters'),
-        getGuideDirectory('guides/decoupled/drupal-backend-starters'),
-        getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
-        getGuideDirectory('guides/decoupled/no-starter-kit'),
-      ],
-    },
+   // about docs
+   // /contribute
+
+    pagesToDelete(),
+    unassignedPages(),
+    getStarted(), // assigned to Chris ✅
+    wordpress(), // assigned to Chris ✅
+    drupal(), // Assigned to Steve
+    dnsProviders(), // todo: rename to goLive
+    migrateAndUpgrade(), // todo, move under "Get Started"
+    webInfrastructure(),
+    accountManagement(),
+    frontEndSites(), // ✅
+    terminus(), // ✅
+    about(), // assigned to Rachel ✅
+    workflows(),
+
+    // @todo, should we have a separate tutorials section?
     {
       link: '/certification',
       title: 'WebOps Certification',
-      children: CertificationItems,
+      children: CertificationItems, // ✅
     },
   ];
+
+
+// Existing top level nav items
+
+// Get Started  --- Keep
+// Develop  -- Rename to "Development Workflows"
+// Go Live    ---Keep
+// Explore Platform Architecture --- "Rename to Web Infrastructure"
+// Automate and Integrate   --- Currently just "Integrations"
+// Optimize Performance --- We'll remove this menu item. Much of the info here will go in Troubleshoot or Web Infra
+// Manage Teams & Organizations  --  "Acount Management"
+// Troubleshoot  --> rename to "Support and Troubleshooting"
+// Release Notes --> Keep
+// Glossary  --> Removing. This page is under "about"
+// Certification --- Keep
+// Terminus --- Keep
+
+// Stuff in the top level of this "Omni menu" but isn't in the existing top level
+// Drupal  -- Adding
+// WordPress -- Adding
+// Migrate and Upgrade --- Moving under "Get Started"
+// Front end Sites --- We're moving
+
+// New Order
+//
+// Get Started
+// Development Workflows
+// Go Live
+// Web Infrastructure
+// Account Management
+// Command Line Interface
+// WordPress
+// Drupal
+// Front End Sites   // Move under "Web Infrastructure" ?
+// Integrations
+// Support and Troubleshooting
+// Certification
+// About Our Docs
+// Release Notes
+
+  console.log('OmniItems: ', OmniItems);
+
   return OmniItems;
 };
 

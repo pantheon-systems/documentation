@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import GuideLayout from "../layout/GuideLayout"
 
-import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import HeaderBody from "../components/headerBody"
 import TOC from "../components/toc"
@@ -10,6 +10,7 @@ import GetFeedback from "../components/getFeedback"
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 import MdxWrapper from "../components/mdxWrapper"
+import OmniSidebarNav from "../components/omniSidebarNav";
 
 
 // Set container width for search and main content.
@@ -47,9 +48,16 @@ class DocTemplate extends React.Component {
     const node = this.props.data.doc
     const isoDate = this.props.data.date
 
+    const ContainerDiv = ({ children }) => (
+      <div className="content-wrapper">{children}</div>
+    )
+    const ContentLayoutType = ContainerDiv
+
     return (
-      <Layout footerBorder>
+      <GuideLayout footerBorder>
         <SEO
+          slot="seo"
+
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
@@ -59,6 +67,13 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
+
+        <OmniSidebarNav
+          slot="guide-menu"
+          activePage={node.fields.slug}
+        />
+
+        <ContentLayoutType slot="guide-content">
         <main id="docs-main" tabIndex="-1">
           <Container
             width={containerWidth}
@@ -79,6 +94,7 @@ class DocTemplate extends React.Component {
                   cms={node.frontmatter.cms}
                 />
                 <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+
                   <MdxWrapper mdx={node.body} />
 
                 </div>
@@ -96,7 +112,8 @@ class DocTemplate extends React.Component {
             </SidebarLayout>
           </Container>
         </main>
-      </Layout>
+        </ContentLayoutType>
+      </GuideLayout>
     )
   }
 }
