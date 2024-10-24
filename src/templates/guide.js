@@ -4,11 +4,11 @@ import GuideLayout from '../layout/GuideLayout';
 import SEO from '../layout/seo';
 import SearchBar from '../layout/SearchBar';
 import HeaderBody from '../components/headerBody';
-import OmniSidebarNav from '../components/omniSidebarNav';
 import { SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
 import NavButtons from '../components/navButtons';
 import TOC from '../components/toc';
 import MdxWrapper from '../components/mdxWrapper';
+import OmniSidebarNav from '../components/omniSidebarNav';
 
 class GuideTemplate extends React.Component {
   componentDidMount() {

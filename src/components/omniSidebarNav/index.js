@@ -7,7 +7,18 @@ import {
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
 } from './helpers.js';
+
+// @todo, remove the reporting before merging this PR.
+import allWrittenPaths from './all-written-paths.js';
+import {
+  flattenOmniItems,
+  CalculateFilteredPathsInMenu,
+  eliminateExceptions,
+} from './reporting';
+
 import './style.css';
+
+// @todo, run prettier one more time on this directory before removing it from the PR.
 
 const OmniSidebarNav = ({
   activePage,
@@ -16,6 +27,35 @@ const OmniSidebarNav = ({
   submenuPathToUse = '',
 }) => {
   const OmniItems = getOmniItems();
+
+  const exceptions = [
+    'https://certification.pantheon.io/',
+    '/404.html',
+    '/404/',
+  ];
+  const RegExExceptions = [
+    // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
+    /.*\/contributors\/.*/,
+    /.*\/release-notes\/.*/,
+    /.*\/iframeembeds\/.*/,
+    /.*\/terminus\/commands\/.*/,
+  ];
+
+  const filteredWrittenPaths = eliminateExceptions(
+    allWrittenPaths,
+    exceptions,
+    RegExExceptions,
+  );
+  const flattenedOmniItems = flattenOmniItems(OmniItems);
+  const results = CalculateFilteredPathsInMenu(
+    filteredWrittenPaths,
+    flattenedOmniItems,
+  );
+
+  // const results = calculateNumberOfPathsInMenu(allWrittenPaths, OmniItems, exceptions);
+
+  console.log(results);
+
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
   // If the caller is asking for a specific submenu, use that directly.

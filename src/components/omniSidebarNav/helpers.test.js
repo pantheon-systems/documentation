@@ -27,7 +27,7 @@ test('finds sub menu to use', () => {
 
 test('Check that the items for a specific guide directory path are correct', () => {
   const guideDirectory = 'guides/decoupled/wp-backend-starters';
-  expect(getGuideDirectory(guideDirectory, AllGuides)).toEqual(
+  expect(getGuideDirectory(guideDirectory, '', AllGuides)).toEqual(
     guideDirectoryItems,
   );
 });
