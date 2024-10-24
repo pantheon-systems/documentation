@@ -9,7 +9,7 @@ export default defineConfig({
         // Unknown file extension ".css" for /Users/xxxxxxxxxxx/Sites/documentation/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.css
         //similar to:
         // https://github.com/vitest-dev/vitest/issues/5283
-        inline: [/@pantheon-systems\/.*/,],
+        inline: [/@pantheon-systems\/.*/],
       },
     },
   },
