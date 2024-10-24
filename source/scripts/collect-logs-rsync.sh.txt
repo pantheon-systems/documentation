@@ -15,7 +15,7 @@ CLEANUP_AGGREGATE_DIR=false
 
 
 if [ $COLLECT_LOGS == true ]; then
-echo 'COLLECT_LOGS set to $COLLECT_LOGS. Beginning the process...'
+echo "COLLECT_LOGS set to $COLLECT_LOGS. Beginning the process..."
 for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
 do
     rsync -rlvz --size-only --ipv4 --progress -e "ssh -p 2222" "$ENV.$SITE_UUID@$app_server:logs" "app_server_$app_server"
@@ -31,7 +31,7 @@ echo 'skipping the collection of logs..'
 fi
 
 if [ $AGGREGATE_NGINX == true ]; then
-echo 'AGGREGATE_NGINX set to $AGGREGATE_NGINX. Starting the process of combining nginx-access logs...'
+echo "AGGREGATE_NGINX set to $AGGREGATE_NGINX. Starting the process of combining nginx-access logs..."
 mkdir aggregate-logs
 
 for d in $(ls -d app*/logs/nginx); do
@@ -63,6 +63,6 @@ echo "AGGREGATE_NGINX set to $AGGREGATE_NGINX. So we're done."
 fi
 
 if [ $CLEANUP_AGGREGATE_DIR == true ]; then
-echo 'CLEANUP_AGGREGATE_DIR set to $CLEANUP_AGGREGATE_DIR. Cleaning up the aggregate-logs directory'
+echo "CLEANUP_AGGREGATE_DIR set to $CLEANUP_AGGREGATE_DIR. Cleaning up the aggregate-logs directory"
 find ./aggregate-logs/ -name 'nginx-access*' -print -exec rm {} \;
 fi

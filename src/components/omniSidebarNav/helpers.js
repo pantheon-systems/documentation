@@ -19,7 +19,6 @@ const turnItemsIntoLinks = (item, activePage) => {
       React.Fragment,
       null,
       item.title,
-
       ' ',
       React.createElement(Icon, { iconName: 'externalLink', iconSize: 'sm' }),
     );

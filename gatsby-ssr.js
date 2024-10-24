@@ -1,5 +1,9 @@
 import React from 'react'
 
+// Import PDS Global wrapper for applying global context providers.
+import { GlobalWrapper } from "@pantheon-systems/pds-toolkit-react"
+import { MOBILE_MENU_BREAKPOINT } from './src/vars/responsive'
+
 /*
  * Add global scripts to ensure Bootstrap and jQuery JS is included
  */
@@ -15,4 +19,9 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
         window.dataLayer.push({'event':'OneTrustGroupsUpdated'})
       }
   ])
+}
+
+// Global context providers
+export const wrapRootElement = ({ element }) => {
+  return <GlobalWrapper mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>{element}</GlobalWrapper>
 }

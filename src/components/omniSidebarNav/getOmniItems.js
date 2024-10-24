@@ -1,5 +1,5 @@
 import CertificationItems from './submenus/certification';
-import { getGuideDirectory, simpleLink } from './helpers';
+
 
 import getStarted from './submenus/getStarted';
 import dnsProviders from './submenus/dnsProviders';
@@ -14,6 +14,8 @@ import frontEndSites from './submenus/frontEndSites';
 import terminus from './submenus/terminus';
 import about from './submenus/about';
 import workflows from './submenus/workflows';
+
+
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -86,6 +88,7 @@ const getOmniItems = () => {
 // Release Notes
 
   console.log('OmniItems: ', OmniItems);
+
   return OmniItems;
 };
 

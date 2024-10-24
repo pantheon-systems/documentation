@@ -31,7 +31,3 @@ All plans except for a Basic plan can use New Relic&reg;. New Relic&reg; is avai
 ## More Resources
 
 - [Incident Management with New Relic&reg; and PagerDuty](/guides/pagerduty/)
-
-- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-
-- [Troubleshooting WordPress Performance with New Relic&reg;](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
