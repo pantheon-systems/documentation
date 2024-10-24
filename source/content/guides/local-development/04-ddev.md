@@ -55,7 +55,7 @@ Be sure that you have:
 
   <Alert title="Note" type="info" >
 
-  Do this in your site's `.ddev` directory, not the global `.dev` directory.
+  Do this in your site's `.ddev` directory, not the global `.ddev` directory.
 
   </Alert>
 
