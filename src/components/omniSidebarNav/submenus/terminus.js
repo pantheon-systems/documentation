@@ -3,7 +3,7 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 const terminus = () => {
   return {
     link: '/terminus',
-    title: 'Terminus',
+    title: 'Command Line Interface (CLI)',
     children: [
       // @todo, copy the order from the terminus template
 
@@ -22,16 +22,17 @@ const terminus = () => {
           simpleLink('/terminus/updates', "Current Terminus Release, Changelog, and Updates"),
           simpleLink('/terminus/terminus-3-0', "Terminus 3"),
         ]
-
       ),
-      simpleLink('/terminus-demo', "Introduction to Terminus"),
-      simpleLink('/terminus-drupal-site-management', "Using Terminus to Create and Update Drupal Sites on Pantheon"),
-      simpleLink('/terminus-overview', "Terminus Overview"),
-      simpleLink('/terminus/ci/bitbucket', "Authenticate Terminus in a Bitbucket CI Pipeline"),
-      simpleLink('/terminus/ci/circleci', "Authenticate Terminus in a CircleCI Pipeline"),
-      simpleLink('/terminus/ci/github-actions', "Authenticate Terminus in a GitHub Actions Pipeline"),
-      simpleLink('/terminus/ci/gitlab', "Authenticate Terminus in a GitLab Pipeline"),
-      simpleLink('/machine-tokens', "Creating and Revoking Machine Tokens"),
+
+      simpleLink('/machine-tokens', "Creating and Revoking Machine Tokens",[
+        simpleLink('/terminus/ci/bitbucket', "Authenticate Terminus in a Bitbucket CI Pipeline"),
+        simpleLink('/terminus/ci/circleci', "Authenticate Terminus in a CircleCI Pipeline"),
+        simpleLink('/terminus/ci/github-actions', "Authenticate Terminus in a GitHub Actions Pipeline"),
+        simpleLink('/terminus/ci/gitlab', "Authenticate Terminus in a GitLab Pipeline"),
+      ]),
+
+      getGuideDirectory('guides/wp-cli', 'WP-CLI'),
+      getGuideDirectory('guides/drush', 'Drush (the Drupal CLI)'),
     ]
   }
 

@@ -28,8 +28,7 @@ const workflows = () => {
       simpleLink('/newrelic', "New Relic"),
       getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
       getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
-      getGuideDirectory('guides/wp-cli', 'WP-CLI'),
-      getGuideDirectory('guides/drush', 'Drush (the Drupal CLI)'),
+
       simpleLink('/workflow-logs', "Workflow Logs"),
       getGuideDirectory('guides/quicksilver', 'Quicksilver Workflow Hooks'),
       getGuideDirectory('guides/local-development', 'Local Development'),

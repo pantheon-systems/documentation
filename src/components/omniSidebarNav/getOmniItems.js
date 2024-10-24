@@ -31,13 +31,13 @@ const getOmniItems = () => {
     wordpress(), // assigned to Chris ✅
 
     drupal(), // Assigned to Steve
-    dnsProviders(), // ?? do we need this at all?
+    dnsProviders(), // todo: rename to goLive
     migrateAndUpgrade(),
     webInfrastructure(),
     accountManagement(),
     integrations(),
     frontEndSites(), // ✅
-    terminus(),
+    terminus(), // ✅
     about(), // assigned to Rachel ✅
     workflows(),
 

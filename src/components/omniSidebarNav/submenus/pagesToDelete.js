@@ -48,6 +48,14 @@ const dnsProviders = () => {
       simpleLink('/start-state'),
 
 
+       // This page is duplicated by other terminus stuff
+      simpleLink('/terminus-demo', "Introduction to Terminus"),
+
+       // Redirect this page to https://docs.pantheon.io/guides/drush/drupal-commandline
+      simpleLink('/terminus-drupal-site-management', "Using Terminus to Create and Update Drupal Sites on Pantheon"),
+
+      // Redirect to /terminus
+      simpleLink('/terminus-overview', "Terminus Overview"),
 
 
       // @todo, this page seems like it should be an article.
