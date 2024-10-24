@@ -151,8 +151,19 @@ Be cautious when running this command, as it will automatically fix any formatti
 
 ## Testing
 
-We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
+To reduced the likelihood of regressions and bugs this site uses a few different testing tools:
 
-### Merge Conflicts
+### Visual Regression Tests
 
-To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
+Within the [`tests`](/tests/) directory there are a number of visual regression tests that can be run to compare the current state of the site to a PR preview or the live site.
+These tests are meant to be run locally instead of CI as they have a high rate of false positives.
+
+### Unit Tests
+
+Unit tests for custom logic are written in in Vitest and can be executed with
+
+```bash
+npx vitest src/components
+```
+
+These tests are executed in CI via a [GitHub Action](.github/workflows/vitest.yml).
