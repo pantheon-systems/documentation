@@ -27,9 +27,9 @@ You can clear the site cache manually or automatically.
 
 ## Pantheon Page Cache Plugin Configuration
 
-### Increase the Default Time to Live Value
+### Increase the Default Page Cache Max Age Value
 
-You can increase the default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
+You can increase the default page cache max age value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
 
 1. Log in to your WordPress site as an administrator.
 
@@ -40,10 +40,18 @@ You can increase the default time to live value to improve the chances that a vi
 1. Modify the **Default Cache Time**.
 
     When [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) is active, your site content should always be fresh and served quickly from Pantheon's Edge Cache. This is why we recommend caching content for a minimum of 1 week. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+	
+	Since the 2.0 version of Pantheon Advanced Page Cache, the input type for the Page Cache Max Age setting has been changed to a dropdown with the values 1 week, 1 month and 1 year. This setting can be overridden using the `pantheon_cache_default_max_age` filter as described below.
 
 1. Click **Save Changes**.
 
-![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
+<Alert title="Note" type="info">
+
+We strongly recommend using the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin to ensure that your site content is always fresh and served quickly from Pantheon's Edge Cache. When Pantheon Advanced Page Cache is active, the Pantheon Page Cache admin page will look like the screenshot below. If the PAPC plugin is not active, the Page Cache Max Age setting will be a text input.
+
+</Alert>
+
+![WordPress Pantheon Cache settings](../../../images/wordpress-configurations/05-pantheon-page-cache-admin.png)
 
 ### Override the default max age
 
