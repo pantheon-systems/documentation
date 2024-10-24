@@ -46,6 +46,9 @@ const migrateAndUpgrade = () => {
       getGuideDirectory('guides/drupal/drupal-unhosted-composer', 'unhosted-composer'),
       getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
 
+      simpleLink('/switch-drupal-recommended-upstream'),
+      simpleLink('/upgrade-drupal-with-ic-to-latest'),
+
 
 
     ],

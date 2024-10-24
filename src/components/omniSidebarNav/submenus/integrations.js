@@ -18,11 +18,20 @@ const integrations = () => {
       simpleLink('/lockr', 'Lockr'),
       simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
       simpleLink('/visual-studio-code', "Visual Studio Code"),
+      simpleLink('/drupal-phpstorm', "Using PHPStorm"),
       // This page might belong in a different section.
       simpleLink('/content-staging', "Content Staging"),
       // There's a separate continuous integration page, should these pages be within that section?
       simpleLink('/jenkins', 'Jenkins'),
       simpleLink('/behat', "Behat Testing"),
+      
+      // This might fit better in "Integrations"
+      simpleLink('/drupal-s3'),
+
+      // This page is more about integrating Cloud front. It might belong in integrations.
+      simpleLink('/drupal-cloudfront'),
+
+
     ],
   }
 };
