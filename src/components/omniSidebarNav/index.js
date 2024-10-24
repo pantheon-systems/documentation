@@ -10,10 +10,13 @@ import {
 
 // @todo, remove the reporting before merging this PR.
 import allWrittenPaths from './all-written-paths.js';
-import { flattenOmniItems, CalculateFilteredPathsInMenu, eliminateExceptions } from './reporting';
+import {
+  flattenOmniItems,
+  CalculateFilteredPathsInMenu,
+  eliminateExceptions,
+} from './reporting';
 
-import "./style.css"
-
+import './style.css';
 
 // @todo, run prettier one more time on this directory before removing it from the PR.
 
@@ -25,10 +28,10 @@ const OmniSidebarNav = ({
 }) => {
   const OmniItems = getOmniItems();
 
-
-  const exceptions = ['https://certification.pantheon.io/',
+  const exceptions = [
+    'https://certification.pantheon.io/',
     '/404.html',
-  '/404/',
+    '/404/',
   ];
   const RegExExceptions = [
     // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
@@ -38,17 +41,20 @@ const OmniSidebarNav = ({
     /.*\/terminus\/commands\/.*/,
   ];
 
-  const filteredWrittenPaths = eliminateExceptions(allWrittenPaths, exceptions, RegExExceptions);
+  const filteredWrittenPaths = eliminateExceptions(
+    allWrittenPaths,
+    exceptions,
+    RegExExceptions,
+  );
   const flattenedOmniItems = flattenOmniItems(OmniItems);
-  const results = CalculateFilteredPathsInMenu(filteredWrittenPaths, flattenedOmniItems);
-
-
+  const results = CalculateFilteredPathsInMenu(
+    filteredWrittenPaths,
+    flattenedOmniItems,
+  );
 
   // const results = calculateNumberOfPathsInMenu(allWrittenPaths, OmniItems, exceptions);
 
   console.log(results);
-
-
 
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
@@ -57,7 +63,8 @@ const OmniSidebarNav = ({
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
     const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
-      <SideNavCompact className="sidenav-compact"
+      <SideNavCompact
+        className="sidenav-compact"
         headingText={submenuLinks.linkContent}
         menuItems={submenuLinks.links}
       />
@@ -65,7 +72,8 @@ const OmniSidebarNav = ({
   } else if (menuItems) {
     const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
     return (
-      <SideNavCompact className="sidenav-compact"
+      <SideNavCompact
+        className="sidenav-compact"
         headingText={OmniLinks.linkContent}
         menuItems={OmniLinks.links}
       />

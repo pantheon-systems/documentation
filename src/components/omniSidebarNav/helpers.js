@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Icon } from '@pantheon-systems/pds-toolkit-react';
 
-
 /**
  * Converts items into links recursively.
  *
@@ -12,7 +11,6 @@ import { Icon } from '@pantheon-systems/pds-toolkit-react';
  * @returns {Object} - The converted item with link properties.
  */
 const turnItemsIntoLinks = (item, activePage) => {
-
   var linkText = item.title;
   // If the link is external, add an icon to indicate that.
   // Internal links will start with a slash.
@@ -22,13 +20,13 @@ const turnItemsIntoLinks = (item, activePage) => {
       null,
       item.title,
 
-      " ",
-      React.createElement(Icon, { iconName: "externalLink", iconSize: "sm" }),
+      ' ',
+      React.createElement(Icon, { iconName: 'externalLink', iconSize: 'sm' }),
     );
   }
 
   return {
-    isActive: item.link === activePage || item.link === "/" + activePage,
+    isActive: item.link === activePage || item.link === '/' + activePage,
     links: item.children
       ? item.children.map((child) => turnItemsIntoLinks(child, activePage))
       : false,
@@ -44,7 +42,7 @@ const turnItemsIntoLinks = (item, activePage) => {
  * @returns {boolean} - True if the item or any of its children have a link that matches the active page, false otherwise.
  */
 function containsActiveLink(item, activePage) {
-  if (item.link === "/" + activePage || item.link === activePage) {
+  if (item.link === '/' + activePage || item.link === activePage) {
     return true;
   } else if (item.children && item.children.length > 0) {
     for (let child of item.children) {
@@ -97,8 +95,11 @@ const findSubMenuItemsToUse = function (topLevelParentPath, NestedItems) {
  * @param {Object} [AllGuides=allGuides()] - The object containing all the guides.
  * @returns {Object} - The guide directory object with its title, link, and children.
  */
-const getGuideDirectory = (guideDirectory, overrideGuideTitle = '', AllGuides = allGuides()) => {
-
+const getGuideDirectory = (
+  guideDirectory,
+  overrideGuideTitle = '',
+  AllGuides = allGuides(),
+) => {
   const ChildItems = [];
   var guideTitle = '';
   for (let item of AllGuides.allGuides.edges) {
@@ -122,12 +123,7 @@ const getGuideDirectory = (guideDirectory, overrideGuideTitle = '', AllGuides = 
   };
 };
 
-
-
-
-
 const simpleLink = (link, title = '', children = []) => {
-
   const returning = {
     link: link,
     title: title || link,
@@ -137,17 +133,12 @@ const simpleLink = (link, title = '', children = []) => {
     returning.children = children;
   }
   return returning;
-
-}
-
-
-
-
+};
 
 export {
   findSubMenuItemsToUse,
   getGuideDirectory,
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
-  simpleLink
+  simpleLink,
 };
