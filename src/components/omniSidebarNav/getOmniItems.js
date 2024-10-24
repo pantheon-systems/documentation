@@ -29,10 +29,9 @@ const getOmniItems = () => {
     unassignedPages(),
     getStarted(), // assigned to Chris ✅
     wordpress(), // assigned to Chris ✅
-
     drupal(), // Assigned to Steve
     dnsProviders(), // todo: rename to goLive
-    migrateAndUpgrade(),
+    migrateAndUpgrade(), // todo, move under "Get Started"
     webInfrastructure(),
     accountManagement(),
     integrations(),
@@ -48,6 +47,45 @@ const getOmniItems = () => {
       children: CertificationItems, // ✅
     },
   ];
+
+
+// Existing top level nav items
+
+// Get Started  --- Keep
+// Develop  -- Rename to "Development Workflows"
+// Go Live    ---Keep
+// Explore Platform Architecture --- "Rename to Web Infrastructure"
+// Automate and Integrate   --- Currently just "Integrations"
+// Optimize Performance --- We'll remove this menu item. Much of the info here will go in Troubleshoot or Web Infra
+// Manage Teams & Organizations  --  "Acount Management"
+// Troubleshoot  --> rename to "Support and Troubleshooting"
+// Release Notes --> Keep
+// Glossary  --> Removing. This page is under "about"
+// Certification --- Keep
+// Terminus --- Keep
+
+// Stuff in the top level of this "Omni menu" but isn't in the existing top level
+// Drupal  -- Adding
+// WordPress -- Adding
+// Migrate and Upgrade --- Moving under "Get Started"
+// Front end Sites --- We're moving
+
+// New Order
+//
+// Get Started
+// Development Workflows
+// Go Live
+// Web Infrastructure
+// Account Management
+// Command Line Interface
+// WordPress
+// Drupal
+// Front End Sites   // Move under "Web Infrastructure" ?
+// Integrations
+// Support and Troubleshooting
+// Certification
+// About Our Docs
+// Release Notes
 
   console.log('OmniItems: ', OmniItems);
   return OmniItems;

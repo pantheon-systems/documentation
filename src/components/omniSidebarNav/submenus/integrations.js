@@ -7,6 +7,7 @@ const integrations = () => {
     title: 'Automate and Integrate',
     children: [
       simpleLink('/integrations'),
+      // Move somewhere else
       getGuideDirectory('guides/pagerduty', 'PagerDuty'),
       getGuideDirectory('guides/accessibility'),
       simpleLink('/deploybot', 'DeployBot'),
@@ -24,7 +25,7 @@ const integrations = () => {
       // There's a separate continuous integration page, should these pages be within that section?
       simpleLink('/jenkins', 'Jenkins'),
       simpleLink('/behat', "Behat Testing"),
-      
+
       // This might fit better in "Integrations"
       simpleLink('/drupal-s3'),
 
