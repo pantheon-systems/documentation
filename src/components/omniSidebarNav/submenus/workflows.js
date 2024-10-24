@@ -13,7 +13,11 @@ const workflows = () => {
       simpleLink('/sftp'),
       simpleLink('/core-updates', "Core Updates"),
       // This page is pretty short given the size of the topic.
-      simpleLink('/continuous-integration', "Continuous Integration"),
+      simpleLink('/continuous-integration', "Continuous Integration", [
+        simpleLink('/deploybot', 'DeployBot'),
+        simpleLink('/jenkins', 'Jenkins'),
+        simpleLink('/behat', "Behat Testing"),      
+      ]),
       getGuideDirectory('guides/integrated-composer'),
       simpleLink('/composer'),
       simpleLink('/composer-convert'),
@@ -25,13 +29,20 @@ const workflows = () => {
 
       ]),
       // Todo, combine these into with guides/new-relic
-      simpleLink('/newrelic', "New Relic"),
-      getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
+      simpleLink('/newrelic', "New Relic", [
+        getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
+        getGuideDirectory('guides/pagerduty', 'Incident Management'),        
+      ]),
+      simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
+      getGuideDirectory('guides/secure-development'),
       getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
-
+      simpleLink('/content-staging', "Content Staging"),
       simpleLink('/workflow-logs', "Workflow Logs"),
       getGuideDirectory('guides/quicksilver', 'Quicksilver Workflow Hooks'),
+      // Maybe make this a separate category for local development
       getGuideDirectory('guides/local-development', 'Local Development'),
+      simpleLink('/visual-studio-code', "Visual Studio Code"),
+      simpleLink('/drupal-phpstorm', "Using PHPStorm"),        
       // maybe move this to a "tutorial" section
       getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
       getGuideDirectory('guides/build-tools', "Build Tools"),

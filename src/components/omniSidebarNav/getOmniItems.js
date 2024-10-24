@@ -10,7 +10,6 @@ import drupal from './submenus/drupal';
 import wordpress from './submenus/wordpress';
 import webInfrastructure from './submenus/webInfrastructure';
 import accountManagement from './submenus/accountManagement';
-import integrations from './submenus/integrations';
 import frontEndSites from './submenus/frontEndSites';
 import terminus from './submenus/terminus';
 import about from './submenus/about';
@@ -34,7 +33,6 @@ const getOmniItems = () => {
     migrateAndUpgrade(), // todo, move under "Get Started"
     webInfrastructure(),
     accountManagement(),
-    integrations(),
     frontEndSites(), // ✅
     terminus(), // ✅
     about(), // assigned to Rachel ✅

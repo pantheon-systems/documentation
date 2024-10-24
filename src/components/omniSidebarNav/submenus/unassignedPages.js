@@ -7,7 +7,7 @@ const unassignedPages = () => {
     children: [
       simpleLink('/search/'),
       simpleLink('/'),
-
+      getGuideDirectory('guides/accessibility'), // This belongs in the learning center
     ],
   }
 

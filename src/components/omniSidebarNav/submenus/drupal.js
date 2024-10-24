@@ -32,6 +32,8 @@ const drupal = () => {
       simpleLink('/drupal-security-patches'),
       simpleLink('/drupal-updates'),
 
+      simpleLink('/drupal-s3'),
+      simpleLink('/drupal-cloudfront'),
 
 
       simpleLink('/supported-drupal'),

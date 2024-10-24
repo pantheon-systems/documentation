@@ -38,7 +38,10 @@ const webInfrastructure = () => {
               simpleLink('/clamav', "ClamAV"),
             ]),
           ]),
-
+          simpleLink('/email', 'Email', [
+            simpleLink('/sendgrid', 'SendGrid'),
+            simpleLink('/rerouting-outbound-email', "Rerouting outbound email during development"),
+          ]),
 
           {
             // This is an old video that should be replaced.

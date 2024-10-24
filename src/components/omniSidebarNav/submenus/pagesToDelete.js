@@ -64,6 +64,7 @@ const dnsProviders = () => {
       // This is a page about the move from Rackspace to Google Cloud
       simpleLink('/platform-upgrade'),
 
+      simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
 
 
 

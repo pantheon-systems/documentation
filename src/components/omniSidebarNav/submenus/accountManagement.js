@@ -17,9 +17,7 @@ const accountManagement = () => {
       simpleLink('/platform-notifications', "Platform Notifications"),
       getGuideDirectory('guides/account-mgmt/workspace-sites-teams'),
       getGuideDirectory('guides/enterprise-billing-center'),
-      simpleLink('/ldap-and-ldaps', 'LDAP and LDAPS'),
       getGuideDirectory('guides/sso'),
-      getGuideDirectory('guides/wordpress-google-sso', 'WP SAML Auth'),
       // @todo, this page is oddly short.
       simpleLink('/support', 'Support'),
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
@@ -30,15 +28,14 @@ const accountManagement = () => {
       getGuideDirectory('guides/domains'),
       // @todo, TOC doesn't work on this page. And this page should probably be combined with guides/custom-upstream
       simpleLink('/custom-upstreams', 'Custom Upstreams', [
-
         getGuideDirectory('guides/custom-upstream'),
+        getGuideDirectory('guides/autopilot-custom-upstream'),
         simpleLink('/unwind-drupal-multisite'),
       ]),
-
-      getGuideDirectory('guides/secure-development'),
-      simpleLink('/autopilot', 'Autopilot Overview'),
+      simpleLink('/ldap-and-ldaps', 'LDAP and LDAPS'),
+      getGuideDirectory('guides/wordpress-google-sso', 'WP SAML Auth'),
       getGuideDirectory('guides/autopilot', 'Autopilot Guide'),
-      getGuideDirectory('guides/autopilot-custom-upstream'),
+      
       simpleLink('/ssh-keys', 'SSH Keys'),
       simpleLink('/billing', 'Billing'),
 
