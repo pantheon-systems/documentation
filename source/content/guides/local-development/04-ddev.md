@@ -49,7 +49,16 @@ Be sure that you have:
     - TERMINUS_MACHINE_TOKEN=insertyourtoken
     ```
 
-1. Copy the `example.pantheon.yaml` provider file to the `pantheon.yaml`.
+1. [Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), and from the site's root directory run the `ddev config` command.
+
+1. Copy your site's `.ddev/providers/example.pantheon.yaml` provider file to `.ddev/providers/pantheon.yaml`.
+
+  <Alert title="Note" type="info" >
+
+  Do this in your site's `.ddev` directory, not the global `.dev` directory.
+
+  </Alert>
+
 
 1. Update the project name and environment variable. In the example below, the project name is `de8` and the targeted environment is `live`. This example updates the local DDEV environment with database and content file backups from the Pantheon Live environment.
 
@@ -62,5 +71,6 @@ Be sure that you have:
 
 ## More Resources
 
+- [DDEV's Pantheon Quickstart docs](https://ddev.readthedocs.io/en/latest/users/providers/pantheon/)
 - [Drupal Drush on Pantheon](/guides/drush)
 - [Using Drupal on Pantheon](/develop-drupal)
