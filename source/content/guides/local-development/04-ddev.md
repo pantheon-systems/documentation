@@ -27,7 +27,7 @@ Be sure that you have:
 - Installed Drush as part of your Drupal project. You can add this via your CLI:
 
     ```bash{promptUser: user}
-    $ ddev composer require drush/drush
+    ddev composer require drush/drush
     ```
 
 ## Download and Install DDEV
