@@ -79,8 +79,4 @@ Now that you have a monitor setup in New Relic&reg; to periodically check your P
 
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
-- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-
-- [Troubleshooting WordPress Performance with New Relic&reg;](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-
 - [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)

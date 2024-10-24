@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: Introduction
+subtitle: Introduction [Archived]
 description: A modern approach to audience-based content personalization.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -15,8 +15,18 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2022-03-23"
+reviewed: "2024-10-09"
 ---
+
+<Alert title="Warning" type="danger">
+
+This page has been archived. The content is no longer maintained and may be outdated.
+
+The Pantheon Edge Integrations SDKs [for Drupal](https://github.com/pantheon-systems/edge-integrations-drupal-sdk) and [WordPress](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) are no longer maintained and those repositories have been archived.
+
+While the integrations are still available with Pantheon Advanced Global CDN, and the code remains available, the SDKs are no longer actively developed or supported.
+
+</Alert>
 
 This guide is made to facilitate the onboarding process for developers who are implementing content personalization via Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) into their own Drupal or WordPress website. 
 

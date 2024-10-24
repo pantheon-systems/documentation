@@ -1066,8 +1066,6 @@
           url: "/guides/local-development/drupal-phpstorm"
         - text: "Drupal Commerce"
           url: "/guides/drupal-commerce"
-        - text: "Drupal SDK"
-          url: "/guides/edge-integrations/drupal-sdk/"
         - text: "Using Terminus to Create and Update Drupal Sites on Pantheon"
           url: "/guides/terminus-drupal-site-management/"
           icon: "book"

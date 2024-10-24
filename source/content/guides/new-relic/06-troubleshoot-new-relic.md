@@ -111,6 +111,4 @@ Availability monitoring from APM is heavily outdated, and will not work with the
 ## More Resources
 
 - [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
-- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-- [New Relic Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - [New Relic FAQ](/guides/new-relic/new-relic-faq)

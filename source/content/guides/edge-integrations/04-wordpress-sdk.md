@@ -1,6 +1,6 @@
 ---
 title: Edge Integrations
-subtitle: WordPress SDK
+subtitle: WordPress SDK [Archived]
 description: Install, configure, and use the Edge Integrations with WordPress.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
@@ -15,8 +15,18 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2022-03-09"
+reviewed: "2024-10-09"
 ---
+
+<Alert title="Warning" type="danger">
+
+This page has been archived. The content is no longer maintained and may be outdated.
+
+The Pantheon Edge Integrations SDK for [WordPress](https://github.com/pantheon-systems/edge-integrations-wordpress-sdk) is no longer maintained and those repositories have been archived.
+
+While the integrations are still available with Pantheon Advanced Global CDN, and the code remains available, the SDKs are no longer actively developed or supported.
+
+</Alert>
 
 This doc will help you personalize and provide custom experiences for visitors to your website, based on Geotargeting and Interest targeting.
 
