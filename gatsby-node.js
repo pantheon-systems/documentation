@@ -653,7 +653,6 @@ exports.onPostBuild = async ({ graphql, getNodes }) => {
   // Fetch all pages created by Gatsby
   const pages = getNodes().filter(node => node.internal.type === 'SitePage');
 
-
   //console.log('pages', pages);
   //loop over pages and log the path
   const pagePaths = pages.map(page => page.path);
