@@ -59,7 +59,6 @@ Be sure that you have:
 
   </Alert>
 
-
 1. Update the project name and environment variable. In the example below, the project name is `de8` and the targeted environment is `live`. This example updates the local DDEV environment with database and content file backups from the Pantheon Live environment.
 
     ```bash{promptUser: user}
