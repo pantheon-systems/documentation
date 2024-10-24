@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
-import GuideLayout from "../layout/GuideLayout"
-import SEO from "../layout/seo"
-import SearchBar from "../layout/SearchBar"
-import HeaderBody from "../components/headerBody"
-import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-import NavButtons from "../components/navButtons"
-import TOC from "../components/toc"
-import MdxWrapper from "../components/mdxWrapper"
-import OmniSidebarNav from "../components/omniSidebarNav";
+import React from 'react';
+import { graphql } from 'gatsby';
+import GuideLayout from '../layout/GuideLayout';
+import SEO from '../layout/seo';
+import SearchBar from '../layout/SearchBar';
+import HeaderBody from '../components/headerBody';
+import { SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
+import NavButtons from '../components/navButtons';
+import TOC from '../components/toc';
+import MdxWrapper from '../components/mdxWrapper';
+import OmniSidebarNav from '../components/omniSidebarNav';
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
@@ -68,12 +68,12 @@ class GuideTemplate extends React.Component {
           type={node.frontmatter.type}
         />
 
-          <OmniSidebarNav
-            slot="guide-menu"
-            activePage={node.fields.slug}
-            fallbackTitle={node.frontmatter.title}
-            fallbackItems={items}
-          />
+        <OmniSidebarNav
+          slot="guide-menu"
+          activePage={node.fields.slug}
+          fallbackTitle={node.frontmatter.title}
+          fallbackItems={items}
+        />
 
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />

@@ -13,8 +13,7 @@ const frontEndSites = () => {
       getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
       getGuideDirectory('guides/decoupled/no-starter-kit'),
     ],
-  }
-
+  };
 };
 
 export default frontEndSites;

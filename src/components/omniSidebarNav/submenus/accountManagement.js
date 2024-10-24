@@ -11,10 +11,10 @@ const accountManagement = () => {
       getGuideDirectory('guides/account-mgmt/plans'),
       getGuideDirectory('guides/account-mgmt/traffic'),
       simpleLink('/agency-tips', 'Agency Tips'),
-      simpleLink('/enterprise-billing-center', "Enterprise Billing Center"),
-      simpleLink('/tax-exempt-status', "Tax Exempt Status"),
-      simpleLink('/resetting-passwords', "Resetting Passwords"),
-      simpleLink('/platform-notifications', "Platform Notifications"),
+      simpleLink('/enterprise-billing-center', 'Enterprise Billing Center'),
+      simpleLink('/tax-exempt-status', 'Tax Exempt Status'),
+      simpleLink('/resetting-passwords', 'Resetting Passwords'),
+      simpleLink('/platform-notifications', 'Platform Notifications'),
       getGuideDirectory('guides/account-mgmt/workspace-sites-teams'),
       getGuideDirectory('guides/enterprise-billing-center'),
       getGuideDirectory('guides/sso'),
@@ -35,13 +35,11 @@ const accountManagement = () => {
       simpleLink('/ldap-and-ldaps', 'LDAP and LDAPS'),
       getGuideDirectory('guides/wordpress-google-sso', 'WP SAML Auth'),
       getGuideDirectory('guides/autopilot', 'Autopilot Guide'),
-      
+
       simpleLink('/ssh-keys', 'SSH Keys'),
       simpleLink('/billing', 'Billing'),
-
     ],
-  }
-
+  };
 };
 
 export default accountManagement;

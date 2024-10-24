@@ -39,8 +39,8 @@ class CertificationTemplate extends React.Component {
   }
 
   render() {
-    const node = this.props.data.mdx
-    const isoDate = this.props.data.date
+    const node = this.props.data.mdx;
+    const isoDate = this.props.data.date;
     const ifCommandsDate =
       node.fields.slug == '/terminus/commands'
         ? this.props.data.terminusReleasesJson.published_at
@@ -68,11 +68,11 @@ class CertificationTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-          <OmniSidebarNav
+        <OmniSidebarNav
           slot="guide-menu"
           activePage={node.fields.slug}
           submenuPathToUse="/certification"
-          />
+        />
 
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
