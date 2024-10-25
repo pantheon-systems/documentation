@@ -4,9 +4,7 @@ const migrateAndUpgrade = () => {
   return {
     link: '/guides/guidasdfasdfed',
     title: 'Migrating Sites to Pantheon',
-    children: [
-      
-    ],
+    children: [],
   };
 };
 

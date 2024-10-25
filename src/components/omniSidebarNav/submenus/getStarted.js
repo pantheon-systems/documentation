@@ -9,12 +9,11 @@ const getStarted = () => {
       getGuideDirectory('guides/getstarted'),
       // This page is kind of a landing page? Should it be in this menu?
 
-
       simpleLink('/required-reading', 'Required Reading'),
-      simpleLink("/guides/guided", "Migrating Sites to Pantheon",  [
+      simpleLink('/guides/guided', 'Migrating Sites to Pantheon', [
         getGuideDirectory('guides/migrate/guided', 'Guided Migration'),
         simpleLink('/migrate-manual', 'Manual Migration'),
-        simpleLink('/migrate-wordpress-multisite', 'WordPress Multisite'), 
+        simpleLink('/migrate-wordpress-multisite', 'WordPress Multisite'),
         getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
         getGuideDirectory('guides/migrate/pagely', 'Pagely'),
         getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
@@ -23,9 +22,7 @@ const getStarted = () => {
         getGuideDirectory('guides/migrate/platformsh', 'Platform.sh'),
         getGuideDirectory('guides/migrate/acquia', 'Acquia'),
         simpleLink('/migrate-cpanel', 'GoDaddy CPanel'),
-      ]
-),
-
+      ]),
 
       simpleLink('/dashboard', 'Dashboard', [
         simpleLink('/site-dashboard', 'Site Dashboard'),
