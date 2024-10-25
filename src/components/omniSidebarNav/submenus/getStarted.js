@@ -3,7 +3,7 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 const getStarted = () => {
   return {
     // @todo, implement sidebar on landing pages.
-    link: '/get-started',
+    link: '/guides/getstarted',
     title: 'Get Started',
     children: [
       getGuideDirectory('guides/getstarted'),
