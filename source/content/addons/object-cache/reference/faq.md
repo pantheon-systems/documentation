@@ -3,7 +3,7 @@ title: Object Cache FAQs
 description: Review frequently asked questions on Object Caching.
 permalink: docs/object-cache/faq
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2024-10-25"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
