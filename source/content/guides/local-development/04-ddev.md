@@ -68,7 +68,7 @@ Be sure that you have:
 
   </Alert>
 
-1. Update the project name and environment variable in your new `.ddev/providers/pantheon.yaml` file. In the example below, the project name is `de8` and the targeted environment is `dev`.
+1. Update the project name and environment variable in your new `.ddev/providers/pantheon.yaml` file. In the example below, the Pantheon project name is `de8` and the targeted Pantheon environment is `dev`.
 
     ```yaml
     environment_variables:
