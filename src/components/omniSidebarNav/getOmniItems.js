@@ -2,7 +2,7 @@ import CertificationItems from './submenus/certification';
 
 
 import getStarted from './submenus/getStarted';
-import dnsProviders from './submenus/dnsProviders';
+import goLive from './submenus/goLive';
 import pagesToDelete from './submenus/pagesToDelete';
 import unassignedPages from './submenus/unassignedPages';
 import migrateAndUpgrade from './submenus/migrateAndUpgrade';
@@ -31,7 +31,7 @@ const getOmniItems = () => {
     getStarted(), // assigned to Chris ✅
     wordpress(), // assigned to Chris ✅
     drupal(), // Assigned to Steve
-    dnsProviders(), // todo: rename to goLive
+    goLive(),
     migrateAndUpgrade(), // todo, move under "Get Started"
     webInfrastructure(),
     accountManagement(),

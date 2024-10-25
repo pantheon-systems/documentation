@@ -1,7 +1,7 @@
 import { getGuideDirectory, simpleLink } from './../helpers';
 
 // @todo, rename this function and file to something like "goingLive" or "golive"
-const dnsProviders = () => {
+const goLive = () => {
 
   return {
     link: '/go-live',
@@ -27,4 +27,5 @@ const dnsProviders = () => {
     }
 };
 
-export default dnsProviders;
+
+export default goLive;
