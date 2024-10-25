@@ -29,16 +29,18 @@ const getOmniItems = () => {
     pagesToDelete(),
     unassignedPages(),
     getStarted(), // assigned to Chris ✅
+    workflows(),
+    goLive(),
     wordpress(), // assigned to Chris ✅
     drupal(), // Assigned to Steve
-    goLive(),
+
     migrateAndUpgrade(), // todo, move under "Get Started"
     webInfrastructure(),
     accountManagement(),
     frontEndSites(), // ✅
     terminus(), // ✅
     about(), // assigned to Rachel ✅
-    workflows(),
+
 
     // @todo, should we have a separate tutorials section?
     {

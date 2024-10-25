@@ -27,7 +27,7 @@ const drupal = () => {
       simpleLink('/drupal-cron'),
 
       simpleLink('/drupal-launch-check'),
-      simpleLink('/drupal-migration'),
+
 
       simpleLink('/drupal-security-patches'),
       simpleLink('/drupal-updates'),

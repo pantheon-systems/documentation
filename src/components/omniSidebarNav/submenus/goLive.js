@@ -21,6 +21,7 @@ const goLive = () => {
             simpleLink('/namecheap', 'Namecheap'),
             simpleLink('/network-solutions', 'Network Solutions'),
           ]),
+          // Todo, this might belong at the top of the subnav, above "Domains"
           getGuideDirectory('guides/launch', 'Launch'),
           simpleLink('/relaunch', 'Relaunch an existing site'),
         ],
