@@ -9,6 +9,9 @@ if [ -n "$CHANGED_FILES" ]; then
 
 	# Run Prettier on the changed files.
 	echo "$CHANGED_FILES" | xargs npx prettier --write
+	echo "Adding Prettier changes to commit"
+	git add .
+	git commit -m "Apply Prettier formatting"
 else
 	echo "No files to format"
 fi
