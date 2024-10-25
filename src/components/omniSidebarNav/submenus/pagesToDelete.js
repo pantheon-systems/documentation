@@ -70,8 +70,8 @@ const dnsProviders = () => {
       simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
 
       simpleLink('/certificate-bundles'),
-      
-      // Pages to audit and reconsider before adding to migration submenu 
+
+      // Pages to audit and reconsider before adding to migration submenu
       simpleLink('/drupal-migration', 'Restructuring Drupal Codebases', [
         simpleLink('/drupal-to-build-tools'),
 
@@ -113,7 +113,7 @@ const dnsProviders = () => {
         simpleLink('/upgrade-drupal-with-ic-to-latest'),
         {
           link: '/migrate-wordpress',
-          title: 'Migrating WordPress Sites'
+          title: 'Migrating WordPress Sites',
         },
         getGuideDirectory(
           'guides/migrate/manual-d8-composer-to-d8',
