@@ -70,6 +70,56 @@ const dnsProviders = () => {
       simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
 
       simpleLink('/certificate-bundles'),
+      
+      // Pages to audit and reconsider before adding to migration submenu 
+      simpleLink('/drupal-migration', 'Restructuring Drupal Codebases', [
+        simpleLink('/drupal-to-build-tools'),
+
+        getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
+        getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
+        getGuideDirectory(
+          'guides/drupal/drupal-unhosted-composer',
+          'unhosted-composer',
+        ),
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-md',
+          'drupal-hosted-multidev',
+        ),
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-createempty-md',
+          'drupal-hosted-createempty-md',
+        ),
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-createdashboard-set8',
+          'drupal-hosted-createdashboard-set8',
+        ),
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-btworkflow',
+          'drupal-hosted-btworkflow',
+        ),
+
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-createbt',
+          'drupal-hosted-createbt',
+        ),
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-createcustom',
+          'drupal-hosted-createcustom',
+        ),
+        simpleLink(
+          '/switch-drupal-recommended-upstream',
+          'Restructuring Drupal Codebases',
+        ),
+        simpleLink('/upgrade-drupal-with-ic-to-latest'),
+        {
+          link: '/migrate-wordpress',
+          title: 'Migrating WordPress Sites'
+        },
+        getGuideDirectory(
+          'guides/migrate/manual-d8-composer-to-d8',
+          'Manual d8 to d8',
+        ),
+      ]),
     ],
   };
 };
