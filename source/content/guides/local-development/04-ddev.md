@@ -104,4 +104,4 @@ Be sure that you have:
 
 - [DDEV's Pantheon Quickstart doc](https://ddev.readthedocs.io/en/latest/users/providers/pantheon/)
 - [DDEV command references](https://ddev.readthedocs.io/en/stable/users/usage/commands/)
-- [DDEV Provider Integrations doc](https://ddev.readthedocs.io/en/latest/users/providers/).
+- [DDEV Provider Integrations doc](https://ddev.readthedocs.io/en/latest/users/providers/)
