@@ -100,7 +100,10 @@ test('certification---study-guide--webops', async ({ page }) => {
   await page.goto('/certification/study-guide/webops');
   await page.getByText('Accept Cookies').click();
   await expect(page.locator('#toc')).toBeVisible();
-  await expect(page).toHaveScreenshot('certification---study-guide--webops.png', { fullPage: true });
+  await expect(page).toHaveScreenshot(
+    'certification---study-guide--webops.png',
+    { fullPage: true },
+  );
 });
 
 // This page is one of the first to use the nest sidebar nav.
@@ -108,7 +111,9 @@ test('wp-nextjs--create', async ({ page }) => {
   await page.goto('/guides/decoupled/wp-nextjs-frontend-starters/create/');
   await page.getByText('Accept Cookies').click();
   await expect(page.locator('#toc')).toBeVisible();
-  await expect(page).toHaveScreenshot('wp-nextjs--create.png', { fullPage: true });
+  await expect(page).toHaveScreenshot('wp-nextjs--create.png', {
+    fullPage: true,
+  });
 });
 
 // As the nested nav is implemented, check that the non-nested nav is still working.

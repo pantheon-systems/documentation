@@ -9,8 +9,7 @@ const unassignedPages = () => {
       simpleLink('/'),
       getGuideDirectory('guides/accessibility'), // This belongs in the learning center
     ],
-  }
-
+  };
 };
 
 export default unassignedPages;

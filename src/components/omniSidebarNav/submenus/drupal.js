@@ -7,7 +7,6 @@ const drupal = () => {
     children: [
       simpleLink('/develop-drupal'),
 
-
       // This page is odd now that D11 is out.
       simpleLink('/drupal-10', 'Drupal 10'),
       // This page might belong in s a tutorial section.
@@ -17,7 +16,7 @@ const drupal = () => {
       simpleLink('/drupal-cache'),
       simpleLink('/drupal-caching-views'),
 
-      simpleLink('/drupal-commerce', "Drupal Commerce"),
+      simpleLink('/drupal-commerce', 'Drupal Commerce'),
 
       // This page probably belongs in a different section.
       simpleLink('/drupal-composer-managed'),
@@ -35,19 +34,14 @@ const drupal = () => {
       simpleLink('/drupal-s3'),
       simpleLink('/drupal-cloudfront'),
 
-
       simpleLink('/supported-drupal'),
       simpleLink('/services-yml'),
       simpleLink('/modules'),
       simpleLink('/modules-known-issues'),
 
       simpleLink('/drush'),
-
-
-
-    ]
-  }
-
+    ],
+  };
 };
 
 export default drupal;
