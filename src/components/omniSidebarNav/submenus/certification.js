@@ -65,6 +65,6 @@ const CertificationItems = [
     link: 'https://certification.pantheon.io/',
     title: 'Certification Directory',
   },
-];
+]
 
 export default CertificationItems;
