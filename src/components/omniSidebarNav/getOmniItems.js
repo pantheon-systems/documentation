@@ -38,7 +38,6 @@ const getOmniItems = () => {
     terminus(), // ✅
     about(), // assigned to Rachel ✅
 
-
     // @todo, should we have a separate tutorials section?
     {
       link: '/certification',

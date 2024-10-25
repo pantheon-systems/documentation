@@ -27,7 +27,6 @@ const drupal = () => {
 
       simpleLink('/drupal-launch-check'),
 
-
       simpleLink('/drupal-security-patches'),
       simpleLink('/drupal-updates'),
 
