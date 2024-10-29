@@ -6,6 +6,9 @@ const dnsProviders = () => {
     title: 'Pages to Delete or reconsider',
     children: [
       simpleLink('/workshops'),
+      simpleLink('/agency-tips', 'Agency Tips'),
+      simpleLink('/support', 'Support landing'),
+      simpleLink('/platform-notifications', 'Platform Notifications'),
 
       // This is a really small page.
       simpleLink('/add-site-clone'),
