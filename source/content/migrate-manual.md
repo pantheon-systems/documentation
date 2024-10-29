@@ -75,13 +75,13 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Enter your current website URL, choose your site type, and click **Continue**:
 
-   ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
+   ![Choose the Starting State for your Migrated Site](../images/dashboard/new-dashboard/2024/migrate-step2.png)
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
 1. Name your site and select an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
 
-   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/migrate-step3.png)
+   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/new-dashboard/2024/migrate-step3.png)
 
 1. Click the link to manually migrate your site then select **Yes** to confirm:
 

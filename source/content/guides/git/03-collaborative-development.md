@@ -315,7 +315,7 @@ You must create the `settings.php` file to develop in sync.
     terminus multidev:create <site>.dev <to_env>
     ```
 
-    ![New environment named configs](../../../images/dashboard/new-env-configs.png)
+    ![New environment named configs](../../../images/dashboard/new-dashboard/2024/new-env-configs.png)
 
     The module will now be available to activate and test on Pantheon for your colleagues to experience.
 

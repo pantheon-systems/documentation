@@ -251,7 +251,7 @@ You can find the credentials for connecting to your database directly in your Si
 
 Navigate to the environment you want to connect with, and select **Connection Info** to view your Database credentials (fig. 4.3):
 
-![connection info details for mysql etc](../../../images/dashboard/mysql-info.png)
+![connection info details for mysql etc](../../../images/dashboard/new-dashboard/2024/mysql-info.png)
 
 The following required fields are provided:
 

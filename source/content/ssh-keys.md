@@ -160,7 +160,7 @@ You can use your Dev environment to clone your site code to your workstation:
 
 1. Click the **Remove** button next to the key you want to delete:
 
-![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
+![Delete SSH Key](../images/dashboard/new-dashboard/2024/remove-ssh-key.png)
 
 ### Site Access After Removing Keys
 After removing SSH Keys from your user account, you will not be able to interact with the application and codeservers directly through command line interfaces like Git, SFTP, WP-CLI, and Drush. However removing SSH keys is separate from revoking the machine tokens used by Terminus to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.
