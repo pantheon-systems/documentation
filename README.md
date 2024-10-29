@@ -45,6 +45,19 @@ nvm install 18
 npm install -g gatsby-cli
 ```
 
+### Using Git Hooks
+Git hooks have been added to `[.github/hooks](.github/hooks)` to help automate some of the tasks that make it easier to work locally with the repository. The following hooks are available:
+
+- `pre-commit`: Runs Prettier to check for code styling issues on updated/changed javascript files. If Prettier made any changes, those changes are automatically committed back to the PR. This mirrors the functionality of the [Prettier GitHub Action](.github/workflows/prettier.yml).
+
+To use the git hooks, you must configure your local environment to use `.github/hooks` as the hooks path (normally `.git/hooks`, but this folder is ignored by Git). This can be done by running the following command from the root of the repository:
+
+```bash
+git config core.hooksPath .github/hooks
+```
+
+It's recommended (but not required) to use the provided git hooks if you are working with any javascript files in the repository. This will help ensure that your changes are formatted correctly before being committed and ensure that your local environment and the remote branch are the same.
+
 ### Get the Code
 
 Fork and clone this repository:
