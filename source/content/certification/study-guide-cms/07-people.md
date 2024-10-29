@@ -207,7 +207,7 @@ In order to lock an environment on Pantheon with a username and password, follow
 4. Provide a username and password.
 5. Click Lock Environment.
 
-![dashboard security tool https basic auth lock](../../../images/dashboard/lock-environment.png)
+![dashboard security tool https basic auth lock](../../../images/dashboard/new-dashboard/2024/lock-environment.png)
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 

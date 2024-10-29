@@ -89,13 +89,13 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
   <Tab title="WordPress" id="wp-confirm" active={true}>
 
-  ![Choose Manual WordPress Migration](../images/dashboard/migrate-manual-wp.png)
+  ![Choose Manual WordPress Migration](../images/dashboard/new-dashboard/2024/migrate-manual-wp.png)
 
   </Tab>
 
   <Tab title="Drupal" id="drops-confirm">
 
-  ![Choose Manual Drupal Migration](../images/dashboard/migrate-manual-drops.png)
+  ![Choose Manual Drupal Migration](../images/dashboard/new-dashboard/2024/migrate-manual-drops.png)
 
   </Tab>
 
@@ -103,7 +103,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Click **Visit your Pantheon Site Dashboard**:
 
-  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/migrate-manual-visit-your-site-dashboard.png)
+  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/new-dashboard/2024/migrate-manual-visit-your-site-dashboard.png)
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 

@@ -28,7 +28,7 @@ When a Dev environment is locked, a lock icon will be added to the screenshot of
 
 </Alert>
 
-![Lock environment](..//../../images/dashboard/lock-environment.png)
+![Lock environment](..//../../images/dashboard/new-dashboard/2024/lock-environment.png)
 
 ## Password Protect Your Site's Environments
 

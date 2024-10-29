@@ -46,7 +46,7 @@ Run backups separately for each environment (Dev, Test, and Live). Changes will 
 
 </Alert>
 
-![Create site backup Pantheon Dashboard](../../../images/dashboard/manual-site-backup.png)
+![Create site backup Pantheon Dashboard](../../../images/dashboard/new-dashboard/2024/manual-site-backup.png)
 
 ## Create a Backup in Terminus
 

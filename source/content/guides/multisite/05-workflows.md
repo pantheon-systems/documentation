@@ -46,7 +46,7 @@ WordPress stores full URLs in the database. These URLs can be links within the p
 
 6. Making sure that you've [configured your WordPress site to use Multisite](/guides/multisite/config/), use the [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool) to clone the database from the Dev to the Test environment.
 
-    ![Workflow Tool](../../../images/dashboard/interface-workflow-tool.png)
+    ![Workflow Tool](../../../images/dashboard/new-dashboard/2024/interface-workflow-tool.png)
 
     <Alert title="Warning" type="danger">
 
