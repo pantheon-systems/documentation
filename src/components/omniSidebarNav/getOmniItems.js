@@ -29,7 +29,7 @@ const getOmniItems = () => {
     wordpress(), // assigned to Chris ✅
     drupal(), // Assigned to Steve
     frontEndSites(), // ✅
-    support(),
+    support(), // ✅
     // @todo, should we have a separate tutorials section?
     {
       link: '/certification',

@@ -9,6 +9,9 @@ const dnsProviders = () => {
       simpleLink('/agency-tips', 'Agency Tips'),
       simpleLink('/support', 'Support landing'),
       simpleLink('/platform-notifications', 'Platform Notifications'),
+      simpleLink('/billing', 'Billing'),
+      simpleLink('/guides/account-mgmt'),
+      simpleLink('/enterprise-billing-center', 'Enterprise Billing Center'),
 
       // This is a really small page.
       simpleLink('/add-site-clone'),

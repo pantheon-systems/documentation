@@ -14,6 +14,7 @@ const getStarted = () => {
         getGuideDirectory('guides/migrate/guided', 'Guided Migration'),
         simpleLink('/migrate-manual', 'Manual Migration'),
         simpleLink('/migrate-wordpress-multisite', 'WordPress Multisite'),
+        simpleLink('/unwind-drupal-multisite'),
         getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
         getGuideDirectory('guides/migrate/pagely', 'Pagely'),
         getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
