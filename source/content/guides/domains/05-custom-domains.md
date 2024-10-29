@@ -47,7 +47,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
   If one (or more) domains have already been added, click **Connect Domain**:
 
-  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/add-additional-domains.png)
+  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/new-dashboard/2024/add-additional-domains.png)
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL.
 
