@@ -28,7 +28,7 @@ const support = () => {
       simpleLink(
         '/modules-plugins-known-issues',
         'Modules and plugins with known issues',
-      ),      
+      ),
     ],
   };
 };
