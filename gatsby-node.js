@@ -375,8 +375,8 @@ exports.createPages = ({ graphql, actions }) => {
         currentPage === 1
           ? null
           : currentPage === 2
-          ? `/changelog/`
-          : `/changelog/page/${currentPage - 1}`;
+            ? `/changelog/`
+            : `/changelog/page/${currentPage - 1}`;
       const previous =
         currentPage < numPages ? `/changelog/page/${currentPage + 1}` : null;
       createPage({
