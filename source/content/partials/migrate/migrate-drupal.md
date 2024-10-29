@@ -28,7 +28,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
   Click **Continue Migration**
 
-  ![Drupal create archive](../../../images/dashboard/drupal-guided-migrate.png)
+  ![Drupal create archive](../../../images/dashboard/new-dashboard/2024/drupal-guided-migrate.png)
 
 1. Paste the publicly accessible URL to a download of your site archive on the right side of the page. If you are using a Dropbox URL, change the end of the URL from `dl=0` to `dl=1` so we can import your site archive correctly. Click **Import Archive**.
 
