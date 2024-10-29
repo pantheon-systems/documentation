@@ -24,8 +24,14 @@ const support = () => {
         // @todo, this page is not loading??
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
-        simpleLink('/load-and-performance-testing', 'Load and Performance Testing'),
-        simpleLink('/load-testing-with-blazemeter', 'Load Testing Drupal and WordPress with BlazeMeter'),
+        simpleLink(
+          '/load-and-performance-testing',
+          'Load and Performance Testing',
+        ),
+        simpleLink(
+          '/load-testing-with-blazemeter',
+          'Load Testing Drupal and WordPress with BlazeMeter',
+        ),
         simpleLink(
           '/modules-plugins-known-issues',
           'Modules and plugins with known issues',
