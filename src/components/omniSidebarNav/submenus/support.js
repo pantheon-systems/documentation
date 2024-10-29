@@ -10,25 +10,27 @@ const support = () => {
       simpleLink('/ssh-keys', 'SSH Keys'),
       getGuideDirectory('guides/professional-services'),
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
-      simpleLink('/basic-troubleshooting'),
-      simpleLink('/timeouts'),
-      simpleLink('/debug-connections'),
-      getGuideDirectory('guides/errors-and-server-responses'),
-      getGuideDirectory(
-        'guides/disaster-recovery',
-        'Disaster Recovery Playbook',
-      ),
-      simpleLink('/mime-types'),
-      simpleLink('/http-to-https'),
-      // @todo, this page is not loading??
-      simpleLink('/debug-slow-performance'),
-      simpleLink('/bots-and-indexing'),
-      simpleLink('/load-and-performance-testing'),
-      simpleLink('/load-testing-with-blazemeter'),
-      simpleLink(
-        '/modules-plugins-known-issues',
-        'Modules and plugins with known issues',
-      ),
+      simpleLink('/troubleshoot', 'Troubleshooting', [
+        simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
+        simpleLink('/timeouts', 'Timeouts on Pantheon'),
+        simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
+        getGuideDirectory('guides/errors-and-server-responses'),
+        getGuideDirectory(
+          'guides/disaster-recovery',
+          'Disaster Recovery Playbook',
+        ),
+        simpleLink('/mime-types', 'MIME Types'),
+        simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
+        // @todo, this page is not loading??
+        simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
+        simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+        simpleLink('/load-and-performance-testing', 'Load and Performance Testing'),
+        simpleLink('/load-testing-with-blazemeter', 'Load Testing Drupal and WordPress with BlazeMeter'),
+        simpleLink(
+          '/modules-plugins-known-issues',
+          'Modules and plugins with known issues',
+        ),
+      ]),
     ],
   };
 };
