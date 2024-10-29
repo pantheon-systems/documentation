@@ -1,0 +1,17 @@
+#!/bin/sh
+git fetch origin main
+# Check for changed JavaScript files.
+CHANGED_FILES=$(git diff --name-only origin/main...HEAD | grep -E '\.js$|\.jsx$|\.ts$|\.tsx$' || echo "")
+# If JavaScript files have changed, run Prettier.
+if [ -n "$CHANGED_FILES" ]; then
+	echo "Fixing the following files:"
+	echo "$CHANGED_FILES"
+
+	# Run Prettier on the changed files.
+	echo "$CHANGED_FILES" | xargs npx prettier --write
+	echo "Adding Prettier changes to commit"
+	git add .
+	git commit -m "Apply Prettier formatting"
+else
+	echo "No files to format"
+fi
