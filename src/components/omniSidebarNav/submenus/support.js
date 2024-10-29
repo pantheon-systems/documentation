@@ -10,7 +10,6 @@ const support = () => {
       simpleLink('/ssh-keys', 'SSH Keys'),
       getGuideDirectory('guides/professional-services'),
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
-
     ],
   };
 };

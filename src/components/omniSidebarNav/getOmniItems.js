@@ -41,8 +41,6 @@ const getOmniItems = () => {
 
     pagesToDelete(),
     unassignedPages(),
-
-
   ];
 
   console.log('OmniItems: ', OmniItems);
