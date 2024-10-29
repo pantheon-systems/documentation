@@ -71,7 +71,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
     You'll automatically be taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
-   ![Custom domain Details page](../../../images/dashboard/details-page.png)
+   ![Custom domain Details page](../../../images/dashboard/new-dashboard/2024/details-page.png)
 
   If you instead see:
 

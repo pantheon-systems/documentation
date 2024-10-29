@@ -232,7 +232,7 @@ You must create the `settings.php` file to develop in sync.
         fe267cb..b802550  master -> master
       ```
 
-      ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/commit-deployed-pantheon-dashboard.png)
+      ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/new-dashboard/2024/commit-deployed-pantheon-dashboard.png)
 
       The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
