@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react';
 
-import { Icon } from "@pantheon-systems/pds-toolkit-react"
+import { Icon } from '@pantheon-systems/pds-toolkit-react';
 
-import "./style.css"
+import './style.css';
 
 const Github = ({ pageTitle, path, editPath }) => {
   return editPath ? (
@@ -22,7 +22,7 @@ const Github = ({ pageTitle, path, editPath }) => {
         <Icon iconName="github" /> Report an issue with this doc
       </a>
     </div>
-  ) : null
-}
+  ) : null;
+};
 
-export default Github
+export default Github;
