@@ -11,7 +11,7 @@ const accountManagement = () => {
         getGuideDirectory('guides/enterprise-billing-center'),
         getGuideDirectory('guides/account-mgmt/plans'),
         getGuideDirectory('guides/account-mgmt/traffic'),
-        // Consider relocating this next one: 
+        // Consider relocating this next one:
         simpleLink('/tax-exempt-status', 'Tax Exempt Status'),
       ]),
       simpleLink('/guides/sso', 'Single Sign-On', [
