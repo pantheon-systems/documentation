@@ -15,7 +15,6 @@ import workflows from './submenus/workflows';
 import support from './submenus/support';
 import security from './submenus/security';
 
-
 /**
  * Retrieves the all the menu items for the sidebar navigation.
  * @returns {Array} An array of Omni items.
@@ -32,7 +31,7 @@ const getOmniItems = () => {
     drupal(), // Assigned to Steve
     frontEndSites(), // ✅
     support(), // ✅
-    security(), 
+    security(),
     // @todo, should we have a separate tutorials section?
     {
       link: '/certification',

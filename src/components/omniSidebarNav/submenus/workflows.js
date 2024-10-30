@@ -7,16 +7,14 @@ const workflows = () => {
     children: [
       simpleLink('/pantheon-workflow', 'Deployment Pipeline on Pantheon', [
         getGuideDirectory('guides/multidev'),
-        simpleLink('/connection-modes', 'Connection Modes',),
+        simpleLink('/connection-modes', 'Connection Modes'),
         getGuideDirectory('guides/sftp', 'SFTP'),
         getGuideDirectory('guides/git', 'Git'),
         simpleLink('/core-updates', 'Core Updates'),
 
         simpleLink('/hotfixes', 'Hotfixes'),
- 
       ]),
       getGuideDirectory('guides/integrated-composer'),
-
 
       // This page is pretty short given the size of the topic.
       simpleLink('/continuous-integration', 'Continuous Integration', [
@@ -25,7 +23,7 @@ const workflows = () => {
         simpleLink('/jenkins', 'Jenkins'),
         simpleLink('/behat', 'Behat Testing'),
       ]),
-      
+
       simpleLink('/content-staging', 'Content Staging'),
       simpleLink('/workflow-logs', 'Workflow Logs'),
       getGuideDirectory('guides/quicksilver', 'Quicksilver Workflow Hooks'),

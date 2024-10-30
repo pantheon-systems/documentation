@@ -4,10 +4,7 @@ const security = () => {
   return {
     link: '/guides/security',
     title: 'Security',
-    children: [
-      getGuideDirectory('guides/secure-development'),
-
-    ],
+    children: [getGuideDirectory('guides/secure-development')],
   };
 };
 

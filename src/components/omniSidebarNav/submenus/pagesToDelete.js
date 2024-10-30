@@ -81,7 +81,7 @@ const dnsProviders = () => {
 
       // Pages to audit and reconsider before adding to migration submenu
       simpleLink('/composer-convert'),
-      simpleLink('/composer-convert-from-empty'),  
+      simpleLink('/composer-convert-from-empty'),
 
       simpleLink('/drupal-migration', 'Restructuring Drupal Codebases', [
         simpleLink('/drupal-to-build-tools'),

@@ -26,7 +26,7 @@ const support = () => {
           ),
           getGuideDirectory('guides/pagerduty', 'Incident Management'),
         ]),
-        simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),  
+        simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
         // @todo, this page is not loading??

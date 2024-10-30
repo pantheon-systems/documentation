@@ -28,7 +28,10 @@ const getStarted = () => {
       simpleLink('/dashboard', 'Dashboard', [
         simpleLink('/site-dashboard', 'Site Dashboard'),
         simpleLink('/personal-settings', 'Personal Settings'),
-        simpleLink('/add-site-custom-upstream', 'Adding a Site with a Custom Upstream'),
+        simpleLink(
+          '/add-site-custom-upstream',
+          'Adding a Site with a Custom Upstream',
+        ),
       ]),
     ],
   };
