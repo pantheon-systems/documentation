@@ -3,6 +3,12 @@
  * @type {Array<Object>}
  */
 const CertificationItems = [
+  // @todo tutorial section
+  //           getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
+  // /pivotal-tracker
+  // /rerouting-outbound-email
+  // /behat
+  // /drupal-advanced-page-cache
   {
     link: '/certification/about',
     title: 'About the Certification Program',

@@ -5,6 +5,8 @@ const dnsProviders = () => {
     link: '/asdfasdf',
     title: 'Pages to Delete or reconsider',
     children: [
+      simpleLink('/partial-composer'), // This page should be rewritten to focus on WordPress.
+
       simpleLink('/workshops'),
       simpleLink('/agency-tips', 'Agency Tips'),
       simpleLink('/support', 'Support landing'),
@@ -78,6 +80,9 @@ const dnsProviders = () => {
       simpleLink('/certificate-bundles'),
 
       // Pages to audit and reconsider before adding to migration submenu
+      simpleLink('/composer-convert'),
+      simpleLink('/composer-convert-from-empty'),  
+
       simpleLink('/drupal-migration', 'Restructuring Drupal Codebases', [
         simpleLink('/drupal-to-build-tools'),
 

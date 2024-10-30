@@ -19,6 +19,14 @@ const support = () => {
           'guides/disaster-recovery',
           'Disaster Recovery Playbook',
         ),
+        simpleLink('/newrelic', 'New Relic', [
+          getGuideDirectory(
+            'guides/new-relic',
+            'New Relic Performance Monitoring',
+          ),
+          getGuideDirectory('guides/pagerduty', 'Incident Management'),
+        ]),
+        simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),  
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
         // @todo, this page is not loading??

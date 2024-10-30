@@ -13,6 +13,8 @@ import terminus from './submenus/terminus';
 import about from './submenus/about';
 import workflows from './submenus/workflows';
 import support from './submenus/support';
+import security from './submenus/security';
+
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -24,12 +26,13 @@ const getOmniItems = () => {
     workflows(),
     goLive(),
     webInfrastructure(),
-    accountManagement(), // ✅
+    accountManagement(),
     terminus(), // ✅
     wordpress(), // assigned to Chris ✅
     drupal(), // Assigned to Steve
     frontEndSites(), // ✅
     support(), // ✅
+    security(), 
     // @todo, should we have a separate tutorials section?
     {
       link: '/certification',

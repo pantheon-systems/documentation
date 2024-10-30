@@ -87,7 +87,8 @@ const webInfrastructure = () => {
         getGuideDirectory('guides/solr-drupal'),
         simpleLink('/opensolr', 'Open Solr'),
       ]),
-
+      simpleLink('/customer-scheduled-cron-jobs', 'Scheduled Cron Jobs'),
+      getGuideDirectory('guides/secrets'),
       getGuideDirectory('guides/redirect'),
       getGuideDirectory('guides/mariadb-mysql'),
       getGuideDirectory('guides/platform-considerations'),
