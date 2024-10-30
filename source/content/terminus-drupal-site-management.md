@@ -134,7 +134,7 @@ There is also the `terminus dashboard <site>.<env> --print` command if, at any p
 terminus dashboard <site>.<env>
 ```
 
-![Dashboard in browser](../images/dashboard/terminus-cli-open-dash.png)
+![Dashboard in browser](../images/dashboard/new-dashboard/2024/terminus-cli-open-dash.png)
 
 Also, the status of each of the environments within the site can be seen using a `terminus env:list` command.
 
@@ -171,7 +171,7 @@ terminus env:list <site>
 
     If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-    ![The dashboard showing the code was deployed to the Dev environment](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+    ![The dashboard showing the code was deployed to the Dev environment](../images/dashboard/new-dashboard/2024/terminus-cli-code-to-commit-dashboard.png)
 
 1. Commit the changes into the Git repo with the `terminus env:commit` command:
 

@@ -17,7 +17,7 @@ editpath: support/01-scope.md
 reviewed: "2024-09-10"
 ---
 
-![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
+![Screenshot of the Support Tab](../../../images/dashboard/new-dashboard/2024/support-tab.png)
 
 ## Support Features and Response Times
 

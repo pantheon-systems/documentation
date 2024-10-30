@@ -36,7 +36,7 @@ You must add the Index Server to your site before you can use Solr on WordPress:
 
 1. Select **Add Ons**, and then click the **Add** button under **Apache Solr Index Server**.
 
-![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
+![Enable Solr from The Site Dashboard](../../../images/dashboard/new-dashboard/2024/settings-addons-solr.png)
 
 This provisions Apache Solr containers for every environment of your site. You are now ready to integrate with WordPress.
 

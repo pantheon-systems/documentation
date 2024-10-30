@@ -36,5 +36,5 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1.  Click **Visit the Site Dashboard** from the Site Dashboard on Pantheon after the import is complete.
 
-   ![Successful Drupal Migration](../../../images/dashboard/successful-drupal-migration.png)
+   ![Successful Drupal Migration](../../../images/dashboard/new-dashboard/2024/successful-drupal-migration.png)
 

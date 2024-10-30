@@ -78,7 +78,7 @@ Follow the steps below to restore Database and Files.
 1. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
-![Workflow Tab](../../../images/dashboard/workflow-tab.png)
+![Workflow Tab](../../../images/dashboard/new-dashboard/2024/workflow-tab.png)
 
 ### Restore Code
 

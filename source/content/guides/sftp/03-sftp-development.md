@@ -29,7 +29,7 @@ SFTP mode has a comment box above the commit log. The Dashboard automatically tr
 
 1. Click **SFTP** next to the **Development Mode** toggle to enable SFTP mode.
 
- ![Enable SFTP mode](../../../images/dashboard/sftp-enabled.png)
+ ![Enable SFTP mode](../../../images/dashboard/new-dashboard/2024/sftp-enabled.png)
 
 ## SFTP Changes
 
