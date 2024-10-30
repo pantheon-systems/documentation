@@ -43,11 +43,11 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. Enter a domain and click **Connect Domain**:
 
-  ![Adding a first domain to the Site Dashboard](../../../images/dashboard/add-first-domain.png)
+  ![Adding a first domain to the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-first-domain.png)
 
   If one (or more) domains have already been added, click **Connect Domain**:
 
-  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/new-dashboard/2024/add-additional-domains.png)
+  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-additional-domains.png)
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL.
 
@@ -61,7 +61,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
   </Alert>
 
-  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/verify-domain-with-remove-button.png)
+  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/new-dashboard/2024/_verify-domain-with-remove-button.png)
 
   It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 
@@ -71,7 +71,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
     You'll automatically be taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
-   ![Custom domain Details page](../../../images/dashboard/new-dashboard/2024/details-page.png)
+   ![Custom domain Details page](../../../images/dashboard/new-dashboard/2024/_domain-added.png)
 
   If you instead see:
 

@@ -23,7 +23,7 @@ Be sure that you have a:
 
 - [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live):
 
- ![Domains / HTTPS](../../images/dashboard/domain-added.png)
+ ![Domains / HTTPS](../../images/dashboard/new-dashboard/2024/_domain-added.png)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
