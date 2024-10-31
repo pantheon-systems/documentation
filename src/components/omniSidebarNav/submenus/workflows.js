@@ -5,7 +5,7 @@ const workflows = () => {
     link: '/pantheon-workflow',
     title: 'Development Workflows',
     children: [
-      // TODO: Report for Submenus and children lists that do not start with a sublink 
+      // TODO: Report for Submenus and children lists that do not start with a sublink
       simpleLink('/pantheon-workflow', 'Deployment Pipeline on Pantheon', [
         simpleLink('/pantheon-workflow', 'Pantheon Workflow'),
         getGuideDirectory('guides/multidev'),
