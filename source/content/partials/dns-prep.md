@@ -10,7 +10,7 @@ reviewed: ""
 
 Follow these simple steps to help minimize DNS-related downtime when you're planning a site migration:
 
-1. Lower the TTL values as low as allowed (usually `500`) several days in advance at your DNS service manager. That way when the values are changed, new records are propagated faster.
+1. Lower the TTL values as low as allowed (usually `300`) several days in advance at your DNS service manager. That way when the values are changed, new records are propagated faster.
 
 1. Use `dig` to confirm the new TTL values have propagated to your ISP's DNS servers:
 

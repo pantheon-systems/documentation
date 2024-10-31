@@ -24,12 +24,6 @@ You can use a frontend starter kit to streamline the creation of your Front-End 
 - Next.js + WordPress
 - Gatsby + WordPress
 
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
-
 ## Why Use the Gatsby WordPress Starter?
 
 The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby

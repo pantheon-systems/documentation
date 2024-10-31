@@ -102,9 +102,9 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Personalization"} link={"/guides/edge-integrations/"}>
+  <Product title={"Pantheon Secrets"} link={"/guides/secrets/"}>
 
-  Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. 
+  Pantheon Secrets is key to maintaining industry best practices for secrets management, secure builds, and application implementation to provide an additional layer of security to your site.
 
   </Product>
 
