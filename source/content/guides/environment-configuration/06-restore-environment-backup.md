@@ -35,7 +35,7 @@ It is important that you and your team know that this is a **destructive** proce
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. When in doubt, [contact support](/guides/support/contact-support/).
 
-![Backup tool](../../../images/dashboard/new-dashboard/2024/backup-tool.png)
+![Backup tool](../../../images/dashboard/new-dashboard/2024/_backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 

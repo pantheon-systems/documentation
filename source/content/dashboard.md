@@ -46,7 +46,7 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 
 *Manage Backups*
 
-![Manage Backups](../images/dashboard/new-dashboard/2024/backup-tool.png)
+![Manage Backups](../images/dashboard/new-dashboard/2024/_backup-tool.png)
 
 </Tab>
 
