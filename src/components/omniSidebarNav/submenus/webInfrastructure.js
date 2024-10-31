@@ -6,16 +6,19 @@ const webInfrastructure = () => {
     title: 'Web Infrastructure',
     children: [
       simpleLink('/application-containers', 'Application Containers', [
-        simpleLink('/application-containers', 'All About Application Containers'),
+        simpleLink(
+          '/application-containers',
+          'All About Application Containers',
+        ),
         simpleLink('/horizontal-scalability', 'Horizontal Scalability'),
-              // This page is oddly short.
-      simpleLink('/single-application-sites', 'One app per site'),
+        // This page is oddly short.
+        simpleLink('/single-application-sites', 'One app per site'),
         getGuideDirectory('guides/php'),
 
         // These pages could be folded into the "Environment configuration" section.
         simpleLink('/pantheon-yml', 'App Configuration', [
           simpleLink('/pantheon-yml', 'pantheon.yml'),
-          simpleLink('/nested-docroot', 'Nested Docroot'),  
+          simpleLink('/nested-docroot', 'Nested Docroot'),
           simpleLink(
             '/server_name-and-server_port',
             'Server Name and Server Port',
@@ -35,13 +38,13 @@ const webInfrastructure = () => {
         // remove PhantomJS stuff?
         simpleLink('/external-libraries', 'External Libraries'),
         simpleLink('/email', 'Email', [
-        simpleLink('/sendgrid', 'SendGrid'),
-        simpleLink(
-          '/rerouting-outbound-email',
-          'Rerouting outbound email during development',
-        ),
+          simpleLink('/sendgrid', 'SendGrid'),
+          simpleLink(
+            '/rerouting-outbound-email',
+            'Rerouting outbound email during development',
+          ),
+        ]),
       ]),
-    ]),
 
       {
         // This is an old video that should be replaced.
@@ -67,7 +70,7 @@ const webInfrastructure = () => {
           simpleLink('/clear-caches', 'Manage Cache', [
             // Think about the order of this section
             simpleLink('/clear-caches', 'Clearing Caches'),
-            // find the wp version of this next one, and un-guidify it 
+            // find the wp version of this next one, and un-guidify it
             simpleLink('/drupal-cache', 'Configure Drupal Cache'),
             simpleLink('/caching-advanced-topics', 'Advanced Topics'),
             simpleLink('/cookies', 'Cookies'),
@@ -76,7 +79,6 @@ const webInfrastructure = () => {
           ]),
           // delete this guide? asking tsc's
           getGuideDirectory('guides/fastly-pantheon'),
-
         ],
       },
       getGuideDirectory('guides/mariadb-mysql', 'Database'),

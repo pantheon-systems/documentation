@@ -14,8 +14,8 @@ const dnsProviders = () => {
 
       // This page could use a refresh
       simpleLink('/headless', 'Running a Headless CMS'),
-      
-      simpleLink('/drupal-caching-views'), // link to dorg docs instead, maybe from status docs or drupal cache doc     
+
+      simpleLink('/drupal-caching-views'), // link to dorg docs instead, maybe from status docs or drupal cache doc
 
       //These next 2 already exist in the local development guide
       simpleLink('/visual-studio-code', 'Visual Studio Code'),
