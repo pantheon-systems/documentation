@@ -1,10 +1,10 @@
 ---
-title: WordPress (Composer Managed) is now in general availability
-published_date: "2024-10-16"
+title: WordPress (Composer Managed) is no longer in Early Access
+published_date: "2024-10-31"
 categories: [new-feature, wordpress, documentation]
 ---
 
-We are excited to announce that our [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed) upstream is now in general availability. This means it is fully supported in production environments.
+We are excited to announce that our [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed) upstream is no longer considered in [Early Access](/guides/support/early-access). It will continue to be maintained by the community and Pantheon engineering. Issues and pull requests are welcome on the [GitHub development repository](https://github.com/pantheon-systems/wordpress-composer-managed).
 
 Historically, we've provided multiple (and sometimes conflicting) examples of how to use Composer with WordPress on Pantheon. This upstream unifies many of the best practices we've learned by leveraging [Roots/Bedrock](https://roots.io/bedrock/). Composer allows for more precise control over your site's dependencies - plugins, themes, and even WordPress core. It empowers development teams to decide which components to update and when, while also simplifying Git repositories. We're excited to unlock this enhanced workflow for our WordPress teams.
 
