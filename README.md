@@ -45,6 +45,19 @@ nvm install 18
 npm install -g gatsby-cli
 ```
 
+### Using Git Hooks
+Git hooks have been added to `[.github/hooks](.github/hooks)` to help automate some of the tasks that make it easier to work locally with the repository. The following hooks are available:
+
+- `pre-commit`: Runs Prettier to check for code styling issues on updated/changed javascript files. If Prettier made any changes, those changes are automatically committed back to the PR. This mirrors the functionality of the [Prettier GitHub Action](.github/workflows/prettier.yml).
+
+To use the git hooks, you must configure your local environment to use `.github/hooks` as the hooks path (normally `.git/hooks`, but this folder is ignored by Git). This can be done by running the following command from the root of the repository:
+
+```bash
+git config core.hooksPath .github/hooks
+```
+
+It's recommended (but not required) to use the provided git hooks if you are working with any javascript files in the repository. This will help ensure that your changes are formatted correctly before being committed and ensure that your local environment and the remote branch are the same.
+
 ### Get the Code
 
 Fork and clone this repository:
@@ -139,10 +152,31 @@ lando start
 
 You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
 
+## Code Formatting
+We use Prettier to enforce code style on changed files. On each pull request to the repository, if any `.js`, `.jsx`, `.ts` or `.tsx` files are modified in the `/src` directory, We run Prettier to check for code styling issues on the updated/changed files. If Prettier made any changes, those changes are automatically committed back to the PR (see [example PR](https://github.com/pantheon-systems/documentation/pull/9180#issuecomment-2292403319)).
+
+
+To automatically fix formatting issues across the entire `/src` directory, run:
+```bash
+npm run format
+```
+Be cautious when running this command, as it will automatically fix any formatting issues it can.
+
 ## Testing
 
-We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
+To reduced the likelihood of regressions and bugs this site uses a few different testing tools:
 
-### Merge Conflicts
+### Visual Regression Tests
 
-To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
+Within the [`tests`](/tests/) directory there are a number of visual regression tests that can be run to compare the current state of the site to a PR preview or the live site.
+These tests are meant to be run locally instead of CI as they have a high rate of false positives.
+
+### Unit Tests
+
+Unit tests for custom logic are written in in Vitest and can be executed with
+
+```bash
+npx vitest src/components
+```
+
+These tests are executed in CI via a [GitHub Action](.github/workflows/vitest.yml).

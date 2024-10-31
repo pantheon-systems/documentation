@@ -127,7 +127,7 @@ const Header = ({ page }) => (
       Skip to main content
     </a>
 
-    <Navbar>
+    <Navbar logoLinkContent={<a href="https://pantheon.io" target="_blank" rel="nofollow">Pantheon Home</a>}>
       <NavMenu
         slot="items-left"
         ariaLabel="Main Navigation"

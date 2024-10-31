@@ -22,12 +22,6 @@ You can use a frontend starter kit to streamline the creation of your Front-End 
 
 - Drupal + Next.js
 
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
-
 ## Why Use the Next.js Drupal Starter?
 
 The `next-drupal-starter` is designed as a starting point for a Next.js site that consumes data from a Drupal backend configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
