@@ -6,6 +6,16 @@ const dnsProviders = () => {
     title: 'Pages to Delete or reconsider',
     children: [
       simpleLink('/partial-composer'), // This page should be rewritten to focus on WordPress.
+      simpleLink('/cache'),
+      simpleLink('/pantheon-yml-overview', 'Pantheon.yml Overview (Delete?)'),
+
+      // This landing page could go elsewhere
+      simpleLink('/performance', 'Performance Consideration'),
+
+      // This page could use a refresh
+      simpleLink('/headless', 'Running a Headless CMS'),
+      
+      simpleLink('/drupal-caching-views'), // link to dorg docs instead, maybe from status docs or drupal cache doc     
 
       //These next 2 already exist in the local development guide
       simpleLink('/visual-studio-code', 'Visual Studio Code'),

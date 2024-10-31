@@ -8,6 +8,8 @@ const unassignedPages = () => {
       simpleLink('/search/'),
       simpleLink('/'),
       getGuideDirectory('guides/accessibility'), // This belongs in the learning center
+      // This should be deprecated/archived see https://github.com/pantheon-systems/documentation/pull/9251
+      getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),
     ],
   };
 };

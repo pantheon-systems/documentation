@@ -46,6 +46,7 @@ const terminus = () => {
           'Authenticate Terminus in a GitLab Pipeline',
         ),
       ]),
+      simpleLink('/customer-scheduled-cron-jobs', 'Scheduled Cron Jobs'),
 
       getGuideDirectory('guides/wp-cli', 'WP-CLI'),
       getGuideDirectory('guides/drush', 'Drush (the Drupal CLI)'),

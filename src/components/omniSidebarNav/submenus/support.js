@@ -31,7 +31,10 @@ const support = () => {
         simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
         // @todo, this page is not loading??
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
+        simpleLink('/debug-cache', 'Debugging Caching'),
         simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+                      // Should could move to the education menu.
+      getGuideDirectory('guides/frontend-performance'),
         simpleLink(
           '/load-and-performance-testing',
           'Load and Performance Testing',

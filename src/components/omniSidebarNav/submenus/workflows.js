@@ -9,6 +9,7 @@ const workflows = () => {
       simpleLink('/pantheon-workflow', 'Deployment Pipeline on Pantheon', [
         simpleLink('/pantheon-workflow', 'Pantheon Workflow'),
         getGuideDirectory('guides/multidev'),
+        getGuideDirectory('guides/environment-configuration'),
         simpleLink('/connection-modes', 'Connection Modes'),
         getGuideDirectory('guides/sftp', 'SFTP'),
         //Todo: relocate hotfixes into git guide
@@ -29,6 +30,7 @@ const workflows = () => {
         simpleLink('/behat', 'Behat Testing'),
       ]),
       getGuideDirectory('guides/quicksilver', 'Quicksilver Workflow Hooks'),
+      getGuideDirectory('guides/backups'),
       // Maybe make this a separate category for local development
       getGuideDirectory('guides/local-development', 'Local Development'),
     ],
