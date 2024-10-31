@@ -22,7 +22,7 @@ import security from './submenus/security';
 const getOmniItems = () => {
   const OmniItems = [
     getStarted(), // assigned to Chris ✅
-    workflows(),
+    workflows(), // ✅
     goLive(),
     webInfrastructure(),
     accountManagement(),

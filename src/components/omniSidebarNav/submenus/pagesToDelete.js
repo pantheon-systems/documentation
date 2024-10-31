@@ -7,6 +7,10 @@ const dnsProviders = () => {
     children: [
       simpleLink('/partial-composer'), // This page should be rewritten to focus on WordPress.
 
+      //These next 2 already exist in the local development guide
+      simpleLink('/visual-studio-code', 'Visual Studio Code'),
+      simpleLink('/drupal-phpstorm', 'Using PHPStorm'),
+
       simpleLink('/workshops'),
       simpleLink('/agency-tips', 'Agency Tips'),
       simpleLink('/support', 'Support landing'),
