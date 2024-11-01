@@ -69,7 +69,7 @@ To verify your current upstream, you can go to the Pantheon site dashboard and c
 terminus site:info <site>
 ```
 
-If you are not already using the Pantheon Drupal 7 upstream, you can [switch the site upstream via Terminus](/terminus/examples#switch-upstreams).
+For sites not already using the Pantheon Drupal 7 upstream (or a Custom Upstream based on the Pantheon Drupal 7 Upstream), we recommend hiring experts like [Tag1](https://www.tag1consulting.com/) to handle converting upstreams, which can be complex and cause disruption if done incorrectly.
 
 #### D7 Contrib Modules LTS
 This includes security patches and compatibility updates to community-contributed modules that power their site via Tag1’s [D7 Extended Support (D7ES) module](https://www.drupal.org/project/tag1_d7es), which will be distributed and maintained as part of the Pantheon Drupal 7 Upstream.
