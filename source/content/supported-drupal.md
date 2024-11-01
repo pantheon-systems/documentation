@@ -53,7 +53,7 @@ Also included, is continued support for Drupal 7-compatible runtime environments
 * Available to all site plans and workspace tiers.
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
   * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
-* Sites must be updated to the latest release of Drupal core (currently 7.101).
+* Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
 <br/>
 <br/>
 
@@ -78,7 +78,7 @@ This includes security patches and compatibility updates to community-contribute
 * Available to all site plans for sites associated with a Gold, Diamond, or Platinum [workspace account tier](/guides/account-mgmt/plans/workspace-plans).
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
   * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
-* Sites must be updated to the latest release of Drupal core (currently 7.101).
+* Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
 * (Recommended) Not a requirement, but we strongly recommend updating all contrib modules to their latest versions as well. 
 
 ##### D7ES Usage
