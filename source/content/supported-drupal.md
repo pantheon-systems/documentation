@@ -100,7 +100,7 @@ Apply contrib updates from the Tag1 D7ES service via Drush, Autopilot, or manual
 
 1. Use Drush to apply contrib updates from the Tag1 D7ES service: 
  ```bash{promptUser: user}
- terminus connection:set <site>.<env> pm:update --no-core
+ terminus drush <site>.<env> pm:update --no-core
  ```
 
 </Tab>
