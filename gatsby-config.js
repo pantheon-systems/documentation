@@ -235,14 +235,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Open Sans"],
-        },
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-sitemap",
