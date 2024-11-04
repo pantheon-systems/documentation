@@ -16,7 +16,6 @@
     "gatsby": "^4.25.4",
     "gatsby-cli": "^4.25.0",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-feed": "^4.25.0",
     "gatsby-plugin-google-tagmanager": "^4.25.0",
     "gatsby-plugin-image": "^2.25.0",

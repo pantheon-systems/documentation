@@ -9,6 +9,9 @@ npm update msgpackr
 fs
 
 
+gatsby-plugin-algolia
+
+
 
 do we use open-sans anywhere?
     {
