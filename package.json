@@ -45,7 +45,6 @@
     "gatsby-transformer-sharp": "^4.25.0",
     "gatsby-transformer-yaml": "^4.25.0",
     "highlight.js": "^11.7.0",
-    "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.7.2",
     "new-github-issue-url": "^0.2.1",
     "postcss": "^8.4.21",

@@ -2,11 +2,8 @@ npm uninstall algoliasearch
 npm uninstall boostrap
 npm uninstall gatsby-plugin-web-font-loader
 npm uninstall babel-plugin-remove-graphql-queries
+npm uninstall jest
 
-
-
-
-jest??
 
 fs
 
