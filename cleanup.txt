@@ -4,21 +4,11 @@ npm uninstall gatsby-plugin-web-font-loader
 npm uninstall babel-plugin-remove-graphql-queries
 npm uninstall jest
 npm update msgpackr
+npm uninstall gatsby-plugin-algolia
 
-
-fs
-
-
-gatsby-plugin-algolia
-
-
-
-do we use open-sans anywhere?
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Open Sans"],
-        },
-      },
-    },
+npm update vitest
+npm uninstall mini-css-extract-plugin
+npm uninstall postcss
+npm uninstall react-instantsearch-dom
+ npm uninstall fs
+npm audit fix
