@@ -45,7 +45,7 @@ To learn more about this partnership, see the [related blog post](https://panthe
 
 
 #### D7 Core LTS and Platform Compatibility 
-This includes security and compatibility updates to Drupal core and core dependencies from Tag1 Consulting, which are distributed by the Pantheon Drupal 7 Upstream and made available as a one-click updates via [the Pantheon Dashboard](core-updates#apply-upstream-updates-via-the-site-dashboard) or [Terminus command line tool](/core-updates#apply-upstream-updates-via-terminus).
+The D7 Long-Term Support includes security and compatibility updates to Drupal core and core dependencies from Tag1 Consulting, which are distributed by the Pantheon Drupal 7 Upstream and made available as a one-click updates via [the Pantheon Dashboard](core-updates#apply-upstream-updates-via-the-site-dashboard) or [Terminus command line tool](/core-updates#apply-upstream-updates-via-terminus).
 
 Also included, is continued support for Drupal 7-compatible runtime environments on the Pantheon Platform, including PHP, MySQL and other prerequisites.
 
