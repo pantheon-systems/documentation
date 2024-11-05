@@ -40,7 +40,7 @@ terminus site:create <site> <label> drupal8
 Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 7 site from the Pantheon dashboard.
 
 ### Drupal 7 long-term support
-Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with Tag1 Consulting to offer Long-Term Support for Drupal 7 through **January 5, 2027**.
+Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with [Tag1 Consulting](https://www.tag1consulting.com/) to offer Long-Term Support for Drupal 7 through **January 5, 2027**.
 To learn more about this partnership, see [related blog post](https://pantheon.io/blog/pantheon-and-tag1-support-drupal-7-websites).
 
 
