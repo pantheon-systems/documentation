@@ -69,7 +69,7 @@ To verify your current upstream, you can go to the Pantheon site dashboard and c
 terminus site:info <site>
 ```
 
-For sites not already using the Pantheon Drupal 7 Upstream (or a Custom Upstream based on the Pantheon Drupal 7 Upstream), we recommend hiring experts like [Tag1](https://www.tag1consulting.com/) to handle converting upstreams, which can be complex and cause disruption if done incorrectly.
+For sites not already using the Pantheon Drupal 7 Upstream (or a Custom Upstream based on the Pantheon Drupal 7 Upstream), Pantheon partners with experienced web development agencies. Use our [Agency Matchmaker](https://directory.pantheon.io/agencies/matchmaking?utm_medium=email&utm_source=nurture&utm_content=agency_directory_match_maker&utm_campaign=2024_7_NU_WCOMP_US_wp_compete) to be connected with a trusted expert.
 
 #### D7 Contrib Modules LTS
 This includes security patches and compatibility updates to community-contributed modules via Tag1’s [D7 Extended Support (D7ES) module](https://www.drupal.org/project/tag1_d7es), which will be distributed and maintained as part of the Pantheon Drupal 7 Upstream.
