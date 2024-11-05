@@ -89,7 +89,7 @@ This usage section is not yet applicable as the D7ES module has not been added t
 However, you can expect the functionality and behavior described below to become available in the near future, before Drupal 7's end of life date.
 </Alert>
 
-By enabling this module, your site’s list of contrib modules will be automatically submitted for D7ES security coverage. You will receive email notifications of D7 core & installed contrib module security and compatibility updates. 
+By enabling this module and configuring the opt-in, your site’s list of contrib modules will be automatically submitted for D7ES security coverage. You will receive email notifications of D7 core & installed contrib module security and compatibility updates. 
 
 Enable the module, then go to `/admin/config/system/tag1-d7es` and configure the list of email addresses that should be notified when applicable updates are released. On this configuration page you can also confirm your sites connection with Tag1’s update servers.
 
