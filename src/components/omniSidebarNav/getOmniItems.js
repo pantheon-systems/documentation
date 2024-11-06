@@ -38,11 +38,8 @@ const getOmniItems = () => {
     support(),
     security(),
     // @todo, should we have a separate tutorials section?
-    {
-      link: '/certification',
-      title: 'WebOps Certification',
-      children: CertificationItems,
-    },
+
+  CertificationItems(),
     about(), // assigned to Rachel ✅
     // Release notes
 

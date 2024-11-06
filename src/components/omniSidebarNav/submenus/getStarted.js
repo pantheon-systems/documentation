@@ -25,7 +25,6 @@ const getStarted = () => {
         getGuideDirectory('guides/migrate/acquia', 'Acquia'),
         simpleLink('/migrate-cpanel', 'GoDaddy CPanel'),
       ]),
-
       simpleLink('/dashboard', 'Dashboard', [
         simpleLink('/site-dashboard', 'Site Dashboard'),
         simpleLink('/personal-settings', 'Personal Settings'),
