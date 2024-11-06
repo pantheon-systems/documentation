@@ -39,7 +39,7 @@ const getOmniItems = () => {
     security(),
     // @todo, should we have a separate tutorials section?
 
-  CertificationItems(),
+    CertificationItems(),
     about(), // assigned to Rachel ✅
     // Release notes
 
