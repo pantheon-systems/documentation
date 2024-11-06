@@ -26,7 +26,7 @@ This section provides information on how to choose and configure your primary do
 
 Choose a primary domain from the dropdown at the bottom of **Domains / HTTPS**:
 
-![Set the primary domain in the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-additional-domains.png)
+![Set the primary domain in the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-more-domains.png)
 
 <Alert title="Note" type="info">
 
