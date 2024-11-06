@@ -7,11 +7,11 @@ const wordpress = () => {
     link: '/develop-wordpress',
     title: 'Using WordPress with Pantheon',
     children: [
-      // Todo: reconcile these 2: 
+      // Todo: reconcile these 2:
       getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
-     // Todo: relocate the aws s3 page to webinfra filesystem submenu
+      // Todo: relocate the aws s3 page to webinfra filesystem submenu
       getGuideDirectory('guides/wordpress-developer'),
-      
+
       getGuideDirectory('guides/wordpress-configurations'),
       getGuideDirectory('guides/multisite', 'WordPress Multisite'),
       getGuideDirectory('guides/woocommerce', 'WooCommerce'),

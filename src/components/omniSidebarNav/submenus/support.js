@@ -22,7 +22,7 @@ const support = () => {
             'Symlinks and plugins that assume write access',
           ),
         ]),
-    
+
         simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
         simpleLink('/timeouts', 'Timeouts on Pantheon'),
         simpleLink('/debug-connections', 'Debugging Connectivity Issues'),

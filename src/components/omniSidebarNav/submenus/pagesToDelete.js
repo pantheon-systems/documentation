@@ -11,14 +11,14 @@ const dnsProviders = () => {
 
       // This page is odd now that D11 is out.
       simpleLink('/drupal-10', 'Drupal 10'),
-      // Build tools dependent, may not be relevant 
+      // Build tools dependent, may not be relevant
       simpleLink('/drupal-commerce', 'Drupal Commerce'),
       // This should be deleted along with /wordpress
       simpleLink('/drupal-composer-managed'),
       simpleLink('/develop-drupal'),
-        // Not so relevant, needs further review
-        simpleLink('/drupal-broken-links', 'Fix Broken Links'),
-        simpleLink('/drupal-updates'),
+      // Not so relevant, needs further review
+      simpleLink('/drupal-broken-links', 'Fix Broken Links'),
+      simpleLink('/drupal-updates'),
 
       // This landing page could go elsewhere
       simpleLink('/performance', 'Performance Consideration'),
