@@ -10,7 +10,7 @@ const Commands = ({ data }) => {
   const slugRegExp = /:/g
   return (
     <div className="doc-commands">
-      <div className="doc-commands__search pds-input-field pds-input-text">
+      <div className="pds-text-input doc-commands__search">
         <div className="pds-input-field__input-wrapper">
           <div className="pds-input-field__decorators">
             <svg
