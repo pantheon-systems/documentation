@@ -12,14 +12,14 @@ import about from './submenus/about';
 import workflows from './submenus/workflows';
 import support from './submenus/support';
 import security from './submenus/security';
-// Before we can merge we need to: 
+// Before we can merge we need to:
 //Todo: Fix doc template (missing search bar)
 //Todo: Fix video template (missing search bar)
 //Todo: add sidebar to landing pages (end goal is to deleete them entirely)
-//Todo: review reporting in console log 
-//Todo: Update dropdown in main site nav 
+//Todo: review reporting in console log
+//Todo: Update dropdown in main site nav
 //Todo: Finish tutorials submenu in certification
-//Todo: audit troubleshooting submenu in support 
+//Todo: audit troubleshooting submenu in support
 //Todo: Finish security submenu
 
 /**

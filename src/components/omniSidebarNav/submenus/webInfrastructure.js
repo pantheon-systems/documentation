@@ -105,7 +105,6 @@ const webInfrastructure = () => {
       ]),
       getGuideDirectory('guides/redirect', 'Redirects'),
       simpleLink('/supported-drupal', 'Drupal', [
-
         simpleLink('/supported-drupal', 'Supported Drupal Versions'),
         simpleLink('/modules', 'Pantheon Modules'),
         simpleLink('/drupal-launch-check', 'Status Report'),
@@ -123,18 +122,17 @@ const webInfrastructure = () => {
           '/drupal-from-dist',
           'Create a Drupal Site Using a Drupal Distribution',
         ),
-
       ]),
       simpleLink('/guides/wordpress-pantheon', 'WordPress', [
-      // Todo: reconcile these 2:
-      getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
-      // Todo: relocate the aws s3 page to webinfra filesystem submenu
-      getGuideDirectory('guides/wordpress-developer'),
+        // Todo: reconcile these 2:
+        getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
+        // Todo: relocate the aws s3 page to webinfra filesystem submenu
+        getGuideDirectory('guides/wordpress-developer'),
 
-      getGuideDirectory('guides/wordpress-configurations'),
-      getGuideDirectory('guides/multisite', 'WordPress Multisite'),
-      getGuideDirectory('guides/woocommerce', 'WooCommerce'),
-      // @todo: add installing from third party sources doc here
+        getGuideDirectory('guides/wordpress-configurations'),
+        getGuideDirectory('guides/multisite', 'WordPress Multisite'),
+        getGuideDirectory('guides/woocommerce', 'WooCommerce'),
+        // @todo: add installing from third party sources doc here
       ]),
     ],
   };
