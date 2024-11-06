@@ -1,8 +1,27 @@
+import { simpleLink } from './../helpers';
+
 /**
  * Array of of links specific to the Certification section of the sidebar.
  * @type {Array<Object>}
  */
-const CertificationItems = [
+const CertificationItems = () => {
+
+
+  return{
+
+    // @todo, implement sidebar on landing pages.
+    link: '/certification',
+    title: 'WebOps Certification',
+    children:
+
+  [
+  // @todo tutorial section
+  //           getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
+  // /pivotal-tracker
+  // /rerouting-outbound-email
+  // /behat
+  // /drupal-advanced-page-cache
+
   {
     link: '/certification/about',
     title: 'About the Certification Program',
@@ -65,6 +84,7 @@ const CertificationItems = [
     link: 'https://certification.pantheon.io/',
     title: 'Certification Directory',
   },
-];
+]
+  }};
 
 export default CertificationItems;
