@@ -9,6 +9,7 @@ const CertificationItems = [
   // /rerouting-outbound-email
   // /behat
   // /drupal-advanced-page-cache
+
   {
     link: '/certification/about',
     title: 'About the Certification Program',

@@ -24,7 +24,7 @@ const getOmniItems = () => {
     getStarted(), // assigned to Chris ✅
     workflows(), // ✅
     goLive(), // ✅
-    webInfrastructure(),
+    webInfrastructure(), // ✅
     accountManagement(), // ✅
     terminus(), // ✅
     wordpress(), // assigned to Chris ✅

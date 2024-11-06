@@ -9,6 +9,7 @@ const security = () => {
       simpleLink('/custom-certificates', 'Custom Certificates'),
       getGuideDirectory('guides/secure-development'),
       simpleLink('/clamav', 'ClamAV'),
+      simpleLink('/drupal-security-patches'),
     ],
   };
 };

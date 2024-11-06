@@ -6,11 +6,23 @@ const support = () => {
     title: 'Support and Troubleshooting',
     children: [
       getGuideDirectory('guides/support', 'Support'),
-      simpleLink('/resetting-passwords', 'Resetting Passwords'),
-      simpleLink('/ssh-keys', 'SSH Keys'),
       getGuideDirectory('guides/professional-services'),
+      // Todo: relocate this to the support guide
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
-      simpleLink('/troubleshoot', 'Troubleshooting', [
+      simpleLink('/basic-troubleshooting', 'Troubleshooting', [
+        simpleLink('/modules-known-issues', 'Known Issues', [
+          simpleLink('/modules-known-issues', 'Drupal Modules Known Issues'),
+          simpleLink('/wordpress-known-issues', 'WordPress Known Issues'),
+          simpleLink(
+            '/plugins-known-issues',
+            'WordPress Plugins and Themes with Known Issues',
+          ),
+          simpleLink(
+            '/symlinks-assumed-write-access',
+            'Symlinks and plugins that assume write access',
+          ),
+        ]),
+    
         simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
         simpleLink('/timeouts', 'Timeouts on Pantheon'),
         simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
@@ -47,6 +59,7 @@ const support = () => {
           '/modules-plugins-known-issues',
           'Modules and plugins with known issues',
         ),
+        simpleLink('/resetting-passwords', 'Resetting Passwords'),
       ]),
     ],
   };

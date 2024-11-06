@@ -7,21 +7,15 @@ const wordpress = () => {
     link: '/develop-wordpress',
     title: 'Using WordPress with Pantheon',
     children: [
+      // Todo: reconcile these 2: 
       getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
+     // Todo: relocate the aws s3 page to webinfra filesystem submenu
       getGuideDirectory('guides/wordpress-developer'),
+      
       getGuideDirectory('guides/wordpress-configurations'),
-      simpleLink(
-        '/symlinks-assumed-write-access',
-        'Symlinks and plugins that assume write access',
-      ),
       getGuideDirectory('guides/multisite', 'WordPress Multisite'),
       getGuideDirectory('guides/woocommerce', 'WooCommerce'),
       // @todo: add installing from third party sources doc here
-      simpleLink('/wordpress-known-issues', 'WordPress Known Issues'),
-      simpleLink(
-        '/plugins-known-issues',
-        'Plugins and Themes with Known Issues',
-      ),
     ],
   };
 };

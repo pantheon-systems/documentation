@@ -77,12 +77,25 @@ const webInfrastructure = () => {
             simpleLink('/pantheon_stripped', 'utm_source URL Parameter'),
             simpleLink('/cache-control', 'Bypass Cache'),
           ]),
+
+          simpleLink('/drupal-cloudfront', 'Stacking CDNs', [          
+
+                // Move to a "stacked CDN section."
+      simpleLink('/drupal-cloudfront'),
           // delete this guide? asking tsc's
-          getGuideDirectory('guides/fastly-pantheon'),
+      getGuideDirectory('guides/fastly-pantheon'),
+          ]),
         ],
       },
       getGuideDirectory('guides/mariadb-mysql', 'Database'),
-      getGuideDirectory('guides/filesystem', 'Filesystem'),
+
+      simpleLink('/guides/filesystem', 'Filesystem', [
+      getGuideDirectory('guides/filesystem', 'Pantheon Filesystem'),
+      simpleLink('/drupal-s3', "Offloading files to S3 for Drupal"),
+      // Todo, pull out the equivalent WordPress page.
+      simpleLink("/guides/wordpress-developer/wordpress-s3?double-menu", "Offloading files to S3 for WordPress")
+      
+    ]),
 
       simpleLink('/solr', 'Solr Search', [
         simpleLink('/solr', 'Pantheon Search'),
