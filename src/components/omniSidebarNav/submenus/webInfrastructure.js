@@ -2,7 +2,7 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 
 const webInfrastructure = () => {
   return {
-    link: '/platform',
+    link: '/application-containers',
     title: 'Web Infrastructure',
     children: [
       simpleLink('/application-containers', 'Application Containers', [
@@ -104,6 +104,38 @@ const webInfrastructure = () => {
         simpleLink('/opensolr', 'Open Solr'),
       ]),
       getGuideDirectory('guides/redirect', 'Redirects'),
+      simpleLink('/supported-drupal', 'Drupal', [
+
+        simpleLink('/supported-drupal', 'Supported Drupal Versions'),
+        simpleLink('/modules', 'Pantheon Modules'),
+        simpleLink('/drupal-launch-check', 'Status Report'),
+        // This is another page that felt necessary in the early days of D8.
+        simpleLink(
+          '/drupal-configuration-management',
+          'Configuration Management Workflow',
+        ),
+        simpleLink('/services-yml', 'Services Files'),
+        simpleLink('/drupal-cron', 'Drupal Cron'),
+        // Check if this page is referenced from hermes.
+        simpleLink('/drupal-caching-views', 'Views Caching'),
+        // Recommendations are potentially out of date (empty upstream instead of IC)
+        simpleLink(
+          '/drupal-from-dist',
+          'Create a Drupal Site Using a Drupal Distribution',
+        ),
+
+      ]),
+      simpleLink('/guides/wordpress-pantheon', 'WordPress', [
+      // Todo: reconcile these 2:
+      getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
+      // Todo: relocate the aws s3 page to webinfra filesystem submenu
+      getGuideDirectory('guides/wordpress-developer'),
+
+      getGuideDirectory('guides/wordpress-configurations'),
+      getGuideDirectory('guides/multisite', 'WordPress Multisite'),
+      getGuideDirectory('guides/woocommerce', 'WooCommerce'),
+      // @todo: add installing from third party sources doc here
+      ]),
     ],
   };
 };
