@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import React, { useState } from 'react';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
-import { InputText, Icon } from "@pantheon-systems/pds-toolkit-react"
+import { InputText, Icon } from '@pantheon-systems/pds-toolkit-react';
 
-import "./style.css"
+import './style.css';
 
 const Commands = ({ data }) => {
-  const [search, setSearch] = useState("")
-  const slugRegExp = /:/g
+  const [search, setSearch] = useState('');
+  const slugRegExp = /:/g;
   return (
     <div className="doc-commands">
       <div className="pds-text-input doc-commands__search">
@@ -38,12 +38,12 @@ const Commands = ({ data }) => {
             value={search}
           />
           <div className="pds-input-field__accessories">
-            {search != "" && (
+            {search != '' && (
               <button
                 type="button"
                 class="pds-input-field__accessory pds-input-field__clear"
                 title="Clear undefined input"
-                onClick={(e) => setSearch("")}
+                onClick={(e) => setSearch('')}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const Commands = ({ data }) => {
           <tbody>
             {data.dataJson.commands
               .filter((command) => {
-                return command.name.indexOf(search) >= 0
+                return command.name.indexOf(search) >= 0;
               })
               .map((command, i) => {
                 return (
@@ -87,7 +87,7 @@ const Commands = ({ data }) => {
                         className="command-name"
                         to={`/terminus/commands/${command.name.replace(
                           slugRegExp,
-                          "-"
+                          '-',
                         )}`}
                       >
                         {command.name}
@@ -96,17 +96,17 @@ const Commands = ({ data }) => {
                       <small>{command.description}</small>
                     </td>
                     <td>
-                      <small>{command.usage[0].replace(/\[|\]/g, "")}</small>
+                      <small>{command.usage[0].replace(/\[|\]/g, '')}</small>
                     </td>
                   </tr>
-                )
+                );
               })}
           </tbody>
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default (props) => (
   <StaticQuery
@@ -123,4 +123,4 @@ export default (props) => (
     `}
     render={(data) => <Commands data={data} {...props} />}
   />
-)
+);
