@@ -4,10 +4,7 @@ const unassignedPages = () => {
   return {
     link: '/search',
     title: 'Unassigned',
-    children: [
-
-      simpleLink('/search'),
-    ],
+    children: [simpleLink('/search')],
   };
 };
 
