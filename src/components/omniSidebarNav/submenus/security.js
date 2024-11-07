@@ -12,7 +12,6 @@ const security = () => {
       simpleLink('/clamav', 'ClamAV'),
       simpleLink('/drupal-security-patches'),
       simpleLink('/certificate-bundles'),
-
     ],
   };
 };

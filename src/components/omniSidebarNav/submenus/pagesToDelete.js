@@ -30,26 +30,20 @@ const pagesToDeleteorReconsider = () => {
         // @todo, this page seems like it should be an article.
         // But it could go under web infra or troubleshooting performance.
         simpleLink('/cloud-optimization'),
-
       ]),
 
       simpleLink('/faq', 'FAQ'),
-
-
 
       // Deprecated
       simpleLink('/crisis-response-upstream', 'Deprecated or archived pages', [
         simpleLink('/crisis-response-upstream'),
         // This should be deprecated/archived see https://github.com/pantheon-systems/documentation/pull/9251
         getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),
-      ]
-      ),
-
-
+      ]),
 
       // Maybe we should keep some of these landing listing and just have
       // no sidebar for them.
-      simpleLink('/guides', "landing pages", [
+      simpleLink('/guides', 'landing pages', [
         simpleLink('/guides'),
         simpleLink('/guides/account-mgmt'),
         simpleLink('/products'),
@@ -60,15 +54,11 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/addons'),
       ]),
 
-
-
-
       // This is actually for google domains and that's no longer a service
       simpleLink('/google', 'Google Cloud DNS'),
 
-
       // Pages that should be redirected
-      simpleLink('/overview', "pages that should be redirected", [
+      simpleLink('/overview', 'pages that should be redirected', [
         simpleLink('/overview'), //  --> "/"
 
         simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
@@ -78,21 +68,21 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/sign-up', 'Sign Up for Pantheon'),
         // This page is already deleted in the main branch.
         simpleLink('/guides/wordpress-composer/pre-ga'),
-      simpleLink('/pantheon-yml-overview', 'Pantheon.yml Overview (Delete?)'),
-      // This should be deleted along with /wordpress
-      simpleLink('/drupal-composer-managed'),
-      simpleLink('/wordpress', 'WordPress changelog'),
-      //These next 2 already exist in the local development guide
-      simpleLink('/visual-studio-code', 'Visual Studio Code'),
-      simpleLink('/drupal-phpstorm', 'Using PHPStorm'),
-      // This page is duplicated by other terminus stuff
-      simpleLink('/terminus-demo', 'Introduction to Terminus'),
-      simpleLink('/enterprise-billing-center', 'Enterprise Billing Center'),
-      simpleLink('/billing', 'Billing'),
-      // This duplicates /guides/getstarted/addsite
-      simpleLink('/add-site', 'Adding a Site'),
-      // Non-dupe content on this page should be moved to /guides/getstarted/addsite
-      simpleLink('/add-site-dashboard', 'Add a site'),
+        simpleLink('/pantheon-yml-overview', 'Pantheon.yml Overview (Delete?)'),
+        // This should be deleted along with /wordpress
+        simpleLink('/drupal-composer-managed'),
+        simpleLink('/wordpress', 'WordPress changelog'),
+        //These next 2 already exist in the local development guide
+        simpleLink('/visual-studio-code', 'Visual Studio Code'),
+        simpleLink('/drupal-phpstorm', 'Using PHPStorm'),
+        // This page is duplicated by other terminus stuff
+        simpleLink('/terminus-demo', 'Introduction to Terminus'),
+        simpleLink('/enterprise-billing-center', 'Enterprise Billing Center'),
+        simpleLink('/billing', 'Billing'),
+        // This duplicates /guides/getstarted/addsite
+        simpleLink('/add-site', 'Adding a Site'),
+        // Non-dupe content on this page should be moved to /guides/getstarted/addsite
+        simpleLink('/add-site-dashboard', 'Add a site'),
         simpleLink('/workshops'),
 
         // This page could use a refresh
@@ -103,14 +93,12 @@ const pagesToDeleteorReconsider = () => {
 
         simpleLink('/cygwin-windows'),
 
-
-
-      // Redirect this page to https://docs.pantheon.io/guides/drush/drupal-commandline
-      simpleLink(
-        '/terminus-drupal-site-management',
-        'Using Terminus to Create and Update Drupal Sites on Pantheon',
-      ),
-      ]),//  --> "/"
+        // Redirect this page to https://docs.pantheon.io/guides/drush/drupal-commandline
+        simpleLink(
+          '/terminus-drupal-site-management',
+          'Using Terminus to Create and Update Drupal Sites on Pantheon',
+        ),
+      ]), //  --> "/"
     ],
   };
 };

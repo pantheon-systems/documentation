@@ -145,9 +145,12 @@ const webInfrastructure = () => {
           getGuideDirectory('guides/decoupled/drupal-backend-starters'),
           getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
           getGuideDirectory('guides/decoupled/no-starter-kit'),
-          simpleLink('/static-site-empty-upstream', "Static Sites on an Empty Upstream"),
+          simpleLink(
+            '/static-site-empty-upstream',
+            'Static Sites on an Empty Upstream',
+          ),
         ],
-      }
+      },
     ],
   };
 };
