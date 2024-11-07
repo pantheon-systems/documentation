@@ -101,6 +101,10 @@ const pagesToDeleteorReconsider = () => {
       // This is a page about the move from Rackspace to Google Cloud
       simpleLink('/platform-upgrade'),
 
+
+      // This should be deprecated/archived see https://github.com/pantheon-systems/documentation/pull/9251
+      getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),
+
       simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
 
       simpleLink('/certificate-bundles'),
