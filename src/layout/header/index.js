@@ -87,7 +87,7 @@ const mainNavigationLinks = [
       {
         linkContent: (
           <Link id="certification" to="/certification">
-            WebOps Certification
+            Education
           </Link>
         ),
       },

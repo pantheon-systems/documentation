@@ -1,4 +1,4 @@
-import { simpleLink } from './../helpers';
+import { simpleLink, getGuideDirectory } from './../helpers';
 
 /**
  * Array of of links specific to the Certification section of the sidebar.
@@ -8,14 +8,11 @@ const CertificationItems = () => {
   return {
     // @todo, implement sidebar on landing pages.
     link: '/certification',
-    title: 'WebOps Certification',
+    title: 'Education',
     children: [
-      // @todo tutorial section
-      //           getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
-      // /pivotal-tracker
-      // /rerouting-outbound-email
-      // /behat
-      // /drupal-advanced-page-cache
+
+      simpleLink('/certification/about', 'WebOps Certification', [
+
 
       {
         link: '/certification/about',
@@ -79,7 +76,22 @@ const CertificationItems = () => {
         link: 'https://certification.pantheon.io/',
         title: 'Certification Directory',
       },
-    ],
+    ]),
+      simpleLink('/guides/wordpress-git', 'Tutorials',[
+
+
+                   getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
+                    getGuideDirectory('pivotal-tracker', 'Pivotal Tracker'),
+                    // @todo, this page is in two menus
+                    getGuideDirectory('rerouting-outbound-email', 'Rerouting Outbound Email'),
+                    getGuideDirectory('behat', 'Behat'),
+                    getGuideDirectory('drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
+
+
+      ]),
+    simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),
+  ]
+
   };
 };
 
