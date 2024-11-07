@@ -1,19 +1,16 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import {
-  Navbar,
-  NavMenu,
-} from "@pantheon-systems/pds-toolkit-react"
+import { Navbar, NavMenu } from '@pantheon-systems/pds-toolkit-react';
 
-import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive'
+import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 
-import "./style.css"
+import './style.css';
 
 // Links for NavMenu component.
 const mainNavigationLinks = [
   {
-    label: "Documentation",
+    label: 'Documentation',
     links: [
       {
         linkContent: (
@@ -37,9 +34,6 @@ const mainNavigationLinks = [
           </Link>
         ),
       },
-
-
-
 
       {
         linkContent: (
@@ -133,7 +127,6 @@ const mainNavigationLinks = [
           </Link>
         ),
       },
-
     ],
   },
   {
@@ -143,8 +136,7 @@ const mainNavigationLinks = [
       </a>
     ),
   },
-]
-
+];
 
 const Header = ({ page }) => (
   <>
@@ -152,7 +144,13 @@ const Header = ({ page }) => (
       Skip to main content
     </a>
 
-    <Navbar logoLinkContent={<a href="https://pantheon.io" target="_blank" rel="nofollow">Pantheon Home</a>}>
+    <Navbar
+      logoLinkContent={
+        <a href="https://pantheon.io" target="_blank" rel="nofollow">
+          Pantheon Home
+        </a>
+      }
+    >
       <NavMenu
         slot="items-left"
         ariaLabel="Main Navigation"
@@ -177,6 +175,6 @@ const Header = ({ page }) => (
       </div>
     </Navbar>
   </>
-)
+);
 
-export default Header
+export default Header;
