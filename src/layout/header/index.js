@@ -9,151 +9,20 @@ import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 import './style.css';
 
 
-// Links for NavMenu component.
-const mainNavigationLinks = [
-  {
-    label: 'Documentation',
-    links: [
-      {
-        linkContent: (
-          <Link id="home" to="/">
-            Docs Home
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="get-started" to="/guides/getstarted">
-            Get Started
-          </Link>
-        ),
-      },
-
-      {
-        linkContent: (
-          <Link id="workflows" to="/pantheon-workflow">
-            Development Workflow
-          </Link>
-        ),
-      },
-
-      {
-        linkContent: (
-          <Link id="go-live" to="/go-live">
-            Go Live
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="web-infra" to="/application-containers">
-            Web Infrastructure
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="performance" to="/guides/account-mgmt/account">
-            Manage Accounts and Workspaces
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="cli" to="/terminus">
-            Command Line Interface (CLI)
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="front-end" to="/guides/decoupled">
-            Front-End Sites and Starter Kits
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="support" to="/guides/support">
-            Support and Troubleshooting
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="security" to="/guides/security">
-            Security
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="certification" to="/certification">
-            Education
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="contribute" to="/contribute">
-            About our Docs
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="pages-to-delete" to="/asdfasdf">
-            Pages to Delete or reconsider
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="unassigned" to="/asdfasdfasdf">
-            Unassigned
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="release-notes" to="/release-notes">
-            Release Notes (Changelog)
-          </Link>
-        ),
-      },
-    ],
-  },
-  {
-    linkContent: (
-      <a href="https://dashboard.pantheon.io/#support" target="_blank">
-        Support
-      </a>
-    ),
-  },
-];
-
 const Header = ({ page }) => {
 
-
-  console.log('getOminasdfaf ', getOmniItems());
-
-
-  const NewLinks = getOmniItems().map((item) => {
-
+  const OmniLinks = getOmniItems().map((item) => {
     const theLink = React.createElement(Link, { to: item.link }, item.title)
     return {
-    linkContent: theLink
+      linkContent: theLink
     }
   });
 
-  console.log('NewLinks ', NewLinks);
-
-
   // Links for NavMenu component.
-  const mainNavigationLinkzzzzz = [
+  const mainNavLinks = [
     {
       label: 'Documentation',
-      links: NewLinks,
+      links: OmniLinks,
     },
     {
       linkContent: (
@@ -163,8 +32,6 @@ const Header = ({ page }) => {
       ),
     },
   ];
-
-
 
   return (
   <>
@@ -182,7 +49,7 @@ const Header = ({ page }) => {
       <NavMenu
         slot="items-left"
         ariaLabel="Main Navigation"
-          menuItems={mainNavigationLinkzzzzz}
+          menuItems={mainNavLinks}
         mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
       />
       <div slot="items-right" className="pds-button-group">
