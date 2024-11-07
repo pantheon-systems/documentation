@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import getOmniItems from '../../components/omniSidebarNav/getOmniItems';
 
 import { Navbar, NavMenu } from '@pantheon-systems/pds-toolkit-react';
 
 import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 
 import './style.css';
+
 
 // Links for NavMenu component.
 const mainNavigationLinks = [
@@ -114,14 +116,6 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="troubleshoot" to="/troubleshoot">
-            Troubleshoot
-          </Link>
-        ),
-      },
-
-      {
-        linkContent: (
           <Link id="release-notes" to="/release-notes">
             Release Notes (Changelog)
           </Link>
@@ -138,7 +132,41 @@ const mainNavigationLinks = [
   },
 ];
 
-const Header = ({ page }) => (
+const Header = ({ page }) => {
+
+
+  console.log('getOminasdfaf ', getOmniItems());
+
+
+  const NewLinks = getOmniItems().map((item) => {
+
+    const theLink = React.createElement(Link, { to: item.link }, item.title)
+    return {
+    linkContent: theLink
+    }
+  });
+
+  console.log('NewLinks ', NewLinks);
+
+
+  // Links for NavMenu component.
+  const mainNavigationLinkzzzzz = [
+    {
+      label: 'Documentation',
+      links: NewLinks,
+    },
+    {
+      linkContent: (
+        <a href="https://dashboard.pantheon.io/#support" target="_blank">
+          Support
+        </a>
+      ),
+    },
+  ];
+
+
+
+  return (
   <>
     <a id="skip-to-main" className="pds-skiplink" href="#docs-main">
       Skip to main content
@@ -154,7 +182,7 @@ const Header = ({ page }) => (
       <NavMenu
         slot="items-left"
         ariaLabel="Main Navigation"
-        menuItems={mainNavigationLinks}
+          menuItems={mainNavigationLinkzzzzz}
         mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
       />
       <div slot="items-right" className="pds-button-group">
@@ -175,6 +203,6 @@ const Header = ({ page }) => (
       </div>
     </Navbar>
   </>
-);
+)};
 
 export default Header;
