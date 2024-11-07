@@ -12,7 +12,7 @@ import about from './submenus/about';
 import workflows from './submenus/workflows';
 import support from './submenus/support';
 import security from './submenus/security';
-import { getGuideDirectory, simpleLink } from './helpers';
+import { simpleLink } from './helpers';
 
 // Before we can merge we need to:
 //Todo: Fix doc template (missing search bar)

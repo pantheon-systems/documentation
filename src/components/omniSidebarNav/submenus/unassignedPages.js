@@ -1,4 +1,4 @@
-import { getGuideDirectory, simpleLink } from './../helpers';
+import { simpleLink } from './../helpers';
 
 const unassignedPages = () => {
   return {
