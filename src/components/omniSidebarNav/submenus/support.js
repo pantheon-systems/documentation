@@ -40,8 +40,6 @@ const support = () => {
           simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
         ]),
 
-
-
         simpleLink('/mime-types', 'MIME Types'),
         // @todo, this page is not loading??
 
@@ -56,23 +54,19 @@ const support = () => {
           'New Relic Performance Monitoring',
         ),
 
-
         // Should could move to the education menu.
         getGuideDirectory('guides/frontend-performance'),
         simpleLink(
           '/load-and-performance-testing',
           'Load and Performance Testing',
           [
-
             simpleLink(
               '/load-testing-with-blazemeter',
               'Load Testing Drupal and WordPress with BlazeMeter',
             ),
             simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
-
-          ]
+          ],
         ),
-
       ]),
     ],
   };
