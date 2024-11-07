@@ -5,7 +5,6 @@ const pagesToDeleteorReconsider = () => {
     link: '/cache',
     title: 'Pages to Delete or reconsider',
     children: [
-
       // minimal landing page that should be kept.
       simpleLink('/addons'),
 
