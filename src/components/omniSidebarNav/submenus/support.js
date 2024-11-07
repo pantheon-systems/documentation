@@ -29,18 +29,11 @@ const support = () => {
           ),
         ]),
 
-
         simpleLink('/timeouts', 'Timeouts and Errors', [
           simpleLink('/timeouts', 'Timeouts on Pantheon'),
           getGuideDirectory('guides/errors-and-server-responses'),
           simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
-        ]
-        ),
-
-
-
-
-
+        ]),
 
         getGuideDirectory(
           'guides/disaster-recovery',
@@ -51,22 +44,14 @@ const support = () => {
           'New Relic Performance Monitoring',
         ),
         simpleLink('/newrelic', 'New Relic', [
-
           getGuideDirectory('guides/pagerduty', 'Incident Management'),
         ]),
         simpleLink('/mime-types', 'MIME Types'),
         // @todo, this page is not loading??
 
-
-
-
-
-
-
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
       ]),
       simpleLink('/debug-slow-performance', 'Troubleshooting Performance', [
-
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
 
@@ -81,7 +66,6 @@ const support = () => {
           'Load Testing Drupal and WordPress with BlazeMeter',
         ),
         simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
-
       ]),
     ],
   };

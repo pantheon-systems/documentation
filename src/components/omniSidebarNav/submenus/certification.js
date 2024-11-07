@@ -80,16 +80,10 @@ const CertificationItems = () => {
         simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
 
         // @todo, this page is in two menus
-        simpleLink(
-          '/rerouting-outbound-email',
-          'Rerouting Outbound Email',
-        ),
+        simpleLink('/rerouting-outbound-email', 'Rerouting Outbound Email'),
         // This is in two menus. It should probably be in just this one.
         simpleLink('/behat', 'Behat'),
-        simpleLink(
-          '/drupal-advanced-page-cache',
-          'Drupal Advanced Page Cache',
-        ),
+        simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
       ]),
       simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),
     ],
