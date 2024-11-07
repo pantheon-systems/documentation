@@ -1,10 +1,14 @@
 import { getGuideDirectory, simpleLink } from './../helpers';
 
-const dnsProviders = () => {
+const pagesToDeleteorReconsider = () => {
   return {
-    link: '/asdfasdf',
+    link: '/cache',
     title: 'Pages to Delete or reconsider',
     children: [
+
+      // minimal landing page that should be kept.
+      simpleLink('/addons'),
+
       simpleLink('/partial-composer'), // This page should be rewritten to focus on WordPress.
       simpleLink('/cache'),
       simpleLink('/pantheon-yml-overview', 'Pantheon.yml Overview (Delete?)'),
@@ -57,8 +61,6 @@ const dnsProviders = () => {
       // This page is pretty empty
       simpleLink('/overview'),
 
-      // minimal landing page
-      simpleLink('/addons'),
       // Maybe we should keep some of these landing listing and just have
       // no sidebar for them.
       simpleLink('/guides'),
@@ -160,4 +162,4 @@ const dnsProviders = () => {
   };
 };
 
-export default dnsProviders;
+export default pagesToDeleteorReconsider;
