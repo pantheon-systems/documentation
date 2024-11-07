@@ -23,6 +23,7 @@ const goLive = () => {
       // Todo, this might belong at the top of the subnav, above "Domains"
       getGuideDirectory('guides/launch', 'Launch'),
       simpleLink('/relaunch', 'Relaunch an existing site'),
+      simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
     ],
   };
 };

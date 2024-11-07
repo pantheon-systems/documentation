@@ -84,6 +84,8 @@ const CertificationItems = () => {
                     getGuideDirectory('pivotal-tracker', 'Pivotal Tracker'),
                     // @todo, this page is in two menus
                     getGuideDirectory('rerouting-outbound-email', 'Rerouting Outbound Email'),
+        simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
+
                     getGuideDirectory('behat', 'Behat'),
                     getGuideDirectory('drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
 

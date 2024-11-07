@@ -9,8 +9,14 @@ const support = () => {
       getGuideDirectory('guides/professional-services'),
       // Todo: relocate this to the support guide
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
-      simpleLink('/basic-troubleshooting', 'Troubleshooting', [
+      simpleLink('/basic-troubleshooting', 'Troubleshooting Errors', [
+        simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
         simpleLink('/modules-known-issues', 'Known Issues', [
+          // @todo, combine some of these pages.
+          simpleLink(
+            '/modules-plugins-known-issues',
+            'Modules and plugins with known issues',
+          ),
           simpleLink('/modules-known-issues', 'Drupal Modules Known Issues'),
           simpleLink('/wordpress-known-issues', 'WordPress Known Issues'),
           simpleLink(
@@ -23,28 +29,47 @@ const support = () => {
           ),
         ]),
 
-        simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
-        simpleLink('/timeouts', 'Timeouts on Pantheon'),
-        simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
-        getGuideDirectory('guides/errors-and-server-responses'),
+
+        simpleLink('/timeouts', 'Timeouts and Errors', [
+          simpleLink('/timeouts', 'Timeouts on Pantheon'),
+          getGuideDirectory('guides/errors-and-server-responses'),
+          simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
+        ]
+        ),
+
+
+
+
+
+
         getGuideDirectory(
           'guides/disaster-recovery',
           'Disaster Recovery Playbook',
         ),
+        getGuideDirectory(
+          'guides/new-relic',
+          'New Relic Performance Monitoring',
+        ),
         simpleLink('/newrelic', 'New Relic', [
-          getGuideDirectory(
-            'guides/new-relic',
-            'New Relic Performance Monitoring',
-          ),
+
           getGuideDirectory('guides/pagerduty', 'Incident Management'),
         ]),
-        simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
         simpleLink('/mime-types', 'MIME Types'),
-        simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
         // @todo, this page is not loading??
+
+
+
+
+
+
+
+        simpleLink('/resetting-passwords', 'Resetting Passwords'),
+      ]),
+      simpleLink('/debug-slow-performance', 'Troubleshooting Performance', [
+
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
-        simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+
         // Should could move to the education menu.
         getGuideDirectory('guides/frontend-performance'),
         simpleLink(
@@ -55,11 +80,8 @@ const support = () => {
           '/load-testing-with-blazemeter',
           'Load Testing Drupal and WordPress with BlazeMeter',
         ),
-        simpleLink(
-          '/modules-plugins-known-issues',
-          'Modules and plugins with known issues',
-        ),
-        simpleLink('/resetting-passwords', 'Resetting Passwords'),
+        simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+
       ]),
     ],
   };
