@@ -155,18 +155,6 @@ module.exports = {
             resolve: "gatsby-remark-grid-tables", // https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/
           },
           {
-            // Used to create code snippets from files on GitHub
-            resolve: "gatsby-remark-github", // https://www.gatsbyjs.com/plugins/gatsby-remark-github/
-            options: {
-              marker: "GITHUB-EMBED",
-              insertEllipsisComments: true,
-              ellipsisPhrase: "...",
-              useCache: true,
-              cacheKey: "gatsby-remark-github-v1",
-              token: process.env.GITHUB_API,
-            },
-          },
-          {
             // Required so the custom Youtube component can create iframes that work with Gatsby
             resolve: "gatsby-remark-responsive-iframe", // https://www.gatsbyjs.com/plugins/gatsby-remark-responsive-iframe/
           },
