@@ -1,19 +1,16 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import {
-  Navbar,
-  NavMenu,
-} from "@pantheon-systems/pds-toolkit-react"
+import { Navbar, NavMenu } from '@pantheon-systems/pds-toolkit-react';
 
-import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive'
+import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 
-import "./style.css"
+import './style.css';
 
 // Links for NavMenu component.
 const mainNavigationLinks = [
   {
-    label: "Documentation",
+    label: 'Documentation',
     links: [
       {
         linkContent: (
@@ -24,18 +21,20 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="get-started" to="/get-started">
+          <Link id="get-started" to="/guides/getstarted">
             Get Started
           </Link>
         ),
       },
+
       {
         linkContent: (
-          <Link id="develop" to="/develop">
-            Develop
+          <Link id="workflows" to="/pantheon-workflow">
+            Development Workflow
           </Link>
         ),
       },
+
       {
         linkContent: (
           <Link id="go-live" to="/go-live">
@@ -45,29 +44,71 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="platform" to="/platform">
-            Explore Platform Architecture
+          <Link id="web-infra" to="/application-containers">
+            Web Infrastructure
           </Link>
         ),
       },
       {
         linkContent: (
-          <Link id="automate" to="/automate">
-            Automate & Integrate
+          <Link id="performance" to="/guides/account-mgmt/account">
+            Manage Accounts and Workspaces
           </Link>
         ),
       },
       {
         linkContent: (
-          <Link id="performance" to="/performance">
-            Optimize Performance
+          <Link id="cli" to="/terminus">
+            Command Line Interface (CLI)
           </Link>
         ),
       },
       {
         linkContent: (
-          <Link id="manage" to="/manage">
-            Manage Teams & Organizations
+          <Link id="front-end" to="/guides/decoupled">
+            Front-End Sites and Starter Kits
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="support" to="/guides/support">
+            Support and Troubleshooting
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="security" to="/guides/security">
+            Security
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="certification" to="/certification">
+            Education
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="contribute" to="/contribute">
+            About our Docs
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="pages-to-delete" to="/asdfasdf">
+            Pages to Delete or reconsider
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="unassigned" to="/asdfasdfasdf">
+            Unassigned
           </Link>
         ),
       },
@@ -78,34 +119,11 @@ const mainNavigationLinks = [
           </Link>
         ),
       },
-      {
-        isSeparator: true,
-      },
+
       {
         linkContent: (
           <Link id="release-notes" to="/release-notes">
             Release Notes (Changelog)
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="Glossary" to="/glossary">
-            Glossary
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="certification" to="/certification">
-            Certification Program
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="terminus" to="/terminus">
-            Terminus Guide
           </Link>
         ),
       },
@@ -118,8 +136,7 @@ const mainNavigationLinks = [
       </a>
     ),
   },
-]
-
+];
 
 const Header = ({ page }) => (
   <>
@@ -127,7 +144,13 @@ const Header = ({ page }) => (
       Skip to main content
     </a>
 
-    <Navbar logoLinkContent={<a href="https://pantheon.io" target="_blank" rel="nofollow">Pantheon Home</a>}>
+    <Navbar
+      logoLinkContent={
+        <a href="https://pantheon.io" target="_blank" rel="nofollow">
+          Pantheon Home
+        </a>
+      }
+    >
       <NavMenu
         slot="items-left"
         ariaLabel="Main Navigation"
@@ -152,6 +175,6 @@ const Header = ({ page }) => (
       </div>
     </Navbar>
   </>
-)
+);
 
-export default Header
+export default Header;
