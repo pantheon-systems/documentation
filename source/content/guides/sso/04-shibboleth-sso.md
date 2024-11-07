@@ -14,7 +14,7 @@ product: [--]
 integration: [SimpleSAMLphp]
 permalink: docs/guides/sso/shibboleth-sso
 ---
-
+<!--Todo: Relocate this to a single page doc so it can be added to Integrations submenu -->
 This section provides information on how to install and configure [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. Refer to the [Other SSO Options](#other-sso-options) section if you are searching for an SSO service provider solution with minimal configuration requirements.
 
 ## Before You Begin
