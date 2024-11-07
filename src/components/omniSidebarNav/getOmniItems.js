@@ -1,5 +1,26 @@
 import CertificationItems from './submenus/certification';
-import { getGuideDirectory } from './helpers';
+
+import getStarted from './submenus/getStarted';
+import goLive from './submenus/goLive';
+import pagesToDelete from './submenus/pagesToDelete';
+import unassignedPages from './submenus/unassignedPages';
+import webInfrastructure from './submenus/webInfrastructure';
+import accountManagement from './submenus/accountManagement';
+import frontEndSites from './submenus/frontEndSites';
+import terminus from './submenus/terminus';
+import about from './submenus/about';
+import workflows from './submenus/workflows';
+import support from './submenus/support';
+import security from './submenus/security';
+// Before we can merge we need to:
+//Todo: Fix doc template (missing search bar)
+//Todo: Fix video template (missing search bar)
+//Todo: add sidebar to landing pages (end goal is to deleete them entirely)
+//Todo: review reporting in console log
+//Todo: Update dropdown in main site nav
+//Todo: Finish tutorials submenu in certification
+//Todo: audit troubleshooting submenu in support
+//Todo: Finish security submenu
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -7,25 +28,27 @@ import { getGuideDirectory } from './helpers';
  */
 const getOmniItems = () => {
   const OmniItems = [
-    {
-      link: '/guides/decoupled',
-      title: 'Front-End Sites and Starter Kits',
-      children: [
-        getGuideDirectory('guides/decoupled/overview'),
-        getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
-        getGuideDirectory('guides/decoupled/wp-backend-starters'),
-        getGuideDirectory('guides/decoupled/wp-gatsby-frontend-starters'),
-        getGuideDirectory('guides/decoupled/drupal-backend-starters'),
-        getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
-        getGuideDirectory('guides/decoupled/no-starter-kit'),
-      ],
-    },
-    {
-      link: '/certification',
-      title: 'WebOps Certification',
-      children: CertificationItems,
-    },
+    getStarted(), // assigned to Chris ✅
+    workflows(), // ✅
+    goLive(), // ✅
+    webInfrastructure(), // ✅
+    accountManagement(), // ✅
+    terminus(), // ✅
+    frontEndSites(), // ✅
+    support(),
+    security(),
+    // @todo, should we have a separate tutorials section?
+
+    CertificationItems(),
+    about(), // assigned to Rachel ✅
+    // Release notes
+
+    pagesToDelete(),
+    unassignedPages(),
   ];
+
+  console.log('OmniItems: ', OmniItems);
+
   return OmniItems;
 };
 
