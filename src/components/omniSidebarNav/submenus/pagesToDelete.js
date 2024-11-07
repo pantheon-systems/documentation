@@ -91,7 +91,9 @@ const pagesToDeleteorReconsider = () => {
         '/terminus-drupal-site-management',
         'Using Terminus to Create and Update Drupal Sites on Pantheon',
       ),
+      simpleLink('/newrelic', 'New Relic', [
 
+      ]),
       // Redirect to /terminus
       simpleLink('/terminus-overview', 'Terminus Overview'),
 

@@ -84,6 +84,7 @@ const CertificationItems = () => {
         // This is in two menus. It should probably be in just this one.
         simpleLink('/behat', 'Behat'),
         simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
+        getGuideDirectory('guides/pagerduty', 'Incident Management'),
       ]),
       simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),
     ],

@@ -6,6 +6,11 @@ const support = () => {
     title: 'Support and Troubleshooting',
     children: [
       getGuideDirectory('guides/support', 'Support'),
+      getGuideDirectory(
+        'guides/disaster-recovery',
+        'Disaster Recovery Playbook',
+      ),
+
       getGuideDirectory('guides/professional-services'),
       // Todo: relocate this to the support guide
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
@@ -35,17 +40,8 @@ const support = () => {
           simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
         ]),
 
-        getGuideDirectory(
-          'guides/disaster-recovery',
-          'Disaster Recovery Playbook',
-        ),
-        getGuideDirectory(
-          'guides/new-relic',
-          'New Relic Performance Monitoring',
-        ),
-        simpleLink('/newrelic', 'New Relic', [
-          getGuideDirectory('guides/pagerduty', 'Incident Management'),
-        ]),
+
+
         simpleLink('/mime-types', 'MIME Types'),
         // @todo, this page is not loading??
 
@@ -55,17 +51,28 @@ const support = () => {
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
 
+        getGuideDirectory(
+          'guides/new-relic',
+          'New Relic Performance Monitoring',
+        ),
+
+
         // Should could move to the education menu.
         getGuideDirectory('guides/frontend-performance'),
         simpleLink(
           '/load-and-performance-testing',
           'Load and Performance Testing',
+          [
+
+            simpleLink(
+              '/load-testing-with-blazemeter',
+              'Load Testing Drupal and WordPress with BlazeMeter',
+            ),
+            simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+
+          ]
         ),
-        simpleLink(
-          '/load-testing-with-blazemeter',
-          'Load Testing Drupal and WordPress with BlazeMeter',
-        ),
-        simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+
       ]),
     ],
   };
