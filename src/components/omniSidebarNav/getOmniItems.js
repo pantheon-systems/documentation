@@ -12,6 +12,8 @@ import about from './submenus/about';
 import workflows from './submenus/workflows';
 import support from './submenus/support';
 import security from './submenus/security';
+import { getGuideDirectory, simpleLink } from './helpers';
+
 // Before we can merge we need to:
 //Todo: Fix doc template (missing search bar)
 //Todo: Fix video template (missing search bar)
@@ -28,6 +30,7 @@ import security from './submenus/security';
  */
 const getOmniItems = () => {
   const OmniItems = [
+    simpleLink('/', 'Docs Home'),
     getStarted(), // assigned to Chris ✅
     workflows(), // ✅
     goLive(), // ✅
@@ -42,7 +45,7 @@ const getOmniItems = () => {
     CertificationItems(),
     about(), // assigned to Rachel ✅
     // Release notes
-
+    simpleLink('/Release Notes', 'Release Notes'),
     pagesToDelete(),
     unassignedPages(),
   ];

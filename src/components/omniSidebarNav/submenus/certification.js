@@ -85,6 +85,7 @@ const CertificationItems = () => {
         simpleLink('/behat', 'Behat'),
         simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
+        getGuideDirectory('guides/accessibility', 'Web Accesibility'), // This belongs in the learning center
       ]),
       simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),
     ],
