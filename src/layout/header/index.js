@@ -24,18 +24,23 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="get-started" to="/get-started">
+          <Link id="get-started" to="/guides/getstarted">
             Get Started
           </Link>
         ),
       },
+
       {
         linkContent: (
-          <Link id="develop" to="/develop">
-            Develop
+          <Link id="workflows" to="/pantheon-workflow">
+            Development Workflow
           </Link>
         ),
       },
+
+
+
+
       {
         linkContent: (
           <Link id="go-live" to="/go-live">
@@ -45,29 +50,71 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="platform" to="/platform">
-            Explore Platform Architecture
+          <Link id="web-infra" to="/application-containers">
+            Web Infrastructure
           </Link>
         ),
       },
       {
         linkContent: (
-          <Link id="automate" to="/automate">
-            Automate & Integrate
+          <Link id="performance" to="/guides/account-mgmt/account">
+            Manage Accounts and Workspaces
           </Link>
         ),
       },
       {
         linkContent: (
-          <Link id="performance" to="/performance">
-            Optimize Performance
+          <Link id="cli" to="/terminus">
+            Command Line Interface (CLI)
           </Link>
         ),
       },
       {
         linkContent: (
-          <Link id="manage" to="/manage">
-            Manage Teams & Organizations
+          <Link id="front-end" to="/guides/decoupled">
+            Front-End Sites and Starter Kits
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="support" to="/guides/support">
+            Support and Troubleshooting
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="security" to="/guides/security">
+            Security
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="certification" to="/certification">
+            WebOps Certification
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="contribute" to="/contribute">
+            About our Docs
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="pages-to-delete" to="/asdfasdf">
+            Pages to Delete or reconsider
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="unassigned" to="/asdfasdfasdf">
+            Unassigned
           </Link>
         ),
       },
@@ -78,9 +125,7 @@ const mainNavigationLinks = [
           </Link>
         ),
       },
-      {
-        isSeparator: true,
-      },
+
       {
         linkContent: (
           <Link id="release-notes" to="/release-notes">
@@ -88,27 +133,7 @@ const mainNavigationLinks = [
           </Link>
         ),
       },
-      {
-        linkContent: (
-          <Link id="Glossary" to="/glossary">
-            Glossary
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="certification" to="/certification">
-            Certification Program
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="terminus" to="/terminus">
-            Terminus Guide
-          </Link>
-        ),
-      },
+
     ],
   },
   {
