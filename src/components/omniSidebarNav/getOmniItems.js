@@ -6,7 +6,7 @@ import pagesToDelete from './submenus/pagesToDelete';
 import unassignedPages from './submenus/unassignedPages';
 import webInfrastructure from './submenus/webInfrastructure';
 import accountManagement from './submenus/accountManagement';
-import frontEndSites from './submenus/frontEndSites';
+
 import terminus from './submenus/terminus';
 import about from './submenus/about';
 import workflows from './submenus/workflows';
@@ -19,11 +19,14 @@ import { getGuideDirectory, simpleLink } from './helpers';
 //Todo: Fix video template (missing search bar)
 //Todo: add sidebar to landing pages (end goal is to delete them entirely)
 //Todo: review reporting in console log
-//Todo: Update dropdown in main site nav
-//Todo: Finish tutorials submenu in certification
-//Todo: audit troubleshooting submenu in support
 //Todo: Finish security submenu
+
+// Review things Steve did alone.
+//Todo: Finish tutorials submenu in certification
+//Todo: Update dropdown in main site nav
+//Todo: Confirm move of Front-End Sites under web infrastructure
 //Todo: Decide if search should be in the sidebar. In the "about" section maybe?
+//Todo: audit troubleshooting submenu in support
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -38,7 +41,6 @@ const getOmniItems = () => {
     webInfrastructure(), // ✅
     accountManagement(), // ✅
     terminus(), // ✅
-    frontEndSites(), // ✅
     support(),
     security(),
     // @todo, should we have a separate tutorials section?

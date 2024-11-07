@@ -85,8 +85,13 @@ const CertificationItems = () => {
         simpleLink('/behat', 'Behat'),
         simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
-        getGuideDirectory('guides/accessibility', 'Web Accesibility'), // This belongs in the learning center
+        getGuideDirectory('guides/accessibility', 'Web Accesibility'),
+        simpleLink('/partial-composer', "Partial Composer Usage"), // This page should be rewritten to focus on WordPress.
+        // Build tools dependent, may not be relevant
+        simpleLink('/drupal-commerce', 'Drupal Commerce'),
+
       ]),
+      simpleLink('/agency-tips', 'Agency Tips'),
       simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),
     ],
   };

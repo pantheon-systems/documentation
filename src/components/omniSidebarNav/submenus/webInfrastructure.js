@@ -134,6 +134,20 @@ const webInfrastructure = () => {
         getGuideDirectory('guides/woocommerce', 'WooCommerce'),
         // @todo: add installing from third party sources doc here
       ]),
+      {
+        link: '/guides/decoupled/overview',
+        title: 'Front-End Sites and Starter Kits',
+        children: [
+          getGuideDirectory('guides/decoupled/overview'),
+          getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
+          getGuideDirectory('guides/decoupled/wp-backend-starters'),
+          getGuideDirectory('guides/decoupled/wp-gatsby-frontend-starters'),
+          getGuideDirectory('guides/decoupled/drupal-backend-starters'),
+          getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
+          getGuideDirectory('guides/decoupled/no-starter-kit'),
+          simpleLink('/static-site-empty-upstream', "Static Sites on an Empty Upstream"),
+        ],
+      }
     ],
   };
 };
