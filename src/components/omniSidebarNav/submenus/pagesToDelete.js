@@ -15,7 +15,6 @@ const pagesToDeleteorReconsider = () => {
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
 
-
         simpleLink('/faq', 'FAQ'), // move to getting started
 
         simpleLink('/platform-notifications', 'Platform Notifications'),
@@ -35,7 +34,6 @@ const pagesToDeleteorReconsider = () => {
         // But it could go under web infra or troubleshooting performance.
         simpleLink('/cloud-optimization'),
       ]),
-
 
       // Deprecated
       simpleLink('/crisis-response-upstream', 'Deprecated or archived pages', [
