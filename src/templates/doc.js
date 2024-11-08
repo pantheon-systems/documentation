@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import GuideLayout from '../layout/GuideLayout';
+import SearchBar from '../layout/SearchBar';
 
 import SEO from '../layout/seo';
 import HeaderBody from '../components/headerBody';
@@ -76,6 +77,9 @@ class DocTemplate extends React.Component {
             >
               <SidebarLayout>
                 <article slot="content" className="doc article styleguide">
+
+                  <SearchBar slot="content" page="default" />
+
                   <HeaderBody
                     title={node.frontmatter.title}
                     subtitle={node.frontmatter.subtitle}

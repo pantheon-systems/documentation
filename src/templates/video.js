@@ -2,10 +2,11 @@ import React from 'react';
 import GuideLayout from '../layout/GuideLayout';
 
 import { graphql } from 'gatsby';
-import Layout from '../layout/layout';
+import SearchBar from '../layout/SearchBar';
+
 import HeaderBody from '../components/headerBody';
 import SEO from '../layout/seo';
-import { Container, SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
+import { Container } from '@pantheon-systems/pds-toolkit-react';
 import MdxWrapper from '../components/mdxWrapper';
 import OmniSidebarNav from '../components/omniSidebarNav';
 
@@ -62,6 +63,8 @@ class VideoTemplate extends React.Component {
         <ContentLayoutType slot="guide-content">
           <main id="docs-main" tabIndex="-1">
             <Container width={containerWidth} className="docs-video">
+              <SearchBar slot="content" page="default" />
+
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}
