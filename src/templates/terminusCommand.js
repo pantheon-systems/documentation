@@ -1,131 +1,129 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import GuideLayout from "../layout/GuideLayout"
-import SEO from "../layout/seo"
-import SearchBar from "../layout/SearchBar"
-import HeaderBody from "../components/headerBody"
-import GetFeedback from "../components/getFeedback"
-import Navbar from "../components/navbar"
-import Partial from "../components/partial"
-import { Container } from "@pantheon-systems/pds-toolkit-react"
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import GuideLayout from '../layout/GuideLayout';
+import SEO from '../layout/seo';
+import SearchBar from '../layout/SearchBar';
+import HeaderBody from '../components/headerBody';
+import GetFeedback from '../components/getFeedback';
+import Navbar from '../components/navbar';
+import Partial from '../components/partial';
+import { Container } from '@pantheon-systems/pds-toolkit-react';
 
-let commandsJson = require("../../source/data/commands.json")
-
+let commandsJson = require('../../source/data/commands.json');
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
 const items = [
   {
-    id: "docs-terminus",
-    link: "/terminus",
-    title: "Introduction",
+    id: 'docs-terminus',
+    link: '/terminus',
+    title: 'Introduction',
   },
   {
-    id: "docs-terminus-install",
-    link: "/terminus/install",
-    title: "Install Terminus",
+    id: 'docs-terminus-install',
+    link: '/terminus/install',
+    title: 'Install Terminus',
   },
   {
-    id: "docs-terminus-examples",
-    link: "/terminus/examples",
-    title: "Get Started",
+    id: 'docs-terminus-examples',
+    link: '/terminus/examples',
+    title: 'Get Started',
   },
   {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
-    title: "Command Directory",
+    id: 'docs-terminus-commands',
+    link: '/terminus/commands',
+    title: 'Command Directory',
   },
   {
-    id: "docs-terminus-scripting",
-    link: "/terminus/scripting",
-    title: "Scripting with Terminus",
+    id: 'docs-terminus-scripting',
+    link: '/terminus/scripting',
+    title: 'Scripting with Terminus',
   },
   {
-    id: "docs-terminus-plugins",
-    link: "/terminus/plugins",
-    title: "Install Plugins",
+    id: 'docs-terminus-plugins',
+    link: '/terminus/plugins',
+    title: 'Install Plugins',
   },
   {
-    id: "docs-terminus-directory",
-    link: "/terminus/directory",
-    title: "Plugin Directory",
+    id: 'docs-terminus-directory',
+    link: '/terminus/directory',
+    title: 'Plugin Directory',
   },
   {
-    id: "docs-terminus-create",
-    link: "/terminus/create",
-    title: "Create Terminus Plugins",
+    id: 'docs-terminus-create',
+    link: '/terminus/create',
+    title: 'Create Terminus Plugins',
   },
   {
-    id: "docs-terminus-configuration",
-    link: "/terminus/configuration",
-    title: "Terminus Configuration File",
+    id: 'docs-terminus-configuration',
+    link: '/terminus/configuration',
+    title: 'Terminus Configuration File',
   },
 
   {
-    id: "docs-supported-terminus",
-    link: "/terminus/supported-terminus",
-    title: "Supported Terminus and PHP Versions",
+    id: 'docs-supported-terminus',
+    link: '/terminus/supported-terminus',
+    title: 'Supported Terminus and PHP Versions',
   },
 
   {
-    id: "docs-terminus-updates",
-    link: "/terminus/updates",
-    title: "Current Terminus Release and Changelog",
+    id: 'docs-terminus-updates',
+    link: '/terminus/updates',
+    title: 'Current Terminus Release and Changelog',
   },
 
   {
-    id: "docs-terminus-terminus-3-0",
-    link: "/terminus/terminus-3-0",
-    title: "Terminus 3",
+    id: 'docs-terminus-terminus-3-0',
+    link: '/terminus/terminus-3-0',
+    title: 'Terminus 3',
   },
-]
+];
 
 class CommandsTemplate extends React.Component {
-
   render() {
-    const slug = this.props.pageContext.slug
+    const slug = this.props.pageContext.slug;
     //console.log("slug: ", slug) // For Debugging
 
-    const name = this.props.pageContext.name
+    const name = this.props.pageContext.name;
     //console.log("name: ", name) //For Debugging
 
-    const commands = this.props.data.dataJson.commands
+    const commands = this.props.data.dataJson.commands;
     //console.log("commands: ", commands) //For Debugging
 
     const getCommandBySlug = (slug) =>
-      commands.find(({ name }) => name === slug)
+      commands.find(({ name }) => name === slug);
     const getCommandJSONBySlug = (slug) =>
-      commandsJson.commands.find(({ name }) => name === slug)
+      commandsJson.commands.find(({ name }) => name === slug);
 
-    const command = getCommandBySlug(name)
+    const command = getCommandBySlug(name);
     //console.log("command: ", command) //For Debugging
 
-    const thisCommandJson = getCommandJSONBySlug(name)
+    const thisCommandJson = getCommandJSONBySlug(name);
     //console.log("thisCommandJson: ", thisCommandJson) //For Debugging
 
-    var options = Object.keys(thisCommandJson.definition.options).map(function (
-      key
-    ) {
-      return [String(key), thisCommandJson.definition.options[key]]
-    })
+    var options = Object.keys(thisCommandJson.definition.options).map(
+      function (key) {
+        return [String(key), thisCommandJson.definition.options[key]];
+      },
+    );
     options.forEach((option) => {
-      option.shift()
-    })
+      option.shift();
+    });
 
-    options.sort((a, b) => (a[0].name > b[0].name ? 1 : -1))
+    options.sort((a, b) => (a[0].name > b[0].name ? 1 : -1));
     options.sort(function (a, b) {
-      return a[0].name.localeCompare(b[0].name)
-    })
+      return a[0].name.localeCompare(b[0].name);
+    });
     //console.log("Options: ", options) //For Debugging
 
     return (
       <GuideLayout>
         <SEO
           slot="seo"
-          title={command.name + " | Terminus Commands"}
+          title={command.name + ' | Terminus Commands'}
           description={command.description}
-          image={"/images/assets/terminus-thumbLarge.png"}
+          image={'/images/assets/terminus-thumbLarge.png'}
         />
         <Navbar
           slot="guide-menu"
@@ -154,7 +152,7 @@ class CommandsTemplate extends React.Component {
               <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
                 <pre className="language-bash">
                   <code className="language=bash">
-                    terminus {command.usage[0].replace(/\[|\]/g, "")}
+                    terminus {command.usage[0].replace(/\[|\]/g, '')}
                   </code>
                 </pre>
               </div>
@@ -170,16 +168,16 @@ class CommandsTemplate extends React.Component {
                             className="pds-spacing-mar-inline-end-2xs"
                           >
                             {usage
-                              .replace(/\[|\]/g, "")
-                              .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
-                          </code>{" "}
+                              .replace(/\[|\]/g, '')
+                              .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, '')}
+                          </code>{' '}
                           {usage
-                            .replace(/\[|\]/g, "")
+                            .replace(/\[|\]/g, '')
                             .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
                         </p>
                         <hr className="commandHr" />
                       </>
-                    )
+                    );
                   }
                 })}
               </div>
@@ -204,7 +202,7 @@ class CommandsTemplate extends React.Component {
                             </td>
                           </tr>
                         </>
-                      )
+                      );
                     })}
                   </tbody>
                 </table>
@@ -214,13 +212,13 @@ class CommandsTemplate extends React.Component {
             </article>
           </main>
         </Container>
-        <GetFeedback page={"/" + slug} />
+        <GetFeedback page={'/' + slug} />
       </GuideLayout>
-    )
+    );
   }
 }
 
-export default CommandsTemplate
+export default CommandsTemplate;
 
 export const pageQuery = graphql`
   query CommandsData {
@@ -232,4 +230,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
