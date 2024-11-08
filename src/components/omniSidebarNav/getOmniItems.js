@@ -27,6 +27,7 @@ import { simpleLink } from './helpers';
 //Todo: Confirm move of Front-End Sites under web infrastructure
 //Todo: Decide if search should be in the sidebar. In the "about" section maybe?
 //Todo: audit troubleshooting submenu in support
+// Todo: reconcile this branch with https://github.com/pantheon-systems/documentation/pull/9296
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
