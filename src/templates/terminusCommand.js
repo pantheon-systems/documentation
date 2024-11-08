@@ -7,10 +7,10 @@ import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
 import Navbar from "../components/navbar"
 import Partial from "../components/partial"
+import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 let commandsJson = require("../../source/data/commands.json")
 
-import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
@@ -82,31 +82,6 @@ const items = [
 ]
 
 class CommandsTemplate extends React.Component {
-  componentDidMount() {
-    $("[data-toggle=popover]").popover({
-      trigger: "click",
-    })
-
-    $("body").on("click", function (e) {
-      $('[data-toggle="popover"]').each(function () {
-        if (
-          !$(this).is(e.target) &&
-          $(this).has(e.target).length === 0 &&
-          $(".popover").has(e.target).length === 0
-        ) {
-          $(this).popover("hide")
-        }
-      })
-    })
-
-    $("body").keyup(function (e) {
-      $('[data-toggle="popover"]').each(function () {
-        if (event.which === 27) {
-          $(this).popover("hide")
-        }
-      })
-    })
-  }
 
   render() {
     const slug = this.props.pageContext.slug
