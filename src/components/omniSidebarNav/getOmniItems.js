@@ -29,8 +29,6 @@ import { simpleLink } from './helpers';
 // Todo: Fix video template (missing search bar)
 // Todo: add sidebar to landing pages (end goal is to delete them entirely)
 
-
-
 /**
  * Retrieves the all the menu items for the sidebar navigation.
  * @returns {Array} An array of Omni items.

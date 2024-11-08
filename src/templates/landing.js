@@ -11,7 +11,6 @@ import SEO from '../layout/seo';
 // @todo, implement sidebar on this template
 import OmniSidebarNav from '../components/omniSidebarNav';
 
-
 import {
   Container,
   FlexContainer,
@@ -44,13 +43,10 @@ class LandingTemplate extends Component {
         containerWidth={containerWidth}
         footerBorder={topic.footer_border}
       >
-        <SEO title={topic.title}
-          slot="seo"
-        />
+        <SEO title={topic.title} slot="seo" />
         <OmniSidebarNav slot="guide-menu" activePage={topic.path} />
 
-
-        <main id="docs-main" slot="guide-content"  tabIndex="-1">
+        <main id="docs-main" slot="guide-content" tabIndex="-1">
           <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"
