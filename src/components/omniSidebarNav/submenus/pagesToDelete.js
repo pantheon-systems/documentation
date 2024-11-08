@@ -14,6 +14,10 @@ const pagesToDeleteorReconsider = () => {
 
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
+
+
+        simpleLink('/faq', 'FAQ'), // move to getting started
+
         simpleLink('/platform-notifications', 'Platform Notifications'),
         // Has unsupported "product" upstreams Panopoly and OpenAtrium. But should probably go in Web Infra?
         simpleLink('/start-state'),
@@ -32,7 +36,6 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/cloud-optimization'),
       ]),
 
-      simpleLink('/faq', 'FAQ'),
 
       // Deprecated
       simpleLink('/crisis-response-upstream', 'Deprecated or archived pages', [
