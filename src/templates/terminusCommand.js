@@ -7,10 +7,10 @@ import HeaderBody from '../components/headerBody';
 import GetFeedback from '../components/getFeedback';
 import Navbar from '../components/navbar';
 import Partial from '../components/partial';
+import { Container } from '@pantheon-systems/pds-toolkit-react';
 
 let commandsJson = require('../../source/data/commands.json');
 
-import { Container } from '@pantheon-systems/pds-toolkit-react';
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
