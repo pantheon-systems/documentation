@@ -82,7 +82,6 @@ const items = [
 ];
 
 class TerminusTemplate extends React.Component {
-
   render() {
     const node = this.props.data.mdx;
     const isoDate = this.props.data.date;

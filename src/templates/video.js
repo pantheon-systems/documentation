@@ -14,7 +14,6 @@ import OmniSidebarNav from '../components/omniSidebarNav';
 const containerWidth = 'standard';
 
 class VideoTemplate extends React.Component {
-
   render() {
     const node = this.props.data.mdx;
 
