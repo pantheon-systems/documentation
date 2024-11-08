@@ -11,7 +11,6 @@ import { Container } from '@pantheon-systems/pds-toolkit-react';
 
 let commandsJson = require('../../source/data/commands.json');
 
-
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
