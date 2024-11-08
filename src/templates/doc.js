@@ -1,51 +1,23 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
-import HeaderBody from "../components/headerBody"
-import TOC from "../components/toc"
-import GetFeedback from "../components/getFeedback"
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
+import HeaderBody from '../components/headerBody';
+import TOC from '../components/toc';
+import GetFeedback from '../components/getFeedback';
 
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import { Container, SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
 
-import MdxWrapper from "../components/mdxWrapper"
-
+import MdxWrapper from '../components/mdxWrapper';
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = 'standard';
 
 class DocTemplate extends React.Component {
-  componentDidMount() {
-    $("[data-toggle=popover]").popover({
-      trigger: "click",
-      placement: "right",
-    })
-
-    $("body").on("click", function (e) {
-      $('[data-toggle="popover"]').each(function () {
-        if (
-          !$(this).is(e.target) &&
-          $(this).has(e.target).length === 0 &&
-          $(".popover").has(e.target).length === 0
-        ) {
-          $(this).popover("hide")
-        }
-      })
-    })
-
-    $("body").keyup(function (e) {
-      $('[data-toggle="popover"]').each(function () {
-        if (event.which === 27) {
-          $(this).popover("hide")
-        }
-      })
-    })
-  }
-
   render() {
-    const node = this.props.data.doc
-    const isoDate = this.props.data.date
+    const node = this.props.data.doc;
+    const isoDate = this.props.data.date;
 
     return (
       <Layout footerBorder>
@@ -53,7 +25,7 @@ class DocTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"/images/assets/default-thumb-doc.png"}
+          image={'/images/assets/default-thumb-doc.png'}
           categories={node.frontmatter.categories}
           keywords={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
@@ -78,9 +50,8 @@ class DocTemplate extends React.Component {
                   isoDate={isoDate.frontmatter.reviewed}
                   cms={node.frontmatter.cms}
                 />
-                <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+                <div style={{ marginTop: '15px', marginBottom: '45px' }}>
                   <MdxWrapper mdx={node.body} />
-
                 </div>
               </article>
               <TOC slot="sidebar" title="Contents" />
@@ -97,11 +68,11 @@ class DocTemplate extends React.Component {
           </Container>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default DocTemplate
+export default DocTemplate;
 
 export const pageQuery = graphql`
   query DocBySlug($slug: String!) {
@@ -139,4 +110,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
