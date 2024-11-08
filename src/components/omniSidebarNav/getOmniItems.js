@@ -15,7 +15,6 @@ import security from './submenus/security';
 import { simpleLink } from './helpers';
 
 // Before we can merge we need to:
-// Todo: add sidebar to landing pages (end goal is to delete them entirely)
 // Todo: review reporting in console log
 // Todo: Finish security submenu
 
@@ -28,6 +27,8 @@ import { simpleLink } from './helpers';
 // Todo: reconcile this branch with https://github.com/pantheon-systems/documentation/pull/9296
 // Todo: Fix doc template (missing search bar)
 // Todo: Fix video template (missing search bar)
+// Todo: add sidebar to landing pages (end goal is to delete them entirely)
+
 
 
 /**
