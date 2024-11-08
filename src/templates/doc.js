@@ -17,7 +17,6 @@ import OmniSidebarNav from '../components/omniSidebarNav';
 const containerWidth = 'standard';
 
 class DocTemplate extends React.Component {
-
   render() {
     const node = this.props.data.doc;
     const isoDate = this.props.data.date;
