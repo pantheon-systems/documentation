@@ -1,44 +1,45 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
-import CallToAction from "../layout/call-to-action"
-import Layout from "../layout/layout"
-import TopicGroup from "../layout/topic-group"
-import SubTopicGroup from "../layout/subtopic-group"
-import Youtube from "../components/youtube"
-import GuideItem from "../layout/guide-item"
-import IntegrationGuideItem from "../layout/integration-guide-item"
-import SEO from "../layout/seo"
-import Wistia from "../components/wistia"
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
+import CallToAction from '../layout/call-to-action';
+import Layout from '../layout/layout';
+import TopicGroup from '../layout/topic-group';
+import SubTopicGroup from '../layout/subtopic-group';
+import Youtube from '../components/youtube';
+import GuideItem from '../layout/guide-item';
+import IntegrationGuideItem from '../layout/integration-guide-item';
+import SEO from '../layout/seo';
+import Wistia from '../components/wistia';
+// @todo, implement sidebar on this template
 
-import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
+import TwoColumnLinks from '../pds-middleware/TwoColumnLinks';
 
 import {
   Container,
   FlexContainer,
   LinksCard,
-} from "@pantheon-systems/pds-toolkit-react"
+} from '@pantheon-systems/pds-toolkit-react';
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = 'standard';
 
 const twoColumnClasses =
-  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6"
+  'pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6';
 
 const threeColumnClasses =
-  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4"
+  'pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4';
 
 class LandingTemplate extends Component {
   render() {
     const {
       data: { landingsYaml },
-    } = this.props
-    const topic = landingsYaml
+    } = this.props;
+    const topic = landingsYaml;
 
     // Check for amount of topic groups if they exist.
-    const groupLength = topic.topics_groups ? topic.topics_groups.length : null
+    const groupLength = topic.topics_groups ? topic.topics_groups.length : null;
     const topicGroupsColumns =
-      groupLength === 2 || groupLength === 4 ? "two" : "three"
+      groupLength === 2 || groupLength === 4 ? 'two' : 'three';
 
     return !topic ? null : (
       <Layout
@@ -91,7 +92,7 @@ class LandingTemplate extends Component {
                 <div className="landing-page__guide-items">
                   {guide.links &&
                     guide.links.map((link) =>
-                      guide.type === "normal" ? (
+                      guide.type === 'normal' ? (
                         <GuideItem
                           url={link.url}
                           image={link.image}
@@ -102,7 +103,7 @@ class LandingTemplate extends Component {
                           url={link.url}
                           image={link.image}
                         />
-                      )
+                      ),
                     )}
                 </div>
               </Container>
@@ -141,7 +142,7 @@ class LandingTemplate extends Component {
                   topic.topics_groups.map((group, key) => (
                     <LinksCard
                       className={
-                        topicGroupsColumns === "two"
+                        topicGroupsColumns === 'two'
                           ? twoColumnClasses
                           : threeColumnClasses
                       }
@@ -188,13 +189,13 @@ class LandingTemplate extends Component {
           )}
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-LandingTemplate.propTypes = {}
+LandingTemplate.propTypes = {};
 
-export default LandingTemplate
+export default LandingTemplate;
 
 export const pageQuery = graphql`
   query landing($id: String!) {
@@ -249,4 +250,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
