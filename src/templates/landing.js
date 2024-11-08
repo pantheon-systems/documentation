@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import GuideLayout from '../layout/GuideLayout';
 import CallToAction from '../layout/call-to-action';
 import Layout from '../layout/layout';
-import TopicGroup from '../layout/topic-group';
 import SubTopicGroup from '../layout/subtopic-group';
 import Youtube from '../components/youtube';
 import GuideItem from '../layout/guide-item';
 import IntegrationGuideItem from '../layout/integration-guide-item';
 import SEO from '../layout/seo';
-import Wistia from '../components/wistia';
 // @todo, implement sidebar on this template
+import OmniSidebarNav from '../components/omniSidebarNav';
 
-import TwoColumnLinks from '../pds-middleware/TwoColumnLinks';
 
 import {
   Container,
@@ -42,12 +40,17 @@ class LandingTemplate extends Component {
       groupLength === 2 || groupLength === 4 ? 'two' : 'three';
 
     return !topic ? null : (
-      <Layout
+      <GuideLayout
         containerWidth={containerWidth}
         footerBorder={topic.footer_border}
       >
-        <SEO title={topic.title} />
-        <main id="docs-main" tabIndex="-1">
+        <SEO title={topic.title}
+          slot="seo"
+        />
+        <OmniSidebarNav slot="guide-menu" activePage={topic.path} />
+
+
+        <main id="docs-main" slot="guide-content"  tabIndex="-1">
           <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"
@@ -188,7 +191,7 @@ class LandingTemplate extends Component {
             </div>
           )}
         </main>
-      </Layout>
+      </GuideLayout>
     );
   }
 }
