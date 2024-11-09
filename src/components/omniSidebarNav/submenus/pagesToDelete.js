@@ -6,14 +6,14 @@ const pagesToDeleteorReconsider = () => {
     title: 'Pages to Delete or reconsider',
     children: [
       // This page is odd now that D11 is out.
-      simpleLink('/drupal-10', 'Drupal 10'),
-
-      simpleLink('/develop-drupal'),
-      // Not so relevant, needs further review
-      simpleLink('/drupal-broken-links', 'Fix Broken Links'),
 
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
+        simpleLink('/develop-drupal'), // Move to Drupal section.
+
+        // Not so relevant, needs further review.
+        // Let's move it to the Drupal menu for now.
+        simpleLink('/drupal-broken-links', 'Fix Broken Links'),
 
         simpleLink('/faq', 'FAQ'), // move to getting started
 
@@ -55,9 +55,6 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/addons'),
       ]),
 
-      // This is actually for google domains and that's no longer a service
-      simpleLink('/google', 'Google Cloud DNS'),
-
       // Pages that should be redirected
       simpleLink('/overview', 'pages that should be redirected', [
         simpleLink('/overview'), //  --> "/"
@@ -85,6 +82,9 @@ const pagesToDeleteorReconsider = () => {
         // Non-dupe content on this page should be moved to /guides/getstarted/addsite
         simpleLink('/add-site-dashboard', 'Add a site'),
         simpleLink('/workshops'),
+
+        // This is actually for google domains and that's no longer a service
+        simpleLink('/google', 'Google Cloud DNS'),
 
         // This page could use a refresh
         simpleLink('/headless', 'Running a Headless CMS'),

@@ -10,7 +10,6 @@ const support = () => {
         'guides/disaster-recovery',
         'Disaster Recovery Playbook',
       ),
-
       getGuideDirectory('guides/professional-services'),
       // Todo: relocate this to the support guide
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
@@ -33,22 +32,17 @@ const support = () => {
             'Symlinks and plugins that assume write access',
           ),
         ]),
-
         simpleLink('/timeouts', 'Timeouts and Errors', [
           simpleLink('/timeouts', 'Timeouts on Pantheon'),
           getGuideDirectory('guides/errors-and-server-responses'),
           simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
         ]),
-
         simpleLink('/mime-types', 'MIME Types'),
-        // @todo, this page is not loading??
-
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
       ]),
       simpleLink('/debug-slow-performance', 'Troubleshooting Performance', [
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
-
         getGuideDirectory(
           'guides/new-relic',
           'New Relic Performance Monitoring',
@@ -69,13 +63,13 @@ const support = () => {
         ),
       ]),
       simpleLink('/drupal-migration', 'Restructuring Drupal Codebases', [
+        simpleLink('/drupal-10', 'Drupal 10'),
         // Pages to audit and reconsider before adding to migration submenu
         simpleLink('/composer-convert'),
         simpleLink('/composer-convert-from-empty'),
 
         simpleLink('/drupal-to-build-tools'),
         simpleLink('/drupal-updates'),
-
         getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
         getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
         getGuideDirectory(
