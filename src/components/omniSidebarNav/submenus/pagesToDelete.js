@@ -5,22 +5,16 @@ const pagesToDeleteorReconsider = () => {
     link: '/platform-upgrade',
     title: 'Pages to Delete or reconsider',
     children: [
-      // This page is odd now that D11 is out.
-
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
         simpleLink('/develop-drupal'), // Move to Drupal section.
-
         // Not so relevant, needs further review.
         // Let's move it to the Drupal menu for now.
         simpleLink('/drupal-broken-links', 'Fix Broken Links'),
-
         simpleLink('/faq', 'FAQ'), // move to getting started
-
         simpleLink('/platform-notifications', 'Platform Notifications'),
         // Has unsupported "product" upstreams Panopoly and OpenAtrium. But should probably go in Web Infra?
         simpleLink('/start-state'),
-
         // This is a really small page. Move to get started?
         simpleLink('/add-site-clone'),
 
@@ -29,7 +23,6 @@ const pagesToDeleteorReconsider = () => {
           '/optimize-wp-options-table-autoloaded-data',
           'Optimize wp_options Table and Autoloaded Data',
         ),
-
         // @todo, this page seems like it should be an article.
         // But it could go under web infra or troubleshooting performance.
         simpleLink('/cloud-optimization'),
@@ -58,7 +51,6 @@ const pagesToDeleteorReconsider = () => {
       // Pages that should be redirected
       simpleLink('/overview', 'pages that should be redirected', [
         simpleLink('/overview'), //  --> "/"
-
         simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
         simpleLink('/terminus-overview', 'Terminus Overview'),
         simpleLink('/newrelic', 'New Relic', []),
@@ -82,18 +74,13 @@ const pagesToDeleteorReconsider = () => {
         // Non-dupe content on this page should be moved to /guides/getstarted/addsite
         simpleLink('/add-site-dashboard', 'Add a site'),
         simpleLink('/workshops'),
-
         // This is actually for google domains and that's no longer a service
         simpleLink('/google', 'Google Cloud DNS'),
-
         // This page could use a refresh
         simpleLink('/headless', 'Running a Headless CMS'),
-
         // This is a page about the move from Rackspace to Google Cloud. Maybe redirect to guides/disaster-recovery
         simpleLink('/platform-upgrade'),
-
         simpleLink('/cygwin-windows'),
-
         // Redirect this page to https://docs.pantheon.io/guides/drush/drupal-commandline
         simpleLink(
           '/terminus-drupal-site-management',
