@@ -13,7 +13,7 @@ With Pantheon Content Publisher, your team can now publish content directly from
 * **Unified platform:** Draft, edit, and publish right from Google Docs.  
 * **Live previews**: See exactly how your content will look before it goes live.  
 * **Seamless collaboration:** Use comments and suggestions in Google Docs to streamline teamwork.  
-* **Publishing control**: Manage permissions and oversee all docs from a central dashboard.  
+* **Publishing control:** Manage permissions and oversee all docs from a central dashboard.  
 * **Publish faster:** Faster publishing: Skip manual tasks with direct publishing from Google Docs.  
 * **Error reduction:** Avoid copy-paste mistakes and ensure content accuracy.  
 * **Efficient workflow:** Move smoothly from draft to published content without leaving Google Docs.
