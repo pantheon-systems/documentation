@@ -18,4 +18,4 @@ With Pantheon Content Publisher, your team can now publish content directly from
 * **Error reduction:** Avoid copy-paste mistakes and ensure content accuracy.  
 * **Efficient workflow:** Move smoothly from draft to published content without leaving Google Docs.
 
-Be among the first to experience Pantheon Content Publisher—request [Beta access](https://pantheon.io/platform/content-publisher) today!
+Be among the first to experience Pantheon Content Publisher — request [beta access](https://pantheon.io/platform/content-publisher) today!
