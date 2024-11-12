@@ -1,5 +1,5 @@
 ---
-title: Explore Pantheon Content Publisher—available now in Beta!
+title: Pantheon Content Publisher in private beta
 published_date: "2024-11-12"
 categories: [New Feature, WordPress, Plugins, Drupal]
 ---
