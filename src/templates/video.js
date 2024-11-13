@@ -1,44 +1,17 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../layout/layout"
-import HeaderBody from "../components/headerBody"
-import SEO from "../layout/seo"
-import { Container } from "@pantheon-systems/pds-toolkit-react"
-import MdxWrapper from "../components/mdxWrapper"
-
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../layout/layout';
+import HeaderBody from '../components/headerBody';
+import SEO from '../layout/seo';
+import { Container } from '@pantheon-systems/pds-toolkit-react';
+import MdxWrapper from '../components/mdxWrapper';
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = 'standard';
 
 class VideoTemplate extends React.Component {
-  componentDidMount() {
-    $("[data-toggle=popover]").popover({
-      trigger: "click",
-    })
-
-    $("body").on("click", function (e) {
-      $('[data-toggle="popover"]').each(function () {
-        if (
-          !$(this).is(e.target) &&
-          $(this).has(e.target).length === 0 &&
-          $(".popover").has(e.target).length === 0
-        ) {
-          $(this).popover("hide")
-        }
-      })
-    })
-
-    $("body").keyup(function (e) {
-      $('[data-toggle="popover"]').each(function () {
-        if (event.which === 27) {
-          $(this).popover("hide")
-        }
-      })
-    })
-  }
-
   render() {
-    const node = this.props.data.mdx
+    const node = this.props.data.mdx;
 
     return (
       <Layout containerWidth={containerWidth}>
@@ -46,7 +19,7 @@ class VideoTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"/images/assets/default-thumb-doc.png"}
+          image={'/images/assets/default-thumb-doc.png'}
           type={node.frontmatter.type}
         />
         <main id="docs-main" tabIndex="-1">
@@ -65,11 +38,11 @@ class VideoTemplate extends React.Component {
           </Container>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default VideoTemplate
+export default VideoTemplate;
 
 export const pageQuery = graphql`
   query VideoBySlug($slug: String!) {
@@ -96,4 +69,4 @@ export const pageQuery = graphql`
       fileAbsolutePath
     }
   }
-`
+`;
