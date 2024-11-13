@@ -5,5 +5,5 @@ categories: [user-interface]
 ---
 Pantheon has refreshed the dashboard navigation experience, with better access to key features and responsiveness across all screen sizes. 
 
-![Before and after image of new Pantheon Dashboard navigation](../images/release-notes/2024/updated-dashboard-nav.png)
+![Before and after image of new Pantheon Dashboard navigation](../images/release-notes/2024/updated-dashboard-nav-white-bg.png)
 
