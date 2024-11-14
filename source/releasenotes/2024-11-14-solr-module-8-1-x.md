@@ -42,6 +42,4 @@ composer require 'drupal/search_api_pantheon:8.1.x-dev@dev'
 * Immediate upgrade recommended for sites experiencing schema reversion issues
 * Test the update in a non-production environment first
 * Monitor search functionality after schema updates
-* Report any issues through the issue queue on the official github repository:
-https://github.com/pantheon-systems/search_api_pantheon/issues
-
+* Report any issues through the issue queue on the [official github repository](https://github.com/pantheon-systems/search_api_pantheon/issues)
