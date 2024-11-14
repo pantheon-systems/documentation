@@ -8,7 +8,6 @@ Version 8.2.0 of our Drupal module [Search API Pantheon](https://github.com/pant
 We recommend updating to `8.2.0` and checking the behavior of your site in a Dev or Multidev environment prior to deploying to Test or Live environments.
 
 ## Critical fix: Solr core reload functionality
-
 This release addresses a critical issue where Solr cores did not automatically reload after schema updates, leading to schema reversions, search index corruption, and potential site downtime.
 `8.2.0` implements automatic core reloading to maintain search index integrity.
 
@@ -18,7 +17,6 @@ This release addresses a critical issue where Solr cores did not automatically r
 * Enhanced error handling during schema updates
 
 ### Updating Search API Pantheon via Composer
-
 Depending on the strictness of your Composer constraints you may get `8.2.0` just by running `composer update`. If you do not, you can specify the version with:
 
 ``` shell
@@ -26,7 +24,6 @@ composer require 'drupal/search_api_pantheon:^8.2'
 ```
 
 ### Schema updates
-
 After installing `8.2.0` of Search API Pantheon, please perform a schema update to test the automatic core reload functionality within a non-live environment.
 
 Do so via:
