@@ -21,12 +21,6 @@ Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/de
 
 You can use the Drupal backend starter kit to streamline the creation of your Front-End Site on Pantheon. This guide shows you how to install, set up local development, update dependencies, configure build hooks, and more.
 
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
-
 ## Requirements and Considerations
 
 Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.

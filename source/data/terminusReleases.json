@@ -23,6 +23,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4KejUT",
@@ -58,6 +59,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -97,6 +99,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4KL64t",
@@ -132,6 +135,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -171,6 +175,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4JjvqR",
@@ -206,6 +211,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -245,6 +251,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4JhOwN",
@@ -280,6 +287,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -319,6 +327,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4JFt08",
@@ -354,6 +363,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -393,6 +403,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4IlqSC",
@@ -428,6 +439,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -467,6 +479,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4Ik1kx",
@@ -502,6 +515,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -541,6 +555,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4IJjKH",
@@ -576,6 +591,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -615,6 +631,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4IJasw",
@@ -650,6 +667,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -689,6 +707,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4H4V8S",
@@ -724,6 +743,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -763,6 +783,7 @@
             "events_url": "https:\/\/api.github.com\/users\/stovak\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/stovak\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4H3ahF",
@@ -798,6 +819,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -837,6 +859,7 @@
             "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4HVWyf",
@@ -872,6 +895,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
                     "type": "User",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -911,6 +935,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4GTTvz",
@@ -946,6 +971,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -985,6 +1011,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4GMMwm",
@@ -1020,6 +1047,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1059,6 +1087,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4F3fT8",
@@ -1094,6 +1123,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1133,6 +1163,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4FnIYx",
@@ -1168,6 +1199,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1207,6 +1239,7 @@
             "events_url": "https:\/\/api.github.com\/users\/stovak\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/stovak\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4FbTvW",
@@ -1242,6 +1275,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1281,6 +1315,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4FO5EY",
@@ -1316,6 +1351,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1355,6 +1391,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4E6e2E",
@@ -1390,6 +1427,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1429,6 +1467,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4EyD7N",
@@ -1464,6 +1503,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1503,6 +1543,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4EuKVo",
@@ -1538,6 +1579,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1577,6 +1619,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4EeQbu",
@@ -1612,6 +1655,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1651,6 +1695,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4Dwn1Q",
@@ -1686,6 +1731,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1725,6 +1771,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4Dko4v",
@@ -1760,6 +1807,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1799,6 +1847,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4DhTMx",
@@ -1834,6 +1883,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1873,6 +1923,7 @@
             "events_url": "https:\/\/api.github.com\/users\/CdrMarks\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/CdrMarks\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4Dg8Xk",
@@ -1908,6 +1959,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -1947,6 +1999,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4Da_yO",
@@ -1982,6 +2035,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -2021,6 +2075,7 @@
             "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
             "type": "Bot",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4DUC9r",
@@ -2056,6 +2111,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -2095,6 +2151,7 @@
             "events_url": "https:\/\/api.github.com\/users\/jspellman814\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/jspellman814\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4DT_1A",
@@ -2130,6 +2187,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",
@@ -2169,6 +2227,7 @@
             "events_url": "https:\/\/api.github.com\/users\/CdrMarks\/events{\/privacy}",
             "received_events_url": "https:\/\/api.github.com\/users\/CdrMarks\/received_events",
             "type": "User",
+            "user_view_type": "public",
             "site_admin": false
         },
         "node_id": "RE_kwDOAQSNzs4DUBDK",
@@ -2204,6 +2263,7 @@
                     "events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/events{\/privacy}",
                     "received_events_url": "https:\/\/api.github.com\/users\/github-actions%5Bbot%5D\/received_events",
                     "type": "Bot",
+                    "user_view_type": "public",
                     "site_admin": false
                 },
                 "content_type": "application\/octet-stream",

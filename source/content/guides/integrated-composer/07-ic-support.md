@@ -1,20 +1,42 @@
 ---
 title: Integrated Composer
-subtitle: Integrated Composer FAQ
-description: Get answers to your Integrated Composer questions.
+subtitle: Support and FAQs
+description: Learn about support for Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-12-13"
+reviewed: "2024-10-15"
 showtoc: true
-permalink: docs/guides/integrated-composer/ic-faq
+permalink: docs/guides/integrated-composer/ic-support
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
-cms: [drupal, wordpress, faq]
+cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
 ---
+
+This section provides information on support for Integrated Composer.
+
+## Pantheon Supports Composer 2
+
+The version of Composer on the platform is Composer 2.
+
+Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/guides/support/contact-support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
+
+## Pantheon's Scope of Support for Composer
+
+Pantheon supports the version of Composer integrated into the Pantheon platform and available for use with all Drupal 8+ and WordPress sites. Pantheon’s support for Composer is limited to the application level, and any Composer scripts or modifications made with a Composer script are outside the [Pantheon Scope of Support](/guides/support/).
+
+## Report an Issue
+
+If you discover any issue for either framework, create an issue in the respective GitHub repo for our team to review and address: 
+* [Drupal Composer Managed issue queue](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
+* [WordPress Composer Managed issue queue](https://github.com/pantheon-upstreams/wordpress-composer-managed/issues)
+
+Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account).
+
+## FAQs
 
 This section provides answers to frequently asked Integrated Composer questions.
 
@@ -64,19 +86,3 @@ All modules will be overwritten by Integrated Composer if you don't add the exce
 ### Can I hotfix an Integrated Composer site?
 
 No. Integrated Composer is not compatible with the [hotfix](/hotfixes) workflow.
-
-### What features are planned for Integrated Composer on Pantheon?
-
-Pantheon's developers are working hard to make the Integrated Composer experience on Pantheon better.
-
-Features that are still in development:
-
-- [Integrated Composer](/guides/integrated-composer) improvements
-
-- [Build Tools](/guides/build-tools)
-
-## More Resources
-
-- [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
-
-- [Add Contrib and Custom Code in image.png](/guides/drupal-hosted-createcustom/contrib-custom)

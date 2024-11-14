@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-09-06"
+reviewed: "2024-10-18"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -548,6 +548,15 @@ via: 1.1 varnish
 
 **Solution:** Several users have reported that [upgrading to the premium version of this plugin](https://www.webtoffee.com/product/gdpr-cookie-consent/) and disabling the included script blocker fixed the issue. For additional support, work with the plugin maintainers and review [related documentation for the premium version](https://www.webtoffee.com/cache-plugin-compatibility/).
 
+___
+
+## Gravity Forms
+
+<ReviewDate date="2024-10-18" />
+
+**Issue:** Emails from Gravity Forms submissions have content truncated when using the default PHP mailer and PHP versions 8.0 or 8.1.
+
+**Solution:** This issue stems from a change in how line endings are handled by PHP's mail() function. To resolve, upgrade to PHP 8.2+.
 ___
 
 ## H5P

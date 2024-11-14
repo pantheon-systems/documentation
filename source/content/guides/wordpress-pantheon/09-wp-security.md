@@ -36,15 +36,13 @@ Pantheon provides additional security through the following features:
 
 - [Secure Runtime Access](/guides/secure-development/secure-runtime-access)
 
-- [Lockr](/guides/lockr)
+- [Pantheon Secrets](/guides/secrets)
 
 - [Secure Integration](/guides/secure-development/secure-integration)
 
 - [Two factor authentication](/guides/secure-development/two-factor-authentication)
 
 - [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels)
-
-- [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
 
 ## Securing WordPress
 
@@ -156,6 +154,4 @@ For detailed information on how to generate and use nonces, review the following
 ## More Resources
 
 - [Secure Development on Pantheon](/guides/secure-development)
-- [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
-- [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
 - [Pantheon Security](/guides/security)

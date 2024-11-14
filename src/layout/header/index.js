@@ -6,6 +6,8 @@ import {
   NavMenu,
 } from "@pantheon-systems/pds-toolkit-react"
 
+import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive'
+
 import "./style.css"
 
 // Links for NavMenu component.
@@ -118,7 +120,6 @@ const mainNavigationLinks = [
   },
 ]
 
-const mobileMenuBreakpoint = 900
 
 const Header = ({ page }) => (
   <>
@@ -126,12 +127,12 @@ const Header = ({ page }) => (
       Skip to main content
     </a>
 
-    <Navbar mobileMenuMaxWidth={mobileMenuBreakpoint}>
+    <Navbar logoLinkContent={<a href="https://pantheon.io" target="_blank" rel="nofollow">Pantheon Home</a>}>
       <NavMenu
         slot="items-left"
         ariaLabel="Main Navigation"
         menuItems={mainNavigationLinks}
-        mobileMenuMaxWidth={mobileMenuBreakpoint}
+        mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
       />
       <div slot="items-right" className="pds-button-group">
         <a

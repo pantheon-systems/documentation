@@ -132,7 +132,9 @@ This table shows some of the reasons why traffic in the Dashboard may differ fro
 |                                                 | Counts as Traffic | Counts for Analytics |
 |:------------------------------------------------|:-----------------:|:--------------------:|
 | **API Request**                                 |        Yes        |          No          |
-| **Automated traffic from bots or load testing** |        Yes        |       Sometimes      |
+| **Known and Self-identified Bots**              |        No         |          No          |
+| **Unknown and Incognito Bots**                  |        Yes        |          No          |
+| **Load Testing and Third-party Monitoring**     |        Yes        |          No          |
 | **Content pre-fetching**                        |        Yes        |       Sometimes      |
 | **Pages without a tracking asset**              |        Yes        |          No          |
 | **User closes browser before tracking loads**   |        Yes        |          No          |

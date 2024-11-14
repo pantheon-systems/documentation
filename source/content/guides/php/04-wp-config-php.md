@@ -39,13 +39,7 @@ Ensure that you are running the latest version of [WordPress core](/core-updates
 
 ## Pantheon's WordPress Config
 
-<Accordion title="View Pantheon's WordPress Configuration" id="pantheon-wp-config-php" icon="wrench">
-
-You can also find this file on [GitHub](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php).
-
-GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php php GITHUB-EMBED
-
-</Accordion>
+You can find this file on [GitHub](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php).
 
 <Alert title="Note" type="info">
 
