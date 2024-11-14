@@ -61,7 +61,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
   </Alert>
 
-  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/new-dashboard/2024/_verify-domain-with-remove-button.png)
+  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
 
   It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 

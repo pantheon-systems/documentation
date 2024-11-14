@@ -41,7 +41,7 @@ Before you launch a domain on Pantheon, you must verify ownership of the domain 
 6. Select desired Time to Live (TTL) and click **Save**.
 7. Return to the Pantheon site dashboard and click **Verify Ownership**.
 
-![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../images/dashboard/new-dashboard/2024/_verify-domain-with-remove-button.png)
+![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
 
 
 ### A Record
