@@ -42,7 +42,7 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 
 *View Site Status*
 
-![View Site Status](../images/dashboard/new-dashboard/2024/status-tab.png)
+![View Site Status](../images/dashboard/new-dashboard/2024/_status-tab.png)
 
 *Manage Backups*
 
