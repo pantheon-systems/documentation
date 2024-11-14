@@ -28,7 +28,7 @@ composer require 'drupal/search_api_pantheon:^8.2'
 After installing `8.2.0` of Search API Pantheon, please perform a schema update within a non-live environment via one of the following methods:
 
 * Admin dashboard: `/admin/config/search/search-api/server/pantheon_solr8/pantheon-admin/schema`
-* [Terminus and Drush](https://docs.pantheon.io/terminus/commands/remote-drush): `terminus drush <site>.<env> search-api-pantheon:postSchema`
+* [Terminus and Drush](https://docs.pantheon.io/terminus/commands/remote-drush): `terminus drush <site>.<env> search-api-pantheon:postSchema [solr-server] [path-to-schema]`
 
 After performing the schema update in the non-live environment, check the search functionality to ensure it is working as expected. If it is, deploy the changes Test and Live environments and repeat the schema update there.
 
