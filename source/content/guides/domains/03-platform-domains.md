@@ -24,7 +24,11 @@ This section provides information Pantheon platform domains.
 
 All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a recommended best practice to ensure you are ready to go live with HTTPS. Refer to [Redirect to HTTPS](/guides/redirect/#redirect-to-https) for more information.
 
+<Alert title="Note" type="info">
 
+Platform domains are provisioned automatically and are non-configurable. Attempting to add variants of a platform domain (e.g. foo.site-name.pantheonsite.io) as a [custom domain](https://docs.pantheon.io/guides/domains/custom-domains) will result in an error. 
+
+</Alert>
 
 ### robots.txt
 
