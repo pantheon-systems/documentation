@@ -32,7 +32,7 @@ After installing the development branch of Search API Pantheon, please perform a
 Do so via:
 
 * Admin dashboard: `/admin/config/search/search-api/server/pantheon_solr8/pantheon-admin/schema`
-* Terminus and Drush: `terminus drush <site>.<env> search-api-pantheon:postSchema`
+* [Terminus and Drush](https://docs.pantheon.io/terminus/commands/remote-drush): `terminus drush <site>.<env> search-api-pantheon:postSchema`
 
 After performing the schema update, monitor the search functionality to ensure that the core reloads automatically and that the search index remains intact.
 
