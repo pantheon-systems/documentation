@@ -1,12 +1,11 @@
 ---
-title: Version 8.2.0 of Search API Pantheon module released to address performance and Solr ore schema issues
+title: Version 8.2.0 of Search API Pantheon module released to address performance and Solr core schema issues
 published_date: "2024-11-14"
 categories: [drupal, action-required]
 ---
 
-
 Version 8.2.0 of our Drupal module [Search API Pantheon](https://github.com/pantheon-systems/search_api_pantheon/) has been released to address [performance and schema issue with Solr cores](https://status.pantheon.io/incidents/rv8bw0v6rbjy).
-We recommend updating immediately and checking the behavior of your site in a Dev or Multidev environment prior to deploy to Test or Live environments.
+We recommend updating to `8.2.0` and checking the behavior of your site in a Dev or Multidev environment prior to deploying to Test or Live environments.
 
 ## Critical fix: Solr core reload functionality
 
@@ -38,8 +37,3 @@ Do so via:
 After performing the schema update, monitor the search functionality to ensure that the core reloads automatically and that the search index remains intact.
 
 Report any issues via the issue queue on the module's [GitHub repository](https://github.com/pantheon-systems/search_api_pantheon/issues)
-
-### Additional follow-up
-
-After these fixes are confirmed in the development branch and `8.1.11` is released, you should you can switch back to the stable releases in Composer by running the following command:
-
