@@ -38,7 +38,7 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 
 *Manage Team*
 
-![Manage Sites](../images/dashboard/manage-site-team.png)
+![Manage Sites](../images/dashboard/new-dashboard/2024/_manage-site-team.png)
 
 *View Site Status*
 
