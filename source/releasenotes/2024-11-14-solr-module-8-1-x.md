@@ -25,9 +25,9 @@ Depending on the strictness of your Composer constraints you may get `8.2.0` jus
 composer require 'drupal/search_api_pantheon:^8.2'
 ```
 
-### Schema updates:
+### Schema updates
 
-After installing the development branch of Search API Pantheon, please perform a schema update to test the automatic core reload functionality within a non-live environment.
+After installing `8.2.0` of Search API Pantheon, please perform a schema update to test the automatic core reload functionality within a non-live environment.
 
 Do so via:
 
