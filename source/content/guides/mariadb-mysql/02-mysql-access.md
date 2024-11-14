@@ -35,7 +35,7 @@ The database credentials for each site environment are located in your Site Dash
 
 Navigate to the environment you want to connect with, and select **Connection Info** to view your Database credentials.
 
-![MySQL Credentials](../../../images/dashboard/mysql-info.png)
+![MySQL Credentials](../../../images/dashboard/new-dashboard/2024/mysql-info.png)
 
 The following required fields are provided:
 

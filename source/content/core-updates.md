@@ -47,7 +47,7 @@ You can apply one-click updates to individual site repositories through:
 
 1. Navigate to the **Code** tab in the Site Dashboard on the Dev environment, then click **Apply Updates**.
 
-  ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
+  ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/new-dashboard/2024/_updatesavailable.png)
 
 1. Commit and deploy any SFTP changes, then set the site's **Connection Mode** to **Git**.
 
@@ -55,7 +55,7 @@ You can apply one-click updates to individual site repositories through:
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
-    ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
+    ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/new-dashboard/2024/_updateoptions.png)
 
   <Alert title="Note"  type="info" >
 
@@ -368,7 +368,7 @@ After you have communicated the issue, you can [manually apply updates from the 
 
 If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click **Check now**:
 
-![Check Now](../images/dashboard/check-for-updates.png)
+![Check Now](../images/dashboard/new-dashboard/2024/_check-for-updates.png)
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 

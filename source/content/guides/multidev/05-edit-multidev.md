@@ -77,7 +77,7 @@ The steps below show you how to merge code from a Multidev into the master branc
 
 Instructions for using the command-line to merge the changes into the target are shown below and can be pasted directly into the terminal without modification.
 
-![Location of Multidev merge button](../../../images/dashboard/multidev-merge.png)
+![Location of Multidev merge button](../../../images/dashboard/new-dashboard/2024/multidev-merge.png)
 
 
 ## Rename a Branch

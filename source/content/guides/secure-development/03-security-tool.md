@@ -28,7 +28,7 @@ When a Dev environment is locked, a lock icon will be added to the screenshot of
 
 </Alert>
 
-![Lock environment](..//../../images/dashboard/lock-environment.png)
+![Lock environment](..//../../images/dashboard/new-dashboard/2024/lock-environment.png)
 
 ## Password Protect Your Site's Environments
 
@@ -46,7 +46,7 @@ You have the ability to password protect any of the available environments.
 
   If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
-  ![Credentials](../../../images/dashboard/environment-access.png)
+  ![Credentials](../../../images/dashboard/new-dashboard/2024/environment-access.png)
 
 1. Refresh your page and you will notice that the environment is shown as Private. You will also be able to see the credentials needed to access that environment.
 

@@ -38,7 +38,7 @@ You can create a new backup and set the length of time a backup is kept. You mus
 
 1. Click **Backups** and then click **Create New Backup**. The status of the new backup is shown in the progress bar. The jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
-![Backups tab](../../../images/dashboard/backup-tool.png)
+![Backups tab](../../../images/dashboard/new-dashboard/2024/_backups-tool.png)
 
 <Alert title="Warning" type="danger">
 
@@ -46,7 +46,7 @@ Run backups separately for each environment (Dev, Test, and Live). Changes will 
 
 </Alert>
 
-![Create site backup Pantheon Dashboard](../../../images/dashboard/manual-site-backup.png)
+![Create site backup Pantheon Dashboard](../../../images/dashboard/new-dashboard/2024/manual-site-backup.png)
 
 ## Create a Backup in Terminus
 

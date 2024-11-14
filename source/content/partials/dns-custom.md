@@ -11,7 +11,7 @@ reviewed: ""
 
 Pantheon provides the values for your DNS records that are assigned with your DNS service provider when adding a custom domain to your site:
 
-![DNS Recommendations](../../images/dashboard/domain-added.png)
+![DNS Recommendations](../../images/dashboard/new-dashboard/2024/_domainadded.png)
 
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 

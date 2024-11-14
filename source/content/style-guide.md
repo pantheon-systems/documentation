@@ -834,12 +834,12 @@ Screenshots are used to reference GUI instructions:
 
 <Example>
 
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../images/dashboard/new-dashboard/2024/terminus-cli-code-to-commit-dashboard.png)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../images/dashboard/new-dashboard/2024/terminus-cli-code-to-commit-dashboard.png)
 ```
 
 </Example>

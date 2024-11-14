@@ -198,11 +198,11 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
 
 1. Navigate to your **Dev** environment > set the **Development Mode** to **Git**:
 
-    ![Git Connection Mode](../../../images/dashboard/connection-mode-git.png)
+    ![Git Connection Mode](../../../images/dashboard/new-dashboard/2024/_connection-mode-git.png)
 
 1. Click **Clone with Git** to Clone the repository to your local computer:
 
-    ![Git Clone](../../../images/dashboard/git-string.png)
+    ![Git Clone](../../../images/dashboard/new-dashboard/2024/_git-string.png)
 
 1. Navigate to the repository directory, change to the `master` branch and pull the Multidev branch to `master`.
 
