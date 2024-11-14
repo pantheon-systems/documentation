@@ -1,35 +1,29 @@
 ---
-title: Fix to Solr cores incident being tested in Search API Pantheon 8.1.x
+title: Version 8.2.0 of Search API Pantheon module released to address performance and Solr ore schema issues
 published_date: "2024-11-14"
 categories: [drupal, action-required]
 ---
 
 
-The [development branch](https://github.com/pantheon-systems/search_api_pantheon/tree/8.1.x) of our Drupal module [Search API Pantheon](https://github.com/pantheon-systems/search_api_pantheon/) now contains a likely fix for an [ongoing performance and schema issue with Solr cores](https://status.pantheon.io/incidents/rv8bw0v6rbjy).
-We are actively testing this fix.
-We will release the next version of the module when we are confident is will resolve most or all issues customers are experiencing.
-Teams who have experience Solr core reversions should try the dev branch of Search API Pantheon in a Multidev (or Dev) environment to confirm the fix by following the instructions below.
+Version 8.2.0 of our Drupal module [Search API Pantheon](https://github.com/pantheon-systems/search_api_pantheon/) has been released to address [performance and schema issue with Solr cores](https://status.pantheon.io/incidents/rv8bw0v6rbjy).
+We recommend updating immediately and checking the behavior of your site in a Dev or Multidev environment prior to deploy to Test or Live environments.
 
 ## Critical fix: Solr core reload functionality
 
-This release addresses a critical issue where Solr cores did not automatically reload after schema updates, leading to schema reversions, search index corruption, and potential site downtime. The update implements automatic core reloading to maintain search index integrity.
+This release addresses a critical issue where Solr cores did not automatically reload after schema updates, leading to schema reversions, search index corruption, and potential site downtime.
+`8.2.0` implements automatic core reloading to maintain search index integrity.
 
-### Key fixes already in development branch
+### Key improvements in 8.2.0
 * Automatic core reload after schema updates
 * Core reload functionality accessible through both UI and Drush commands
 * Enhanced error handling during schema updates
-* New Drush command search-api-pantheon:postSchema
 
-### Remaining work prior to formally tagg the next release of Search API Pantheon
-* Confirm with a larger set of customers that these updates resolves their issues
-* Get the pre-existing `drush search-api-solr:reload` command to trigger the new reload functionality
+### Updating Search API Pantheon via Composer
 
-### Installation of development branch
-
-You can switch from the stable release currently (`8.1.10`) to the development branch by running the following command:
+Depending on the strictness of your Composer constraints you may get `8.2.0` just by running `composer update`. If you do not, you can specify the version with:
 
 ``` shell
-composer require 'drupal/search_api_pantheon:8.1.x-dev@dev'
+composer require 'drupal/search_api_pantheon:^8.2'
 ```
 
 ### Schema updates can be performed via:
@@ -49,6 +43,3 @@ Report any issues via the issue queue on the module's [GitHub repository](https:
 
 After these fixes are confirmed in the development branch and `8.1.11` is released, you should you can switch back to the stable releases in Composer by running the following command:
 
-``` shell
-composer require 'drupal/search_api_pantheon:^8.1'
-```
