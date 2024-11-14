@@ -222,7 +222,7 @@ You can use the tools in the Database / Files tab to overwrite the databases on 
 
 Note that cloning a database from one environment to another will overwrite the contents of the target environment’s database. It is therefore recommended to create an on demand backup of the existing database before cloning the database between environments. On-Demand Backups are available in the Backups tab of the left sidebar (fig. 4.2):
 
-![clone content from live into test](../../../images/dashboard/new-dashboard/2024/_backup-tool.png)
+![clone content from live into test](../../../images/dashboard/new-dashboard/2024/_backups-tool.png)
 
 To create an on demand backup of your code, database, and files, simply click the “Create New Backup” button. The new backup will appear at the top of the list of archived backups once completed. More importantly, the label for the backup will have a “Restore” button next to it that will allow you to roll back your database changes if needed. This protects you from the risk of cloning a database between environments.
 
