@@ -279,7 +279,7 @@ terminus deploy mysite.test --note="one sidebar" --updatedb --cc --sync-content
 ```
 <hr className="certification source-code" /> <br/>
 
-![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/dashboard/new-dashboard/2024/deploy-to-test-env.png)
+![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/dashboard/new-dashboard/2024/_deploy-to-test-env.png)
 </Example>
 
 #### Clear Caches
