@@ -20,7 +20,7 @@ The Pantheon platform provides each site environment with a dedicated MySQL cont
 
 You can use the tools in the Database / Files tab to overwrite the databases on your site's Dev or Test environment with the database on your Live environment. This allows you to pull content from Live in to other environments.
 
-![Workflow Tool](../../../images/dashboard/new-dashboard/2024/interface-workflow-tool.png)
+![Workflow Tool](../../../images/dashboard/new-dashboard/2024/_interface-workflow-tool.png)
 
 <Alert title="Warning" type="danger">
 
