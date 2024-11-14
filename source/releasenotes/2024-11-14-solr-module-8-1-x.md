@@ -4,8 +4,9 @@ published_date: "2024-11-14"
 categories: [drupal, action-required]
 ---
 
-Version 8.2.0 of our Drupal module [Search API Pantheon](https://github.com/pantheon-systems/search_api_pantheon/) has been released to address [performance and schema issue with Solr cores](https://status.pantheon.io/incidents/rv8bw0v6rbjy).
-We recommend updating to `8.2.0` and checking the behavior of your site in a Dev or Multidev environment prior to deploying to Test or Live environments.
+Version 8.2.0 of our Drupal module [Search API Pantheon](https://github.com/pantheon-systems/search_api_pantheon/) has been released to address [performance and schema issues with Solr cores](https://status.pantheon.io/incidents/rv8bw0v6rbjy).
+
+Update to `8.2.0` and check the behavior of your site in a Dev or Multidev environment prior to deploying to Test or Live environments.
 
 ## Critical fix: Solr core reload functionality
 This release addresses a critical issue where Solr cores did not automatically reload after schema updates, leading to schema reversions, search index corruption, and potential site downtime.
@@ -24,13 +25,11 @@ composer require 'drupal/search_api_pantheon:^8.2'
 ```
 
 ### Schema updates
-After installing `8.2.0` of Search API Pantheon, please perform a schema update to test the automatic core reload functionality within a non-live environment.
-
-Do so via:
+After installing `8.2.0` of Search API Pantheon, please perform a schema update within a non-live environment via one of the following methods:
 
 * Admin dashboard: `/admin/config/search/search-api/server/pantheon_solr8/pantheon-admin/schema`
 * [Terminus and Drush](https://docs.pantheon.io/terminus/commands/remote-drush): `terminus drush <site>.<env> search-api-pantheon:postSchema`
 
-After performing the schema update, monitor the search functionality to ensure that the core reloads automatically and that the search index remains intact.
+After performing the schema update in the non-live environment, check the search functionality to ensure it is working as expected. If it is, deploy the changes Test and Live environments and repeat the schema update there.
 
-Report any issues via the issue queue on the module's [GitHub repository](https://github.com/pantheon-systems/search_api_pantheon/issues)
+Report any issues to [Pantheon Support](https://pantheon.io/support).
