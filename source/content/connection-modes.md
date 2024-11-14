@@ -22,7 +22,7 @@ It’s common to switch between SFTP and Git Connection Mode, depending on the t
 
 </Alert>
 
-![Connection Modes](../images/dashboard/connection-mode-sftp.png)
+![Connection Modes](../images/dashboard/new-dashboard/2024/_connection-mode-sftp.png)
 
 To manage connection modes:
 

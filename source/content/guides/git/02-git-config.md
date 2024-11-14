@@ -60,7 +60,7 @@ You must create a local copy of your [codebase](/guides/git/collaborative-develo
 
 1. Click the **<Icon icon="wrench" /> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**.
 
-  ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+  ![Copy Git Clone Command](../../../images/dashboard/new-dashboard/2024/_git-string.png)
 
 1. Copy the `git clone` command and paste it into Terminal. Git will create a directory as part of the clone, so you don't need to create one:
 

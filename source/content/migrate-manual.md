@@ -195,7 +195,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
 1. From the **<Icon icon="wrench" /> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
-  ![Git connection mode](../images/dashboard/connection-mode-git.png)
+  ![Git connection mode](../images/dashboard/new-dashboard/2024/_connection-mode-git.png)
 
 1. Copy the SSH URL for the site repository. *Do not copy* `git clone` or the site name.
 
