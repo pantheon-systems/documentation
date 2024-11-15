@@ -15,6 +15,8 @@ product: [--]
 integration: [--]
 ---
 
+_In diataxis, this page read like a "reference" page. It needs to be a set of mini explanations._
+
 This section provides detailed information on AGCDN features.
 
 ## OSI Layer 3 and 4 DDoS Protection & Mitigation
@@ -39,13 +41,15 @@ Tor encrypts and routes user traffic through at least three Tor nodes to mask a 
 
 ## Custom Rules and Redirects
 
+_Explain that Drupal and WordPress and PHP can do a lot for redirects. But there are situations where the CDN is better. Lets explain why. Many redirects are the result of **content** labor. So we think it is better to implement redirects closer to the content editors._
+
 AGCDN allows you to use custom site rules, including:
 
 - Bespoke cookie-handling
 
 - Header modifications and filters
 
-- URL and query string sorting and filtering 
+- URL and query string sorting and filtering
 
 ## Token Authentication with JSON Web Token
 
@@ -67,7 +71,7 @@ Sending location information to your application is much faster than fetching it
 
 Edge Logs show every request to your website and records cached and uncached content. Server logs can only record requests that couldn't be fulfilled from a CDN's cache. Full CDN Edge Logs replace these with logs to provide a complete picture of your traffic.
 
-You must have your own server to offload complete CDN Edge logs. Review [recommended third-party services](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) that support Fastly logging to find the best solution for your setup. 
+You must have your own server to offload complete CDN Edge logs. Review [recommended third-party services](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) that support Fastly logging to find the best solution for your setup.
 
 ## Edge Redirects
 
@@ -77,7 +81,7 @@ Reduce requests to your CMS by moving page redirects to the edge. AGCDN can comb
 
 - Domain
 
-- Pattern-based (RegEx) 
+- Pattern-based (RegEx)
 
 - Redirects based on geolocation information
 
