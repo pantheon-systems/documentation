@@ -97,11 +97,11 @@ terminus redis:enable <site>
 	<Alert title="Note" type="info">
 	**Note for Lando users:**
 
-	If you are using Lando for your local development, add the following to your `wp-config.php` file to deactivate Redis to prevent it from disabling your Lando server:
+	If you are using Lando for your local development, add the following to your `wp-config.php` file to deactivate Object Cache Pro to prevent it from disabling your Lando server:
 
-	```
-	if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-	  define('FS_METHOD', 'direct');
+	``` php
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+	  define('WP_REDIS_DISABLED', true);
 	}
  	```
  	Make sure to git push it back to your dev environment once you are finished.
