@@ -94,6 +94,19 @@ terminus redis:enable <site>
 
 	**Note:** WordPress Multisite users will need to append the `--network` flag to network activate the plugin.
 
+	<Alert title="Note" type="info">
+	**Note for Lando users:**
+
+	If you are using Lando for your local development, add the following to your `wp-config.php` file to deactivate Redis to prevent it from disabling your Lando server:
+
+	```
+	if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+	  define('FS_METHOD', 'direct');
+	}
+ 	```
+ 	Make sure to git push it back to your dev environment once you are finished.
+	</alert>
+
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
 	<Alert title="Note" type="info">
