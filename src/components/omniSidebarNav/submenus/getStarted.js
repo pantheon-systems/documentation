@@ -24,7 +24,15 @@ const getStarted = () => {
         getGuideDirectory('guides/migrate/platformsh', 'Platform.sh'),
         getGuideDirectory('guides/migrate/acquia', 'Acquia'),
         simpleLink('/migrate-cpanel', 'GoDaddy CPanel'),
+        getGuideDirectory(
+          'guides/drupal/drupal-unhosted-composer',
+          'Composer-based Drupal sites',
+        ),
       ]),
+
+
+
+
       simpleLink('/dashboard', 'Dashboard', [
         simpleLink('/site-dashboard', 'Site Dashboard'),
         simpleLink('/personal-settings', 'Personal Settings'),

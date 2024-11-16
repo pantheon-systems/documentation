@@ -122,6 +122,7 @@ const webInfrastructure = () => {
           '/drupal-from-dist',
           'Create a Drupal Site Using a Drupal Distribution',
         ),
+
       ]),
       simpleLink('/guides/wordpress-pantheon', 'WordPress', [
         // Todo: reconcile these 2:

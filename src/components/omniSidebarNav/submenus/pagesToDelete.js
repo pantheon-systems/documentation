@@ -5,6 +5,11 @@ const pagesToDeleteorReconsider = () => {
     link: '/platform-upgrade',
     title: 'Pages to Delete or reconsider',
     children: [
+
+
+      simpleLink('/drupal-10', 'Drupal 10'),
+      // Pages to audit and reconsider before adding to migration submenu
+      simpleLink('/drupal-updates', "Drupal Updates"),
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
         simpleLink('/develop-drupal'), // Move to Drupal section.
@@ -76,6 +81,19 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/workshops'),
         // This is actually for google domains and that's no longer a service
         simpleLink('/google', 'Google Cloud DNS'),
+
+
+
+
+        getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
+
+        // Is this duplicated by guides/drupal-unhosted-composer
+        getGuideDirectory(
+          'guides/migrate/manual-d8-composer-to-d8',
+          'Manual d8 to d8',
+        ),
+
+
         // This page could use a refresh
         simpleLink('/headless', 'Running a Headless CMS'),
         // This is a page about the move from Rackspace to Google Cloud. Maybe redirect to guides/disaster-recovery
@@ -86,6 +104,13 @@ const pagesToDeleteorReconsider = () => {
           '/terminus-drupal-site-management',
           'Using Terminus to Create and Update Drupal Sites on Pantheon',
         ),
+
+        // Todo: relocate this page.
+        {
+          link: '/migrate-wordpress',
+          title: 'Migrating WordPress Sites',
+        },
+
       ]), //  --> "/"
     ],
   };

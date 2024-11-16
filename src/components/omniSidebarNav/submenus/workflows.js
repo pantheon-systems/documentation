@@ -19,8 +19,14 @@ const workflows = () => {
         simpleLink('/workflow-logs', 'Workflow Logs'),
         simpleLink('/content-staging', 'Content Staging'),
       ]),
-      getGuideDirectory('guides/integrated-composer'),
+      simpleLink('/guides/integrated-composer', "Integrated Composer", [
+        getGuideDirectory('guides/integrated-composer', "Using Integrated Composer"),
+        // "a Standard Drupal Site" is now an out of date phrase.
+        simpleLink('/composer-convert', "Convert to Integrated Composer"),
+        simpleLink('/composer-convert-from-empty', "Convert from an Empty Repository"),
+        simpleLink('/upgrade-drupal-with-ic-to-latest', "Upgrade a Drupal Site"),
 
+      ]),
       // This page is pretty short given the size of the topic.
       simpleLink('/continuous-integration', 'Continuous Integration', [
         simpleLink('/continuous-integration', 'CI Solutions'),

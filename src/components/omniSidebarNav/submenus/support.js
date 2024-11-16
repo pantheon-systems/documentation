@@ -62,61 +62,58 @@ const support = () => {
           ],
         ),
       ]),
-      simpleLink('/drupal-migration', 'Restructuring Drupal Codebases', [
-        simpleLink('/drupal-10', 'Drupal 10'),
-        // Pages to audit and reconsider before adding to migration submenu
-        simpleLink('/composer-convert'),
-        simpleLink('/composer-convert-from-empty'),
 
-        simpleLink('/drupal-to-build-tools'),
-        simpleLink('/drupal-updates'),
-        getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
-        getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
-        getGuideDirectory(
-          'guides/drupal/drupal-unhosted-composer',
-          'unhosted-composer',
-        ),
-        getGuideDirectory(
-          'guides/drupal/drupal-hosted-md',
-          'drupal-hosted-multidev',
-        ),
+
+
+      simpleLink('/drupal-migration', 'Upgrading major versions of Drupal', [
+        simpleLink('/drupal-migration', 'Upgrades and migrations'),
+      getGuideDirectory(
+        'guides/drupal/drupal-hosted-md',
+        'Using Multidev to Upgrade Drupal',
+      ),
+
+        getGuideDirectory('guides/drupal/drupal-hosted', 'Upgrading without Multidev'),
         getGuideDirectory(
           'guides/drupal/drupal-hosted-createempty-md',
-          'drupal-hosted-createempty-md',
+          'Upgrading within an empty upstream',
         ),
+
+
         getGuideDirectory(
           'guides/drupal/drupal-hosted-createdashboard-set8',
-          'drupal-hosted-createdashboard-set8',
+          'Upgrade using a new site instance',
         ),
+
+
+        getGuideDirectory(
+          'guides/drupal/drupal-hosted-createcustom',
+          'Custom Upstreams',
+        ),
+
+        simpleLink(
+          '/switch-drupal-recommended-upstream',
+          'Switch from Drupal to Drupal Composer Managed Upstream',
+        ),
+
+
+
+        simpleLink('/drupal-to-build-tools', 'Migrate a Composer-based Drupal Site to a Build Tools Site'),
+
+
         getGuideDirectory(
           'guides/drupal/drupal-hosted-btworkflow',
-          'drupal-hosted-btworkflow',
+          'Convert a dashboard-based site to Build Tools',
         ),
 
         getGuideDirectory(
           'guides/drupal/drupal-hosted-createbt',
-          'drupal-hosted-createbt',
-        ),
-        getGuideDirectory(
-          'guides/drupal/drupal-hosted-createcustom',
-          'drupal-hosted-createcustom',
-        ),
-        simpleLink(
-          '/switch-drupal-recommended-upstream',
-          'Restructuring Drupal Codebases',
+          'Updating a site with Build Tools',
         ),
 
-        simpleLink('/upgrade-drupal-with-ic-to-latest'),
-        // Todo: relocate this page.
-        {
-          link: '/migrate-wordpress',
-          title: 'Migrating WordPress Sites',
-        },
-        getGuideDirectory(
-          'guides/migrate/manual-d8-composer-to-d8',
-          'Manual d8 to d8',
-        ),
+
       ]),
+
+
     ],
   };
 };
