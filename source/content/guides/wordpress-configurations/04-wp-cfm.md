@@ -13,7 +13,7 @@ tags: [workflow, plugins]
 permalink: docs/guides/wordpress-configurations/wp-cfm
 ---
 
-This section provides information on how to install and configure the [WordPress Configuration Management (WP-CFM)](https://forumone.github.io/wp-cfm/) plugin on your Pantheon WordPress site.
+This section provides information on how to install and configure the [WordPress Configuration Management (WP-CFM)](https://github.com/forumone/wp-cfm-dist/wiki) plugin on your Pantheon WordPress site.
 
 It is a best practice to maintain version control for your site configuration within the codebase. Developer workflows must account for migrating configuration from development and testing environments into production without affecting the content because WordPress site configuration is stored in the database alongside content.
 
@@ -180,7 +180,7 @@ You can review values on the [All Settings Screen](https://codex.wordpress.org/O
 
 ### How can I extend WP-CFM to track more tables?
 
-If you want to track configurations in more tables, you must use the `wpcfm_configuration_items` hook. Refer to the [WP-CFM documentation](https://forumone.github.io/wp-cfm/) for more information.
+If you want to track configurations in more tables, you must use the `wpcfm_configuration_items` hook. Refer to the [WP-CFM documentation](https://github.com/forumone/wp-cfm-dist/wiki) for more information.
 
 ### Will WP-CFM work with Multidev?
 
