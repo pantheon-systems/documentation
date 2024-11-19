@@ -34,7 +34,7 @@ WP-CFM should only be used to write changes to code in Dev and Multidev environm
 This method makes use of the [Git Updater](https://git-updater.com/) plugin to install and keep WP-CFM up-to-date. Follow the steps in [our documentation on installing plugins using Git Updater](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-git-updater-to-install-and-manage-plugins-and-themes-from-git-repositories) and use the following settings:
 
 **Plugin URI:** `forumone/wp-cfm-dist`
-**Repository Branch:** `release`
+**Repository Branch:** `main`
 **Remote Repository Host:** GitHub
 **GitHub Access Token:** Blank 
 
