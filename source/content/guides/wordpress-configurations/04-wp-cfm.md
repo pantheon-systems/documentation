@@ -41,7 +41,7 @@ This method makes use of the [Git Updater](https://git-updater.com/) plugin to i
 </Tab>
 
 <Tab title=”Installing via Composer” id=”composer”>
-This method makes use of [Integrated Composer](/guides/integrated-composer) to manage installation and version management. This process assumes you already have a `composer.json` in your site repository and `build_step` is set to `true` in your `pantheon.yml`. Follow the steps in [our documentation on installing plugins using Composer](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-composer-to-source-plugins-and-packages) and use `forumone/wp-cfm-dist` as the repository.
+This method makes use of [Integrated Composer](/guides/integrated-composer) to manage installation and version management. This process assumes you already have a `composer.json` in your site repository and `build_step` is set to `true` in your `pantheon.yml`. Follow the steps in [our documentation on installing plugins using Composer](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-composer-to-source-plugins-and-packages) and use `forumone/wp-cfm` as the repository.
 
 </Tab>
 
