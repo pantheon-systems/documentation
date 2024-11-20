@@ -5,13 +5,15 @@ const security = () => {
     link: '/guides/security',
     title: 'Security',
     children: [
-      simpleLink('/guides/security'),
-      getGuideDirectory('guides/secrets'),
-      simpleLink('/custom-certificates', 'Custom Certificates'),
+      simpleLink('/guides/security', "Security Overview"),
       getGuideDirectory('guides/secure-development'),
+
+      getGuideDirectory('guides/secrets', "Managing API Keys and Secrets"),
+      simpleLink('/custom-certificates', 'Custom Certificates'),
+      simpleLink('/certificate-bundles', "Certificate Bundles"),
       simpleLink('/clamav', 'ClamAV'),
-      simpleLink('/drupal-security-patches'),
-      simpleLink('/certificate-bundles'),
+      simpleLink('/drupal-security-patches', "Drupal Security Patches"),
+
     ],
   };
 };

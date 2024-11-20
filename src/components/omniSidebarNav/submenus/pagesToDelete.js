@@ -5,11 +5,9 @@ const pagesToDeleteorReconsider = () => {
     link: '/platform-upgrade',
     title: 'Pages to Delete or reconsider',
     children: [
-
-
       simpleLink('/drupal-10', 'Drupal 10'),
       // Pages to audit and reconsider before adding to migration submenu
-      simpleLink('/drupal-updates', "Drupal Updates"),
+      simpleLink('/drupal-updates', 'Drupal Updates'),
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
         simpleLink('/develop-drupal'), // Move to Drupal section.
@@ -44,9 +42,9 @@ const pagesToDeleteorReconsider = () => {
       // no sidebar for them.
       simpleLink('/guides', 'landing pages', [
         simpleLink('/guides'),
-        simpleLink('/guides/account-mgmt'),
-        simpleLink('/products'),
-        simpleLink('/support', 'Support landing'),
+
+
+
         // This landing page could go elsewhere
         simpleLink('/performance', 'Performance Consideration'),
         // minimal landing page that should be kept or rebuilt as prose.
@@ -82,9 +80,6 @@ const pagesToDeleteorReconsider = () => {
         // This is actually for google domains and that's no longer a service
         simpleLink('/google', 'Google Cloud DNS'),
 
-
-
-
         getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
 
         // Is this duplicated by guides/drupal-unhosted-composer
@@ -92,7 +87,6 @@ const pagesToDeleteorReconsider = () => {
           'guides/migrate/manual-d8-composer-to-d8',
           'Manual d8 to d8',
         ),
-
 
         // This page could use a refresh
         simpleLink('/headless', 'Running a Headless CMS'),
@@ -110,7 +104,6 @@ const pagesToDeleteorReconsider = () => {
           link: '/migrate-wordpress',
           title: 'Migrating WordPress Sites',
         },
-
       ]), //  --> "/"
     ],
   };

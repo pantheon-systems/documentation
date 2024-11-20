@@ -2,10 +2,11 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 
 const accountManagement = () => {
   return {
-    link: '/guides/account-mgmt/account',
+    link: '/guides/account-mgmt',
     title: 'Manage Accounts and Workspaces',
     children: [
-      simpleLink('/guides/account-mgmt/account', 'Billing', [
+
+      simpleLink('/guides/account-mgmt', 'Overview', [
         getGuideDirectory('guides/account-mgmt/account'),
         getGuideDirectory('guides/account-mgmt/billing'),
         getGuideDirectory('guides/enterprise-billing-center'),

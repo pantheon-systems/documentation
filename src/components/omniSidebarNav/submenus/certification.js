@@ -8,9 +8,13 @@ const CertificationItems = () => {
   return {
     // @todo, implement sidebar on landing pages.
     link: '/certification',
-    title: 'Education',
+    title: 'Education & Certification',
     children: [
-      simpleLink('/certification/about', 'WebOps Certification', [
+      simpleLink('/certification', 'WebOps Certification', [
+        {
+          link: '/certification',
+          title: 'Certification',
+        },
         {
           link: '/certification/about',
           title: 'About the Certification Program',
@@ -76,19 +80,18 @@ const CertificationItems = () => {
       ]),
       simpleLink('/guides/wordpress-git', 'Tutorials', [
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
+        getGuideDirectory('guides/pagerduty', 'Incident Management'),
+        getGuideDirectory('guides/accessibility', 'Web Accesibility'),
         simpleLink('/pivotal-tracker', 'Pivotal Tracker'),
         simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
 
-        // @todo, this page is in two menus
-        simpleLink('/rerouting-outbound-email', 'Rerouting Outbound Email'),
-        // This is in two menus. It should probably be in just this one.
-        simpleLink('/behat', 'Behat'),
+
         simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
-        getGuideDirectory('guides/pagerduty', 'Incident Management'),
-        getGuideDirectory('guides/accessibility', 'Web Accesibility'),
+
         simpleLink('/partial-composer', 'Partial Composer Usage'), // This page should be rewritten to focus on WordPress.
         // Build tools dependent, may not be relevant
         simpleLink('/drupal-commerce', 'Drupal Commerce'),
+        // @todo, eventually pull guides/create-wp-site into this menu. and guides/drush/drupal-commandline/
       ]),
       simpleLink('/agency-tips', 'Agency Tips'),
       simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),

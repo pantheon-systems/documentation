@@ -8,7 +8,7 @@ const getStarted = () => {
     children: [
       getGuideDirectory('guides/getstarted'),
       // This page is kind of a landing page? Should it be in this menu?
-
+      simpleLink('/products', "Products & Features"),
       simpleLink('/required-reading', 'Required Reading'),
       getGuideDirectory('guides/platform-considerations'),
       simpleLink('/guides/guided', 'Migrating Sites to Pantheon', [
@@ -29,9 +29,6 @@ const getStarted = () => {
           'Composer-based Drupal sites',
         ),
       ]),
-
-
-
 
       simpleLink('/dashboard', 'Dashboard', [
         simpleLink('/site-dashboard', 'Site Dashboard'),
