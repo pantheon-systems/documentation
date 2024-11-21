@@ -33,6 +33,14 @@ When following the below procedure for relaunch, the duration of the disruption 
 
 ### Before You Begin:
 
+  <Alert title="Note" type="info">
+
+If your site uses [Advanced Global CDN](/guides/agcdn), please [contact Support](https://pantheon.io/support) and your Customer Success Manager before proceeding. There may be configuration specific to your domain that Pantheon staff will have to update.
+
+  </Alert>
+
+
+
 1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
 1. Open a new tab for the old Pantheon Site Dashboard.
