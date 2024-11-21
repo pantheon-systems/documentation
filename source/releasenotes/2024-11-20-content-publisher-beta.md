@@ -9,11 +9,11 @@ Pantheon is now accepting customers into a [private beta for our Content Publish
 
 With Pantheon Content Publisher, your team can now safely publish content directly from Google Docs to Drupal, WordPress, or Next.js sites — quickly and seamlessly. Skip the extra steps and empower everyone who writes and collaborates to participate in web publishing.
 
-<video style="border-radius:0.9rem;height:auto;max-width:100%;pointer-events:none;" loop muted="muted" autoplay="true">
+<a href="https://pantheon.io/blog/introducing-pantheon-content-publisher"><video style="border-radius:0.9rem;height:auto;max-width:100%;" loop muted="muted" autoplay="true">
 <source src="https://cdn.bfldr.com/MEM5087K/as/9rb7wjp6g8wqprx6wj9kxcv/Content_Publisher_animation_batch_1?position=2" type="video/webm" />
 <source src="https://cdn.bfldr.com/MEM5087K/as/9rb7wjp6g8wqprx6wj9kxcv/Content_Publisher_animation_batch_1" type="video/mp4" />
  Your browser does not support the video tag.
-</video>
+</video></a>
 
 ### Here’s what you can expect
 
