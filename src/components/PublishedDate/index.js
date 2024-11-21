@@ -11,9 +11,10 @@ const PublishedDate = ({ dateString, className }) => {
   // Turn ReleaseNoteData.frontmatter.published_date into a date object.
   // And then format it as Month Day, Year.
   // https://stackoverflow.com/questions/3552461/how-to-format-a-javascript-date
-  const date = new Date(`${dateString}T00:00:00Z`); // Interpret as UTC midnight
-  const options = { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }; // Format as UTC
-  const formattedDate = date.toLocaleDateString(undefined, options)
+
+  const [year, month, day] = dateString.split("-"); // Extract year, month, and day
+  const formattedDate = `${new Date(year, month - 1).toLocaleString('default', { month: 'long' })} ${parseInt(day)}, ${year}`;
+
 
   return (
     <div
