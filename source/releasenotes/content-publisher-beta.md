@@ -8,7 +8,7 @@ Pantheon is now accepting customers into a [private beta for our Content Publish
 
 With Pantheon Content Publisher, your team can now safely publish content directly from Google Docs to Drupal, WordPress, or Next.js sites — quickly and seamlessly. Skip the extra steps and empower everyone who writes and collaborates to participate in web publishing.
 
-![Pantheon Content Publisher in private beta](../source/images/content-publisher-revised.mp4)
+![Pantheon Content Publisher](../images/release-notes/2024/content-publisher-revised.mp4)
 
 ### Here’s what you can expect
 
