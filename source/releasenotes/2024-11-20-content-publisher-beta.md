@@ -4,11 +4,16 @@ published_date: "2024-11-20"
 categories: [new-feature, wordpress, drupal, plugins]
 ---
 
+
 Pantheon is now accepting customers into a [private beta for our Content Publisher](https://pantheon.io/platform/content-publisher).
 
 With Pantheon Content Publisher, your team can now safely publish content directly from Google Docs to Drupal, WordPress, or Next.js sites — quickly and seamlessly. Skip the extra steps and empower everyone who writes and collaborates to participate in web publishing.
 
-![Pantheon Content Publisher](../images/release-notes/2024/content-publisher-revised.mp4)
+<video style="border-radius:0.9rem;height:auto;max-width:100%;pointer-events:none;" loop muted="muted" autoplay="true">
+<source src="https://cdn.bfldr.com/MEM5087K/as/9rb7wjp6g8wqprx6wj9kxcv/Content_Publisher_animation_batch_1?position=2" type="video/webm">
+<source src="https://cdn.bfldr.com/MEM5087K/as/9rb7wjp6g8wqprx6wj9kxcv/Content_Publisher_animation_batch_1" type="video/mp4">
+ Your browser does not support the video tag.
+</video>
 
 ### Here’s what you can expect
 
@@ -16,7 +21,7 @@ With Pantheon Content Publisher, your team can now safely publish content direct
 - **Live preview**: See exactly how your content will look before it goes live and see changes in real time.
 - **Collaborative editing**: Use comments, suggestions, and other collaboration features in Google Docs.
 - **Structure your content**: Organize and structure your content for content discoverability and SEO. Define metadata fields with AI recommendations.
-- **Controlled publishing**: Manage publishing workflow. Avoid copy-pasting mistakes with automated quality control. 
+- **Controlled publishing**: Manage publishing workflow. Avoid copy-pasting mistakes with automated quality control.
 
 ### Documentation
 
