@@ -117,21 +117,19 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
         ```
 	1. Commit and push this file to your site.
 
-1. Obtain a license token to use in the following authentication steps.
-
-	```bash
-	terminus remote:wp "<site>.<env>" -- eval "echo getenv('OCP_LICENSE');"
-    ```
-
-1. Create the authentication token and add your license token to Composer. You can do this automatically with the following command or create it manually with the steps below.
-
+1. Obtain the license token and apply it directly to the Composer `auth.json` to be able to authenticate against Object Cache Pro's Composer repository.
+	
 	```bash{promptUser: user}
-	composer config --auth http-basic.objectcache.pro token <LICENSE-TOKEN>
+	composer config --auth http-basic.objectcache.pro token $(terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")
 	```
-
+	
+	This will pull the Object Cache Pro license token directly into the `auth.json` file. 
+	
 	**Manually:**
 
 	1. Create an `auth.json` file in your directory.
+	
+	1. Run `terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")` to output the token to your terminal, then copy it into the `password` field in the next step.
 
 	1. Add the following code to the `auth.json` file.
 
