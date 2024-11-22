@@ -13,7 +13,7 @@ With Pantheon Content Publisher, your team can now safely publish content direct
 <source src="https://cdn.bfldr.com/MEM5087K/at/bkj79gvbv3fp3xb7vmn8638/platformoverview_featurestab_2400x1080-Web-ContentPublisher-Video-01-whitebg.webm" type="video/webm" />
 <source src="https://cdn.bfldr.com/MEM5087K/as/9rb7wjp6g8wqprx6wj9kxcv/Content_Publisher_animation_batch_1?position=4" type="video/mp4" />
   Your browser does not support the video tag.
-</video>/a>
+</video></a>
 
 ### Here’s what you can expect
 
