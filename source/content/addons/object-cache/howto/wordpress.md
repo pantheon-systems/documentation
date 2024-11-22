@@ -390,6 +390,18 @@ Make sure to commit your code back to your environment when you have made the ap
   - Subsites do not get their own configuration or graphs.
   - If installed on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache. The default behavior can be modified by [adjusting the `WP_REDIS_CONFIG` settings](https://objectcache.pro/docs/configuration-options/#flushing-networks). Alternatively, you can flush a single site's cache by using the [WP-CLI command](https://objectcache.pro/docs/wp-cli/#multisite-flushing).
   - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
+- When working locally with Lando, it's possible that Lando's self-signed SSL certificate will cause issues connecting to the Object Cache Pro license API resulting in a license error. To resolve this, add the following code to a mu-plugin:
+	
+	```php
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+		add_filter( 'http_request_args', function ( $args ) {
+			$args['sslverify'] = false;
+			return $args;
+		} );	
+	}
+	```
+	
+	- You may wish to make this file local-only by adding it to your `.gitignore` file. This error will not cause any issues with the functioning of Object Cache Pro or the behavior of the plugin on Pantheon but it might prevent you from being able to make updates to the plugin locally.
 
   	<Alert title="Note" type="info">
 
