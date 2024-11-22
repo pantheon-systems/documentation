@@ -222,7 +222,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 			 * Object Cache Pro config
 			 */
 			Config::define( 'WP_REDIS_CONFIG', [
-				'token' => pantheon_get_secret( 'ocp_token' ),
+				// Check for `pantheon_get_secret` then check for the OCP_LICENSE environment variable.
+				'token' => function_exists( 'pantheon_get_secret' ) ? pantheon_get_secret( 'ocp_token' ) : ( isset( getenv( 'OCP_LICENSE' ) ? getenv( 'OCP_LICENSE' ) : '' ),
 			] );		
 		```
 	
