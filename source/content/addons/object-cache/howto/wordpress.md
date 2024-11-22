@@ -295,7 +295,55 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
-### Additional Considerations
+## Local configuration with Lando
+Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Redis in its Docker configuration. However, to get Object Cache Pro to work correctly with Lando locally, you'll need to make a few changes to your Object Cache Pro and Lando configuration.
+
+1. First, in your `.lando.yml` file add the following:
+
+	```yaml
+	services:
+		<your-service-name>:
+			type: redis:6.0
+	```
+
+	- This ensures that the Redis version in your Lando environment matches the 6.x environment on Pantheon.
+
+1. Next, in your `wp-config.php` (or `config/application.php` for Bedrock-based WordPress Composer sites), find the `WP_REDIS_CONFIG` settings. Lando does not support `igbinary` serialization or `zstd` compression, so you will need to modify these settings for Lando locally. The simplest solution is to store the configuration values to a variable and then modify the variable for Lando environments. For example:
+
+	```php
+	$ocp_settings = [
+		'token' isset( getenv( 'OCP_LICENSE' ) ) ? getenv( 'OCP_LICENSE' ) : '',
+		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
+		'port' => getenv('CACHE_PORT') ?: 6379,
+		'database' => getenv('CACHE_DB') ?: 0,
+		'password' => getenv('CACHE_PASSWORD') ?: null,
+		// ...the rest of your settings...
+		'serializer' => 'igbinary',
+		'compression' => 'zstd',
+		// ...
+	];
+	
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+		$ocp_settings['serializer'] = 'php';
+		$ocp_settings['compression'] = 'none';
+	}
+	
+	define( 'WP_REDIS_CONFIG', $ocp_settings );
+	```
+	
+	<Alert title="Note" type="info">
+		If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
+	
+		```php
+		if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+			define( 'WP_REDIS_DISABLED', true );
+		}
+		```
+	</Alert>
+	
+Make sure to commit your code back to your environment when you have made the appropriate changes.
+
+## Additional Considerations
 - When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- cache flush`.
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
     - To summarize, the full order of steps are:
