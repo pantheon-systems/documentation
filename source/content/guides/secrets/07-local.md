@@ -21,13 +21,20 @@ The [Pantheon Secrets SDK](https://github.com/pantheon-systems/customer-secrets-
 
 To get this file, you should use the [plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin/) `secret:site:local-generate` command and then set an environment variable into your local environment (or docker container if you are running a docker-ized environment) with name `CUSTOMER_SECRETS_FAKE_FILE` and use the absolute path to the file as the value.
 
-To get generate this file, run `terminus secret:site:local-generate` in your terminal:
+1.  To get generate this file, run `terminus secret:site:local-generate` in your terminal:
 
-```bash
-terminus secret:site:local-generate <site> --filepath=./secrets.json
-```
+    ```bash
+    terminus secret:site:local-generate <site> --filepath=./secrets.json
+    ```
 
-Replace `<site>` with your Pantheon site name. The `secrets.json` file will be generated in your project root.
+    Replace `<site>` with your Pantheon site name. The `secrets.json` file will be generated in your project root.
+
+1. Once you have the `secrets.json`, add it to your `.gitignore` so you do not accidentally commit it to your repository.
+
+    ```text
+    # Ignore Pantheon local secrets file
+    secrets.json
+    ```
 
 ### Lando configuration
 
