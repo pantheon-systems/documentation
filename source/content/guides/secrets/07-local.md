@@ -88,9 +88,9 @@ if ( ! function_exists( 'pantheon_get_secret' ) ) {
         // Create SDK client for local development
 		try {
 			$client = \PantheonSystems\CustomerSecrets\CustomerSecrets::create()->getClient();
-			$secret = $client->getSecret($token);
+			$secret = $client->getSecret( $token );
 			return $secret ? $secret->getValue() : null;
-		} catch (\Exception $e) {
+		} catch ( \Exception $e ) {
             // Handle errors appropriately for your application
 			return null;
 		}
