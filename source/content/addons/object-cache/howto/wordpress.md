@@ -150,7 +150,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	git add auth.json && git commit -m "Add Object Cache Pro auth token."
 	```
 
-1. Add the Object Cache Pro repository to your `composer.json` file's `repositories` section.
+1. Open your `composer.json` file and locate the `repositories` section. If it doesn't exist, add it as shown below:
 
 	```json
 		repositories: [
