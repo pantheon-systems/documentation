@@ -59,5 +59,13 @@ Replace `<site>` with your Pantheon site name. The `secrets.json` file will be g
     ddev restart
     ```
 
+## Verifying Secrets Access
+### Drupal-Specific
+If using Drupal with the Key module and Pantheon Secrets module:
+1. Go to the Key module configuration
+2. Click the "Sync Pantheon Secrets" tab
+3. Click the "Sync Keys" button
+4. Your secrets from the JSON file should appear in the available list of keys
+
 ## Restrictions
 For secrets without "user" scope, the `secret:site:local-generate` command will set the value of the secret to "null". You must manually set test values in your local `secrets.json` file.
