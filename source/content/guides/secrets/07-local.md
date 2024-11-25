@@ -60,6 +60,46 @@ Replace `<site>` with your Pantheon site name. The `secrets.json` file will be g
     ```
 
 ## Verifying Secrets Access
+
+### Local Development Function
+
+The `pantheon_get_secret()` function only works on Pantheon's infrastructure, not in local development.  For local development, you can create a helper function that mimics the `pantheon_get_secret()` function. To do this, you can use the [Pantheon Customer Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk). This SDK mirrors the code that is already integrated into the platform. The easiest way to install the Customer Secrets SDK locally is via Composer:
+
+```bash{promptUser: user}
+composer require-dev pantheon-systems/customer-secrets-php-sdk
+```
+
+Once you have the SDK locally, you can create a local version of `pantheon_get_secret` using the SDK:
+
+```php
+if ( ! function_exists( 'pantheon_get_secret' ) ) {
+    function pantheon_get_secret( $token = '' ) {
+        // Check if SDK class exists, if not try to load the Composer autoloader.
+        if ( ! class_exists( '\PantheonSystems\CustomerSecrets\CustomerSecrets' ) ) {
+            $autoloader = __DIR__ . '/vendor/autoload.php';
+			if ( file_exists( $autoloader ) ) {
+				require_once $autoloader;
+			} else {
+                // Autoloader not found - handle appropriately for your application.
+                return null;
+            }
+        }
+
+        // Create SDK client for local development
+		try {
+			$client = \PantheonSystems\CustomerSecrets\CustomerSecrets::create()->getClient();
+			$secret = $client->getSecret($token);
+			return $secret ? $secret->getValue() : null;
+		} catch (\Exception $e) {
+            // Handle errors appropriately for your application
+			return null;
+		}
+    }
+}
+```
+
+This approach allows your code to work seamlessly both on Pantheon (where `pantheon_get_secret()` is natively available) and in local development (where you provide your own implementation).
+
 ### Drupal-Specific
 If using Drupal with the Key module and Pantheon Secrets module:
 1. Go to the Key module configuration
