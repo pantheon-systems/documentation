@@ -60,4 +60,4 @@ Replace `<site>` with your Pantheon site name. The `secrets.json` file will be g
     ```
 
 ## Restrictions
-For secrets that do not have the "user" scope, the `secret:site:local-generate` command will set the value of the secret to "null". Edit this file and replace the null values with appropriate test values for local development.
+For secrets without "user" scope, the `secret:site:local-generate` command will set the value of the secret to "null". You must manually set test values in your local `secrets.json` file.
