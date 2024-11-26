@@ -39,7 +39,7 @@ Yes. AGCDN is compatible with [Custom Upstream](/guides/custom-upstream) and [Au
 
 ### Does AGCDN include Edge caching?
 
-No, Edge caching is not included in AGCDN. However, AGCDN with WAF/IO does include image caching at the Edge.
+No, Edge Caching is unnecessary at the AGCDN, because caching exists at the GCDN and is configured at the application level. However, AGCDN with WAF/IO does include image caching at the Edge.
 
 ## More Resources
 
