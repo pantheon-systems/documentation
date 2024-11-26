@@ -41,16 +41,20 @@ We do not support uses of WordPress Multisite that run functionally-different or
 ## Request a WordPress Multisite
 WordPress Multisite requires a special configuration that is only available to select customers. Access to WordPress Multisite requires a Gold, Platinum, or Diamond level [Workspace plan](https://pantheon.io/plans/pricing).
 
-By default, Pantheon employees must create new Multisites on your behalf. Reach out to your account manager to request site creation for a new WordPress Multisite.
+By default, Pantheon employees must create new Multisites on your behalf. This is because they use a different platform framework (which includes the appropriate Nginx configuration) than the default `wordpress` framework typically available to customers. Reach out to your account manager to request site creation for a new WordPress Multisite.
 
 If you want to create new WordPress Multisites self-serve and on-demand in the Pantheon Dashboard, reach out to your account manager and request a [Custom Upstream](/guides/custom-upstream) for your workspace based on Pantheon's WordPress Multisite framework.
 
-Existing WordPress sites cannot be converted to a multisite, however they can be [migrated](/migrate-wordpress-multisite).
+Existing WordPress sites on Pantheon cannot be converted to a multisite due to the framework limitation. Instead, if a WordPress Multisite upstream has been created for you, a new site can be created based on that upstream and the codebase pushed to that site repository (since WordPress Multisite is a core component of WordPress and uses the same code).
+
+**Note:** Any non-multisite WordPress site can be [configured](/guides/multisite/config) as a WordPress Multisite. However, it is not recommended to set up your WordPress site to be a Multisite if your upstream is not using the correct framework.
 
 If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
 
  ## More Resources
+
+- [Migrate a WordPress Multisite onto Pantheon](/migrate-wordpress-multisite)
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
