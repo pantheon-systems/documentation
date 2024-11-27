@@ -126,20 +126,16 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 
 Here are definitions for commonly used terms:
 
-- **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
-
-- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
-
-- **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-
-- **Repository**: A collection of files packaged in a single directory under version control.
-
-- **Remote Repository**: A central version control location, such as a repository residing on GitHub, Bitbucket, or GitLab.
-
-- **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-
-- **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.
-
+<ul>
+<li><strong><dfn id="upstream">Upstream</dfn></strong>: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.</li>
+<li><strong><dfn id="custom-upstream">Custom Upstream</dfn></strong>: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.</li>
+<li><strong><dfn id="public-upstream">Public Upstream</dfn></strong>: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).</li>
+<li><strong><dfn id="repository">Repository</dfn></strong>: A collection of files packaged in a single directory under version control.</li>
+<li><strong><dfn id="remote-repository">Remote Repository</dfn></strong>: A central version control location, such as a repository residing on GitHub, Bitbucket, or GitLab.</li>
+<li><strong><dfn id="upstream-updates">Upstream Updates</dfn></strong>: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.</li>
+<li><strong><dfn id="site-repository">Site Repository</dfn></strong>: Child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.</li>
+<li><strong><dfn id="framework">Framework</dfn></strong>: The upstream framework determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is _not visible_ to users and once a framework has been set for a site (based on how the upstream was configured), it cannot be changed without [changing the upstream](/guides/custom-upstream/switch-custom-upstream) itself.</li>
+</ul>
 
 ## More Resources
 
