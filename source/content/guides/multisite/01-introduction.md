@@ -45,9 +45,7 @@ By default, Pantheon employees must create new Multisites on your behalf. This i
 
 If you want to create new WordPress Multisites self-serve and on-demand in the Pantheon Dashboard, reach out to your account manager and request a [Custom Upstream](/guides/custom-upstream) for your workspace based on Pantheon's WordPress Multisite framework.
 
-Existing WordPress sites on Pantheon cannot be converted to a multisite due to the framework limitation. Instead, if a WordPress Multisite upstream has been created for you, a new site can be created based on that upstream and the codebase pushed to that site repository (since WordPress Multisite is a core component of WordPress and uses the same code).
-
-**Note:** Any non-multisite WordPress site can be [configured](/guides/multisite/config) as a WordPress Multisite. However, it is not recommended to set up your WordPress site to be a Multisite if your upstream is not using the correct framework.
+Setting up an existing WordPress site  on Pantheon as a WordPress multisite without the correct framework can result in unexpected errors due to the improper Nginx configuration. If you have an existing WordPress site that you want to make into a multisite but the upstream does not use the `wordpress_network` framework (visible in the Pantheon Dashboard), and a WordPress Multisite upstream has been created for you, you can create a new site based on that upstream and push your codebase pushed to the new site repository (since WordPress Multisite is a core component of WordPress and uses the same code).
 
 If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
