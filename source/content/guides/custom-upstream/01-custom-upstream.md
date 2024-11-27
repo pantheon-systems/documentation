@@ -126,14 +126,38 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 
 Here are definitions for commonly used terms:
 
-- **Upstream**: An <dfn id="upstream">upstream</dfn> is a repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). 
-- **Custom Upstream**: A <dfn id="custom-upstream">custom upstream</dfn> is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
-- **Public Upstream**: A <dfn id="public-upstream">public upstream</dfn> is a repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-- **Repository**: A<dfn id="repository">repository</dfn> is a collection of files packaged in a single directory under version control.
-- **Remote Repository**: A <dfn id="remote-repository">remote repository</dfn> is the central version control location, such as a repository residing on GitHub, Bitbucket, or GitLab.
-- **Upstream Updates**: <dfn id="upstream-updates"> Upstream Updates</dfn> are code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-- **Site Repository**: A <dfn id="site-repository">site repository</dfn> is a child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.
-- **Framework**: The upstream <dfn id="framework">framework</dfn> determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is _not visible_ to users and once a framework has been set for a site (based on how the upstream was configured), it cannot be changed without [changing the upstream](/guides/custom-upstream/switch-custom-upstream) itself.
+### Upstream
+
+<p>An <dfn id="upstream">upstream</dfn> is a repository that acts as a parent for another repository, like <a href="https://github.com/pantheon-systems/wordpress">Pantheon's WordPress Upstream</a>.</p>
+
+### Custom Upstream
+
+<p>A <dfn id="custom-upstream">custom upstream</dfn> is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams (<a href="https://github.com/pantheon-systems/wordpress">WordPress</a>, <a href="https://github.com/pantheon-upstreams/drupal-composer-managed">Drupal (Latest Version)</a>, <a href="https://github.com/pantheon-systems/drops-7">Drupal 7</a>) and acts as a parent for site level repositories.</p>
+
+### Public Upstream
+
+<p>A <dfn id="public-upstream">public upstream</dfn> is a repository that is open to all Pantheon users which contains a common codebase for new sites, like <a href="https://github.com/populist/panopoly-drops-7">Panopoly</a>.</p>
+
+### Repository
+
+<p>A<dfn id="repository">repository</dfn> is a collection of files packaged in a single directory under version control.</p>
+
+
+### Remote Repository
+
+<p>A <dfn id="remote-repository">remote repository</dfn> is the central version control location, such as a repository residing on GitHub, Bitbucket, or GitLab.</p>
+
+### Upstream Updates
+
+<p><dfn id="upstream-updates"> Upstream Updates</dfn> are code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.</p>
+
+### Site Repository
+
+<p>A <dfn id="site-repository">site repository</dfn> is a child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.</p>
+
+### Framework
+
+<p>The upstream <dfn id="framework">framework</dfn> determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is _not visible_ to users and once a framework has been set for a site (based on how the upstream was configured), it cannot be changed without <a href="https://docs.pantheon.io/guides/custom-upstream/switch-custom-upstream">changing the upstream</a> itself.</p>
 
 ## More Resources
 
