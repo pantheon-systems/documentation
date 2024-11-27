@@ -157,7 +157,7 @@ Here are definitions for commonly used terms:
 
 ### Framework
 
-<p>The <dfn id="site-framework">site framework</dfn> determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is _not visible_ to users and once a framework has been set for a site (based on how the upstream was configured), it cannot be changed without <a href="https://docs.pantheon.io/guides/custom-upstream/switch-custom-upstream">changing the upstream</a> itself.</p>
+<p>The <dfn id="upstream-framework">upstream framework</dfn> (or site framework) determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is _not visible_ to users and once a framework has been set for a site (based on how the upstream was configured), it cannot be changed without <a href="https://docs.pantheon.io/guides/custom-upstream/switch-custom-upstream">changing the upstream</a> itself.</p>
 
 ## More Resources
 
