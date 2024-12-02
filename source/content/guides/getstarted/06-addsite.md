@@ -17,7 +17,7 @@ permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
 ---
 
-There are dozens of ways to add a site on Pantheon. This section covers the most common scenarios for new users: creating a new CMS site (a site running WordPress or Drupal), or migrating an existing WordPress or Drupal site.  For additional scenarios, see the [Adding a Site to Pantheon](/add-site) section at the end of this document.
+There are dozens of ways to add a site on Pantheon. This section covers the most common scenarios for new users: creating a new CMS site (a site running WordPress or Drupal), or migrating an existing WordPress or Drupal site.  For additional scenarios, see the [Adding a Site to Pantheon](/guides/getstarted/addsite/) section at the end of this document.
 
 ## Create a New CMS Site
 Pantheon CMS site contains three components: code, files, and a database containing the content and configurations of your Content Management System (CMS). When you create a site, you are creating each of these components in the Dev environment. Then, when you are ready, you will create your Test and Live environments.

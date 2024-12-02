@@ -96,7 +96,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"New Relic Performance Monitoring"} link={"/newrelic"}>
+  <Product title={"New Relic Performance Monitoring"} link={"/guides/new-relic"}>
 
   New Relic® Performance Monitoring provides a nearly real-time look into the performance of a web application.
 
@@ -108,7 +108,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Terminus CLI"} link={"/terminus-overview"}>
+  <Product title={"Terminus CLI"} link={"/terminus"}>
 
   Access complete platform functionality from our integrated command line.
 

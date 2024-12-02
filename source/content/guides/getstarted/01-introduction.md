@@ -35,7 +35,6 @@ This guide will walk you through the specific steps of getting set up on Pantheo
 
 | Resource | Use this to...  |
 |---|---|
-| [Pantheon Overview](/overview) | Learn the language of Pantheon by learning about its architecture, products, workflows, and more. |
 | [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams) | Learn how Workspaces, Sites, and Teams work together to help you manage your sites.  |
 | [The Pantheon Dashboard](/guides/new-dashboard)| Get an overview of the features and functionality of the Pantheon Dashboard.
 </Alert>
