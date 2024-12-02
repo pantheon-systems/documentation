@@ -71,7 +71,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
 
  It should look similar to this:
 
-    ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../../../images/dashboard/git-string.png)
+  ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../../../images/dashboard/new-dashboard/2024/_git-string.png)
 
 1. Go to where you want the code to reside in your local environment.
 

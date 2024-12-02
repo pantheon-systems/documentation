@@ -1,30 +1,25 @@
-import React from "react"
+import React from 'react';
 
-import "./style.css"
+import './style.css';
 
 const PublishedDate = ({ dateString, className }) => {
   // Todo, more type checking.
   if (!dateString) {
-    return null
+    return null;
   }
-
-  // Turn ReleaseNoteData.frontmatter.published_date into a date object.
-  // And then format it as Month Day, Year.
-  // https://stackoverflow.com/questions/3552461/how-to-format-a-javascript-date
-  const date = new Date(dateString)
-  const options = { year: "numeric", month: "long", day: "numeric" }
-  const formattedDate = date.toLocaleDateString(undefined, options)
+  const [year, month, day] = dateString.split('-'); // Extract year, month, and day
+  const formattedDate = `${new Date(year, month - 1).toLocaleString('default', { month: 'long' })} ${parseInt(day)}, ${year}`;
 
   return (
     <div
-      className={["docs-published-date", className]
-        .join(" ")
+      className={['docs-published-date', className]
+        .join(' ')
         .trim()
-        .replace(/\s+/g, " ")}
+        .replace(/\s+/g, ' ')}
     >
       {formattedDate}
     </div>
-  )
-}
+  );
+};
 
-export default PublishedDate
+export default PublishedDate;

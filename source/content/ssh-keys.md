@@ -110,17 +110,19 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 1. Log in to your Pantheon Dashboard.
 
-1. [Go to your Personal Settings](/personal-settings), then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
+1. Click your user icon in the top right then click [Personal Settings](/personal-settings), and go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
 
-1. Click **Add New Key**.
+1. If this is your first key, click **Get Started**, otherwise click **Add New Key**.
 
 1. Paste the copied public key into the box, and click **Save**.
+
+  ![Adding SSH Keys](../images/dashboard/new-dashboard/2024/_add-ssh-key.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
 
 ### Add SSH Key - Classic Dashboard
 
-1. Log in to your Pantheon site.
+1. Log in to your Pantheon Dashboard.
 
 1. Click your username in the top right, then select **My Dashboard**.
 
@@ -131,8 +133,6 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Paste the copied public key into the **Add Key** box.
 
 1. Click the **Add Key** button.
-
-  ![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
 
@@ -150,17 +150,20 @@ You can use your Dev environment to clone your site code to your workstation:
 
 1. Log in to your Pantheon Dashboard.
 
-1. [Go to your Personal Settings](/personal-settings), then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
+1. Click your user icon in the top right then click [Personal Settings](/personal-settings), and go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
 
 1. Click the **Revoke** button next to the key you want to remove:
+
+  ![Delete SSH Key](../images/dashboard/new-dashboard/2024/_revoke-ssh-key.png)
+
+1. Check the box in the confirmation prompt and click continue.
+
 
 ### Remove SSH Key from Pantheon - Classic Dashboard
 
 1. Navigate to the **<Icon icon="gear" /> Account** tab of your User Dashboard and click **SSH Keys**.
 
 1. Click the **Remove** button next to the key you want to delete:
-
-![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
 ### Site Access After Removing Keys
 After removing SSH Keys from your user account, you will not be able to interact with the application and codeservers directly through command line interfaces like Git, SFTP, WP-CLI, and Drush. However removing SSH keys is separate from revoking the machine tokens used by Terminus to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.

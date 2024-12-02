@@ -231,7 +231,7 @@ To remove a user:
 
    - **Workspace Only**: removes a member from this workspace only. Associated sites will not be impacted.
 
-      ![Alt text](../../../../images/workspace-offboarding.png)
+      ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding.png)
 
 </Tab>
 
@@ -251,7 +251,7 @@ To remove a team member from a site:
 
    - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
 
-     ![Alt text](../../../../images/workspace-offboarding-site-team-member.png)
+     ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-site-team-member.png)
 
 1. Click **Remove Access** with one of the selections provided. The team is removed based on the selection you made.
 
@@ -278,7 +278,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
 
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+   ![Site with two Supporting Workspaces](../../../../images/dashboard/new-dashboard/2024/_manage-site-team.png)
 
 ## Remove a Supporting Workspace from a Site
 
@@ -294,7 +294,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
    - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
 
-     ![Alt text](../../../../images/workspace-offboarding-supporting.png)
+     ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-supporting.png)
 
 1. Click **Yes, remove access**. The Supporting Workspace is removed based on the selection you made.
 

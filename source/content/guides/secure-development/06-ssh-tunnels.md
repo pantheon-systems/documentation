@@ -92,7 +92,7 @@ To manually create an SSH tunnel within your Pantheon Site Dashboard:
 
 1. Click **Connection Info**. This will give you the required environment specific values for the command example below.
 
-  ![Connection info](../../../images/dashboard/connection-info.png)
+  ![Connection info](../../../images/dashboard/new-dashboard/2024/connection-info.png)
 
 1. Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) found in the Dashboard URL within the following command:
 

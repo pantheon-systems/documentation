@@ -16,14 +16,14 @@ showtoc: true
 
 Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner, then **Personal Settings**.
 
-![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/personal-settings-profile.jpg)
+![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/2024/_personal-settings-profile.png)
 
 
 ## Profile
 
 The user gravatar is a personalized image you can upload.  If you have not personalized your gravatar, it will appear as it does in the image below. To customize it, click **Change your Gravator**, to the right of the existing gravatar.
 
-![The user gravatar](../images/gravatar-user.png)
+![The user gravatar](../images/dashboard/new-dashboard/2024/_gravatar-user.png)
 
 You can also add your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
 

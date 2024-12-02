@@ -36,7 +36,7 @@ The sections below will show you the basics for collaborating with others if you
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-    ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+    ![Copy Git Clone Command](../../../images/dashboard/new-dashboard/2024/_git-string.png)
 
 1. Click the **<Icon icon="wrench" /> Dev** tab, set the **Development Mode** to **Git**, and then click **Clone with Git**:
 
@@ -209,7 +209,7 @@ You must create the `settings.php` file to develop in sync.
 
       This push to Pantheon failed, because the Development environment was in SFTP mode.
 
-      ![Connection Mode set to SFTP](../../../images/dashboard/connection-mode-sftp.png)
+      ![Connection Mode set to SFTP](../../../images/dashboard/new-dashboard/2024/_connection-mode-sftp.png)
 
 1. Set the **Development Mode** to **Git** by clicking on the toggle, or enter the code below in the command line:
 
@@ -217,7 +217,7 @@ You must create the `settings.php` file to develop in sync.
       terminus connection:set <site>.<env> git
       ```
 
-      ![Connection Mode set to Git](../../../images/dashboard/connection-mode-git.png)
+      ![Connection Mode set to Git](../../../images/dashboard/new-dashboard/2024/_connection-mode-git.png)
 
 1. Push to Pantheon:
 
@@ -231,8 +231,6 @@ You must create the `settings.php` file to develop in sync.
       To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
         fe267cb..b802550  master -> master
       ```
-
-      ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/commit-deployed-pantheon-dashboard.png)
 
       The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
@@ -314,8 +312,6 @@ You must create the `settings.php` file to develop in sync.
     ```bash{promptUser: user}
     terminus multidev:create <site>.dev <to_env>
     ```
-
-    ![New environment named configs](../../../images/dashboard/new-env-configs.png)
 
     The module will now be available to activate and test on Pantheon for your colleagues to experience.
 

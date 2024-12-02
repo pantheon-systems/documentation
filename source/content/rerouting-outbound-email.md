@@ -67,7 +67,7 @@ git push origin master
 
 Now, check your Site Dashboard and you’ll see that the module’s code has been deployed to your Dev environment.
 
-![The dashboard's showing the code was deployed to the Dev environment](../images/dashboard/verify-reroute-email-dashboard-commits1.png)
+![The dashboard's showing the code was deployed to the Dev environment](../images/dashboard/new-dashboard/2024/verify-reroute-email-dashboard-commits1.png)
 
 ## Configuration
 

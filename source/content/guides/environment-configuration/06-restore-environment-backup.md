@@ -35,7 +35,7 @@ It is important that you and your team know that this is a **destructive** proce
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. When in doubt, [contact support](/guides/support/contact-support/).
 
-![Backup tool](../../../images/dashboard/backup-tool.png)
+![Backup tool](../../../images/dashboard/new-dashboard/2024/_backups-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
@@ -78,7 +78,7 @@ Follow the steps below to restore Database and Files.
 1. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
-![Workflow Tab](../../../images/dashboard/workflow-tab.png)
+![Workflow Tab](../../../images/dashboard/new-dashboard/2024/workflow-tab.png)
 
 ### Restore Code
 

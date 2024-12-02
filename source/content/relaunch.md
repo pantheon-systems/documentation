@@ -33,6 +33,14 @@ When following the below procedure for relaunch, the duration of the disruption 
 
 ### Before You Begin:
 
+  <Alert title="Note" type="info">
+
+If your site uses [Advanced Global CDN](/guides/agcdn), please [contact Support](https://pantheon.io/support) and your Customer Success Manager before proceeding. There may be configuration specific to your domain that Pantheon staff will have to update.
+
+  </Alert>
+
+
+
 1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
 1. Open a new tab for the old Pantheon Site Dashboard.
@@ -110,7 +118,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. Complete domain validation by adding a new DNS TXT record or by uploading a file to a specific URL, then click **Verify Ownership**:
 
-  ![Domain validation prompt](../images/dashboard/verify-domain-with-remove-button.png)
+  ![Domain validation prompt](../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
 
 1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 

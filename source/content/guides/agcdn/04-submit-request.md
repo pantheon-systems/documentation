@@ -30,7 +30,7 @@ Follow the steps below to submit a ticket for a configuration change or support 
 
 1. Complete the steps in [Ticket Support](/guides/support/contact-support/#general-support-ticket). 
 
-    ![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
+    ![Screenshot of the Support Tab](../../../images/dashboard/new-dashboard/2024/support-tab.png)
 
 ## More Resources
 

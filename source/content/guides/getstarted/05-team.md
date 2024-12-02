@@ -31,18 +31,23 @@ To set up your team:
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
-   ![Adding Workspace Information](../../../images/create-workspace-form.png)
+   ![Adding Workspace Information](../../../images/dashboard/new-dashboard/2024/create-workspace-form.png)
 
 1. Enter the email addresses and select roles for team members that need access to this Workspace. To learn about roles, select **View Role Permission Levels**.
 
-   Repeat this step for each team member you want to add.
+   Repeat this step for each team member you want to add, then click **Continue**.
 
-  ![Adding a team member](../../../images/create-workspace-team.png)
+  ![Adding a team member](../../../images/dashboard/new-dashboard/2024/create-workspace-team.png)
 
-1. Click **Continue**. Your Workspace is created, and you are taken to the Workspace.
+1. Once your workspace is created, click **Go to Workspace Home**.
 
-   ![Workspace](../../../images/create-workspace-dashboard.png)
+   ![Workspace creation success message](../../../images/dashboard/new-dashboard/2024/create-workspace-success.png)
 
-You have created your first workspace, and added your team members. If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
+  You have created your first workspace, and added your team members:
+
+  ![Workspace](../../../images/dashboard/new-dashboard/2024/create-workspace-dashboard.png)
+
+
+If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 
 Now, let's add a site.

@@ -16,7 +16,7 @@ reviewed: 2023-04-19
 
 The Pantheon Site Dashboard is the hub of all development and activity for an individual site.
 
-![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/site-dashboard.png)
+![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/2024/site-dashboard.png)
 
 ## Header Elements
 
