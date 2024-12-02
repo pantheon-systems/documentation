@@ -2,9 +2,11 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 
 const webInfrastructure = () => {
   return {
-    link: '/application-containers',
+    link: '/platform',
     title: 'Web Infrastructure',
     children: [
+      simpleLink('/platform', 'Overview'),
+
       simpleLink('/application-containers', 'Application Containers', [
         simpleLink(
           '/application-containers',
@@ -123,19 +125,22 @@ const webInfrastructure = () => {
           'Create a Drupal Site Using a Drupal Distribution',
         ),
       ]),
-      simpleLink('/guides/wordpress-pantheon', 'WordPress', [
+      simpleLink('/develop-wordpress', 'WordPress', [
+        simpleLink(
+          '/develop-wordpress',
+          'Overview',
+        ),
         // Todo: reconcile these 2:
         getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
         // Todo: relocate the aws s3 page to webinfra filesystem submenu
         getGuideDirectory('guides/wordpress-developer'),
-
         getGuideDirectory('guides/wordpress-configurations'),
         getGuideDirectory('guides/multisite', 'WordPress Multisite'),
         getGuideDirectory('guides/woocommerce', 'WooCommerce'),
         // @todo: add installing from third party sources doc here
       ]),
       {
-        link: '/guides/decoupled/overview',
+        link: '/guides/decoupled',
         title: 'Front-End Sites and Starter Kits',
         children: [
           getGuideDirectory('guides/decoupled/overview'),
@@ -151,6 +156,8 @@ const webInfrastructure = () => {
           ),
         ],
       },
+      simpleLink('/addons', 'Performance Add-ons'),
+      simpleLink('/integrations', 'Integrations'),
     ],
   };
 };

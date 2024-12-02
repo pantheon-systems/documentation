@@ -14,8 +14,8 @@ const support = () => {
       ),
       getGuideDirectory('guides/professional-services'),
       // Todo: relocate this to the support guide
-
-      simpleLink('/basic-troubleshooting', 'Troubleshooting', [
+      simpleLink('/troubleshoot', 'Troubleshooting', [
+        simpleLink('/troubleshoot', 'Overview'),
         simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
         simpleLink('/modules-plugins-known-issues', 'Known Issues', [
           // @todo, combine some of these pages.
@@ -42,7 +42,9 @@ const support = () => {
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
       ]),
-      simpleLink('/debug-slow-performance', 'Performance Troubleshooting', [
+      simpleLink('/performance', 'Performance Troubleshooting', [
+        simpleLink('/performance', 'Overview'),
+      //simpleLink('/debug-slow-performance', 'Performance Troubleshooting', [
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
         getGuideDirectory(

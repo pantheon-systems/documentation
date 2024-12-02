@@ -2,9 +2,10 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 
 const workflows = () => {
   return {
-    link: '/pantheon-workflow',
+    link: '/develop',
     title: 'Development Workflows',
     children: [
+      simpleLink('/develop', 'Overview'),
       // TODO: Report for Submenus and children lists that do not start with a sublink
       simpleLink('/pantheon-workflow', 'Deployment Pipeline on Pantheon', [
         simpleLink('/pantheon-workflow', 'Pantheon Workflow'),
@@ -20,6 +21,8 @@ const workflows = () => {
         simpleLink('/workflow-logs', 'Workflow Logs'),
         simpleLink('/content-staging', 'Content Staging'),
       ]),
+
+
       simpleLink('/guides/integrated-composer', 'Integrated Composer', [
         getGuideDirectory(
           'guides/integrated-composer',
@@ -37,7 +40,8 @@ const workflows = () => {
         ),
       ]),
       // This page is pretty short given the size of the topic.
-      simpleLink('/continuous-integration', 'Continuous Integration', [
+      simpleLink('/automate', 'Automation & CI', [
+        simpleLink('/automate', 'Overview'),
         simpleLink('/continuous-integration', 'CI Solutions'),
         getGuideDirectory('guides/build-tools', 'Build Tools'),
         simpleLink('/deploybot', 'DeployBot'),

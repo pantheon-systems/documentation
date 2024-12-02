@@ -91,6 +91,7 @@ const CertificationItems = () => {
         // Build tools dependent, may not be relevant
         simpleLink('/drupal-commerce', 'Drupal Commerce'),
         // @todo, eventually pull guides/create-wp-site into this menu. and guides/drush/drupal-commandline/
+        simpleLink('/guides', 'More Tutorials'),
       ]),
       simpleLink('/agency-tips', 'Agency Tips'),
       simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),

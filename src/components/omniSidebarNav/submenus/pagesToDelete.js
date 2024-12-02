@@ -41,31 +41,11 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/drupal-updates', 'Drupal Updates'),
       ]),
 
-      // Maybe we should keep some of these landing listing and just have
-      // no sidebar for them.
-      simpleLink('/guides', 'landing pages', [
-        simpleLink('/guides'),
 
-        simpleLink('/automate', 'Automate'),
-        simpleLink('/develop', 'Develop'),
-        simpleLink(
-          '/develop-wordpress',
-          'Developing with WordPress on Pantheon',
-        ),
-        simpleLink('/get-started', 'Get Started'),
-        simpleLink('/guides/decoupled'),
 
-        simpleLink('/integrations'),
+      // We should probably delete/redirect this.
+      simpleLink('/manage'),
 
-        simpleLink('/manage'),
-        simpleLink('/platform'),
-        simpleLink('/troubleshoot'),
-
-        // This landing page could go elsewhere
-        simpleLink('/performance', 'Performance Consideration'),
-        // minimal landing page that should be kept or rebuilt as prose.
-        simpleLink('/addons'),
-      ]),
 
       // Pages that should be redirected
       simpleLink('/overview', 'pages that should be redirected', [

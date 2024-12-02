@@ -3,10 +3,13 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 const getStarted = () => {
   return {
     // @todo, implement sidebar on landing pages.
-    link: '/guides/getstarted',
+    link: '/get-started',
     title: 'Get Started',
     children: [
-      getGuideDirectory('guides/getstarted'),
+
+
+      simpleLink('/get-started', 'Overview'),
+      getGuideDirectory('guides/getstarted', "Getting Started Guide"),
       // This page is kind of a landing page? Should it be in this menu?
       simpleLink('/products', 'Products & Features'),
       simpleLink('/required-reading', 'Required Reading'),

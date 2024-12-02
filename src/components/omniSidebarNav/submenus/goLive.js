@@ -6,6 +6,8 @@ const goLive = () => {
     link: '/go-live',
     title: 'Going Live',
     children: [
+      simpleLink('/go-live', 'Overview'),
+
       getGuideDirectory('guides/domains', 'Domains'),
       simpleLink('/dns-providers', 'DNS Providers', [
         simpleLink('/1-and-1', '1 & 1'),
