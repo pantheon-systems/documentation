@@ -4,7 +4,8 @@ const unassignedPages = () => {
   return {
     link: '/lockr',
     title: 'Unassigned',
-    children: [simpleLink('/search'),
+    children: [
+      simpleLink('/search'),
       simpleLink('/automate'),
       simpleLink('/composer'),
       simpleLink('/configure-dns'),
@@ -21,8 +22,6 @@ const unassignedPages = () => {
       simpleLink('/guides/integrated-composer/one-click-updates'),
       simpleLink('/guides/integrated-composer/private-repo-package'),
 
-
-
       simpleLink('/integrations'),
       simpleLink('/lockr'),
       simpleLink('/manage'),
@@ -32,22 +31,11 @@ const unassignedPages = () => {
       simpleLink('/static-site-empty-upstream-demo'),
       simpleLink('/troubleshoot'),
 
-
-
-
       // Do these pages exist?
       // simpleLink('/guides/wordpress-composer'),
       // simpleLink('/guides/wordpress-composer/create-wp-site-composer-ci-auto-test'),
       // simpleLink('/guides/wordpress-composer/wordpress-composer-managed'),
       // simpleLink('/guides/wordpress-composer/wordpress-ic'),
-
-
-
-
-
-
-
-
     ],
   };
 };

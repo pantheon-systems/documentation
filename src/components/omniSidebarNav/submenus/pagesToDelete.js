@@ -43,8 +43,6 @@ const pagesToDeleteorReconsider = () => {
       simpleLink('/guides', 'landing pages', [
         simpleLink('/guides'),
 
-
-
         // This landing page could go elsewhere
         simpleLink('/performance', 'Performance Consideration'),
         // minimal landing page that should be kept or rebuilt as prose.
