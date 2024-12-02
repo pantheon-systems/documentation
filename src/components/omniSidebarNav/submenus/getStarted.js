@@ -16,7 +16,10 @@ const getStarted = () => {
         getGuideDirectory('guides/migrate/guided', 'Guided Migration'),
         simpleLink('/migrate-manual', 'Manual Migration'),
         simpleLink('/migrate-wordpress-multisite', 'WordPress Multisite'),
-        simpleLink('/unwind-drupal-multisite'),
+        simpleLink(
+          '/unwind-drupal-multisite',
+          'Extracting from a Drupal Multisite',
+        ),
         getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
         getGuideDirectory('guides/migrate/pagely', 'Pagely'),
         getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
@@ -29,8 +32,8 @@ const getStarted = () => {
           'guides/drupal/drupal-unhosted-composer',
           'Composer-based Drupal sites',
         ),
+        simpleLink('/add-site-clone', 'Clone an Existing Pantheon Site'),
       ]),
-
       simpleLink('/dashboard', 'Dashboard', [
         simpleLink('/site-dashboard', 'Site Dashboard'),
         simpleLink('/personal-settings', 'Personal Settings'),
@@ -39,6 +42,7 @@ const getStarted = () => {
           'Adding a Site with a Custom Upstream',
         ),
       ]),
+      simpleLink('/faq', 'FAQ'),
     ],
   };
 };

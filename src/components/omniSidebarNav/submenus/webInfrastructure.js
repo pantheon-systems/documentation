@@ -106,7 +106,9 @@ const webInfrastructure = () => {
         simpleLink('/opensolr', 'Open Solr'),
       ]),
       getGuideDirectory('guides/redirect', 'Redirects'),
-      simpleLink('/supported-drupal', 'Drupal', [
+
+      simpleLink('/develop-drupal', 'Drupal', [
+        simpleLink('/develop-drupal', 'Overview'),
         simpleLink('/supported-drupal', 'Supported Drupal Versions'),
         simpleLink('/modules', 'Pantheon Modules'),
         simpleLink('/drupal-launch-check', 'Status Report'),
@@ -124,6 +126,9 @@ const webInfrastructure = () => {
           '/drupal-from-dist',
           'Create a Drupal Site Using a Drupal Distribution',
         ),
+        simpleLink('/drupal-broken-links', 'Fix Broken Links'),
+        // This page should be converted into an article.
+        simpleLink('/cloud-optimization', 'Optimizing for the Cloud'),
       ]),
       simpleLink('/develop-wordpress', 'WordPress', [
         simpleLink('/develop-wordpress', 'Overview'),
@@ -134,7 +139,12 @@ const webInfrastructure = () => {
         getGuideDirectory('guides/wordpress-configurations'),
         getGuideDirectory('guides/multisite', 'WordPress Multisite'),
         getGuideDirectory('guides/woocommerce', 'WooCommerce'),
-        // @todo: add installing from third party sources doc here
+        // Do we need this page?
+        simpleLink('/supported-wp', 'Supported WordPress Versions'),
+        simpleLink(
+          '/optimize-wp-options-table-autoloaded-data',
+          'Optimize wp_options Table and Autoloaded Data',
+        ),
       ]),
       {
         link: '/guides/decoupled',

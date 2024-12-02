@@ -5,36 +5,12 @@ const pagesToDeleteorReconsider = () => {
     link: '/platform-upgrade',
     title: 'Pages to Delete or reconsider',
     children: [
-      simpleLink('/drupal-10', 'Drupal 10'),
       // Should this one be redirected to /guides/custom-upstreams?
       simpleLink('/custom-upstreams', 'Custom Upstreams'),
 
-      // Pages to audit and reconsider before adding to migration submenu
-      simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
-        simpleLink('/supported-wp'),
-        simpleLink('/develop-drupal'), // Move to Drupal section.
-        // Not so relevant, needs further review.
-        // Let's move it to the Drupal menu for now.
-        simpleLink('/drupal-broken-links', 'Fix Broken Links'),
-        simpleLink('/faq', 'FAQ'), // move to getting started
-        simpleLink('/platform-notifications', 'Platform Notifications'),
-        // Has unsupported "product" upstreams Panopoly and OpenAtrium. But should probably go in Web Infra?
-        simpleLink('/start-state'),
-        // This is a really small page. Move to get started?
-        simpleLink('/add-site-clone'),
-
-        // This should be added as a sub-page of guides/mariadb-mysql
-        simpleLink(
-          '/optimize-wp-options-table-autoloaded-data',
-          'Optimize wp_options Table and Autoloaded Data',
-        ),
-        // @todo, this page seems like it should be an article.
-        // But it could go under web infra or troubleshooting performance.
-        simpleLink('/cloud-optimization'),
-      ]),
-
       // Deprecated
       simpleLink('/crisis-response-upstream', 'Deprecated or archived pages', [
+        simpleLink('/drupal-10', 'Drupal 10'),
         simpleLink('/crisis-response-upstream'),
         // This should be deprecated/archived see https://github.com/pantheon-systems/documentation/pull/9251
         getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),

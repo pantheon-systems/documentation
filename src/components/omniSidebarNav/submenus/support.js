@@ -114,6 +114,7 @@ const support = () => {
         ),
       ]),
       simpleLink('/monthly-maintenance', "Pantheon's Monthly Maintenance"),
+      simpleLink('/platform-notifications', 'Platform Notifications'),
     ],
   };
 };

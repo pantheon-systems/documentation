@@ -9,13 +9,13 @@ const workflows = () => {
       // TODO: Report for Submenus and children lists that do not start with a sublink
       simpleLink('/pantheon-workflow', 'Deployment Pipeline on Pantheon', [
         simpleLink('/pantheon-workflow', 'Pantheon Workflow'),
+        simpleLink('/start-state', 'Start States'),
         getGuideDirectory('guides/multidev'),
         getGuideDirectory('guides/environment-configuration'),
         simpleLink('/connection-modes', 'Connection Modes'),
         getGuideDirectory('guides/sftp', 'SFTP'),
         //Todo: relocate hotfixes into git guide
         getGuideDirectory('guides/git', 'Git'),
-
         simpleLink('/hotfixes', 'Hotfixes'),
         simpleLink('/core-updates', 'Core Updates'),
         simpleLink('/workflow-logs', 'Workflow Logs'),
