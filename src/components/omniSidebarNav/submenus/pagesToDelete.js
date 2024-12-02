@@ -6,8 +6,10 @@ const pagesToDeleteorReconsider = () => {
     title: 'Pages to Delete or reconsider',
     children: [
       simpleLink('/drupal-10', 'Drupal 10'),
+      // Should this one be redirected to /guides/custom-upstreams?
+      simpleLink('/custom-upstreams', "Custom Upstreams"),
+
       // Pages to audit and reconsider before adding to migration submenu
-      simpleLink('/drupal-updates', 'Drupal Updates'),
       simpleLink('/platform-notifications?asfdasdfasdf', 'pages to move', [
         simpleLink('/supported-wp'),
         simpleLink('/develop-drupal'), // Move to Drupal section.
@@ -36,12 +38,28 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/crisis-response-upstream'),
         // This should be deprecated/archived see https://github.com/pantheon-systems/documentation/pull/9251
         getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),
+        simpleLink('/drupal-updates', 'Drupal Updates'),
+
       ]),
 
       // Maybe we should keep some of these landing listing and just have
       // no sidebar for them.
       simpleLink('/guides', 'landing pages', [
         simpleLink('/guides'),
+
+        simpleLink('/automate', 'Automate'),
+        simpleLink('/develop', 'Develop'),
+        simpleLink('/develop-wordpress', 'Developing with WordPress on Pantheon'),
+        simpleLink('/get-started', 'Get Started'),
+        simpleLink('/guides/decoupled'),
+
+
+        simpleLink('/integrations'),
+
+        simpleLink('/manage'),
+        simpleLink('/platform'),
+        simpleLink('/troubleshoot'),
+
 
         // This landing page could go elsewhere
         simpleLink('/performance', 'Performance Consideration'),
