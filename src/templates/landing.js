@@ -48,7 +48,6 @@ class LandingTemplate extends Component {
         <OmniSidebarNav slot="guide-menu" activePage={topic.path} />
 
         <main id="docs-main" slot="guide-content" tabIndex="-1">
-
           <Container width={containerWidth} className="landing-page__header">
             <SearchBar page="default" />
 
