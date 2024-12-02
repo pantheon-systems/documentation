@@ -15,19 +15,10 @@ import security from './submenus/security';
 import { simpleLink } from './helpers';
 
 // Before we can merge we need to:
-// Todo: review reporting in console log
-// Todo: Finish security submenu
-
-/////// Review things Steve did alone. ///////
-// Todo: Finish tutorials submenu in certification
-// Todo: Update dropdown in main site nav
-// Todo: Confirm move of Front-End Sites under web infrastructure
-// Todo: Decide if search should be in the sidebar. In the "about" section maybe?
-// Todo: audit troubleshooting submenu in support
-// Todo: reconcile this branch with https://github.com/pantheon-systems/documentation/pull/9296
-// Todo: Fix doc template (missing search bar)
-// Todo: Fix video template (missing search bar)
-// Todo: add sidebar to landing pages (end goal is to delete them entirely)
+// Todo: review reporting in console log - Assigned to Steve to investigate
+// Todo: Review pages that are reported as unassigned
+// Todo: remove console logging from this component.
+// Todo, add search bar back to landing pages
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.

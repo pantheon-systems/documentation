@@ -8,7 +8,7 @@ const security = () => {
       simpleLink('/guides/security', "Security Overview"),
       getGuideDirectory('guides/secure-development'),
 
-      getGuideDirectory('guides/secrets', "Managing API Keys and Secrets"),
+      getGuideDirectory('guides/secrets', "Secrets Manager"),
       simpleLink('/custom-certificates', 'Custom Certificates'),
       simpleLink('/certificate-bundles', "Certificate Bundles"),
       simpleLink('/clamav', 'ClamAV'),
