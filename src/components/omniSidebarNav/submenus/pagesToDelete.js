@@ -39,6 +39,7 @@ const pagesToDeleteorReconsider = () => {
         // This should be deprecated/archived see https://github.com/pantheon-systems/documentation/pull/9251
         getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),
         simpleLink('/drupal-updates', 'Drupal Updates'),
+        simpleLink('/lockr'),
       ]),
 
       // We should probably delete/redirect this.
