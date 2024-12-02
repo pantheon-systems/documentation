@@ -19,6 +19,7 @@ import { simpleLink } from './helpers';
 // Todo: Review pages that are reported as unassigned
 // Todo: remove console logging from this component.
 // Todo, add search bar back to landing pages
+// todo, delete pagesToDelete and unassignedPages
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -39,14 +40,10 @@ const getOmniItems = () => {
 
     CertificationItems(), // ✅
     about(), // assigned to Rachel ✅
-    // Release notes
     simpleLink('/release-notes', 'Release Notes'),
     pagesToDelete(),
     unassignedPages(),
   ];
-
-  console.log('OmniItems: ', OmniItems);
-
   return OmniItems;
 };
 
