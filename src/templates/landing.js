@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, graphql } from 'gatsby';
 import GuideLayout from '../layout/GuideLayout';
 import CallToAction from '../layout/call-to-action';
-//import SearchBar from '../layout/SearchBar';
+import SearchBar from '../layout/SearchBar';
 import Layout from '../layout/layout';
 import SubTopicGroup from '../layout/subtopic-group';
 import Youtube from '../components/youtube';
@@ -48,7 +48,10 @@ class LandingTemplate extends Component {
         <OmniSidebarNav slot="guide-menu" activePage={topic.path} />
 
         <main id="docs-main" slot="guide-content" tabIndex="-1">
+
           <Container width={containerWidth} className="landing-page__header">
+            <SearchBar page="default" />
+
             <FlexContainer
               alignItems="center"
               flexDirection="column"
