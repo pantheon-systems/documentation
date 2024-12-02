@@ -114,7 +114,6 @@ const support = () => {
         ),
       ]),
       simpleLink('/monthly-maintenance', "Pantheon's Monthly Maintenance"),
-
     ],
   };
 };
