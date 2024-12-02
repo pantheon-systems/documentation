@@ -5,7 +5,6 @@ const support = () => {
     link: '/support',
     title: 'Support and Troubleshooting',
     children: [
-
       simpleLink('/support', 'Overview'),
       getGuideDirectory('guides/support', 'Support'),
       simpleLink('/oss-support-levels', 'Open Source Support Levels'),
@@ -52,7 +51,10 @@ const support = () => {
         ),
 
         // Should could move to the education menu.
-        getGuideDirectory('guides/frontend-performance', "Front End Performance"),
+        getGuideDirectory(
+          'guides/frontend-performance',
+          'Front End Performance',
+        ),
         simpleLink(
           '/load-and-performance-testing',
           'Load and Performance Testing',

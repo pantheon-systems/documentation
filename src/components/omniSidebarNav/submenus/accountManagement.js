@@ -5,7 +5,6 @@ const accountManagement = () => {
     link: '/guides/account-mgmt',
     title: 'Manage Accounts and Workspaces',
     children: [
-
       simpleLink('/guides/account-mgmt', 'Overview', [
         getGuideDirectory('guides/account-mgmt/account'),
         getGuideDirectory('guides/account-mgmt/billing'),

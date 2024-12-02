@@ -85,7 +85,6 @@ const CertificationItems = () => {
         simpleLink('/pivotal-tracker', 'Pivotal Tracker'),
         simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
 
-
         simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
 
         simpleLink('/partial-composer', 'Partial Composer Usage'), // This page should be rewritten to focus on WordPress.
