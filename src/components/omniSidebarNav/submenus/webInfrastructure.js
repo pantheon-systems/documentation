@@ -126,10 +126,7 @@ const webInfrastructure = () => {
         ),
       ]),
       simpleLink('/develop-wordpress', 'WordPress', [
-        simpleLink(
-          '/develop-wordpress',
-          'Overview',
-        ),
+        simpleLink('/develop-wordpress', 'Overview'),
         // Todo: reconcile these 2:
         getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
         // Todo: relocate the aws s3 page to webinfra filesystem submenu

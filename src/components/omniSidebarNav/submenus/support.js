@@ -44,7 +44,7 @@ const support = () => {
       ]),
       simpleLink('/performance', 'Performance Troubleshooting', [
         simpleLink('/performance', 'Overview'),
-      //simpleLink('/debug-slow-performance', 'Performance Troubleshooting', [
+        //simpleLink('/debug-slow-performance', 'Performance Troubleshooting', [
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
         getGuideDirectory(

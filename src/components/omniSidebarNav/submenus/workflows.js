@@ -22,7 +22,6 @@ const workflows = () => {
         simpleLink('/content-staging', 'Content Staging'),
       ]),
 
-
       simpleLink('/guides/integrated-composer', 'Integrated Composer', [
         getGuideDirectory(
           'guides/integrated-composer',

@@ -41,11 +41,8 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/drupal-updates', 'Drupal Updates'),
       ]),
 
-
-
       // We should probably delete/redirect this.
       simpleLink('/manage'),
-
 
       // Pages that should be redirected
       simpleLink('/overview', 'pages that should be redirected', [

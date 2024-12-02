@@ -6,10 +6,8 @@ const getStarted = () => {
     link: '/get-started',
     title: 'Get Started',
     children: [
-
-
       simpleLink('/get-started', 'Overview'),
-      getGuideDirectory('guides/getstarted', "Getting Started Guide"),
+      getGuideDirectory('guides/getstarted', 'Getting Started Guide'),
       // This page is kind of a landing page? Should it be in this menu?
       simpleLink('/products', 'Products & Features'),
       simpleLink('/required-reading', 'Required Reading'),
