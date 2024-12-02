@@ -1,5 +1,5 @@
 ---
-title: Backups Tool
+title: Backups
 subtitle: Create Backups
 description: Learn how to create new backups.
 tags: [backups, security]
