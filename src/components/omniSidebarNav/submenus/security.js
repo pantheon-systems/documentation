@@ -7,7 +7,6 @@ const security = () => {
     children: [
       simpleLink('/guides/security', 'Security Overview'),
       getGuideDirectory('guides/secure-development'),
-
       getGuideDirectory('guides/secrets', 'Secrets Manager'),
       simpleLink('/custom-certificates', 'Custom Certificates'),
       simpleLink('/certificate-bundles', 'Certificate Bundles'),
