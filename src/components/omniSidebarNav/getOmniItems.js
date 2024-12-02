@@ -18,7 +18,6 @@ import { simpleLink } from './helpers';
 // Todo: review reporting in console log - Assigned to Steve to investigate
 // Todo: Review pages that are reported as unassigned
 // Todo: remove console logging from this component.
-// Todo, add search bar back to landing pages
 // todo, delete pagesToDelete and unassignedPages
 
 /**

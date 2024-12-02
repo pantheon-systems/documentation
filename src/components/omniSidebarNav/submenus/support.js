@@ -41,6 +41,7 @@ const support = () => {
         ]),
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
+        simpleLink('/local-dns-cache', 'Local DNS Cache'),
       ]),
       simpleLink('/performance', 'Performance Troubleshooting', [
         simpleLink('/performance', 'Overview'),
@@ -112,6 +113,8 @@ const support = () => {
           'Migrate a Composer-based Drupal Site to a Build Tools Site',
         ),
       ]),
+      simpleLink('/monthly-maintenance', "Pantheon's Monthly Maintenance"),
+
     ],
   };
 };

@@ -38,6 +38,7 @@ const OmniSidebarNav = ({
     /.*\/contributors\/.*/,
     /.*\/release-notes\/.*/,
     /.*\/iframeembeds\/.*/,
+    /.*\/search\/.*/,
     /.*\/terminus\/commands\/.*/,
   ];
 
