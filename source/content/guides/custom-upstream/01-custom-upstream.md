@@ -140,7 +140,7 @@ Here are definitions for commonly used terms:
 
 ### Repository
 
-<p>A<dfn id="repository">repository</dfn> is a collection of files packaged in a single directory under version control.</p>
+<p>A <dfn id="repository">repository</dfn> is a collection of files packaged in a single directory under version control.</p>
 
 
 ### Remote Repository
