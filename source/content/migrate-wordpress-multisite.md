@@ -219,5 +219,4 @@ For you to be able to access your WPMS in different environments, you need to en
 ## More Resources
 
 * [Migrate Sites to Pantheon](/guides/guided/)
-* [Guided WordPress Migrations (video)](/migrate-wordpress)
 * [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check)
