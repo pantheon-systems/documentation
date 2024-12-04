@@ -5,9 +5,17 @@ const pagesToDeleteorReconsider = () => {
     link: '/platform-upgrade',
     title: 'Pages to Delete or reconsider',
     children: [
-      // Should this one be redirected to /guides/custom-upstreams?
-      simpleLink('/custom-upstreams', 'Custom Upstreams'),
 
+      getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
+      // Is this duplicated by guides/drupal-unhosted-composer
+      getGuideDirectory(
+        'guides/migrate/manual-d8-composer-to-d8',
+        'Manual d8 to d8',
+      ),
+      // This page could use a refresh
+      simpleLink('/headless', 'Running a Headless CMS'),
+      simpleLink('/cygwin-windows'),
+        
       // Deprecated
       simpleLink('/crisis-response-upstream', 'Deprecated or archived pages', [
         simpleLink('/drupal-10', 'Drupal 10'),
@@ -17,13 +25,17 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/drupal-updates', 'Drupal Updates'),
         simpleLink('/lockr'),
       ]),
+      // --- ^^ Everything above still needs to be reviewed ^^ ---
 
-      // We should probably delete/redirect this.
-      simpleLink('/manage'),
-
+      
+      // --- Everything below has been deleted for redirection in PR #9335 ---
       // Pages that should be redirected
       simpleLink('/overview', 'pages that should be redirected', [
         simpleLink('/overview'), //  --> "/"
+        // We should probably delete/redirect this.
+        simpleLink('/manage'),
+        // Should this one be redirected to /guides/custom-upstreams?
+        simpleLink('/custom-upstreams', 'Custom Upstreams'),
         simpleLink('/autopilot', 'Autopilot Overview'), // Duplicates the autopilot guide
         simpleLink('/terminus-overview', 'Terminus Overview'),
         simpleLink('/newrelic', 'New Relic', []),
@@ -49,31 +61,21 @@ const pagesToDeleteorReconsider = () => {
         simpleLink('/workshops'),
         // This is actually for google domains and that's no longer a service
         simpleLink('/google', 'Google Cloud DNS'),
-
-        getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
-
-        // Is this duplicated by guides/drupal-unhosted-composer
-        getGuideDirectory(
-          'guides/migrate/manual-d8-composer-to-d8',
-          'Manual d8 to d8',
-        ),
-
-        // This page could use a refresh
-        simpleLink('/headless', 'Running a Headless CMS'),
         // This is a page about the move from Rackspace to Google Cloud. Maybe redirect to guides/disaster-recovery
+        // RW: I think maybe /monthly-maintenance is a better target for the redirect
         simpleLink('/platform-upgrade'),
-        simpleLink('/cygwin-windows'),
         // Redirect this page to https://docs.pantheon.io/guides/drush/drupal-commandline
         simpleLink(
           '/terminus-drupal-site-management',
           'Using Terminus to Create and Update Drupal Sites on Pantheon',
         ),
-
         // Todo: relocate this page.
         {
           link: '/migrate-wordpress',
           title: 'Migrating WordPress Sites',
         },
+
+
       ]), //  --> "/"
     ],
   };
