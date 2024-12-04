@@ -1,5 +1,19 @@
 import CertificationItems from './submenus/certification';
-import { getGuideDirectory } from './helpers';
+import getStarted from './submenus/getStarted';
+import goLive from './submenus/goLive';
+import pagesToDelete from './submenus/pagesToDelete';
+import webInfrastructure from './submenus/webInfrastructure';
+import accountManagement from './submenus/accountManagement';
+import terminus from './submenus/terminus';
+import about from './submenus/about';
+import workflows from './submenus/workflows';
+import support from './submenus/support';
+import security from './submenus/security';
+import { simpleLink } from './helpers';
+
+// Before we can merge we need to:
+// Todo: remove console logging from this component.
+// todo, delete pagesToDelete()
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -7,24 +21,19 @@ import { getGuideDirectory } from './helpers';
  */
 const getOmniItems = () => {
   const OmniItems = [
-    {
-      link: '/guides/decoupled',
-      title: 'Front-End Sites and Starter Kits',
-      children: [
-        getGuideDirectory('guides/decoupled/overview'),
-        getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
-        getGuideDirectory('guides/decoupled/wp-backend-starters'),
-        getGuideDirectory('guides/decoupled/wp-gatsby-frontend-starters'),
-        getGuideDirectory('guides/decoupled/drupal-backend-starters'),
-        getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
-        getGuideDirectory('guides/decoupled/no-starter-kit'),
-      ],
-    },
-    {
-      link: '/certification',
-      title: 'WebOps Certification',
-      children: CertificationItems,
-    },
+    simpleLink('/', 'Docs Home'),
+    getStarted(),
+    workflows(),
+    goLive(),
+    webInfrastructure(),
+    accountManagement(),
+    terminus(),
+    support(),
+    security(),
+    CertificationItems(),
+    about(),
+    simpleLink('/release-notes', 'Release Notes'),
+    pagesToDelete(),
   ];
   return OmniItems;
 };

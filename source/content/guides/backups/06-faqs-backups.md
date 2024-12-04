@@ -1,5 +1,5 @@
 ---
-title: Backups Tool
+title: Backups
 subtitle: FAQs
 description: Get answers to your Backups Tool questions.
 tags: [backups, security]
