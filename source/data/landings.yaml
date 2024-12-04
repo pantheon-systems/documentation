@@ -400,8 +400,6 @@
           url: "/cloud-optimization"
         - text: "Pantheon Filesystem"
           url: "/guides/filesystem"
-        - text: "Running WordPress and Drupal as a Backend API"
-          url: "/headless"
         - text: "Horizontal Scalability"
           url: "/horizontal-scalability"
         - text: "Pantheon Modules"
