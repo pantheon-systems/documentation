@@ -73,7 +73,7 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/3.6.0",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/3.6.0",
-        "body": "3.6.0 - 2024-09-18\r\n\r\nAdded\r\n\r\nNew command \"site:label:set\" to set a site's label (#2626)\r\nTrack command success rates and execution time (#2623)\r\n"
+        "body": "### Added\r\n\r\n- New command \"site:label:set\" to set a site's label (#2626)\r\n- Track command success rates and execution time (#2623)"
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/170896941",
