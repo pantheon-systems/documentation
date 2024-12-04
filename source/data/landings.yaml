@@ -995,11 +995,6 @@
   subtitle: ""
   path: "develop-drupal"
   video_id: "PsYTvhGhmYo"
-  cta:
-    title: "Drupal 10"
-    type: "Guide"
-    subtitle: "Learn about Drupal 10 the Pantheon WebOps Platform."
-    url: "/drupal-10"
   cta_alt:
     type: "Reference"
     title: "Supported Drupal Versions"
