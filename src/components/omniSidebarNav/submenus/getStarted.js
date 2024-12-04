@@ -32,7 +32,10 @@ const getStarted = () => {
           'guides/drupal/drupal-unhosted-composer',
           'Composer-based Drupal Sites',
         ),
-        getGuideDirectory('guides/drupal/drupal-unhosted', 'Non-Composer-based Drupal Sites'),
+        getGuideDirectory(
+          'guides/drupal/drupal-unhosted',
+          'Non-Composer-based Drupal Sites',
+        ),
 
         simpleLink('/add-site-clone', 'Clone an Existing Pantheon Site'),
       ]),
