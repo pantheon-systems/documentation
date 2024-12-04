@@ -1,5 +1,5 @@
 ---
-title: Backups Tool
+title: Backups
 subtitle: Access Backups
 description: Learn how to access your backups.
 tags: [backups, security]

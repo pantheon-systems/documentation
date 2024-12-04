@@ -1,5 +1,5 @@
 ---
-title: Backups Tool
+title: Backups
 subtitle: Restore a Backup
 description: Learn how restore from an existing backup.
 tags: [backups, security]

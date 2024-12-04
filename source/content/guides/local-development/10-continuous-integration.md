@@ -15,7 +15,7 @@ integration: []
 showtoc: true
 permalink: docs/guides/local-development/continuous-integration
 ---
-
+<!--Todo: move content to /continuous-integration and delete -->
 This section provides information on how to use Terminus and Drupal SimpleTest to run automated integration tests.
 
 [Continuous Integration](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. [Contact support](/guides/support/contact-support/) if you have a particular use case or technique that you'd like to highlight.

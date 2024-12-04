@@ -1,5 +1,5 @@
 ---
-title: Backups Tool
+title: Backups
 subtitle: Code Archives and Backup Log
 description: Learn about your code archives and Backup Log.
 tags: [backups, security]

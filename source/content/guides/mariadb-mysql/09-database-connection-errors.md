@@ -14,6 +14,8 @@ showtoc: true
 permalink: docs/guides/mariadb-mysql/database-connection-errors
 ---
 
+<!-- Much of this guide could be restructured. Some of the info in this guide is general explanation. Some is troubleshooting "how to"  -->
+
 This section provides information on database connection errors.
 
 There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you get database connection errors like the one below:
@@ -24,7 +26,7 @@ There is an issue connecting to the Pantheon database if your site suddenly reve
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
 
-There are two common causes for this issue: 
+There are two common causes for this issue:
 
 - Overwriting core
 - Using non-standard bootstraps

@@ -1,5 +1,5 @@
 ---
-title: Optimize Your wp-options Table and Autoloaded Data
+title: Optimize Your wp_options Table and Autoloaded Data
 description: Learn how to check and configure the autoloaded data in your wp_options table.
 tags: [cache]
 contributors: [carl-alberto, whitneymeredith]
