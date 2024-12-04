@@ -157,7 +157,7 @@ Here are definitions for commonly used terms:
 
 ### Framework
 
-<p>The <dfn id="upstream-framework">upstream framework</dfn> determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is visible to users via Terminus and in the Site Settings. Once a framework has been set, it cannot be changed at the site level through the UI or Terminus. If you need to change your upstream's framework, you would need to contact Support.</p>
+<p>The <dfn id="framework">framework</dfn> determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is visible to users via Terminus and in the Site Settings. Once a framework has been set, it cannot be changed at the site level through the UI or Terminus. If you need to change your upstream's framework, you would need to contact Support.</p>
 
 ## More Resources
 
