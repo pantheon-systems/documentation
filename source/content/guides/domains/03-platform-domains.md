@@ -26,7 +26,7 @@ All platform domains are available over HTTPS. Redirecting to HTTPS during devel
 
 <Alert title="Note" type="info">
 
-Platform domains are provisioned automatically and are non-configurable. Attempting to add variants of a platform domain (e.g. foo.site-name.pantheonsite.io) as a [custom domain](https://docs.pantheon.io/guides/domains/custom-domains) will result in an error. 
+Platform domains are provisioned automatically and are non-configurable. Attempting to add variants of a platform domain (e.g. `foo.site-name.pantheonsite.io`) as a [custom domain](https://docs.pantheon.io/guides/domains/custom-domains) will result in an error. 
 
 </Alert>
 
