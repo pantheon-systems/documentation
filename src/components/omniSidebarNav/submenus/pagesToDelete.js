@@ -5,7 +5,6 @@ const pagesToDeleteorReconsider = () => {
     link: '/platform-upgrade',
     title: 'Pages to Delete or reconsider',
     children: [
-
       getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
       // Is this duplicated by guides/drupal-unhosted-composer
       getGuideDirectory(
@@ -15,7 +14,7 @@ const pagesToDeleteorReconsider = () => {
       // This page could use a refresh
       simpleLink('/headless', 'Running a Headless CMS'),
       simpleLink('/cygwin-windows'),
-        
+
       // Deprecated
       simpleLink('/crisis-response-upstream', 'Deprecated or archived pages', [
         simpleLink('/drupal-10', 'Drupal 10'),
@@ -27,7 +26,6 @@ const pagesToDeleteorReconsider = () => {
       ]),
       // --- ^^ Everything above still needs to be reviewed ^^ ---
 
-      
       // --- Everything below has been deleted for redirection in PR #9335 ---
       // Pages that should be redirected
       simpleLink('/overview', 'pages that should be redirected', [
@@ -74,8 +72,6 @@ const pagesToDeleteorReconsider = () => {
           link: '/migrate-wordpress',
           title: 'Migrating WordPress Sites',
         },
-
-
       ]), //  --> "/"
     ],
   };
