@@ -33,7 +33,7 @@ const getOmniItems = () => {
     CertificationItems(),
     about(),
     simpleLink('/release-notes', 'Release Notes'),
-    pagesToDelete(),
+    // pagesToDelete(),
   ];
   return OmniItems;
 };
