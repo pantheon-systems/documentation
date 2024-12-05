@@ -43,11 +43,9 @@ WordPress Multisite requires a special configuration that is only available to s
 
 Pantheon employees must enable a WordPress Multisite custom upstream on your behalf so your team can create new Multisites self-serve in your professional workspace. This is because WordPress Multisites use the `wordpress_network` [framework](/glossary/#framework), which includes Multisite specific Nginx configurations and differs from the default `wordpress` framework. Reach out to your account manager to get started, or if you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
-If you want to create new WordPress Multisites self-serve and on-demand in the Pantheon Dashboard, reach out to your account manager and request a [Custom Upstream](/guides/custom-upstream) for your workspace based on Pantheon's WordPress Multisite framework.
 
 Existing WordPress sites cannot be converted to WordPress Multisites (since they are different frameworks), however you can spin up a new WordPress Multisite and then [manually migrate](/migrate-manual) the code, database and files from your existing site. 
 
-If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
 
  ## More Resources
