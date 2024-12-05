@@ -41,7 +41,7 @@ We do not support uses of WordPress Multisite that run functionally-different or
 ## Request a WordPress Multisite
 WordPress Multisite requires a special configuration that is only available to select customers. Access to WordPress Multisite requires a Gold, Platinum, or Diamond level [Workspace plan](https://pantheon.io/plans/pricing).
 
-By default, Pantheon employees must create the WordPress Network upstream on your behalf so your team can create new Multisites on the platform. This is because they use the `wordpress_network` [framework](/glossary/#framework) which includes Multisite specific Nginx configurations and differs from the default `wordpress` framework. Reach out to your account manager to request site creation for a new WordPress Multisite.
+By default, Pantheon employees must create the WordPress Multisite upstream on your behalf so your team can create new Multisites on the platform. This is because they use the `wordpress_network` [framework](/glossary/#framework) which includes Multisite specific Nginx configurations and differs from the default `wordpress` framework. Reach out to your account manager to request site creation for a new WordPress Multisite.
 
 If you want to create new WordPress Multisites self-serve and on-demand in the Pantheon Dashboard, reach out to your account manager and request a [Custom Upstream](/guides/custom-upstream) for your workspace based on Pantheon's WordPress Multisite framework.
 
