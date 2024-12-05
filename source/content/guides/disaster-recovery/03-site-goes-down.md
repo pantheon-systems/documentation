@@ -69,7 +69,7 @@ Filing an emergency ticket will escalate your downtime incident within the Suppo
 
 Depending on the account tier, your escalation path may differ. Escalation paths include the following:
 
-* Dedicated Support Team: All Diamond tier accounts have a dedicated support team, and tickets and issues are routed preferentially to them. This escalation is an automatic part of the intake process once a ticket is opened.
+* Diamond Support Team: All Diamond tier accounts have the Diamond support team, and tickets and issues are routed preferentially to them. This escalation is an automatic part of the intake process once a ticket is opened.
 
 * Customer Success Manager (CSM): Included for all Enterprise (contract) customers, CSMs serve as a coordinator when support involves multiple teams, or when additional subject matter experts need to be brought into the process. The CSM is also responsible for any post-incident Customer Incident Analysis or performance reviews.
 
