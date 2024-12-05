@@ -53,7 +53,7 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Complex Caching Use Cases
    - Terminus
 - **Diamond Support**:
-   - Access for bespoke site debugging
+   - Access to bespoke site debugging
 
 ## Range of Support
 
