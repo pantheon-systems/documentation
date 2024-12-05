@@ -34,7 +34,7 @@ To view a Site Dashboard:
 
 ## Add a Site
 
-For guidance on how best to create or migrate a site, see [Adding a Site to Pantheon](/add-site).
+For guidance on how best to create or migrate a site, see [Adding a Site to Pantheon](/guides/getstarted/addsite/).
 
 ## Manage Sites
 

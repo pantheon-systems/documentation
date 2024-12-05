@@ -16,7 +16,7 @@ product: [composer]
 integration: [--]
 ---
 
-This section provides usage and maintanenance information for composer-managed [Custom Upstreams](/custom-upstreams) on Pantheon, including steps to add upstream dependencies.
+This section provides usage and maintanenance information for composer-managed [Custom Upstreams](/guides/custom-upstream) on Pantheon, including steps to add upstream dependencies.
 
 
 ## Custom Upstreams

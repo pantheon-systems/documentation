@@ -16,7 +16,7 @@ audience: [sysadmin]
 product: [--]
 integration: [--]
 ---
-Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/add-site-dashboard#create-the-test-environment). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
+Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/getstarted/addsite/#create-the-live-environment). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
 
 To access metrics for another environment, use the [Terminus](/terminus) `metrics` command:
 

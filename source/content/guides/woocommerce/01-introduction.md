@@ -27,7 +27,7 @@ This guide is here to help you get a WooCommerce store up and running on Pantheo
 * Accept orders on your **<Icon icon="wavePulse" /> Live** site and pull your database to your **<Icon icon="equalizer" /> Test** and **<Icon icon="wrench" /> Dev** environments for future changes.
 
 ## Before You Begin
-Before we get going it's important that you already have a [Pantheon account](https://pantheon.io/register) (they're free!), and you already know how to [create a site](/add-site).
+Before we get going it's important that you already have a [Pantheon account](https://pantheon.io/register) (they're free!), and you already know how to [create a site](/guides/getstarted/addsite/).
 
 ### Learn the Pantheon Workflow
 At Pantheon we believe in workflows and processes that make developer's (and site owner's) lives better. To help with that, every site on Pantheon has three environments: **<Icon icon="wrench" /> Dev**, **<Icon icon="equalizer" /> Test**, and **<Icon icon="wavePulse" /> Live**.

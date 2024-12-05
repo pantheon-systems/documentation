@@ -132,7 +132,7 @@ Workspaces cannot be deleted.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to add sites to.
 
-1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/add-site) for more details.
+1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/guides/getstarted/addsite/) for more details.
 
 
 ### Why do login attempts fail for all users across my workspace simultaneously?

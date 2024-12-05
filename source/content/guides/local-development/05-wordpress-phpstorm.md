@@ -24,7 +24,7 @@ Refer to [WordPress Development using PhpStorm](https://confluence.jetbrains.com
 
 ## Create a WordPress site
 
-[Create a new WordPress site](/add-site-dashboard) on Pantheon if you don't already have one. This site should be empty to develop your new plugin or theme.
+[Create a new WordPress site](/guides/getstarted/addsite/#create-a-new-cms-site) on Pantheon if you don't already have one. This site should be empty to develop your new plugin or theme.
 
 ## Clone the Code Repository
 

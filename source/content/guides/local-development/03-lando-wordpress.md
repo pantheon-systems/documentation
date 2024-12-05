@@ -134,7 +134,7 @@ Verify that you have:
 
 - An account with Pantheon, which you can [register](https://pantheon.io/register) for free.
 
-- A Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/add-site).
+- A Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/guides/getstarted/addsite/).
 
 - A unique Pantheon [machine token](/machine-tokens).
 

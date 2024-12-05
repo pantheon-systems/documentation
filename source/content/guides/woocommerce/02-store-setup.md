@@ -14,7 +14,7 @@ type: guide
 permalink: docs/guides/woocommerce/store-setup/
 editpath: woocommerce/02-store-setup.md
 ---
-I've already gone ahead and [created a new site on Pantheon](/add-site).
+I've already gone ahead and [created a new site on Pantheon](/guides/getstarted/addsite/).
 
 ![New Pantheon Site Dashboard](../../../images/guides/woocommerce/01-new-pantheon-site.png)
 

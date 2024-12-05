@@ -11,6 +11,4 @@ Learn how to ace an online speed test with Pantheon's Global CDN.
 
 [DNS Made Easy Domain Configuration](/dns-made-easy)
 
-[Google Domain Configuration](/google)
-
 [Style Guide](/style-guide)

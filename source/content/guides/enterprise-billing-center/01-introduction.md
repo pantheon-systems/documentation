@@ -40,7 +40,7 @@ Follow the steps below to access the Enterprise Billing Center. Refer to [Access
 
 ## More Resources
 
-- [Account Management](/manage)
+- [Account Management](/guides/account-mgmt)
 - [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 - [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy)
 - [Metrics in the Site Dashboard](/guides/account-mgmt/traffic)

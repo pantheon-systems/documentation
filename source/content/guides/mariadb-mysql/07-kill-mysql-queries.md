@@ -19,12 +19,6 @@ This section provides information on how to identify and kill queries with MySQL
 
 Long-running MySQL queries prevent other transactions from accessing the necessary tables to execute a request, leaving your users on hold. You can [access the environment's MySQL database](/guides/mariadb-mysql/mysql-access) to kill these queries.
 
-<Enablement title="Ramp up website performance" link="/workshops?c=lw4">
-
-Make your site faster. Check out our free on-demand training, where you'll learn about caching pages with our Advanced CDN, our Redis backend cache, and see how to use New Relic&reg; Performance Monitoring for monitoring performance.
-
-</Enablement>
-
 ## Identify Long-Running Queries
 
 1. Create a local [MySQL connection](/guides/mariadb-mysql/mysql-access#access-your-database-directly) to the site's database.

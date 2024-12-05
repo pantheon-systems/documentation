@@ -25,7 +25,7 @@ The following table indicates availability of the specified Drupal versions, as 
 | 6           | ❌          | ❌           | ❌          |
 
 ## Drupal 10 and 11 on Pantheon
-Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
+Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
 
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
@@ -37,7 +37,7 @@ terminus site:create <site> <label> drupal8
 ```
 
 ## Drupal 7 on Pantheon
-Refer to [Create a New CMS Site](/add-site-dashboard) for how to create a new Drupal 7 site from the Pantheon dashboard.
+Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 7 site from the Pantheon dashboard.
 
 ### Drupal 7 long-term support
 Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with [Tag1 Consulting](https://www.tag1consulting.com/) to offer Long-Term Support for Drupal 7 through **January 5, 2027**.

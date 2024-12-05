@@ -62,9 +62,6 @@
             - text: "Create a Drupal Site From the Command Line Using Terminus and Drush"
               url: "/guides/drush/drupal-commandline"
               icon: "book"
-            - text: "Using Terminus to Create and Update Drupal Sites on Pantheon"
-              url: "/guides/terminus-drupal-site-management"
-              icon: "book"
             - text: "Create a WordPress Site From the Command Line Using Terminus and WP-CLI"
               url: "/guides/wp-cli"
               icon: "book"
@@ -403,8 +400,6 @@
           url: "/cloud-optimization"
         - text: "Pantheon Filesystem"
           url: "/guides/filesystem"
-        - text: "Running WordPress and Drupal as a Backend API"
-          url: "/headless"
         - text: "Horizontal Scalability"
           url: "/horizontal-scalability"
         - text: "Pantheon Modules"
@@ -584,9 +579,6 @@
               icon: "video"
             - text: "Create a Drupal Site From the Command Line Using Terminus and Drush"
               url: "/guides/drush/drupal-commandline"
-              icon: "book"
-            - text: "Using Terminus to Create and Update Drupal Sites on Pantheon"
-              url: "/guides/terminus-drupal-site-management"
               icon: "book"
             - text: "Create a WordPress Site From the Command Line Using Terminus and WP-CLI"
               url: "/guides/wp-cli"
@@ -839,8 +831,8 @@
           url: "/guides/drupal-advanced-page-cache"
         - text: "Using Pantheon as a Training Platform for WordPress and Drupal"
           url: "/guides/trainers"
-        - text: "Using Terminus to Create and Update Drupal Sites on Pantheon"
-          url: "/guides/terminus-drupal-site-management"
+        - text: "Create a Drupal Site From the Command Line Using Terminus and Drush"
+          url: "/guides/drush/drupal-commandline"
         - text: "Using WP SAML Auth with Google Apps"
           url: "/guides/wordpress-google-sso"
         - text: "Using WordPress with Composer on Pantheon"
@@ -962,9 +954,6 @@
           url: "/guides/local-development/wordpress-phpstorm"
         - text: "WordPress Configuration Management (WP-CFM)"
           url: "/guides/wordpress-configurations/wp-cfm"
-        - text: "Guided WordPress Migrations"
-          url: "/migrate-wordpress"
-          icon: "video"
         - text: "Create a WordPress MU-Plugin for Actions and Filters"
           url: "/guides/wordpress-configurations/mu-plugin"
         - text: "Managing Custom Code for WordPress with Plugins"
@@ -1004,11 +993,6 @@
   subtitle: ""
   path: "develop-drupal"
   video_id: "PsYTvhGhmYo"
-  cta:
-    title: "Drupal 10"
-    type: "Guide"
-    subtitle: "Learn about Drupal 10 the Pantheon WebOps Platform."
-    url: "/drupal-10"
   cta_alt:
     type: "Reference"
     title: "Supported Drupal Versions"
@@ -1042,9 +1026,6 @@
         - text: "Convert an Empty Upstream Drupal Site to a Composer Managed Site"
           url: "/guides/composer-convert-from-empty/"
           icon: "book"
-        - text: "Upgrade a Drupal Site That Is Managed With Composer From Another Platform"
-          url: "/guides/manual-d8-composer-to-d8/"
-          icon: "book"
         - text: "Switch from Drupal to Drupal Composer Managed Upstream"
           url: "/guides/switch-drupal-recommended-upstream/"
           icon: "book"
@@ -1066,9 +1047,6 @@
           url: "/guides/local-development/drupal-phpstorm"
         - text: "Drupal Commerce"
           url: "/guides/drupal-commerce"
-        - text: "Using Terminus to Create and Update Drupal Sites on Pantheon"
-          url: "/guides/terminus-drupal-site-management/"
-          icon: "book"
         - text: "Creating a services.yml File for Drupal"
           url: "/services-yml"
         - text: "Drush"
@@ -1143,110 +1121,6 @@
           url: "/modules-plugins-known-issues"
         - text: "Drupal Modules with Known Issues"
           url: "/modules-known-issues"
-- title: "Pantheon Overview"
-  subtitle: "Pantheon offers a robust platform for your web sites, offering dozens of features, integrations and customization options.  As such, it can be a little like landing in a country where you don't know the language!  The following documents provide an overview of our capabilities, making it possible for you to understand the language, and determine your next steps."
-  path: "overview"
-  guides:
-    - title: ""
-      type: "normal"
-      links:
-        - text: "Architecture"
-          url: "/platform"
-        - text: "Products"
-          url: "/products"
-        - text: "Integrations"
-          url: "/integrations"
-        - text: "Pantheon WebOps Workflow"
-          url: "/pantheon-workflow"
-        - text: "Account Management"
-          url: "/manage"
-        - text: "Support"
-          url: "/support"
-- title: "Account Management at Pantheon"
-  subtitle: "Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading these guides."
-  path: "manage"
-  footer_border: true
-  guides:
-    - title: ""
-      type: "normal"
-      links:
-        - text: 'Accounts'
-          url: '/guides/account-mgmt/account'
-        - text: 'Plans and Pricing'
-          url: '/guides/account-mgmt/plans'
-        - text: 'Workspaces, Sites, and Teams'
-          url: '/guides/account-mgmt/workspace-sites-teams'
-        - text: 'Billing - Self-Serve Customers'
-          url: '/guides/account-mgmt/billing'
-        - text: 'Traffic and Overages'
-          url: '/guides/account-mgmt/traffic'
-        - text: 'Billing - Enterprise Customers'
-          url: '/guides/enterprise-billing-center'
-  topics-groups:
-    - title: "Accounts"
-      subtitle: ""
-      links:
-        - text: "Personal Workspace"
-          url: "/guides/account-mgmt/account/workspace"
-        - text: "Recover Account"
-          url: "/guides/account-mgmt/account/recover"
-        - text: "Delete Account"
-          url: "/guides/account-mgmt/account/delete"
-    - title: "Plans and Pricing"
-      subtitle: ""
-      links:
-        - text: "Plan Resources"
-          url: "/guides/account-mgmt/plans/resources"
-        - text: "Pricing"
-          url: "/guides/account-mgmt/plans/pricing"
-        - text: "Purchase Plans and Addons"
-          url: "/guides/account-mgmt/plans/purchase"
-        - text: "Manage Your Plans"
-          url: "/guides/account-mgmt/plans/site-plans"
-    - title: "Workspaces, Sites, and Teams"
-      subtitle: ""
-      links:
-        - text: 'Understand How Workspaces, Sites and Teams Work Together'
-          url: '/guides/account-mgmt/workspace-sites-teams'
-        - text: 'Professional Workspaces'
-          url: '/guides/account-mgmt/workspace-sites-teams/workspaces'
-        - text: 'Sites'
-          url: '/guides/account-mgmt/workspace-sites-teams/sites'
-        - text: 'Teams'
-          url: '/guides/account-mgmt/workspace-sites-teams/teams'
-    - title: 'Billing - Self-Serve Customers'
-      subtitle: ''
-      links:
-        - text: "Billing Periods"
-          url: "/guides/account-mgmt/billing/periods"
-        - text: "Payment Methods"
-          url: "/guides/account-mgmt/billing/methods"
-        - text: "Invoices and Subscriptions"
-          url: "/guides/account-mgmt/billing/invoices"
-        - text: "Transfer Ownership and Billing"
-          url: "/guides/account-mgmt/billing/transfer"
-        - text: "Troubleshooting"
-          url: "/guides/account-mgmt/billing/troubleshooting"
-    - title: "Traffic and Overages"
-      subtitle: ""
-      links:
-        - text: 'Overview'
-          url: '/guides/account-mgmt/traffic'
-        - text: 'Measuring Traffic'
-          url: '/guides/account-mgmt/traffic/measure'
-        - text: 'Investigate and Remedy Traffic Events'
-          url: '/guides/account-mgmt/traffic/remedy'
-        - text: 'FAQ'
-          url: '/guides/account-mgmt/traffic/faq'
-    - title: "Billing - Enterprise Customers"
-      subtitle: ""
-      links:
-        - text: "Overview"
-          url: "/guides/enterprise-billing-center"
-        - text: "Invoices"
-          url: "/guides/enterprise-billing-center/invoices"
-        - text: "Site Portfolio Report"
-          url: "/guides/enterprise-billing-center/site-portfolio-report"
 - title: "Account Management at Pantheon"
   subtitle: "Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading these guides."
   path: "guides/account-mgmt"
@@ -1329,93 +1203,6 @@
           url: '/guides/enterprise-billing-center/invoices'
         - text: 'Site Portfolio Report'
           url: '/guides/enterprise-billing-center/site-portfolio-report'
-- title: 'Billing Docs'
-  subtitle: ''
-  path: 'billing'
-  topics-groups:
-    - title: "Site Owners"
-      subtitle: ""
-      links:
-        - text: "Add and remove site team members"
-          url: "/guides/account-mgmt/workspace-sites-teams/teams#remove-a-user"
-        - text: "Account billing in the personal workspace: update or change billing"
-          url: "/guides/account-mgmt/billing"
-        - text: "View invoices"
-          url: "/guides/account-mgmt/billing/invoices#invoices"
-        - text: "Switch to annual billing"
-          url: "/guides/account-mgmt/billing/periods"
-        - text: "Add new card on the site dashboard"
-          url: "/guides/account-mgmt/billing/methods#add-a-site-specific-payment-method"
-        - text: "Recover an account after a site owner leaves"
-          url: "/guides/account-mgmt/account/recover"
-        - text: "Site plan FAQs"
-          url: "/guides/account-mgmt/plans/faq"
-        - text: "Pricing Comparison"
-          url: "https://pantheon.io/plans/pricing/pantheon-web-hosting-pricing-comparison?docs"
-        - text: "Site Plan Change"
-          url: "/guides/account-mgmt/plans/site-plans"
-        - text: "Transfer ownership (User-to-User/individual owner to a new individual owner)"
-          url: "/guides/account-mgmt/billing/transfer"
-        - text: "Accept an invitation to pay (for the new owner)"
-          url: "/guides/account-mgmt/billing/transfer#accept-an-invitation-to-pay"
-        - text: "Update the credit card on file"
-          url: "/guides/account-mgmt/billing/methods#update-personal-payment-method"
-        - text: "Cancel Site plan"
-          url: "/guides/account-mgmt/plans/site-plans#cancel-your-plan"
-    - title: "Preferred Pricing"
-      subtitle: ""
-      links:
-        - text: "Retain or share the preferred pricing (when changing plans and transferring ownership)"
-          url: "/guides/account-mgmt/workspace-sites-teams/sites#share-preferred-pricing-for-a-site"
-        - text: "How to add a Supporting Organization"
-          url: "/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site"
-        - text: "List vs. Preferred pricing "
-          url: "/guides/account-mgmt/plans/pricing"
-        - text: "Agency Directory/Finder"
-          url: "https://pantheon.io/agencies/agency-finder"
-    - title: "Organizations"
-      subtitle: ""
-      links:
-        - text: "Pantheon Org FAQs"
-          url: "/guides/account-mgmt/workspace-sites-teams/workspaces#faq"
-        - text: "Role-Based permissions and change management"
-          url: "/guides/account-mgmt/workspace-sites-teams/teams"
-    - title: "Partner Program Guide/FAQ"
-      subtitle: ""
-      links:
-        - text: "Partner Program Guide PDF"
-          url: "https://pantheon.io/sites/default/files/pdf/Pantheon-ebook-PartnerProgramGuide_0.pdf"
-        - text: "Partner Program FAQ"
-          url: "https://pantheon.io/sites/default/files/pdf/Pantheon%20Partner%20Program%20FAQs%20.pdf"
-    - title: "Traffic and Overages"
-      subtitle: ""
-      links:
-        - text: "Site traffic and overages"
-          url: "/guides/account-mgmt/traffic#traffic-limits-and-overages"
-        - text: "Difference Between GA vs Pantheon Analytics"
-          url: "/guides/account-mgmt/traffic/#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics"
-    - title: "Site Relaunch"
-      subtitle: ""
-      links:
-        - text: "Site relaunch guide"
-          url: "/relaunch"
-        - text: "Specific steps that are billing related from the main relaunch guide"
-          url: "/relaunch#relaunch-procedure"
-    - title: "Finance"
-      subtitle: ""
-      links:
-        - text: "W-9 Form 2022"
-          url: " https://pantheon.io/w9 "
-        - text: "Request Tax Exempt Status"
-          url: "/tax-exempt-status"
-    - title: "General"
-      subtitle: ""
-      links:
-        - text: "Real-time chat support"
-          url: "https://docs.pantheon.io/support/#real-time-chat-support"
-- title: "WordPress on Pantheon: Pre-GA"
-  subtitle: "Pantheon makes some WordPress features available to a limited audience for testing. Some Support exclusions will apply."
-  path: "guides/wordpress-composer/pre-ga"
 - title: "Front-End Sites on Pantheon"
   subtitle: "Learn about Front-End Sites on Pantheon."
   path: "guides/decoupled"
