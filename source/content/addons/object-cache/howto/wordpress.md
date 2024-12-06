@@ -142,7 +142,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	
 	</Alert>
 
-1. Open your `composer.json` file and locate the `repositories` section. If it doesn't exist, add it as shown below:
+1. Open your `composer.json` file and locate the `repositories` section. If it doesn't exist, add it in the "repositories" section as shown below:
 
 	```json
 		repositories: [
