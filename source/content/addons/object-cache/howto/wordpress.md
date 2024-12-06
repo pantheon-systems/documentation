@@ -123,16 +123,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	composer config --auth http-basic.objectcache.pro token $(terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")
 	```
 	
-	This will pull the Object Cache Pro license token directly into the `auth.json` file.
+	This will pull the Object Cache Pro license token directly into the `auth.json` file. You can open the `auth.json` file locally to ensure that it has a structure that looks like this:
 	
-	**Manually:**
-
-	1. Create an `auth.json` file in your directory.
-	
-	1. Run `terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")` to output the token to your terminal, then copy it into the `password` field in the next step.
-
-	1. Add the following code to the `auth.json` file.
-
 		```json
 		{
 			"http-basic": {
