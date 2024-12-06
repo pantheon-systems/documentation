@@ -227,7 +227,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
 	```php
-		'token' => '<LICENSE-TOKEN>',
+		'token' => $token,
 		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
 		'port' => getenv('CACHE_PORT') ?: 6379,
 		'database' => getenv('CACHE_DB') ?: 0,
@@ -305,7 +305,7 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 
 	```php
 	$ocp_settings = [
-		'token' isset( getenv( 'OCP_LICENSE' ) ) ? getenv( 'OCP_LICENSE' ) : '',
+		'token' => $token, // The dynamically fetched token from above.
 		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
 		'port' => getenv('CACHE_PORT') ?: 6379,
 		'database' => getenv('CACHE_DB') ?: 0,
