@@ -185,8 +185,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	git add composer.* && git commit -m "Require Object Cache Pro"
 	```
 	
-1. Add the license token your `config/application.php` file. Note that in the future, the license key will be provided by the platform. Currently, you are responsible for adding it to your repository. However, you can take advantage of [Pantheon Secrets](/guides/secrets) to store the token as a secret. 
-	
+1. Add the license token your `config/application.php` file. Normally, the license key is provided by the platform. However, when you are working locally, Lando (or your local development environment) does not have access to the platform environment variable. However, you can extract it from the `auth.json` created in the previous steps.
+
 1. Open your `config/application.php` file to add configuration values to Object Cache Pro for your site.
 
 1. Locate the `Config::apply()` line at the bottom of the file and add the following code above that line.
