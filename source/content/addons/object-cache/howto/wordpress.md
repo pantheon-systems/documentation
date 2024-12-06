@@ -191,70 +191,38 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 1. Locate the `Config::apply()` line at the bottom of the file and add the following code above that line.
 
-	<Tablist>
+	```php
+	$token = getenv( 'OCP_LICENSE' ); // Get the license from the Pantheon environment variables.
 	
-	<Tab title="Using Pantheon Secrets" id="ocp-auth-secrets" active={true}>
-	
-	<Alert title="Secrets Usage Note" type="info">
-	You will need to have the Terminus Secrets Manager Plugin installed to perform any steps relating to Pantheon Secrets. For more information about how to install the Secrets Manager Plugin [refer to our documentation](/guides/secrets#installation). For more information about how Secrets work, refer to our [guide](/guides/secrets).
-	</Alert>
+	// If working locally, set $token based on the local auth.json file.
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) { // Change this if you are not using Lando.
+		$auth_json = ABSPATH . '/auth.json';
+		if ( file_exists( $auth_json ) ) {
+			$auth_json = json_decode( file_get_contents( $auth_json ) );
+			$token = $auth_json['http-basic']['objectcache.pro']['password'];
+		}
+	}
+	```
 
-	1. Before updating the `WP_REDIS_CONFIG` constant, store the license token as a secret:
-	
-		```bash{promptUser: user}
-		terminus secret:site:set <site> ocp_token $(terminus wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');") --scope=user,web
-		```
-		
-		This grabs the Object Cache Pro license key from Pantheon and stores it directly as a Pantheon Site Secret. You can verify that the secret has been stored by running `terminus secret:site:list <site>`
-		
-	1. Use the `pantheon_get_secret` function in your `config/application.php` file:
-	
-		```php
-			/**
-			 * Object Cache Pro config
-			 */
-			Config::define( 'WP_REDIS_CONFIG', [
-				// Check for `pantheon_get_secret` then check for the OCP_LICENSE environment variable.
-				'token' => function_exists( 'pantheon_get_secret' ) ? pantheon_get_secret( 'ocp_token' ) : ( isset( getenv( 'OCP_LICENSE' ) ? getenv( 'OCP_LICENSE' ) : '' ),
-			] );		
-		```
-	
-	</Tab>
+1. Set the Object Cache Pro settings using the license key either from the Pantheon environment or your local `auth.json`. You can put this directly under the `WP_DEBUG` rules so it looks like this:
 
-	<Tab title="Manually" id="ocp-auth-manual">
-	
-	- Use the `OCP_LICENSE` fetched earlier from `terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")` and copy this into your `config/application.php` file:
+	```php
+		/**
+		 * Debugging Settings
+		 */
+		Config::define('WP_DEBUG_DISPLAY', false);
+		Config::define('WP_DEBUG_LOG', false);
+		Config::define('SCRIPT_DEBUG', false);
+		ini_set('display_errors', '0');
 
-		```php
-			/**
-			 * Object Cache Pro config
-			 */
-			Config::define( 'WP_REDIS_CONFIG', [
-				'token' => '<LICENSE-TOKEN>',
-			] );
-		```
-	
-		You can put this directly under the `WP_DEBUG` rules so it looks like this:
+		/**
+		 * Object Cache Pro config
+		 */
+		Config::define( 'WP_REDIS_CONFIG', [
+			'token' => $token,
+		] );
+	```
 
-		```php
-			/**
-			 * Debugging Settings
-			 */
-			Config::define('WP_DEBUG_DISPLAY', false);
-			Config::define('WP_DEBUG_LOG', false);
-			Config::define('SCRIPT_DEBUG', false);
-			ini_set('display_errors', '0');
-
-			/**
-			 * Object Cache Pro config
-			 */
-			Config::define( 'WP_REDIS_CONFIG', [
-				'token' => '<LICENSE-TOKEN>',
-			] );
-		```
-	</Tab>
-	
-	</Tablist>
 
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
