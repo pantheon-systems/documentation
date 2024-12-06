@@ -123,7 +123,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	composer config --auth http-basic.objectcache.pro token $(terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")
 	```
 	
-	This will pull the Object Cache Pro license token directly into the `auth.json` file. 
+	This will pull the Object Cache Pro license token directly into the `auth.json` file.
 	
 	**Manually:**
 
@@ -144,11 +144,11 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		}
 		```
 
-1. Commit the `auth.json` to your repository:
-
-	 ```bash{promptUser: user}
-	git add auth.json && git commit -m "Add Object Cache Pro auth token."
-	```
+	<Alert title="Note" type="info">
+	
+	The `auth.json` file is only necessary for authenticating against the Object Cache Pro Composer repository. For this reason, we recommend adding it to your `.gitignore` so you are not committing secrets to your Git repository. However, excluding it from version control means that anyone else who may want to update Object Cache Pro locally will need to repeat the steps above to generate their own `auth.json` file.
+	
+	</Alert>
 
 1. Open your `composer.json` file and locate the `repositories` section. If it doesn't exist, add it as shown below:
 
