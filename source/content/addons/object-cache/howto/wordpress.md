@@ -251,7 +251,10 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
  		'async_flush' => true,
  		'strict' => true,
 	```
-1. Make sure you `git push` your changes up to your repository before you activate the plugin.
+	
+	Refer to the [Object Cache Pro documentation](https://objectcache.pro/docs/) for detailed explanations of all the configuration settings.
+	
+1. Make sure you add and `git push` your changes up to your repository before you activate the plugin.
 
 1. Activate the plugin and enable Redis in the plugin. You can activate the Object Cache Pro plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
 
