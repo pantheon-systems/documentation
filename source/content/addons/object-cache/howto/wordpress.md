@@ -302,7 +302,7 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 			type: redis:6.0
 	```
 
-	- This ensures that the Redis version in your Lando environment matches the 6.x environment on Pantheon.
+	- This ensures that the Redis version in your Lando environment matches the 6.x environment on Pantheon. Object Cache Pro will still work with the default version of Redis that is included in the Pantheon Lando recipe, so this step is optional.
 
 1. Next, in your `wp-config.php` (or `config/application.php` for Bedrock-based WordPress Composer sites), find the `WP_REDIS_CONFIG` settings. Lando does not support `igbinary` serialization or `zstd` compression, so you will need to modify these settings for Lando locally. The simplest solution is to store the configuration values to a variable and then modify the variable for Lando environments. For example:
 
