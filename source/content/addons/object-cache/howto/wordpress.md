@@ -298,7 +298,7 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 
 	```yaml
 	services:
-		<your-service-name>:
+		cache:
 			type: redis:6.0
 	```
 
