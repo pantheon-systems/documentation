@@ -88,7 +88,7 @@ Enable the module, then go to `/admin/config/system/tag1-d7es` to configure the 
 
 ![Tag1 D7ES configuration](../images/supported-drupal-d7es-email-config.png)
 
-When updates are available, Drupal's Update Status module will notify you of the available updates. If you have configured your email address in the D7ES module, you will also receive an email notification. [See the Tag1 documentation on notifications for more information about configuring notifications.](https://docs.tag1.com/notifications/)
+When updates are available, Drupal's Update Status module will notify you of the available updates. If you have configured your email address in the D7ES module, you will also receive an email notification. [See the Tag1 documentation on notifications for more information about configuration.](https://docs.tag1.com/notifications/)
 
 ![Tag1 D7ES available updates](../images/supported-drupal-d7es-update-status-security-alert.png)
 
