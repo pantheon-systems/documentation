@@ -54,8 +54,6 @@ Also included is continued support for Drupal 7-compatible runtime environments 
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
   * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
-<br/>
-<br/>
 
 To verify your current Drupal core version, you can check the [Status report tab](/drupal-launch-check#status-report) in the Pantheon site dashboard or you can use Terminus: 
 
@@ -84,7 +82,15 @@ This includes security patches and compatibility updates to community-contribute
 ##### D7ES Usage
 By enabling this module and configuring the opt-in, your site’s list of contrib modules will be automatically submitted for D7ES security coverage. You will receive email notifications of D7 core & installed contrib module security and compatibility updates. 
 
-Enable the module, then go to `/admin/config/system/tag1-d7es` and configure the list of email addresses that should be notified when applicable updates are released. On this configuration page you can also confirm your sites connection with Tag1’s update servers.
+![Tag1 D7ES module](../images/supported-drupal-d7es-module.png)
+
+Enable the module, then go to `/admin/config/system/tag1-d7es` to configure the list of email addresses that should be notified when applicable updates are released. On this configuration page you can also confirm your sites connection with Tag1’s update servers.
+
+![Tag1 D7ES configuration](../images/supported-drupal-d7es-email-config.png)
+
+When updates are available, Drupal's Update Status module will notify you of the available updates. If you have configured your email address in the D7ES module, you will also receive an email notification. [See the Tag1 documentation on notifications for more information about configuring notifications.](https://docs.tag1.com/notifications/)
+
+![Tag1 D7ES available updates](../images/supported-drupal-d7es-update-status-security-alert.png)
 
 Apply contrib updates from the Tag1 D7ES service via Drush, Autopilot, or manually via SFTP. For details, see the following tabs.
 
@@ -134,3 +140,9 @@ Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus dru
 ## Modules Support
 
 Refer to [Drupal Modules with Known Issues](/modules-known-issues) for a list of known compatibility issues.
+
+## More Resources
+
+* [Tag1 D7ES Documentation](https://docs.tag1.com)
+* [D7ES Module on Drupal.org](https://www.drupal.org/project/tag1_d7es)
+* [Pantheon Long-Term Support announcement post](https://pantheon.io/blog/pantheon-and-tag1-support-drupal-7-websites)
