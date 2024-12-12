@@ -47,6 +47,12 @@ To learn more about this partnership, see the [related blog post](https://panthe
 #### D7 Core LTS and Platform Compatibility 
 The D7 Long-Term Support includes security and compatibility updates to Drupal core and core dependencies from Tag1 Consulting, which are distributed by the Pantheon Drupal 7 Upstream and made available as a one-click updates via [the Pantheon Dashboard](core-updates#apply-upstream-updates-via-the-site-dashboard) or [Terminus command line tool](/core-updates#apply-upstream-updates-via-terminus).
 
+<Alert title="Note" type="info" >
+
+Drupal 7 sites that are currently using Composer with Drupal 7 (e.g. with our [Drops 7 Composer upstream](https://github.com/pantheon-systems/drops-7-composer) or similar) are recommended to migrate away from Drupal 7 with Composer to make the most of Pantheon's Drupal 7 Long-Term Support. Contrib modules cannot be automatically updated in this model and updates would need to be applied manually.
+
+</Alert>
+
 Also included is continued support for Drupal 7-compatible runtime environments on the Pantheon Platform, including PHP, MySQL and other prerequisites.
 
 ##### Requirements
@@ -54,8 +60,6 @@ Also included is continued support for Drupal 7-compatible runtime environments 
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
   * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
-<br/>
-<br/>
 
 To verify your current Drupal core version, you can check the [Status report tab](/drupal-launch-check#status-report) in the Pantheon site dashboard or you can use Terminus: 
 
@@ -82,16 +86,18 @@ This includes security patches and compatibility updates to community-contribute
 * (Recommended) Not a requirement, but we strongly recommend updating all contrib modules to their latest versions as well. 
 
 ##### D7ES Usage
-<Alert title="Note" type="info" >
-
-This usage section is not yet applicable as the D7ES module has not been added to the Pantheon Drupal 7 Upstream.
-
-However, you can expect the functionality and behavior described below to become available in the near future, before Drupal 7's end of life date.
-</Alert>
 
 By enabling this module and configuring the opt-in, your site’s list of contrib modules will be automatically submitted for D7ES security coverage. You will receive email notifications of D7 core & installed contrib module security and compatibility updates. 
 
-Enable the module, then go to `/admin/config/system/tag1-d7es` and configure the list of email addresses that should be notified when applicable updates are released. On this configuration page you can also confirm your sites connection with Tag1’s update servers.
+![Tag1 D7ES module](../images/supported-drupal-d7es-module.png)
+
+Enable the module, then go to `/admin/config/system/tag1-d7es` to configure the list of email addresses that should be notified when applicable updates are released. On this configuration page you can also confirm your sites connection with Tag1’s update servers.
+
+![Tag1 D7ES configuration](../images/supported-drupal-d7es-email-config.png)
+
+When updates are available, Drupal's Update Status module will notify you of the available updates. If you have configured your email address in the D7ES module, you will also receive an email notification. [See the Tag1 documentation on notifications for more information about configuration.](https://docs.tag1.com/notifications/)
+
+![Tag1 D7ES available updates](../images/supported-drupal-d7es-update-status-security-alert.png)
 
 Apply contrib updates from the Tag1 D7ES service via Drush, Autopilot, or manually via SFTP. For details, see the following tabs.
 
@@ -141,3 +147,9 @@ Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus dru
 ## Modules Support
 
 Refer to [Drupal Modules with Known Issues](/modules-known-issues) for a list of known compatibility issues.
+
+## More Resources
+
+* [Tag1 D7ES Documentation](https://docs.tag1.com)
+* [D7ES Module on Drupal.org](https://www.drupal.org/project/tag1_d7es)
+* [Pantheon Long-Term Support announcement post](https://pantheon.io/blog/pantheon-and-tag1-support-drupal-7-websites)
