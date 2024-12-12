@@ -80,6 +80,13 @@ This includes security patches and compatibility updates to community-contribute
 * (Recommended) Not a requirement, but we strongly recommend updating all contrib modules to their latest versions as well. 
 
 ##### D7ES Usage
+
+<Alert title="Note" type="info">
+
+Drupal 7 sites that are currently using Composer with Drupal 7 (e.g. with our [Drops 7 Composer upstream](https://github.com/pantheon-systems/drops-7-composer) or similar) are recommended to migrate away from Drupal 7 with Composer to make the most of Pantheon's Drupal 7 Long-Term Support. Contrib modules cannot be automatically updated in this model and updates would need to be applied manually.
+
+</Alert>
+
 By enabling this module and configuring the opt-in, your site’s list of contrib modules will be automatically submitted for D7ES security coverage. You will receive email notifications of D7 core & installed contrib module security and compatibility updates. 
 
 ![Tag1 D7ES module](../images/supported-drupal-d7es-module.png)
