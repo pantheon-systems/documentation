@@ -56,7 +56,7 @@ Drupal 7 sites that are currently using Composer with Drupal 7 (e.g. with our [D
 Also included is continued support for Drupal 7-compatible runtime environments on the Pantheon Platform, including PHP, MySQL and other prerequisites.
 
 ##### Requirements
-* Available to all site plans and workspace tiers.
+* Drupal 7 core LTS available to all site plans and workspace tiers.
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
   * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
@@ -79,7 +79,7 @@ For sites not already using the Pantheon Drupal 7 Upstream (or a Custom Upstream
 This includes security patches and compatibility updates to community-contributed modules via Tag1’s [D7 Extended Support (D7ES) module](https://www.drupal.org/project/tag1_d7es), which will be distributed and maintained as part of the Pantheon Drupal 7 Upstream.
 
 ##### Requirements
-* Available to all non-Sandbox site plans, or sites associated with a Gold, Diamond, or Platinum [workspace account tier](/guides/account-mgmt/plans/workspace-plans).
+* D7 contrib module LTS available to all non-Sandbox site plans, or sites associated with a Gold, Diamond, or Platinum [workspace account tier](/guides/account-mgmt/plans/workspace-plans).
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
   * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
