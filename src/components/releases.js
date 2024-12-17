@@ -42,7 +42,7 @@ export default (props) => {
   return (
     <StaticQuery
       query={graphql`
-        query($cutoffDate: Date!) {
+        query ($cutoffDate: Date!) {
           allTerminusReleasesJson(
             sort: { fields: [published_at], order: DESC }
             filter: { published_at: { gte: $cutoffDate } }
