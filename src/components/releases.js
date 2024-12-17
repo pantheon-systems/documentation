@@ -39,9 +39,7 @@ export default (props) => (
   <StaticQuery
     query={graphql`
       query {
-        allTerminusReleasesJson(
-          sort: { fields: [tag_name], order: DESC }
-        ) {
+        allTerminusReleasesJson(sort: { fields: [tag_name], order: DESC }) {
           edges {
             node {
               id
