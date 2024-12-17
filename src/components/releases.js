@@ -41,7 +41,6 @@ export default (props) => (
       query {
         allTerminusReleasesJson(
           sort: { fields: [tag_name], order: DESC }
-          filter: { fields: { original_id: { gt: 5224487 } } }
         ) {
           edges {
             node {
