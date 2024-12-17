@@ -16,8 +16,12 @@ const Releases = ({ data }) => {
   const oneYearAgo = subYears(new Date(), 1);
 
   // Filter releases that are newer than one year
-  const filteredReleases = data.allTerminusReleasesJson.edges.filter((release) =>
-    isAfter(parseISO(release.node.fields.markdownBody.childMdx.body.published_at), oneYearAgo)
+  const filteredReleases = data.allTerminusReleasesJson.edges.filter(
+    (release) =>
+      isAfter(
+        parseISO(release.node.fields.markdownBody.childMdx.body.published_at),
+        oneYearAgo,
+      ),
   );
 
   return (
@@ -28,7 +32,9 @@ const Releases = ({ data }) => {
             {release.node.tag_name}
           </h3>
           <MDXProvider components={shortcodes}>
-            <MDXRenderer>{release.node.fields.markdownBody.childMdx.body}</MDXRenderer>
+            <MDXRenderer>
+              {release.node.fields.markdownBody.childMdx.body}
+            </MDXRenderer>
           </MDXProvider>
           <hr />
         </div>
