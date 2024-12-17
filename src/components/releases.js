@@ -37,6 +37,7 @@ const Releases = ({ data }) => {
 };
 
 export default (props) => {
+  // Determine one year ago. Filter out releases over a year old.
   const oneYearAgo = format(subYears(new Date(), 1), 'yyyy-MM-dd');
 
   return (
