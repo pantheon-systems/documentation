@@ -20,7 +20,7 @@ const Releases = ({ data }) => {
     (release) => {
       const publishedDate = release.node.published_at;
       return publishedDate && isAfter(parseISO(publishedDate), oneYearAgo);
-    }
+    },
   );
 
   return (
@@ -31,7 +31,9 @@ const Releases = ({ data }) => {
             {release.node.tag_name}
           </h3>
           <MDXProvider components={shortcodes}>
-            <MDXRenderer>{release.node.fields.markdownBody.childMdx.body}</MDXRenderer>
+            <MDXRenderer>
+              {release.node.fields.markdownBody.childMdx.body}
+            </MDXRenderer>
           </MDXProvider>
           <hr />
         </div>
