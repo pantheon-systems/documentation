@@ -2,19 +2,25 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 function TerminusVersion({ text }) {
-  const { terminusReleasesJson } = useStaticQuery(
+  const { allTerminusReleasesJson } = useStaticQuery(
     graphql`
       query {
-        terminusReleasesJson {
-          tag_name
+        allTerminusReleasesJson(sort: { fields: [published_at], order: DESC }) {
+          edges {
+            node {
+              tag_name
+            }
+          }
         }
       }
     `
   )
 
+  const latestRelease = allTerminusReleasesJson.edges[0].node.tag_name
+
   return (
     <h2>
-      {text} {terminusReleasesJson.tag_name}
+      {text} {latestRelease}
     </h2>
   )
 }
