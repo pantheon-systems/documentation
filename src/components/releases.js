@@ -12,7 +12,10 @@ const shortcodes = {
 }
 
 const Releases = ({ data }) => (
-  <>
+  console.log(data.allTerminusReleasesJson.edges);
+
+  return(
+    <>
     {data.allTerminusReleasesJson.edges.map((release, i) => {
       return (
         <div key={i}>
@@ -29,7 +32,8 @@ const Releases = ({ data }) => (
       )
     })}
   </>
-)
+  );
+);
 
 export default props => (
   <StaticQuery
