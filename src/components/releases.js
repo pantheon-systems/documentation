@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
-import { format, subYears } from 'date-fns';
+import { subYears, parseISO, isAfter } from 'date-fns';
 
 import { headline1, headline2, headline3 } from './releaseHeadlines';
 
@@ -13,60 +13,51 @@ const shortcodes = {
 };
 
 const Releases = ({ data }) => {
-  console.log(data.allTerminusReleasesJson.edges);
+  const oneYearAgo = subYears(new Date(), 1);
+
+  // Filter releases that are newer than one year
+  const filteredReleases = data.allTerminusReleasesJson.edges.filter((release) =>
+    isAfter(parseISO(release.node.fields.markdownBody.childMdx.body.published_at), oneYearAgo)
+  );
 
   return (
     <>
-      {data.allTerminusReleasesJson.edges.map((release, i) => {
-        return (
-          <div key={i}>
-            <h3 className="toc-ignore" id={release.node.tag_name}>
-              {release.node.tag_name}
-            </h3>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer>
-                {release.node.fields.markdownBody.childMdx.body}
-              </MDXRenderer>
-            </MDXProvider>
-            <hr />
-          </div>
-        );
-      })}
+      {filteredReleases.map((release, i) => (
+        <div key={i}>
+          <h3 className="toc-ignore" id={release.node.tag_name}>
+            {release.node.tag_name}
+          </h3>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{release.node.fields.markdownBody.childMdx.body}</MDXRenderer>
+          </MDXProvider>
+          <hr />
+        </div>
+      ))}
     </>
   );
 };
 
-export default (props) => {
-  // Determine one year ago. Filter out releases over a year old.
-  const oneYearAgo = format(subYears(new Date(), 1), 'yyyy-MM-dd');
-
-  return (
-    <StaticQuery
-      query={graphql`
-        query ($cutoffDate: Date!) {
-          allTerminusReleasesJson(
-            sort: { fields: [published_at], order: DESC }
-            filter: { published_at: { gte: $cutoffDate } }
-          ) {
-            edges {
-              node {
-                id
-                tag_name
-                body
-                fields {
-                  markdownBody {
-                    childMdx {
-                      body
-                    }
+export default (props) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allTerminusReleasesJson(sort: { fields: [published_at], order: DESC }) {
+          edges {
+            node {
+              id
+              tag_name
+              fields {
+                markdownBody {
+                  childMdx {
+                    body
                   }
                 }
               }
             }
           }
         }
-      `}
-      variables={{ cutoffDate: oneYearAgo }}
-      render={(data) => <Releases data={data} {...props} />}
-    />
-  );
-};
+      }
+    `}
+    render={(data) => <Releases data={data} {...props} />}
+  />
+);
