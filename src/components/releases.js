@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
+import { format, subYears } from 'date-fns';
 
 import { headline1, headline2, headline3 } from './releaseHeadlines';
 
@@ -35,28 +36,36 @@ const Releases = ({ data }) => {
   );
 };
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allTerminusReleasesJson(sort: { fields: [tag_name], order: DESC }) {
-          edges {
-            node {
-              id
-              tag_name
-              body
-              fields {
-                markdownBody {
-                  childMdx {
-                    body
+export default (props) => {
+  const oneYearAgo = format(subYears(new Date(), 1), 'yyyy-MM-dd');
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query($cutoffDate: Date!) {
+          allTerminusReleasesJson(
+            sort: { fields: [published_at], order: DESC }
+            filter: { published_at: { gte: $cutoffDate } }
+          ) {
+            edges {
+              node {
+                id
+                tag_name
+                body
+                fields {
+                  markdownBody {
+                    childMdx {
+                      body
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
-    `}
-    render={(data) => <Releases data={data} {...props} />}
-  />
-);
+      `}
+      variables={{ cutoffDate: oneYearAgo }}
+      render={(data) => <Releases data={data} {...props} />}
+    />
+  );
+};
