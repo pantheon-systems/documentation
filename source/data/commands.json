@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.6.0"
+        "version": "3.6.1"
     },
     "commands": [
         {
@@ -3593,7 +3593,7 @@
                 "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env>",
                 "env:clone-content <site>.<env> <target_env> --from-url=www.example.com"
             ],
-            "help": "IMPORTANT NOTE: if you have a WordPress Multisite installation, you\nwill need an entry in your pantheon.yml in order to search all the\nsites in your install.  See http:\/\/pantheon.io\/some\/link\/in\/docs.",
+            "help": "IMPORTANT NOTE: if you have a WordPress Multisite installation, you\nwill need an entry in your pantheon.yml in order to search all the\nsites in your install.  See https:\/\/docs.pantheon.io\/guides\/multisite\/search-replace.",
             "definition": {
                 "arguments": {
                     "site_env": {
@@ -6060,7 +6060,7 @@
             "name": "local:clone",
             "description": "CLone a copy of the site code into $HOME\/pantheon-local-copies",
             "usage": [
-                "local:clone [--site_dir [SITE_DIR]] [--override [OVERRIDE]] [--] <site_id>",
+                "local:clone [--site_dir [SITE_DIR]] [--override [OVERRIDE]] [--branch [BRANCH]] [--] <site_id>",
                 "local:clone <site> Clone's a local copy into \"$HOME\/pantheon-local-copies\"",
                 "lc"
             ],
@@ -6093,6 +6093,15 @@
                         "is_multiple": false,
                         "description": "Override the local copy if exists",
                         "default": null
+                    },
+                    "branch": {
+                        "name": "--branch",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "The branch to clone. Default is master",
+                        "default": "master"
                     },
                     "help": {
                         "name": "--help",
