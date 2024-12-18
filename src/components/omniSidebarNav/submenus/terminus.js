@@ -21,7 +21,7 @@ const terminus = () => {
         ),
         simpleLink(
           '/terminus/updates',
-          'Current Terminus Release, Changelog, and Updates',
+          'Terminus Changelog',
         ),
         simpleLink('/terminus/terminus-3-0', 'Terminus 3'),
       ]),
