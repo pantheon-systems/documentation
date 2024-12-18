@@ -16,6 +16,8 @@ product: [--]
 integration: [drush]
 ---
 
+<!--  @todo, move this page out of this guide and to a "Tutorials" section. https://github.com/pantheon-systems/documentation/issues/9354  -->
+
 [Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
 
 This section walks you through using Drush and Terminus in the command line to create a new Drupal site and move configurations between Pantheon environments.
@@ -67,7 +69,7 @@ The next few sections use the example variables `my-site` and `"My D9 Site"` as 
   ```
 
   - You can add the `--org` option to the command above and pass the Workspace name, label, or ID if you want to associate this site with an Workspace.
-  
+
   - Use the `site:org:add` command to associate an existing site with an Workspace.
 
 1. Open your new Site Dashboard in a browser:

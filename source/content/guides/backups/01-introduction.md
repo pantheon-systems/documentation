@@ -1,5 +1,5 @@
 ---
-title: Backups Tool
+title: Backups
 subtitle: Introduction
 description: Learn access and manage your Pantheon site backups.
 tags: [backups, security]

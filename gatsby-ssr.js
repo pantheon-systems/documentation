@@ -18,6 +18,7 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     />,
     <script key="twitter" src="https://platform.twitter.com/widgets.js" />,
+
     // OneTrust Banner
     <script
       src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
