@@ -5,7 +5,6 @@ const terminus = () => {
     link: '/terminus',
     title: 'Command Line Interface (CLI)',
     children: [
-
       simpleLink('/terminus', 'Terminus User Manual', [
         simpleLink('/terminus', 'Introduction'),
         simpleLink('/terminus/install', 'Install and Update Terminus'),
