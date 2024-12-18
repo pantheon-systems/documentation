@@ -42,12 +42,12 @@ export const onRouteUpdate = () => {
   //console.log("Title: ", document.title) //For debugging
 }
 
-// Trigger resize event once rendered
+// Trigger resize event once rendered.
 export const onInitialClientRender = () => {
   window.dispatchEvent(new Event("resize"))
 }
 
-// Global context providers
+// Global context providers.
 export const wrapRootElement = ({ element }) => {
   return <GlobalWrapper mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>{element}</GlobalWrapper>
 }

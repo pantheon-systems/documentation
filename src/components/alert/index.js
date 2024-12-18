@@ -1,17 +1,15 @@
-import React from "react"
-
-import { Callout } from "@pantheon-systems/pds-toolkit-react"
-
-import "./style.css"
+import React from 'react';
+import { Callout } from '@pantheon-systems/pds-toolkit-react';
+import './style.css';
 
 const Alert = ({ title, type, icon, children }) => {
   // Recalibrate types for this site.
-  if (type === "danger") {
-    type = "warning"
-  } else if (type === "export") {
-    type = "code"
+  if (type === 'danger') {
+    type = 'warning';
+  } else if (type === 'export') {
+    type = 'code';
   } else {
-    type = type
+    type = type;
   }
 
   return (
@@ -21,7 +19,7 @@ const Alert = ({ title, type, icon, children }) => {
       title={title}
       className="docs-alert"
     />
-  )
-}
+  );
+};
 
-export default Alert
+export default Alert;
