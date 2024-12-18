@@ -650,5 +650,47 @@ exports.onPreBootstrap = () => {
   fs.copySync(scriptsCopyFrom, scriptsCopyTo);
 };
 
+/* This block is for debugging purposes. It writes the paths of all pages to a file.
+exports.onPostBuild = async ({ graphql, getNodes }) => {
+  // Fetch all pages created by Gatsby
+  const pages = getNodes().filter((node) => node.internal.type === 'SitePage');
+
+  //console.log('pages', pages);
+  //loop over pages and log the path
+  const pagePaths = pages.map((page) => page.path);
+  console.log('pagePaths', pagePaths);
+  pages.forEach((page) => {
+    console.log('path', page.path);
+  });
+
+  // const exceptions = ['https://certification.pantheon.io/', '/404.html'];
+  // const OmniItems = getOmniItems();
+  // const menuReport = calculateNumberOfPathsInMenu(pagePaths, OmniItems, exceptions);
+  // console.log('menuReport', menuReport);
+
+  fs.writeFile(
+    'all-written-paths.txt',
+    JSON.stringify(pagePaths, null, 2),
+    (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    },
+  );
+
+  // // Read the menu links from your menu file (assuming it's a JSON file)
+  // const menuFilePath = path.resolve(__dirname, 'src/data/menu.json');
+  // const menuData = JSON.parse(fs.readFileSync(menuFilePath, 'utf-8'));
+
+  // // Extract the paths from the menu links
+  // const menuLinks = menuData.map(item => item.path);
+
+  // // Check how many pages are in the menu
+  // const pagesInMenu = pages.filter(page => menuLinks.includes(page.path));
+
+  // console.log(`Total Pages Created by Gatsby: ${pages.length}`);
+  // console.log(`Total Pages in Menu: ${pagesInMenu.length}`);
+};
+*/
+
 /* todo Should there be an error thrown if a release note category is set that is not allowed? */
 /* todo, infer published date from file name. And throw an error if there are files that don't follow the pattern. */
