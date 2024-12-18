@@ -2,7 +2,6 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 
 const getStarted = () => {
   return {
-    // @todo, implement sidebar on landing pages.
     link: '/get-started',
     title: 'Get Started',
     children: [
@@ -24,7 +23,6 @@ const getStarted = () => {
         getGuideDirectory('guides/migrate/pagely', 'Pagely'),
         getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
         getGuideDirectory('guides/migrate/wpengine', 'WP Engine'),
-        /// I would have guessed that the Platform.sh docs would be about Drupal, not WordPress.
         getGuideDirectory('guides/migrate/platformsh', 'Platform.sh'),
         getGuideDirectory('guides/migrate/acquia', 'Acquia'),
         simpleLink('/migrate-cpanel', 'GoDaddy CPanel'),
@@ -36,7 +34,6 @@ const getStarted = () => {
           'guides/drupal/drupal-unhosted',
           'Non-Composer-based Drupal Sites',
         ),
-
         simpleLink('/add-site-clone', 'Clone an Existing Pantheon Site'),
       ]),
       simpleLink('/dashboard', 'Dashboard', [

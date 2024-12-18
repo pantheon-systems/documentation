@@ -6,7 +6,6 @@ import { simpleLink, getGuideDirectory } from './../helpers';
  */
 const CertificationItems = () => {
   return {
-    // @todo, implement sidebar on landing pages.
     link: '/certification',
     title: 'Education & Certification',
     children: [
