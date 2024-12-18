@@ -19,10 +19,7 @@ const terminus = () => {
           '/terminus/supported-terminus',
           'Supported Terminus and PHP Versions',
         ),
-        simpleLink(
-          '/terminus/updates',
-          'Terminus Changelog',
-        ),
+        simpleLink('/terminus/updates', 'Terminus Changelog'),
         simpleLink('/terminus/terminus-3-0', 'Terminus 3'),
       ]),
       simpleLink('/machine-tokens', 'Authentication', [
