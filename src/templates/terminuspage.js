@@ -70,7 +70,7 @@ const items = [
   {
     id: 'docs-terminus-updates',
     link: '/terminus/updates',
-    title: 'Current Terminus Release and Changelog',
+    title: 'Terminus Changelog',
   },
 
   {
