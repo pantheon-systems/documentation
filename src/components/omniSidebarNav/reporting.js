@@ -88,24 +88,18 @@ const RegExExceptions = [
   /.*\/terminus\/commands\/.*/,
 ];
 
-const exceptions = [
-  'https://certification.pantheon.io/',
-  '/404.html',
-  '/404/',
-];
+const exceptions = ['https://certification.pantheon.io/', '/404.html', '/404/'];
 
-  const filteredWrittenPaths = eliminateExceptions(
-    allWrittenPaths,
-    exceptions,
-    RegExExceptions,
-  );
-
+const filteredWrittenPaths = eliminateExceptions(
+  allWrittenPaths,
+  exceptions,
+  RegExExceptions,
+);
 
 export {
   flattenOmniItems,
   InMenuOrExceptions,
   eliminateExceptions,
   CalculateFilteredPathsInMenu,
-
-  filteredWrittenPaths
+  filteredWrittenPaths,
 };

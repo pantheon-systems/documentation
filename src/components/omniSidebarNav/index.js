@@ -8,7 +8,6 @@ import {
   turnItemsIntoLinks,
 } from './helpers.js';
 
-
 /* Reporting debugging code.
 import {
   flattenOmniItems,
@@ -27,7 +26,7 @@ const OmniSidebarNav = ({
 }) => {
   const OmniItems = getOmniItems();
 
-/* Reporting debug code
+  /* Reporting debug code
   const flattenedOmniItems = flattenOmniItems(OmniItems);
   const results = CalculateFilteredPathsInMenu(
     filteredWrittenPaths,
