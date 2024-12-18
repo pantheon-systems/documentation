@@ -5,7 +5,7 @@ import { GlobalWrapper } from "@pantheon-systems/pds-toolkit-react"
 import { MOBILE_MENU_BREAKPOINT } from './src/vars/responsive'
 
 /*
- * Add global scripts to ensure Bootstrap and jQuery JS is included
+ * Add global scripts to ensure Bootstrap and jQuery JS is included.
  */
 export const onRenderBody = ({ setPostBodyComponents }) => {
   setPostBodyComponents([
