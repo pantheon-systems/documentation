@@ -5,7 +5,6 @@ const terminus = () => {
     link: '/terminus',
     title: 'Command Line Interface (CLI)',
     children: [
-      // @todo, copy the order from the terminus template
 
       simpleLink('/terminus', 'Terminus User Manual', [
         simpleLink('/terminus', 'Introduction'),
