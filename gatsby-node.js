@@ -647,5 +647,5 @@ exports.onPreBootstrap = () => {
   fs.copySync(scriptsCopyFrom, scriptsCopyTo)
 }
 
-/* todo should there be an error thrown if a release note category is set that is not allowed */
-/* todo, infer published date from file name. And throw an error if there are files that don't follow the pattern. */
+/* todo Should there be an error thrown if a release note category is set that is not allowed? */
+/* todo, Infer published date from file name. And throw an error if there are files that don't follow the pattern. */
