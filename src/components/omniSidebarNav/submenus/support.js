@@ -53,7 +53,7 @@ const support = () => {
           'New Relic Performance Monitoring',
         ),
 
-        // Should could move to the education menu.
+        // Consider moving to the education/tutorials section.
         getGuideDirectory(
           'guides/frontend-performance',
           'Front End Performance',
