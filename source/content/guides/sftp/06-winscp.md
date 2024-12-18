@@ -47,4 +47,4 @@ This section provides information on how to use WinSCP with Pantheon.
 
 ## More Resources
 
-- [Install Cygwin on Windows](/cygwin-windows)
+- [Install Cygwin on Windows](/guides/local-development/cygwin-windows)

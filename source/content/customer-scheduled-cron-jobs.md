@@ -28,7 +28,7 @@ While this feature is in Early Access, Pantheon's development team releases new 
 
 </Alert>
 
-The [Terminus](/terminus-overview) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
+The [Terminus](/terminus) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
 
 ## Requirements
 

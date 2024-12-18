@@ -17,7 +17,7 @@ integration: [--]
 
 This section provides information on how to create your Live environment. 
 
-1. [Create a New Site](/add-site).
+1. [Create a New Site](/guides/getstarted/addsite/).
 
 1. Learn how to use [Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces).
 
