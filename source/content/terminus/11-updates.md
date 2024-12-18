@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Current Terminus Release, Changelog, and Updates
+subtitle: Terminus Changelog
 description: Stay up to date on the latest Terminus version.
 terminuspage: true
 type: terminuspage
@@ -15,8 +15,6 @@ audience: [development]
 product: [terminus]
 integration: [--]
 ---
-
-<TerminusVersion text="Update to the Current Release" />
 
 ## Changelog
 
