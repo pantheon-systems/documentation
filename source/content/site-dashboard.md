@@ -16,7 +16,7 @@ reviewed: 2024-12-05
 
 The Pantheon Site Dashboard is the hub of all development and activity for an individual site.
 
-![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/2024/_site-dashboard.png)
+![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/2024/site-dashboard-2024.png)
 
 ## Header Elements
 
@@ -27,7 +27,6 @@ On the top left of the page, you will see the following information:
 - If applicable, a yellow **Upgrade** button, that will allow you to [upgrade the site](/guides/account-mgmt/plans/site-plans).
 - If applicable, the name of the Professional Workspace containing this site.
 
-<br />
 On the right side, there are two rows of options:
 
 - Workflows: displays information about any active workflows.
