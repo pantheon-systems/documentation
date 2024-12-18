@@ -7,4 +7,4 @@ Drupal 11 is now available as an option when creating a new Drupal site on Panth
 
 ![Drupal site creation from the Pantheon dashboard](../images/dashboard/new-dashboard/2024/create-new-site-cms-drupal-11crop.png)
 
-See [related documentation](/add-site-dashboard) for how to create new CMS sites on Pantheon.
+See [related documentation](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create new CMS sites on Pantheon.

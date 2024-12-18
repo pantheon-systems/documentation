@@ -113,4 +113,4 @@ One-click core updates can be made through the Dashboard:
 ## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)
-- [Drupal 10 on Pantheon](/drupal-10)
+- [Supported Drupal Versions](/supported-drupal)
