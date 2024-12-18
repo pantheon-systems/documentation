@@ -650,6 +650,7 @@ exports.onPreBootstrap = () => {
   fs.copySync(scriptsCopyFrom, scriptsCopyTo);
 };
 
+/* This block is for debugging purposes. It writes the paths of all pages to a file.
 exports.onPostBuild = async ({ graphql, getNodes }) => {
   // Fetch all pages created by Gatsby
   const pages = getNodes().filter((node) => node.internal.type === 'SitePage');
@@ -689,6 +690,8 @@ exports.onPostBuild = async ({ graphql, getNodes }) => {
   // console.log(`Total Pages Created by Gatsby: ${pages.length}`);
   // console.log(`Total Pages in Menu: ${pagesInMenu.length}`);
 };
+*/
 
-/* todo should there be an error thrown if a release note category is set that is not allowed */
+
+/* todo Should there be an error thrown if a release note category is set that is not allowed? */
 /* todo, infer published date from file name. And throw an error if there are files that don't follow the pattern. */
