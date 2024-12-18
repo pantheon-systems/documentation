@@ -18,7 +18,7 @@ const support = () => {
         simpleLink('/troubleshoot', 'Overview'),
         simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
         simpleLink('/modules-plugins-known-issues', 'Known Issues', [
-          // @todo, combine some of these pages.
+          // @todo, combine some of these pages: https://github.com/pantheon-systems/documentation/issues/9356
           simpleLink(
             '/modules-plugins-known-issues',
             'Modules and plugins with known issues',
