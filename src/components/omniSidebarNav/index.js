@@ -7,6 +7,15 @@ import {
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
 } from './helpers.js';
+
+/* Reporting debugging code.
+import {
+  flattenOmniItems,
+  CalculateFilteredPathsInMenu,
+  filteredWrittenPaths
+} from './reporting';
+*/
+
 import './style.css';
 
 const OmniSidebarNav = ({
@@ -16,6 +25,16 @@ const OmniSidebarNav = ({
   submenuPathToUse = '',
 }) => {
   const OmniItems = getOmniItems();
+
+  /* Reporting debug code
+  const flattenedOmniItems = flattenOmniItems(OmniItems);
+  const results = CalculateFilteredPathsInMenu(
+    filteredWrittenPaths,
+    flattenedOmniItems,
+);
+  console.log(results);
+  */
+
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
   // If the caller is asking for a specific submenu, use that directly.
