@@ -1,7 +1,5 @@
 import React from "react"
-
 import { Callout } from "@pantheon-systems/pds-toolkit-react"
-
 import "./style.css"
 
 const Alert = ({ title, type, icon, children }) => {
