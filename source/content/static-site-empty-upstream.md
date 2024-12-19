@@ -14,14 +14,6 @@ integration: [upstreams]
 ---
 
 
-<Alert title="Better solution available: Front-End Sites" type="danger">
-
-This documentation page describes how to host a static site using Pantheon's infrastructure that was designed for CMS sites. Since this page was written, Pantheon has developed a new offering called [Front-End Sites](/guides/decoupled) that is specifically designed for running sites with static site generators (and server-side rendered front-end frameworks).
-
-We keep this page of documentation present for customers who had already set up a static site on Pantheon using the method described here. However, we recommend that new customers use Front-End Sites for hosting static sites on Pantheon.
-
-</Alert>
-
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
 
 The usual [Scope of Support](/guides/support/) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
