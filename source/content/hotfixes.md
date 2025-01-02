@@ -16,7 +16,7 @@ For Experts only. You should not need to attempt this if you use [Multidev](/gui
 
 We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user, and should be avoided whenever possible.
 
-Note that [Integrated Composer](/guides/integrated-composer) is not compatible with the hotfix workflow.
+Note that [Integrated Composer](/guides/integrated-composer) is not compatible with the hotfix workflow, and changes to `pantheon.yml` will not be processed.
 
 </Alert>
 
