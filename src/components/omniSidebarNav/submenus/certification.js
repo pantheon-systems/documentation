@@ -81,7 +81,10 @@ const CertificationItems = () => {
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
         getGuideDirectory('guides/accessibility', 'Web Accesibility'),
-        simpleLink('/tutorials/drupal-site-creation-and-workflow-commandline', 'All CLI workflow with Terminus and Drupal'),
+        simpleLink(
+          '/tutorials/drupal-site-creation-and-workflow-commandline',
+          'All CLI workflow with Terminus and Drupal',
+        ),
         simpleLink('/pivotal-tracker', 'Pivotal Tracker'),
         simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
 
