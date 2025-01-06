@@ -82,7 +82,7 @@ const CertificationItems = () => {
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
         getGuideDirectory('guides/accessibility', 'Web Accesibility'),
         simpleLink(
-          '/tutorials/drupal-site-creation-and-workflow-commandline',
+          '/drupal-commandline',
           'All CLI workflow with Terminus and Drupal',
         ),
         simpleLink('/pivotal-tracker', 'Pivotal Tracker'),

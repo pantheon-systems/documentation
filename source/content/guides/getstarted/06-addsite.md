@@ -108,5 +108,5 @@ Now it's time to purchase a site plan in preparation for launching your site.
 * [Manually Migrate Sites to Pantheon](/migrate-manual)
 * [Create a Static Site Using an Empty Upstream](/static-site-empty-upstream)
 * [Create a Drupal Site Using a Drupal Distribution](/guides/drupal-from-dist)
-* [Create a Drupal Site From the Command Line Using Terminus and Drush](/tutorials/drupal-site-creation-and-workflow-commandline)
+* [Create a Drupal Site From the Command Line Using Terminus and Drush](/drupal-commandline)
 * [Create a WordPress Site with Terminus and WP-CLI](/guides/create-wp-site)

@@ -6,7 +6,7 @@ tags: [terminus, site, cli]
 contributors: [stevector, whitneymeredith]
 type: guide
 showtoc: true
-permalink: docs/tutorials/drupal-site-creation-and-workflow-commandline
+permalink: docs/drupal-commandline
 contenttype: [guide]
 innav: [false]
 categories: [cli]

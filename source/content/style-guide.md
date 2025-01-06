@@ -767,7 +767,7 @@ When you're moving a doc or heading to a new location, include a formatted table
 | docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
 | docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
 | docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
-| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/tutorials/drupal-site-creation-and-workflow-commandline |
+| docs.pantheon.io/drupal-commandline        | sc=301\|t=https://docs.pantheon.io/drupal-commandline |
 
 <hr className="source-code" /> <br/>
 
@@ -777,7 +777,7 @@ When you're moving a doc or heading to a new location, include a formatted table
 | docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
 | docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
 | docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
-| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/tutorials/drupal-site-creation-and-workflow-commandline |
+| docs.pantheon.io/drupal-commandline        | sc=301\|t=https://docs.pantheon.io/drupal-commandline |
 ```
 </Example>
 
