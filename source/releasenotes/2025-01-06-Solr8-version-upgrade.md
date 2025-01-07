@@ -1,10 +1,10 @@
 ---
-title: "Upgraded Solr8 version to address recent security vulnerabilities"
+title: Upgraded Solr8 version to address recent security vulnerabilities
 published_date: "2025-01-07"
 categories: [security]
 ---
 
-We are pleased to announce the release of an upgraded Solr8 version that resolves recently reported security vulnerabilities affecting prior Solr8 releases. This update addresses a vulnerability identified in CVE-2024-45216, although this vulnerability did not directly impact the Pantheon platform's security.
+We are pleased to announce the release of an upgraded Solr8 version that resolves recently reported security vulnerabilities affecting prior Solr8 releases. This update addresses a vulnerability identified in [CVE-2024-45216](https://nvd.nist.gov/vuln/detail/CVE-2024-45216), although this vulnerability did not directly impact the Pantheon platform's security.
   
 ### What's new? ###
 * **Security vulnerability fixes:** This release addresses the latest CVE impacting previous versions of Solr8.
