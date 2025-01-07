@@ -259,6 +259,19 @@ This occurs because both repositories contain a package called `drupal/search_ap
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
 
+### Editing Solr Configuration files
+
+There are instances where you want to edit the configuration file like `schema.xml` or `synonyms.txt` to customize the search results. The [Search API Solr](https://www.drupal.org/project/search_api_solr) module provided these configuration files via a [jump-start config set](https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start/solr8/config-set?ref_type=heads). Installing the module in your Drupal sites will allow you to see these configuration files in the path `/code/web/module/contrib/searc_api_solr/jump-start/solr8/config-set`. If you need to edit any of the files, you need to copy the folder to a different location to prevent your changes from being overwritten for any future module update.
+
+**Instructions:**
+1. Copy the `config-set` folder to a directory inside `/code` e.g. `/code/solr/config`.
+2. Edit the necessary file (e.g.`synonyms_en.txt`) or any configuration files you wanted to customize.
+3. Alternatively, change the Solr Schema version name, so there is a differentiator to your custom configuration from the default. Please take a look at this [link](https://git.drupalcode.org/project/search_api_solr/-/blob/4.x/jump-start/solr8/config-set/schema.xml?ref_type=heads#L52) e.g. from this → `<schema name="drupal-4.3.5-solr-8.x-1" version="1.6">` to this` <schema name="drupal-4.3.5-solr-8.x-1-CUSTOM-IDENTIFIER" version="1.6">` **note:** change the word “CUSTOM-IDENTIFIER” to anything that describes your custom config.
+4. Commit the changes, it is recommended to test this in a multidev site.
+5. Go to the Search API Pantheon Admin interface and repost the Solr Schema specifying the path of your custom configuration, in this example, it is `/code/solr/config`.
+6. Wait for **5 minutes** for the configuration to take effect.
+7. After making sure the site uses the new Solr configuration, **reset the index tracker** and then **re-index** the site.
+
 ### Reloading Solr Core
 
 Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site. You can follow this steps on how to enable the Reload Core in your Search API configuration:
