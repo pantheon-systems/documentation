@@ -5,7 +5,7 @@ categories: [documentation]
 ---
 ### New Articles
 
-[Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)
+[Create a Drupal Site From the Command Line Using Terminus and Drush](/drupal-commandline)
 
 [Build Tools Guide](/guides/build-tools)
 
