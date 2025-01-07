@@ -133,7 +133,7 @@ function additional_securityheaders( $headers ) {
     $headers['Referrer-Policy']             = 'no-referrer-when-downgrade'; //This is the default value, the same as if it were not set.
     $headers['X-Content-Type-Options']      = 'nosniff';
     $headers['X-XSS-Protection']            = '1; mode=block';
-    $headers['Permissions-Policy']          = 'geolocation=(self "https://example.com") microphone=() camera=()';
+    $headers['Permissions-Policy']          = 'geolocation=(self "https://example.com"), microphone=(), camera=()';
     $headers['Content-Security-Policy']     = "script-src 'self'";
     $headers['X-Frame-Options']             = 'SAMEORIGIN';
   }
