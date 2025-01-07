@@ -129,7 +129,7 @@ After enabling Redis, there are cache tables in the database that are no longer 
   SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
   ```
 
-This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+  This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
 
 1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
 
