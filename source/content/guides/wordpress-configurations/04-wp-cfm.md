@@ -33,14 +33,15 @@ WP-CFM should only be used to write changes to code in Dev and Multidev environm
 
 This method makes use of the [Git Updater](https://git-updater.com/) plugin to install and keep WP-CFM up-to-date. Follow the steps in [our documentation on installing plugins using Git Updater](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-git-updater-to-install-and-manage-plugins-and-themes-from-git-repositories) and use the following settings:
 
-**Plugin URI:** `forumone/wp-cfm-dist`
-**Repository Branch:** `main`
-**Remote Repository Host:** GitHub
-**GitHub Access Token:** Blank 
+**Plugin URI:** `forumone/wp-cfm-dist`  
+**Repository Branch:** `main`  
+**Remote Repository Host:** GitHub  
+**GitHub Access Token:** Blank  
 
 </Tab>
 
 <Tab title="Installing via Composer" id="composer">
+
 This method makes use of [Integrated Composer](/guides/integrated-composer) to manage installation and version management. This process assumes you already have a `composer.json` in your site repository and `build_step` is set to `true` in your `pantheon.yml`. Follow the steps in [our documentation on installing plugins using Composer](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-composer-to-source-plugins-and-packages) and use `forumone/wp-cfm` as the repository.
 
 </Tab>
