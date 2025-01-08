@@ -18,7 +18,6 @@ const learning = () => {
           title: 'About the Certification Program',
         },
 
-
         {
           link: '/certification/exam',
           title: 'Taking the Exam',
