@@ -73,7 +73,6 @@ const learning = () => {
         },
       ]),
 
-
       simpleLink('/guides/wordpress-git', 'Tutorials', [
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
@@ -90,7 +89,6 @@ const learning = () => {
         simpleLink('/guides', 'More Tutorials'),
       ]),
       simpleLink('/agency-tips', 'Agency Tips'),
-
     ],
   };
 };
