@@ -1,23 +1,18 @@
-import { simpleLink, getGuideDirectory } from './../helpers';
+import { getGuideDirectory, simpleLink } from './../helpers';
 
-/**
- * Array of of links specific to the Certification section of the sidebar.
- * @type {Array<Object>}
- */
-const CertificationItems = () => {
+const learning = () => {
   return {
     link: '/learning',
     title: 'Learning',
     children: [
+      simpleLink('/learning', 'Learning about Pantheon'),
+
       simpleLink('/certification', 'WebOps Certification', [
         {
           link: '/certification',
           title: 'Certification',
         },
-        {
-          link: '/certification/about',
-          title: 'About the Certification Program',
-        },
+
         {
           link: '/certification/exam',
           title: 'Taking the Exam',
@@ -77,6 +72,8 @@ const CertificationItems = () => {
           title: 'Certification Directory',
         },
       ]),
+
+
       simpleLink('/guides/wordpress-git', 'Tutorials', [
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
@@ -93,9 +90,9 @@ const CertificationItems = () => {
         simpleLink('/guides', 'More Tutorials'),
       ]),
       simpleLink('/agency-tips', 'Agency Tips'),
-      simpleLink('https://learning.pantheon.io', 'Pantheon Learning'),
+
     ],
   };
 };
 
-export default CertificationItems;
+export default learning;
