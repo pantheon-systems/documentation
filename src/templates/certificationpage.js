@@ -45,7 +45,7 @@ class CertificationTemplate extends React.Component {
         <OmniSidebarNav
           slot="guide-menu"
           activePage={node.fields.slug}
-          submenuPathToUse="/certification"
+          submenuPathToUse="/learning"
         />
 
         <ContentLayoutType slot="guide-content">
