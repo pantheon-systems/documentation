@@ -6,8 +6,8 @@ import { simpleLink, getGuideDirectory } from './../helpers';
  */
 const CertificationItems = () => {
   return {
-    link: '/certification',
-    title: 'Education & Certification',
+    link: '/learning',
+    title: 'Learning',
     children: [
       simpleLink('/certification', 'WebOps Certification', [
         {
