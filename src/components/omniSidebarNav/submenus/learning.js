@@ -14,6 +14,12 @@ const learning = () => {
         },
 
         {
+          link: '/certification/about',
+          title: 'About the Certification Program',
+        },
+
+
+        {
           link: '/certification/exam',
           title: 'Taking the Exam',
         },

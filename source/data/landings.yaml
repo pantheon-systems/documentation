@@ -1385,18 +1385,30 @@
           url: "/guides/getstarted/launch/"
 
 
-
     - title: "Tutorials"
       links:
-        - text: "Why become certified?"
-          url: "/certification/about"
+        - text: "WordPress and Git"
+          url: "/guides/wordpress-git"
 
     - title: "TL;DR"
       links:
         - text: "Why become certified?"
-          url: "/certification/about"
+          url: "/tldr"
 
     - title: "Certification"
       links:
         - text: "Why become certified?"
           url: "/certification/about"
+        - text: "Study Guide"
+          url: "/certification/study-guide"
+        - text: "Exam Instructions"
+          url: "/certification/exam#exam-instructions"
+        - text: "Exam Topics"
+          url: "/certification/exam#exam-topics"
+        - text: "Exam FAQs"
+          url: "/certification/exam#exam-faqs"
+        - text: "See who's certified!"
+          url: "https://certification.pantheon.io"
+
+
+
