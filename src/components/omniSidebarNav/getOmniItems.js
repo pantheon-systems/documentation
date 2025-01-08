@@ -1,7 +1,5 @@
-import CertificationItems from './submenus/certification';
 import getStarted from './submenus/getStarted';
 import goLive from './submenus/goLive';
-import pagesToDelete from './submenus/pagesToDelete';
 import webInfrastructure from './submenus/webInfrastructure';
 import accountManagement from './submenus/accountManagement';
 import terminus from './submenus/terminus';
@@ -10,6 +8,7 @@ import workflows from './submenus/workflows';
 import support from './submenus/support';
 import security from './submenus/security';
 import { simpleLink } from './helpers';
+import learning from './submenus/learning';
 
 // Before we can merge we need to:
 // Todo: remove console logging from this component.
@@ -30,7 +29,7 @@ const getOmniItems = () => {
     terminus(),
     support(),
     security(),
-    CertificationItems(),
+    learning(),
     about(),
     simpleLink('/release-notes', 'Release Notes'),
     // pagesToDelete(),

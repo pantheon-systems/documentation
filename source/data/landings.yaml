@@ -1370,3 +1370,33 @@
       links:
         - text: "Pantheon WebOps Certification Registry"
           url: "https://certification.pantheon.io"
+
+- title: "Learning"
+  subtitle: "Learn to use Pantheon"
+  path: "learning"
+  topics-groups:
+
+    - title: "Getting Started"
+      links:
+        - text: "Create a Site"
+          url: "/guides/getstarted/addsite"
+
+        - text: "Launch a Site"
+          url: "/guides/getstarted/launch/"
+
+
+
+    - title: "Tutorials"
+      links:
+        - text: "Why become certified?"
+          url: "/certification/about"
+
+    - title: "TL;DR"
+      links:
+        - text: "Why become certified?"
+          url: "/certification/about"
+
+    - title: "Certification"
+      links:
+        - text: "Why become certified?"
+          url: "/certification/about"
