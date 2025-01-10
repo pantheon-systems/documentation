@@ -3,7 +3,7 @@ import { getGuideDirectory, simpleLink } from './../helpers';
 const learning = () => {
   return {
     link: '/learning',
-    title: 'Learning',
+    title: 'Learning and Certification',
     children: [
       simpleLink('/learning', 'Learning about Pantheon'),
 
