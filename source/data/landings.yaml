@@ -1371,8 +1371,8 @@
         - text: "Pantheon WebOps Certification Registry"
           url: "https://certification.pantheon.io"
 
-- title: "Learning"
-  subtitle: "Learn to use Pantheon"
+- title: "Learning and Certification"
+  subtitle: "Learn to use Pantheon's platform and tools"
   path: "learning"
   topics-groups:
 
@@ -1380,20 +1380,45 @@
       links:
         - text: "Create a Site"
           url: "/guides/getstarted/addsite"
-
         - text: "Launch a Site"
           url: "/guides/getstarted/launch/"
+        - text: "Migrating a Site to Pantheon"
+          url: "/guides/guided"
+
 
 
     - title: "Tutorials"
       links:
         - text: "WordPress and Git"
           url: "/guides/wordpress-git"
+        - text: "Incident Management"
+          url: "/guides/pagerduty"
+        - text: "Web Accessibility"
+          url: "/guides/accessibility/"
 
-    - title: "TL;DR"
+
+    - title: "TL;DR - For when you need a video summary of documentation"
       links:
-        - text: "Why become certified?"
-          url: "/tldr"
+
+        - text: "Site Creation"
+          url: "/tldr#site-creation"
+
+        - text: "Development Workflow"
+          url: "/tldr#development-workflow"
+
+        - text: "Workspaces, Sites, and Teams"
+          url: "/tldr#workspaces-sites-and-teams"
+
+        - text: "Connecting DNS"
+          url: "/tldr#updating-dns-to-connect-a-domain-name-to-pantheon"
+
+        - text: "Quicksilver Workflow Hooks"
+          url: "/tldr#how-to-use-quicksilver-hooks-to-improve-your-workflow"
+
+        - text: "Terminus: Pantheon's CLI"
+          url: "/tldr#terminus-pantheons-cli"
+
+
 
     - title: "Certification"
       links:
