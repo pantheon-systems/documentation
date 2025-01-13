@@ -15,6 +15,7 @@ permalink: docs/guides/guided
 editpath: migrate/guided/01-introduction.md
 reviewed: "2022-12-13"
 ---
+<Wistia src="n8tnwnrkn6" />
 
 Welcome to Pantheon! We want to make it easy for you to move a site from another hosting provider to Pantheon. Use the following instructions and you'll be good to go!
 
