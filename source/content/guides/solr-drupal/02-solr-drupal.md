@@ -261,7 +261,7 @@ This error occurs after installing `search_api_pantheon` for Drupal using Compos
 
 ### Editing Solr Configuration files
 
-There are instances where you want to edit the configuration file like `schema.xml` or `synonyms.txt` to customize the search results. The [Search API Solr](https://www.drupal.org/project/search_api_solr) module provided these configuration files via a [jump-start config set](https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start/solr8/config-set?ref_type=heads). Installing the module in your Drupal sites will allow you to see these configuration files in the path `/code/web/module/contrib/searc_api_solr/jump-start/solr8/config-set`. If you need to edit any of the files, you need to copy the folder to a different location to prevent your changes from being overwritten for any future module update.
+There are instances where you want to edit the configuration file like `schema.xml` or `synonyms.txt` to customize the search results. The [Search API Solr](https://www.drupal.org/project/search_api_solr) module provided these configuration files via a [jump-start config set](https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start/solr8/config-set?ref_type=heads). Installing the module in your Drupal sites will allow you to see these configuration files in the path `/code/web/module/contrib/search_api_solr/jump-start/solr8/config-set`. If you need to edit any of the files, you need to copy the folder to a different location to prevent your changes from being overwritten for any future module update.
 
 **Instructions:**
 1. Copy the `config-set` folder to a directory inside `/code` e.g. `/code/solr/config`.
