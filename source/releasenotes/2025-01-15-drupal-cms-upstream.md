@@ -8,4 +8,4 @@ categories: [drupal, new-feature]
 
 For installation details, check out the new [Drupal CMS docs](/supported-drupal#drupal-cms-on-pantheon). Please join us in the [Pantheon Community Slack](https://docs.pantheon.io/pantheon-community) to celebrate the release!
 
-Our support team is ready and available if you have any questions or issues with configuring your new Drupal CMS site.
+Our support team is ready and available if you have any questions or issues configuring your new Drupal CMS site.
