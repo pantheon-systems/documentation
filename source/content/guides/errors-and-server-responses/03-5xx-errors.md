@@ -59,11 +59,11 @@ This error message will be accompanied by a `503 First Byte Timeout` page title.
 
 > Header overflow.
 
-The new Pantheon Global Edge size limit for cookies, sent in the request `"Cookie: .."` header, is 10KB. If more than 10KB are sent, all cookies are dropped and the request is processed as if no cookies were sent. The header `"X-Cookies-Dropped: 1"` is added to truncated requests and responses. You can ignore this scenario in your PHP code or handle it by displaying a custom error page.
+If the total size of cookies in the `"Cookie: ..."` header exceeds 10KB, Pantheon discards all cookies and processes the request as if no cookies were sent. A `X-Cookies-Dropped: 1` header is added to the truncated request and response. You can ignore this behavior in your application code or display a custom error page.
 
-This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (for example, `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. Refer to [Environment-Specific Configurations for Drupal](/guides/environment-configuration/environment-specific-config-drupal/#troubleshoot-503-response-header-overflow) for more information.
+This issue can also occur if Drupal’s cacheability debug service generates large `X-Drupal-Cache-Tags` or `X-Drupal-Cache-Contexts` headers. See [Environment-Specific Configurations for Drupal](/guides/environment-configuration/environment-specific-config-drupal/#troubleshoot-503-response-header-overflow) for details.
 
-You can reduce the number of set-cookie headers in the response to resolve this error if you receive a 503 error and your cookie size is smaller than 10KB.
+If your cookie usage is below 10KB but you still get a `503 Header Overflow`, reduce the number of headers your application sends. Pantheon adds routing headers automatically, so keep any additional headers to under 40 to avoid overflow.
 
 ### Pantheon 503 Database not Responding
 
