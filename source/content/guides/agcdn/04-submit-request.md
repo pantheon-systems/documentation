@@ -1,6 +1,6 @@
 ---
 title: Advanced Global CDN
-subtitle: Submit a Request
+subtitle: Submit a Change Request
 description: Learn how to submit a configuration or support request.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
@@ -26,11 +26,11 @@ The Pantheon Professional Services (PS) team works closely with partners to prov
 
 Follow the steps below to submit a ticket for a configuration change or support request.
 
-1. Review [Support Ticket Best Practices](/guides/support/support-ticket/#best-practices).
-
-1. Complete the steps in [Ticket Support](/guides/support/contact-support/#general-support-ticket). 
-
-    ![Screenshot of the Support Tab](../../../images/dashboard/new-dashboard/2024/support-tab.png)
+1. [Go to your professional workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+1. Click on the **Edge** tab.
+1. Locate the new **Change Request Form** section.
+1. Complete the form with all relevant details about your request.
+1. Submit your request.
 
 ## More Resources
 
