@@ -34,6 +34,8 @@ terminus site:create <site> <label> drupal-cms-composer-managed
 
 See the [`site:create` command docs](/terminus/commands/site-create) for all available flags.
 
+Drupal CMS will be an option during site creation in the Pantheon dashboard soon.
+
 ## Drupal 10 and 11 on Pantheon
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
 
