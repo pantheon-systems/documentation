@@ -19,6 +19,10 @@ Previously, the Advanced Global CDN service lacked a dedicated category within t
 3. Complete the form with all relevant details about your request.  
 4. Submit your request.
 
+## Whats Next
+
+The roll-out of this form is a first step toward providing Pantheon's AGCDN customers with a dedicated area in the workspace to make AGCDN changes. In the future, we'd like for customers to be able to make AGCDN configuration changes on their own, if they choose to do so.
+
 ## Questions?
 
 For additional feedback or questions regarding the Advanced Global CDN Change Request Form, contact the Pantheon Support team.
