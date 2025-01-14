@@ -1,6 +1,6 @@
 ---
 title: Drupal CMS upstream now available
-published_date: "2024-12-15"
+published_date: "2025-01-15"
 categories: [drupal, new-feature]
 ---
 
