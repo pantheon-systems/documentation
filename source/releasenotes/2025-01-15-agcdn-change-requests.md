@@ -1,6 +1,6 @@
 ---
 title: Advanced Global CDN change request update
-published_date: "2025-01-14"
+published_date: "2025-01-15"
 categories: [general, account-management]
 ---
 
