@@ -37,7 +37,3 @@ Follow the steps below to submit a ticket for a configuration change or support 
 - [Support FAQs](/guides/support/faq/)
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
-
-## Whats Next
-
-The roll-out of this form is a first step toward providing Pantheon's AGCDN customers with a dedicated area in the workspace to make AGCDN changes. In the future, we'd like for customers to be able to make AGCDN configuration changes on their own, if they choose to do so. 
