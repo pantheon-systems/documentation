@@ -26,7 +26,7 @@ The Pantheon Professional Services (PS) team works closely with partners to prov
 
 Follow the steps below to submit a ticket for a configuration change or support request.
 
-1. [Go to your professional workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+1. [Go to your professional workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces).
 1. Click on the **Edge** tab.
 1. Locate the new **Change Request Form** section.
 1. Complete the form with all relevant details about your request.
