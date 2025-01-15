@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence]
-reviewed: "2024-08-09"
+reviewed: "2025-01-15"
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -258,14 +258,3 @@ This occurs because both repositories contain a package called `drupal/search_ap
 ### Fatal error: Cannot redeclare config_get_config_directory()
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
-
-### Reloading Solr Core
-
-Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site. You can follow this steps on how to enable the Reload Core in your Search API configuration:
-
-1. Go to `/admin/modules`
-2. Enable `Search API Solr Admin`
-3. Go to `/admin/config/search/search-api`
-4. Click the server you want to reload
-5. You'll be able to see the `Reload Core` button and you can simply click and confirm to reload
-6. Reindex the site to apply any changes
