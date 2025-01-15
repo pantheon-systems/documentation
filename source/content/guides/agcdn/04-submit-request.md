@@ -33,7 +33,7 @@ Follow the steps below to submit a ticket for a configuration change or support 
 
  ![AGCDN change request form to submit tickets for configuration changes](../../../images/dashboard/new-dashboard/2024/agcdn-change-request.png)
 
-After submission, you will be switched to the **Support** tab of your professional workspace and the new AGCDN ticket will be selected for review.
+After submission, you will be switched to the **Support** tab of your professional workspace and the new AGCDN ticket will be open.
 
 ## More Resources
 
