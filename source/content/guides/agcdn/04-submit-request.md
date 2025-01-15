@@ -31,7 +31,7 @@ Follow the steps below to submit a ticket for a configuration change or support 
 1. Complete the form with all relevant details about your request. 
 1. Submit your request.
 
- ![The "Recent log messages" listing under Reports in the Drupal admin interface.](../../../images/dashboard/new-dashboard/2024/agcdn-change-request.png)
+ ![AGCDN change request form to submit tickets for configuration changes](../../../images/dashboard/new-dashboard/2024/agcdn-change-request.png)
 
 After submission, you will be switched to the **Support** tab of your professional workspace and the new AGCDN ticket will be selected for review.
 
