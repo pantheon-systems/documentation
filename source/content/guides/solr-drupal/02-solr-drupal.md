@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence]
-reviewed: "2024-08-09"
+reviewed: "2025-01-15"
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -258,27 +258,3 @@ This occurs because both repositories contain a package called `drupal/search_ap
 ### Fatal error: Cannot redeclare config_get_config_directory()
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
-
-### Custom Solr Configuration
-
-There are instances where you want to edit the configuration file like `schema.xml` or `synonyms.txt` to customize the search results. The [Search API Solr](https://www.drupal.org/project/search_api_solr) module provided these configuration files via a [jump-start config set](https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start/solr8/config-set?ref_type=heads). Installing the module in your Drupal sites will allow you to see these configuration files in the path `/code/web/module/contrib/search_api_solr/jump-start/solr8/config-set`. If you need to edit any of the files, you need to copy the folder to a different location to prevent your changes from being overwritten for any future module update.
-
-**Instructions:**
-1. Copy the `config-set` folder to a directory inside `/code` (e.g. `/code/solr/config`).
-2. Edit the necessary file (e.g.`synonyms_en.txt`) or any configuration files you wanted to customize.
-3. Alternatively, change the Solr Schema version name, so there is a differentiator to your custom configuration from the default. Please take a look at this [link](https://git.drupalcode.org/project/search_api_solr/-/blob/4.x/jump-start/solr8/config-set/schema.xml?ref_type=heads#L52) e.g. from this → `<schema name="drupal-4.3.5-solr-8.x-1" version="1.6">` to this` <schema name="drupal-4.3.5-solr-8.x-1-CUSTOM-IDENTIFIER" version="1.6">` **note:** change the word “CUSTOM-IDENTIFIER” to anything that describes your custom config.
-4. Commit the changes, it is recommended to test this in a multidev environment.
-5. Go to `/admin/config/search/search-api` and select your server, then go to the **Pantheon Search Admin** tab and click **+ Post Solr Schema**. Specify the path of your custom configuration (e.g., `/code/solr/config`), then click **Post Schema**.
-6. Pantheon's platform checks for updated Solr configurations every 5 minutes. Wait 5 minutes to ensure your new custom configuration has been detected and applied by the platform before proceeding to the next step.
-7. After making sure the site uses the new Solr configuration, go to `/admin/config/search/search-api` and select your index, then click **Rebuild tracking information** and then click **Index now**.
-
-### Reloading Solr Core
-
-Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site. You can follow this steps on how to enable the Reload Core in your Search API configuration:
-
-1. Go to `/admin/modules`
-2. Enable `Search API Solr Admin`
-3. Go to `/admin/config/search/search-api`
-4. Click the server you want to reload
-5. You'll be able to see the `Reload Core` button and you can simply click and confirm to reload
-6. Reindex the site to apply any changes
