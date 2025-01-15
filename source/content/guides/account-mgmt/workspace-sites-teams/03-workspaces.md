@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
-reviewed: "2022-09-19"
+reviewed: "2025-01-15"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -49,7 +49,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
 
-- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime.
+- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime. Submit AGCDN configuration change requests on this tab.
 
 - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
