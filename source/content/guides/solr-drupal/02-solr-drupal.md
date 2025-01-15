@@ -269,7 +269,7 @@ There are instances where you want to edit the configuration file like `schema.x
 3. Alternatively, change the Solr Schema version name, so there is a differentiator to your custom configuration from the default. Please take a look at this [link](https://git.drupalcode.org/project/search_api_solr/-/blob/4.x/jump-start/solr8/config-set/schema.xml?ref_type=heads#L52) e.g. from this → `<schema name="drupal-4.3.5-solr-8.x-1" version="1.6">` to this` <schema name="drupal-4.3.5-solr-8.x-1-CUSTOM-IDENTIFIER" version="1.6">` **note:** change the word “CUSTOM-IDENTIFIER” to anything that describes your custom config.
 4. Commit the changes, it is recommended to test this in a multidev environment.
 5. Go to `/admin/config/search/search-api` and select your server, then go to the **Pantheon Search Admin** tab and click **+ Post Solr Schema**. Specify the path of your custom configuration (e.g., `/code/solr/config`), then click **Post Schema**.
-6. Wait for **5 minutes** for the configuration to take effect.
+6. Pantheon's platform checks for updated Solr configurations every 5 minutes. Wait 5 minutes to ensure your new custom configuration has been detected and applied by the platform before proceeding to the next step.
 7. After making sure the site uses the new Solr configuration, go to `/admin/config/search/search-api` and select your index, then click **Rebuild tracking information** and then click **Index now**.
 
 ### Reloading Solr Core
