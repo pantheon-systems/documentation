@@ -1,10 +1,10 @@
 ---
 title: Advanced Global CDN
-subtitle: Submit a Request
+subtitle: Submit a Change Request
 description: Learn how to submit a configuration or support request.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
-reviewed: "2022-11-01" 
+reviewed: "2025-01-15"
 showtoc: true
 permalink: docs/guides/agcdn/submit-request
 contenttype: [guide]

@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
-reviewed: "2022-09-19"
+reviewed: "2025-01-15"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
