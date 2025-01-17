@@ -15,4 +15,4 @@ This update makes it easier to stay informed about your latest payment without i
 
 ## What's next?
 
-This effort towards improved billing visibility in the dashboard lays the groundwork for further improvements down the road. In a future update, we plan to apply "Paid" and "Unpaid" tags across all invoices, rather that just the most recent invoice. 
+This effort towards improved billing visibility in the dashboard lays the groundwork for further improvements down the road. In a future update, we plan to apply "Paid" and "Unpaid" tags across all invoices, rather than just the most recent invoice.

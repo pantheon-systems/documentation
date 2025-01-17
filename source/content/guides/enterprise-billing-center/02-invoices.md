@@ -38,7 +38,7 @@ Only the latest invoice is labeled as paid or unpaid.
 
 ## Filter the Invoice
 
-You can filter the filter the invoice by Year.
+You can filter invoices by Year.
 
 Click the **Filter by** drop-down menus to sort by Year.
 
