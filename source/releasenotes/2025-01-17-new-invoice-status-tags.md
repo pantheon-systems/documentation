@@ -1,7 +1,7 @@
 ---
 title: "Track invoice statuses with new Paid and Unpaid tags"
-published_date: "2025-01-16"
-categories: [billing]
+published_date: "2025-01-17"
+categories: [billing, user-interface]
 ---
 We’ve added a feature to the billing section of the Pantheon dashboard that helps you quickly check the status of your most recent invoice.
 
