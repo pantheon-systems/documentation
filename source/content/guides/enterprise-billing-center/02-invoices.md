@@ -13,6 +13,7 @@ tags: [billing]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/invoices
+reviewed: "2025-01-17"
 ---
 
 This section provides information on how you can access and interact with the invoices in the Enterprise Billing Center.
@@ -27,7 +28,13 @@ You must have Admin privileges for the workspace to view invoices. Note that acc
 
 1. Click the invoice number you want to review.
 
-    ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
+    ![Dashboard Site Portfolio Display Example 2](../../../images/release-notes/2024/invoice-tags.png)
+
+<Alert title="Note" type="info">
+
+Only the latest invoice is labeled as paid or unpaid.
+
+</Alert>
 
 ## Filter the Invoice
 
