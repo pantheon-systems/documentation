@@ -19,8 +19,6 @@ This section provides solutions to common Git troubleshooting scenarios.
 
 ### Reduce Large Repositories
 
-
-
 Repositories that exceed 2GB may experience failures or degraded performance when interacting with code via Git on Pantheon. We recommend that you reduce the repository size by removing objects that are no longer referenced. You can output the size of your repository by running [`git count-objects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.
 
 We recommend that you use [git filter-repo](https://github.com/newren/git-filter-repo/) to reduce the size of your repository.
