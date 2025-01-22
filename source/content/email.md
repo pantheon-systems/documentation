@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [email]
-reviewed: "2022-08-03"
+reviewed: "2025-01-22"
 ---
 
 ## Incoming Email
@@ -20,27 +20,48 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 Drupal and WordPress both require a configured outgoing email service.
 
-For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use an SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
+For outgoing emails, we offer multiple options:
 
-### REST API Providers
+* **Recommended** Rest API Integration: Integrating WordPress and Drupal directly with a third-party service provider that supports a REST API configuration.
+* Pantheon SMTP: A basic transactional email service (limited to 500 emails daily).
+* SMTP Port Forwarding: Alternatively, you can use an SMTP configuration, but because SMTP requests are associated with dynamic, outgoing IPs, this can negatively impact deliverability.
 
-<Partial file="email-rest.md" />
+For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
 
-### SMTP Providers & Configurations
+### REST API Integration
+Pantheon recommends using SendGrid as a Rest API email provider. This configuration is completed within WordPress or Drupal so that transactional emails are sent directly from your hosted CMS to SendGrid (or your preferred provider) and finally to the recipient.
 
-Customers have successfully used [SendGrid](/guides/sendgrid), Gmail, Amazon SES, Mandrill, and other externally hosted SMTP based email providers.
+There are many benefits to using SendGrid, including the following:
+* Email domain authentication (SPF support).
+* Clear visibility into the emails being sent.
+* Send up to 100 emails daily at no cost (using a free SendGrid account).
+* Additional features to support sending marketing emails.
 
-Pantheon strongly encourages using ports other than `25`, `465` or `587` to send email because those ports are often blocked by service providers as an anti-spam measure. Here’s a list of popular email providers and the alternate ports which Pantheon recommends:
+Additional email vendors can be used, although our support team needs to gain more knowledge of the integration process (it will require working with the email provider if you have any issues).
 
-| Provider   | Port Documentation                                                                                          |
-|:---------- |:----------------------------------------------------------------------------------------------------------- |
-| Amazon SES | [2587 (STARTTLS), 2465 (TLSWRAPPER)](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html) |
-| Mailgun    | [2525](http://blog.mailgun.com/25-465-587-what-port-should-i-use/)                                          |
-| Mandrill   | [2525](https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-)                |
-| Sendgrid   | [2525](https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html)                 |
-| SparkPost  | [2525](https://www.sparkpost.com/docs/faq/smtp-connection-problems/)                                        |
+#### Configuring SendGrid:
+The setup process with SendGrid takes a few minutes and differs depending on whether you use Drupal or WordPress.
 
-If you do not find your service provider in the table above, check with their support and/or documentation.
+[SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your needs. Review our guide [Using SendGrid To Deliver Email](/sendgrid) for details.
+
+##### Drupal
+[Sendgrid Integration](https://www.drupal.org/project/sendgrid_integration)
+
+##### WordPress 
+[Use WP Mail SMTP to Send Email with SendGrid](/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp)
+
+### Pantheon SMTP
+Pantheon provides a basic SMTP service for delivering transactional emails. This service allows you to send transactional emails from your Pantheon hosted WordPress and Drupal sites with no action (will begin automatically work once the site has been created).
+
+#### Features and limitations
+Pantheons SMTP service allows up to 25 emails daily per environment. A pantheon site with multiple environments will be able to send up to 25 emails daily per environment. Upon reaching the daily limit, any emails sent beyond the limit will not be sent.
+
+There is not support for SPF or email domain authentication. It’s important if your environment will need to send more emails then the daily limit to configure WP Mail to work with Sendgrid (or the email provider of your choice). This will ensure that the transactional emails requested from your site will be sent.
+
+### SMTP Port Forwarders Configurations
+Pantheon strongly encourages using port `2525`. We don’t recommend using ports `25`, `465`, or `587` to send email because service providers often block those ports as an anti-spam measure. 
+
+Customers have successfully used [SendGrid](https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html), [Amazon SES](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html), [Mailgun](http://blog.mailgun.com/25-465-587-what-port-should-i-use/), [Mandrill](https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-), and other externally hosted SMTP-based email providers. If your service provider is not listed in the table above, check with their support and documentation.
 
 Use the following integration methods for Drupal and WordPress to configure an external SMTP service:
 
@@ -109,11 +130,11 @@ current URL: `https://dev-example.pantheonsite.io/wp-login.php?action=lostpasswo
 
 ### Can I use Pantheon's local MTA (postfix)?
 
-We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
+Yes, this is limited to sending 25 emails per day from each site environment (e.g., staging can send 25 per day, live can send 25 per day). We strongly recommend using a third-party email service provider as they offer additional features to ensure deliverability such as email domain authentication link branding, and allow you to send more than 25 emails daily.
 
 ### Can I access the mail logs for my site?
 
-No, mail logs are not available for download and we do not recommend using the local MTA (postfix).
+No, mail logs are unavailable. If you need to see your site's email traffic, we recommend using SendGrid.
 
 ### What ports are recommended by Pantheon?
 
@@ -121,17 +142,7 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
 
 ### Are there SPF records for Pantheon's local MTA (postfix)?
 
-If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
-
-```none
-v=spf1 include:spf.example.com include:spf.pantheon.io ~all
-```
-
-Adjust the above example record as needed for your domain:
-
-- Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
-- If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
-- To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd-party mail systems** text box.
+No, we don’t provide SPF records for Pantheon local MTA. We encourage you to use SendGrid instead to ensure email deliverability.
 
 ### Why does my Gmail user name and password not work?
 
