@@ -14,9 +14,7 @@ const workflows = () => {
         getGuideDirectory('guides/environment-configuration'),
         simpleLink('/connection-modes', 'Connection Modes'),
         getGuideDirectory('guides/sftp', 'SFTP'),
-        //Todo: relocate hotfixes into git guide
         getGuideDirectory('guides/git', 'Git'),
-        simpleLink('/hotfixes', 'Hotfixes'),
         simpleLink('/core-updates', 'Core Updates'),
         simpleLink('/workflow-logs', 'Workflow Logs'),
         simpleLink('/content-staging', 'Content Staging'),
