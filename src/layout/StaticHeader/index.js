@@ -1,19 +1,16 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import { Container, PantheonLogo } from "@pantheon-systems/pds-toolkit-react"
+import { Container, PantheonLogo } from '@pantheon-systems/pds-toolkit-react';
 
-import "./style.css"
+import './style.css';
 
 const StaticHeader = ({ page }) => (
   <header className="docs-static-header">
     <Container className="docs-static-header__container">
       <div className="docs-static-header__logo">
         <PantheonLogo
-          isLink={{
-            ariaLabel: "Pantheon Home",
-            link: <a href="https://pantheon.io" target="_blank"></a>,
-          }}
+          linkContent={<a href="https://pantheon.io" target="_blank"></a>}
         />
       </div>
       <div className="docs-static-header__link">
@@ -23,6 +20,6 @@ const StaticHeader = ({ page }) => (
       </div>
     </Container>
   </header>
-)
+);
 
-export default StaticHeader
+export default StaticHeader;
