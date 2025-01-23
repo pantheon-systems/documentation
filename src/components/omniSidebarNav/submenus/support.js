@@ -36,9 +36,9 @@ const support = () => {
         ]),
         simpleLink('/timeouts', 'Timeouts and Errors', [
           simpleLink('/timeouts', 'Timeouts on Pantheon'),
-          getGuideDirectory('guides/errors-and-server-responses'),
           simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
         ]),
+        getGuideDirectory('guides/errors-and-server-responses'),
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
         simpleLink('/local-dns-cache', 'Local DNS Cache'),
