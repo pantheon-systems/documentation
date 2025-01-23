@@ -55,6 +55,7 @@ You can use frontend frameworks other than Gatsby and Next.js, however the proce
 
 - Forks are not currently supported
 - A repo cannot be empty or site creation will fail
+- The total build size with node modules and excluding the .git folder cannot exceed 3GB
 - A repo cannot be connected to more than one Front-End Site
 - There are known issues around disconnecting and reconnecting a repo
 - There are known issues around the GitHub app and org level permissions

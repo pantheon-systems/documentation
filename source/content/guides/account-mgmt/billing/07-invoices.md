@@ -14,7 +14,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/invoices
 editpath: docs/guides/account-mgmt/billing/07-invoices.md
-reviewed: "2022-09-19"
+reviewed: "2025-01-17"
 ---
 
 Learn how to view and manage your invoices and subscriptions.
@@ -25,7 +25,7 @@ To view your invoices:
 
 1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Invoices**.
 
-Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list.
+Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list. Only the most recent invoice is labeled as paid or unpaid.
 
 ### Receiving Invoices via Email
 

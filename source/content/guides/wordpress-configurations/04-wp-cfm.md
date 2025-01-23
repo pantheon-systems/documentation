@@ -13,11 +13,11 @@ tags: [workflow, plugins]
 permalink: docs/guides/wordpress-configurations/wp-cfm
 ---
 
-This section provides information on how to install and configure the [WordPress Configuration Management (WP-CFM)](https://wordpress.org/plugins/wp-cfm/) plugin on your Pantheon WordPress site.
+This section provides information on how to install and configure the [WordPress Configuration Management (WP-CFM)](https://github.com/forumone/wp-cfm-dist/wiki) plugin on your Pantheon WordPress site.
 
 It is a best practice to maintain version control for your site configuration within the codebase. Developer workflows must account for migrating configuration from development and testing environments into production without affecting the content because WordPress site configuration is stored in the database alongside content.
 
-The WP-CFM plugin provides an simple mechanism to allow developers to practice configuration management within their code. The plugin exports WordPress site configuration from the SQL database's `wp_options` table to a `.json` file stored in `private/config`. You must deploy the file to a new environment for the same site before you can import the configuration from the `.json` file into the second `wp_options` table.
+The WP-CFM plugin provides a simple mechanism to allow developers to practice configuration management within their code. The plugin exports WordPress site configuration from the SQL database's `wp_options` table to a `.json` file stored in `private/config`. You must deploy the file to a new environment for the same site before you can import the configuration from the `.json` file into the second `wp_options` table.
 
 <Alert title="Note" type="info">
 
@@ -27,25 +27,26 @@ WP-CFM should only be used to write changes to code in Dev and Multidev environm
 
 ## Install and Deploy WP-CFM
 
-Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/terminus):
+<TabList>
 
-1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
+<Tab title="Installing via Git Updater" id="git-updater" active={true}>
 
-    ```bash{promptUser: user}
-    terminus connection:set <site>.<env> sftp
-    ```
+This method makes use of the [Git Updater](https://git-updater.com/) plugin to install and keep WP-CFM up-to-date. Follow the steps in [our documentation on installing plugins using Git Updater](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-git-updater-to-install-and-manage-plugins-and-themes-from-git-repositories) and use the following settings:
 
-1. Install the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin on the Dev Environment using the WordPress Dashboard or with Terminus:
+**Plugin URI:** `forumone/wp-cfm-dist`  
+**Repository Branch:** `main`  
+**Remote Repository Host:** GitHub  
+**GitHub Access Token:** Blank  
 
-    ```bash{promptUser: user}
-    terminus wp <site>.<env> -- plugin install --activate wp-cfm
-    ```
+</Tab>
 
-1. Commit this change using the Site Dashboard or with Terminus:
+<Tab title="Installing via Composer" id="composer">
 
-    ```bash{promptUser: user}
-    terminus env:commit <site>.<env> --message="Install wp-cfm plugin"
-    ```
+This method makes use of [Integrated Composer](/guides/integrated-composer) to manage installation and version management. This process assumes you already have a `composer.json` in your site repository and `build_step` is set to `true` in your `pantheon.yml`. Follow the steps in [our documentation on installing plugins using Composer](/guides/wordpress-configurations/installing-updating-from-third-party-sources#using-composer-to-source-plugins-and-packages) and use `forumone/wp-cfm` as the repository.
+
+</Tab>
+
+</TabList>
 
 1. Deploy the commit to the Test and Live environments using the Pantheon Dashboard or with Terminus, and clear the cache for both environments:
 
@@ -164,6 +165,9 @@ Deploy the `.json` file from Dev to Test:
 1. Test the configuration on Live.
 
 ## Frequently Asked Questions
+### Why can’t I install WP-CFM from the WordPress plugin repository?
+
+The WP-CFM plugin on WordPress.org is no longer receiving updates. This means that if you had previously installed via the WordPress plugin repository, you will not receive updates to the plugin unless you use one of the above alternative options. See our documentation on [installing and managing plugins from third party sources}(https://docs.pantheon.io/guides/wordpress-configurations/installing-updating-from-third-party-sources).
 
 ### What database values are tracked using WP-CFM?
 
@@ -177,11 +181,11 @@ You can review values on the [All Settings Screen](https://codex.wordpress.org/O
 
 ### How can I extend WP-CFM to track more tables?
 
-If you want to track configurations in more tables, you must use the `wpcfm_configuration_items` hook. Refer to the [WP-CFM documentation](https://forumone.github.io/wp-cfm/) for more information.
+If you want to track configurations in more tables, you must use the `wpcfm_configuration_items` hook. Refer to the [WP-CFM documentation](https://github.com/forumone/wp-cfm-dist/wiki) for more information.
 
 ### Will WP-CFM work with Multidev?
 
-Yes. For the Multidev to appear as a config option, you must hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin/#wp-cfm-compatibility).
+Yes. For the Multidev to appear as a config option, you must hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm-dist/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm-dist/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin/#wp-cfm-compatibility).
 
 ### What's not tracked?
 

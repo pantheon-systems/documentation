@@ -10,6 +10,7 @@ const getStarted = () => {
       // This page is kind of a landing page? Should it be in this menu?
       simpleLink('/products', 'Products & Features'),
       simpleLink('/required-reading', 'Required Reading'),
+      simpleLink('/tldr', 'Documentation TL;DR'),
       getGuideDirectory('guides/platform-considerations'),
       simpleLink('/guides/guided', 'Migrating Sites to Pantheon', [
         getGuideDirectory('guides/migrate/guided', 'Guided Migration'),

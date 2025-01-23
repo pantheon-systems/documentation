@@ -11,12 +11,12 @@ product: [dashboard]
 integration: [--]
 tags: [--]
 showtoc: true
-reviewed: 2023-04-19
+reviewed: 2025-01-15
 ---
 
 The Pantheon Site Dashboard is the hub of all development and activity for an individual site.
 
-![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/2024/site-dashboard.png)
+![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/2024/site-dashboard-2024.png)
 
 ## Header Elements
 
@@ -57,11 +57,21 @@ This environment is for your live site, where content creators actively post and
 
 ## Left Navigation
 
-The following links are located within your Dev, Test, and Live environment tabs:
+The following buttons are found above the lefthand navigation menu on every environment in the site dashboard:
 
-- **Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your Dev environment. (This link is only accessible within your Dev environment.)
+- **Visit `Environment` Site**: Where `Environment` is a placeholder for the active environment you're currently looking at in the dashboard, such as **Visit Test Site** or **Visit Development Site** etc. This will open the homepage of your site for the given environment in a new tab.
 
-- **Commit Log:** Review a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
+- **Site Admin**: This will open your sites admin login page for the given environment in a new tab. If you're not already logged into your sites admin interface, this button will open `/user/login` for Drupal and `/wp-login.php` for WordPress. Once you've logged in and have an active admin session, this button will take you to `/user` for Drupal and `/wp-admin` for WordPress.
+
+<Alert title="Note" type="info">
+
+By default, the buttons described above will open links that are served via their respective [platform domains](/guides/domains/platform-domains) (e.g., `test-example.pantheonsite.io`). If you want these buttons to open your site using your own custom domain instead (e.g., `test.example.com`) you can connect a [custom domain](/guides/domains/custom-domains) then configure it as the [primary domain](/guides/domains/primary-domain) for the target environment. This is typically only done for the Live environment as part of launch however you can do this anytime for any environment based on your preferences and requirements.
+
+</Alert>
+
+The following navigation items are found on the lefthand side in the site dashboard:
+
+- **Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your Dev environment. In the center of this page you will find the site's commit log with an activity feed of all code changes. (This tab is only accessible within your Dev or Multidev environments.)
 
 - **Deploys:** View a deploy log for the environment. (This link is only accessible within your Test and Live environments.)
 
