@@ -626,6 +626,31 @@ ___
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 
+**Issue 3:** Unable to reset WordPress password or register new WordPress users when "Hide Backend" feature is enabled due to `itsec-hb-token` parameter being stripped from URL redirections.
+
+**Solution 1**  Dynamically append the `itsec-hb-token` parameter to redirection URLs when it's present in the original request. Edit the `functions.php` file of your WordPress theme. If you're using a child theme, make the changes there to avoid overwriting during theme updates.
+
+```php
+add_filter('wp_redirect', 'retain_itsec_hb_token', 10, 2);
+
+function retain_itsec_hb_token($location, $status) {
+    if (strpos($location, 'wp-login.php?checkemail=confirm') !== false && !empty($_GET['itsec-hb-token'])) {
+        $location = add_query_arg('itsec-hb-token', $_GET['itsec-hb-token'], $location);
+    }
+    return $location;
+}
+```
+
+**Solution 2** Ensure the `itsec-hb-token` parameter is retained during redirection to the `wp-login.php?checkemail=confirm` page. Locate the `wp-config.php` file in the root directory of your WordPress installation. Add the following code snippet at the top of the file, replacing "LOGIN_LOCATION" with your defined login slug (such as `log-me`):
+
+```php
+if (($_SERVER['REQUEST_URI'] == '/wp-login.php?checkemail=confirm') && (php_sapi_name() != "cli")) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://' . $_SERVER['HTTP_HOST'] . '/wp-login.php?checkemail=confirm&itsec-hb-token=LOGIN_LOCATION');
+    exit();
+}
+```
+
 ___
 
 ## Jetpack
