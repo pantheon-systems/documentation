@@ -2,7 +2,7 @@
 title: Supported Drupal Versions
 description: Learn which versions of Drupal are currently supported, as well as additional compatibility information.
 tags: [libraries, updates]
-contributors: [wordsmither]
+contributors: [wordsmither, scottbuscemi]
 contenttype: [doc]
 innav: [true]
 categories: [cms]
@@ -10,19 +10,31 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-11-04"
+reviewed: "2025-01-14"
 ---
 
 The following table indicates availability of the specified Drupal versions, as well as our usage recommendations and our support scope.
 
 | Drupal version | Available | Recommended | Supported |
 | ----------- | :---------: | :---------: | :---------: |
+| Drupal CMS          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 11          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
 | 9           |<span style="color:green">✔</span> <Popover title="Drupal 9 Availability" content="Drupal 9 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
 | 8           |<span style="color:green">✔</span> <Popover title="Drupal 8 Availability" content="Drupal 8 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
 | 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span> <Popover title="Drupal 7 LTS" content="Pantheon offers Long-Term Support for Drupal 7 sites on the platform at no extra cost. For more information, see the <a href='#drupal-7-long-term-support'>section below.</a>" />        |
 | 6           | ❌          | ❌           | ❌          |
+
+## Drupal CMS on Pantheon
+Drupal CMS is currently available to install via [this Dashboard Link](https://dashboard.pantheon.io/sites/create?upstream_id=462d08e2-3322-48a1-b150-f12a075eaabe) or Terminus:
+
+```bash{promptUser: user}
+terminus site:create <site> <label> drupal-cms-composer-managed
+```
+
+See the [`site:create` command docs](/terminus/commands/site-create) for all available flags.
+
+Drupal CMS will be an option during site creation in the Pantheon dashboard soon.
 
 ## Drupal 10 and 11 on Pantheon
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.

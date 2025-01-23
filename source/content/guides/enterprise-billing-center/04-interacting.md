@@ -13,6 +13,7 @@ tags: [billing]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/interacting
+reviewed: "2025-01-17"
 ---
 
 This section provides information on how you can access and interact with the Site Portfolio Report.
@@ -23,19 +24,9 @@ You can access the Site Portfolio Report in the Enterprise Billing Center within
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then click **Billing**.
 
-    Note that the Enterprise Billing Center page displays differently for different account types:
-
-    - Click **Download CSV** next to the desired invoice period under **Portfolio Report**.
-
-        ![Dashboard Site Portfolio Display Example 1](../../../images/site-portfolio-report-dashboard-portfolio-report-section.png)
-
-    **OR**
-
-    If you do not have a Portfolio Report section on your Enterprise Billing Center:
-
     - Click the **View** link next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
 
-        ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
+        ![Dashboard Site Portfolio Display Example 2](../../../images/release-notes/2024/invoice-tags.png)
 
 ## View Additional Information in the Charts
 
