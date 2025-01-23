@@ -1,5 +1,5 @@
 ---
-title: Crisis Response Upstream
+title: Crisis Response Upstream [Deprecated]
 description: About the Pantheon COVID-19 Response WordPress Upstream
 tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
@@ -12,6 +12,12 @@ audience: [development]
 product: [--]
 integration: [--]
 ---
+
+<Alert title="Warning" type="danger">
+
+This page is considered deprecated.
+
+</Alert>
 
 ## Overview
 
