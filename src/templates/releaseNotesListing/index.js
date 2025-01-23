@@ -294,7 +294,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             </div>
             <FlexContainer flexWrap='wrap' className='rn-popover-trigger-and-tags' >
               <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} isDisabled={!isLoaded} />
-              <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
+              <FlexContainer mobileFlexDirection='row' gap='narrow' flexWrap='wrap' >
                 {
                   filters && filters.categories.map(item => {
                     return (

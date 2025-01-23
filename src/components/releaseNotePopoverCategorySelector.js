@@ -64,7 +64,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters, setCurrentPage
                   key={item.slug}
                   style={{ gap: '8px' }}
                   className='pds-spacing-pad-block-end-m category-checkbox-group'
-                  mobileFlex='same'
+                  mobileFlexDirection="row"
                 >
                   <input
                     type='checkbox'
