@@ -362,7 +362,7 @@ You must do _one_ of the following to ensure that your newly created Multidev ha
 
 ### Deploying Hotfixes
 
-Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). Git tags created manually and pushed on the platform do not invoke all the processes that an actual deployment does. Pantheon standard workflow is done via the dashboard deploy or `terminus env:deploy`. As a workaround for hotfixes:
+Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/guides/git/hotfixes). Git tags created manually and pushed on the platform do not invoke all the processes that an actual deployment does. Pantheon standard workflow is done via the dashboard deploy or `terminus env:deploy`. As a workaround for hotfixes:
 
 1. Modify your `pantheon.yml` file in a development environment (for example add a code comment).
 

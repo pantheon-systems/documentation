@@ -3,7 +3,6 @@ title: Git on Pantheon Guide
 subtitle: Hotfixing with Git Tags
 description: Get solutions to common Git troubleshooting scenarios.
 tags: [code, collaborate, git, webops, workflow]
-
 showtoc: true
 permalink: docs/guides/git/hotfixes
 contenttype: [guide]
