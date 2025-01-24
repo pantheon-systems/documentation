@@ -34,10 +34,8 @@ const support = () => {
             'Symlinks and plugins that assume write access',
           ),
         ]),
-        simpleLink('/timeouts', 'Timeouts and Errors', [
-          simpleLink('/timeouts', 'Timeouts on Pantheon'),
-          simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
-        ]),
+        simpleLink('/timeouts', 'Timeouts on Pantheon'),
+        simpleLink('/debug-connections', 'Debugging Connectivity Issues'),
         getGuideDirectory('guides/errors-and-server-responses'),
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
