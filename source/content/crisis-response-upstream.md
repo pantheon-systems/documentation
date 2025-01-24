@@ -1,5 +1,5 @@
 ---
-title: Crisis Response Upstream [Deprecated]
+title: Crisis Response Upstream [Archived]
 description: About the Pantheon COVID-19 Response WordPress Upstream
 tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
@@ -15,7 +15,11 @@ integration: [--]
 
 <Alert title="Warning" type="danger">
 
-This page is considered deprecated.
+This page has been archived. The content is no longer maintained and may be outdated.
+
+The [Pantheon Crisis Response WordPress Upstream](https://github.com/pantheon-upstreams/crisis-response-wp) is no longer maintained.
+
+While the upstream and code remains available, it is no longer actively developed or supported.
 
 </Alert>
 
