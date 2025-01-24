@@ -12,6 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2025-01-23"
 ---
 
 Git makes it easy to reverse commits pushed to the Pantheon Dev environment.
@@ -174,14 +175,38 @@ You can revert a past commit that has been pushed to your Test or Live environme
 
 You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev. However, it does reset the Dev environment's codebase.
 
-1. Identify the most recent commit deployed to Live.
+<TabList>
 
-1. Run the command below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
+<Tab title="All others" id="all-others" active={true}>
 
-    ```bash{promptUser: user}
-    git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
-    git push origin master -f
-    ```
+Run the commands below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
+
+```bash{promptUser: user}
+git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
+git push origin master -f
+```
+
+</Tab>
+
+<Tab title="Integrated Composer" id="integrated-composer">
+
+<Alert title="Note" type="info">
+
+We've adjusted the following for [Integrated Composer sites](/guides/integrated-composer), so that you reset history to the **second** to last commit hash on the Live environment, rather than the first - to avoid resetting dev's history to a build artifact.
+
+</Alert>
+
+Run the commands below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
+
+```bash{promptUser: user}
+git reset --hard `terminus env:code-log <site>.live --format=string | grep -m2 'live' | tail -n 1 | cut -f 4`
+git push origin master -f
+```
+
+</Tab>
+
+</TabList>
+
 
 ## What if Dev Is Behind Test and Live?
 
