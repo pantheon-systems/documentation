@@ -630,7 +630,7 @@ ___
 
 **Solution 1**  Dynamically append the `itsec-hb-token` parameter to redirection URLs when it's present in the original request. Edit the `functions.php` file of your WordPress theme. If you're using a child theme, make the changes there to avoid overwriting during theme updates.
 
-```php
+```php:title=functions.php
 add_filter('wp_redirect', 'retain_itsec_hb_token', 10, 2);
 
 function retain_itsec_hb_token($location, $status) {
@@ -643,7 +643,7 @@ function retain_itsec_hb_token($location, $status) {
 
 **Solution 2** Ensure the `itsec-hb-token` parameter is retained during redirection to the `wp-login.php?checkemail=confirm` page. Locate the `wp-config.php` file in the root directory of your WordPress installation. Add the following code snippet at the top of the file, replacing "LOGIN_LOCATION" with your defined login slug (such as `log-me`):
 
-```php
+```php:title=wp-config.php
 if (($_SERVER['REQUEST_URI'] == '/wp-login.php?checkemail=confirm') && (php_sapi_name() != "cli")) {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://' . $_SERVER['HTTP_HOST'] . '/wp-login.php?checkemail=confirm&itsec-hb-token=LOGIN_LOCATION');
