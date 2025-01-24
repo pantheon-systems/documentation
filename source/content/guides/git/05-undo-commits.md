@@ -179,14 +179,12 @@ You can reset your Dev environment history to match the current state of your Li
 
 <Tab title="All others" id="all-others" active={true}>
 
-1. Identify the most recent commit deployed to Live.
+Run the commands below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
 
-1. Run the command below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
-
-    ```bash{promptUser: user}
-    git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
-    git push origin master -f
-    ```
+```bash{promptUser: user}
+git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
+git push origin master -f
+```
 
 </Tab>
 
@@ -194,18 +192,16 @@ You can reset your Dev environment history to match the current state of your Li
 
 <Alert title="Note" type="info">
 
-We've adjusted the following steps for [Integrated Composer sites](/guides/integrated-composer), so that you reset history to the **second** to last commit hash on the Live environment, rather than the first - to avoid resetting dev's history to a build artifact.
+We've adjusted the following for [Integrated Composer sites](/guides/integrated-composer), so that you reset history to the **second** to last commit hash on the Live environment, rather than the first - to avoid resetting dev's history to a build artifact.
 
 </Alert>
 
-1. Identify the **second** most recent commit deployed to Live.
+Run the commands below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
 
-1. Run the command below to overwrite the history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
-
-    ```bash{promptUser: user}
-    git reset --hard `terminus env:code-log <site>.live --format=string | grep -m2 'live' | tail -n 1 | cut -f 4`
-    git push origin master -f
-    ```
+```bash{promptUser: user}
+git reset --hard `terminus env:code-log <site>.live --format=string | grep -m2 'live' | tail -n 1 | cut -f 4`
+git push origin master -f
+```
 
 </Tab>
 
