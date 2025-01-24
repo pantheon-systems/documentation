@@ -628,7 +628,7 @@ ___
 
 **Issue 3:** Unable to reset WordPress password or register new WordPress users when "Hide Backend" feature is enabled due to `itsec-hb-token` parameter being stripped from URL redirections.
 
-**Solution 1**  Dynamically append the `itsec-hb-token` parameter to redirection URLs when it's present in the original request. Edit the `functions.php` file of your WordPress theme. If you're using a child theme, make the changes there to avoid overwriting during theme updates.
+**Solution:** Two adjustments are needed to fully resolve this issue. First, dynamically append the `itsec-hb-token` parameter to redirection URLs when the parameter present in the original request. Edit the `functions.php` file of your WordPress theme. If you're using a child theme, make the changes there to avoid overwriting during theme updates.
 
 ```php:title=functions.php
 add_filter('wp_redirect', 'retain_itsec_hb_token', 10, 2);
@@ -641,7 +641,7 @@ function retain_itsec_hb_token($location, $status) {
 }
 ```
 
-**Solution 2** Ensure the `itsec-hb-token` parameter is retained during redirection to the `wp-login.php?checkemail=confirm` page. Locate the `wp-config.php` file in the root directory of your WordPress installation. Add the following code snippet at the top of the file, replacing "LOGIN_LOCATION" with your defined login slug (such as `log-me`):
+Second, ensure the `itsec-hb-token` parameter is retained when during login redirection to the `wp-login.php?checkemail=confirm` page. Locate the `wp-config.php` file in the root directory of your WordPress installation. Add the following code snippet at the top of the file, replacing "LOGIN_LOCATION" with your defined login slug (such as `log-me`):
 
 ```php:title=wp-config.php
 if (($_SERVER['REQUEST_URI'] == '/wp-login.php?checkemail=confirm') && (php_sapi_name() != "cli")) {
