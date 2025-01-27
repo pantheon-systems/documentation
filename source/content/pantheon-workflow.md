@@ -239,7 +239,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 1. **Use the Workflow** (Recommended): Deploy code from Dev to Test to Live via the Site Dashboard or Terminus as outlined above, beginning in the [Combine Code from Dev and Content from Live in Test](#combine-code-from-dev-and-content-from-live-in-test) section.
 
-2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
+2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/guides/git/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
 ### Managing Database and Files: Clone, Import, Export, Wipe
 

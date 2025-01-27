@@ -85,4 +85,4 @@ All modules will be overwritten by Integrated Composer if you don't add the exce
 
 ### Can I hotfix an Integrated Composer site?
 
-No. Integrated Composer is not compatible with the [hotfix](/hotfixes) workflow.
+No. Integrated Composer is not compatible with the [hotfix](/guides/git/hotfixes) workflow.

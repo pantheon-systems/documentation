@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-10-18"
+reviewed: "2025-01-27"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -625,6 +625,31 @@ ___
 **Issue 2:** Solid Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
+
+**Issue 3:** Unable to reset WordPress password or register new WordPress users when "Hide Backend" feature is enabled due to `itsec-hb-token` parameter being stripped from URL redirections.
+
+**Solution:** Two adjustments are needed to fully resolve this issue. First, dynamically append the `itsec-hb-token` parameter to redirection URLs when the parameter present in the original request. Edit the `functions.php` file of your WordPress theme. If you're using a child theme, make the changes there to avoid overwriting during theme updates.
+
+```php:title=functions.php
+add_filter('wp_redirect', 'retain_itsec_hb_token', 10, 2);
+
+function retain_itsec_hb_token($location, $status) {
+    if (strpos($location, 'wp-login.php?checkemail=confirm') !== false && !empty($_GET['itsec-hb-token'])) {
+        $location = add_query_arg('itsec-hb-token', $_GET['itsec-hb-token'], $location);
+    }
+    return $location;
+}
+```
+
+Second, ensure the `itsec-hb-token` parameter is retained when during login redirection to the `wp-login.php?checkemail=confirm` page. Locate the `wp-config.php` file in the root directory of your WordPress installation. Add the following code snippet at the top of the file, replacing "LOGIN_LOCATION" with your defined login slug (such as `log-me`):
+
+```php:title=wp-config.php
+if (($_SERVER['REQUEST_URI'] == '/wp-login.php?checkemail=confirm') && (php_sapi_name() != "cli")) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://' . $_SERVER['HTTP_HOST'] . '/wp-login.php?checkemail=confirm&itsec-hb-token=LOGIN_LOCATION');
+    exit();
+}
+```
 
 ___
 
@@ -1557,7 +1582,7 @@ ___
 
 ## WPML - The WordPress Multilingual Plugin
 
-<ReviewDate date="2023-07-28" />
+<ReviewDate date="2025-01-27" />
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
@@ -1592,23 +1617,23 @@ ___
 >For more details, see WPML's documentation on troubleshooting .mo files generation.
 
 
-**Solution 1:**
+**Solution:**
+
+1. Use SFTP to manually create the `/files/languages` folder on Pantheon. You can use your preferred SFTP client and [the connection details](/guides/sftp/sftp-connection-info#sftp-connection-info) from the site dashboard, or you can use Terminus and SFTP to create the directory from the commandline (replace `<site>` and `<env>`): 
+
+  ```bash
+  $ `terminus connection:info <site>.<env> --field sftp_command`
+  > mkdir files/languages
+  > exit
+  ```
 
 1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
-  if ( !defined('WP_LANG_DIR') ) {    
-  	define( 'WP_LANG_DIR','/files/languages/wpml' );
-  }
-  if ( !defined('WP_TEMP_DIR') ) {
-  	define('WP_TEMP_DIR', sys_get_temp_dir() );
-  }
+  define( 'WP_LANG_DIR','/files/languages' );
   ```
-1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
-1. Create the `languages/wpml` directory inside `/files` for each environment.
-
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+1. After testing on a Dev or Multidev environment, repeat step 1 above for all environments. Then deploy the code change to `wp-config.php` across Dev, Test, and Live. 
 
 ___
 

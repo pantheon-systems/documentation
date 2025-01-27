@@ -1,14 +1,17 @@
 ---
-title: Hotfixes
-description: Learn how to deploy and test hot fixes and preserve orphan commits on your Pantheon Drupal or WordPress site.
+title: Git on Pantheon Guide
+subtitle: Hotfixing with Git Tags
+description: Get solutions to common Git troubleshooting scenarios.
 tags: [code, collaborate, git, webops, workflow]
-contenttype: [doc]
-innav: [true]
+showtoc: true
+permalink: docs/guides/git/hotfixes
+contenttype: [guide]
+innav: [false]
 categories: [git]
 cms: [drupal, wordpress]
 audience: [development]
 product: [--]
-integration: [--]
+integration: [git]
 ---
 For Experts only. You should not need to attempt this if you use [Multidev](/guides/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
