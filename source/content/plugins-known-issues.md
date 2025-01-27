@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-10-18"
+reviewed: "2025-01-27"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -1582,7 +1582,7 @@ ___
 
 ## WPML - The WordPress Multilingual Plugin
 
-<ReviewDate date="2023-07-28" />
+<ReviewDate date="2025-01-27" />
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
@@ -1617,23 +1617,23 @@ ___
 >For more details, see WPML's documentation on troubleshooting .mo files generation.
 
 
-**Solution 1:**
+**Solution:**
+
+1. Use SFTP to manually create the `/files/languages` folder on Pantheon. You can use your preferred SFTP client and [the connection details](/guides/sftp/sftp-connection-info#sftp-connection-info) from the site dashboard, or you can use Terminus and SFTP to create the directory from the commandline (replace `<site>` and `<env>`): 
+
+  ```bash
+  $ `terminus connection:info <site>.<env> --field sftp_command`
+  > mkdir files/languages
+  > exit
+  ```
 
 1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
-  if ( !defined('WP_LANG_DIR') ) {    
-  	define( 'WP_LANG_DIR','/files/languages/wpml' );
-  }
-  if ( !defined('WP_TEMP_DIR') ) {
-  	define('WP_TEMP_DIR', sys_get_temp_dir() );
-  }
+  define( 'WP_LANG_DIR','/files/languages' );
   ```
-1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
-1. Create the `languages/wpml` directory inside `/files` for each environment.
-
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+1. After testing on a Dev or Multidev environment, repeat step 1 above for all environments. Then deploy the code change to `wp-config.php` across Dev, Test, and Live. 
 
 ___
 
