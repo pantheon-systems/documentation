@@ -253,7 +253,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       <SEO
         title="Pantheon release notes"
         description="A summary of changes to the Pantheon Platform"
-        image={"assets/images/default-thumb-doc.png"}
+        image={"/assets/images/default-thumb-changelog.png"}
       />
       <main id="docs-main" tabIndex="-1">
         <Container

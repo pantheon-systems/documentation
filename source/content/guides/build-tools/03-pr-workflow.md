@@ -14,6 +14,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+image: buildToolsGuide-thumb.png
 ---
 
 ## Pull Request/Merge Request Introduction

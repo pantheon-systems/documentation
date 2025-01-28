@@ -15,6 +15,7 @@ reviewed: "2023-03-21"
 showtoc: false
 permalink: docs/guides/getstarted/nextsteps
 editpath: getstarted/09-nextsteps.md
+image: getting-started-Largethumb.png
 ---
 
 This guide showed you how to complete your basic Pantheon set up, and add a site. But there is so much more you can do with the Pantheon Platform!

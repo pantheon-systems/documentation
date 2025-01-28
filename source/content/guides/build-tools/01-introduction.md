@@ -16,6 +16,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+image: buildToolsGuide-thumb.png
 ---
 
 ## What Is Build Tools?

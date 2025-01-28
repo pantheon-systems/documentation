@@ -14,6 +14,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+image: buildToolsGuide-thumb.png
 ---
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, [Composer](https://getcomposer.org), a Continuous Integration (CI) service, and a Pantheon site with Automated Testing. This guide will get you started, but you will need to customize and maintain the CI/testing set up for your projects.
