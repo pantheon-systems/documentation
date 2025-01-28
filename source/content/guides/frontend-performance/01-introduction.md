@@ -14,6 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+image: CDN-speedTest-docs-guide.png
 ---
 
 In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.

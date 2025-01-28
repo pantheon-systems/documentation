@@ -14,6 +14,7 @@ type: guide
 permalink: docs/guides/wordpress-git/themes/
 editpath: wordpress-git/03-themes.md
 reviewed: "2020-02-26"
+image: git-sftp-wp-docs-guide.png
 ---
 
 This lesson demonstrates how to utilize Git while developing over SFTP with a local file client and text editor. Often, premium plugins or themes need to be downloaded from the plugin provider and uploaded to your site. In this example, we will replicate that by uploading a new theme, creating a child theme, and then finally make some example customizations to the stylesheet -- all while submitting our work to version control along the way in sensibly grouped commits. ARE YOU UPDATING

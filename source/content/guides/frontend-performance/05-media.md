@@ -15,6 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+image: CDN-speedTest-docs-guide.png
 ---
 
 This pages includes information on optimizing media, such as images and iframes.

@@ -28,6 +28,10 @@ class GuideTemplate extends React.Component {
       <div className="content-wrapper">{children}</div>
     );
     const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv;
+    let image = '/images/assets/' + node.frontmatter.image;
+    if (image === '/images/assets/null') {
+      image = '/images/assets/default-thumb-guide.png';
+    }
 
     return (
       <GuideLayout>
@@ -37,7 +41,7 @@ class GuideTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           keywords={node.frontmatter.tags}
           authors={node.frontmatter.contributors}
-          image={'/images/assets/terminus-thumbLarge.png'}
+          image={image}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
@@ -97,6 +101,7 @@ export const pageQuery = graphql`
         description
         showtoc
         editpath
+        image
         contributors {
           yamlId
           name
