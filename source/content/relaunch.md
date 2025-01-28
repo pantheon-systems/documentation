@@ -120,6 +120,10 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   ![Domain validation prompt](../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
 
+1. In the Live environment tab of the Site Dashboard for the old site, click **Clear Caches**.
+
+1. Repeat on the Live environment of the new site.
+
 1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
   <Partial file="standard-dns-config.md" />
