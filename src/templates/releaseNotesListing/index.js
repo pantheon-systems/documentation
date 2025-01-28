@@ -293,6 +293,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             >
               <TextInput
                 type="search"
+                searchIcon="filter"
                 aria-label="Filter by text"
                 placeholder="Filter by text"
                 ref={queryRef}
