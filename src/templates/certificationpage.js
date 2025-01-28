@@ -38,7 +38,7 @@ class CertificationTemplate extends React.Component {
           title={node.frontmatter.subtitle + ' | ' + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={'/images/assets/default-thumb-cert.png'}
+          image={'/images/default-thumb-cert.png'}
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />

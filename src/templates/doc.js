@@ -25,9 +25,9 @@ class DocTemplate extends React.Component {
       <div className="content-wrapper">{children}</div>
     );
     const ContentLayoutType = ContainerDiv;
-    let image = '/images/assets/' + node.frontmatter.image;
-    if (image === '/images/assets/null') {
-      image = '/images/assets/default-thumb-doc.png';
+    let image = '/images/' + node.frontmatter.image;
+    if (image === '/images/null') {
+      image = '/images/default-thumb-doc.png';
     }
 
     return (

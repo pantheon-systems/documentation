@@ -24,7 +24,7 @@ class Index extends React.Component {
         <SEO
           title="Pantheon Docs"
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
-          image={"/images/assets/default-thumb-doc.png"}
+          image={"/images/default-thumb-doc.png"}
         />
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>

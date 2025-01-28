@@ -28,9 +28,9 @@ class GuideTemplate extends React.Component {
       <div className="content-wrapper">{children}</div>
     );
     const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv;
-    let image = '/images/assets/' + node.frontmatter.image;
-    if (image === '/images/assets/null') {
-      image = '/images/assets/default-thumb-guide.png';
+    let image = '/images/' + node.frontmatter.image;
+    if (image === '/images/null') {
+      image = '/images/default-thumb-guide.png';
     }
 
     return (
