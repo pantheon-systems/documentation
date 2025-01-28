@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 5: CMS Infrastructure"
+description: Understand the ways containerized technology benefits WebOps.
 certificationpage: true
 type: certificationpage
 layout: certificationpage

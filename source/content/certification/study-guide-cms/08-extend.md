@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 8: Extend with CLI and Hooks"
+description: "Understand how Terminus and Quicksilver can work together to help facilitate complex WebOps workflows"
 certificationpage: true
 type: certificationpage
 layout: certificationpage

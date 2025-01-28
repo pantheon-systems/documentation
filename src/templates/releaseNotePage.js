@@ -29,7 +29,7 @@ class ReleaseNoteTemplate extends React.Component {
       <Layout containerWidth={containerWidth} excludeSearch footerBorder>
         <SEO
           title={node.frontmatter.title}
-          description={node.frontmatter.description || node.excerpt}
+          description="A summary of changes to the Pantheon Platform"
           authors={node.frontmatter.contributors}
           image={"/images/assets/default-thumb-doc.png"}
         />

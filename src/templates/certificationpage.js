@@ -36,7 +36,7 @@ class CertificationTemplate extends React.Component {
         <SEO
           slot="seo"
           title={node.frontmatter.subtitle + ' | ' + node.frontmatter.title}
-          description={node.frontmatter.description || node.excerpt}
+          description={node.frontmatter.description || node.frontmatter.subtitle}
           authors={node.frontmatter.contributors}
           image={'/images/assets/terminus-thumbLarge.png'}
           reviewed={ifCommandsISO}

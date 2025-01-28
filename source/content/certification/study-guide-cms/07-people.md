@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 7: Connecting People"
+description: Undertsand how to manage teams and learn the differences between sites, environments, and applications on Pantheon.
 certificationpage: true
 type: certificationpage
 layout: certificationpage

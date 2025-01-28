@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 3: Site Creation"
+description: Understand and practice site creation on Pantheon.
 certificationpage: true
 showtoc: true
 type: certificationpage
