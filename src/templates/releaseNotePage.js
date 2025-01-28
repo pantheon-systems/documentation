@@ -1,29 +1,29 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
-import ReleaseNoteCategories from "../components/ReleaseNoteCategories"
-import MdxWrapper from "../components/mdxWrapper.js"
-import PublishedDate from "../components/PublishedDate"
-import { Container, Icon } from "@pantheon-systems/pds-toolkit-react"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
+import ReleaseNoteCategories from '../components/ReleaseNoteCategories';
+import MdxWrapper from '../components/mdxWrapper.js';
+import PublishedDate from '../components/PublishedDate';
+import { Container, Icon } from '@pantheon-systems/pds-toolkit-react';
 import {
   headline2,
   headline3,
   headline4,
-} from "../components/releaseHeadlines"
+} from '../components/releaseHeadlines';
 
 const customShortcodes = {
   h1: headline2,
   h2: headline3,
   h3: headline4,
-}
+};
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = 'standard';
 
 class ReleaseNoteTemplate extends React.Component {
   render() {
-    const node = this.props.data.mdx
+    const node = this.props.data.mdx;
 
     return (
       <Layout containerWidth={containerWidth} excludeSearch footerBorder>
@@ -31,7 +31,7 @@ class ReleaseNoteTemplate extends React.Component {
           title={node.frontmatter.title}
           description="A summary of changes to the Pantheon Platform"
           authors={node.frontmatter.contributors}
-          image={"/images/assets/default-thumb-doc.png"}
+          image={'/images/assets/default-thumb-doc.png'}
         />
         <main id="docs-main" tabIndex="-1">
           <Container
@@ -59,13 +59,24 @@ class ReleaseNoteTemplate extends React.Component {
                     dateString={node.frontmatter.published_date}
                     className="pds-spacing-mar-block-end-m"
                   />
-                  <MdxWrapper mdx={node.body} customShortcodes={customShortcodes} />
+                  <MdxWrapper
+                    mdx={node.body}
+                    customShortcodes={customShortcodes}
+                  />
                 </div>
               </div>
 
               <div className="pds-spacing-mar-block-4xl">
-                <a href="/release-notes/rss.xml" target="_blank" className="rss-feed-link">
-                  <Icon className="rss-feed-link-icon" iconName='rss' iconSize='lg' />
+                <a
+                  href="/release-notes/rss.xml"
+                  target="_blank"
+                  className="rss-feed-link"
+                >
+                  <Icon
+                    className="rss-feed-link-icon"
+                    iconName="rss"
+                    iconSize="lg"
+                  />
                   <span>Subscribe to RSS feed</span>
                 </a>
               </div>
@@ -73,11 +84,11 @@ class ReleaseNoteTemplate extends React.Component {
           </Container>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default ReleaseNoteTemplate
+export default ReleaseNoteTemplate;
 
 export const pageQuery = graphql`
   query ReleaseNoteBySlug($slug: String!) {
@@ -85,4 +96,4 @@ export const pageQuery = graphql`
       ...theReleaseNoteFields
     }
   }
-`
+`;
