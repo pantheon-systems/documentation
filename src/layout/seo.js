@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({
   description,
@@ -23,30 +23,26 @@ function SEO({
   reviewed,
   type,
 }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            siteUrl
-            social {
-              twitter
-            }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          siteUrl
+          social {
+            twitter
           }
         }
       }
-    `
-  )
+    }
+  `);
 
-  const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || "/images/default-thumb-doc.png"
-  const authorList = authors ? Array.from(authors) : []
-  const addSearchCategories = categories
-    ? categories.join("/")
-    : `other`
-  const addSearchType = type ? `type=${type}` : "type=doc"
+  const metaDescription = description || site.siteMetadata.description;
+  const metaImage = image || '/images/default-thumb-doc.png';
+  const authorList = authors ? Array.from(authors) : [];
+  const addSearchCategories = categories ? categories.join('/') : `other`;
+  const addSearchType = type ? `type=${type}` : 'type=doc';
   const titleProps = title
     ? {
         title: `${title}`,
@@ -54,7 +50,7 @@ function SEO({
       }
     : {
         title: site.siteMetadata.title,
-      }
+      };
 
   const tagValues =
     tags && tags.length
@@ -62,14 +58,14 @@ function SEO({
           property: `og:article:tags`,
           content: `${tags}`,
         }
-      : {}
+      : {};
 
   const reviewtag = reviewed
     ? {
         property: `og:article:modified_time`,
         content: `${reviewed}`,
       }
-    : {}
+    : {};
 
   return (
     <Helmet
@@ -158,19 +154,19 @@ function SEO({
               }
             : {
                 name: `keywords`,
-                content: 'documentation'
-            }
+                content: 'documentation',
+              },
         )
         .concat(
-          authorList.map(author => {
+          authorList.map((author) => {
             if (author.twitter != null) {
               return {
                 name: `twitter:creator`,
                 content: `@${author.twitter.toLowerCase()}`,
-              }
+              };
             }
-            return {}
-          })
+            return {};
+          }),
         )
         .concat(meta)}
     >
@@ -192,14 +188,14 @@ function SEO({
         }}
       />
     </Helmet>
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
@@ -209,6 +205,6 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
   image: PropTypes.string,
-}
+};
 
-export default SEO
+export default SEO;
