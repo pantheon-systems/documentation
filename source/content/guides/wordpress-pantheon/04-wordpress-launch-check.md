@@ -18,7 +18,7 @@ permalink: docs/guides/wordpress-pantheon/wordpress-launch-check
 
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
 
-![status tab on live environment](../../../images/dashboard/status-tab.png)
+![status tab on live environment](../../../images/dashboard/new-dashboard/2024/_status-tab.png)
 
 ## Overview
 
@@ -29,45 +29,6 @@ This mechanism does not actually perform requests on your site, and in doing so 
 ## How Does it Work?
 
 WP Launch Check is a site audit extension for WP-CLI designed for Pantheon customers, although it is fully usable outside of Pantheon.
-
-## WPScan (Recommended)
-
-WP Launch Check uses the [WPScan API](https://wpscan.com/api) to check for outdated or vulnerable plugins. The service sends alerts when your plugins need to be updated. Follow the steps below to use this service.
-
-1. Obtain an [API token](https://wpscan.com/wordpress-security-scanner) from the WPScan website by creating an account.
-
-1. Add the token to your site's `wp-config.php` file using the following PHP code:
-
-    ```php:title=wp-config.php
-    define( 'WPSCAN_API_TOKEN', '$your_api_token' );
-    ```
-1. Define the environment.
-
-    You'll also need to define which environment you want WPScan to run on using the `PANTHEON_WPSCAN_ENVIRONMENTS` constant. This constant is required to use the WPScan functionality, and allows you to decide whether or not scans are done on multiple environments, or just one.
-
-    To scan one environment:
-
-    ```php:title=wp-config.php
-    define( 'PANTHEON_WPSCAN_ENVIRONMENTS', 'live' );
-    ```
-
-    To scan multiple environments:
-
-    ```php:title=wp-config.php
-    define( 'PANTHEON_WPSCAN_ENVIRONMENTS', ['dev', 'test', 'live'] );
-    ```
-
-    To scan all environments:
-
-    ```php:title=wp-config.php
-    define( 'PANTHEON_WPSCAN_ENVIRONMENTS', '*' );
-    ```
-
-<Alert title="Note"  type="info" >
-
-Scanning multiple or all environments exhausts your daily API request quota faster.
-
-</Alert>
 
 ## Run Launch Check Manually
 
@@ -120,10 +81,6 @@ The `wp_options` table stores several types of data for your site, including:
 
 If your website is running slow and you receive the following message in the database stats: `consider autoloading only necessary options`, review [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data).
 
-### Probable Exploits
-
-This check will display a list of exploited patterns in code, the file name that has the exploit, line number, and match.
-
 ### Object Cache
 
 This tells you if Object Caching and Redis are enabled.
@@ -139,11 +96,11 @@ Performance and Elite WordPress site(s) that are currently running WP Redis are 
 
 ### Plugins
 
-This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.
+This check lists all your enabled plugins and alerts you when they need to be updated.
 
 - **Green:** All of your plugins are up-to-date
 - **Yellow:** Highlighted plugins need to be updated
-- **Red:** Displays all vulnerabilities and unsupported plugins
+- **Red:** Displays unsupported plugins
 
 #### Unsupported Plugins
 

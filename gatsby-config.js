@@ -1,12 +1,12 @@
-const dotenv = require("dotenv")
+const dotenv = require('dotenv');
 
 // load environment specific configurations.
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
-})
-require("dotenv").config({
+});
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 // Gatsby Configuration, Options, and Plugins
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
   },
   // Creates a shorthand for Contributor data in GraphQL
   mapping: {
-    "Mdx.frontmatter.contributors": "ContributorYaml",
+    'Mdx.frontmatter.contributors': 'ContributorYaml',
   },
   plugins: [
     `gatsby-transformer-yaml`,
@@ -32,17 +32,17 @@ module.exports = {
       // Handles inserting the GTM js blob into the site
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: "GTM-MDF545G", // process.env.GTM_ID_NEW,
+        id: 'GTM-MDF545G', // process.env.GTM_ID_NEW,
         //testing includeInDevelopment: false,
         defaultDataLayer: {},
       },
     },
     {
       // Handles inserting the Segment js blob into the site
-      resolve: "gatsby-plugin-segment-js",
+      resolve: 'gatsby-plugin-segment-js',
       options: {
-        prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
-        devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
+        prodKey: 'lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA',
+        devKey: 'kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj',
         trackPage: false,
         trackPageOnlyIfReady: true,
         customSnippet:
@@ -119,7 +119,7 @@ module.exports = {
       },
     },
     // When running Gatsby develop, creates reporting pages
-    ...(process.env.NODE_ENV === "development"
+    ...(process.env.NODE_ENV === 'development'
       ? [
           {
             resolve: `gatsby-plugin-page-creator`,
@@ -148,31 +148,19 @@ module.exports = {
       // Allows for React components within the Markdown files.
       resolve: `gatsby-plugin-mdx`, // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
             // Allows for more complex tables
-            resolve: "gatsby-remark-grid-tables", // https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/
-          },
-          {
-            // Used to create code snippets from files on GitHub
-            resolve: "gatsby-remark-github", // https://www.gatsbyjs.com/plugins/gatsby-remark-github/
-            options: {
-              marker: "GITHUB-EMBED",
-              insertEllipsisComments: true,
-              ellipsisPhrase: "...",
-              useCache: true,
-              cacheKey: "gatsby-remark-github-v1",
-              token: process.env.GITHUB_API,
-            },
+            resolve: 'gatsby-remark-grid-tables', // https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/
           },
           {
             // Required so the custom Youtube component can create iframes that work with Gatsby
-            resolve: "gatsby-remark-responsive-iframe", // https://www.gatsbyjs.com/plugins/gatsby-remark-responsive-iframe/
+            resolve: 'gatsby-remark-responsive-iframe', // https://www.gatsbyjs.com/plugins/gatsby-remark-responsive-iframe/
           },
           {
             // Self-explanatory
-            resolve: "gatsby-remark-images", // https://www.gatsbyjs.com/plugins/gatsby-remark-images/
+            resolve: 'gatsby-remark-images', // https://www.gatsbyjs.com/plugins/gatsby-remark-images/
             options: {
               maxWidth: 1035,
               // sizeByPixelDensity: true,
@@ -192,12 +180,12 @@ module.exports = {
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
-              exclude: "Table of Contents",
+              exclude: 'Table of Contents',
               tight: true,
               ordered: false,
               fromHeading: 2,
               toHeading: 3,
-              className: "table-of-contents",
+              className: 'table-of-contents',
             },
           },
           {
@@ -213,21 +201,21 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               noInlineHighlight: true,
               aliases: {},
               prompt: {
-                user: "user",
-                host: "localhost",
+                user: 'user',
+                host: 'localhost',
               },
             },
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_blank",
-              rel: "nofollow noopener external",
+              target: '_blank',
+              rel: 'nofollow noopener external',
             },
           },
         ],
@@ -235,17 +223,9 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Open Sans"],
-        },
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: 'gatsby-plugin-sitemap',
     },
     {
       resolve: 'gatsby-plugin-feed',
@@ -265,13 +245,40 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                const url = new URL(edge.node.fields.slug, site.siteMetadata.siteUrl).toString();
+              return allMdx.edges.map((edge) => {
+                const url = new URL(
+                  edge.node.fields.slug,
+                  site.siteMetadata.siteUrl,
+                ).toString();
+                // Simple hash function to turn a string into a numeric value
+                // https://chatgpt.com/share/69aeb001-e00f-41b9-98a4-816aa6a0330d
+                function hashCode(str) {
+                  let hash = 0;
+                  for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = (hash << 5) - hash + char;
+                    hash |= 0; // Convert to 32bit integer
+                  }
+                  return Math.abs(hash);
+                }
+
+                // Generate time based on title hash
+                function getSeededTime(title) {
+                  const hash = hashCode(title);
+
+                  const hours = (hash % 24).toString().padStart(2, '0');
+                  const minutes = (hash % 60).toString().padStart(2, '0');
+                  const seconds = ((hash >> 8) % 60)
+                    .toString()
+                    .padStart(2, '0'); // Shift for more variance
+
+                  return `${hours}:${minutes}:${seconds}`;
+                }
 
                 return {
                   title: edge.node.frontmatter.title,
                   description: edge.node.excerpt,
-                  date: edge.node.frontmatter.published_date,
+                  date: `${edge.node.frontmatter.published_date}T${getSeededTime(edge.node.frontmatter.title)}Z`,
                   url: url,
                   guid: edge.node.id,
                 };
@@ -298,13 +305,14 @@ module.exports = {
                 }
               }
             `,
-            output: "/release-notes/rss.xml",
-            title: "Pantheon release notes RSS feed",
-            description: 'Stay updated with the latest releases and enhancements.',
-            site_url: 'docs.pantheon.io/release-notes'
+            output: '/release-notes/rss.xml',
+            title: 'Pantheon release notes RSS feed',
+            description:
+              'Stay updated with the latest releases and enhancements.',
+            site_url: 'docs.pantheon.io/release-notes',
           },
         ],
       },
     },
   ],
-}
+};

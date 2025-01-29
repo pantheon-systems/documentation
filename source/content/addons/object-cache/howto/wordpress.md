@@ -3,7 +3,7 @@ title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
 permalink: docs/object-cache/wordpress
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2024-08-08"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-contributors: [jazzsequence]
+contributors: [jazzsequence, jkudish]
 showtoc: true
 ---
 
@@ -71,11 +71,11 @@ terminus redis:enable <site>
 
   <Alert title="Note" type="info">
 
-  If the workflow text in the dashboard turns red, it did not succeed. Please [create a ticket with support](/guides/support/contact-support/#ticket-support) to debug this further.
+  If the workflow text in the dashboard turns red, it did not succeed. Please [create a ticket with support](/guides/support/contact-support/#general-support-ticket) to debug this further.
 
   </Alert>
 
-1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
+1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus on your development or multidev environment. NOTE: This workflow cannot be run on test or live environments.
 
 	**WordPress Admin:**
 
@@ -117,24 +117,14 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
         ```
 	1. Commit and push this file to your site.
 
-1. Obtain a license token to use in the following authentication steps.
-
-	```bash
-	terminus remote:wp "<site>.<env>" -- eval "echo getenv('OCP_LICENSE');"
-    ```
-
-1. Create the authentication token and add your license token to Composer. You can do this automatically with the following command or create it manually with the steps below.
-
+1. Obtain the license token and apply it directly to the Composer `auth.json` to be able to authenticate against Object Cache Pro's Composer repository.
+	
 	```bash{promptUser: user}
-	composer config --auth http-basic.objectcache.pro token <LICENSE-TOKEN>
+	composer config --auth http-basic.objectcache.pro token $(terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');")
 	```
-
-	**Manually:**
-
-	1. Create an `auth.json` file in your directory.
-
-	1. Add the following code to the `auth.json` file.
-
+	
+	This will pull the Object Cache Pro license token directly into the `auth.json` file. You can open the `auth.json` file locally to ensure that it has a structure that looks like this:
+	
 		```json
 		{
 			"http-basic": {
@@ -146,31 +136,19 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		}
 		```
 
-1. Commit the `auth.json` to your repository:
+	<Alert title="Note" type="info">
+	
+	The `auth.json` file is only necessary for authenticating against the Object Cache Pro Composer repository. For this reason, we recommend adding it to your `.gitignore` so you are not committing secrets to your Git repository. However, excluding it from version control means that anyone else who may want to update Object Cache Pro locally will need to repeat the steps above to generate their own `auth.json` file.
+	
+	</Alert>
 
-	 ```bash{promptUser: user}
-	git add auth.json && git commit -m "Add Object Cache Pro auth token."
-	```
-
-1. Add the Object Cache Pro repository to your `composer.json` file's `repositories` section. Your final `repositories` section should look something like this:
+1. Open your `composer.json` file and locate the `repositories` section. If it doesn't exist, add it in the "repositories" section as shown below:
 
 	```json
 		repositories: [
 			{
 				"type": "composer",
 				"url": "https://objectcache.pro/repo/"
-			},
-			{
-				"type": "composer",
-				"url": "https://wpackagist.org",
-				"only": [
-					"wpackagist-plugin/*",
-					"wpackagist-theme/*"
-				]
-			},
-			{
-				"type": "path",
-				"url": "upstream-configuration"
 			}
 		],
 	```
@@ -206,47 +184,50 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	```bash{promptUser: user}
 	git add composer.* && git commit -m "Require Object Cache Pro"
 	```
-
-1. Add the license token your `config/application.php` file. Note that in the future, the license key will be provided by the platform. Currently, you are responsible for adding it to your repository.
+	
+1. Add the license token your `config/application.php` file. Normally, the license key is provided by the platform. However, when you are working locally, Lando (or your local development environment) does not have access to the platform environment variable. However, you can extract it from the `auth.json` created in the previous steps.
 
 1. Open your `config/application.php` file to add configuration values to Object Cache Pro for your site.
 
-1. Locate the `Config::apply()` line at the bottom of the file and add the following code above the line:
+1. Locate the `Config::apply()` line at the bottom of the file and add the following code above that line.
 
 	```php
+	$token = getenv( 'OCP_LICENSE' ); // Get the license from the Pantheon environment variables.
+	
+	// If working locally, set $token based on the local auth.json file.
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) { // Change this if you are not using Lando.
+		$auth_json = ABSPATH . '/auth.json';
+		if ( file_exists( $auth_json ) ) {
+			$auth_json = json_decode( file_get_contents( $auth_json ) );
+			$token = $auth_json['http-basic']['objectcache.pro']['password'];
+		}
+	}
+	```
+
+1. Set the Object Cache Pro settings using the license key either from the Pantheon environment or your local `auth.json`. You can put this directly under the `WP_DEBUG` rules so it looks like this:
+
+	```php
+		/**
+		 * Debugging Settings
+		 */
+		Config::define('WP_DEBUG_DISPLAY', false);
+		Config::define('WP_DEBUG_LOG', false);
+		Config::define('SCRIPT_DEBUG', false);
+		ini_set('display_errors', '0');
 
 		/**
 		 * Object Cache Pro config
 		 */
 		Config::define( 'WP_REDIS_CONFIG', [
-			'token' => '<LICENSE-TOKEN>',
+			'token' => $token,
 		] );
-
 	```
-	You can put this directly under the `WP_DEBUG` rules so it looks like this:
-	```php
 
-  	/**
-  	 * Debugging Settings
-  	 */
-  	Config::define('WP_DEBUG_DISPLAY', false);
-  	Config::define('WP_DEBUG_LOG', false);
-  	Config::define('SCRIPT_DEBUG', false);
-  	ini_set('display_errors', '0');
-
-  	/**
-  	 * Object Cache Pro config
-  	 */
-  	Config::define( 'WP_REDIS_CONFIG', [
-  		'token' => '<LICENSE-TOKEN>',
-  	] );
-
-  ```
 
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
 	```php
-		'token' => '<LICENSE-TOKEN>',
+		'token' => $token,
 		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
 		'port' => getenv('CACHE_PORT') ?: 6379,
 		'database' => getenv('CACHE_DB') ?: 0,
@@ -270,7 +251,10 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
  		'async_flush' => true,
  		'strict' => true,
 	```
-1. Make sure you `git push` your changes up to your repository before you activate the plugin.
+	
+	Refer to the [Object Cache Pro documentation](https://objectcache.pro/docs/) for detailed explanations of all the configuration settings.
+	
+1. Make sure you add and `git push` your changes up to your repository before you activate the plugin.
 
 1. Activate the plugin and enable Redis in the plugin. You can activate the Object Cache Pro plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
 
@@ -307,7 +291,55 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
-### Additional Considerations
+## Local configuration with Lando
+Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Redis in its Docker configuration. However, to get Object Cache Pro to work correctly with Lando locally, you'll need to make a few changes to your Object Cache Pro and Lando configuration.
+
+1. First, in your `.lando.yml` file add the following:
+
+	```yaml
+	services:
+		cache:
+			type: redis:6.0
+	```
+
+	- This ensures that the Redis version in your Lando environment matches the 6.x environment on Pantheon. Object Cache Pro will still work with the default version of Redis that is included in the Pantheon Lando recipe, so this step is optional.
+
+1. Next, in your `wp-config.php` (or `config/application.php` for Bedrock-based WordPress Composer sites), find the `WP_REDIS_CONFIG` settings. Lando does not support `igbinary` serialization or `zstd` compression, so you will need to modify these settings for Lando locally. The simplest solution is to store the configuration values to a variable and then modify the variable for Lando environments. For example:
+
+	```php
+	$ocp_settings = [
+		'token' => $token, // The dynamically fetched token from above.
+		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
+		'port' => getenv('CACHE_PORT') ?: 6379,
+		'database' => getenv('CACHE_DB') ?: 0,
+		'password' => getenv('CACHE_PASSWORD') ?: null,
+		// ...the rest of your settings...
+		'serializer' => 'igbinary',
+		'compression' => 'zstd',
+		// ...
+	];
+	
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+		$ocp_settings['serializer'] = 'php';
+		$ocp_settings['compression'] = 'none';
+	}
+	
+	define( 'WP_REDIS_CONFIG', $ocp_settings );
+	```
+	
+	<Alert title="Note" type="info">
+		If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
+	
+		```php
+		if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+			define( 'WP_REDIS_DISABLED', true );
+		}
+		```
+	</Alert>
+	
+Make sure to commit your code back to your environment when you have made the appropriate changes.
+
+## Additional Considerations
 - When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- cache flush`.
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
     - To summarize, the full order of steps are:
@@ -315,11 +347,24 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
       1. Merge code
       1. Activate OCP
       1. Flush Redis cache
+- The `object-cache.php` drop-in file must be created in your development or multidev environment and committed or pushed to live to work.
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
   - Flushing the network cache from the network admin will flush all caches across the network.
   - Subsites do not get their own configuration or graphs.
   - If installed on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache. The default behavior can be modified by [adjusting the `WP_REDIS_CONFIG` settings](https://objectcache.pro/docs/configuration-options/#flushing-networks). Alternatively, you can flush a single site's cache by using the [WP-CLI command](https://objectcache.pro/docs/wp-cli/#multisite-flushing).
   - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
+- When working locally with Lando, it's possible that Lando's self-signed SSL certificate will cause issues connecting to the Object Cache Pro license API resulting in a license error. To resolve this, add the following code to a mu-plugin:
+	
+	```php
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+		add_filter( 'http_request_args', function ( $args ) {
+			$args['sslverify'] = false;
+			return $args;
+		} );	
+	}
+	```
+	
+	- You may wish to make this file local-only by adding it to your `.gitignore` file. This error will not cause any issues with the functioning of Object Cache Pro or the behavior of the plugin on Pantheon but it might prevent you from being able to make updates to the plugin locally.
 
   	<Alert title="Note" type="info">
 

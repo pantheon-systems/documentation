@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.5.1"
+        "version": "3.6.1"
     },
     "commands": [
         {
@@ -3593,7 +3593,7 @@
                 "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env>",
                 "env:clone-content <site>.<env> <target_env> --from-url=www.example.com"
             ],
-            "help": "IMPORTANT NOTE: if you have a WordPress Multisite installation, you\nwill need an entry in your pantheon.yml in order to search all the\nsites in your install.  See http:\/\/pantheon.io\/some\/link\/in\/docs.",
+            "help": "IMPORTANT NOTE: if you have a WordPress Multisite installation, you\nwill need an entry in your pantheon.yml in order to search all the\nsites in your install.  See https:\/\/docs.pantheon.io\/guides\/multisite\/search-replace.",
             "definition": {
                 "arguments": {
                     "site_env": {
@@ -6060,7 +6060,7 @@
             "name": "local:clone",
             "description": "CLone a copy of the site code into $HOME\/pantheon-local-copies",
             "usage": [
-                "local:clone [--site_dir [SITE_DIR]] [--override [OVERRIDE]] [--] <site_id>",
+                "local:clone [--site_dir [SITE_DIR]] [--override [OVERRIDE]] [--branch [BRANCH]] [--] <site_id>",
                 "local:clone <site> Clone's a local copy into \"$HOME\/pantheon-local-copies\"",
                 "lc"
             ],
@@ -6093,6 +6093,15 @@
                         "is_multiple": false,
                         "description": "Override the local copy if exists",
                         "default": null
+                    },
+                    "branch": {
+                        "name": "--branch",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "The branch to clone. Default is master",
+                        "default": "master"
                     },
                     "help": {
                         "name": "--help",
@@ -12708,6 +12717,118 @@
             "hidden": false
         },
         {
+            "name": "site:label:set",
+            "description": "Changes the site label",
+            "usage": [
+                "site:label:set <site_name> <label>",
+                "site:label:set <site> <label> change the site label to the given value.",
+                "site:label:set <site> \"<label>\" Be sure to quote any label with spaces."
+            ],
+            "help": "Changes the site label",
+            "definition": {
+                "arguments": {
+                    "site_name": {
+                        "name": "site_name",
+                        "is_required": true,
+                        "is_array": false,
+                        "description": "Site name",
+                        "default": null
+                    },
+                    "label": {
+                        "name": "label",
+                        "is_required": true,
+                        "is_array": false,
+                        "description": "Site label",
+                        "default": null
+                    }
+                },
+                "options": {
+                    "help": {
+                        "name": "--help",
+                        "shortcut": "-h",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
+                        "default": false
+                    },
+                    "quiet": {
+                        "name": "--quiet",
+                        "shortcut": "-q",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not output any message",
+                        "default": false
+                    },
+                    "verbose": {
+                        "name": "--verbose",
+                        "shortcut": "-v|-vv|-vvv",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+                        "default": false
+                    },
+                    "version": {
+                        "name": "--version",
+                        "shortcut": "-V",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display this application version",
+                        "default": false
+                    },
+                    "ansi": {
+                        "name": "--ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Force (or disable --no-ansi) ANSI output",
+                        "default": null
+                    },
+                    "no-ansi": {
+                        "name": "--no-ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Negate the \"--ansi\" option",
+                        "default": false
+                    },
+                    "no-interaction": {
+                        "name": "--no-interaction",
+                        "shortcut": "-n",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not ask any interactive question",
+                        "default": false
+                    },
+                    "define": {
+                        "name": "--define",
+                        "shortcut": "-D",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": true,
+                        "description": "Define a configuration item value.",
+                        "default": []
+                    },
+                    "yes": {
+                        "name": "--yes",
+                        "shortcut": "-y",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Answer all confirmations with \"yes\"",
+                        "default": false
+                    }
+                }
+            },
+            "hidden": false
+        },
+        {
             "name": "site:list",
             "description": "Displays the list of sites accessible to the currently logged-in user.",
             "usage": [
@@ -16789,6 +16910,7 @@
                 "site:import",
                 "site:import:complete",
                 "site:info",
+                "site:label:set",
                 "site:list",
                 "site:lookup",
                 "site:org:add",

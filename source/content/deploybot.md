@@ -98,7 +98,7 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
 5. Name the destination for these deployments, such as Pantheon Dev Environment.
 6. Retrieve the target environment's SFTP details within the Site Dashboard on Pantheon by clicking **Connection Info**:
 
- ![Connection info dev dashboard](../images/dashboard/connection-info.png)
+ ![Connection info dev dashboard](../images/dashboard/new-dashboard/2024/connection-info.png)
 
 7. Use the SFTP values gathered in the previous step to enter the host, port, and login (username). The destination path should use `~/code`.
 

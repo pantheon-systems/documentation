@@ -10,8 +10,8 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [carolynshannon, joan-ing]
-reviewed: "2022-12-13"
+contributors: [carolynshannon, joan-ing, jazzsequence]
+reviewed: "2025-01-15"
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -71,10 +71,6 @@ Ensure you review our documentation on [Git](/guides/git/git-config), [Composer]
 
 Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr server. Indexing and searching in one environment does not impact any other environment.
 
-## Enable Access to Pantheon Search
-
-As a Limited Availability participant, your will need to manually enable access to Solr 8 for your site, for each environment in which you would like to create an index (Dev, Test, Live, and Multidevs).
-
 ### Enable at the Site Level
 
 You must enable Pantheon Search at the site-level and add the Apache Solr Index Server. This can be done by using either the Terminus CLI or through the Site Dashboard.
@@ -114,26 +110,6 @@ You must configure the `pantheon.yml` for the platform environment after you ena
    - A confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/guides/integrated-composer) to update your site modules.
 
 For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
-
-#### Verify `pantheon.yml` is Configured Correctly
-
-After you specify the Solr 8 version in the Dev environment of your Drupal site, verify that the environment is configured to use Solr 8. The configured Solr environment will have several `PANTHEON_INDEX_*` variables, one of which will be `PANTHEON_INDEX_PORT`. If Solr 8 is configured correctly, the `PANTHEON_INDEX_PORT` value will be `443`. If any other value is displayed, your site is still configured to use Solr 3.
-
-1. Run the command below:
-
-  ```bash{promptUser:user}
-  terminus drush SITE.ENV -- ev "phpinfo();" | grep PANTHEON_INDEX_PORT
-  ```
-
-1. Confirm that the `PANTHEON_INDEX_PORT` value is `443`. The output from the command above should look similar to the example below.
-
-  ```bash{promptUser:user}
-  terminus drush solr8-sandbox.dev -- ev "phpinfo();" | grep PANTHEON_INDEX_PORT
-  [warning] This environment is in read-only Git mode. If you want to make changes to the codebase of this site (e.g. updating modules or plugins), you will need to toggle into read/write SFTP mode first.
-  PANTHEON_INDEX_PORT => 443
-  $_SERVER['PANTHEON_INDEX_PORT'] => 443
-  $_ENV['PANTHEON_INDEX_PORT'] => 443
-  ```
 
 ## Install and Enable the Search API Pantheon Module
 
@@ -282,14 +258,3 @@ This occurs because both repositories contain a package called `drupal/search_ap
 ### Fatal error: Cannot redeclare config_get_config_directory()
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
-
-### Reloading Solr Core
-
-Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site. You can follow this steps on how to enable the Reload Core in your Search API configuration:
-
-1. Go to `/admin/modules`
-2. Enable `Search API Solr Admin`
-3. Go to `/admin/config/search/search-api`
-4. Click the server you want to reload
-5. You'll be able to see the `Reload Core` button and you can simply click and confirm to reload
-6. Reindex the site to apply any changes

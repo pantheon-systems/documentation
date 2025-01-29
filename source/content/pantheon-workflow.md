@@ -65,7 +65,7 @@ While you are able to update the Dev environment via Git, if you would like to d
 
 After changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
-![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
+![Site dashboard, test environment, Deploys section](../images/dashboard/new-dashboard/2024/_deploy-to-test-env.png)
 
  - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
@@ -101,7 +101,7 @@ This entire process is designed around making sure that the Live environment is 
 
 After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
-![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
+![Site dashboard, live environment, workflow section](../images/dashboard/new-dashboard/2024/_deploy-live.png)
 
 ## Examples
 
@@ -239,7 +239,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 1. **Use the Workflow** (Recommended): Deploy code from Dev to Test to Live via the Site Dashboard or Terminus as outlined above, beginning in the [Combine Code from Dev and Content from Live in Test](#combine-code-from-dev-and-content-from-live-in-test) section.
 
-2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
+2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/guides/git/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
 ### Managing Database and Files: Clone, Import, Export, Wipe
 

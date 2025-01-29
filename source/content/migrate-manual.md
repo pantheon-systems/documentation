@@ -75,13 +75,13 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Enter your current website URL, choose your site type, and click **Continue**:
 
-   ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
+   ![Choose the Starting State for your Migrated Site](../images/dashboard/new-dashboard/2024/migrate-step2.png)
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
 1. Name your site and select an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
 
-   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/migrate-step3.png)
+   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/new-dashboard/2024/migrate-step3.png)
 
 1. Click the link to manually migrate your site then select **Yes** to confirm:
 
@@ -89,13 +89,13 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
   <Tab title="WordPress" id="wp-confirm" active={true}>
 
-  ![Choose Manual WordPress Migration](../images/dashboard/migrate-manual-wp.png)
+  ![Choose Manual WordPress Migration](../images/dashboard/new-dashboard/2024/migrate-manual-wp.png)
 
   </Tab>
 
   <Tab title="Drupal" id="drops-confirm">
 
-  ![Choose Manual Drupal Migration](../images/dashboard/migrate-manual-drops.png)
+  ![Choose Manual Drupal Migration](../images/dashboard/new-dashboard/2024/migrate-manual-drops.png)
 
   </Tab>
 
@@ -103,7 +103,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Click **Visit your Pantheon Site Dashboard**:
 
-  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/migrate-manual-visit-your-site-dashboard.png)
+  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/new-dashboard/2024/migrate-manual-visit-your-site-dashboard.png)
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 
@@ -195,7 +195,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
 1. From the **<Icon icon="wrench" /> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
-  ![Git connection mode](../images/dashboard/connection-mode-git.png)
+  ![Git connection mode](../images/dashboard/new-dashboard/2024/_connection-mode-git.png)
 
 1. Copy the SSH URL for the site repository. *Do not copy* `git clone` or the site name.
 

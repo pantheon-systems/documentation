@@ -24,7 +24,7 @@ reviewed: ""
     composer upstream-require drupal/pkg-name [--no-update]
     ```
 
-1. Commit and push your changes.
+1. Commit and push your changes to your `composer.json` file. **Remember to *not* commit the `composer.lock` file.**
 
 ## Update Dependencies in Your Upstream
 

@@ -27,9 +27,9 @@ You can clear the site cache manually or automatically.
 
 ## Pantheon Page Cache Plugin Configuration
 
-### Increase the Default Time to Live Value
+### Increase the Default Page Cache Max Age Value
 
-You can increase the default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
+You can increase the default page cache max age value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
 
 1. Log in to your WordPress site as an administrator.
 
@@ -40,14 +40,22 @@ You can increase the default time to live value to improve the chances that a vi
 1. Modify the **Default Cache Time**.
 
     When [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) is active, your site content should always be fresh and served quickly from Pantheon's Edge Cache. This is why we recommend caching content for a minimum of 1 week. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+	
+	Since the 2.0 version of Pantheon Advanced Page Cache, the input type for the Page Cache Max Age setting has been changed to a dropdown with the values 1 week, 1 month and 1 year. This setting can be overridden using the `pantheon_cache_default_max_age` filter as described below.
 
 1. Click **Save Changes**.
 
-![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
+<Alert title="Note" type="info">
+
+We strongly recommend using the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin to ensure that your site content is always fresh and served quickly from Pantheon's Edge Cache. When Pantheon Advanced Page Cache is active, the Pantheon Page Cache admin page will look like the screenshot below. If the PAPC plugin is not active, the Page Cache Max Age setting will be a text input.
+
+</Alert>
+
+![WordPress Pantheon Cache settings](../../../images/wordpress-configurations/05-pantheon-page-cache-admin.png)
 
 ### Override the default max age
 
-Since the [1.4.0 update in the Pantheon Mu Plugin](/release-notes/2024/04/pantheon-mu-plugin-1-4-0-update), you can override the default `max-age` using a filter. This is useful if you want to set a different max age for specific pages or post types, or if you want to set it to a specific value programmatically.
+Since the [1.4.0 update in the Pantheon MU Plugin](/release-notes/2024/04/pantheon-mu-plugin-1-4-0-update), you can override the default `max-age` using a filter. This is useful if you want to set a different max age for specific pages or post types, or if you want to set it to a specific value programmatically.
 
 ```php
 add_filter( 'pantheon_cache_default_max_age', function() {
@@ -74,7 +82,7 @@ You can enable maintenance mode for others while working on your site.
 
 ## Use Pantheon Cache Functions Programmatically
 
-There are three functions that are useful to developers within the [pantheon-page-cache.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) file that houses the Pantheon Cache plugin code. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/).
+There are functions that are useful to developers within the [Pantheon MU plugin](https://github.com/pantheon-systems/pantheon-mu-plugin/blob/main/inc/pantheon-page-cache.php). You can call them from within your own custom code using various WordPress hooks, such as [`save_post`](https://developer.wordpress.org/reference/hooks/save_post/).
 
 ### flush_site
 
@@ -118,6 +126,8 @@ This function flushes the cache for an individual term or terms which are passed
 public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
+Additional filters are added and available only when the [Pantheon Advanced Page Cache](https://github.com/pantheon-systems/pantheon-advanced-page-cache/tree/e3b5552b0cb9268d9b696cb200af56cc044920d9?tab=readme-ov-file#adding-custom-keys) plugin is installed and active.
+
 ## Automatically Clear Cache on Archive Pages for Specific Custom Post Type
 
 By default, adding a post, page or custom post type, clears the cache for the homepage and associated terms or categories associated with it. To clear cache for a specific page when a specific custom post type is added:
@@ -131,15 +141,17 @@ add_action( 'save_post', 'custom_clearcache_archive_page' );
  * @return void
  */
 function custom_clearcache_archive_page( $post_id ){
-	if(get_post_type() === 'book') {
-		pantheon_clear_edge_paths(['/books-on-startups-entrepreneurship-and-venture-capital/']);
+	if ( get_post_type() === 'book' ) {
+		pantheon_clear_edge_paths( ['/books-on-startups-entrepreneurship-and-venture-capital/'] );
 	}
 
-	if(get_post_type() === 'public-media') {
-		pantheon_clear_edge_paths(['/archives/media/']);
+	if( get_post_type() === 'public-media' ) {
+		pantheon_clear_edge_paths( ['/archives/media/'] );
 	}
 }
 ```
+
+The `pantheon_clear_edge_paths` function is declared in the PHP runtime and is only available on the Pantheon platform.
 
 ## More Resources
 

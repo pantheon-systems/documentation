@@ -43,11 +43,11 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. Enter a domain and click **Connect Domain**:
 
-  ![Adding a first domain to the Site Dashboard](../../../images/dashboard/add-first-domain.png)
+  ![Adding a first domain to the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-first-custom-domain.png)
 
   If one (or more) domains have already been added, click **Connect Domain**:
 
-  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/add-additional-domains.png)
+  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-more-domains.png)
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL.
 
@@ -57,11 +57,11 @@ Note that each custom domain is counted regardless of the environment to which i
 
    <Alert title="Note" type="info">
 
-  Professional workspaces that have wildcard domain(s) pointed at Pantheon may have a valid use case for opt-ing out of domain verification (e.g., WordPress Multisite with many subdomains). For details, [see this FAQ below](#can-i-opt-out-of-domain-verification).
+  Sites associated with Diamond or Platinum workspaces have the option to skip this step. For details, [see this FAQ below](#can-i-opt-out-of-domain-verification).
 
   </Alert>
 
-  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/verify-domain-with-remove-button.png)
+  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
 
   It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 
@@ -71,7 +71,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
     You'll automatically be taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
-   ![Custom domain Details page](../../../images/dashboard/details-page.png)
+   ![Custom domain Details page](../../../images/dashboard/new-dashboard/2024/_domainadded.png)
 
   If you instead see:
 
@@ -84,14 +84,14 @@ Note that each custom domain is counted regardless of the environment to which i
    - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
 
 ## FAQ
-### I have existing custom domains which were previously connected and launched prior to the enforcement of Domain Verification, will those be impacted?
+### I have existing custom domains which were previously connected and launched prior to the enforcement of domain verification, will those be impacted?
 No. Any custom domains previously added or launched will not require explicit domain verification. However, if any of those domains are deleted by the customer and then re-added, the process of re-addition (whether to the same environment or any other environment) will trigger domain verification.
 
 ### Is pre-provisioning HTTPS now a requirement to connect a custom domain?
 Yes. Skipping HTTPS provisioning is no longer an option.
 
 
-### Is Wild Card DNS routing supported by Domain Verification?
+### Is Wild Card DNS routing supported by domain verification?
 Pantheon does not allow wild card domains to be directly added as a custom domain. Customers may point wildcard domains (eg: *.example.com) in their own DNS to Pantheon, but are still required to have specific domains (eg: mysite.example.com) added and connected to specific environments on Pantheon.
 
 ### How can I know which domains are still pending ownership verification ?
@@ -99,10 +99,11 @@ For any domain that has been added that is pending verification, clicking on the
 
 You can get a high-level status view for all custom domains connected to a given environment via Terminus using the [`https:info` command](/terminus/commands/https-info). Domains that are pending verification will have the "Verification Pending" status returned as part of the Terminus `https:info` command.
 
-### Can I opt-out of Domain Verification?
-Yes, a professional workspace can opt-out from domain verifications across all sites in their organization but only by request. Please [contact support](/guides/support/contact-support/) to request exemption from domain verification, and once granted - you will see an option to skip domain verification when connecting domains to sites in your workspace.
+### Can I opt out of domain verification?
+Sites associated with Diamond and Platinum workspaces are automatically exempt from domain verification enforcement. All other account tiers can request an exemption for a professional workspace by [contacting support](/guides/support/contact-support/).
 
-Exemption is only available at the workspace level. For example, you cannot request exemption for just one site in your workspace, or an individual custom domain such as `example.com`.
+Exemption enables the option to skip domain verification when connecting custom domains in the site dashboard, and is only available at the workspace level. For example, you cannot request exemption for just one site in your workspace, or an individual custom domain such as `example.com`.
+
 
 ## More Resources
 

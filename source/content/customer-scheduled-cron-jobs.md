@@ -22,13 +22,13 @@ Also, this URL has been added to addsearch to exclude it from search results. th
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-Customer scheduled cron jobs are available for [Early Access](/guides/support/early-access/) participants.
+Customer scheduled cron jobs [Early Access](/guides/support/early-access/) program is closed for new participants.
 
 While this feature is in Early Access, Pantheon's development team releases new functionality often. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about support expectations for and access to Pantheon's pre-release software.
 
 </Alert>
 
-The [Terminus](/terminus-overview) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
+The [Terminus](/terminus) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
 
 ## Requirements
 

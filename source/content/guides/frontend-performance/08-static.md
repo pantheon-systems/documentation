@@ -15,6 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+image: CDN-speedTest-docs-guide.png
 ---
 
 This pages provides information on static sites and static page generation, including AMP.

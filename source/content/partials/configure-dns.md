@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-The <Icon icon="triangleExclamation" /> icon within the Domains / HTTPS page indicates that the domain has not been correctly routed to Pantheon. Complete the steps below before you provision your HTTPS.
+The <Icon icon="triangleExclamation" /> icon within the Domains / HTTPS page indicates that the domain has not been correctly routed to Pantheon. Complete the steps below before you provision your HTTPS. The addition of a Custom Domain now requires Domain Validation via a TXT record, please follow [the steps outlined here](/guides/domains/custom-domains) before proceeding with the outlined steps below:
 
 1. Access the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 1. Navigate to the **<Icon icon="global" /> Domains / HTTPS** page.

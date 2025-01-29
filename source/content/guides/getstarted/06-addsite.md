@@ -11,49 +11,51 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2023-03-21"
+reviewed: "2024-12-02"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
+image: getting-started-Largethumb.png
 ---
 
-There are dozens of ways to add a site on Pantheon. This section covers the most common scenarios for new users: creating a new CMS site (a site running WordPress or Drupal), or migrating an existing WordPress or Drupal site.  For additional scenarios, see the [Adding a Site to Pantheon](/add-site) section at the end of this document.
+There are dozens of ways to add a site on Pantheon. This section covers the most common scenarios for new users: creating a new CMS site (a site running WordPress or Drupal), or migrating an existing WordPress or Drupal site.  For additional scenarios, see the [Adding a Site to Pantheon](/guides/getstarted/addsite/) section at the end of this document.
 
 ## Create a New CMS Site
+Pantheon CMS site contains three components: code, files, and a database containing the content and configurations of your Content Management System (CMS). When you create a site, you are creating each of these components in the Dev environment. Then, when you are ready, you will create your Test and Live environments.
 
+<Wistia src="kprkgaikos" />
+
+### Create the Dev Environment
 To create a CMS site:
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
+<Partial file="dashboard-site-creation-1.md" />
 
-   ![Create new site button](../../../images/create-new-site-button.png)
-
-1. Select **WordPress** or **Drupal**.
-
-   ![Select CMS](../../../images/create-new-site-cms.png)
-
-   If you select Drupal, you will have the option to select the Drupal version you want to use.
-
-   ![Select Drupal version](../../../images/create-new-site-cms-drupal.png)
-
-1. Enter the name and select a region for this site. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. Click **Continue**. It can take several minutes to create a new site on Pantheon.
-
-   ![Enter site information](../../../images/create-new-site-info.png)
-
-   <Alert title="Note" type="info" >
-
-   You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site.  If possible, stay on this tab to simplify accessing the site when the creation is complete.
-
-   </Alert>
-
-1. Click **Visit your Pantheon Site Dashboard** when the process is complete.
-
-   ![Site creation completed](../../../images/create-site-done.png)
-
-At this point, you have a Dev environment for your site code, but you do not have a Dev environment for your CMS.  To create that:
-
+#### Install the CMS
 <Partial file="cms-dev.md" />
 
-You have successfully finished adding a site in its Dev environment!
+You have successfully finished adding a site in its Dev environment.  Click **Visit Dev Site** to view your site.
+
+### Create the Test environment
+
+<Partial file="test-initialize.md" />
+
+You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
+
+### Create the Live environment
+
+After you [purchase a plan](/guides/getstarted/purchase), you can deploy your site live.  But first, you have to create the Live environment.
+
+<Alert title="Warning" type="danger" >
+
+When you complete this step, your site will be live for anyone to see, at the Pantheon URL. For detailed information about launching your site, refer to our [Launch Essentials](/guides/launch/) guide.
+
+</Alert>
+
+<Partial file="live-initialize.md" />
+
+You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
+
+At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
 
 ## Migrate an Existing Site
 
@@ -107,5 +109,5 @@ Now it's time to purchase a site plan in preparation for launching your site.
 * [Manually Migrate Sites to Pantheon](/migrate-manual)
 * [Create a Static Site Using an Empty Upstream](/static-site-empty-upstream)
 * [Create a Drupal Site Using a Drupal Distribution](/guides/drupal-from-dist)
-* [Using Terminus to Create and Update Drupal Sites on Pantheon](/terminus-drupal-site-management/)
+* [Create a Drupal Site From the Command Line Using Terminus and Drush](/drupal-commandline)
 * [Create a WordPress Site with Terminus and WP-CLI](/guides/create-wp-site)

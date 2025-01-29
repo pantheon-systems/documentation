@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
-reviewed: "2022-09-19"
+reviewed: "2025-01-15"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -49,7 +49,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
 
-- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime.
+- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime. Submit AGCDN configuration change requests on this tab.
 
 - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
@@ -65,11 +65,11 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 You can switch between Workspaces to work on personal projects or to switch between Professional Workspaces.  To do so:
 
-- Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces.
+- Click the Workspace Switcher (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices) to switch between Workspaces.
 
   Your Personal Workspace is at the top, followed by an Professional Workspaces in which you are a member.
 
-  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
+  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/2024/workspaces-selector.png)
 
 ### Create a Professional Workspace
 
@@ -83,7 +83,7 @@ If you are a contract customer, your contract is associated to one Professional 
 
 The following process will create a Professional Workspace with a free Silver Account Plan.  To upgrade a Workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
 
-1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) in the upper left corner, then select **Create New Workspace**.
+1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices), then select **Create a Professional Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
@@ -132,7 +132,7 @@ Workspaces cannot be deleted.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to add sites to.
 
-1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/add-site) for more details.
+1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/guides/getstarted/addsite/) for more details.
 
 
 ### Why do login attempts fail for all users across my workspace simultaneously?

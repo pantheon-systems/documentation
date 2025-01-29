@@ -1,7 +1,9 @@
 ---
 title: "WebOps Certification: Exam Overview"
+subtitle: "Pantheon WebOps Certification Exam Overview"
 contributors: []
 showtoc: true
+layout: certificationpage
 permalink: docs/certification/exam
 ---
 ## Exam Instructions
@@ -291,21 +293,13 @@ The following directions and instructions were captured by a user on a MacOS dev
 ## Exam FAQs
 Here are some frequently asked questions about Pantheon's WebOps Certification Program.
 
-<Accordion title="Where Can I Find Materials to Study for the Pantheon WebOps Certification Exam?" id="study-guide" icon="wrench">
-
+### Where Can I Find Materials to Study for the Pantheon WebOps Certification Exam?
 In addition to [this guide within our documentation](/certification/study-guide) you can download a [PDF version that contains hands-on activities and review questions.](https://certification.pantheon.io/sites/default/files/2023-11/webopscert_final_v1_1.pdf).
 
-</Accordion>
+### What are the directions for launching my exam?
+You can find the directions for launching the exam here: [Exam Instructions](/certification/exam#exam-instructions)
 
-<Accordion title="What are the directions for launching my exam?" id="directions" icon="wrench">
-
-You can find the directions for launching the exam here: [Exam Instructions](/certification/exam-instructions)
-
-</Accordion>
-
-<Accordion title="How do I use the ProctorFree virtual proctoring service for my exam?" id="ProctorFree" icon="wrench">
-
-
+### How do I use the ProctorFree virtual proctoring service for my exam?
 Pantheon’s Certification Program utilizes [ProctorFree](https://www.proctorfree.com/), a software-only identity verification and exam recording solution. The following document describes the requirements for successfully enabling ProctorFree when taking a Pantheon Certification exam.
 
 Before you get started, please note the following:
@@ -338,13 +332,11 @@ If you are using a Linux machine, you will need to indicate this on the form whe
 
 Remote exam sessions must be completed on a laptop or desktop computer that meets the minimum technical requirements.
 
-</Accordion>
-
-<Accordion title="Do I need a camera?" id="camera" icon="wrench">
+### Do I need a camera?
 In order to take the exam with our automated proctoring service, you will need a working web camera to record your test taking session. Please reach out to us if you have any questions about this.
-</Accordion>
 
-<Accordion title="What are the technical requirements for taking a Pantheon Certification?" id="technical-requirements" icon="wrench">
+
+### What are the technical requirements for taking a Pantheon Certification?
 
 In order to maintain compatibility with our online proctoring service, we require that exam takers use machines that adhere to the following minimum technical specifications:
 
@@ -360,20 +352,20 @@ In order to maintain compatibility with our online proctoring service, we requir
 
 **Web Camera & Microphone:** An external or internal web camera and microphone are required. Camera and microphone drivers must have been updated or released within the last 5 years. 3D Webcams are not supported at this time.
 
-</Accordion>
 
-<Accordion title="How do I register for an exam?" id="register" icon="wrench">
+
+### How do I register for an exam?
 
 You can register for the [Pantheon WebOps Certification Exam with the form on this page](https://pantheon.io/certification). The form will ask for your name, email address, organization (if applicable), and some technical information about the computer you will be using to take the exam. This is to help us ensure that your computer is technically compatible with our exam engine and proctoring service. You will then choose a date to take the exam.
 
-</Accordion>
 
 
-<Accordion title="How do I get certificate and a badge?" id="badge" icon="wrench">
+
+### How do I get certificate and a badge?
 
 When you have finished taking the exam, you will see a message on the screen indicating whether you have passed or not. Once you have passed the exam, we will go through the process of validating the results. This validation can take up to 48 hours, at which point you will receive an email with a link to your badge and certification. We will also display your name, certification date, and a link to your badge and digital certificate on our [Certification Registry site](https://certification.pantheon.io/).
 
-</Accordion>
+
 
 
 ## More Resources

@@ -13,20 +13,20 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/faq/
 editpath: support/06-faq.md
-reviewed: "2020-12-13"
+reviewed: "2024-09-10"
 ---
 
 ### Can I request a feature be added to the platform?
 
 Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us).
 
-### Is there a support number we can call? If so, is this service available for every package?
+### Is there a support number we can call? Is this service available for all account tiers?
 
-Diamond and Platinum customers have access to Pantheon On-Call, which includes an emergency 800-number to page an on-call engineer. For more details, [contact sales](https://pantheon.io/contact-us).
+Diamond and Platinum customers can call the 24/7 Premium Support Hotline  for any technical issues, escalations, site, billing, or overages queries. You can find the phone number in the Support tab of your workspace. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
 
-### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
+### Is there 24/7 support for emergencies like incidents or outages? Is this service available for all account tiers?
 
-Diamond, Platinum and Gold customers can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting Diamond and Platinum customers.
+Diamond and Platinum customers can open an emergency ticket for business-critical issues. Pantheon escalates emergency tickets to our support engineers, even during off-hours. To ensure effective triage, please open the emergency ticket from the workspace of the affected site.
 
 ### What if I can't login to the Pantheon Dashboard?
 

@@ -16,7 +16,11 @@ product: [dashboard]
 integration: [--]
 ---
 
-This section provides information on how to choose and configure your primary domain.
+## Considerations 
+Before you configure a primay domain consider the following: 
+* WordPress Multisites should not use this configuration as it will conflict with subsite routing 
+* Sites already managing redirects for secondary domains via PHP should not use this configuration 
+  * For example, if you are redirecting `one-example.com` to `example.com/one` via [PHP redirects](/guides/redirect/advanced) 
 
 ## Choose Primary Domain
 
@@ -26,7 +30,7 @@ This section provides information on how to choose and configure your primary do
 
 Choose a primary domain from the dropdown at the bottom of **Domains / HTTPS**:
 
-![Set the primary domain in the Site Dashboard](../../../images/dashboard/choose-primary-domain.png)
+![Set the primary domain in the Site Dashboard](../../../images/dashboard/new-dashboard/2024/_add-more-domains.png)
 
 <Alert title="Note" type="info">
 

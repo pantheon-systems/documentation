@@ -12,9 +12,9 @@ product: [cdn]
 integration: [--]
 ---
 
-This article provides an overview of the steps to set up and work with manually managed, custom certificates through Pantheon's Global CDN and Advanced Global CDN, available through Pantheon's Custom Certificates concierge service.
+This article provides an overview of the steps to set up and work with manually managed, custom certificates through Pantheon's Custom Certificates concierge service.
 
-Custom Certificates service is available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. To get started, contact your account manager or our [Sales Team](https://pantheon.io/contact-us?docs).
+Our Custom Certificates service is available to contract customers only, but it does not require the Advanced Global CDN product or an Elite plan. There is a fee to utilize the service. To get started, contact your account manager or our [Sales Team](https://pantheon.io/contact-us?docs).
 
 
 ## Add a Custom Certificate

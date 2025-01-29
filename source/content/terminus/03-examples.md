@@ -14,6 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
+reviewed: "2025-01-23"
 ---
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
@@ -281,6 +282,11 @@ There are a few scenarios where it may be useful to reset your Dev environment (
 
 - The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
 
+
+<TabList>
+
+<Tab title="All others" id="all-others" active={true}>
+
 Follow the steps below to reset Dev to Live.
 
 1. Clone the site's codebase to your local machine if you have not done so already (replace `awesome-site` with your site name):
@@ -293,7 +299,34 @@ Follow the steps below to reset Dev to Live.
 
   <Download file="reset-dev-to-live.sh" />
 
-  GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
+  ```bash
+  #!/bin/bash
+
+  #Authenticate Terminus
+  terminus auth:login
+
+  #Provide the target site name (e.g. your-awesome-site)
+  echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER] to reset the Dev environment to Live:';
+  read SITE;
+
+  #Set the Dev environment's connection mode to Git
+  echo "Making sure the environment's connection mode is set to Git...";
+  terminus connection:set $SITE.dev git
+
+  #Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live
+  echo "Rewriting history on the Dev environment's codebase...";
+  git reset --hard `terminus env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4`
+
+  #Force push to Pantheon to rewrite history on Dev and reset codebase to Live
+  git push origin master -f
+
+  #Clone database and files from Live into Dev
+  echo "Importing database and files from Live into Dev...";
+  terminus env:clone-content $SITE.live dev
+
+  #Open the Dev environment on the Site Dashboard
+  terminus dashboard:view $SITE.dev
+  ```
 
 1. Execute the script from the command line within the root directory of your site's codebase:
 
@@ -302,6 +335,69 @@ Follow the steps below to reset Dev to Live.
   ```
 
 The Site Dashboard will open when the reset procedure completes.
+
+</Tab>
+
+<Tab title="Integrated Composer" id="integrated-composer">
+
+Follow the steps below to reset Dev to Live.
+
+<Alert title="Note" type="info">
+
+We've adjusted the following script for [Integrated Composer sites](/guides/integrated-composer), so that you reset history to the **second** to last commit hash on the Live environment, rather than the most recent - to avoid resetting history to a build artifact.
+
+</Alert>
+
+1. Clone the site's codebase to your local machine if you have not done so already (replace `awesome-site` with your site name):
+
+  ```bash{promptUser: user}
+  terminus connection:info awesome-site.dev --fields='Git Command' --format=string
+  ```
+
+1. Automate the procedure for resetting Dev to Live by downloading the following bash script:
+
+  <Download file="ic-reset-dev-to-live.sh" />
+
+  ```bash
+  #!/bin/bash
+
+  #Authenticate Terminus
+  terminus auth:login
+
+  #Provide the target site name (e.g. your-awesome-site)
+  echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER] to reset the Dev environment to Live:';
+  read SITE;
+
+  #Set the Dev environment's connection mode to Git
+  echo "Making sure the environment's connection mode is set to Git...";
+  terminus connection:set $SITE.dev git
+
+  #Identify the second most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live
+  echo "Rewriting history on the Dev environment's codebase...";
+  git reset --hard `terminus env:code-log $SITE.live --format=string | grep -m2 'live' | tail -n 1 | cut -f 4`
+
+  #Force push to Pantheon to rewrite history on Dev and reset codebase to Live
+  git push origin master -f
+
+  #Clone database and files from Live into Dev
+  echo "Importing database and files from Live into Dev...";
+  terminus env:clone-content $SITE.live dev
+
+  #Open the Dev environment on the Site Dashboard
+  terminus dashboard:view $SITE.dev
+  ```
+
+1. Execute the script from the command line within the root directory of your site's codebase:
+
+  ```bash{promptUser: user}
+  sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
+  ```
+
+The Site Dashboard will open when the reset procedure completes.
+
+</Tab>
+
+</TabList>
 
 ## Switch Upstreams
 

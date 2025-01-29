@@ -1,0 +1,7 @@
+/* Default menu */
+@media (min-width: 641px) {
+  .sidenav-compact {
+    padding-block-start: var(--pds-spacing-xl);
+    padding-inline-end: var(--pds-spacing-xl);
+  }
+}

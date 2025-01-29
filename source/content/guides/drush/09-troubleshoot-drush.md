@@ -233,6 +233,13 @@ This error can occur on Multidevs with a [site-local installation](/guides/drush
 
 You can add a compatible Drush version in your `pantheon.yml` file to refresh the environment as a potential workaround. For Drupal 9 and later, add `drush_version: 10` to the `pantheon.yml` file.
 
+### Drush GDPR Dumper Error
+[Drush GDPR Dumper](https://github.com/druidfi/drush-gdpr-dumper) is incompatible with MariaDB and breaks the `drush-sql-dump` command, resulting in following error: `The '--column-statistics' option does not exist.`
+
+This package ships it's own `mysqldump` file to do the MySQL dump and overrides the `extra-dump` configuration, which is passed to `mysqldump` and does not allow it's alteration.
+
+To fix this error, remove the `mysqldump` file or uninstall the package. Then the platform's version of `mysqldump` will be used instead.
+
 ## More Resources
 
 - [Timeouts](/timeouts)

@@ -93,6 +93,10 @@ If you encounter rate limits, we recommend the following approaches:
 - [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform).
 - Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/) as a workaround.
 
+### Requests to .well-known are intercepted
+
+Pantheon's platform intercepts all requests to `.well-known/acme-challenge` and serves challenge responses for verifying ownership of domains in order to issue Let's Encrypt HTTPS certificates. Usage of this path is restricted to the Pantheon platform and may not be used to authorize third-party services. Instead, you must use an alternative method of authorization for third-party services, such as a DNS TXT record.
+
 ## More Resources
 
 - [Custom Certificates](/custom-certificates#option-2-manually-managed-custom-certificates)

@@ -14,6 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [modules, plugins]
+image: CDN-speedTest-docs-guide.png
 ---
 
 Learn more about improving Frontend Performance by reviewing resources available on [Drupal](https://www.drupal.org/docs/mobile-drupal-sites/front-end-performance) and [WordPress](https://wordpress.org/support/article/optimization/).

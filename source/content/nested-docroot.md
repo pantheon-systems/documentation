@@ -34,11 +34,11 @@ This is especially useful for third party dependencies, such as those installed 
 
 ## Disable One-click Updates
 
-If you wish to stop using one-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
+If you wish to stop using one-click updates in the dashboard on a particular Drupal 6/7 or WordPress site, and instead intend to update your site with Composer in a nested docroot,  switch the site's upstream to an empty repository using [Terminus](/terminus). Newer supported versions of Drupal are Composer-managed by default.
 
 <TabList>
 
-<Tab title="Drupal" id="d7-set-upstream" active={true}>
+<Tab title="Drupal 6 or 7" id="d7-set-upstream" active={true}>
 
 ```bash
 terminus site:upstream:set <site> empty-7

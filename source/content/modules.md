@@ -24,10 +24,6 @@ WordPress users should review [Pantheon Plugins](/guides/wordpress-configuration
 
 The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/guides/global-cdn) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
 
-## Edge Personalization
-
-The [Edge Integrations Drupal module](/guides/edge-integrations/drupal-sdk/) is a Software Development Kit (SDK) that allows users to personalize Drupal. This module uses configuration at the "edge" or the CDN to enable personalization options for Geolocation or Interests. This is done by using HTTP vary headers that tell the CDN to return cached variations of content based on values identified by the user browsing the site.
-
 ## [Generate Errors (Drupal 7)](https://www.drupal.org/project/generate_errors)
 
 Interface which allows you to generate various errors to test system behaviors like custom errors and server responses.

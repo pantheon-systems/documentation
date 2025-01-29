@@ -3,37 +3,37 @@
     {
       "slug": "account-management",
       "displayName": "Account management",
-      "color": "color-1",
+      "color": "color-3",
       "description": "Highlights updates related to account permissions, user roles, and any changes that impact how users manage and interact with their accounts"
     },
     {
       "slug": "action-required",
       "displayName": "Action required",
-      "color": "color-3",
+      "color": "color-2",
       "description": "Requires customer to act in order to avoid disruption"
     },
     {
       "slug": "billing",
       "displayName": "Billing & Finance",
-      "color": "color-1",
+      "color": "color-5",
       "description": "Covers finance and billing-related updates, allowing billing and finance managers to track changes affecting their financial aspects"
     },
     {
       "slug": "deprecated",
       "displayName": "Deprecated",
-      "color": "color-4",
+      "color": "color-6",
       "description": "Reserved for updates indicating the phasing out or discontinuation of specific features or functionalities"
     },
     {
       "slug": "documentation",
       "displayName": "Pantheon Docs",
-      "color": "color-4",
+      "color": "color-18",
       "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users"
     },
     {
       "slug": "drupal",
       "displayName": "Drupal",
-      "color": "color-9",
+      "color": "color-7",
       "description": "Tailored for updates specific to the Drupal content management system, helping Drupal users stay informed about platform changes that directly impact their workflows"
     },
     {
@@ -45,19 +45,19 @@
     {
       "slug": "front-end-sites",
       "displayName": "Front-End Sites",
-      "color": "color-9",
+      "color": "color-12",
       "description": "Focuses on updates related to Front-End Site (FES) enhancements, ensuring that developers and designers stay informed about changes affecting how they use the product"
     },
     {
       "slug": "general",
       "displayName": "General",
-      "color": "color-4",
+      "color": "color-6",
       "description": "Serves as a catch-all for updates that don't neatly fit into specific categories, offering a broad overview of general changes on the Pantheon platform"
     },
     {
       "slug": "infrastructure",
       "displayName": "Infrastructure",
-      "color": "color-8",
+      "color": "color-9",
       "description": "Details changes related to the underlying technology and architecture of the Pantheon platform, providing insights into changes that may impact performance and reliability"
     },
     {
@@ -69,49 +69,49 @@
     {
       "slug": "new-feature",
       "displayName": "New feature",
-      "color": "color-7",
+      "color": "color-19",
       "description": "Consolidates information about both new features and improvements, providing users with insights into enhancements that contribute to a better overall experience"
     },
     {
       "slug": "performance",
       "displayName": "Performance",
-      "color": "color-6",
+      "color": "color-16",
       "description": "Highlights updates focused on optimizing the speed, efficiency, and overall performance of the Pantheon platform, giving users insights into improvements that enhance user experience"
     },
     {
       "slug": "policy",
       "displayName": "Policy",
-      "color": "color-10",
+      "color": "color-8",
       "description": "Communicates updates related to platform policies, ensuring users are aware of any changes in rules or guidelines that may impact their usage"
     },
     {
       "slug": "security",
       "displayName": "Security",
-      "color": "color-5",
+      "color": "color-15",
       "description": "Addresses security-related updates, emphasizing the importance of staying informed about changes aimed at maintaining a secure and protected environment for users"
     },
     {
       "slug": "tools-apis",
       "displayName": "Tools & APIs",
-      "color": "color-2",
+      "color": "color-1",
       "description": "Keeps users informed about updates related to tools and APIs, helping developers understand changes that may impact their workflows and integrations"
     },
     {
       "slug": "user-interface",
       "displayName": "User interface",
-      "color": "color-2",
+      "color": "color-11",
       "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
     },
     {
       "slug": "wordpress",
       "displayName": "WordPress",
-      "color": "color-9",
+      "color": "color-10",
       "description": "Tailored for updates specific to the WordPress content management system, helping WordPress users stay informed about platform changes that directly impact their workflows"
     },
     {
       "slug": "plugins",
       "displayName": "Plugins",
-      "color": "color-7",
+      "color": "color-10",
       "description": "Keeps users informed about updates to WordPress plugins that we maintain."
     },
     {

@@ -71,7 +71,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
 
  It should look similar to this:
 
-    ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../../../images/dashboard/git-string.png)
+  ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../../../images/dashboard/new-dashboard/2024/_git-string.png)
 
 1. Go to where you want the code to reside in your local environment.
 
@@ -214,13 +214,7 @@ This file is ignored by the `.gitignore` file in [WordPress](https://github.com/
 
 Pantheon sites that install WordPress 5.5 include a `wp-config-local-sample.php` file. Older sites can copy the [wp-config-local-sample.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php) file on GitHub to the same directory as the site's `wp-config.php`, or create one in that location as shown here.
 
-The following can be used as a starting point for `wp-config-local.php`. Replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/)).
-
-<Accordion title={"Full text of wp-config-local-sample.php"} id={"full-wp-config-local-sample"}>
-
-GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php php GITHUB-EMBED
-
-</Accordion>
+This can be used as a starting point for `wp-config-local.php`. Replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/)).
 
 ### Drupal settings.local.php
 

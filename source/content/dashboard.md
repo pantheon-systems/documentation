@@ -21,7 +21,7 @@ Easily visualize and manage sites, users, traffic, metrics, visual regression te
 
 Our site dashboard provide a real-time interface into Pantheon. It includes everything you need to build, launch, and run sites. Create new projects, manage team access, interface via SFTP or Git (version control), and track miscellaneous tools like backups. It also allows you to deploy and scale your sites.
 
-![The Pantheon Dashboard](../images/dashboard/new-dashboard/site-dashboard.png)
+![The Pantheon Dashboard](../images/dashboard/new-dashboard/2024/_site-dashboard.png)
 
 </Tab>
 
@@ -38,15 +38,15 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 
 *Manage Team*
 
-![Manage Sites](../images/dashboard/manage-site-team.png)
+![Manage Sites](../images/dashboard/new-dashboard/2024/_manage-site-team.png)
 
 *View Site Status*
 
-![View Site Status](../images/dashboard/status-tab.png)
+![View Site Status](../images/dashboard/new-dashboard/2024/_status-tab.png)
 
 *Manage Backups*
 
-![Manage Backups](../images/dashboard/backup-tool.png)
+![Manage Backups](../images/dashboard/new-dashboard/2024/_backups-tool.png)
 
 </Tab>
 

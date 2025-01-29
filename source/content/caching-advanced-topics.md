@@ -53,7 +53,9 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of one year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Dev and Multidev environments do not cache static assets. Select one of the options below to ensure a client's browser receives a new version of any static asset after clearing a site's cache:
+Pantheon sets an cache max-age of one year for static assets (e.g. CSS, JS, Images, PDFs) on Live and Test environments with the HTTP header of `cache-control: max-age=31622400`. This setting improves page load times as a visitor browses a site across pages that make requests to the same assets.
+
+However, this setting can prevent changes to static assets from being immediately visible to a client's browser. So select one of the options below to ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
 - Rename the file
 - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
@@ -78,6 +80,13 @@ Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) 
 </TabList>
 
 [Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
+
+
+<Alert title="Note" type="info">
+
+Dev and Multidev environments always set an HTTP header to `cache-control: no-cache, must-revalidate` so that changes to CSS and other assets are always reloaded as developers update them.
+
+</Alert>
 
 ## Using Your Own Session-Style Cookies
 

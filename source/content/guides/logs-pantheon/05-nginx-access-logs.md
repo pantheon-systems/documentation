@@ -1,5 +1,5 @@
 ---
-title: Log Files on Pantheon
+title: Environment Log Files on Pantheon
 subtitle: Parse Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess.
 contenttype: [guide]

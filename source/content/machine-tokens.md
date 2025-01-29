@@ -14,7 +14,7 @@ integration: [--]
 
 Machine tokens are used to uniquely identify your machine and securely authenticate via [Terminus](/terminus).
 
-Machine tokens:  
+Machine tokens:
 
 - Provide the same access as your username and password
 - Do not expire
@@ -23,7 +23,7 @@ Machine tokens:
 
 ## Create a Machine Token
 
-1. [Go to your Personal Settings](/personal-settings) and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+1. [Go to your Personal Settings](/personal-settings) and select [Machine Tokens](https://dashboard.pantheon.io/personal-settings/machine-tokens).
 
 1. Click **Create Token**.
 
@@ -63,7 +63,7 @@ terminus auth:login --email <email@example.com>
 
 For security purposes, we recommend removing tokens from your account when they are no longer used.
 
-1. [Go to your Personal Settings](/personal-settings) and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+1. [Go to your Personal Settings](/personal-settings) and select [Machine Tokens](https://dashboard.pantheon.io/personal-settings/machine-tokens).
 
 1. Locate the token you want to delete, and click **Revoke Token**.
 

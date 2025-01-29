@@ -45,7 +45,7 @@ AGCDN provides many features:
 
 | Feature        | AGCDN |
 | ------------- | -------------------------------------- |
-| [OSI Layer 3 and 4 DDoS Protection & Mitigation](/guides/agcdn/agcdn-features#osi-layer-3-and-4-ddos-protection-&-mitigation) | <span style="color:green">✔</span> |
+| [OSI Layer 3 and 4 DDoS Protection & Mitigation](/guides/agcdn/agcdn-features#osi-layer-3-and-4-ddos-protection--mitigation) | <span style="color:green">✔</span> |
 | [SOC 2 Type 2 Compliance](/guides/agcdn/agcdn-features#soc-2-type-2-compliance)        | <span style="color:green">✔</span> |
 | [IP Allowlisting and Blocklisting](/guides/agcdn/agcdn-features#ip-allowlisting-and-blocklisting)   | <span style="color:green">✔</span> |
 | [Token Authentication with JSON Web Token](/guides/agcdn/agcdn-features#token-authentication-with-json-web-token) | <span style="color:green">✔</span> |
@@ -66,10 +66,10 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 
 | Feature         | AGCDN with WAF and IO |
 | ------------- | ------------------------- |
-| [Layer 7 and Enterprise WAF rules](/guides/agcdn/agcdn-features#layer-7-and-enterprise-waf-rules)| <span style="color:green">✔</span> |
-| [Efficient Image Optimization at the Edge](/guides/agcdn/agcdn-features#efficient-image-optimization-at-the-edge)  |  <span style="color:green">✔</span> |
+| [Layer 7 and Enterprise WAF rules](/guides/agcdn/agcdn-wafio#owasp-layer-7-and-enterprise-waf-rules)| <span style="color:green">✔</span> |
+| [Efficient Image Optimization at the Edge](/guides/agcdn/agcdn-wafio#efficient-image-optimization-at-the-edge)  |  <span style="color:green">✔</span> |
 | [Rate Limiting](/guides/agcdn/agcdn-wafio#rate-limiting)   | <span style="color:green">✔</span> |
-| [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection-and-mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
+| [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-wafio#advanced-bot-detection-and-mitigation) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
 
 ## Is AGCDN Right For Me?
 

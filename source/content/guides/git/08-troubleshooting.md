@@ -62,7 +62,7 @@ However, some Git GUI clients, including SourceTree, also support the use of
 
 1. Paste the URL into the **Source URL** field.
 
-   1. Remove `git clone` from the beginning of the URL. 
+   1. Remove `git clone` from the beginning of the URL.
 
    1. Remove the trailing space and `my-site` name from the end of the URL provided in the **Connection Info** section of your Pantheon Dashboard.
 
@@ -90,6 +90,9 @@ fatal: Could not read from remote repository.
 ```
 
 To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/guides/sftp/port-2222).
+
+### Debug CI pipeline failures
+If your continuous integration pipeline is suddenly failing across a large portfolio of sites due to permission denied errors for Git/SSH authentication, we recommend [debugging local DNS cache](/local-dns-cache) to solve.
 
 ## More Resources
 

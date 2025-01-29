@@ -14,21 +14,21 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2022-12-13"
+reviewed: "2024-09-10"
 ---
 
-![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
+![Screenshot of the Support Tab](../../../images/dashboard/new-dashboard/2024/support-tab.png)
 
 ## Support Features and Response Times
 
-Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
+Pantheon offers a range of support options for mission-critical sites, such as 24x7x365 emergency ticket, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
-| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic Custom Upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Custom Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
-| [**Chat**](/guides/support/contact-support/#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
-| [**Tickets**](/guides/support/contact-support/#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
-| [**Emergency On-Call**](/guides/support/contact-support/#premium-technical-support-and-on-call-services)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
+| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic Custom Upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Custom Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Diamond Support <Popover title="Scope of Support" content="Bespoke site debugging" /> |
+| [**Live chat**](/guides/support/contact-support/#live-chat)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
+| [**General support ticket**](/guides/support/contact-support/#general-support-ticket)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
+| [**Emergency ticket**](/guides/support/contact-support/#emergency-ticket)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
 | [**Professional Services**](/guides/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Available for Purchase    |
 
 Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are generally available on business days, Monday through Friday, 9AM to 5PM PST.
@@ -52,8 +52,8 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Advanced Workflows
    - Complex Caching Use Cases
    - Terminus
-- **Dedicated**:
-   - A dedicated Diamond team for bespoke site debugging
+- **Diamond Support**:
+   - Access to bespoke site debugging
 
 ## Range of Support
 
@@ -121,7 +121,7 @@ We provide technical support for all user interfaces of the Pantheon product, as
 
 We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and we have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques.
 
-### Dedicated Support Team
+### Diamond Support Team
 
 Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's Diamond team can investigate misbehaving sites slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
 

@@ -166,124 +166,17 @@ array(63) {
 
 ## Setting Environment Variables
 
-It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead.
+You can use the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to write the secrets to Pantheon's secure storage system. The secrets are encrypted at rest and follow all standard practices for the storing of sensitive values.
 
-### Terminus Secrets Plugin
+Learn more about this new feature by exploring our new Pantheon Secrets Guide:
+  * [Introduction](/guides/secrets)
+  * [Secrets Overview](/guides/secrets/overview)
+  * [PHP Usage](/guides/secrets/php)
+  * [Drupal Key Usage](/guides/secrets/drupal)
+  * [Integrated Composer Usage](/guides/secrets/composer)
+  * [Local Development Usage](/guides/secrets/local)
+  * [Troubleshooting](/guides/secrets/troubleshooting)
 
-You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below. This example will help you get started, however, you must modify the third line for the key you want to configure. You can also modify the `secrets.json` file name, although we recommend you provide the file with a name you will recognize for secrets management.
-
-<TabList>
-
-<Tab title="WordPress" id="wp-example" active={true}>
-
-1. Modify and use the code example below to write secrets.
-
-```bash
-$secrets_json_text = file_get_contents('/files/private/secrets.json');
-$secrets_data = json_decode($secrets_json_text, TRUE);
-define('EXAMPLE_API_KEY', $secrets_data['example_api_key']);
-```
-
-</Tab>
-
-<Tab title="Drupal" id="drupal-example">
-
-1. Modify and use the code example below to write secrets.
-
-```bash
-$secrets_json_text = file_get_contents('/files/private/secrets.json');
-$secrets_data = json_decode($secrets_json_text, TRUE);
-$config['example_integration.settings']['apikey'] = $secrets_data['example_api_key'];
-```
-
-</Tab>
-
-</TabList>
-
-### Manual File Creation
-
-You can manually create and add files to the `/files/private` directory for scenarios that are not supported by the Terminus Secrets plugin. For example, when secrets in the Dev and Live environments are different.
-
-1. Create your files manually in the `/files/private` directory for each case required, for example:
-
-    - `/files/private/dev.secrets.json`
-    - `/files/private/test.secrets.json`
-    - `/files/private/live.secrets.json`
-
-1. Update your PHP file using the code examples below as a reference.
-
-    - Note that the code below uses SendGrid as an example. You will need to modify the code for the specific key you are configuring.
-
-<TabList>
-
-<Tab title="WordPress" id="wp-example" active={true}>
-
-1. Add the code to your `wp-config.php` file and modify it as necessary for the specific key you are configuring:
-
-```php
-if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-	switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-    case 'live':
-      // keys for production env
-      $secrets_filename = 'live.secrets.json';
-      break;
-    case 'test':
-      // keys for staging env
-      $secrets_filename = 'test.secrets.json';
-      break;
-    default:
-      // keys for dev and multidev envs
-      $secrets_filename = 'dev.secrets.json';
-      break;
-  }
-  if (isset($secrets_filename)) {
-    $secrets_json_text = file_get_contents('/files/private/' . $secrets_filename);
-    $secrets_data = json_decode($secrets_json_text, TRUE);
-
-    define('SENDGRID_API_KEY', $secrets_data['sendgrid_api_key']);
-    define('SOME_OTHER_OPTION', $secrets_data['other_key_example']);
-}
-```
-
-</Tab>
-
-<Tab title="Drupal" id="drupal-example">
-
-1. Add the code below to your `settings.php` file and modify it as necessary for the specific key you are configuring:
-
-```php
-        if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-	    switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-      case 'live':
-      // keys for production env
-      $secrets_filename = 'live.secrets.json';
-      break;
-      case 'test':
-      // keys for staging env
-      $secrets_filename = 'test.secrets.json';
-      break;
-      default:
-      // keys for dev and multidev envs
-      $secrets_filename = 'dev.secrets.json';
-      break;
-    }
-    if (isset($secrets_filename)) {
-    $secrets_json_text = file_get_contents('/files/private/' . $secrets_filename);
-    $secrets_data = json_decode($secrets_json_text, TRUE);
-
-    $config['sendgrid_integration.settings']['apikey'] = $secrets_data['sendgrid_api_key'];
-    $config['some_other_config_override']['value'] = $secrets_data['other_key_example'];
-    }
-    ```
-```
-
-</Tab>
-
-</TabList>
-
-### Lockr
-
-You can use [Lockr](/guides/lockr) for maximum site security. Lockr provides a simple-to-use developer interface with a scalable cloud key management system. Review the [Install Lockr via the Lockr Terminus Plugin](/guides/lockr#install-lockr-via-the-lockr-terminus-plugin) guide section for installation steps.
 
 ## More Resources
 

@@ -1,6 +1,6 @@
 ---
 title: WebOps Certification
-subtitle: Introduction
+subtitle: Study Guide Introduction
 certificationpage: true
 type: certificationpage
 layout: certificationpage

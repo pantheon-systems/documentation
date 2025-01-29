@@ -16,7 +16,7 @@ permalink: docs/guides/php/php-versions
 reviewed: "2022-12-13"
 ---
 
-This section provides information on how to upgrade your PHP version.
+This section provides information on how to upgrade to [a supported version of PHP](/guides/php##supported-php-versions).
 
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. Refer to our blog post for an [example of 62% performance gains after upgrading PHP](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
@@ -74,7 +74,7 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
    ```yaml:title=pantheon.yml
    api_version: 1
 
-   php_version: 8.1
+   php_version: 8.2
    ```
 
    - You do not need to specify the PHP version's exact point release (for example, `8.1.10`), as these are managed by the platform and deployed automatically.

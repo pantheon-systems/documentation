@@ -54,7 +54,3 @@ Now we'll hookup our PagerDuty service as a notification channel for our alert p
 ## More Resources
 
 - [Monitor and Improve Site Performance with New Relic&reg;](/guides/new-relic/monitor-new-relic)
-
-- [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-
-- [Troubleshooting WordPress Performance with New Relic&reg;](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)

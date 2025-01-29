@@ -9,6 +9,7 @@ reviewed: ""
 ---
 
 <Partial file="drupal/migrate-add-files-part1.md" />
+
 1. Export a `tar.gz` or `.zip` file of your files directory:
 
   Navigate to your Drupal site's root directory to run this command, which will create an archive file in your user's home directory:
@@ -34,7 +35,7 @@ reviewed: ""
 
    1. Select your local archive file and click **Import**.
 
-      ![Import MySQL database from file](../../../images/dashboard/import-mysql-file.png)
+      ![Import MySQL database from file](../../../images/dashboard/new-dashboard/2024/import-mysql-file.png)
 
   **Note:** If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
 
@@ -68,7 +69,33 @@ reviewed: ""
 
   <Download file="manual-rsync-script.sh" />
 
-  GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/manual-rsync-script.sh.txt bash GITHUB-EMBED
+  ```bash
+  #!/bin/bash
+
+  # manual-rsync-script.sh
+  # runs Rsync and waits two minutes if it doesn't work
+
+  ENV='dev'
+  SITE='SITEID'
+
+  read -sp "Your Pantheon Password: " PASSWORD
+  if [[ -z "$PASSWORD" ]]; then
+  echo "Whoops, need password"
+  exit
+  fi
+
+  while [ 1 ]
+  do
+      sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV$SITE@appserver.$ENV.$SITE.drush.in:files/
+  if [ "$?" = "0" ] ; then
+      echo "rsync completed normally"
+  exit
+  else
+      echo "Rsync failure. Backing off and retrying..."
+      sleep 180
+  fi
+  done
+  ```
 
   </Tab>
 

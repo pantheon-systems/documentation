@@ -1,5 +1,5 @@
 ---
-title: Log Files on Pantheon
+title: Environment Log Files on Pantheon
 subtitle: Frequently Asked Questions
 description: Get answers to your log questions.
 contenttype: [guide]
@@ -67,13 +67,13 @@ Drupal logs events with the Database Logging module (dblog) by default. PHP fata
 - Use [Terminus](/terminus):
 
  ```bash{promptUser: user}
- terminus drush <site>.<env> -- watchdog-show
+ terminus drush <site>.<env> -- watchdog:show
  ```
 
 - Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until interrupted (Control+C).
 
  ```bash{promptUser: user}
- terminus drush <site>.<env> -- watchdog-show --tail
+ terminus drush <site>.<env> -- watchdog:show --tail
  ```
 
 ### My Drupal database logs are huge. Should I disable dblog?

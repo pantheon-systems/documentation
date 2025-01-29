@@ -1,5 +1,5 @@
 ---
-title: Log Files on Pantheon
+title: Environment Log Files on Pantheon
 subtitle: Introduction
 description: Use logs on Pantheon to help find, debug, and isolate potential problems.
 contenttype: [guide]
@@ -14,7 +14,11 @@ contributors: [whitneymeredith]
 permalink: docs/guides/logs-pantheon
 ---
 
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has individual log files, which can be obtained via SFTP. Application-level logs can be accessed directly through Drupal. You can use [New Relic&reg; Performance Monitoring](/guides/new-relic) in conjunction with logs to help diagnose and fix errors and performance bottlenecks.
+Log files track and record your the activity within one environment to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has individual log files, which can be obtained via SFTP.
+
+These logs are separate from:
+  * application-level logs that can be accessed directly through WordPress and Drupal. You can use [New Relic&reg; Performance Monitoring](/guides/new-relic) in conjunction with logs to help diagnose and fix errors and performance bottlenecks.
+ * the [workflow logs](/workflow-logs), which are available in the site dashboard, and record details around events like code deployments and the creation of Multidev environments.
 
 The server timezone and log timestamps are in UTC (Coordinated Universal Time).
 

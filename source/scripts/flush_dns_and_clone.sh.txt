@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Function to flush DNS cache based on the operating system
+function flush_dns_cache() {
+    case "$(uname -s)" in
+        Darwin)
+            # macOS
+            echo "Flushing DNS cache on macOS..."
+            sudo dscacheutil -flushcache
+            sudo killall -HUP mDNSResponder
+            ;;
+        Linux)
+            # Linux
+            echo "Flushing DNS cache on Linux..."
+            sudo systemd-resolve --flush-caches
+            ;;
+        CYGWIN*|MINGW32*|MSYS*|MINGW*)
+            # Windows
+            echo "Flushing DNS cache on Windows..."
+            ipconfig /flushdns
+            ;;
+        *)
+            echo "Unsupported OS. DNS cache flush not performed."
+            ;;
+    esac
+}
+
+# Flush the DNS cache
+flush_dns_cache
+
+# Standard Pantheon git commands, eg
+git clone ssh://codeserver.dev.[id]@codeserver.dev.[id].drush.in:2222/~/repository.git -b master mysite

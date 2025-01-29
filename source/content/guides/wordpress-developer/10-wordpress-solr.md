@@ -10,17 +10,17 @@ audience: [development]
 product: [search]
 integration: [plugins]
 tags: [solr, plugins]
-contributors: [cityofoaksdesign]
+contributors: [cityofoaksdesign, ccharlton]
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-solr
-reviewed: "2022-12-13"
+reviewed: "2024-09-09"
 ---
 
 This section provides information on how to use Apache Solr with your WordPress Pantheon site.
 
 [Apache Solr](/solr) is a system for indexing and searching site content. All plans except for Basic can use Pantheon Solr.
 
-<Partial file="solr-version.md" />
+Currently, Pantheon provides Apache Solr v3.6 for WordPress search for all plans except the Basic plan.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -36,7 +36,7 @@ You must add the Index Server to your site before you can use Solr on WordPress:
 
 1. Select **Add Ons**, and then click the **Add** button under **Apache Solr Index Server**.
 
-![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
+![Enable Solr from The Site Dashboard](../../../images/dashboard/new-dashboard/2024/settings-addons-solr.png)
 
 This provisions Apache Solr containers for every environment of your site. You are now ready to integrate with WordPress.
 

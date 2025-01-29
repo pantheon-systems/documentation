@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/overages
 editpath: docs/guides/account-mgmt/traffic/03-overages.md
-reviewed: "2024-03-28"
+reviewed: "2024-08-15"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -16,6 +16,13 @@ audience: [sysadmin]
 product: [--]
 integration: [--]
 ---
+
+
+<Alert title="Overage charges temporarily waived" type="danger" >
+
+In response to your feedback, Pantheon has temporarily paused the automated overage program. See [related release note](/release-notes/2024/08/overage-charges-updates).
+
+</Alert>
 
 ## Traffic Limits
 Pantheon optimizes the resources and performance of your site based on your choice of [pricing plan](https://pantheon.io/plans/pricing?docs). Your pricing plan determines the [backend resources](/guides/account-mgmt/plans/faq#plan-resources) Pantheon deploys to support site performance and to serve the corresponding traffic levels for each plan.
@@ -48,6 +55,13 @@ To access nonprofit preferred pricing, the organization will either need to 1) p
 All new Pantheon sites with a Performance or Elite annual plan will have a three-month grace period starting with your service start date (the day a site is first  moved from a Sandbox to a commercial plan) where no overages will be incurred.  New sites include any website that has not had a Pantheon subscription during the past 12 months. This allows you the time to get calibrated on the platform and focus on what is most important: the successful launch of your web site(s) on Pantheon!
 
 ### Overage Processing
+
+<Alert title="Overage charges temporarily waived" type="danger" >
+
+In response to your feedback, Pantheon has temporarily paused the automated overage program. See [related release note](/release-notes/2024/08/overage-charges-updates).
+
+</Alert>
+
 Overages will be processed on a monthly basis.  All customers subject to overages will be notified immediately. For customers paying monthly by credit card- you can expect to receive an invoice for any site in overage right away.  For customers on an annual contract, overages will be invoiced quarterly (processing in March, June, September and December).  
 
 This is intended to ease the administrative burden that comes with the potential for monthly invoices.  For those contract customers on quarterly invoicing- you will still receive monthly notifications on any overages found for the month so as to keep you informed ahead of final processing and invoicing avoiding any surprises.

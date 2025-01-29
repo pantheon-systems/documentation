@@ -2,7 +2,7 @@
 title: Pantheon Community Code of Conduct
 description: Pantheon is dedicated to a positive and harassment-free community experience for everyone.
 contributors: [joshkoenig, rachelwhitton]
-reviewed: "2016-09-27"
+reviewed: "2024-08-22"
 tags: [collaborate]
 contenttype: [doc]
 innav: [true]
@@ -50,7 +50,7 @@ You may contact any of our community Administrators to report a Code of Conduct 
 |------|-------|
 | McKenna Regets (She/Her) | <mckenna.regets@pantheon.io> |
 | Steve Persch (He/Him) | <steve.persch@pantheon.io> |
-| Steve Bresnick (He/Him) | <steve.bresnick@pantheon.io> |
+| Chris Reynolds (He/Him) | <chris.reynolds@pantheon.io> |
 | Rachel Whitton (She/Her) | <rachel.whitton@pantheon.io> |
 
 ## Scope

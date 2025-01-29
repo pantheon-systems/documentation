@@ -2,7 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish, miriamgoldman]
 contenttype: [doc]
 showtoc: true
 innav: [true]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2024-07-12"
+reviewed: "2025-01-27"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -550,6 +550,15 @@ via: 1.1 varnish
 
 ___
 
+## Gravity Forms
+
+<ReviewDate date="2024-10-18" />
+
+**Issue:** Emails from Gravity Forms submissions have content truncated when using the default PHP mailer and PHP versions 8.0 or 8.1.
+
+**Solution:** This issue stems from a change in how line endings are handled by PHP's mail() function. To resolve, upgrade to PHP 8.2+.
+___
+
 ## H5P
 
 <Partial file="h5p-known-issues.md" />
@@ -616,6 +625,31 @@ ___
 **Issue 2:** Solid Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
+
+**Issue 3:** Unable to reset WordPress password or register new WordPress users when "Hide Backend" feature is enabled due to `itsec-hb-token` parameter being stripped from URL redirections.
+
+**Solution:** Two adjustments are needed to fully resolve this issue. First, dynamically append the `itsec-hb-token` parameter to redirection URLs when the parameter present in the original request. Edit the `functions.php` file of your WordPress theme. If you're using a child theme, make the changes there to avoid overwriting during theme updates.
+
+```php:title=functions.php
+add_filter('wp_redirect', 'retain_itsec_hb_token', 10, 2);
+
+function retain_itsec_hb_token($location, $status) {
+    if (strpos($location, 'wp-login.php?checkemail=confirm') !== false && !empty($_GET['itsec-hb-token'])) {
+        $location = add_query_arg('itsec-hb-token', $_GET['itsec-hb-token'], $location);
+    }
+    return $location;
+}
+```
+
+Second, ensure the `itsec-hb-token` parameter is retained when during login redirection to the `wp-login.php?checkemail=confirm` page. Locate the `wp-config.php` file in the root directory of your WordPress installation. Add the following code snippet at the top of the file, replacing "LOGIN_LOCATION" with your defined login slug (such as `log-me`):
+
+```php:title=wp-config.php
+if (($_SERVER['REQUEST_URI'] == '/wp-login.php?checkemail=confirm') && (php_sapi_name() != "cli")) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://' . $_SERVER['HTTP_HOST'] . '/wp-login.php?checkemail=confirm&itsec-hb-token=LOGIN_LOCATION');
+    exit();
+}
+```
 
 ___
 
@@ -783,6 +817,16 @@ ___
 **Issue:** The [Object Sync for Salesforce](https://wordpress.org/plugins/object-sync-for-salesforce/) plugin adds dependencies using Composer, and one of these dependencies provides a .gitignore file which prevents files from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution:** Remove the `.gitignore` file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
+
+___
+
+## PhastPress
+
+<ReviewDate date="2024-08-13" />
+
+**Issue:** [PhastPress](https://wordpress.org/plugins/phastpress/) is a site optimization plugin that creates an SQLite database on Pantheon's filesystem. This is problematic as it can vastly increase the amount of filesystem storage your site consumes and run up against resource limits. This plugin is not recommended on Pantheon.
+
+**Solution**: Consider other optimization plugins, such as [Autoptimize](https://wordpress.org/plugins/autoptimize/) and [Flying Scripts](https://wordpress.org/plugins/flying-scripts/).
 
 ___
 
@@ -1319,6 +1363,30 @@ You will need to make this change every time the plugin is updated.
 
 ___
 
+## WP Cerber Security, Antispam & Malware Scan
+
+<ReviewDate date="2024-09-06" />
+
+WP Cerber is a premium security plugin (with a free version available) that is only available through the [WP Cerber website](https://wpcerber.com/). Previously, it was available on the WordPress plugin repository, but it was [removed](https://wordpress.org/plugins/wp-cerber/) due to a violation of the repository's guidelines.
+
+**Issue:** The WP Cerber Anti-Spam Engine makes pages uncacheable on the Pantheon Global CDN. WP Cerber creates a unique, cache-busting cookie for each visitor, which prevents users from seeing cached pages.
+
+**Solution:** Disable the Anti-Spam Engine features in the WP Cerber plugin settings.
+
+1. Navigate to the **WP Cerber** menu in the WordPress dashboard and select **Anti-Spam**.
+
+1. Disable the following options:
+   - **Protect registration form**
+   - **Protect comment form**
+   - **Protect other forms**
+
+  ![WP Cerber Anti-Spam Engine settings](../images/plugins-known-issues/wp-cerber-anti-spam-settings.png)      
+
+1. In your Pantheon dashboard, clear the cache for the environment.
+
+Your pages should now be cacheable on the Pantheon Global CDN.
+___
+
 ## WP Reset
 
 <ReviewDate date="2021-11-04" />
@@ -1514,7 +1582,7 @@ ___
 
 ## WPML - The WordPress Multilingual Plugin
 
-<ReviewDate date="2023-07-28" />
+<ReviewDate date="2025-01-27" />
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
@@ -1549,23 +1617,23 @@ ___
 >For more details, see WPML's documentation on troubleshooting .mo files generation.
 
 
-**Solution 1:**
+**Solution:**
+
+1. Use SFTP to manually create the `/files/languages` folder on Pantheon. You can use your preferred SFTP client and [the connection details](/guides/sftp/sftp-connection-info#sftp-connection-info) from the site dashboard, or you can use Terminus and SFTP to create the directory from the commandline (replace `<site>` and `<env>`): 
+
+  ```bash
+  $ `terminus connection:info <site>.<env> --field sftp_command`
+  > mkdir files/languages
+  > exit
+  ```
 
 1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
-  if ( !defined('WP_LANG_DIR') ) {    
-  	define( 'WP_LANG_DIR','/files/languages/wpml' );
-  }
-  if ( !defined('WP_TEMP_DIR') ) {
-  	define('WP_TEMP_DIR', sys_get_temp_dir() );
-  }
+  define( 'WP_LANG_DIR','/files/languages' );
   ```
-1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
-1. Create the `languages/wpml` directory inside `/files` for each environment.
-
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+1. After testing on a Dev or Multidev environment, repeat step 1 above for all environments. Then deploy the code change to `wp-config.php` across Dev, Test, and Live. 
 
 ___
 

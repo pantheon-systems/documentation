@@ -13,6 +13,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 Pantheon is a WebOps platform for open-source Drupal and WordPress sites that makes it easy to design, build, test, and measure your sites. WebOps combines the lessons of Agile and DevOps communities to prioritize iterative work that is visible to all team members. You can quickly deploy different versions of the same site on your Test environment, Live environment, and backup servers.
@@ -27,7 +28,7 @@ This guide will show you how to create, configure, and launch your site on the P
 
 ## Essential Steps in This Guide
 
-- [Create the Live environment](/add-site-dashboard#create-the-live-environment)
+- [Create the Live environment](/guides/getstarted/addsite/#create-the-live-environment)
 
 - [Select Your Site Plan](/guides/launch/plans/)
 

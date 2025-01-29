@@ -1,5 +1,5 @@
 ---
-title: Crisis Response Upstream
+title: Crisis Response Upstream [Archived]
 description: About the Pantheon COVID-19 Response WordPress Upstream
 tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
@@ -12,6 +12,16 @@ audience: [development]
 product: [--]
 integration: [--]
 ---
+
+<Alert title="Warning" type="danger">
+
+This page has been archived. The content is no longer maintained and may be outdated.
+
+The [Pantheon Crisis Response WordPress Upstream](https://github.com/pantheon-upstreams/crisis-response-wp) is no longer maintained.
+
+While the upstream and code remains available, it is no longer actively developed or supported.
+
+</Alert>
 
 ## Overview
 
@@ -74,7 +84,7 @@ These plugins were selected to improve the content creation and moderation proce
 
   If not, use your email address for the username and click on **Forgot Password**. Be sure to set a strong password.
 
-1. After the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/add-site-dashboard#create-the-test-environment), copying your code and the initial database to each.
+1. After the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/guides/getstarted/addsite/#create-the-test-environment), copying your code and the initial database to each.
 
 1. If you update your site code or add a new plugin, you can use the [Pantheon WebOps workflow](/pantheon-workflow). On your site's Pantheon dashboard, once changes are [committed](/guides/sftp/sftp-development), the Deploys panel in the Test environment will prompt you to deploy the changes to the Test environment.
 

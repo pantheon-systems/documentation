@@ -12,6 +12,8 @@ cms: [wordpress, drupal]
 audience: [agency, business]
 product: [--]
 integration: [--]
+reviewed: "2024-08-07"
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
@@ -20,21 +22,24 @@ Contract customers must contact their account manager when they're ready to upgr
 
 ## Use Your Own Card
 
-Add your payment method to upgrade and pay for the site now:
+There are several places within the Pantheon Dashboard you can upgrade your site plan:
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), and click **Upgrade** next to the site's name.
+1.  [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), and click **Upgrade** next to the site's name.
+2.  Within your personal workspace, navigate to Settings>Subscriptions. Click the 'Actions' dropdown and choose, **Change Site Plan**
+3.  If you are in a workspace, you can navigate to Settings>Billing. Scroll to see **Supported Sites** table. Within that table, if you are the site owner, you'll be able to click the **Site Plan** column to upgrade or downgrade your site.
 
-1. Click the **Select** button under the [plan you choose](https://pantheon.io/plans/pricing/).
+From the site upgrade and downgrade page, complete the following steps:
 
-1. Continue to the **Choose Billing** step, and then select the billing frequency: [**Pay Annually**](/guides/account-mgmt/plans/pricing) or **Pay Monthly**.
-
-   - If you've chosen a **Performance Plan**, choose the size and click **Continue**.
+1. Click the **Select** button under the [plan you choose](https://pantheon.io/plans/pricing/). Select the billing frequency: [**Pay Annually**](/guides/account-mgmt/plans/pricing) or **Pay Monthly** at the top of the page.
+   - If you've chosen a **Performance Plan**, choose the size and click **Choose Performance**.
 
    - If you've chosen a **Basic Plan**, click **Continue**.
 
-1. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information.
+   - If you've chosen **Custom**, please fill out the contact field to be contacted by a customer support agent.
 
-1. Click **Continue** and review your information carefully, then click **Place Your Order** to confirm your purchase.
+2. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information. If you already have a card saved, it should be available in this section.
+
+3. Click **Continue** and review your information carefully, then click **Place Your Order** to confirm your purchase.
 
    - [Contact Support](/guides/support/contact-support) if you need any help.
 

@@ -13,6 +13,7 @@ product: [custom-upstreams]
 integration: [upstreams]
 ---
 
+
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
 
 The usual [Scope of Support](/guides/support/) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
@@ -21,7 +22,7 @@ This process assumes you already have a static site developed and that you have 
 
 ## What is an Empty Upstream?
 
-An empty Upstream is a [Custom Upstream](/guides/custom-upstream) repository (a [Start State](/start-state)) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
+An empty Upstream is an [Upstream](/guides/custom-upstream) repository (a [Start State](/start-state)) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
 
 Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-tools) setup. In this doc, we use it to host static HTML or PHP sites.
 
@@ -81,7 +82,7 @@ docroot/
 
 ### Are there platform features I can/cannot use with this?
 
-An empty Upstream, behind the scenes, is essentially an empty Drupal environment. All of the tools available to the Site Plan will be available. But, if you are only using static HTML, tools like Redis and New Relic are not utilized as no requests are being processed by PHP.
+An empty Upstream, behind the scenes, is essentially a Drupal environment with no Drupal code (it is entirely empty of code). All of the tools available to the Site Plan will be available. But, if you are only using static HTML, tools like Redis and New Relic are not utilized as no requests are being processed by PHP.
 
 ### Does traffic count the same way?
 
@@ -93,7 +94,7 @@ Yes, compiled static sites that don't require a Drupal or WordPress CMS backend 
 
 Some customers utilize a two-site approach on Pantheon where one site is the CMS backend (headless WordPress or Drupal), and the other site is the decoupled frontend (Frontity, Gatsby, [etc.](https://jamstack.org/generators/)). Of course, you will likely have different deployment workflows for updating each site, and you would need to determine the best workflow for you and your team.
 
-For other Decoupled configurations, please refer to our [Decoupled Sites](/guides/decoupled/overview) documentation.
+For other Decoupled configurations, please refer to our [Front-End Sites](/guides/decoupled/overview) documentation.
 
 ## More on How Pantheon Uses Upstreams
 

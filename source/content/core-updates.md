@@ -47,7 +47,7 @@ You can apply one-click updates to individual site repositories through:
 
 1. Navigate to the **Code** tab in the Site Dashboard on the Dev environment, then click **Apply Updates**.
 
-  ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
+  ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/new-dashboard/2024/_updatesavailable.png)
 
 1. Commit and deploy any SFTP changes, then set the site's **Connection Mode** to **Git**.
 
@@ -55,7 +55,7 @@ You can apply one-click updates to individual site repositories through:
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
-    ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
+    ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/new-dashboard/2024/_updateoptions.png)
 
   <Alert title="Note"  type="info" >
 
@@ -368,7 +368,7 @@ After you have communicated the issue, you can [manually apply updates from the 
 
 If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click **Check now**:
 
-![Check Now](../images/dashboard/check-for-updates.png)
+![Check Now](../images/dashboard/new-dashboard/2024/_check-for-updates.png)
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 
@@ -391,34 +391,9 @@ This issue happens when you attempt to update very outdated core files from the 
 1. Set the Site Connection Mode to SFTP
 
 1. Reupload the `pantheon.upstream.yml` file if missing:
-
- <TabList>
-
- <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge" active={true}>
-
-  GITHUB-EMBED https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
-
- [View on GitHub](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml)
-
- </Tab>
-
- <Tab title="Drupal 7" id="d7-2conflict-merge">
-
- GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
-
-  [View on GitHub](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
-
- </Tab>
-
- <Tab title="WordPress" id="wp-2conflict-merge">
-
- GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
-
-  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
-
- </Tab>
-
- </TabList>
+   * [Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml)
+   * [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+   * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
 

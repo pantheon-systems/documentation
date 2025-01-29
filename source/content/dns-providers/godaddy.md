@@ -30,6 +30,20 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 
 ## Configure DNS Records on GoDaddy
 
+### TXT Record
+Before you launch a domain on Pantheon, you must verify ownership of the domain first by configuring a TXT record with the provided value from your site dashboard.
+
+1. Click your GoDaddy profile in the top right menu bar and select **Manage My Domains**.
+2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Manage DNS**.
+3. Click the **Add** button and select **TXT** from the type dropdown menu.
+4. Enter the **Name / Host** value provided by Pantheon in the **Name** field.
+5. Enter the **Value** provided by Pantheon in the **Value** field.
+6. Select desired Time to Live (TTL) and click **Save**.
+7. Return to the Pantheon site dashboard and click **Verify Ownership**.
+
+![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
+
+
 ### A Record
 
 ![Example A record](../../images/godaddy-dns-a-record.png)

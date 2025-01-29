@@ -28,13 +28,13 @@
   z-index: 100;
 }
 
-.rn-popover-tigger-and-tags{
+.rn-popover-trigger-and-tags{
   align-items: center;
   justify-content: flex-start;
 }
 
 @media(max-width: 640px){
-  .rn-popover-tigger-and-tags{
+  .rn-popover-trigger-and-tags{
     align-items: flex-start;
   }
 }

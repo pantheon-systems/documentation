@@ -150,27 +150,11 @@ ___
 
 ___
 
-___
-
 ## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference/issues/2930423)
 
 <ReviewDate date="2023-06-09" />
 
 **Issue:** Dynamic Entity Reference isn't supported on Pantheon because MySQL triggers are not supported. Stored procedures and events are also not supported. Refer to [Database Stored Procedures](/guides/platform-considerations/platform-site-info#database-stored-procedures) in the [Platform Considerations](/guides/platform-considerations) guide for more information.
-
-___
-
-## [Feeds](https://www.drupal.org/project/feeds)
-
-<ReviewDate date="2022-01-25" />
-
-**Issue:** When attempting to manually import using the Feeds plugin in cron, the following error message is displayed:
-
-`RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
-
-**Solution:** The [Persistent Temporary Path Workaround](/guides/filesystem/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
-
-We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130) and requesting that the module maintainer fix the module.
 
 ___
 
@@ -414,10 +398,14 @@ ___
 ___
 
 ## [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
+<ReviewDate date="2024-06-12" />
 
-**Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
+**Issue**: This module requires a very specific set of permissions for the folder and the keys to be uploaded.
 
-**Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
+**Solution**: Apply the following patches (which have been tested and validated by Pantheon), based on your site's PHP version, to solve for this issue:
+* [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 8.0+)](https://patch-diff.githubusercontent.com/raw/pantheon-systems/oauth2-server/pull/1.patch)
+* [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 7.4)](https://patch-diff.githubusercontent.com/raw/pantheon-systems/oauth2-server/pull/2.patch)
+
 ___
 
 ## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 9 (core)

@@ -24,12 +24,6 @@ You can use a frontend starter kit to streamline the creation of your Front-End 
 - Next.js + WordPress
 - Gatsby + WordPress
 
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
-
 ## Why Use the Next.js WordPress Starter?
 
 The `next-wordpress-starter` is designed as a starting point for a Next.js site that consumes data from a WordPress backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.

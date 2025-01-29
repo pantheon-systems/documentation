@@ -12,6 +12,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to connect a bare domain and `www` domain to Pantheon's Live environment.
@@ -38,7 +39,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
    <Alert title="Note" type="info">
 
-   If you have a wildcard domain pointed at Pantheon and you have a valid use case to skip this verification for your sub-domains (although it is recommended to prevent domain takeovers), you may request an exemption to skip the verification by contacting Pantheon Support via chat or [ticket](/guides/support/support-ticket/).
+   Sites associated with Diamond or Platinum workspaces have the option to skip this step. For details, [see this related FAQ](/guides/domains/custom-domains#can-i-opt-out-of-domain-verification).
 
   </Alert>
 
