@@ -14,6 +14,7 @@ type: guide
 permalink: docs/guides/wordpress-git/next-steps/
 editpath: wordpress-git/06-next-steps.md
 reviewed: "2020-02-26"
+image: git-sftp-wp-docs-guide.png
 ---
 
 ## Deploy Code from Dev

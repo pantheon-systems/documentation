@@ -14,6 +14,7 @@ type: guide
 permalink: docs/guides/wordpress-git/media/
 editpath: wordpress-git/04-media.md
 reviewed: "2020-02-26"
+image: git-sftp-wp-docs-guide.png
 ---
 
 In this lesson, we'll demonstrate how media files are handled on Pantheon. Media refers to anything in the `wp-content/uploads/` directory, which is intentionally excluded from version control. Git isn't needed to manage content like this, so we won't use version control in this lesson.

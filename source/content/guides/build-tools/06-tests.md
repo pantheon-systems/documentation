@@ -14,6 +14,7 @@ audience: [development]
 product: [--]
 integration: [--]
 reviewed: "2022-12-13"
+image: buildToolsGuide-thumb.png
 ---
 
 The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal uses [Behat](http://behat.org/en/latest/) and the WordPress example uses [WordHat](https://github.com/paulgibbs/behat-wordpress-extension).

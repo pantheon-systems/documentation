@@ -13,6 +13,7 @@ audience: [agency, business]
 product: [--]
 integration: [--]
 reviewed: "2024-08-07"
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.

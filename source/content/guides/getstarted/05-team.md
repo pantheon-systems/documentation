@@ -15,6 +15,7 @@ reviewed: "2023-03-21"
 showtoc: false
 permalink: docs/guides/getstarted/team
 editpath: getstarted/05-team.md
+image: getting-started-Largethumb.png
 ---
 
 <Wistia src="jdhn2naeu2" />

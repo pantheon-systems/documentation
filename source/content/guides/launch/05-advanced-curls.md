@@ -13,6 +13,7 @@ cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to use cURL commands during the migration process, as well as commands to compare your old site to your newly migrated site on Pantheon. 

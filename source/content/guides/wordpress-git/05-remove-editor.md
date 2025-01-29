@@ -14,6 +14,7 @@ type: guide
 permalink: docs/guides/wordpress-git/remove-editor/
 editpath: wordpress-git/05-remove-editor.md
 reviewed: "2020-02-26"
+image: git-sftp-wp-docs-guide.png
 ---
 
 ## Remove Default WordPress Editor
