@@ -39,12 +39,8 @@ const containerWidth = "standard"
 class ContributorTemplate extends React.Component {
   render() {
     const contributor = this.props.data.contributorYaml
-    const docs =
-      this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
-    let printedGuides = []
-    let printedOverview = []
 
-    console.log(contributor)
+    // console.log(contributor)
 
     return (
       <Layout containerWidth={containerWidth} footerBorder>
@@ -84,26 +80,15 @@ class ContributorTemplate extends React.Component {
                   slot="second-item"
                   className="docs-contributor__contributions"
                 >
-                  <h2>Contributions</h2>
-                  <ul className="docs-contributor__list">
-                    {docs.map(({ node }) => {
 
-                      var linkPath = '';
-                      if (node.frontmatter.permalink) {
-                        linkPath = "/" + node.frontmatter.permalink;
-                      }else {
-                        linkPath = "/" + node.id;
-                      }
 
-                      return (
-                        <li key={node.id}>
-                          <Link to={linkPath}>
-                            {node.frontmatter.title}
-                          </Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
+
+                  <h2>
+                    <a href={`https://github.com/pantheon-systems/documentation/commits?author=${contributor.yamlId}`}>
+                      See contributions on GitHub
+                    </a>
+                  </h2>
+
                 </div>
               </TwoItemLayout>
             </div>
