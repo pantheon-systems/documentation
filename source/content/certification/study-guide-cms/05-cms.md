@@ -1,7 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 5: CMS Infrastructure"
-description: Understand the ways containerized technology benefits WebOps.
+description: Pantheon's containerized infrastructure makes CMS applications faster, more scalable, and more secure.
 certificationpage: true
 type: certificationpage
 layout: certificationpage
