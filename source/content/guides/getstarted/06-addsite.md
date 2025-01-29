@@ -15,6 +15,7 @@ reviewed: "2024-12-02"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
+image: getting-started-Largethumb.png
 ---
 
 There are dozens of ways to add a site on Pantheon. This section covers the most common scenarios for new users: creating a new CMS site (a site running WordPress or Drupal), or migrating an existing WordPress or Drupal site.  For additional scenarios, see the [Adding a Site to Pantheon](/guides/getstarted/addsite/) section at the end of this document.

@@ -30,7 +30,7 @@ class VideoTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={'/images/assets/default-thumb-doc.png'}
+          image={'/images/default-thumb-video.png'}
           type={node.frontmatter.type}
         />
         <OmniSidebarNav slot="guide-menu" activePage={node.fields.slug} />

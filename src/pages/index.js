@@ -1,30 +1,30 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Helmet from "react-helmet"
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
-import HeroCTA from "../components/HeroCTA"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
+import HeroCTA from '../components/HeroCTA';
 
-import ChangelogList from "../pds-middleware/ChangelogList"
-import LinksList from "../pds-middleware/LinksList"
-import TopicsGrid from "../pds-middleware/TopicsGrid"
+import ChangelogList from '../pds-middleware/ChangelogList';
+import LinksList from '../pds-middleware/LinksList';
+import TopicsGrid from '../pds-middleware/TopicsGrid';
 
-import { Container, TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
+import { Container, TwoItemLayout } from '@pantheon-systems/pds-toolkit-react';
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = 'standard';
 
 class Index extends React.Component {
   render() {
     const {
       data: { homeYaml, allMdx },
-    } = this.props
+    } = this.props;
     return (
       <Layout containerWidth={containerWidth} hasCta={true}>
         <SEO
           title="Pantheon Docs"
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
-          image={"/images/assets/default-thumb-doc.png"}
+          image={'/images/default-thumb-doc.png'}
         />
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
@@ -71,11 +71,11 @@ class Index extends React.Component {
           </Container>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default Index
+export default Index;
 
 export const pageQuery = graphql`
   {
@@ -134,4 +134,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

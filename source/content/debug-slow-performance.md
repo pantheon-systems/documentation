@@ -13,6 +13,7 @@ integration: [--]
 reviewed: "2024-06-12"
 showtoc: true
 contributors: [jms-pantheon]
+image: CDN-speedTest-docs-guide.png
 ---
 
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.

@@ -12,6 +12,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to configure DNS and provision [free, automated HTTPS](/guides/global-cdn/https) on Pantheon.

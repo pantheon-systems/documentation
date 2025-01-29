@@ -25,6 +25,10 @@ class DocTemplate extends React.Component {
       <div className="content-wrapper">{children}</div>
     );
     const ContentLayoutType = ContainerDiv;
+    let image = '/images/' + node.frontmatter.image;
+    if (image === '/images/null') {
+      image = '/images/default-thumb-doc.png';
+    }
 
     return (
       <GuideLayout footerBorder>
@@ -33,7 +37,7 @@ class DocTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={'/images/assets/default-thumb-doc.png'}
+          image={image}
           categories={node.frontmatter.categories}
           keywords={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
@@ -100,6 +104,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        image
         description
         categories
         cms

@@ -12,6 +12,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [newrelic]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 Congratulations on launching a site on Pantheon. Review next steps below for information on WordPress and Drupal launch checks, content staging, New Relic performance monitoring, load and performance testing, and secure development on the Pantheon platform.

@@ -31,7 +31,7 @@ class ReleaseNoteTemplate extends React.Component {
           title={node.frontmatter.title}
           description="A summary of changes to the Pantheon Platform"
           authors={node.frontmatter.contributors}
-          image={'/images/assets/default-thumb-doc.png'}
+          image={'/images/default-thumb-changelog.png'}
         />
         <main id="docs-main" tabIndex="-1">
           <Container

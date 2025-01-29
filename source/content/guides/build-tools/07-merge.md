@@ -13,6 +13,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+image: buildToolsGuide-thumb.png
 ---
 This lesson demonstrates the final process of the Pull Request workflow, merging. After completing an internal peer review process for a given Pull Request, work is considered ready for production and accepted into the master branch.
 

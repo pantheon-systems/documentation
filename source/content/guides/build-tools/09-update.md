@@ -12,6 +12,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+image: buildToolsGuide-thumb.png
 ---
 
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.

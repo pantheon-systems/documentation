@@ -12,6 +12,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to enable backups, test your email plugin or module, review status reports, and test your cache.

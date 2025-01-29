@@ -15,6 +15,7 @@ reviewed: "2023-03-21"
 showtoc: false
 permalink: docs/guides/getstarted
 editpath: getstarted/01-introduction.md
+image: getting-started-Largethumb.png
 ---
 
 Welcome to Pantheon! This guide will walk you through the steps required to get your business and site(s) up and running on Pantheon.

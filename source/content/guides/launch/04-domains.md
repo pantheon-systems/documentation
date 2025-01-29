@@ -12,6 +12,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to connect a bare domain and `www` domain to Pantheon's Live environment.
