@@ -1,7 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 6: The Deployment Pipeline"
-description: Learn about the deployment pipeline for CMS Sites on Pantheon as it relates to Code, Files, and Databases.
+description: Learn about the deployment pipeline for CMS Sites on Pantheon as it relates to code, files, and databases.
 certificationpage: true
 type: certificationpage
 layout: certificationpage
