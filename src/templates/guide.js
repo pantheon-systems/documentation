@@ -30,7 +30,7 @@ class GuideTemplate extends React.Component {
     const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv;
     let image = '/images/' + node.frontmatter.image;
     if (image === '/images/null') {
-      image = '/images/default-thumb-guide.png';
+      image = '/images/default-thumb-guides.png';
     }
 
     return (
