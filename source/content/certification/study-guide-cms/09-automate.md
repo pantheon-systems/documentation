@@ -1,7 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 9: Additional Automation"
-description: "Learn how to leverage build steps on Pantheon to run Integrated Composer workflows."
+description: "Learn how to leverage Integrated Composer and Autopilot"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
