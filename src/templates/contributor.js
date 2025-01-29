@@ -1,50 +1,50 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
-import ContributorLink from "../components/ContributorLink"
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
+import ContributorLink from '../components/ContributorLink';
 
-import { Container, TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
+import { Container, TwoItemLayout } from '@pantheon-systems/pds-toolkit-react';
 
 const links = [
   {
-    property: "url",
-    icon: "user",
+    property: 'url',
+    icon: 'user',
   },
   {
-    property: "github",
-    icon: "github",
+    property: 'github',
+    icon: 'github',
   },
   {
-    property: "drupal",
-    icon: "drupal",
+    property: 'drupal',
+    icon: 'drupal',
   },
   {
-    property: "wordpress",
-    icon: "wordpress",
+    property: 'wordpress',
+    icon: 'wordpress',
   },
   {
-    property: "twitter",
-    icon: "twitter",
+    property: 'twitter',
+    icon: 'twitter',
   },
   {
-    property: "linkedin",
-    icon: "linkedin",
+    property: 'linkedin',
+    icon: 'linkedin',
   },
-]
+];
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = 'standard';
 
 class ContributorTemplate extends React.Component {
   render() {
-    const contributor = this.props.data.contributorYaml
+    const contributor = this.props.data.contributorYaml;
     const docs =
-      this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
-    let printedGuides = []
-    let printedOverview = []
+      this.props.data.allDocs != null ? this.props.data.allDocs.edges : [];
+    let printedGuides = [];
+    let printedOverview = [];
 
-    console.log(contributor)
+    console.log(contributor);
 
     return (
       <Layout containerWidth={containerWidth} footerBorder>
@@ -70,11 +70,11 @@ class ContributorTemplate extends React.Component {
                     {links.map((link, i) => {
                       const url = contributor.hasOwnProperty(link.property)
                         ? contributor[link.property]
-                        : null
+                        : null;
                       if (url !== null) {
                         return (
                           <ContributorLink key={i} url={url} icon={link.icon} />
-                        )
+                        );
                       }
                     })}
                   </div>
@@ -87,21 +87,18 @@ class ContributorTemplate extends React.Component {
                   <h2>Contributions</h2>
                   <ul className="docs-contributor__list">
                     {docs.map(({ node }) => {
-
                       var linkPath = '';
                       if (node.frontmatter.permalink) {
-                        linkPath = "/" + node.frontmatter.permalink;
-                      }else {
-                        linkPath = "/" + node.id;
+                        linkPath = '/' + node.frontmatter.permalink;
+                      } else {
+                        linkPath = '/' + node.id;
                       }
 
                       return (
                         <li key={node.id}>
-                          <Link to={linkPath}>
-                            {node.frontmatter.title}
-                          </Link>
+                          <Link to={linkPath}>{node.frontmatter.title}</Link>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
                 </div>
@@ -110,11 +107,11 @@ class ContributorTemplate extends React.Component {
           </Container>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default ContributorTemplate
+export default ContributorTemplate;
 
 export const pageQuery = graphql`
   query ContributorById($id: String!) {
@@ -160,4 +157,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
