@@ -38,7 +38,7 @@ const containerWidth = 'standard';
 
 class ContributorTemplate extends React.Component {
   render() {
-    const contributor = this.props.data.contributorYaml
+    const contributor = this.props.data.contributorYaml;
 
     // console.log(contributor)
 
@@ -80,13 +80,13 @@ class ContributorTemplate extends React.Component {
                   slot="second-item"
                   className="docs-contributor__contributions"
                 >
-
                   <h2>
-                    <a href={`https://github.com/pantheon-systems/documentation/commits?author=${contributor.yamlId}`}>
+                    <a
+                      href={`https://github.com/pantheon-systems/documentation/commits?author=${contributor.yamlId}`}
+                    >
                       See contributions on GitHub
                     </a>
                   </h2>
-
                 </div>
               </TwoItemLayout>
             </div>
