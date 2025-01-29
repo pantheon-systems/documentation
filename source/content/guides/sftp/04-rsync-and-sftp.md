@@ -156,7 +156,7 @@ If you need to upload the file directory from a local installation called *Foo* 
 
 <Alert title="Warning" type="danger">
 
-Always use the `temp-dir flag` when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.
+Always use the `temp-dir` flag when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.
 
 </Alert>
 
