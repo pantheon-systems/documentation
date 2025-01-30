@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 import GuideLayout from '../layout/GuideLayout';
 import CallToAction from '../layout/call-to-action';
 import SearchBar from '../layout/SearchBar';
-import Layout from '../layout/layout';
 import SubTopicGroup from '../layout/subtopic-group';
 import Youtube from '../components/youtube';
 import GuideItem from '../layout/guide-item';
