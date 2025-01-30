@@ -42,7 +42,7 @@ Run the command below to install Terminus:
 brew install pantheon-systems/external/terminus
 ```
 
-### Direct Installation of Standalone Terminus PHAR (Recommended for Ubuntu and WSL Users)
+### Direct Installation of Standalone PHAR (Recommended for Ubuntu and WSL Users)
 
 Installing Terminus with a PHAR (a stand-alone executable PHP archive) is recommended for Ubuntu and Windows Subsystem for Linux (WSL) users.
 This technique is also viable for MacOS users who prefer not to use Homebrew.
