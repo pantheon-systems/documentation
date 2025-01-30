@@ -16,7 +16,7 @@ product: [terminus]
 integration: [--]
 ---
 
-This section provides information on how to install, authenticate, and update Terminus.
+This page provides information on how to install, authenticate, and update Terminus.
 
 ## Installing Terminus
 
