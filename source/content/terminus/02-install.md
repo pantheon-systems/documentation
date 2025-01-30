@@ -20,7 +20,7 @@ This page provides information on how to install, authenticate, and update Termi
 
 ## Installing Terminus
 
-Terminus is available for MacOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), and then install Terminus in the Linux shell.
+Terminus is available for MacOS and Linux. Windows 10+ users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), and then install Terminus in the Linux shell.
 
 Some Terminus commands use SSH authentication. You may want to [generate and add SSH keys](/ssh-keys/) to your account before you continue.
 
