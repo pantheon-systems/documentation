@@ -1,6 +1,5 @@
 import React from "react"
 import "./style.css"
-import { is } from "date-fns/locale"
 /*
 This component creates embedded Wistia videos.
 
