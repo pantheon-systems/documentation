@@ -274,6 +274,16 @@ ___
 
 ___
 
+## [Menu Item Extras](https://www.drupal.org/project/menu_item_extras)
+<ReviewDate date="2025-01-30" />
+
+**Issue**: In extremely large menus with over 200 links, the module takes a very long time to run through all links, and causes timeouts on uncached visits.
+
+**Solution**: [Apply a patch to the module](https://git.drupalcode.org/project/menu_item_extras/-/merge_requests/37.patch) (which have been tested and validated by Pantheon), to eliminate timeouts.
+
+
+___
+
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 
 **Issue**:  This module requires the use of the `tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
