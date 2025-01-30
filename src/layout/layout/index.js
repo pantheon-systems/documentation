@@ -1,20 +1,20 @@
-import React  from "react"
-import "./style.css"
-import Header from "../header"
-import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
-import Footer from "../footer"
-import SearchBar from "../SearchBar"
+import React from 'react';
+import './style.css';
+import Header from '../header';
+import { Container, CTASlice } from '@pantheon-systems/pds-toolkit-react';
+import Footer from '../footer';
+import SearchBar from '../SearchBar';
 
 // Content for CTA
 const primaryCTA = {
-  text: "Learn Pantheon",
-  url: "https://pantheon.io/learn-pantheon?docs",
-}
+  text: 'Learn Pantheon',
+  url: 'https://pantheon.io/learn-pantheon?docs',
+};
 
 const secondaryCTA = {
-  text: "Office Hours",
-  url: "https://pantheon.io/developers/office-hours?docs",
-}
+  text: 'Office Hours',
+  url: 'https://pantheon.io/developers/office-hours?docs',
+};
 
 const Layout = ({
   children,
@@ -22,7 +22,7 @@ const Layout = ({
   excludeSearch,
   hasCta,
   footerBorder,
-  pageType = "default",
+  pageType = 'default',
 }) => {
   return (
     <div className="pantheon-docs">
@@ -42,9 +42,9 @@ const Layout = ({
           className="pre-footer-slice"
         />
       )}
-      <Footer className={footerBorder ? "with-border" : null} />
+      <Footer className={footerBorder ? 'with-border' : null} />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

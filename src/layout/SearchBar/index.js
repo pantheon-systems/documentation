@@ -1,8 +1,8 @@
-import React from "react"
-import AddSearch from "../../components/addSearch"
-import { TextInput } from "@pantheon-systems/pds-toolkit-react"
+import React from 'react';
+import AddSearch from '../../components/addSearch';
+import { TextInput } from '@pantheon-systems/pds-toolkit-react';
 
-import "./style.css"
+import './style.css';
 
 const SearchBar = ({ page }) => (
   <form
@@ -22,8 +22,8 @@ const SearchBar = ({ page }) => (
       label="Search Pantheon Documentation"
       showLabel={false}
     />
-    {page == "default" ? <AddSearch /> : null}
+    {page == 'default' ? <AddSearch /> : null}
   </form>
-)
+);
 
-export default SearchBar
+export default SearchBar;

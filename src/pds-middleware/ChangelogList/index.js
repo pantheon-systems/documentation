@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import "./styles.css"
+import React from 'react';
+import { Link } from 'gatsby';
+import './styles.css';
 
 const ChangelogList = (props) => {
-  const { title, url, changelogs } = props
-  const current = changelogs[0]
+  const { title, url, changelogs } = props;
+  const current = changelogs[0];
   return (
     <div className="changelog-preview">
       <ul className="changelog-list">
@@ -20,9 +20,9 @@ const ChangelogList = (props) => {
         See all
       </Link>
     </div>
-  )
-}
+  );
+};
 
-ChangelogList.propTypes = {}
+ChangelogList.propTypes = {};
 
-export default ChangelogList
+export default ChangelogList;
