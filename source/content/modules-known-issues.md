@@ -277,10 +277,9 @@ ___
 ## [Menu Item Extras](https://www.drupal.org/project/menu_item_extras)
 <ReviewDate date="2025-01-30" />
 
-**Issue**: In extremely large menus with over 200 links, the module takes a very long time to run through all links, and causes timeouts on uncached visits.
+**Issue**: [Performance issues have been reported](https://www.drupal.org/project/menu_item_extras/issues/3370223) for sites with large menus, causing responses for uncached visits to [timeout](/guides/errors-and-server-responses/5xx-errors#pantheon-504-gateway-timeout). 
 
-**Solution**: [Apply a patch to the module](https://git.drupalcode.org/project/menu_item_extras/-/merge_requests/37.patch) (which have been tested and validated by Pantheon), to eliminate timeouts.
-
+**Solution**: [Apply this patch](https://git.drupalcode.org/project/menu_item_extras/-/merge_requests/37.patch) (which has been tested and validated by Pantheon), to improve performance and avoid related timeouts.
 
 ___
 
