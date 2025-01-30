@@ -15,6 +15,7 @@ reviewed: "2023-03-21"
 showtoc: true
 permalink: docs/guides/getstarted/launch
 editpath: getstarted/08-launch.md
+image: getting-started-Largethumb.png
 ---
 
 And now it's time to finally make your site available to the public! This section provides the minimum requirements to launch your site. Refer to our [Launch Guide](/guides/launch/) for more detailed information.

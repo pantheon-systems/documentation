@@ -12,11 +12,11 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1. Open your Personal or Professional Workspace dashboard and click the **Migrate Existing Site** button.
 
-   ![Migrate site button](../../../images/migrate-site-button.png)
+   ![Migrate site button](../../../images/dashboard/new-dashboard/2024/migrate-site-button.png)
 
-1. Enter your current website URL, select **Drupal 7** or **Drupal 8**, and click **Continue**.
+1. Enter your current website URL, select **Drupal 7** and click **Continue**.
 
-   ![Enter URL and select CMS](../../../images/migrate-site-cms-drupal.png)
+   ![Enter URL and select CMS](../../../images/dashboard/new-dashboard/2024/migrate-site-cms-drupal.png)
 
 1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**.
 

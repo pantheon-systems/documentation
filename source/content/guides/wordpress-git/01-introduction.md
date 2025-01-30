@@ -15,6 +15,7 @@ contributors: [scottmassey, rachelwhitton]
 permalink: docs/guides/wordpress-git/
 editpath: wordpress-Git/01-introduction.md
 reviewed: "2021-02-26"
+image: git-sftp-wp-docs-guide.png
 ---
 
 This guide demonstrates how SFTP users can build WordPress sites on Pantheon's Git-based platform. Don't use Git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.

@@ -15,6 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+image: CDN-speedTest-docs-guide.png
 ---
 
 This page provides information on optimizing queries, query caching (when you should, and shouldn't use it), and database optimization techniques.

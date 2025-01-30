@@ -108,7 +108,7 @@ class TerminusTemplate extends React.Component {
           title={node.frontmatter.subtitle + ' | ' + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={'/images/assets/terminus-thumbLarge.png'}
+          image={'/images/terminus-Largethumb.png'}
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />

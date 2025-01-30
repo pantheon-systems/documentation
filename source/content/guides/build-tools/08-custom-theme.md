@@ -13,6 +13,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+image: buildToolsGuide-thumb.png
 ---
 This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the [Terminus Drupal Console plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin). 
 

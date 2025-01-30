@@ -15,6 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+image: CDN-speedTest-docs-guide.png
 ---
 
 There are many different ways to measure page speed and performance. This guide will help you tune your site for the metrics in Google's [Core Web Vitals](https://web.dev/vitals/#core-web-vitals), which focus on three aspects of the user experience—loading, interactivity, and visual stability.

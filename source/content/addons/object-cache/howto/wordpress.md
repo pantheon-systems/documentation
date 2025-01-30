@@ -328,13 +328,13 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 	```
 	
 	<Alert title="Note" type="info">
-		If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
-	
-		```php
-		if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
-			define( 'WP_REDIS_DISABLED', true );
-		}
-		```
+	If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
+
+	```php
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+		define( 'WP_REDIS_DISABLED', true );
+	}
+	```
 	</Alert>
 	
 Make sure to commit your code back to your environment when you have made the appropriate changes.

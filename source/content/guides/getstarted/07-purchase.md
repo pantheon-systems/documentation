@@ -15,6 +15,7 @@ reviewed: "2023-03-21"
 showtoc: false
 permalink: docs/guides/getstarted/purchase
 editpath: getstarted/07-purchase.md
+image: getting-started-Largethumb.png
 ---
 
 The free account you created allows you to create sandbox (non-production) sites.  In order to take your site live, you'll need to select and purchase a plan.

@@ -123,7 +123,7 @@ class CommandsTemplate extends React.Component {
           slot="seo"
           title={command.name + ' | Terminus Commands'}
           description={command.description}
-          image={'/images/assets/terminus-thumbLarge.png'}
+          image={'/images/terminus-Largethumb.png'}
         />
         <Navbar
           slot="guide-menu"

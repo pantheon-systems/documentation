@@ -13,6 +13,7 @@ cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
+image: launchGuide-twitterLarge.png
 ---
 
 This section provides information on how to create your Live environment. 
