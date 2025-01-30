@@ -52,8 +52,8 @@ Terminus requires the following:
   - This package is required for executing nested Drush or WP-CLI commands.
 
 ## Installation and Update Methods 
-### MacOS Terminus Installation
-Homebrew is the recommended installation method for MacOS, however the method [described below](#windows-wsl-and-ubuntu-terminus-installation) for Windows and Ubuntu can also be used by MacOS users who are not using Homebrew.
+### MacOS
+Homebrew is the recommended installation method for MacOS, however the method [described below](#windows-and-linux) for Windows and Ubuntu can also be used by MacOS users who are not using Homebrew.
 
 The Terminus application is published to [Homebrew](https://brew.sh/), a package manager for MacOS.
 
@@ -63,17 +63,16 @@ Install Terminus by running the command below:
 brew install pantheon-systems/external/terminus
 ```
 
-### MacOS Terminus Updates
+<hr/>
 
-Update to the newest version of the [Homebrew installation](#macos-terminus-installation) by running the command below:
+Update to the newest version of the [Homebrew installation](#macos) by running the command below:
 
 ```bash{promptUser: user}
 brew upgrade terminus
 ```
 
-### Windows (WSL) and Ubuntu Terminus Installation
-
-Installing Terminus with a PHAR (a stand-alone executable PHP archive) is recommended for Ubuntu and Windows Subsystem for Linux (WSL) users. This technique is also viable for MacOS users who prefer not to use Homebrew.
+### Windows and Linux
+Installing Terminus with a PHAR (a stand-alone executable PHP archive) is recommended for Linux and Windows users. This technique is also viable for MacOS users who prefer not to use Homebrew.
 
 The commands below will:
 - Create a `terminus` folder in your home directory (`~/`)
@@ -89,8 +88,9 @@ chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
-### Windows (WSL) and Ubuntu Terminus Updates
-You can update the [standalone Terminus PHAR](#windows-wsl-and-ubuntu-terminus-installation) installation to the newest version with the command below.
+<hr/>
+
+Update the [standalone Terminus PHAR](#windows-and-linux) installation to the newest version by running the command below:
 
 ```bash{promptUser: user}
 terminus self:update
