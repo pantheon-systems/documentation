@@ -327,7 +327,7 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 	define( 'WP_REDIS_CONFIG', $ocp_settings );
 	```
 	
-<Alert title="Note" type="info">
+	<Alert title="Note" type="info">
 	If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
 
 	```php
@@ -335,7 +335,7 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 		define( 'WP_REDIS_DISABLED', true );
 	}
 	```
-</Alert>
+	</Alert>
 	
 Make sure to commit your code back to your environment when you have made the appropriate changes.
 
