@@ -53,7 +53,7 @@ Terminus requires the following:
 
 ## Installation and Update Methods 
 ### MacOS
-Homebrew is the recommended installation method for MacOS, however the method [described below](#windows-and-linux) for Windows and Ubuntu can also be used by MacOS users who are not using Homebrew.
+Homebrew is the recommended installation method for MacOS, however the method [described below](#windows-and-linux) for Windows and Linux can also be used by MacOS users who are not using Homebrew.
 
 The Terminus application is published to [Homebrew](https://brew.sh/), a package manager for MacOS.
 
