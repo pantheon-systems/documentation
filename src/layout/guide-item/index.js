@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Image from "../image"
 import "./style.css"
 
 const propTypes = {
