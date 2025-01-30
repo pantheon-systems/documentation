@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 10: Custom Upstreams"
+description: "Understand the relationship between Pantheon’s Core Upstreams, Custom Upstreams, and individual site repositories."
 certificationpage: true
 type: certificationpage
 layout: certificationpage

@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: Study Guide Introduction
+description: Learn about the three failure modes of website operations.
 certificationpage: true
 type: certificationpage
 layout: certificationpage

@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 1: WebOps"
+description: Learn about the principles and benefits of WebOps.
 certificationpage: true
 showtoc: true
 type: certificationpage
