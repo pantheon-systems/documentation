@@ -89,7 +89,7 @@ chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
-### Ubuntu and Linux Terminus Updates
+### Windows (WSL) and Ubuntu Terminus Updates
 You can update the [standalone Terminus PHAR](#windows-wsl-and-ubuntu-terminus-installation) installation to the newest version with the command below.
 
 ```bash{promptUser: user}
