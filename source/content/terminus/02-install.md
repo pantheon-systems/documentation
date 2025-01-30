@@ -128,7 +128,7 @@ Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test 
 You can update to the newest version of the [Homebrew installation](/terminus/install#homebrew-installation) by running the command below:
 
 ```bash{promptUser: user}
-brew upgrade pantheon-systems/external/terminus
+brew upgrade terminus
 ```
 
 ### Update Standalone Terminus PHAR
