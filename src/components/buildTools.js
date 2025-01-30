@@ -4,6 +4,7 @@ import circlelogo from "../../source/images/circleci-logo.svg"
 import composerlogo from "../../source/images/composer-logo.svg"
 
 const BuildTools = ({}) => {
+  const h4Style = `margin-top:10px;fontSize:larger`
   return (
     <>
       <div className="flex-panel-group">

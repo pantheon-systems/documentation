@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Components } from "react"
 import "./style.css"
 import Header from "../header"
 import Footer from "../footer"

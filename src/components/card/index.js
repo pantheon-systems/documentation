@@ -1,4 +1,5 @@
 import React from "react"
+import logo from "../../../source/images/official-plugin.svg"
 
 import { Icon, PantheonLogo } from "@pantheon-systems/pds-toolkit-react"
 

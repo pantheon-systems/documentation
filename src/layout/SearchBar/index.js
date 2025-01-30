@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import AddSearch from "../../components/addSearch"
 import { TextInput } from "@pantheon-systems/pds-toolkit-react"
 
