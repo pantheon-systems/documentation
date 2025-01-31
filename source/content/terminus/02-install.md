@@ -72,6 +72,12 @@ brew upgrade terminus
 ### Windows and Linux
 Installing Terminus with a PHAR (a stand-alone executable PHP archive) is recommended for Linux and Windows users. This technique is also viable for MacOS users who prefer not to use Homebrew.
 
+<Alert title="Note" type="info" >
+
+[Terminus compatibility](#compatibility-and-requirements) for Windows requires installing the Windows Subsystem for Linux (WSL). [Install WSL](https://learn.microsoft.com/en-us/windows/wsl/) before proceeding to the steps below.
+
+</Alert>
+
 The commands below will:
 - Create a `terminus` folder in your home directory (`~/`)
 - Get the latest release tag of Terminus
