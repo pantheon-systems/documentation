@@ -73,8 +73,8 @@ Terminus does not work with the following platforms:
 
 There are several ways to install Terminus, depending on your use case:
 
-- Self-contained Terminus executable:[install terminus.phar](#standalone-terminus-phar)
-- Mac:[install using Homebrew](#homebrew-installation)
+- Self-contained Terminus executable: [install terminus.phar](#standalone-terminus-phar)
+- Mac: [install using Homebrew](#macos-homebrew-installation)
 - Contribute to the Terminus project: [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the Git repository
 
 ### Standalone Terminus PHAR
