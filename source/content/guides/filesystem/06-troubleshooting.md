@@ -50,6 +50,15 @@ recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey
 
 Changing the file permissions to `770` from `660` via SFTP will cause a silent fail. The platform will not update the file permissions and will not return an error.
 
+### Wipe all files from environment
+Sites with overpopulated or large directories may experience difficulties deleting files from particular environments. One solution is to wipe everything in the `/files` directory from an environment, keeping the database and code intact, then selectively re-upload the `/files` that need to be kept afterwards. We highly recommend this is done via a Multidev environment for better safety of the site, available to Gold+ customers, but the Dev environment can be used if Multidev is not available.
+
+1. Create a Multidev by going to the Multidev tab of your site, and give it a name such as "file-reset".
+   1. If using Dev, make sure no unstaged commits are present.
+   2. 
+2. Navigate to the Database/Files tab of the Multidev, then select "Wipe"
+   1. 
+
 ## More Resources
 
 - [Configure Your wp-config.php File](/guides/php/wp-config-php)
