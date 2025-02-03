@@ -11,11 +11,7 @@ audience: [development]
 product: [--]
 integration: [ssh, drush, sftp]
 ---
-
-SSH keys are a best practice for authentication and offer more security than a simple password.  SSH keys allow you to stay secure and compliant with security regulations, provided that you follow recommended guidelines to generate, store, manage, and remove your SSH keys.
-
-You can take full advantage of Pantheon by loading your public SSH key into your account.
-You must add your SSH key once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
+Interacting with remote Pantheon environments via Git, SFTP, WP-CLI, and Drush requires SSH authentication. This is configured by adding your public SSH key to your Pantheon account. If you interact with Pantheon from multiple workstations (laptop, desktop, etc.), you must configure a separate SSH key for each one. 
 
 <Alert title="Note" type="info">
 
