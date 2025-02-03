@@ -102,6 +102,32 @@ terminus redis:enable <site>
 
 	 </Alert>
 
+### Database Cleanup (Required)
+After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+
+Use the following script to cleanup cache tables in the database: 
+
+<Download file="wp-db-cleanup-cache-tables.sh" />
+
+```bash
+#!/bin/bash
+
+echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
+read SITE;
+
+echo 'Provide the site name (multidev, dev, test, or live), then press [ENTER]:';
+read ENV;
+
+# Get a list of all cache tables
+CACHETABLES="$(terminus wp $SITE.$ENV -- db query "SHOW TABLES LIKE 'cache%';")"
+
+# Trucate each cache table in a loop to avoid resource contention and potential deadlocks.
+
+for table in $CACHETABLES; do
+    terminus wp $SITE.$ENV -- db query "TRUNCATE TABLE $table;"
+done
+```
+
 ## Installation and Configuration for Composer-Managed WordPress Sites
 
 Refer to the [official Object Cache Pro documentation](https://objectcache.pro/docs/composer-installation) for full configuration instructions.
@@ -223,7 +249,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		] );
 	```
 
-
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
 	```php
@@ -290,6 +315,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
+
+1. See the ["Database Cleanup" section above](#database-cleanup-required) for steps on how to truncate the existing cache tables to make sure the latest data populates object cache properly.
 
 ## Local configuration with Lando
 Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Redis in its Docker configuration. However, to get Object Cache Pro to work correctly with Lando locally, you'll need to make a few changes to your Object Cache Pro and Lando configuration.
