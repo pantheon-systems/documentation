@@ -76,6 +76,21 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
     // cache bin definition below.
     $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
 
+    /**
+    * Default TTL for Redis is 1 year.
+    *
+    * Change cache expiration (TTL) for data,default bin - 12 hours.
+    * Change cache expiration (TTL) for entity bin - 48 hours.
+    *
+    * @see \Drupal\redis\Cache\CacheBase::LIFETIME_PERM_DEFAULT
+    */
+
+    $settings['redis.settings']['perm_ttl'] = 2630000; // 30 days
+    $settings['redis.settings']['perm_ttl_config'] = 43200;
+    $settings['redis.settings']['perm_ttl_data'] = 43200;
+    $settings['redis.settings']['perm_ttl_default'] = 43200;
+    $settings['redis.settings']['perm_ttl_entity'] = 172800;
+
     // Use redis for container cache.
     // The container cache is used to load the container definition itself, and
     // thus any configuration stored in the container itself is not available
