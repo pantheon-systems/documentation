@@ -23,8 +23,8 @@ This page provides information on how to install, authenticate, and update Termi
 Terminus has been tested on the following platforms:
 
 - MacOS
-- Windows 10 – WSL 2 Ubuntu 20.0
-- Ubuntu 20.0 – this would include Ubuntu under Docker or VirtualBox
+- Windows 10 (WSL 2 Ubuntu 20.0+)
+- Ubuntu 20.0 (Including Ubuntu under Docker or VirtualBox)
 
 <Accordion title="Incompatible Operating Systems" id="incompatible-os" icon="info-sign">
 Terminus does not work with the following platforms:
