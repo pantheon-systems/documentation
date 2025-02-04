@@ -103,7 +103,7 @@ terminus redis:enable <site>
 	 </Alert>
 
 ### Database Cleanup (Required)
-After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+By default, when Redis is not available on a WordPress site, WordPress stores [transient data](https://developer.wordpress.org/apis/transients/) in the database. Transients are bits of data that are intended to be stored _temporarily_ and then cleared automatically. When object caching like Redis is available, WordPress automatically stores transients into the object cache. However, after enabling Redis, any transients that previously existed in the database will not necessarily be cleared automatically, even when the cache is cleared. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
 
 Use the following script to cleanup cache tables in the database: 
 
