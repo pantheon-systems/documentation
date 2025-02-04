@@ -25,7 +25,9 @@ class ReleaseNoteTemplate extends React.Component {
   render() {
     const node = this.props.data.mdx;
     const excerptRaw = this.props.data.mdx.excerpt;
-    const excerpt = excerptRaw.substring(0, 200). trim() || "A summary of changes to the Pantheon Platform";
+    const excerpt =
+      excerptRaw.substring(0, 200).trim() ||
+      'A summary of changes to the Pantheon Platform';
 
     return (
       <Layout containerWidth={containerWidth} excludeSearch footerBorder>
