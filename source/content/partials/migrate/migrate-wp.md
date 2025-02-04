@@ -19,7 +19,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Open your Personal or Professional Workspace dashboard and select the **Migrate Existing Site** button on the lower right side of the page.
 
-   ![Migrate site button](../../../images/migrate-site-button.png)
+   ![Migrate site button](../../../images/dashboard/new-dashboard/2024/migrate-site-button.png)
 
 1. Enter your current website URL, select **WordPress**, and click **Continue**.
 
