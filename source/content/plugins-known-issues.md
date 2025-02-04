@@ -28,6 +28,8 @@ Since version [1.5.0](https://github.com/pantheon-systems/pantheon-mu-plugin/rel
 
 These are shown in the form of Site Health checks that are detailed on a new Pantheon Compatibility tab on the Site Health page in your admin. If manual changes are required, they will be reported to your Site Health page, otherwise the MU plugin will attempt to correct the issue without any required changes. If you are using a plugin that appears on this page, it's a good idea to check to see if the issue is already mitigated by checking your Site Health page for information about the plugin.
 
+![Pantheon MU Plugin Compatibility Layer](../images/pantheon-mu-plugin-compatibility.png)
+
 If you think a plugin should be added to the Pantheon MU Plugin Compatibility layer, you may [open a ticket](https://github.com/pantheon-systems/pantheon-mu-plugin/issues/new?title=Plugin%20Compatibility%20Layer%20Update:%20[Plugin%20Name]&body=A%20plugin%20with%20a%20compatibility%20issue%20on%20Pantheon%20has%20been%20requested%20to%20be%20added%20to%20the%20mu-plugin%0A%0APlugin%20Name:%20[plugin%20name]) in the Pantheon MU Plugin GitHub repository.
 
 ### Assumed Write Access
