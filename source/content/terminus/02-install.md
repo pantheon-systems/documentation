@@ -36,7 +36,7 @@ Terminus does not work with the following platforms:
 
 </Accordion>
 
-Terminus requires the following: 
+**Terminus requires the following:** 
 - PHP Version 7.4 or later
   - You can check your PHP version by running `php -v` from a terminal application.
   - You must have the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php) for:
