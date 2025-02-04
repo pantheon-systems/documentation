@@ -3,7 +3,7 @@ title: Enable Object Cache for Drupal
 description: How to install and configure Object Cache for Drupal.
 permalink: docs/object-cache/drupal
 tags: [cache, plugins, modules, database]
-reviewed: "2025-02-03"
+reviewed: "2025-02-04"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
