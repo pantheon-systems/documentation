@@ -188,7 +188,7 @@ In this section, we will walk through the process of generating SSH keys and add
 
     **Multiple SSH Keys**
 
-    If you have multiple SSH keys for different purposes and want to tell all of your Pantheon sites to use a specific key, you can configure your local ssh setup to use one key for all Pantheon servers. Follow the instructions here: https://web.berkeley.edu/web-hosting-pantheon/hosting-your-site-pantheon/special-topics-pantheon-sites/using-ssh-keys
+    If you have multiple SSH keys for different purposes and want to tell all of your Pantheon sites to use a specific key, you can [configure your local ssh setup to use one key for all Pantheon servers](/ssh-keys/#manage-multiple-keys-optional).
 
 2. **Set a passphrase for better security.** We recommend using a passphrase, but it can conflict with some tools.
 
