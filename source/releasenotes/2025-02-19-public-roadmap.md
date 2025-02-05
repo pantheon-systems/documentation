@@ -12,7 +12,8 @@ Pantheon has shared our roadmap with customers for a long time, but it was stati
 
 For more details, see [related documentation](/roadmap).
 
-## We’d love your feedback
+## Why is this being done?
+In the past, Pantheon’s roadmap was shared via presentations a few times a year. Our hands-on approach with customers isn’t going away, but we wanted to ensure our product roadmap was available to all customers, whenever they needed it. Our prior method also didn’t provide a clear path for feedback, which is now built into the new experience.
 
-What do you think of this feature? [We’d love to hear your feedback!](https://roadmap.pantheon.io/c/138-pantheon-roadmap-is-now-self-serve?&utm_medium=social&utm_source=starter_share)
-
+## What’s next?
+Access the roadmap anytime at https://roadmap.pantheon.io. Submit feedback about roadmap items or new ideas that you’d like to see. Help drive the future of Pantheon, ensuring our platform grows with you and continues to meet your needs.
