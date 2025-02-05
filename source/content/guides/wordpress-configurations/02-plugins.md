@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-05-04"
+reviewed: "2025-02-05"
 showtoc: true
 permalink: docs/guides/wordpress-configurations/plugins
 ---
@@ -29,7 +29,7 @@ Drupal users should refer to [Pantheon Modules](/modules) for details on Drupal 
 
 [Pantheon Must-Use Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) is vital to the operation of your site on the Pantheon platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
 
-The Pantheon MU Plugin [adds features](https://github.com/pantheon-systems/pantheon-mu-plugin?tab=readme-ov-file#features) such as integrating the Pantheon WebOps workflow into your site, basic integration with [Pantheon's Global CDN](https://docs.pantheon.io/guides/global-cdn), support for [WordPress multisite](https://docs.pantheon.io/guides/multisite/), and a compatibility layer that attempts to automatically configure your site to work with plugins on our [plugins with known issues](https://docs.pantheon.io/plugins-known-issues) page.
+The Pantheon MU Plugin [adds features](https://github.com/pantheon-systems/pantheon-mu-plugin?tab=readme-ov-file#features) such as integrating the Pantheon WebOps workflow into your site, basic integration with [Pantheon's Global CDN](/guides/global-cdn), support for [WordPress multisite](/guides/multisite/), and a compatibility layer that attempts to automatically configure your site to work with plugins on our [plugins with known issues](/plugins-known-issues) page.
 
 Refer to [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin) for information on how to create a custom MU-Plugin.
 
