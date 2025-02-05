@@ -14,26 +14,19 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
+showtoc: true
 ---
 
-This section provides information on how to install and authenticate Terminus.
+This page provides information on how to install, authenticate, and update Terminus.
 
-Refer to [Current Terminus Release, Changelog, and Updates](/terminus/updates) if you are looking for instructions on **how to update Terminus** for your specific operating system.
-
-Terminus is available for MacOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), and then install Terminus in the Linux shell.
-
-Some Terminus commands use SSH authentication. You may want to [generate and add SSH keys](/ssh-keys/) to your account before you continue.
-
-## Compatible Operating Systems
-
+## Compatibility and Requirements
 Terminus has been tested on the following platforms:
 
 - MacOS
-- Windows 10 – WSL 2 Ubuntu 20.0
-- Ubuntu 20.0 – this would include Ubuntu under Docker or VirtualBox
+- Windows 10 (WSL 2 Ubuntu 20.0+)
+- Ubuntu 20.0 (Including Ubuntu under Docker or VirtualBox)
 
-### Incompatible Operating Systems
-
+<Accordion title="Incompatible Operating Systems" id="incompatible-os" icon="info-sign">
 Terminus does not work with the following platforms:
 
 - Windows 10 – Command Line
@@ -41,20 +34,9 @@ Terminus does not work with the following platforms:
 - Ubuntu 18.0 and earlier versions
 - Linux system with coreutils equal to or less than 8.28
 
-## Terminus Requirements
+</Accordion>
 
-### Package Manager
-
-**Ubuntu/WinWSL-Ubuntu**
-
-- [apt](https://ubuntu.com/server/docs/package-management)
-
-**MacOS**
-
-- [Homebrew](https://brew.sh/)
-
-### Required Packages
-
+**Terminus requires the following:** 
 - PHP Version 7.4 or later
   - You can check your PHP version by running `php -v` from a terminal application.
   - You must have the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php) for:
@@ -69,53 +51,60 @@ Terminus does not work with the following platforms:
   - You can check your OpenSSH version by running `ssh -V` from a terminal application.
   - This package is required for executing nested Drush or WP-CLI commands.
 
-## Install Terminus
+## Installation and Update Methods 
+### MacOS
+[Homebrew](https://brew.sh/), a package manager for MacOS, is the recommended installation method for MacOS. However, the method [described below](#windows-and-linux) for Windows and Linux can also be used by MacOS users who are not using Homebrew.
 
-There are several ways to install Terminus, depending on your use case:
+Install Terminus by running the command below:
 
-- Self-contained Terminus executable:[install terminus.phar](#standalone-terminus-phar)
-- Mac:[install using Homebrew](#homebrew-installation)
-- Contribute to the Terminus project: [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the Git repository
+```bash{promptUser: user}
+brew install pantheon-systems/external/terminus
+```
 
-### Standalone Terminus PHAR
+<hr/>
+
+Update to the newest version of the [Homebrew installation](#macos) by running the command below:
+
+```bash{promptUser: user}
+brew upgrade terminus
+```
+
+### Windows and Linux
+Installing Terminus with a PHAR (a stand-alone executable PHP archive) is recommended for Linux and Windows users. This technique is also viable for MacOS users who prefer not to use Homebrew.
+
+<Alert title="Note" type="info" >
+
+[Terminus compatibility](#compatibility-and-requirements) for Windows requires installing the Windows Subsystem for Linux (WSL). [Install WSL](https://learn.microsoft.com/en-us/windows/wsl/) before proceeding to the steps below.
+
+</Alert>
 
 The commands below will:
-
 - Create a `terminus` folder in your home directory (`~/`)
 - Get the latest release tag of Terminus
 - Download and save the release as `~/terminus/terminus`
 - Make the file executable
 - Add a symlink to your local `bin` directory for the Terminus executable
 
-    ```bash{promptUser: user}
-  mkdir -p ~/terminus && cd ~/terminus
-  curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.1/terminus.phar --output terminus
-  chmod +x terminus
-  ./terminus self:update
-  sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
-  ```
+```bash{promptUser: user}
+mkdir -p ~/terminus && cd ~/terminus
+curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.1/terminus.phar --output terminus
+chmod +x terminus
+./terminus self:update
+sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+```
+<hr/>
 
-### MacOS Homebrew Installation
-
-The Terminus application is published to [Homebrew](https://brew.sh/).
-
-Run the command below to install Terminus:
+Update the [standalone Terminus PHAR](#windows-and-linux) installation to the newest version by running the command below:
 
 ```bash{promptUser: user}
-brew install pantheon-systems/external/terminus
+terminus self:update
 ```
 
-### Ubuntu/WinWSL-Ubuntu Installation
-
-Follow the steps in the [Standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) section.
-
-## Authenticate
-
-### Machine Token
-
+## Authentication
+### Login via Machine Token (Required)
 You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. Refer to [Machine Tokens](/machine-tokens/) for more information.
 
-2. [Go to your Personal Settings](/personal-settings), select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/), then [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
+1. [Go to your Personal Settings](/personal-settings), select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/), then [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
 1. Use your machine token to authenticate into Terminus, replacing `<email@example.com>` and `<machine_token>`:
 
@@ -123,83 +112,13 @@ You must log in with a machine token after the installation completes. A machine
   terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
   ```
 
-    - Machine tokens are keyed to the email address associated with your Pantheon user account. Future sessions are authenticated with your email address after a token has been used to authenticate Terminus:
+Machine tokens are keyed to the email address associated with your Pantheon user account. Future sessions are authenticated with your email address after a token has been used to authenticate Terminus:
 
-  ```bash{promptUser: user}
-  terminus auth:login --email <email@example.com>
-  ```
+```bash{promptUser: user}
+terminus auth:login --email <email@example.com>
+```
 
-### SSH Authentication
+### SSH Authentication (Optional, but recommended)
 
 Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. Refer to [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
-## Update Standalone Terminus
-
-You can update the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation to the newest version with the command below.
-
-<Alert title="Warning" type="danger" >
-
-The `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/self-update) for available options.
-
-</Alert>
-
-```bash{promptUser: user}
-terminus self:update
-```
-
-## Update Terminus Installer PHAR
-
-You can update the Composer-managed version of Terminus that was installed with the [Terminus Installer PHAR](/terminus/install#terminus-installer-phar).
-
-1. Navigate to the directory where Terminus was originally installed.
-
-1. Run the following command:
-
-    ```bash{promptUser: user}
-    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
-    ```
-
-### Update Terminus Homebrew Installation
-
-You can update to the newest version of the [Homebrew installation](/terminus/install#homebrew-installation) by running the command below:
-
-```bash{promptUser: user}
-brew upgrade pantheon-systems/external/terminus
-```
-
-<Alert title="Note" type="info">
-
-Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test compatibility with existing configurations before upgrading to new major releases.
-
-</Alert>
-
-## Update Terminus with Plugin
-
-Use the [`self:plugin:update` command](/terminus/commands/self-plugin-update) if you use the Terminus plugin manager.
-
-## Troubleshooting
-
-### Nothing to install or update
-
-For Composer-managed Terminus installations, if the update command above returns an output that indicates no updates were found:
-
-1. Delete the existing Terminus version (e.g. `$HOME/terminus`).
-
-1. Re-run the install command:
-
-    ```bash{promptUser: user}
-    rm -rf $HOME/terminus
-    mkdir $HOME/terminus
-    cd $HOME/terminus
-    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-    php installer.phar install
-    ```
-
-### Self:update not defined
-
-The `self:update` command is only available for standalone Terminus installed using the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar). If `self:update` returns a not defined error, use the [Terminus Installer PHAR](#update-terminus-installer-phar) update instructions above.
-
-## More Resources
-
-- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
-- [PHP on Pantheon](/guides/php)
