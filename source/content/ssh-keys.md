@@ -11,11 +11,11 @@ audience: [development]
 product: [--]
 integration: [ssh, drush, sftp]
 ---
-Interacting with remote Pantheon environments via Git, SFTP, WP-CLI, and Drush requires SSH authentication. This is configured by adding your public SSH key to your Pantheon account. If you interact with Pantheon from multiple workstations (laptop, desktop, etc.), you must configure a separate SSH key for each one. 
+Interacting with remote Pantheon environments via Git, SFTP, WP-CLI, and Drush requires an SSH key for authentication. This is configured by adding your public SSH key to your user account on Pantheon. If you interact with your sites from multiple workstations (laptop, desktop, etc.), you must add a separate SSH key for each machine.
 
 <Alert title="Note" type="info">
 
-Pantheon does not provide access to a shell environment over SSH. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
+Pantheon does not provide access to a shell environment over SSH. These directions allow you to authenticate operations on Pantheon like  Git, SFTP, WP-CLI or Drush via SSH keys.
 
 </Alert>
 

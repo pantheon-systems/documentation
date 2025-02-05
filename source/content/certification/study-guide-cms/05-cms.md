@@ -161,7 +161,7 @@ We will cover Pantheon’s full WebOps Workflow in depth in a later section.
 
 Developers access a container directly via a special encrypted SSH interface, and while SSH keys are used to securely authenticate users to give them access to git codeservers, as well as CLI tools like rsync and SFTP,** it should be noted that Pantheon does not provide root level server access to customers.**
 
-SSH keys are a best practice for authentication and provide a more secure way to access your Pantheon features than a simple username and password. SSH keys allow you to stay secure and compliant with security regulations, provided that you follow recommended guidelines to generate, store, manage, and remove your SSH keys. SSH keys provide developers with passwordless access to your application's Git repository, SFTP, and Drush. SSH public keys are uploaded in the Pantheon Dashboard in the Personal Settings section under the SSH Keys tab.
+Interacting with remote Pantheon environments via Git, SFTP, WP-CLI, and Drush requires an SSH key for authentication. SSH keys allow you to stay secure and compliant with security regulations, provided that you follow recommended guidelines to generate, store, manage, and remove your SSH keys. SSH public keys are uploaded in the Pantheon Dashboard in the Personal Settings section under the SSH Keys tab.
 
 You can take full advantage of Pantheon by loading your public SSH key into your account. You must add your SSH key once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
 
