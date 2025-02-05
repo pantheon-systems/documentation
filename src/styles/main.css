@@ -230,8 +230,8 @@ a.individual-changelog-link:hover {
   border: 1px solid var(--pds-color-input-border-critical);
 }
 
-article.doc.article {
-  ul ul {
+article.doc.article, article.guide-doc-body {
+  ul {
     margin-block-end: var(--pds-spacing-m);
   }
 
