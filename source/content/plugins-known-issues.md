@@ -30,7 +30,7 @@ These are shown in the form of Site Health checks that are detailed on a new Pan
 
 ![Pantheon MU Plugin Compatibility Layer](../images/pantheon-mu-plugin-compatibility.png)
 
-If you think a plugin should be added to the Pantheon MU Plugin Compatibility layer, you may [open a ticket](https://github.com/pantheon-systems/pantheon-mu-plugin/issues/new?title=Plugin%20Compatibility%20Layer%20Update:%20[Plugin%20Name]&body=A%20plugin%20with%20a%20compatibility%20issue%20on%20Pantheon%20has%20been%20requested%20to%20be%20added%20to%20the%20mu-plugin%0A%0APlugin%20Name:%20[plugin%20name]) in the Pantheon MU Plugin GitHub repository.
+If you think a plugin should be added to the Pantheon MU Plugin Compatibility layer, you may [open a ticket](https://github.com/pantheon-systems/pantheon-mu-plugin/issues/new?title=Plugin%20Compatibility%20Layer%20Update:%20[Plugin%20Name]&body=A%20plugin%20with%20a%20compatibility%20issue%20on%20Pantheon%20has%20been%20requested%20to%20be%20added%20to%20the%20mu-plugin%0A%0APlugin%20Name:%20[plugin%20name]) in the Pantheon MU Plugin GitHub repository. [Read more about the Pantheon MU Plugin ](/guides/wordpress-configurations/plugins#pantheon-must-use-plugin).
 
 ### Assumed Write Access
 
