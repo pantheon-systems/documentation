@@ -1,28 +1,25 @@
-import React from "react"
-import { Callout } from "@pantheon-systems/pds-toolkit-react"
+import React from 'react';
+import { Callout } from '@pantheon-systems/pds-toolkit-react';
 import './style.css';
 
 const Enablement = ({ title, link, campaign, children }) => {
-
   function _handleClick() {
-    if (window.analytics){
-      window.analytics.track("Docs Enablement Clicked", {
-          campaign: {campaign},
+    if (window.analytics) {
+      window.analytics.track('Docs Enablement Clicked', {
+        campaign: { campaign },
       });
     }
   }
   return (
-    <Callout
-          children={children}
-          type="info"
-          className="docs-alert"
-        >
+    <Callout children={children} type="info" className="docs-alert">
       <h4>
-        <a href={link} onClick={_handleClick}>{title}</a>
+        <a href={link} onClick={_handleClick}>
+          {title}
+        </a>
       </h4>
       {children}
     </Callout>
-  )
-}
+  );
+};
 
-export default Enablement
+export default Enablement;
