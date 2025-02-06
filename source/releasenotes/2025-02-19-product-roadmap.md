@@ -1,5 +1,5 @@
 ---
-title: "Pantheon roadmap is now public and self-serve"
+title: "Introducing Pantheon’s self-serve product roadmap"
 published_date: "2025-02-19"
 categories: [new-feature, general]
 ---

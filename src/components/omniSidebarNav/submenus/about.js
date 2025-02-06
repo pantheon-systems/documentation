@@ -9,7 +9,7 @@ const about = () => {
       simpleLink('/community', 'Pantheon Community', [
         simpleLink('/community', 'Community'),
         simpleLink('/pantheon-community', 'Join'),
-        simpleLink('/roadmap', 'Public Roadmap'),
+        simpleLink('/roadmap', 'Pantheon Roadmap'),
         simpleLink('/code-of-conduct', 'Code of Conduct'),
         simpleLink('/trainers', 'Trainers'),
       ]),

@@ -1381,7 +1381,7 @@
           url: "https://pantheon.io/developer-community/heroes/apply"
         - text: "Contribute to Docs"
           url: "/contribute"
-    - title: "Public Product Roadmap"
+    - title: "Product Roadmap"
       links:
       - text: "View the Pantheon roadmap"
         url: "https://roadmap.pantheon.io"
