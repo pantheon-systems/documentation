@@ -1,4 +1,5 @@
 import React from "react"
+import { Callout } from "@pantheon-systems/pds-toolkit-react"
 import './style.css';
 
 const Enablement = ({ title, link, campaign, children }) => {
@@ -11,12 +12,16 @@ const Enablement = ({ title, link, campaign, children }) => {
     }
   }
   return (
-    <div className="enablement">
-      <h4 className="info">
-        <a href={link} className="external" onClick={_handleClick}>{title}</a>
+    <Callout
+          children={children}
+          type="info"
+          className="docs-alert"
+        >
+      <h4>
+        <a href={link} onClick={_handleClick}>{title}</a>
       </h4>
       {children}
-    </div>
+    </Callout>
   )
 }
 
