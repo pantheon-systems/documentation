@@ -232,10 +232,11 @@ a.individual-changelog-link:hover {
 
 article.doc.article, article.guide-doc-body {
   ul {
+    margin-block-start: 0;
     margin-block-end: var(--pds-spacing-m);
   }
 
-  p:has(+ ul) {
-    margin-bottom: var(--pds-spacing-4xs);
+  *:has(+ ul) {
+    margin-bottom: 0;
   }
 }
