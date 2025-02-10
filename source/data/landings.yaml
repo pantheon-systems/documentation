@@ -1055,6 +1055,8 @@
     - title: "Manage Your Drupal Site"
       subtitle: ""
       links:
+        - text: "Project Browser in Pantheon"
+          url: "/drupal-cms-project-browser"
         - text: "Continuous Integration Solutions on Pantheon"
           url: "/guides/local-development/continuous-integration"
         - text: "Deliver Email Through Your Drupal Site on the Pantheon Platform"
