@@ -127,7 +127,10 @@ const webInfrastructure = () => {
           'Create a Drupal Site Using a Drupal Distribution',
         ),
         simpleLink('/drupal-broken-links', 'Fix Broken Links'),
-        simpleLink('/drupal-cms-project-browser', 'Project Browser in Pantheon'),
+        simpleLink(
+          '/drupal-cms-project-browser',
+          'Project Browser in Pantheon',
+        ),
         // This page should be converted into an article.
         simpleLink('/cloud-optimization', 'Optimizing for the Cloud'),
       ]),
