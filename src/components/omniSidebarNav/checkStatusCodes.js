@@ -154,6 +154,7 @@ const allWrittenPaths = [
   '/drupal-composer-managed',
   '/drupal-configuration-management',
   '/drupal-cron',
+  '/drupal-cms-project-browser',
   '/drupal-from-dist',
   '/drupal-launch-check',
   '/drupal-migration',
