@@ -4,7 +4,7 @@ subtitle: Incident Remediation
 description: Bring a site back from downtime and implement post-recovery actions
 tags: [dashboard, webops, workflow]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-07-30"
+reviewed: "2025-02-10"
 type: guide
 permalink: docs/guides/disaster-recovery/incident-remediation
 editpath: disaster-recovery/04-incident-remediation.md
@@ -61,16 +61,16 @@ In cases where the site code, database, or assets have become corrupted or compr
 As part of the Managed Updates deployment process, a Multidev will be cloned from the Live environment. It will be used primarily for testing, but also as a backup. If the Live deployment fails, results in a regression, or compromises the site, this Multidev will be used as the source to restore Live to a pre-deploy state.
 
 #### Codebase is Unrecoverable
-The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore Tools** restore all aspects of the site, and cannot be used to selectively restore. For more information, refer to the [Backup Restore](/terminus/commands/backup-restore) documentation information.
+The codebase can be [restored from a selected backup via Terminus](/terminus/commands/backup-restore) - the Dashboard **Restore Tools** restore all aspects of the site, and cannot be used to selectively restore. For more information, refer to the [Backup Restore](/guides/environment-configuration/restore-environment-backup) documentation. 
 
 #### Reverting a Bad Commit to Pantheon
 If a bad commit has been deployed to your Pantheon site, you can roll back the commit using Git. The process depends on the nature of the change and whether it involves core updates or upstream updates, etc. For more information, refer to the [Undo Commits](/undo-commits) documentation.
 
 #### Database and Filesystem Issues
-The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). For more information, refer to the [Database Workflow](/database-workflow) documentation.
+The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). For more information, refer to the [Database Workflow](/guides/mariadb-mysql/database-workflow-tool) documentation.
 
 #### Restoring a Database from a Backup
 The database can be restored from a selected backup via Terminus. The Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. For more information, refer to the [Backup Restore](/terminus/commands/backup-restore) documentation.
 
 #### Restoring a Database from an External Dump
-The database can be restored from an external dump using the **Database/files** tools on the Site Dashboard. An archive file can be uploaded, or a MySQL archive accessed on a remote location. For more information, refer to the [Database Workflow](/database-workflow) documentation.
+The database can be restored from an external dump using the **Database/files** tools on the Site Dashboard. An archive file can be uploaded, or a MySQL archive accessed on a remote location. For more information, refer to the [Database Workflow](/guides/mariadb-mysql/database-workflow-tool) documentation.
