@@ -12,11 +12,11 @@ const Enablement = ({ title, link, campaign, children }) => {
   }
   return (
     <Callout children={children} type="info" className="docs-alert">
-      <h4>
-          {title}
-      </h4>
-      {children} <a href={link} onClick={_handleClick}>Learn more</a>
-
+      <h4>{title}</h4>
+      {children}{' '}
+      <a href={link} onClick={_handleClick}>
+        Learn more
+      </a>
     </Callout>
   );
 };
