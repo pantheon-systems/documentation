@@ -2,7 +2,7 @@
 title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 tags: [security, dashboard, ssh]
-reviewed: "2025-02-05"
+reviewed: "2025-02-11"
 contenttype: [doc]
 innav: [true]
 categories: [security, git, config]
