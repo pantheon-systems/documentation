@@ -149,7 +149,7 @@ WordPress has a built-in function to help stop CSRF attacks called a "nonce,” 
 For detailed information on how to generate and use nonces, review the following WordPress documentation:
 
 - [Nonces](https://developer.wordpress.org/apis/security/nonces/)
-- [Using Nonces](https://developer.wordpress.org/news/2023/08/understand-and-use-wordpress-nonces-properly/)
+- [Understand and use WordPress nonces properly](https://developer.wordpress.org/news/2023/08/understand-and-use-wordpress-nonces-properly/)
 
 ## More Resources
 
