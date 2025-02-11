@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 
-import { InputText, Icon } from '@pantheon-systems/pds-toolkit-react';
-
 import './style.css';
 
 const Commands = ({ data }) => {
