@@ -54,7 +54,7 @@ To remove a user:
 
    - **Workspace Only**: removes a member from this workspace only. Associated sites will not be impacted.
 
-      ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding.png)
+      ![Pantheon Workspace dashboard with remove user modal open and options for removing the user from everything or for removing the user from just the workspace](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding.png)
 
 </Tab>
 
@@ -74,7 +74,7 @@ To remove a team member from a site:
 
    - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
 
-     ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-site-team-member.png)
+     ![Pantheon site dashboard with remove user modal open and options for removing the user from just this site or for removing the user from all sites](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-site-team-member.png)
 
 1. Click **Remove Access** with one of the selections provided. The team is removed based on the selection you made.
 
