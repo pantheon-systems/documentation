@@ -1,20 +1,43 @@
-import React, { Components } from "react"
-import "./style.css"
-import Header from "../header"
-import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
-import Footer from "../footer"
-import SearchBar from "../SearchBar"
+import React, { Components } from 'react';
+import './style.css';
+import Header from '../header';
+import { ButtonLink } from '@pantheon-systems/pds-toolkit-react';
+import { Container, CTASlice } from '@pantheon-systems/pds-toolkit-react';
+import Footer from '../footer';
+import SearchBar from '../SearchBar';
 
 // Content for CTA
-const primaryCTA = {
-  text: "Learn Pantheon",
-  url: "https://pantheon.io/learn-pantheon?docs",
-}
+const primaryCTA = (
+  <ButtonLink
+    variant="primary"
+    size="lg"
+    linkContent={
+      <a
+        href="https://pantheon.io/learn-pantheon?docs"
+        className="pds-button pds-button--lg"
+        target="_blank"
+      >
+        Learn Pantheon
+      </a>
+    }
+  />
+);
 
-const secondaryCTA = {
-  text: "Office Hours",
-  url: "https://pantheon.io/developers/office-hours?docs",
-}
+const secondaryCTA = (
+  <ButtonLink
+    variant="secondary"
+    size="lg"
+    linkContent={
+      <a
+        href="https://pantheon.io/developers/office-hours?docs"
+        className="pds-button pds-button--lg pds-button--secondary"
+        target="_blank"
+      >
+        Office Hours
+      </a>
+    }
+  />
+);
 
 const Layout = ({
   children,
@@ -22,7 +45,7 @@ const Layout = ({
   excludeSearch,
   hasCta,
   footerBorder,
-  pageType = "default",
+  pageType = 'default',
 }) => {
   return (
     <div className="pantheon-docs">
@@ -37,14 +60,14 @@ const Layout = ({
         <CTASlice
           backgroundColor="secondary"
           headingText="Got questions? We've got answers!"
-          primaryLink={primaryCTA}
-          secondaryLink={secondaryCTA}
+          primaryLinkContent={primaryCTA}
+          secondaryLinkContent={secondaryCTA}
           className="pre-footer-slice"
         />
       )}
-      <Footer className={footerBorder ? "with-border" : null} />
+      <Footer className={footerBorder ? 'with-border' : null} />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
