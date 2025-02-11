@@ -23,7 +23,56 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 </Alert>
 
-## Install WordPress Multisite Via Terminus
+## Installing WordPress Multisite
+
+Choose the best option below to install WordPress multisite based on your site setup and preferences.
+
+<TabList>
+
+<Tab title="Install Multisite via the GUI" id="wpms-gui-install">
+
+Complete the steps below after spinning up a new WPMS site from the correct Custom Upstream in your workspace.
+
+1. Navigate to the WordPress Admin dashboard, select **Tools**, and then select **Network Setup**.
+
+  ![Network setup step 1](../../../images/wp-network-config.png)
+
+1. Select either the **Sub-domains** or **Sub-directories** option.
+
+1. Enter the **Network Title** and **Network Admin Email**, and then click **Install**.
+
+1. Finalize the installation by following steps provided from the GUI or by following the next steps.
+
+  ![Network setup last step](../../../images/wp-network-config-last.png)
+
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
+
+1. Click **Connect with SFTP**.
+
+1. Click **Open SFTP client**.
+
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
+
+1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
+
+1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
+
+  ```php:title=wp-config.php
+  define( 'WP_ALLOW_MULTISITE', true );
+  define( 'MULTISITE', true );
+  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
+  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
+  define( 'PATH_CURRENT_SITE', '/' );
+  define( 'SITE_ID_CURRENT_SITE', 1 );
+  define( 'BLOG_ID_CURRENT_SITE', 1 );
+
+  /* That's all, stop editing! Happy Pressing. */
+  ```
+
+</Tab>
+
+<Tab title="Install Multisite with Terminus" id="wpms-terminus-install">
 
 Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/install#authenticate) before you complete the steps below.
 
@@ -91,48 +140,9 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 
 </Alert>
 
-## Install WordPress Multisite Via the GUI
+</Tab>
 
-Complete the steps below after spinning up a new WPMS site from the correct Custom Upstream in your workspace.
-
-1. Navigate to the WordPress Admin dashboard, select **Tools**, and then select **Network Setup**.
-
-  ![Network setup step 1](../../../images/wp-network-config.png)
-
-1. Select either the **Sub-domains** or **Sub-directories** option.
-
-1. Enter the **Network Title** and **Network Admin Email**, and then click **Install**.
-
-1. Finalize the installation by following steps provided from the GUI or by following the next steps.
-
-  ![Network setup last step](../../../images/wp-network-config-last.png)
-
-1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
-
-1. Click **Connect with SFTP**.
-
-1. Click **Open SFTP client**.
-
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
-
-1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
-
-1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
-
-  ```php:title=wp-config.php
-  define( 'WP_ALLOW_MULTISITE', true );
-  define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
-  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
-  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
-  define( 'PATH_CURRENT_SITE', '/' );
-  define( 'SITE_ID_CURRENT_SITE', 1 );
-  define( 'BLOG_ID_CURRENT_SITE', 1 );
-
-  /* That's all, stop editing! Happy Pressing. */
-  ```
-
-## Setting up Multisite on WordPress (Composer Managed) sites
+<Tab title="Install Multisite on Bedrock Composer-based sites" id="wpms-composer-install">
 
 The [Bedrock](https://roots.io/bedrock/)-based [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed) upstream uses `Config::define()` and `config/application.php` instead of traditional `define()` statements in `wp-config.php`. You will not be able to use WP-CLI via Terminus to enable multisite as documented above in a standard multisite configuration. This section provides guidance on how to set up a WordPress Multisite using the WordPress (Composer Managed) upstream.
 
@@ -168,6 +178,10 @@ The [Bedrock](https://roots.io/bedrock/)-based [WordPress (Composer Managed)](ht
 
 Currently, the built-in dashboard [WordPress Multisite Search and Replace](/guides/multisite/search-replace/) does not support Composer-based WordPress multisites. To perform a search and replace on a WordPress (Composer Managed) multisite, you will need to use WP-CLI via Terminus manually. For more information, see our [WordPress Multisite Search and Replace](guides/multisite/workflows/#run-wp-cli-search-replace-manually) guide.
 </Alert>
+
+</Tab>
+
+</TabList>
 
 ## Develop the Multisite
 

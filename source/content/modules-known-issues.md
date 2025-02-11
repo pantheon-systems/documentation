@@ -274,6 +274,15 @@ ___
 
 ___
 
+## [Menu Item Extras](https://www.drupal.org/project/menu_item_extras)
+<ReviewDate date="2025-01-30" />
+
+**Issue**: [Performance issues have been reported](https://www.drupal.org/project/menu_item_extras/issues/3370223) for sites with large menus, causing responses for uncached visits to [timeout](/guides/errors-and-server-responses/5xx-errors#pantheon-504-gateway-timeout). 
+
+**Solution**: [Apply this patch](https://git.drupalcode.org/project/menu_item_extras/-/merge_requests/37.patch) (which has been tested and validated by Pantheon), to improve performance and avoid related timeouts.
+
+___
+
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 
 **Issue**:  This module requires the use of the `tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
+read SITE;
+
+echo 'Provide the site name (multidev, dev, test, or live), then press [ENTER]:';
+read ENV;
+
+# Delete all transient options - these are now stored in Redis
+terminus wp $SITE.$ENV -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"

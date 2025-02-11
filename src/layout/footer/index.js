@@ -53,9 +53,9 @@ const Footer = ({ data, className }) => {
       <div className="pds-footer__links-area pds-grid pds-grid--wide">
         <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
           <FlexContainer
-            spacing="standard"
+            gap="standard"
             justifyContent="between"
-            mobileFlex="reverse"
+            mobileFlexDirection="column"
           >
             <FooterLinks
               headingText="Topics"

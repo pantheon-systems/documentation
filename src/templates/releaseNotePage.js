@@ -24,12 +24,16 @@ const containerWidth = 'standard';
 class ReleaseNoteTemplate extends React.Component {
   render() {
     const node = this.props.data.mdx;
+    const excerptRaw = this.props.data.mdx.excerpt;
+    const excerpt =
+      excerptRaw.substring(0, 200).trim() ||
+      'A summary of changes to the Pantheon Platform';
 
     return (
       <Layout containerWidth={containerWidth} excludeSearch footerBorder>
         <SEO
           title={node.frontmatter.title}
-          description={node.frontmatter.description || node.excerpt}
+          description={excerpt}
           authors={node.frontmatter.contributors}
           image={'/images/default-thumb-changelog.png'}
         />
@@ -94,6 +98,7 @@ export const pageQuery = graphql`
   query ReleaseNoteBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       ...theReleaseNoteFields
+      excerpt
     }
   }
 `;

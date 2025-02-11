@@ -3,7 +3,7 @@ title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
 permalink: docs/object-cache/wordpress
 tags: [cache, plugins, modules, database]
-reviewed: "2024-08-08"
+reviewed: "2025-02-04"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -101,6 +101,26 @@ terminus redis:enable <site>
 	 Subsites do not get their own configuration or graphs if you are using WordPress Multisites. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
 	 </Alert>
+
+### Database Cleanup (Required)
+By default, when Redis is not available on a WordPress site, WordPress stores [transient data](https://developer.wordpress.org/apis/transients/) in the database. Transients are bits of data that are intended to be stored _temporarily_ and then cleared automatically. When object caching like Redis is available, WordPress automatically stores transients into the object cache. However, after enabling Redis, any transients that previously existed in the database will not necessarily be cleared automatically, even when the cache is cleared. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+
+Use the following script to cleanup cache tables in the database: 
+
+<Download file="wp-db-cleanup-cache-tables.sh" />
+
+```bash
+#!/bin/bash
+
+echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
+read SITE;
+
+echo 'Provide the site name (multidev, dev, test, or live), then press [ENTER]:';
+read ENV;
+
+# Delete all transient options - these are now stored in Redis
+terminus wp $SITE.$ENV -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
+```
 
 ## Installation and Configuration for Composer-Managed WordPress Sites
 
@@ -223,7 +243,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		] );
 	```
 
-
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
 	```php
@@ -291,6 +310,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
+1. See the ["Database Cleanup" section above](#database-cleanup-required) for steps on how to truncate the existing cache tables to make sure the latest data populates object cache properly.
+
 ## Local configuration with Lando
 Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Redis in its Docker configuration. However, to get Object Cache Pro to work correctly with Lando locally, you'll need to make a few changes to your Object Cache Pro and Lando configuration.
 
@@ -328,13 +349,13 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 	```
 	
 	<Alert title="Note" type="info">
-		If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
-	
-		```php
-		if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
-			define( 'WP_REDIS_DISABLED', true );
-		}
-		```
+	If you don't want to bother with changing the configuration for local environments, you can simply disable Object Cache Pro for Lando and leave the existing configuration:
+
+	```php
+	if ( isset( $_ENV['LANDO'] ) && 'ON' === $_ENV['LANDO'] ) {
+		define( 'WP_REDIS_DISABLED', true );
+	}
+	```
 	</Alert>
 	
 Make sure to commit your code back to your environment when you have made the appropriate changes.
