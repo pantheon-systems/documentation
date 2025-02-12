@@ -1,15 +1,15 @@
-import { graphql, StaticQuery, Link } from 'gatsby';
-import React from 'react';
-import MarketoForm from '../../components/marketoForm';
+import { graphql, StaticQuery, Link } from "gatsby"
+import React from "react"
+import MarketoForm from "../../components/marketoForm"
 import {
   FlexContainer,
   FooterLinks,
   FooterHeading,
   SiteFooter,
   SocialLinks,
-} from '@pantheon-systems/pds-toolkit-react';
+} from "@pantheon-systems/pds-toolkit-react"
 
-import './style.css';
+import "./style.css"
 
 const topicLinks = [
   <Link to="/get-started/">Get Started</Link>,
@@ -20,7 +20,7 @@ const topicLinks = [
   <Link to="/performance/">Optimize Performance</Link>,
   <Link to="/manage/">Manage Teams & Organizations</Link>,
   <Link to="/troubleshoot/">Troubleshoot</Link>,
-];
+]
 
 const helpLinks = [
   <a href="https://pantheon.io/contact-us" className="cta docs-cta">
@@ -34,28 +34,28 @@ const helpLinks = [
   </a>,
   <a href="https://status.pantheon.io/">Status</a>,
   <Link to="/guides/support/">Support</Link>,
-];
+]
 
 const communityLinks = [
   <Link to="/code-of-conduct/">Code of Conduct</Link>,
   <Link to="/contributors/">Contributors</Link>,
   <Link to="/pantheon-community/">Community & Power Users Group</Link>,
   <Link to="/contribute/">Learn to Contribute</Link>,
-];
+]
 
 const Footer = ({ data, className }) => {
   const CCLogo = data.allFile.edges.find(
-    (file) => file.node.publicURL.indexOf('CC-BY-SA_icon') > -1,
-  );
+    (file) => file.node.publicURL.indexOf("CC-BY-SA_icon") > -1
+  )
 
   return (
     <SiteFooter containerWidth="standard" className={className}>
       <div className="pds-footer__links-area pds-grid pds-grid--wide">
         <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
           <FlexContainer
-            gap="standard"
+            spacing="standard"
             justifyContent="between"
-            mobileFlexDirection="column"
+            mobileFlex="reverse"
           >
             <FooterLinks
               headingText="Topics"
@@ -115,8 +115,8 @@ const Footer = ({ data, className }) => {
         </p>
       </div>
     </SiteFooter>
-  );
-};
+  )
+}
 
 export default (props) => (
   <StaticQuery
@@ -134,4 +134,4 @@ export default (props) => (
     `}
     render={(data) => <Footer data={data} {...props} />}
   />
-);
+)

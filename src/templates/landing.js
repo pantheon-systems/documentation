@@ -53,7 +53,7 @@ class LandingTemplate extends Component {
             <FlexContainer
               alignItems="center"
               flexDirection="column"
-              mobileFlexDirection="column"
+              mobileFlex="same"
               className="landing-page-heading pds-spacing-pad-block-m"
             >
               <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
@@ -114,8 +114,8 @@ class LandingTemplate extends Component {
           {topic.subtopics && (
             <FlexContainer
               flexDirection="column"
-              mobileFlexDirection="column"
-              gap="wide"
+              mobileFlex="same"
+              spacing="wide"
               className="pds-spacing-pad-block-start-5xl"
             >
               {topic.subtopics &&
@@ -166,7 +166,7 @@ class LandingTemplate extends Component {
                 <h2 className="landing-page__section-heading">
                   Related Resources
                 </h2>
-                <FlexContainer gap="wide">
+                <FlexContainer spacing="wide">
                   {topic.cta && (
                     <CallToAction
                       title={topic.cta.title}
