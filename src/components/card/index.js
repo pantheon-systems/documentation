@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react"
+import logo from "../../../source/images/official-plugin.svg"
 
-import { Icon, PantheonLogo } from '@pantheon-systems/pds-toolkit-react';
+import { Icon, PantheonLogo } from "@pantheon-systems/pds-toolkit-react"
 
-import './style.css';
+import "./style.css"
 
 const Card = ({ title, isOfficial, author, authorLink, link, children }) => {
   return (
@@ -42,7 +43,7 @@ const Card = ({ title, isOfficial, author, authorLink, link, children }) => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
