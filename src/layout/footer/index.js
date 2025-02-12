@@ -2,7 +2,10 @@ import { graphql, StaticQuery, Link } from 'gatsby';
 import React from 'react';
 import MarketoForm from '../../components/marketoForm';
 import {
+  CTASlice,
+  InputText,
   FlexContainer,
+  Form,
   FooterLinks,
   FooterHeading,
   SiteFooter,

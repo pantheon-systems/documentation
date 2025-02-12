@@ -4,6 +4,7 @@ import GuideLayout from '../layout/GuideLayout';
 import SEO from '../layout/seo';
 import SearchBar from '../layout/SearchBar';
 import HeaderBody from '../components/headerBody';
+import Navbar from '../components/navbar';
 import TOC from '../components/toc';
 import GetFeedback from '../components/getFeedback';
 
