@@ -1,9 +1,11 @@
-import React from 'react';
-import { Container } from '@pantheon-systems/pds-toolkit-react';
+import React from "react"
+import { Link } from "gatsby"
 
-import './style.css';
+import { Container } from "@pantheon-systems/pds-toolkit-react"
 
-const currentYear = new Date().getFullYear();
+import "./style.css"
+
+const currentYear = new Date().getFullYear()
 
 const StaticFooter = ({ page }) => (
   <footer className="docs-static-footer">
@@ -26,6 +28,6 @@ const StaticFooter = ({ page }) => (
       </div>
     </Container>
   </footer>
-);
+)
 
-export default StaticFooter;
+export default StaticFooter
