@@ -1,22 +1,21 @@
 ---
-title: "New Side-by-Side Docs & Website Preview for Content Publisher"
+title: "New side-by-side preview editor for Content Publisher"
 published_date: "2025-02-13"
-categories: [user-interface, content-publisher]
+categories: [content-publisher, new-feature]
 ---
-We introduced a new **side-by-side docs and website Preview Editor**. It is being rolled out progressively to users under a feature flag. If you use Content Publisher and don’t have access yet, contact us if interested to try it out.
+Today we are releasing the **side-by-side preview editor** for Pantheon's Content Publisher. Previously available by request under a feature flag, the side-by-side preview editor is now available to all users participating in [the private beta program](https://pantheon.io/platform/content-publisher#beta).
 
-This new experience makes it easy to see how content from Docs will render on your Website:
+This new experience makes it easy to see how content from Google Docs will render on your website:
 
 ![Preview Editor Example](https://cdn.prod.pcc.pantheon.io/bXl9A4Dif2o3vA4YetBQ/GGPWyzsBLg5rSNNLhTiD)
 
-- Edit your Doc and see how it renders on your Website in a single browser tab—no more juggling multiple windows
-- Get quick access to the preview directly from the content explorer in the administration interface (see below)
-- Toggle between ‘desktop’ and ‘mobile preview’ to check responsive rendering
+- Edit your Google Doc and see how it renders on your website in a single browser tab - no more juggling multiple windows.
+- Get quick access to the preview directly from the content explorer in the administration interface.
+- Toggle between ‘desktop’ and ‘mobile preview’ to check responsive rendering.
 - Simply change the zoom factor for a better preview if your screen feels too small.
-Adjustable pane widths
+
 
 ## What's next
 
-- Preview editor will be progressively released to all users of Content 
-Publisher beta. Further improvement to the feature as well as other bug fixes and minor improvements will be released continuously. 
-- Visit Content Publisher detailed [release notes](https://pcc.pantheon.io/docs/release-notes) to know more, [request beta access](https://pantheon.io/platform/content-publisher#beta) if interested in testing the solution. Content Publisher is expected to move to Public Preview shortly. 
+- Further improvements to this feature as well as other bug fixes and minor improvements will be released continuously.
+- See also, the Content Publisher [release notes](https://pcc.pantheon.io/docs/release-notes) for a more detailed history of changes.
