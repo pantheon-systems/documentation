@@ -19,10 +19,6 @@ const Header = ({ page }) => {
   // Links for NavMenu component.
   const mainNavLinks = [
     {
-      label: 'Documentation',
-      links: OmniLinks,
-    },
-    {
       linkContent: (
         <a href="https://dashboard.pantheon.io/#support" target="_blank">
           Support
