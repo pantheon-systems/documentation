@@ -1,5 +1,5 @@
 import React from 'react';
-import { location, globalHistory } from '@reach/router';
+// import { location, globalHistory } from '@reach/router';
 
 // Import PDS Global wrapper for applying global context providers.
 import { GlobalWrapper } from '@pantheon-systems/pds-toolkit-react';
@@ -30,9 +30,9 @@ import 'tocbot/dist/tocbot.min.js';
 
 //Segment
 export const onRouteUpdate = () => {
-  window.locations = window.locations || [document.referrer];
-  locations.push(window.location.href);
-  window.previousPath = locations[locations.length - 2];
+  // window.locations = window.locations || [document.referrer];
+  // locations.push(window.location.href);
+  // window.previousPath = locations[locations.length - 2];
   window.analytics &&
     window.analytics.page({
       url: window.location.href,
