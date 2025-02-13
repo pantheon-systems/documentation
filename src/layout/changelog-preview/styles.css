@@ -1,0 +1,22 @@
+.changelog-preview .changelog-sidebar{
+  margin-top: 70px;
+}
+.changelog-sidebar li{
+  list-style: none;
+}
+
+.changelog-sidebar a {
+  color: rgb(18, 124, 187);
+  text-decoration: none;
+}
+.changelog-wrapper a {
+  color: rgb(18, 124, 187);
+}
+.changelog-sidebar a:hover {
+  opacity: 0.65;
+  color: rgb(18, 124, 187);
+}
+.changelog-wrapper a:hover {
+  opacity: 0.65;
+  color: rgb(18, 124, 187);
+}

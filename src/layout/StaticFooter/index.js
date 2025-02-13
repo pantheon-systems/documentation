@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
 import { Container } from '@pantheon-systems/pds-toolkit-react';
 
 import './style.css';

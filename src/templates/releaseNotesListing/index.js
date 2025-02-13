@@ -10,7 +10,6 @@ import SEO from '../../layout/seo.js';
 import ReleaseNotesPager from '../../components/releaseNotesPager.js';
 import ReleaseNotePopoverCategorySelector from '../../components/releaseNotePopoverCategorySelector.js';
 import ReleaseNoteTeaser from '../../components/ReleaseNoteTeaser/index.js';
-import { TextInput } from '@pantheon-systems/pds-toolkit-react';
 
 import { releaseNoteCategoryLoader } from '../../data/releaseNoteCategories.js';
 
@@ -291,9 +290,11 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 flexGrow: '2',
               }}
             >
-              <TextInput
+              <div className="pds-input-field__decorators">
+                <Icon iconName="barsFilter" />
+              </div>
+              <input
                 type="search"
-                searchIcon="filter"
                 aria-label="Filter by text"
                 placeholder="Filter by text"
                 ref={queryRef}
@@ -312,11 +313,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 setCurrentPage={setCurrentPage}
                 isDisabled={!isLoaded}
               />
-              <FlexContainer
-                mobileFlexDirection="row"
-                gap="narrow"
-                flexWrap="wrap"
-              >
+              <FlexContainer mobileFlex="same" spacing="narrow" flexWrap="wrap">
                 {filters &&
                   filters.categories.map((item) => {
                     return (
