@@ -12,7 +12,7 @@ require('dotenv').config({
 module.exports = {
   // Testing
   flags: {
-    DEV_SSR: true
+    DEV_SSR: true,
   },
   // Puts build artifacts in a subdirectory, and updates all local links
   pathPrefix: `/`,

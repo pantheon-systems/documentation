@@ -104,7 +104,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
   });
 
-  if (stage === "build-html" || stage === "develop-html") {
+  if (stage === 'build-html' || stage === 'develop-html') {
     actions.setWebpackConfig({
       module: {
         rules: [
@@ -114,7 +114,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
         ],
       },
-    })
+    });
   }
 };
 
