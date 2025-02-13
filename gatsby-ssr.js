@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 // Import PDS Global wrapper for applying global context providers.
 import { GlobalWrapper } from '@pantheon-systems/pds-toolkit-react';

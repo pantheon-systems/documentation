@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { location, globalHistory } from '@reach/router';
 
 // Import PDS Global wrapper for applying global context providers.
