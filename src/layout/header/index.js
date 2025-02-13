@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import getOmniItems from '../../components/omniSidebarNav/getOmniItems';
 
 import { Navbar, NavMenu } from '@pantheon-systems/pds-toolkit-react';
 
@@ -9,12 +7,6 @@ import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 import './style.css';
 
 const Header = ({ page }) => {
-  const OmniLinks = getOmniItems().map((item) => {
-    const theLink = React.createElement(Link, { to: item.link }, item.title);
-    return {
-      linkContent: theLink,
-    };
-  });
 
   // Links for NavMenu component.
   const mainNavLinks = [
