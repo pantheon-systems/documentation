@@ -46,12 +46,3 @@ export const onRouteUpdate = () => {
 export const onInitialClientRender = () => {
   window.dispatchEvent(new Event('resize'));
 };
-
-// Global context providers.
-export const wrapRootElement = ({ element }) => {
-  return (
-    <GlobalWrapper mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>
-      {element}
-    </GlobalWrapper>
-  );
-};

@@ -31,12 +31,3 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
     },
   ]);
 };
-
-// Global context providers.
-export const wrapRootElement = ({ element }) => {
-  return (
-    <GlobalWrapper mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>
-      {element}
-    </GlobalWrapper>
-  );
-};
