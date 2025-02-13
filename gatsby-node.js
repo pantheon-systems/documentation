@@ -97,12 +97,25 @@ const digest = (str) =>
     ? crypto.createHash('md5').update(str).digest('hex')
     : crypto.createHash('md5').update(' ').digest('hex');
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
   });
+
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /pds-toolkit-react/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
 };
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
