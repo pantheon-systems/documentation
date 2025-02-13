@@ -37,7 +37,7 @@ const Header = ({ page }) => {
         Skip to main content
       </a>
 
-      <Navbar
+      {/* <Navbar
         logoLinkContent={
           <a href="https://pantheon.io" target="_blank" rel="nofollow">
             Pantheon Home
@@ -66,7 +66,7 @@ const Header = ({ page }) => {
             Get free account
           </a>
         </div>
-      </Navbar>
+      </Navbar> */}
     </>
   );
 };
