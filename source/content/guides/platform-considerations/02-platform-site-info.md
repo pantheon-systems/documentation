@@ -84,7 +84,7 @@ Pantheon does not provide a user interface for administering MySQL.
 
 You may use applications like [phpMyAdmin](https://www.phpmyadmin.net/) to administer MySQL in your local development environment. However, we do not support running the phpMyAdmin application on Pantheon's remote environments, as only [one application per site is allowed](#one-application-per-site). More critically, it would be a dangerous security risk to do so on Pantheon as it's primary purpose is to provide direct read/write access to the database.
 
-Instead, we recommend using the command-line interface or a MySQL client like [Sequel Ace](https://sequel-ace.com/) to [acccess MySQL directly](/guides/mariadb-mysql/mysql-access/).
+Instead, we recommend using the command-line interface or a MySQL client like [Sequel Ace](https://sequel-ace.com/) to [access MySQL directly](/guides/mariadb-mysql/mysql-access/).
 
 ## Database Stored Procedures
 
