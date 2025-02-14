@@ -12,7 +12,7 @@ const accountManagement = () => {
         getGuideDirectory('guides/account-mgmt/plans'),
         getGuideDirectory('guides/account-mgmt/traffic'),
         // Consider relocating this next one as a Q in the Plans FAQ page:
-        // simpleLink('/tax-exempt-status', 'Tax Exempt Status'),
+        simpleLink('/tax-exempt-status', 'Tax Exempt Status'),
         // @todo, make a new page listing all
       ]),
       simpleLink('/guides/sso', 'Single Sign-On', [
