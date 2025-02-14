@@ -52,9 +52,10 @@ There's a wide array of MySQL clients that you can use, including:
 - [TablePlus](https://tableplus.com/)
 - [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/)
 - [Navicat](https://www.navicat.com/download)
-- [PHPMyAdmin](https://www.phpmyadmin.net/)
 
 Refer to the documentation or issue queue of your software to learn more about how to configure a connection.
+
+See our [platform considerations for phpMyAdmin usage](/guides/platform-considerations/platform-site-info#database-administration).
 
 #### Open Sequel Ace Database Connection
 
