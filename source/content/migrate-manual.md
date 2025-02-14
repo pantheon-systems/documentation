@@ -43,7 +43,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 - Read [Platform Considerations](/guides/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
-- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
+- Reference your plugins and/or modules against [Drupal Modules Known Issues](/modules-known-issues) and [WordPress Known Issues](/wordpress-known-issues)
 - Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/guides/php/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/guides/php/php-versions#configure-php-version).
 - Clear all caches
 - Remove unneeded code, database tables, and files

@@ -129,7 +129,7 @@ You can follow the _optional_ steps below to verify that your symlink is correct
 
 <Accordion title="Divi theme version 4.0.6 and above" id="divi-panel" icon="wrench">
 
-As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi) is assumes write access to the codebase where the `et-cache` folder is located.
+As discussed in [WordPress Known Issues](/wordpress-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi) is assumes write access to the codebase where the `et-cache` folder is located.
 
 <Alert title="Note" type="info">
 

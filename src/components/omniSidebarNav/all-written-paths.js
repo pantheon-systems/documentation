@@ -715,7 +715,6 @@ const allWrittenPaths = [
   '/mime-types',
   '/modules',
   '/modules-known-issues',
-  '/modules-plugins-known-issues',
   '/monthly-maintenance',
   '/multizone-failover',
   '/namecheap',

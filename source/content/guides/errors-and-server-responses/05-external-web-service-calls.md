@@ -63,4 +63,6 @@ Evaluate the code making the call and the service provider if you encounter freq
 
 - [External Libraries on Pantheon](/external-libraries)
 
-- [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
+- [Drupal Modules Known Issues](/modules-known-issues)
+
+- [WordPress Known Issues](/wordpress-known-issues)
