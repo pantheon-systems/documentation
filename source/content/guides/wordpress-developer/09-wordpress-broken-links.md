@@ -22,7 +22,7 @@ Links in your content may stop working by accident or due to web rot. This happe
 
 ## Links Constructed Using SERVER_NAME or SERVER_PORT
 
-Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data is for temporary container data, which can lead to broken links. Refer to [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) for more information.
+Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data is for temporary container data, which can lead to broken links. Refer to [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues) for more information.
 
 ## Available Plugins
 
@@ -61,5 +61,5 @@ WordPress stores URLs in various places in the database. This can cause unexpect
 ## More Resources
 
 - [Pantheon WebOps Workflow](/pantheon-workflow)
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues)
 - [Quicksilver on Pantheon](/guides/quicksilver)

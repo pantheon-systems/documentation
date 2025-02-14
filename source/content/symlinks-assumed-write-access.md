@@ -2,7 +2,7 @@
 title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 tags: [cli, code, files]
-reviewed: "2021-09-13"
+reviewed: "2025-02-14"
 contenttype: [doc]
 innav: [true]
 categories: [files]
@@ -176,7 +176,7 @@ You can also verify success using `dir`:
 
 <Accordion title="Nitropack" id="nitropack-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Nitropack](https://wordpress.org/plugins/nitropack/) assumes write access to the `wp-content/nitropack` folder and to `advanced.cache.php`.
+As discussed in [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues#assumed-write-access), [Nitropack](https://wordpress.org/plugins/nitropack/) assumes write access to the `wp-content/nitropack` folder and to `advanced.cache.php`.
 
 <Alert title="Note" type="info">
 
@@ -207,7 +207,7 @@ Manually create the target folders `code/wp-content/uploads/nitropack` and `code
 
 <Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [WP-Rocket](https://wp-rocket.me/) assumes write access to the codebase.
+As discussed in [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues#wp-rocket), [WP-Rocket](https://wp-rocket.me/) assumes write access to the codebase.
 
 <Alert title="Note" type="info">
 
@@ -259,7 +259,7 @@ You can also verify success using `dir`:
 
 <Accordion title="Uncode Theme" id="uncode-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the codebase.
+As discussed in [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues#uncode), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the codebase.
 
 1. Manually move the target folders. Note that Windows uses `\` instead of `/` to separate directories. These examples are formatted or Mac and Linux:
 

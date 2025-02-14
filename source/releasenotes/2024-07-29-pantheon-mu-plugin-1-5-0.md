@@ -10,7 +10,7 @@ The Pantheon MU Plugin [v1.5.0](https://github.com/pantheon-systems/pantheon-mu-
 
 This update introduces a new "comptibility layer" feature designed to enhance the compatibility of your site’s plugins. Here are the key highlights:
 
-* **Automatic compatibility fixes:** The compatibility layer automatically detects many plugins listed in our [WordPress Plugins and Themes with Known Issues](https://docs.pantheon.io/plugins-known-issues) guide. If a plugin is detected, relevant fixes are applied automatically.
+* **Automatic compatibility fixes:** The compatibility layer automatically detects many plugins listed in our [WordPress Plugins and Themes with Known Issues](https://docs.pantheon.io/wordpress-known-issues) guide. If a plugin is detected, relevant fixes are applied automatically.
 
 * **Compatibility reports:** If a plugin is detected but no fix is available, the compatibility layer generates a report for you.
 

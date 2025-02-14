@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-05-09"
+reviewed: "2025-02-14"
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/troubleshooting
 ---
@@ -24,7 +24,7 @@ Review our [Fix Broken Links in WordPress](/guides/wordpress-developer/wordpress
 
 ## Plugins and Themes with Known Issues
 
-Review our [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) doc for a list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
+Review our [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues) doc for a list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 
 ## Known Issues
 

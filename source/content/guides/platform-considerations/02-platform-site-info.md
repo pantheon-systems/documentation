@@ -13,7 +13,7 @@ tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/platform-considerations/platform-site-info
-reviewed: "2022-12-13"
+reviewed: "2025-02-14"
 ---
 
 This section provides information on Pantheon platform support for domain masking, htaccess, and many other configuration and site support considerations.
@@ -148,7 +148,7 @@ Refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubles
 
 ## Modules and Plugins with Known Issues
 
-Refer to [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for information about [Drupal modules](/modules-known-issues) and [WordPress plugins](/plugins-known-issues) that are not supported and/or require workarounds.
+Refer to [Drupal Modules with Known Issues](/modules-known-issues) for information about Drupal modules and [WordPress Known Issues](/wordpress-known-issues) for information about WordPress plugins that are not supported and/or require workarounds.
 
 ## Multisite
 

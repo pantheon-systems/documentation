@@ -748,7 +748,7 @@ const allWrittenPaths = [
   '/platform',
   '/platform-notifications',
   '/platform-upgrade',
-  '/plugins-known-issues',
+  '/wordpress-known-issues',
   '/products',
   '/regions',
   '/relaunch',
