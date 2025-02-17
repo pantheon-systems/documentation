@@ -107,8 +107,14 @@ const webInfrastructure = () => {
       ]),
       getGuideDirectory('guides/redirect', 'Redirects'),
 
+
       simpleLink('/develop-drupal', 'Drupal', [
-        simpleLink('/develop-drupal', 'Overview'),
+        simpleLink('/develop-drupalCMS', 'DrupalCMS', [
+          simpleLink('/drupalcms-from-dist', 'Create a DrupalCMS Site in Pantheon'),
+          simpleLink('/drupalcms-troubleshooting', 'DrupalCMS troubleshooting'),
+
+        ]),
+        simpleLink('/develop-drupal', 'Overview'), 
         simpleLink('/supported-drupal', 'Supported Drupal Versions'),
         simpleLink('/modules', 'Pantheon Modules'),
         simpleLink('/drupal-launch-check', 'Status Report'),
@@ -126,6 +132,7 @@ const webInfrastructure = () => {
           '/drupal-from-dist',
           'Create a Drupal Site Using a Drupal Distribution',
         ),
+
         simpleLink('/drupal-broken-links', 'Fix Broken Links'),
         // This page should be converted into an article.
         simpleLink('/cloud-optimization', 'Optimizing for the Cloud'),
