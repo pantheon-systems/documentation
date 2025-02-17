@@ -107,14 +107,15 @@ const webInfrastructure = () => {
       ]),
       getGuideDirectory('guides/redirect', 'Redirects'),
 
-
       simpleLink('/develop-drupal', 'Drupal', [
         simpleLink('/develop-drupalCMS', 'DrupalCMS', [
-          simpleLink('/drupalcms-from-dist', 'Create a DrupalCMS Site in Pantheon'),
+          simpleLink(
+            '/drupalcms-from-dist',
+            'Create a DrupalCMS Site in Pantheon',
+          ),
           simpleLink('/drupalcms-troubleshooting', 'DrupalCMS troubleshooting'),
-
         ]),
-        simpleLink('/develop-drupal', 'Overview'), 
+        simpleLink('/develop-drupal', 'Overview'),
         simpleLink('/supported-drupal', 'Supported Drupal Versions'),
         simpleLink('/modules', 'Pantheon Modules'),
         simpleLink('/drupal-launch-check', 'Status Report'),
