@@ -1,6 +1,6 @@
 ---
-title: Secure Development on Pantheon
-subtitle: Transport Layer Security (TLS)
+title: Transport Layer Security (TLS) 
+subtitle: How to check that your site supports secure TLS-encrypted connections
 description: Learn how to ensure your site is compatible with the latest security standards.
 contenttype: [guide]
 innav: [false]
