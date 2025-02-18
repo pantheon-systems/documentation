@@ -1,35 +1,31 @@
-import React from "react"
-import { Link } from "gatsby"
-import ReleaseNoteCategories from "../ReleaseNoteCategories/index.js"
-import MdxWrapper from "../mdxWrapper.js"
-import PublishedDate from "../PublishedDate/index.js"
-import {
-  headline2,
-  headline3,
-  headline4,
-} from "../releaseHeadlines"
+import React from 'react';
+import { Link } from 'gatsby';
+import ReleaseNoteCategories from '../ReleaseNoteCategories/index.js';
+import MdxWrapper from '../mdxWrapper.js';
+import PublishedDate from '../PublishedDate/index.js';
+import { headline2, headline3, headline4 } from '../releaseHeadlines';
 
-import "./style.css"
+import './style.css';
 
 // Change the heading levels when release notes are displayed as a list so that the the headings don't conflict with the release note headings.
 const customShortcodes = {
   h1: headline2,
   h2: headline3,
   h3: headline4,
-}
+};
 
 const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
   if (!ReleaseNoteData) {
-    return null
+    return null;
   }
 
   return (
     <React.Fragment key={ReleaseNoteData.id}>
       <article
-        className={["docs-release-note-teaser", className]
-          .join(" ")
+        className={['docs-release-note-teaser', className]
+          .join(' ')
           .trim()
-          .replace(/\s+/g, " ")}
+          .replace(/\s+/g, ' ')}
       >
         <div className="docs-release-note-teaser__header pds-spacing-mar-block-end-xs">
           <Link
@@ -49,10 +45,13 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
           dateString={ReleaseNoteData.frontmatter.published_date}
           className="pds-spacing-mar-block-end-m"
         />
-        <MdxWrapper mdx={ReleaseNoteData.body} customShortcodes={customShortcodes} />
+        <MdxWrapper
+          mdx={ReleaseNoteData.body}
+          customShortcodes={customShortcodes}
+        />
       </article>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default ReleaseNoteTeaser
+export default ReleaseNoteTeaser;
