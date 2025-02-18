@@ -25,7 +25,7 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
 
   return (
     <React.Fragment key={ReleaseNoteData.id}>
-      <div
+      <article
         className={["docs-release-note-teaser", className]
           .join(" ")
           .trim()
@@ -50,7 +50,7 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
           className="pds-spacing-mar-block-end-m"
         />
         <MdxWrapper mdx={ReleaseNoteData.body} customShortcodes={customShortcodes} />
-      </div>
+      </article>
     </React.Fragment>
   )
 }
