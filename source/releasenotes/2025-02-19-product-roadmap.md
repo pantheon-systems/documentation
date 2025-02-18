@@ -10,6 +10,8 @@ Pantheon has shared our roadmap with customers for a long time, but it was stati
 * Access our new self-serve public roadmap at your convenience.
 * Submit feedback about individual features on the roadmap, or new ideas that aren't yet represented.
 
+<br/>
+
 For more details, see [related documentation](/roadmap).
 
 ## Why is this being done?
