@@ -141,8 +141,8 @@ class LandingTemplate extends Component {
                 className="landing-page__topics pds-grid"
               >
                 {topic.topics_groups &&
-                  topic.topics_groups.map((group, key) => ({
-                    /* <LinksCard
+                  topic.topics_groups.map((group, key) => (
+                    <LinksCard
                       className={
                         topicGroupsColumns === 'two'
                           ? twoColumnClasses
@@ -154,8 +154,8 @@ class LandingTemplate extends Component {
                       linkItems={group.links.map((link, index) => (
                         <Link to={link.url}>{link.text}</Link>
                       ))}
-                    /> */
-                  }))}
+                    />
+                  ))}
               </Container>
             </div>
           )}
