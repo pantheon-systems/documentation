@@ -11,7 +11,7 @@ integration: [--]
 ---
 
 ## Access
-You can now access Pantheon’s product roadmap at your convenience by visiting https://roadmap.pantheon.io. The roadmap contains information on past releases, along with features that are under development or under consideration for future development. The roadmap reflects changes on a rolling basis so you can access the most up-to-date information about what’s coming whenever you want.
+You can now access Pantheon’s product roadmap at your convenience by visiting [https://roadmap.pantheon.io](https://roadmap.pantheon.io). The roadmap contains information on past releases, along with features that are under development or under consideration for future development. The roadmap reflects changes on a rolling basis so you can access the most up-to-date information about what’s coming whenever you want.
 
 ## Submit Feature Requests and Feedback
 Additionally, the new roadmap provides two ways for you to submit feedback to Pantheon, helping to shape individual features and the future of the Pantheon platform.
@@ -26,7 +26,7 @@ When you do submit feedback, please use the email address associated with your P
 ## Frequently Asked Questions
 ### What does each phase in the product roadmap mean? 
 * **Released** - Generally available (GA) features released to all customers.
-* **Beta** - New features released in either a private “Beta,” or a “Public Preview” state. In both cases, information on how to access this feature will be provided on the feature card. Additionally, once the feature is in GA, it will be moved to the “Released” tab.
+* **Beta & Preview** - New features released in either a private “Beta,” or a “Public Preview” state. In both cases, information on how to access this feature will be provided on the feature card. Additionally, once the feature is in GA, it will be moved to the “Released” tab.
 * **Coming soon** - Features in development or coming up soon.
 * **Under consideration** - Features that could come next.  In this phase, your feedback has the most impact—it plays a key role in shaping our next steps and determining what we focus on next.
 
