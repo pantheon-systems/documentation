@@ -142,7 +142,7 @@ class LandingTemplate extends Component {
               >
                 {topic.topics_groups &&
                   topic.topics_groups.map((group, key) => (
-                    <LinksCard
+                    {/* <LinksCard
                       className={
                         topicGroupsColumns === 'two'
                           ? twoColumnClasses
@@ -154,7 +154,7 @@ class LandingTemplate extends Component {
                       linkItems={group.links.map((link, index) => (
                         <Link to={link.url}>{link.text}</Link>
                       ))}
-                    />
+                    /> */}
                   ))}
               </Container>
             </div>
