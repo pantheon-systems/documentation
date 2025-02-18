@@ -12,7 +12,7 @@ integration: [--]
 tags: [cms, security]
 contributors: [jazzsequence]
 showtoc: true
-permalink: docs/guides/secure-development/tls-compatibility
+permalink: docs/tls-compatibility
 reviewed: "2025-02-04"
 ---
 
