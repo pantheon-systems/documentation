@@ -229,3 +229,14 @@ a.individual-changelog-link:hover {
 .mktoForm .mktoLogicalField.mktoInvalid {
   border: 1px solid var(--pds-color-input-border-critical);
 }
+
+article {
+  ul {
+    margin-block-start: var(--pds-spacing-3xs);
+    margin-block-end: var(--pds-spacing-m);
+  }
+
+  *:has(+ ul) {
+    margin-bottom: 0;
+  }
+}
