@@ -48,7 +48,7 @@ Unfortunately, there is no way for you to edit a piece of feedback once it has b
 Customer feedback is not visible within the public roadmap; it is only accessible to Pantheon staff members after submission. You’ll know it was submitted successfully if you receive the email to verify your email address. Once you complete that verification, the feedback will be accessible to Pantheon’s staff members.
 
 ### I’ve shared feedback with Pantheon in the past. How do I know if that feedback is reflected in the roadmap?
-Past feedback shared directly with Pantheon staff was logged in internal systems and then used to help prioritize the Pantheon roadmap.  It won’t be reflected in the “vote” counts on individual feature cards. If you aren’t sure you shared feedback about a particular topic before, or if you want to raise the issue again, please feel free to submit the feedback through this self-serve roadmap.
+Past feedback shared directly with Pantheon staff was logged in internal systems and then used to help prioritize the Pantheon roadmap.  It won’t be reflected in the “vote” counts on individual feature cards. If you aren’t sure you shared feedback about a particular topic before, or if you want to raise the issue again, please feel free to submit the feedback through this interactive roadmap.
 
 ### How often does Pantheon review customer feedback?
 We review customer feedback on a rolling basis during normal business hours. The feedback submitted through the public roadmap is meant to help guide our long-term feature prioritization and to ensure we are building the tools you need to succeed with Pantheon. If you need a response, discussion, or support, especially for urgent matters, please [contact our support team](/guides/support/contact-support).  

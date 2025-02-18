@@ -1,5 +1,5 @@
 ---
-title: "Introducing Pantheon’s self-serve product roadmap"
+title: "Introducing Pantheon’s interactive product roadmap"
 published_date: "2025-02-19"
 categories: [new-feature, general]
 ---
