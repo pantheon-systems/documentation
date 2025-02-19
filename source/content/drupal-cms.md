@@ -76,7 +76,7 @@ They also provide some helper functionality like keeping the PHP versions declar
 
 To remove these scripts:
 
-1. Delete the `upstream-configuration` entry from the repositories section of `composer.json`:
+1. Delete the `upstream-configuration` entry from the `repositories` section of `composer.json`:
 
 ```json
         {
@@ -85,7 +85,15 @@ To remove these scripts:
         }
 ```
 
-2. Delete the `autoload`, `scripts`, and `scripts-descriptions` from `composer.json`:
+
+2. Delete the `"upstream-configuration` entry from the `require` section of `composer.json`:
+
+
+```json
+        "pantheon-upstreams/upstream-configuration": "dev-main",
+```
+
+3. Delete the `autoload`, `scripts`, and `scripts-descriptions` from `composer.json`:
 
 ```json
     "autoload": {
@@ -106,7 +114,7 @@ To remove these scripts:
     },
 ```
 
-3. Delete the `upstream-configuration` directory from the root of your project:
+4. Delete the `upstream-configuration` directory from the root of your project:
 
 ```bash
 rm -rf upstream-configuration
