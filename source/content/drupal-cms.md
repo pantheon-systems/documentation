@@ -28,9 +28,7 @@ After trial usage of recipe combinations in sandbox sites, teams cab then replic
 Drupal CMS can be installed in a fresh sandbox site on Pantheon the same as vanilla Drupal 11 and WordPress are.
 [This link will take you straight to site creation with Drupal CMS in the dashboard](https://dashboard.pantheon.io/sites/create?upstream_id=462d08e2-3322-48a1-b150-f12a075eaabe).
 
-
 ![Drupal CMS Dashboard](../images/drupalcms/deploying-drupalcms-dashboard.png)
-
 
 If you prefer, you can also create a new site with Drupal CMS using [Terminus](/terminus):
 
@@ -50,7 +48,7 @@ In addition to Recipes, Drupal CMS elevates other new technical constructs withi
 
 Selecting a large number of recipes in during installation seems to correlate with an increased likelihood of timeouts and errors.
 
-If you encounter a timeout or error during installation you can likely resolve it by clearing caches.
+If you encounter a timeout or error during installation you can likely resolve it by clearing caches:
 
   ![Clear Cache Button](../images/clear-cache-button.png)
 
