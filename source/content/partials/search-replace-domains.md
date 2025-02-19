@@ -24,7 +24,7 @@ Make sure you select the **Find & Replace** functionality:
 
 <Image alt="Enable Find & Replace" path="wp-migrate-db-setting.png" />
 
-Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/). However, there is an additional filter that must be added for it to work on Live, as outlined in [Plugins and Themes with Known Issues](/plugins-known-issues/#better-search-and-replace).
+Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/). However, there is an additional filter that must be added for it to work on Live, as outlined in [Plugins and Themes with Known Issues](/wordpress-known-issues/#better-search-and-replace).
 
 </Tab>
 

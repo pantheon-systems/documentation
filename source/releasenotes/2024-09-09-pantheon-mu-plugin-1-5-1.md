@@ -8,6 +8,6 @@ The Pantheon MU Plugin [v1.5.1](https://github.com/pantheon-systems/pantheon-mu-
 
 ### What's new?
 
-This update adds two new plugin additions to the compatibility layer feature warning of potential issues with [PhastPress](/plugins-known-issues#phastpress) and [WP Cerber](/plugins-known-issues#wp-cerber-security-antispam--malware-scan).
+This update adds two new plugin additions to the compatibility layer feature warning of potential issues with [PhastPress](/wordpress-known-issues#phastpress) and [WP Cerber](/wordpress-known-issues#wp-cerber-security-antispam--malware-scan).
 
 Additionally, this release updates some of the content in the WordPress multisite setup screens and adds filters to allow for the customization of the location of the WordPress configuration file and the "Happy publishing" comment typically found in `wp-config.php` files.

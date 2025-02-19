@@ -11,7 +11,7 @@ product: [--]
 integration: [plugins]
 tags: [workflow, code]
 contributors: [afragen, petersuhm, jazzsequence]
-reviewed: "2024-10-14"
+reviewed: "2025-02-14"
 permalink: docs/guides/wordpress-configurations/wordpress-custom-code
 ---
 
@@ -109,5 +109,5 @@ These errors occur when the expected WP Pusher database table does not exist on 
 
 ## More Resources
 
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues)
 - [WP-CLI on the Pantheon Platform](/guides/create-wp-site)

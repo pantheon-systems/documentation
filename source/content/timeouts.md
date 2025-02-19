@@ -2,7 +2,7 @@
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
 tags: [cron, drush, ssh, solr, terminus]
-reviewed: "2020-03-18"
+reviewed: "2025-02-14"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -87,5 +87,6 @@ Agencies that frequently deploy sites using a common set of themes and plugins s
 
 - [Platform Considerations](/guides/platform-considerations)
 - [Errors and Server Responses](/guides/errors-and-server-responses)
-- [Modules and Plugins With Known Issues](/modules-plugins-known-issues)
+- [Drupal Modules Known Issues](/modules-known-issues)
+- [WordPress Known Issues](/wordpress-known-issues)
 - [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)

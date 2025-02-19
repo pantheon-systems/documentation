@@ -165,5 +165,5 @@ The [WordPress theme repository](https://wordpress.org/themes/) provides a list 
 
 ## More Resources
 
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues)
 - [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)

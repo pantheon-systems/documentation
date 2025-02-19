@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-05-04"
+reviewed: "2025-02-14"
 showtoc: true
 permalink: docs/guides/wordpress-configurations
 ---
@@ -22,7 +22,7 @@ Pantheon provides extensive compatibility with WordPress plugins. This guide pro
 - Apache Solr for WordPress
 - Custom code for plugins
 
-We recommend that you review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document carefully before you download and configure plugins or themes for your WordPress site.
+We recommend that you review the [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues) document carefully before you download and configure plugins or themes for your WordPress site.
 
 ## WordPress on Pantheon Quick Start Guide
 

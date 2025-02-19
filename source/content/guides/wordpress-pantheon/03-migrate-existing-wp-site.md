@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-05-02"
+reviewed: "2025-02-14"
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/migrate-existing-wp-site
 ---
@@ -44,7 +44,7 @@ Complete the following steps for the current site before beginning the migration
 
 1. Audit your Plugins and Themes and remove any that you no longer use.
 
-1. Review Pantheon's [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) to see if any of your plugins or themes are listed.
+1. Review Pantheon's [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues) to see if any of your plugins or themes are listed.
 
 1. Make sure your code is compatible with the latest recommended version of PHP for WordPress, and [adjust PHP versions](/guides/php/php-versions#configure-php-version) if needed.
 

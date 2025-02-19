@@ -7,7 +7,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2022-12-13"
+reviewed: "2025-02-14"
 contenttype: [guide]
 innav: [false]
 categories: [automate, test, update, faq]
@@ -234,7 +234,7 @@ Autopilot supports the use of premium and paid WordPress plugins. It is importan
 
 Before you begin:
 
-1. Review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document.
+1. Review the [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues) document.
 
 1. Ensure that the plugins or themes are compatible with Pantheon. Plugins and themes will not work on Pantheon if they:
 

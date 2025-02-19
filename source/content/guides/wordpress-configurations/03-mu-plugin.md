@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [plugins]
-reviewed: "2020-08-12"
+reviewed: "2025-02-14"
 permalink: docs/guides/wordpress-configurations/mu-plugin
 ---
 
@@ -368,4 +368,4 @@ function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
 
 - [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues)

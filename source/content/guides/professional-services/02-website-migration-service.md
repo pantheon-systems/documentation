@@ -94,7 +94,9 @@ Throughout the process, you'll have access to the Migrations Team through a dedi
 
 ### Implement Solutions to Known Existing Incompatibilities
 
-Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing [known solutions](/modules-plugins-known-issues) to incompatibilities that have been identified by our Success teams.
+Each site migration includes up to **five hours** of the Migration Team's time for researching issues and implementing **known solutions** to incompatibilities that have been identified by our Success teams:
+* [Drupal Modules Known Issues](/modules-known-issues)
+* [WordPress Known Issues](/wordpress-known-issues)
 
 These hours are tracked by the Migrations Team and do not roll over for use on other sites.
 
@@ -122,7 +124,7 @@ During the Migration project kick-off, the team will review which of the followi
 
      - [Pantheon platform considerations](/guides/platform-considerations)
 
-     - Plugins or Modules that have been identified as [problematic](/modules-plugins-known-issues/)
+     - [Plugins](/wordpress-known-issues) or [Modules](/modules-known-issues) that have been identified as problematic
 
    - Code that relies on specific PHP libraries, packages, server applications, or other dependencies not supported by the platform.
 
