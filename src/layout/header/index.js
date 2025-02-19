@@ -37,7 +37,36 @@ const Header = ({ page }) => {
         Skip to main content
       </a>
 
-      <p>test</p>
+      <Navbar
+        logoLinkContent={
+          <a href="https://pantheon.io" target="_blank" rel="nofollow">
+            Pantheon Home
+          </a>
+        }
+      >
+        <NavMenu
+          slot="items-left"
+          ariaLabel="Main Navigation"
+          menuItems={mainNavLinks}
+          mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
+        />
+        <div slot="items-right" className="pds-button-group">
+          <a
+            className="pds-button pds-button--brand-secondary"
+            href="https://dashboard.pantheon.io"
+            target="_blank"
+          >
+            Log in
+          </a>
+          <a
+            className="pds-button pds-button--brand"
+            href="https://pantheon.io/register"
+            target="_blank"
+          >
+            Get free account
+          </a>
+        </div>
+      </Navbar>
     </>
   );
 };
