@@ -85,7 +85,6 @@ To remove these scripts:
         }
 ```
 
-
 2. Delete the `"upstream-configuration` entry from the `require` section of `composer.json`:
 
 
