@@ -16,7 +16,7 @@ reviewed: "2024-02-10"
 
 # Drupal CMS
 
-Released in January of 2025, Drupal CMS is a relatively new wrapper around Drupal Core.
+Released in January of 2025, Drupal CMS is a wrapper around Drupal Core.
 Drupal CMS builds on the concept of [Recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes) to [radically reduce the amount of time and expertise required to stand up common functionality](https://pantheon.io/blog/drupal-cms-innovations).
 In particular, Drupal CMS is aimed at Marketers and Content Editors who commonly use Drupal, but who may not have the technical expertise to install and configure modules themselves.
 
