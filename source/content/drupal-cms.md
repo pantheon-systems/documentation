@@ -20,12 +20,12 @@ Released in January of 2025, Drupal CMS is a wrapper around Drupal Core.
 Drupal CMS builds on the concept of [Recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes) to [radically reduce the amount of time and expertise required to stand up common functionality](https://pantheon.io/blog/drupal-cms-innovations).
 In particular, Drupal CMS is aimed at Marketers and Content Editors who commonly use Drupal, but who may not have the technical expertise to install and configure modules themselves.
 
-For Pantheon's developer-centric community, Drupal CMS will be most valuable as a reference point and proving ground for recipes.
-After trial usage of recipe combinations in sandbox sites, teams cab then replicate their favorite recipes on new or pre-existing live sites.
+For Pantheon's developer-centric community, Drupal CMS can be used as a reference point and proving ground for recipes.
+After trial usage of recipe combinations in sandbox sites, experienced development teams can then replicate their favorite recipes on new or pre-existing live sites.
 
 ## Installing Drupal CMS on Pantheon
 
-Drupal CMS can be installed in a fresh sandbox site on Pantheon the same as vanilla Drupal 11 and WordPress are.
+Drupal CMS can be installed in a fresh sandbox site on Pantheon.
 [This link will take you straight to site creation with Drupal CMS in the dashboard](https://dashboard.pantheon.io/sites/create?upstream_id=462d08e2-3322-48a1-b150-f12a075eaabe).
 
 ![Drupal CMS Dashboard](../images/drupalcms/deploying-drupalcms-dashboard.png)
@@ -42,7 +42,7 @@ After the site creation process provisions a database, code, and other resources
 
 ## Troubleshooting common issues with Drupal CMS
 
-In addition to Recipes, Drupal CMS elevates other new technical constructs within Drupal can be challenging to troubleshoot or raise the importance of workflow clarity.
+In addition to Recipes, Drupal CMS elevates other new technical constructs within Drupal that can be challenging to troubleshoot or raise the importance of workflow clarity.
 
 ### Timeouts and Errors during Drupal CMS Installation
 
@@ -56,9 +56,12 @@ If clearing caches does not resolve the error, you may need to wipe your databas
 
 [See this GitHub issue for more discussion of timeouts and errors during Drupal CMS installation.](https://github.com/pantheon-upstreams/drupal-cms-composer-managed/issues/1)
 
-### Project Browser and file system writablility
+### Project Browser
 
 Project Browser is a new feature that allows modules and recipes to be installed or applied directly from Drupal's browser-based administrative interface.
+
+#### Project Browser and file system write access
+
 Adding modules and recipes to a site using assumes some version-controlled files and directories are writable by the web server and it also presumes that there is only one web server.
 
 On Pantheon sites, Test and Live environments are locked down for security purposes, and therefore not writable.
@@ -67,11 +70,11 @@ This means that Project Browser can only be used on Pantheon in the Dev and Mult
 
 After using Project Browser to install modules, you must [commit and push the changes to your codebase in order to deploy them to Test and Live](/drupal-configuration-management).
 
-### Project Browser and Pantheon-provided Composer scripts
+#### Project Browser and Pantheon-provided Composer scripts
 
-If you intend to use Project Browser first remove extra the composer scripts that Pantheon provides upon site creation. These scripts hook into the Composer lifecycle and can interfere with the Project Browser's ability to install modules and recipes.
+If you intend to use Project Browser, first remove the composer scripts that Pantheon provides on site creation. These scripts hook into the Composer lifecycle and can interfere with the Project Browser's ability to install modules and recipes.
 
-These scripts are most useful for teams that then create their own upstreams or distributions.
+Pantheon's upstream configuration scripts are most useful for teams that create and maintain their own upstreams or distributions.
 They also provide some helper functionality like keeping the PHP versions declared in `composer.json` in sync with those declared in `pantheon.yml`.
 
 To remove these scripts:
@@ -92,7 +95,7 @@ To remove these scripts:
         "pantheon-upstreams/upstream-configuration": "dev-main",
 ```
 
-3. Delete the `autoload`, `scripts`, and `scripts-descriptions` from `composer.json`:
+3. Delete the `autoload`, `scripts`, and `scripts-descriptions` that reference `upstream-configuration` or `DrupalComposerManaged` from `composer.json`:
 
 ```json
     "autoload": {
