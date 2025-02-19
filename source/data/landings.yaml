@@ -1008,7 +1008,7 @@
           url: "/drupal-from-dist"
           icon: "book"
         - text: "Create a DrupalCMS Site"
-          url: "/drupalcms-from-dist"
+          url: "/drupal-cms"
         - text: "Launch Check - Drupal Performance and Configuration Analysis"
           url: "/drupal-launch-check"
         - text: "Importing Drush Site Archives with Terminus"

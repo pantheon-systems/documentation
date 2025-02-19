@@ -127,7 +127,6 @@ const webInfrastructure = () => {
           '/drupal-from-dist',
           'Create a Drupal Site Using a Drupal Distribution',
         ),
-
         simpleLink('/drupal-broken-links', 'Fix Broken Links'),
         // This page should be converted into an article.
         simpleLink('/cloud-optimization', 'Optimizing for the Cloud'),
