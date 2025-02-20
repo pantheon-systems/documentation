@@ -6,7 +6,10 @@ const about = () => {
     title: 'About our Docs',
     children: [
       simpleLink('/contribute', 'Contribute to the Docs'),
-      simpleLink('/pantheon-community', 'Pantheon Community', [
+      simpleLink('/community', 'Pantheon Community', [
+        simpleLink('/community', 'Community'),
+        simpleLink('/pantheon-community', 'Join'),
+        simpleLink('/roadmap', 'Pantheon Roadmap'),
         simpleLink('/code-of-conduct', 'Code of Conduct'),
         simpleLink('/trainers', 'Trainers'),
       ]),

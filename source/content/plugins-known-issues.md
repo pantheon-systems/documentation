@@ -1649,11 +1649,11 @@ ___
 
 ## WP phpMyAdmin
 
-<ReviewDate date="2024-01-30" />
+<ReviewDate date="2025-02-14" />
 
-The [WP phpMyAdmin](https://puvox.software/software/wordpress-plugins/?plugin=wp-phpmyadmin-extension) plugin is not supported on Pantheon and will not work correctly.
+The [WP phpMyAdmin](https://wordpress.org/plugins/wp-phpmyadmin-extension/) plugin is not supported on Pantheon and will not work correctly.
 
-**Alternative:** Please see https://docs.pantheon.io/guides/mariadb-mysql/mysql-access for more information on accessing your database directly.
+**Alternative:** See our related documentation for more information on [accessing your database directly](/guides/mariadb-mysql/mysql-access).
 
 ___
 
