@@ -40,6 +40,7 @@ const support = () => {
         simpleLink('/mime-types', 'MIME Types'),
         simpleLink('/resetting-passwords', 'Resetting Passwords'),
         simpleLink('/local-dns-cache', 'Local DNS Cache'),
+        simpleLink('/tls-compatibility', 'TLS Compatibility'),
       ]),
       simpleLink('/performance', 'Performance Troubleshooting', [
         simpleLink('/performance', 'Overview'),
