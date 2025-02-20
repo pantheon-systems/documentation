@@ -285,7 +285,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             }}
           >
             <div
-              className="pds-input-field pds-input-field--text pds-spacing-mar-block-end-xl"
+              className="pds-text-input__input-wrapper pds-spacing-mar-block-end-xl"
               style={{
                 flexGrow: '2',
               }}
