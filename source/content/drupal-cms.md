@@ -21,7 +21,10 @@ Drupal CMS builds on the concept of [Recipes](https://www.drupal.org/docs/extend
 In particular, Drupal CMS is aimed at Marketers and Content Editors who commonly use Drupal, but who may not have the technical expertise to install and configure modules themselves.
 
 For Pantheon's developer-centric community, Drupal CMS can be used as a reference point and proving ground for recipes.
-After trial usage of recipe combinations in sandbox sites, experienced development teams can then replicate their favorite recipes on new or pre-existing live sites.
+
+After trial usage of recipe combinations in sandbox sites, experienced development teams can then replicate their favorite recipes on new or pre-existing live sites, or provide those recipes for an easy deployment on their sites for less experienced users.
+
+Recipes also reduce the time and knowledge it requires to install and setup some functionalities and modules. While in the past installing some specific modules would require having a minimum knowledge of what we are installing, how to configure them, etc, in the era of the Drupal recipes adding new functionality to any site has been highly simplified. 
 
 ## Installing Drupal CMS on Pantheon
 
@@ -58,7 +61,7 @@ If clearing caches does not resolve the error, you may need to wipe your databas
 
 ### Project Browser
 
-Project Browser is a new feature that allows modules and recipes to be installed or applied directly from Drupal's browser-based administrative interface.
+Project Browser in Drupal is a tool designed to simplify the process of discovering, evaluating, and installing modules directly from within the Drupal administrative interface. It provides a user-friendly interface that allows site administrators and developers to search for modules, view detailed information about them, and install them without needing to leave Drupal or manually download and upload module files.
 
 #### Project Browser and file system write access
 
