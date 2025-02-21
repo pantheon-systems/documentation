@@ -71,7 +71,10 @@ const ReleaseNotePopoverCategorySelector = ({
         {/* Create an array, with length defined in `totalColumns` */}
         {Array.from({ length: totalColumns }, (_, columnIndex) => (
           // Iterate over each column
-          <div key={columnIndex} className="rn-popover-content-inner pds-spacing-pad-block-start-s">
+          <div
+            key={columnIndex}
+            className="rn-popover-content-inner pds-spacing-pad-block-start-s"
+          >
             {/* For each column, render items within the specified range based on `itemsPerColumn`
             and slice `activeCategories` to get the items for the current column. */}
             {activeCategories
@@ -102,7 +105,10 @@ const ReleaseNotePopoverCategorySelector = ({
                     <label
                       htmlFor={item.displayName}
                       className="pds-spacing-mar-block-end-none"
-                      style={{ fontWeight: 400, fontSize: 'var(--pds-typography-size-s)' }}
+                      style={{
+                        fontWeight: 400,
+                        fontSize: 'var(--pds-typography-size-s)',
+                      }}
                     >
                       {item.displayName}
                     </label>
