@@ -1,0 +1,18 @@
+diff --git a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+index cd7ee0c..daad0eb 100644
+--- a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
++++ b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+@@ -6991,11 +6991,11 @@ const ds = (p) => {
+       const Y = _1(
+         document.querySelector(".pds-navbar__mobile")
+       ), W = ["a", "button", "input", "select", "textarea"];
+-      E ? Y.forEach((O) => {
++      Y && (E ? Y.forEach((O) => {
+         W.includes(O.nodeName.toLowerCase()) && (O.tabIndex = 0);
+       }) : Y.forEach((O) => {
+         W.includes(O.nodeName.toLowerCase()) && (O.tabIndex = -1);
+-      });
++      }));
+     }
+   }, [E]);
+   const z = (Y) => {
