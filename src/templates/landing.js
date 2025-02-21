@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 import GuideLayout from '../layout/GuideLayout';
 import CallToAction from '../layout/call-to-action';
 import SearchBar from '../layout/SearchBar';
-import Layout from '../layout/layout';
 import SubTopicGroup from '../layout/subtopic-group';
 import Youtube from '../components/youtube';
 import GuideItem from '../layout/guide-item';
@@ -54,7 +53,7 @@ class LandingTemplate extends Component {
             <FlexContainer
               alignItems="center"
               flexDirection="column"
-              mobileFlex="same"
+              mobileFlexDirection="column"
               className="landing-page-heading pds-spacing-pad-block-m"
             >
               <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
@@ -115,8 +114,8 @@ class LandingTemplate extends Component {
           {topic.subtopics && (
             <FlexContainer
               flexDirection="column"
-              mobileFlex="same"
-              spacing="wide"
+              mobileFlexDirection="column"
+              gap="wide"
               className="pds-spacing-pad-block-start-5xl"
             >
               {topic.subtopics &&
@@ -167,7 +166,7 @@ class LandingTemplate extends Component {
                 <h2 className="landing-page__section-heading">
                   Related Resources
                 </h2>
-                <FlexContainer spacing="wide">
+                <FlexContainer gap="wide">
                   {topic.cta && (
                     <CallToAction
                       title={topic.cta.title}
