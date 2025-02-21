@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import getOmniItems from '../../components/omniSidebarNav/getOmniItems';
 
-import { Navbar, NavMenu } from '@pantheon-systems/pds-toolkit-react';
+import { DocsNavbar } from '../../pds-middleware/DocsNavbar/DocsNavbar';
+
+import { NavMenu } from '@pantheon-systems/pds-toolkit-react';
 
 import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 
@@ -37,7 +39,7 @@ const Header = ({ page }) => {
         Skip to main content
       </a>
 
-      <Navbar
+      <DocsNavbar
         logoLinkContent={
           <a href="https://pantheon.io" target="_blank" rel="nofollow">
             Pantheon Home
@@ -66,7 +68,7 @@ const Header = ({ page }) => {
             Get free account
           </a>
         </div>
-      </Navbar>
+      </DocsNavbar>
     </>
   );
 };
