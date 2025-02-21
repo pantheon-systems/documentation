@@ -21,6 +21,7 @@ import {
 } from '@pantheon-systems/pds-toolkit-react';
 
 import './docs-navbar.css';
+import { is } from 'date-fns/locale';
 
 /**
  * DocsNavbar UI component
@@ -124,7 +125,7 @@ export const DocsNavbar = ({
         }
       }
     }
-  }, [mobileNavOpen]);
+  }, [mobileNavOpen, isBrowser]);
 
   // Close the mobile menu when clicking the a link within it or the home link.
   // The is necessary for client-side routing.
@@ -149,7 +150,7 @@ export const DocsNavbar = ({
         mobileMenu.removeEventListener('click', handleOpenMobileClick);
       };
     }
-  }, [mobileNavOpen]);
+  }, [mobileNavOpen, isBrowser]);
 
   // Disallow all scrolling when mobile menu is open.
   useEffect(() => {
@@ -158,7 +159,7 @@ export const DocsNavbar = ({
     } else {
       document.body.classList.remove('pds-no-scroll');
     }
-  }, [mobileNavOpen]);
+  }, [mobileNavOpen, isBrowser]);
 
   // Initiate slots.
   const slots = initiateSlots(children);
