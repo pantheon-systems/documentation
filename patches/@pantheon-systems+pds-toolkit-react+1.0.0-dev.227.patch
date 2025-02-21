@@ -1,0 +1,31 @@
+diff --git a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+index 07332d4..84f4ff5 100644
+--- a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
++++ b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+@@ -6990,7 +6990,7 @@ const ds = (p) => {
+     "translationStrings",
+     "className"
+   ]);
+-  const [E, w] = Z(!1);
++  const [E, w] = Z(!1), v = typeof window != "undefined";
+   let v = !1;
+   const $ = we(ze);
+   $ && (v = $.isMobile);
+@@ -7022,7 +7022,7 @@ const ds = (p) => {
+         q.includes(O.nodeName.toLowerCase()) && (O.tabIndex = -1);
+       }));
+     }
+-  }, [E]);
++  }, [E, v]);
+   const z = (G) => {
+     G.target.nodeName === "A" && w(!1);
+   };
+@@ -7033,7 +7033,7 @@ const ds = (p) => {
+         G.removeEventListener("click", z), q.removeEventListener("click", z);
+       };
+     }
+-  }, [E]), oe(() => {
++  }, [E, v]), oe(() => {
+     E ? document.body.classList.add("pds-no-scroll") : document.body.classList.remove("pds-no-scroll");
+   }, [E]);
+   const k = Ge(t), V = k["items-left"], T = k["items-right"];
