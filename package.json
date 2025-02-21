@@ -84,7 +84,8 @@
     "lighthouse-run": "node ./tests/lighthouse/lighthouse.run.js",
     "lighthouse-run-local": "node ./tests/lighthouse/lighthouse.run.local.js",
     "lighthouse-test": "jest ./tests/lighthouse/lighthouse.test.js",
-    "lighthouse-pr-comment": "node ./tests/lighthouse/createPullRequestComment.js"
+    "lighthouse-pr-comment": "node ./tests/lighthouse/createPullRequestComment.js",
+    "postinstall": "patch-package"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.24.0"
