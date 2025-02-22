@@ -21,7 +21,6 @@ import {
 } from '@pantheon-systems/pds-toolkit-react';
 
 import './docs-navbar.css';
-import { is } from 'date-fns/locale';
 
 /**
  * DocsNavbar UI component
@@ -38,9 +37,6 @@ export const DocsNavbar = ({
 }) => {
   // State
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  // Check if the window object is available.
-  const isBrowser = typeof window !== 'undefined';
 
   // Set isMobile fallback.
   let isMobile = false;
@@ -125,7 +121,7 @@ export const DocsNavbar = ({
         }
       }
     }
-  }, [mobileNavOpen, isBrowser]);
+  }, [mobileNavOpen, children, isMobile]);
 
   // Close the mobile menu when clicking the a link within it or the home link.
   // The is necessary for client-side routing.
@@ -150,7 +146,7 @@ export const DocsNavbar = ({
         mobileMenu.removeEventListener('click', handleOpenMobileClick);
       };
     }
-  }, [mobileNavOpen, isBrowser]);
+  }, [mobileNavOpen]);
 
   // Disallow all scrolling when mobile menu is open.
   useEffect(() => {
@@ -159,7 +155,7 @@ export const DocsNavbar = ({
     } else {
       document.body.classList.remove('pds-no-scroll');
     }
-  }, [mobileNavOpen, isBrowser]);
+  }, [mobileNavOpen]);
 
   // Initiate slots.
   const slots = initiateSlots(children);
@@ -174,7 +170,7 @@ export const DocsNavbar = ({
       colorType="default"
       displayType="full"
       linkContent={
-        <a href="https://pantheon.io" target="_blank" rel="nofollow">
+        <a href="https://pantheon.io" target="_blank" rel="noreferrer">
           Pantheon Home
         </a>
       }
