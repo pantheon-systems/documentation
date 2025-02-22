@@ -1,9 +1,4 @@
-import React, {
-  createRef,
-  isValidElement,
-  useEffect,
-  useState,
-} from 'react';
+import React, { createRef, isValidElement, useEffect, useState } from 'react';
 import FocusTrap from 'focus-trap-react';
 
 // Local utilities.
@@ -36,31 +31,30 @@ export const DocsNavbar = ({
   // State
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-	const isBrowser = typeof window !== 'undefined';
+  const isBrowser = typeof window !== 'undefined';
 
-	const [windowWidth, setWindowWidth] = useState(
-		isBrowser && window.innerWidth !== undefined ? window.innerWidth : 1024,
-	);
+  const [windowWidth, setWindowWidth] = useState(
+    isBrowser && window.innerWidth !== undefined ? window.innerWidth : 1024,
+  );
 
-	const isMobile = windowWidth < MOBILE_MENU_BREAKPOINT;
+  const isMobile = windowWidth < MOBILE_MENU_BREAKPOINT;
 
-	// Get window width.
-		useEffect(() => {
-		if (!isBrowser) return;
+  // Get window width.
+  useEffect(() => {
+    if (!isBrowser) return;
 
-		setWindowWidth(window.innerWidth);
+    setWindowWidth(window.innerWidth);
 
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth);
-		};
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-		window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, [isBrowser]);
-
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isBrowser]);
 
   // Set up classes.
   const baseClass = 'pds-navbar';
