@@ -1,7 +1,6 @@
 import React, {
   createRef,
   isValidElement,
-  useContext,
   useEffect,
   useState,
 } from 'react';
@@ -10,15 +9,14 @@ import FocusTrap from 'focus-trap-react';
 // Local utilities.
 import { getDescendants, initiateSlots, mergeClasses } from '../pds-utils';
 
-// Contexts.
-import { ResponsiveContext } from '@pantheon-systems/pds-toolkit-react';
-
 // Components.
 import {
   Container,
   Icon,
   PantheonLogo,
 } from '@pantheon-systems/pds-toolkit-react';
+
+import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
 
 import './docs-navbar.css';
 
@@ -38,14 +36,31 @@ export const DocsNavbar = ({
   // State
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-  // Set isMobile fallback.
-  let isMobile = false;
+	const isBrowser = typeof window !== 'undefined';
 
-  // Get responsive context.
-  const responsiveContext = useContext(ResponsiveContext);
-  if (responsiveContext) {
-    isMobile = responsiveContext.isMobile;
-  }
+	const [windowWidth, setWindowWidth] = useState(
+		isBrowser && window.innerWidth !== undefined ? window.innerWidth : 1024,
+	);
+
+	const isMobile = windowWidth < MOBILE_MENU_BREAKPOINT;
+
+	// Get window width.
+		useEffect(() => {
+		if (!isBrowser) return;
+
+		setWindowWidth(window.innerWidth);
+
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [isBrowser]);
+
 
   // Set up classes.
   const baseClass = 'pds-navbar';
