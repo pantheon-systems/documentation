@@ -41,8 +41,6 @@ export const DocsNavbar = ({
 
   // Get window width.
   useEffect(() => {
-    if (!isBrowser) return;
-
     setWindowWidth(window.innerWidth);
 
     const handleResize = () => {
