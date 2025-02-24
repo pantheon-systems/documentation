@@ -111,20 +111,22 @@ export const DocsNavbar = ({
         const disableList = ['a', 'button', 'input', 'select', 'textarea'];
 
         // Remove focus from these types if mobile nav is closed.
-        if (!mobileNavOpen) {
-          // Remove focus.
-          childElements.forEach((elem) => {
-            if (disableList.includes(elem.nodeName.toLowerCase())) {
-              elem.tabIndex = -1;
-            }
-          });
-        } else {
-          // re-add focus.
-          childElements.forEach((elem) => {
-            if (disableList.includes(elem.nodeName.toLowerCase())) {
-              elem.tabIndex = 0;
-            }
-          });
+        if (childElements) {
+          if (!mobileNavOpen) {
+            // Remove focus.
+            childElements.forEach((elem) => {
+              if (disableList.includes(elem.nodeName.toLowerCase())) {
+                elem.tabIndex = -1;
+              }
+            });
+          } else {
+            // re-add focus.
+            childElements.forEach((elem) => {
+              if (disableList.includes(elem.nodeName.toLowerCase())) {
+                elem.tabIndex = 0;
+              }
+            });
+          }
         }
       }
     }
