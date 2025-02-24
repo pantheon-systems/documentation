@@ -43,7 +43,7 @@ export const onRouteUpdate = () => {
 };
 
 // Trigger resize event once rendered
-export const onInitialClientRender = () => {
+export const onRouteUpdate = () => {
   window.dispatchEvent(new Event('resize'));
 };
 
