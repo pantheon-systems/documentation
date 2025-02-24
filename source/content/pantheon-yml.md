@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2022-03-16"
+reviewed: "2025-02-24"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -69,6 +69,7 @@ The `pantheon.upstream.yml` file provided by your upstream might define protecte
 - Limited to 24 protected paths
 - You may not be able to protect files or paths with special characters
 - Wait a few seconds for changes to take effect
+- Do not use this setting for the public files path (`sites/default/files` or `/wp-content/uploads`) as it would likely break site functionality related to asset loading and generation.
 
 ### Protected Web Paths Override
 
