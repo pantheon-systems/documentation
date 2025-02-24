@@ -30,6 +30,7 @@ import 'tocbot/dist/tocbot.min.js';
 
 //Segment
 export const onRouteUpdate = () => {
+  window.dispatchEvent(new Event('resize'));
   window.locations = window.locations || [document.referrer];
   locations.push(window.location.href);
   window.previousPath = locations[locations.length - 2];
@@ -43,9 +44,9 @@ export const onRouteUpdate = () => {
 };
 
 // Trigger resize event once rendered
-export const onRouteUpdate = () => {
-  window.dispatchEvent(new Event('resize'));
-};
+// export const onInitialClientRender = () => {
+//   window.dispatchEvent(new Event('resize'));
+// };
 
 // Global context providers.
 export const wrapRootElement = ({ element }) => {
