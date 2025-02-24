@@ -143,7 +143,7 @@ export const DocsNavbar = ({
 
   // Add event listeners for mobile menu.
   useEffect(() => {
-    if (mobileNavOpen) {
+    if (isMobile && mobileNavOpen) {
       const mobileNavbar = document.querySelector('.pds-navbar__bar-mobile');
       const mobileMenu = document.querySelector('.pds-navbar__mobile');
 
@@ -155,16 +155,16 @@ export const DocsNavbar = ({
         mobileMenu.removeEventListener('click', handleOpenMobileClick);
       };
     }
-  }, [mobileNavOpen]);
+  }, [isMobile, mobileNavOpen]);
 
   // Disallow all scrolling when mobile menu is open.
   useEffect(() => {
-    if (mobileNavOpen) {
+    if (isMobile && mobileNavOpen) {
       document.body.classList.add('pds-no-scroll');
     } else {
       document.body.classList.remove('pds-no-scroll');
     }
-  }, [mobileNavOpen]);
+  }, [isMobile, mobileNavOpen]);
 
   // Initiate slots.
   const slots = initiateSlots(children);
