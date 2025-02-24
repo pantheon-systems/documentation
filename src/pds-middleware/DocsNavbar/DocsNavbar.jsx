@@ -34,7 +34,7 @@ export const DocsNavbar = ({
   const isBrowser = typeof window !== 'undefined';
 
   const [windowWidth, setWindowWidth] = useState(
-    isBrowser && window.innerWidth !== undefined ? window.innerWidth : 1024,
+    isBrowser && window.innerWidth !== undefined ? window.innerWidth : 1025,
   );
 
   const isMobile = windowWidth < MOBILE_MENU_BREAKPOINT;
@@ -52,7 +52,7 @@ export const DocsNavbar = ({
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [isBrowser]);
+  }, []);
 
   // Set up classes.
   const baseClass = 'pds-navbar';
@@ -141,7 +141,7 @@ export const DocsNavbar = ({
 
   // Add event listeners for mobile menu.
   useEffect(() => {
-    if (isMobile && mobileNavOpen) {
+    if (mobileNavOpen) {
       const mobileNavbar = document.querySelector('.pds-navbar__bar-mobile');
       const mobileMenu = document.querySelector('.pds-navbar__mobile');
 
@@ -153,16 +153,16 @@ export const DocsNavbar = ({
         mobileMenu.removeEventListener('click', handleOpenMobileClick);
       };
     }
-  }, [isMobile, mobileNavOpen]);
+  }, [mobileNavOpen]);
 
   // Disallow all scrolling when mobile menu is open.
   useEffect(() => {
-    if (isMobile && mobileNavOpen) {
+    if (mobileNavOpen) {
       document.body.classList.add('pds-no-scroll');
     } else {
       document.body.classList.remove('pds-no-scroll');
     }
-  }, [isMobile, mobileNavOpen]);
+  }, [mobileNavOpen]);
 
   // Initiate slots.
   const slots = initiateSlots(children);
