@@ -1,5 +1,8 @@
-import React, { createRef, isValidElement, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import FocusTrap from 'focus-trap-react';
+
+import { ContainerWidth } from '../customPropTypes';
 
 // Local utilities.
 import { getDescendants, initiateSlots, mergeClasses } from '../pds-utils';
@@ -11,8 +14,6 @@ import {
   PantheonLogo,
 } from '@pantheon-systems/pds-toolkit-react';
 
-import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
-
 import './docs-navbar.css';
 
 /**
@@ -21,38 +22,34 @@ import './docs-navbar.css';
 export const DocsNavbar = ({
   children,
   containerWidth = 'x-wide',
-  translationStrings = {
-    closeMobileNav: 'Close navigation area',
-    openMobileNav: 'Open navigation area',
-  },
+  mobileMenuMaxWidth = 640,
   className,
   ...props
 }) => {
   // State
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(1025);
 
-  const isBrowser = typeof window !== 'undefined';
-
-  const [windowWidth, setWindowWidth] = useState(
-    isBrowser && window.innerWidth !== undefined ? window.innerWidth : 1025,
-  );
-
-  const isMobile = windowWidth < MOBILE_MENU_BREAKPOINT;
-
-  // Get window width.
+  // Add event listeners and get initial windowWidth.
   useEffect(() => {
     setWindowWidth(window.innerWidth);
 
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
     window.addEventListener('resize', handleResize);
+    window.addEventListener('keyup', handleKeyUp);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('keyup', handleKeyUp);
     };
   }, []);
+
+  // Handle responsiveness.
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  // Check if mobile.
+  const isMobile = windowWidth <= mobileMenuMaxWidth;
 
   // Set up classes.
   const baseClass = 'pds-navbar';
@@ -60,45 +57,39 @@ export const DocsNavbar = ({
     ? `${baseClass}--isMobile`
     : `${baseClass}--notMobile`;
 
-  const handleKeyUp = (e) => {
-    const key = e.key;
-    let flag = false;
+  // Handle closing mobile menu with esc key.
+  const handleKeyUp = (event) => {
+    var key = event.key;
+    var flag = false;
 
     switch (key) {
+      // close menu
       case 'Esc':
       case 'Escape':
         setMobileNavOpen(false);
         flag = true;
         break;
 
+      // Do nothing.
       default:
         break;
     }
 
     // If something desired happened prevent default behavior.
     if (flag) {
-      e.stopPropagation();
-      e.preventDefault();
+      event.stopPropagation();
+      event.preventDefault();
     }
   };
-
-  // Add keyup event listener.
-  useEffect(() => {
-    window.addEventListener('keyup', handleKeyUp);
-
-    return () => {
-      window.removeEventListener('keyup', handleKeyUp);
-    };
-  }, []);
 
   // Handle opening/closing of mobile menu via button.
   const handleClick = () => setMobileNavOpen(!mobileNavOpen);
 
   // Adjust focus of menu items depending on visibility of the menu.
-  const parentRef = createRef();
+  const parentRef = React.createRef();
 
   useEffect(() => {
-    if (isMobile) {
+    if (windowWidth <= mobileMenuMaxWidth) {
       // Get all child elements of the mobile menu.
       if (children) {
         const childElements = getDescendants(
@@ -109,37 +100,34 @@ export const DocsNavbar = ({
         const disableList = ['a', 'button', 'input', 'select', 'textarea'];
 
         // Remove focus from these types if mobile nav is closed.
-        if (childElements) {
-          if (!mobileNavOpen) {
-            // Remove focus.
-            childElements.forEach((elem) => {
-              if (disableList.includes(elem.nodeName.toLowerCase())) {
-                elem.tabIndex = -1;
-              }
-            });
-          } else {
-            // re-add focus.
-            childElements.forEach((elem) => {
-              if (disableList.includes(elem.nodeName.toLowerCase())) {
-                elem.tabIndex = 0;
-              }
-            });
-          }
+        if (!mobileNavOpen) {
+          // Remove focus.
+          childElements.forEach((elem) => {
+            if (disableList.includes(elem.nodeName.toLowerCase())) {
+              elem.tabIndex = -1;
+            }
+          });
+        } else {
+          // re-add focus.
+          childElements.forEach((elem) => {
+            if (disableList.includes(elem.nodeName.toLowerCase())) {
+              elem.tabIndex = 0;
+            }
+          });
         }
       }
     }
-  }, [mobileNavOpen, children, isMobile]);
+  }, [children, mobileMenuMaxWidth, mobileNavOpen, windowWidth]);
 
   // Close the mobile menu when clicking the a link within it or the home link.
   // The is necessary for client-side routing.
-  const handleOpenMobileClick = (e) => {
+  const handleOpenMobileClick = (event) => {
     // If the target is a link, close the menu.
-    if (e.target.nodeName === 'A') {
+    if (event.target.nodeName === 'A') {
       setMobileNavOpen(false);
     }
   };
 
-  // Add event listeners for mobile menu.
   useEffect(() => {
     if (mobileNavOpen) {
       const mobileNavbar = document.querySelector('.pds-navbar__bar-mobile');
@@ -147,13 +135,21 @@ export const DocsNavbar = ({
 
       mobileNavbar.addEventListener('click', handleOpenMobileClick);
       mobileMenu.addEventListener('click', handleOpenMobileClick);
-
       return () => {
         mobileNavbar.removeEventListener('click', handleOpenMobileClick);
         mobileMenu.removeEventListener('click', handleOpenMobileClick);
       };
     }
   }, [mobileNavOpen]);
+
+  // Disallow horizontal scrolling when at sm and md breakpoints.
+  useEffect(() => {
+    if (windowWidth <= mobileMenuMaxWidth) {
+      document.body.classList.add('pds-no-scroll-x');
+    } else {
+      document.body.classList.remove('pds-no-scroll-x');
+    }
+  }, [mobileMenuMaxWidth, windowWidth]);
 
   // Disallow all scrolling when mobile menu is open.
   useEffect(() => {
@@ -171,11 +167,8 @@ export const DocsNavbar = ({
   const itemsLeftContent = slots['items-left'];
   const itemsRightContent = slots['items-right'];
 
-  // Logo configuration.
-  const logoMarkup = (
+  const logoContent = (
     <PantheonLogo
-      colorType="default"
-      displayType="full"
       linkContent={
         <a href="https://pantheon.io" target="_blank" rel="noreferrer">
           Pantheon Home
@@ -189,26 +182,13 @@ export const DocsNavbar = ({
     <button
       className={`${baseClass}__menu-toggle`}
       aria-label={
-        mobileNavOpen
-          ? translationStrings.closeMobileNav
-          : translationStrings.openMobileNav
+        mobileNavOpen ? 'Close navigation area' : 'Open navigation area'
       }
       onClick={handleClick}
     >
       <Icon iconName={mobileNavOpen ? 'xmark' : 'bars'} iconSize="lg" />
     </button>
   );
-
-  // Sort children based on mobile_order prop for mobile view.
-  const sortedChildren = React.Children.toArray(children).sort((a, b) => {
-    const aOrder = isValidElement(a)
-      ? parseInt(a.props['data-mobile-order'], 10) || Infinity
-      : Infinity;
-    const bOrder = isValidElement(b)
-      ? parseInt(b.props['data-mobile-order'], 10) || Infinity
-      : Infinity;
-    return aOrder - bOrder;
-  });
 
   // Render the mobile menu.
   const mobileNavOpenContents = (
@@ -220,7 +200,10 @@ export const DocsNavbar = ({
       }
       ref={parentRef}
     >
-      <Container>{sortedChildren}</Container>
+      <Container>
+        {itemsLeftContent}
+        {itemsRightContent}
+      </Container>
     </div>
   );
 
@@ -235,7 +218,7 @@ export const DocsNavbar = ({
       <div>
         <Container className={`${baseClass}__bar-mobile`}>
           <div className={`${baseClass}__inner-mobile`}>
-            {logoMarkup}
+            {logoContent}
             {children && toggleButton}
           </div>
         </Container>
@@ -247,8 +230,7 @@ export const DocsNavbar = ({
   // Render the wide markup.
   const wideMarkup = (
     <Container width={containerWidth} className={`${baseClass}__inner`}>
-      <div className={`${baseClass}__logo`}>{logoMarkup}</div>
-
+      <div className={`${baseClass}__logo`}>{logoContent}</div>
       <div className={`${baseClass}__content`}>
         {itemsLeftContent ? (
           <div className={`${baseClass}__items-left`}>{itemsLeftContent}</div>
@@ -265,10 +247,30 @@ export const DocsNavbar = ({
   // Render the output.
   return (
     <header
-      className={mergeClasses([baseClass, mobileClass, className ?? ''])}
+      className={mergeClasses([baseClass, mobileClass, className])}
       {...props}
     >
       {isMobile ? mobileMarkup : wideMarkup}
     </header>
   );
+};
+
+// Prop types.
+DocsNavbar.propTypes = {
+  /**
+   * Navbar content.
+   */
+  children: PropTypes.node,
+  /**
+   * PDS container width.
+   */
+  containerWidth: ContainerWidth,
+  /**
+   *  Mobile menu will be enabled when viewport is at or below this number in pixels.
+   */
+  mobileMenuMaxWidth: PropTypes.number,
+  /**
+   * Additional class names.
+   */
+  className: PropTypes.string,
 };

@@ -39,7 +39,30 @@ const Header = ({ page }) => {
         Skip to main content
       </a>
 
-      <p>Test</p>
+      <DocsNavbar mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>
+        <NavMenu
+          slot="items-left"
+          ariaLabel="Main Navigation"
+          menuItems={mainNavLinks}
+          mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
+        />
+        <div slot="items-right" className="pds-button-group">
+          <a
+            className="pds-button pds-button--brand-secondary"
+            href="https://dashboard.pantheon.io"
+            target="_blank"
+          >
+            Log in
+          </a>
+          <a
+            className="pds-button pds-button--brand"
+            href="https://pantheon.io/register"
+            target="_blank"
+          >
+            Get free account
+          </a>
+        </div>
+      </DocsNavbar>
     </>
   );
 };
