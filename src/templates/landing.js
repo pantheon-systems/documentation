@@ -14,7 +14,7 @@ import OmniSidebarNav from '../components/omniSidebarNav';
 import { Container, LinksCard } from '@pantheon-systems/pds-toolkit-react';
 
 // Set container width for search and main content.
-const containerWidth = 'standard';
+const containerWidth = 'full';
 
 const twoColumnClasses =
   'pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6';
@@ -43,9 +43,10 @@ class LandingTemplate extends Component {
         <OmniSidebarNav slot="guide-menu" activePage={topic.path} />
 
         <main id="docs-main" slot="guide-content" tabIndex="-1">
-          <Container width={containerWidth} className="landing-page__header">
+          <Container width={containerWidth}>
             <SearchBar page="default" />
-
+          </Container>
+          <Container width={containerWidth} className="landing-page__header">
             <div className="landing-page-heading pds-spacing-pad-block-m">
               <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
               {topic.subtitle && (
@@ -154,7 +155,7 @@ class LandingTemplate extends Component {
 
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
-            <div className="landing-page__related pds-background-default-secondary pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
+            <div className="landing-page__related pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
               <Container width={containerWidth}>
                 <h2 className="landing-page__section-heading">
                   Related Resources

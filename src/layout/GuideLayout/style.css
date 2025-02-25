@@ -11,14 +11,4 @@
     border-right: 1px solid var(--pds-color-border-default);
     padding-block-end: 0;
   }
-
-  .guide-content {
-    margin-inline-start: calc(var(--pds-spacing-2xl) * -1);
-  }
-}
-
-@media (min-width: 1441px) {
-  .guide-content {
-    margin-inline-start: calc(var(--pds-spacing-2xl) * -1);
-  }
 }

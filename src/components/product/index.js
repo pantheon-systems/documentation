@@ -12,7 +12,7 @@ const Product = ({ title, link, children }) => {
       <div className="product-card__text">{children}</div>
 
       <div className="product-card__link">
-        <a href={link} target="_blank" className="pds-button">
+        <a href={link} target="_blank" rel="noreferrer" className="pds-button">
           Learn More
           <Icon
             iconName="arrowRight"

@@ -14,9 +14,6 @@ import { Container } from '@pantheon-systems/pds-toolkit-react';
 import MdxWrapper from '../components/mdxWrapper';
 import OmniSidebarNav from '../components/omniSidebarNav';
 
-// Set container width for search and main content.
-const containerWidth = 'wide';
-
 class DocTemplate extends React.Component {
   render() {
     const node = this.props.data.doc;
@@ -49,7 +46,7 @@ class DocTemplate extends React.Component {
 
         <ContentLayoutType slot="guide-content">
           <main id="docs-main" tabIndex="-1">
-            <Container width="full" className="pds-spacing-pad-block-end-4xl">
+            <div>
               <DocsSidebarLayout>
                 <article slot="content" className="doc article styleguide">
                   <SearchBar slot="content" page="default" />
@@ -81,7 +78,7 @@ class DocTemplate extends React.Component {
                   }
                 />
               </DocsSidebarLayout>
-            </Container>
+            </div>
           </main>
         </ContentLayoutType>
       </GuideLayout>

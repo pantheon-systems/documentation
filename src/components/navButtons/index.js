@@ -13,7 +13,7 @@ const NavButtons = ({
 }) => {
   return (
     <div>
-      <ul className="pagination pager-guides">
+      <ul className="pagination pager-guides pds-spacing-mar-block-end-2xl">
         {prev && (
           <li className="pagination__prev">
             <Link to={prev} rel="prev" className="pds-button">

@@ -36,15 +36,6 @@ h2.landing-page__section-heading {
   margin-block-start: 0 !important;
 }
 
-.landing-page__video-background {
-  background: linear-gradient(
-    to top,
-    var(--pds-color-button-secondary-background-hover) 70%,
-    white 0%
-  );
-  padding-block: var(--pds-spacing-2xl);
-}
-
 .video-container .gatsby-resp-iframe-wrapper {
   box-shadow: var(--pds-elevation-raised);
 }
@@ -172,12 +163,12 @@ a.individual-changelog-link:hover {
 }
 
 /* Inputs */
-.mktoForm input[type="text"],
-.mktoForm input[type="url"],
-.mktoForm input[type="email"],
-.mktoForm input[type="tel"],
-.mktoForm input[type="number"],
-.mktoForm input[type="date"],
+.mktoForm input[type='text'],
+.mktoForm input[type='url'],
+.mktoForm input[type='email'],
+.mktoForm input[type='tel'],
+.mktoForm input[type='number'],
+.mktoForm input[type='date'],
 .mktoForm select.mktoField,
 .mktoForm textarea.mktoField {
   background-color: var(--pds-color-background-default);
@@ -189,12 +180,12 @@ a.individual-changelog-link:hover {
   line-height: 1.5em;
   padding: var(--pds-spacing-2xs);
 }
-.mktoForm input[type="text"]:focus,
-.mktoForm input[type="url"]:focus,
-.mktoForm input[type="email"]:focus,
-.mktoForm input[type="tel"]:focus,
-.mktoForm input[type="number"]:focus,
-.mktoForm input[type="date"]:focus,
+.mktoForm input[type='text']:focus,
+.mktoForm input[type='url']:focus,
+.mktoForm input[type='email']:focus,
+.mktoForm input[type='tel']:focus,
+.mktoForm input[type='number']:focus,
+.mktoForm input[type='date']:focus,
 .mktoForm select.mktoField:focus,
 .mktoForm textarea.mktoField:focus {
   outline: 1px solid var(--pds-color-interactive-focus) !important;
