@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { FlexContainer, Icon } from '@pantheon-systems/pds-toolkit-react';
+import { Icon } from '@pantheon-systems/pds-toolkit-react';
 
 import './styles.css';
 
@@ -18,8 +18,11 @@ function HeroCTA(props) {
   const { url, title, subTitle, linkText } = props;
 
   return (
-    <FlexContainer gap="wide" className="hero-cta">
-      <div className="hero-cta-image" slot="first-item">
+    <div className="pds-grid hero-cta">
+      <div
+        className="pds-grid-item pds-grid-item--md-6 hero-cta-image"
+        slot="first-item"
+      >
         <StaticImage
           src="https://cdn.bfldr.com/MEM5087K/at/933t7sx45wwnmsrrjq94z4f/front-page-hero.png?auto=webp&format=png"
           alt=""
@@ -27,7 +30,10 @@ function HeroCTA(props) {
           width={1080}
         />
       </div>
-      <div className="hero-cta-text" slot="second-item">
+      <div
+        className="pds-grid-item pds-grid-item--md-6 hero-cta-text"
+        slot="second-item"
+      >
         <h1>{title}</h1>
         <p className="pds-lead-text">{subTitle}</p>
         <Link
@@ -38,7 +44,7 @@ function HeroCTA(props) {
           <Icon iconName="arrowRight" iconSize="lg" />
         </Link>
       </div>
-    </FlexContainer>
+    </div>
   );
 }
 
