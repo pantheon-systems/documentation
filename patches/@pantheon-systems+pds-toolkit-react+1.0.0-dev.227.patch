@@ -1,0 +1,12 @@
+diff --git a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+index 07332d4..271ae4c 100644
+--- a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
++++ b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+@@ -1464,7 +1464,6 @@ const Ht = 300, Q1 = 400, xe = (u) => {
+     t && window.innerWidth !== void 0 ? window.innerWidth : 1024
+   );
+   return oe(() => {
+-    if (!t) return;
+     n(window.innerWidth);
+     const l = () => {
+       n(window.innerWidth);
