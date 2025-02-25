@@ -7,6 +7,8 @@ import { ContainerWidth } from '../customPropTypes';
 // Local utilities.
 import { getDescendants, initiateSlots, mergeClasses } from '../pds-utils';
 
+import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
+
 // Components.
 import {
   Container,
@@ -22,7 +24,7 @@ import './docs-navbar.css';
 export const DocsNavbar = ({
   children,
   containerWidth = 'x-wide',
-  mobileMenuMaxWidth = 640,
+  mobileMenuMaxWidth = MOBILE_MENU_BREAKPOINT,
   className,
   ...props
 }) => {

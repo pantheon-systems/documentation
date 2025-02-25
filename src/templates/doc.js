@@ -7,14 +7,15 @@ import SEO from '../layout/seo';
 import HeaderBody from '../components/headerBody';
 import TOC from '../components/toc';
 import GetFeedback from '../components/getFeedback';
+import { DocsSidebarLayout } from '../pds-middleware/DocsSidebarLayout/DocsSidebarLayout';
 
-import { Container, SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
+import { Container } from '@pantheon-systems/pds-toolkit-react';
 
 import MdxWrapper from '../components/mdxWrapper';
 import OmniSidebarNav from '../components/omniSidebarNav';
 
 // Set container width for search and main content.
-const containerWidth = 'standard';
+const containerWidth = 'wide';
 
 class DocTemplate extends React.Component {
   render() {
@@ -48,11 +49,8 @@ class DocTemplate extends React.Component {
 
         <ContentLayoutType slot="guide-content">
           <main id="docs-main" tabIndex="-1">
-            <Container
-              width={containerWidth}
-              className="pds-spacing-pad-block-end-4xl"
-            >
-              <SidebarLayout>
+            <Container width="full" className="pds-spacing-pad-block-end-4xl">
+              <DocsSidebarLayout>
                 <article slot="content" className="doc article styleguide">
                   <SearchBar slot="content" page="default" />
 
@@ -82,7 +80,7 @@ class DocTemplate extends React.Component {
                       : null
                   }
                 />
-              </SidebarLayout>
+              </DocsSidebarLayout>
             </Container>
           </main>
         </ContentLayoutType>

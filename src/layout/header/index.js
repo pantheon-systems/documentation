@@ -39,7 +39,7 @@ const Header = ({ page }) => {
         Skip to main content
       </a>
 
-      <DocsNavbar mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}>
+      <DocsNavbar>
         <NavMenu
           slot="items-left"
           ariaLabel="Main Navigation"

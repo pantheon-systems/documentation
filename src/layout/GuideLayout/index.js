@@ -2,21 +2,13 @@ import React, { Components } from 'react';
 import './style.css';
 import Header from '../header';
 import Footer from '../footer';
-import { SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
+import { DocsSidebarLayout } from '../../pds-middleware/DocsSidebarLayout/DocsSidebarLayout';
+// Local utilities.
+import { initiateSlots } from '../../pds-middleware/pds-utils';
 
 const GuideLayout = ({ children, pageType = 'default' }) => {
-  // Establish slots for children.
-  const slots = {};
-  React.Children.forEach(children, (child) => {
-    const slotName = child.props.slot;
-    if (slotName) {
-      if (slots[slotName]) {
-        slots[slotName].push(child);
-      } else {
-        slots[slotName] = [child];
-      }
-    }
-  });
+  // Initiate slots.
+  const slots = initiateSlots(children);
 
   // Assign content to named slots.
   const pageSEO = slots['seo'];
@@ -27,7 +19,7 @@ const GuideLayout = ({ children, pageType = 'default' }) => {
     <div className="pantheon-docs">
       <Header page={pageType} />
       {pageSEO}
-      <SidebarLayout
+      <DocsSidebarLayout
         gridGap="narrow"
         sidebarLocation="left"
         className="pds-container pds-container--x-wide"
@@ -35,8 +27,10 @@ const GuideLayout = ({ children, pageType = 'default' }) => {
         <div slot="sidebar" className="guide-sidebar">
           {guideMenu}
         </div>
-        <div slot="content">{guideContent}</div>
-      </SidebarLayout>
+        <div slot="content" className="guide-content">
+          {guideContent}
+        </div>
+      </DocsSidebarLayout>
       <Footer className="with-border" />
     </div>
   );

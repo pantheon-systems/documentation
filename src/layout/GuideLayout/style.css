@@ -1,12 +1,24 @@
-@import "../../../node_modules/highlight.js/styles/tomorrow-night-bright.css";
-@import "../../styles/codeBlocks.css";
+@import '../../../node_modules/highlight.js/styles/tomorrow-night-bright.css';
+@import '../../styles/codeBlocks.css';
 
 .guide-sidebar {
   height: 100%;
+  padding-block-end: var(--pds-spacing-2xl);
 }
 
-@media (min-width: 641px) {
+@media (min-width: 900px) {
   .guide-sidebar {
     border-right: 1px solid var(--pds-color-border-default);
+    padding-block-end: 0;
+  }
+
+  .guide-content {
+    margin-inline-start: calc(var(--pds-spacing-2xl) * -1);
+  }
+}
+
+@media (min-width: 1441px) {
+  .guide-content {
+    margin-inline-start: calc(var(--pds-spacing-2xl) * -1);
   }
 }

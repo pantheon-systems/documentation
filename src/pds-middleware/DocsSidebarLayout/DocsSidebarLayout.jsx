@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
+// Local utilities.
+import { initiateSlots, mergeClasses } from '../pds-utils';
+
+import { MOBILE_MENU_BREAKPOINT } from '../../vars/responsive';
+
 /**
  * DocsSidebarLayout UI component
  */
 export const DocsSidebarLayout = ({
   children,
   gridGap = 'standard',
+  mobileMenuMaxWidth = MOBILE_MENU_BREAKPOINT,
   sidebarLocation = 'right',
   sidebarMobileLocation = 'after',
   sidebarWidth = 'standard',
@@ -38,18 +44,8 @@ export const DocsSidebarLayout = ({
     setWindowWidth(window.innerWidth);
   };
 
-  // Establish slots.
-  const slots = {};
-  React.Children.forEach(children, (child) => {
-    const slotName = child.props.slot;
-    if (slotName) {
-      if (slots[slotName]) {
-        slots[slotName].push(child);
-      } else {
-        slots[slotName] = [child];
-      }
-    }
-  });
+  // Initiate slots.
+  const slots = initiateSlots(children);
 
   // Assign grid classes based on sidebarWidth prop.
   let contentWidthClasses =
@@ -86,7 +82,7 @@ export const DocsSidebarLayout = ({
   );
 
   // Order content based on breakpoint and sidebarLocation
-  const isMobile = windowWidth < 641 ? true : false;
+  const isMobile = windowWidth < mobileMenuMaxWidth ? true : false;
 
   let renderedContent = [];
 
@@ -113,11 +109,12 @@ export const DocsSidebarLayout = ({
   // Render the output
   return (
     <div
-      className={[baseClass, gridGapClass, locationClass, className]
-        .join(' ')
-        .trim()
-        .replace(/\s+/g, ' ')}
-      {...props}
+      className={mergeClasses([
+        baseClass,
+        gridGapClass,
+        locationClass,
+        className,
+      ])}
     >
       {renderedContent}
     </div>
