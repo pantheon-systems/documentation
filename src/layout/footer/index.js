@@ -10,6 +10,7 @@ import {
   FooterHeading,
   SiteFooter,
   SocialLinks,
+  ThreeItemLayout,
 } from '@pantheon-systems/pds-toolkit-react';
 
 import './style.css';
@@ -55,29 +56,28 @@ const Footer = ({ data, className }) => {
     <SiteFooter containerWidth="standard" className={className}>
       <div className="pds-footer__links-area pds-grid pds-grid--wide">
         <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
-          <FlexContainer
-            gap="standard"
-            justifyContent="between"
-            mobileFlexDirection="column"
-          >
+          <ThreeItemLayout>
             <FooterLinks
+              slot="first-item"
               headingText="Topics"
               headingLevel="h2"
               linkItems={topicLinks}
             />
             <FooterLinks
+              slot="second-item"
               headingText="Help"
               headingLevel="h2"
               linkItems={helpLinks}
               className="pds-spacing-mar-block-start-xl@sm"
             />
             <FooterLinks
+              slot="third-item"
               headingText="Community"
               headingLevel="h2"
               linkItems={communityLinks}
               className="pds-spacing-mar-block-start-xl@sm"
             />
-          </FlexContainer>
+          </ThreeItemLayout>
         </div>
         <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
           <FooterHeading
