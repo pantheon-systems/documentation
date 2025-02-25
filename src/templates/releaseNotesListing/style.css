@@ -1,66 +1,64 @@
-.rn-popover-content{
+.rn-popover-content {
   gap: 74px;
   display: flex;
 }
 
-.rn-popover-content-inner{
+.rn-popover-content-inner {
   margin-bottom: 10px;
 }
 
-@media (max-width:640px) {
-  .rn-popover-content{
+@media (max-width: 640px) {
+  .rn-popover-content {
     gap: 0;
     flex-wrap: wrap;
     flex-direction: column;
   }
 
-  .rn-popover-content-inner{
+  .rn-popover-content-inner {
     display: block;
     width: 100%;
     margin-bottom: 0;
   }
-
 }
 
-.rn-popover-categories .pds-popover__container{
+.rn-popover-categories .pds-popover__container {
   max-width: 100%;
   padding: 40px;
   z-index: 100;
 }
 
-.rn-popover-trigger-and-tags{
-  align-items: center;
-  justify-content: flex-start;
+.rn-popover-categories {
+  margin-block-end: var(--pds-spacing-xl);
 }
 
-@media(max-width: 640px){
-  .rn-popover-trigger-and-tags{
-    align-items: flex-start;
-  }
+.rn-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-m);
 }
 
-.rn-popover-categories .pds-popover__title{
+.rn-popover-categories .pds-popover__title {
   font-size: 16px;
   margin-bottom: 26px;
 }
 
-.rn-popover-categories .pds-popover__close{
+.rn-popover-categories .pds-popover__close {
   top: -20px;
   right: -10px;
 }
 
-.rn-popover-categories .pds-popover__trigger-text{
+.rn-popover-categories .pds-popover__trigger-text {
   border-bottom: 0;
 }
 
-.rn-pagination-controls{
+.rn-pagination-controls {
   display: flex;
   justify-content: center;
   gap: 5px;
   margin-bottom: 40px;
 }
 
-.rn-pagination-controls button{
+.rn-pagination-controls button {
   padding: 6px 11px;
   background-color: transparent;
   color: var(--pds-color-text-paragraph);
@@ -69,7 +67,7 @@
   cursor: pointer;
 }
 
-.rn-pagination-controls button.active{
+.rn-pagination-controls button.active {
   background-color: var(--pds-color-button-secondary-background-hover);
   color: var(--pds-color-brand-secondary-default);
   border-radius: 3px;
@@ -80,18 +78,18 @@
   align-items: center;
 }
 
-.rn-pagination-controls button:disabled{
-  opacity: .5;
+.rn-pagination-controls button:disabled {
+  opacity: 0.5;
   cursor: default;
 }
 
-.rss-feed-link{
+.rss-feed-link {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 25px;
 }
 
-.rss-feed-link-icon{
+.rss-feed-link-icon {
   color: var(--pds-color-social-rss);
 }

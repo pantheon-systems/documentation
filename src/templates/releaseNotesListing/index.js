@@ -14,12 +14,7 @@ import { TextInput } from '@pantheon-systems/pds-toolkit-react';
 
 import { releaseNoteCategoryLoader } from '../../data/releaseNoteCategories.js';
 
-import {
-  Container,
-  FlexContainer,
-  Icon,
-  Tag,
-} from '@pantheon-systems/pds-toolkit-react';
+import { Container, Icon, Tag } from '@pantheon-systems/pds-toolkit-react';
 
 import './style.css';
 
@@ -302,21 +297,14 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer
-              flexWrap="wrap"
-              className="rn-popover-trigger-and-tags"
-            >
+            <div className="rn-popover-trigger-and-tags">
               <ReleaseNotePopoverCategorySelector
                 filters={filters}
                 setFilters={setFilters}
                 setCurrentPage={setCurrentPage}
                 isDisabled={!isLoaded}
               />
-              <FlexContainer
-                mobileFlexDirection="row"
-                gap="narrow"
-                flexWrap="wrap"
-              >
+              <div className="rn-tags-list">
                 {filters &&
                   filters.categories.map((item) => {
                     return (
@@ -331,8 +319,8 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                       />
                     );
                   })}
-              </FlexContainer>
-            </FlexContainer>
+              </div>
+            </div>
           </div>
           <div
             id="doc"
