@@ -73,7 +73,7 @@ const ReleaseNotePopoverCategorySelector = ({
           // Iterate over each column
           <div
             key={columnIndex}
-            className="rn-popover-content-inner pds-spacing-pad-block-start-s"
+            className="rn-popover-content-inner pds-spacing-pad-block-start-s@md"
           >
             {/* For each column, render items within the specified range based on `itemsPerColumn`
             and slice `activeCategories` to get the items for the current column. */}
@@ -89,11 +89,10 @@ const ReleaseNotePopoverCategorySelector = ({
                 );
                 return (
                   // Render each category/item with a checkbox and label
-                  <FlexContainer
+                  <div
                     key={item.slug}
-                    style={{ gap: '8px' }}
+                    style={{ display: 'flex', gap: '8px' }}
                     className="pds-spacing-pad-block-end-m category-checkbox-group"
-                    mobileFlexDirection="row"
                   >
                     <input
                       type="checkbox"
@@ -112,7 +111,7 @@ const ReleaseNotePopoverCategorySelector = ({
                     >
                       {item.displayName}
                     </label>
-                  </FlexContainer>
+                  </div>
                 );
               })}
           </div>
