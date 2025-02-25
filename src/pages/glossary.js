@@ -2,13 +2,14 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../layout/layout';
 import HeaderBody from '../components/headerBody';
+import { DocsSidebarLayout } from '../pds-middleware/DocsSidebarLayout/DocsSidebarLayout';
 
 import React from 'react';
 import SEO from '../layout/seo';
 import TOC from '../components/toc';
 import showdown from 'showdown';
 
-import { Container, SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
+import { Container } from '@pantheon-systems/pds-toolkit-react';
 // @todo, add omnisidebarnav to this page.
 import './styles/glossary.css';
 
@@ -145,7 +146,7 @@ class Glossary extends React.Component {
             width={containerWidth}
             className="pds-spacing-pad-block-end-4xl"
           >
-            <SidebarLayout>
+            <DocsSidebarLayout>
               <article slot="content" className="doc article glossary">
                 <HeaderBody
                   title="Glossary"
@@ -233,7 +234,7 @@ class Glossary extends React.Component {
                 </div>
               </article>
               <TOC slot="sidebar" title="Contents" />
-            </SidebarLayout>
+            </DocsSidebarLayout>
           </Container>
         </main>
       </Layout>
