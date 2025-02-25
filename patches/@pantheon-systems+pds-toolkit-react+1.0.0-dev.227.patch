@@ -1,5 +1,5 @@
 diff --git a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
-index 07332d4..271ae4c 100644
+index 07332d4..5ab6a23 100644
 --- a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
 +++ b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
 @@ -1464,7 +1464,6 @@ const Ht = 300, Q1 = 400, xe = (u) => {
@@ -10,3 +10,12 @@ index 07332d4..271ae4c 100644
      n(window.innerWidth);
      const l = () => {
        n(window.innerWidth);
+@@ -1472,7 +1471,7 @@ const Ht = 300, Q1 = 400, xe = (u) => {
+     return window.addEventListener("resize", l), () => {
+       window.removeEventListener("resize", l);
+     };
+-  }, []), s;
++  }, [window.innerWidth]), s;
+ }, ze = d1(null), s2 = ({
+   children: t,
+   mobileMenuMaxWidth: s = 640
