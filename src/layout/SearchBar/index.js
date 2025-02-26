@@ -14,7 +14,7 @@ const SearchBar = ({ page }) => (
     acceptCharset="UTF-8"
     encType="application/x-www-form-urlencoded"
     title="Search Pantheon Documentation"
-    className="pds-spacing-pad-block-start-l pds-spacing-pad-block-end-2xl"
+    className="pds-spacing-pad-block-start-2xl pds-spacing-pad-block-end-2xl"
   >
     <TextInput
       id="search"
