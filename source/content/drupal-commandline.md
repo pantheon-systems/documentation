@@ -252,7 +252,7 @@ Follow the steps below for a demonstration of the typical workflow on Pantheon.
 1. Create content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
 
   ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.live -- devel-generate-content 25
+  terminus drush $TERMINUS_SITE.live -- devel-generate-content --bundles=page  25
   ```
 
 1. Copy the database and media files from the Live environment to the Dev environment:
