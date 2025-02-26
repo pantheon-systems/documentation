@@ -41,7 +41,8 @@ h2.landing-page__section-heading {
 }
 
 .docs-video .gatsby-resp-iframe-wrapper,
-.video-container .gatsby-resp-iframe-wrapper {
+.video-container .gatsby-resp-iframe-wrapper,
+.wistia_embed {
   box-shadow: var(--pds-elevation-raised);
 }
 
