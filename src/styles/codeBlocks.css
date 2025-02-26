@@ -1,5 +1,9 @@
 .gatsby-highlight {
   margin-block-end: var(--pds-spacing-l);
+
+  code {
+    border: 0;
+  }
 }
 
 .command-line-prompt {
