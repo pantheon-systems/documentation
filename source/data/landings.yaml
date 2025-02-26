@@ -1007,6 +1007,8 @@
         - text: "Create a Drupal Site Using a Drupal Distribution"
           url: "/drupal-from-dist"
           icon: "book"
+        - text: "Create a DrupalCMS Site"
+          url: "/drupal-cms"
         - text: "Launch Check - Drupal Performance and Configuration Analysis"
           url: "/drupal-launch-check"
         - text: "Importing Drush Site Archives with Terminus"
