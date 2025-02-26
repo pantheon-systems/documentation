@@ -283,12 +283,23 @@ Follow the steps below for a demonstration of the typical workflow on Pantheon.
 
   Visit `/glossary` and `/admin/content` in your Test environment. You should see a 404 message for the glossary page and the administrative content list should not contain the articles and pages that were made on Live. You should see something different on both URLs after you deploy our code in the next step.
 
-1. Deploy code, clear the site cache, and import configuration changes to Test:
+1. Deploy code, clear the site cache in the Test environment:
 
   ```bash{outputLines: 2}
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying glossary View"
   terminus env:clear-cache $TERMINUS_SITE.test
+  ```
+
+1. Now import to the Test environment the configuration that was just exported and committed in the Dev environment:
+
+  ```bash{outputLines: 2}
   terminus drush $TERMINUS_SITE.test -- config-import -y
+  ```
+
+1. Log in to the Test environment:
+
+  ```bash{outputLines: 2}
+  terminus drush $TERMINUS_SITE.test -- user-login
   ```
 
 1. Check the Test environment and visit `/glossary` and `/admin/content` again. You should see both the glossary view and a full list of content on the administrative page.
