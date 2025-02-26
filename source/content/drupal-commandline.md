@@ -63,7 +63,7 @@ The next few sections use the example variables `my-site` and `"My D9 Site"` as 
 1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create my-site "My Site" "drupal-composer-managed"
+  terminus site:create my-site "My Site" "drupal-11-composer-managed"
   ```
 
   - You can add the `--org` option to the command above and pass the Workspace name, label, or ID if you want to associate this site with an Workspace.
