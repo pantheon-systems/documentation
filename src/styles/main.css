@@ -26,14 +26,18 @@ mark {
   background-color: #fff1a9;
 }
 
-/* Landing pages */
-.landing-page__header {
-  text-align: center;
-  width: 80%;
-}
-
 h2.landing-page__section-heading {
   margin-block-start: 0 !important;
+}
+
+.landing-page__video-background {
+  background: linear-gradient(
+    to top,
+    var(--pds-color-button-secondary-background-hover) 70%,
+    white 0%
+  );
+  padding-block: var(--pds-spacing-4xs);
+  padding-inline: 0;
 }
 
 .video-container .gatsby-resp-iframe-wrapper {
@@ -41,41 +45,35 @@ h2.landing-page__section-heading {
 }
 
 hr.landing-page__guides-separator {
-  margin-block: var(--pds-spacing-m);
-  width: 96%;
+  height: 1px;
+  background: var(--pds-color-border-default);
+  border: 0;
 }
 
 .landing-page__guides-title {
   font-size: var(--pds-typography-size-l);
   font-weight: var(--pds-typography-font-weight-semibold);
   padding-block-start: var(--pds-spacing-xl);
-  text-align: center;
 }
 
 .landing-page__guide-items {
   display: flex;
   flex-direction: column;
-  padding-block-end: var(--pds-spacing-3xl);
-  padding-block-start: var(--pds-spacing-xl);
+  padding-block-start: var(--pds-spacing-m);
   row-gap: var(--pds-spacing-xl);
-  text-align: center;
 }
 
 @media (min-width: 641px) {
   .landing-page__guide-items {
-    column-gap: var(--pds-spacing-3xl);
+    column-gap: var(--pds-spacing-xl);
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-inline: auto;
-    width: 90%;
   }
 }
 
 .landing-page__related h2 {
   margin-block-end: var(--pds-spacing-3xl);
   margin-block-start: var(--pds-spacing-4xl);
-  text-align: center;
 }
 
 /* In-document anchor links. */

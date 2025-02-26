@@ -48,9 +48,9 @@ class LandingTemplate extends Component {
           </Container>
           <Container width={containerWidth} className="landing-page__header">
             <div className="landing-page-heading pds-spacing-pad-block-m">
-              <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
+              <h1 className="pds-spacing-mar-block-end-m">{topic.title}</h1>
               {topic.subtitle && (
-                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xs">
+                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-6xs">
                   {topic.subtitle}
                 </div>
               )}
@@ -61,7 +61,7 @@ class LandingTemplate extends Component {
             <div className="landing-page__video-background">
               <Container
                 width={containerWidth}
-                className="video-container  pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
+                className="video-container pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
               >
                 <Youtube src={topic.video_id} title={topic.title} />
               </Container>
