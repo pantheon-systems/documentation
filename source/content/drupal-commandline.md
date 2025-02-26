@@ -174,13 +174,12 @@ You may want to remove these modules after you launch your site, or use more adv
 
   All of these modules are helpful during active development. Devel Generate is used in this walk-through to make nodes on the Live environment.
 
-1. Sign in to your Dev environment if you haven't already done so. You will see a footer of helpful development information provided by the `webprofiler` module you just installed:
+1. Sign in to your Dev environment if you haven't already done so. You will see a links from Devel module in the administrative header:
 
   ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-  ![The webprofiler toolbar](../../../images/drupal8-commandline--webprofiler.png)
 
 1. Export the configuration in the Dev environment:
 
