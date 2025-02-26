@@ -40,6 +40,7 @@ h2.landing-page__section-heading {
   padding-inline: 0;
 }
 
+.docs-video .gatsby-resp-iframe-wrapper,
 .video-container .gatsby-resp-iframe-wrapper {
   box-shadow: var(--pds-elevation-raised);
 }
