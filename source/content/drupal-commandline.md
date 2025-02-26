@@ -169,7 +169,7 @@ You may want to remove these modules after you launch your site, or use more adv
 1. Enable the modules:
 
   ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate webprofiler -y
+  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate -y
   ```
 
   All of these modules are helpful during active development. Devel Generate is used in this walk-through to make nodes on the Live environment.
