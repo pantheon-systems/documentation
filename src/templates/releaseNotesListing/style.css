@@ -69,7 +69,7 @@
 
 .rn-pagination-controls button.active {
   background-color: var(--pds-color-button-secondary-background-hover);
-  color: var(--pds-color-brand-secondary-default);
+  color: var(--pds-color-brand-primary-default);
   border-radius: 3px;
 }
 
