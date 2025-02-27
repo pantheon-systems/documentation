@@ -69,7 +69,7 @@ The `pantheon.upstream.yml` file provided by your upstream might define protecte
 - Limited to 24 protected paths
 - You may not be able to protect files or paths with special characters
 - Wait a few seconds for changes to take effect
-- Do not use this setting for the public files path (`sites/default/files` or `/wp-content/uploads`) as it would likely break site functionality related to asset loading and generation.
+- Do not use this setting for the public files path (`/sites/default/files` or `/wp-content/uploads`) as it would likely break site functionality related to asset loading and generation. You can however use this setting to protect specific subdirectories of the public files path (e.g., `/wp-content/uploads/example-subdirectory`).
 
 ### Protected Web Paths Override
 
