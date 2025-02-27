@@ -32,6 +32,7 @@
 
 #mktoForm_2014 input {
   min-width: 12rem;
+  border: 1px solid var(--pds-color-border-input);
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
