@@ -1,0 +1,22 @@
+name: Check Release Notes Filenames
+
+on:
+  pull_request:
+
+jobs:
+  check-filenames:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Find invalid filenames in added/modified files
+        run: |
+          git diff --name-only --diff-filter=A origin/main | grep '^source/releasenotes/' | while read -r file; do
+            filename=$(basename "$file")
+            name="${filename%.*}"  # Remove only the last extension
+            if [[ "$name" == *.* ]]; then
+              echo "Invalid file: $file"
+              exit 1
+            fi
+          done
