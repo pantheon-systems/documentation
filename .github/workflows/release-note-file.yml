@@ -9,10 +9,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Ensures we have at least one previous commit for diffing
 
       - name: Find invalid filenames in added/modified files
         run: |
-          git diff --name-only --diff-filter=A origin/main | grep '^source/releasenotes/' | while read -r file; do
+          git fetch origin ${{ github.base_ref }} --depth=1
+          git diff --name-only --diff-filter=A origin/${{ github.base_ref }} | grep '^source/releasenotes/' | while read -r file; do
             filename=$(basename "$file")
             name="${filename%.*}"  # Remove only the last extension
             if [[ "$name" == *.* ]]; then
