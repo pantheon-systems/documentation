@@ -60,7 +60,7 @@ Be sure that you have:
 
   In addition to starting local Docker containers for the site, this command will also install DDEV provider integration recipes to your site's codebase at `.ddev/providers`, which we will use in the next step.
 
-1. Copy your site's `.ddev/providers/example.pantheon.yaml` provider file to `.ddev/providers/pantheon.yaml`.
+1. Copy your site's `.ddev/providers/pantheon.yaml.example` provider file to `.ddev/providers/pantheon.yaml`.
 
   <Alert title="Note" type="info" >
 
