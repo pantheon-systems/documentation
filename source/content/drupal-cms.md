@@ -36,7 +36,7 @@ Drupal CMS can be installed in a fresh sandbox site on Pantheon.
 If you prefer, you can also create a new site with Drupal CMS using [Terminus](/terminus):
 
 ```bash
-terminus site:create drupal-cms-sandbox "A Drupal CMS Sandbox" drupal-cms-composer-managed --org=pantheon-cooking
+terminus site:create [drupal-cms-sandbox-name] "A Drupal CMS Sandbox" drupal-cms-composer-managed --org=[YOUR-ORGANIZATION]
 ```
 
 After the site creation process provisions a database, code, and other resources, use the browser-based installer to set up your Drupal CMS site.
