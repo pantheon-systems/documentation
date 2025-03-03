@@ -1,22 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import { FlexContainer, Icon } from "@pantheon-systems/pds-toolkit-react"
+import { Icon } from '@pantheon-systems/pds-toolkit-react';
 
-import "./style.css"
+import './style.css';
 
 const NavButtons = ({
   prev,
   next,
-  prevTitle = "Previous",
-  nextTitle = "Continue",
+  prevTitle = 'Previous',
+  nextTitle = 'Continue',
 }) => {
   return (
-    <FlexContainer
-      justifyContent="between"
-      className="pds-spacing-mar-block-start-m pds-spacing-mar-block-end-xl"
-    >
-      <ul className="pagination pager-guides">
+    <div>
+      <ul className="pagination pager-guides pds-spacing-mar-block-end-2xl">
         {prev && (
           <li className="pagination__prev">
             <Link to={prev} rel="prev" className="pds-button">
@@ -34,8 +31,8 @@ const NavButtons = ({
           </li>
         )}
       </ul>
-    </FlexContainer>
-  )
-}
+    </div>
+  );
+};
 
-export default NavButtons
+export default NavButtons;

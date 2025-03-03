@@ -11,7 +11,7 @@ import MdxWrapper from '../components/mdxWrapper';
 import OmniSidebarNav from '../components/omniSidebarNav';
 
 // Set container width for search and main content.
-const containerWidth = 'standard';
+const containerWidth = 'full';
 
 class VideoTemplate extends React.Component {
   render() {
@@ -36,7 +36,7 @@ class VideoTemplate extends React.Component {
         <OmniSidebarNav slot="guide-menu" activePage={node.fields.slug} />
         <ContentLayoutType slot="guide-content">
           <main id="docs-main" tabIndex="-1">
-            <Container width={containerWidth} className="docs-video">
+            <div className="docs-video">
               <SearchBar slot="content" page="default" />
 
               <HeaderBody
@@ -51,7 +51,7 @@ class VideoTemplate extends React.Component {
               <article className="pds-spacing-mar-block-end-4xl">
                 <MdxWrapper mdx={node.body} />
               </article>
-            </Container>
+            </div>
           </main>
         </ContentLayoutType>
       </GuideLayout>
