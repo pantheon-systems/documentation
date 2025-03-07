@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 7: Connecting People"
+description: Learn how to manage teams, workspaces and permissions before connecting DNS.
 certificationpage: true
 type: certificationpage
 layout: certificationpage
@@ -225,14 +226,14 @@ For more information, see: [Secure Development on Pantheon](/guides/secure-devel
 
 Pantheon offers a variety of plans to suit your needs. This section will cover the various purchase plans, what is included with each, and how to manage your plan.
 
+Before reading on, we recommend you familiarize yourself with the following terminology:
+
 **Terminology**
 
 * **Application Containers:** Each application container is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
 * **PHP Concurrency:** The amount of simultaneous processes PHP that can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance.
 * **PHP Memory Limit (Application Memory Limit):** The maximum amount of memory a single PHP process can use. Exceeding this limit will cancel the process, resulting in a failed request from the user's perspective.
 * **MySQL Buffer Pool:** The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
-
-Before reading on, we recommend you familiarize yourself with the following terminology:
 
 #### Types of Site Plans
 

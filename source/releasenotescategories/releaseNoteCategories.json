@@ -119,6 +119,12 @@
       "displayName": "Modules",
       "color": "color-7",
       "description": "Keeps users informed about updates to Drupal modules that we maintain."
+    },
+    {
+      "slug": "content-publisher",
+      "displayName": "Content Publisher",
+      "color": "color-4",
+      "description": "Keeps users informed about updates to Pantheon Content Publisher"
     }
   ]
 }

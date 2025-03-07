@@ -1,7 +1,7 @@
 ---
 title: Pantheon Content Publisher in private beta
 published_date: "2024-11-20"
-categories: [new-feature, wordpress, drupal, plugins]
+categories: [new-feature, wordpress, drupal, plugins, content-publisher]
 ---
 
 

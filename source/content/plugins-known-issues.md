@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2025-01-27"
+reviewed: "2025-02-04"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -21,6 +21,16 @@ We do not prevent you from installing and using these plugins or themes. However
 **Plugin & Theme Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fdocs.pantheon.io/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
 
 If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-plugins-known-issues.md).
+
+### Pantheon MU Plugin Compatibility Layer
+
+Since version [1.5.0](https://github.com/pantheon-systems/pantheon-mu-plugin/releases/tag/1.5.0) of the [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin/), a "compatibility layer" has been implemented in the MU plugin that is sent to all sites on Pantheon. This compatibility layer attempts to make any configuration changes necessary to ensure your site is compatible with the plugins listed on this page. 
+
+These are shown in the form of Site Health checks that are detailed on a new Pantheon Compatibility tab on the Site Health page in your admin. If manual changes are required, they will be reported to your Site Health page, otherwise the MU plugin will attempt to correct the issue without any required changes. If you are using a plugin that appears on this page, it's a good idea to check to see if the issue is already mitigated by checking your Site Health page for information about the plugin.
+
+![Pantheon MU Plugin Compatibility Layer](../images/pantheon-mu-plugin-compatibility.png)
+
+If you think a plugin should be added to the Pantheon MU Plugin Compatibility layer, you may [open a ticket](https://github.com/pantheon-systems/pantheon-mu-plugin/issues/new?title=Plugin%20Compatibility%20Layer%20Update:%20[Plugin%20Name]&body=A%20plugin%20with%20a%20compatibility%20issue%20on%20Pantheon%20has%20been%20requested%20to%20be%20added%20to%20the%20mu-plugin%0A%0APlugin%20Name:%20[plugin%20name]) in the Pantheon MU Plugin GitHub repository. [Read more about the Pantheon MU Plugin ](/guides/wordpress-configurations/plugins#pantheon-must-use-plugin).
 
 ### Assumed Write Access
 
@@ -1639,11 +1649,11 @@ ___
 
 ## WP phpMyAdmin
 
-<ReviewDate date="2024-01-30" />
+<ReviewDate date="2025-02-14" />
 
-The [WP phpMyAdmin](https://puvox.software/software/wordpress-plugins/?plugin=wp-phpmyadmin-extension) plugin is not supported on Pantheon and will not work correctly.
+The [WP phpMyAdmin](https://wordpress.org/plugins/wp-phpmyadmin-extension/) plugin is not supported on Pantheon and will not work correctly.
 
-**Alternative:** Please see https://docs.pantheon.io/guides/mariadb-mysql/mysql-access for more information on accessing your database directly.
+**Alternative:** See our related documentation for more information on [accessing your database directly](/guides/mariadb-mysql/mysql-access).
 
 ___
 

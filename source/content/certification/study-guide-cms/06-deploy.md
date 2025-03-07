@@ -1,6 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 6: The Deployment Pipeline"
+description: Learn about the deployment pipeline for CMS Sites on Pantheon as it relates to code, files, and databases.
 certificationpage: true
 type: certificationpage
 layout: certificationpage
@@ -169,7 +170,7 @@ SSH keys are a best practice for authentication and offer more security than a s
 You can take full advantage of Pantheon by loading your public SSH key into your account. You must add your SSH key once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
 
 <Alert title="Note on SSH Access"  type="danger" >
-Pantheon does not provide access to a shell environment over SSH. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
+Pantheon does not provide access to a shell environment over SSH. These directions allow you to authenticate operations on Pantheon like  Git, SFTP, WP-CLI or Drush via SSH keys.
 </Alert>
 
 SSH keys provide a secure and convenient way for users to interact with a Pantheon site. SSH does not provide root access to the server.
@@ -188,7 +189,7 @@ In this section, we will walk through the process of generating SSH keys and add
 
     **Multiple SSH Keys**
 
-    If you have multiple SSH keys for different purposes and want to tell all of your Pantheon sites to use a specific key, you can configure your local ssh setup to use one key for all Pantheon servers. Follow the instructions here: https://web.berkeley.edu/web-hosting-pantheon/hosting-your-site-pantheon/special-topics-pantheon-sites/using-ssh-keys
+    If you have multiple SSH keys for different purposes and want to tell all of your Pantheon sites to use a specific key, you can [configure your local ssh setup to use one key for all Pantheon servers](/ssh-keys/#manage-multiple-keys-optional).
 
 2. **Set a passphrase for better security.** We recommend using a passphrase, but it can conflict with some tools.
 

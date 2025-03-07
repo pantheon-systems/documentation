@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { FlexContainer, Icon } from "@pantheon-systems/pds-toolkit-react"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import { FlexContainer, Icon } from '@pantheon-systems/pds-toolkit-react';
 
-import "./styles.css"
+import './styles.css';
 
 const propTypes = {
   dark: PropTypes.bool,
@@ -12,10 +12,10 @@ const propTypes = {
   title: PropTypes.string,
   subTitle: PropTypes.string,
   type: PropTypes.string,
-}
+};
 
 function HeroCTA(props) {
-  const { url, title, subTitle, linkText } = props
+  const { url, title, subTitle, linkText } = props;
 
   return (
     <FlexContainer spacing="wide" className="hero-cta">
@@ -39,9 +39,9 @@ function HeroCTA(props) {
         </Link>
       </div>
     </FlexContainer>
-  )
+  );
 }
 
-HeroCTA.propTypes = propTypes
+HeroCTA.propTypes = propTypes;
 
-export default HeroCTA
+export default HeroCTA;

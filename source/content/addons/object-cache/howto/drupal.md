@@ -3,7 +3,7 @@ title: Enable Object Cache for Drupal
 description: How to install and configure Object Cache for Drupal.
 permalink: docs/object-cache/drupal
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2025-02-04"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -76,6 +76,21 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
     // cache bin definition below.
     $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
 
+    /**
+    * Default TTL for Redis is 1 year.
+    *
+    * Change cache expiration (TTL) for data,default bin - 12 hours.
+    * Change cache expiration (TTL) for entity bin - 48 hours.
+    *
+    * @see \Drupal\redis\Cache\CacheBase::LIFETIME_PERM_DEFAULT
+    */
+
+    $settings['redis.settings']['perm_ttl'] = 2630000; // 30 days
+    $settings['redis.settings']['perm_ttl_config'] = 43200;
+    $settings['redis.settings']['perm_ttl_data'] = 43200;
+    $settings['redis.settings']['perm_ttl_default'] = 43200;
+    $settings['redis.settings']['perm_ttl_entity'] = 172800;
+
     // Use redis for container cache.
     // The container cache is used to load the container definition itself, and
     // thus any configuration stored in the container itself is not available
@@ -119,25 +134,32 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 
    </Alert>
 
-<Accordion title="Database Cleanup (recommended)" id="database-cleanup-drupal" icon="lightbulb">
+### Database Cleanup (Required) 
 
 After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
 
-1. [Connect directly to MySQL](/guides/mariadb-mysql/mysql-access) and run the command below to view the cache:
+Use the following script to cleanup cache tables in the database: 
 
-  ```sql
-  SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
-  ```
+<Download file="drupal-db-cleanup-cache-tables.sh" />
 
-  This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+```bash
+#!/bin/bash
 
-1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
+echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
+read SITE;
 
-  ```sql
-  TRUNCATE TABLE `<tablename>`;
-  ```
+echo 'Provide the site name (multidev, dev, test, or live), then press [ENTER]:';
+read ENV;
 
-</Accordion>
+# Get a list of all cache tables
+CACHETABLES="$(terminus drush $SITE.$ENV -- sql:query "SHOW TABLES LIKE 'cache%';")"
+
+# Trucate each cache table in a loop to avoid resource contention and potential deadlocks.
+
+for table in $CACHETABLES; do
+    terminus drush $SITE.$ENV -- sql:query "TRUNCATE TABLE $table;"
+done
+```
 
 ## Drupal 7
 
@@ -188,11 +210,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
 
-<Accordion title="Database Cleanup (recommended)" id="database-cleanup-d7" icon="lightbulb">
-
-After enabling Redis, there are cache tables in the database that are no longer being used. Refer to the "Database Cleanup" section above for steps on how to truncate the existing cache tables to make sure the latest data populates object cache properly.
-
-</Accordion>
+1. See the ["Database Cleanup" section above](#database-cleanup-required) for steps on how to truncate the existing cache tables to make sure the latest data populates object cache properly.
 
 
 ## More Resources
