@@ -56,7 +56,9 @@ View the project [README](https://github.com/pantheon-systems/wp-tls-compatibili
 
 <Tab title="Drupal" id="check-compatibility-drupal">
 
-A Drupal module with similar functionality will be made available in the near future.
+Drupal users can use the [Pantheon Drupal TLS Compatibility Checker](https://github.com/pantheon-systems/drupal_tls_checker) to scan their site for outgoing TLS connections. This module supports Drupal 10/11 and can be run from the command line using Drush or in the admin at `/admin/config/development/tls-checker`. If any URLs are found in the `modules` or `themes` directories that do not support TLS 1.2 or 1.3 connections, a list is provided on that page (or shown in the terminal).
+
+View the project [README](https://github.com/pantheon-systems/drupal_tls_checker/blob/main/README.md) for more detailed information about customizing the checks, installation and usage.
 
 </Tab>
 
