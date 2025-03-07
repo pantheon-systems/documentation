@@ -30,7 +30,7 @@ A TLS connection is initiated by a "handshake". You can think of this as two com
 
 TLS 1.0 and 1.1 were published in 1999 and 2006, respectively. Both were deprecated in 2021 and are considered outdated and insecure. Pantheon servers support TLS 1.2 and 1.3 connections. This means any outgoing HTTP requests being made from the _application level_ must be with servers that also support TLS 1.2 or 1.3.
 
-Pantheon application servers will _reject_ connections to applications that do not support TLS 1.2+.
+Pantheon application servers will _reject_ connections to applications that do not support TLS 1.2+. <!--TODO: Update to note *when* we will no longer allow TLS 1.2+ connections? -->
 
 <Alert title="What's affected?" type="info">
 
