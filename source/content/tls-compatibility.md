@@ -72,6 +72,8 @@ curl --tlsv1.2 --head --connect-timeout 10 "<your url to check>"
 
 If you receive a 200 status code in the response (e.g. `HTTP/2 200`) along with header information, the check succeeded. If you receive an error (e.g. `TLS connect error`), it means the server you are attempting to make a connection to does not support that version of TLS.
 
+A more robust example that scans all the files in a particular path can be found [in this Gist](https://gist.github.com/scottbuscemi/8915d6d53f34f5012406ef5d21b222a1).
+
 <TabList>
 
 <Tab title="Successful result" id="cli-test-success" active={true}>
