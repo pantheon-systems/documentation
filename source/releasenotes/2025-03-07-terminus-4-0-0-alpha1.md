@@ -4,7 +4,8 @@ published_date: "2025-03-07"
 categories: [tools-apis]
 ---
 
-A Terminus [4.0.0-alpha1](https://github.com/pantheon-systems/terminus/releases/tag/4.0.0-alpha1) _pre-release_ is now available as of March 07, 2025. The next generation of Terminus adds support for PHP 8.4 and removes support for PHP versions 8.2 and below.
+A Terminus [4.0.0-alpha1](https://github.com/pantheon-systems/terminus/releases/tag/4.0.0-alpha1) _pre-release_ is now available.
+The next generation of Terminus adds support for PHP 8.4 and removes support for PHP versions 8.2 and below.
 
 For more information about this release, visit the [GitHub release page](https://github.com/pantheon-systems/terminus/releases/tag/4.0.0-alpha1).
 
