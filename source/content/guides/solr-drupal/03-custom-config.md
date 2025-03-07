@@ -10,11 +10,19 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-reviewed: "2025-01-15"
+reviewed: "2025-02-11"
 showtoc: true
 permalink: docs/guides/solr-drupal/custom-config
 editpath: solr-drupal/03-custom-config.md
 ---
+## Before you begin
+### Install the Pantheon Search Admin module
+
+[If you have not done so already](/guides/solr-drupal/solr-drupal#install-the-search-module), install the `search_api_pantheon_admin` module, either from the Extend page in Drupal admin (`/admin/modules`) or from the command line using Terminus and Drush:
+
+```shell{promptUser:user}
+terminus drush <site>.<env> -- pm-enable search_api_pantheon_admin
+```
 
 ## Apply Custom Solr Configurations
 
@@ -28,7 +36,7 @@ There are instances where you may want to edit the configuration file like `sche
 
   <Alert title="Note" type="info">
 
-  Relocating these files outsdie of the `web/modules/contrib/search_api_solr` path ensures your custom configurations will not be overwritten by future module updates.
+  Relocating these files outside of the `web/modules/contrib/search_api_solr` path ensures your custom configurations will not be overwritten by future module updates.
 
   </Alert>
 

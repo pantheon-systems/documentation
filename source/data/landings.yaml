@@ -1007,6 +1007,8 @@
         - text: "Create a Drupal Site Using a Drupal Distribution"
           url: "/drupal-from-dist"
           icon: "book"
+        - text: "Create a DrupalCMS Site"
+          url: "/drupal-cms"
         - text: "Launch Check - Drupal Performance and Configuration Analysis"
           url: "/drupal-launch-check"
         - text: "Importing Drush Site Archives with Terminus"
@@ -1370,6 +1372,28 @@
       links:
         - text: "Pantheon WebOps Certification Registry"
           url: "https://certification.pantheon.io"
+- title: "Pantheon Community"
+  path: "community"
+  topics-groups:
+    - title: "Pantheon Community"
+      links:
+        - text: "Join the community"
+          url: "/pantheon-community"
+        - text: "Apply to be a Hero"
+          url: "https://pantheon.io/developer-community/heroes/apply"
+        - text: "Contribute to Docs"
+          url: "/contribute"
+    - title: "Product Roadmap"
+      links:
+      - text: "View the Pantheon roadmap"
+        url: "https://roadmap.pantheon.io"
+      - text: "Learn more about the roadmap"
+        url: "/roadmap"
+      - text: "Submit a feature request"
+        url: "/roadmap#submit-feature-requests-and-feedback"
+      - text: "FAQs"
+        url: "/roadmap#frequently-asked-questions"
+
 
 - title: "Learning and Certification"
   subtitle: "Learn to use Pantheon's platform and tools"
@@ -1434,6 +1458,9 @@
           url: "/certification/exam#exam-faqs"
         - text: "See who's certified!"
           url: "https://certification.pantheon.io"
+
+
+
 
 
 

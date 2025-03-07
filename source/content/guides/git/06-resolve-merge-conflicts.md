@@ -52,7 +52,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 <Tab title="Drupal (Latest)" id="d#">
 
   ```bash{promptUser: user}
-  git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-10-composer-managed.git main
+  git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed.git main
   # resolve conflicts
   git push origin master
   ```

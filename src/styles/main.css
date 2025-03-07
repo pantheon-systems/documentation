@@ -172,12 +172,12 @@ a.individual-changelog-link:hover {
 }
 
 /* Inputs */
-.mktoForm input[type='text'],
-.mktoForm input[type='url'],
-.mktoForm input[type='email'],
-.mktoForm input[type='tel'],
-.mktoForm input[type='number'],
-.mktoForm input[type='date'],
+.mktoForm input[type="text"],
+.mktoForm input[type="url"],
+.mktoForm input[type="email"],
+.mktoForm input[type="tel"],
+.mktoForm input[type="number"],
+.mktoForm input[type="date"],
 .mktoForm select.mktoField,
 .mktoForm textarea.mktoField {
   background-color: var(--pds-color-background-default);
@@ -189,12 +189,12 @@ a.individual-changelog-link:hover {
   line-height: 1.5em;
   padding: var(--pds-spacing-2xs);
 }
-.mktoForm input[type='text']:focus,
-.mktoForm input[type='url']:focus,
-.mktoForm input[type='email']:focus,
-.mktoForm input[type='tel']:focus,
-.mktoForm input[type='number']:focus,
-.mktoForm input[type='date']:focus,
+.mktoForm input[type="text"]:focus,
+.mktoForm input[type="url"]:focus,
+.mktoForm input[type="email"]:focus,
+.mktoForm input[type="tel"]:focus,
+.mktoForm input[type="number"]:focus,
+.mktoForm input[type="date"]:focus,
 .mktoForm select.mktoField:focus,
 .mktoForm textarea.mktoField:focus {
   outline: 1px solid var(--pds-color-interactive-focus) !important;
@@ -230,9 +230,9 @@ a.individual-changelog-link:hover {
   border: 1px solid var(--pds-color-input-border-critical);
 }
 
-article.doc.article, article.guide-doc-body {
+article {
   ul {
-    margin-block-start: 0;
+    margin-block-start: var(--pds-spacing-3xs);
     margin-block-end: var(--pds-spacing-m);
   }
 

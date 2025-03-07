@@ -79,6 +79,9 @@ mysql> SHOW VARIABLES LIKE "max_connections";
 
 There are many other factors that you should consider if you have concerns about maximum database connections. Contact your [CSM](/guides/professional-services#customer-success-management) or [Sales](https://pantheon.io/contact-sales?docs) for more information.
 
+### Can I use phpMyAdmin on Pantheon environments?
+No, Pantheon does not support running [phpMyAdmin](https://www.phpmyadmin.net/) on our application containers for database administration. See [platform considerations](/guides/platform-considerations/platform-site-info#database-administration) for more details.
+
 ## More Resources
 
 - [Accessing MariaDB and MySQL Databases](/guides/mariadb-mysql/mysql-access)

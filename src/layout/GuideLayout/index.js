@@ -1,27 +1,27 @@
-import React, { Components } from "react"
-import "./style.css"
-import Header from "../header"
-import Footer from "../footer"
-import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import React, { Components } from 'react';
+import './style.css';
+import Header from '../header';
+import Footer from '../footer';
+import { SidebarLayout } from '@pantheon-systems/pds-toolkit-react';
 
-const GuideLayout = ({ children, pageType = "default" }) => {
+const GuideLayout = ({ children, pageType = 'default' }) => {
   // Establish slots for children.
-  const slots = {}
+  const slots = {};
   React.Children.forEach(children, (child) => {
-    const slotName = child.props.slot
+    const slotName = child.props.slot;
     if (slotName) {
       if (slots[slotName]) {
-        slots[slotName].push(child)
+        slots[slotName].push(child);
       } else {
-        slots[slotName] = [child]
+        slots[slotName] = [child];
       }
     }
-  })
+  });
 
   // Assign content to named slots.
-  const pageSEO = slots["seo"]
-  const guideMenu = slots["guide-menu"]
-  const guideContent = slots["guide-content"]
+  const pageSEO = slots['seo'];
+  const guideMenu = slots['guide-menu'];
+  const guideContent = slots['guide-content'];
 
   return (
     <div className="pantheon-docs">
@@ -39,7 +39,7 @@ const GuideLayout = ({ children, pageType = "default" }) => {
       </SidebarLayout>
       <Footer className="with-border" />
     </div>
-  )
-}
+  );
+};
 
-export default GuideLayout
+export default GuideLayout;

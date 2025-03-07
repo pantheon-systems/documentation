@@ -1,43 +1,20 @@
 import React, { Components } from 'react';
 import './style.css';
 import Header from '../header';
-import { ButtonLink } from '@pantheon-systems/pds-toolkit-react';
 import { Container, CTASlice } from '@pantheon-systems/pds-toolkit-react';
 import Footer from '../footer';
 import SearchBar from '../SearchBar';
 
 // Content for CTA
-const primaryCTA = (
-  <ButtonLink
-    variant="primary"
-    size="lg"
-    linkContent={
-      <a
-        href="https://pantheon.io/learn-pantheon?docs"
-        className="pds-button pds-button--lg"
-        target="_blank"
-      >
-        Learn Pantheon
-      </a>
-    }
-  />
-);
+const primaryCTA = {
+  text: 'Learn Pantheon',
+  url: 'https://pantheon.io/learn-pantheon?docs',
+};
 
-const secondaryCTA = (
-  <ButtonLink
-    variant="secondary"
-    size="lg"
-    linkContent={
-      <a
-        href="https://pantheon.io/developers/office-hours?docs"
-        className="pds-button pds-button--lg pds-button--secondary"
-        target="_blank"
-      >
-        Office Hours
-      </a>
-    }
-  />
-);
+const secondaryCTA = {
+  text: 'Office Hours',
+  url: 'https://pantheon.io/developers/office-hours?docs',
+};
 
 const Layout = ({
   children,
@@ -60,8 +37,8 @@ const Layout = ({
         <CTASlice
           backgroundColor="secondary"
           headingText="Got questions? We've got answers!"
-          primaryLinkContent={primaryCTA}
-          secondaryLinkContent={secondaryCTA}
+          primaryLink={primaryCTA}
+          secondaryLink={secondaryCTA}
           className="pre-footer-slice"
         />
       )}

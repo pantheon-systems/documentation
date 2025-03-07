@@ -18,7 +18,7 @@ function HeroCTA(props) {
   const { url, title, subTitle, linkText } = props;
 
   return (
-    <FlexContainer gap="wide" className="hero-cta">
+    <FlexContainer spacing="wide" className="hero-cta">
       <div className="hero-cta-image" slot="first-item">
         <StaticImage
           src="https://cdn.bfldr.com/MEM5087K/at/933t7sx45wwnmsrrjq94z4f/front-page-hero.png?auto=webp&format=png"

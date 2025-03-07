@@ -108,6 +108,7 @@ const webInfrastructure = () => {
       getGuideDirectory('guides/redirect', 'Redirects'),
 
       simpleLink('/develop-drupal', 'Drupal', [
+        simpleLink('/drupal-cms', 'Drupal CMS'),
         simpleLink('/develop-drupal', 'Overview'),
         simpleLink('/supported-drupal', 'Supported Drupal Versions'),
         simpleLink('/modules', 'Pantheon Modules'),
