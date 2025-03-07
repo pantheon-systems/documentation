@@ -124,4 +124,5 @@ It's uncommon (but possible) for a server to support TLS 1.3 _but not_ 1.2. You 
 * [Transport Layer Security article on Wikipedia](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 * [What is TLS?](https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/)
 * [What happens in a TLS handshake?](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
-* [Pantheon WP TLS Compatibility Checker](https://github.com/jazzsequence/wp-tls-compatibility-checker)
+* [Pantheon WP TLS Compatibility Checker](https://github.com/pantheon-systems/wp-tls-compatibility-checker)
+* [Pantheon Drupal TLS Compatibility Checker](https://github.com/pantheon-systems/drupal_tls_checker)
