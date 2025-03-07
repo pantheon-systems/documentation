@@ -31,6 +31,10 @@ Refer to [Dynamic Outgoing IP Addresses](/outgoing-ips) for more information.
 
 Pantheon's platform security controls include blocking most [UDP traffic](https://en.wikipedia.org/wiki/User_Datagram_Protocol) originating from website containers to prevent platform abuse.
 
+## TLS
+
+Pantheon supports Transport Layer Security (TLS) encryption versions 1.2 and 1.3. [Learn more about TLS compatibility](/tls-compatibility).
+
 ## More Resources
 
 - [Pantheon Security](/guides/security)
