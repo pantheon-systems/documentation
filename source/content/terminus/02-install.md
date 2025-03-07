@@ -50,6 +50,8 @@ Terminus does not work with the following platforms:
 - OpenSSH 7.8 or later
   - You can check your OpenSSH version by running `ssh -V` from a terminal application.
   - This package is required for executing nested Drush or WP-CLI commands.
+ 
+  TODO, add explanation of 8.4
 
 ## Installation and Update Methods 
 ### MacOS
