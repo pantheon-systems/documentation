@@ -18,7 +18,9 @@ On macOS with Homebrew PHP 8.3 can be installed by specifying the version when i
 For more information see [the `php` Homebrew formula](https://formulae.brew.sh/formula/php@8.3).
 
 ## How to upgrade to Terminus 4.x while in alpha
-During the pre-release development phase of Terminus 4, the only way to install Terminus is [directly from the `phar`](https://docs.pantheon.io/terminus/install#windows-and-linux). If you manage your installation via Homebrew on macOS, you will not be able to update to Terminus 4 until it is generally available and the Brew formula is updated.
+During the pre-release development phase of Terminus 4, the only way to install Terminus is [directly from the `phar`](https://docs.pantheon.io/terminus/install#windows-and-linux). 
+
+If you previously used Homebrew (macOS-only) to manage your installation, you will not be able to update to Terminus 4 until it is generally available and the Brew formula is updated. In that case, use the commands below to install Terminus to 4.0.0-alpha1:
 
 ```shell{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
@@ -26,8 +28,9 @@ curl -L https://github.com/pantheon-systems/terminus/releases/download/4.0.0-alp
 chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+brew unlink terminus
 ```
 
-If you have previously installed Terminus using Brew, you will need to run `brew unlink terminus` to remove the symbollic links that Homebrew uses for Terminus.
+If you have already installed Terminus via the `phar` file, you can use `terminus self:update --preview` to update to the latest version. The `--preview` flag is required to update to the latest pre-release version of Terminus.
 
 If you have questions or concerns around Terminus 4, please use the [Terminus issue queue](https://github.com/pantheon-systems/terminus).
