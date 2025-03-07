@@ -13,7 +13,7 @@ For more information about this release, visit the [GitHub release page](https:/
 
 Terminus 3.x is **not compatible with PHP 8.4**. The recommended PHP version to use locally with Terminus 3.x is 8.3. 
 
-On MacOS with Homebrew PHP 8.3 can be installed by specifying the version when installing the `php` package, e.g. `brew install php@8.3`. If you already have PHP installed at the default version (8.4), you may need to use [`brew unlink php`](https://docs.brew.sh/Manpage#unlink---dry-run-installed_formula-) and [`brew link php@8.3`](https://docs.brew.sh/Manpage#link-ln-options-installed_formula-) to use the corrected version.
+On macOS with Homebrew PHP 8.3 can be installed by specifying the version when installing the `php` package, e.g. `brew install php@8.3`. If you already have PHP installed at the default version (8.4), you may need to use [`brew unlink php`](https://docs.brew.sh/Manpage#unlink---dry-run-installed_formula-) and [`brew link php@8.3`](https://docs.brew.sh/Manpage#link-ln-options-installed_formula-) to use the corrected version.
 
 For more information see [the `php` Homebrew formula](https://formulae.brew.sh/formula/php@8.3).
 
