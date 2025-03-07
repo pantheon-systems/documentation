@@ -46,11 +46,11 @@ You can check your whether site's codebase makes HTTP connections to servers tha
 
 <Tab title="WordPress" id="check-compatibility-wp" active={true}>
 
-WordPress users can use the [Pantheon WP TLS Compatibility Checker](https://github.com/jazzsequence/wp-tls-compatibility-checker) to scan their site for outgoing TLS connections. The plugin can be run from the command line using WP-CLI or in the admin via a new TLS Compatibility page under the Tools menu. If any URLs are found that do not support TLS 1.2 or 1.3 connections, a list is provided on the TLS Compatibility page. <!-- TODO: Update the URL when the repository is moved to Pantheon Systems. -->
+WordPress users can use the [Pantheon WP TLS Compatibility Checker](https://github.com/pantheon-systems/wp-tls-compatibility-checker) to scan their site for outgoing TLS connections. The plugin can be run from the command line using WP-CLI or in the admin via a new TLS Compatibility page under the Tools menu. If any URLs are found that do not support TLS 1.2 or 1.3 connections, a list is provided on the TLS Compatibility page (or shown in the terminal).
 
 The plugin also adds issues to the Site Health screen after the tests have been run if URLs were found that do not support TLS 1.2+ connections.
 
-View the project [README](https://github.com/jazzsequence/wp-tls-compatibility-checker/blob/main/README.md) for more detailed information about customizing the checks, installation and usage.
+View the project [README](https://github.com/pantheon-systems/wp-tls-compatibility-checker/blob/main/README.md) for more detailed information about customizing the checks, installation and usage.
 
 </Tab>
 
