@@ -24,3 +24,4 @@ chmod +x terminus
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
 
+If you have previously installed Terminus using Brew, you will need to run `brew unlink terminus` to remove the symbollic links that Homebrew uses for Terminus.
