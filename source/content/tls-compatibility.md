@@ -13,7 +13,7 @@ tags: [cms, security]
 contributors: [jazzsequence]
 showtoc: true
 permalink: docs/tls-compatibility
-reviewed: "2025-02-04"
+reviewed: "2025-03-07"
 ---
 
 This document describes TLS encryption, when it's used, and how to test TLS compatibility.
