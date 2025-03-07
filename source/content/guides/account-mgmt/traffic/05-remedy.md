@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
-reviewed: "2024-03-28"
+reviewed: "2025-02-14"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -199,7 +199,7 @@ mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-You can review a [list of plugins on wordpress.org](https://wordpress.org/plugins/) to find the right plugin for your setup. Consult [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) before you install a new plugin.
+You can review a [list of plugins on wordpress.org](https://wordpress.org/plugins/) to find the right plugin for your setup. Consult [WordPress Plugins and Themes with Known Issues](/wordpress-known-issues) before you install a new plugin.
 
 </Tab>
 

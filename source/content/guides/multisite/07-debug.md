@@ -74,5 +74,3 @@ Check out the [open WordPress.org Trac ticket](https://core.trac.wordpress.org/t
 - [Troubleshooting WordPress](/guides/wordpress-pantheon/troubleshooting)
 
 - [WordPress Known Issues](/wordpress-known-issues)
-
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

@@ -35,7 +35,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Pantheon platform consideration](/guides/platform-considerations)
 - [Advanced caching](/caching-advanced-topics)
 - [Symlinks and Assumed Write Access](/symlinks-assumed-write-access)
-- [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
+- [Drupal Modules Known Issues](/modules-known-issues)
 - [Pantheon FAQs](/faq)
 - [Pricing comparison](https://pantheon.io/plans/pricing/pantheon-web-hosting-pricing-comparison?docs)
 - [Add a Client to Your Agency](/guides/legacy-dashboard/add-client-site) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.

@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-02-11"
+reviewed: "2025-02-14"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -20,9 +20,9 @@ We do not prevent you from installing and using these plugins or themes. However
 
 ## Plugins with Known Issues
 
-**Plugin & Theme Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fdocs.pantheon.io/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
+**Plugin & Theme Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fdocs.pantheon.io/modules-wordpress-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
 
-If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-plugins-known-issues.md).
+If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-wordpress-known-issues.md).
 
 ### Pantheon MU Plugin Compatibility Layer
 
@@ -47,21 +47,20 @@ The following is a list of plugins that assume write access, and the specific fi
 | Plugin | Assumed Write Path | Notes |
 | --- | --- | --- |
 | [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1wm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
-| | wp-content/plugins/all-in-one-wp-migrations/storage |
-| [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
-| [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) | wp-content/bfu-temp | See the [Big File Uploads](/plugins-known-issues#big-file-uploads) section below for solutions. |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1wm-backups <br /><br /> wp-content/plugins/all-in-one-wp-migrations/storage | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/wordpress-known-issues#all-in-one-wp-migration) for additional information. |
+| [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/wordpress-known-issues#autoptimize) section below for other solutions. |
+| [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) | wp-content/bfu-temp | See the [Big File Uploads](/wordpress-known-issues#big-file-uploads) section below for solutions. |
 | [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
 | [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/) | wp-content/cache | Remember to repeat this process for each environment, including Multidevs. |
 | [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/)  | wp-content/wphb-logs | The /wphb-logs folder logs API calls |
 | [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/) | wp-content/gallery | You can override this path on the plugin configuration page (/wp-admin/admin.php?page=ngg\_other\_options) to use wp-content/uploads/gallery/ instead of creating a symlink. |
 | [Nitropack](https://wordpress.org/plugins/nitropack/) | wp-content/nitropack and advanced.cache.php | Allows for the caching feature to be disabled so that other features, such as optimization, can be used side-by-side. |
 | [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache |
-| [Wordfence](https://wordpress.org/plugins/wordfence/) | wp-content/wflogs | Follow the steps outlined in the [Wordfence](/plugins-known-issues#wordfence) section. |
+| [Wordfence](https://wordpress.org/plugins/wordfence/) | wp-content/wflogs | Follow the steps outlined in the [Wordfence](/wordpress-known-issues#wordfence) section. |
 | [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/) | wp-content/cache | This plugin uses is\_dir to verify the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files. |
 | [WP-Rocket](https://wp-rocket.me/) | wp-content/wp-rocket-config |
 | | wp-content/cache |
-| [WPML - The WordPress Multilingual Plugin](https://wpml.org/) | wp-content/languages | Alternate solutions are listed in the [WPML section](/plugins-known-issues#wpml---the-wordpress-multilingual-plugin). |
+| [WPML - The WordPress Multilingual Plugin](https://wpml.org/) | wp-content/languages | Alternate solutions are listed in the [WPML section](/wordpress-known-issues#wpml---the-wordpress-multilingual-plugin). |
 
 ### Define FS_METHOD
 
@@ -1391,7 +1390,7 @@ WP Cerber is a premium security plugin (with a free version available) that is o
    - **Protect comment form**
    - **Protect other forms**
 
-  ![WP Cerber Anti-Spam Engine settings](../images/plugins-known-issues/wp-cerber-anti-spam-settings.png)      
+  ![WP Cerber Anti-Spam Engine settings](../images/wordpress-known-issues/wp-cerber-anti-spam-settings.png)      
 
 1. In your Pantheon dashboard, clear the cache for the environment.
 
@@ -1527,13 +1526,13 @@ ___
 - Clean up temporary files
 - Lower the chunk size to fewer than 100 records:
 
-  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
+  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/wordpress-known-issues/wp-import-chunk-size.png)
 
 - Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 second platform PHP timeout.
 
 - Set the plugin to only process 1 record at a time:
 
-  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
+  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/wordpress-known-issues/wp-import-iterative.png)
 
 The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported.
 

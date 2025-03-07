@@ -56,7 +56,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 - **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)** - The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more. Yoast provides insight on how to improve your SEO, empowering your content editors to write organic, impactful content for your target audiences to find.
 
-  **Note:** Use the "PHP" redirect method with this plugin. See [Plugins With Known Issues](/plugins-known-issues#yoast-seo) for more information.
+  **Note:** Use the "PHP" redirect method with this plugin. See [Plugins With Known Issues](/wordpress-known-issues#yoast-seo) for more information.
 
 - **[Elementor](https://wordpress.org/plugins/elementor/)** - One of the most advanced frontend drag & drop page builders for WordPress. Elementor provides an intuitive interface for creating content and is well documented with community support.
 
