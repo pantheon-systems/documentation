@@ -29,3 +29,5 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
 
 If you have previously installed Terminus using Brew, you will need to run `brew unlink terminus` to remove the symbollic links that Homebrew uses for Terminus.
+
+If you have questions or concerns around Terminus 4, please use the [Terminus issue queue](https://github.com/pantheon-systems/terminus).
