@@ -12,4 +12,4 @@ Seeing intermittently slow performance? Check your [slow query log](/guides/mari
 [Getting Support](/guides/support)
 [MIME Types](/mime-types)
 The Pantheon Deploy Log
-[Modules and Plugins with Known Issues](/modules-plugins-known-issues)
+[Modules and Plugins with Known Issues](/modules-known-issues)

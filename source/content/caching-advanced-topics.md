@@ -2,7 +2,7 @@
 title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 tags: [cache, cookies, security, webops, D8, D9, D10]
-reviewed: "2022-12-13"
+reviewed: "2025-02-14"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -73,7 +73,7 @@ Use the built-in option found in the Drupal dashboard at `/admin/config/developm
 
 <Tab title="WordPress" id="wp">
 
-Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
+Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/wordpress-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
 </Tab>
 

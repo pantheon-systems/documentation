@@ -2,7 +2,7 @@
 title: SERVER_NAME and SERVER_PORT on Pantheon
 description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your Pantheon Website Management Platform environment configuration.
 tags: [site]
-reviewed: "2021-07-19"
+reviewed: "2025-02-14"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -54,5 +54,5 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 - [Advanced Redirects and Restrictions](/guides/redirect/advanced)
 - [Configuring Settings.php](/guides/php/settings-php)
 - [Configuring wp-config.php](/guides/php/wp-config-php)
-- [Plugins with Known Issues](/plugins-known-issues)
+- [WordPress Known Issues](/wordpress-known-issues)
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

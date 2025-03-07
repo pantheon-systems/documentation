@@ -17,18 +17,9 @@ const support = () => {
       simpleLink('/troubleshoot', 'Troubleshooting', [
         simpleLink('/troubleshoot', 'Overview'),
         simpleLink('/basic-troubleshooting', 'Basic Troubleshooting'),
-        simpleLink('/modules-plugins-known-issues', 'Known Issues', [
-          // @todo, combine some of these pages: https://github.com/pantheon-systems/documentation/issues/9356
-          simpleLink(
-            '/modules-plugins-known-issues',
-            'Modules and plugins with known issues',
-          ),
-          simpleLink('/modules-known-issues', 'Drupal Modules Known Issues'),
+        simpleLink('/wordpress-known-issues', 'Known Issues', [
           simpleLink('/wordpress-known-issues', 'WordPress Known Issues'),
-          simpleLink(
-            '/plugins-known-issues',
-            'WordPress Plugins and Themes with Known Issues',
-          ),
+          simpleLink('/modules-known-issues', 'Drupal Modules Known Issues'),
           simpleLink(
             '/symlinks-assumed-write-access',
             'Symlinks and plugins that assume write access',
