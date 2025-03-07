@@ -62,7 +62,7 @@ Terminus 4.x is compatible with PHP 8.4 and can be installed directly from [a `p
 
 
 ## Installation and Update Methods
-### MacOS
+### macOS
 [Homebrew](https://brew.sh/), a package manager for MacOS, is the recommended installation method for MacOS. However, the method [described below](#windows-and-linux) for Windows and Linux can also be used by MacOS users who are not using Homebrew.
 
 Install Terminus by running the command below:
