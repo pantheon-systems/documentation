@@ -36,7 +36,7 @@ Terminus does not work with the following platforms:
 
 </Accordion>
 
-**Terminus requires the following:** 
+**Terminus requires the following:**
 - PHP Version 7.4 or later
   - You can check your PHP version by running `php -v` from a terminal application.
   - You must have the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php) for:
@@ -50,10 +50,18 @@ Terminus does not work with the following platforms:
 - OpenSSH 7.8 or later
   - You can check your OpenSSH version by running `ssh -V` from a terminal application.
   - This package is required for executing nested Drush or WP-CLI commands.
- 
-  TODO, add explanation of 8.4
 
-## Installation and Update Methods 
+<Alert title="PHP 8.4 and Terminus" type="danger">
+
+The current stable version of Terminus, 3.x, is not compatible with PHP 8.4. We recommend using PHP 8.3 for Terminus 3.x.
+
+Terminus 4.x is compatible with PHP 8.4 and can be installed directly from [a `phar` file](/release-notes/2025/03/terminus-4-0-0-alpha1).
+
+</Alert>
+
+
+
+## Installation and Update Methods
 ### MacOS
 [Homebrew](https://brew.sh/), a package manager for MacOS, is the recommended installation method for MacOS. However, the method [described below](#windows-and-linux) for Windows and Linux can also be used by MacOS users who are not using Homebrew.
 
