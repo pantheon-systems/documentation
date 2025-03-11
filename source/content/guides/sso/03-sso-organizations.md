@@ -125,6 +125,12 @@ There are three types of certificates that you can generate:
 
 Use a `token-signing` certificate, otherwise you will get a thumbprint error.
 
+### Update email address 
+Pantheon does not support email changes for accounts created via SAML connections. 
+
+Instead, email changes must be done via your IdP which will then pass the alias to Pantheon allowing the platform to recognize the new address and connect it to the right user account. 
+
+You will not see a change to the email address on Pantheon. However, the login experience will continue to work normally without disruption. 
 
 ## More Resources
 
