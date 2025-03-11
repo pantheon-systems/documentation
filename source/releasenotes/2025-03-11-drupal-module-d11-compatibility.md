@@ -1,6 +1,6 @@
 ---
 title: Pantheon Advanced Page Cache & Search API Pantheon modules are now Drupal 11 compatible
-published_date: "2025-03-10"
+published_date: "2025-03-11"
 categories: [drupal, modules]
 ---
 
