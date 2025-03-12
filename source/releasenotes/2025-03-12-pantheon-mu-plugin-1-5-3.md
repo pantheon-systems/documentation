@@ -1,6 +1,6 @@
 ---
 title: Pantheon MU Plugin v1.5.3 release
-published_date: "2025-03-11"
+published_date: "2025-03-12"
 categories: [wordpress, plugins]
 ---
 
