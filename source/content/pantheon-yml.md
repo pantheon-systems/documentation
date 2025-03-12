@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2025-02-24"
+reviewed: "2025-03-12"
 contenttype: [doc]
 innav: [true]
 categories: [config]
