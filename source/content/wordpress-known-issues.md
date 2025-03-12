@@ -727,6 +727,14 @@ ___
 
 ___
 
+### MonsterInsights
+
+<ReviewDate date="2025-03-12" />
+
+**Issue:** [MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/) is incompatible with Pantheon's edge caching due to its reliance on the `PHP_SELF` server variable. Pantheon modifies this variable to improve cacheability, breaking campaign tracking for users of MonsterInsights particularly using WooCommerce.
+
+___
+
 ### New Relic Reporting for WordPress
 
 <ReviewDate date="2019-05-08" />
