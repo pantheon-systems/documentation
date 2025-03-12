@@ -1,0 +1,26 @@
+diff --git a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+index 347b73b..00dbfeb 100644
+--- a/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
++++ b/node_modules/@pantheon-systems/pds-toolkit-react/_dist/index.js
+@@ -3398,8 +3398,9 @@ const P2 = m.exact({
+   children: t,
+   mobileMenuMaxWidth: s = 640
+ }) => {
++const isBrowser = typeof window !== 'undefined';
+   const [n, a] = F(
+-    window.innerWidth !== void 0 ? window.innerWidth : 1024
++    isBrowser && window.innerWidth !== void 0 ? window.innerWidth : 1024
+   );
+   re(() => (a(window.innerWidth), window.addEventListener("resize", c), () => {
+     window.removeEventListener("resize", c);
+@@ -3407,10 +3408,7 @@ const P2 = m.exact({
+   const c = () => {
+     a(window.innerWidth);
+   }, r = n <= s;
+-  let l = null;
+-  n <= 640 ? l = "sm" : n > 641 && n <= 1024 ? l = "md" : n > 1025 && n <= 1440 ? l = "lg" : n > 1441 && (l = "xl");
+   const o = {
+-    breakpoint: l,
+     isMobile: r,
+     mobileMenuMaxWidth: s,
+     windowWidth: n
