@@ -4,7 +4,7 @@ published_date: "2025-03-12"
 categories: [wordpress, plugins]
 ---
 
-The [Pantheon MU Plugin](hhttps://github.com/pantheon-systems/pantheon-mu-plugin?tab=readme-ov-file#pantheon-must-use-plugin) v1.5.3 update is now available for Composer-based WordPress sites. For non-Composer-based WordPress sites, this latest update will be bundled with the next WordPress core update (likely [6.8](https://make.wordpress.org/core/6-8/), expected April 15.). [WordPress (composer managed)](/guides/wordpress-composer) sites can upgrade today using `composer update` or by checking for updates in the dashboard.
+The [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin?tab=readme-ov-file#pantheon-must-use-plugin) v1.5.3 update is now available for Composer-based WordPress sites. For non-Composer-based WordPress sites, this latest update will be bundled with the next WordPress core update (likely [6.8](https://make.wordpress.org/core/6-8/), expected April 15.). [WordPress (composer managed)](/guides/wordpress-composer) sites can upgrade today using `composer update` or by checking for updates in the dashboard.
 
 ### What's new?
 
