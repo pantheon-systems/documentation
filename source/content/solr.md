@@ -1,8 +1,8 @@
 ---
-title: Pantheon Search (formerly Pantheon Solr)
+title: Pantheon Search
 description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
 tags: [solr,search]
-reviewed: "2023-04-03"
+reviewed: "2025-01-29"
 contenttype: [doc]
 innav: [true]
 categories: [search]
@@ -12,7 +12,7 @@ product: [search]
 integration: [--]
 ---
 
-Pantheon Search (formerly Pantheon Solr) is a system for indexing and searching site content. Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Pantheon Search.
+Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments.
 
 <Partial file="solr-version.md" />
 
@@ -22,7 +22,7 @@ Pantheon Search (formerly Pantheon Solr) is a system for indexing and searching 
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
-Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which is currently unsupported by Solr. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
+Pantheon's Drupal integration builds upon the [Search API](https://www.drupal.org/project/search_api) ecosystem.
 
 </Alert>
 
