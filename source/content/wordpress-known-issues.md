@@ -307,7 +307,9 @@ ___
 **Solution:** Add the following to `wp-config.php`:
 
 ```php:title=wp-config.php
-$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+if (php_sapi_name() != 'cli') {
+  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+}
 
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   if (isset($_SERVER['HTTP_USER_AGENT_HTTPS']) && $_SERVER['HTTP_USER_AGENT_HTTPS'] === 'ON') {
@@ -860,7 +862,9 @@ ___
   // server name and not the current hostname, as a
   // result, Redirection's "URL and server"-based
   // redirects never match.
-  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+  if (php_sapi_name() != 'cli') {
+    $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+  }
   ```
 
 Visit the [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) doc for more information about how to use `HTTP_Host` on Pantheon.
@@ -930,7 +934,9 @@ The plugin generates the site's URL using `$_SERVER['SERVER_NAME']` instead of `
 **Solution:** Add the following line to `wp-config.php`:
 
 ```php:title=wp-config.php
-$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+if (php_sapi_name() != 'cli') {
+  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+}
 ```
 
 ___
