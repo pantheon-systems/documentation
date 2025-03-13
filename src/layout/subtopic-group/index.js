@@ -1,21 +1,21 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import { Container, Icon, Panel } from "@pantheon-systems/pds-toolkit-react"
+import { Container, Icon, Panel } from '@pantheon-systems/pds-toolkit-react';
 
-import "./style.css"
+import './style.css';
 
 const propTypes = {
   title: PropTypes.string,
   subTitle: PropTypes.string,
   topics: PropTypes.array,
-}
+};
 
 function SubtopicGroup(props) {
-  const { title, subTitle, topics } = props
+  const { title, subTitle, topics } = props;
   return (
-    <Container>
+    <Container width="full">
       <Panel>
         <h2 className="subtopic__heading">{title}</h2>
         {subTitle && (
@@ -47,9 +47,9 @@ function SubtopicGroup(props) {
           ))}
       </Panel>
     </Container>
-  )
+  );
 }
 
-SubtopicGroup.propTypes = propTypes
+SubtopicGroup.propTypes = propTypes;
 
-export default SubtopicGroup
+export default SubtopicGroup;

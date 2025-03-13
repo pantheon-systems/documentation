@@ -14,6 +14,7 @@ import './node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-compone
 import './src/styles/main.css';
 import './src/styles/custom-glyphicons.css';
 import './src/styles/pds-additions.css';
+import './src/styles/pds-grid-overrides.css';
 
 // custom typefaces
 import 'prismjs/themes/prism-okaidia.css';
