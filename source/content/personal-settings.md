@@ -10,7 +10,7 @@ product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [wordsmither]
-reviewed: "2023-04-19"
+reviewed: "2025-03-11"
 showtoc: true
 ---
 
@@ -34,6 +34,12 @@ You can update the current email address or password associated with your Dashbo
 #### Email
 
 To update the email address, click **Change Email Address**. Enter the updated email address in the **New Email Address** field and click **Save Changes**.
+
+<Alert title="Note" type="info">
+
+Members of SSO-enabled workspaces cannot update email addresses as described above for accounts created via SAML connections. [Instead, email changes must be done via your IdP.](/guides/sso/sso-organizations#update-email-address)  
+
+</Alert>
 
 #### Password
 

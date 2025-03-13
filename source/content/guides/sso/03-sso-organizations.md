@@ -125,6 +125,12 @@ There are three types of certificates that you can generate:
 
 Use a `token-signing` certificate, otherwise you will get a thumbprint error.
 
+### Update email address 
+Due to the way enterprise connections are configured, it is not possible to change the email address for your account via Pantheon. Instead, you will need to contact the administrator of your company’s single sign on service - they can either update your email address or add an additional email address to your user account.
+
+Once updated, Pantheon will recognize the new email address at login and connect you to the correct user account based on alias metadata passed by your IdP.
+
+You will not see a change to the email address on Pantheon. However, the login experience will continue to work normally without disruption. 
 
 ## More Resources
 
