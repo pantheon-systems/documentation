@@ -23,7 +23,7 @@ This section provides information on how to use Drupal with Integrated Composer.
 
 ### Create Your Site
 
-There are two ways you can spin up a site using WordPress Composer Managed:
+There are two ways you can spin up a site using Drupal Composer Managed:
 
 - Running the following terminus command:
 
