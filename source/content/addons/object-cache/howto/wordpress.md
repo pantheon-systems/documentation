@@ -115,7 +115,7 @@ Use the following script to cleanup cache tables in the database:
 echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
 read SITE;
 
-echo 'Provide the site name (multidev, dev, test, or live), then press [ENTER]:';
+echo 'Provide the environment name (multidev, dev, test, or live), then press [ENTER]:';
 read ENV;
 
 # Delete all transient options - these are now stored in Redis
