@@ -1087,7 +1087,7 @@ ___
 
 ### WooCommerce
 
-<ReviewDate date="2018-01-10" />
+<ReviewDate date="2025-03-14" />
 
 **Issue:** For the [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin, the "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
@@ -1105,6 +1105,11 @@ ___
 
 **Solution:** The issue and a few workarounds possible are described in this [WooCommerce Issue](https://github.com/woocommerce/woocommerce/issues/23751) We hope this issue will result in future code changes to WooCommerce so mitigations are not needed.
 
+___
+
+**Issue 3:** WooCommerce Cart Fragments break caching on [Pantheon's Global CDN](/guides/global-cdn). This may result in degraded performance and frequent 504 errors.
+
+**Solution:** Disable cart fragments. This may be accomplished with a plugin such as [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments/) or [Perfmatters](https://perfmatters.io/docs/disable-woocommerce-cart-fragments-ajax/).
 ___
 
 ### WooZone
