@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 ---
 
-Pantheon's distributed infrastructure facilitates horizontal scalability through the automated process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pages served to hundreds of millions without downtime.
+Pantheon's distributed infrastructure facilitates horizontal scalability through a managed process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pages served to hundreds of millions without downtime.
 
 ## Vertical vs. Horizontal Scalability
 
@@ -29,7 +29,7 @@ In addition to extremely high overhead costs, common pitfalls include:
 - One-off science projects to build out your complex snowflake cluster
 - Last-minute requests for additional resources
 
-Pantheon eliminates these risks entirely by running sites on a web-scale infrastructure from the start. Provisioning more containers to handle viral traffic happens at the speed of software through an automated process.
+Pantheon handles these risks by running sites on a web-scale infrastructure from the start. Provisioning more containers to handle viral traffic happens through a managed process overseen by expert staff.
 
 ## Container Architecture
 
