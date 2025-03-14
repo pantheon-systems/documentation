@@ -55,7 +55,7 @@ If you are having difficulties issuing a [Let's Encrypt](https://letsencrypt.org
 HTTPS encrypts and decrypts requests. For more information, see [this Google resource](https://support.google.com/webmasters/answer/6073543?hl=en).
 
 ### TLS (Transport Layer Security)
-TLS (Transport Layer Security) is a protocol for secure HTTP connections. It replaces its less secure predecessor, the **SSL (Secure Socket Layer)** protocol, which we no longer support. Pantheon uses the term HTTPS to refer to secure HTTP connections.
+TLS (Transport Layer Security) is a protocol for secure HTTP connections. It replaces its less secure predecessor, the **SSL (Secure Socket Layer)** protocol, which we no longer support. Pantheon uses the term HTTPS to refer to secure HTTP connections. Pantheon supports TLS 1.2 & 1.3. [Learn more about TLS Compatibility](/tls-compatibility).
 
 ### Server Name Indication (SNI)
 
