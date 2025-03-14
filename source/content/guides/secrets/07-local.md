@@ -73,7 +73,7 @@ To get this file, you should use the [plugin](https://github.com/pantheon-system
 The `pantheon_get_secret()` function only works on Pantheon's infrastructure, not in local development.  For local development, you can create a helper function that mimics the `pantheon_get_secret()` function. To do this, you can use the [Pantheon Customer Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk). This SDK mirrors the code that is already integrated into the platform. The easiest way to install the Customer Secrets SDK locally is via Composer:
 
 ```bash{promptUser: user}
-composer require-dev pantheon-systems/customer-secrets-php-sdk
+composer require --dev pantheon-systems/customer-secrets-php-sdk
 ```
 
 Once you have the SDK locally, you can create a local version of `pantheon_get_secret` using the SDK:
