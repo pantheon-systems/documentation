@@ -11,6 +11,4 @@ We have released a new version of the Content Publisher service (back-end + admi
 * [**Ingest API**](https://pcc.pantheon.io/docs/release-notes#h.xm5hgdtj084u): This open API allows developers to programmatically ingest content in Content Publisher from other 3rd party services.
 * [**Include in search**](https://pcc.pantheon.io/docs/release-notes#h.mnxclnrnx5sx): New toggle added so you can easily include or exclude content from search.
 
-![Screen capture of excluding content from content publisher](https://cdn.prod.pcc.pantheon.io/bXl9A4Dif2o3vA4YetBQ/3yDXZYC6xLKwFnH4I02F)
-
 See also, the Content Publisher [release notes](https://pcc.pantheon.io/docs/release-notes#h.qugh6kkwizvx) for a more detailed history of changes.
