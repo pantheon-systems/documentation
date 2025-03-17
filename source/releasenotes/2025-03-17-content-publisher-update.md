@@ -3,7 +3,7 @@ title: "Conent Publisher latest release now available"
 published_date: "2025-03-17"
 categories: [new-feature, content-publisher]
 ---
-We have released a new version of the service (back-end + admin interface + Google Docs add-on + CLI + JS SDK v3.11.2).
+We have released a new version of the Content Publisher service (back-end + admin interface + Google Docs add-on + CLI + JS SDK v3.11.2).
 
 ## What's new?
 
