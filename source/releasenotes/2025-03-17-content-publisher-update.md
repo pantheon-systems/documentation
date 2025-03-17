@@ -1,5 +1,5 @@
 ---
-title: "Conent Publisher latest release now available"
+title: "Content Publisher latest release now available"
 published_date: "2025-03-17"
 categories: [new-feature, content-publisher]
 ---
