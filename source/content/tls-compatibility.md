@@ -72,7 +72,79 @@ curl --tlsv1.2 --head --connect-timeout 10 "<your url to check>"
 
 If you receive a 200 status code in the response (e.g. `HTTP/2 200`) along with header information, the check succeeded. If you receive an error (e.g. `TLS connect error`), it means the server you are attempting to make a connection to does not support that version of TLS.
 
-A more robust example that scans all the files in a particular path can be found [in this Gist](https://gist.github.com/scottbuscemi/8915d6d53f34f5012406ef5d21b222a1).
+A more robust script that scans all the files in a particular path can be found below:
+
+<Download file="tls-1-2-compatibility-scan.sh" />
+
+```bash
+#!/bin/bash
+
+# Directory to scan (ie, set to your WordPress custom code directory)
+CODE_DIR="/path/to/your/code"
+
+# Temporary files
+TEMP_URL_FILE="/tmp/urls_to_check.txt"
+TEMP_FAILED_FILE="/tmp/failed_tls_check.txt"
+TEMP_CHECKED_HOSTS="/tmp/checked_hosts.txt"
+
+# Initialize the temporary files
+> "$TEMP_FAILED_FILE"
+> "$TEMP_CHECKED_HOSTS"
+
+# Function to check TLS compatibility using curl
+check_tls() {
+  local hostname="$1"
+  echo -n "Checking TLS for $hostname... "
+
+  # Use curl to test if the hostname supports TLS 1.2.
+  curl --tlsv1.2 --silent --head --connect-timeout 10 "https://$hostname" >/dev/null 2>&1
+  if [[ $? -eq 0 ]]; then
+    echo "Supports TLS 1.2 or higher"
+  else
+    echo "Does NOT support TLS 1.2"
+    echo "$hostname" >> "$TEMP_FAILED_FILE"
+  fi
+}
+
+# Step 1: Search for URLs in the code
+echo "Scanning $CODE_DIR for external connections..."
+grep -Eroh "(https?://[a-zA-Z0-9./?=_-]+)" "$CODE_DIR" | sort -u > "$TEMP_URL_FILE"
+
+if [[ ! -s "$TEMP_URL_FILE" ]]; then
+  echo "No URLs found in the code."
+  exit 0
+fi
+
+# Step 2: Extract unique hostnames and check TLS compatibility
+echo "Found URLs. Checking TLS compatibility..."
+while IFS= read -r url; do
+  # Extract the hostname from the URL
+  hostname=$(echo "$url" | sed -E 's|https?://([^:/]+).*|\1|')
+
+  # Skip localhost or if this hostname has already been checked
+  if [[ "$hostname" == "localhost" ]] || grep -qx "$hostname" "$TEMP_CHECKED_HOSTS"; then
+    continue
+  fi
+
+  # Check TLS and mark hostname as checked
+  check_tls "$hostname"
+  echo "$hostname" >> "$TEMP_CHECKED_HOSTS"
+done < "$TEMP_URL_FILE"
+
+# Step 3: Output the failed hostnames
+echo
+echo "URLs requiring further investigation:"
+if [[ -s "$TEMP_FAILED_FILE" ]]; then
+  sort -u "$TEMP_FAILED_FILE"
+else
+  echo "None"
+fi
+
+# Cleanup
+rm -f "$TEMP_URL_FILE" "$TEMP_FAILED_FILE" "$TEMP_CHECKED_HOSTS"
+
+echo "TLS compatibility check complete."
+```
 
 <TabList>
 
