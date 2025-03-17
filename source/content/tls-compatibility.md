@@ -26,11 +26,11 @@ A web application uses TLS when communicating with another server or service, su
 
 A TLS connection is initiated by a "handshake". You can think of this as two computers introducing themselves to each other. As part of the TLS handshake, the two servers will acknowledge each other, determine what cryptographic algorithms to use, exchange session keys and handle authentication. This is when the version of TLS encryption is determined.
 
-## TLS Compatibility
+## Pantheon Platform TLS Compatibility
 
 TLS 1.0 and 1.1 were published in 1999 and 2006, respectively. Both were deprecated in 2021 and are considered outdated and insecure. Pantheon servers support TLS 1.2 and 1.3 connections. This means any outgoing HTTP requests being made from the _application level_ must be with servers that also support TLS 1.2 or 1.3.
 
-Pantheon application servers will _reject_ connections to applications that do not support TLS 1.2+. <!--TODO: Update to note *when* we will no longer allow TLS 1.2+ connections? -->
+Pantheon application servers will _reject_ connections to applications that do not support TLS 1.2+ beginning in late 2025.
 
 <Alert title="What's affected?" type="info">
 
@@ -46,7 +46,7 @@ You can check your whether site's codebase makes HTTP connections to servers tha
 
 <Tab title="WordPress" id="check-compatibility-wp" active={true}>
 
-WordPress users can use the [Pantheon WP TLS Compatibility Checker](https://github.com/pantheon-systems/wp-tls-compatibility-checker) to scan their site for outgoing TLS connections. The plugin can be run from the command line using WP-CLI or in the admin via a new TLS Compatibility page under the Tools menu. If any URLs are found that do not support TLS 1.2 or 1.3 connections, a list is provided on the TLS Compatibility page (or shown in the terminal).
+WordPress users can use the [Pantheon WP TLS Compatibility Checker](https://github.com/pantheon-systems/wp-tls-compatibility-checker) plugin to scan their site for outgoing TLS connections. The plugin can be run from the command line using WP-CLI or in the admin via a new TLS Compatibility page under the Tools menu. If any URLs are found that do not support TLS 1.2 or 1.3 connections, a list is provided on the TLS Compatibility page (or shown in the terminal).
 
 The plugin also adds issues to the Site Health screen after the tests have been run if URLs were found that do not support TLS 1.2+ connections.
 
