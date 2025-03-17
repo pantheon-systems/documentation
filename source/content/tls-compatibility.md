@@ -72,6 +72,35 @@ curl --tlsv1.2 --head --connect-timeout 10 "<your url to check>"
 
 If you receive a 200 status code in the response (e.g. `HTTP/2 200`) along with header information, the check succeeded. If you receive an error (e.g. `TLS connect error`), it means the server you are attempting to make a connection to does not support that version of TLS.
 
+<TabList>
+
+<Tab title="Successful result" id="cli-test-success" active={true}>
+
+```bash
+HTTP/1.1 200 OK
+Server: nginx/1.10.3 (Ubuntu)
+Date: Tue, 04 Feb 2025 17:26:38 GMT
+Content-Type: text/html
+Content-Length: 502
+Last-Modified: Tue, 28 Jan 2025 21:00:42 GMT
+Connection: keep-alive
+ETag: "6799457a-1f6"
+Cache-Control: no-store
+Accept-Ranges: bytes
+```
+
+</Tab>
+
+<Tab title="Failed result" id="cli-test-fail">
+
+```bash
+curl: (35) TLS connect error: error:0A000102:SSL routines::unsupported protocol
+```
+
+</Tab>
+
+</TabList>
+
 A more robust script that scans all the files in a particular path can be found below:
 
 <Download file="tls-1-2-compatibility-scan.sh" />
@@ -145,35 +174,6 @@ rm -f "$TEMP_URL_FILE" "$TEMP_FAILED_FILE" "$TEMP_CHECKED_HOSTS"
 
 echo "TLS compatibility check complete."
 ```
-
-<TabList>
-
-<Tab title="Successful result" id="cli-test-success" active={true}>
-
-```bash
-HTTP/1.1 200 OK
-Server: nginx/1.10.3 (Ubuntu)
-Date: Tue, 04 Feb 2025 17:26:38 GMT
-Content-Type: text/html
-Content-Length: 502
-Last-Modified: Tue, 28 Jan 2025 21:00:42 GMT
-Connection: keep-alive
-ETag: "6799457a-1f6"
-Cache-Control: no-store
-Accept-Ranges: bytes
-```
-
-</Tab>
-
-<Tab title="Failed result" id="cli-test-fail">
-
-```bash
-curl: (35) TLS connect error: error:0A000102:SSL routines::unsupported protocol
-```
-
-</Tab>
-
-</TabList>
 
 <Alert title="TLS support in curl" type="info">
 
