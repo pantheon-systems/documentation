@@ -4,11 +4,9 @@ published_date: "2025-03-17"
 categories: [new-feature, content-publisher]
 ---
 We just released a new version of the service (back-end + admin interface + Google Docs add-on + CLI + JS SDK v3.11.2). 
-Now available:
 
 ## Auth Tokens Management
 
-[](https://pcc.pantheon.io/docs/release-notes#h.xm86x7zetwrt)
 
 Managing tokens for authenticating to the service was confusing as part of it was managed in the CLI and other was in the Content Management UI. The system was also confusing because of unclear terminology and language. We solved that by providing an upgraded Auth Token user interface in the Content Management UI. See the [related documentation page](https://pcc.pantheon.io/docs/authentication-tokens).
 
