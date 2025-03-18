@@ -13,7 +13,7 @@ See the [Drush Drupal Compatibility chart](https://www.drush.org/latest/install/
 
 ### Drush Requirements and Compatibility
 
-| Drush Version  | PHP Version | End of Life  | Available in `pantheon.yml` | Drupal 7| Drupal 8 ⚠️ <Popover title="Drupal 8 EOL" content="Drupal 8 is past its end of life date. While a version of Drush may function with Drupal 8, do not build for the future on that combination" /> | Drupal 9+ | Drupal 11+
+| Drush Version  | PHP Version | End of Life  | Available in `pantheon.yml` | Drupal 7| Drupal 8 ⚠️ <Popover title="Drupal 8 EOL" content="Drupal 8 is past its end of life date. While a version of Drush may function with Drupal 8, do not build for the future on that combination" /> | Drupal 9,10 | Drupal 11+
 | ------------- |-------------|-------------|-------------   |------------- |-------------  |-----------  |-----------  |
 | 13      | 8.3+     | TBD      |   ⚠️ <Popover title="Use Site-Local Installation" content="To use this version of Drush, do not specify a version of Drush in pantheon.yml and specify this version with Composer instead" /> |   <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |
 | 12      | 8.1+     | TBD      |   ⚠️ <Popover title="Use Site-Local Installation" content="To use this version of Drush, do not specify a version of Drush in pantheon.yml and specify this version with Composer instead" /> |   <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |<span style="color:red">❌ </span>|
