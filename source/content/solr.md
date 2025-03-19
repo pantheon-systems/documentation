@@ -2,7 +2,7 @@
 title: Pantheon Search
 description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
 tags: [solr,search]
-reviewed: "2025-01-29"
+reviewed: "2025-03-19"
 contenttype: [doc]
 innav: [true]
 categories: [search]
