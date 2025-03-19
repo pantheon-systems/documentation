@@ -63,7 +63,7 @@ The next few sections use the example variables `my-site` and `"My D9 Site"` as 
 1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create my-site "My Site" "drupal-composer-managed"
+  terminus site:create my-site "My Site" "drupal-11-composer-managed"
   ```
 
   - You can add the `--org` option to the command above and pass the Workspace name, label, or ID if you want to associate this site with an Workspace.
@@ -169,18 +169,17 @@ You may want to remove these modules after you launch your site, or use more adv
 1. Enable the modules:
 
   ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate webprofiler -y
+  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate -y
   ```
 
   All of these modules are helpful during active development. Devel Generate is used in this walk-through to make nodes on the Live environment.
 
-1. Sign in to your Dev environment if you haven't already done so. You will see a footer of helpful development information provided by the `webprofiler` module you just installed:
+1. Sign in to your Dev environment if you haven't already done so. You will see a links from Devel module in the administrative header:
 
   ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-  ![The webprofiler toolbar](../../../images/drupal8-commandline--webprofiler.png)
 
 1. Export the configuration in the Dev environment:
 
@@ -253,7 +252,7 @@ Follow the steps below for a demonstration of the typical workflow on Pantheon.
 1. Create content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
 
   ```bash{promptUser: user}
-  terminus drush $TERMINUS_SITE.live -- devel-generate-content 25
+  terminus drush $TERMINUS_SITE.live -- devel-generate-content --bundles=page  25
   ```
 
 1. Copy the database and media files from the Live environment to the Dev environment:
@@ -284,12 +283,23 @@ Follow the steps below for a demonstration of the typical workflow on Pantheon.
 
   Visit `/glossary` and `/admin/content` in your Test environment. You should see a 404 message for the glossary page and the administrative content list should not contain the articles and pages that were made on Live. You should see something different on both URLs after you deploy our code in the next step.
 
-1. Deploy code, clear the site cache, and import configuration changes to Test:
+1. Deploy code, clear the site cache in the Test environment:
 
   ```bash{outputLines: 2}
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --note="Deploying glossary View"
   terminus env:clear-cache $TERMINUS_SITE.test
+  ```
+
+1. Now import to the Test environment the configuration that was just exported and committed in the Dev environment:
+
+  ```bash{outputLines: 2}
   terminus drush $TERMINUS_SITE.test -- config-import -y
+  ```
+
+1. Log in to the Test environment:
+
+  ```bash{outputLines: 2}
+  terminus drush $TERMINUS_SITE.test -- user-login
   ```
 
 1. Check the Test environment and visit `/glossary` and `/admin/content` again. You should see both the glossary view and a full list of content on the administrative page.
