@@ -1,1 +1,1 @@
-export const MOBILE_MENU_BREAKPOINT = 900
+export const MOBILE_MENU_BREAKPOINT = 900;

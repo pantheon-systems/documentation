@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 import GuideLayout from '../layout/GuideLayout';
 import CallToAction from '../layout/call-to-action';
 import SearchBar from '../layout/SearchBar';
-import Layout from '../layout/layout';
 import SubTopicGroup from '../layout/subtopic-group';
 import Youtube from '../components/youtube';
 import GuideItem from '../layout/guide-item';
@@ -12,14 +11,10 @@ import SEO from '../layout/seo';
 // @todo, implement sidebar on this template
 import OmniSidebarNav from '../components/omniSidebarNav';
 
-import {
-  Container,
-  FlexContainer,
-  LinksCard,
-} from '@pantheon-systems/pds-toolkit-react';
+import { Container, LinksCard } from '@pantheon-systems/pds-toolkit-react';
 
 // Set container width for search and main content.
-const containerWidth = 'standard';
+const containerWidth = 'full';
 
 const twoColumnClasses =
   'pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6';
@@ -48,29 +43,25 @@ class LandingTemplate extends Component {
         <OmniSidebarNav slot="guide-menu" activePage={topic.path} />
 
         <main id="docs-main" slot="guide-content" tabIndex="-1">
-          <Container width={containerWidth} className="landing-page__header">
+          <Container width={containerWidth}>
             <SearchBar page="default" />
-
-            <FlexContainer
-              alignItems="center"
-              flexDirection="column"
-              mobileFlex="same"
-              className="landing-page-heading pds-spacing-pad-block-m"
-            >
-              <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
+          </Container>
+          <Container width={containerWidth} className="landing-page__header">
+            <div className="landing-page-heading pds-spacing-pad-block-m">
+              <h1 className="pds-spacing-mar-block-end-m">{topic.title}</h1>
               {topic.subtitle && (
-                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xs">
+                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-6xs">
                   {topic.subtitle}
                 </div>
               )}
-            </FlexContainer>
+            </div>
           </Container>
           {/* Video */}
           {topic.video_id && (
             <div className="landing-page__video-background">
               <Container
                 width={containerWidth}
-                className="video-container  pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
+                className="video-container pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
               >
                 <Youtube src={topic.video_id} title={topic.title} />
               </Container>
@@ -113,11 +104,13 @@ class LandingTemplate extends Component {
 
           {/* Subtopics */}
           {topic.subtopics && (
-            <FlexContainer
-              flexDirection="column"
-              mobileFlex="same"
-              spacing="wide"
+            <div
               className="pds-spacing-pad-block-start-5xl"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 'var(--pds-spacing-3xl)',
+              }}
             >
               {topic.subtopics &&
                 topic.subtopics.map((subtopic) => (
@@ -130,7 +123,7 @@ class LandingTemplate extends Component {
                     />
                   </div>
                 ))}
-            </FlexContainer>
+            </div>
           )}
 
           {/* Topic groups */}
@@ -162,12 +155,17 @@ class LandingTemplate extends Component {
 
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
-            <div className="landing-page__related pds-background-default-secondary pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
+            <div className="landing-page__related pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
               <Container width={containerWidth}>
                 <h2 className="landing-page__section-heading">
                   Related Resources
                 </h2>
-                <FlexContainer spacing="wide">
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: 'var(--pds-spacing-2xl)',
+                  }}
+                >
                   {topic.cta && (
                     <CallToAction
                       title={topic.cta.title}
@@ -185,7 +183,7 @@ class LandingTemplate extends Component {
                       dark
                     />
                   )}
-                </FlexContainer>
+                </div>
               </Container>
             </div>
           )}

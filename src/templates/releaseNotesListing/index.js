@@ -10,15 +10,11 @@ import SEO from '../../layout/seo.js';
 import ReleaseNotesPager from '../../components/releaseNotesPager.js';
 import ReleaseNotePopoverCategorySelector from '../../components/releaseNotePopoverCategorySelector.js';
 import ReleaseNoteTeaser from '../../components/ReleaseNoteTeaser/index.js';
+import { TextInput } from '@pantheon-systems/pds-toolkit-react';
 
 import { releaseNoteCategoryLoader } from '../../data/releaseNoteCategories.js';
 
-import {
-  Container,
-  FlexContainer,
-  Icon,
-  Tag,
-} from '@pantheon-systems/pds-toolkit-react';
+import { Container, Icon, Tag } from '@pantheon-systems/pds-toolkit-react';
 
 import './style.css';
 
@@ -285,16 +281,14 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             }}
           >
             <div
-              className="pds-text-input__input-wrapper pds-spacing-mar-block-end-xl"
+              className="pds-input-field pds-input-field--text pds-spacing-mar-block-end-xl"
               style={{
                 flexGrow: '2',
               }}
             >
-              <div className="pds-input-field__decorators">
-                <Icon iconName="barsFilter" />
-              </div>
-              <input
+              <TextInput
                 type="search"
+                searchIcon="filter"
                 aria-label="Filter by text"
                 placeholder="Filter by text"
                 ref={queryRef}
@@ -303,17 +297,14 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer
-              flexWrap="wrap"
-              className="rn-popover-trigger-and-tags"
-            >
+            <div className="rn-popover-trigger-and-tags">
               <ReleaseNotePopoverCategorySelector
                 filters={filters}
                 setFilters={setFilters}
                 setCurrentPage={setCurrentPage}
                 isDisabled={!isLoaded}
               />
-              <FlexContainer mobileFlex="same" spacing="narrow" flexWrap="wrap">
+              <div className="rn-tags-list">
                 {filters &&
                   filters.categories.map((item) => {
                     return (
@@ -328,8 +319,8 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                       />
                     );
                   })}
-              </FlexContainer>
-            </FlexContainer>
+              </div>
+            </div>
           </div>
           <div
             id="doc"
