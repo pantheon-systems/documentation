@@ -33,10 +33,10 @@ The [`composer.json` file used by newly created Drupal 9 and 10 sites](https://g
 
 #### Changing the Site-Local Drush Version
 
-To change the site-local version of Drush run a composer command to update the version of Drush in the `composer.json` file. For instance, to set the site-local version of Drush to 11, run the following command:
+To change the site-local version of Drush run a composer command to update the version of Drush in the `composer.json` file. For instance, to set the site-local version to Drush 13, run the following command:
 
 ```bash
-composer require drush/drush:^11
+composer require drush/drush:^13
 ```
 
 ### Drupal 7
@@ -53,7 +53,7 @@ api_version: 1
 drush_version: 8
 ```
 
-<Alert title="Note: Limited Drush Versions in Pantheon.yml" type="info">
+<Alert title="Note: Restricted Drush Versions in Pantheon.yml" type="info">
 
 Even though Drush 11 and above are available for site-local installations, they are not available global version options in `pantheon.yml`. This restriction is present to reduce unnecessary or possibily counterproductive settings in `pantheon.yml`
 
