@@ -117,6 +117,7 @@ A visit does not count if it is one of the following:
 
 ## FAQs
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
+
 Website traffic is an important indicator of a successful website. Analytics suites (e.g. Google Analytics, Similarweb, Mixpanel) each serve a different purpose from Pantheon’s Site Dashboard.
 
 <Alert title="Note"  type="info" >
