@@ -3,7 +3,7 @@ title: "New Relic Synthetics IP Ranges – Update Your Allowlist"
 published_date: "2025-03-19"
 categories: [tools-apis, action-required]
 ---
-New Relic is updating the IP ranges used for Synthetics monitoring. Most Pantheon customers do not need to take action. However, if you have an allowlist set up for New Relic Synthetics traffic (in either [Advanced Global CDN](/guides/agcdn) or another edge network provider), you may need to update your configurations before **April 14, 2025**, to ensure uninterrupted monitoring.
+New Relic is updating the IP ranges used for Synthetic Monitoring. Most Pantheon customers do not need to take action. However, if you have an allowlist set up for New Relic Synthetics traffic (in either [Advanced Global CDN](/guides/agcdn) or another edge network provider), you may need to update your configurations before **April 14, 2025**, to ensure uninterrupted monitoring.
 
 ## Who Needs to Take Action?
 * If you **do not** explicitly allowlist New Relic Synthetics traffic by IP range, **no changes are needed**.
