@@ -2,7 +2,7 @@
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
 tags: [cdn, https, professional-services]
-reviewed: "2022-12-07"
+reviewed: "2025-03-19"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -36,6 +36,8 @@ Allow two business days for your Account Team to load the certificate.
 - You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
 
 - Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
+
+- Your CA must generate your custom certificate in PEM format containing all the certificates.
 
   <Alert title="Streamlined AGCDN"  type="info" >
     This procedure also applies for customers who use Streamlined AGCDN. Pantheon staff uploads your certificate and the related domains are marked or show an indicator the same way regular domains with custom certificates do.
