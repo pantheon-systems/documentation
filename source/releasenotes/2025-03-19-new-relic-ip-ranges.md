@@ -23,4 +23,4 @@ After April 14, 2025, the [old IP ranges](https://docs.newrelic.com/whats-new/20
 1. If you do allowlist Synthetics traffic, update your allowlist with the new IPs before April 14, 2025.
 1. After April 14, 2025, remove the old IP ranges to avoid connectivity issues.
 
-For any questions or assistance, reach out to [New Relic support](https://support.newrelic.com/s/).
+For any questions or assistance, [refer to the documentation](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/) or reach out to [New Relic support](https://support.newrelic.com/s/).
