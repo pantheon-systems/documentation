@@ -41,15 +41,7 @@ Synthetic monitors and alerts are available for all accounts but not enabled by 
 
 These features are available for every environment. When a Multidev is created, it will automatically appear in New Relic after it receives traffic.
 
-Any additional New Relic® features beyond these default inclusions will be subject to review and may either incur extra charges or be removed. Additional non-Pantheon assets will be subject to the same terms. Please consult with your account team before enabling additional agents or features to avoid unexpected costs. In some circumstances, we may modify the configuration in your account. For example, we may adjust sampling rates or other settings to optimize system performance.
-
-### Additional paid features
-Additional New Relic® features are available for purchase. Other New Relic® features, such as Tracing, Infrastructure Monitoring, Logs, and Mobile, are not available by default but can be requested.
-If you require:
-* Additional capabilities beyond the features listed in the section above (e.g., custom events, logs, distributed tracing).
-* Monitoring of non-Pantheon assets that support your sites (e.g., external databases, external failover systems).
-
-For more details or to request additional New Relic capabilities, please contact your account team.
+Any additional New Relic® features beyond these default inclusions will be subject to review and may either incur extra charges or be removed. We **do not support additional features** beyond the ones listed above. In some circumstances, we may modify the configuration in your account. For example, we may adjust sampling rates or other settings to optimize system performance.
 
 ## More Resources
 
