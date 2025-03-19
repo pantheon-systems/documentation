@@ -94,5 +94,5 @@ provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## More Resources
 
-- [Pantheon Search (formerly Pantheon Solr)](/solr)
+- [Pantheon Search](/solr)
 - [Enable Object Cache Pro for WordPress](/object-cache/wordpress)
