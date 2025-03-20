@@ -61,9 +61,9 @@ const ReleaseNotePopoverCategorySelector = ({
   let popoverTriggerIcon = isPopoverOpen ? 'angleUp' : 'angleDown';
 
   // Popover columns config
-  const itemsPerColumn = 6;
+  const itemsPerColumn = 7;
   const totalItems = activeCategories.length;
-  const totalColumns = totalItems / itemsPerColumn;
+  const totalColumns = Math.ceil(totalItems / itemsPerColumn);
 
   const popoverContent = (
     <>
