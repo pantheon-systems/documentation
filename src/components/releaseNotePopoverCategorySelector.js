@@ -146,6 +146,7 @@ const ReleaseNotePopoverCategorySelector = ({
         content={popoverContent}
         hasCloseButton={true}
         className={'rn-popover-categories'}
+        classNameContainer={'rn-popover-categories'}
         placement="bottom-start"
         onClose={handlePopoverClose}
         offsetValue={18}
