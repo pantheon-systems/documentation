@@ -21,7 +21,7 @@
   }
 }
 
-.rn-popover-categories .pds-popover__container {
+.pds-popover__container.rn-popover-categories  {
   max-width: 100%;
   padding: 40px;
   z-index: 100;
