@@ -119,6 +119,7 @@ A visit does not count if it is one of the following:
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
 Website traffic is an important indicator of a successful website. Analytics suites (e.g. Google Analytics, Similarweb, Mixpanel) each serve a different purpose from Pantheon’s Site Dashboard.
 
+<!-- Comment test -->
 <Alert title="Note"  type="info" >
 
 Google Analytics doesn’t count most bots and search engines because it's a metric of visitors and not data transfer. AJAX requests and other requests that aren't from a browser may not be counted because Google Analytics only counts actual pages loaded in a browser.
