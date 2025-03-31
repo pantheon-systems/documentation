@@ -1,9 +1,11 @@
-import React, { useState, useEffect} from "react"
+import React, { useState, useEffect } from 'react';
 
-import { Popover as PDSPopover } from "@pantheon-systems/pds-toolkit-react"
+import { Popover as PDSPopover } from '@pantheon-systems/pds-toolkit-react';
 
 const Popover = ({ icon, title, content }) => {
-  const processedContent = <div dangerouslySetInnerHTML={{ __html: content }} />
+  const processedContent = (
+    <div dangerouslySetInnerHTML={{ __html: content }} />
+  );
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -14,7 +16,7 @@ const Popover = ({ icon, title, content }) => {
     return null;
   }
 
-  return <PDSPopover content={processedContent} title={title} />
-}
+  return <PDSPopover content={processedContent} title={title} />;
+};
 
-export default Popover
+export default Popover;
