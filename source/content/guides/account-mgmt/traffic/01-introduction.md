@@ -117,7 +117,6 @@ A visit does not count if it is one of the following:
 
 ## FAQs
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
-
 Website traffic is an important indicator of a successful website. Analytics suites (e.g. Google Analytics, Similarweb, Mixpanel) each serve a different purpose from Pantheon’s Site Dashboard.
 
 <Alert title="Note"  type="info" >
@@ -182,7 +181,6 @@ Load tests and other performance reviews of the Pantheon platform are generally 
 If you identify an underlying issue that may affect the platform, please let us know. If an issue is identified with your codebase, Pantheon can [recommend a Partner](https://directory.pantheon.io/agencies?docs) or connect you with our [Professional Services](/guides/professional-services) team to help you with remediation.
 
 ### What about Denial of Service and other attacks?
-
 Malicious actors can create unplanned events in traffic, and this is not a fair measure of value a customer receives from our platform. We ask that customers help us identify and support the investigation of these issues. On a case by case basis, Pantheon may choose to waive overages in its judgment weighing factors such as how many clients are affected, to what degree could this have been addressed by customers, and how uniquely Pantheon is positioned to help our customers resolve these issues.
 
 Malicious actors are different from unwanted traffic, which may be unique to a customer’s preferences for the targeted audience of their site. From a traffic measurement perspective, Pantheon is focused on omitting traffic that is objectively malicious.
