@@ -23,7 +23,9 @@ In general, you don't want your code to rely on this, but some extensions (theme
 Adding the following code will pass the correct value when `'SERVER_NAME'` is used:
 
 ```php
-$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+if (php_sapi_name() != 'cli') {
+  $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+}
 ```
 
 While this fix does correct symptoms such as undesirable URLs, we recommended replacing all instances of `'SERVER_NAME'` with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L52) for WordPress).
