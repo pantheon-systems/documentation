@@ -60,7 +60,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: terminus-binary
         with:
           path: ~/terminus/terminus
@@ -106,14 +106,14 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: terminus-cache
         with:
           path: ~/.terminus
           key: ${{ runner.os }}-terminus-cache-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-terminus-cache-
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: terminus-binary
         with:
           path: ~/terminus/terminus
