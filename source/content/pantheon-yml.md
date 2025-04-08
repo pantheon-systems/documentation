@@ -373,3 +373,4 @@ Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](
 
 - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver)
 - [Upgrade PHP Versions](/guides/php/php-versions)
+- [YAML linter and comparator](https://yamline.com/)
