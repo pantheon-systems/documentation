@@ -180,28 +180,31 @@ As discussed in [WordPress Plugins and Themes with Known Issues](/wordpress-know
 
 <Alert title="Note" type="info">
 
-Manually create the target folders `code/wp-content/uploads/nitropack` and `code/wp-content/uploads/advanced-cache.php` for Dev, Test, and Live environments.
+This process is 2 steps. First you need to manually create the target folder `code/wp-content/uploads/nitropack` and file `code/wp-content/uploads/advanced-cache.php` in your Local environment as well as the Dev, Test, and Live environments on Pantheon.
 
 </Alert>
 
-1. In the command line, navigate to `code/wp-content/uploads` in your Dev environment. Or, if you are using an SFTP client (such as [FileZilla](https://filezilla-project.org/)), navigate to `files/`.
+1. In the command line, navigate to `code/wp-content/` in your Local environment. 
 
-1. Create a `nitropack` folder and an `advanced-cache.php` file. Be sure to delete any existing `advanced-cache.php` that is present in the `./uploads` directory before creating the file:
+1. Create a `nitropack` folder and an `advanced-cache.php` file. If an existing `advanced-cache.php` is present in the `./uploads` directory, delete that file:
 
   ```bash{promptUser: user}
-  mkdir ./nitropack​ && touch ./advanced-cache.php
+  mkdir ./uploads/nitropack​ && touch ./uploads/advanced-cache.php
   ```
 
-1. Repeat steps 1 and 2 for your Test and Live environments.
-
-1. Navigate back to `code/wp-content` and create a symlink in your Dev environment:
+1. Now create the symlinks tageting the directory and file in the `code/wp-content/` directory of your Local environment. 
 
   ```bash{promptUser: user}
   ln -s ./uploads/nitropack/ ./nitropack
   ln -s ./uploads/advanced-cache.php ./advanced-cache.php
   ```
 
-1. Commit changes to the Dev or Multidev environment, then deploy to Test to confirm the results before you deploy to Live.
+1. Commit and push these changes.
+
+ ```bash{promptUser: user}
+  git commit -am "adding symlinks for nitropack"
+  git push origin master
+  ```
 
 </Accordion>
 
