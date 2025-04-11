@@ -12,6 +12,7 @@ const webInfrastructure = () => {
           '/application-containers',
           'All About Application Containers',
         ),
+        simpleLink('/debian-php-appserver', 'Debian PHP Appserver (Beta)'),
         simpleLink('/horizontal-scalability', 'Horizontal Scalability'),
         // This page is oddly short.
         simpleLink('/single-application-sites', 'One app per site'),
