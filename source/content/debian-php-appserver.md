@@ -17,7 +17,7 @@ In May 2025, Pantheon introduced a new PHP application server based on the Debia
 
 Depending on your web application's configuration, this change may have major effects on the compatibility of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade.
 
-## Why We're Making This Change
+## Why Switch?
 
 - Enhanced security features with a hardened operating system image
 - Long Term Support (LTS) coverage for EOL PHP versions
