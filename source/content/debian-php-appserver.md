@@ -75,9 +75,9 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 | Extension | CentOS | Debian |
 |-----------|---------|---------|
-| oci8 | Available for PHP 7.4-8.3<br>3.3.x | Available for PHP 8.2-8.4<br>3.4.x |
+| oci8 | Available for PHP 7.4-8.3<br/>3.3.x | Available for PHP 8.2-8.4<br/>3.4.x |
 | ioncube | Available for PHP 7.1 only | Not available |
-| pdo_sqlsrv | Available for PHP 7.2 only<br>5.2.0 | Not available |
+| pdo_sqlsrv | Available for PHP 7.2 only<br/>5.2.0 | Not available |
 | curl | v7.61.1 | 7.88.1 |
 | gd | 2.1.0 | 2.3.3 |
 | iconv | 2.28 | 2.36 |
@@ -86,7 +86,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | pdo_pgsql | 13.5 | 15.12 |
 | pdo_sqlite | 3.26.0 | 3.40.1 |
 | pgsql | 13.5 | 15.12 |
-| redis | 5.3.7<br>Compression types: zstd | 6.1<br>Compression types: zstd, lzf, lz4 |
+| redis | 5.3.7<br/>Compression types: zstd | 6.1<br/>Compression types: zstd, lzf, lz4 |
 | sqlite3 | 3.26.0 | 3.40.1 |
 
 Does your application require support for an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by [filling this form](https://docs.google.com/forms/d/e/1FAIpQLSfbgXOPRq4ylGgtGLHsQ68dwc_11eUzO7Y2X6PjIB3oy9rUxA/viewform?usp=header) or contacting your Customer Success Manager.
