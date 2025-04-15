@@ -11,9 +11,6 @@ product: [--]
 integration: [--]
 ---
 
-...
-
-
 ## Overview
 
 Pantheon is introducing a new PHP application server based on the Debian operating system, which will replace our previous CentOS-based infrastructure. This upgrade represents our commitment to providing a modern, secure, and efficient hosting environment for your applications.
@@ -53,11 +50,11 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 ## Timeline
 
-| Date | Phase | Details |
+| Phase | Date | Details |
 |-----------|------------------|--------------|
-| April - July 2025 | Beta (Opt-in) | Sites can be opted-in to Debian. All other sites will continue using CentOS |
-| August-September 2025 | Rollout (Opt-out) | A slow rollout will auto-upgrade all sites to Debian. Opting out via the `pantheon.yml` parameter will be available |
-| Q1 2026 | CentOS Deprecation | CentOS will no longer be a valid `appserver_os` option, and all remaining sites will be auto-upgraded to Debian |
+| **Beta (Opt-in)** | April - July 2025 | Sites can be opted-in to Debian. All other sites will continue using CentOS |
+| **Rollout (Opt-out)** | August-September 2025 | A slow rollout will auto-upgrade all sites to Debian. Opting out via the `pantheon.yml` parameter will be available |
+| **CentOS Deprecation** | Q1 2026 | CentOS will no longer be a valid `appserver_os` option, and all remaining sites will be auto-upgraded to Debian |
 
 
 ## Known Changes and Differences
@@ -66,13 +63,13 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 | Package | CentOS | Debian |
 |---------|---------|---------|
-| OIC (Oracle Instant Client) | Available for PHP 7.4-8.3 | Available for PHP 8.2-8.4 |
-| IBM PHP ODBC Driver | Available for PHP 7.4-8.2 | Not available |
-| wkhtmltopdf | 0.12.5 available | Not available |
-| Apache Tika | 1.18, v1.21 available | Not available* |
-| PhantomJS | 1.7.0, 2.1.1 available | Not available |
+| **OIC (Oracle Instant Client)** | Available for PHP 7.4-8.3 | Available for PHP 8.2-8.4 |
+| **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Not available |
+| **wkhtmltopdf** | 0.12.5 available | Not available |
+| **Apache Tika** | 1.18, v1.21 available | Not available <sup>1</sup> |
+| **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-* For `search_api_attachments` users, we recommend using the Solr Extractor built into the `Pantheon Search` Solr server, rather than using Tika on the appserver.
+<sup>1</sup> For `search_api_attachments` users, we recommend using the Solr Extractor built into the `Pantheon Search` Solr server, rather than using Tika on the appserver.
 
 ### PHP Extensions
 
