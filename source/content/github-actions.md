@@ -19,16 +19,21 @@ Some are general purpose, while others are specific to certain workflows.
 
 ## Push to Pantheon
 
-Our Push to Pantheon Action handles the creation of Multidev environments to correspond to GitHub pull requests and the pushing to Pantheon's Dev environment after merging of pull requests to a `main` branch.
-
-_todo_ digram
+Our [Push to Pantheon](https://github.com/stevector/push-to-pantheon) Action handles the creation of Multidev environments to correspond to GitHub pull requests and the pushing to Pantheon's Dev environment after merging of pull requests to a `main` branch.
 
 
+When running workflow triggered by a pull request, this action will create a [Multidev environment](https://docs.pantheon.io/guides/multidev) and deploy code to it.
 
+![Deploying a PR to a Pantheon Multidev](../images/github-action/diagram--deploying-pr.png)
 
-```
-Here is an example of a complete GitHub Actions workflow file that uses our new Action to deploy every pull request made on the repository for a WordPress or Drupal codebase to a Pantheon Multidev environment.
+When running on workflows triggered by merges/pushes to the `main` branch this action will deploy code to [the Pantheon `Dev` environment](https://docs.pantheon.io/pantheon-workflow).
 
+<!-- These images are also in https://github.com/stevector/push-to-pantheon/tree/0.x/.github/documentation and https://docs.google.com/presentation/d/17k15auDrnpq2LdRC4P35dN5yJ4pOkPY62M7drBDkTCc/edit#slide=id.g32ed471dd64_0_2488 -->
+![Deploying main to Pantheon](../images/github-action/diagram--pushing-main.png)
+
+Here is an example of a complete GitHub Actions workflow file to deploy every pull request made on the repository for a WordPress or Drupal codebase to a Pantheon Multidev environment.
+
+```yml
 name: Deploy PR to Pantheon
 
 concurrency:
@@ -50,28 +55,40 @@ jobs:
         ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
         machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
         site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
-
 ```
 
 For more detailed guidance on usage of this Action including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme from the Action](https://github.com/stevector/push-to-pantheon).
 
 
-
-
 ## Install Terminus
 
-If you are writing your own GitHub Actions workflows from scratch to interact with Pantheon, you will likely need to install Terminus in your workflow. (The above Push to Pantheon Action calls Terminus installation for you). This is a simple step that can be added to your workflow file.
+If you are writing your own GitHub Actions workflows from scratch to interact with Pantheon, you will likely need to install Terminus in your workflow.
+(The above Push to Pantheon Action calls Terminus installation for you).
+[This is a simple Action](https://github.com/pantheon-systems/terminus-github-actions) that can be added to your workflow file.
 
 ```yaml
-
-
+  - name: Install Terminus
+    uses: pantheon-systems/terminus-github-actions@v1
+    with:
+      pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 ```
 
-## Autotag?
+This Action also handles caching of both the Terminus executable and of the authenticated session which is valuable when running complex workflows across dozens or hundreds of sites.
+[See the readme for more details](https://github.com/pantheon-systems/terminus-github-actions).
+
+### Autotag?
+
+https://github.com/pantheon-systems/action-autotag
 
 
+### plugin pipeline
 
+https://github.com/pantheon-systems/plugin-pipeline-example
 
+### Release action
 
+https://github.com/pantheon-systems/plugin-release-actions
 
+## Other Actions we like
 
+https://github.com/pantheon-systems/action-library?tab=readme-ov-file#actions-we-love
