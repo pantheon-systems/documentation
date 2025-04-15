@@ -40,7 +40,7 @@ const workflows = () => {
       simpleLink('/automate', 'Automation & CI', [
         simpleLink('/automate', 'Overview'),
         simpleLink('/continuous-integration', 'CI Solutions'),
-        simpleLink('/github-appplication', 'GitHub Integration', [
+        simpleLink('/github-application', 'GitHub Integration', [
           simpleLink('/github-application', 'GitHub Application'),
           simpleLink('/github-actions', 'GitHub Actions'),
         ]),
