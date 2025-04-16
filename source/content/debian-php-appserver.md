@@ -91,6 +91,14 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by [filling this form](https://docs.google.com/forms/d/e/1FAIpQLSfbgXOPRq4ylGgtGLHsQ68dwc_11eUzO7Y2X6PjIB3oy9rUxA/viewform?usp=header) or contacting your Customer Success Manager.
 
+### Networking
+
+| Protocol | CentOS | Debian |
+|---------|---------|---------|
+| **TLS** | 1.0-1.3 | 1.2-1.3 <sup>1</sup>|
+
+<sup>1</sup> Review the [TLS documentation](/tls-compatibility) to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.
+
 ## Known Issues
 
 - SFTP mode is currently non-functional. Git mode is available.
