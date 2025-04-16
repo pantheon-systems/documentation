@@ -43,7 +43,7 @@ Terminus does not work with the following platforms:
      - mbstring
      - XML
      - [cURL](https://secure.php.net/manual/en/curl.setup.php)
-     - [CLI](http://www.php-cli.com)
+     - CLI
 - [Composer](https://getcomposer.org/download/)
 - [Git](https://help.github.com/articles/set-up-git/)
   - This may be needed for the plugin manager component.

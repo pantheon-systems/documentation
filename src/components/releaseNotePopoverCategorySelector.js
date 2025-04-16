@@ -61,9 +61,9 @@ const ReleaseNotePopoverCategorySelector = ({
   let popoverTriggerIcon = isPopoverOpen ? 'angleUp' : 'angleDown';
 
   // Popover columns config
-  const itemsPerColumn = 6;
+  const itemsPerColumn = 7;
   const totalItems = activeCategories.length;
-  const totalColumns = totalItems / itemsPerColumn;
+  const totalColumns = Math.ceil(totalItems / itemsPerColumn);
 
   const popoverContent = (
     <>
@@ -146,6 +146,7 @@ const ReleaseNotePopoverCategorySelector = ({
         content={popoverContent}
         hasCloseButton={true}
         className={'rn-popover-categories'}
+        classNameContainer={'rn-popover-categories'}
         placement="bottom-start"
         onClose={handlePopoverClose}
         offsetValue={18}

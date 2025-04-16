@@ -425,6 +425,22 @@ ___
 **I am still having issues:** Please [contact support](/guides/support/contact-support/) if you have completed the resolution steps above and you are still having issues.
 ___
 
+### Duplicator Pro
+
+<ReviewDate date="2025-03-24" />
+
+**Issue:** [Duplicator Pro](https://duplicator.com) attempts to create backups of the site within the site's own code directory. Refer to [Backup Creation](/guides/backups/) for more information.
+
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/guides/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
+
+- Running the bash script in your local system
+- Using an external server
+- Using a service that runs cron jobs for you
+
+Refer to the [Access Backups](/guides/backups/access-backups) documentation for more details.
+
+___
+
 ### Elementor
 
 <ReviewDate date="2022-03-30" />
