@@ -111,6 +111,16 @@ When updates are available, Drupal's Update Status module will notify you of the
 
 ![Tag1 D7ES available updates](../images/supported-drupal-d7es-update-status-security-alert.png)
 
+<Alert title="Data retention policy"  type="info" >
+
+##### Requirement for maintaining contrib module LTS coverage
+
+Tag1 only keeps 90 days of reported data from Pantheon-hosted Drupal 7 sites. The `tag1_d7es` module phones home to Tag1 when Drupal cron is executed. Under normal circumstances, it will call home every 24 hours and transmit a list of installed modules. If Drupal cron is not regularly executed, after 90 days all data for the site will be pruned. If the site was depending on security notification emails, these will no longer be emitted. 
+
+To continue receiving email notifications from Tag1, ensure that they have been configured in the `tag1_d7es` module and that Drupal cron is executed on a regular basis. [See the Pantheon Cron for Drupal docs for more details](/drupal-cron).
+
+</Alert>
+
 Apply contrib updates from the Tag1 D7ES service via Drush, Autopilot, or manually via SFTP. For details, see the following tabs.
 
 <TabList>
