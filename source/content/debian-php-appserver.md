@@ -57,7 +57,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **CentOS Deprecation** | Q1 2026 | CentOS will no longer be a valid `appserver_os` option, and all remaining sites will be auto-upgraded to Debian |
 
 
-## Known Changes and Differences
+## Known Changes and Requirements
 
 ### OS Packages
 
