@@ -113,7 +113,7 @@ When updates are available, Drupal's Update Status module will notify you of the
 
 <Alert title="Data retention policy"  type="info" >
 
-##### Requirement for maintaining contrib module LTS coverage
+##### Functioning cron is necessary for maintaining contrib module LTS coverage
 
 LTS support depends on cron to communicate between the Drupal 7 site and Tag1's infrastructure. If cron is not executed regularly, the site may cease to receive updates.
 
