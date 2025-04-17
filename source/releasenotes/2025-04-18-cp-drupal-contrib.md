@@ -10,14 +10,12 @@ Today we are releasing v1.0 of [Pantheon Content Publisher's Drupal Module](http
 
 This release marks a complete redesign of the Drupal integration for Content Publisher, and offers new functionality: 
 
-* Manages content as standard Drupal entities, rather than relying on Drupal views for rendering
-* Metadata fields are now converted into standard Drupal configured fields
-* Drupal Search support has been added, allowing Content Publisher content to be searched by Drupal with blended results alongside other Drupal content
-* Smart Components are now fieldable Drupal entities and no longer rely on Drupal Single Directory Components (SDC)
-* Increased reliability for real-time previews
-* Improved configuration panel 
-
-Thanks to this new module, Drupal developers considering Content Publisher are now able to use it in a native way, letting them choose their favorite Drupal development path and fully leverage the value of Drupal. 
+* Manages content as standard Drupal entities, rather than relying on Drupal views for rendering.
+* Metadata fields are now converted into standard Drupal configured fields.
+* Drupal Search support has been added, allowing Content Publisher content to be searched by Drupal with blended results alongside other Drupal content.
+* Smart Components are now fieldable Drupal entities and no longer rely on Drupal Single Directory Components (SDC).
+* Increased reliability for real-time previews.
+* Improved configuration panel.
 
 ## Learn More
 While this module is now available on Drupal.org, it still requires access to the private beta program in order to be leveraged.
