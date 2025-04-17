@@ -18,8 +18,10 @@ This release marks a complete redesign of the Drupal integration for Content Pub
 
 Thanks to this new module, Drupal developers considering Content Publisher are now able to use it in a native way, letting them choose their favorite Drupal development path and fully leverage the value of Drupal. 
 
-## More Resources 
+## Learn More
+While this module is now available on drupal.org, it still requires access to a private beta program in order to be leveraged. 
 
+* [Request beta access](https://pantheon.io/platform/content-publisher?_gl=1*pi6niv*_gcl_au*Mjc4NDY3NTIzLjE3NDQ4OTk4NDY.*_ga*ODM4NjY0NDYwLjE3NDQ4OTk4NDc.*_ga_CPJLBDH983*MTc0NDkwMzA3OS4yLjEuMTc0NDkwMzEwNi4wLjAuMA..#beta)
 * Docs: [Content Publisher for Drupal: Getting Started Guide](https://docs.content.pantheon.io/pantheon-content-publisher-for-drupal)
 * Blog: Enhanced Drupal Integration for Content Publisher
 * See the Content Publisher [release notes](https://docs.content.pantheon.io/release-notes) for a more detailed history of changes 
