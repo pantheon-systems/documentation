@@ -12,7 +12,7 @@ This release marks a complete redesign of the Drupal integration for Content Pub
 
 * Manages content as standard Drupal entities, rather than relying on Drupal views for rendering
 * Metadata fields are now converted into standard Drupal configured fields
-* Drupal Search support has been added, allowing Content Publisher content to be search by Drupal, blended with other Drupal content
+* Drupal Search support has been added, allowing Content Publisher content to be searched by Drupal with blended results alongside other Drupal content
 * Smart Components are now fieldable Drupal entities and no longer rely on Drupal Single Directory Components (SDC)
 * Increased reliability for real-time previews
 * Improved configuration panel 
