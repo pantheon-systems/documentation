@@ -3,15 +3,16 @@ title: "Content Publisher Drupal Module v1.0 now available"
 published_date: "2025-04-18"
 categories: [content-publisher, drupal, modules]
 ---
-Today we are releasing v1.0 of [Pantheon Content Publisher](https://www.drupal.org/project/pantheon_content_publisher) - a new contrib module for Drupal sites. This new module replaces [the older alpha module](https://github.com/pantheon-systems/pcc-drupal-module) used by participants of [the private beta program](https://pantheon.io/platform/content-publisher?_gl=1*pi6niv*_gcl_au*Mjc4NDY3NTIzLjE3NDQ4OTk4NDY.*_ga*ODM4NjY0NDYwLjE3NDQ4OTk4NDc.*_ga_CPJLBDH983*MTc0NDkwMzA3OS4yLjEuMTc0NDkwMzEwNi4wLjAuMA..). 
+Today we are releasing v1.0 of [Pantheon Content Publisher's Drupal Module](https://www.drupal.org/project/pantheon_content_publisher) - a new contrib module for Drupal sites. This new module replaces [the previous module](https://github.com/pantheon-systems/pcc-drupal-module) that was used by earlier participants of [the private beta program](https://pantheon.io/platform/content-publisher?_gl=1*pi6niv*_gcl_au*Mjc4NDY3NTIzLjE3NDQ4OTk4NDY.*_ga*ODM4NjY0NDYwLjE3NDQ4OTk4NDc.*_ga_CPJLBDH983*MTc0NDkwMzA3OS4yLjEuMTc0NDkwMzEwNi4wLjAuMA..).
+
 
 ## What's new?
 
 This release marks a complete redesign of the Drupal integration for Content Publisher, and offers new functionality: 
 
-* Publishes content as standard Drupal entities, rather than relying on Drupal views for rendering
-* Metadata fields are now standard Drupal configured fields
-* Search support has been added, allowing content to be indexed and searchable by Drupal 
+* Manages content as standard Drupal entities, rather than relying on Drupal views for rendering
+* Metadata fields are now converted into standard Drupal configured fields
+* Drupal Search support has been added, allowing Content Publisher content to be search by Drupal, blended with other Drupal content
 * Smart Components are now fieldable Drupal entities and no longer rely on Drupal Single Directory Components (SDC)
 * Increased reliability for real-time previews
 * Improved configuration panel 
