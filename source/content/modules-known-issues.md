@@ -268,9 +268,9 @@ ___
 ## [Media Bulk Upload](https://www.drupal.org/project/media_bulk_upload)
 <ReviewDate date="2024-06-24" />
 
-**Issue**: The default configuration for this module has been known to cause issues related to the "Upload location" setting, which out of the box uses the `/tmp` directory.
+**Issue**: The Media Bulk Upload module uses dropzoneJS which doesn't interact well with multi-container environments like Pantheon, where each web server uses its own local temp directory. The upload handler should not use local server directories. Instead, rely on the shared file system.
 
-**Solution**: Configure the "Upload location" to `public://sites/default/files/private` You must include the `public://` protocol for this solution to work.
+**Solution**: This issue can fixed by changing the `tmp_upload_scheme` configuration from `temporary` to `public` in the `dropzonejs.settings.yml` file.
 
 ___
 
