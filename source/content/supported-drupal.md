@@ -115,6 +115,8 @@ When updates are available, Drupal's Update Status module will notify you of the
 
 ##### Requirement for maintaining contrib module LTS coverage
 
+LTS support depends on cron to communicate between the Drupal 7 site and Tag1's infrastructure. If cron is not executed regularly, the site may cease to receive updates.
+
 Tag1 only keeps 90 days of reported data from Pantheon-hosted Drupal 7 sites. The `tag1_d7es` module phones home to Tag1 when Drupal cron is executed. Under normal circumstances, it will call home every 24 hours and transmit a list of installed modules. If Drupal cron is not regularly executed, after 90 days all data for the site will be pruned. If the site was depending on security notification emails, these will no longer be emitted. 
 
 To continue receiving email notifications from Tag1, ensure that they have been configured in the `tag1_d7es` module and that Drupal cron is executed on a regular basis. [See the Pantheon Cron for Drupal docs for more details](/drupal-cron).
