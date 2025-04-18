@@ -69,7 +69,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **Apache Tika** | 1.18, v1.21 available | Not available <sup>1</sup> |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> For <code>search_api_attachments</code> users, we recommend using the Solr Extractor built into the Pantheon Search Solr server, rather than using Tika on the appserver. This is configured at <code>/admin/config/search/search_api_attachments</code>. 
+<sup>1</sup> For <code>search_api_attachments</code> users, we recommend using the Solr Extractor built into the Pantheon Search Solr server, rather than using Tika on the appserver. This is configured at <code>/admin/config/search/search_api_attachments</code>. <br />
 
 ### PHP Extensions
 
@@ -97,7 +97,7 @@ Does your application require an OS package or PHP extension that is no longer a
 |---------|---------|---------|
 | **TLS** | 1.0-1.3 | 1.2-1.3 <sup>1</sup>|
 
-<sup>1</sup> Review the <a href="/tls-compatibility">TLS documentation</a> to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.
+<sup>1</sup> Review the <a href="/tls-compatibility">TLS documentation</a> to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.<br />
 
 ### CMS Version Requirements
 
@@ -112,9 +112,6 @@ To provide the most secure environment, you may need to upgrade your CMS version
 | Drupal | 8.3.x | 8.4.6+ |
 | Drupal | 8.4.x | 8.4.6+ |
 | Drupal | 8.5.x | 8.5.1+ |
-
-
-<sup>1</sup> Review the [TLS documentation](/tls-compatibility) to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.
 
 ## Known Issues
 
