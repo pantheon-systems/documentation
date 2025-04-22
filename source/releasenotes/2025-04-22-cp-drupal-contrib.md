@@ -1,6 +1,6 @@
 ---
 title: "Content Publisher Drupal Module v1.0 now available"
-published_date: "2025-04-18"
+published_date: "2025-04-22"
 categories: [content-publisher, drupal, modules]
 ---
 Today we are releasing v1.0 of [Pantheon Content Publisher's Drupal module](https://www.drupal.org/project/pantheon_content_publisher) - a new contrib module for Drupal sites. This new module replaces [the previous module](https://github.com/pantheon-systems/pcc-drupal-module) that was used by earlier participants of [the private beta program](https://pantheon.io/platform/content-publisher?_gl=1*pi6niv*_gcl_au*Mjc4NDY3NTIzLjE3NDQ4OTk4NDY.*_ga*ODM4NjY0NDYwLjE3NDQ4OTk4NDc.*_ga_CPJLBDH983*MTc0NDkwMzA3OS4yLjEuMTc0NDkwMzEwNi4wLjAuMA..).
