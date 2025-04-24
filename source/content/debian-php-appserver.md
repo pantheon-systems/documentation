@@ -65,11 +65,12 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 |---------|---------|---------|
 | **OIC (Oracle Instant Client)** | Available for PHP 7.4-8.3 | Available for PHP 8.2-8.4 |
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Not available |
-| **wkhtmltopdf** | 0.12.5 available | Coming Soon |
-| **Apache Tika** | 1.18, v1.21 available | Not available <sup>1</sup> |
+| **wkhtmltopdf** | 0.12.5 available | Not available <sup>1</sup> |
+| **Apache Tika** | 1.18, v1.21 available | Not available <sup>2</sup> |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> For <code>search_api_attachments</code> users, we recommend using the Solr Extractor built into the Pantheon Search Solr server, rather than using Tika on the appserver. This is configured at <code>/admin/config/search/search_api_attachments</code>. <br /><br />
+<sup>1</sup> wkhtmltopdf is no longer supported by its maintainers. We are working on integrating a different solution for customers depending on this OS Package. <br />
+<sup>2</sup> For <code>search_api_attachments</code> users, we recommend using the Solr Extractor built into the Pantheon Search Solr server, rather than using Tika on the appserver. This is configured at <code>/admin/config/search/search_api_attachments</code>. <br /><br />
 
 ### PHP Extensions
 
