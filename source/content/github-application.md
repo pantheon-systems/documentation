@@ -21,11 +21,11 @@ The GitHub application is currently in private Beta. [Request access for your Pa
 
 Once turned, on this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
 
-TODO, add a diagram of the workflow
+![Deploying a PR to a Pantheon Multidev](../images/github-app/diagram--deploying-pr.png)
 
 Merging pull requests, or pushing code to the main branch of the GitHub repository, will automatically deploy the code to the Pantheon development environment.
 
-TODO add a diagram of the workflow
+![Deploying main to Pantheon](../images/github-app/diagram--deploying-main.png)
 
 
 ## Asumptions of GitHub application
@@ -38,8 +38,8 @@ This GitHub application is designed to work with Multidev environments. Multidev
 
 Our separate GitHub action is designed for more customized workflows that might involve building code elsewhere and deploying to Pantheon. The GitHub application is designed for teams that want to use Pantheon as their build server.
 
-Currently, Pantheon can execute "composer install" through our Integrated Composer LINK feature.
-If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use our GitHub Action now LINK and follow this item on our roadmap for eventual inclusion of such functionaity within a Pantheon-prodived build step.
+Currently, Pantheon can execute "composer install" through our [Integrated Composer](/guides/integrated-composer) feature.
+If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use [our GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) now and [follow this item on our roadmap for eventual inclusion of such functionaity within a Pantheon-prodived build step](https://pantheon.productboard.com/detail/30103699).
 
 ## Limitations prior to General Availability
 
