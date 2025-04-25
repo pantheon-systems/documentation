@@ -1,6 +1,6 @@
 ---
 title: Pantheon's GitHub Actions
-description: todo
+description: Actions for web teams and plugin authors
 tags: [continuous-integration, workflow, D8, D9, D10]
 contenttype: [doc]
 innav: [true]
@@ -13,9 +13,7 @@ reviewed: "2025-04-15"
 
 ---
 
-Pantheon maintains multiple GitHub Actions for integrating with our platform.
-Some are general purpose, while others are specific to certain workflows.
-
+Pantheon maintains multiple GitHub Actions for integrating with our platform. This page focuses on the two actions most commonly used by web teams deploying to Pantheon. Separately, [we maintain multiple GitHub Actions mean for authors of WordPress plugins and other packages](https://github.com/pantheon-systems/action-library).
 
 ## Push to Pantheon
 
@@ -75,20 +73,3 @@ If you are writing your own GitHub Actions workflows from scratch to interact wi
 
 This Action also handles caching of both the Terminus executable and of the authenticated session which is valuable when running complex workflows across dozens or hundreds of sites.
 [See the readme for more details](https://github.com/pantheon-systems/terminus-github-actions).
-
-### Autotag?
-
-https://github.com/pantheon-systems/action-autotag
-
-
-### plugin pipeline
-
-https://github.com/pantheon-systems/plugin-pipeline-example
-
-### Release action
-
-https://github.com/pantheon-systems/plugin-release-actions
-
-## Other Actions we like
-
-https://github.com/pantheon-systems/action-library?tab=readme-ov-file#actions-we-love
