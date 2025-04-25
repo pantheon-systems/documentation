@@ -1,7 +1,7 @@
 ---
 title: "Traffic"
 subtitle: Measuring Site Traffic
-description: View your site's traffic usage with the Metrics tool, found in the Live environment of the Site Dashboard.
+description: View your site traffic in the site list, and explore your usage with the Metrics tool, found in the Live environment of the Site Dashboard.
 tags: [traffic]
 contributors: [wordsmither]
 permalink: docs/guides/account-mgmt/traffic
@@ -16,7 +16,15 @@ audience: [sysadmin]
 product: [--]
 integration: [--]
 ---
-Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/getstarted/addsite/#create-the-live-environment). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
+The Site Traffic by Entitlement feature gives you clear visibility into traffic usage across all your Pantheon sites, segmented by site plan level entitlement. Whether you're managing a single site or an entire portfolio, you can now easily see how traffic is allocated and consumed on a per-site basis directly in your Site List view. This feature resets upon the end of every billing cycle per site.
+
+<Alert title="Note"  type="info" >
+  
+Traffic overages are currently paused, so you will not be charged if a site exceeds its plan’s traffic limit. However, we strongly recommend ensuring each site is properly provisioned to maintain optimal performance.
+
+</Alert>
+
+If you would like to explore more, access metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/getstarted/addsite/#create-the-live-environment). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
 
 To access metrics for another environment, use the [Terminus](/terminus) `metrics` command:
 
