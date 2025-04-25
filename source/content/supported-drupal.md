@@ -52,7 +52,7 @@ terminus site:create <site> <label> drupal8
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 7 site from the Pantheon dashboard.
 
 ### Drupal 7 long-term support
-Drupal 7 will reach it's end of life on January 5, 2025. Pantheon has partnered with [Tag1 Consulting](https://www.tag1consulting.com/) to offer Long-Term Support for Drupal 7 through **January 5, 2027**.
+Drupal 7 reached its end of life on January 5, 2025. Pantheon has partnered with [Tag1 Consulting](https://www.tag1consulting.com/) to offer Long-Term Support for Drupal 7 through **January 5, 2027**.
 To learn more about this partnership, see the [related blog post](https://pantheon.io/blog/pantheon-and-tag1-support-drupal-7-websites).
 
 
@@ -110,6 +110,18 @@ Enable the module, then go to `/admin/config/system/tag1-d7es` to configure the 
 When updates are available, Drupal's Update Status module will notify you of the available updates. If you have configured your email address in the D7ES module, you will also receive an email notification. [See the Tag1 documentation on notifications for more information about configuration.](https://docs.tag1.com/notifications/)
 
 ![Tag1 D7ES available updates](../images/supported-drupal-d7es-update-status-security-alert.png)
+
+<Alert title="Data retention policy"  type="info" >
+
+##### Functioning cron is necessary for maintaining contrib module LTS coverage
+
+LTS support depends on cron to communicate between the Drupal 7 site and Tag1's infrastructure. If cron is not executed regularly, the site may cease to receive updates.
+
+Tag1 only keeps 90 days of reported data from Pantheon-hosted Drupal 7 sites. The `tag1_d7es` module phones home to Tag1 when Drupal cron is executed. Under normal circumstances, it will call home every 24 hours and transmit a list of installed modules. If Drupal cron is not regularly executed, after 90 days all data for the site will be pruned. If the site was depending on security notification emails, these will no longer be emitted. 
+
+To continue receiving email notifications from Tag1, ensure that they have been configured in the `tag1_d7es` module and that Drupal cron is executed on a regular basis. [See the Pantheon Cron for Drupal docs for more details](/drupal-cron).
+
+</Alert>
 
 Apply contrib updates from the Tag1 D7ES service via Drush, Autopilot, or manually via SFTP. For details, see the following tabs.
 
