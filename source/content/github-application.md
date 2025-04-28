@@ -85,7 +85,7 @@ We will address these limitaitons before the application is made generally avail
 ### Limited to new projects created by the Terminus
 
 Activating the GitHub Application presently runs through Terminus that creates a new site on Pantheon and a new GitHub repository. The GitHub application does not yet support retrofitting existing GitHub repositories or Pantheon sites yet.
-Follow [this issue](https://github.com/pantheon-systems/terminus-repository-plugin/issues/52) in the queue to find out when this limitation is removed. TODO: update link to be a Terminus one.
+Follow [this issue](https://github.com/pantheon-systems/terminus/issues/2683) in the queue to find out when this limitation is removed.
 
 ### No On Server Development  (SFTP Mode)
 
