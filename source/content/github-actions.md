@@ -57,7 +57,6 @@ jobs:
 
 For more detailed guidance on usage of this Action including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme from the Action](https://github.com/stevector/push-to-pantheon).
 
-
 ## Install Terminus
 
 If you are writing your own GitHub Actions workflows from scratch to interact with Pantheon, you will likely need to install Terminus in your workflow.
