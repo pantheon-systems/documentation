@@ -38,7 +38,12 @@ ul.toc-list {
   list-style-type: none;
   padding-inline-start: var(--pds-spacing-s);
   padding-inline-end: var(--pds-spacing-2xs);
+  padding-block-end: var(--pds-spacing-s);
   row-gap: var(--pds-spacing-xs);
+}
+
+ul.toc-list .is-collapsible{
+  max-height: none;
 }
 
 ul.toc-list ul {
