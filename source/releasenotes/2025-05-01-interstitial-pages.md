@@ -10,7 +10,7 @@ Beginning May 6, 2025, newly created [_sandbox_ sites](/guides/account-mgmt/plan
 
 After clicking through this page, a cookie is set in the browser to prevent the interstitial page from showing again for the same visitor to the same environment for 24 hours.
 
-This change is being made to discourages abuse of the sandbox sites for spam, phishing or other malicious purposes. It also clarifies for visitors that the site is not live, preventing potential confusion.
+This change is being made to discourage abuse of the sandbox sites for spam, phishing or other malicious purposes. It also clarifies for visitors that the site is not live, preventing potential confusion.
 
 See [related documentation to learn more](/guides/account-mgmt/plans/site-plans#sandbox-sites) about this change, including how to bypass the interstitial page for automated testing.
 
