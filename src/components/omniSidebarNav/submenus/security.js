@@ -12,10 +12,6 @@ const security = () => {
       simpleLink('/certificate-bundles', 'Certificate Bundles'),
       simpleLink('/clamav', 'ClamAV'),
       simpleLink('/drupal-security-patches', 'Drupal Security Patches'),
-      simpleLink(
-        '/interstitial-pages-on-sandbox-sites',
-        'Interstitial Warnings on Sandbox Sites',
-      ),
     ],
   };
 };
