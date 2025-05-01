@@ -55,7 +55,7 @@ jobs:
         site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
 ```
 
-For more detailed guidance on usage of this Action including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme from the Action](https://github.com/stevector/push-to-pantheon).
+For more detailed guidance on usage of this Action including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme from the Action](https://github.com/pantheon-systems/push-to-pantheon).
 
 ## Install Terminus
 
