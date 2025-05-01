@@ -73,7 +73,7 @@ This GitHub application is designed to work with Multidev environments. Multidev
 
 Our separate [GitHub Action](/github-actions) is designed for more customized workflows that might involve building code elsewhere and deploying to Pantheon. The GitHub application is designed for teams that want to use Pantheon as their build server.
 
-Currently, Pantheon can execute "composer install" through our [Integrated Composer](/guides/integrated-composer) feature.
+Currently, Pantheon executes a `composer install` command through our [Integrated Composer](/guides/integrated-composer) feature.
 If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use [our GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) now and [follow this item on our roadmap for eventual inclusion of such functionaity within a Pantheon-prodived build step](https://pantheon.productboard.com/detail/30103699).
 
 ## Limitations prior to General Availability
