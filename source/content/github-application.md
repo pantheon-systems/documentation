@@ -49,7 +49,7 @@ Then create the Test and Live environments.
 
 ### Make a pull request
 
-Then, make a local clone of the GitHub repository and make a change to the code.
+Make a local clone of the GitHub repository and make a change to the code.
 For example, you could add your favorite plugin or module.
 
 Make a new branch and then push to GitHub to open a pull request.
