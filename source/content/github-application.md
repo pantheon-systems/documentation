@@ -42,7 +42,7 @@ The first time you run this command, you will be prompted to authorize the GitHu
 
 ## Try the pull request workflow
 
-To get comfortable using the workflow, of this GitHub application, do a few practice pull requests.
+To get comfortable using the workflow, you might want to do a few practice pull requests.
 
 First, after the site is created, install the CMS (WordPress or Drupal) within the Dev environment.
 Then create the Test and Live environments.
