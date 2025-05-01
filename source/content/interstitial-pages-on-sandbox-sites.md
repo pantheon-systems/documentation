@@ -1,5 +1,5 @@
 ---
-title: Interstitial Pages on Sandbox Sites
+title: Interstitial Warning Pages on Sandbox Sites
 description: Visiting a page on a sandbox site will pop up a message informing the visitor that the site is not live.
 contenttype: [doc]
 innav: [true]

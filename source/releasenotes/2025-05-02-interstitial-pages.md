@@ -1,12 +1,12 @@
 ---
-title: Interstitial pages added to sandbox sites
+title: Interstitial warning pages added to sandbox sites
 published_date: "2025-05-02"
 categories: [security]
 ---
 
 Beginning May 6, 2025, newly created sandbox sites (sites not on a paid plan) will an interstitial page when a visitor loads a page for the first time.
 
-_todo: screenshot_
+_todo: screenshots_
 
 After clicking through this page, a cookie is set in the browser to prevent the interstitial page from showing again for the same visitor to the same environment for 24 hours.
 
