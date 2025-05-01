@@ -12,9 +12,10 @@ tags: [security]
 reviewed: "2025-05-01"
 ---
 
+
 Pantheon displays an interstitial page when a visitor attempts to access a sandbox site created after May 6th, 2025. This page informs the visitor that the site is in a sandbox and that they should be cautious about entering any personal information.
 
-_todo: add screenshot_
+![screenshot of warning message](../images/interstitial-warning-page-message.png)
 
 We show this message as a means of clarifying for visitors that the site is not live and to prevent confusion.
 This message also discourages abuse of the sandbox sites for spam, phishing, or other malicious purposes.
