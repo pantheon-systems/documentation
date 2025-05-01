@@ -6,7 +6,7 @@ categories: [security]
 
 Beginning May 6, 2025, newly created [_sandbox_ sites](/guides/account-mgmt/plans/resources) will show an interstitial page when a visitor loads a page for the first time.
 
-![screenshot of warning message](../images/interstitial-warning-page-message.png)
+![screenshot of warning message](../images/interstitial-warning-message.png)
 
 After clicking through this page, a cookie is set in the browser to prevent the interstitial page from showing again for the same visitor to the same environment for 24 hours.
 
