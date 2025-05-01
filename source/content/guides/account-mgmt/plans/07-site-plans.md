@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/site-plans
 editpath: docs/guides/account-mgmt/plans/07-site-plans.md
-reviewed: "2024-08-07"
+reviewed: "2025-05-01"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -135,6 +135,28 @@ Pantheon Search and Object Cache are available to Sandbox plans for testing. Pan
 Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. Pantheon allocates two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live, or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more Sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
 
 To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/site-plans#cancel-your-plan).
+
+### Interstitial Warning Pages
+In order to inform visitors they are accessing a non-production sandbox site, and to discourage abuse of sandbox sites (spam, phishing, or other malicious purposes) - Pantheon displays an interstitial warning page for all newly created sandbox sites. 
+
+![screenshot of warning message](../../../../images/interstitial-warning-message.png)
+
+After clicking through this page, a cookie is set in the browser to prevent the interstitial page from showing again for the same visitor on a given environment for 24 hours.
+
+These pages show in all environments (Multidev, Dev, Test, and Live) for [_sandbox_ sites that have not upgraded to a paid plan](/guides/account-mgmt/plans/resources).
+Once a site is on a paid plan, this message will no longer show for any environment.
+
+#### Bypassing the interstitial page with an HTTP header during automated testing
+
+If you are using a automated testing tool that requires access to the sandbox site, you can add an HTTP header of `Deterrence-Bypass` to your request to bypass the interstitial page.
+
+For example, if you are testing a site with Playwright, you can add the following to your test script:
+
+```javascript
+await page.setExtraHTTPHeaders({
+  'Deterrence-Bypass': 'true',
+});
+```
 
 ## Change Your Plan
 
