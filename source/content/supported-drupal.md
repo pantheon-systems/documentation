@@ -97,7 +97,7 @@ This includes security patches and compatibility updates to community-contribute
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
 * (Recommended) Not a requirement, but we strongly recommend updating all contrib modules to their latest versions as well. 
 
-##### D7ES Usage
+##### Tag1 D7ES Module Usage
 
 By enabling this module and configuring the opt-in, your site’s list of contrib modules will be automatically submitted for D7ES security coverage. You will receive email notifications of D7 core & installed contrib module security and compatibility updates. 
 
@@ -155,6 +155,9 @@ The notification email will include the fully updated module package in tarball 
 
 </TabList>
 
+##### Tag1 D7ES Support
+
+If you encounter issues with the patched version of a contrib module provided by the Tag1 D7ES service, please contact Tag1 support by emailing <a href="mailto:d7es@tag1consulting.com">d7es@tag1consulting.com</a>.
 
 ## Drush version support
 
