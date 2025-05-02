@@ -10,7 +10,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2025-01-14"
+reviewed: "2025-05-02"
 ---
 
 The following table indicates availability of the specified Drupal versions, as well as our usage recommendations and our support scope.
@@ -155,9 +155,9 @@ The notification email will include the fully updated module package in tarball 
 
 </TabList>
 
-##### Tag1 D7ES Support
+###### Tag1 D7ES Module Support
 
-If you encounter issues with the patched version of a contrib module provided by the Tag1 D7ES service, please contact Tag1 support by emailing <a href="mailto:d7es@tag1consulting.com">d7es@tag1consulting.com</a>.
+If you encounter issues with the patched version of a contrib module provided by the Tag1 D7ES service, please reach out to Tag1 support at [d7es@tag1consulting.com](mailto:d7es@tag1consulting.com).
 
 ## Drush version support
 
