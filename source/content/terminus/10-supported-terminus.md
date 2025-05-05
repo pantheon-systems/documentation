@@ -23,6 +23,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version          | Release Date       | EOL Date           |
 |------------------|--------------------|--------------------|
+| 4.0.0            | May 07, 2025       |                    |
 | 3.6.2            | March 03, 2025     |                    |
 | 3.6.1            | December 05, 2024  | March 03, 2026     |
 | 3.6.0            | September 19, 2024 | December 05, 2025  |
@@ -36,14 +37,14 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 ### PHP Version Compatibility Matrix
 
-| PHP Version |            Terminus 3.x            |
+| PHP Version |            Terminus 4.x            |
 | ---------- |:----------------------------------:|
+| 8.4 | <span style="color:green">✔</span> |
 | 8.3 | <span style="color:green">✔</span> |
 | 8.2 | <span style="color:green">✔</span> |
 | 8.1 | <span style="color:green">✔</span> |
 | 8.0 | <span style="color:green">✔</span> |
-| 7.4 | <span style="color:green">✔</span> |
-| 7.3 or earlier |                 ❌                  |
+| 7.4 or earlier |                 ❌                  |
 
 ## More Resources
 
