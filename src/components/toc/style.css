@@ -1,3 +1,12 @@
+@media screen and (max-width: 900px) {
+  .pds-sidebar-layout__content
+    #docs-main
+    .pds-sidebar-layout
+    .pds-sidebar-layout__side:has(.toc-placeholder) {
+    display: none;
+  }
+}
+
 .toc-placeholder {
   margin-block-end: var(--pds-spacing-4xs);
 }
@@ -42,7 +51,7 @@ ul.toc-list {
   row-gap: var(--pds-spacing-xs);
 }
 
-ul.toc-list .is-collapsible{
+ul.toc-list .is-collapsible {
   max-height: none;
 }
 
