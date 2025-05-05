@@ -42,9 +42,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 8.4 | <span style="color:green">✔</span> |
 | 8.3 | <span style="color:green">✔</span> |
 | 8.2 | <span style="color:green">✔</span> |
-| 8.1 | <span style="color:green">✔</span> |
-| 8.0 | <span style="color:green">✔</span> |
-| 7.4 or earlier |                 ❌                  |
+| 8.1 or earlier |                 ❌                  |
 
 ## More Resources
 
