@@ -1,6 +1,6 @@
 ---
 title: New Relic PHP agent v11.8.0.22 now available
-published_date: "2025-05-05"
+published_date: "2025-05-06"
 categories: [infrastructure, performance, tools-apis]
 ---
 
