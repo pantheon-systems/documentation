@@ -42,7 +42,7 @@ The following commands were removed from Terminus 4.0:
 - Removed `getOptionalSiteEnv` function from `SiteAwareTrait`: `getOptionalEnv` should be used instead.
 - Removed `getUnfrozenSiteEnv` function from `SiteAwareTrait`: `requireSiteIsNotFrozen` should be used instead.
 - When in interactive mode, if a command is missing a required argument, it will be interactively prompted.
-- Support for some EOL versions of PHP have been removed from Terminus 4. PHP 8.0 or later is required.
+- Support for some EOL versions of PHP have been removed from Terminus 4. PHP 8.2 or later is required.
 
 ## More Resources
 

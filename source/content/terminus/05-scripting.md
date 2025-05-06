@@ -74,7 +74,7 @@ This example assumes the variable `TERMINUS_SITE` is already set. You can iterat
 
 ## Interactive Prompts
 
-Commands that normally require user interaction must be bypassed with the appropriate flag. The flags `-y` or `--yes` will bypass requests to confirm actions for most Terminus commands.
+Commands that normally require user interaction must be bypassed with the appropriate flag. The flags `-y` or `--yes` will bypass requests to confirm actions for most Terminus commands. Also, `-n` flag could be used for non interactive mode.
 
 ## Example Bash Scripts
 
