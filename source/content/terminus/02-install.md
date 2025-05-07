@@ -55,7 +55,7 @@ Terminus does not work with the following platforms:
 
 Terminus 3.x is not compatible with PHP 8.4. If you are using PHP <= 8.3 you should use Terminus 3.x.
 
-Terminus 4.x is compatible with PHP 8.4 and can be installed now.
+Terminus 4.x is compatible with PHP 8.2+.
 
 </Alert>
 
