@@ -98,6 +98,7 @@ The commands below will:
 <TabList>
 
 <Tab title="PHP 8.4+" id="php84" active={true}>
+
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
 curl -L https://github.com/pantheon-systems/terminus/releases/download/4.0.0/terminus.phar --output terminus
@@ -105,9 +106,11 @@ chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
+
 </Tab>
 
 <Tab title="PHP 8.2/8.3" id="php82-83">
+
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
 curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.2/terminus.phar --output terminus
@@ -115,6 +118,7 @@ chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
+
 </Tab>
 
 </TabList>
