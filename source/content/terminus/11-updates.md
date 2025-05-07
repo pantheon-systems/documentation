@@ -23,4 +23,4 @@ integration: [--]
 ## More Resources
 
 - [Terminus Command Reference](/terminus/commands)
-- [Terminus 3.0](/terminus/updates)
+- [Terminus 4.0](/terminus/updates)
