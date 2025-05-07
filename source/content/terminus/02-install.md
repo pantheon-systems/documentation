@@ -109,7 +109,7 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 
 </Tab>
 
-<Tab title="PHP 8.2/8.3" id="php82-83">
+<Tab title="PHP 8.3 and below" id="php83-">
 
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
