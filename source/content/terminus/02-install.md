@@ -123,8 +123,6 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 
 </TabList>
 
-<hr/>
-
 Update the [standalone Terminus PHAR](#windows-and-linux) installation to the newest version by running the command below:
 
 ```bash{promptUser: user}
