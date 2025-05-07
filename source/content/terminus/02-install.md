@@ -97,7 +97,7 @@ The commands below will:
 
 <TabList>
 
-<Tab title="PHP 8.4+" id="php84" active={true}>
+<Tab title="Terminus 4 (PHP 8.2+)" id="terminus4" active={true}>
 
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
@@ -109,7 +109,7 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 
 </Tab>
 
-<Tab title="PHP 8.3 and below" id="php83-">
+<Tab title="Terminus 3 (PHP 7.4-8.3)" id="terminus3">
 
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
