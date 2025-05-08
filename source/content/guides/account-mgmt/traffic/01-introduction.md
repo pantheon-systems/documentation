@@ -24,7 +24,7 @@ To access metrics for another environment, use the [Terminus](/terminus) `metric
 terminus metrics <site>.<env>
 ```
 ## Workspace Traffic Insights 
-The workspace site list provides a traffic column for high-level usage visibility across all sites. This data resets at the end of your billing cycle. 
+The workspace site list provides a traffic column for high-level usage visibility across all sites, showing data for the [**Site Visits**](#site-visits) traffic metric. This data resets at the end of your billing cycle. 
 
 ![](../../../../images/dashboard/new-dashboard/2025/workspace-site-list-traffic.png)
 

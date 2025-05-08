@@ -3,7 +3,7 @@ title: Site traffic now visible from workspace site list
 published_date: "2025-05-08"
 categories: [new-feature, user-interface]
 ---
-We've added a new **Traffic** column to the site list of workspaces, enabling clearer visibility into traffic usage across all sites. This data resets at the end of your billing period. 
+We've added a new **Traffic** column to the site list of workspaces, enabling clearer visibility into traffic usage across all sites. This data resets at the end of your billing period. The metric visualized in this context is [**Site Visits**](/guides/account-mgmt/traffic#site-visits). 
 
 ![Workspace site last tab showcasing new traffic column](../images/dashboard/new-dashboard/2025/workspace-site-list-traffic.png)
 
