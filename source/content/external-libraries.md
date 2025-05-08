@@ -81,7 +81,7 @@ The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadat
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
-See the [Solr for Drupal](/guides/solr-drupal) guide for instructions on using Apache Tika with Pantheon Drupal sites.
+See the [Solr for Drupal](/guides/solr-drupal) guide for instructions on using Apache Tika with Pantheon Drupal sites. Currently Tika 1.21 is available.
 
 There are no known plugins in the WordPress.org repository that will enable the use of Tika.
 
@@ -89,7 +89,6 @@ There are no known plugins in the WordPress.org repository that will enable the 
 
 Pantheon also supplies the following older version of Tika:
 
-- `/srv/bin/tika-app-1.21.jar`
 - `/srv/bin/tika-app-1.18.jar`
 
 Sites that are using an old version of Tika should be upgraded to the supported path as soon as possible.
