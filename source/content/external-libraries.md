@@ -94,6 +94,18 @@ Pantheon also supplies the following older version of Tika:
 
 Sites that are using an old version of Tika should be upgraded to the supported path as soon as possible.
 
+## Tesseract OCR
+
+[Tesseract OCR](https://github.com/tesseract-ocr/tesseract) is an open-source optical character recognition (OCR) engine that can extract text from images. Tesseract 4.1.1 is currently available on the Pantheon platform at `/usr/bin/tesseract`.
+
+The installation includes the following components:
+- Tesseract 4.1.1
+- Leptonica 1.76.0
+
+### Drupal Tesseract Integration
+
+Right now Tika does not use Tesseract, to use it with Drupal, you can call the Tesseract binary directly using PHP's `exec()` or `shell_exec()` functions, pointing to the binary location `/usr/bin/tesseract`.
+
 ## ImageMagick
 
 [ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php), [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
