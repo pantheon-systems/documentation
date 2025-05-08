@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/site-plans
 editpath: docs/guides/account-mgmt/plans/07-site-plans.md
-reviewed: "2025-05-01"
+reviewed: "2025-05-08"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -137,7 +137,7 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/site-plans#cancel-your-plan).
 
 ### Interstitial Warning Pages
-In order to inform visitors they are accessing a non-production sandbox site, and to discourage abuse of sandbox sites (spam, phishing, or other malicious purposes) - Pantheon displays an interstitial warning page for all newly created sandbox sites. 
+In order to inform visitors they are accessing a non-production sandbox site, and to discourage abuse of sandbox sites (spam, phishing, or other malicious purposes) - Pantheon displays an interstitial warning page for all sandbox sites.
 
 ![screenshot of warning message](../../../../images/interstitial-warning-message.png)
 
