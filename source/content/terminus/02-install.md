@@ -37,7 +37,7 @@ Terminus does not work with the following platforms:
 </Accordion>
 
 **Terminus requires the following:**
-- PHP Version 7.4 or later
+- PHP Version 8.2 or later
   - You can check your PHP version by running `php -v` from a terminal application.
   - You must have the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php) for:
      - mbstring
@@ -53,9 +53,9 @@ Terminus does not work with the following platforms:
 
 <Alert title="PHP 8.4 and Terminus" type="danger">
 
-The current stable version of Terminus, 3.x, is not compatible with PHP 8.4. We recommend using PHP 8.3 for Terminus 3.x.
+Terminus 3.x is not compatible with PHP 8.4. If you are using PHP <= 8.1 you should use Terminus 3.x.
 
-Terminus 4.x is compatible with PHP 8.4 and can be installed directly from [a `phar` file](/release-notes/2025/03/terminus-4-0-0-alpha1).
+Terminus 4.x is compatible with PHP 8.2+.
 
 </Alert>
 
@@ -95,6 +95,22 @@ The commands below will:
 - Make the file executable
 - Add a symlink to your local `bin` directory for the Terminus executable
 
+<TabList>
+
+<Tab title="Terminus 4 (PHP 8.2+)" id="terminus4" active={true}>
+
+```bash{promptUser: user}
+mkdir -p ~/terminus && cd ~/terminus
+curl -L https://github.com/pantheon-systems/terminus/releases/download/4.0.0/terminus.phar --output terminus
+chmod +x terminus
+./terminus self:update
+sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+```
+
+</Tab>
+
+<Tab title="Terminus 3 (PHP 7.4-8.3)" id="terminus3">
+
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
 curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.2/terminus.phar --output terminus
@@ -102,7 +118,10 @@ chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
-<hr/>
+
+</Tab>
+
+</TabList>
 
 Update the [standalone Terminus PHAR](#windows-and-linux) installation to the newest version by running the command below:
 

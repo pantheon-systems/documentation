@@ -54,7 +54,7 @@ The first step to importing your Drush archive is to generate the Drush archive 
 
 ## Install Terminus
 
-Install [Terminus 3](/terminus/terminus-3-0).
+Install [Terminus 4](/terminus/terminus-4-0).
 
 ## Import Your Archive
 
