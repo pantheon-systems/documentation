@@ -4,7 +4,7 @@ published_date: "2025-05-01"
 categories: [security]
 ---
 
-_**Editorial note**: As of May 8, 2025, this release note has been edited to no longer specify "newly created" sandbox sites - as this change now applies to all sandbox sites regardless of when the site was created.
+_**Editorial note**: As of May 8, 2025, this release note has been edited to no longer specify "newly created" sandbox sites - as this change now applies to all sandbox sites regardless of when the site was created._
 
 Beginning May 6, 2025, [_sandbox_ sites](/guides/account-mgmt/plans/site-plans#sandbox-sites) will show an interstitial page when a visitor loads a page for the first time.
 
