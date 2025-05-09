@@ -63,7 +63,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
  Or for WordPress Multisites:
 
  ```bash{promptUser: user}
- terminus wp <site>.<env> -- plugin install --activate --network solr-power
+ terminus wp <site>.<env> -- plugin install solr-power --activate-network
  ```
 
 1. Open your WordPress Dashboard, navigate to **Solr Power** (previously under **Settings**), and then select the **Info** tab to see your site's Solr Server details.

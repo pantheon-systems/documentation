@@ -46,33 +46,15 @@ Run [Composer](https://getcomposer.org/) commands on Pantheon sites.
 
   </Card>
 
-<Card title={"Drupal Console"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-drupal-console-plugin"}>
-
-Run Drupal Console commands on Pantheon sites.
-
-  </Card>
-
   <Card title={"Filer"} author={"Sean Dietrich"} authorLink={"https://github.com/sean-e-dietrich"} link={"https://github.com/terminus-plugin-project/terminus-filer-plugin"}>
 
 Open SFTP Connections to your Pantheon Sites.
 
   </Card>
 
-  <Card title={"Front-End Sites"} isOfficial author={"Pantheon Decoupled Kit"}  link={"/guides/decoupled/overview/site-options#terminus-plugin"}>
-
-  Create your Front-End Sites project with the Terminus Decoupled Kit plugin. You must enroll in our [Front-End Sites Early Access program](https://pantheon.io/features/decoupled-cms) before you can use Front-End Sites and this plugin.
-
-  </Card>
-
   <Card title={"Mass Update"} isOfficial author={"Ronan Dowling"} authorLink={"https://github.com/ronan"} link={"https://github.com/pantheon-systems/terminus-mass-update"}>
 
 Apply upstream updates to a list of sites.
-
-  </Card>
-
-  <Card title={"New Relic"} isOfficial author={"Paul Jebulan de Paula"} authorLink={"https://github.com/fusionx1"} link={"https://github.com/pantheon-systems/terminus-newrelic-data-plugin"}>
-
-Fetch metric data from the New Relic API.
 
   </Card>
 
