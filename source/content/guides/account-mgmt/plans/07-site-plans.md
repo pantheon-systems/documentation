@@ -154,7 +154,7 @@ For example, if you are testing a site with Playwright, you can add the followin
 
 ```javascript
 await page.setExtraHTTPHeaders({
-  'Deterrence-Bypass': 'true',
+  'Deterrence-Bypass': '1',
 });
 ```
 
