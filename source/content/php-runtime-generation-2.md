@@ -13,7 +13,7 @@ integration: [--]
 
 ## Overview
 
-A new generation of our Serverless PHP Runtime is now available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
+A new generation of our Serverless PHP Runtime is available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
 
 Depending on your website's features, this change may have major effects on the compatibility of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be deprecated in 2026.
 
