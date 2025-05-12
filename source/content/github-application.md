@@ -14,10 +14,10 @@ reviewed: "2025-04-15"
 
 ---
 
-Pantheon's GitHub application directly integrates a GitHub repository with a Pantheon site.
+Pantheon's GitHub Application directly integrates a GitHub repository with a Pantheon site.
 This allows you to use GitHub as your code repository while still using Pantheon to run your site.
 
-The GitHub application is currently in private Beta. [Request access for your Pantheon workspace here](https://docs.google.com/forms/d/e/1FAIpQLSf0vYrRbPQBxR-hT8kGJ4bEdYPtpkTtfDvPM89xD2dNZeqLqA/viewform).
+The GitHub Application is currently in private Beta. [Request access for your Pantheon workspace here](https://docs.google.com/forms/d/e/1FAIpQLSf0vYrRbPQBxR-hT8kGJ4bEdYPtpkTtfDvPM89xD2dNZeqLqA/viewform).
 
 Once turned, on this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
 
