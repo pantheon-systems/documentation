@@ -19,7 +19,7 @@ This allows you to use GitHub as your code repository while still using Pantheon
 
 The GitHub application is currently in private Beta. [Request access for your Pantheon workspace here](https://docs.google.com/forms/d/e/1FAIpQLSf0vYrRbPQBxR-hT8kGJ4bEdYPtpkTtfDvPM89xD2dNZeqLqA/viewform).
 
-Once turned, on this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
+Once configured, this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
 
 ![Deploying a PR to a Pantheon Multidev](../images/github-app/diagram--deploying-pr.png)
 
