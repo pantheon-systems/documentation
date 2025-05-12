@@ -30,15 +30,7 @@ Merging pull requests, or pushing code to the main branch of the GitHub reposito
 
 ## Creating a new site
 
-The GitHub application works with newly created Pantheon sites and GitHub repositories.
-Before the application is made generally available, it will not work with existing Pantheon sites or GitHub repositories.
-
-To create a new site to correspond to a new GitHub repository, you will need to use [Terminus](https://pantheon.io/docs/terminus) to create the site and the GitHub repository.
-If you already have Terminus installed, double check to ensure that you are running version 3.X.X or higher. (TODO, confirm version number before publishing)
-You can check your version by running the command `terminus --version`.
-
-Run `terminus site:create` with the `--????` flag to create a new site and GitHub repository.
-The first time you run this command, you will be prompted to authorize the GitHub application to access your GitHub account.
+Once accepted into the private Beta, you will be given access to a private Terminus plugin to enable site creation with the GitHub Application.
 
 ## Try the pull request workflow
 
@@ -54,45 +46,39 @@ For example, you could add your favorite plugin or module.
 
 Make a new branch and then push to GitHub to open a pull request.
 
-Once the pull request is open, the GitHub application will automatically create a new Multidev environment on Pantheon.
+Once the pull request is open, the GitHub Application will automatically create a new Multidev environment on Pantheon.
 
 When the Multidev environment is created, you will be able to see it in the Pantheon dashboard.
 Verify that your change is working by visiting the Multidev environment URL.
 
 ### Merge the pull request
 
-Once you are happy with the change, you can merge the pull request and the GitHub application will automatically deploy the code to the Pantheon Dev environment.
+Once you are happy with the change, you can merge the pull request and the GitHub Application will automatically deploy the code to the Pantheon Dev environment.
 
-## Asumptions of GitHub application
+## Asumptions of GitHub Application
 
 ### Multidev is available at to customers with Gold or higher plans
 
-This GitHub application is designed to work with Multidev environments. Multidev is available to customers on [Gold or higher plans](/guides/multidev). If you are on a lower plan, you can still use the GitHub application, but you will not be able to use the Multidev features.
+This GitHub Application is designed to work with Multidev environments. Multidev is available to customers on [Gold or higher plans](/guides/multidev). If you are on a lower plan, you can still use the GitHub Application, but you will not be able to use the Multidev features.
 
 ### Build processes happen on Pantheon
 
-Our separate [GitHub Action](/github-actions) is designed for more customized workflows that might involve building code elsewhere and deploying to Pantheon. The GitHub application is designed for teams that want to use Pantheon as their build server.
+Our separate [GitHub Action](/github-actions) is designed for more customized workflows that might involve building code elsewhere and deploying to Pantheon. The GitHub Application is designed for teams that want to use Pantheon as their build server.
 
 Currently, Pantheon executes a `composer install` command through our [Integrated Composer](/guides/integrated-composer) feature.
-If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use [our GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) now and [follow this item on our roadmap for eventual inclusion of such functionaity within a Pantheon-prodived build step](https://pantheon.productboard.com/detail/30103699).
+If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use [our GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) now and [follow this item on our roadmap for eventual inclusion of such functionality within a Pantheon-prodived build step](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
 
 ## Limitations prior to General Availability
 
-The GitHub application is currently in private Beta.
+The GitHub Application is currently in private Beta.
 
 We will address these limitaitons before the application is made generally available.
 
 ### Limited to new projects created by the Terminus
 
-Activating the GitHub Application presently runs through Terminus that creates a new site on Pantheon and a new GitHub repository. The GitHub application does not yet support retrofitting existing GitHub repositories or Pantheon sites yet.
+Activating the GitHub Application presently runs through a Terminus command that creates a new site on Pantheon and a new GitHub repository. The GitHub Application does not yet support retrofitting existing GitHub repositories or Pantheon sites.
 Follow [this issue](https://github.com/pantheon-systems/terminus/issues/2683) in the queue to find out when this limitation is removed.
 
 ### No On Server Development  (SFTP Mode)
 
-New sites made with the GitHub Application do not support "[SFTP Mode](/guides/sftp)" which allows version controlled files to be altered via SFTP or simply by the CMS changing files, as is common with operations like "drush config-export." We know this limitation will stop some teams from using this application and [we are seeking feedback on how important it is to support this style of working when using 3rd party repositories](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
-
-### No dashboard representation of Git commit log
-
-_Todo: explain this. Maybe add a screenshot_
-
-
+New sites made with the GitHub Application do not support "[SFTP Mode](/guides/sftp)" which allows version controlled files to be altered via SFTP or simply by the CMS changing files, as is common with operations like `drush config-export`. We know this limitation will stop some teams from using this application and [we are seeking feedback on how important it is to support this style of working when using 3rd party repositories](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
