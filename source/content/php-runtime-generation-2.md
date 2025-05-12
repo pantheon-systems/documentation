@@ -17,11 +17,11 @@ A new generation of our Serverless PHP Runtime is now available in beta. This up
 
 Depending on your website's features, this change may have major effects on the compatibility of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be deprecated in 2026.
 
-## Why Switch?
+## Why Upgrade?
 
-- Enhanced security features with a hardened operating system image
 - Long Term Support (LTS) coverage for EOL PHP versions
 - Better compatibility with updated PHP extensions
+- Enhanced security infrastructure
 - PHP 8.4 availability (coming soon)
 
 ## Opt-In Beta Phase (Q2 2025)
@@ -53,7 +53,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 | Phase | Date | Details |
 |-----------|------------------|--------------|
-| **Beta (Opt-in)** | April - July 2025 | Environments can be opted-in. All other environments will remain on the previous generation |
+| **Beta (Opt-in)** | May - July 2025 | Environments can be opted-in. All other environments will remain on the previous generation |
 | **Rollout (Opt-out)** | August-September 2025 | A slow rollout will auto-upgrade all sites to PHP Runtime Generation 2. Opting out via the `pantheon.yml` parameter will be available |
 | **Gen 1 Deprecation** | Q1 2026 | PHP Runtime Generation 1 will no longer be available - all remaining sites will be auto-upgraded |
 
@@ -90,7 +90,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.1<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
-Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by [filling this form](https://docs.google.com/forms/d/e/1FAIpQLSfbgXOPRq4ylGgtGLHsQ68dwc_11eUzO7Y2X6PjIB3oy9rUxA/viewform?usp=header) or contacting your Customer Success Manager.
+Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by contacting your Customer Success Manager or creating a support ticket.
 
 ### Networking
 
