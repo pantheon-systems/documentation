@@ -1,6 +1,6 @@
 ---
 title: PHP Runtime Generation 2 (Beta)
-description: The second generation of Pantheon's PHP runtime is now available with added security and updated extensions.
+description: The second generation of Pantheon's PHP runtime with added security and updated extensions.
 tags: [updates, libraries]
 contenttype: [doc]
 innav: [true]
