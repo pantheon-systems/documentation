@@ -21,16 +21,17 @@ The GitHub Application is currently in private Beta. [Request access for your Pa
 
 Once enabled, this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
 
-![Deploying a PR to a Pantheon Multidev](../images/github-app/diagram--deploying-pr.png)
+![Diagram of the GitHub application process of deploying a PR to a Pantheon Multidev](../images/github-app/diagram--deploying-pr.png)
 
-Merging pull requests, or pushing code to the main branch of the GitHub repository, will automatically deploy the code to the Pantheon development environment.
+Merging pull requests, or pushing code to the `main` branch of the GitHub repository, will automatically deploy the code to the Pantheon development environment.
 
-![Deploying main to Pantheon](../images/github-app/diagram--deploying-main.png)
+![Diagram of the GitHub application process of deploying main to Pantheon](../images/github-app/diagram--deploying-main.png)
 
 
 ## Creating a new site
 
 Once accepted into the private Beta, you will be given access to a private Terminus plugin to enable site creation with the GitHub Application.
+Usage instructions for the specific site creation commands are included in the README for the Terminus plugin.
 
 ## Try the pull request workflow
 
