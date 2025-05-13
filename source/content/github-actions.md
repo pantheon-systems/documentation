@@ -13,9 +13,8 @@ reviewed: "2025-04-15"
 
 ---
 
-Pantheon maintains multiple GitHub Actions for integrating with our platform.
+Pantheon maintains [multiple GitHub Actions](https://github.com/pantheon-systems/action-library) for integrating with our platform or designed for authors of WordPress plugins and other packages.
 This page focuses on the two actions most commonly used by web teams deploying to Pantheon.
-Separately, [we maintain multiple GitHub Actions meant for authors of WordPress plugins and other packages](https://github.com/pantheon-systems/action-library).
 
 ## Push to Pantheon
 
