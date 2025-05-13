@@ -18,7 +18,7 @@ This page focuses on the two actions most commonly used by web teams deploying t
 
 ## Push to Pantheon
 
-Our [Push to Pantheon](https://github.com/stevector/push-to-pantheon) Action handles the creation of [Multidev environments](https://docs.pantheon.io/guides/multidev) to correspond to GitHub pull requests and the pushing to Pantheon's Dev environment after merging of pull requests to a `main` branch.
+Our [Push to Pantheon](https://github.com/pantheon-systems/push-to-pantheon) Action handles the creation of [Multidev environments](https://docs.pantheon.io/guides/multidev) that correspond to GitHub pull requests and the pushes to Pantheon's Dev environment after merging pull requests to a `main` branch.
 
 
 When running workflow triggered by a pull request, this action will create a Multidev environment and deploy code to it.
