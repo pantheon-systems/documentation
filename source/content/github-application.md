@@ -45,7 +45,16 @@ Then create the Test and Live environments.
 Make a local clone of the GitHub repository and make a change to the code.
 For example, you could add your favorite plugin or module.
 
+```bash
+git clone git[@github](https://github.com/github).com:<your organization name>/<your site id>.git 
+```
+
 Make a new branch and then push to GitHub to open a pull request.
+
+```bash  
+git checkout -b <branch name>  
+git push --set-upstream origin <branch name>  
+```  
 
 Once the pull request is open, the GitHub Application will automatically create a new Multidev environment on Pantheon.
 
