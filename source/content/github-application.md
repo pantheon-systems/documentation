@@ -46,15 +46,15 @@ Make a local clone of the GitHub repository and make a change to the code.
 For example, you could add your favorite plugin or module.
 
 ```bash
-git clone git[@github](https://github.com/github).com:<your organization name>/<your site id>.git 
+git clone git[@github](https://github.com/github).com:<your organization name>/<your site id>.git
 ```
 
 Make a new branch and then push to GitHub to open a pull request.
 
-```bash  
-git checkout -b <branch name>  
-git push --set-upstream origin <branch name>  
-```  
+```bash
+git checkout -b <branch name>
+git push --set-upstream origin <branch name>
+```
 
 Once the pull request is open, the GitHub Application will automatically create a new Multidev environment on Pantheon.
 
@@ -92,3 +92,7 @@ Follow [this issue](https://github.com/pantheon-systems/terminus/issues/2683) in
 ### No On Server Development  (SFTP Mode)
 
 New sites made with the GitHub Application do not support "[SFTP Mode](/guides/sftp)" which allows version controlled files to be altered via SFTP or simply by the CMS changing files, as is common with operations like `drush config-export`. We know this limitation will stop some teams from using this application and [we are seeking feedback on how important it is to support this style of working when using 3rd party repositories](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
+
+## Support
+
+Before this functionality is made generally available, please direct questions and feedback to [the issue queue on the Terminus repository](https://github.com/pantheon-systems/terminus) rather than general support channels.
