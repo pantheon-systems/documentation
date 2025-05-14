@@ -21,7 +21,7 @@ image: buildToolsGuide-thumb.png
 
 ## What Is Build Tools?
 
-Build Tools connects Pantheon with your CI service and external Git provider. It also includes Composer support, Automated Testing, and best practice recommendations for your advanced [WebOps workflow](https://pantheon.io/webops). This is an extension of the [Pantheon WebOps workflow](/pantheon-workflow).
+Build Tools connects Pantheon with your CI service and external Git provider. It also includes Composer support, Automated Testing, and best practice recommendations for your advanced [Website Operations workflow](https://pantheon.io/webops). This is an extension of the [Pantheon WebOps workflow](/pantheon-workflow).
 
 ![Build Tools Structure diagram ](../../../images/pr-workflow/build-tools-structure-diagram.png)
 
