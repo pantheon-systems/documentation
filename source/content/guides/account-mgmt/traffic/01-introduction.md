@@ -6,7 +6,7 @@ tags: [traffic]
 contributors: [wordsmither]
 permalink: docs/guides/account-mgmt/traffic
 editpath: docs/guides/account-mgmt/traffic/01-introduction.md
-reviewed: "2024-03-28"
+reviewed: "2025-05-08"
 showtoc: true
 contenttype: [guide]
 innav: [true]
@@ -23,6 +23,10 @@ To access metrics for another environment, use the [Terminus](/terminus) `metric
 ```bash{promptUser: user}
 terminus metrics <site>.<env>
 ```
+## Workspace Traffic Insights 
+The workspace site list provides a traffic column for high-level usage visibility across all sites, showing data for the [**Site Visits**](#site-visits) traffic metric. This data resets at the end of your billing cycle. 
+
+![](../../../../images/dashboard/new-dashboard/2025/workspace-site-list-traffic.png)
 
 ## Access Metrics
 

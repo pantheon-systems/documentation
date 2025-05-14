@@ -74,9 +74,9 @@ const items = [
   },
 
   {
-    id: 'docs-terminus-terminus-3-0',
-    link: '/terminus/terminus-3-0',
-    title: 'Terminus 3',
+    id: 'docs-terminus-terminus-4-0',
+    link: '/terminus/terminus-4-0',
+    title: 'Terminus 4',
   },
 ];
 

@@ -1406,7 +1406,7 @@ WP Cerber is a premium security plugin (with a free version available) that is o
    - **Protect comment form**
    - **Protect other forms**
 
-  ![WP Cerber Anti-Spam Engine settings](../images/wordpress-known-issues/wp-cerber-anti-spam-settings.png)      
+  ![WP Cerber Anti-Spam Engine settings](../images/plugins-known-issues/wp-cerber-anti-spam-settings.png)
 
 1. In your Pantheon dashboard, clear the cache for the environment.
 
@@ -1542,13 +1542,13 @@ ___
 - Clean up temporary files
 - Lower the chunk size to fewer than 100 records:
 
-  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/wordpress-known-issues/wp-import-chunk-size.png)
+  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
 
 - Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 second platform PHP timeout.
 
 - Set the plugin to only process 1 record at a time:
 
-  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/wordpress-known-issues/wp-import-iterative.png)
+  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
 
 The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported.
 

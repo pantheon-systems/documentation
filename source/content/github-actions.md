@@ -13,23 +13,24 @@ reviewed: "2025-04-15"
 
 ---
 
-Pantheon maintains multiple GitHub Actions for integrating with our platform. This page focuses on the two actions most commonly used by web teams deploying to Pantheon. Separately, [we maintain multiple GitHub Actions mean for authors of WordPress plugins and other packages](https://github.com/pantheon-systems/action-library).
+Pantheon maintains [multiple GitHub Actions](https://github.com/pantheon-systems/action-library) for integrating with our platform or designed for authors of WordPress plugins and other packages.
+This page focuses on the two actions most commonly used by web teams deploying to Pantheon.
 
 ## Push to Pantheon
 
-Our [Push to Pantheon](https://github.com/stevector/push-to-pantheon) Action handles the creation of Multidev environments to correspond to GitHub pull requests and the pushing to Pantheon's Dev environment after merging of pull requests to a `main` branch.
+Our [Push to Pantheon](https://github.com/pantheon-systems/push-to-pantheon) Action handles the creation of [Multidev environments](https://docs.pantheon.io/guides/multidev) that correspond to GitHub pull requests and the pushes to Pantheon's Dev environment after merging pull requests to a `main` branch.
 
 
-When running workflow triggered by a pull request, this action will create a [Multidev environment](https://docs.pantheon.io/guides/multidev) and deploy code to it.
+When running workflow triggered by a pull request, this action will create a Multidev environment and deploy code to it.
 
-![Deploying a PR to a Pantheon Multidev](../images/github-action/diagram--deploying-pr.png)
+![Diagram of the Push to Pantheon process of deploying a PR to a Pantheon Multidev](../images/github-action/diagram--deploying-pr.png)
 
-When running on workflows triggered by merges/pushes to the `main` branch this action will deploy code to [the Pantheon `Dev` environment](https://docs.pantheon.io/pantheon-workflow).
+When running on workflows triggered by merges/pushes to the `main` branch (or whatever you name your default branch) this action will deploy code to [the Pantheon Dev environment](https://docs.pantheon.io/pantheon-workflow).
 
-<!-- These images are also in https://github.com/stevector/push-to-pantheon/tree/0.x/.github/documentation and https://docs.google.com/presentation/d/17k15auDrnpq2LdRC4P35dN5yJ4pOkPY62M7drBDkTCc/edit#slide=id.g32ed471dd64_0_2488 -->
-![Deploying main to Pantheon](../images/github-action/diagram--pushing-main.png)
+<!-- These images are also in https://github.com/pantheon-systems/push-to-pantheon/tree/0.x/.github/documentation and https://docs.google.com/presentation/d/17k15auDrnpq2LdRC4P35dN5yJ4pOkPY62M7drBDkTCc/edit#slide=id.g32ed471dd64_0_2488 -->
+![Diagram of the Push to Pantheon process of deploying main to Pantheon](../images/github-action/diagram--pushing-main.png)
 
-Here is an example of a complete GitHub Actions workflow file to deploy every pull request made on the repository for a WordPress or Drupal codebase to a Pantheon Multidev environment.
+Here is an example of a complete GitHub Actions workflow file to deploy every pull request made on the repository for a WordPress or Drupal site codebase to a Pantheon Multidev environment.
 
 ```yml
 name: Deploy PR to Pantheon
@@ -55,7 +56,7 @@ jobs:
         site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
 ```
 
-For more detailed guidance on usage of this Action including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme from the Action](https://github.com/pantheon-systems/push-to-pantheon).
+For more detailed usage guidance including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme file from the Action](https://github.com/pantheon-systems/push-to-pantheon).
 
 ## Install Terminus
 
