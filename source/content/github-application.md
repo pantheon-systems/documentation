@@ -95,4 +95,4 @@ New sites made with the GitHub Application do not support "[SFTP Mode](/guides/s
 
 ## Support
 
-Before this functionality is made generally available, please direct questions and feedback to [the issue queue on the Terminus repository](https://github.com/pantheon-systems/terminus) rather than general support channels.
+Before this functionality is made generally available, please direct questions and feedback to [the issue queue on the related Terminus plugin](https://github.com/pantheon-systems/terminus-repository-plugin) rather than general support channels.

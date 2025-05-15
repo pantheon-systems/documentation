@@ -1,6 +1,6 @@
 ---
 title: "Direct GitHub Integration - Now in Private Beta"
-published_date: "2025-05-13"
+published_date: "2025-05-15"
 categories: [new-feature, tools-apis]
 ---
 
@@ -16,7 +16,6 @@ The GitHub *Action* is intended for teams who want to make customization to thei
 
 ### **More information**
 
-* [Check out a blog post from Product Director Duncan Schouten for more on why we wanted to make this integration.](https://pantheon.io/blog/direct-github-integration-pantheons-new-application)
 * [See our documentation page for more instruction on usage and a breakdown of current limitations.](https://docs.pantheon.io/github-application)
-* For support and questions, please file issues on [the Terminus queue](https://github.com/pantheon-systems/terminus).
+* For support and questions, please file issues on [the queue of the related plugin](https://github.com/pantheon-systems/terminus-repository-plugin).
 * [For general feedback and to express interest in similar integrations with BitBucket, GitLab or other services, please see our roadmap.](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration)
