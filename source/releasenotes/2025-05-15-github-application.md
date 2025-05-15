@@ -16,6 +16,6 @@ The GitHub *Action* is intended for teams who want to make customization to thei
 
 ### **More information**
 
-* [See our documentation page for more instruction on usage and a breakdown of current limitations.](https://docs.pantheon.io/github-application)
+* [See our documentation page for more instruction on usage and a breakdown of current limitations](https://docs.pantheon.io/github-application).
 * For support and questions, please file issues on [the queue of the related plugin](https://github.com/pantheon-systems/terminus-repository-plugin).
-* [For general feedback and to express interest in similar integrations with BitBucket, GitLab or other services, please see our roadmap.](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration)
+* [For general feedback and to express interest in similar integrations with BitBucket, GitLab or other services, please see our roadmap](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
