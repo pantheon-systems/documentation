@@ -34,7 +34,7 @@ jobs:
 
 The Action can push code to the Pantheon Dev environment upon pull request merges (or direct pushes to a `main` branch).
 
-![Deploying main to Pantheon](../images/github-action/diagram--pushing-main.png?asdfasdf)
+![Deploying main to Pantheon](../images/github-action/diagram--pushing-main.png)
 
 See [the readme file within the repository](https://github.com/pantheon-systems/push-to-pantheon) for full usage instructions.
 
