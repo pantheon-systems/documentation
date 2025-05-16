@@ -2,7 +2,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -230,4 +230,11 @@ article {
   *:has(+ ul) {
     margin-bottom: 0;
   }
+}
+
+.sticky-wrapper {
+  position: sticky;
+  top: var(--pds-spacing-xl);
+  height: calc(100vh - var(--pds-spacing-4xl));
+  overflow-y: auto;
 }

@@ -1,3 +1,12 @@
+@media screen and (max-width: 900px) {
+  .pds-sidebar-layout__content
+    #docs-main
+    .pds-sidebar-layout
+    .pds-sidebar-layout__side:has(.toc-placeholder) {
+    display: none;
+  }
+}
+
 .toc-placeholder {
   margin-block-end: var(--pds-spacing-4xs);
 }
@@ -7,12 +16,11 @@
   font-family: var(--pds-typography-font-default);
   font-weight: var(--pds-typography-font-weight-regular);
   margin-block-start: var(--pds-spacing-xl);
-  max-height: calc(100vh - 40px);
   overflow: auto;
   position: sticky;
   position: -webkit-sticky;
   top: var(--pds-spacing-m);
-  width: 100%;
+  /* width: 100%; */
 }
 
 .toc-container a {
@@ -37,12 +45,18 @@ ul.toc-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  padding-inline-start: var(--pds-spacing-xl);
-  row-gap: var(--pds-spacing-m);
+  padding-inline-start: var(--pds-spacing-s);
+  padding-inline-end: var(--pds-spacing-2xs);
+  padding-block-end: var(--pds-spacing-s);
+  row-gap: var(--pds-spacing-xs);
+}
+
+ul.toc-list .is-collapsible {
+  max-height: none;
 }
 
 ul.toc-list ul {
-  padding-block-start: var(--pds-spacing-m);
+  padding-block-start: var(--pds-spacing-s);
 }
 
 ul.toc-list ul.is-collapsed {
