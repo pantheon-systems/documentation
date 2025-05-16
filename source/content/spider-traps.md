@@ -29,6 +29,8 @@ A spider trap typically arises on sites utilizing dynamic content features like 
 * Performance degradation affecting real users.
 * Potential downtime due to overwhelming system resources.
 
+For a broader overview of bots on the platform, including how to identify them in logs and how Pantheon handles indexing, refer to [Bots and Indexing on Pantheon](/bots-and-indexing).
+
 ### Strategies for Managing Spider Traps and Unwanted Crawlers
 
 Pantheon recommends several strategies for effectively handling spider traps and problematic AI-driven crawlers:
