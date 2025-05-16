@@ -1,6 +1,6 @@
 ---
-title: Your Guide to Launching with Pantheon
-subtitle: Review essential steps for launching your site on Pantheon.
+title: Launch Checklist
+subtitle: Launch Checklist
 description: Review essential steps for launching your site on Pantheon.
 tags: [collaborate, launch, site, webops, workflow]
 contributors: [stevector]
@@ -20,12 +20,16 @@ You've successfully set up your site and created your workflow. Now, it's time t
 
 **In this guide:**
 
+1. [Initialize the Live environment](/guides/getstarted/addsite/#create-the-live-environment)
 1. [Run Launch Check](#run-launch-check)
-2. [Configure Backups](#configure-backups)
-3. [Lock Sensitive Environments](#lock-sensitive-environments)
-4. [Choose a Site Plan](#choose-a-site-plan)
-5. [Custom Domains](#connect-and-configure-your-custom-domain)
-6. [More Resources](#additional-resources)
+1. [Configure Backups](#configure-backups)
+1. [Lock Sensitive Environments](#lock-sensitive-environments)
+1. [Choose a Site Plan](#choose-a-site-plan)
+1. [Connect Custom Domains](#connect-and-configure-your-custom-domain)
+
+[More Resources](#additional-resources)
+
+## Initialize the Live environment 
 
 ## Run Launch Check
 
