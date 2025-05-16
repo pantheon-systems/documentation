@@ -1,6 +1,6 @@
 ---
 title: "0.6.0 Release of the 'Push to Pantheon' GitHub Action"
-published_date: "2025-05-15"
+published_date: "2025-05-16"
 categories: [new-feature, tools-apis]
 ---
 
