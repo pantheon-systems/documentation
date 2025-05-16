@@ -57,6 +57,7 @@ const support = () => {
               'Load Testing Drupal and WordPress with BlazeMeter',
             ),
             simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+            simpleLink('/spider-traps', 'Spider Traps and Scrapers'),
           ],
         ),
       ]),
