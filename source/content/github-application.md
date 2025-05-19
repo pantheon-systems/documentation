@@ -65,7 +65,7 @@ Verify that your change is working by visiting the Multidev environment URL.
 
 Once you are happy with the change, you can merge the pull request and the GitHub Application will automatically deploy the code to the Pantheon Dev environment.
 
-## Asumptions of GitHub Application
+## Assumptions of GitHub Application
 
 ### Multidev is available at to customers with Gold or higher plans
 
