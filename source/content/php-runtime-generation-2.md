@@ -33,6 +33,8 @@ During the beta phase, you can opt in to test your sites on the new PHP runtime.
 - Identify any potential issues early
 - Provide valuable feedback to our team
 
+We currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
+
 ### How to Opt In
 
 To enable the second generation PHP runtime for an environment, add the following to your `pantheon.yml`:
@@ -113,6 +115,7 @@ To provide the most secure environment, sites running Drupal 7 or 8 may need upg
 
 - SFTP mode is currently unsupported. Git mode is available. 
 - Drupal 7 sites cannot access Solr services. An update to `drops-7` will be available soon.
+- ClamAV is currently unavailable.
 
 ## Reporting Issues
 
