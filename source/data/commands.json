@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.6.2"
+        "version": "4.0.1"
     },
     "commands": [
         {
@@ -12,8 +12,7 @@
                 "aliases Saves Pantheon Drush aliases for sites on which the currently logged-in user is on the team to ~\/.drush\/pantheon.aliases.drushrc.php.",
                 "aliases --print Displays Pantheon Drush 8 aliases for sites on which the currently logged-in user is on the team.",
                 "aliases --location=<full_path> Saves Pantheon Drush 8 aliases for sites on which the currently logged-in user is on the team to <full_path>.",
-                "drush:aliases",
-                "alpha:aliases"
+                "drush:aliases"
             ],
             "help": "Generates Pantheon Drush aliases for sites on which the currently logged-in user is on the team. Note that Drush 9 does not read alias files from global locations. You must set valid alias locations in your drush.yml file. Refer to https:\/\/docs.pantheon.io\/guides\/drush\/drush-aliases#manage-available-site-aliases-lists for more information.",
             "definition": {
@@ -295,7 +294,7 @@
             "usage": [
                 "completion [--debug] [--] [<shell>]"
             ],
-            "help": "The <info>completion<\/> command dumps the shell completion script required\nto use shell autocompletion (currently only bash completion is supported).\n\n<comment>Static installation\n-------------------<\/>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion bash | sudo tee \/etc\/bash_completion.d\/terminus.phar<\/>\n\nOr dump the script to a local file and source it:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion bash > completion.sh<\/>\n\n    <comment># source the file whenever you use the project<\/>\n    <info>source completion.sh<\/>\n\n    <comment># or add this line at the end of your \"~\/.bashrc\" file:<\/>\n    <info>source \/path\/to\/completion.sh<\/>\n\n<comment>Dynamic installation\n--------------------<\/>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~\/.bashrc\"<\/>):\n\n    <info>eval \"$(\/tmp\/update-tool\/terminus\/terminus.phar completion bash)\"<\/>",
+            "help": "The <info>completion<\/> command dumps the shell completion script required\nto use shell autocompletion (currently, bash, fish, zsh completion are supported).\n\n<comment>Static installation\n-------------------<\/>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion  | sudo tee \/etc\/bash_completion.d\/terminus.phar<\/>\n\nOr dump the script to a local file and source it:\n\n    <info>\/tmp\/update-tool\/terminus\/\/terminus.phar completion  > completion.sh<\/>\n\n    <comment># source the file whenever you use the project<\/>\n    <info>source completion.sh<\/>\n\n    <comment># or add this line at the end of your \"~\/.bashrc\" file:<\/>\n    <info>source \/path\/to\/completion.sh<\/>\n\n<comment>Dynamic installation\n--------------------<\/>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~\/.bashrc\"<\/>):\n\n    <info>eval \"$(\/tmp\/update-tool\/terminus\/terminus.phar completion )\"<\/>",
             "definition": {
                 "arguments": {
                     "shell": {
@@ -1912,7 +1911,7 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "[all|code|files|database|db] DEPRECATED Backup element filter",
+                        "description": "[all|code|files|database|db] Backup element filter",
                         "default": "all"
                     },
                     "format": {
@@ -4657,9 +4656,7 @@
                 "env:metrics <site>.<env> Displays metrics for <site>'s <env> environment.",
                 "env:metrics <site> Displays the combined metrics for all of <site>'s",
                 "env:metrics <site> --fields=datetime,pages_served Displays only the pages",
-                "metrics",
-                "alpha:env:metrics",
-                "alpha:metrics"
+                "metrics"
             ],
             "help": "Displays the pages served and unique visit metrics for the specified site environment. The most recent data up to the current day is returned.",
             "definition": {
@@ -12234,117 +12231,6 @@
             "hidden": false
         },
         {
-            "name": "service-level:set",
-            "description": "Upgrades or downgrades a site service level.",
-            "usage": [
-                "service-level:set <site_id> <level>",
-                "service-level:set <site> <service_level> Updates <site>'s service level to <service_level>."
-            ],
-            "help": "Upgrades or downgrades a site service level.",
-            "definition": {
-                "arguments": {
-                    "site_id": {
-                        "name": "site_id",
-                        "is_required": true,
-                        "is_array": false,
-                        "description": "Site name",
-                        "default": null
-                    },
-                    "level": {
-                        "name": "level",
-                        "is_required": true,
-                        "is_array": false,
-                        "description": "[free|basic|pro|business] Service level",
-                        "default": null
-                    }
-                },
-                "options": {
-                    "help": {
-                        "name": "--help",
-                        "shortcut": "-h",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
-                        "default": false
-                    },
-                    "quiet": {
-                        "name": "--quiet",
-                        "shortcut": "-q",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Do not output any message",
-                        "default": false
-                    },
-                    "verbose": {
-                        "name": "--verbose",
-                        "shortcut": "-v|-vv|-vvv",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
-                        "default": false
-                    },
-                    "version": {
-                        "name": "--version",
-                        "shortcut": "-V",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Display this application version",
-                        "default": false
-                    },
-                    "ansi": {
-                        "name": "--ansi",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Force (or disable --no-ansi) ANSI output",
-                        "default": null
-                    },
-                    "no-ansi": {
-                        "name": "--no-ansi",
-                        "shortcut": "",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Negate the \"--ansi\" option",
-                        "default": false
-                    },
-                    "no-interaction": {
-                        "name": "--no-interaction",
-                        "shortcut": "-n",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Do not ask any interactive question",
-                        "default": false
-                    },
-                    "define": {
-                        "name": "--define",
-                        "shortcut": "-D",
-                        "accept_value": true,
-                        "is_value_required": true,
-                        "is_multiple": true,
-                        "description": "Define a configuration item value.",
-                        "default": []
-                    },
-                    "yes": {
-                        "name": "--yes",
-                        "shortcut": "-y",
-                        "accept_value": false,
-                        "is_value_required": false,
-                        "is_multiple": false,
-                        "description": "Answer all confirmations with \"yes\"",
-                        "default": false
-                    }
-                }
-            },
-            "hidden": false
-        },
-        {
             "name": "site:create",
             "description": "Creates a new site.",
             "usage": [
@@ -16603,14 +16489,6 @@
             ]
         },
         {
-            "id": "alpha",
-            "commands": [
-                "alpha:aliases",
-                "alpha:env:metrics",
-                "alpha:metrics"
-            ]
-        },
-        {
             "id": "art",
             "commands": [
                 "art:list"
@@ -16894,12 +16772,6 @@
                 "self:plugin:upgrade",
                 "self:plugins",
                 "self:update"
-            ]
-        },
-        {
-            "id": "service-level",
-            "commands": [
-                "service-level:set"
             ]
         },
         {
