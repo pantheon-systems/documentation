@@ -4,7 +4,7 @@ published_date: "2025-05-22"
 categories: [drupal]
 ---
 
-A followup to [last week's update](/release-notes/2025/05/drops-7-solr-update) for Drupal 7's `pantheon_apachesolr` module has been released to the Drupal 7 upstream.
+A followup update to [last week's release](/release-notes/2025/05/drops-7-solr-update) for the Drupal 7 `pantheon_apachesolr` module is now available for the Drupal 7 upstream.
 
 This update resolves a regression with local development in version 1.1 of `pantheon_apachesolr`.
 
