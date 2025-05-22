@@ -11,6 +11,10 @@ product: [--]
 integration: [--]
 ---
 
+<Alert title="Warning" type="danger">
+We currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
+</Alert>
+
 ## Overview
 
 A new generation of our Serverless PHP Runtime is available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
@@ -32,8 +36,6 @@ During the beta phase, you can opt in to test your sites on the new PHP runtime.
 - Test your deployment workflows
 - Identify any potential issues early
 - Provide valuable feedback to our team
-
-We currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
 
 ### How to Opt In
 
