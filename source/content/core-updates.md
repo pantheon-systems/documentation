@@ -259,7 +259,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   ```bash{promptUser: user}
   git fetch pantheon-drupal
-  git rebase pantheon-drupal/master
+  git rebase pantheon-drupal/main
   ```
 
   </Tab>
