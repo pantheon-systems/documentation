@@ -11,6 +11,10 @@ product: [--]
 integration: [--]
 ---
 
+<Alert title="Warning" type="danger">
+We currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
+</Alert>
+
 ## Overview
 
 A new generation of our Serverless PHP Runtime is available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
@@ -113,6 +117,7 @@ To provide the most secure environment, sites running Drupal 7 or 8 may need upg
 
 - SFTP mode is currently unsupported. Git mode is available. 
 - Drupal 7 sites cannot access Solr services. An update to `drops-7` will be available soon.
+- ClamAV is currently unavailable.
 
 ## Reporting Issues
 
