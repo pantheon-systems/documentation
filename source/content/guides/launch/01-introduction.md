@@ -18,19 +18,6 @@ image: launchGuide-twitterLarge.png
 
 You've successfully set up your site and created your workflow. Now, it's time to go through the final steps to get your site live. This guide will show you how to create, configure, and launch your site on the Pantheon platform.
 
-**In this guide:**
-
-1. [Initialize the Live environment](/guides/getstarted/addsite/#create-the-live-environment)
-1. [Run Launch Check](#run-launch-check)
-1. [Configure Backups](#configure-backups)
-1. [Lock Sensitive Environments](#lock-sensitive-environments)
-1. [Choose a Site Plan](#choose-a-site-plan)
-1. [Connect Custom Domains](#connect-and-configure-your-custom-domain)
-
-[More Resources](#additional-resources)
-
-## Initialize the Live environment 
-
 ## Run Launch Check
 
 Before going live, use Pantheon’s Launch Check tool to identify and resolve common configuration or performance issues.
