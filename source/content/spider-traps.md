@@ -1,6 +1,7 @@
 ---
 title: Spider Traps and AI Scraping Bots
 description: Information on why bots get into loops indexing content, the impact on sites, and how to mitigate it.
+reviewed: "2025-05-28"
 tags: [measure, traffic]
 contenttype: [doc]
 showtoc: true
@@ -21,7 +22,7 @@ With the rapid adoption of AI and Large Language Model (LLM) technologies, websi
 
 These advanced crawlers can significantly affect your site’s performance and stability.
 
-### Understanding Spider Traps
+## Understanding Spider Traps
 
 A spider trap typically arises on sites utilizing dynamic content features like a search with filters. Each unique combination of search filters generates a distinct URL. Bots traversing these links can inadvertently trigger an exponential crawl, potentially generating hundreds of thousands of variations. This can lead to:
 
@@ -31,7 +32,7 @@ A spider trap typically arises on sites utilizing dynamic content features like 
 
 For a broader overview of bots on the platform, including how to identify them in logs and how Pantheon handles indexing, refer to [Bots and Indexing on Pantheon](/bots-and-indexing).
 
-### Strategies for Managing Spider Traps and Unwanted Crawlers
+## Strategies for Managing Spider Traps and Unwanted Crawlers
 
 Pantheon recommends several strategies for effectively handling spider traps and problematic AI-driven crawlers:
 

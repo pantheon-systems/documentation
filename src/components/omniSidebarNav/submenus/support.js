@@ -38,6 +38,13 @@ const support = () => {
         //simpleLink('/debug-slow-performance', 'Performance Troubleshooting', [
         simpleLink('/debug-slow-performance', 'Debugging Slow Performance'),
         simpleLink('/debug-cache', 'Debugging Caching'),
+
+        simpleLink('/bots-and-indexing', 'Bots and Indexing',
+          [
+          simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
+          simpleLink('/spider-traps', 'Spider Traps and Scrapers'),
+          ],
+        ),
         getGuideDirectory(
           'guides/new-relic',
           'New Relic Performance Monitoring',
@@ -48,16 +55,13 @@ const support = () => {
           'guides/frontend-performance',
           'Front End Performance',
         ),
-        simpleLink(
-          '/load-and-performance-testing',
-          'Load and Performance Testing',
+        simpleLink('/load-and-performance-testing', 'Load and Performance Testing',
           [
+            simpleLink('/load-and-performance-testing', 'Overview'),
             simpleLink(
               '/load-testing-with-blazemeter',
               'Load Testing Drupal and WordPress with BlazeMeter',
             ),
-            simpleLink('/bots-and-indexing', 'Bots and Indexing on Pantheon'),
-            simpleLink('/spider-traps', 'Spider Traps and Scrapers'),
           ],
         ),
       ]),
