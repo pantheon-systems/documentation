@@ -132,6 +132,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	1. Open your `pantheon.yml` file and modify the `object_cache` entry or add an `object_cache` entry if there is not one already such that your `pantheon.yml` file includes:
 
 	    ```yaml
+		api_version: 1
         object_cache:
           version: 6.2
         ```
