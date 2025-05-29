@@ -145,16 +145,16 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	
 	This will pull the Object Cache Pro license token directly into the `auth.json` file. You can open the `auth.json` file locally to ensure that it has a structure that looks like this:
 	
-		```json
-		{
-			"http-basic": {
-				"objectcache.pro": {
-					"username": "token",
-					"password": "<LICENSE-TOKEN>"
-				}
+	```json
+	{
+		"http-basic": {
+			"objectcache.pro": {
+				"username": "token",
+				"password": "<LICENSE-TOKEN>"
 			}
 		}
-		```
+	}
+	```
 
 	<Alert title="Note" type="info">
 	
