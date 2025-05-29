@@ -14,12 +14,19 @@ jobs:
 
       - name: Find invalid filenames in added/modified files
         run: |
-          git fetch origin ${{ github.base_ref }} --depth=1
-          git diff --name-only --diff-filter=A origin/${{ github.base_ref }} | grep '^source/releasenotes/' | while read -r file; do
+            git fetch origin ${{ github.base_ref }} --depth=1
+            git diff --name-only --diff-filter=A origin/${{ github.base_ref }} | grep '^source/releasenotes/' | while read -r file; do
             filename=$(basename "$file")
             name="${filename%.*}"  # Remove only the last extension
+            ext="${filename##*.}"
+            # Check for multiple dots in the filename (excluding extension)
             if [[ "$name" == *.* ]]; then
-              echo "Invalid file: $file"
+              echo "Invalid file: $file (multiple dots in filename)"
               exit 1
             fi
-          done
+            # Check for missing .md extension
+            if [[ "$ext" != "md" ]]; then
+              echo "Invalid file: $file (missing .md extension)"
+              exit 1
+            fi
+            done
