@@ -23,7 +23,7 @@ You've successfully set up your site and created your workflow. Now, it's time t
 You can interact with the following checklist to mark steps as completed as you follow along, however progress is not saved and will reset on pageload. 
 <br/>
 <br/>
-Steps marked with an astrix character * indicate the task is required and cannot be skipped. All other steps are best practice recommendations, but optional.
+Steps marked with an asterisk character * indicate the task is required and cannot be skipped. All other steps are best practice recommendations, but optional.
 
 </Alert>
 
