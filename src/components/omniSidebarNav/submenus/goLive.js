@@ -6,6 +6,7 @@ const goLive = () => {
     title: 'Going Live',
     children: [
       simpleLink('/go-live', 'Overview'),
+      getGuideDirectory('guides/launch', 'Launch'),
       getGuideDirectory('guides/domains', 'Domains'),
       simpleLink('/dns-providers', 'DNS Providers', [
         simpleLink('/1-and-1', '1 & 1'),
@@ -20,7 +21,6 @@ const goLive = () => {
         simpleLink('/namecheap', 'Namecheap'),
         simpleLink('/network-solutions', 'Network Solutions'),
       ]),
-      getGuideDirectory('guides/launch', 'Launch'),
       simpleLink('/relaunch', 'Relaunch an existing site'),
       simpleLink('/http-to-https', 'Switching Sites from HTTP to HTTPS'),
     ],
