@@ -46,7 +46,11 @@ Run the command below to enable Redis via the command line with Terminus:
 terminus redis:enable <site>
 ```
 
-## Installation and Configuration for non-Composer WordPress Sites
+## Installation and Configuration
+
+<TabList>
+
+<Tab title="Standard WordPress" id="standard-wp" active={true}>
 
 1. Ensure that your site is on a paid Performance or Elite plan. This can be verified by navigating to your **Pantheon Site Dashboard**, selecting **Settings**, selecting **About Site**, and then looking at the **Service Level**.
 
@@ -102,27 +106,9 @@ terminus redis:enable <site>
 
 	 </Alert>
 
-### Database Cleanup (Required)
-By default, when Redis is not available on a WordPress site, WordPress stores [transient data](https://developer.wordpress.org/apis/transients/) in the database. Transients are bits of data that are intended to be stored _temporarily_ and then cleared automatically. When object caching like Redis is available, WordPress automatically stores transients into the object cache. However, after enabling Redis, any transients that previously existed in the database will not necessarily be cleared automatically, even when the cache is cleared. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+</Tab>
 
-Use the following script to cleanup cache tables in the database: 
-
-<Download file="wp-db-cleanup-cache-tables.sh" />
-
-```bash
-#!/bin/bash
-
-echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
-read SITE;
-
-echo 'Provide the environment name (multidev, dev, test, or live), then press [ENTER]:';
-read ENV;
-
-# Delete all transient options - these are now stored in Redis
-terminus wp $SITE.$ENV -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
-```
-
-## Installation and Configuration for Composer-Managed WordPress Sites
+<Tab title="Composer-based WordPress" id="wordpress-composer">
 
 Refer to the [official Object Cache Pro documentation](https://objectcache.pro/docs/composer-installation) for full configuration instructions.
 
@@ -132,6 +118,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	1. Open your `pantheon.yml` file and modify the `object_cache` entry or add an `object_cache` entry if there is not one already such that your `pantheon.yml` file includes:
 
 	    ```yaml
+		api_version: 1
         object_cache:
           version: 6.2
         ```
@@ -145,16 +132,16 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	
 	This will pull the Object Cache Pro license token directly into the `auth.json` file. You can open the `auth.json` file locally to ensure that it has a structure that looks like this:
 	
-		```json
-		{
-			"http-basic": {
-				"objectcache.pro": {
-					"username": "token",
-					"password": "<LICENSE-TOKEN>"
-				}
+	```json
+	{
+		"http-basic": {
+			"objectcache.pro": {
+				"username": "token",
+				"password": "<LICENSE-TOKEN>"
 			}
 		}
-		```
+	}
+	```
 
 	<Alert title="Note" type="info">
 	
@@ -311,6 +298,30 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
 1. See the ["Database Cleanup" section above](#database-cleanup-required) for steps on how to truncate the existing cache tables to make sure the latest data populates object cache properly.
+
+</Tab>
+
+</TabList>
+
+### Database Cleanup (Required)
+By default, when Redis is not available on a WordPress site, WordPress stores [transient data](https://developer.wordpress.org/apis/transients/) in the database. Transients are bits of data that are intended to be stored _temporarily_ and then cleared automatically. When object caching like Redis is available, WordPress automatically stores transients into the object cache. However, after enabling Redis, any transients that previously existed in the database will not necessarily be cleared automatically, even when the cache is cleared. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+
+Use the following script to cleanup cache tables in the database: 
+
+<Download file="wp-db-cleanup-cache-tables.sh" />
+
+```bash
+#!/bin/bash
+
+echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
+read SITE;
+
+echo 'Provide the environment name (multidev, dev, test, or live), then press [ENTER]:';
+read ENV;
+
+# Delete all transient options - these are now stored in Redis
+terminus wp $SITE.$ENV -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
+```
 
 ## Local configuration with Lando
 Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Redis in its Docker configuration. However, to get Object Cache Pro to work correctly with Lando locally, you'll need to make a few changes to your Object Cache Pro and Lando configuration.
