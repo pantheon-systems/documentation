@@ -24,10 +24,10 @@ These advanced crawlers can significantly affect your site’s performance and s
 
 ## Understanding Spider Traps
 
-A spider trap typically arises on sites utilizing dynamic content features like a search with filters. Each unique combination of search filters generates a distinct URL. Bots traversing these links can inadvertently trigger an exponential crawl, potentially generating hundreds of thousands of variations. This can lead to:
+Any site crawler’s primary goal is to scan the content on your website. The crawlers accomplish this by visiting your site and scanning a page for links it hasn’t visited yet, then repeating for the newly found pages and scanning for links again. This can be problematic on sites that utilize dynamic content features, such as search or filters, because each unique combination of search/filters generates a distinct URL.  Site crawlers get stuck scanning these dynamic pages in what is called a “spider trap”, which results in site crawlers scanning your site exponentially more times, potentially causing hundreds of thousands of hits or more, per-crawler. This can lead to:
 
 * Increased server load due to the high volume of uncached, resource-intensive requests.
-* Performance degradation affecting real users.
+* Real users experiencing degraded performance.
 * Potential downtime due to overwhelming system resources.
 
 For a broader overview of bots on the platform, including how to identify them in logs and how Pantheon handles indexing, refer to [Bots and Indexing on Pantheon](/bots-and-indexing).
