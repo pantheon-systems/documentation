@@ -2,7 +2,7 @@
 title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 tags: [security, dashboard, ssh]
-reviewed: "2025-02-11"
+reviewed: "2025-06-02"
 contenttype: [doc]
 innav: [true]
 categories: [security, git, config]
@@ -17,7 +17,7 @@ Interacting with remote Pantheon environments via Git, SFTP, WP-CLI, and Drush r
 
 Pantheon does not provide access to a shell environment over SSH. These directions allow you to authenticate operations on Pantheon like  Git, SFTP, WP-CLI or Drush via SSH keys.
 
-Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519` keys.
+Pantheon supports ECDSA and RSA key types. [For ECDSA keys, only the 256 bit key size is compatible](#ecdsa-key-support). Currently, we do not support `ed25519` keys.
 
 </Alert>
 
@@ -184,6 +184,47 @@ Removing SSH keys is separate from [revoking the machine tokens used by Terminus
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
+
+### ECDSA Key Support
+
+<TabList>
+
+<Tab title="New Dashboard" id="phoebe-invalid-key-typoe" active={true}>
+
+
+The new dashboard will return the following error when attempting to add an **ECDSA** key with a keysize of either **384** or **521** bits: 
+
+```
+We ran into an unexpected error and your SSH key wasn't created. Please try again.
+```
+
+To resolve, generate and use a 256-bit ECDSA key instead: 
+
+```bash{promptUser: user}
+ssh-keygen -t ecdsa -b 256 
+```
+
+</Tab>
+<Tab title="Legacy Dashboard" id="hermes-invalid-key-type">
+
+The legacy dashboard will return the following error when attempting to add an **ECDSA** key with a keysize of either **384** or **521** bits: 
+
+```
+SSH validation failed: Unknown SSH key type 'ecdsa-sha2-nistp384'.
+```
+
+```
+SSH validation failed: Unknown SSH key type 'ecdsa-sha2-nistp521'.
+```
+
+To resolve, generate and use a 256-bit ECDSA key instead: 
+
+```bash{promptUser: user}
+ssh-keygen -t ecdsa -b 256 
+```
+
+</Tab>
+</TabList>
 
 ### Control Path Error
 
