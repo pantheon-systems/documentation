@@ -67,7 +67,7 @@ remote: Changes to `pantheon.yml` detected, but there was an error while process
 remote:
 remote: pantheon.yml:
 remote: Validation failed with error:
-remote: >   11 is not one of [5, 7, 8, 9, 10]
+remote: >   11 is not one of [8, 9, 10]
 remote:
 remote: while validating the following value:
 remote: >   11
@@ -117,16 +117,6 @@ Follow the steps below if you encounter `permission denied` errors when running 
     ```
 
 1. Commit and push this change to your Pantheon site.
-
-### Drush 5 on Older Sites
-
-Drupal sites created on Pantheon in late 2015 or earlier that do not have `drush_version` defined in `pantheon.yml` may default to Drush 5. In this case, you may see the following error:
-
-```bash
-{{Uncaught Error: Call to undefined function mysql_connect() in /etc/drush/drush-5-extensions/pantheon.drush.inc:127
-```
-
-Configure a newer version of Drush as [documented above](#configure-drush-version) to resolve this error.
 
 ## More Resources
 
