@@ -123,7 +123,7 @@ We are also happy to help developers learn the ins and outs of making their site
 
 ### Diamond Support Team
 
-Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's Diamond team can investigate misbehaving sites slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+Diamond Account customers get an extra level of assistance for their dev teams. Pantheon's Diamond team can investigate misbehaving sites slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance. This is a test edit.
 
 Our team has access to internal logging and monitoring, and is experienced with using New Relic to diagnose whether an issue is platform or site related.
 
