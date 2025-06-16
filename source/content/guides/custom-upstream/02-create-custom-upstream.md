@@ -250,7 +250,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
         - The latest version of Drupal on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
-    1. Change to the `composer.json` file in the `upstream-configuration` directory and use `composer require` to add packages to the Upstream, then set the `config version` to a number that makes sense for you:
+    1. Change to the `upstream-configuration` directory and use `composer require` to add packages to the Upstream `composer.json` file:
 
      ```bash{promptUser: user}
      cd upstream-configuration
