@@ -2,7 +2,7 @@
 title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 tags: [security, dashboard, ssh]
-reviewed: "2025-06-02"
+reviewed: "2025-06-17"
 contenttype: [doc]
 innav: [true]
 categories: [security, git, config]
@@ -184,6 +184,8 @@ Removing SSH keys is separate from [revoking the machine tokens used by Terminus
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
+
+<Partial file="ssh-ServerAliveInterval.md" />
 
 ### ECDSA Key Support
 
