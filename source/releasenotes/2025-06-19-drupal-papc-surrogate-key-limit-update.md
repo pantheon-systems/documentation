@@ -1,10 +1,10 @@
 ---
-title: Pantheon Advanced Page Cache Surrogate Key Limit Update
+title: Pantheon Advanced Page Cache Drupal Module Surrogate Key Limit Update
 published_date: "2025-06-19"
 categories: [drupal, modules]
 ---
 
-This update on the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) Drupal module focuses on improving the functionality of the surrogate key header limit in your local development environment.
+Version 2.3.3 of the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) Drupal module adds support for overriding the surrogate key header size limit to better support local development environments..
 
 **Key Update**
 Surrogate Key Header Limit Adjustment: To prevent header breaking and enhance the ease of work in your local environment, you now have the ability to override the surrogate key header limit. 
