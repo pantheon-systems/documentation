@@ -82,10 +82,11 @@ ___
 
 ## [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 
-<ReviewDate date="2024-01-09" />
+<ReviewDate date="2025-06-23" />
 
-**Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output. Since BigPipe provides no benefit on Pantheon sites, we recommend disabling it.
+**Issue**: The BigPipe module intercepts Drupal application requests, occasionally holding visitor sessions open indefinitely. On more complex Drupal applications, these open visitor sessions can result in a site's Redis layer experiecing memory exhaustion, cache corruption, and inability to serve web requests ("504 timeout" errors). Sites with BigPipe who are unable to serve web requests will also experience a lack of server-level traffic logs in the `nginx-access.log` file, and inhibiting traffic auditing. 
 
+**Solution**: Pantheon recommends disabling BigPipe for sites hosted on our platform. 
 ___
 
 ## [Boost](https://www.drupal.org/project/boost)
