@@ -49,7 +49,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Push to Pantheon
-      uses: pantheon-systems/push-to-pantheon@0.5.0
+      uses: pantheon-systems/push-to-pantheon@0.6.0
       with:
         ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
         machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
