@@ -9,7 +9,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2025-04-15"
+reviewed: "2025-06-24"
 
 ---
 
@@ -49,7 +49,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Push to Pantheon
-      uses: pantheon/push-to-pantheon@0.5.0
+      uses: pantheon-systems/push-to-pantheon@0.5.0
       with:
         ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
         machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
