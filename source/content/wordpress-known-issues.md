@@ -743,6 +743,16 @@ ___
 
 ___
 
+### MonsterInsights
+
+<ReviewDate date="2025-06-25" />
+
+**Issue:** [MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/) has been reported to be incompatible with Pantheon's edge caching when paired with certain WooCommerce integrations, breaking campaign tracking in Google Analytics.
+
+**Solution**: Customers have reported success using the [Beehive Analytics](https://wordpress.org/plugins/beehive-analytics/) plugin as an alternative.
+
+___
+
 ### New Relic Reporting for WordPress
 
 <ReviewDate date="2019-05-08" />
