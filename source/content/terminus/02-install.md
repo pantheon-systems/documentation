@@ -113,9 +113,8 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
-curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.2/terminus.phar --output terminus
-chmod +x terminus
-./terminus self:update
+curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.2/terminus.phar --output terminus3
+chmod +x terminus3
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
 
