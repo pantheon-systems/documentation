@@ -25,7 +25,6 @@ Depending on your website's features, this change may have major effects on the 
 
 - Long Term Support (LTS) coverage for EOL PHP versions
 - Better compatibility with updated PHP extensions
-- Enhanced security infrastructure
 - PHP 8.4 availability (coming soon)
 
 ## Opt-In Beta Phase (Q2 2025)
@@ -70,11 +69,11 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 |---------|---------|---------|
 | **OIC (Oracle Instant Client)** | Available for PHP 7.4-8.3 | Available for PHP 8.2-8.4 |
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Not available |
-| **wkhtmltopdf** | 0.12.5 available | Not available <sup>1</sup> |
-| **Apache Tika** | 1.18, v1.21 available | Coming soon |
+| **wkhtmltopdf** | 0.12.5 available | Replacement coming soon <sup>1</sup> |
+| **Apache Tika** | 1.18, 1.21 available | 1.18, 1.21, 3.2 coming soon |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> wkhtmltopdf is no longer supported by its maintainers. We are working on integrating a different solution for customers depending on this OS Package. <br />
+<sup>1</sup> wkhtmltopdf is no longer supported by its maintainers. We are working to offer a different solution for sites that use server-side PDF generation. <br /><br />
 
 ### PHP Extensions
 
@@ -104,19 +103,8 @@ Does your application require an OS package or PHP extension that is no longer a
 
 <sup>1</sup> Review the <a href="/tls-compatibility">TLS documentation</a> to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.<br /><br />
 
-### Drupal 7/8 Minor Version Requirements
-
-To provide the most secure environment, sites running Drupal 7 or 8 may need upgrading before switching to the new PHP runtime generation.
-
-| Drupal Major Version | Minimum Required Version |
-|---------|---------|---------|
-| Drupal 7.x | 7.58+ |
-| Drupal 8.x | 8.5.1+ |
-
 ## Known Issues
 
-- SFTP mode is currently unsupported. Git mode is available. 
-- Drupal 7 sites cannot access Solr services. An update to `drops-7` will be available soon.
 - ClamAV is currently unavailable.
 
 ## Reporting Issues
