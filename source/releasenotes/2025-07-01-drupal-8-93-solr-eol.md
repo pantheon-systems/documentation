@@ -14,7 +14,7 @@ To find out which version of Drupal your site is running, go to your site in the
 
 ## Action Required
 
-Affected Drupal 8.0-9.3 sites will need to be upgraded to Drupal 9.4+ and Solr 8. [Drupal core](https://docs.pantheon.io/guides/drupal-hosted-createdashboard-set8) and [Solr](/guides/solr-drupal/solr-drupal) upgrade guides are available in our documentation.
+Affected Drupal 8.0-9.3 sites will need to be upgraded to Drupal 9.4+, Solr 8, and [search_api_pantheon](https://www.drupal.org/project/search_api_pantheon) 8.2+. [Drupal core](https://docs.pantheon.io/guides/drupal-hosted-createdashboard-set8) and [Solr](/guides/solr-drupal/solr-drupal) upgrade guides are available in our documentation.
 
 Alternatively, Pantheon Search can be disabled and site owners may choose to implement Drupal’s built-in database search or another alternative.
 
