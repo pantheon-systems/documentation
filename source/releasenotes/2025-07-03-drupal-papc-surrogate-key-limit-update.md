@@ -9,7 +9,7 @@ Version 2.3.3 of the [Pantheon Advanced Page Cache](https://www.drupal.org/proje
 **Key Update**
 Surrogate Key Header Limit Adjustment: To prevent header breaking and enhance the ease of work in your local environment, you now have the ability to override the surrogate key header limit. 
 
-By default, this limit is set to 25,000 bytes. You can adjust this limit by adding the following line to your site's settings.php file:
+By default, this limit is set to 25,000 bytes. You can adjust this limit by adding the following line to your site's pantheon.yml file:
 
 ```
 $settings['pantheon_advanced_page_cache_header_limit'] = [your_desired_value];
