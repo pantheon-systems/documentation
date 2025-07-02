@@ -12,6 +12,6 @@ Surrogate Key Header Limit Adjustment: To prevent header breaking and enhance th
 By default, this limit is set to 0 bytes. You can adjust this limit by adding the following line to your site's settings.php file:
 
 ```
-$config['pantheon_advanced_page_cache.settings']['surrogate_key_header_limit'] = 1000;`
+$config['pantheon_advanced_page_cache.settings']['surrogate_key_header_limit'] = 1000;
 ```
 Please note that the maximum value for this setting is capped at 25,000 bytes. Adjust the value as needed to suit your local development requirements.
