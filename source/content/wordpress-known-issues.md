@@ -1087,7 +1087,7 @@ ___
 
 ### WooCommerce
 
-<ReviewDate date="2025-03-14" />
+<ReviewDate date="2025-07-02" />
 
 **Issue:** For the [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin, the "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
@@ -1109,7 +1109,40 @@ ___
 
 **Issue 3:** WooCommerce Cart Fragments break caching on [Pantheon's Global CDN](/guides/global-cdn). This may result in degraded performance and frequent 504 errors.
 
-**Solution:** Disable cart fragments. This may be accomplished with a plugin such as [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments/) or [Perfmatters](https://perfmatters.io/docs/disable-woocommerce-cart-fragments-ajax/).
+**Solution:** Disable cart fragments. This may be accomplished with a plugin from the WordPress repository, like [Disable Cart Fragments by Optimocha](https://wordpress.org/plugins/disable-cart-fragments/) or with a custom plugin like the following:
+
+<Download file="disable-woocommerce-cart-fragments.php" />
+
+```php
+<?php
+/**
+ * Plugin Name: Disable WooCommerce Cart Fragments
+ * Description: Disables WooCommerce cart fragments to improve site performance.
+ * Version: 1.0
+ * Author: Pantheon Professional Services
+ */
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+add_action( 'wp_enqueue_scripts', 'dcf_disable_cart_fragments', 11 );
+
+function dcf_disable_cart_fragments() {
+    // Check if WooCommerce is active
+    if ( function_exists( 'is_woocommerce' ) ) {
+
+	if ( ! is_cart() && ! is_checkout() ) {
+		wp_dequeue_script( 'wc-cart-fragments' );
+		wp_deregister_script( 'wc-cart-fragments' );
+		remove_action( 'wp_ajax_get_refreshed_fragments', 'wc_ajax_get_refreshed_fragments' );
+		remove_action( 'wp_ajax_nopriv_get_refreshed_fragments', 'wc_ajax_get_refreshed_fragments' );
+	}
+    }
+}
+```
+
 ___
 
 ### WooZone
