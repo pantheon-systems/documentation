@@ -25,9 +25,9 @@ Depending on your website's features, this change may have major effects on the 
 
 - Long Term Support (LTS) coverage for EOL PHP versions
 - Better compatibility with updated PHP extensions
-- PHP 8.4 availability (coming soon)
+- PHP 8.4 availability
 
-## Opt-In Beta Phase (Q2 2025)
+## Opt-In Beta Phase (April - August 2025)
 
 During the beta phase, you can opt in to test your sites on the new PHP runtime. The opt-in is environment-based, meaning you can trial the new PHP runtime without affecting your other environments. This allows you to:
 
@@ -85,12 +85,12 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **curl** | v7.61.1 | 7.88.1 |
 | **gd** | 2.1.0 | 2.3.3 |
 | **iconv** | 2.28 | 2.36 |
-| **mongodb** | 1.14 | 1.20 |
-| **openssl** | 1.1.1k | 3.0.15 |
-| **pdo_pgsql** | 13.5 | 15.12 |
+| **mongodb** | 1.14 | 2.1.0|
+| **openssl** | 1.1.1k | 3.0.16 |
+| **pdo_pgsql** | 13.5 | 15.13 |
 | **pdo_sqlite** | 3.26.0 | 3.40.1 |
-| **pgsql** | 13.5 | 15.12 |
-| **redis** | 5.3.7<br/>Compression types: zstd | 6.1<br/>Compression types: zstd, lzf, lz4 |
+| **pgsql** | 13.5 | 15.13 |
+| **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
 Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by contacting your Customer Success Manager or creating a support ticket.
@@ -106,6 +106,7 @@ Does your application require an OS package or PHP extension that is no longer a
 ## Known Issues
 
 - ClamAV is currently unavailable.
+- Object Cache Pro installation via Terminus is currently unavailable.
 
 ## Reporting Issues
 
