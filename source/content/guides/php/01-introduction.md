@@ -34,7 +34,7 @@ Click the links below to display complete PHP information for each version, incl
 | [7.3](https://v73-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 | [7.2](https://v72-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 
-While sites previously configured with unlisted versions of PHP may continue running those versions, new sites cannot change their PHP version to older, unlisted values.
+While sites previously configured with unlisted versions of PHP may continue running those versions, a site with a listed PHP version cannot be configured to an older, unlisted PHP version.
 
 ## Drush Compatibility
 
