@@ -16,4 +16,4 @@ All WordPress plugins and Drupal modules actively maintained by Pantheon have be
 * [Pantheon Advanced Page Cache (Drupal)](https://www.drupal.org/project/pantheon_advanced_page_cache)
 * [Pantheon Content Publisher (Drupal)](https://www.drupal.org/project/pantheon_content_publisher)
 
-PHP 8.4 is now available on the Pantheon platform. Learn more about upgrading.
+PHP 8.4 was recently made available on the Pantheon platform. [See the PHP 8.4 release note](#).
