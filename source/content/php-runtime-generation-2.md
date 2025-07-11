@@ -12,7 +12,7 @@ integration: [--]
 ---
 
 <Alert title="Warning" type="danger">
-We currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
+If your site uses Apache Tika, we currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
 </Alert>
 
 ## Overview
