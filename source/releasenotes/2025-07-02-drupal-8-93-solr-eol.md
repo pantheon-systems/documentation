@@ -1,6 +1,6 @@
 ---
 title: "Pantheon Search no longer available for Drupal 8.0-9.3 sites starting October 6, 2025"
-published_date: "2025-07-02"
+published_date: "2025-07-14"
 categories: [infrastructure, action-required, drupal, security]
 ---
 
