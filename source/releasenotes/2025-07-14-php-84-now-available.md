@@ -4,7 +4,7 @@ published_date: "2025-07-14"
 categories: [infrastructure, new-feature]
 ---
 
-Support for PHP 8.4 is now available on the platform, which provides developers the latest version of the server-side language powering Drupal and WordPress.
+Support for PHP 8.4 is now available on the platform with the new [PHP Runtime Generation 2](/php-runtime-generation-2). [PHP 8.4](https://www.php.net/releases/8.4/en.php) is the latest version of the server-side language powering Drupal and WordPress.
 
 ## CMS support
 
