@@ -31,10 +31,6 @@ There are two places a team can be defined: on a Professional Workspace, or in t
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU workspaces where members are allowed to spin up new Sandbox sites at will. However, in these workspaces, the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the workspace, only workspace admins are allowed to change service levels.
-
-If you are an administrator for a Pantheon workspace, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
-
 ### Workspace Level Permissions
 
 
@@ -73,6 +69,15 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:red">❌</span>  |
+
+#### User in Charge vs Site Owner
+<p><dfn id="site-owner">Site Owner</dfn> is a site level role for Self Serve customers paying by credit card. Billing for the site is tied to this role, with permissions to update payment methods or transfer site ownserhip and billing to another user. For more details, see <a href="/guides/account-mgmt/billing">Billing for Self-Serve Accounts</a>.</p>
+
+<p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise customers paying by contract. By default, it is set at site creation to the user account that created the site. This role is not tied to any billing for the site and does not have permission to manage site plans unless the user is also an administrator of the owning workspace. If you are an administrator for a Pantheon workspace, <a href="/guides/support/contact-support">contact support</a> to have the User in Charge changed on a given site.</p>
+
+Additionally, the following applies to either role: 
+- New Relic activation uses the associated email address for account creation. Once enabled, New Relic will send a email to this address for validation which much be completed in order to finish account setup. 
+- Pantheon Support uses the associated emaill address as the default point of contact and reaches out here first for any proactive support tickets. 
 
 
 ## Manage Teams
