@@ -1,6 +1,6 @@
 ---
 title: PHP 8.4 now available via PHP Runtime Generation 2
-published_date: "2025-07-14"
+published_date: "2025-07-15"
 categories: [infrastructure, new-feature]
 ---
 
