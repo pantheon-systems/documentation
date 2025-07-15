@@ -77,7 +77,7 @@ These tables detail the actions each role can execute on each Dashboard.
 
 Additionally, the following applies to either role based on the given billing scenario - where User in Charge email is used for contract customers and Site Owner email is used for self-serve customers: 
 - New Relic activation uses the associated email address for account creation. Once enabled, New Relic will send a email to this address for validation which much be completed in order to finish account setup. 
-- Pantheon Support uses the associated emaill address as the default point of contact and reaches out here first for any proactive support tickets. 
+- Pantheon Support uses the associated email address as the default point of contact and reaches out here first for any proactive support tickets.
 
 
 ## Manage Teams
