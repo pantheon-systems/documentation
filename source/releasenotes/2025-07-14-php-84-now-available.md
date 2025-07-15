@@ -34,5 +34,5 @@ PHP 8.4 is only available with the new [PHP Runtime Generation 2](/php-runtime-g
 
    ```yaml:title=pantheon.yml
    php_runtime_generation: 2
-   php: 8.4 
+   php_version: 8.4 
    ```
