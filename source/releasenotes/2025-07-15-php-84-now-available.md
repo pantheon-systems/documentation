@@ -32,7 +32,7 @@ PHP 8.4 is not expected to bring new performance gains for sites. But for develo
 
 PHP 8.4 is only available with the new [PHP Runtime Generation 2](/php-runtime-generation-2). To upgrade your site, set the following in your `pantheon.yml` file:
 
-   ```yaml:title=pantheon.yml
-   php_runtime_generation: 2
-   php_version: 8.4 
-   ```
+```yaml:title=pantheon.yml
+php_runtime_generation: 2
+php_version: 8.4 
+```
