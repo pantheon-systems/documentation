@@ -25,15 +25,16 @@ Click the links below to display complete PHP information for each version, incl
 
 | Version                                          | Available   | Recommended |
 | ------------------------------------------------ | :---------: | :---------: |
+| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> Drupal 10.4+, 11.1+ <br /><br />❌ WordPress          |
 | [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
-| [8.1](https://v81-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
+| [8.1](https://v81-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | ❌           |
 | [8.0](https://v80-php-info.pantheonsite.io/) | <span style="color:green">✔</span>         | ❌          |
 | [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌          |
 | [7.3](https://v73-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 | [7.2](https://v72-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 
-Sites that run older PHP versions not listed above will continue to serve pages. While older sites will still run unlisted and unsupported versions of PHP, new sites cannot change their PHP version to unsupported values. As of March 12, 2025, Pantheon [automatically upgraded sites running PHP 5.3 and 5.5 to PHP 5.6](/release-notes/2025/03/php-eol-53-55).
+While sites previously configured with unlisted versions of PHP may continue running those versions, a site with a listed PHP version cannot be configured to an older, unlisted PHP version.
 
 ## Drush Compatibility
 
