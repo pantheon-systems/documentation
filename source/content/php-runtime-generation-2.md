@@ -27,7 +27,7 @@ Depending on your website's features, this change may have major effects on the 
 - Better compatibility with updated PHP extensions
 - PHP 8.4 availability*
 
- * For CMS compatibility details, see [Supported PHP Versions](/guides/php#supported-php-versions).
+\* For CMS compatibility details, see [Supported PHP Versions](/guides/php#supported-php-versions).
 
 ## Opt-In Beta Phase (April - August 2025)
 
