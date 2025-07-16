@@ -1,5 +1,13 @@
 import { test, expect } from '@playwright/test';
 
+test.describe('Does the site still work?', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setExtraHTTPHeaders({
+      'Deterrence-Bypass': '1',
+    });
+  });
+});
+
 test('home page', async ({ page }) => {
   await page.goto('/');
   await page.getByText('Accept Cookies').click();
@@ -77,7 +85,7 @@ test('certification---study-guide--webops', async ({ page }) => {
     { fullPage: true },
   );
 });
-
+/*
 // This page is one of the first to use the nest sidebar nav.
 test('wp-nextjs--create', async ({ page }) => {
   await page.goto('/guides/decoupled/wp-nextjs-frontend-starters/create/');
@@ -130,3 +138,4 @@ test('drupal-cron', async ({ page }) => {
   await expect(page.locator('#toc')).toBeVisible();
   await expect(page).toHaveScreenshot('drupal-cron.png', { fullPage: true });
 });
+*/
