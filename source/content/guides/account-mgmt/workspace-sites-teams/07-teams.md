@@ -73,11 +73,11 @@ These tables detail the actions each role can execute on each Dashboard.
 #### User in Charge vs Site Owner
 <p><dfn id="site-owner">Site Owner</dfn> is a site level role tied to billing and ownership. <ul><li>For self-serve customers, the site owner is set to an individual user account. The site owner role grants permissions for billing, managing the site plan, updating payment methods, and transferring site ownership. See also <a href="/guides/account-mgmt/billing">Billing for Self-Serve Accounts</a></li><li> For Enterprise and EDU customers, the site owner is set to the Workspace responsible for billing. Users with the Administrator role within this Workspace will have billing permissions. See also <a href="/guides/enterprise-billing-center">Enterprise Billing Center</a></li></ul></p>
 
-<p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is mostly used by workspace admins to determine who created a given site, and is also used by Pantheon as the primary point of contact for proactive support tickets. This role is not tied to billing or ownership of the site and does not have permission to manage site plans unless the user is also an admin of the owning workspace. If you are an administrator for a Pantheon workspace, <a href="/guides/support/contact-support">contact support</a> to have the User in Charge changed on a given site.</p>
+<p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is used by Workspaces to determine who created the site. This role does not grant permissions for billing, changing site ownershipship, nor managing the site plan, unless the user is also an Administrator of the owning Workspace. If you are an Administrator for a Workspace and want to change the User in Charge on a site, please <a href="/guides/support/contact-support">contact support</a>.</p>
 
-Additionally, the following applies to either role based on the given billing scenario - where User in Charge email is used for Enterprise/EDU customers and Site Owner email is used for self-serve customers:
-- New Relic activation uses the associated email address for account creation. Once enabled, New Relic will send a email to this address for validation which much be completed in order to finish account setup. 
-- Pantheon Support uses the associated email address as the default point of contact and reaches out here first for any proactive support tickets.
+Pantheon uses the email address associated with the User in Charge (Enterprise and EDU customers) or Site Owner (self-serve customers) for the following two situations:
+- Activating New Relic will send a validation request to this email address, which much be completed in order to finish account setup. 
+- Pantheon Support will use this email address as the default point of contact for any proactive support tickets about the site.
 
 
 ## Manage Teams
