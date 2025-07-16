@@ -1,13 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Does the site still work?', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.setExtraHTTPHeaders({
-      'Deterrence-Bypass': '1',
-    });
-  });
-});
-
 test('home page', async ({ page }) => {
   await page.goto('/');
   await page.getByText('Accept Cookies').click();

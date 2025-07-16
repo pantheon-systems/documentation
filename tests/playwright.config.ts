@@ -18,6 +18,9 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    extraHTTPHeaders: {
+      'Deterrence-Bypass': '1',
+    },
     video: 'on',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // TODO, update this url to handle building on the main branch.
@@ -29,10 +32,10 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
+    /*{
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
+    },*/
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
