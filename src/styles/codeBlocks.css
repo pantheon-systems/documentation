@@ -110,6 +110,7 @@ pre > code {
 
 .gatsby-highlight code {
   padding: 0;
+  margin-inline: 0;
 }
 
 .gatsby-highlight {
