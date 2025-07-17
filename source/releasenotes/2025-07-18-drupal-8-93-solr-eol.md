@@ -1,10 +1,10 @@
 ---
 title: "Pantheon Search no longer available for Drupal 8.0-9.3 sites starting October 6, 2025"
-published_date: "2025-07-14"
+published_date: "2025-07-18"
 categories: [infrastructure, action-required, drupal, security]
 ---
 
-As part of our ongoing platform maintenance and security improvements, sites on the platform running Drupal 8.0-9.3 will no longer be able to access [Pantheon Search services](/solr) (Apache Solr-based search) starting October 6, 2025. 
+As part of our ongoing platform maintenance and security improvements, sites on the platform running Drupal 8.0-9.3 will no longer be able to access [Pantheon Search services](/solr) (Apache Solr-based search) starting October 21, 2025. 
 
 After this date, affected sites will not be able to fetch Solr search results or index new content. Views or blocks that rely on Solr-powered Search API indexes may fail to load, return no results, or throw errors.
 
@@ -16,5 +16,5 @@ To find out which version of Drupal your site is running, go to your site in the
 
 Affected Drupal 8.0-9.3 sites will need to be upgraded to Drupal 9.4+, Solr 8, and [search_api_pantheon](https://www.drupal.org/project/search_api_pantheon) 8.2+. [Drupal core](/guides/drupal-hosted-createdashboard-set8) and [Solr](/guides/solr-drupal/solr-drupal) upgrade guides are available in our documentation.
 
-Alternatively, Pantheon Search can be disabled and site owners may choose to implement Drupal’s built-in database search or another alternative such as a third-party search service provider like [SearchStax](https://www.searchstax.com/).
+Alternatively, Pantheon Search can be disabled and site owners may choose to implement Drupal’s built-in database search or another alternative such as a third-party search service provider.
 
