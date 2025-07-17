@@ -108,6 +108,10 @@ pre > code {
   font-weight: var(--pds-typography-font-weight-regular);
 }
 
+.gatsby-highlight code {
+  padding: 0;
+}
+
 .gatsby-highlight {
   margin-block-end: var(--pds-spacing-2xl);
 }
