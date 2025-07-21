@@ -10,8 +10,8 @@ audience: [development]
 product: [--]
 integration: [cron]
 tags: [cron]
-contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814]
-reviewed: "2022-04-27"
+contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814, jazzsequence]
+reviewed: "2025-07-21"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-cron
 ---
