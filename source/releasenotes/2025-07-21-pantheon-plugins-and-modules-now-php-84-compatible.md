@@ -1,6 +1,6 @@
 ---
 title: Pantheon Plugins and Modules Now PHP 8.4 Compatible
-published_date: "2025-07-16"
+published_date: "2025-07-21"
 categories: [wordpress, drupal, performance, compatibility]
 ---
 
@@ -16,4 +16,4 @@ All WordPress plugins and Drupal modules actively maintained by Pantheon have be
 * [Pantheon Advanced Page Cache (Drupal)](https://www.drupal.org/project/pantheon_advanced_page_cache)
 * [Pantheon Content Publisher (Drupal)](https://www.drupal.org/project/pantheon_content_publisher)
 
-PHP 8.4 is now available on the Pantheon platform. Learn more about upgrading.
+PHP 8.4 is now available on the Pantheon platform. [Learn more about the release](https://docs.pantheon.io/release-notes/2025/07/php-84-now-available).
