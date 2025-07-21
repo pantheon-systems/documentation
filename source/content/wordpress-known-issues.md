@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-02-14"
+reviewed: "2025-07-21"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -993,6 +993,8 @@ ___
 ___
 
 ### Tin Canny Reporting
+
+<ReviewDate date="2025-07-21" />
 
 **Issue:** [Tin Canny Reporting for LearnDash](https://www.uncannyowl.com/downloads/tin-canny-reporting/) contains a `rename()` PHP function which is [not supported on Pantheon](/guides/filesystem/files-directories#renamemove-files-or-directories). As a result, this plugin will not work on Pantheon.
 
