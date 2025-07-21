@@ -1,7 +1,7 @@
 ---
 title: Pantheon Plugins and Modules Now PHP 8.4 Compatible
 published_date: "2025-07-21"
-categories: [wordpress, drupal, performance, compatibility]
+categories: [wordpress, drupal, performance, plugins, modules]
 ---
 
 All WordPress plugins and Drupal modules actively maintained by Pantheon have been confirmed to be compatible with PHP 8.4. Most did not require any code updates to be compatible, so they did not receive a version bump.
