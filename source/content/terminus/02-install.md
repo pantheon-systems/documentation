@@ -71,15 +71,15 @@ While you can install Terminus using a PHAR as described in the [Windows and Lin
 
 1. Install OpenSSH via Homebrew by running the command below:
 
-```bash{promptUser: user}
-brew install openssh
-```
+  ```bash{promptUser: user}
+  brew install openssh
+  ```
 
 1. Install Terminus by running the command below:
 
-```bash{promptUser: user}
-brew install pantheon-systems/external/terminus
-```
+  ```bash{promptUser: user}
+  brew install pantheon-systems/external/terminus
+  ```
 
 <hr/>
 
