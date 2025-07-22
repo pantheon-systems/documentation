@@ -5,6 +5,7 @@ description:  Learn how to install and update Terminus to your local computer.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+contributors: [whitneymeredith,jazzsequence]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/install
 contenttype: [guide]
@@ -15,6 +16,7 @@ audience: [development]
 product: [terminus]
 integration: [--]
 showtoc: true
+reviewed: "2025-07-22"
 ---
 
 This page provides information on how to install, authenticate, and update Terminus.
