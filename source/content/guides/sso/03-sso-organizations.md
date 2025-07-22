@@ -66,11 +66,11 @@ You must enter the following:
 1. **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attributes `mail` to `user.email` and `user_name` to `user.email`.
 
 1. **Additional configuration details:**
+    * The `user_id` attribute must be configured to be sent manually. If this value is not already present, it should be set to match the `email` attribute.
     * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
     * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
     * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
     * The NameID format: `unspecified`
-    * The `user_id` attribute must be configured to be sent manually. If this value is not already present, it should be set to match the `email` attribute.
     * The SAML assertion, and the SAML response can be individually or simultaneously signed.
     * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
 
