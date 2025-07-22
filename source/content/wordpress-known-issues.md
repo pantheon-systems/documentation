@@ -706,6 +706,10 @@ Adjust the fix suggested by Jetpack, so that `$_SERVER['SERVER_PORT']` is used i
 define( 'JETPACK_SIGNATURE__HTTPS_PORT', $_SERVER['SERVER_PORT'] );
 ```
 
+**Issue 3:** Jetpack is a sophisticated plugin that detects test sites. It will turn on safe mode and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **Live** environment of your site and let it run in dev mode for your **Dev** and **Test** environments. For more information, see the [Jetpack documentation on Safe Mode]https://jetpack.com/support/safe-mode/).
+
+**Solution:** Use Jetpack's [Staging Mode](https://jetpack.com/support/staging-sites/) to prevent it from running in the Dev and Test environments. This requires that the `WP_ENVIRONMENT_TYPE` constant is correctly defined in your `wp-config.php` file. This is handled for you in the Pantheon [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L76-L91) and [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/config/application.pantheon.php#L23-L36) upstreams. It's recommended that you use the most recent version of the upstream to ensure that this is set correctly.
+
 ___
 
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
