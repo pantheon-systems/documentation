@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-02-14"
+reviewed: "2025-07-22"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -681,7 +681,7 @@ ___
 
 ### Jetpack
 
-<ReviewDate date="2022-03-09" />
+<ReviewDate date="2025-07-22" />
 
 **Issue 1:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
