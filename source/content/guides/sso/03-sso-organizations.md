@@ -72,7 +72,7 @@ You must enter the following:
     * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
     * The NameID format: `unspecified`
     * The SAML assertion, and the SAML response can be individually or simultaneously signed.
-    * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
+    * **Optional**: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
 
 
 ### Azure IdP Configuration
