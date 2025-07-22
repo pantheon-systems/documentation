@@ -61,13 +61,21 @@ Terminus 4.x is compatible with PHP 8.2+.
 
 </Alert>
 
-
-
 ## Installation and Update Methods
 ### macOS
-[Homebrew](https://brew.sh/), a package manager for MacOS, is the recommended installation method for MacOS. However, the method [described below](#windows-and-linux) for Windows and Linux can also be used by MacOS users who are not using Homebrew.
+[Homebrew](https://brew.sh/), a package manager for MacOS, is the recommended installation method for MacOS. As of May 2025, the built-in MacOS version of OpenSSH can cause issues with Terminus if a site being accessed is frozen. For this reason, we recommend installing OpenSSH and Terminus via Homebrew, described below. 
 
-Install Terminus by running the command below:
+While you can install Terminus using a PHAR as described in the [Windows and Linux section](#windows-and-linux), we still recommend using Homebrew for installing OpenSSH.
+
+1. If you do not have Homebrew installed, follow the instructions on the [Homebrew website](https://brew.sh/).
+
+1. Install OpenSSH via Homebrew by running the command below:
+
+```bash{promptUser: user}
+brew install openssh
+```
+
+1. Install Terminus by running the command below:
 
 ```bash{promptUser: user}
 brew install pantheon-systems/external/terminus
