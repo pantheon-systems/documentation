@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-07-21"
+reviewed: "2025-07-22"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -681,7 +681,7 @@ ___
 
 ### Jetpack
 
-<ReviewDate date="2022-03-09" />
+<ReviewDate date="2025-07-22" />
 
 **Issue 1:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
@@ -705,6 +705,10 @@ Adjust the fix suggested by Jetpack, so that `$_SERVER['SERVER_PORT']` is used i
 ```php
 define( 'JETPACK_SIGNATURE__HTTPS_PORT', $_SERVER['SERVER_PORT'] );
 ```
+
+**Issue 3:** Jetpack is intended to be run only in your Live environment. If Jetpack also runs in a [non-live environment](pantheon-workflow) it will turn on safe mode and prevent the connection to WordPress.com because the site is already registered. For this reason it's best to only activate Jetpack in the **Live** environment of your site and let it run in dev mode for your **Dev** and **Test** environments. For more information, see the [Jetpack documentation on Safe Mode](https://jetpack.com/support/safe-mode/).
+
+**Solution:** Use Jetpack's [Staging Mode](https://jetpack.com/support/staging-sites/) to prevent it from running in the Dev and Test environments. This requires that the `WP_ENVIRONMENT_TYPE` constant is correctly defined in your `wp-config.php` file. This is handled for you in the Pantheon [WordPress](https://github.com/pantheon-systems/WordPress/blob/233447f05e238b54a6d28e2160d51167a368cd89/wp-config-pantheon.php#L99-L104) and [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed/blob/b0e12ac051d3564453327f241029449d3805d8e5/config/application.pantheon.php#L75-L81) upstreams. It's recommended that you use the most recent version of the upstream to ensure that this is set correctly.
 
 ___
 
