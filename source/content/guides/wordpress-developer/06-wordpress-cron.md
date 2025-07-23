@@ -10,8 +10,8 @@ audience: [development]
 product: [--]
 integration: [cron]
 tags: [cron]
-contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814]
-reviewed: "2022-04-27"
+contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814, jazzsequence]
+reviewed: "2025-07-21"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-cron
 ---
@@ -140,8 +140,6 @@ Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon C
 ### Plugins
 
 There are several plugins you can use if you want to keep an eye on WP-Cron but don't like the command line. [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/screenshots/ "WP Crontrol page on wordpress.org"), for example, shows all events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
-
-[WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") works similarly with a slightly different UI. This plugin requires you to do a one-time installation of the WPX framework, which you can do straight from the plugin manager page.
 
 ## Manage WP-Cron Externally
 
