@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [sso, saml, users, security, plugins]
-reviewed: "2020-02-19"
+reviewed: "2020-07-21"
 permalink: docs/guides/wordpress-google-sso/advanced-configuration
 editpath: wordpress-google-sso/06-advanced-configuration.md
 ---

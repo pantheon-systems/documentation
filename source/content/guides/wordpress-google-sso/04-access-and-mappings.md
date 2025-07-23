@@ -2,7 +2,7 @@
 title: Using WP SAML Auth with Google Apps
 subtitle: Access Permissions and Mappings
 description: Provide access to your new SAML app for your Google users, and map the proper attributes
-contributors: [alexfornuto, danielbachhuber]
+contributors: [alexfornuto, danielbachhuber, jazzsequence]
 contenttype: [guide]
 innav: [false]
 categories: [security]
@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [sso, saml, users, security, plugins]
-reviewed: "2020-02-19"
+reviewed: "2025-07-21"
 permalink: docs/guides/wordpress-google-sso/access-and-mappings
 editpath: wordpress-google-sso/04-access-and-mappings.md
 ---
@@ -46,7 +46,7 @@ WP SAML Auth enables by default "Auto Provision", which will create a new WordPr
 
 1. Using the **ADD NEW MAPPING** button and referencing the **Attribute Mappings** section of the plugin settings page, define mappings for the remaining values:
 
-  ![A screenshot of the Attribute Mapping panel on the SAML App Settings page, with additional mappings provided](../../../images/guides/wordpress-google-sso/additional-attributes.png)
+  ![A screenshot of the Attribute Mapping panel on the SAML App Settings page, with additional mappings provided](../../../images/guides/wordpress-google-sso/wp-saml-auth-attribute-mapping.png)
 
   These mappings are shown as an example. Adjust to match your organization. Click **SAVE** once you're finished mapping.
 
