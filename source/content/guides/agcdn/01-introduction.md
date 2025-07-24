@@ -38,12 +38,12 @@ _Improve Security & Maintain Compliance_
 As attack surfaces expand, businesses require additional security beyond the CMS to protect their web sites. Pantheon’s Security Starter brings industry standard rules including OWASP and Drupal/WordPress protections. Secure your sites with a web application firewall (WAF) - tuned for each CMS, geolocation and IP blocking.
 
 ### Security Starter with Rate Limiting
-Security Starter is also available with a rate-limiting upgrade. Rate-limiting provides a layer of defense against DDoS attacks and high-traffic events for websites by throttling requests to be under specific thresholds, at the Fastly Edge Layer.
+Security Starter is also available with a rate-limiting upgrade. Rate-limiting provides a layer of defense against DDoS attacks and high-traffic events for websites by throttling requests to be under specific thresholds, at the [Fastly Edge Layer](https://www.fastly.com/).
 
 ### Advanced Global CDN
 _Unique Optimizations for Digital Delivery at Scale_
 
-Advanced Global CDN extends our Global CDN offering—both powered by [Fastly](https://www.fastly.com/). Pantheon users can easily manage edge customizations for groups of websites, unlock personalization and targeted messaging at scale. With Advanced Global CDN, users can regain control over messaging and intellectual property with location-based blocking, redirection, and IP blocklisting.
+Advanced Global CDN extends our Global CDN offering—both powered by Fastly. Pantheon users can easily manage edge customizations for groups of websites, unlock personalization and targeted messaging at scale. With Advanced Global CDN, users can regain control over messaging and intellectual property with location-based blocking, redirection, and IP blocklisting.
 
 ### Advanced Global CDN with WAF/IO
 _Complete Solution_
