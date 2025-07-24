@@ -21,7 +21,7 @@ Each AGCDN service configuration is offered as an annual contract subscription. 
 
 <Alert title="Note" type="info" >
 
-At the moment, AGCDN only works with custom domains. `.pantheonsite.io` domains are not covered.
+AGCDN only works with custom domains. Platform domains (e.g., `live-site-name.pantheonsite.io`) are not covered.
 
 </Alert>
 
