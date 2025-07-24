@@ -1,6 +1,6 @@
 ---
 title: Pantheon Plugins and Modules Now PHP 8.4 Compatible
-published_date: "2025-07-21"
+published_date: "2025-07-24"
 categories: [wordpress, drupal, performance, plugins, modules]
 ---
 
