@@ -207,6 +207,7 @@ const allWrittenPaths = [
   '/guides/acquia/prepare',
   '/guides/acquia/troubleshooting',
   '/guides/agcdn',
+  '/guides/agcdn/features',
   '/guides/agcdn/agcdn-faq',
   '/guides/agcdn/submit-request',
   '/guides/autopilot',

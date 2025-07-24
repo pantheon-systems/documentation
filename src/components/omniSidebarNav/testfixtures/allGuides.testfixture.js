@@ -367,6 +367,18 @@ const AllGuides = {
           },
         },
       },
+            {
+        node: {
+          fields: {
+            slug: '/guides/agcdn/features',
+            guide_directory: 'guides/agcdn',
+          },
+          frontmatter: {
+            title: 'Advanced Global CDN',
+            subtitle: 'Features & Use Cases',
+          },
+        },
+      },
       {
         node: {
           fields: {
