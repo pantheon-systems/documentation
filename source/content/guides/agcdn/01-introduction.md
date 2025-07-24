@@ -45,10 +45,10 @@ _Unique Optimizations for Digital Delivery at Scale_
 
 Advanced Global CDN extends our Global CDN offering—both powered by Fastly. Pantheon users can easily manage edge customizations for groups of websites, unlock personalization and targeted messaging at scale. With Advanced Global CDN, users can regain control over messaging and intellectual property with location-based blocking, redirection, and IP blocklisting.
 
-### Advanced Global CDN w/WAF IO
+### Advanced Global CDN with WAF/IO
 _Complete Solution_
 
-Unlock the power of the edge to enable secure control over your full stack. Advanced Global CDN w/ WAF IO brings a full suite of edge security capabilities that ensures site integrity with a CMS-tuned web application firewall (WAF), rate limiting to guard critical assets, and engage visitors in rich content with image optimization (IO). The WAF, powered by Fastly, inspects each un-cached request in detail and rapidly applies rules to keep your online presence stable.
+Unlock the power of the edge to enable secure control over your full stack. Advanced Global CDN with WAF/IO brings a full suite of edge security capabilities that ensures site integrity with a CMS-tuned web application firewall (WAF), rate limiting to guard critical assets, and engage visitors in rich content with image optimization (IO). The WAF, powered by Fastly, inspects each un-cached request in detail and rapidly applies rules to keep your online presence stable.
 
 ## AGCDN Package Comparison 
 
