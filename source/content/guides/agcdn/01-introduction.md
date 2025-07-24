@@ -64,7 +64,6 @@ Unlock the power of the edge to enable secure control over your full stack. Adva
 |Domain Masking|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
 |Redirects|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
 |CDN Log Streaming|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
-|Device Detection|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
 |Header Modification|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
 
 To learn more about each of these features, see [Features & Use Cases](/guides/agcdn/features).
