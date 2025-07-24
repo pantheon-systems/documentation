@@ -213,8 +213,6 @@ const allWrittenPaths = [
   '/guides/acquia/troubleshooting',
   '/guides/agcdn',
   '/guides/agcdn/agcdn-faq',
-  '/guides/agcdn/agcdn-features',
-  '/guides/agcdn/agcdn-wafio',
   '/guides/agcdn/submit-request',
   '/guides/autopilot',
   '/guides/autopilot-custom-upstream',
