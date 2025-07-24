@@ -1,6 +1,6 @@
 ---
 title: "Security Starter with Rate Limiting: New Advanced Global CDN package now available"
-published_date: "2025-07-24"
+published_date: "2025-07-25"
 categories: [infrastructure, security]
 ---
 
