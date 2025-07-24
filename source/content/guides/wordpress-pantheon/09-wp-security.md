@@ -24,7 +24,7 @@ Pantheon automatically provides the following security measures:
 
 - [Automated HTTPS](/guides/global-cdn/https)
 - [Secure Dev environment](/pantheon-workflow)
-- [DDOS and intrusion protection](/guides/agcdn/agcdn-features#osi-layer-3-and-4-ddos-protection--mitigation)
+- [DDOS and intrusion protection](/guides/agcdn/features#enterprise-waf-rules-for-wordpress-and-drupal)
 - [Automated backups](/guides/backups)
 - [Dashboard Security](/guides/secure-development/security-tool) to lock your environments
 

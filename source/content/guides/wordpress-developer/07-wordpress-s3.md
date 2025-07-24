@@ -164,5 +164,5 @@ Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offlo
 
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
 - [Securely store your Secret Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys)
-- [Mask your S3 URLs to match your domain](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)
+- [Mask your S3 URLs to match your domain](/guides/agcdn/features#domain-masking)
 - [AWS S3 Setup for Drupal](/drupal-s3)

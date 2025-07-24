@@ -19,58 +19,55 @@ Advanced Global CDN is a Managed Service that takes Pantheon's content delivery 
 
 Each AGCDN service configuration is offered as an annual contract subscription. Customers can add multiple sites to their AGCDN configuration, or conditionally apply specific rules.
 
-AGCDN provides teams with a way to:
-
-- Block Malicious traffic
-
-- Create Geofencing / IP restrictions
-
-- Rate limits with a website firewall (only with [AGCDN with WAF / IO](/guides/agcdn/agcdn-wafio))
-
-- Define valid user agent strings and query string sorting and filtering
-
-- Extend enterprise-grade security
-
 <Alert title="Note" type="info" >
 
-At the moment, AGCDN only works with custom domains. `.pantheonsite.io` domains are not covered.
+AGCDN only works with custom domains. Platform domains (e.g., `live-site-name.pantheonsite.io`) are not covered.
 
 </Alert>
 
-## What Does AGCDN Include?
+## AGCDN Packages 
 
-### AGCDN
+### IO Starter
+_Rich Content from Globally Distributed Points of Presence_
 
-AGCDN provides many features:
+Improve Lighthouse scores and core web vitals with improved page load times. Pantheon’s IO Starter package brings modern image optimization and auto WebP support to render pages quickly at the edge, taking load off your application and adding resilience to your site.
 
-| Feature        | AGCDN |
-| ------------- | -------------------------------------- |
-| [OSI Layer 3 and 4 DDoS Protection & Mitigation](/guides/agcdn/agcdn-features#osi-layer-3-and-4-ddos-protection--mitigation) | <span style="color:green">✔</span> |
-| [SOC 2 Type 2 Compliance](/guides/agcdn/agcdn-features#soc-2-type-2-compliance)        | <span style="color:green">✔</span> |
-| [IP Allowlisting and Blocklisting](/guides/agcdn/agcdn-features#ip-allowlisting-and-blocklisting)   | <span style="color:green">✔</span> |
-| [Token Authentication with JSON Web Token](/guides/agcdn/agcdn-features#token-authentication-with-json-web-token) | <span style="color:green">✔</span> |
-| [Custom Error and Maintenance Page Rules](/guides/agcdn/agcdn-features#custom-error-and-maintenance-page-rules)| <span style="color:green">✔</span> |
-| [Geolocation-based Actions](/guides/agcdn/agcdn-features#geolocation-based-actions) | <span style="color:green">✔</span>|
-| [Device Detection and Edge Control](/guides/agcdn/agcdn-features#device-detection-and-edge-control) | <span style="color:green">✔</span> |
-| [Complete CDN Edge Logs](/guides/agcdn/agcdn-features#complete-cdn-edge-logs) | <span style="color:green">✔</span>|
-| [Modify and Filter Headers at the Edge](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |<span style="color:green">✔</span> |
-| [Edge Redirects](/guides/agcdn/agcdn-features#edge-redirects) | <span style="color:green">✔</span> |
-| [Domain Masking and Reverse Proxy](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)| <span style="color:green">✔</span> |
-| [Enterprise Blue and Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-blue-and-green-deployment-support)| <span style="color:green">✔</span> |
-|[Custom Rules and Redirects](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |  <span style="color:green">✔</span> |
-|[Tor Traffic Blocking](/guides/agcdn/agcdn-features#tor-traffic-blocking)| <span style="color:green">✔</span> |
+### Security Starter
+_Improve Security & Maintain Compliance_
 
-### AGCDN with WAF/IO Features
+As attack surfaces expand, businesses require additional security beyond the CMS to protect their web sites. Pantheon’s Security Starter brings industry standard rules including OWASP and Drupal/WordPress protections. Secure your sites with a web application firewall (WAF) - tuned for each CMS, geolocation and IP blocking.
 
-AGCDN with WAF/IO includes everything in the table above with the following additions:
+### Security Starter with Rate Limiting
+Security Starter is also available with a rate-limiting upgrade. Rate-limiting provides a layer of defense against DDoS attacks and high-traffic events for websites by throttling requests to be under specific thresholds, at the [Fastly Edge Layer](https://www.fastly.com/).
 
-| Feature         | AGCDN with WAF and IO |
-| ------------- | ------------------------- |
-| [Layer 7 and Enterprise WAF rules](/guides/agcdn/agcdn-wafio#owasp-layer-7-and-enterprise-waf-rules)| <span style="color:green">✔</span> |
-| [Efficient Image Optimization at the Edge](/guides/agcdn/agcdn-wafio#efficient-image-optimization-at-the-edge)  |  <span style="color:green">✔</span> |
-| [Rate Limiting](/guides/agcdn/agcdn-wafio#rate-limiting)   | <span style="color:green">✔</span> |
-| [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-wafio#advanced-bot-detection-and-mitigation) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
+### Advanced Global CDN
+_Unique Optimizations for Digital Delivery at Scale_
 
+Advanced Global CDN extends our Global CDN offering—both powered by Fastly. Pantheon users can easily manage edge customizations for groups of websites, unlock personalization and targeted messaging at scale. With Advanced Global CDN, users can regain control over messaging and intellectual property with location-based blocking, redirection, and IP blocklisting.
+
+### Advanced Global CDN with WAF/IO
+_Complete Solution_
+
+Unlock the power of the edge to enable secure control over your full stack. Advanced Global CDN with WAF/IO brings a full suite of edge security capabilities that ensures site integrity with a CMS-tuned web application firewall (WAF), rate limiting to guard critical assets, and engage visitors in rich content with image optimization (IO). The WAF, powered by Fastly, inspects each un-cached request in detail and rapidly applies rules to keep your online presence stable.
+
+## AGCDN Package Comparison 
+
+| Feature        | IO Starter | Security Starter | Security Starter with Rate Limiting | Advanced Global CDN | Advanced Global CDN with WAF/IO |
+| --- | ---| --- | ---| ---| --- |
+| Image Optimization (IO)|<span style="color:green">✔</span>|❌|❌|❌|<span style="color:green">✔</span>|
+| IP Restrictions|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Enterprise WAF rules for WordPress and Drupal|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|❌|<span style="color:green">✔</span>|
+|Rate Limiting|❌|❌|<span style="color:green">✔</span>|❌|<span style="color:green">✔</span>|
+|Custom Error & Maintenance Page Rules|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Geolocation / Geofencing Control|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Device Detection|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Domain Masking|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Redirects|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|CDN Log Streaming|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Device Detection|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+|Header Modification|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
+
+To learn more about each of these features, see [Features & Use Cases](/guides/agcdn/features).
 ## Is AGCDN Right For Me?
 
 AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation.

@@ -370,24 +370,12 @@ const AllGuides = {
       {
         node: {
           fields: {
-            slug: '/guides/agcdn/agcdn-features',
+            slug: '/guides/agcdn/features',
             guide_directory: 'guides/agcdn',
           },
           frontmatter: {
             title: 'Advanced Global CDN',
-            subtitle: 'AGCDN Features',
-          },
-        },
-      },
-      {
-        node: {
-          fields: {
-            slug: '/guides/agcdn/agcdn-wafio',
-            guide_directory: 'guides/agcdn',
-          },
-          frontmatter: {
-            title: 'Advanced Global CDN',
-            subtitle: 'AGCDN with WAF / IO Features',
+            subtitle: 'Features & Use Cases',
           },
         },
       },
