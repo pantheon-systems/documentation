@@ -43,7 +43,7 @@ Security Starter is also available with a rate-limiting upgrade. Rate-limiting p
 ### Advanced Global CDN
 _Unique Optimizations for Digital Delivery at Scale_
 
-Advanced Global CDN extends our Global CDN offering—both powered by Fastly. Pantheon users can easily manage edge customizations for groups of websites, unlock personalization and targeted messaging at scale. With Advanced Global CDN, users can regain control over messaging and intellectual property with location-based blocking, redirection, and IP blocklisting.
+Advanced Global CDN extends our Global CDN offering—both powered by [Fastly](https://www.fastly.com/). Pantheon users can easily manage edge customizations for groups of websites, unlock personalization and targeted messaging at scale. With Advanced Global CDN, users can regain control over messaging and intellectual property with location-based blocking, redirection, and IP blocklisting.
 
 ### Advanced Global CDN with WAF/IO
 _Complete Solution_
