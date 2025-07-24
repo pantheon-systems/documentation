@@ -94,11 +94,11 @@ WP-Stateless is another option for GCS integration. Refer to the [full installat
 
 ## URL Rewriting
 
-URLs saved in the database use GCS-provided URLs (for example, `https://storage.googleapis.com/example.com/2023/1/image.jpg`) by default.[Advanced Global CDN](/guides/agcdn#core-features) can mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request Domain Masking if you have AGCDN.
+URLs saved in the database use GCS-provided URLs (for example, `https://storage.googleapis.com/example.com/2023/1/image.jpg`) by default.[Advanced Global CDN](/guides/agcdn/features#domain-masking) can mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request Domain Masking if you have AGCDN.
 
 ## More Resources
 
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
 - [AWS S3 Setup for WordPress](/guides/wordpress-developer/wordpress-s3)
 - [Securely Store your API Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
-- [Mask your Google Cloud Storage URLs to match your domain](/guides/agcdn#core-features)
+- [Mask your Google Cloud Storage URLs to match your domain](/guides/agcdn/features#domain-masking)

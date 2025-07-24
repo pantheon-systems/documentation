@@ -25,21 +25,6 @@ At the moment, AGCDN only works with custom domains. `.pantheonsite.io` domains 
 
 </Alert>
 
-## Core Features 
-AGCDN provides teams with a way to:
-
-* **Image Optimization**: Render and compress modern image formats by serving images from the edge.
-* **IP Restriction**: Protect intellectual property and secure development environments with granular access control down to the IP address level.
-* **Enterprise WAF rules for WordPress and Drupal**: Added site integrity and security by inspecting each uncached request in detail.
-* **Rate Limiting**: Protect websites from volumetric attacks and unwanted traffic patterns.
-* **Custom Error & Maintenance Page Rules**: Customize error pages.
-* **Geolocation & Geofencing Control**: Brand and intellectual property protection with fast location-based edge logic.
-* **Device Detection**: Categorizes visitors based on User-Agents.
-* **Domain Masking**: Enable page-by-page migrations by reviewing, and routing each request uniquely at the edge.
-* **Redirects**: Do even more with cookie-handling, URL rate-limiting, header modifications and query string sorting and filtering.
-* **CDN Log Streaming**: Complete security visibility with end-to-end edge traffic logs.
-* **Header Modification**: Optimize your website by modifying headers to increase performance, security, and flexibility without altering your core application code.
-
 ## AGCDN Packages 
 
 ### IO Starter
@@ -82,6 +67,7 @@ Unlock the power of the edge to enable secure control over your full stack. Adva
 |Device Detection|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
 |Header Modification|❌|❌|❌|<span style="color:green">✔</span>|<span style="color:green">✔</span>|
 
+To learn more about each of these features, see [Features & Use Cases](/guides/agcdn/features).
 ## Is AGCDN Right For Me?
 
 AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation.
