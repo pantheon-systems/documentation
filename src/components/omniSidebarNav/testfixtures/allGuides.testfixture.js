@@ -367,7 +367,7 @@ const AllGuides = {
           },
         },
       },
-            {
+      {
         node: {
           fields: {
             slug: '/guides/agcdn/features',
