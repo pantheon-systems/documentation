@@ -314,13 +314,13 @@ Use the following script to cleanup cache tables in the database:
 #!/bin/bash
 
 echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
-read SITE;
+read -r SITE;
 
 echo 'Provide the environment name (multidev, dev, test, or live), then press [ENTER]:';
-read ENV;
+read -r ENV;
 
 # Delete all transient options - these are now stored in Redis
-terminus wp $SITE.$ENV -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
+terminus wp "$SITE"."$ENV" -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
 ```
 
 ## Local configuration with Lando

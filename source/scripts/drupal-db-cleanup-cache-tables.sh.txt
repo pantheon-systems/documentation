@@ -1,16 +1,16 @@
 #!/bin/bash
 
 echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER]:';
-read SITE;
+read -r SITE;
 
 echo 'Provide the environment name (multidev, dev, test, or live), then press [ENTER]:';
-read ENV;
+read -r ENV;
 
 # Get a list of all cache tables
-CACHETABLES="$(terminus drush $SITE.$ENV -- sql:query "SHOW TABLES LIKE 'cache%';")"
+CACHETABLES="$(terminus drush "$SITE"."$ENV" -- sql:query "SHOW TABLES LIKE 'cache%';")"
 
-# Trucate each cache table in a loop to avoid resource contention and potential deadlocks.
+# Truncate each cache table in a loop to avoid resource contention and potential deadlocks.
 
 for table in $CACHETABLES; do
-    terminus drush $SITE.$ENV -- sql:query "TRUNCATE TABLE $table;"
+    terminus drush "$SITE"."$ENV" -- sql:query "TRUNCATE TABLE $table;"
 done
