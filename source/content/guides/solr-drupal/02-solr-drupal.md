@@ -258,3 +258,19 @@ This occurs because both repositories contain a package called `drupal/search_ap
 ### Fatal error: Cannot redeclare config_get_config_directory()
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
+
+### Solr Indexing error
+
+If you are experiencing an error while indexing ie.
+
+```
+SearchApiSolrException while indexing item some:entity:node/1234 Solr endpoint https://search-gateway.pantheon.io bad request (code: 400, body: Expected: OBJECT_START but got ARRAY_END)
+```
+
+This usually means that there's a possible non-UTF8 character that solr can't process impeding the indexing process. To fix the issue, you can check the content's title, body, or other fields that may contain the non-UTF8 character.
+
+### Working with multiword synonyms
+
+If you do have an issue having multiword Synonyms get to work, make sure you disable any parsing Drupal would be processing before it get passed down to the Solr server. A good example of this is the Parse mode field on your search filter view:
+
+ ![Configure Solr Settings](../../../images/guides/solr-drupal/solr_view_filter_parse_mode.png)
