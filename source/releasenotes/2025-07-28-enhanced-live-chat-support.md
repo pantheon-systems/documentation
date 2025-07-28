@@ -10,7 +10,6 @@ Starting today, Pantheon will begin rolling out a new live chat support experien
 
 * **Faster support:** Combining the backends for tickets and chats means quicker routing and less waiting.
 * **Improved consistency:** Support engineers now have stronger context and continuity for conversations across chat and ticket histories.
-* **Easier follow-ups**: Automatic email summaries and updates for users, even after live chat ends - so you can track issues and their progress at a high level.
 
 ## What to Expect During the Transition
 
