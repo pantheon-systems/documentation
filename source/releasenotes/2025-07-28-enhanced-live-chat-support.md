@@ -4,11 +4,17 @@ published_date: "2025-07-28"
 categories: [infrastructure]
 ---
 
-Starting today, Pantheon will begin rolling out a new Live Chat support experience which unifies our backend infrastructures for Live Chats and Support Tickets. This change is being rolled out incrementally by workspace over the next few weeks. Not all workspaces will have access as of the publishing of this release note.
+Starting today, Pantheon will begin rolling out a new live chat support experience which unifies our backend infrastructures for [Live Chats](/guides/support/contact-support/#live-chat) and [Support Tickets](/guides/support/contact-support/#general-support-ticket).
 
-## What’s new? 
+## Key Benefits
 
-* **Faster support:** combining the backends for tickets and chats means quicker routing and less waiting 
-* **Increased visibility:** chats are now auto converted to tickets and visible to all members of the workspace 
+* **Faster support:** Combining the backends for tickets and chats means quicker routing and less waiting.
+* **Improved consistency:** Support engineers now have stronger context and continuity for conversations across chat and ticket histories.
+* **Easier follow-ups**: Automatic email summaries and updates for users, even after live chat ends - so you can track issues and their progress at a high level.
 
-**Note:** Chat history will reset once your workspace is switched to the new experience, however all chats going forward are preserved as 1) conversations in the new Live Chat widget and 2) tickets in the Support tab of your workspace. 
+## What to Expect During the Transition
+
+**Note:** This change is being rolled out incrementally by workspace over the next few weeks. Not all workspaces will have access as of the publishing of this release note.
+
+* **No interruptions:** Users will not experience any interruption in accessing live chat support during this transition.
+* **Chat history:** All chats from the last 30 days prior to the transition will be moved to tickets, accessible from the Support tab of your [Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#manage-workspaces).
