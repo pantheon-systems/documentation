@@ -61,10 +61,6 @@ To receive the highest level of support available to your site or Workspace, rem
 
 1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
 
-You can download a transcript of your chat with the <Icon icon="arrowDownToLine"/> button:
-
-![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../../../images/chat-log-download.png)
-
 <Alert title="Note" type="info">
 
 Some in-browser ad or tracking blockers may interfere with the **Start chat** button. If you don't see the button, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has provided more details on [why this happens](https://www.intercom.com/help/en/articles/2546256-troubleshooting-when-the-messenger-doesn-t-appear) on their site.
