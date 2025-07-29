@@ -6,10 +6,11 @@ categories: [infrastructure]
 
 Starting today, Pantheon will begin rolling out a new live chat support experience which unifies our backend infrastructures for [Live Chats](/guides/support/contact-support/#live-chat) and [Support Tickets](/guides/support/contact-support/#general-support-ticket).
 
-## Key Benefits
+## Key Changes
 
 * **Faster support:** Combining the backends for tickets and chats means quicker routing and less waiting.
 * **Improved consistency:** Support engineers now have stronger context and continuity for conversations across chat and ticket histories.
+* **Transcripts:** Chat transcripts are no longer available self-serve by the widget, but can be provided upon request.
 
 ## What to Expect During the Transition
 
