@@ -61,6 +61,8 @@ To receive the highest level of support available to your site or Workspace, rem
 
 1. Provide a [detailed description](#provide-a-detailed-description) of your support request.
 
+A PDF of the chat transcript can be provided upon request.
+
 <Alert title="Note" type="info">
 
 Some in-browser ad or tracking blockers may interfere with the **Start chat** button. If you don't see the button, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has provided more details on [why this happens](https://www.intercom.com/help/en/articles/2546256-troubleshooting-when-the-messenger-doesn-t-appear) on their site.
