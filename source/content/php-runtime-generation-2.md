@@ -29,7 +29,7 @@ Depending on your website's features, this change may have major effects on the 
 
 \* For CMS compatibility details, see [Supported PHP Versions](/guides/php#supported-php-versions).
 
-## Opt-In Beta Phase (April - September 15, 2025)
+## Opt-In Beta Phase (April - September 17, 2025)
 
 During the beta phase, you can opt in to test your sites on the new PHP runtime. The opt-in is environment-based, meaning you can trial the new PHP runtime without affecting your other environments. This allows you to:
 
@@ -58,8 +58,8 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 | Phase | Date | Details |
 |-----------|------------------|--------------|
-| **Beta (Opt-in)** | May - July 2025 | Environments can be opted-in. All other environments will remain on the previous generation |
-| **Rollout (Opt-out)** | Beginning September 15 2025 | A slow 40-day rollout will auto-upgrade all sites to PHP Runtime Generation 2. Opting out via the `pantheon.yml` parameter will be available |
+| **Beta (Opt-in)** | May - September 2025 | Environments can be opted-in. All other environments will remain on the previous generation |
+| **Rollout (Opt-out)** | Beginning September 17, 2025 | A 40-day rollout will auto-upgrade all sites to PHP Runtime Generation 2. Opting out via the `pantheon.yml` parameter will be available |
 | **Gen 1 Removal** | Q1 2026 | PHP Runtime Generation 1 will no longer be available - all remaining sites will be auto-upgraded |
 
 
