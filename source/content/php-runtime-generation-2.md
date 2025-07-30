@@ -74,7 +74,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **Apache Tika** | 1.18, 1.21 available | 1.18, 1.21, 3.2 coming soon <sup>3</sup> |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> Support for this OS Package may be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you [opt out of Runtime Generation 2](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) for now. <br /><br />
+<sup>1</sup> Support for this OS Package may be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
 <sup>2</sup> wkhtmltopdf is no longer supported by its maintainers. We are working to offer a different solution for sites that use server-side PDF generation. <br /><br />
 <sup>3</sup> Tika will be made available before the platform-wide rollout in September. <br /><br />
 
@@ -96,7 +96,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
-<sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you [opt out of Runtime Generation 2](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) for now. <br /><br />
+<sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
 
 Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by contacting your Customer Success Manager or creating a support ticket.
 
