@@ -53,7 +53,7 @@ Failed to download vendor/package from dist
 
 Some possible causes for this error:
 
-- **Problem:** Secrets are not correctly set for the site. Secrets for Integrated Composer to use need to be type `composer` and have scope `ic`. Secret types and scopes are covered in the [Basic Concepts](/guides/secrets/02-basic-concepts) documentation.
+- **Problem:** Secrets are not correctly set for the site. Secrets for Integrated Composer to use need to be type `composer` and have scope `ic`. Secret types and scopes are covered in the [Overview](/guides/secrets/overview) documentation.
 
   **Solution:** ask the client to delete and recreate the secret if scope and type do not match for the given secret name
 

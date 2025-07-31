@@ -60,7 +60,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
   [Drupal Commerce](https://drupalcommerce.org/) is an e-commerce implementation designed specifically for Drupal
 
   </Product>
-  
+
   <Product title={"Opensolr"} link={"/opensolr"}>
 
   Opensolr offers automated provisioning for the most complex Failover Systems.
@@ -85,9 +85,9 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"Pivotal Tracker"} link={"/guides/pivotal-tracker/"}>
+  <Product title={"Pivotal Tracker"} link={"/pivotal-tracker/"}>
 
-  [Pivotal Tracker](https://www.pivotaltracker.com/) offers product planning and management. 
+  [Pivotal Tracker](https://www.pivotaltracker.com/) offers product planning and management.
 
   </Product>
 

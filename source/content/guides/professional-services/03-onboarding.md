@@ -26,7 +26,7 @@ Provides a static outgoing IP address for use in IP allowlisting connections to 
 
 ## SSO/SAML
 
-Single Sign-on to the Pantheon Dashboard. [Learn more about SSO for Organizations](/guides/sso-organizations) or [contact us](https://pantheon.io/professional-services?docs) for details.
+Single Sign-on to the Pantheon Dashboard. [Learn more about SSO for Organizations](/guides/sso/sso-organizations) or [contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## Custom SSL Certificates
 
