@@ -147,7 +147,7 @@ Alternatively, you can:
 <Alert title="Note" type="info" >
 
 In order to delete a payment method, any associated site(s) must first either be downgraded to Sandbox or moved to a different payment method.
-Refer to [upgrade the site plan](/guides/account-mgmt/plans/07-site-plans.md) for more information.
+Refer to [upgrade the site plan](/guides/account-mgmt/plans/site-plans) for more information.
 
 </Alert>
 
