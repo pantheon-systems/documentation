@@ -221,12 +221,12 @@ There are two available versions of Redis available for the [Object Cache](/obje
 
 
 #### Rollback the Redis Version
-1. Change the value of `version` to `2.8` 
+1. Change the value of `version` to `2.8`
 1. Push the change.
 
 #### Test the Redis 6 Update
 We recommend that you push the Redis version change to a Multidev environment:
-1. Create a new Multidev environment. Refer to [Multidev Environment](/guides/multidev/01-introduction)for more information. 
+1. Create a new Multidev environment. Refer to [Multidev Environment](/guides/multidev)for more information.
 1. Push the `pantheon.yml` Redis change to the branch associated with the Multidev environment.
 1. Wait for the upgrade workflow to complete.
 1. Confirm the Redis version upgrade using [redis-cli](/object-cache/cli).
