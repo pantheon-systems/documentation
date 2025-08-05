@@ -80,9 +80,9 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 ### Switch from wkhtmltopdf to dompdf
 
-Custom enterprise CMS or internal tools developed must check their code for the presence of wkhtmltopdf and make the change for dompdf. 
+Custom enterprise CMS or internal tools must be checked for the presence of wkhtmltopdf and make the change to dompdf. 
 
-Modern CMS and plugin are lickely to have made the switch but if your systems use older PHP versions or CMS, you might encounter issues such as fatal errors, tool malfunctions, and numerous deprecated warnings. 
+Modern CMS and plugin are likely to have made the switch but if your systems use older PHP versions or CMS, you might encounter issues such as fatal errors, tool malfunctions, and numerous deprecated warnings. 
 
 For Drupal 7 websites, you are invite to use <a href="https://www.drupal.org/project/print">the print module</a> and download the dompdf library compatible with your PHP version.
 
