@@ -25,7 +25,7 @@ Click the links below to display complete PHP information for each version, incl
 
 | Version                                          | Available   | Recommended |
 | ------------------------------------------------ | :---------: | :---------: |
-| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> Drupal 10.4+, 11.1+ <br /><br />❌ WordPress          |
+| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> Drupal 10.4+, 11.1+ <br /><br /><span style="color:green">✔</span> WordPress 6.7+           |
 | [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.1](https://v81-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | ❌           |
