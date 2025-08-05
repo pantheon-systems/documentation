@@ -93,7 +93,8 @@ For Drupal 7 websites, you are invite to use <a href="https://www.drupal.org/pro
 
 
 Place the dompdf folder inside the following folder:
-<yoursite>/sites/all/modules/lib/dompdf or <yoursite>/sites/all/librairies/dompdf
+/modules/print/lib/dompdf or /sites/all/libraries/dompdf
+
 From the admin/config/user-interface/print/pdf, choose dompdf as PDF Generation tool and save the changes.
 
 
