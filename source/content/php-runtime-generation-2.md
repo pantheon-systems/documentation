@@ -149,7 +149,7 @@ php_runtime_generation: 1
 
 ### Q: After upgrading to PHP Runtime Generation 2, I removed php_runtime_generation from my pantheon.yml but the environment did not go back to Generation 1. How do I downgrade?
 
-If your environment is using PHP Runtime Generation 2, removing the `php_runtime_generation` parameter from your `pantheon.yml` does not automatically downgrade you back to `1`. To revert back to the first generation PHP runtime, set the following in your `pantheon.yml`:
+To revert back to the first generation PHP runtime, set the following in your `pantheon.yml`:
 
 ```yaml:title=pantheon.yml
 php_runtime_generation: 1
