@@ -11,6 +11,8 @@ PHP 8.4 is only available with the new [PHP Runtime Generation 2](/php-runtime-g
    php_version: 8.4 
    ```
 
+The PHP 8.4 upgrade process automatically includes an upgrade to PHP Runtime Generation 2.
+
 **Important PHP version information**
 
 * PHP 8.1 and 8.2 are currently receiving security-only updates.
