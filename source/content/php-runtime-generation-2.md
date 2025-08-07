@@ -17,7 +17,7 @@ If your site uses Apache Tika, we currently recommend only using the PHP Runtime
 
 ## Overview
 
-A new generation of our Serverless PHP Runtime is available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
+A new generation of our Serverless PHP runtime is available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
 
 Depending on your website's features, this change may have major effects on the compatibility of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be removed in 2026.
 
@@ -96,7 +96,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
-<sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
+<sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of PHP Runtime Generation 2</a> for now. <br /><br />
 
 Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by contacting your Customer Success Manager or creating a support ticket.
 
@@ -110,13 +110,13 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Known Issues
 
-- ClamAV is currently unavailable. Support for ClamAV will be added after the platform-wide rollout begins. If you depend on ClamAV services, we recommend you [opt out of Runtime Generation 2](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) for now.
+- ClamAV is currently unavailable. Support for ClamAV will be added after the platform-wide rollout begins. If you depend on ClamAV services, we recommend you [opt out of PHP Runtime Generation 2](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) for now.
 - [Object Cache Pro installation via Terminus for standard WordPress configurations](/object-cache/wordpress#installation-and-configuration) is currently unavailable. 
   - Workaround: [Downgrade to PHP Runtime Generation 1](/php-runtime-generation-2#q-can-i-switch-back-to-the-previous-php-runtime-if-i-encounter-issues), follow the installation procedure, then upgrade back to PHP Runtime Generation 2.
 
 ## Reporting Issues
 
-If you encounter any issues while testing your site on the new PHP runtime generation:
+If you encounter any issues while testing your site with PHP Runtime Generation 2:
 
 1. Check the Known Issues section above
 2. Verify the issue is related to the new infrastructure by reverting back to `1` in your `pantheon.yml` file.
@@ -128,13 +128,6 @@ If you encounter any issues while testing your site on the new PHP runtime gener
 
 Potentially. Depending on your integrations with our PHP extensions and operating system libraries, you may need to update your website to be compatible with new PHP runtime.
 
-### Q: Can I switch back to the previous PHP runtime if I encounter issues?
-
-Yes, you may revert back to the first generation PHP runtime by setting the following in your `pantheon.yml`:
-
-```yaml:title=pantheon.yml
-php_runtime_generation: 1
-```
 
 ### Q: How do I opt out of the upcoming platform rollout?
 
@@ -145,3 +138,19 @@ php_runtime_generation: 1
 ```
 
 Note: All sites will be auto-upgraded in Q1 2026 if they haven't already, including sites that specify the opt-out above.
+
+### Q: Can I switch back to the previous PHP runtime if I encounter issues?
+
+Yes, you may revert back to the first generation PHP runtime by setting the following in your `pantheon.yml`:
+
+```yaml:title=pantheon.yml
+php_runtime_generation: 1
+```
+
+### Q: After upgrading to PHP Runtime Generation 2, I removed php_runtime_generation from my pantheon.yml but the environment did not go back to Generation 1. How do I downgrade?
+
+To revert back to the first generation PHP runtime, set the following in your `pantheon.yml`:
+
+```yaml:title=pantheon.yml
+php_runtime_generation: 1
+```
