@@ -1,6 +1,6 @@
 ---
 title: "wkhtmltopdf will not be available on PHP Runtime Generation 2"
-published_date: "2025-08-08"
+published_date: "2025-08-09"
 categories: [infrastructure, wordpress, drupal, action-required]
 ---
 
