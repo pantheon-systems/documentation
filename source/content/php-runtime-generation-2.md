@@ -70,33 +70,12 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | Package | Gen 1 | Gen 2 |
 |---------|---------|---------|
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
-| **wkhtmltopdf** | 0.12.5 available | dompdf |
+| **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
 | **Apache Tika** | 1.18, 1.21 available | 1.18, 1.21, 3.2 coming soon <sup>2</sup> |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
 <sup>1</sup> Support for this OS Package may be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
 <sup>2</sup> Tika will be made available before the platform-wide rollout in September. <br /><br />
-
-
-### Switch from wkhtmltopdf to dompdf
-
-Custom enterprise CMS or internal tools must be checked for the presence of wkhtmltopdf and make the change to dompdf. 
-
-Modern CMS and plugin are likely to have made the switch but if your systems use older PHP versions or CMS, you might encounter issues such as fatal errors, tool malfunctions, and numerous deprecated warnings. 
-
-For Drupal 7 websites, you are invite to use <a href="https://www.drupal.org/project/print">the print module</a> and download the dompdf library compatible with your PHP version.
-
-| PHP version | dompdf lib | Notes |
-|---------|---------|---------|
-| 5.6 - 7.0 | Dompdf 0.8.3 | <a href="https://github.com/dompdf/dompdf/releases/tag/v0.8.3">v0.8.3</a>  |
-| 7.1 to 8.4| Dompdf 3.1.x or the latest| <a href="https://github.com/dompdf/dompdf/releases/tag/v3.1.0">v3.1.0</a>  |
-
-
-Place the dompdf folder inside the following folder:
-/modules/print/lib/dompdf or /sites/all/libraries/dompdf
-
-From the admin/config/user-interface/print/pdf, choose dompdf as PDF Generation tool and save the changes.
-
 
 ### PHP Extensions
 
