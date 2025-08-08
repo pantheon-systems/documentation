@@ -1,6 +1,6 @@
 ---
 title: "Solr 3 support for Drupal 9.4+ sites ending November 12, 2025"
-published_date: "2025-08-12"
+published_date: "2025-08-08"
 categories: [infrastructure, action-required, drupal, security]
 ---
 
