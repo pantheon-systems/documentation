@@ -14,51 +14,30 @@ reviewed: "2020-07-27"
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
 
-## wkhtmltopdf
+## wkhtmltopdf (Deprecated)
 
-[wkhtmltopdf](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF. Wkhtmltopdf version `0.12.5 (with patched qt)` is currently installed on the Pantheon Platform. For more information regarding the qt patch, read the [wkhtmltopdf documentation](https://wkhtmltopdf.org/status.html).
+wkhtmltopdf has been abandoned by its maintainers and no longer receives updates. While it is still available on PHP Runtime Generation 1, the package is not available on [PHP Runtime Generation 2](/php-runtime-generation-2). We recommend all sites using wkhtmltopdf switch to [dompdf](https://github.com/dompdf/dompdf).
 
-wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. You must install or create a compatible plugin or module to complete the following steps:
+### Switching from wkhtmltopdf to dompdf
 
-<TabList>
+#### Drupal Entity Print Module
 
-<Tab title="Drupal" id="d7-example" active={true}>
+dompdf is included with the [Entity Print](https://www.drupal.org/project/entity_print) module. Visit `<your-url>/admin/config/content/entityprint` to confirm you are using dompdf as the PDF engine.
 
-Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
+#### Drupal 7 Print Module
 
-```bash{promptUser: user}
-terminus drush <site>.<env> -- en print --y
-```
+For Drupal 7 websites using <a href="https://www.drupal.org/project/print">the print module</a>, begin by downloading the dompdf library compatible with your PHP version.
 
-Create a symlink to the hosted library and your site's `libraries` directory [via Git](/guides/git/git-config#clone-your-site-codebase):
+| PHP version | dompdf lib |
+|---------|---------|---------|
+| 5.6 - 7.0 | [Dompdf 0.8.3](https://github.com/dompdf/dompdf/releases/tag/v0.8.3) | 
+| 7.1 to 8.4 | [Dompdf 3.1.x or the latest](https://github.com/dompdf/dompdf/releases) |
 
-```bash{promptUser: user}
-mkdir -p sites/all/libraries/wkhtmltopdf
-ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
-git add .
-git commit -m "Added wkhtmltopdf library"
-git push
-```
+Place the dompdf folder inside the following folder:
+`/modules/print/lib/dompdf` or `/sites/all/libraries/dompdf`
 
-</Tab>
+From `<your-url>/admin/config/user-interface/print/pdf`, choose dompdf as PDF Generation tool and save the changes.
 
-<Tab title="WordPress" id="wp-example">
-
-Currently, there are no known plugins that implement wkhtmltopdf directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
-
-If your WordPress site uses Composer, consider the [PHP WkHtmlToPdf](https://github.com/mikehaertl/phpwkhtmltopdf) PHP wrapper.
-
-</Tab>
-
-</TabList>
-
-### Unable to Generate PDF File
-
-Due to a [known issue in wkhtmltopdf 0.12.5](https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4242) and sites that use the CSS `quotes` property, some users may have issues with downloading a PDF created by wkhtmltopdf. In Live environments, creating a PDF fails silently. On Dev, you'll encounter the error `Unable to generate PDF file`.
-
-To confirm the source of the error, log in to the Drupal Admin and click **Reports** in the menu, then **Recent Log Messages** and look for `print_pdf` or `(returned 127): No stderr output available`.
-
-If you encounter this error, remove the offending `quotes` property from the CSS.
 
 ## Apache Tika
 
