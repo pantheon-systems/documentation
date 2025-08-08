@@ -25,7 +25,7 @@ Click the links below to display complete PHP information for each version, incl
 
 | Version                                          | Available   | Recommended |
 | ------------------------------------------------ | :---------: | :---------: |
-| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> Drupal 10.4+, 11.1+ <br /><br />❌ WordPress          |
+| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span> <Popover title="Note" content="Setting PHP version to 8.4 will automatically upgrade your site to the new <a href='/php-runtime-generation-2'>PHP Runtime Generation 2</a>."/> | <span style="color:green">✔</span>     |
 | [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.1](https://v81-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | ❌           |
