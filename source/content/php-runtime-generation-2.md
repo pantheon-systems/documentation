@@ -11,10 +11,6 @@ product: [--]
 integration: [--]
 ---
 
-<Alert title="Warning" type="danger">
-If your site uses Apache Tika, we currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
-</Alert>
-
 ## Overview
 
 The new generation of our Serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
@@ -35,6 +31,8 @@ During the beta phase, you can opt in to test your sites on the new PHP runtime.
 - Test your deployment workflows
 - Identify any potential issues early
 - Provide valuable feedback to our team
+
+It is safe to use the PHP Runtime Generation 2 beta on a Live environment once you have confirmed site compatibility.
 
 ### How to Opt In
 
@@ -70,7 +68,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
 | **ClamAV** | Available | Coming soon <sup>1</sup> |
 | **wkhtmltopdf** | 0.12.5 available | Replacement coming soon <sup>2</sup> |
-| **Apache Tika** | 1.18, 1.21 available | Coming soon <sup>3</sup> |
+| **Apache Tika** | 1.18, 1.21 available | 1.18, 1.21, 3.2 coming soon <sup>3</sup> |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
 <sup>1</sup> Support for this OS Package may be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
