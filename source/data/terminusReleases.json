@@ -75,7 +75,19 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/4.0.1",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/4.0.1",
-        "body": "### Fixed\r\n\r\n- env:code-rebuild command should no longer throw a fatal error (#2694)"
+        "body": "### Fixed\r\n\r\n- env:code-rebuild command should no longer throw a fatal error (#2694)",
+        "reactions": {
+            "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/219585258\/reactions",
+            "total_count": 1,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 1,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+        }
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/217109294",
