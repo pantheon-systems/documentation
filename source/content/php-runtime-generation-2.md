@@ -11,25 +11,19 @@ product: [--]
 integration: [--]
 ---
 
-<Alert title="Warning" type="danger">
-If your site uses Apache Tika, we currently recommend only using the PHP Runtime Generation 2 beta for testing with non-Live environments.
-</Alert>
-
 ## Overview
 
-A new generation of our Serverless PHP runtime is available in beta. This upgrade represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
+The new generation of our Serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
 
-Depending on your website's features, this change may have major effects on the compatibility of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be removed in 2026.
+Depending on your website's features, this new PHP runtime may have major effects on the operation of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be removed in early 2026.
 
-## Why Upgrade?
+## What's included?
 
-- Long Term Support (LTS) coverage for EOL PHP versions
-- Better compatibility with updated PHP extensions
-- PHP 8.4 availability*
+- Long Term Support (LTS) coverage for EOL PHP versions (PHP 5.6+)
+- Better CMS functionality via updated PHP extensions
+- PHP 8.4 availability
 
-\* For CMS compatibility details, see [Supported PHP Versions](/guides/php#supported-php-versions).
-
-## Opt-In Beta Phase (April - September 17, 2025)
+## Beta Phase (April - September 16, 2025)
 
 During the beta phase, you can opt in to test your sites on the new PHP runtime. The opt-in is environment-based, meaning you can trial the new PHP runtime without affecting your other environments. This allows you to:
 
@@ -37,6 +31,8 @@ During the beta phase, you can opt in to test your sites on the new PHP runtime.
 - Test your deployment workflows
 - Identify any potential issues early
 - Provide valuable feedback to our team
+
+It is safe to use the PHP Runtime Generation 2 beta on a Live environment once you have confirmed site compatibility.
 
 ### How to Opt In
 
@@ -46,7 +42,7 @@ To enable the second generation PHP runtime for an environment, add the followin
 php_runtime_generation: 2
 ```
 
-To safely revert to the previous generation, you may remove the line during the beta phase or use:
+To safely revert to the previous generation, use the following:
 
 ```yaml:title=pantheon.yml
 php_runtime_generation: 1
@@ -58,9 +54,9 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 | Phase | Date | Details |
 |-----------|------------------|--------------|
-| **Beta (Opt-in)** | May - September 2025 | Environments can be opted-in. All other environments will remain on the previous generation |
-| **Rollout (Opt-out)** | Beginning September 17, 2025 | A 40-day rollout will auto-upgrade all sites to PHP Runtime Generation 2. Opting out via the `pantheon.yml` parameter will be available |
-| **Gen 1 Removal** | Q1 2026 | PHP Runtime Generation 1 will no longer be available - all remaining sites will be auto-upgraded |
+| **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
+| **Gen 2 Rollout** | September 17 - October 27, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
 
 ## Known Changes and Requirements
@@ -70,6 +66,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | Package | Gen 1 | Gen 2 |
 |---------|---------|---------|
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
+| **ClamAV** | Available | Coming soon <sup>1</sup> |
 | **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
 | **Apache Tika** | 1.18, 1.21 available | 1.18, 1.21, 3.2 coming soon <sup>2</sup> |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
@@ -108,7 +105,6 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Known Issues
 
-- ClamAV is currently unavailable. Support for ClamAV will be added after the platform-wide rollout begins. If you depend on ClamAV services, we recommend you [opt out of PHP Runtime Generation 2](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) for now.
 - [Object Cache Pro installation via Terminus for standard WordPress configurations](/object-cache/wordpress#installation-and-configuration) is currently unavailable. 
   - Workaround: [Downgrade to PHP Runtime Generation 1](/php-runtime-generation-2#q-can-i-switch-back-to-the-previous-php-runtime-if-i-encounter-issues), follow the installation procedure, then upgrade back to PHP Runtime Generation 2.
 
@@ -117,7 +113,7 @@ Does your application require an OS package or PHP extension that is no longer a
 If you encounter any issues while testing your site with PHP Runtime Generation 2:
 
 1. Check the Known Issues section above
-2. Verify the issue is related to the new infrastructure by reverting back to `1` in your `pantheon.yml` file.
+2. Verify the issue is related to the new PHP runtime by reverting back to `1` in your `pantheon.yml` file.
 3. Submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2 Beta" in your message to support.
 
 ## Frequently Asked Questions
@@ -135,7 +131,7 @@ You may opt-out of the upcoming platform rollout by setting the following in you
 php_runtime_generation: 1
 ```
 
-Note: All sites will be auto-upgraded in Q1 2026 if they haven't already, including sites that specify the opt-out above.
+Note: All sites will be auto-upgraded in early 2026 if they haven't already, including sites that specify the opt-out above.
 
 ### Q: Can I switch back to the previous PHP runtime if I encounter issues?
 
