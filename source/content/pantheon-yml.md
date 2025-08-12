@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2025-03-12"
+reviewed: "2025-08-12"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -87,6 +87,13 @@ For a list of standard protected paths, see the `pantheon.upstream.yml` for:
 
 - [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+
+Additionally, the following paths are protected by Pantheon at the platform level and cannot be overridden:
+
+- `composer.json`
+- `composer.lock`
+- `package.json`
+- `phpunit.xml.dist`
 
 ### Enforce HTTPS + HSTS
 
