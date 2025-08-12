@@ -34,6 +34,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2025-05-19T17:11:06Z",
+        "updated_at": "2025-05-19T18:23:38Z",
         "published_at": "2025-05-19T18:21:57Z",
         "assets": [
             {
@@ -75,7 +76,19 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/4.0.1",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/4.0.1",
-        "body": "### Fixed\r\n\r\n- env:code-rebuild command should no longer throw a fatal error (#2694)"
+        "body": "### Fixed\r\n\r\n- env:code-rebuild command should no longer throw a fatal error (#2694)",
+        "reactions": {
+            "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/219585258\/reactions",
+            "total_count": 1,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 1,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+        }
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/217109294",
@@ -112,6 +125,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2025-05-06T22:26:10Z",
+        "updated_at": "2025-05-07T17:31:30Z",
         "published_at": "2025-05-07T17:27:46Z",
         "assets": [
             {
@@ -190,6 +204,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2025-03-03T17:47:38Z",
+        "updated_at": "2025-03-03T19:08:49Z",
         "published_at": "2025-03-03T18:48:16Z",
         "assets": [
             {
@@ -268,6 +283,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-12-05T14:45:25Z",
+        "updated_at": "2024-12-05T16:23:09Z",
         "published_at": "2024-12-05T16:19:11Z",
         "assets": [
             {
@@ -347,6 +363,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-09-18T22:43:17Z",
+        "updated_at": "2024-12-03T22:24:32Z",
         "published_at": "2024-09-18T23:22:19Z",
         "assets": [
             {
@@ -425,6 +442,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-08-16T17:17:54Z",
+        "updated_at": "2024-08-19T16:58:08Z",
         "published_at": "2024-08-19T15:33:55Z",
         "assets": [
             {
@@ -503,6 +521,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-06-13T18:34:14Z",
+        "updated_at": "2024-06-13T19:19:20Z",
         "published_at": "2024-06-13T19:15:24Z",
         "assets": [
             {
@@ -581,6 +600,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-06-10T15:39:12Z",
+        "updated_at": "2024-06-10T16:26:16Z",
         "published_at": "2024-06-10T16:19:07Z",
         "assets": [
             {
@@ -659,6 +679,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-04-23T21:51:48Z",
+        "updated_at": "2024-04-23T23:02:59Z",
         "published_at": "2024-04-23T22:56:16Z",
         "assets": [
             {
@@ -737,6 +758,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-02-28T22:00:53Z",
+        "updated_at": "2024-02-28T23:39:02Z",
         "published_at": "2024-02-28T23:13:22Z",
         "assets": [
             {
@@ -815,6 +837,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-02-27T17:45:54Z",
+        "updated_at": "2024-02-27T20:05:25Z",
         "published_at": "2024-02-27T20:05:24Z",
         "assets": [
             {
@@ -893,6 +916,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-01-11T19:04:52Z",
+        "updated_at": "2024-01-11T19:30:54Z",
         "published_at": "2024-01-11T19:24:43Z",
         "assets": [
             {
@@ -971,6 +995,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2024-01-11T14:35:13Z",
+        "updated_at": "2024-01-11T15:31:53Z",
         "published_at": "2024-01-11T15:27:17Z",
         "assets": [
             {
@@ -1049,6 +1074,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-11-30T16:29:15Z",
+        "updated_at": "2023-12-01T00:43:52Z",
         "published_at": "2023-12-01T00:43:51Z",
         "assets": [
             {
@@ -1127,6 +1153,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-11-29T18:26:07Z",
+        "updated_at": "2023-11-30T16:52:54Z",
         "published_at": "2023-11-29T18:27:08Z",
         "assets": [
             {
@@ -1205,6 +1232,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-09-28T19:55:35Z",
+        "updated_at": "2023-09-28T21:37:44Z",
         "published_at": "2023-09-28T21:07:01Z",
         "assets": [
             {
@@ -1283,6 +1311,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-06-01T17:18:58Z",
+        "updated_at": "2023-06-02T16:27:07Z",
         "published_at": "2023-06-01T17:59:17Z",
         "assets": [
             {
@@ -1361,6 +1390,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-05-22T19:26:47Z",
+        "updated_at": "2023-08-03T21:33:35Z",
         "published_at": "2023-05-22T20:03:20Z",
         "assets": [
             {
@@ -1439,6 +1469,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-04-06T13:26:29Z",
+        "updated_at": "2023-04-06T15:21:29Z",
         "published_at": "2023-04-06T14:50:52Z",
         "assets": [
             {
@@ -1517,6 +1548,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-03-01T19:51:38Z",
+        "updated_at": "2023-03-16T19:29:11Z",
         "published_at": "2023-03-01T20:47:39Z",
         "assets": [
             {
@@ -1595,6 +1627,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-02-01T22:24:45Z",
+        "updated_at": "2023-02-01T23:02:04Z",
         "published_at": "2023-02-01T22:26:05Z",
         "assets": [
             {
@@ -1673,6 +1706,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2023-01-03T14:44:58Z",
+        "updated_at": "2023-01-03T15:23:55Z",
         "published_at": "2023-01-03T15:21:17Z",
         "assets": [
             {
@@ -1751,6 +1785,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2022-11-08T19:44:16Z",
+        "updated_at": "2022-11-08T20:53:17Z",
         "published_at": "2022-11-08T20:52:09Z",
         "assets": [
             {
@@ -1829,6 +1864,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2022-10-18T15:49:47Z",
+        "updated_at": "2022-10-18T17:41:17Z",
         "published_at": "2022-10-18T16:31:26Z",
         "assets": [
             {
@@ -1907,6 +1943,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2022-10-06T20:19:00Z",
+        "updated_at": "2022-10-06T21:03:39Z",
         "published_at": "2022-10-06T20:51:36Z",
         "assets": [
             {
@@ -1985,6 +2022,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2022-08-22T22:39:32Z",
+        "updated_at": "2022-08-22T23:46:29Z",
         "published_at": "2022-08-22T23:43:47Z",
         "assets": [
             {
@@ -2063,6 +2101,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2022-03-29T18:43:32Z",
+        "updated_at": "2022-03-29T20:01:03Z",
         "published_at": "2022-03-29T19:56:40Z",
         "assets": [
             {
@@ -2141,6 +2180,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2022-02-18T18:52:06Z",
+        "updated_at": "2022-02-18T19:49:00Z",
         "published_at": "2022-02-18T19:48:12Z",
         "assets": [
             {
