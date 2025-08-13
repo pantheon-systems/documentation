@@ -50,6 +50,28 @@ recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey
 
 Changing the file permissions to `770` from `660` via SFTP will cause a silent fail. The platform will not update the file permissions and will not return an error.
 
+### Wipe all files from environment
+Sites with overpopulated or large directories may experience difficulties deleting files from particular environments. One solution is to wipe everything in the `/files` directory from an environment, keeping the database and code intact, then selectively re-upload the `/files` that need to be kept afterwards. We highly recommend this is done via a Multidev environment for better safety of the site, available to Gold+ customers, but the Dev environment can be used if Multidev is not available.
+
+(if you are using Dev, we highly recommend creating a Backup before beginning)
+
+1. Create a new Multidev
+   - It does not matter which environment you select to clone information from.
+2. Navigate to the Database/Files tab of the new Multidev.
+3. Navigate to the "Wipe" subtab and click on **Wipe the {env} Environment**, then fill out the confirmation modal.
+   - This will delete all of the environments Files and drop the Database entirely. You cannot undo this action, which is why we recommend using a Multidev.
+4. Within the Multidev, navigate to Databse/Files again, then the "Clone" section.
+   1. Update the "From this Environment:" field to select "Live"
+   2. Uncheck "Clone Files"
+   3. Keep "Clear Caches" unchecked
+   4. Click the button at the bottom to begin the clone, wait for it to finish.
+5. Test the fileless environment. At this point the environment should be fully functional, but have zero files associated with it.
+6. At this point, you can use [SFTP + Rsync](https://docs.pantheon.io/guides/sftp/rsync-and-sftp) to upload the files you want to keep back into the Multidev. 
+
+Pantheon Notes:
+- If customers wish to do this via Live, it's likely not a good idea to wipe all files then slowly replace them. [This solution is likely better](https://docs.pantheon.io/guides/sftp/rsync-and-sftp#empty-a-folder-recursively-using-rsync).
+- We should clearly define a good use case for this workflow, such as testing if files are a problem. 
+
 ## More Resources
 
 - [Configure Your wp-config.php File](/guides/php/wp-config-php)
