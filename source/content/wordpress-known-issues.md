@@ -998,11 +998,11 @@ ___
 
 ### Tin Canny Reporting
 
-<ReviewDate date="2025-07-21" />
+<ReviewDate date="2025-08-06" />
 
 **Issue:** [Tin Canny Reporting for LearnDash](https://www.uncannyowl.com/downloads/tin-canny-reporting/) contains a `rename()` PHP function which is [not supported on Pantheon](/guides/filesystem/files-directories#renamemove-files-or-directories). As a result, this plugin will not work on Pantheon.
 
-**Solution:** While no fix for this issue exists, a workaround exists in which the `rename()` function is manually replaced with `copy()` and `unlink()`. However, this is not recommended as it may break the plugin in future updates. The file that contains the `rename()` function is the `finalize_module_upload()` function in `tin-canny-zip-uploader/tincanny-zip-uploader.php`.
+**Solution:** While a fix for this issue is expected in versions above 5.1.0.3, a temporary workaround exists in which the `rename()` function is manually replaced with `copy()` and `unlink()`. However, this is not recommended as it may break the plugin in future updates. The file that contains the `rename()` function is the `finalize_module_upload()` function in `tin-canny-zip-uploader/tincanny-zip-uploader.php`.
 
 ___
 
