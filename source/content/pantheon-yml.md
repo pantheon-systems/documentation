@@ -85,7 +85,7 @@ The standard protected web paths can be important to the security of your site. 
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
 
-- [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+- [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 Additionally, the following paths are protected by Pantheon at the platform level and cannot be overridden:
