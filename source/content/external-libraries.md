@@ -49,10 +49,12 @@ Tika can extract content from a number of document formats such as HTML, XML, M
 
 <Tab title="PHP Runtime Generation 2" id="tab-1-anchor" active={true}>
 
-By default, sites using PHP Runtime Generation 2 have access to Tika 1.18 and 1.21. These versions are available at the following paths:
+By default, sites using [PHP Runtime Generation 2](/php-runtime-generation-2) have access to Tika 1.18 and 1.21. These versions are available at the following paths:
 
 - `/srv/bin/tika-app-1.18.jar`
 - `/srv/bin/tika-app-1.21.jar`
+
+Sites that are using these older versions of Tika should be upgraded to a newer version of Tika as soon as possible.
 
 Tika 3 is available and recommended. To enable Tika 3, add the following to your `pantheon.yml`:
 
@@ -67,7 +69,7 @@ Once you have committed the line above, the latest version of Tika 3 will be ava
 </Tab>
 <Tab title="PHP Runtime Generation 1" id="tab-2-id">
 
-Currently Tika 1.18 and 1.21 are available. These versions are available at the following paths:
+Tika 1.18 and 1.21 are available for PHP Runtime Generation 1. These versions are available at the following paths:
 
 - `/srv/bin/tika-app-1.18.jar`
 - `/srv/bin/tika-app-1.21.jar`
