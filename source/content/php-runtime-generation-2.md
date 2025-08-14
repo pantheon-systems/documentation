@@ -68,11 +68,10 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
 | **ClamAV** | Available | Coming soon <sup>1</sup> |
 | **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
-| **Apache Tika** | 1.18, 1.21 available | 1.18, 1.21, 3.2 coming soon <sup>2</sup> |
+| **Apache Tika** | 1.18, 1.21 | 1.18, 1.21, 3.2 |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
 <sup>1</sup> Support for this OS Package may be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
-<sup>2</sup> Tika will be made available before the platform-wide rollout in September. <br /><br />
 
 ### PHP Extensions
 
