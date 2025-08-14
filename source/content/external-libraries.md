@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, libraries, modules, plugins]
-reviewed: "2020-07-27"
+reviewed: "2025-08-14"
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
