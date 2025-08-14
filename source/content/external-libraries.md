@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, libraries, modules, plugins]
-reviewed: "2020-07-27"
+reviewed: "2025-08-14"
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
@@ -44,6 +44,41 @@ From `<your-url>/admin/config/user-interface/print/pdf`, choose dompdf as PDF Ge
 The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
+
+<TabList>
+
+<Tab title="PHP Runtime Generation 2" id="tab-1-anchor" active={true}>
+
+By default, sites using [PHP Runtime Generation 2](/php-runtime-generation-2) have access to Tika 1.18 and 1.21. These versions are available at the following paths:
+
+- `/srv/bin/tika-app-1.18.jar`
+- `/srv/bin/tika-app-1.21.jar`
+
+Sites that are using these older versions of Tika should be upgraded to a newer version of Tika as soon as possible.
+
+Tika 3 is available and recommended. To enable Tika 3, add the following to your `pantheon.yml`:
+
+```yaml:title=pantheon.yml
+tika_version: 3
+```
+
+Once you have committed the line above, the latest version of Tika 3 will be available at the following path:
+
+- `/opt/pantheon/tika/tika.jar`
+
+</Tab>
+<Tab title="PHP Runtime Generation 1" id="tab-2-id">
+
+Tika 1.18 and 1.21 are available for PHP Runtime Generation 1. These versions are available at the following paths:
+
+- `/srv/bin/tika-app-1.18.jar`
+- `/srv/bin/tika-app-1.21.jar`
+
+Sites that are using these older versions of Tika should be upgraded to a newer version of Tika as soon as possible. See the PHP Runtime Generation 2 tab for more information.
+
+
+</Tab>
+</TabList>
 
 See the [Solr for Drupal](/guides/solr-drupal) guide for instructions on using Apache Tika with Pantheon Drupal sites. Currently Tika 1.21 is available.
 
