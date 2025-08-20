@@ -3,7 +3,7 @@ title: "New beta experience rolling out for Site Dashboards now"
 published_date: "2025-08-20"
 categories: [user-interface, new-feature]
 ---
-A new beta experience for a freshly modernized Site Dashboard is rolling out across the platform starting now and will be available to all users over the coming weeks. If you want access immediately (without waiting for the platform rollout to finish) you can [submit this form](https://forms.gle/jzERvoCUzD7U7iqs7). 
+A new beta experience for a freshly modernized Site Dashboard is rolling out across the platform starting now and will be available to all users over the coming weeks. [Sign up now to skip the wait!](https://forms.gle/jzERvoCUzD7U7iqs7)
 
 ### Enable the new beta experience 
 
