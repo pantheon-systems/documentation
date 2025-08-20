@@ -35,5 +35,7 @@ Please note the toggle setting is specific to each user. If multiple users have 
   * Domain management
   * New Relic 
 * **Easily switch back** – If you need to, you still have access to the current dashboard.
-* **Share feedback** – We have a dedicated Slack channel for beta participants where you can easily ask questions and discuss feedback with the Pantheon product and engineering team.
+* **Share feedback** – We have a dedicated Slack channel for beta participants where you can easily ask questions and discuss feedback with the Pantheon product and engineering team. Reach out to your account manager to get an invite. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us). To request an invite, [submit this form](https://forms.gle/jzERvoCUzD7U7iqs7).
+
+
 
