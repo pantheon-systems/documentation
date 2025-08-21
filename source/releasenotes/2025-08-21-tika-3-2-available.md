@@ -1,6 +1,6 @@
 ---
 title: Apache Tika 3.2 now available via PHP Runtime Generation 2
-published_date: "2025-08-14"
+published_date: "2025-08-21"
 categories: [infrastructure]
 ---
 Support for [Apache Tika 3.2](https://tika.apache.org/3.2.0/index.html) is now available on the Pantheon platform via [PHP Runtime Generation 2](/php-runtime-generation-2). Older versions of Tika are still available for both PHP Runtime Gen 1 and Gen 2, however we recommend sites using older versions of Tika upgrade to 3.2 as soon as possible.
