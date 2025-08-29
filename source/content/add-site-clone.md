@@ -18,9 +18,11 @@ If you have a site on Pantheon that you wish to create a copy of (clone), you ca
 
 To do so:
 
+Here's an exact change. 
+
 1. [Install and authenticate Terminus](/terminus/install)
 
-1. Install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
+1.   Install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
 1. Replace `<source>` and `<destination>` with target [site UUIDs](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 
