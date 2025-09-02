@@ -66,12 +66,11 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | Package | Gen 1 | Gen 2 |
 |---------|---------|---------|
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
-| **ClamAV** | Available | Coming soon <sup>1</sup> |
 | **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
 | **Apache Tika** | 1.18, 1.21 | 1.18, 1.21, [3.2](/external-libraries#apache-tika) |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> Support for this OS Package may be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
+<sup>1</sup> Support for this OS Package will be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
 
 ### PHP Extensions
 
@@ -82,8 +81,8 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **curl** | v7.61.1 | 7.88.1 |
 | **gd** | 2.1.0 | 2.3.3 |
 | **iconv** | 2.28 | 2.36 |
-| **mongodb** | 1.14 | 2.1.0|
-| **openssl** | 1.1.1k | 3.0.16 |
+| **mongodb** | 1.14 | 2.1.1 |
+| **openssl** | 1.1.1k | 3.0.17 |
 | **pdo_pgsql** | 13.5 | 15.13 |
 | **pdo_sqlite** | 3.26.0 | 3.40.1 |
 | **pgsql** | 13.5 | 15.13 |
@@ -105,6 +104,7 @@ Does your application require an OS package or PHP extension that is no longer a
 ## Known Issues
 
 - There are no known issues currently
+
 ## Reporting Issues
 
 If you encounter any issues while testing your site with PHP Runtime Generation 2:
