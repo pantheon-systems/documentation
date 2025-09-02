@@ -1,5 +1,5 @@
 ---
-title: PHP Runtime Generation 2 supports ClamAV
+title: PHP Runtime Generation 2 now supports ClamAV
 published_date: "2025-09-02"
 categories: [infrastructure]
 ---
