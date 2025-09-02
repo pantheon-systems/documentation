@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/troubleshooting
-reviewed: "2024-08-22"
+reviewed: "2025-08-27"
 showtoc: true
 ---
 
@@ -91,11 +91,32 @@ Some possible causes for this error:
 
   **Solution:** Change the repository definition (in composer.json) to use https instead of ssh. In this example, the repository would be https://github.com/biltmoreco/advanced-custom-fields-pro.git
 
-
 ## Rate limiting
+### Pantheon rate limiting
 The service supports up to 3 requests per second per user through Terminus. If you hit that limit, the API will return a `429` error code and the plugin will throw an error.
 
 The PHP SDK and `pantheon_get_secret()` function are not affected by this rate limiting.
+
+### GitHub rate limiting
+Running frequent workflows involving composer can lead to external service rate limiters like GitHub's kicking in and preventing deployments from completing. This may arise when using Autopilot or spinning up Multidev environments.
+
+You can check the Build logs in failed workflows for errors that may indicate a limiter has been hit, e.g. 
+
+```bash
+Running composer update...
+composer --no-interaction --no-progress --prefer-dist --ansi update
+> DrupalComposerManaged\ComposerScripts::preUpdate
+Loading composer repositories with package information
+ 
+In AuthHelper.php line 132:
+                                             
+  Could not authenticate against github.com  
+                                             
+```
+
+**Solution:** 
+
+To avoid GitHub's rate limiter, you can [add a GitHub Personal Access Token (PAT) as a Secret to your project](/guides/secrets/composer#mechanism-1-oauth-composer-authentication-recommended).
 
 ## Still having issues?
 
