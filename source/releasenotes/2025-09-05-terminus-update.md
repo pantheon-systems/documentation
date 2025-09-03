@@ -1,6 +1,6 @@
 ---
 title: Terminus 4.0.2 release now available
-published_date: "2025-09-04"
+published_date: "2025-09-05"
 categories: [tools-apis]
 ---
 
