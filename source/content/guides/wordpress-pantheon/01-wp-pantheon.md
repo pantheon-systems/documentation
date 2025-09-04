@@ -5,7 +5,7 @@ description: Your guide to using WordPress on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-cms: [wordpress]
+cms: [wordpress
 audience: [development]
 product: [--]
 integration: [--]
