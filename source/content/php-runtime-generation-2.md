@@ -1,5 +1,5 @@
 ---
-title: PHP Runtime Generation 2 (Beta)
+title: PHP Runtime Generation 2
 description: The second generation of Pantheon's PHP runtime with added security and updated extensions.
 tags: [updates, libraries]
 contenttype: [doc]
@@ -13,9 +13,9 @@ integration: [--]
 
 ## Overview
 
-The new generation of our Serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
+The new generation of Pantheon's serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
 
-Depending on your website's features, this new PHP runtime may have major effects on the operation of your site. During the beta phase, we invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be removed in early 2026.
+Depending on your website's features, this new PHP runtime may have major effects on the operation of your site. We invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be removed in early 2026.
 
 ## What's included?
 
