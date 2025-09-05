@@ -1,10 +1,10 @@
 ---
 title: Terminus 4.0.2 release now available
-published_date: "2025-09-05"
+published_date: "2025-09-06"
 categories: [tools-apis]
 ---
 
-Terminus [4.0.2](https://github.com/pantheon-systems/terminus/releases/tag/4.0.2) is now available as of September 4, 2025. This small update contains the latest bug fixes and improvements for this tool.
+Terminus [4.0.2](https://github.com/pantheon-systems/terminus/releases/tag/4.0.2) is now available. This small update contains the latest bug fixes and improvements for this tool.
 
 ## Notable release details
 
