@@ -13,8 +13,11 @@ Terminus [4.0.2](https://github.com/pantheon-systems/terminus/releases/tag/4.0.2
 
 For more information about this release, visit the [GitHub release page](https://github.com/pantheon-systems/terminus/releases/tag/4.0.2).
 
-### Know Regression
-We've identified a regression affecting SSH commands (e.g., `drush`, `wp-cli`) on sites using external version control which will be patched next week.
+<Alert type="warning" title="Known Regression">
+
+We've identified a regression affecting SSH commands (e.g., `drush`, `wp-cli`) on [sites using external version control](/github-application) which will be patched next week.
+
+</Alert>
 
 ## How to upgrade Terminus
 If you manage your installation via Homebrew on macOS, you can update Terminus with the following command:
