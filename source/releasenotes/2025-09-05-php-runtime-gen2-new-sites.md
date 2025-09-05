@@ -1,6 +1,6 @@
 ---
 title: New sites will use PHP Runtime Generation 2 starting September 10, 2025
-published_date: "2025-09-04"
+published_date: "2025-09-05"
 categories: [infrastructure]
 ---
 
