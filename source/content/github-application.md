@@ -82,7 +82,7 @@ If you need compilation of front-end assets in your WordPress or Drupal theme th
 
 The GitHub Application is currently in private Beta.
 
-We will address these limitaitons before the application is made generally available.
+We will address these limitations before the application is made generally available.
 
 ### Limited to new projects created by the Terminus
 
