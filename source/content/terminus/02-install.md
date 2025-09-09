@@ -111,7 +111,7 @@ The commands below will:
 
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
-curl -L https://github.com/pantheon-systems/terminus/releases/download/4.0.1/terminus.phar --output terminus
+curl -L https://github.com/pantheon-systems/terminus/releases/download/4.0.2/terminus.phar --output terminus
 chmod +x terminus
 ./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
