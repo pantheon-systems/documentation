@@ -107,7 +107,7 @@ If you encounter any issues while testing your site with PHP Runtime Generation 
 
 ### Q: How can I determine which PHP runtime a site environment is using?
 
-The PHP Runtime is set at the environment-level. You can find out which generation an environment is using via the [Terminus](/terminus) command  `terminus env:info <site>.<env>`.
+The PHP runtime is set at the environment-level. You can find out which generation an environment is using via the [Terminus](/terminus) command  `terminus env:info <site>.<env>`.
 
 ### Q: Will I need to make changes to my website?
 
