@@ -14,7 +14,7 @@ const webInfrastructure = () => {
         ),
         simpleLink(
           '/php-runtime-generation-2',
-          'PHP Runtime Generation 2 (Beta)',
+          'PHP Runtime Generation 2',
         ),
         simpleLink('/horizontal-scalability', 'Horizontal Scalability'),
         // This page is oddly short.
