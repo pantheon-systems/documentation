@@ -1,10 +1,10 @@
 ---
 title: PHP Runtime Generation 2 rolling out to existing sites
-published_date: "2025-09-17"
+published_date: "2025-09-24"
 categories: [infrastructure]
 ---
 
-[PHP Runtime Generation 2](/php-runtime-generation-2) includeos updated extensions, PHP 8.4 availability, and enhanced security features. This new PHP runtime is currently rolling ut to existing sites on the platform.
+[PHP Runtime Generation 2](/php-runtime-generation-2) includes updated extensions, PHP 8.4 availability, and enhanced security features. This new PHP runtime is currently rolling ut to existing sites on the platform.
 
 We continue to encourage customers to [upgrade to Generation 2 proactively](/php-runtime-generation-2#how-to-opt-in), or [manually opt-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) if you need more time.
 
@@ -14,12 +14,12 @@ The upgrade rollout will take place over the next 40 days.
 
 | Estimated Date for Upgrades to Begin | Site Plans | Environments |
 |-----------|------------------|--------------|
-| September 17 | Sandbox | Dev/Multidevs |
-| October 1 | Sandbox | Test/Live |
-| October 1 | Basic | Dev/Multidevs |
-| October 15 | Basic | Test/Live |
-| October 15 | Performance/Elite | Dev/Multidevs |
-| October 22 | Performance/Elite | Test/Live |
+| September 24 | Sandbox | Dev/Multidevs |
+| October 8 | Sandbox | Test/Live |
+| October 8 | Basic | Dev/Multidevs |
+| October 22 | Basic | Test/Live |
+| October 22 | Performance/Elite | Dev/Multidevs |
+| October 29 | Performance/Elite | Test/Live |
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 
