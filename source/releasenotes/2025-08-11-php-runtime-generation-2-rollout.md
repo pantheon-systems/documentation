@@ -1,5 +1,5 @@
 ---
-title: "PHP Runtime Generation 2 Beta Available; Platform Rollout Starting September 17"
+title: "PHP Runtime Generation 2 Beta Available; Platform Rollout Starting September 24 [update - new date]"
 published_date: "2025-08-11"
 categories: [infrastructure, action-required]
 ---
@@ -29,13 +29,13 @@ We recommend all customers test your sites ahead of the rollout to identify any 
 
 ## Rollout Timeline
 
-We are currently in the beta phase, with a platform-wide rollout starting September 17. 
+We are currently in the beta phase, with a platform-wide rollout starting September 24. 
 
 It is safe to use the PHP Runtime Generation 2 beta on a Live environment once you have confirmed site compatibility.
 
 | Phase | Date | Details |
 |-----------|------------------|--------------|
-| **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
-| **Gen 2 Rollout** | September 17 - October 27, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Beta** | May - September 23, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
+| **Gen 2 Rollout** | Starting September 24 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
