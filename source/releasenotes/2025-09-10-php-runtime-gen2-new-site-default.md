@@ -1,7 +1,7 @@
 ---
 title: New sites use PHP Runtime Generation 2 by default
 published_date: "2025-09-10"
-categories: [infrastructure, new-feature]
+categories: [infrastructure]
 ---
 
 New sites created on the platform now use PHP Runtime Generation 2.
