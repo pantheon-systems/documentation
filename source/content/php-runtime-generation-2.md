@@ -43,9 +43,9 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 
 | Phase | Date | Details |
 |-----------|------------------|--------------|
-| **Beta** | May - September 9, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
-| **New Sites** | September 10, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
-| **Gen 2 Rollout** | September 17 - October 27, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
+| **New Sites** | September 17, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
+| **Gen 2 Rollout** | September 24 - November 3, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
 
