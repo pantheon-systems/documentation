@@ -23,7 +23,7 @@ The upgrade rollout will take place over the next 40 days.
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 
-Once the dev environment for a site has been upgraded to Generation 2, deploying commits from dev to test will automatically upgrade the test environment to Generation 2 as well. Following this pattern, an upgrade to the live environment takes place once commits are deployed from the test to live environment.
+Once the Dev environment for a site has been upgraded to Generation 2, deploying commits from Dev to Test will automatically upgrade the Test environment to Generation 2 as well. Following this pattern, an upgrade to the Live environment takes place once commits are deployed from the Test to Live environment.
 
 </Alert>
 
