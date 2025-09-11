@@ -61,15 +61,9 @@ If you experience this error, it will likely be at the end of the flow, at which
 
 ## Autopilot Ran Into an Unexpected Error
 
-<Accordion title="Autopilot ran into an unexpected error. Contact Support for assistance." id="unexpected-error" icon="info-sign">
-
 Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
-</Accordion>
-
-## Drush Version
-
-<Accordion title="We could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
+## We could not run Autopilot because the site is running an unsupported Drush version
 
 ### Issue
 
@@ -85,7 +79,6 @@ Autopilot only supports Integrated Composer; Build Tools sites cannot be updated
 
 To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
-</Accordion>
 
 ## Extension Updates are Missing
 
