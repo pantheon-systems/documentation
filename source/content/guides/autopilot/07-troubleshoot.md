@@ -43,9 +43,7 @@ Click **Actions** in the site's row on the Autopilot screen and then click **Sta
 
 If a test that was waiting was approved after changing the Dev environment, Autopilot will periodically check to see if Dev has changed since Autopilot last ran.
 
-## Autopilot is blocked
-
-<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes." id="uncommitted-sftp" icon="info-sign">
+## Autopilot is blocked due to uncommitted SFTP code changes
 
 ### Issue
 
@@ -60,8 +58,6 @@ If Autopilot attempted to deploy, then either: tests have already passed; or the
 ### Solution
 
 If you experience this error, it will likely be at the end of the flow, at which point you should [re-run Autopilot](#re-run-autopilot) with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
-
-</Accordion>
 
 ## Autopilot Ran Into an Unexpected Error
 
