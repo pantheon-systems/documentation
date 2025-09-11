@@ -43,9 +43,7 @@ Click **Actions** in the site's row on the Autopilot screen and then click **Sta
 
 If a test that was waiting was approved after changing the Dev environment, Autopilot will periodically check to see if Dev has changed since Autopilot last ran.
 
-## Autopilot is blocked
-
-<Accordion title="Autopilot is blocked due to uncommitted SFTP code changes." id="uncommitted-sftp" icon="info-sign">
+## Autopilot is blocked due to uncommitted SFTP code changes
 
 ### Issue
 
@@ -61,19 +59,11 @@ If Autopilot attempted to deploy, then either: tests have already passed; or the
 
 If you experience this error, it will likely be at the end of the flow, at which point you should [re-run Autopilot](#re-run-autopilot) with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
 
-</Accordion>
-
 ## Autopilot Ran Into an Unexpected Error
-
-<Accordion title="Autopilot ran into an unexpected error. Contact Support for assistance." id="unexpected-error" icon="info-sign">
 
 Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
-</Accordion>
-
-## Drush Version
-
-<Accordion title="We could not run Autopilot because the site is running an unsupported Drush version." id="invalid-drush-version" icon="info-sign">
+## We could not run Autopilot because the site is running an unsupported Drush version
 
 ### Issue
 
@@ -89,7 +79,6 @@ Autopilot only supports Integrated Composer; Build Tools sites cannot be updated
 
 To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
-</Accordion>
 
 ## Extension Updates are Missing
 
