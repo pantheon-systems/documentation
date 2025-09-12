@@ -1,6 +1,6 @@
 ---
 title: "PHP 8.3 and 8.4 updated to their latest patch releases"
-published_date: "2025-09-11"
+published_date: "2025-09-12"
 categories: [infrastructure, security]
 ---
 PHP versions [8.3.25](https://www.php.net/ChangeLog-8.php#8.3.25) and [8.4.12](https://www.php.net/ChangeLog-8.php#8.4.12), and  are now available on the platform. These updates brings the latest bug fixes, improving performance and security for your sites. Updates will be applied automatically over the next few days, so no manual action is required.
