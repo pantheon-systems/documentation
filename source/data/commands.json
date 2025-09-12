@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "4.0.2"
+        "version": "4.0.3"
     },
     "commands": [
         {
@@ -9043,7 +9043,7 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "DEPRECATED Tag name to filter",
+                        "description": "Tag name to filter (ANY)",
                         "default": null
                     },
                     "tags": {
@@ -9052,7 +9052,7 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "",
+                        "description": "Multiple tag names to filter (ALL)",
                         "default": null
                     },
                     "upstream": {
@@ -9079,8 +9079,8 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: Name (name), ID (id), Plan (plan_name), Framework (framework), Owner (owner), Created (created), Tags (tags), Is Frozen? (frozen)",
-                        "default": ""
+                        "description": "Available fields: Name (name), Label (label), ID (id), Plan (plan_name), Framework (framework), Owner (owner), Created (created), Tags (tags), Is Frozen? (frozen)",
+                        "default": "name,id,plan_name,framework,owner,created,tags,frozen"
                     },
                     "field": {
                         "name": "--field",
@@ -12803,7 +12803,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: Name (name), ID (id), Plan (plan_name), Framework (framework), Region (region), Owner (owner), Created (created), Memberships (memberships), Is Frozen? (frozen), Date frozen (last_frozen_at)",
+                        "description": "Available fields: Name (name), Label (label), ID (id), Plan (plan_name), Framework (framework), Region (region), Owner (owner), Created (created), Memberships (memberships), Is Frozen? (frozen), Date frozen (last_frozen_at)",
                         "default": "name,id,plan_name,framework,region,owner,created,memberships,frozen"
                     },
                     "field": {
