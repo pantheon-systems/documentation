@@ -93,7 +93,8 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Known Issues
 
-- There are no known issues currently
+- New Relic is not available for sites running PHP 5.6. Compatibility will be added soon.
+- Drupal 8+ sites cannot access Solr 3. [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) is required.
 
 ## Reporting Issues
 
