@@ -238,16 +238,17 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		'port' => getenv('CACHE_PORT') ?: 6379,
 		'database' => getenv('CACHE_DB') ?: 0,
 		'password' => getenv('CACHE_PASSWORD') ?: null,
-		'maxttl' => 86400 * 7,
-		'timeout' => 0.5,
-		'read_timeout' => 0.5,
+		'maxttl' => 86400,
+		'timeout' => 2.0,
+		'read_timeout' => 2.0,
+		'retry_interval' => 100,
 		'split_alloptions' => true,
 		'prefetch' => true,
 		'debug' => false,
 		'save_commands' => false,
 		'analytics' => [
 			'enabled' => true,
-			'persist' => true,
+			'persist' => false,
 			'retention' => 3600, // 1 hour
 			'footnote' => true,
 		],
@@ -370,6 +371,45 @@ Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Red
 	</Alert>
 	
 Make sure to commit your code back to your environment when you have made the appropriate changes.
+
+## WP_REDIS_CONFIG Constant
+
+Using the `terminus install:run <site>.<environment> ocp` command to install Object Cache Pro will automatically configure the latest version of the recommended `WP_REDIS_CONFIG` for Pantheon-hosted sites. This constant is placed in `wp-config-ocp.php`.
+
+The latest recommended version of the constant is below:
+
+	```php:title=wp-config-ocp.php
+	/*
+	* Pantheon OCP Config Version: 2.0
+	*/
+	
+	define( 'WP_REDIS_CONFIG', [
+		'token' => getenv('OCP_LICENSE') ?: null,
+		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
+		'port' => getenv('CACHE_PORT') ?: 6379,
+		'database' => getenv('CACHE_DB') ?: 0,
+		'password' => getenv('CACHE_PASSWORD') ?: null,
+		'maxttl' => 86400,
+		'timeout' => 2.0,
+		'read_timeout' => 2.0,
+		'retry_interval' => 100,
+		'split_alloptions' => true,
+		'prefetch' => true,
+		'debug' => false,
+		'save_commands' => false,
+		'analytics' => [
+			'enabled' => true,
+			'persist' => false,
+			'retention' => 3600, // 1 hour
+			'footnote' => true,
+		],
+		'prefix' => $ocp_redis_prefix,
+		'serializer' => 'igbinary',
+		'compression' => 'zstd',
+		'async_flush' => true,
+		'strict' => true,
+	] );
+	```
 
 ## Additional Considerations
 - When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- cache flush`.
