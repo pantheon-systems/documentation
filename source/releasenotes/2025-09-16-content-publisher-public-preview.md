@@ -13,7 +13,7 @@ This promotion to Public Preview also reflects increased product maturity in are
 * [Pricing information](https://pantheon.io/content-publisher-free-trial#pricing) and [free trial](https://pantheon.io/content-publisher-free-trial) of enterprise-level features now publicly available.
 * New releases for our [Drupal module](https://www.drupal.org/project/pantheon_content_publisher) and [WordPress plugin](https://github.com/pantheon-systems/pantheon-content-publisher-wordpress) with bug fixes and feature improvements.
 * Multiple Google Workspaces can now be connected to a single Content Publisher account.
-* [Content approval workflows](https://docs.content.pantheon.io/approval-workflow) that allow content editors to submit content to be approved and published by administrators.
+* [Content approval workflows](https://docs.content.pantheon.io/approval-workflow#h.lwsqxtbqyglx) that allow content editors to submit content to be approved and published by administrators.
 * Live chat support now directly integrated within the Content Dashboard interface.
 
 For more perspective on Content Publisher, check out [the announcement blog post](https://pantheon.io/blog/content-publisher-public-preview). See [our documentation site](https://docs.content.pantheon.io/) for guidance on using Content Publisher.
