@@ -45,17 +45,17 @@ If a test that was waiting was approved after changing the Dev environment, Auto
 
 ## Autopilot is blocked due to uncommitted SFTP code changes
 
-### Issue
+**Issue**
 
 Autopilot will fail if there are uncommitted SFTP code changes in the Dev environment.
 
-### Diagnosis
+**Diagnosis**
 
 If commits are pushed to Dev after the Autopilot Multidev is created, you run the risk of having a merge conflict when Autopilot is pushed back to Dev.
 
 If Autopilot attempted to deploy, then either: tests have already passed; or the less likely event that a test that was waiting, was approved after changing the Dev environment.
 
-### Solution
+**Solution**
 
 If you experience this error, it will likely be at the end of the flow, at which point you should [re-run Autopilot](#re-run-autopilot) with the latest changes to ensure all is covered in testing. Autopilot will also log an error, which can be found in the activity feed.
 
@@ -65,30 +65,30 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## We could not run Autopilot because the site is running an unsupported Drush version
 
-### Issue
+**Issue**
 
 An error occurred because your site is currently running an unsupported version of Drush.
 
-### Diagnosis
+**Diagnosis**
 
 If your Drupal site is not managed with Composer, Autopilot only works on sites that are running Drush 8. Composer-managed sites may use any compatible Drush version and will not display the Drush version error.
 
 Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
 
-### Solution
+**Solution**
 
 To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
 
 ## We could not apply the updates because a plugin, theme, or module was not found while attempting the update
 
-### Issue
+**Issue**
 
 - **WordPress**: This error message is displayed if a WordPress plugin or theme is not found after updates were attempted.
 
 - **Drupal**: This error message is displayed if a Drupal module or theme update could not be applied.
 
-### Diagnosis
+**Diagnosis**
 
 To determine which plugin is causing the issue:
 
@@ -98,7 +98,7 @@ To determine which plugin is causing the issue:
 
 If you need assistance, [contact Support](/guides/support/contact-support).
 
-### Solution
+**Solution**
 
 Remove the plugin, theme, or module from the site if it is not being used. You can also revert the plugin, theme, or module to the original name.
 
@@ -114,15 +114,15 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 
 ## Could not apply the extension updates
 
-### Issue
+**Issue**
 
 Applying extension updates failed.
 
-### Diagnosis
+**Diagnosis**
 
 Applying updates with Drush or WP-CLI failed. This could be because of a read/write error, PHP fatal error thrown by the CMS, or another site-level error.
 
-### Solution
+**Solution**
 
 Ensure Drush or the WP-CLI works as expected on the Dev and Multidev environments.
 
@@ -133,15 +133,15 @@ If possible, manually edit or update the plugins required to resolve the update 
 
 ## We could not apply the upstream updates
 
-### Issue
+**Issue**
 
 Applying upstream updates failed and changes cannot be automatically merged by Git.
 
-### Diagnosis
+**Diagnosis**
 
 This error message most likely results from a merge conflict when applying upstream updates to the site. For sites that use Composer, this could be caused by a failed Composer build.
 
-### Solution
+**Solution**
 
 Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
@@ -153,15 +153,15 @@ This error can also display if some of the updates failed testing. This results 
 
 ## We could not complete the visual regression test due to a redirect error on one or more pages
 
-### Issue
+**Issue**
 
 The visual regression test (VRT) could not be completed due to a redirect error on one or more pages.
 
-### Diagnosis
+**Diagnosis**
 
 Autopilot fails when a VRT page redirects more than 8 times or is stuck in an infinite loop.
 
-### Solution
+**Solution**
 
 To resolve this issue, remove the page from VRT settings or fix the redirect in the Dev environment for the page.
 
@@ -169,11 +169,11 @@ To resolve this issue, remove the page from VRT settings or fix the redirect in 
 
 ## We could not run Autopilot because no pages are defined for visual regression testing
 
-### Issue
+**Issue**
 
 There are no visual regression testing pages in the Autopilot settings.
 
-### Solution
+**Solution**
 
 Add at least one site to the Autopilot VRT settings.
 
@@ -181,11 +181,11 @@ Add at least one site to the Autopilot VRT settings.
 
 ## Could not deploy the updates to the Test or Live environment due to an unexpected error
 
-### Issue
+**Issue**
 
 Autopilot failed to deploy to Test or Live; however, deploying to Dev from Multidev was successful. The most common reason for this is running clear cache or update db using Drush or the WP-CLI failed after the code was deployed. Ensure that clearing the cache using Drush or the WP-CLI works on the target environment.
 
-### Solution
+**Solution**
 
 If the Drush or WP-CLI steps failed during diagnosis, resolve any errors thrown by the CMS.
 
@@ -197,11 +197,11 @@ If these steps fail, contact [Support](/guides/support/contact-support).
 
 ## We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment
 
-### Issue
+**Issue**
 
 Failed to get a `200 OK` response from the homepage of the Dev environment.
 
-### Solution
+**Solution**
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
 
@@ -211,21 +211,21 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 ### CMS Error
 
-#### Diagnosis
+#**Diagnosis**
 
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
-#### Solution
+#**Solution**
 
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
 ### Composer Error
 
-#### Diagnosis
+#**Diagnosis**
 
 The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer).
 
-#### Solution
+#**Solution**
 
 Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
 
@@ -234,15 +234,15 @@ You can also use [Composer 2](/guides/integrated-composer/ic-support) to test lo
 
 ## We could not merge the updates to the Dev environment due to an unexpected issue
 
-### Issue
+**Issue**
 
 Updates could not be merged to the Dev environment.
 
-### Diagnosis
+**Diagnosis**
 
 The most common reason for failure is due to a merge conflict. Changes were deployed in the Dev environment after Autopilot ran that resulted in a merge conflict. This error could also be because of a site-level PHP issue with `clear-cache` or `update.php` failing following a merge.
 
-### Solution
+**Solution**
 
 If failure is because of a merge conflict, run Autopilot again with latest changes.
 
@@ -251,11 +251,11 @@ If the issue is because of a PHP or CMS issue, resolve any issues causing `clear
 
 ## We could not clone the environments due to an unexpected error
 
-### Diagnosis
+**Diagnosis**
 
 The most common reason for clone content to fail is that drush/wp-cli clear cache failed at the end of a workflow.
 
-### Solution
+**Solution**
 
 Ensure the commands work. You will not be able to see if the workflow failed, but CSEs will be able to confirm if there was an issue with Drush or WP-CLI by replicating the step with Terminus.
 
@@ -273,11 +273,11 @@ Use the following steps:
 
 ## We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot
 
-### Issue
+**Issue**
 
 Unsaved work in the development environment has prevented Autopilot from running.
 
-### Solution
+**Solution**
 
 Commit or discard the change, and run Autopilot again.
 
@@ -285,29 +285,29 @@ Commit or discard the change, and run Autopilot again.
 
 ## We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot
 
-### Issue
+**Issue**
 
 A CMS was not detected.
 
-### Solution
+**Solution**
 
 Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](/guides/legacy-dashboard/create-sites).
 
 
 ## We could not run Autopilot because the site is frozen due to inactivity
 
-### Issue
+**Issue**
 
 A Sandbox site is frozen due to inactivity.
 
-### Solution
+**Solution**
 
 Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
 
 
 ## We could not run Autopilot because the site is running an unsupported framework
 
-### Diagnosis
+**Diagnosis**
 
 Site is running a framework that is not supported. Supported frameworks are:
 
@@ -315,7 +315,7 @@ Site is running a framework that is not supported. Supported frameworks are:
 - Drupal 8 with Integrated Composer or Drush 8
 - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
 
-### Solution
+**Solution**
 
 [Contact support](/guides/support/contact-support/) for assistance.
 
@@ -323,11 +323,11 @@ Site is running a framework that is not supported. Supported frameworks are:
 
 ## We could not run Autopilot because the site is running an unsupported framework
 
-### Diagnosis
+**Diagnosis**
 
 A Composer-based WordPress site built with [Build Tools](https://docs.pantheon.io/guides/build-tools/) is not supported by Autopilot.
 
-### Solution
+**Solution**
 
 Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
 
@@ -335,13 +335,13 @@ Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/wordpre
 
 ## We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected
 
-### Diagnosis
+**Diagnosis**
 
 There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment.
 
 Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
 
-### Solution
+**Solution**
 
 After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
 
@@ -349,11 +349,11 @@ After diagnosing the problem, resolve the issue that is causing the error on the
 ## We could not execute some Quicksilver scripts on this site
 
 
-### Issue
+**Issue**
 
 Quicksilver scripts failed to execute on the site.
 
-### Solution
+**Solution**
 
 Contact Support[/support] for assistance.
 
@@ -361,22 +361,22 @@ Contact Support[/support] for assistance.
 
 ## We ran into an issue with Autopilot because the database could not be updated
 
-### Issue
+**Issue**
 
 An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated.
 
-### Solution
+**Solution**
 
 Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
 
 
 ## We could not apply upstream updates because the upstreams could not be merged
 
-### Issue
+**Issue**
 
 This error is distinct from a merge conflict, and is encountered when there is no shared Git history between the site's commits and the upstream's commits. This error is most often encountered when the site's upstream has been changed, or when a different Git history has been force-pushed for the site's code repository.
 
-### Solution
+**Solution**
 
 Update the site's code or the upstream so that the site and upstream share a common history.
 
