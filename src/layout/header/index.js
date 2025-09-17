@@ -26,6 +26,13 @@ const Header = ({ page }) => {
     },
     {
       linkContent: (
+        <a href="https://docs.content.pantheon.io" target="_blank">
+          Content Publisher
+        </a>
+      ),
+    },
+    {
+      linkContent: (
         <a href="https://dashboard.pantheon.io/#support" target="_blank">
           Support
         </a>
