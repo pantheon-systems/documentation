@@ -8,4 +8,6 @@ For sites using [Object Cache Pro](/object-cache/wordpress), a new recommended c
 
 [View the new config constant here.](/object-cache/wordpress#wp_redis_config-constant)
 
+## Action Required
+
 You may choose to manually replace the `WP_REDIS_CONFIG` constant in your `wp-config-ocp.php` or re-run `terminus install:run <site>.<environment> ocp` to apply the changes.
