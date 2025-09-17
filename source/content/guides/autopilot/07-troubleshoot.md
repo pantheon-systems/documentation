@@ -80,9 +80,7 @@ Autopilot only supports Integrated Composer; Build Tools sites cannot be updated
 To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integrated Composer.
 
 
-## Extension Updates are Missing
-
-<Accordion title="We could not apply the updates because a plugin, theme, or module was not found while attempting the update." id="missing-extension-updates" icon="info-sign">
+## We could not apply the updates because a plugin, theme, or module was not found while attempting the update
 
 ### Issue
 
@@ -106,19 +104,15 @@ Remove the plugin, theme, or module from the site if it is not being used. You c
 
 Alternatively, you can add the plugin, theme, or module to the **Excluded Updates** list in Autopilot settings.
 
-</Accordion>
 
-## Preventing Autopilot From Taking Screenshots of Your Website
 
-<Accordion title="There was an unexpected error preventing Autopilot from taking screenshots of your website." id="unexpected-screenshot-error" icon="info-sign">
+## There was an unexpected error preventing Autopilot from taking screenshots of your website
 
 Pantheon's Autopilot engineers investigate each of these errors as they occur. Please [contact Support](/guides/support/contact-support) via chat or ticket.
 
-</Accordion>
 
-## Failed Extension Updates
 
-<Accordion title="Could not apply the extension updates." id="extension-updates-failed" icon="info-sign">
+## Could not apply the extension updates
 
 ### Issue
 
@@ -136,11 +130,8 @@ Apply the plugin or theme updates either in the UI or with Drush or WP-CLI using
 
 If possible, manually edit or update the plugins required to resolve the update failure and allow Autopilot to run its subsequent round of updates.
 
-</Accordion>
 
-## Failed Upstream Updates
-
-<Accordion title="We could not apply the upstream updates." id="upstream-updates-failed" icon="info-sign">
+## We could not apply the upstream updates
 
 ### Issue
 
@@ -158,11 +149,9 @@ If the error is displayed due to a failed Composer build, use `git diff` to view
 
 This error can also display if some of the updates failed testing. This results in partial updates, in which the updates that passed testing are applied, while the updates that failed testing are not applied. Refer to the [Failing Tests](/guides/autopilot/tests-results/#failing-tests) section for more information on how to resolve failed tests.
 
-</Accordion>
 
-## Redirects
 
-<Accordion title="We could not complete the visual regression test due to a redirect error on one or more pages." id="too-many-redirects" icon="info-sign">
+## We could not complete the visual regression test due to a redirect error on one or more pages
 
 ### Issue
 
@@ -176,11 +165,9 @@ Autopilot fails when a VRT page redirects more than 8 times or is stuck in an in
 
 To resolve this issue, remove the page from VRT settings or fix the redirect in the Dev environment for the page.
 
-</Accordion>
 
-## VRT Scenarios
 
-<Accordion title="We could not run Autopilot because no pages are defined for visual regression testing." id="no-vrt-scenarios" icon="info-sign">
+## We could not run Autopilot because no pages are defined for visual regression testing
 
 ### Issue
 
@@ -190,11 +177,9 @@ There are no visual regression testing pages in the Autopilot settings.
 
 Add at least one site to the Autopilot VRT settings.
 
-</Accordion>
 
-## Failed Deployment
 
-<Accordion title="Could not deploy the updates to the Test or Live environment due to an unexpected error." id="deploy-failed" icon="info-sign">
+## Could not deploy the updates to the Test or Live environment due to an unexpected error
 
 ### Issue
 
@@ -208,11 +193,9 @@ Run the deploy to Test or Live manually. Autopilot will also attempt to deploy a
 
 If these steps fail, contact [Support](/guides/support/contact-support).
 
-</Accordion>
 
-## Unreachable Site
 
-<Accordion title="We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment." id="site-unreachable" icon="info-sign">
+## We ran into an unexpected issue with Autopilot because the site could not be loaded in the Dev environment
 
 ### Issue
 
@@ -222,11 +205,9 @@ Failed to get a `200 OK` response from the homepage of the Dev environment.
 
 Ensure the Dev environment is live and reachable with no fatal errors and returns a `200 OK` with curl or another check, for example `curl -I https://dev-{SITE}.pantheonsite.io/`.
 
-</Accordion>
 
-## Autopilot Multidev
 
-<Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
+## Could not create or reset the Autopilot Multidev due to an unexpected error
 
 ### CMS Error
 
@@ -250,11 +231,8 @@ Check the build log in the Site dashboard. Review the most recent commit to see 
 
 You can also use [Composer 2](/guides/integrated-composer/ic-support) to test locally and identify issues by running `composer install` or `composer update`
 
-</Accordion>
 
-## Merge to Dev
-
-<Accordion title="We could not merge the updates to the Dev environment due to an unexpected issue." id="merge-dev" icon="info-sign">
+## We could not merge the updates to the Dev environment due to an unexpected issue
 
 ### Issue
 
@@ -270,11 +248,8 @@ If failure is because of a merge conflict, run Autopilot again with latest chang
 
 If the issue is because of a PHP or CMS issue, resolve any issues causing `clear-cache` or `update.php` steps to fail, and manually merge again, or re-run Autopilot.
 
-</Accordion>
 
-## Cloned Content
-
-<Accordion title="We could not clone the environments due to an unexpected error." id="cloned-content-failed" icon="info-sign">
+## We could not clone the environments due to an unexpected error
 
 ### Diagnosis
 
@@ -294,11 +269,9 @@ Use the following steps:
 
   `drush cache-rebuild`
 
-</Accordion>
 
-## Uncommitted Changes
 
-<Accordion title="We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot." id="changes-uncommitted" icon="info-sign">
+## We could not run Autopilot because there is unsaved work in the development environment. Commit or discard the change, and retry Autopilot
 
 ### Issue
 
@@ -308,11 +281,9 @@ Unsaved work in the development environment has prevented Autopilot from running
 
 Commit or discard the change, and run Autopilot again.
 
-</Accordion>
 
-## CMS Missing
 
-<Accordion title="We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot." id="missing-cms" icon="info-sign">
+## We could not run Autopilot because a CMS was not detected. Install Drupal or WordPress on this site, and retry Autopilot
 
 ### Issue
 
@@ -322,11 +293,8 @@ A CMS was not detected.
 
 Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](/guides/legacy-dashboard/create-sites).
 
-</Accordion>
 
-## Frozen Site
-
-<Accordion title="We could not run Autopilot because the site is frozen due to inactivity." id="site-frozen" icon="info-sign">
+## We could not run Autopilot because the site is frozen due to inactivity
 
 ### Issue
 
@@ -336,11 +304,8 @@ A Sandbox site is frozen due to inactivity.
 
 Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreezing may take some time.
 
-</Accordion>
 
-## Framework is Not Supported
-
-<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="framework-not-supported" icon="info-sign">
+## We could not run Autopilot because the site is running an unsupported framework
 
 ### Diagnosis
 
@@ -354,11 +319,9 @@ Site is running a framework that is not supported. Supported frameworks are:
 
 [Contact support](/guides/support/contact-support/) for assistance.
 
-</Accordion>
 
-## Composer configuration Not Supported
 
-<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="misconfigured-composer" icon="info-sign">
+## We could not run Autopilot because the site is running an unsupported framework
 
 ### Diagnosis
 
@@ -368,11 +331,9 @@ A Composer-based WordPress site built with [Build Tools](https://docs.pantheon.i
 
 Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
 
-</Accordion>
 
-## CLI Tool Failed
 
-<Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
+## We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected
 
 ### Diagnosis
 
@@ -384,11 +345,9 @@ Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev --
 
 After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
 
-</Accordion>
 
-## Quicksilver is Unavailable
+## We could not execute some Quicksilver scripts on this site
 
-<Accordion title="We could not execute some Quicksilver scripts on this site." id="no-quicksilver" icon="info-sign">
 
 ### Issue
 
@@ -398,11 +357,9 @@ Quicksilver scripts failed to execute on the site.
 
 Contact Support[/support] for assistance.
 
-</Accordion>
 
-## Database Could Not Be Updated
 
-<Accordion title="We ran into an issue with Autopilot because the database could not be updated." id="no-database-updates" icon="info-sign">
+## We ran into an issue with Autopilot because the database could not be updated
 
 ### Issue
 
@@ -412,11 +369,8 @@ An issue with Autopilot occurred because the WordPress Dev, Test, or Live databa
 
 Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
 
-</Accordion>
 
-## Upstreams Could Not Be Merged
-
-<Accordion title="We could not apply upstream updates because the upstreams could not be merged." id="upstream-no-common-ancestor" icon="info-sign">
+## We could not apply upstream updates because the upstreams could not be merged
 
 ### Issue
 
@@ -428,7 +382,6 @@ Update the site's code or the upstream so that the site and upstream share a com
 
 You can also disable upstream updates if you do not want Autopilot to maintain upstream updates, including core updates. Autopilot will continue to update plugins, themes, and modules.
 
-</Accordion>
 
 ## More Resources
 
