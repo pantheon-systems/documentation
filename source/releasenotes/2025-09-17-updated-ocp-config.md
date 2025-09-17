@@ -1,7 +1,7 @@
 ---
 title: New Object Cache Pro recommended config constant (2.0)
 published_date: "2025-09-17"
-categories: [wordpress, performance]
+categories: [wordpress, performance, action-required]
 ---
 
 For sites using [Object Cache Pro](/object-cache/wordpress), a new recommended config constant, Pantheon OCP Config Version 2.0, is now available.
