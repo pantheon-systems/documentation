@@ -211,21 +211,21 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 ### CMS Error
 
-#**Diagnosis**
+**Diagnosis**
 
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
-#**Solution**
+**Solution**
 
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
 ### Composer Error
 
-#**Diagnosis**
+**Diagnosis**
 
 The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer).
 
-#**Solution**
+**Solution**
 
 Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
 
