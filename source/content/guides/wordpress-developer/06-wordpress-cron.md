@@ -62,7 +62,7 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 </Alert>
 
 ### WordPress Multisite
-By default, Pantheon Cron is disabled for WordPress Multisite installations, and the normal WP Cron will be used instead. This is because WordPress Multisite installations often have unpredictable customizations to domains or subdirectories and their mapping to subsites. 
+By default, Pantheon Cron is disabled for WordPress Multisite installations, and the normal WP Cron will be used instead.  
 
 ### Security
 
