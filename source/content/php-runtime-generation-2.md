@@ -23,18 +23,7 @@ Depending on your website's features, this new PHP runtime may have major effect
 - Better CMS functionality via updated PHP extensions
 - PHP 8.4 availability
 
-## Beta Phase (April - September 16, 2025)
-
-During the beta phase, you can opt in to test your sites on the new PHP runtime. The opt-in is environment-based, meaning you can trial the new PHP runtime without affecting your other environments. This allows you to:
-
-- Verify your site's compatibility before the platform-wide rollout
-- Test your deployment workflows
-- Identify any potential issues early
-- Provide valuable feedback to our team
-
-It is safe to use the PHP Runtime Generation 2 beta on a Live environment once you have confirmed site compatibility.
-
-### How to Opt In
+## How to upgrade
 
 To enable the second generation PHP runtime for an environment, add the following to your `pantheon.yml`:
 
@@ -55,8 +44,8 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | Phase | Date | Details |
 |-----------|------------------|--------------|
 | **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
-| **New Sites** | September 10, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
-| **Gen 2 Rollout** | September 17 - October 27, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **New Sites** | September 17, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
+| **Gen 2 Rollout** | September 24 - November 3, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
 
@@ -104,7 +93,8 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Known Issues
 
-- There are no known issues currently
+- New Relic is not available for sites running PHP 5.6. Compatibility will be added soon.
+- Drupal 8+ sites using Solr 3 should not upgrade to PHP Runtime Generation 2. [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) or disabling Solr is required.
 
 ## Reporting Issues
 
@@ -112,9 +102,13 @@ If you encounter any issues while testing your site with PHP Runtime Generation 
 
 1. Check the Known Issues section above
 2. Verify the issue is related to the new PHP runtime by reverting back to `1` in your `pantheon.yml` file.
-3. Submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2 Beta" in your message to support.
+3. Submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2" in your message to support.
 
 ## Frequently Asked Questions
+
+### Q: How can I determine which PHP runtime a site environment is using?
+
+The PHP runtime is set at the environment-level. You can find out which generation an environment is using via the [Terminus](/terminus) command  `terminus env:info <site>.<env>`.
 
 ### Q: Will I need to make changes to my website?
 
