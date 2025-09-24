@@ -27,6 +27,7 @@ const getOmniItems = () => {
     webInfrastructure(),
     accountManagement(),
     terminus(),
+    simpleLink('https://docs.content.pantheon.io', 'Content Publisher'),
     support(),
     security(),
     learning(),

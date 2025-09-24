@@ -44,7 +44,6 @@ const allWrittenPaths = [
   '/composer-convert',
   '/composer-convert-from-empty',
   '/connection-modes',
-  '/content-publisher',
   '/content-staging',
   '/continuous-integration',
   '/contribute',

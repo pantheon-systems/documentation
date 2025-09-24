@@ -53,7 +53,6 @@ const workflows = () => {
       getGuideDirectory('guides/backups'),
       // Maybe make this a separate category for local development
       getGuideDirectory('guides/local-development', 'Local Development'),
-      simpleLink('/content-publisher', 'Content Publisher'),
     ],
   };
 };

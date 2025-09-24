@@ -34,7 +34,7 @@
         "immutable": false,
         "prerelease": false,
         "created_at": "2025-09-11T18:34:51Z",
-        "updated_at": "2025-09-11T19:08:39Z",
+        "updated_at": "2025-09-12T17:26:45Z",
         "published_at": "2025-09-11T19:08:38Z",
         "assets": [
             {
@@ -76,7 +76,7 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/4.0.3",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/4.0.3",
-        "body": ""
+        "body": "### Added\r\n\r\n- Make site label available in `site:list` and `org:site:list` commands (#2708)\r\n- Add a debug log message to `workflow:wait` printing the workflow start time (#2703)\r\n\r\n### Fixed\r\n- Fix regression for drush\/wp-cli commands on eVCS sites (#2719)\r\n- Un-deprecated `--tags` parameter on `org:site:list` command (#2709)\r\n- Remove unnecessary api call from `tag:add` and `tag:list` causing unnecessary load and timeouts (#2718)"
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/245129994",
