@@ -31,6 +31,6 @@ The PHP Runtime is set at the environment-level. You can find out which generati
 
 <Alert type="info" title="Post-upgrade discrepancy">
 
-During the automated rollout, an environment may appear as Generation 2 with the Terminus command above but the the upgrade process may not have completed yet. The upgrade process fully complete within 48 hours, or when code is committed/deployed to the environment.
+During the automated rollout, an environment may appear as Generation 2 with the Terminus command above but the the upgrade process may not have completed yet. The upgrade process fully completes within 48 hours, or when code is committed/deployed to the environment.
 
 </Alert>
