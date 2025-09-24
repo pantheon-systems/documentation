@@ -10,16 +10,12 @@ We continue to encourage customers to [upgrade to Generation 2 proactively](/php
 
 ## Rollout Timeline
 
-The upgrade rollout will take place over the next 40 days.
+The upgrade rollout will take place over the next 40 days. The table below shows which upgrades are being processed. We will update this release note as we begin each phase.
 
-| Estimated Date for Upgrades to Begin | Site Plans | Environments |
+| Start Date for Upgrades | Site Plans | Environments |
 |-----------|------------------|--------------|
 | September 24 | Sandbox | Dev/Multidevs |
-| October 8 | Sandbox | Test/Live |
-| October 8 | Basic | Dev/Multidevs |
-| October 22 | Basic | Test/Live |
-| October 22 | Performance/Elite | Dev/Multidevs |
-| October 29 | Performance/Elite | Test/Live |
+
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 
@@ -31,5 +27,10 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 The PHP Runtime is set at the environment-level. You can find out which generation an environment is using via Terminus or the Pantheon Dashboard.
 
-* **Terminus:** Use the command `terminus env:info <site>.<env>`
-* **Dashboard:** Navigate to the Site then look for "Software Versions" on the environment's Status page
+* **Terminus 4.0.2+:** Use the command `terminus env:info <site>.<env>`
+
+<Alert type="info" title="Post-upgrade discrepancy">
+
+During the automated rollout, an environment may appear as Generation 2 with the Terminus command above but the the upgrade process may not have completed yet. The upgrade process fully complete within 48 hours, or when code is committed/deployed to the environment.
+
+</Alert>
