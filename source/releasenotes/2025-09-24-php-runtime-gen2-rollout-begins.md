@@ -25,7 +25,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 ## How to determine which PHP runtime your site environment is using
 
-The PHP Runtime is set at the environment-level. You can find out which generation an environment is using via Terminus or the Pantheon Dashboard.
+The PHP Runtime is set at the environment-level. You can find out which generation an environment is using via [Terminus](/terminus/install):
 
 * **Terminus 4.0.2+:** Use the command `terminus env:info <site>.<env>`
 
