@@ -147,15 +147,7 @@ To view the status of that process, run this command (which presumes we are list
 terminus node:logs:build:list my-site-machine-name.pr-1
 ```
 
-Over the course of a few minutes, you will see the status of your build move through a few phases.
-
-BUILD_QUEUED: This state should last briefly in between GitHub triggering a build and Pantheon beginning to build the Next.js site.
-
-BUILD_WORKING: This phase builds your Next.js application. Primarily, it executes `npm clean-install` and `npm run build`. (We also support pnpm and yarn). If these commands complete successfully, you will next see a status of BUILD_SUCESS or BUILD_FAILURE.
-
-As the build runs, and after it completes, you can inspect the build logs via `terminus node:logs:build:get site-name.env  build_id`. The logs shown here can help you troubleshoot build failures.
-
-Assuming your build completes successfully, the files needed to run your Next.js site will be deployed from the build environment to a runtime container which will serve HTTP traffic via `npm run start`. These deployment steps will also surface in `terminus node:logs:build:list` as DEPLOYMENT_QUEUED, DEPLOYMENT_WORKING, DEPLOYMENT_FAILURE or DEPLOYMENT_SUCCESS.
+Over the course of a few minutes, you will see the statuses update as the files necessary to run Next.js are built and deployed. See this [section for more details on the build and deployment process](/nextjs/build-and-deploy).
 
 For as small of a change as we made in this pull request, some "Hello World" text, we should soon see DEPLOYMENT_SUCCESS as the status. Once that status is reached, you should be able to see your change in your browser by opening a Multidev environment from your dashboard.
 
@@ -169,9 +161,9 @@ Having seen this change to the Next.js site deployed on a non-live environment w
 
 Having reached a "Hello World" state with Next.js on Pantheon, you might want to proceed to one or more other Tutorials or guides.
 
-* How-To Guide: Migrating from Front-End Sites walk through moving a site away from Pantheon's prior offering for hosting Next.js.
-* Learn to Troubleshoot errors and set environment variables.
-* Deploy to Test and Live environments and connect a custom domain name.
-* Connect Next.js to Content Publisher.
+* [How-To Guide: Migrating from Front-End Sites walk through moving a site away from Pantheon's prior offering for hosting Next.js](/nextjs/migrating-from-front-end-sites).
+* [Learn to Troubleshoot errors and set environment variables](/nextjs/logs-and-environment-variables-tutorial).
+* [Deploy to Test and Live environments and connect a custom domain name](/nextjs/test-and-live-env).
+* [Connect Next.js to Content Publisher](/nextjs/content-publisher-tutorial).
 
 
