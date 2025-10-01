@@ -148,6 +148,22 @@ const webInfrastructure = () => {
           'Optimize wp_options Table and Autoloaded Data',
         ),
       ]),
+      simpleLink('/nextjs', 'Next.js', [
+        simpleLink('/nextjs', 'Next.js Overview'),
+        simpleLink('/nextjs/hello-world-tutorial', 'Tutorial: Hello World'),
+        simpleLink('/nextjs/architecture', 'Next.js Architecture', [
+          simpleLink('/nextjs/architecture', 'Runtime'),
+          simpleLink('/nextjs/build-and-deploy', 'Build and Deploy'),
+        ]),
+
+        simpleLink('/nextjs/content-publisher-tutorial', 'Tutorial: Content Publisher'),
+        simpleLink(
+          '/nextjs/logs-and-environment-variables-tutorial',
+          'Tutorial: Logs and Environment Variables',
+        ),
+        simpleLink('/nextjs/migrating-from-front-end-sites', 'Migrating from Front-End Sites'),
+        simpleLink('/nextjs/test-and-live-env', 'Test and Live Environments'),
+      ]),
       {
         link: '/guides/decoupled',
         title: 'Front-End Sites and Starter Kits',
