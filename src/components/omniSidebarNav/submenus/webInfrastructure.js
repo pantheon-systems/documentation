@@ -148,6 +148,11 @@ const webInfrastructure = () => {
           'Optimize wp_options Table and Autoloaded Data',
         ),
       ]),
+      simpleLink('/nextjs', 'Next.js', [
+        simpleLink('/nextjs', 'Next.js Overview'),
+        simpleLink('/nextjs/hello-world-tutorial', 'Tutorial: Hello World'),
+        simpleLink('/nextjs/logs-and-environment-variables-tutorial', 'Tutorial: Logs and Environment Variables'),
+      ]),
       {
         link: '/guides/decoupled',
         title: 'Front-End Sites and Starter Kits',
