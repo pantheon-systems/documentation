@@ -10,6 +10,8 @@ As part of [Pantheon's Long-Term Support (LTS) for Drupal 7](https://pantheon.io
 
 * **7.105**: This adds support for PHP 8.4. If you do not run and/or do not plan to run your site on PHP 8.4, you do not need this update. Given the nature of the many deprecations included in PHP 8.4, it is recommended that `ini_set('error_reporting', E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED)` or some equivalent is added to the site.
 
+In order to swiftly provide security coverage for the vulnerability, both updates have been included in the (7.105)[https://github.com/pantheon-systems/drops-7/releases/tag/7.105] tag for the drops-7 upstream. 
+
 ### Action required
 
 Apply the latest upstream update to your Drupal 7 site to receive these updates. See [related documentation for how to apply core updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
