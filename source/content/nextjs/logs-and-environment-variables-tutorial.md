@@ -11,4 +11,4 @@ permalink: docs/nextjs/logs-and-environment-variables-tutorial
 
 ---
 
-asdfasdf
+tktk
