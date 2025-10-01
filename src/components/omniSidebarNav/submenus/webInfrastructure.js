@@ -151,7 +151,10 @@ const webInfrastructure = () => {
       simpleLink('/nextjs', 'Next.js', [
         simpleLink('/nextjs', 'Next.js Overview'),
         simpleLink('/nextjs/hello-world-tutorial', 'Tutorial: Hello World'),
-        simpleLink('/nextjs/logs-and-environment-variables-tutorial', 'Tutorial: Logs and Environment Variables'),
+        simpleLink(
+          '/nextjs/logs-and-environment-variables-tutorial',
+          'Tutorial: Logs and Environment Variables',
+        ),
       ]),
       {
         link: '/guides/decoupled',
