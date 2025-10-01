@@ -11,4 +11,6 @@ permalink: docs/nextjs/logs-and-environment-variables-tutorial
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 tktk

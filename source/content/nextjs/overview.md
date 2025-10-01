@@ -11,6 +11,6 @@ permalink: docs/nextjs
 
 ---
 
-Next.js overview
+<Partial file="nextjs-pre-ga.md" />
 
 tktk

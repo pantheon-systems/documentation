@@ -11,7 +11,7 @@ permalink: docs/nextjs/test-and-live-env
 
 ---
 
-[alpha disclaimer]
+<Partial file="nextjs-pre-ga.md" />
 
 tktk
 

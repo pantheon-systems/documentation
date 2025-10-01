@@ -11,4 +11,6 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 tktk

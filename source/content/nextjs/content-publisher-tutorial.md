@@ -11,4 +11,6 @@ permalink: docs/nextjs/content-publisher-tutorial
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 tktk
