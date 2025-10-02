@@ -18,7 +18,8 @@ This Tutorial will guide you from having never used Pantheon before to seeing a 
 
 In this tutorial we will:
 
-* Make **a new repository on GitHub** that will correspond to **a newly created site on Pantheon**. The repository will hold the code of a very simple Next.js site and Pantheon will serve build and run code from the main branch of the repository.
+* Make **a new repository on GitHub** that will correspond to **a newly created site on Pantheon**.
+The repository will hold the code of a very simple Next.js site and Pantheon will serve build and run code from the main branch of the repository.
 * Make a minor code change in a different branch and then create **a pull request on GitHub**. We'll then observe that the changed codebase be **built and deployed to a separate environment on Pantheon** with its own resources and subdomain.
 * **Merge the pull request on GitHub to the main branch** and observe the change be **built and deployed to Pantheon's Dev environment**.
 * Create **Test and Live environments** and deploy to them via direct **Git tag creation and GitHub's Releases** interface.
@@ -26,7 +27,8 @@ In this tutorial we will:
 
 #### Note: Access Prerequisites
 
-In order to complete the steps in this documentation your organization will need to have been granted access to the Private Alpha program for evaluating our support for Next.js. Without access to this program, you will not be able to create a new site on Pantheon that provides the infrastructure necessary to run Next.js.
+In order to complete the steps in this documentation your organization will need to have been granted access to the Private Alpha program for evaluating our support for Next.js.
+Without access to this program, you will not be able to create a new site on Pantheon that provides the infrastructure necessary to run Next.js.
 
 Additionally, creating a Next.js site on Pantheon requires the permission to connect Pantheon's GitHub Application to your GitHub Account.
 
@@ -70,7 +72,8 @@ terminus site:create my-site-name my-site-label nextjs15 \
 --repository-name=name-of-to-be-created-github-repo
 ```
 
-See `terminus site:create --help` for detailed explanations of each of these parameters. Of particular note:
+See `terminus site:create --help` for detailed explanations of each of these parameters.
+Of particular note:
 
 * While you *can* provide different values for the site's machine name on Pantheon, the site's label on Pantheon, and the name of the repository on GitHub, it is often preferable to use exactly the same value for all three (Something like "`my-next-js-site`")
 * "`nextjs15`" as the upstream_id value will give us a [simple example Next.js codebase](https://github.com/pantheon-upstreams/nextjs). In practice for real sites, you can overwrite these files as you wish.
@@ -93,7 +96,8 @@ This site creation process will take a few minutes to complete. Once it complete
 
   [two screenshots or gif]
 
-* Finally, check your local machine for a clone of your Next.js repository. Open it in your preferred code editor so that you can make a change to be pushed to GitHub.
+* Finally, check your local machine for a clone of your Next.js repository.
+Open it in your preferred code editor so that you can make a change to be pushed to GitHub.
 
   [screenshot]
 
@@ -127,7 +131,7 @@ Next, commit this change:
 git commit -am 'Changing home page to say "Hello World"'
 ```
 
-Push your new branch to GitHub before making a Pull Request
+Push your new branch to GitHub before making a Pull Request.
 
 ```
 git push origin hello-world-change
@@ -147,15 +151,18 @@ To view the status of that process, run this command (which presumes we are list
 terminus node:logs:build:list my-site-machine-name.pr-1
 ```
 
-Over the course of a few minutes, you will see the statuses update as the files necessary to run Next.js are built and deployed. See this [section for more details on the build and deployment process](/nextjs/build-and-deploy).
+Over the course of a few minutes, you will see the statuses update as the files necessary to run Next.js are built and deployed.
+See this [section for more details on the build and deployment process](/nextjs/build-and-deploy).
 
-For as small of a change as we made in this pull request, some "Hello World" text, we should soon see DEPLOYMENT_SUCCESS as the status. Once that status is reached, you should be able to see your change in your browser by opening a Multidev environment from your dashboard.
+For as small of a change as we made in this pull request, some "Hello World" text, we should soon see DEPLOYMENT_SUCCESS as the status.
+Once that status is reached, you should be able to see your change in your browser by opening a Multidev environment from your dashboard.
 
 [screenshot of Multidev list in dashboard]
 
 [screenshot of Hello World]
 
-Having seen this change to the Next.js site deployed on a non-live environment we can merge it with more confidence. If you chose to merge this change you can watch the same progression of build and deployment statuses through `terminus node:logs:build:list my-site-machine-name.dev`
+Having seen this change to the Next.js site deployed on a non-live environment we can merge it with more confidence.
+If you chose to merge this change you can watch the same progression of build and deployment statuses through `terminus node:logs:build:list my-site-machine-name.dev`.
 
 ### Conclusion
 
@@ -165,5 +172,3 @@ Having reached a "Hello World" state with Next.js on Pantheon, you might want to
 * [Learn to Troubleshoot errors and set environment variables](/nextjs/logs-and-environment-variables-tutorial).
 * [Deploy to Test and Live environments and connect a custom domain name](/nextjs/test-and-live-env).
 * [Connect Next.js to Content Publisher](/nextjs/content-publisher-tutorial).
-
-
