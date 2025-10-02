@@ -6,7 +6,7 @@ categories: [drupal, action-required]
 
 As part of [Pantheon's Long-Term Support (LTS) for Drupal 7](https://pantheon.io/drupal-7), Drupal 7.105 is now available with a critical security patch. 
 
-In order to swiftly provide security coverage for a discovered vulnerability, both 7.104 and 7.105 have been included in a (7.105)[https://github.com/pantheon-systems/drops-7/releases/tag/7.105] tag for the drops-7 upstream. 
+In order to swiftly provide security coverage for a discovered vulnerability, both 7.104 and 7.105 have been included in a [7.105](https://github.com/pantheon-systems/drops-7/releases/tag/7.105) tag for the drops-7 upstream. 
 
 * **7.104**: This backports a prototype pollution fix in the BBQ JavaScript library used by several popular modules, including Views, Overlay and Module Filter. Of the usages inspected, only Overlay was found to be using BBQ in a vulnerable manner. If you cannot upgrade immediately, the issue can be mitigated by uninstalling Overlay module. If Overlay is not installed, then this update is not needed.
 
