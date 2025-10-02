@@ -4,13 +4,13 @@ published_date: "2025-10-01"
 categories: [drupal, action-required]
 ---
 
-As part of [Pantheon's Long-Term Support (LTS) for Drupal 7](https://pantheon.io/drupal-7), Drupal 7.104 and 7.105 are now available.
+As part of [Pantheon's Long-Term Support (LTS) for Drupal 7](https://pantheon.io/drupal-7), Drupal 7.105 is now available with a critical security patch. 
+
+In order to swiftly provide security coverage for a discovered vulnerability, both 7.104 and 7.105 have been included in a (7.105)[https://github.com/pantheon-systems/drops-7/releases/tag/7.105] tag for the drops-7 upstream. 
 
 * **7.104**: This backports a prototype pollution fix in the BBQ JavaScript library used by several popular modules, including Views, Overlay and Module Filter. Of the usages inspected, only Overlay was found to be using BBQ in a vulnerable manner. If you cannot upgrade immediately, the issue can be mitigated by uninstalling Overlay module. If Overlay is not installed, then this update is not needed.
 
-* **7.105**: This adds support for PHP 8.4. If you do not run and/or do not plan to run your site on PHP 8.4, you do not need this update. Because of the many deprecation notices added to PHP 8.4, it is recommended that `ini_set('error_reporting', E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED)` or some equivalent is added to the site.
-
-In order to swiftly provide security coverage for the vulnerability, both updates have been included in the (7.105)[https://github.com/pantheon-systems/drops-7/releases/tag/7.105] tag for the drops-7 upstream. 
+* **7.105**: This adds support for PHP 8.4. If you do not run and/or do not plan to run your site on PHP 8.4, you do not need this update. Because of the many deprecation notices added to PHP 8.4, it is recommended that `ini_set('error_reporting', E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED)` or some equivalent is added to the site's `settings.php` file.
 
 ### Action required
 
