@@ -1,6 +1,6 @@
 ---
 title: Pantheon Dashboard session length reduced to 14 hours
-published_date: "2025-10-02"
+published_date: "2025-10-03"
 categories: [security, user-interface]
 ---
 Starting today all Pantheon Dashboard users will be required to log in after 14 hours - regardless of session activity. Terminus sessions are not impacted. See [related documentation](/faq#pantheon-user-account-login-session-length) for more information.
