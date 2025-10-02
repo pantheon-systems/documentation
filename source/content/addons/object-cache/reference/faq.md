@@ -74,9 +74,8 @@ Our customers have encountered edge cases that may affect Redis performance unde
 
 | Issue Description | Patch Link |
 | -------- | ------- |
-| [TTL handling broken, always permanent](https://www.drupal.org/project/redis/issues/3179757) | [Patch](https://www.drupal.org/files/issues/2020-10-30/3179757-4.patch) |
 | [Always return array to mget to avoid breaking transactions](https://www.drupal.org/project/redis/issues/3216874) | [Patch](https://www.drupal.org/files/issues/2021-11-16/3216874-2.patch) |
-| [TTL handling broken, always permanent](https://www.drupal.org/project/redis/issues/3102739) | [Patch](https://www.drupal.org/files/issues/2023-07-11/3102739-28.patch) |
+| [Allow failing over to database or other backends if Redis is down](https://www.drupal.org/project/redis/issues/3102739) | [Patch](https://www.drupal.org/files/issues/2023-07-11/3102739-28.patch) |
 
 ### If Redis Hits the Upper Limit of Memory Usage, Is This Logged on Pantheon?
 
