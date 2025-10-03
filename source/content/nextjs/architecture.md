@@ -14,3 +14,5 @@ permalink: docs/nextjs/architecture
 <Partial file="nextjs-pre-ga.md" />
 
 tktk
+
+By default, Next

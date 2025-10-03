@@ -6,16 +6,78 @@ contenttype: [doc]
 innav: [true]
 audience: [development]
 product: [--]
-integration: [--]
+  integration: [--]
 permalink: docs/nextjs/test-and-live-env
 
 ---
 
 <Partial file="nextjs-pre-ga.md" />
 
-tktk
+By default, all sites on Pantheon have at least three environments: Dev, Test, and Live. Additionally, Multidev workflows correspond to separate branches or pull requests.
 
-* Git Tags
-* GitHub Releases
-* GitHub Actions
-* Connecting custom domains
+The Test and Live environments are special in that they only receive code changes via Git tags.
+Deployments to these environments follow a simple pattern in which integers are incremented for each new deployment. For example deployments to Test can be triggered by tags like
+
+```bash{promptUser: user}
+pantheon_test_1
+pantheon_test_2
+pantheon_test_3
+```
+
+Similarly, deployments to Live can be triggered by tags like
+
+```bash{promptUser: user}
+pantheon_live_1
+pantheon_live_2
+pantheon_live_3
+```
+
+For sites running Drupal and WordPress, these tags are create automatically when triggering a deploment in the dashboard or via Terminus.
+
+Presently, for Next.js sites, deployments to Test and Live must be triggered by  Git tags in the connected GitHub repository.
+
+These tags can be created in a few ways including:
+
+* Directly via Git on your local machine
+* Via GitHub's Releases interface
+* Via GitHub Actions
+
+On Drupal and WordPress sites, the extra Dev and Test environments separating a code in a Multidev from being deployed to Live are valuable for extra testing.
+For such sites, the cost of breaking the Live database is high, so having extra environments to test code and database changes is worthwhile.
+
+On Next.js sites, the cost of breaking the Live environment is lower because there is no database to break.
+
+Depending on your team's workflow and preferences, you may choose to manually deploy the Test and then to Live, or you may choose to automate deployments to Dev, Test, and Live all at once via GitHub Actions or another CI/CD tool.
+
+## Manual Deployment to Test and Live
+
+To manually deploy to Test or Live, create a Git tag in your local clone of the repository connected to your Pantheon site.
+For example, to deploy to Test, you might run
+
+```bash{promptUser: user}
+git tag pantheon_test_1 -a -m "Deploying to Test"
+git push origin --tags
+```
+
+After this tag is pushed to GitHub, Pantheon will detect the new tag and begin building and deploying the code to the Test environment.
+The progress of the build and deployment can be monitored via Terminus:
+
+```bash{promptUser: user}
+terminus node:logs:build:list my-site-machine-name.test
+```
+
+This tactic requires knowing what the next integer tag should be.
+To find the latest tag, you can use
+
+```bash{promptUser: user}
+git tag --list 'pantheon_live_*' --sort=v:refname | tail -1
+```
+
+## Manual creation via GitHub's Releases interface
+
+The manual creation of a tag can also be done via GitHub's Releases interface.
+
+This screenshot shows a tag being created from a `main` branch.
+
+[screenshot]
+
