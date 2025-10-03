@@ -8,6 +8,6 @@ tags: [--]
 reviewed: ""
 ---
 
-Pantheon Dashboard users are forcibly logged out after 14 hours and must log back in after session expiry. 
+The session length for users logged into the Pantheon Dashboard is 14 hours, after which users are forcibly logged out and prompted to log back in.
 
-Terminus sessions rely on a local cookie token for authorization and that cookie is renewed based on activity over 24 hours until it maxes out after 30 days - at which point, the user must re-authenticate Terminus by running `terminus auth:login`.
+[Terminus](/terminus/install) sessions are authenticated via a machine token and refreshed based on activity. After 30 days of inactivity, Terminus users will be prompted to re-authenticate via the `auth:login` command.
