@@ -27,3 +27,4 @@ We do all of this one the same platform that powers thousands of Drupal and Word
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
+_more overview_
