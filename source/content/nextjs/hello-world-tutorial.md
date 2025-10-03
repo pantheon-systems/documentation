@@ -25,12 +25,14 @@ The repository will hold the code of a very simple Next.js site and Pantheon wil
 * Create **Test and Live environments** and deploy to them via direct **Git tag creation and GitHub's Releases** interface.
 * Optionally **connect a custom domain** to the live environment.
 
-#### Note: Access Prerequisites
+<Alert title="Access Prerequisites" type="info" >
 
 In order to complete the steps in this documentation your organization will need to have been granted access to the Private Alpha program for evaluating our support for Next.js.
 Without access to this program, you will not be able to create a new site on Pantheon that provides the infrastructure necessary to run Next.js.
 
 Additionally, creating a Next.js site on Pantheon requires the permission to connect Pantheon's GitHub Application to your GitHub Account.
+
+</Alert>
 
 ## Command Line Tool Prerequisites
 
