@@ -81,3 +81,9 @@ This screenshot shows a tag being created from a `main` branch.
 
 [screenshot]
 
+## Automating tagging via GitHub Actions
+
+If you wish to automate deployments to Test and Live, you can use GitHub Actions or another CI/CD tool to create the necessary tags.
+
+
+
