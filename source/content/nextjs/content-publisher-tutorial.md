@@ -114,6 +114,16 @@ Commit and push these changes to GitHub.
 
 </Alert>
 
+
+<Alert title="TEMPORARY WORKAROUND" type="info" >
+
+Pin your version of Next.js too. https://github.com/pantheon-systems/content-publisher-sdk/pull/411
+
+</Alert>
+
+
+
+
 ## Create a new Pantheon site
 
 With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site that will build and run that code.
