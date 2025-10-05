@@ -6,7 +6,7 @@ contenttype: [doc]
 innav: [true]
 audience: [development]
 product: [--]
-  integration: [--]
+integration: [--]
 permalink: docs/nextjs/test-and-live-env
 
 ---
