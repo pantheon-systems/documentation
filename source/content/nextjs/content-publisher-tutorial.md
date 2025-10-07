@@ -129,11 +129,11 @@ Pin your version of Next.js too. https://github.com/pantheon-systems/content-pub
 With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site that will build and run that code.
 
 ```bash{promptUser: user}
-terminus site:create office-artifacts5 office-artifacts5 nextjs15 \
+terminus site:create my-site-name my-site-name nextjs15 \
 --org="Pantheon Cooking" \
 --vcs-provider=github \
 --vcs-org=stevector \
---repository-name=office-artifacts5 \
+--repository-name=my-site-name \
 --no-create-repo
 ```
 
@@ -195,8 +195,8 @@ __describe in more detail????__
 Now, we will set the environment variables on Pantheon using Terminus.
 
 ```bash{promptUser: user}
-terminus secret:site:set office-artifacts5  PCC_TOKEN your-token-here --type=env --scope=web,ic --no-interaction
-terminus secret:site:set office-artifacts5  PCC_SITE_ID your-collection-id-here --type=env --scope=web,ic --no-interaction
+terminus secret:site:set my-site-name  PCC_TOKEN your-token-here --type=env --scope=web,ic --no-interaction
+terminus secret:site:set my-site-name  PCC_SITE_ID your-collection-id-here --type=env --scope=web,ic --no-interaction
 ```
 
 ### Trigger another build
