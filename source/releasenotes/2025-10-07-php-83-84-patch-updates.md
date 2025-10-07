@@ -3,7 +3,7 @@ title: "PHP 8.3 and 8.4 updated to their latest patch releases"
 published_date: "2025-10-07"
 categories: [infrastructure, security]
 ---
-PHP versions [8.3.26](https://www.php.net/ChangeLog-8.php#8.3.26) and [8.4.13](https://www.php.net/ChangeLog-8.php#8.4.13), are now available on the platform. These updates brings the latest bug fixes, improving performance and security for your sites. Updates will be applied automatically over the next few days, so no manual action is required.
+PHP versions [8.3.26](https://www.php.net/ChangeLog-8.php#8.3.26) and [8.4.13](https://www.php.net/ChangeLog-8.php#8.4.13), are now available on the platform. These updates bring the latest bug fixes, improving performance and security for your sites. Updates will be applied automatically over the next few days, so no manual action is required.
 
 PHP 8.4 is only available with the new [PHP Runtime Generation 2](/php-runtime-generation-2). To upgrade your site, set the following in your `pantheon.yml` file:
 
