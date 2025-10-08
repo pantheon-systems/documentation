@@ -10,15 +10,12 @@ We continue to encourage customers to [upgrade to Generation 2 proactively](/php
 
 ## Rollout Timeline
 
-The upgrade rollout will take place over the next 40 days. The table below shows which upgrades are being processed. We will update this release note as we begin each phase.
+The upgrade rollout will take place over the next 60 days. The table below shows which upgrades are being processed. We will update this release note as we begin each phase.
 
 | Start Date for Upgrades | Site Plans | Environments |
 |-----------|------------------|--------------|
 | September 24 | Sandbox | Dev/Multidevs |
-| TBD* | Sandbox | Test/Live |
-
-_**Editorial note:**_
-* _* This date has been revised from October 6 to TBD._
+| October 14 | Sandbox | Test/Live |
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 

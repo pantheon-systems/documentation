@@ -45,7 +45,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 |-----------|------------------|--------------|
 | **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
 | **New Sites** | September 17, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
-| **Gen 2 Rollout** | September 24 - November 3, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Gen 2 Rollout** | September 24 - November 23, 2025 | A 60-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
 
@@ -93,7 +93,6 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Known Issues
 
-- New Relic is not available for sites running PHP 5.6. Compatibility will be added soon.
 - Drupal 8+ sites using Solr 3 are not compatible with PHP Runtime Generation 2.  [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) or disabling Solr is required. These sites will not be included in the initial automatic upgrade rollout, but will be upgraded after November 12, 2025.
 
 ## Reporting Issues
