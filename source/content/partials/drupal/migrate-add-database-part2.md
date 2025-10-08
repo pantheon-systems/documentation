@@ -16,9 +16,9 @@ reviewed: "2022-11-04"
 
   <TabList>
 
-  <Tab title="Up to 100MBs" id="100mbs" active={true}>
+  <Tab title="Up to 200MBs" id="200mbs" active={true}>
 
-  If your archive is under 100MB, upload the file directly:
+  If your archive is under 200MB, upload the file directly:
 
    1. Navigate to the **MySQL database** field > click **File** > **Choose File**.
 
