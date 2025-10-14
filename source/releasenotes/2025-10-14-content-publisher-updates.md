@@ -1,6 +1,6 @@
 ---
 title: "Content Publisher improvements October 2025"
-published_date: "2025-10-14"
+published_date: "2025-10-15"
 categories: [content-publisher, user-interface]
 ---
 The following user interface enhancements are now available for Content Publisher: 
