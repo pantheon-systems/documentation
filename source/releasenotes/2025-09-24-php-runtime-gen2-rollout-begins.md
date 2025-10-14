@@ -16,6 +16,7 @@ The upgrade rollout will take place over the next 60<sup>1</sup> days. The table
 |-----------|------------------|--------------|
 | September 24 | Sandbox | Dev/Multidevs |
 | October 14<sup>2</sup> | Sandbox | Test/Live |
+| October 16 | Basic | Dev/Multidevs |
 
 _**Editorial note:**_
 
