@@ -1,5 +1,5 @@
 ---
-title: "Content Publisher improvements now available"
+title: "Content Publisher improvements October 2025"
 published_date: "2025-10-14"
 categories: [content-publisher, user-interface]
 ---
