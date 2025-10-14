@@ -24,7 +24,7 @@ _<sup>1</sup> This has been revised from 40 to 60 days_
 
 _<sup>2</sup> This date has been revised from October 6 to October 14_
 
-_<sup>3</sup> Timeline has been updated to include rollout to Basic site plans. 
+_<sup>3</sup> Timeline has been updated to include rollout to Basic site plans._ 
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 
