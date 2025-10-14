@@ -16,13 +16,15 @@ The upgrade rollout will take place over the next 60<sup>1</sup> days. The table
 |-----------|------------------|--------------|
 | September 24 | Sandbox | Dev/Multidevs |
 | October 14<sup>2</sup> | Sandbox | Test/Live |
-| October 16 | Basic | Dev/Multidevs |
+| October 16<sup>3</sup> | Basic | Dev/Multidevs |
 
 _**Editorial note:**_
 
 _<sup>1</sup> This has been revised from 40 to 60 days_
 
 _<sup>2</sup> This date has been revised from October 6 to October 14_
+
+_<sup>3</sup> Timeline has been updated to include rollout to Basic site plans. 
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 
