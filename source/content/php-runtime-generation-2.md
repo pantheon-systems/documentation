@@ -48,6 +48,22 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **Gen 2 Rollout** | September 24 - November 23, 2025 | A 60-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
+### Current Phase Details 
+Currently, we are in the **Gen 2 Rollout** phase. The upgrade rollout will take place over the next 60 days. The table below shows which upgrades are being processed. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). We will revise this section of documentation as we begin each phase along with any updates to the timeline. 
+
+<Alert type="info" title="Deploying code will upgrade test/live environments">
+
+Once the Dev environment for a site has been upgraded to Generation 2, deploying commits from Dev to Test will automatically upgrade the Test environment to Generation 2 as well. Following this pattern, an upgrade to the Live environment takes place once commits are deployed from the Test to Live environment.
+
+</Alert>
+
+
+| Start Date for Upgrades | Site Plans | Environments |
+|-----------|------------------|--------------|
+| September 24 | Sandbox | Dev/Multidevs |
+| October 14 | Sandbox | Test/Live |
+| October 16 | Basic | Dev/Multidevs |
+
 
 ## Known Changes and Requirements
 
