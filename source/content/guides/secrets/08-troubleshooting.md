@@ -30,7 +30,7 @@ First set it with site id only, without specifying the environment,
 then, you can override the value for whatever environment you need to override
 
 ```
-terminus secret:site site.dev mysecretnonexist foobar
+terminus secret:site site mysecretnonexist foobar
 ```
 
 ## Invalid key name
