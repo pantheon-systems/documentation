@@ -3,7 +3,7 @@ title: "Unprivileged user role to be replaced by a new Contributor user role sta
 published_date: "2025-10-16"
 categories: [user-interface, general]
 ---
-Effective October 22, 2025, the "Unprivileged" user role will be transitioned to a new "Contributor" role. Permissions will remain exactly the same, except that Contributors will have limited access to Workspaces in the Pantheon Dashbard. This update is to ensure that all Pantheon users have access to the modern dashboard experience. 
+Effective October 22, 2025, the "Unprivileged" user role will be transitioned to a new "Contributor" role. Permissions will remain exactly the same, except that Contributors will have limited access to Workspaces in the Pantheon Dashboard. This update is to ensure that all Pantheon users have access to the modern dashboard experience. 
 
 No action is needed by site owners or workspace administrators. 
 
