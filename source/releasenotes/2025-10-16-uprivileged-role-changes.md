@@ -29,5 +29,5 @@ Users assigned this role will retain access solely to the sites for which they h
 
 Here's what you can expect a Contributor to see when accessing the Workspace home context: 
 
-![Contributor view of a workspace in the Pantheon Dashboard](../images/release-notes/contributor-workspace.png)
+![Contributor view of a workspace in the Pantheon Dashboard](../images/release-notes/contributor-workspace-home.png)
 
