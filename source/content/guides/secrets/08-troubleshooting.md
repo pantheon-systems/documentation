@@ -26,6 +26,12 @@ terminus secret:site:set site.dev mysecretnonexist foobar
 ```
 
 A site-level or organization-level secret must be set first before you can set an environmental override.
+First set it with site id only, without specifying the environment,
+then, you can override the value for whatever environment you need to override
+
+```
+terminus secret:site site mysecretnonexist foobar
+```
 
 ## Invalid key name
 There are some validations in place for the key name based on the key type. As an example, a secret name of type env must match the following regex: `^[a-zA-Z_][a-zA-Z0-9_]*$`. Failure to comply with those validations results in errors like this:
