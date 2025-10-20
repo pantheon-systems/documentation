@@ -130,9 +130,9 @@ With a GitHub repository holding our Next.js codebase, we can now create a new P
 
 ```bash{promptUser: user}
 terminus site:create my-site-name my-site-name nextjs15 \
---org="Pantheon Cooking" \
+--org="My Pantheon Organization Name" \
 --vcs-provider=github \
---vcs-org=stevector \
+--vcs-org=my-github-org-name \
 --repository-name=my-site-name \
 --no-create-repo
 ```

@@ -1,6 +1,6 @@
 ---
 title: Test and Live Environments for Next.js
-description: TKTK
+description: Specially named Git tags trigger deployments to Test and Live environments for Next.js sites on Pantheon.
 reviewed: "2025-10-01"
 contenttype: [doc]
 innav: [true]
@@ -34,7 +34,7 @@ pantheon_live_3
 
 For sites running Drupal and WordPress, these tags are create automatically when triggering a deploment in the dashboard or via Terminus.
 
-Presently, for Next.js sites, deployments to Test and Live must be triggered by  Git tags in the connected GitHub repository.
+Presently, for Next.js sites, deployments to Test and Live must be triggered by Git tags in the connected GitHub repository.
 
 These tags can be created in a few ways including:
 
@@ -43,9 +43,9 @@ These tags can be created in a few ways including:
 * Via GitHub Actions
 
 On Drupal and WordPress sites, the extra Dev and Test environments separating a code in a Multidev from being deployed to Live are valuable for extra testing.
-For such sites, the cost of breaking the Live database is high, so having extra environments to test code and database changes is worthwhile.
+For such sites, the cost of breaking the Live database is high because it may require database restores and content loss in addition to code fixes.
 
-On Next.js sites, the cost of breaking the Live environment is lower because there is no database to break.
+On Next.js sites which may only be displaying data sourced from a headless CMS or Content Publisher, the remediation for deploying broken code to Live is often as simple as pushing a fix to the repository and triggering a new deployment.
 
 Depending on your team's workflow and preferences, you may choose to manually deploy the Test and then to Live, or you may choose to automate deployments to Dev, Test, and Live all at once via GitHub Actions or another CI/CD tool.
 
@@ -85,5 +85,6 @@ This screenshot shows a tag being created from a `main` branch.
 
 If you wish to automate deployments to Test and Live, you can use GitHub Actions or another CI/CD tool to create the necessary tags.
 
+Here is an example repository that uses GitHub Actions to automate deployments to Live by running [a workflow on pushes to the `main` branch](https://github.com/stevector/office-artifacts/blob/345a870642fba423e9360482fb7f716c87f79533/.github/workflows/auto-tag.yml) that invokes a [locally defined (but reusable) Action](https://github.com/stevector/office-artifacts/blob/345a870642fba423e9360482fb7f716c87f79533/.github/actions/pantheon-auto-tag/action.yml) to create the necessary Git tag.
 
-
+ _What GitHub Action guidance should we give? https://github.com/pantheon-systems/documentation/issues/9725_
