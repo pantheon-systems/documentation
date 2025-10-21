@@ -1,6 +1,6 @@
 ---
 title: PHP Runtime Generation 2
-description: The second generation of Pantheon's PHP runtime with added security and updated extensions.
+description: The second generation of Pantheon's PHP runtime provides added security and updated extensions.
 tags: [updates, libraries]
 contenttype: [doc]
 innav: [true]
@@ -123,7 +123,11 @@ If you encounter any issues while testing your site with PHP Runtime Generation 
 
 ### Q: How can I determine which PHP runtime a site environment is using?
 
-The PHP runtime is set at the environment-level. You can find out which generation an environment is using via the [Terminus](/terminus) command  `terminus env:info <site>.<env>`.
+The PHP runtime is set at the environment-level. You can find out which generation an environment with the following methods:
+
+* Use the [Terminus](/terminus) command  `terminus env:info <site>.<env>`. This requires Terminus 4.0.2+
+* Use the Terminus command `env:list <site> --fields=id,php_runtime_generation,php_version`. This requires Terminus 4.1.0+
+* View your site on the Pantheon Dashboard, navigate to the environment's Status page, then review the Software Versions block
 
 ### Q: Will I need to make changes to my website?
 
