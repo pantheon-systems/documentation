@@ -6,6 +6,8 @@ categories: [user-interface, infrastructure]
 
 We've enhanced the **Software Versions** block on the Environment>Status dashboard screen to now display the environment's **PHP Runtime Generation**.
 
+![Software Versions block on the Status screen](../images/release-notes/pantheon-status-software-version-php-runtime-generation.png)
+
 This new data point provides immediate, at-a-glance confirmation of your site's underlying PHP configuration, making it simpler to track your stack and prepare for platform updates.
 
 Alternatively, you may use the `terminus env:info <site>.<env>` command using [Terminus](/terminus) 4.0.2+ to see the current PHP Runtime Generation.
