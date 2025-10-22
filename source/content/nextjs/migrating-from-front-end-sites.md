@@ -35,3 +35,5 @@ terminus site:create my-site-name my-site-label nextjs15 \
 
 
 ## Replicate environment variables as Pantheon secrets
+
+https://github.com/pantheon-systems/terminus-secrets-manager-plugin
