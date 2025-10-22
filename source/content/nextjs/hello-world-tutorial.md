@@ -66,7 +66,7 @@ With the [Terminus Repository Plugin](https://github.com/pantheon-systems/termin
 
 While `terminus site:create` can interactively prompt you for information, you might be more comfortable specifying all the details in one command like this:
 
-```
+```bash{promptUser: user}
 terminus site:create my-site-name my-site-label nextjs15 \
 --org="My Pantheon Org name" \
 --vcs-provider=github \
@@ -115,13 +115,13 @@ For instance you can change the text "Welcome to Pantheon Platform" to "Hello Wo
 
 Now make a separate Git branch, commit, and push to GitHub. On the command line, those commands are:
 
-```
+```bash{promptUser: user}
 git checkout -b hello-world-change
 ```
 
 Verify that the differences you are about to commit are what you expect:
 
-```
+```bash{promptUser: user}
 git diff
 ```
 
@@ -129,13 +129,13 @@ This command will show you the alteration you made to `app/page.tsx`.
 
 Next, commit this change:
 
-```
+```bash{promptUser: user}
 git commit -am 'Changing home page to say "Hello World"'
 ```
 
 Push your new branch to GitHub before making a Pull Request.
 
-```
+```bash{promptUser: user}
 git push origin hello-world-change
 ```
 
@@ -149,7 +149,7 @@ The creation of the Pull Request will prompt Pantheon to start a build and deplo
 
 To view the status of that process, run this command (which presumes we are listing the logs that correspond to the first Pull Request, or `pr-1`)
 
-```
+```bash{promptUser: user}
 terminus node:logs:build:list my-site-machine-name.pr-1
 ```
 

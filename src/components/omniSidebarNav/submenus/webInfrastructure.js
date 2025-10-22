@@ -150,12 +150,8 @@ const webInfrastructure = () => {
       ]),
       simpleLink('/nextjs', 'Next.js', [
         simpleLink('/nextjs', 'Next.js Overview'),
+        simpleLink('/nextjs/architecture', 'Architecture'),
         simpleLink('/nextjs/hello-world-tutorial', 'Tutorial: Hello World'),
-        simpleLink('/nextjs/architecture', 'Next.js Architecture', [
-          simpleLink('/nextjs/architecture', 'Runtime'),
-          simpleLink('/nextjs/build-and-deploy', 'Build and Deploy'),
-        ]),
-
         simpleLink(
           '/nextjs/content-publisher-tutorial',
           'Tutorial: Content Publisher',
