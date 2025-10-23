@@ -101,7 +101,7 @@ git push -u origin main
 
 ## Create a new Pantheon site
 
-With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site that will build and run that code.
+With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site and use [Pantheon's GitHub Application](https://docs.pantheon.io/github-application) to trigger builds in response to code changes.
 
 ```bash{promptUser: user}
 terminus site:create my-site-name my-site-name nextjs15 \
@@ -111,16 +111,6 @@ terminus site:create my-site-name my-site-name nextjs15 \
 --repository-name=my-site-name \
 --no-create-repo
 ```
-
-<Alert title="BUG WORKAROUND" type="info" >
-
-If you want the GitHub App to have access to only a limited set of repositories, you may need to uninstall and reinstall the Pantheon GitHub App.
-
-This issue is being tracked here: LINK NEEDED/TODO
-
-https://pantheon.slack.com/archives/C04LF93UJ0Y/p1759528831066449
-
-</Alert>
 
 This command will take a few minutes to complete as Pantheon will create the new site, connect it to the GitHub repository, and start the first build and deployment.
 

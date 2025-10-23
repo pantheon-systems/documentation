@@ -19,6 +19,12 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 * Do you have access to create new Next.js sites on Pantheon?
 * Do you have access to your DNS provider to update DNS records?
 
+## Differences between Front-End Sites and new Next.js sites
+
+_Link to blog post_
+
+_table of differences between Front-End Sites and new Next.js support_
+
 
 ## Connect the GitHub application to your repository
 
