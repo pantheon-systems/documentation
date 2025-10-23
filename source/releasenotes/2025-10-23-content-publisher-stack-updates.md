@@ -10,6 +10,6 @@ The following updates are now available for Content Publisher:
 * The experience for [Smart Components](https://docs.content.pantheon.io/components) has been improved for first time users. 
 * Upgrade [Content Publisher AI metadata suggestion](https://docs.content.pantheon.io/metadata#h.mqduipr8a3w5) to use Gemini 2.5 flash instead of Gemini 2.0.
 * Bug fix for our [Next.js starter kit](https://docs.content.pantheon.io/nextjs-tutorial) and [SDK](https://github.com/pantheon-systems/content-publisher-sdk) to properly support Next.js 15.5 and the use of App Router. Improve the build process by using pinned versions of dependencies.
-* Fix several event tracking issues in the back-end
+* Fix several event tracking issues in the back-end.
 
 
