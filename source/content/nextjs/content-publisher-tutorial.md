@@ -99,31 +99,6 @@ git remote add origin git@github.com:myname/my-site-name.git
 git push -u origin main
 ```
 
-<Alert title="TEMPORARY WORKAROUND" type="info" >
-
-Until [this fix](https://github.com/pantheon-systems/content-publisher-sdk/pull/410) in the Next.js Content Publisher Starter is released, you will need to make a small modification to the codebase.
-
-In `package.json`, ensure that the `build` and `start` scripts look like this:
-
-```json
-    "build": "next build",
-    "start": "next start",
-```
-
-Commit and push these changes to GitHub.
-
-</Alert>
-
-
-<Alert title="TEMPORARY WORKAROUND" type="info" >
-
-Pin your version of Next.js too. https://github.com/pantheon-systems/content-publisher-sdk/pull/411
-
-</Alert>
-
-
-
-
 ## Create a new Pantheon site
 
 With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site that will build and run that code.
