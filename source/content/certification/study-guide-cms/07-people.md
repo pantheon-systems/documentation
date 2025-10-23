@@ -35,7 +35,7 @@ nexturl: /certification/study-guide/extend
 * List and Describe the different site plans available on Pantheon, and the resources associated with each type of plan.
 * Describe the limitations of Pantheon's free tier Sandbox site plans.
 * List the features that are available only in Professional Workspaces, but not in Personal Workspaces.
-* List and Describe the permissions that are associated with the Workspace Administrator, Workspace Team Member, Workspace Developer and Workspace Unprivileged roles.
+* List and Describe the permissions that are associated with the Workspace Administrator, Workspace Team Member, Workspace Developer and Workspace Contributor roles.
 * List and Describe the WebOps features that are unlocked in the Professional Dashboard by upgrading to a Gold Plan.
 
 **Domains on Pantheon**
