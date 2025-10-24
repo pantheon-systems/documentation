@@ -85,4 +85,3 @@ For fully thorough testing, you may want to modify your local `hosts` file to po
 ### Update your DNS records to point to the new Live environment
 
 Once you are satisfied with the performance and functionality of your new Live environment, update your DNS records to point to the new Live environment using the same instructions as for WordPress and Drupal sites: [Connecting a Custom Domain to Pantheon](/guides/launch/configure-dns/).
-

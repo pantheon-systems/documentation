@@ -163,6 +163,7 @@ const webInfrastructure = () => {
           'Migrating from Front-End Sites',
         ),
         simpleLink('/nextjs/test-and-live-env', 'Test and Live Environments'),
+        simpleLink('/nextjs/connecting-custom-domain-name', 'Connecting a Custom Domain Name'),
       ]),
       {
         link: '/guides/decoupled',

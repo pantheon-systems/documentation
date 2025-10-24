@@ -14,6 +14,11 @@ permalink: docs/nextjs/test-and-live-env
 <Partial file="nextjs-pre-ga.md" />
 
 By default, all sites on Pantheon have at least three environments: Dev, Test, and Live. Additionally, Multidev workflows correspond to separate branches or pull requests.
+These environments generate unique subdomains in the pattern of `<environment>-<site-machine-name>.pantheonsite.io`.
+
+Sites on paid plans can connect custom domain names to any of these environments, though custom domains are most commonly connected to the Live environment.
+
+## Deploying to Test and Live environments through Git tags
 
 The Test and Live environments are special in that they only receive code changes via Git tags.
 Deployments to these environments follow a simple pattern in which integers are incremented for each new deployment. For example deployments to Test can be triggered by tags like
@@ -49,7 +54,7 @@ On Next.js sites which may only be displaying data sourced from a headless CMS o
 
 Depending on your team's workflow and preferences, you may choose to manually deploy the Test and then to Live, or you may choose to automate deployments to Dev, Test, and Live all at once via GitHub Actions or another CI/CD tool.
 
-## Manual Deployment to Test and Live
+### Manual Deployment to Test and Live
 
 To manually deploy to Test or Live, create a Git tag in your local clone of the repository connected to your Pantheon site.
 For example, to deploy to Test, you might run
@@ -73,7 +78,7 @@ To find the latest tag, you can use
 git tag --list 'pantheon_live_*' --sort=v:refname | tail -1
 ```
 
-## Manual creation via GitHub's Releases interface
+### Manual creation via GitHub's Releases interface
 
 The manual creation of a tag can also be done via GitHub's Releases interface.
 
@@ -81,10 +86,18 @@ This screenshot shows a tag being created from a `main` branch.
 
 [screenshot]
 
-## Automating tagging via GitHub Actions
+### Automating tagging via GitHub Actions
 
 If you wish to automate deployments to Test and Live, you can use GitHub Actions or another CI/CD tool to create the necessary tags.
 
 Here is an example repository that uses GitHub Actions to automate deployments to Live by running [a workflow on pushes to the `main` branch](https://github.com/stevector/office-artifacts/blob/345a870642fba423e9360482fb7f716c87f79533/.github/workflows/auto-tag.yml) that invokes a [locally defined (but reusable) Action](https://github.com/stevector/office-artifacts/blob/345a870642fba423e9360482fb7f716c87f79533/.github/actions/pantheon-auto-tag/action.yml) to create the necessary Git tag.
 
- _What GitHub Action guidance should we give? https://github.com/pantheon-systems/documentation/issues/9725_
+If you have input on what guidance we should provide for using GitHub Actions to automate deployments to Test and Live, please share your thoughts in [this issue](https://github.com/pantheon-systems/documentation/issues/9725).
+
+## Connecting a custom domain name
+
+In practice, what makes a Live environment different from Dev or Multidev environments is that only the Live environment is likely to have a custom domain name connected to it.
+The custom domain name is what your end users will use to access your site.
+Platform domains, those ending in `pantheonsite.io`, are typically only used by members of the web team for testing and development purposes.
+
+To connect a custom domain name to your Live environment, follow the instructions in [Connecting a Custom Domain Name](/nextjs/connecting-custom-domain-name).
