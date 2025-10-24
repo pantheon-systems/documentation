@@ -156,10 +156,8 @@ const webInfrastructure = () => {
           '/nextjs/content-publisher-tutorial',
           'Tutorial: Content Publisher',
         ),
-        simpleLink(
-          '/nextjs/logs-and-environment-variables-tutorial',
-          'Tutorial: Logs and Environment Variables',
-        ),
+        simpleLink('/nextjs/environment-variables', 'Environment Variables'),
+        simpleLink('/nextjs/cli-tools', 'CLI Tools'),
         simpleLink(
           '/nextjs/migrating-from-front-end-sites',
           'Migrating from Front-End Sites',
