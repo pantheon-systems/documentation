@@ -1,13 +1,13 @@
 ---
-title: Logs and Environment Variables Tutorial for Next.js
-description: Learn how to access logs and set environment variables in a Next.js application on Pantheon
+title: Environment Variables Tutorial for Next.js
+description: Set and read environment variables for Next.js on Pantheon
 reviewed: "2025-10-01"
 contenttype: [doc]
 innav: [true]
 audience: [development]
 product: [--]
 integration: [--]
-permalink: docs/nextjs/logs-and-environment-variables-tutorial
+permalink: docs/nextjs/environment-variables
 
 ---
 
