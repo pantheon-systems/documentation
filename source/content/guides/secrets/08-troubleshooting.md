@@ -17,21 +17,32 @@ showtoc: true
 ---
 
 ## Default secret value does not exist
-Setting an environmental override when no site or organization secret has been set, results in an error like this:
+Setting an [environmental override](/guides/secrets/overview#environment-override) when no site or organization secret has been set, results in an error like this:
 
-```
+```bash
 terminus secret:site:set site.dev mysecretnonexist foobar
 [error]  An error happened when trying to set the secret.
 [error]  Secret 'mysecretnonexist' does not exist. You should create the default secret value first.
 ```
 
-A site-level or organization-level secret must be set first before you can set an environmental override.
-First set it with site id only, without specifying the environment,
-then, you can override the value for whatever environment you need to override
+**Solution**
 
-```
-terminus secret:site site mysecretnonexist foobar
-```
+1. First, determine what [owning entity](/guides/secrets/overview#owning-entity) is appropriate for the given secret (site vs org).
+1. Next, set EITHER a site-wide secret (replace `<site>` `<secret-name>` and `<secret-value>`):
+
+  ```bash{promptUser: user}
+  terminus secret:site:set <site> <secret-name> <secret-value>
+  ```
+    * OR set an organization-wide secret (replace `<org>` `<secret-name>` and `<secret-value>`):
+  
+    ```bash{promptUser: user}
+    terminus secret:org:set <org> <secret-name> <secret-value>
+    ```
+1. Finally, set an environment override (replace `<site>` `<env>` `<secret-name>` and `<secret-value>`):
+
+  ```bash{promptUser: user}
+  terminus secret:site:set <site>.<env> <secret-name> <secret-value>
+  ```
 
 ## Invalid key name
 There are some validations in place for the key name based on the key type. As an example, a secret name of type env must match the following regex: `^[a-zA-Z_][a-zA-Z0-9_]*$`. Failure to comply with those validations results in errors like this:
