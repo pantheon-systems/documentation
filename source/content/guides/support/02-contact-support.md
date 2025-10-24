@@ -47,7 +47,7 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Click **Submit ticket**
 
-After a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Contributors](/guides/account-mgmt/workspace-sites-teams/teams#workspace-level-permissions).
+After a ticket is submitted, you can view details for your support requests. Support tickets are visible to all members except [Contributors](/guides/account-mgmt/workspace-sites-teams/teams#workspace-level-permissions).
 
 ## Live Chat
 
