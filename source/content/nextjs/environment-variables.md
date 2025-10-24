@@ -41,10 +41,16 @@ terminus secret:site:set <site-name>  PCC_SITE_ID 12345 --type=env --scope=web
 
 For somes variables for some sites, you may need a different value for the Live environment than for all other environments.
 
+## Environment-specific values
+
 To set a different value for a given environment, specify the environment after the site name.
 
 ```bash{promptUser: user}
 terminus secret:site:set <site-name>.live  MY_VARIABLE my-variable-value-for-live-environment --type=env --scope=web
 ```
+
+## Reading environment variables in Next.js
+
+Once set, these environment variables can be read in your Next.js application code using `process.env.VARIABLE_NAME`.
 
 To learn more about using Secrets Manager to set environment variables, see [Managing Environment Variables with Secrets Manager](/guides/secrets).
