@@ -33,6 +33,26 @@ const getOmniItems = () => {
     learning(),
     about(),
     simpleLink('/release-notes', 'Release Notes'),
+
+simpleLink('/nextjs', 'Next.js', [
+        simpleLink('/nextjs', 'Next.js Overview'),
+        simpleLink('/nextjs/architecture', 'Architecture'),
+        simpleLink('/nextjs/hello-world-tutorial', 'Tutorial: Hello World'),
+        simpleLink(
+          '/nextjs/content-publisher-tutorial',
+          'Tutorial: Content Publisher',
+        ),
+        simpleLink('/nextjs/environment-variables', 'Environment Variables'),
+        simpleLink('/nextjs/cli-tools', 'CLI Tools'),
+        simpleLink(
+          '/nextjs/migrating-from-front-end-sites',
+          'Migrating from Front-End Sites',
+        ),
+        simpleLink('/nextjs/test-and-live-env', 'Test and Live Environments'),
+        simpleLink('/nextjs/connecting-custom-domain-name', 'Connecting a Custom Domain Name'),
+        simpleLink('/nextjs/request-access', 'Private Alpha Program'),
+      ]),
+
     // pagesToDelete(),
   ];
   return OmniItems;
