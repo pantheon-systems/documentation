@@ -23,7 +23,7 @@ Depending on your website's features, this new PHP runtime may have major effect
 - Better CMS functionality via updated PHP extensions
 - PHP 8.4 availability
 
-## How to upgrade
+## How to upgrade manually
 
 To enable the second generation PHP runtime for an environment, add the following to your `pantheon.yml`:
 
@@ -63,6 +63,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | September 24 | Sandbox | Dev/Multidevs |
 | October 14 | Sandbox | Test/Live |
 | October 16 | Basic | Dev/Multidevs |
+| October 29 | Performance/Elite | Dev/Multidevs |
 
 
 ## Known Changes and Requirements
@@ -89,9 +90,9 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **iconv** | 2.28 | 2.36 |
 | **mongodb** | 1.14 | 2.1.1 |
 | **openssl** | 1.1.1k | 3.0.17 |
-| **pdo_pgsql** | 13.5 | 15.13 |
+| **pdo_pgsql** | 13.5 | 15.14 |
 | **pdo_sqlite** | 3.26.0 | 3.40.1 |
-| **pgsql** | 13.5 | 15.13 |
+| **pgsql** | 13.5 | 15.14 |
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
@@ -133,10 +134,9 @@ The PHP runtime is set at the environment-level. You can find out which generati
 
 Potentially. Depending on your integrations with our PHP extensions and operating system libraries, you may need to update your website to be compatible with new PHP runtime.
 
+### Q: How do I opt out of the automatic rollout?
 
-### Q: How do I opt out of the upcoming platform rollout?
-
-You may opt-out of the upcoming platform rollout by setting the following in your `pantheon.yml`:
+You may opt-out of the platform rollout by setting the following in your `pantheon.yml`:
 
 ```yaml:title=pantheon.yml
 php_runtime_generation: 1
