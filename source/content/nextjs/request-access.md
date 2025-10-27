@@ -11,7 +11,7 @@ permalink: docs/nextjs/request-access
 
 ---
 
-<Partial file="nextjs-pre-ga.md" />
+Access to Pantheon's Next.js support is currently available through a Private Alpha program.
 
+To request access to the Private Alpha program, please fill out [this form](https://forms.pantheon.io/nextjs-alpha-request).
 
-tktktk
