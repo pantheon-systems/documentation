@@ -1,6 +1,6 @@
 ---
 title: PHP Runtime Generation 2
-description: The second generation of Pantheon's PHP runtime with added security and updated extensions.
+description: The second generation of Pantheon's PHP runtime provides added security and updated extensions.
 tags: [updates, libraries]
 contenttype: [doc]
 innav: [true]
@@ -23,7 +23,7 @@ Depending on your website's features, this new PHP runtime may have major effect
 - Better CMS functionality via updated PHP extensions
 - PHP 8.4 availability
 
-## How to upgrade
+## How to upgrade manually
 
 To enable the second generation PHP runtime for an environment, add the following to your `pantheon.yml`:
 
@@ -45,8 +45,25 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 |-----------|------------------|--------------|
 | **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
 | **New Sites** | September 17, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
-| **Gen 2 Rollout** | September 24 - November 3, 2025 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Gen 2 Rollout** | September 24 - November 23, 2025 | A 60-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
+
+### Current Phase Details 
+Currently, we are in the **Gen 2 Rollout** phase. The upgrade rollout will take place over the next 60 days. The table below shows which upgrades are being processed. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). We will revise this section of documentation as we begin each phase along with any updates to the timeline. 
+
+<Alert type="info" title="Deploying code will upgrade test/live environments">
+
+Once the Dev environment for a site has been upgraded to Generation 2, deploying commits from Dev to Test will automatically upgrade the Test environment to Generation 2 as well. Following this pattern, an upgrade to the Live environment takes place once commits are deployed from the Test to Live environment.
+
+</Alert>
+
+
+| Start Date for Upgrades | Site Plans | Environments |
+|-----------|------------------|--------------|
+| September 24 | Sandbox | Dev/Multidevs |
+| October 14 | Sandbox | Test/Live |
+| October 16 | Basic | Dev/Multidevs |
+| October 29 | Performance/Elite | Dev/Multidevs |
 
 
 ## Known Changes and Requirements
@@ -73,9 +90,9 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **iconv** | 2.28 | 2.36 |
 | **mongodb** | 1.14 | 2.1.1 |
 | **openssl** | 1.1.1k | 3.0.17 |
-| **pdo_pgsql** | 13.5 | 15.13 |
+| **pdo_pgsql** | 13.5 | 15.14 |
 | **pdo_sqlite** | 3.26.0 | 3.40.1 |
-| **pgsql** | 13.5 | 15.13 |
+| **pgsql** | 13.5 | 15.14 |
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
@@ -93,7 +110,6 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Known Issues
 
-- New Relic is not available for sites running PHP 5.6. Compatibility will be added soon.
 - Drupal 8+ sites using Solr 3 are not compatible with PHP Runtime Generation 2.  [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) or disabling Solr is required. These sites will not be included in the initial automatic upgrade rollout, but will be upgraded after November 12, 2025.
 
 ## Reporting Issues
@@ -108,16 +124,19 @@ If you encounter any issues while testing your site with PHP Runtime Generation 
 
 ### Q: How can I determine which PHP runtime a site environment is using?
 
-The PHP runtime is set at the environment-level. You can find out which generation an environment is using via the [Terminus](/terminus) command  `terminus env:info <site>.<env>`.
+The PHP runtime is set at the environment-level. You can find out which generation an environment with the following methods:
+
+* Use the [Terminus](/terminus) command  `terminus env:info <site>.<env>`. This requires Terminus 4.0.2+
+* Use the Terminus command `env:list <site> --fields=id,php_runtime_generation,php_version`. This requires Terminus 4.1.0+
+* View your site on the Pantheon Dashboard, navigate to the environment's Status page, then review the Software Versions block
 
 ### Q: Will I need to make changes to my website?
 
 Potentially. Depending on your integrations with our PHP extensions and operating system libraries, you may need to update your website to be compatible with new PHP runtime.
 
+### Q: How do I opt out of the automatic rollout?
 
-### Q: How do I opt out of the upcoming platform rollout?
-
-You may opt-out of the upcoming platform rollout by setting the following in your `pantheon.yml`:
+You may opt-out of the platform rollout by setting the following in your `pantheon.yml`:
 
 ```yaml:title=pantheon.yml
 php_runtime_generation: 1

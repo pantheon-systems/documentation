@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2025-07-14"
+reviewed: "2025-10-23"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -34,7 +34,7 @@ These tables detail the actions each role can execute on each Dashboard.
 ### Workspace Level Permissions
 
 
-| Permissions                                             | Administrator                       | Team Member                         | Developer                          | Unprivileged <Popover title="Unprivileged" content="Enterprise and EDU+ workspaces only" /> |
+| Permissions                                             | Administrator                       | Team Member                         | Developer                          | Contributor <Popover title="Contributor" content="Enterprise and EDU+ workspaces only" /> |
 |:------------------------------------------------------- |:----------------------------------- |:----------------------------------- |:-----------------------------------|:-----------------------------------|
 | Create sites within an org                              | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Work in Dev environments                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
@@ -42,7 +42,7 @@ These tables detail the actions each role can execute on each Dashboard.
 | Create or delete Multidev environments                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Create or view support tickets                                    | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Access and manage [Autopilot](/guides/autopilot)        | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
-| Access the [workspace](/guides/account-mgmt/workspace-sites-teams/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the workspace's name, but will not be able to access it." />|
+| Access the [workspace](/guides/account-mgmt/workspace-sites-teams/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| ⚠️ <Popover title="Limited Access" content="The Contributor role has limited access to the Workspace. See <a href='#what-exactly-does-a-contributor-see-when-accessing-the-workspace'>related FAQ below</a> to learn more." />|
 | Change site upstream <Popover title="Permissions Note" content="The site and the upstream must both belong to the same workspace." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Deploy to Test and Live                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 | Invite new team members                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
@@ -248,7 +248,24 @@ Only sites owned by Enterprise and EDU+ can assign the developer role to specifi
 
 ### Which role should I assign a user to give them the lowest level of access?
 
-At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
+At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Contributor role has the least amount of permissions and can only create sites.
+
+### What exactly does a Contributor see when accessing the Workspace?
+Contributors have limited access to Workspaces:
+
+| Workspace Context             | Contributor Permission     |
+|:----------------------------- |:-------------------------- |
+| Home                          |⚠️ Limited access: Total number of sites and team members are not shown.|
+| Sites > Site list             |⚠️ Limited access: Only sites they create and sites they have been added to will be shown.|
+| Sites > Create new site       |<span style="color:green">✔</span>|
+| Sites > Migrate existing site |<span style="color:green">✔</span>|
+| Team                          |<span style="color:red">❌</span>|
+| Autopilot                     |<span style="color:red">❌</span>|
+| Edge                          |<span style="color:red">❌</span>|
+| Support                       |⚠️ Limited access: They can start a Live chat, but they cannot open tickets or see Workspace ticket history|
+| Upstreams                     |<span style="color:red">❌</span>|
+| Settings > Billing            |<span style="color:red">❌</span>|
+| Settings > Profile            |<span style="color:red">❌</span>|
 
 ### Which environments can a user with the Developer role deploy to?
 
