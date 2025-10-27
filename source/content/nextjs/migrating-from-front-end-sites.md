@@ -72,4 +72,3 @@ If you prefer a workflow in which code changes deploy to Live immediately upon m
 ### Connect your custom domain to the new Live environment
 
 To connect a custom domain name to your Live environment, follow the instructions in [Connecting a Custom Domain Name](/nextjs/connecting-custom-domain-name).
-

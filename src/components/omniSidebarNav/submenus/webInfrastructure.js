@@ -164,6 +164,7 @@ const webInfrastructure = () => {
         ),
         simpleLink('/nextjs/test-and-live-env', 'Test and Live Environments'),
         simpleLink('/nextjs/connecting-custom-domain-name', 'Connecting a Custom Domain Name'),
+        simpleLink('/nextjs/request-access', 'Private Alpha Program'),
       ]),
       {
         link: '/guides/decoupled',
