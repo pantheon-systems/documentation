@@ -42,6 +42,7 @@ const getOmniItems = () => {
         '/nextjs/content-publisher-tutorial',
         'Tutorial: Content Publisher',
       ),
+      simpleLink('/nextjs/multidev', 'Multidev environments'),
       simpleLink('/nextjs/environment-variables', 'Environment Variables'),
       simpleLink('/nextjs/cli-tools', 'CLI Tools'),
       simpleLink(
