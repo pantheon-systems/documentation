@@ -1,14 +1,13 @@
 ---
 title: Content Publisher Tutorial for Next.js
 description: Integrate Content Publisher with a Next.js site on Pantheon
-reviewed: "2025-10-01"
+reviewed: "2025-10-29"
 contenttype: [doc]
 innav: [true]
 audience: [development]
 product: [--]
 integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
-
 ---
 
 <Partial file="nextjs-pre-ga.md" />
@@ -136,7 +135,7 @@ You _can_ reuse an existing Content Publisher collection if you have one, but fo
 
 1. Enter something simple for **Collection name** like "Next.js tutorial content".
 
-1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io`.
+1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io/articles`.
 
   <Alert title="Tutorial vs. production usage" type="info" >
 
@@ -185,5 +184,5 @@ terminus node:logs:build:list <site>
 
 1. [Create a new Google Doc](https://docs.new/) and [connect it to your collection](https://docs.content.pantheon.io/add-on-install#h.25elm2hpgwjj) using the Google Docs add-on.
 1. [Publish your new page using the add-on](https://docs.content.pantheon.io/preview-publish#h.7ovppm53h4ec).
-
-**todo: troubleshoot 404s publishing not working, do i need to setup a webhook maybe?**
+1. Click **View live content** and you should see your new page, for example: 
+  ![New article published in Next.js from Google Docs](../../images/nextjs/example-first-article.png)
