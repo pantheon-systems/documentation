@@ -10,7 +10,6 @@ integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
 
 ---
-**todo: rachel to finish copy reviews for last 3 sections 
 
 <Partial file="nextjs-pre-ga.md" />
 
@@ -38,8 +37,9 @@ This tutorial will walk you through:
     - [NodeJS and NPM](https://docs.content.pantheon.io/cli-setup#h.tqdsaj5gmjzp)
     - [Content Publisher CLI](https://docs.content.pantheon.io/cli-setup#h.6sxx14u8zeur)*
     - [Content Publisher Google Docs add-on ](https://docs.content.pantheon.io/add-on-install#h.32fczwiey3t0)
-  - Optional:
     - [Terminus](/terminus/install)*
+    - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+  - Optional:
     - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
 
 \* Requires logging in after installation.
@@ -146,25 +146,44 @@ You _can_ reuse an existing Content Publisher collection if you have one, but fo
 
 1. Set [Collection access](https://docs.content.pantheon.io/publishing-permissions#h.q3xmgo7a5kws). Since this collection is meant to be a tutorial, you may want to select **Only managers and authorized users**.
 
-1. Click **Create collection**. Once the Collection is created, [create a new Google Doc](https://docs.new/) and [connect it to your collection](https://docs.content.pantheon.io/add-on-install#h.25elm2hpgwjj) using the Google Docs add-on.
+1. Click **Create collection**.
 
-## Configure environment variables to connect the Next.js site to the Content Publisher collection
+## Connect Content Publisher to your site
 
 Now that we have a Content Publisher collection, we can configure the environment variables needed to connect our Next.js site to that collection.
 
-Grab the collection ID and token from the Content Publisher dashboard.
+1. From the **Tokens** tab of the [Content Publisher dashboard](https://content.pantheon.io/dashboard/settings/tokens) click **Create access token** and fill in the prompt. The token will only be shown once, copy it to your clipboard now for use in the following step.
 
-__describe in more detail????__
+1. Set `PCC_TOKEN` as an environment variable on Pantheon using [Terminus Secrets](/guides/secrets). Replace `my-site-name` and `your-token-here`:
 
-### Set the environment variables on Pantheon
+  ```bash{promptUser: user}
+  terminus secret:site:set my-site-name  PCC_TOKEN your-token-here --type=env --scope=web,ic --no-interaction
+  ```
 
-Now, we will set the environment variables on Pantheon using Terminus.
+1. From the **Home** tab of the [Content Publisher dashboard](https://content.pantheon.io/dashboard/collections) find and select your new collection. Copy the collection ID. For example:
 
-```bash{promptUser: user}
-terminus secret:site:set my-site-name  PCC_TOKEN your-token-here --type=env --scope=web,ic --no-interaction
-terminus secret:site:set my-site-name  PCC_SITE_ID your-collection-id-here --type=env --scope=web,ic --no-interaction
-```
+  ![Screenshot from the Content Publisher dashboard highlighting the collection ID](../../images/nextjs/collection-id.png)
+
+1. Set `PCC_SITE_ID` as an environment variable on Pantheon using [Terminus Secrets](/guides/secrets). Replace `my-site-name` and `your-collection-id-here`:
+
+  ```bash{promptUser: user}
+  terminus secret:site:set my-site-name  PCC_SITE_ID your-collection-id-here --type=env --scope=web,ic --no-interaction
+  ```
 
 ### Trigger another build
 
-To see the changes take effect make another commit to the GitHub repository to trigger a new build and deployment.
+To see the changes take effect make another commit to the GitHub repository to trigger a new build and deployment. For example, you can add a new line to the README file in the main branch to trigger a build on Dev.
+
+#### (Optional) Review Build Status from the CLI
+To view the status of that process, run this command, replacing `<site>` with your sitename:
+
+```bash{promptUser: user}
+terminus node:logs:build:list <site>
+```
+
+## Publish from Google Docs to your Next.js site 
+
+1. [Create a new Google Doc](https://docs.new/) and [connect it to your collection](https://docs.content.pantheon.io/add-on-install#h.25elm2hpgwjj) using the Google Docs add-on.
+1. [Publish your new page using the add-on](https://docs.content.pantheon.io/preview-publish#h.7ovppm53h4ec).
+
+**todo: troubleshoot 404s publishing not working, do i need to setup a webhook maybe?**
