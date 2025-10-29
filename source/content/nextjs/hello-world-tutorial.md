@@ -23,11 +23,12 @@ This tutorial will walk you through:
 ## Requirements 
 
 * Access granted for the [Next.js Private Alpha Program](/nextjs/request-access)
-* A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) 
-* (Optional) Installing the [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin):
-  ```bash{promptUser:user}
-  terminus self:plugin:install terminus-node-logs-plugin
-  ``` 
+* A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+* (Optional) Install the following applications:
+  - [Terminus](/terminus/install)*
+  - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
+
+\* Requires logging in after installation.
 
 ## Site creation
 

@@ -30,7 +30,7 @@ This tutorial will walk you through:
 
 * Access granted for the [Next.js Private Alpha Program](/nextjs/request-access)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
-* [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with Administrator access
+* A [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with [Administrator access](https://docs.content.pantheon.io/roles)
 * Install the following applications:
   - [Git](https://git-scm.com/)
   - Content Publisher requirements:
@@ -73,32 +73,32 @@ Since this repository is meant to be a tutorial, you may want to make it private
 
 Now, we will push the codebase we made with `pcc init` to the new repository on GitHub.
 
-First, change into the directory holding the codebase:
+1. First, change into the directory holding the codebase:
 
-```bash{promptUser: user}
-cd my-site-name
-```
-Next, initialize a new Git repository:
+  ```bash{promptUser: user}
+  cd my-site-name
+  ```
+1. Next, initialize a new Git repository:
 
-```bash{promptUser: user}
-git init
-```
-Next, add the files in the directory to the new Git repository:
+  ```bash{promptUser: user}
+  git init
+  ```
+1. Next, add the files in the directory to the new Git repository:
 
-```bash{promptUser: user}
-git add .
-```
-Next, commit the files to the new Git repository:
+  ```bash{promptUser: user}
+  git add .
+  ```
+1. Next, commit the files to the new Git repository:
 
-```bash{promptUser: user}
-git commit -m "Initial commit"
-```
-Finally, add the GitHub repository as a remote and push the code to it (replacing `myname` and `my-site-name` with your GitHub username or organization and the name of the repository you created):
+  ```bash{promptUser: user}
+  git commit -m "Initial commit"
+  ```
+1. Finally, add the GitHub repository as a remote and push the code to it (replacing `myname` and `my-site-name` with your GitHub username or organization and the name of the repository you created):
 
-```bash{promptUser: user}
-git remote add origin git@github.com:myname/my-site-name.git
-git push -u origin main
-```
+  ```bash{promptUser: user}
+  git remote add origin git@github.com:myname/my-site-name.git
+  git push -u origin main
+  ```
 
 ## Create a new Pantheon site
 
