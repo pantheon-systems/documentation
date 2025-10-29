@@ -1,6 +1,6 @@
 ---
-title: Connecting a Custom Domain to Next.js on Pantheon
-description: Once on a paid plan, connecting a custom domain to your Next.js site on Pantheon is the same as other Pantheon sites.
+title: Connecting a custom domain to Next.js on Pantheon
+description: During the Alpha stage, reach out to Pantheon staff to connect a custom domain to your Next.js site.
 reviewed: "2025-10-01"
 contenttype: [doc]
 innav: [true]
@@ -10,21 +10,13 @@ integration: [--]
 permalink: docs/nextjs/connecting-custom-domain-name
 
 ---
-**todo: finish draft** 
 
 <Partial file="nextjs-pre-ga.md" />
 
-Newly created sites on Pantheon start on an unpaid "Sandbox" tier which does not allow custom domains.
-To connect a custom domain to your Live environment, contact a Pantheon employee through the channels of the Alpha program.
+Please reach out to Pantheon staff through the communication channels of the Alpha program for assistance with connecting custom domains to Next.js sites.
+Sites on Pantheon generally require moving from an unpaid "Sandbox" plan to a paid plan before connecting a custom domain name through the dashboard.
+However, in the Alpha phase we have not yet implemented self-service mechanism for moving Next.js sites between plans.
 
-[Follow this GitHub issue for when these instructions will be updated](https://github.com/pantheon-systems/documentation/issues/9735).
-
-### Pre-live checklist
-
-Before switching your DNS records to point to the new Live environment consider doing any load or performance testing that you feel is necessary to confirm that the new infrastructure meets your needs.
-
+Once Pantheon staff have enabled the capacity to connect a custom domain name to your Next.js site, you can follow the same instructions as for WordPress and Drupal sites: [Connecting a Custom Domain to Pantheon](/guides/launch/configure-dns/).
+As with any switching of DNS records, the amount of testing you choose to do before switching will depend on the risk tolerance of your organization and the nature of your site.
 For fully thorough testing, you may want to modify your local `hosts` file to point your custom domain to the IP address of the new Live environment [using these instructions](/guides/domains/hosts-file).
-
-### Update your DNS records to point to the new Live environment
-
-Once you are satisfied with the performance and functionality of your new Live environment, update your DNS records to point to the new Live environment using the same instructions as for WordPress and Drupal sites: [Connecting a Custom Domain to Pantheon](/guides/launch/configure-dns/).
