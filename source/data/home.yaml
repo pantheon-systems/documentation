@@ -52,7 +52,7 @@
         imageSrc: "https://cdn.bfldr.com/MEM5087K/at/6hz6pj6p596khsgnx7qp87/Book_shelf.svg"
         url: "/contribute"
       - headingText: "Release Notes"
-        summary: "LeYour destination for staying informed about our latest innovations and product updates."
+        summary: "Your destination for staying informed about our latest innovations and product updates."
         imageSrc: "https://cdn.bfldr.com/MEM5087K/at/bnmzkfsghpkcscw589pxqrxk/Release_New_Features-_Upstream.svg"
         url: "/release-notes"
       #- headingText: "Using Next.js?"
