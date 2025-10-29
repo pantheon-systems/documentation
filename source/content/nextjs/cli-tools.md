@@ -10,6 +10,7 @@ integration: [--]
 permalink: docs/nextjs/cli-tools
 
 ---
+**todo:** consider reducing and relocating to overview and/or troubleshooting page? 
 
 <Partial file="nextjs-pre-ga.md" />
 

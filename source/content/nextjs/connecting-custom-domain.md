@@ -10,6 +10,7 @@ integration: [--]
 permalink: docs/nextjs/connecting-custom-domain-name
 
 ---
+**todo: finish draft** 
 
 <Partial file="nextjs-pre-ga.md" />
 

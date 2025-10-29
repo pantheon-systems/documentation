@@ -8,8 +8,9 @@ audience: [development]
 product: [--]
 integration: [--]
 permalink: docs/nextjs
-
+showtoc: false
 ---
+**todo:** consider adding sections for access and Compatibility, features, related tools/cli, limitations (no redis)?
 
 <Partial file="nextjs-pre-ga.md" />
 

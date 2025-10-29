@@ -10,7 +10,8 @@ integration: [--]
 permalink: docs/nextjs/environment-variables
 
 ---
-
+**todo: rewrite intro, consider tabs for drupal/wp/cp usage examples**
+ 
 <Partial file="nextjs-pre-ga.md" />
 
 Many Next.js sites rely on environment variables to provide API keys, and other configuration values critical to the operation of the site.

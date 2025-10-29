@@ -10,41 +10,43 @@ integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
 
 ---
+**todo: rachel to finish copy reviews for last 3 sections 
 
 <Partial file="nextjs-pre-ga.md" />
 
 Pantheon's Content Publisher shines as a way to send content straight from Google Docs to a Next.js site hosted on Pantheon.
 This tutorial will walk you through the steps needed to make a simple site combining the two.
 
-In this tutorial, we will:
+## Learning Objectives
 
-* Make a new Next.js codebase using the [Next.js Content Publisher Starter](https://docs.content.pantheon.io/nextjs-tutorial).
-* Create a new GitHub repository to hold that codebase.
-* Create a new Pantheon site that will build and run the code from that repository.
-* Create a Content Publisher collection that will send content to the Next.js site.
-* Configure environment variables on Pantheon to connect the Next.js site to the Content Publisher collection.
+This tutorial will walk you through:
 
+* Making a new Next.js codebase using the [Next.js Content Publisher Starter](https://github.com/pantheon-systems/content-publisher-sdk/tree/main/starters/nextjs-starter-approuter-ts).
+* Creating a new GitHub repository to hold that codebase.
+* Creating a new Pantheon site that will build and run the code from that repository.
+* Creating a Content Publisher collection that will send content to the Next.js site.
+* Configuring environment variables on Pantheon to connect the Next.js site to the Content Publisher collection.
 
-<Alert title="Access prerequisites" type="info" >
+## Requirements
 
-tktktk
+* Access granted for the [Next.js Private Alpha Program](/nextjs/request-access)
+* A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+* A [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with [Administrator access](https://docs.content.pantheon.io/roles)
+* Install the following applications:
+  - [Git](https://git-scm.com/)
+  - Content Publisher requirements:
+    - [NodeJS and NPM](https://docs.content.pantheon.io/cli-setup#h.tqdsaj5gmjzp)
+    - [Content Publisher CLI](https://docs.content.pantheon.io/cli-setup#h.6sxx14u8zeur)*
+    - [Content Publisher Google Docs add-on ](https://docs.content.pantheon.io/add-on-install#h.32fczwiey3t0)
+  - Optional:
+    - [Terminus](/terminus/install)*
+    - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
 
-</Alert>
-
-## Command Line Tool Prerequisites
-
-This tutorial requires few command line tools that are best to install before starting.
-
-* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - to manage the codebase and push it to GitHub.
-* Terminus - to create and manage the Pantheon site.
-  If you don't have Terminus installed, [start by installing it](https://docs.pantheon.io/terminus/install).
-* log plugin
-* repo plugin
-* pcc
+\* Requires logging in after installation.
 
 ## Create a local Next.js codebase
 
-The all of the prerequisites tools in place we will now make a local codebase for our Next.js site.
+With all the requirements above in place, we will now make a local codebase for our Next.js site.
 
 Run this command (replacing `my-site-name` with a unique name for your site):
 
@@ -62,7 +64,7 @@ Next, we will create a new repository on GitHub to hold the codebase we just mad
 
 You can do this via GitHub's web interface or via the command line.
 
-[screenshot of GitHub new repo page]
+![Create a new empty private GitHub repository](../../images/nextjs/new-empty-repo.png)
 
 Leave the repository empty for now and do not add a README, .gitignore, or license.
 
@@ -72,54 +74,54 @@ Since this repository is meant to be a tutorial, you may want to make it private
 
 Now, we will push the codebase we made with `pcc init` to the new repository on GitHub.
 
-First, change into the directory holding the codebase:
+1. First, change into the directory holding the codebase:
 
-```bash{promptUser: user}
-cd my-site-name
-```
-Next, initialize a new Git repository:
+  ```bash{promptUser: user}
+  cd my-site-name
+  ```
+1. Next, initialize a new Git repository:
 
-```bash{promptUser: user}
-git init
-```
-Next, add the files in the directory to the new Git repository:
+  ```bash{promptUser: user}
+  git init
+  ```
+1. Next, add the files in the directory to the new Git repository:
 
-```bash{promptUser: user}
-git add .
-```
-Next, commit the files to the new Git repository:
+  ```bash{promptUser: user}
+  git add .
+  ```
+1. Next, commit the files to the new Git repository:
 
-```bash{promptUser: user}
-git commit -m "Initial commit"
-```
-Finally, add the GitHub repository as a remote and push the code to it (replacing `myname` and `my-site-name` with your GitHub username or organization and the name of the repository you created):
+  ```bash{promptUser: user}
+  git commit -m "Initial commit"
+  ```
+1. Finally, add the GitHub repository as a remote and push the code to it (replacing `myname` and `my-site-name` with your GitHub username or organization and the name of the repository you created):
 
-```bash{promptUser: user}
-git remote add origin git@github.com:myname/my-site-name.git
-git push -u origin main
-```
+  ```bash{promptUser: user}
+  git remote add origin git@github.com:myname/my-site-name.git
+  git push -u origin main
+  ```
 
 ## Create a new Pantheon site
 
 With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site and use [Pantheon's GitHub Application](https://docs.pantheon.io/github-application) to trigger builds in response to code changes.
 
-```bash{promptUser: user}
-terminus site:create my-site-name my-site-name nextjs15 \
---org="My Pantheon Organization Name" \
---vcs-provider=github \
---vcs-org=my-github-org-name \
---repository-name=my-site-name \
---no-create-repo
-```
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Create New Site** button. Then click **Next.js**.
+1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application.
+1. Select the newly authorized account, then click **Continue**.
+1. In the **Configure Site** step, switch tabs to **Use existing repository**, then enter a **Site name** and select your existing repository from the dropdown menu. Click **Deploy site**:
 
-This command will take a few minutes to complete as Pantheon will create the new site, connect it to the GitHub repository, and start the first build and deployment.
+  ![Create new site configured from existing repository](../../images/nextjs/configure-existing-repo.png)
+
+1. Click **Begin Deployment**. Do not close the tab or navigate away from this page until the workflow is complete.
 
 The build process will return an error because we have not yet configured the environment variables needed to connect to Content Publisher.
-You can see this progression of build statuses using Terminus:
+
+(Optional) You can see this progression of build statuses using Terminus:
 
 ```bash{promptUser: user}
 terminus node:logs:build:list my-site.dev
 ```
+
 To make the build and deployment succeed, will will need a Content Publisher collection and token.
 
 ## Create a Content Publisher collection
@@ -128,24 +130,23 @@ Now let's make a Content Publisher collection that will send content to our new 
 
 You _can_ reuse an existing Content Publisher collection if you have one, but for this tutorial we will make a new one.
 
-Go to the [Content Publisher dashboard](https://content.pantheon.io) and log in.
+1. Go to the [Content Publisher dashboard](https://content.pantheon.io) and log in.
 
-Next create a new collection by clicking the **"New collection"** button.
+1. Next create a new collection by clicking the **"New collection"** button.
 
-Enter something simple for **Collection name** like "Next.js tutorial content".
+1. Enter something simple for **Collection name** like "Next.js tutorial content".
 
-For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io`.
+1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io`.
 
-<Alert title="Tutorial vs. production usage" type="info" >
+  <Alert title="Tutorial vs. production usage" type="info" >
 
-When using this combination of Content Publisher and Next.js in production, you would likely use the URL of your live environment here. For more information on deploying to Test and Live environments, see [Deploying to Test and Live](/docs/nextjs/test-and-live-env).
+  When using this combination of Content Publisher and Next.js in production, you would likely use the URL of your live environment here. For more information on deploying to Test and Live environments, see [Deploying to Test and Live](/docs/nextjs/test-and-live-env).
 
-</Alert>
+  </Alert>
 
-Once the Collection is created, [create a new Google Doc](https://docs.new/) and add it to your collection.
+1. Set [Collection access](https://docs.content.pantheon.io/publishing-permissions#h.q3xmgo7a5kws). Since this collection is meant to be a tutorial, you may want to select **Only managers and authorized users**.
 
-__describe in more detail????__
-
+1. Click **Create collection**. Once the Collection is created, [create a new Google Doc](https://docs.new/) and [connect it to your collection](https://docs.content.pantheon.io/add-on-install#h.25elm2hpgwjj) using the Google Docs add-on.
 
 ## Configure environment variables to connect the Next.js site to the Content Publisher collection
 
