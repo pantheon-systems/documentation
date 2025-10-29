@@ -1,7 +1,7 @@
 ---
 title: How to set environment variables for Next.js
 description: Use Pantheon's Secrets Manager to set environment variables for all environments or specific environments of a Next.js site.
-reviewed: "2025-10-01"
+reviewed: "2025-10-29"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -24,7 +24,7 @@ NEXT_PUBLIC_CMS_BASE_URL=http://example.com
 
 When the site is deployed to Pantheon, these environment variables need to be set in a way that the Next.js application can read in both the [build and runtime phases](/nextjs/architecture).
 
-## Setting environment variables on Pantheon
+## Setting site-wide environment variables on Pantheon
 
 Pantheon provides a way to set environment variables using [Secrets Manager](/guides/secrets) that can be read by applications running on Pantheon.
 
@@ -40,7 +40,7 @@ terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.co
 
 For somes variables for some sites, you may need a different value for the Live environment than for all other environments.
 
-## Environment-specific values
+## Setting Environment-specific overrides
 
 To set a different value for a given environment, specify the environment after the site name.
 

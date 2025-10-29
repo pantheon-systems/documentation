@@ -1,14 +1,13 @@
 ---
 title: Content Publisher Tutorial for Next.js
 description: Integrate Content Publisher with a Next.js site on Pantheon
-reviewed: "2025-10-01"
+reviewed: "2025-10-29"
 contenttype: [doc]
 innav: [true]
 audience: [development]
 product: [--]
 integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
-
 ---
 
 <Partial file="nextjs-pre-ga.md" />
@@ -33,12 +32,12 @@ This tutorial will walk you through:
 * A [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with [Administrator access](https://docs.content.pantheon.io/roles)
 * Install the following applications:
   - [Git](https://git-scm.com/)
+  - [Terminus](/terminus/install)*
+  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
   - Content Publisher requirements:
     - [NodeJS and NPM](https://docs.content.pantheon.io/cli-setup#h.tqdsaj5gmjzp)
     - [Content Publisher CLI](https://docs.content.pantheon.io/cli-setup#h.6sxx14u8zeur)*
     - [Content Publisher Google Docs add-on ](https://docs.content.pantheon.io/add-on-install#h.32fczwiey3t0)
-    - [Terminus](/terminus/install)*
-    - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
   - Optional:
     - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
 
@@ -56,7 +55,7 @@ Run this command (replacing `my-site-name` with a unique name for your site):
 
 You can answer the interactive prompts that follow with "no" since we have not yet made a Content Publisher collection or token to go with this site.
 
-When the command completes, you will have a with a simple Next.js codebase on your local machine in a directory named `my-site-name`.
+When the command completes, you will have a simple Next.js codebase on your local machine in a directory named `my-site-name`.
 
 ### Create a GitHub repository
 
@@ -136,7 +135,7 @@ You _can_ reuse an existing Content Publisher collection if you have one, but fo
 
 1. Enter something simple for **Collection name** like "Next.js tutorial content".
 
-1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io`.
+1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io/articles`.
 
   <Alert title="Tutorial vs. production usage" type="info" >
 
@@ -185,5 +184,5 @@ terminus node:logs:build:list <site>
 
 1. [Create a new Google Doc](https://docs.new/) and [connect it to your collection](https://docs.content.pantheon.io/add-on-install#h.25elm2hpgwjj) using the Google Docs add-on.
 1. [Publish your new page using the add-on](https://docs.content.pantheon.io/preview-publish#h.7ovppm53h4ec).
-
-**todo: troubleshoot 404s publishing not working, do i need to setup a webhook maybe?**
+1. Click **View live content** and you should see your new page, for example: 
+  ![New article published in Next.js from Google Docs](../../images/nextjs/example-first-article.png)
