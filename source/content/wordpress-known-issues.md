@@ -1411,8 +1411,9 @@ if(! defined('WFWAF_STORAGE_ENGINE')) {
 }
 
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-  define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
+  define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
   include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+}
 ```
 
 **Advantages:** Customers have reported improved file system performance without having to compromise on Wordfence's features.
