@@ -53,7 +53,10 @@ const getOmniItems = () => {
           '/nextjs/migrating-from-front-end-sites',
           'How to migrate from Front-End Sites',
         ),
-        simpleLink('/nextjs/environment-variables', 'How to set environment variables'),
+        simpleLink(
+          '/nextjs/environment-variables',
+          'How to set environment variables',
+        ),
         simpleLink(
           '/nextjs/connecting-custom-domain-name',
           'How to connect a custom domain name',
