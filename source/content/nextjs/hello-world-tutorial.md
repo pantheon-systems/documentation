@@ -24,6 +24,7 @@ This tutorial will walk you through:
 
 * Access granted for the [Next.js Private Alpha Program](/nextjs/request-access)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+* Install [Git](https://git-scm.com/)
 * (Optional) Install the following applications:
   - [Terminus](/terminus/install)*
   - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
@@ -39,6 +40,10 @@ This tutorial will walk you through:
 1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application: 
 
   ![Authorize access for Pantheon's GitHub Application across all repositories](../../images/nextjs/auth-all-repos.png)
+
+  <Alert type="info" title="Note">
+    **TODO:** Talk about all repos access vs specifics, and to do limit access you have to create repo first then grant permissions for pantheon on that one repo
+  </Alert>
 
 1. Select the newly authorized account, then click **Continue**: 
 
@@ -118,7 +123,7 @@ terminus node:logs:build:list <site>.pr-1
 ```
 
 Over the course of a few minutes, you will see the statuses update as the files necessary to run Next.js are built and deployed.
-See this [section for more details on the build and deployment process](/nextjs/build-and-deploy).
+See this [section for more details on the build and deployment process](/nextjs/architecture#build-and-deploy-process).
 
 For as small of a change as we made in this pull request, some "Hello World" text, we should soon see DEPLOYMENT_SUCCESS as the status.
 Once that status is reached, you should be able to see your change in your browser by opening a Multidev environment from your dashboard.

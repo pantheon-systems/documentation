@@ -10,6 +10,7 @@ integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
 
 ---
+**todo: rachel to finish copy reviews for last 3 sections 
 
 <Partial file="nextjs-pre-ga.md" />
 
