@@ -28,24 +28,23 @@ We do all of this one the same platform that powers thousands of Drupal and Word
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
-<ProductGroup>
+## Architecture and workflow
 
-  <Product title={"Architecture"} link={"/nextjs/architecture"}>
+<!--- This image is pulled from this deck: https://docs.google.com/presentation/d/17k15auDrnpq2LdRC4P35dN5yJ4pOkPY62M7drBDkTCc/edit?slide=id.g39e43c7cf0e_0_15#slide=id.g39e43c7cf0e_0_15 --->
+![architecture diagram](../../images/nextjs/github-app--nextjs-version.png)
 
-  Pantheon runs Next.js on horizontally scalable containers behind a Global CDN.
+To support Next.js development teams, Pantheon uses a GitHub Application that builds and deploys changes. Learn more about:
 
-  </Product>
+* [Deploying branches to Dev and Multidev environments](/nextjs/multidev)
+* [Deploying Git tags to Test and Live environments](/nextjs/test-and-live-env)
+* [The architecture underlying the build time and runtime environments](/nextjs/architecture)
+* [Setting environment variables](/nextjs/environment-variables)
 
-  <Product title={"Hello World"} link={"/nextjs/hello-world-tutorial"}>
+## Getting started
 
-  Spin up a simple Next.js site on Pantheon with this tutorial.
+To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
 
-  </Product>
+If you have previously launched a Next.js site via [Pantheon's Front-End Sites, use this guide for migration](/nextjs/migrating-from-front-end-sites).
 
-  <Product title={"Content Publisher and Next.js"} link={"/nextjs/content-publisher-tutorial"}>
-
-  Connect Next.js to Pantheon's Content Publisher to instantly send content from Google Docs to your website.
-
-  </Product>
-
-</ProductGroup>
+Most of the tasks related to developing a site with Next.js on Pantheon can be done through the Pantheon dashboard.
+We also provide [command line tools equivalents](/nextjs/cli-tools) for many tasks like log viewing and site creation.
