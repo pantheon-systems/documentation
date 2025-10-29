@@ -1,6 +1,6 @@
 ---
-title: Environment Variables Tutorial for Next.js
-description: Set and read environment variables for Next.js on Pantheon
+title: How to set environment variables for Next.js
+description: Use Pantheon's Secrets Manager to set environment variables for all environments or specific environments of a Next.js site.
 reviewed: "2025-10-01"
 contenttype: [doc]
 innav: [true]
@@ -10,18 +10,16 @@ integration: [--]
 permalink: docs/nextjs/environment-variables
 
 ---
-**todo: rewrite intro, consider tabs for drupal/wp/cp usage examples**
- 
+
 <Partial file="nextjs-pre-ga.md" />
 
 Many Next.js sites rely on environment variables to provide API keys, and other configuration values critical to the operation of the site.
 
-For instance, a Next.js site that uses our [Content Publisher](https://docs.content.pantheon.io/nextjs-tutorial) Starter Kits would rely on two variables the Collection ID (Site ID) and Authentication token respectively.
-In local development, these variables would be set in a `.env.local` file as
+For instance, a Next.js site that connects reads data out of a content management system might rely on a secret on an environment variable to set the URL where the CMS lives.
+In local development, that variable would likely be set in a `.env.local` file as
 
 ```
-PCC_SITE_ID=12345
-PCC_TOKEN=ABC-DEF
+NEXT_PUBLIC_CMS_BASE_URL=http://example.com
 ```
 
 When the site is deployed to Pantheon, these environment variables need to be set in a way that the Next.js application can read in both the [build and runtime phases](/nextjs/architecture).
@@ -37,7 +35,7 @@ terminus self:plugin:install terminus-secrets-manager-plugin
 ```
 
 ```bash{promptUser: user}
-terminus secret:site:set <site-name>  PCC_SITE_ID 12345 --type=env --scope=web
+terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
 ```
 
 For somes variables for some sites, you may need a different value for the Live environment than for all other environments.

@@ -18,7 +18,7 @@ Pantheon hosts Next.js in containers running Node.js behind a global CDN. Those 
 
 Both the containers and the cache are populated by the result of a build process which prepares Next.js by running `npm clean-install` and `npm run build` on a codebase.
 
-## Architecture diagram
+## Moving code from your local machine to Pantheon
 
 <!-- This diagram comes from https://docs.google.com/presentation/d/1NesMYwF82xFEymuH3Mmi5oClZ3cXSnb9SAwwyPT1lBY/edit?slide=id.g39b80743bea_0_702#slide=id.g39b80743bea_0_702 -->
 
