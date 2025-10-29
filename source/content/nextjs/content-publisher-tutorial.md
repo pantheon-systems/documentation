@@ -55,7 +55,7 @@ Run this command (replacing `my-site-name` with a unique name for your site):
 
 You can answer the interactive prompts that follow with "no" since we have not yet made a Content Publisher collection or token to go with this site.
 
-When the command completes, you will have a with a simple Next.js codebase on your local machine in a directory named `my-site-name`.
+When the command completes, you will have a simple Next.js codebase on your local machine in a directory named `my-site-name`.
 
 ### Create a GitHub repository
 
