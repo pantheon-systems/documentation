@@ -42,7 +42,7 @@ This tutorial will walk you through:
   ![Authorize access for Pantheon's GitHub Application across all repositories](../../images/nextjs/auth-all-repos.png)
 
   <Alert type="info" title="Note">
-    **TODO:** Talk about all repos access vs specifics, and to do limit access you have to create repo first then grant permissions for pantheon on that one repo
+    If you prefer not to grant permissions for all repositories as demonstrated above, you should instead create an empty repository before proceeding. Once created, return to this step and choose **Only select repositories** then select your new repository.
   </Alert>
 
 1. Select the newly authorized account, then click **Continue**: 
