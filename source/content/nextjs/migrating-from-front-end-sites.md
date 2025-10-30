@@ -10,7 +10,6 @@ integration: [--]
 permalink: docs/nextjs/migrating-from-front-end-sites
 
 ---
-**todo: fill out incomplete sections, before you begin needs more details** 
 
 <Partial file="nextjs-pre-ga.md" />
 

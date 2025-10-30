@@ -8,15 +8,32 @@ audience: [development]
 product: [--]
 integration: [--]
 permalink: docs/nextjs
-showtoc: false
 ---
-**todo:** Rachel to own - consider adding sections for access and Compatibility, features, related tools/cli, limitations (no redis)?
 
 <Partial file="nextjs-pre-ga.md" />
 
 Next.js is the leading React framework for building web applications and sites.
 It stands out for its use of cutting edge development techniques and strong commitment to performance for the end users of the web.
 
+## Access & Availability
+Access to Pantheon's Next.js support is currently available through a **Private Alpha** program. To request access, please fill out  [this form](https://forms.pantheon.io/nextjs-alpha-request).
+
+Pantheon's product engineering team is rolling out new functionality often while this product is in Private Alpha. Certain features and functionality are limited, for details see [this section below](#considerations).
+
+### Compatibility & Requirements
+<!--* **TODO: Need help filling this section, what versions are supported? Any specific requirements for related tooling?**--->
+
+Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
+
+### Usage
+To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
+
+If you have previously launched a Next.js site via [Pantheon's Front-End Sites, use this guide for migration](/nextjs/migrating-from-front-end-sites).
+
+Most of the tasks related to developing a site with Next.js on Pantheon can be done through the Pantheon dashboard.
+We also provide [command line equivalents](/nextjs/cli-tools) for many tasks like log viewing and site creation.
+
+## Key Features
 Pantheon makes teams using Next.js more effective by
 
 * Providing a container-based runtime environment that holds all the dependencies needed to run Next.js applications.
@@ -28,23 +45,16 @@ We do all of this one the same platform that powers thousands of Drupal and Word
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
-## Architecture and workflow
-
-<!--- This image is pulled from this deck: https://docs.google.com/presentation/d/17k15auDrnpq2LdRC4P35dN5yJ4pOkPY62M7drBDkTCc/edit?slide=id.g39e43c7cf0e_0_15#slide=id.g39e43c7cf0e_0_15 --->
-![architecture diagram](../../images/nextjs/github-app--nextjs-version.png)
-
-To support Next.js development teams, Pantheon uses a GitHub Application that builds and deploys changes. Learn more about:
-
-* [Deploying branches to Dev and Multidev environments](/nextjs/multidev)
-* [Deploying Git tags to Test and Live environments](/nextjs/test-and-live-env)
-* [The architecture underlying the build time and runtime environments](/nextjs/architecture)
-* [Setting environment variables](/nextjs/environment-variables)
-
-## Getting started
-
-To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
-
-If you have previously launched a Next.js site via [Pantheon's Front-End Sites, use this guide for migration](/nextjs/migrating-from-front-end-sites).
-
-Most of the tasks related to developing a site with Next.js on Pantheon can be done through the Pantheon dashboard.
-We also provide [command line tools equivalents](/nextjs/cli-tools) for many tasks like log viewing and site creation.
+## Considerations
+The following are known limitations for Next.js on Pantheon:
+* These Site Dashboard features are not supported for Next.js at this time:
+  * Status reports
+  * Errors <Popover title="Note" content="Instead, refer to the Build tab on the given environment - checking build logs for errors related to Next.js deployments." />
+  * Domains & HTTPS, Upgrading site plan <Popover title="Note" content="Launch is not currently self-serve, for details see <a href='/nextjs/connecting-custom-domain-name'>Connecting a custom domain to Next.js on Pantheon</a>." />
+* Performance addons are not supported for Next.js at this time, regardless of site plan:
+  * New Relic
+  * Redis
+  * Solr
+* The following Workspace features are not supported for Next.js at this time:
+  * Autopilot
+  * Custom Upstreams

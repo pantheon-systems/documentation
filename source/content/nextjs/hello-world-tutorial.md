@@ -22,7 +22,7 @@ This tutorial will walk you through:
 
 ## Requirements 
 
-* Access granted for the [Next.js Private Alpha Program](/nextjs/request-access)
+* Access granted for the [Next.js Private Alpha Program](/nextjs/#access--availability)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * Install [Git](https://git-scm.com/)
 * (Optional) Install the following applications:

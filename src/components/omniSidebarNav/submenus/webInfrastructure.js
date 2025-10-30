@@ -177,7 +177,6 @@ const webInfrastructure = () => {
             'How to connect a custom domain name',
           ),
         ]),
-        simpleLink('/nextjs/request-access', 'Private Alpha Program'),
       ]),
 
       {
