@@ -24,6 +24,7 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 _Link to blog post_
 
 _table of differences between Front-End Sites and new Next.js support_
+_webhooks not avail_
 
 ## Replicating your Front-End Site on new Next.js infrastructure
 
