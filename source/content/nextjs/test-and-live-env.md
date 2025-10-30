@@ -1,7 +1,7 @@
 ---
 title: Test and Live Environments for Next.js
 description: Specially named Git tags trigger deployments to Test and Live environments for Next.js sites on Pantheon.
-reviewed: "2025-10-01"
+reviewed: "2025-10-31"
 contenttype: [doc]
 innav: [true]
 audience: [development]

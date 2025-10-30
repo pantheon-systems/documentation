@@ -1,7 +1,7 @@
 ---
 title: Next.js Private Alpha Program
 description: Request access to use Next.js on Pantheon
-reviewed: "2025-10-01"
+reviewed: "2025-10-31"
 contenttype: [doc]
 innav: [true]
 audience: [development]

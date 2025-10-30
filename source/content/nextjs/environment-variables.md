@@ -1,7 +1,7 @@
 ---
 title: How to set environment variables for Next.js
 description: Use Pantheon's Secrets Manager to set environment variables for all environments or specific environments of a Next.js site.
-reviewed: "2025-10-29"
+reviewed: "2025-10-31"
 contenttype: [doc]
 innav: [true]
 audience: [development]

@@ -1,7 +1,7 @@
 ---
 title: Connecting a custom domain to Next.js on Pantheon
 description: During the Alpha stage, reach out to Pantheon staff to connect a custom domain to your Next.js site.
-reviewed: "2025-10-01"
+reviewed: "2025-10-31"
 contenttype: [doc]
 innav: [true]
 audience: [development]

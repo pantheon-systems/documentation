@@ -1,7 +1,7 @@
 ---
 title: Command Line Tools to use with Next.js on Pantheon
 description: Terminus plugins and other CLI tools to manage Next.js sites on Pantheon
-reviewed: "2025-10-01"
+reviewed: "2025-10-31"
 contenttype: [doc]
 innav: [true]
 audience: [development]

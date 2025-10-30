@@ -1,7 +1,7 @@
 ---
 title: Next.js Hello World Tutorial
 description: Get up and running with a simple Next.js application on Pantheon
-reviewed: "2025-10-29"
+reviewed: "2025-10-31"
 contenttype: [doc]
 innav: [true]
 audience: [development]
