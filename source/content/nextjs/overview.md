@@ -16,7 +16,7 @@ Next.js is the leading React framework for building web applications and sites.
 It stands out for its use of cutting edge development techniques and strong commitment to performance for the end users of the web.
 
 ## Access & Availability
-Access to Pantheon's Next.js support is currently available through a **Private Alpha** program. To request access, please fill out  [this form](https://forms.pantheon.io/nextjs-alpha-request).
+Access to Pantheon's Next.js support is currently available through a **Private Alpha** program. To request access, please reach out to nextjs@pantheon.io.
 
 Pantheon's product engineering team is rolling out new functionality often while this product is in Private Alpha. Certain features and functionality are limited, for details see [this section below](#considerations).
 
