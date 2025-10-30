@@ -1,6 +1,6 @@
 ---
 title: New Object Cache Pro recommended config constant (2.0)
-published_date: "2025-10-29"
+published_date: "2025-10-30"
 categories: [wordpress, performance, action-required]
 ---
 
