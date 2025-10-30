@@ -22,8 +22,12 @@ Pantheon's product engineering team is rolling out new functionality often while
 
 ### Compatibility & Requirements
 <!--* **TODO: Need help filling this section, what versions are supported? Any specific requirements for related tooling?**--->
-
-Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
+* **Node versions:**
+  * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the `engines` property in `package.json`.
+* **Package managers:**
+  * Pantheon will use `npm`, `yarn`, or `pnm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
+* **GitHub:**
+  * Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
 
 ### Usage
 To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
@@ -34,7 +38,7 @@ Most of the tasks related to developing a site with Next.js on Pantheon can be d
 We also provide [command line equivalents](/nextjs/cli-tools) for many tasks like log viewing and site creation.
 
 ## Key Features
-Pantheon makes teams using Next.js more effective by
+Pantheon makes teams using Next.js more effective by:
 
 * Providing a container-based runtime environment that holds all the dependencies needed to run Next.js applications.
 * Storing cached responses both in our Global CDN and a persistent layer that is shared across horitzontally scaled containers.
