@@ -35,7 +35,7 @@ This tutorial will walk you through:
   - [Terminus](/terminus/install)*
   - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
   - Content Publisher requirements:
-    - [NodeJS and NPM](https://docs.content.pantheon.io/cli-setup#h.tqdsaj5gmjzp)
+    - [Node.js and npm](https://docs.content.pantheon.io/cli-setup#h.tqdsaj5gmjzp)
     - [Content Publisher CLI](https://docs.content.pantheon.io/cli-setup#h.6sxx14u8zeur)*
     - [Content Publisher Google Docs add-on ](https://docs.content.pantheon.io/add-on-install#h.32fczwiey3t0)
   - Optional:
