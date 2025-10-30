@@ -13,18 +13,34 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 
 <Partial file="nextjs-pre-ga.md" />
 
-## Befor you begin
+This guide walks through moving a Next.js site away from Pantheon's earlier [Front-End Sites offering](/guides/decoupled).
 
-* Do you have admin access to your GitHub repository?
-* Do you have access to create new Next.js sites on Pantheon?
-* Do you have access to your DNS provider to update DNS records?
+## Requirements
 
-### Differences between Front-End Sites and new Next.js sites
+* Access granted for the [Next.js Private Alpha Program](/nextjs/#access--availability)
+* Administrative access to the GitHub repo used for your Next.js site.
+* Install the following CLI applications:
+  - [Terminus](/terminus/install)
+  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+  - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin) (optional)
 
-_Link to blog post_
 
-_table of differences between Front-End Sites and new Next.js support_
-_webhooks not avail_
+## Differences between Front-End Sites and new Next.js sites
+
+In the years since Front-End Sites was architected, frameworks like Next.js has moved in the direction of "dynamic by default" as seen with the addition of [Cache Components](https://nextjs.org/docs/app/getting-started/cache-components) in [Next.js 16](https://nextjs.org/blog/next-16#cache-components). The infrastucture well suited to this direction (horizontally scalable containers with shared caches) is different from the static-first architecture made for leading JAMStack leaders like Gatsby.
+
+Pantheon pioneered containerized PHP and runs Next.js in a similar architecture. Read more about [ our Next.js architecture here](/nextjs/architecture).
+
+Additional differences between Front-End Sites and our updated Next.js offering include:
+
+* Next.js sites can now be created and managed on the command line via Terminus.
+* Use Pantheon's Secrets Manager should be used instead of Front-End Sites' environment variable interface.
+* Secrets Manager should also be used to hold connection credentials to any given WordPress or Drupal site on Pantheon.
+* All sites now have at least three environments (Dev, Test, and Live) in addition to the Multidev environments made per pull request or for branches starting with `multi-`.
+* Sites are routed through Pantheon's Global CDN and get URLs structured as `https://<env>-<site>.pantheonsite.io` instead of routing through a different CDN that used `https://<env>-<site>.appa.pantheon.site/` as the pattern of domain names.
+
+Front-End Sites and our new support for Next.js both use distinct GitHub Applications as the mechanism for trigger builds and deployments.
+Configuring that new connection to our GitHub Application is the first step of migrating.
 
 ## Replicating your Front-End Site on new Next.js infrastructure
 
@@ -50,11 +66,18 @@ For many sites, builds will fail until required environment variables are set.
 Front-End Sites provided a dashboard interface for setting environment variables.
 The new Next.js support on Pantheon uses [Secrets Manager](/guides/secrets) to set environment variables.
 
+For each variable set in your Front-End Sites environment variables field, set as secret using Pantheon's Secrets Manager.
+
+
+```bash{promptUser: user}
+terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
+```
+
+[See here for more information on using Secrets Manager to set environment variables for Next.js sites](/nextjs/environment-variables).
+
 ### Confirm your site is working as expected
 
 Once your environment variables are set, and another build process has completed without error, confirm that your site is working as expected in the Dev environment.
-
-https://github.com/pantheon-systems/terminus-secrets-manager-plugin
 
 ## Going Live
 
