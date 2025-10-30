@@ -21,7 +21,6 @@ Access to Pantheon's Next.js support is currently available through a **Private 
 Pantheon's product engineering team is rolling out new functionality often while this product is in Private Alpha. Certain features and functionality are limited, for details see [this section below](#considerations).
 
 ### Compatibility & Requirements
-<!--* **TODO: Need help filling this section, what versions are supported? Any specific requirements for related tooling?**--->
 * **Node versions:**
   * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the `engines` property in `package.json`.
 * **Package managers:**
@@ -45,7 +44,7 @@ Pantheon makes teams using Next.js more effective by:
 * Providing a Git-based workflow that integrates with GitHub to enable Continuous Integration and Continuous Deployment.
 * Offering a dashboard and command line tool for managing environments, viewing logs, and scaling resources.
 
-We do all of this one the same platform that powers thousands of Drupal and WordPress sites.
+We do all of this on the same platform that powers thousands of Drupal and WordPress sites.
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
