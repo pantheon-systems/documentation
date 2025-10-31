@@ -135,7 +135,7 @@ You _can_ reuse an existing Content Publisher collection if you have one, but fo
 
 1. Enter something simple for **Collection name** like "Next.js tutorial content".
 
-1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io/articles`.
+1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io`.
 
   <Alert title="Tutorial vs. production usage" type="info" >
 
