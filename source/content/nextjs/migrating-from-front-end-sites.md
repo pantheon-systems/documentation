@@ -22,6 +22,7 @@ This guide walks through moving a Next.js site away from Pantheon's earlier [Fro
 * Install the following CLI applications:
   - [Terminus](/terminus/install)
   - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+  - [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
   - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin) (optional)
 
 
