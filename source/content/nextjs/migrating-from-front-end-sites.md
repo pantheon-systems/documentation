@@ -35,10 +35,12 @@ Pantheon pioneered containerized PHP and runs Next.js in a similar architecture.
 Additional differences between Front-End Sites and our updated Next.js offering include:
 
 * Next.js sites can now be created and managed on the command line via Terminus.
-* Use Pantheon's Secrets Manager should be used instead of Front-End Sites' environment variable interface.
-* Secrets Manager should also be used to hold connection credentials to any given WordPress or Drupal site on Pantheon.
-* All sites now have at least three environments (Dev, Test, and Live) in addition to the Multidev environments made per pull request or for branches starting with `multi-`.
+* [Pantheon's Secrets Manager](/guides/secrets/) should be used instead of Front-End Sites' environment variable interface.
+  * Secrets Manager should also be used to hold connection credentials to any given WordPress or Drupal site on Pantheon.
+* Next.js sites have three environments (Dev, Test, and Live) unlike Front-End Sites.
+  * Multidev environments are still created for every pull request opened and for branches starting with `multi-`.
 * Sites are routed through Pantheon's Global CDN and get URLs structured as `https://<env>-<site>.pantheonsite.io` instead of routing through a different CDN that used `https://<env>-<site>.appa.pantheon.site/` as the pattern of domain names.
+* Our new support for Next.js _does not_ supply "webhooks" for triggering full rebuilds and deployments when content changes in a connected CMS. Next.js running in a container can re-fetch content when needed.
 
 Front-End Sites and our new support for Next.js both use distinct GitHub Applications as the mechanism for trigger builds and deployments.
 Configuring that new connection to our GitHub Application is the first step of migrating.
@@ -78,7 +80,14 @@ terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.co
 
 ### Confirm your site is working as expected
 
-Once your environment variables are set, and another build process has completed without error, confirm that your site is working as expected in the Dev environment.
+Once your environment variables are set, trigger a new build by pushing a code change to the `main` branch or opening a pull request. Once another build process has completed without error, confirm that your site is working as expected in the Dev environment. 
+
+(Optional) You can follow the build process along by either refreshing the Build tab in the Site Dashboard or via Terminus: 
+
+```bash{promptUser: user}
+terminus node:logs:build:list <site>.<env>
+```
+
 
 ## Going Live
 
