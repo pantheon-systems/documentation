@@ -33,6 +33,7 @@ const getOmniItems = () => {
     learning(),
     about(),
     simpleLink('/release-notes', 'Release Notes'),
+
     // pagesToDelete(),
   ];
   return OmniItems;
