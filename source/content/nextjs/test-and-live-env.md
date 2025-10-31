@@ -43,9 +43,9 @@ Presently, for Next.js sites, deployments to Test and Live must be triggered by 
 
 These tags can be created in a few ways including:
 
-* Directly via Git on your local machine
-* Via GitHub's Releases interface
-* Via GitHub Actions
+* [Directly via Git on your local machine](#manual-deployment-to-test-and-live)
+* [Via GitHub's Releases interface](#manual-creation-via-githubs-releases-interface)
+* [Via GitHub Actions](#automating-tagging-via-github-actions)
 
 On Drupal and WordPress sites, the extra Dev and Test environments separating a code in a Multidev from being deployed to Live are valuable for extra testing.
 For such sites, the cost of breaking the Live database is high because it may require database restores and content loss in addition to code fixes.
@@ -82,9 +82,9 @@ git tag --list 'pantheon_live_*' --sort=v:refname | tail -1
 
 The manual creation of a tag can also be done via GitHub's Releases interface.
 
-This screenshot shows a tag being created from a `main` branch.
+This screenshot shows a new tag named `pantheon_test_1` being created from the `main` branch. For more details, see [related GitHub documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
-[screenshot]
+![screenshot showing a new tag being created to init test env](../../images/nextjs/github-tag-example.png)
 
 ### Automating tagging via GitHub Actions
 
