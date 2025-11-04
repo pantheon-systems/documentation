@@ -3,15 +3,15 @@ title: "New user interface for creating sites in the Pantheon Dashboard now avai
 published_date: "2025-11-04"
 categories: [user-interface]
 ---
-Pantheon has rolled out a modernized site creation experience across the platform and is now available for all Pantheon users on the Pantheon dashboard. 
+A refreshed, modernized site creation experience is now available in the Pantheon Dashboard for all users. 
 
-![New user interface showing the creation of a WordPress site in the dashboard](../images/release-notes/create-new-site-updated-interface.png)
+Share questions and feedback in the [Pantheon Community Slack](http://slackin.pantheon.io/).
 
-## What to expect
-* Same functionality, fewer loading screens – The process and workflow is the same, with fewer “loading” screens.
-* Modern design – We’ve made improvements to align with the latest usability design standards.
-* Redesigned final step - When your site deployment is complete, documentation and a link to complete setting up the site (in Drupal or WordPress) is immediately available to you on a redesigned screen.
+![New user interface showing the creation of a WordPress site in the dashboard](../images/create-new-site-form.png)
 
-![New user interface showing the completion of deploying a new WordPress site in the dashboard](../images/release-notes/new-site-setup-complete.png)
-
-Share questions and feedback in our Community Slack.
+## Key Changes
+* The process and workflow is the same, with fewer “loading” screens.
+* Design improvements to align with the latest usability standards.
+* Previously, errors were checked after form submission. Now, errors are checked as you type.
+* Previously, after deployment completed, only a single button was shown for opening the new site dashboard. In the new experience, we've added next steps in context with relevant documentation links: 
+  ![New user interface showing the completion of deploying a new WordPress site in the dashboard](../images/new-site-setup-deploy-complete.png)
