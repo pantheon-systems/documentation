@@ -125,7 +125,7 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 mkdir -p ~/terminus && cd ~/terminus
 curl -L https://github.com/pantheon-systems/terminus/releases/download/3.6.2/terminus.phar --output terminus3
 chmod +x terminus3
-sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+sudo ln -s ~/terminus/terminus3 /usr/local/bin/terminus
 ```
 
 </Tab>
@@ -135,7 +135,7 @@ sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 Update the [standalone Terminus PHAR](#windows-and-linux) installation to the newest version by running the command below:
 
 ```bash{promptUser: user}
-terminus self:update
+terminus self:update --compatible
 ```
 
 ## Authentication
