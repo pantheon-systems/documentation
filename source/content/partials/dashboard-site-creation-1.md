@@ -36,11 +36,11 @@ reviewed: ""
    - Select a region for this site.
    - If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
 
-   ![Enter site information](../../images/create-new-site-info.png)
+   ![Enter site information](../../images/create-new-site-form.png)
 
 1. The deployment process begins. It can take several minutes to create a new site on Pantheon.
 
-   ![Deploying a new site](../../images/create-new-site-deploy.png)
+   ![Deploying a new site](../../images/creating-new-wp-site.png)
 
    <Alert title="Note" type="info" >
 
@@ -48,8 +48,8 @@ reviewed: ""
 
    </Alert>
 
-1. Click **Visit your Pantheon Site Dashboard** when the process is complete.
+1. Click **Go to site dashboard** when the process is complete.
 
-   ![Site creation completed](../../images/create-site-done.png)
+   ![Site creation completed](../../images/new-site-setup-deploy-complete.png)
 
 You've now created the core portion of your Dev environment; now you have to install the CMS.

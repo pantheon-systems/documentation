@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2024-12-02"
+reviewed: "2025-11-04"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
