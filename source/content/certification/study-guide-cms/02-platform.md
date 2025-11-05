@@ -74,7 +74,7 @@ By the end of this section, you should be able to:
 
 For how overwhelming it can be to approach WordPress and Drupal as decades old communities with thousands of plugins and modules, they have developed some very helpful and clear layers. There are clear lines between code maintained by core committers, code maintained in community plugins/modules, and site specific code. Large organizations frequently insert another layer in the middle. Using conventions pioneered in Drupal distributions or WordPress suites of plugins like WooCommerce a large company or university may have a shared theme and centralized common code in addition to per-site customizations.
 
-[Chapter 10](/certification/study-guide/chapter-10-custom-upstreams) goes into greater detail on Pantheon's Custom Upstream product that enables this layering even more effectively than traditional Multisite configurations.
+[Chapter 10](/certification/study-guide/custom-upstreams) goes into greater detail on Pantheon's Custom Upstream product that enables this layering even more effectively than traditional Multisite configurations.
 
 This practice of layering technology platforms supports more conceptual layering of value. At Pantheon we often think about the efforts of website operations going toward one of three layers of value: Credibility, Productivity, Impact.
 
@@ -97,11 +97,11 @@ With that mindset, let's look at what lies ahead in the rest of this Study Guide
 
 ### Balancing Standardization and Independence
 
-[Chapter 10](/certification/study-guide/chapter-10-custom-upstreams) examines how a central web team can manage shared code using Custom Upstreams to save time for a wider organization running dozens, hundreds, or thousands of sites.
+[Chapter 10](/certification/study-guide/custom-upstreams) examines how a central web team can manage shared code using Custom Upstreams to save time for a wider organization running dozens, hundreds, or thousands of sites.
 
 ### Automating Repetitive Tasks
 
-Performing code updates is one of the most tedious tasks in website operations where human error adds huge risk. With security updates the stakes are raised. [Chapter 9](/certification/study-guide/chapter-9-automation) shows Pantheon's answers.
+Performing code updates is one of the most tedious tasks in website operations where human error adds huge risk. With security updates the stakes are raised. [Chapter 9](/certification/study-guide/automate) shows Pantheon's answers.
 
 **Autopilot** automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated visual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features
 
@@ -112,7 +112,7 @@ Performing code updates is one of the most tedious tasks in website operations w
 
 **Integrated Composer** is a Pantheon platform feature that extends Composer  functionality to WordPress and Drupal's core files, and treats them as a managed dependency. Integrated Composer enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
 
-Web teams frequently need to build their own specific automations. Pantheon enables that with our command line interface (Terminus) and hook system (Quicksilver) as you will see in [Chapter 8](/certification/study-guide/chapter-8-extending).
+Web teams frequently need to build their own specific automations. Pantheon enables that with our command line interface (Terminus) and hook system (Quicksilver) as you will see in [Chapter 8](/certification/study-guide/extend).
 
 **Terminus** is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more. Here are just a few of the things you can do with Terminus:
 
@@ -140,13 +140,13 @@ Web teams frequently need to build their own specific automations. Pantheon enab
 
 Moving up to higher levels of value also requires effective collaboration between people.
 
-[Chapter 7](/certification/study-guide/chapter-7-people) shows how to connect with your team on Pantheon, and most critically, how to connect your DNS so that the public can find your site. It covers:
+[Chapter 7](/certification/study-guide/people) shows how to connect with your team on Pantheon, and most critically, how to connect your DNS so that the public can find your site. It covers:
 
 * **Site Security Tab:** Allows users to** **lock down environments to only be accessible using a username/password, allowing for selective sharing of progress.
 * **Expert Support: **Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency support, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
 * **Role-base access control:** Users can be automatically provisioned with adherence to** **the principle of least privilege.
 
-Within the workflow of a single site, any number of details can trip up a team on a regular basis or with the occasional disaster. [Chapter 6](/certification/study-guide/chapter-6-deployment) highlights the guardrails Pantheon puts around the workflow of a site as code moves through the deployment pipeline from Multidev environments to Dev to Test to Live.
+Within the workflow of a single site, any number of details can trip up a team on a regular basis or with the occasional disaster. [Chapter 6](/certification/study-guide/deploy) highlights the guardrails Pantheon puts around the workflow of a site as code moves through the deployment pipeline from Multidev environments to Dev to Test to Live.
 
 * **Multidev Environments:** Perhaps the best loved feature of Pantheon, Multidevs provide on-demand sandbox environments that are full clones of your production environment and data. Per-environment configurations allow you to upgrade PHP and CMS versions in-place, allowing you to complete critical maintenance tasks without having to “drop everything right now” to do so.
 * With push-button synchronization, you can instantly sync changes across environments on Pantheon. Syncing content, code, and configuration changes between environments can be done in seconds, eliminating the need to copy anything manually between environments. This ensures that your developers are always developing new features and functionality against the very latest version of your marketing team's content.
@@ -159,7 +159,7 @@ Within the workflow of a single site, any number of details can trip up a team o
 
 That collaboration depends on Pantheon's founding breakthrough: moving WordPress and Drupal past the model of running on single servers.
 
-[Chapter 5](/certification/study-guide/chapter-5-cms) describes the containerization model that supports highly scaled sites, and perhaps just as importantly, enables teams to move between sites (large and small) without rethinking every detail of their workflow.
+[Chapter 5](/certification/study-guide/cms) describes the containerization model that supports highly scaled sites, and perhaps just as importantly, enables teams to move between sites (large and small) without rethinking every detail of their workflow.
 
 With our containerization, you get
 
@@ -169,7 +169,7 @@ With our containerization, you get
 * **Scaling** server resources up or down to meet the demand of traffic spikes used to be a manual process, but with elastic hosting, scaling is instant and automatic.
 * **Infrastructure security** used to be something IT had to worry about and plan for, but Pantheon maintains a secure infrastructure on top of Google Cloud Platform's data centers.
 * **Performance optimization** no longer requires painstakingly inspecting metrics and adjusting infrastructure settings, Pantheon manages all of this for you.
-* [Chapter 4](/certification/study-guide/chapter-4-edge) examines the CDN Edge layer that serves responses to visitors. With this layer standardized web teams can reach the best possible performance without extra work.
+* [Chapter 4](/certification/study-guide/cdn) examines the CDN Edge layer that serves responses to visitors. With this layer standardized web teams can reach the best possible performance without extra work.
     * Full page caching
     * **Automated HTTPS certificates:** Pantheon automates the provisioning of HTTPS certificates by default, and we manage their renewal as well. This means you never have to worry about certificate expiration. IT likes the security aspect of this, Marketing likes the SEO aspect.
 
@@ -180,7 +180,7 @@ Now all of the stuff only matters if you can make a website.
 
 Provisioning a new installation of your CMS application once required several manual steps, but Pantheon provides a push-of-the-button installation of Drupal, WordPress, and Front End Sites for each containerized environment.  
 
-Let's see that process next in [Chapter 3](/certification/study-guide/chapter-3-site-creation).
+Let's see that process next in [Chapter 3](/certification/study-guide/create).
 
 <Alert title="Chapter 2 Key Takeaways:" type="info" >
 
