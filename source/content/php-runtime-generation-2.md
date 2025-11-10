@@ -65,6 +65,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | October 16 | Basic | Dev/Multidevs |
 | October 29 | Performance/Elite | Dev/Multidevs |
 | November 3 | Basic | Test/Live |
+| November 17 | Performance/Elite | Test/Live |
 
 
 ## Known Changes and Requirements
