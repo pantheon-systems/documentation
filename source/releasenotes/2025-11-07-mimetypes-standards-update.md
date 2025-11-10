@@ -1,17 +1,31 @@
 ---
 title: MIME Type Standards Update
-published_date: "2025-11-07"
+published_date: "2025-11-11"
 categories: [infrastructure]
 ---
 
-Pantheon is removing support for deprecated MIME types using the x- prefix to align with current IANA standards.
+Pantheon is updating its platform to align with current IANA standards by removing support for deprecated MIME types that use the x- prefix. This change will be introduced on November 17, 2025.
 
-This change removes the following types:
+The following deprecated types have been updated to their modern, IANA-standard equivalents. No action is required for these files unless you have custom code explicitly referencing the old format.
+
+`application/mathml+xml mml`
+`application/javascript js mjs`
+`image/vnd.microsoft.icon ico`
+`image/bmp bmp`
+`application/vnd.rar rar`
+`audio/mp4 m4a`
+`video/mp4 m4v`
+`font/ttf ttf`
+`text/vcard vcf`
+`application/vnd.amazon.mobi8-ebook mobi`
+
+The following deprecated x- prefixed MIME types will be removed entirely from platform support:
 
 `text/x-component htc`
 `image/x-jng jng`
 `application/x-7z-compressed 7z`
 `application/x-cocoa cco`
+`application/x-javascript`
 `application/x-java-archive-diff jardiff`
 `application/x-java-jnlp-file jnlp`
 `application/x-makeself run`
@@ -32,4 +46,6 @@ This change removes the following types:
 
 ## Action
 
-Review custom code for any use of the following removed MIME types and update them to use their respective IANA-standard equivalents. [Follow these instructions if you have a file type that isn't handled by IANA, or require an alternative](https://docs.pantheon.io/mime-types).
+Review any custom code or configurations that utilize the removed MIME types and update them to use their respective IANA-standard equivalents. 
+
+If you encounter a file type that IANA does not yet handle, or if you require an alternative configuration, please [follow the instructions in our documentation](https://docs.pantheon.io/mime-types).
