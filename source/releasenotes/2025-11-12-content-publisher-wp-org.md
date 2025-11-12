@@ -1,7 +1,7 @@
 ---
 title: Pantheon Content Publisher plugin now available in WordPress Plugin Repository
 published_date: "2025-11-12"
-categories: [wordpress, modules, plugins]
+categories: [wordpress, content-publisher, plugins, action-required]
 ---
 
 The **Pantheon Content Publisher** plugin is now officially available in the [WordPress Plugin Repository](https://wordpress.org/plugins/pantheon-content-publisher/). You can now install or update it directly from your WordPress dashboard.
