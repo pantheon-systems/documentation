@@ -1,6 +1,6 @@
 ---
 title: MIME Type Standards Update
-published_date: "2025-11-11"
+published_date: "2025-11-12"
 categories: [infrastructure]
 ---
 
