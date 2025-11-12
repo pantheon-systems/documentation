@@ -8,6 +8,8 @@ The **Pantheon Content Publisher** plugin is now officially available in the [Wo
 
 ![Pantheon Content Publisher on the WordPress.org Plugin Repository](../images/pantheon-content-publisher-wp-org.png)
 
+## Action required
+
 We recommend that all customers switch their sites to the WordPress.org–hosted version to take advantage of seamless updates and improved long-term support. By switching, you’ll:
 
 - **Receive automatic update notifications** and one-click upgrades within the WordPress admin panel  
