@@ -1,7 +1,7 @@
 ---
 title: MIME Type Standards Update
 published_date: "2025-11-12"
-categories: [infrastructure]
+categories: [infrastructure, action-required]
 ---
 
 Pantheon is updating its platform to align with current IANA standards by removing support for deprecated MIME types that use the x- prefix. This change will be introduced on November 17, 2025.
@@ -44,7 +44,7 @@ The following deprecated x- prefixed MIME types will be removed entirely from pl
 * `video/x-msvideo avi`
 * `application/x-plist plist`
 
-## Action
+## Action Required
 
 Review any custom code or configurations that utilize the removed MIME types and update them to use their respective IANA-standard equivalents. 
 
