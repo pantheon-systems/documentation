@@ -41,7 +41,7 @@ The following deprecated x- prefixed MIME types will be removed entirely from pl
 * `video/x-mng mng`
 * `video/x-ms-asf asx asf`
 * `video/x-ms-wmv wmv`
-*`video/x-msvideo avi`
+* `video/x-msvideo avi`
 * `application/x-plist plist`
 
 ## Action
