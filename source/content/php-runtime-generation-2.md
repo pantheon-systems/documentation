@@ -15,7 +15,7 @@ integration: [--]
 
 The new generation of Pantheon's serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
 
-Depending on your website's features, this new PHP runtime may have major effects on the operation of your site. We invite you to test your site for compatibility and performance to ensure a seamless upgrade. The previous generation will be removed in early 2026.
+Depending on your website's features, this new PHP runtime may have major effects on the operation of your site. The previous generation will be removed in early 2026.
 
 ## What's included?
 
@@ -116,7 +116,7 @@ Does your application require an OS package or PHP extension that is no longer a
 
 ## Reporting Issues
 
-If you encounter any issues while testing your site with PHP Runtime Generation 2:
+If you encounter any issues with PHP Runtime Generation 2:
 
 1. Check the Known Issues section above
 2. Verify the issue is related to the new PHP runtime by reverting back to `1` in your `pantheon.yml` file.
@@ -136,7 +136,7 @@ The PHP runtime is set at the environment-level. You can find out which generati
 
 Potentially. Depending on your integrations with our PHP extensions and operating system libraries, you may need to update your website to be compatible with new PHP runtime.
 
-### Q: How do I opt out of the automatic rollout?
+### Q: How do I opt out of PHP Runtime Generation 2?
 
 You may opt-out of the platform rollout by setting the following in your `pantheon.yml`:
 
@@ -156,7 +156,7 @@ php_runtime_generation: 1
 
 ### Q: After upgrading to PHP Runtime Generation 2, I removed php_runtime_generation from my pantheon.yml but the environment did not go back to Generation 1. How do I downgrade?
 
-To revert back to the first generation PHP runtime, set the following in your `pantheon.yml`:
+To revert back to the first generation PHP runtime, you must set the following in your `pantheon.yml`:
 
 ```yaml:title=pantheon.yml
 php_runtime_generation: 1
