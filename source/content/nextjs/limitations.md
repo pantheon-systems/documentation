@@ -86,7 +86,7 @@ We will create the same capacity for Next.js to clear CDN caches itself in respo
 
 Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress, Drupal, and Next.js. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).
 
-For many teams this restriction is counterproductive. That is especially true in the Next.js ecosystem which is investing further in usage of  [\<Suspense\>](https://react.dev/reference/react/Suspense) components as a performance optimization.
+For many teams this restriction is counterproductive. That is especially true in the Next.js ecosystem which is investing further in usage of  [`<Suspense>`](https://react.dev/reference/react/Suspense) components as a performance optimization.
 
 While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
 
@@ -102,7 +102,7 @@ Node.js is the most common run time for Next.js. Bun and Deno both have compelli
 
 ### **Astro, Remix, and other frameworks beyond Next.js**
 
-Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official with very minimal modification to our tech stack. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
+Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
 
 Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams in our Beta period, we are focusing our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please request access to our Beta program](https://pantheon.io/nextjs-beta) and tell us more about your projects.
 
