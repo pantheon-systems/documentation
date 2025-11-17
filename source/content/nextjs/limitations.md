@@ -1,5 +1,5 @@
 ---
-title: Next.js on Pantheon: Limitations during Beta
+title: "Next.js on Pantheon: Limitations during Beta"
 description: Functionality under development or under consideration during the Next.js Private Beta on Pantheon
 reviewed: "2025-11-14"
 contenttype: [doc]
