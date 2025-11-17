@@ -17,4 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 <Partial file="decoupled-manage-settings.md" />

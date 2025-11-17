@@ -1,7 +1,7 @@
 ---
 title: How to migrate from Front-End Sites
 description: Move your existing Next.js site from Pantheon's Front-End Sites to updated Next.js infrastructure.
-reviewed: "2025-10-31"
+reviewed: "2025-11-17"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -13,7 +13,7 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 
 <Partial file="nextjs-pre-ga.md" />
 
-This guide walks through moving a Next.js site away from Pantheon's earlier [Front-End Sites offering](/guides/decoupled).
+This guide walks through moving a Next.js site away from Pantheon's earlier [Front-End Sites offering](/guides/decoupled/overview).
 
 ## Requirements
 

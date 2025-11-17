@@ -7,7 +7,7 @@ contributors: [joan-ing, backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/considerations
-reviewed: "2023-03-23"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 Review this section carefully to ensure your system has the correct components to deploy a Pantheon Front-End Site.
 
 ## General Requirements
@@ -24,12 +27,6 @@ Review this section carefully to ensure your system has the correct components t
 - You have the Front-End Sites tab enabled in your dashboard.
 - You are using [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
   - Other IDEs can be used, but our project ships with suggested plugins and example settings for VSCode.
-
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
 
 ## Backend Requirements
 

@@ -16,6 +16,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+<Partial file="fes-deprecated.md" />
+
 <Youtube src="_3d8ID01UhQ" title="Configuring Your Front End Site" />
 
 This section provides information on Settings. You can configure Front-End Site settings in the Pantheon dashboard, including:

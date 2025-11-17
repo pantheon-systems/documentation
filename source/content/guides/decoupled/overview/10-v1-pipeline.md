@@ -7,7 +7,7 @@ contributors: [stevector]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/v1-pipeline
-reviewed: "2023-03-23"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -16,6 +16,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+<Partial file="fes-deprecated.md" />
+
 
 In the Fall of 2023 Pantheon introduced a new build pipeline for Front End Sites.
 Among under-the-hood-optimizations, like [caching of folders between builds](/guides/decoupled/overview/manage-settings#build-cache), [the new pipeline now uses your `package.json` file](/guides/decoupled/overview/manage-settings#nodejs-version) to select the appropriate version of Node.js for your build and your runtime environments.
