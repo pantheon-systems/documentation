@@ -45,11 +45,11 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 |-----------|------------------|--------------|
 | **Beta** | May - September 16, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
 | **New Sites** | September 17, 2025 | New sites created on the platform will use PHP Runtime Generation 2. |
-| **Gen 2 Rollout** | September 24 - November 23, 2025 | A 60-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Gen 2 Rollout** | September 24 - November 23, 2025 | A 60-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](#q-how-do-i-opt-out-of-php-runtime-generation-2). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
 ### Current Phase Details 
-Currently, we are in the **Gen 2 Rollout** phase. The upgrade rollout will take place over the next 60 days. The table below shows which upgrades are being processed. [Sites may be opted-out](#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). We will revise this section of documentation as we begin each phase along with any updates to the timeline. 
+Currently, we are in the **Gen 2 Rollout** phase. The upgrade rollout will take place over the next 60 days. The table below shows which upgrades are being processed. [Sites may be opted-out](#q-how-do-i-opt-out-of-php-runtime-generation-2). We will revise this section of documentation as we begin each phase along with any updates to the timeline. 
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
 
@@ -79,7 +79,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **Apache Tika** | 1.18, 1.21 | 1.18, 1.21, [3.2](/external-libraries#apache-tika) |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> Support for this OS Package will be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of Runtime Generation 2</a> for now. <br /><br />
+<sup>1</sup> Support for this OS Package will be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-php-runtime-generation-2">opt out of Runtime Generation 2</a> for now. <br /><br />
 
 ### PHP Extensions
 
@@ -98,7 +98,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
-<sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you <a href="#q-how-do-i-opt-out-of-the-upcoming-platform-rollout">opt out of PHP Runtime Generation 2</a> for now. <br /><br />
+<sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you <a href="#q-how-do-i-opt-out-of-php-runtime-generation-2">opt out of PHP Runtime Generation 2</a> for now. <br /><br />
 
 Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by contacting your Customer Success Manager or creating a support ticket.
 
