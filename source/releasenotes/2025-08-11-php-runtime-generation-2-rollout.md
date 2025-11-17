@@ -21,11 +21,11 @@ categories: [infrastructure, action-required]
 
 ## What's Currently Unavailable with Generation 2?
 
-Some PHP extensions and OS packages have not been ported over to Generation 2 yet, and may never be ported. Review the [OS Packages and PHP Extensions documentation](/php-runtime-generation-2#os-packages) to review these changes. If you depend on these, we recommend you [opt out of Runtime Generation 2](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) for now, and contact your Customer Success Manager or create a support ticket to discuss your site needs.
+Some PHP extensions and OS packages have not been ported over to Generation 2 yet, and may never be ported. Review the [OS Packages and PHP Extensions documentation](/php-runtime-generation-2#os-packages) to review these changes. If you depend on these, we recommend you [opt out of Runtime Generation 2](/php-runtime-generation-2#q-how-do-i-opt-out-of-php-runtime-generation-2) for now, and contact your Customer Success Manager or create a support ticket to discuss your site needs.
 
 ## Action Recommended
 
-We recommend all customers test your sites ahead of the rollout to identify any compatibility issues. Sites relying on unavailable extensions or packages should [opt out](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) before September 17. We will attempt to auto-detect incompatible sites and delay their upgrade when possible.
+We recommend all customers test your sites ahead of the rollout to identify any compatibility issues. Sites relying on unavailable extensions or packages should [opt out](/php-runtime-generation-2#q-how-do-i-opt-out-of-php-runtime-generation-2) before September 17. We will attempt to auto-detect incompatible sites and delay their upgrade when possible.
 
 ## Rollout Timeline
 
@@ -36,6 +36,6 @@ It is safe to use the PHP Runtime Generation 2 beta on a Live environment once y
 | Phase | Date | Details |
 |-----------|------------------|--------------|
 | **Beta** | May - September 23, 2025 | Environments can be opted-in. All other environments will remain on the previous generation. |
-| **Gen 2 Rollout** | Starting September 24 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout). |
+| **Gen 2 Rollout** | Starting September 24 | A 40-day rollout will gradually upgrade sites to PHP Runtime Generation 2. [Sites may be opted-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-php-runtime-generation-2). |
 | **Gen 1 Removal** | Early 2026 | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 

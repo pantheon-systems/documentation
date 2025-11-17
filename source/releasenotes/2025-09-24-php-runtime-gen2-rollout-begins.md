@@ -6,7 +6,7 @@ categories: [infrastructure]
 
 [PHP Runtime Generation 2](/php-runtime-generation-2) includes updated extensions, PHP 8.4 availability, and enhanced security features. This new PHP runtime is currently rolling out to existing sites on the platform.
 
-We continue to encourage customers to [upgrade to Generation 2 proactively](/php-runtime-generation-2#how-to-opt-in), or [manually opt-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-the-upcoming-platform-rollout) if you need more time.
+We continue to encourage customers to [upgrade to Generation 2 proactively](/php-runtime-generation-2#how-to-opt-in), or [manually opt-out](/php-runtime-generation-2#q-how-do-i-opt-out-of-php-runtime-generation-2) if you need more time.
 
 ## Rollout Timeline
 
