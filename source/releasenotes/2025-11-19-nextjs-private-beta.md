@@ -8,7 +8,7 @@ Today, Pantheon's new solution for  Next.js  enters **Private Beta**. To request
 
 **Front-End Sites**, our previous offering for Next.js, will be discontinued. We encourage users to [migrate to the updated architecture](/nextjs/migrating-from-front-end-sites).
 
-For more information, see [this related blog post](https://pantheon.io/redirects/nextjs/beta-blog-post).
+For more information, see [this related blog post](https://pantheon.io/blog/next-js-beta).
 
 
 ## What's new?
