@@ -16,6 +16,8 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Partial file="fes-deprecated.md" />
+
 <Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
 
 This section provides information on how to use the Drupal Backend Starter for Front-End Sites.

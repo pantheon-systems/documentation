@@ -15,6 +15,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Partial file="fes-deprecated.md" />
 
 This section provides information on how to use the Drupal + Next.js frontend starter kit.
 
