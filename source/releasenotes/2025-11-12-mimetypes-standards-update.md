@@ -4,7 +4,7 @@ published_date: "2025-11-12"
 categories: [infrastructure, action-required]
 ---
 
-_**Update:** This has been deployed to the platform on November 17, 2025._
+_**Update:** This has been deployed to the platform._
 
 Pantheon is updating its platform to align with current IANA standards by removing support for deprecated MIME types that use the x- prefix. This change will be introduced on November 17, 2025.
 
