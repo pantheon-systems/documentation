@@ -1,7 +1,7 @@
 ---
 title: Content Publisher Tutorial for Next.js
 description: Integrate Content Publisher with a Next.js site on Pantheon
-reviewed: "2025-10-31"
+reviewed: "2025-11-17"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -27,7 +27,7 @@ This tutorial will walk you through:
 
 ## Requirements
 
-* Access granted for the [Next.js Private Alpha Program](/nextjs/#access--availability)
+* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * A [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with [Administrator access](https://docs.content.pantheon.io/roles)
 * Install the following applications:
