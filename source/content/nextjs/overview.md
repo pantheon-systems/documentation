@@ -1,7 +1,7 @@
 ---
 title: Next.js Overview
 description: How Next.js works on Pantheon
-reviewed: "2025-10-31"
+reviewed: "2025-11-17"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -24,10 +24,10 @@ Pantheon's product engineering team is rolling out new functionality often while
 
 ### Compatibility & Requirements
 * **Node versions:**
-  * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the `engines` property in `package.json`.
+  * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
 * **Package managers:**
   * Pantheon will use `npm`, `yarn`, or `pnm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
-* **GitHub:**
+* **External version control:**
   * Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
 
 ### Usage
@@ -51,15 +51,5 @@ While Next.js is fundamentally a server-side application, it does not dicate whe
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
 ## Considerations
-The following are known limitations for Next.js on Pantheon:
-* These Site Dashboard features are not supported for Next.js at this time:
-  * Status reports
-  * Errors <Popover title="Note" content="Instead, refer to the Build tab on the given environment - checking build logs for errors related to Next.js deployments." />
-  * Domains & HTTPS, Upgrading site plan <Popover title="Note" content="Launch is not currently self-serve, for details see <a href='/nextjs/connecting-custom-domain-name'>Connecting a custom domain to Next.js on Pantheon</a>." />
-* Performance addons are not supported for Next.js at this time, regardless of site plan:
-  * New Relic
-  * Redis
-  * Solr
-* The following Workspace features are not supported for Next.js at this time:
-  * Autopilot
-  * Custom Upstreams
+See the following page for current limitations of Next.js Beta functionality on Pantheon:
+* [Known issues and considerations for Next.js Beta](/nextjs/considerations)
