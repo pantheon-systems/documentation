@@ -5,7 +5,7 @@ categories: [user-interface, new-feature]
 ---
 Starting today, the new Site Dashboard enters General Availability for Professional Workspaces. Specfically, this release changes the following for Professional Workspaces:
 
-* The new experience is now the default, previously it had to be enabled.
+* The new experience is now the default, previously it could be enabled and disabled.
 * The option to disable the new experience has been removed.
 
 Personal Workspaces are not impacted, and still require opting in to enable the new experience.
