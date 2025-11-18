@@ -180,9 +180,11 @@ const webInfrastructure = () => {
         ]),
       ]),
 
+      simpleLink('/addons', 'Performance Add-ons'),
+      simpleLink('/integrations', 'Integrations'),
       {
-        link: '/guides/decoupled',
-        title: 'Front-End Sites and Starter Kits',
+        link: '/guides/decoupled/overview',
+        title: 'Front-End Sites [Deprecated]',
         children: [
           getGuideDirectory('guides/decoupled/overview'),
           getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
@@ -197,8 +199,6 @@ const webInfrastructure = () => {
           ),
         ],
       },
-      simpleLink('/addons', 'Performance Add-ons'),
-      simpleLink('/integrations', 'Integrations'),
     ],
   };
 };

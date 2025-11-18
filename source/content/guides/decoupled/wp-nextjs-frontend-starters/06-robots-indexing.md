@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 This section provides information on how to use a `robots.txt` file to manage indexing for Front-End Sites.
 
 <Partial file="decoupled-nextjs-robots.md" />

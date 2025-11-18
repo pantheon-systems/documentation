@@ -7,7 +7,7 @@ contributors: [joan-ing, backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site-options
-reviewed: "2023-03-23"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -16,6 +16,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+<Partial file="fes-deprecated.md" />
+
 
 This section provides information on site options and starter kits to help you find a starting point to create your Front-End Site. You can build Front-End Sites on Pantheon using several methods. The Front-End Site option must be enabled before you can apply your own configuration or use a [compatible starter kit](https://decoupledkit.pantheon.io/docs/decoupled-kit-overview).
 

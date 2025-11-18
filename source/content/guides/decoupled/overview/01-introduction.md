@@ -7,7 +7,7 @@ contributors: [backlineint, cobypear, hckia, joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview
-reviewed: "2023-03-23"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [true]
 categories: [create]
@@ -17,13 +17,11 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
-<Alert title="Early Access" type="info" icon="leaf">
-
-Pantheon Front-End Sites are available for Early Access participants. Features for Pantheon Front-End Sites are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Enrollment is open for our [ Front-End Sites Early Access program](https://pantheon.io/features/decoupled-cms). Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
-
-</Alert>
 
 ## What is a Decoupled Site?
 

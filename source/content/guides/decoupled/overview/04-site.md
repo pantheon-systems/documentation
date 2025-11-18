@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site
 anchorid: site
-reviewed: "2023-03-23"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -17,6 +17,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+<Partial file="fes-deprecated.md" />
+
 
 This section provides information to help you create your Front-End Site.
 

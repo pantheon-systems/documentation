@@ -37,6 +37,12 @@
       "description": "Tailored for updates specific to the Drupal content management system, helping Drupal users stay informed about platform changes that directly impact their workflows"
     },
     {
+      "slug": "nextjs",
+      "displayName": "Next.js",
+      "color": "color-1",
+      "description": "Information about Pantheon's support for Next.js, the leading React framework for building web applications"
+    },
+    {
       "slug": "events",
       "displayName": "Events",
       "color": "color-4",

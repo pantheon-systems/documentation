@@ -1,7 +1,7 @@
 ---
 title: How to migrate from Front-End Sites
 description: Move your existing Next.js site from Pantheon's Front-End Sites to updated Next.js infrastructure.
-reviewed: "2025-10-31"
+reviewed: "2025-11-17"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -13,11 +13,11 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 
 <Partial file="nextjs-pre-ga.md" />
 
-This guide walks through moving a Next.js site away from Pantheon's earlier [Front-End Sites offering](/guides/decoupled).
+This guide walks through moving a Next.js site away from Pantheon's earlier [Front-End Sites offering](/guides/decoupled/overview).
 
 ## Requirements
 
-* Access granted for the [Next.js Private Alpha Program](/nextjs/#access--availability)
+* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * Administrative access to the GitHub repo used for your Next.js site.
 * Install the following CLI applications:
   - [Terminus](/terminus/install)
@@ -80,9 +80,9 @@ terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.co
 
 ### Confirm your site is working as expected
 
-Once your environment variables are set, trigger a new build by pushing a code change to the `main` branch or opening a pull request. Once another build process has completed without error, confirm that your site is working as expected in the Dev environment. 
+Once your environment variables are set, trigger a new build by pushing a code change to the `main` branch or opening a pull request. Once another build process has completed without error, confirm that your site is working as expected in the Dev environment.
 
-(Optional) You can follow the build process along by either refreshing the Build tab in the Site Dashboard or via Terminus: 
+(Optional) You can follow the build process along by either refreshing the Build tab in the Site Dashboard or via Terminus:
 
 ```bash{promptUser: user}
 terminus node:logs:build:list <site>.<env>

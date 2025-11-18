@@ -7,7 +7,7 @@ contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/troubleshooting
-reviewed: "2023-03-23"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -16,6 +16,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+<Partial file="fes-deprecated.md" />
+
 
 This section provides information on known issues and solutions to common troubleshooting scenarios.
 

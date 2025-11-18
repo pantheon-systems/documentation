@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, such as when your CMS is not on Pantheon but your frontend is on Pantheon.
 
 ## How it Works

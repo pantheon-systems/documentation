@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 This section provides information on the Front-End Sites Multidev workflow, configuration steps to connect your Front-End Site to a Multidev environment, and information on Multidev branch builds.
 
 ## Front-End Sites Multidev Development Workflow
