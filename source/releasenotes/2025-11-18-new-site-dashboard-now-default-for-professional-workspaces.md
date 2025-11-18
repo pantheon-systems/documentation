@@ -3,11 +3,12 @@ title: "New Site Dashboard now generally available for Professional Workspaces"
 published_date: "2025-11-18"
 categories: [user-interface, new-feature]
 ---
-Starting today, the new Site Dashboard enters General Availability for Professional Workspaces. 
+Starting today, the new Site Dashboard enters General Availability for Professional Workspaces. Specfically, this release changes the following for Professional Workspaces:
 
-Previously, enabling the new experience required users to opt in via a toggle located at the top of the Site List tab. That toggle has been removed from Professional Workspaces and the new experience is no longer optional and cannot be disabled.
+* The new experience is now the default, previously it had to be enabled.
+* The option to disable the new experience has been removed.
 
-Personal Workspaces are not impacted by todays change, and still require opting in to enable the new experience.
+Personal Workspaces are not impacted, and still require opting in to enable the new experience.
 
 <Alert title="Note" type="info">
 
