@@ -22,9 +22,7 @@ Pantheon's product engineering team is rolling out new functionality often while
 
 ### Compatibility & Requirements
 * **Node versions:**
-  * During Beta, Pantheon supports Node.js `22.21.0`. In the future, we will provide support for the latest **3 LTS versions**. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
-* **Next.js versions:**
-  * During Beta, Pantheon supports Next.js `15.3.1`. In the future, we will provide support for the latest **2 LTS versions**.
+  * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
 * **Package managers:**
   * Pantheon will use `npm`, `yarn`, or `pnm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
 * **External version control:**
