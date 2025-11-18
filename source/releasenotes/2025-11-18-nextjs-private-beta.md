@@ -27,7 +27,7 @@ For usage instructions and guidance, see the following new docs:
 
 * [Next.js Overview](/nextjs)
 * [Runtime Architecture](/nextjs/architecture)
-* [Considerations and limitations](/nextjs/considerations)
+* [Limitations and considerations](/nextjs/considerations)
 * [Hello World Tutorial](/nextjs/hello-world-tutorial)
 * [Content Publisher Tutorial](/nextjs/content-publisher-tutorial)
 * [Migrating from Front-End Sites](/nextjs/migrating-from-front-end-sites)
