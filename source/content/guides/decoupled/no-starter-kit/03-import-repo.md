@@ -16,6 +16,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Partial file="fes-deprecated.md" />
 
 You can import your Git-provided repository to create your Front-End Site.
 

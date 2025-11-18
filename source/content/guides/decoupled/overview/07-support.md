@@ -7,7 +7,7 @@ contributors: [joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/support
-reviewed: "2024-09-10"
+reviewed: "2025-11-17"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -16,6 +16,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+<Partial file="fes-deprecated.md" />
+
 
 Pantheon supports installation and configuration of Front-End Sites hosted on the platform. Support includes use of the documented workflows as defined in this guide.
 

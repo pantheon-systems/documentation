@@ -15,6 +15,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Partial file="fes-deprecated.md" />
 
 Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 

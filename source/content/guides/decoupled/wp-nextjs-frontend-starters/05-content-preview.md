@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 This section provides information on how to configure decoupled content preview for your site. This allows you to preview your content changes in the Next.js app before publishing to your live site.
 
 ## Before You Begin

@@ -16,6 +16,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Partial file="fes-deprecated.md" />
 
 This section provides information on how to create a Front-End Site without a starter kit and/or CMS on Pantheon.
 

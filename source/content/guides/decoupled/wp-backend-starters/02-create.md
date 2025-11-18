@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 This section provides information on how to create a new WordPress backend project with Pantheon's starter kit.
 
 ## Create with Dashboard Upstream

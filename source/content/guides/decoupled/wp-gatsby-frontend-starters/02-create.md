@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+<Partial file="fes-deprecated.md" />
+
+
 This section provides information on how to use the Gatsby + WordPress starter kit.
 
 ## Before You Begin

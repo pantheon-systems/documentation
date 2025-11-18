@@ -24,7 +24,7 @@ View our [WordPress Command Line](/guides/wp-cli) guide for steps to create and 
 
 ## Run WordPress as a Backend API
 
-Pantheon supports [running WordPress as an API](/guides/decoupled) (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
+Pantheon supports [running WordPress as an API](/guides/decoupled/overview) (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
 
 ## WordPress on Pantheon Developer Best Practices
 

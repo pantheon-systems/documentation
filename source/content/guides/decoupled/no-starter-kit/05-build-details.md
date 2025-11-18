@@ -16,5 +16,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Partial file="fes-deprecated.md" />
+
 
 <Partial file="decoupled-build-info.md" />

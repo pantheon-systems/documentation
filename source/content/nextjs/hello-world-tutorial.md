@@ -1,7 +1,7 @@
 ---
 title: Next.js Hello World Tutorial
 description: Get up and running with a simple Next.js application on Pantheon
-reviewed: "2025-10-31"
+reviewed: "2025-11-17"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -22,7 +22,7 @@ This tutorial will walk you through:
 
 ## Requirements 
 
-* Access granted for the [Next.js Private Alpha Program](/nextjs/#access--availability)
+* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * Install [Git](https://git-scm.com/)
 * (Optional) Install the following applications:
