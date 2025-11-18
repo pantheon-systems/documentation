@@ -7,9 +7,12 @@ Starting today, the new Site Dashboard enters General Availability by serving as
 
 Personal Workspaces are not impacted by todays change, and still require opting in to enable the new experience.
 
-## What to expect
+<Alert title="Note" type="info">
 
-The following highlights what users can expect in the new experience. Note these items have not been added or impacted by todays change but were delivered by our earlier [Beta release](/release-notes/2025/08/site-dashboard-beta#what-to-expect):
+The following highlights what users can expect in the new experience. Note these items have not been added or impacted by todays change but were delivered by our earlier [Beta release](/release-notes/2025/08/site-dashboard-beta#what-to-expect).
+
+</Alert>
+
 
 * **Same functionality, familiar workflows** – No need to relearn anything. Your day-to-day tasks remain unchanged.
 * **Modern, accessible design** – We’ve made significant improvements to align with the latest usability design standards, enhancing readability, contrast, and navigation.
