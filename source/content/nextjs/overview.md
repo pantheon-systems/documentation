@@ -52,4 +52,4 @@ By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Con
 
 ## Considerations
 See the following page for current limitations of Next.js Beta functionality on Pantheon:
-* [Known issues and considerations for Next.js Beta](/nextjs/considerations)
+* [Limitations and considerations for Next.js Beta](/nextjs/considerations)

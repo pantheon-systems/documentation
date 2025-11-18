@@ -1,5 +1,5 @@
 ---
-title: "Known issues and considerations for Next.js Beta"
+title: "Limitations and considerations for Next.js Beta"
 description: Learn about current limitations of Next.js Beta functionality on Pantheon, and how to weigh in to inform feature development.
 reviewed: "2025-11-17"
 contenttype: [doc]
