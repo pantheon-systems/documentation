@@ -1,6 +1,6 @@
 ---
 title: "New product for Next.js enters Private Beta, sunsetting Front-End Sites"
-published_date: "2025-11-19"
+published_date: "2025-11-18"
 categories: [nextjs, documentation, new-feature, front-end-sites]
 ---
 
