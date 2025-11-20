@@ -95,7 +95,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **pdo_pgsql** | 13.5 | 15.14 |
 | **pdo_sqlite** | 3.26.0 | 3.40.1 |
 | **pgsql** | 13.5 | 15.14 |
-| **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
+| **redis** | 6.3.0<br/>Compression types: zstd | 6.3.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
 <sup>1</sup> Support for these PHP extensions may be added after the platform-wide rollout begins. If you depend on this PHP Extension, we recommend you <a href="#q-how-do-i-opt-out-of-php-runtime-generation-2">opt out of PHP Runtime Generation 2</a> for now. <br /><br />
