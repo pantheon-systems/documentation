@@ -49,7 +49,7 @@ Since any `pantheon.yml` changes are part of your site repository and promoted i
 | **Gen 1 Removal** | April 6 - 17, 2026  | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
 
 ### Current Phase Details 
-We have completed the iniital Gen 2 Rollout. Sites may continue to opt-out until the Gen 1 Removal phase takes place.
+We have completed the initial Gen 2 Rollout. Sites may continue to opt-out until the Gen 1 Removal phase takes place.
 
 The table below contains the dates we upgraded sites to Gen 2 that were not set to opt-out.
 
