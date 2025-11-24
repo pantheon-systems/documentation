@@ -112,7 +112,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 ## Known Issues
 
-- Drupal 8+ sites using Solr 3 are not compatible with PHP Runtime Generation 2.  [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) or disabling Solr is required. These sites will not be included in the initial automatic upgrade rollout, but will be upgraded after November 12, 2025.
+- Drupal 8+ sites using Solr 3 are not compatible with PHP Runtime Generation 2.  [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) or disabling Solr is required. These sites were not included in the initial automatic upgrade rollout. The dev/multidev environments of these sites will be upgraded on December 9, and the test/live environments will be upgraded on December 16. Opting out of Generation 2 is still available for these sites.
 
 ## Reporting Issues
 
