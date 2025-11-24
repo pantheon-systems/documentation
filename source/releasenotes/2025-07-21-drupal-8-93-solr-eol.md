@@ -2,10 +2,9 @@
 title: "Pantheon Search no longer available for Drupal 8.0-9.3 sites starting December 2, 2025"
 published_date: "2025-07-21"
 categories: [infrastructure, action-required, drupal, security]
-
-*Editorial Note: The date has been moved from October 21 to December 2.*
-
 ---
+
+_**Editorial note: The date has been moved from October 21 to December 2.**_
 
 As part of our ongoing platform maintenance and security improvements, sites on the platform running Drupal 8.0-9.3 will no longer be able to access [Pantheon Search services](/solr) (Apache Solr-based search) starting December 2, 2025. 
 
