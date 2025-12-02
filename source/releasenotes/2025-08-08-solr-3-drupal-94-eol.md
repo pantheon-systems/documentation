@@ -1,12 +1,12 @@
 ---
-title: "Solr 3 support for Drupal 9.4+ sites ending December 2, 2025"
+title: "Solr 3 support for Drupal 9.4+ sites ending December 9, 2025"
 published_date: "2025-08-08"
 categories: [infrastructure, action-required, drupal, security]
 ---
 
-_**Editorial note: The date has been moved from November 12 to December 2.**_
+_**Editorial note: The date has been moved from November 12 to December 9.**_
 
-Sites running Drupal 9.4+ will no longer be able to access Solr 3 via [Pantheon Search services](/solr) starting December 2, 2025. 
+Sites running Drupal 9.4+ will no longer be able to access Solr 3 via [Pantheon Search services](/solr) starting December 9, 2025. 
 
 After this date, affected sites will not be able to fetch Solr search results or index new content using Solr 3. Views or blocks that rely on Solr-powered Search API indexes may fail to load, return no results, or throw errors.
 
