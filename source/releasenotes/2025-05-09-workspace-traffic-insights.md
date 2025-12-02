@@ -14,4 +14,4 @@ We've added a new **Traffic** column to the site list of workspaces, enabling cl
 
 For more details on how to measure site traffic, see [related documentation](/guides/account-mgmt/traffic).
 
-_**Editorial note:** [Automated overages are still currently paused for all users](release-notes/2024/08/overage-charges-updates). This change is to help you better monitor site traffic._
+_**Editorial note:** [Automated overages are still currently paused for all users](/release-notes/2024/08/overage-charges-updates). This change is to help you better monitor site traffic._
