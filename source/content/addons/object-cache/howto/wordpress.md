@@ -381,6 +381,8 @@ The latest recommended version of the constant is below:
 * Pantheon OCP Config Version: 2.0
 */
 
+$ocp_redis_prefix = "ocppantheon";
+
 define( 'WP_REDIS_CONFIG', [
 	'token' => getenv('OCP_LICENSE') ?: null,
 	'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
