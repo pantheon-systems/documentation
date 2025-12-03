@@ -347,7 +347,19 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
        ![Bitbucket HTTPS Repo URL](../../../images/bitbucket-https-url.png)
 
-   - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear for your "App Password". At this time, BitBucket has [depreciated App Passwords](https://www.atlassian.com/blog/bitbucket/bitbucket-cloud-enters-phase-2-of-app-password-deprecation). In order to connect to a private BitBucket repository, please create an Auth Token, then [contact Pantheon Support](https://docs.pantheon.io/guides/support/contact-support/) who can configure private BitBucket upstream for you. 
+    - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+      ![BitBucket Upstream Authentication](../../../images/dashboard/create-upstream-auth-bb.png)
+      For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+        1. Go to Bitbucket to generate an [app password](https://bitbucket.org/account/admin/app-passwords).
+        1. Click **Create app password**.
+        1. Enter a label and select the `"Repositories:Read"` permission:
+           ![Bitbucket app password](../../../images/bitbucket-app-password.png)
+        1. Click **Create** and copy the new password.
+        1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the Custom Upstream.
+        1. Paste your new Bitbucket app password. The username field should already be populated based on the repository URL.
+   - **Framework**: Drupal 7, Drupal (Latest), or WordPress
+   - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+1. Click **Create**.
 
 </Tab>
 
