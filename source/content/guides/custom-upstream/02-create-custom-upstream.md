@@ -347,7 +347,22 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
        ![Bitbucket HTTPS Repo URL](../../../images/bitbucket-https-url.png)
 
-   - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear for your "App Password". At this time, BitBucket has [depreciated App Passwords](https://www.atlassian.com/blog/bitbucket/bitbucket-cloud-enters-phase-2-of-app-password-deprecation). In order to connect to a private BitBucket repository, please create an Auth Token, then [contact Pantheon Support](https://docs.pantheon.io/guides/support/contact-support/) who can configure private BitBucket upstream for you. 
+   - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+      ![BitBucket Upstream Authentication](../../../images/dashboard/create-upstream-auth-bb.png)
+      For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+        1. Go to Bitbucket Personal Settings and [generate an account access token](https://id.atlassian.com/manage-profile/security/api-tokens).
+        1. Press the "Create API token with scopes" button.
+        1. Add a name and expiration date for your token.
+        1. Select "Bitbucket" as the app.
+        1. Select the `read:repository:bitbucket` scope.
+        1. Confirm token creation.
+        1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the Custom Upstream.
+        1. Enter your Bitbucket email in the **Email** field. You can find this in your [Bitbucket Email Settings page](https://bitbucket.org/account/settings/email/).
+        1. Paste the token you just created into the **Account Access Token** field.
+   - **Upstream Repository Branch**: Enter the name of your primary Bitbucket branch.
+   - **Framework**: Drupal 7, Drupal (Latest), or WordPress
+   - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+1. Click **Create**.
 
 </Tab>
 
