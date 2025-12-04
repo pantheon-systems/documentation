@@ -30,8 +30,9 @@ Merging pull requests, or pushing code to the `main` branch of the GitHub reposi
 
 ## Creating a new site
 
-Once accepted into the private Beta, you will be given access to a private Terminus plugin to enable site creation with the GitHub Application.
-Usage instructions for the specific site creation commands are included in the README for the Terminus plugin.
+Once accepted into the private Beta, you must install the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin). 
+This is a public Terminus plugin that can be installed normally, e.g. `terminus self:plugin:install terminus-repository-plugin`.
+Usage instructions for the specific site creation commands are included in the [README](https://github.com/pantheon-systems/terminus-repository-plugin/blob/main/README.md#creating-a-new-site).
 
 ## Try the pull request workflow
 
