@@ -19,11 +19,11 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Open your Personal or Professional Workspace dashboard and select the **Migrate Existing Site** button on the lower right side of the page.
 
-   ![Migrate site button](../../../images/dashboard/new-dashboard/2024/migrate-site-button.png)
+   ![Migrate site button](../../../images/dashboard/new-dashboard/2025/migrate-site-button.png)
 
-1. Enter your current website URL, select **WordPress**, and click **Continue**.
+1. Select **WordPress**:
 
-   ![Enter URL and select CMS](../../../images/migrate-site-cms.png)
+   ![Enter URL and select CMS](../../../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
 
 1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**.
 
