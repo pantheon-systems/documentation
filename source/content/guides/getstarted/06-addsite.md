@@ -23,7 +23,9 @@ There are dozens of ways to add a site on Pantheon. This section covers the most
 ## Create a New CMS Site
 Pantheon CMS site contains three components: code, files, and a database containing the content and configurations of your Content Management System (CMS). When you create a site, you are creating each of these components in the Dev environment. Then, when you are ready, you will create your Test and Live environments.
 
-<Wistia src="kprkgaikos" />
+<Wistia src="kprkgaikos">
+
+</Wistia>
 
 ### Create the Dev Environment
 To create a CMS site:

@@ -17,7 +17,9 @@ permalink: docs/guides/multidev/edit-multidev
 
 This section provides steps on how to make edits, merge code in your Multidev environments, and rename a branch.
 
-<Wistia src="2lyxgxgkfw" />
+<Wistia src="2lyxgxgkfw">
+
+</Wistia>
 
 ## Edit Code
 
