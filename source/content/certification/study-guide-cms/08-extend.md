@@ -191,120 +191,130 @@ Let’s walk through some common actions within the dashboard and their Terminus
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus site:list
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus site:list
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![View site list from the Pantheon Dashbaord](../../../images/dashboard/new-dashboard/sites.png)
+  ![View site list from the Pantheon Dashbaord](../../../images/dashboard/new-dashboard/sites.png)
+
 </Example>
 
 #### Create Site
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus site:create mysite “My Site” wordpress
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus site:create mysite “My Site” wordpress
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![Create a new site from the Pantheon Dashbaord](../../../images/dashboard/create-pantheon-site.png)
+  ![Create a new site from the Pantheon Dashbaord](../../../images/dashboard/create-pantheon-site.png)
+
 </Example>
 
 #### Install WordPress
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus wp mysite.dev -- core install --title="My Site" --admin_user=admin123
-```
-<hr className="certification cms source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus wp mysite.dev -- core install --title="My Site" --admin_user=admin123
+  ```
+  <hr className="certification cms source-code" /> <br/>
 
-![Install WordPress via the WordPress admin interface](../../../images/certification/study-guide-cms/wp-dashboard-install.png)
+  ![Install WordPress via the WordPress admin interface](../../../images/certification/study-guide-cms/wp-dashboard-install.png)
+
 </Example>
 
 #### Create Multidev Environment
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus multidev:create mysite.live calendar
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus multidev:create mysite.live calendar
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![Create a new Multidev environment via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-create-multidev.png)
+  ![Create a new Multidev environment via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-create-multidev.png)
+
 </Example>
 
 #### Enable SFTP Development Mode
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus connection:set mysite.dev sftp
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus connection:set mysite.dev sftp
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![Switch to SFTP mode via the Pantheon Dashboard](../../../images/SFTP-mode.png)
+  ![Switch to SFTP mode via the Pantheon Dashboard](../../../images/SFTP-mode.png)
+
 </Example>
 
 #### Activate Plugins
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus wp mysite.dev -- plugin activate debug-bar
-```
-<hr className="certification cms source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus wp mysite.dev -- plugin activate debug-bar
+  ```
+  <hr className="certification cms source-code" /> <br/>
 
-![Use the WordPress Dashboard to activate plugins](../../../images/certification/study-guide-cms/wp-dashboard-activate-plugin.png)
+  ![Use the WordPress Dashboard to activate plugins](../../../images/certification/study-guide-cms/wp-dashboard-activate-plugin.png)
+
 </Example>
 
 #### Enable Modules
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus drush mysite.dev -- pm-enable serialization
-```
-<hr className="certification cms source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus drush mysite.dev -- pm-enable serialization
+  ```
+  <hr className="certification cms source-code" /> <br/>
 
-![Use the Drupal admin interface to install modules](../../../images/certification/study-guide-cms/drupal-admin-install-module.png)
+  ![Use the Drupal admin interface to install modules](../../../images/certification/study-guide-cms/drupal-admin-install-module.png)
+
 </Example>
 
 #### Deploy Dev to Test
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus deploy mysite.test --note="one sidebar" --updatedb --cc --sync-content
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus deploy mysite.test --note="one sidebar" --updatedb --cc --sync-content
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/dashboard/new-dashboard/2024/_deploy-to-test-env.png)
+  ![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/dashboard/new-dashboard/2024/_deploy-to-test-env.png)
+
 </Example>
 
 #### Clear Caches
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus env:clear-cache mysite.dev
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus env:clear-cache mysite.dev
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![Clear caches via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-clear-caches.png)
+  ![Clear caches via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-clear-caches.png)
+
 </Example>
 
 #### Retrieve Latest Database Backup from Live
 
 <Example class="certification style-example">
 
-```bash{promptUser: user}
-terminus backup:get mysite.live --element=db
-```
-<hr className="certification source-code" /> <br/>
+  ```bash{promptUser: user}
+  terminus backup:get mysite.live --element=db
+  ```
+  <hr className="certification source-code" /> <br/>
 
-![Get backups from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-get-database-backup.png)
+  ![Get backups from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-get-database-backup.png)
+
 </Example>
 
 ### Scripting with Terminus
