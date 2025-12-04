@@ -17,7 +17,9 @@ permalink: docs/guides/multidev/create-multidev
 
 This section provides steps on how to create a new Multidev.
 
-<Wistia src="5fncfu9ygh" />
+<Wistia src="5fncfu9ygh">
+
+</Wistia>
 
 ## Create in the Dashboard
 

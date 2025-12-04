@@ -19,7 +19,9 @@ integration: [quicksilver]
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment. Autopilot does this by taking before and after screenshots to check for changes. Before screenshots are taken from the Dev environment and After screenshots are taken from the Multidev environment. You also have the option to pull down your site's live content to the Dev environment before taking the Before screenshot so that it is in parity with your Live environment.
 
-<Wistia src="67b5343pz4" />
+<Wistia src="67b5343pz4">
+
+</Wistia>
 
 ## View Test Results
 

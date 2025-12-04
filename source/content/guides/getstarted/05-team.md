@@ -18,7 +18,9 @@ editpath: getstarted/05-team.md
 image: getting-started-Largethumb.png
 ---
 
-<Wistia src="jdhn2naeu2" />
+<Wistia src="jdhn2naeu2">
+
+</Wistia>
 
 <Alert title="Note" type="info" >
 

@@ -1127,12 +1127,16 @@ Use the Wistia component to embed Wistia videos. Set only the `src` without `tit
 
 <Example>
 
-<Wistia src="7gn1g3ljz6" />
+<Wistia src="7gn1g3ljz6">
+
+</Wistia>
 
 <hr className="source-code" /> <br />
 
 ```markdown
-<Wistia src="7gn1g3ljz6" />
+<Wistia src="7gn1g3ljz6">
+
+</Wistia>
 ```
 
 </Example>
