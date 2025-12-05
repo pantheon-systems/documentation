@@ -81,14 +81,14 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **Apache Tika** | 1.18, 1.21 | 1.18, 1.21, [3.2](/external-libraries#apache-tika) |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
-<sup>1</sup> Support for this OS Package will be added after the platform-wide rollout begins. If you depend on this OS Package, we recommend you <a href="#q-how-do-i-opt-out-of-php-runtime-generation-2">opt out of Runtime Generation 2</a> for now. <br /><br />
+<sup>1</sup> Support for this OS Package will be added soon. If you depend on this OS Package, <a href="#q-how-do-i-opt-out-of-php-runtime-generation-2">opt out of Runtime Generation 2</a> for now. <br /><br />
 
 ### PHP Extensions
 
 | Extension | Gen 1 | Gen 2 |
 |-----------|---------|---------|
-| **ioncube** | Available for PHP 7.1 only | Not available <sup>1</sup>  |
-| **pdo_sqlsrv** | Available for PHP 7.2 only<br/>5.2.0 | Not available <sup>1</sup>  |
+| **ioncube** | Available for PHP 7.1 only | Not available  |
+| **pdo_sqlsrv** | Available for PHP 7.2 only<br/>5.2.0 | Coming soon for PHP 8.2+  |
 | **curl** | v7.61.1 | 7.88.1 |
 | **gd** | 2.1.0 | 2.3.3 |
 | **iconv** | 2.28 | 2.36 |
@@ -99,8 +99,6 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **pgsql** | 13.5 | 15.14 |
 | **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
-
-<sup>1</sup> Does your application require an OS package or PHP extension that is no longer available? Please reach out to us to discuss compatibility by contacting your Customer Success Manager or creating a support ticket.
 
 ### Networking
 
@@ -144,7 +142,7 @@ You may opt-out of the platform rollout by setting the following in your `panthe
 php_runtime_generation: 1
 ```
 
-Note: All sites will be auto-upgraded in early 2026 if they haven't already, including sites that specify the opt-out above.
+Note: All sites will be auto-upgraded starting April 6, 2026, if they haven't already, including sites that specify the opt-out above.
 
 ### Q: Can I switch back to the previous PHP runtime if I encounter issues?
 
