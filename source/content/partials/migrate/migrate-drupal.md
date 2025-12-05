@@ -16,7 +16,7 @@ The process described on this page is supported for Drupal 7 sites only.
 
 </Alert>
 
-1. Open your Personal or Professional Workspace dashboard and click the **Migrate Existing Site** button.
+1. Open your Personal or Professional Workspace dashboard and click the **Migrate Existing Site** button:
 
    ![Migrate site button](../../../images/dashboard/new-dashboard/2025/migrate-site-button.png)
 
@@ -34,10 +34,14 @@ The process described on this page is supported for Drupal 7 sites only.
 
 1. When the Drupal site deployment is complete, click **Continue**:
 
-   ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../../../images/dashboard/new-dashboard/2025/migrate-site-drupal-create-site.png)
+   ![Site creation step showing a completed deployment and a prompt to visit the new site dashboard](../../../images/dashboard/new-dashboard/2025/drupal-deploy-complete.png)
 
-1. Finish the Drupal 7 site migration process by following the prompts on screen, which includes: 
+1. Complete the following procedures, as prompted in the Site Dashboard:
    
    * [Importing your code](/migrate-manual#import-your-code) 
    * [Adding your database](/migrate-manual#add-your-database)
-   * [Uploading your files](/migrate-manual#upload-your-files).
+   * [Uploading your files](/migrate-manual#upload-your-files)
+
+1. Once all 3 components of your site have been added manually, click **Finish site migration**:
+   
+   ![Newly created site dashboard showing manual migration prompts at the top to import code, db and files](../../../images/dashboard/new-dashboard/2025/drupal-finish-migration.png)
