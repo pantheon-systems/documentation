@@ -17,42 +17,47 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 </Accordion>
 
-1. Open your Personal or Professional Workspace dashboard and select the **Migrate Existing Site** button on the lower right side of the page.
+1. Open your Personal or Professional Workspace dashboard and select the **Migrate Existing Site** button on the lower right side of the page:
 
-   ![Migrate site button](../../../images/dashboard/new-dashboard/2024/migrate-site-button.png)
+   ![Migrate site button](../../../images/dashboard/new-dashboard/2025/migrate-site-button.png)
 
-1. Enter your current website URL, select **WordPress**, and click **Continue**.
+1. Select **WordPress**:
 
-   ![Enter URL and select CMS](../../../images/migrate-site-cms.png)
+   ![Enter URL and select CMS](../../../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
 
-1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**.
+   Then enter your existing production URL for the site you want to migrate (e.g., `example.com`) and click **Continue**:
+   
+   ![Enter URL](../../../images/dashboard/new-dashboard/2025/migrate-wp-site-url.png)
+   
+1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**:
+   
+   ![Site creation form for WordPress migrations prompting user to input site name and associated workspace](../../../images/dashboard/new-dashboard/2025/migrate-site-wp-create-site.png)
+   
+   When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
-   ![Install Plugin](../../../images/migrate-site-info.png)
+   ![Confirmation prompt for workspace selection during site creation in the dashboard](../../../images/dashboard/new-dashboard/2025/confirm-workspace-prompt.png)
+   
+1. Click **Generate Machine Token** and re-authenticate if prompted:
 
-1. Select **Generate Machine Token** and re-authenticate if prompted.
+   ![Begin process of installing plugin](../../../images/dashboard/new-dashboard/2025/migrate-create-token.png)
 
-   ![Begin process of installing plugin](../../../images/migrate-site-wp-plugin.png)
+   Copy the token to your clipboard now or in the following step. Click the **Continue to Migration** button.
 
-1. Select **Install on /wp-admin**.  A new tab will open with your WordPress CMS for your existing site. Keep the Pantheon tab open in your browser.
-   ![Install on /wp-admin](../../../images/migrate-site-wp-install.png)
+1. Click **Go to wp-admin**, and a new tab will open for your WordPress admin dashboard. Do not close the Pantheon Site Dashboard tab in your browser.
+   
+   ![Install on /wp-admin](../../../images/dashboard/new-dashboard/2025/migrate-install-plugin.png)
 
-1. Search for and install the plugin.
+1. Log into your existing site as an admin, the button from the above step sends you directly to our plugin page. Click **Install Now**, then click **Activate**.
+   
+   ![Install migration plugin on WordPress](../../../images/dashboard/new-dashboard/2025/pantheon-migrations-plugin-install.png)
 
-   ![Searching for plugin on WordPress](../../../images/migrate-site-wp-search-plugin.png)
+1. Copy and paste your machine token and site name from the Pantheon Site Dashboard into the plugin form: 
+   
+   ![Copying and pasting info](../../../images/dashboard/new-dashboard/2025/migrate-site-wp-activate-info.png)
 
-1. Click **Activate**.
-
-   ![Copying and pasting info](../../../images/migrate-site-wp-activate.png)
-
-1. Go back to the browser tab containing your Pantheon dashboard, copy the machine token from the Pantheon Dashboard, then go back to the WordPress Dashboard on your existing site. Paste the machine token and the site name, and click **Migrate**.
-
-   ![Copying and pasting info](../../../images/migrate-site-wp-activate-info.png)
-
-   When the migration is complete, the **Migration completed successfully** page appears.
-
+   You will see a new page where BlogVault validates the information provided (site name and token), then updates once the migration is in progress and updates once again when completed. You'll also receive an email upon migration completion.
+   
    ![Migration successful](../../../images/migrate-site-wp-successful.png)
-
-   You will also receive an email when the migration completes. 
 
 1. Go back to the Pantheon tab and click **Confirm migration progress**.  Your site's dashboard appears.
 

@@ -8,33 +8,40 @@ tags: [--]
 reviewed: ""
 ---
 
-The recommended way to migrate Drupal sites from another host is to use `drush ard` (Drush 8 or 11) to create an archive that can be easily imported.
+<Alert type="info" title="Note"> 
 
-1. Open your Personal or Professional Workspace dashboard and click the **Migrate Existing Site** button.
+The process described on this page is supported for Drupal 7 sites only. 
+   * Modern Drupal sites should instead refer to [this composer-based migration process](/guides/drupal-unhosted-composer). 
+   * Older Drupal 8 sites not managed by composer should instead refer to this [manual migration process](/migrate-manual). 
 
-   ![Migrate site button](../../../images/dashboard/new-dashboard/2024/migrate-site-button.png)
+</Alert>
 
-1. Enter your current website URL, select **Drupal 7** and click **Continue**.
+1. Open your Personal or Professional Workspace dashboard and click the **Migrate Existing Site** button:
 
-   ![Enter URL and select CMS](../../../images/dashboard/new-dashboard/2024/migrate-site-cms-drupal.png)
+   ![Migrate site button](../../../images/dashboard/new-dashboard/2025/migrate-site-button.png)
 
-1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**.
+1. Select **Drupal 7**:
 
-   ![Install Plugin](../../../images/migrate-site-drupal-create-site.png)
+   ![Enter URL and select CMS](../../../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
 
-1. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
+1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**:
 
-  The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+   ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../../../images/dashboard/new-dashboard/2025/migrate-site-drupal-create-site.png)
 
-  Click **Continue Migration**
+   When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
-  ![Drupal create archive](../../../images/dashboard/new-dashboard/2024/drupal-guided-migrate.png)
+   ![Confirmation prompt for workspace selection during site creation in the dashboard](../../../images/dashboard/new-dashboard/2025/confirm-workspace-prompt.png)
 
-1. Paste the publicly accessible URL to a download of your site archive on the right side of the page. If you are using a Dropbox URL, change the end of the URL from `dl=0` to `dl=1` so we can import your site archive correctly. Click **Import Archive**.
+1. When the Drupal site deployment is complete, click **Continue**:
 
-   ![Import archive](../../../images/migrate-site-drupal-import-archive.png)
+   ![Site creation step showing a completed deployment and a prompt to visit the new site dashboard](../../../images/dashboard/new-dashboard/2025/drupal-deploy-complete.png)
 
-1.  Click **Visit the Site Dashboard** from the Site Dashboard on Pantheon after the import is complete.
+1. Complete the following procedures, as prompted in the Site Dashboard:
+   
+   * [Importing your code](/migrate-manual#import-your-code) 
+   * [Adding your database](/migrate-manual#add-your-database)
+   * [Uploading your files](/migrate-manual#upload-your-files)
 
-   ![Successful Drupal Migration](../../../images/dashboard/new-dashboard/2024/successful-drupal-migration.png)
-
+1. Once all 3 components of your site have been added manually, click **Finish site migration**:
+   
+   ![Newly created site dashboard showing manual migration prompts at the top to import code, db and files](../../../images/dashboard/new-dashboard/2025/drupal-finish-migration.png)

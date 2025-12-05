@@ -73,37 +73,27 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Migrate Existing Site** button:
 
-1. Enter your current website URL, choose your site type, and click **Continue**:
+1. Choose your site type, and click **Continue**:
 
-   ![Choose the Starting State for your Migrated Site](../images/dashboard/new-dashboard/2024/migrate-step2.png)
+   ![Enter URL and select CMS](../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
-1. Name your site and select an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
+1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**:
+  
+  ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../images/dashboard/new-dashboard/2025/migrate-site-drupal-create-site.png)
 
-   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/new-dashboard/2024/migrate-step3.png)
+  When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
-1. Click the link to manually migrate your site then select **Yes** to confirm:
+  ![Confirmation prompt for workspace selection during site creation in the dashboard](../images/dashboard/new-dashboard/2025/confirm-workspace-prompt.png)
 
-  <TabList>
+1. For WordPress sites, click the link at the bottom to manually migrate your site then select **Yes** to confirm:
+  
+  ![Begin process of installing plugin](../images/dashboard/new-dashboard/2025/migrate-create-token.png)
 
-  <Tab title="WordPress" id="wp-confirm" active={true}>
+1. Click **Go to site dashboard**:
 
-  ![Choose Manual WordPress Migration](../images/dashboard/new-dashboard/2024/migrate-manual-wp.png)
-
-  </Tab>
-
-  <Tab title="Drupal" id="drops-confirm">
-
-  ![Choose Manual Drupal Migration](../images/dashboard/new-dashboard/2024/migrate-manual-drops.png)
-
-  </Tab>
-
-  </TabList>
-
-1. Click **Visit your Pantheon Site Dashboard**:
-
-  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/new-dashboard/2024/migrate-manual-visit-your-site-dashboard.png)
+  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/new-dashboard/2025/wp-manual-migration-deploy-complete.png)
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 

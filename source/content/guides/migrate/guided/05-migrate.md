@@ -13,7 +13,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 permalink: docs/guides/guided/migrate
 editpath: migrate/guided/05-migrate.md
-reviewed: "2025-01-27"
+reviewed: "2025-12-05"
 ---
 
 Pantheon provides a guided path for migrating existing sites to the platform. This process begins by clicking **Migrate Existing Site**.
