@@ -43,7 +43,7 @@ This tutorial will walk you through:
 
   <Alert type="info" title="Note">
 
-    If you prefer not to grant permissions for all repositories as demonstrated above, you can instead create a repository with your code in GitHub. Once created, return to this step and choose **Only select repositories** then select your new repository. *An empty existing repository will not work.*
+    If you prefer not to grant permissions for all repositories as demonstrated above, you can instead create a new repository with your code in GitHub or link to an existing repository. Once created, return to this step and choose **Only select repositories** then select your new repository. *An empty existing repository will not work.*
 
   </Alert>
 
