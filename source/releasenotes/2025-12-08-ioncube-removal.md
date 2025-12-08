@@ -8,4 +8,4 @@ We are removing [ionCube](https://www.ioncube.com/) support from the platform on
 
 Pantheon continually reviews our PHP runtime and explores opportunities to optimize performance and build times.
 
-If your application uses ionCube, please [contact support](https://pantheon.io/support) or your Customer Success Manager to explore options for your use case.
+If your application uses ionCube, please [contact support](/guides/support/contact-support) or your Customer Success Manager to explore options for your use case.
