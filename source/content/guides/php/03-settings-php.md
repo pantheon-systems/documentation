@@ -13,7 +13,7 @@ integration: [--]
 tags: [site, database]
 showtoc: true
 permalink: docs/guides/php/settings-php
-reviewed: "2022-12-13"
+reviewed: "2025-12-08"
 ---
 
 This section provides information on how to configure the `settings.php` file for a Drupal site. Refer to [Configure Your wp-config.php File](/guides/php/wp-config-php) if you have a WordPress site.
@@ -254,18 +254,6 @@ Drupal 7 sites that plan to use [Drush](/guides/drush) should have a `settings.p
 ### Can I edit settings.pantheon.php?
 
 No. `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file might change in future updates, and modifying it would cause conflicts.
-
-### How do I enable ionCube Decoder support?
-
-1. Verify that you are running [PHP 7.1](/guides/php/php-versions) if you are using a licensed plugin that requires ionCube Decoder support. Please note that later PHP versions do not currently support ionCube.
-
-1. Enable ionCube Decoder support site-wide by adding this line to `settings.php`:
-
-  ```php:title=settings.php
-  ini_set('ioncube.loader.encoded_paths', '/');
-  ```
-
-More information can be found in our [PHP 7.1 & ionCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.
 
 ## Troubleshooting
 
