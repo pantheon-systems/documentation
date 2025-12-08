@@ -1,6 +1,6 @@
 ---
 title: "PHP 8.3 and 8.4 updated to their latest patch releases"
-published_date: "2025-12-05"
+published_date: "2025-12-08"
 categories: [infrastructure]
 ---
 PHP versions [8.3.28](https://www.php.net/ChangeLog-8.php#8.3.28) and [8.4.15](https://www.php.net/ChangeLog-8.php#8.4.15), are now available on the platform. These updates bring the latest bug fixes, improving performance and security for your sites. The latest versions have already rolled out to all sites.
