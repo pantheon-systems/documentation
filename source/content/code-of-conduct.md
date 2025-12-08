@@ -31,7 +31,7 @@ Examples of unacceptable behavior by members include but are not limited to:
 
 - The use of sexualized language or imagery and unwelcome sexual attention or advances
 - Discriminatory or derogatory jokes and language relating to gender identity and expression, sexuality, disability, physical appearance, socioeconomic status, educational background and level of experience, ethnicity, nationality, age, lifestyle choices, and religious affiliation
-- Personal solicitations and/or spam
+- Personal solicitations, job postings and/or spam
 - Publishing others’ private information, such as a legal name, or physical or electronic address, without explicit permission
 - Other conduct which could reasonably be considered inappropriate in a professional setting
 - Advocating for or encouraging any of the above behaviors
@@ -50,7 +50,7 @@ You may contact any of our community Administrators to report a Code of Conduct 
 |------|-------|
 | McKenna Regets (She/Her) | <mckenna.regets@pantheon.io> |
 | Steve Persch (He/Him) | <steve.persch@pantheon.io> |
-| Chris Reynolds (He/Him) | <chris.reynolds@pantheon.io> |
+| Chris Reynolds (He/They) | <chris.reynolds@pantheon.io> |
 | Rachel Whitton (She/Her) | <rachel.whitton@pantheon.io> |
 
 ## Scope
