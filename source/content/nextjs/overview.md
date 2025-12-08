@@ -26,7 +26,7 @@ Pantheon's product engineering team is rolling out new functionality often while
 * **Node versions:**
   * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
 * **Package managers:**
-  * Pantheon will use `npm`, `yarn`, or `pnm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
+  * Pantheon will use `npm`, `yarn`, or `pnpm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
 * **External version control:**
   * Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
 
