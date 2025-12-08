@@ -1,7 +1,7 @@
 ---
 title: Next.js Hello World Tutorial
 description: Get up and running with a simple Next.js application on Pantheon
-reviewed: "2025-11-17"
+reviewed: "2025-12-08"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -43,7 +43,7 @@ This tutorial will walk you through:
 
   <Alert type="info" title="Note">
 
-    If you prefer not to grant permissions for all repositories as demonstrated above, you can instead create an empty repository now in GitHub. Once created, return to this step and choose **Only select repositories** then select your new repository.
+    If you prefer not to grant permissions for all repositories as demonstrated above, you can instead create a repository with your code in GitHub. Once created, return to this step and choose **Only select repositories** then select your new repository. *An empty existing repository will not work.*
 
   </Alert>
 
