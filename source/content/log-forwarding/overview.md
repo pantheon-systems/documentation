@@ -25,7 +25,7 @@ Description
 Use Case
 
 |Log Stream |Description |Use Case |
-|:-------|:----------:|:-----------|
+|-----------|------------|---------|
 |`nginx-access`|HTTP access requests to your site.|Traffic analysis and performance monitoring.|
 |`nginx-error`|Nginx web server errors.|Server-level error monitoring.|
 |`php-error`|General PHP runtime errors.|Application debugging and error tracking.|
