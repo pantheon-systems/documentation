@@ -1,12 +1,12 @@
 ---
-title: Log Forwarding (Beta)
-description: todo add desc
+title: Log Forwarding
 contenttype: [doc]
 innav: [true]
 integration: [--]
 reviewed: "2025-12-10"
 permalink: docs/log-forwarding
 ---
+<Partial file="log-forwarding-beta.md" />
 
 ## Introduction 
 Pantheon's Log Forwarding feature allows Enterprise customers to stream operational logs from their Pantheon sites directly into a centralized analysis tool like Splunk (Cloud or Enterprise). This provides a critical, unified data stream for security, performance, and operational intelligence.

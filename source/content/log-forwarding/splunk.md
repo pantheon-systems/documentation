@@ -1,12 +1,12 @@
 ---
-title: Log Forwarding with Splunk (Beta)
-description: todo add desc
+title: Log Forwarding with Splunk
 contenttype: [doc]
 innav: [true]
 integration: [--]
 reviewed: "2025-12-10"
 permalink: docs/log-forwarding/splunk
 ---
+<Partial file="log-forwarding-beta.md" />
 
 ## Setup Steps: Requesting Activation
 To enable log forwarding to Splunk, you must first configure a secure HTTP Event Collector (HEC) and provide the necessary credentials to your Pantheon team.

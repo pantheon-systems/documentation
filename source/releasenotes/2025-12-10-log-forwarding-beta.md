@@ -1,9 +1,11 @@
 ---
 title: "Log Forwarding (Beta): Stream Your Logs for Enhanced Observability"
 published_date: "2025-12-10"
-categories: [new-feature, general]
+categories: [new-feature, tools-apis, documentation]
 ---
 We're excited to announce the beta release of Log Forwarding, a new feature designed to give our customers deeper visibility and control over their application data.
+
+For more information, see [this related blog post](https://pantheon.io/blog/log-forwarding-beta).
 
 ## What is Log Forwarding?
 Log Forwarding enables you to automatically stream your binding-level logs from the Pantheon platform directly to your preferred log analysis services. This is a crucial tool for observability, meeting compliance requirements, and performing advanced analytics on your application's behavior.
@@ -28,3 +30,9 @@ You can currently forward your Pantheon logs to the following popular log manage
 
 ## How to Access the Beta
 Please complete and submit the [beta interest form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform) or contact your dedicated Account Manager or Customer Success Manager to enable the Log Forwarding beta for your organization if you are already using Splunk or Sumo logic. 
+
+## Documentation
+See also, the following new docs:
+* [Log Fowarding Overview](/log-forwarding)
+* [Sumo Logic Setup](/log-forwarding/sumo-logic)
+* [Splunk Setup](/log-forwardin/splunk)

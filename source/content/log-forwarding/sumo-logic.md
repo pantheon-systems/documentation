@@ -1,12 +1,12 @@
 ---
-title: Log Forwarding with Sumo Logic (Beta)
-description: todo add desc
+title: Log Forwarding with Sumo Logic
 contenttype: [doc]
 innav: [true]
 integration: [--]
 reviewed: "2025-12-10"
 permalink: docs/log-forwarding/sumo-logic
 ---
+<Partial file="log-forwarding-beta.md" />
 
 ## Setup Steps: Requesting Activation
 To enable log forwarding to Sumo Logic, you must first create a specific endpoint in Sumo Logic and then provide the URL to your Pantheon team.
