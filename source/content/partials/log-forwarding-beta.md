@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <Alert title="Beta Access Required" type="info" >
 
 This documentation describes support for log forwarding that is under active development and is available only to customers who have been individually approved as part of our **Private Beta** program.

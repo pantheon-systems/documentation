@@ -6,23 +6,30 @@ integration: [--]
 reviewed: "2025-12-10"
 permalink: docs/log-forwarding
 ---
+
 <Partial file="log-forwarding-beta.md" />
 
-## Introduction 
-Pantheon's Log Forwarding feature allows Enterprise customers to stream operational logs from their Pantheon sites directly into a centralized analysis tool like Splunk (Cloud or Enterprise). This provides a critical, unified data stream for security, performance, and operational intelligence.
+Pantheon's Log Forwarding feature enables streaming operational logs from Pantheon sites directly into a centralized analysis tool (e.g., Splunk). This provides a critical, unified data stream for security, performance, and operational intelligence.
 
-This feature is currently in **Beta**. Configuration must be completed by the Pantheon team.
+## Access & availability
 
-## Prerequisites
-* A Pantheon Elite or Enterprise plan.
-* An active Sumo Logic or Splunk account.
-* The ability to configure a **Hosted Collector** and an **HTTP Source** within **Sumo Logic** or an **HTTP Event Collector (HEC)** in **Splunk** to securely receive the logs
+This feature is available to **Private Beta** participants at no additional cost. [Submit this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform) to request an invite to participate.
+
+### Compatability
+We currently support forwarding logs to the following providers:
+* [Sumo Logic](/log-forwarding/sumo-logic)
+* [Splunk](/log-forwarding/splunk)
+
+If you rely on a provider other than Sumo Logic or Splunk, we want to hear from you! Please reach out to your Customer Success Manager (CSM) or [our support team](/guides/support/contact-support/) to voice your requirements.
+
+### Benefits
+Integrating your Pantheon logs with your existing analysis tools allows your team to achieve a variety of critical goals:
+* **Health Checks & Performance Monitoring:** Proactively monitor application health, detect performance bottlenecks, and optimize resource usage.
+* **Debugging & Root Cause Analysis**: Accelerate the diagnosis and resolution of issues by correlating logs with other system data.
+* **Security & Compliance:** Perform security auditing, intrusion detection, and meet regulatory archiving requirements with a centralized view of all log activity.
 
 ## Log Streams Forwarded
 Pantheon forwards the following five binding-level log streams:
-Log Stream
-Description
-Use Case
 
 |Log Stream |Description |Use Case |
 |-----------|------------|---------|

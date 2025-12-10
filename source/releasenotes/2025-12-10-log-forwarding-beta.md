@@ -15,7 +15,7 @@ When enabled, this feature streams the following log types from your Pantheon si
 * `nginx-error`
 
 ## Documentation
-See also the following new docs:
+See also, the following new docs:
 * [Log Fowarding Overview](/log-forwarding)
 * [Sumo Logic Setup](/log-forwarding/sumo-logic)
 * [Splunk Setup](/log-forwardin/splunk)
