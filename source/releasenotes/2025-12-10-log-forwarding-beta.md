@@ -14,6 +14,10 @@ When enabled, this feature streams the following log types from your Pantheon si
 * `nginx-access`
 * `nginx-error`
 
+**Share feedback**: Once Beta access has been granted, users will recieve a welcome email and be invited to a dedicated slack channel where you can provide feedback, ask questions and discuss usage with the Pantheon product and engineering team. 
+
+To request an invite, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform).
+
 ## Documentation
 See also, the following new docs:
 * [Log Fowarding Overview](/log-forwarding)

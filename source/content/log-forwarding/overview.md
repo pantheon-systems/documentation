@@ -38,3 +38,9 @@ Pantheon forwards the following five binding-level log streams:
 |`php-error`|General PHP runtime errors.|Application debugging and error tracking.|
 |`php-fpm-error`|PHP-FPM worker errors.|Service health and worker pool monitoring.|
 |`php-slow`|Logs for PHP requests exceeding the slow execution threshold.|Identifying performance bottlenecks.|
+
+## Support
+Once Beta access has been granted, users will recieve a welcome email and be invited to a dedicated slack channel where you can provide feedback, ask questions and discuss usage with the Pantheon product and engineering team. 
+
+To request an invite, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform).
+

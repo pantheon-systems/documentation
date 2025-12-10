@@ -29,13 +29,11 @@ Configure a secure HTTP Event Collector (HEC) in Splunk:
 1. Copy the **Splunk HEC Endpoint** including both the hostname and port (e.g., `https://my-splunk.com:8088`).
 
 ## Request Pantheon configuration
-Contact your **Customer Success Manager (CSM)** or [**open a Support** ticket](/guides/support/contact-support/) with the following information:
+Reply to your beta program welcome email, or reach out to your Customer Success Manager (CSM), with the following information: 
 
-1. **Site UUID(s) and Environment(s):** Specify which sites and environments (e.g., live, test) require log forwarding.
+1. **Workspace UUID:** Specify which workspace you want enabled.
 1. **Splunk HEC Endpoint URL:** The host and port (e.g., https://my-splunk.com:8088).
 1. **HEC Token:** The unique GUID copied in [the previous section](#add-splunk-configuration).
-
-The Pantheon team will configure log forwarding for the requested site(s) on each requested environment(s).
 
 ### Test log streaming
 Once Pantheon confirms that forwarding is active, use the Splunk search interface (e.g., `index=<your_index> token="<HEC_token>"`) to verify that log events are being ingested.

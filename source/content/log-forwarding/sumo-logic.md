@@ -23,12 +23,10 @@ Configure a specific endpoint in Sumo Logic:
 1. Once the source is created, **copy the unique HTTP Source URL** provided by Sumo Logic. This URL is your specific endpoint for receiving the logs.
 
 ## Request Pantheon configuration
-Contact your **Customer Success Manager (CSM)** or [**open a Support** ticket](/guides/support/contact-support/) with the following information:
+Reply to your beta program welcome email, or reach out to your Customer Success Manager (CSM), with the following information: 
 
-1. **Site UUID(s) and Environment(s):** Specify which sites and environments (e.g., `live`, `test`) require log forwarding.
+1. **Workspace UUID:** Specify which workspace you want enabled.
 1. **Sumo Logic HTTP Source URL:** The unique URL copied in Step 1.
-
-The Pantheon team will configure log forwarding for the requested site(s) on each requested environment(s).
 
 ### Test log streaming
 Once Pantheon confirms that forwarding is active, you should see log data appear in your Sumo Logic search dashboard within minutes.
