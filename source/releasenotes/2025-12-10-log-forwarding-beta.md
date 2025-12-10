@@ -1,38 +1,21 @@
 ---
-title: "Log Forwarding (Beta): Stream Your Logs for Enhanced Observability"
+title: "New log fowarding feature enters private beta"
 published_date: "2025-12-10"
 categories: [new-feature, tools-apis, documentation]
 ---
-We're excited to announce the beta release of Log Forwarding, a new feature designed to give our customers deeper visibility and control over their application data.
+Log forwarding for Splunk and Sumo Logic is now availble via a **Private Beta** program. There is no additional cost for this feature and anyone can request an invite by [submitting this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform).
 
 For more information, see [this related blog post](https://pantheon.io/blog/log-forwarding-beta).
 
-## What is Log Forwarding?
-Log Forwarding enables you to automatically stream your binding-level logs from the Pantheon platform directly to your preferred log analysis services. This is a crucial tool for observability, meeting compliance requirements, and performing advanced analytics on your application's behavior.
-
-## Why is this important?
-Integrating your Pantheon logs with your existing analysis tools allows your team to achieve a variety of critical goals:
-* **Health Checks & Performance Monitoring:** Proactively monitor application health, detect performance bottlenecks, and optimize resource usage.
-* **Debugging & Root Cause Analysis**: Accelerate the diagnosis and resolution of issues by correlating logs with other system data.
-* **Security & Compliance:** Perform security auditing, intrusion detection, and meet regulatory archiving requirements with a centralized view of all log activity.
-
-## What Logs Are We Sending?
-In this beta, Log Forwarding will stream the following log types from your application to your service:
+When enabled, this feature streams the following log types from your Pantheon site to your external service (Splunk or Sumo Logic):
 * `php-fpm-error`
 * `php-slow`
 * `php-error`
 * `nginx-access`
 * `nginx-error`
-## Supported Log Destinations
-You can currently forward your Pantheon logs to the following popular log management platforms:
-* Sumo Logic
-* Splunk
-
-## How to Access the Beta
-Please complete and submit the [beta interest form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform) or contact your dedicated Account Manager or Customer Success Manager to enable the Log Forwarding beta for your organization if you are already using Splunk or Sumo logic. 
 
 ## Documentation
-See also, the following new docs:
+See also the following new docs:
 * [Log Fowarding Overview](/log-forwarding)
 * [Sumo Logic Setup](/log-forwarding/sumo-logic)
 * [Splunk Setup](/log-forwardin/splunk)
