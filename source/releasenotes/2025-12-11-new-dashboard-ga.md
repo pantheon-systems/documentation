@@ -1,14 +1,11 @@
 ---
-title: "Legacy dashboard disabled, new dashboard now generally available for all"
+title: "New site dashboard now generally available for all"
 published_date: "2025-12-11"
 categories: [user-interface, new-feature]
 ---
 The new Site Dashboard is now available for **all** Workspaces. Today's release switches Personal Workspaces over to the new experience, a change we recently completed for Professional Workspaces. 
 
-Today we have also removed the ability for users to opt out of the new experience via [Personal Settings](/personal-settings). Effectively, the legacy dashboard is now disabled and the new dashboard is the only available experience for all users. No action is required.
-
 The following ON/OFF toggles have been removed from the user interface: 
-* **Personal Settings** > **Preferences** "Go to the new dashboard by default"
 * **Personal Workspace** > **Site list** "Open sites in new beta" 
 * **Professional Workspace** > **Site list** "Open sites in new beta" ([removed in a previous release](/release-notes/2025/11/new-site-dashboard-now-default-for-professional-workspaces))
 
