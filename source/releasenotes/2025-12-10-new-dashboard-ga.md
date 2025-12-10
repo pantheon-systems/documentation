@@ -1,6 +1,6 @@
 ---
 title: "New site dashboard now generally available for all"
-published_date: "2025-12-11"
+published_date: "2025-12-10"
 categories: [user-interface, new-feature]
 ---
 The new Site Dashboard is now available for **all** Workspaces. Today's release switches Personal Workspaces over to the new experience, a change we recently completed for Professional Workspaces. 
