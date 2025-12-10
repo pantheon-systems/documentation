@@ -10,7 +10,7 @@ product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [wordsmither]
-reviewed: "2025-03-11"
+reviewed: "2025-12-10"
 showtoc: true
 ---
 
@@ -75,13 +75,3 @@ SSH keys allow you to establish a secure connection between your computer and Pa
 Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
 
 The token key will only be shown once and provides the same access as your username and password. To learn more about machine tokens, refer to the [Creating and Revoking Machine Tokens](/machine-tokens) documentation.
-
-## Preferences
-
-### New Pantheon Features
-
-#### Redesigned Dashboard Interface
-
-If you would like to be directed to the redesigned Dashboard interface when you log into Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
-
-If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Workspace. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 

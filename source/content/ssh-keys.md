@@ -2,7 +2,7 @@
 title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 tags: [security, dashboard, ssh]
-reviewed: "2025-06-17"
+reviewed: "2025-12-10"
 contenttype: [doc]
 innav: [true]
 categories: [security, git, config]
@@ -66,10 +66,6 @@ The following steps are compatible with MacOS, Linux, and the Windows Subsystem 
    ```
 
 ## Add your SSH key to Pantheon
-<TabList>
-
-<Tab title="New Dashboard" id="phoebe-add-key" active={true}>
-
 1. Log in to your Pantheon Dashboard.
 
 1. Click your user icon in the top right then click [Personal Settings](/personal-settings), and go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
@@ -81,28 +77,6 @@ The following steps are compatible with MacOS, Linux, and the Windows Subsystem 
   ![Adding SSH Keys](../images/dashboard/new-dashboard/2024/_add-ssh-key.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
-
-</Tab>
-
-<Tab title="Legacy Dashboard" id="hermes-add-key">
-
-1. Log in to your Pantheon Dashboard.
-
-1. Click your username in the top right, then select **My Dashboard**.
-
-1. Open the **<Icon icon="gear" /> Account** tab in your User Dashboard.
-
-1. Click **SSH Keys**.
-
-1. Paste the copied public key into the **Add Key** box.
-
-1. Click the **Add Key** button.
-
-  Your local machine is now set up to securely connect to remote Pantheon environments. This page will show you all keys associated with your user account.
-
-</Tab>
-</TabList>
-
 
 ### Test your new key (optional)
 
@@ -156,11 +130,6 @@ After removing SSH Keys from your user account, you will not be able to interact
 
 Removing SSH keys is separate from [revoking the machine tokens used by Terminus](/machine-tokens#revoke-a-machine-token) to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.
 
-<TabList>
-
-<Tab title="New Dashboard" id="phoebe-revoke-key" active={true}>
-
-
 1. Log in to your Pantheon Dashboard.
 
 1. Click your user icon in the top right then click [Personal Settings](/personal-settings), and go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
@@ -171,16 +140,6 @@ Removing SSH keys is separate from [revoking the machine tokens used by Terminus
 
 1. Check the box in the confirmation prompt and click continue.
 
-</Tab>
-<Tab title="Legacy Dashboard" id="hermes-revoke-key">
-
-1. Navigate to the **<Icon icon="gear" /> Account** tab of your User Dashboard and click **SSH Keys**.
-
-1. Click the **Remove** button next to the key you want to delete:
-
-</Tab>
-</TabList>
-
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
@@ -189,12 +148,7 @@ Removing SSH keys is separate from [revoking the machine tokens used by Terminus
 
 ### ECDSA Key Support
 
-<TabList>
-
-<Tab title="New Dashboard" id="phoebe-invalid-key-typoe" active={true}>
-
-
-The new dashboard will return the following error when attempting to add an **ECDSA** key with a keysize of either **384** or **521** bits: 
+The dashboard will return the following error when attempting to add an **ECDSA** key with a keysize of either **384** or **521** bits: 
 
 ```
 We ran into an unexpected error and your SSH key wasn't created. Please try again.
@@ -205,28 +159,6 @@ To resolve, generate and use a 256-bit ECDSA key instead:
 ```bash{promptUser: user}
 ssh-keygen -t ecdsa -b 256 
 ```
-
-</Tab>
-<Tab title="Legacy Dashboard" id="hermes-invalid-key-type">
-
-The legacy dashboard will return the following error when attempting to add an **ECDSA** key with a keysize of either **384** or **521** bits: 
-
-```
-SSH validation failed: Unknown SSH key type 'ecdsa-sha2-nistp384'.
-```
-
-```
-SSH validation failed: Unknown SSH key type 'ecdsa-sha2-nistp521'.
-```
-
-To resolve, generate and use a 256-bit ECDSA key instead: 
-
-```bash{promptUser: user}
-ssh-keygen -t ecdsa -b 256 
-```
-
-</Tab>
-</TabList>
 
 ### Control Path Error
 
