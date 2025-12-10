@@ -20,7 +20,7 @@ We currently support forwarding logs to the following providers:
 * [Sumo Logic](/log-forwarding/sumo-logic)
 * [Splunk](/log-forwarding/splunk)
 
-If you rely on a provider other than Sumo Logic or Splunk, we want to hear from you! Please reach out to your Customer Success Manager (CSM) or [our support team](/guides/support/contact-support/) to voice your requirements.
+If you rely on a provider other than Sumo Logic or Splunk, we want to hear from you! Please reach out to your Customer Success Manager (CSM) or [our support team](#support) to voice your requirements.
 
 ### Benefits
 Integrating your Pantheon logs with your existing analysis tools allows your team to achieve a variety of critical goals:
