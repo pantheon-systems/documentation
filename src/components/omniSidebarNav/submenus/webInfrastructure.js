@@ -33,6 +33,11 @@ const webInfrastructure = () => {
         ]),
 
         getGuideDirectory('guides/logs-pantheon', 'Environment Log files'),
+        simpleLink('/log-forwarding', 'Log Forwarding', [
+          simpleLink('/log-forwarding', 'Overview'),
+          simpleLink('/log-forwarding/sumo-logic', 'Sumo Logic'),
+          simpleLink('/log-forwarding/splunk', 'Splunk'),
+        ]),
         // @todo, should this page be an article?
         simpleLink('/multizone-failover', 'Multizone Failover'),
 
