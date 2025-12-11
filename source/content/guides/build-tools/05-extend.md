@@ -24,10 +24,10 @@ This section will be performed from the command line, to prepare your local syst
 
   ![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 
-2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
+2. Open a terminal application and clone the GitHub repository (replace `<github_url>`):
 
     ```bash
-    git clone <github-url>
+    git clone <github_url>
     ```
 
 3. Navigate to the repository's root (replace `pantheon-d8-composer-project`):

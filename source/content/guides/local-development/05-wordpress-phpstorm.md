@@ -88,11 +88,11 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 
 1. **Type:** `SFTP`
 
-1. **SFTP Host:** `appserver.dev.<Site UUID>.drush.in`
+1. **SFTP Host:** `appserver.dev.<Site_UUID>.drush.in`
 
 1. **Port:** `2222`
 
-1. **User name:** `dev.<Site UUID>`
+1. **User name:** `dev.<Site_UUID>`
 
 1. **Auth Type:** Select **Password** and specify password, or key pair and select your private SSH key.
 

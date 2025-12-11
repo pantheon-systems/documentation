@@ -13,7 +13,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
-reviewed: "2024-10-15"
+reviewed: "2025-12-10"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.
@@ -154,7 +154,7 @@ Your repository should contain a `composer.json` file that declares a package na
 
    ```bash{promptUser: user
    git add composer.json composer.lock
-   git commit -m "Adding private package <your-package>"
+   git commit -m "Adding private package <your_package>"
    git push
    ```
 
@@ -185,7 +185,7 @@ Your repository should contain a `composer.json` file that declares a package na
 
    ```bash{promptUser: user
    git add composer.json composer.lock
-   git commit -m "Adding private package <your-package>"
+   git commit -m "Adding private package <your_package>"
    git push
    ```
 
@@ -222,7 +222,7 @@ Your repository should contain a `composer.json` file that declares a package na
 
    ```bash{promptUser: user
    git add auth.json composer.json composer.lock
-   git commit -m "Adding private package <your-package>"
+   git commit -m "Adding private package <your_package>"
    git push
    ```
 

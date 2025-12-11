@@ -16,6 +16,6 @@ Complete the steps in this section to copy exported configuration settings from 
 
   ```bash{promptUser: user}
   mkdir config
-  cp -R ../FORMER-PLATFORM/<config folder location> config/
+  cp -R ../FORMER-PLATFORM/<config_folder_location> config/
   git commit -m "Add site configuration."
   ```

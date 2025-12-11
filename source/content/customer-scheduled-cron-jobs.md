@@ -11,7 +11,7 @@ product: [terminus]
 integration: [--]
 tags: [--]
 showtoc: true
-reviewed: 2023-06-21
+reviewed: 2025-12-10
 ---
 
 <!-- Note to authors: this is early access content. When the feature goes to general access, this content should likely be added to the Terminus guide - or at least, the terminus commands should be, and an entry to the plugins page. 
@@ -49,7 +49,7 @@ For more information about installing Terminus Plugins, see [Install Plugins](/t
 The plugin uses the following syntax:
 
 ```bash
-terminus scheduledjobs:<command>:<subcommand> <site>.<env> "<job name>" "<cron command>" "<cron schedule>"
+terminus scheduledjobs:<command>:<subcommand> <site>.<env> "<job_name>" "<cron_command>" "<cron_schedule>"
 ```
 
 Where:
@@ -58,13 +58,13 @@ Where:
 
 - `<site>.<env>`: the site name or UUID.  Use `terminus site:list` to retrieve a list of site names and UUIDs.
 
-- `<job name>`: a brief description of the job.
+- `<job_name>`: a brief description of the job.
 
-- `<cron command>`: the cron command you are scheduling. The following commands cannot be used:
+- `<cron_command>`: the cron command you are scheduling. The following commands cannot be used:
   - Outbound email via `sendmail` or `localhost` SMTP is not permitted. Email can still be sent via integrations with third party email providers either via their SMTP servers or API integrations.
   - New Relic
 
-- `<cron schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
+- `<cron_schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
 
 ### Jobs "Budget"
 
@@ -78,19 +78,19 @@ Timeouts are dynamic and dependent on the remaining budget plus the 15 minute gr
 
 ## Commands
 
-These commands may require the following variables, indicated by `<variable name>`. 
+These commands may require the following variables, indicated by `<variable_name>`. 
 
 - `<site>.<env>`: the site name or UUID.  Use `terminus site:list` to retrieve a list of site names and UUIDs.
 
-- `<job name>`: a brief description of the job.
+- `<job_name>`: a brief description of the job.
 
-- `<cron command>`: the cron command you are scheduling. The following commands cannot be used:
+- `<cron_command>`: the cron command you are scheduling. The following commands cannot be used:
 
-- `<cron schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
+- `<cron_schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
 
-- `<job ID>`: The unique ID of the job, which you can find using the [`jobs:list`](/customer-scheduled-cron-jobs#list) command.
+- `<job_ID>`: The unique ID of the job, which you can find using the [`jobs:list`](/customer-scheduled-cron-jobs#list) command.
 
-- `<schedule ID>`: the unique ID of the schedule, which you can find using the [`schedule:list`](/customer-scheduled-cron-jobs#schedulelist) command.
+- `<schedule_ID>`: the unique ID of the schedule, which you can find using the [`schedule:list`](/customer-scheduled-cron-jobs#schedulelist) command.
 
 ### budget:info
 
@@ -130,7 +130,7 @@ terminus scheduledjobs:job:list <site>.<env>
 View logs associated with a job ID.
 
 ```bash
-terminus scheduledjobs:job:logs <site>.<env> <job ID>
+terminus scheduledjobs:job:logs <site>.<env> <job_ID>
 ```
 
 ### schedule:create
@@ -138,7 +138,7 @@ terminus scheduledjobs:job:logs <site>.<env> <job ID>
 Creates a new scheduled job.
 
 ```bash
-terminus scheduledjobs:schedule:create <site>.<env> "<job name>" "<cron command>" "<cron schedule>"
+terminus scheduledjobs:schedule:create <site>.<env> "<job_name>" "<cron_command>" "<cron_schedule>"
 ```
 
 ### schedule:delete
@@ -146,7 +146,7 @@ terminus scheduledjobs:schedule:create <site>.<env> "<job name>" "<cron command>
 Delete an existing schedule. 
 
 ```bash
-terminus scheduledjobs:schedule:delete <site>.<env> <schedule ID>
+terminus scheduledjobs:schedule:delete <site>.<env> <schedule_ID>
 ```
 
 ### schedule:list
@@ -168,7 +168,7 @@ terminus scheduledjobs:schedule:list <site>.<env>
 Pause a schedule. 
 
 ```bash
-terminus scheduledjobs:schedule:pause <site>.<env> <schedule ID>
+terminus scheduledjobs:schedule:pause <site>.<env> <schedule_ID>
 ```
 
 ### schedule:resume
@@ -176,5 +176,5 @@ terminus scheduledjobs:schedule:pause <site>.<env> <schedule ID>
 Resume a paused schedule. 
 
 ```bash
-terminus scheduledjobs:schedule:resume <site>.<env> <schedule ID>
+terminus scheduledjobs:schedule:resume <site>.<env> <schedule_ID>
 ```

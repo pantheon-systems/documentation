@@ -12,7 +12,7 @@ integration: []
 tags: [collaborate, continuous-integration, git, iterate]
 showtoc: true
 permalink: docs/guides/local-development/jenkins
-reviewed: "2022-12-13"
+reviewed: "2025-12-10"
 ---
 
 This section provides information on how to configure your Jenkins server to test and deploy code changes to Pantheon automatically.
@@ -79,26 +79,26 @@ Be sure that you have:
 
 1. Open your local terminal and use Composer to make a new local project based on the example, which contains Drupal, Behat, and other configuration settings:
 
-  <Alert title="Note" type="info">
+    <Alert title="Note" type="info">
 
-  In this example, the project is called `my-site`. Set a local environment variable to this value. Adjust this and other variables to match your site settings.
+    In this example, the project is called `my-site`. Set a local environment variable to this value. Adjust this and other variables to match your site settings.
 
-  </Alert>
+    </Alert>
 
-  ```bash{promptUser: user}
-  SITE="my-site"
-  composer create-project pantheon-systems/example-drops-8-composer $SITE
-  cd $SITE
-  composer prepare-for-pantheon
-  ```
+    ```bash{promptUser: user}
+    SITE="my-site"
+    composer create-project pantheon-systems/example-drops-8-composer $SITE
+    cd $SITE
+    composer prepare-for-pantheon
+    ```
 
 1. Initialize a local Git repository within your project:
 
-  ```bash{promptUser: user}
-  git init
-  git add -A .
-  git commit -m "Initial commit."
-  ```
+    ```bash{promptUser: user}
+    git init
+    git add -A .
+    git commit -m "Initial commit."
+    ```
 
 ### Create and Configure a GitHub Repository
 
@@ -121,32 +121,32 @@ You must create a site on Pantheon for this part of the process. The example in 
 
 1. Use Terminus to create a site on Pantheon:
 
-  ```bash{promptUser: user}
-  terminus site:create $SITE "My Site" "Drupal (Latest Version)" --org="My Team"
-  terminus connection:set $SITE.dev git
-  ```
+    ```bash{promptUser: user}
+    terminus site:create $SITE "My Site" "Drupal (Latest Version)" --org="My Team"
+    terminus connection:set $SITE.dev git
+    ```
 
 1. Add the Pantheon remote repository address and push the code to it:
 
-  ```bash{promptUser: user}
-  PANTHEON_REPO=$(terminus connection:info $SITE.dev --field=git_url)
-  git remote add pantheon $PANTHEON_REPO
-  git push --force pantheon master
-  ```
+    ```bash{promptUser: user}
+    PANTHEON_REPO=$(terminus connection:info $SITE.dev --field=git_url)
+    git remote add pantheon $PANTHEON_REPO
+    git push --force pantheon master
+    ```
 
 1. Complete the Drupal site configuration on Pantheon, replacing the values for `--site-mail`, `--account-mail`, and `--account-name`:
 
-  ```bash{promptUser: user}
-  terminus build:env:install --site-mail="your email" --site-name="My Drupal Site" --account-mail="<your email>" --account-name="admin" $SITE.dev
-  ```
+    ```bash{promptUser: user}
+    terminus build:env:install --site-mail="your email" --site-name="My Drupal Site" --account-mail="<your_email>" --account-name="admin" $SITE.dev
+    ```
 
 1. Verify the site is installed and working:
 
-  ```bash{promptUser: user}
-  terminus env:view $SITE.dev
-  ```
+    ```bash{promptUser: user}
+    terminus env:view $SITE.dev
+    ```
 
-Now the master branch of GitHub, your local, and Pantheon are in sync.
+    Now the master branch of GitHub, your local, and Pantheon are in sync.
 
 ## Configure Jenkins
 
@@ -246,46 +246,46 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks exec
 
 1. Add Jenkins logs into Pantheon:
 
-  ```bash
-  #!/bin/bash
-  echo "Logging into Terminus"
-  terminus auth:login --machine-token=${TERMINUS_TOKEN}
-  ```
+    ```bash
+    #!/bin/bash
+    echo "Logging into Terminus"
+    terminus auth:login --machine-token=${TERMINUS_TOKEN}
+    ```
 
 1. Verify the Dev environment is awake and in Git mode.
 
-  ```bash
-  echo "Waking Dev environment."
-  terminus env:wake -n ${SITE_ID}.dev
-  ```
+    ```bash
+    echo "Waking Dev environment."
+    terminus env:wake -n ${SITE_ID}.dev
+    ```
 
 1. Verify that the Dev environment is in Git mode:
 
-  ```bash
-  echo "Setting site to git mode."
-  terminus connection:set ${SITE_ID}.dev git
-  ```
+    ```bash
+    echo "Setting site to git mode."
+    terminus connection:set ${SITE_ID}.dev git
+    ```
 
 1. Set Jenkins to create a Multidev and push the new code to this environment:
 
-  ```bash
-  echo "Creating multidev"
-  cd ${WORKSPACE}
-  terminus build:env:create ${SITE_ID}.dev ci-${BUILD_ID} --yes
-  ```
+    ```bash
+    echo "Creating multidev"
+    cd ${WORKSPACE}
+    terminus build:env:create ${SITE_ID}.dev ci-${BUILD_ID} --yes
+    ```
 
-  ```bash
-  echo "Run database updates and clear cache"
-  terminus drush -n ${SITE_ID}.ci-${BUILD_ID} -- updatedb -y
-  terminus drush ${SITE_ID}.ci-${BUILD_ID} cr
-  ```
+    ```bash
+    echo "Run database updates and clear cache"
+    terminus drush -n ${SITE_ID}.ci-${BUILD_ID} -- updatedb -y
+    terminus drush ${SITE_ID}.ci-${BUILD_ID} cr
+    ```
 
 1. Test that the suite included with the example runs:
 
-  ```bash
-  echo "Running behat"
-  TERMINUS_ENV=ci-$BUILD_ID TERMINUS_SITE=$SITE_ID $WORKSPACE/tests/scripts/run-behat
-  ```
+    ```bash
+    echo "Running behat"
+    TERMINUS_ENV=ci-$BUILD_ID TERMINUS_SITE=$SITE_ID $WORKSPACE/tests/scripts/run-behat
+    ```
 
 1. Add one **Conditional step (single)** build task to merge the code from the Pantheon Multidev to the pantheon/master, i.e. your Dev site on Pantheon. This will only happen when changing the master branch.
 

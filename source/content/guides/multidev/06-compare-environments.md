@@ -45,7 +45,7 @@ The Multidev Environments page provides a list of all existing environments for 
 1. Run the following command: 
 
     ```bash
-    git show-branch <multidev-name> origin/master
+    git show-branch <multidev_name> origin/master
     ```
 
 The [`show-branch`](https://git-scm.com/docs/git-show-branch) output is formatted into two columns and color coded to illustrate which commits exist on the Multidev branch as compared to which exist on the master (Dev) branch.

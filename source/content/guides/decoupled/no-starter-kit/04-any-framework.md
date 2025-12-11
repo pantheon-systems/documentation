@@ -81,7 +81,7 @@ You can create a Front-End Site using plain HTML, CSS, JS with some manual confi
 1. Open your terminal and use the `cd` command to change into the directory:
 
     ```bash{promptUser: user}
-    cd <your-site-directory>
+    cd <your_site_directory>
     ```
 
 1. Create a `package.json` file if the directory does not have one.

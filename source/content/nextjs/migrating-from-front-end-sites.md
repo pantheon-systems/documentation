@@ -1,7 +1,7 @@
 ---
 title: How to migrate from Front-End Sites
 description: Move your existing Next.js site from Pantheon's Front-End Sites to updated Next.js infrastructure.
-reviewed: "2025-11-17"
+reviewed: "2025-12-10"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -73,7 +73,7 @@ For each variable set in your Front-End Sites environment variables field, set a
 
 
 ```bash{promptUser: user}
-terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
+terminus secret:site:set <site_name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
 ```
 
 [See here for more information on using Secrets Manager to set environment variables for Next.js sites](/nextjs/environment-variables).

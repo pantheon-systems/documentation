@@ -90,10 +90,10 @@ We use the filesystem private path in this section because we don't want to trac
 
   Otherwise, continue to the next step.
 
-1. Use Terminus to store the Automation User's API key in the private `secrets.json` file (replace `<API key>`):
+1. Use Terminus to store the Automation User's API key in the private `secrets.json` file (replace `<API_key>`):
 
    ```bash{promptUser: user}
-   terminus secrets:set $SITE.dev trello_key '<API key>'
+   terminus secrets:set $SITE.dev trello_key '<API_key>'
    ```
 
 1. Use Terminus to store the Automation User's token in the private `secrets.json` file (replace `<Token>`):

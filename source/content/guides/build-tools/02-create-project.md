@@ -6,7 +6,7 @@ tags: [composer, terminus, webops, workflow, D8, D9, wordpress]
 type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
-reviewed: "2024-10-15"
+reviewed: "2025-12-10"
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
@@ -313,7 +313,7 @@ BuildToolsCommand.php line 166:
 To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus and try the build command again:
 
 ```bash{promptUser: user}
-terminus auth:login --machine-token=<machine-token>
+terminus auth:login --machine-token=<machine_token>
 ```
 
 ### Additional Support

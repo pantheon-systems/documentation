@@ -602,9 +602,10 @@ Use relative paths when linking to other pages of the docs site.
 ## Icons
 
 [List of available icons](https://live-pds-toolkit-react.appa.pantheon.site/?path=/docs/components-icon--docs)
-<Accordion title="Legacy icons" id="legacy-icons">
-These additional icons will be deprecated but are currently available to represent icons in the site dashboard.
 
+<Accordion title="Legacy icons" id="legacy-icons">
+
+These additional icons will be deprecated but are currently available to represent icons in the site dashboard.
 - <Icon icon="charts" /> <code>charts</code>
 - <Icon icon="cleaning" /> <code>cleaning</code>
 - <Icon icon="cloud-upload" /> <code>cloud-upload</code>
@@ -914,13 +915,13 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 |                 | error        | **✓**       |              |  **✓**                 |
 +-----------------+--------------+-------------+--------------+------------------------+
 |                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
+|                 +--------------+-------------+--------------+------------------------+
 | Test            | warning      |             | **✓**        |                        |
 |                 +--------------+-------------+--------------+------------------------+
 |                 | error        | **✓**       |              |  **✓**                 |
 +-----------------+--------------+-------------+--------------+------------------------+
 |                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
+|                 +--------------+-------------+--------------+------------------------+
 | Live            | warning      |             | **✓**        |                        |
 |                 +--------------+-------------+--------------+------------------------+
 |                 | error        |             |              |  **✓**                 |

@@ -92,7 +92,7 @@ By default, Subdomain Multisites do not run any Search and Replace. Enabling Sea
     # facilitate search-replace of a WordPress Multisite (WPMS) across pantheon
     # environments. Each key of "domain_maps" must be a valid environment name.
     domain_maps:
-      # environment: <collection of domains to be used on this environment>
+      # environment: <collection_of_domains_to_be_used_on_this_environment>
       # i.e. dev, test, live, feat-branch, &c.
       dev:
         # each environment collection maps the blog ID to its URL. A url must be

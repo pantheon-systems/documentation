@@ -1,7 +1,7 @@
 ---
 title: How to set environment variables for Next.js
 description: Use Pantheon's Secrets Manager to set environment variables for all environments or specific environments of a Next.js site.
-reviewed: "2025-10-31"
+reviewed: "2025-12-10"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -35,7 +35,7 @@ terminus self:plugin:install terminus-secrets-manager-plugin
 ```
 
 ```bash{promptUser: user}
-terminus secret:site:set <site-name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
+terminus secret:site:set <site_name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
 ```
 
 For somes variables for some sites, you may need a different value for the Live environment than for all other environments.
@@ -45,7 +45,7 @@ For somes variables for some sites, you may need a different value for the Live 
 To set a different value for a given environment, specify the environment after the site name.
 
 ```bash{promptUser: user}
-terminus secret:site:set <site-name>.live  MY_VARIABLE my-variable-value-for-live-environment --type=env --scope=web
+terminus secret:site:set <site_name>.live  MY_VARIABLE my-variable-value-for-live-environment --type=env --scope=web
 ```
 
 ## Reading environment variables in Next.js

@@ -116,7 +116,7 @@ A delete/modify conflict occurs when one commit deletes a file and another modif
 1. Navigate to your local repository > run the following Git command to get a copy of the file in conflict:
 
     ```bash{promptUser: user}
-    git checkout <commit ID> -- <file>
+    git checkout <commit_ID> -- <file>
     ```
 
     <Alert title="Note" type="info">
@@ -160,7 +160,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Follow the steps below to resolve this scenario.
 
-1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
+1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit_id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
 
   ![An example of Visual Studio Code highlighting a merge conflict](../../../images/vscode-merge-conflict.png)
 
@@ -180,7 +180,7 @@ Follow the steps below to resolve this scenario.
 
 A content conflict shows in the content-hash section of your `composer.lock` file. This type of merge conflict happens when two developers install or remove the package(s) in different branches. The branches cannot be merged because the `composer.lock` file has two different content-hash values.
 
-1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit-id>` at the bottom, with `=======` delineating the two versions.
+1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit_id>` at the bottom, with `=======` delineating the two versions.
 
 1. Edit the conflict by choosing one of the two content-hash values, or by editing a version containing both updates.
 

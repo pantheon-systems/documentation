@@ -13,7 +13,7 @@ tags: [database, local, ssh, redis, webops]
 contributors: [bwood]
 showtoc: true
 permalink: docs/guides/secure-development/ssh-tunnels
-reviewed: "2022-07-21"
+reviewed: "2025-12-10"
 ---
 
 This section provides information on how to use SSH tunnels to keep your sites secure.
@@ -186,7 +186,7 @@ To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/
 If port 2222 is blocked on your network you will see an error similar to the following:
 
 ```none
-SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
+SSH: connect to host codeserver.dev.<site_UUID>.drush.in port 2222: No route to host
 Fatal: Could not read from remote repository.
 ```
 

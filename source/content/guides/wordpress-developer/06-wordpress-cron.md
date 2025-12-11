@@ -11,7 +11,7 @@ product: [--]
 integration: [cron]
 tags: [cron]
 contributors: [greg-1-anderson, CdrMarks, whitneymeredith, jspellman814, jazzsequence]
-reviewed: "2025-07-21"
+reviewed: "2025-12-10"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-cron
 ---
@@ -93,7 +93,7 @@ You can also use Terminus and WP-CLI to:
 Use the command below to test WP-Cron and ensure everything is working correctly. Replace `<SITE_NAME>` with your site's name and replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name.
 
 ```bash{promptUser: user}
-terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
+terminus wp <SITE_NAME>.<ENV_NAME> -- cron test
 ```
 
 You will receive the status of WP-Cron's functionality. You will receive a response similar to the one below if this is a WordPress site on the Pantheon upstream now running on Pantheon Cron:
@@ -113,7 +113,7 @@ Success: WP-Cron spawning is working as expected.
 You can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is:
 
 ```bash{promptUser: user}
-terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your wp-cron command and switches here>
+terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your_wp_cron command_and_switches_here>
 ```
 
 All `terminus wp` commands require a site name and environment to operate. WordPress Multisites require an additional `--url=<url>` parameter to specify which subsite to run the command on.

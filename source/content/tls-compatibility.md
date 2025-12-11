@@ -13,7 +13,7 @@ tags: [cms, security]
 contributors: [jazzsequence]
 showtoc: true
 permalink: docs/tls-compatibility
-reviewed: "2025-03-07"
+reviewed: "2025-12-10"
 ---
 
 This document describes TLS encryption, when it's used, and how to test TLS compatibility.
@@ -67,7 +67,7 @@ View the project [README](https://github.com/pantheon-systems/drupal_tls_checker
 Individual URLs can be checked for TLS 1.2/1.3 compatibility with the `curl` command.
 
 ```bash{promptUser: user}
-curl --tlsv1.2 --head --connect-timeout 10 "<your url to check>"
+curl --tlsv1.2 --head --connect-timeout 10 "<your_url_to_check>"
 ```
 
 If you receive a 200 status code in the response (e.g. `HTTP/2 200`) along with header information, the check succeeded. If you receive an error (e.g. `TLS connect error`), it means the server you are attempting to make a connection to does not support that version of TLS.

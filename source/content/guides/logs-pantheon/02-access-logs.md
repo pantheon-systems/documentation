@@ -18,14 +18,14 @@ This section provides information on how to use SFTP to access your logs on Pant
 
 Logs are stored within [application containers](/application-containers) and database containers. Application containers house your site's codebase and files.
 
-Click **Connection Info** in the Site Dashboard of the desired environment to get your SFTP connection information. You can review the connection information to gain an understanding of the pattern used for the hostnames: `<env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in`
+Click **Connection Info** in the Site Dashboard of the desired environment to get your SFTP connection information. You can review the connection information to gain an understanding of the pattern used for the hostnames: `<env>.<site_uuid>@<type>.<env>.<site_uuid>.drush.in`
 
-    | Type         | Env                                     | Site UUID                                                                                                 |
-    |:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
-    | `appserver`  | `dev`, `test`, `live`, `<multidev-env>` | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site-uuid>` |
-    | `dbserver`   |                                         |                                                                                                           |
+| Type         | Env                                     | Site UUID                                                                                                 |
+|:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
+| `appserver`  | `dev`, `test`, `live`, `<multidev_env>` | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site_uuid>` |
+| `dbserver`   |                                         |                                                                                                           |
 
-    - You must [add an SSH key](/ssh-keys) in your Personal Settings if you want to enable password-less access and avoid authentication prompts.
+- You must [add an SSH key](/ssh-keys) in your Personal Settings if you want to enable password-less access and avoid authentication prompts.
 
 
 ### Application Log Files
@@ -73,23 +73,23 @@ Follow the steps below to download your database log files.
 
 1. Edit and execute the command by replacing `appserver` with `dbserver`:
 
- From:
+    From:
 
- ```bash{promptUser: user}
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
- ```
+    ```bash{promptUser: user}
+    sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
+    ```
 
- To:
+    To:
 
- ```bash{promptUser: user}
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
- ```
+    ```bash{promptUser: user}
+    sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
+    ```
 
 1. Run the following SFTP command:
 
- ```none
- get -r logs
- ```
+    ```none
+    get -r logs
+    ```
 
     You now have a local copy of the logs directory, which contains the following:
 

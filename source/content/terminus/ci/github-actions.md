@@ -15,7 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2023-06-08"
+reviewed: "2025-12-10"
 ---
 
 This section provides information on how to to authenticate Terminus in a GitHub Actions CI pipeline without receiving errors and avoiding authentication rate limits.
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     # Uncomment this line if your TERMINUS_TOKEN secret belongs to a GitHub
     # Environment (preferred for security, see note above).
-    # environment: <environment-name>
+    # environment: <environment_name>
     steps:
       - uses: actions/checkout@v3
       - name: Setup PHP
@@ -99,7 +99,7 @@ jobs:
     runs-on: ubuntu-latest
     # Uncomment this line if your TERMINUS_TOKEN secret belongs to a GitHub
     # Environment (preferred for security, see note above).
-    # environment: <environment-name>
+    # environment: <environment_name>
     steps:
       - uses: actions/checkout@v3
       - name: Setup PHP
