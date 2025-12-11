@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Project Card
-        uses: peter-evans/create-or-update-project-card@v2
+        uses: peter-evans/create-or-update-project-card@5eacbbd224b7814354861b555cc18a8359e2cebe # v2.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           project-location: pantheon-systems/documentation
