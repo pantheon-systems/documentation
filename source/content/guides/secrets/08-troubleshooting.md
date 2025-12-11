@@ -29,20 +29,23 @@ terminus secret:site:set site.dev mysecretnonexist foobar
 
 1. First, determine what [owning entity](/guides/secrets/overview#owning-entity) is appropriate for the given secret (site vs org).
 1. Next, set EITHER a site-wide secret (replace `<site>` `<secret-name>` and `<secret-value>`):
+    
+   ```bash{promptUser: user}
+   terminus secret:site:set <site> <secret-name> <secret-value>
+   ```
+   
+     * OR set an organization-wide secret (replace `<org>` `<secret-name>` and `<secret-value>`):  
 
-  ```bash{promptUser: user}
-  terminus secret:site:set <site> <secret-name> <secret-value>
-  ```
-    * OR set an organization-wide secret (replace `<org>` `<secret-name>` and `<secret-value>`):
-  
-    ```bash{promptUser: user}
-    terminus secret:org:set <org> <secret-name> <secret-value>
-    ```
+      
+       ```bash{promptUser: user}
+       terminus secret:org:set <org> <secret-name> <secret-value>
+       ```
+
 1. Finally, set an environment override (replace `<site>` `<env>` `<secret-name>` and `<secret-value>`):
-
-  ```bash{promptUser: user}
-  terminus secret:site:set <site>.<env> <secret-name> <secret-value>
-  ```
+  
+   ```bash{promptUser: user}
+   terminus secret:site:set <site>.<env> <secret-name> <secret-value>
+   ```
 
 ## Invalid key name
 There are some validations in place for the key name based on the key type. As an example, a secret name of type env must match the following regex: `^[a-zA-Z_][a-zA-Z0-9_]*$`. Failure to comply with those validations results in errors like this:

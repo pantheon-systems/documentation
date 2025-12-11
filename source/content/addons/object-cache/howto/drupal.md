@@ -42,8 +42,8 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 
    if (defined(
     'PANTHEON_ENVIRONMENT'
-  ) && !\Drupal\Core\Installer\InstallerKernel::installationAttempted(
-  ) && extension_loaded('redis')) {
+   ) && !\Drupal\Core\Installer\InstallerKernel::installationAttempted(
+   ) && extension_loaded('redis')) {
     // Set Redis as the default backend for any cache bin not otherwise specified.
     $settings['cache']['default'] = 'cache.backend.redis';
 
@@ -124,7 +124,7 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
         ],
       ],
     ];
-}
+   }
 
    ```
 
