@@ -35,7 +35,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 1. Navigate to the WordPress Admin dashboard, select **Tools**, and then select **Network Setup**.
 
-  ![Network setup step 1](../../../images/wp-network-config.png)
+    ![Network setup step 1](../../../images/wp-network-config.png)
 
 1. Select either the **Sub-domains** or **Sub-directories** option.
 
@@ -43,7 +43,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 1. Finalize the installation by following steps provided from the GUI or by following the next steps.
 
-  ![Network setup last step](../../../images/wp-network-config-last.png)
+    ![Network setup last step](../../../images/wp-network-config-last.png)
 
 1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
@@ -51,24 +51,24 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 1. Click **Open SFTP client**.
 
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
+    If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
 1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
-  ```php:title=wp-config.php
-  define( 'WP_ALLOW_MULTISITE', true );
-  define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
-  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
-  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
-  define( 'PATH_CURRENT_SITE', '/' );
-  define( 'SITE_ID_CURRENT_SITE', 1 );
-  define( 'BLOG_ID_CURRENT_SITE', 1 );
+    ```php:title=wp-config.php
+    define( 'WP_ALLOW_MULTISITE', true );
+    define( 'MULTISITE', true );
+    define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
+    // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+    define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
+    define( 'PATH_CURRENT_SITE', '/' );
+    define( 'SITE_ID_CURRENT_SITE', 1 );
+    define( 'BLOG_ID_CURRENT_SITE', 1 );
 
-  /* That's all, stop editing! Happy Pressing. */
-  ```
+    /* That's all, stop editing! Happy Pressing. */
+    ```
 
 </Tab>
 
@@ -91,7 +91,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
       </Alert>
 
       ```bash{promptUser: user}
-      terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_email=<email>
+      terminus wp <site>.<env> -- core multisite-install --title=<site_title> --admin_user=<username> --admin_email=<email>
       ```
 
       After you successfully install a new WordPress Multisite, a message displays that is similar to the following:
@@ -113,32 +113,32 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
 1. Click **Open SFTP client**.
 
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
+    If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
 1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. We have provided a constant in `wp-config-pantheon.php`, `PANTHEON_HOSTNAME` that defaults to a dynamic URL for web requests (`$_SERVER['HTTP_HOST']`, when available), while providing a fallback for non-web requests (notably workflows like search and replace) that do not have a `$_SERVER['HTTP_HOST']` value.
   
-  ```php:title=wp-config.php
-  define( 'WP_ALLOW_MULTISITE', true );
-  define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomain installs.
-  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
-  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
-  define( 'PATH_CURRENT_SITE', '/' );
-  define( 'SITE_ID_CURRENT_SITE', 1 );
-  define( 'BLOG_ID_CURRENT_SITE', 1 );
-  ```
+    ```php:title=wp-config.php
+    define( 'WP_ALLOW_MULTISITE', true );
+    define( 'MULTISITE', true );
+    define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomain installs.
+    // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+    define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
+    define( 'PATH_CURRENT_SITE', '/' );
+    define( 'SITE_ID_CURRENT_SITE', 1 );
+    define( 'BLOG_ID_CURRENT_SITE', 1 );
+    ```
 
-  Refer to the [`wp-config.php` documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
+    Refer to the [`wp-config.php` documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's **Dev** environment.
 
-<Alert title="Note" type="info">
+    <Alert title="Note" type="info">
 
-A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for Multisite use by your Account Manager, you can ignore this warning.
+    A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for Multisite use by your Account Manager, you can ignore this warning.
 
-</Alert>
+    </Alert>
 
 </Tab>
 
@@ -195,7 +195,7 @@ You will have one site and you can create another if needed. If you chose to use
 
 ### Map Custom Hostnames (subdomain configurations only)
 
-Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new-sub-site>.dev-<example>.pantheonsite.io`). WordPress Multisites using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
+Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new_sub_site>.dev-<example>.pantheonsite.io`). WordPress Multisites using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
 
 1. Access the domain's DNS settings wherever they are managed.
 1. Create a wildcard CNAME `*.dev.example.com` that maps to the Dev environment's platform domain, `dev-<example>.pantheonsite.io`. Doing so ensures all hostnames mapped to the environment will load without additional DNS records.

@@ -3,7 +3,7 @@ title: Use the Redis CLI
 description: How to use the Redis Command Line to manage Object Cache.
 permalink: docs/object-cache/cli
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2025-12-10"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -130,10 +130,10 @@ Run the following code to access your Hit/Miss ratio:
 
 Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients.
 
-Run the command below in your local terminal to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
+Run the command below in your local terminal to access stat mode. Substitute `<redis_cli_connection_info>` with your Redis connection string.
 
 ```bash {outputLines: 2-11}
-<redis-cli connection info> --stat
+<redis_cli_connection_info> --stat
 ------- data ------ --------------------- load -------------------- - child -
 keys       mem      clients blocked requests            connections
 506        1015.00K 1       0       24 (+0)             7
@@ -152,10 +152,10 @@ You can also use the `i` (interval) option in this mode to change the frequency 
 
 Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset.
 
-Run the command below in your local terminal to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
+Run the command below in your local terminal to access stat mode. Substitute `<redis_cli_connection_info>` with your Redis connection string.
 
 ```bash {outputLines: 2-25}
-<redis-cli connection info> --bigkeys
+<redis_cli_connection_info> --bigkeys
 
 # Scanning the entire keyspace to find biggest keys as well as
 # average sizes per key type.  You can use -i 0.01 to sleep 0.01 sec

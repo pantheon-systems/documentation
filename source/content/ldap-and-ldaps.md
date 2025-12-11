@@ -214,8 +214,8 @@ $settings = array(
   'NAME' => array(
     'host' => 'ldaps://127.0.0.1', //when using Secure Integration, this is localhost
     'port' => PANTHEON_SOIP_EXAMPLE, //when using Secure Integration, this is the PHP CONSTANT
-    'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
-    'bind_password' => '<insert-password>',
+    'bind_rdn' => '<insert_bind_dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
+    'bind_password' => '<insert_password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
     'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
     'filter' => '(objectClass=user)', //Could be an alternate objectClass or a uid

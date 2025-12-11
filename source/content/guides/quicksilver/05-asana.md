@@ -105,7 +105,7 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 1. Write the machine user's token to the private `secrets.json` file:
 
    ```bash{promptUser: user}
-   terminus secrets:set $SITE.dev asana_access_token '<API token>'
+   terminus secrets:set $SITE.dev asana_access_token '<API_token>'
    ```
 
 <Alert title="Note" type="info">

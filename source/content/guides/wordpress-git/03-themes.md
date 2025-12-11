@@ -13,7 +13,7 @@ tags: [git, sftp, themes]
 type: guide
 permalink: docs/guides/wordpress-git/themes/
 editpath: wordpress-git/03-themes.md
-reviewed: "2020-02-26"
+reviewed: "2025-12-10"
 image: git-sftp-wp-docs-guide.png
 ---
 
@@ -91,7 +91,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
   /*
   Theme Name:   Bento Child
   Description:  A Bento-based child theme for demo purposes on Pantheon.
-  Author:       <Your Name>
+  Author:       <YourName>
   Template:     bento
   Version:      1.0.0
   */

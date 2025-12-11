@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, libraries, modules, plugins]
-reviewed: "2025-08-14"
+reviewed: "2025-12-10"
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
@@ -22,7 +22,7 @@ wkhtmltopdf has been abandoned by its maintainers and no longer receives updates
 
 #### Drupal Entity Print Module
 
-dompdf is included with the [Entity Print](https://www.drupal.org/project/entity_print) module. Visit `<your-url>/admin/config/content/entityprint` to confirm you are using dompdf as the PDF engine.
+dompdf is included with the [Entity Print](https://www.drupal.org/project/entity_print) module. Visit `<your_url>/admin/config/content/entityprint` to confirm you are using dompdf as the PDF engine.
 
 #### Drupal 7 Print Module
 
@@ -36,7 +36,7 @@ For Drupal 7 websites using <a href="https://www.drupal.org/project/print">the p
 Place the dompdf folder inside the following folder:
 `/modules/print/lib/dompdf` or `/sites/all/libraries/dompdf`
 
-From `<your-url>/admin/config/user-interface/print/pdf`, choose dompdf as PDF Generation tool and save the changes.
+From `<your_url>/admin/config/user-interface/print/pdf`, choose dompdf as PDF Generation tool and save the changes.
 
 
 ## Apache Tika

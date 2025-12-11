@@ -10,8 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2025-04-15"
-
+reviewed: "2025-12-10"
 ---
 
 Pantheon's GitHub Application directly integrates a GitHub repository with a Pantheon site.
@@ -47,14 +46,14 @@ Make a local clone of the GitHub repository and make a change to the code.
 For example, you could add your favorite plugin or module.
 
 ```bash
-git clone git[@github](https://github.com/github).com:<your organization name>/<your site id>.git
+git clone git[@github](https://github.com/github).com:<your_organization_name>/<your_site_id>.git
 ```
 
 Make a new branch and then push to GitHub to open a pull request.
 
 ```bash
-git checkout -b <branch name>
-git push --set-upstream origin <branch name>
+git checkout -b <branch_name>
+git push --set-upstream origin <branch_name>
 ```
 
 Once the pull request is open, the GitHub Application will automatically create a new Multidev environment on Pantheon.

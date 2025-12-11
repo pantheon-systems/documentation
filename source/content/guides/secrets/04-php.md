@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/php
-reviewed: "2024-08-22"
+reviewed: "2025-12-10"
 showtoc: true
 ---
 
@@ -60,15 +60,15 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
     As a best practice, the non-production environments should be the default and then override that value with a [secret environment override](/guides/secrets/overview#environment-override) to change the API key for the live environment (for example, if you want to use different SendGrid accounts for live and dev environments).
 1. Add the following to `wp-config.php`, replacing placeholder values (e.g., `example@example.com` and `Example From Name`):
 
-  ```php
-  define( 'WPMS_ON', true ); // True turns on the WPMS constants for usage below, false turns it off.
-  define( 'WPMS_MAIL_FROM', 'example@example.com' );  
-  define( 'WPMS_MAIL_FROM_NAME', 'Example From Name');
-  define( 'WPMS_MAILER', 'sendgrid' );
-  if ( function_exists('pantheon_get_secret') ) {
-  	define( 'WPMS_SENDGRID_API_KEY', pantheon_get_secret( 'sendgrid_api' ) );
-  }
-  ```
+    ```php
+    define( 'WPMS_ON', true ); // True turns on the WPMS constants for usage below, false turns it off.
+    define( 'WPMS_MAIL_FROM', 'example@example.com' );  
+    define( 'WPMS_MAIL_FROM_NAME', 'Example From Name');
+    define( 'WPMS_MAILER', 'sendgrid' );
+    if ( function_exists('pantheon_get_secret') ) {
+      define( 'WPMS_SENDGRID_API_KEY', pantheon_get_secret( 'sendgrid_api' ) );
+    }
+    ```
 
 1. Go to the SendGrid email test page (`/wp-admin/admin.php?page=wp-mail-smtp-tools&tab=test`) and test your SendGrid integration by sending a test email.
 

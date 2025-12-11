@@ -4,7 +4,7 @@ description: Detailed information on how to set up and use Lockr in your WordPre
 tags: [plugins, security]
 contributors: [cteitzel]
 featuredcontributor: true
-reviewed: "2022-02-04"
+reviewed: "2025-12-10"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -45,7 +45,7 @@ Lockr provides a simple-to-use developer interface with a managed scalable cloud
 1. Run the following command:
 
    ```bash{promptUser: user}
-   terminus lockdown [<Lockr account email>] --password=[<Lockr account password>]
+   terminus lockdown [<Lockr_account_email>] --password=[<Lockr_account_password>]
    ```
 
 1. Select the site for the install. It will detect the CMS, download and install all necessary components, register the site, and patch all relevant plugins in your site.
@@ -94,7 +94,7 @@ The Lockr plugin contains a number of WP-CLI commands to quickly register a site
 This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a Custom Upstream using [Quicksilver](/guides/quicksilver).
 
 ```bash{promptUser: user}
-terminus wp <site>.<env> -- lockr register-site --email=[<Lockr email address>] --password=[<Lockr account password>]
+terminus wp <site>.<env> -- lockr register-site --email=[<Lockr_email_address>] --password=[<Lockr_account_password>]
 ```
 
 #### Use Lockr to Patch Existing Plugins
@@ -158,7 +158,7 @@ Use Drush to download and install Lockr in a few simple commands.
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- dl lockr
 terminus drush <site>.<env> -- en lockr
-terminus drush <site>.<env> -- lockr-register --email=[<Lockr account email >] --password=[<Lockr account password>]
+terminus drush <site>.<env> -- lockr-register --email=[<Lockr_account_email >] --password=[<Lockr_account_password>]
 ```
 
 This command registers the site with Lockr to the email address provided. The password is only necessary for email addresses already with a Lockr account. This is useful for automated deployment from a Custom Upstream using Quicksilver.

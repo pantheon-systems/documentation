@@ -11,7 +11,7 @@ cms: [drupal]
 audience: [development]
 product: [dashboard, terminus]
 integration: [--]
-reviewed: "2024-02-10"
+reviewed: "2025-12-10"
 ---
 
 # Drupal CMS
@@ -36,7 +36,7 @@ Drupal CMS can be installed in a fresh sandbox site on Pantheon.
 If you prefer, you can also create a new site with Drupal CMS using [Terminus](/terminus):
 
 ```bash
-terminus site:create <your-site-name> "Your Site Name" drupal-cms-composer-managed --org=<your-optional-org-id>
+terminus site:create <your_site_name> "Your Site Name" drupal-cms-composer-managed --org=<your_optional_org_id>
 ```
 
 After the site creation process provisions a database, code, and other resources, use the browser-based installer to set up your Drupal CMS site.

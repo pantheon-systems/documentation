@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [code, plugins]
-reviewed: "2024-10-16"
+reviewed: "2025-12-10"
 showtoc: true
 permalink: docs/guides/wordpress-configurations/installing-updating-from-third-party-sources
 ---
@@ -51,7 +51,7 @@ Once you've gone through the initial prompts, you will be presented with the def
 
 ### Installing a plugin or theme from a Git repository
 
-To install a plugin or a theme from a GitHub repository, click on the "Install Plugin" or "Install Theme" tab and enter the Plugin URI (in the format `<vendor>/<plugin-name>` e.g. `pantheon-systems/pantheon-hud`	), the repository branch (default is `master`) and the remote repository host (either GitHub or a zip file).
+To install a plugin or a theme from a GitHub repository, click on the "Install Plugin" or "Install Theme" tab and enter the Plugin URI (in the format `<vendor>/<plugin_name>` e.g. `pantheon-systems/pantheon-hud`	), the repository branch (default is `master`) and the remote repository host (either GitHub or a zip file).
 You can also specify a GitHub Personal Access Token for private GitHub repositories. Then click Install Plugin/Theme.
 	![Git Updater Install Plugin](../../../images/wordpress-configurations/08-git-updater-install-plugin.png)
 
@@ -61,7 +61,7 @@ Themes and Plugins use a `GitHub Plugin URI` or `GitHub Theme URI` header string
 
 It is also possible for plugins or themes to receive updates from GitHub or other sources using the Git Updater even if this header is not present by using the Additions tab.
 
-To add a plugin that gets updates from a Git repository but lacks the GitHub Plugin or Theme URI plugin header line, click on the Additions tab, enter the main plugin file name as the Repository Slug (e.g. `pantheon-hud/pantheon-hud.php`), the repository URI (in the format `<vendor>/<plugin-name>`, e.g. `pantheon-systems/pantheon-hud`), the branch (default is `master`), and whether the plugin or theme should look use a Release Asset (defaults to no release asset). Then click Save Changes.
+To add a plugin that gets updates from a Git repository but lacks the GitHub Plugin or Theme URI plugin header line, click on the Additions tab, enter the main plugin file name as the Repository Slug (e.g. `pantheon-hud/pantheon-hud.php`), the repository URI (in the format `<vendor>/<plugin_name>`, e.g. `pantheon-systems/pantheon-hud`), the branch (default is `master`), and whether the plugin or theme should look use a Release Asset (defaults to no release asset). Then click Save Changes.
 
 ![Git Updater Additions](../../../images/wordpress-configurations/08-git-updater-additions.png)
 
