@@ -1,6 +1,6 @@
 ---
 title: "New log fowarding feature enters private beta"
-published_date: "2025-12-10"
+published_date: "2025-12-11"
 categories: [new-feature, tools-apis, documentation]
 ---
 Log forwarding for Splunk and Sumo Logic is now availble via a **Private Beta** program. There is no additional cost for this feature and anyone can request an invite by [submitting this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform).
