@@ -3,7 +3,6 @@ title: "New collection settings added to the Content Publisher dashboard"
 published_date: "2025-12-12"
 categories: [content-publisher]
 ---
-## Key Changes 
 Collection metadata and publishing configurations are now managed via the [Content Dashboard](https://content.pantheon.io):
 * Go to "**Collection Settings** > **Metadata**" in the Content Dashboard to manage custom metadata fields for a given collection. 
   * Previously, this was done from the Google Docs Add-on via "**About this collection** > **Page Metadata**". 
@@ -14,7 +13,8 @@ Collection metadata and publishing configurations are now managed via the [Conte
 
 For details, see [related documentation](https://docs.content.pantheon.io/collection-settings).
 
-## Bug fixes and other minor updates
+## Additional changes 
+### Bug fixes and other minor updates
 * Starter kits and all Next.js applications have been updated priorly to mitigate CVE …..
 * The Ingest API previously only authorized Google accounts, but now accepts any authenticated user.
 * Refactored the sign-in and sign-up experience for a smoother onboarding process including email verification. Country, state and other dropdowns now support keyboard navigation.
