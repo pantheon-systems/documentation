@@ -14,8 +14,8 @@ Collection metadata and publishing configurations are now managed via the [Conte
 For details, see [related documentation](https://docs.content.pantheon.io/collection-settings).
 
 ## Additional changes 
-### Bug fixes and other minor updates
-* Starter kits and all Next.js applications have been updated priorly to mitigate CVE …..
+### Bug fixes and other recent minor updates
+* Starter kits and all Next.js applications have been updated to mitigate [CVE-2025-55182](https://www.cve.org/CVERecord?id=CVE-2025-55182) and [CVE-2025-66478](https://github.com/vercel/next.js/security/advisories/GHSA-9qr9-h5gf-34mp).
 * The Ingest API previously only authorized Google accounts, but now accepts any authenticated user.
 * Refactored the sign-in and sign-up experience for a smoother onboarding process including email verification. Country, state and other dropdowns now support keyboard navigation.
 * Helper text added to collection creation for clarity. The playground guide also got improved with simplified navigation.
