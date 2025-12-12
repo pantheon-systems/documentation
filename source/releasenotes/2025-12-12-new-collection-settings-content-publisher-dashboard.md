@@ -1,8 +1,9 @@
 ---
-title: "New collection settings added to the Content Publisher dashboard"
+title: "New collection settings and other updates for Content Publisher"
 published_date: "2025-12-12"
 categories: [content-publisher]
 ---
+## Key changes
 Collection metadata and publishing configurations are now managed via the [Content Dashboard](https://content.pantheon.io):
 * Go to "**Collection Settings** > **Metadata**" in the Content Dashboard to manage custom metadata fields for a given collection. 
   * Previously, this was done from the Google Docs Add-on via "**About this collection** > **Page Metadata**". 
