@@ -1,8 +1,9 @@
 ---
-title: PHP Redis Extension Update v6.3.0 now available
-published_date: "2025-11-21"
-categories: [infrastructure, performance, tools-apis]
+title: phpredis extension updated to version 6.3.0
+published_date: "2025-12-15"
+categories: [infrastructure, performance]
 ---
 
-The PHP Redis agent has been updated to the latest version, v6.3.0, for all eligible versions of PHP on both PHP Runtime Generation 1 and [Generation 2](https://docs.pantheon.io/php-runtime-generation-2). 
+The phpredis extension has been updated to the latest version, 6.3.0, for environments using PHP 7.4+ on [PHP Runtime Generation 2](/php-runtime-generation-2). 
 
+To view the latest improvements and fixes, [view the changelog on GitHub](https://github.com/phpredis/phpredis/releases/tag/6.3.0).
