@@ -49,7 +49,7 @@ SITEENVS="dev live"
 # Elements of backup to be downloaded.
 ELEMENTS="code files db"
 # Local backup directory (must exist, requires trailing slash)
-BACKUPDIR="<local-path-to-folder>/"
+BACKUPDIR="<local_path_to_folder>/"
 # Add a date and unique string to the filename
 BACKUPDATE=$(date +%Y%m%d%s)
 # This sets the proper file extension
@@ -130,10 +130,10 @@ wget "https://storage.googleapis.com/gcs-pantheon-backups/..."
 
 ### Terminus
 
-Note that `--element=all` is only available when creating backups and not when downloading:
+Note that `--element=all` is only available when creating backups and not when downloading. Replace `<selected_element>` with either `code`, `files,` or `db`:
 
 ```bash{promptUser: user}
-terminus backup:get $site.$env --element=<code|files|db> --to=path/to/file.tar.gz
+terminus backup:get $site.$env --element=<selected_element> --to=path/to/file.tar.gz
 ```
 
 File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`. Be sure to use the correct extension when specifying the file path for `--to`.

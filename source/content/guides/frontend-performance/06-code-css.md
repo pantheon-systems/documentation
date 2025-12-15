@@ -149,7 +149,7 @@ While you can use those core APIs directly to move load files as late as possibl
 
 For JavaScript, we suggest deferring as much as possible until after the `onload` DOM event has completed so rendering isn't blocked. Whatever script cannot be deferred should be loaded asynchronously so the page rendering continues without interruption.
 
-For more details on the `<script async>` and `<script defer>` attributes, see [this article by Daniel Imms](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
+For more details on using `async` and `defer` attributes within a `<script>` tag, see [this article by Daniel Imms](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
 
 ### Load the Critical Pieces as Early as Possible
 

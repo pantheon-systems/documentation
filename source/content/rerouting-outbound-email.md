@@ -10,7 +10,7 @@ product: [--]
 integration: [email]
 tags: [workflow, email]
 contributors: [ari]
-reviewed: "2021-09-15"
+reviewed: "2025-12-10"
 ---
 If your Drupal site sends outbound emails, you don't want to accidentally spam your users or customers from your Dev or Test environments. Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming customers during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your developer toolkit.
 
@@ -28,7 +28,7 @@ For instance, you can use [a start state](/start-state/#import-an-existing-site)
 
 ```bash{promptUser: user}
 cd sites
-git clone <pantheon git clone ssh connection string>
+git clone <pantheon_git_clone_ssh_connection_string>
 cd site-name
 mkdir sites/all/modules/contrib
 ```

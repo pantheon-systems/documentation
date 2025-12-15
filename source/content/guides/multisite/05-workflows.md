@@ -61,17 +61,17 @@ WordPress stores full URLs in the database. These URLs can be links within the p
 Terminus allows you to run WP-CLI commands yourself and, using that, you can manually run `wp search-replace`. The general pattern you'll want to follow is:
 
 ```bash
-terminus remote:wp <site>.<env> -- search-replace "<old-domain>" "<new-domain>" --network --url=<old-domain>
+terminus remote:wp <site>.<env> -- search-replace "<old_domain>" "<new_domain>" --network --url=<old_domain>
 ```
 
 **You should only need to run `wp search-replace` manually via Terminus if you are explicitly _not_ using the built-in [WordPress Multisite Search and Replace](/guides/multisite/search-replace).** Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 
 In this example:
 
-- `<old-domain>` is the domain currently stored in the database.
-- `<new-domain>` is the new domain you'd like to replace the old domain with.
+- `<old_domain>` is the domain currently stored in the database.
+- `<new_domain>` is the new domain you'd like to replace the old domain with.
 - `--network` tells WP-CLI to perform the procedure on all WordPress Multisite tables. Its default behavior is to limit search and replace to the current site.
-- `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
+- `--url=<old_domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
 
@@ -87,7 +87,7 @@ Refreshing data in Test or Dev from Live is simply a matter of using the Databas
 1. Run `wp search-replace` to update all domain configuration references:
 
     ```bash
-    terminus remote:wp <site>.<env> -- search-replace <live-domain> <dev-domain> --network --url=<live-domain>
+    terminus remote:wp <site>.<env> -- search-replace <live_domain> <dev_domain> --network --url=<live_domain>
     ```
 
 1. Flush the cache for the entire Dev environment:
@@ -114,7 +114,7 @@ In a stock WordPress install (e.g. no custom plugins), there are a few key place
 Try running `wp search-replace` against this limited subset of data:
 
 ```bash
-terminus remote:wp <site>.<env> -- search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus remote:wp <site>.<env> -- db tables "wp_*options" --network --url=<old-domain> | paste -s -d ' ' -) --url=<old-domain>
+terminus remote:wp <site>.<env> -- search-replace <old_domain> <new_domain> wp_blogs wp_site $(terminus remote:wp <site>.<env> -- db tables "wp_*options" --network --url=<old_domain> | paste -s -d ' ' -) --url=<old_domain>
 ```
 
 In this example:

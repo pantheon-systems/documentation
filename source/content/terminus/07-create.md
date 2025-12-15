@@ -83,7 +83,7 @@ You must complete the steps below if you want to share your plugin with others.
 
 <Alert title="Warning" type="info">
 
-Some of the following instructions may break your plugin temporarily. We recommend you to uninstall your plugin (`terminus self:plugin:uninstall <plugin-name>`) and then re-install it (`terminus self:plugin:install <plugin-dir>`) after executing them.
+Some of the following instructions may break your plugin temporarily. We recommend you to uninstall your plugin (`terminus self:plugin:uninstall <plugin_name>`) and then re-install it (`terminus self:plugin:install <plugin_dir>`) after executing them.
 
 </Alert>
 
@@ -143,7 +143,7 @@ You can specify this in the `compatible-version` section of your `composer.json`
 
 1. Use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md).
 
-1. Make sure that your constraint expression does not accidentally include the next major version of Terminus if you change `compatible-version`. For example, `>=3.0 <4.0.0` is fine, but `>=3.0` is not.
+1. Make sure that your constraint expression does not accidentally include the next major version of Terminus if you change `compatible-version`. For example, **&gt;=3.0 &lt;4.0.0** is fine, but **&gt;=3.0** is not.
 
 1. Add a new Git tag to the repository. This publishes the plugin as a new version in Packagist. Note that additional steps may be required depending on your plugin needs.
 

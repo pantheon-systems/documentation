@@ -135,7 +135,7 @@ You should see the following screen upon completion:
 Once you have generated your token, you can use it to authenticate with Terminus. In order to authenticate with Terminus, run the following command (using the unique machine token string you have just generated in the Pantheon Dashboard):
 
 ```bash{promptUser: user}
-terminus auth:login -machine-token=<replace your machine token here>
+terminus auth:login -machine-token=<replace_your_machine_token_here>
 ```
 
 ### Terminus Command Structure

@@ -69,9 +69,9 @@ There are many more ways to leverage content variation to identify valuable audi
 
 The cache layer stores and registers content variants utilizing the [vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary). The Vary HTTP response header describes the parts of the request message, aside from the method and URL, that influenced the content of the response it occurs in. It’s a key concept in the process of *content negotiation*. In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource (for example, a WordPress Post or Drupal node) to the same URI to help the user agent specify which representation is best suited for the user (e.g. document language, personalization blocks, content-encoding, version of the content).
 
-Example: `Vary: <header-name>, <header-name>`
+Example: `Vary: <header_name>, <header_name>`
 
-- `<header-name>` corresponds to the personalization property or condition
+- `<header_name>` corresponds to the personalization property or condition
 
 </dd>
 
