@@ -1,0 +1,10 @@
+.articleYtWrapper {
+  margin-bottom: var(--pds-spacing-4xl);
+}
+.ytWrapper {
+  padding-bottom: 56.5%;
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}

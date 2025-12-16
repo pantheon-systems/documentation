@@ -1,0 +1,56 @@
+name: on main push
+
+on:
+  push:
+    branches:
+      - multi-content-publisher-ingest-testing
+
+jobs:
+  get-changed-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required to get full history
+
+      - name: Get last successful commit SHA
+        id: last_success
+        run: |
+          last_success_sha=$(gh run list --branch=main --workflow="${{ github.workflow }}" --status=success --limit=1 --json=headSha --jq='.[0].headSha')
+          echo "Last successful SHA: $last_success_sha"
+          echo "last_success_sha=$last_success_sha" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get changed files since last successful run
+        run: |
+          mkdir -p /tmp
+          if [ -z "${{ steps.last_success.outputs.last_success_sha }}" ]; then
+            echo "No previous successful build found, listing all files"
+            git diff --name-only HEAD > /tmp/changed_files.txt
+          else
+            echo "Comparing ${{ steps.last_success.outputs.last_success_sha }}..HEAD"
+            git diff --name-only ${{ steps.last_success.outputs.last_success_sha }} HEAD > /tmp/changed_files.txt
+          fi
+          echo "Files changed:"
+          cat /tmp/changed_files.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run your Node.js script
+        run: pnpm run update
+        env:
+          PCC_SITE_ID: ${{ secrets.PCC_SITE_ID }}
+          PCC_TOKEN: ${{ secrets.PCC_TOKEN }}
+          PCC_MANAGEMENT_TOKEN: ${{ secrets.PCC_MANAGEMENT_TOKEN }}

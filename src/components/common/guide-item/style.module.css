@@ -1,0 +1,7 @@
+.guideItem {
+  text-decoration: none;
+}
+
+.guideItem:hover {
+  text-decoration: underline;
+}

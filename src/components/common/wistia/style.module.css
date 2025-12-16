@@ -1,0 +1,40 @@
+.wistiaContainer {
+  padding-block: var(--pds-spacing-m);
+}
+
+.wistiaResponsivePadding {
+  padding: 56.25% 0 20px 0;
+  position: relative;
+}
+
+.wistiaResponsiveWrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.wistiaEmbed {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.wistiaSwatch {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: opacity 200ms;
+  width: 100%;
+}
+
+.wistiaSwatch img {
+  filter: blur(5px);
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}

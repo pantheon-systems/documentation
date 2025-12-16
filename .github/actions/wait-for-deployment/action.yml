@@ -1,0 +1,51 @@
+name: Pantheon - wait for deployment
+inputs:
+  pantheon_site_machine_name:
+    description: 'The string unique across all sites on Pantheon that represents a site. This string is used in the construction of the URL to check to see if a deployment has completed.'
+    required: true
+
+  target_env:
+    description: 'The environment to which a deployment is being made. This string is used in the construction of the URL to check to see if a deployment has completed.'
+    required: true
+
+  expected_sha:
+    description: 'The string to check for at /commit-hash that will indicate that a deployment has completed.'
+    required: true
+
+runs:
+    using: 'composite'
+    steps:
+
+      - name: ⏳ Wait for Pantheon Deployment
+        id: wait_for_deployment
+        shell: bash
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          INPUT_TARGET_ENV: ${{ inputs.target_env }}
+          INPUT_PANTHEON_SITE_NAME: ${{ inputs.pantheon_site_machine_name }}
+        run: |
+          echo $EXPECTED_SHA
+          echo "Polling URL: $URL"
+          echo "Waiting for commit SHA: $EXPECTED_SHA"
+          URL="https://${INPUT_TARGET_ENV}-${INPUT_PANTHEON_SITE_NAME}.pantheonsite.io/commit-hash"
+
+          echo "checking ${URL}"
+
+          for i in {1..1000}; do
+            curl -s "$URL?ts=$(date +%s)"
+            # Use curl with -s (silent) and capture the output
+            # The shell will evaluate this to an empty string on 404s or other errors
+            DEPLOYED_SHA=$(curl -s "$URL?ts=$(date +%s)")
+
+            # Trim whitespace from the fetched SHA
+            DEPLOYED_SHA_TRIMMED=$(echo "$DEPLOYED_SHA" | xargs)
+
+            if [[ "$DEPLOYED_SHA_TRIMMED" == "$EXPECTED_SHA" ]]; then
+              echo "✅ Deployment confirmed! SHA matches."
+              exit 0
+            fi
+
+            echo "Attempt $i: Waiting for deployment... (current content: '$DEPLOYED_SHA_TRIMMED')"
+            sleep 10
+          done

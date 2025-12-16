@@ -1,0 +1,152 @@
+From 3c2ba5881f04a3e1cb4e9651b6cd677664f0f1a2 Mon Sep 17 00:00:00 2001
+From: Aniket Biprojit Chowdhury <8.aniket.chowdhury@gmail.com>
+Date: Mon, 25 Aug 2025 20:42:48 +0530
+Subject: [PATCH] fix: updated source data (#113)
+
+---
+ src/source/content/addons/object-cache/howto/drupal.md     | 6 +++---
+ src/source/content/guides/php/06-php-errors.md             | 5 +++--
+ .../guides/platform-considerations/01-introduction.md      | 2 +-
+ src/source/content/style-guide.md                          | 7 ++++---
+ 4 files changed, 11 insertions(+), 9 deletions(-)
+
+diff --git a/src/source/content/addons/object-cache/howto/drupal.md b/src/source/content/addons/object-cache/howto/drupal.md
+index d28965a..0564b86 100644
+--- a/src/source/content/addons/object-cache/howto/drupal.md
++++ b/src/source/content/addons/object-cache/howto/drupal.md
+@@ -42,8 +42,8 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
+ 
+    if (defined(
+     'PANTHEON_ENVIRONMENT'
+-  ) && !\Drupal\Core\Installer\InstallerKernel::installationAttempted(
+-  ) && extension_loaded('redis')) {
++   ) && !\Drupal\Core\Installer\InstallerKernel::installationAttempted(
++   ) && extension_loaded('redis')) {
+     // Set Redis as the default backend for any cache bin not otherwise specified.
+     $settings['cache']['default'] = 'cache.backend.redis';
+ 
+@@ -124,7 +124,7 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
+         ],
+       ],
+     ];
+-}
++   }
+ 
+    ```
+ 
+diff --git a/src/source/content/guides/php/06-php-errors.md b/src/source/content/guides/php/06-php-errors.md
+index 2bf6463..f33da8a 100644
+--- a/src/source/content/guides/php/06-php-errors.md
++++ b/src/source/content/guides/php/06-php-errors.md
+@@ -28,6 +28,7 @@ Each of the PHP errors are handled differently depending on the site environment
+ 
+ Here's a breakdown of what errors are shown and where:
+ 
++
+ +-----------------+--------------+-------------+--------------+------------------------+
+ | **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
+ +-----------------+--------------+-------------+--------------+------------------------+
+@@ -38,13 +39,13 @@ Here's a breakdown of what errors are shown and where:
+ |                 | error        | **✓**       |              |  **✓**                 |
+ +-----------------+--------------+-------------+--------------+------------------------+
+ |                 | notice       |             | **✓**        |                        |
+-+                 +--------------+-------------+--------------+------------------------+
++|                 +--------------+-------------+--------------+------------------------+
+ | Test            | warning      |             | **✓**        |                        |
+ |                 +--------------+-------------+--------------+------------------------+
+ |                 | error        | **✓**       |              |  **✓**                 |
+ +-----------------+--------------+-------------+--------------+------------------------+
+ |                 | notice       |             | **✓**        |                        |
+-+                 +--------------+-------------+--------------+------------------------+
++|                 +--------------+-------------+--------------+------------------------+
+ | Live            | warning      |             | **✓**        |                        |
+ |                 +--------------+-------------+--------------+------------------------+
+ |                 | error        |             |              |  **✓**                 |
+diff --git a/src/source/content/guides/platform-considerations/01-introduction.md b/src/source/content/guides/platform-considerations/01-introduction.md
+index d0d3eb8..df559a5 100644
+--- a/src/source/content/guides/platform-considerations/01-introduction.md
++++ b/src/source/content/guides/platform-considerations/01-introduction.md
+@@ -27,7 +27,7 @@ The Pantheon Dashboard supports the following browsers to maintain platform secu
+   - [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility)
+   - [Safari](https://developer.apple.com/documentation/safari-release-notes)
+ 
+-Visit <https://www.whatsmybrowser.org> to confirm which browser version you are using and compare your browser's version with the latest available. Panthoen recommends using 'Evergreen' browsers. These are browsers that have the ability to update themselves and do not require the user to manually download new packages.
++Visit https://www.whatsmybrowser.org to confirm which browser version you are using and compare your browser's version with the latest available. Panthoen recommends using 'Evergreen' browsers. These are browsers that have the ability to update themselves and do not require the user to manually download new packages.
+ 
+ 
+ ## More Resources
+diff --git a/src/source/content/style-guide.md b/src/source/content/style-guide.md
+index 2e90afd..226e048 100644
+--- a/src/source/content/style-guide.md
++++ b/src/source/content/style-guide.md
+@@ -602,9 +602,10 @@ Use relative paths when linking to other pages of the docs site.
+ ## Icons
+ 
+ [List of available icons](https://live-pds-toolkit-react.appa.pantheon.site/?path=/docs/components-icon--docs)
++
+ <Accordion title="Legacy icons" id="legacy-icons">
+-These additional icons will be deprecated but are currently available to represent icons in the site dashboard.
+ 
++These additional icons will be deprecated but are currently available to represent icons in the site dashboard.
+ - <Icon icon="charts" /> <code>charts</code>
+ - <Icon icon="cleaning" /> <code>cleaning</code>
+ - <Icon icon="cloud-upload" /> <code>cloud-upload</code>
+@@ -914,13 +915,13 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
+ |                 | error        | **✓**       |              |  **✓**                 |
+ +-----------------+--------------+-------------+--------------+------------------------+
+ |                 | notice       |             | **✓**        |                        |
+-+                 +--------------+-------------+--------------+------------------------+
++|                 +--------------+-------------+--------------+------------------------+
+ | Test            | warning      |             | **✓**        |                        |
+ |                 +--------------+-------------+--------------+------------------------+
+ |                 | error        | **✓**       |              |  **✓**                 |
+ +-----------------+--------------+-------------+--------------+------------------------+
+ |                 | notice       |             | **✓**        |                        |
+-+                 +--------------+-------------+--------------+------------------------+
++|                 +--------------+-------------+--------------+------------------------+
+ | Live            | warning      |             | **✓**        |                        |
+ |                 +--------------+-------------+--------------+------------------------+
+ |                 | error        |             |              |  **✓**                 |
+-- 
+2.42.0
+
+diff --git a/src/source/content/guides/secrets/08-troubleshooting.md b/src/source/content/guides/secrets/08-troubleshooting.md
+index 8c3fe17..2ccc7ef 100644
+--- a/src/source/content/guides/secrets/08-troubleshooting.md
++++ b/src/source/content/guides/secrets/08-troubleshooting.md
+@@ -29,20 +29,23 @@ terminus secret:site:set site.dev mysecretnonexist foobar
+ 
+ 1. First, determine what [owning entity](/guides/secrets/overview#owning-entity) is appropriate for the given secret (site vs org).
+ 1. Next, set EITHER a site-wide secret (replace `<site>` `<secret-name>` and `<secret-value>`):
++    
++   ```bash{promptUser: user}
++   terminus secret:site:set <site> <secret-name> <secret-value>
++   ```
++   
++     * OR set an organization-wide secret (replace `<org>` `<secret-name>` and `<secret-value>`):  
++
++      
++       ```bash{promptUser: user}
++       terminus secret:org:set <org> <secret-name> <secret-value>
++       ```
+ 
+-  ```bash{promptUser: user}
+-  terminus secret:site:set <site> <secret-name> <secret-value>
+-  ```
+-    * OR set an organization-wide secret (replace `<org>` `<secret-name>` and `<secret-value>`):
+-  
+-    ```bash{promptUser: user}
+-    terminus secret:org:set <org> <secret-name> <secret-value>
+-    ```
+ 1. Finally, set an environment override (replace `<site>` `<env>` `<secret-name>` and `<secret-value>`):
+-
+-  ```bash{promptUser: user}
+-  terminus secret:site:set <site>.<env> <secret-name> <secret-value>
+-  ```
++  
++   ```bash{promptUser: user}
++   terminus secret:site:set <site>.<env> <secret-name> <secret-value>
++   ```
+ 
+ ## Invalid key name
+ There are some validations in place for the key name based on the key type. As an example, a secret name of type env must match the following regex: `^[a-zA-Z_][a-zA-Z0-9_]*$`. Failure to comply with those validations results in errors like this:

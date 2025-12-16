@@ -1,0 +1,17 @@
+.platformIntegrationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 18rem;
+  min-height: 6rem;
+  padding: 0 1rem;
+}
+
+.platformIntegrationImage {
+  width: 100%;
+  /*  */
+}
+
+.platformIntegrationLink {
+  padding: 0;
+}
