@@ -3,7 +3,7 @@
 
 # Pantheon Documentation
 
-This repository contains the Next.js source code and the content of [Pantheon's (not yet relaunched) Documentation site](https://newdocs.pantheon.io/).
+This repository contains the Next.js source code and the content of [Pantheon's Documentation site](https://newdocs.pantheon.io/).
 
 ## Contributing documentation changes
 
