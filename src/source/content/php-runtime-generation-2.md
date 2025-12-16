@@ -97,7 +97,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **pdo_pgsql** | 13.5 | 15.14 |
 | **pdo_sqlite** | 3.26.0 | 3.40.1 |
 | **pgsql** | 13.5 | 15.14 |
-| **redis** | 5.3.7<br/>Compression types: zstd | 6.2.0<br/>Compression types: zstd, lzf, lz4 |
+| **redis** | 5.3.7<br/>Compression types: zstd | 6.3.0<br/>Compression types: zstd, lzf, lz4 |
 | **sqlite3** | 3.26.0 | 3.40.1 |
 
 ### Networking
