@@ -28,7 +28,7 @@ jobs:
         id: warm_containers
         shell: bash
         env:
-          REFERENCE_BASE_URL: "https://dev-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
+          REFERENCE_BASE_URL: "https://docs.pantheon.io"
           DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
         run: |
           #!/bin/bash
