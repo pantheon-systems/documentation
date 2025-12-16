@@ -1,6 +1,6 @@
 ---
 title: phpredis extension updated to version 6.3.0
-published_date: "2025-12-15"
+published_date: "2025-12-16"
 categories: [infrastructure, performance]
 ---
 
