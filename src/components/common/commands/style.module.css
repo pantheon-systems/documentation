@@ -1,0 +1,24 @@
+.docCommands {
+  margin-block-end: var(--pds-spacing-xl);
+}
+
+.docCommandsSearch {
+  margin-block: var(--pds-spacing-xl) var(--pds-spacing-m);
+}
+
+.commandName {
+  font-weight: var(--pds-typography-font-weight-bold);
+  margin-block-end: var(--pds-spacing-s);
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .tableResponsive > .table > tbody > tr > td,
+  .tableResponsive > .table > tbody > tr > th,
+  .tableResponsive > .table > tfoot > tr > td,
+  .tableResponsive > .table > tfoot > tr > th,
+  .tableResponsive > .table > thead > tr > td,
+  .tableResponsive > .table > thead > tr > th {
+    white-space: normal !important;
+  }
+}

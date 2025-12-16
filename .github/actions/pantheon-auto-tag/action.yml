@@ -1,0 +1,73 @@
+name: Pantheon auto tag deployment
+inputs:
+  target_env:
+    type: choice
+    description: Should a deployment tag be made for the test environment or the live environment?
+    options:
+    - test
+    - live
+
+runs:
+    using: 'composite'
+    steps:
+
+      - name: Configure Git identity
+        shell: bash
+        run: |
+          # The name of the person who pushed/merged the commit
+          GIT_USER_NAME="${{ github.actor }}"
+
+          # The default no-reply email for the user's account
+          # The format is ID+USERNAME@users.noreply.github.com
+          GIT_USER_EMAIL="${{ github.actor }}@users.noreply.github.com"
+
+          # NOTE: The actual no-reply email is technically more complex
+          # (it includes the user ID: 41898282+github-actions[bot]@users.noreply.github.com),
+          # but for Git configuration purposes, many find using the simple format
+          # with the actor's username to be sufficient and cleaner.
+          # For maximum accuracy, you'd use a more complex context expression,
+          # but let's stick to the reliable and simple `github.actor` for the name, and a standard bot format for email,
+          # or the simple ${{ github.actor }}@users.noreply.github.com which works well.
+
+          git config user.name "$GIT_USER_NAME"
+          git config user.email "$GIT_USER_EMAIL"
+          echo "Git identity set for: $GIT_USER_NAME <$GIT_USER_EMAIL>"
+
+      - name: Find and create next tag
+        id: tagger
+        shell: bash
+        env:
+          INPUT_TARGET_ENV: ${{ inputs.target_env }}
+        run: |
+          # Define the tag prefix
+          TAG_PREFIX="pantheon_${INPUT_TARGET_ENV}_"
+
+          # 1. Fetch all tags and filter only those starting with the prefix.
+          # 2. Use sed to remove the prefix, leaving only the integer.
+          # 3. Sort numerically in reverse order (-nr).
+          # 4. Take the first line (the highest number).
+          HIGHEST_NUMBER=$(git tag -l "${TAG_PREFIX}*" | \
+                            sed "s/${TAG_PREFIX}//" | \
+                            sort -nr | \
+                            head -n 1)
+
+          # If no tags are found, start at 1. Otherwise, increment the highest number.
+          if [ -z "$HIGHEST_NUMBER" ]; then
+            NEXT_NUMBER=1
+            echo "No existing tags found with prefix '${TAG_PREFIX}'. Starting at 1."
+          else
+            NEXT_NUMBER=$((HIGHEST_NUMBER + 1))
+            echo "Highest existing tag number is ${HIGHEST_NUMBER}. Next tag number will be ${NEXT_NUMBER}."
+          fi
+
+          # Construct the full new tag name
+          NEW_TAG="${TAG_PREFIX}${NEXT_NUMBER}"
+          echo "NEW_TAG=${NEW_TAG}" >> $GITHUB_OUTPUT
+
+          # Create the new tag on the current commit
+          git tag -a "${NEW_TAG}" -m "Auto-generated live deployment tag ${NEW_TAG}"
+
+      - name: Push the new tag
+        shell: bash
+        run: git push origin ${{ steps.tagger.outputs.NEW_TAG }}
+

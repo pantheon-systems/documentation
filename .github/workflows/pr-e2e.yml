@@ -1,0 +1,149 @@
+name: E2E Tests for a Pull Request deployment
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  wait_for_deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # timeout-minutes: 1
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/wait-for-deployment
+        with:
+         expected_sha: ${{ github.event.pull_request.head.sha }}
+         target_env: pr-${{ github.event.pull_request.number }}
+         pantheon_site_machine_name: documentation-in-nextjs
+
+      - name: warm containers
+        id: warm_containers
+        shell: bash
+        env:
+          REFERENCE_BASE_URL: "https://dev-documentation-in-nextjs.pantheonsite.io"
+          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-documentation-in-nextjs.pantheonsite.io"
+        run: |
+          #!/bin/bash
+          set +e
+          # curl to warm the environments.
+          # these shouldn't be necessary if the cold start time is brought down.
+          curl -I ${REFERENCE_BASE_URL}
+          curl -I ${DEPLOYED_BASE_URL}
+          curl -I "${DEPLOYED_BASE_URL}?t=$(date +%s)"
+          sleep 2
+          curl -I "${DEPLOYED_BASE_URL}?t=$(date +%s)"
+          sleep 2
+          curl -I "${DEPLOYED_BASE_URL}?t=$(date +%s)"
+
+  http_status_checker_on_sta:
+    runs-on: ubuntu-latest
+    needs: wait_for_deployment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check all status codes
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          SITE_NAME: "documentation-in-nextjs"
+        run: |
+          cd tests/404checking
+          export URL="https://pr-${PR_NUMBER}-${SITE_NAME}.pantheonsite.io"
+          ./404finder.sh
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sta404report
+          path: tests/404checking/
+
+  backstop_vrt:
+    runs-on: macos-latest
+    needs: http_status_checker_on_sta
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install backstop
+        shell: bash
+        run: npm install -g backstopjs
+
+      - name: Run Backstop tests
+        id: backstop_tests
+        shell: bash
+        env:
+          REFERENCE_BASE_URL: "https://dev-documentation-in-nextjs.pantheonsite.io"
+          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-documentation-in-nextjs.pantheonsite.io"
+        run: |
+          #!/bin/bash
+          set +e
+          cd tests/backstop
+          backstop reference --config="backstop.js"
+          backstop test --config="backstop.js"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: backstop_vrt
+          path: tests/backstop
+
+  playwright:
+    runs-on: ubuntu-latest
+    needs: wait_for_deployment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        shell: bash
+        run: cd tests/playwright && npm ci
+
+      - name: Install Playwright Browsers
+        shell: bash
+        run: cd tests/playwright && npx playwright install chromium --only-shell
+
+      - name: Run Playwright tests
+        id: playwright_tests
+        shell: bash
+        env:
+          PLAYWRIGHT_DOMAIN: "pr-${{ github.event.pull_request.number }}-documentation-in-nextjs.pantheonsite.io"
+        run: |
+          #!/bin/bash
+          set +e
+          cd tests/playwright
+          npx playwright test --fail-on-flaky-tests
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright_report
+          path: tests/playwright/playwright-report
+
+  vitest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+      - run: npm ci
+      - run: npm run test
