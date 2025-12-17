@@ -13,6 +13,7 @@ integration: [--]
 
 ## Update Links Referencing IP:Port
 
+
 When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as `https://192.237.142.203:5555/files/cernettes.gif` instead of `https://www.example.com/files/cernettes.gif`.
 
 The link may work at first, but will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
