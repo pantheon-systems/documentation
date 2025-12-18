@@ -42,10 +42,10 @@ export const GET = async () => {
   const output = releaseNotes.map((releaseNote) => ({
     title: releaseNote.data.node.frontmatter.title,
     excerpt: releaseNote.data.node.excerpt,
-    link: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://docs.pantheon.io"}/release-notes/${releaseNote.data.node.fields.slug}`,
+    link: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://docs.pantheon.io"}/${releaseNote.data.node.fields.slug}`,
     id: uuidv5(releaseNote.data.node.id, namespace),
     published_date: new Date(
-      `${releaseNotes[0].data.node.frontmatter.published_date}T${getSeededTime(releaseNotes[0].data.node.frontmatter.title ?? "")}Z`
+      `${releaseNote.data.node.frontmatter.published_date}T${getSeededTime(releaseNote.data.node.frontmatter.title ?? "")}Z`
     ).toUTCString(),
   }));
 

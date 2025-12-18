@@ -230,13 +230,18 @@ export function middleware(request: NextRequest) {
   const incomingProtocol = request.headers.get('x-proto') || '';
   const policyDocSurrogateKey = request.headers.get('policy-doc-surrogate-key') || '';
   if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
-    if (policyDocSurrogateKey.trim().endsWith(siteMachineName + '.pantheonsite.io')) {
       url.protocol = "https:";
       url.hostname = policyDocSurrogateKey;
       url.port = "";
       // Use a 301 permanent redirect
       return NextResponse.redirect(url.toString(), 301);
-    }
+  }
+  // Redirect newdocs.pantheon.io to docs.pantheon.io
+  if (policyDocSurrogateKey.trim().endsWith('newdocs.pantheon.io')) {
+    url.hostname = 'docs.pantheon.io';
+    url.port = "";
+    // Use a 301 permanent redirect
+    return NextResponse.redirect(url.toString(), 301);
   }
 
   // regex to match the wildcard redirects
