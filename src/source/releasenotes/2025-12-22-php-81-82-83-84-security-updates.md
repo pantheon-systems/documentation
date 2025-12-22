@@ -1,5 +1,5 @@
 ---
-title: "PHP 8.1, 8.2, 8.3  and 8.4 updated to their latest security patch releases"
+title: "PHP 8.1, 8.2, 8.3 and 8.4 updated to their latest security patch releases"
 published_date: "2025-12-22"
 categories: [infrastructure]
 ---
