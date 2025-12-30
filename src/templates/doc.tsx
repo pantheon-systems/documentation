@@ -8,10 +8,6 @@ import HeaderBody from "@/components/common/header-body";
 import NavButtons from "@/components/common/nav-buttons";
 import { TOC } from "@/components/common/toc";
 
-const ContainerDiv = ({ children }: { children: React.ReactNode }) => (
-  <div className="content-wrapper">{children}</div>
-);
-
 
 export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
   const items: any[] = []; // todo: add items @aniketbiprojit
@@ -20,10 +16,6 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
   if (image === "/images/null") {
     image = "/images/default-thumb-guides.png";
   }
-
-  // Determine submenuPathToUse based on content path
-  const slug = doc.fields.slug ?? "";
-  const submenuPathToUse = slug.startsWith("certification/") ? "/learning" : "";
 
   // Get prev/next URLs from frontmatter for NavButtons
   const prevUrl = doc.frontmatter.previousurl ?? "";
@@ -44,7 +36,7 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
             activePage={doc.fields.slug}
             fallbackTitle={doc.frontmatter.title ?? ""}
             fallbackItems={items}
-            submenuPathToUse={submenuPathToUse}
+            submenuPathToUse=""
           />
         </div>
 
