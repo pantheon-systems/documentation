@@ -47,10 +47,10 @@ export const resolveComponent = async (
           template: "doc",
         };
       } else if (template === "terminuspage") {
-        const Terminus = await import(`@/templates/terminus`);
+        const Doc = await import(`@/templates/doc`);
         return {
-          Component: <Terminus.TerminusTemplate terminus={pageData.data.doc} />,
-          template: "terminuspage",
+          Component: <Doc.DocTemplate doc={pageData.data.doc} />,
+          template: "doc",
         };
       } else if (template === "video") {
         const Video = await import(`@/templates/guide`);

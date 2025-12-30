@@ -2,19 +2,14 @@
 title: Terminus Guide
 subtitle: Get Started
 description: Learn how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/examples
-contenttype: [guide]
-innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
 reviewed: "2025-01-23"
+showtoc: false
 ---
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.

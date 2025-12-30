@@ -16,6 +16,9 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
   const prevUrl = doc.frontmatter.previousurl ?? "";
   const nextUrl = doc.frontmatter.nexturl ?? "";
 
+  // Show TOC by default, but allow hiding via frontmatter
+  const hasTOC = doc.frontmatter.showtoc ?? true;
+
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
       <DocsSidebarLayout
@@ -81,9 +84,11 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
                 </div>
               </article>
             </main>
-            <div slot="sidebar" className="sticky-wrapper">
-              <TOC title="Contents" />
-            </div>
+            {hasTOC && (
+              <div slot="sidebar" className="sticky-wrapper">
+                <TOC title="Contents" />
+              </div>
+            )}
           </DocsSidebarLayout>
         </div>
       </DocsSidebarLayout>
