@@ -8,6 +8,33 @@ import HeaderBody from "@/components/common/header-body";
 import NavButtons from "@/components/common/nav-buttons";
 import { TOC } from "@/components/common/toc";
 
+const ContainerDiv = ({ children }: { children: React.ReactNode }) => (
+  <div className="content-wrapper">{children}</div>
+);
+
+const ContentLayoutType = ({
+  children,
+  hasTOC,
+}: {
+  children: React.ReactNode;
+  hasTOC: boolean;
+}) => {
+  if (hasTOC) {
+    return (
+      <DocsSidebarLayout
+        mobileMenuMaxWidth={900}
+        sidebarLocation="right"
+        sidebarWidth="narrow"
+        gridGap="narrow"
+        sidebarMobileLocation="after"
+      >
+        {children}
+      </DocsSidebarLayout>
+    );
+  }
+
+  return <ContainerDiv>{children}</ContainerDiv>;
+};
 
 export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
   const items: any[] = []; // todo: add items @aniketbiprojit
@@ -39,13 +66,7 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
         </div>
 
         <div id="docs-main" slot="content" tabIndex={-1}>
-          <DocsSidebarLayout
-            mobileMenuMaxWidth={900}
-            sidebarLocation="right"
-            sidebarWidth="narrow"
-            gridGap="narrow"
-            sidebarMobileLocation="after"
-          >
+          <ContentLayoutType hasTOC={hasTOC}>
             <div slot="content">
               <SearchBar />
             </div>
@@ -89,7 +110,7 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
                 <TOC title="Contents" />
               </div>
             )}
-          </DocsSidebarLayout>
+          </ContentLayoutType>
         </div>
       </DocsSidebarLayout>
     </Layout>
