@@ -12,11 +12,6 @@ import { TOC } from "@/components/common/toc";
 export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
   const items: any[] = []; // todo: add items @aniketbiprojit
 
-  let image = "/images/" + doc.frontmatter.image;
-  if (image === "/images/null") {
-    image = "/images/default-thumb-guides.png";
-  }
-
   // Get prev/next URLs from frontmatter for NavButtons
   const prevUrl = doc.frontmatter.previousurl ?? "";
   const nextUrl = doc.frontmatter.nexturl ?? "";
