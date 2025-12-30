@@ -146,7 +146,7 @@ export type PageData = PageDataWithoutComponent & {
 /* This helper function helps determine which template should be applied to a piece of content */
 export const calculateTemplate = (
   node: ProcessedFile,
-  defaultTemplate: "doc" | "terminuspage" | "certificationpage" | "video"
+  defaultTemplate: "doc" | "terminuspage" | "video"
 ) => {
   if (
     node.frontmatter &&
