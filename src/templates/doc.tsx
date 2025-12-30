@@ -37,8 +37,6 @@ const ContentLayoutType = ({
 };
 
 export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
-  const items: any[] = []; // todo: add items @aniketbiprojit
-
   // Get prev/next URLs from frontmatter for NavButtons
   const prevUrl = doc.frontmatter.previousurl ?? "";
   const nextUrl = doc.frontmatter.nexturl ?? "";
@@ -57,11 +55,7 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
       >
         <div slot="sidebar" className="guide-sidebar">
           <OmniSidebarNav
-            slot="guide-menu"
             activePage={doc.fields.slug}
-            fallbackTitle={doc.frontmatter.title ?? ""}
-            fallbackItems={items}
-            submenuPathToUse=""
           />
         </div>
 

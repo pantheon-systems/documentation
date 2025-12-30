@@ -45,8 +45,6 @@ export const GuideTemplate = ({
   guide: ProcessedFile;
   next: null | { fields: { slug: string; guide_directory: string } };
 }) => {
-  const items: any[] = []; // todo: add items @aniketbiprojit
-
   const hasTOC = guide.frontmatter.showtoc ?? false;
 
   let image = "/images/" + guide.frontmatter.image;
@@ -65,11 +63,7 @@ export const GuideTemplate = ({
       >
         <div slot="sidebar" className="guide-sidebar">
           <OmniSidebarNav
-            slot="guide-menu"
             activePage={guide.fields.slug ?? ""}
-            submenuPathToUse=""
-            fallbackTitle={guide.frontmatter.title ?? ""}
-            fallbackItems={items}
           />
         </div>
 

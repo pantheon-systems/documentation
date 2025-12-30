@@ -5,23 +5,16 @@ import {
 } from "./omni-components/helpers";
 
 import { SideNavCompact } from "./ui/pds-re-export";
-import { Navbar } from "./common/navbar";
 import { MOBILE_MENU_BREAKPOINT } from "@/constants";
 import { getOmniItems } from "./omni-components";
 import { turnItemsIntoLinks } from "./omni-components/client-helper";
 
 export const OmniSidebarNav = async ({
   activePage,
-  fallbackItems = null,
-  fallbackTitle = "",
   submenuPathToUse = "",
-  slot = "",
 }: {
   activePage: string;
-  fallbackItems?: any[] | null;
-  fallbackTitle: string;
-  submenuPathToUse: string;
-  slot?: string;
+  submenuPathToUse?: string;
 }) => {
   const OmniItems = await getOmniItems();
 
@@ -62,16 +55,6 @@ export const OmniSidebarNav = async ({
         headingText={OmniLinks.linkContent}
         menuItems={OmniLinks.links}
       />
-    );
-  } else if (fallbackItems && fallbackItems.length > 0) {
-    return (
-      <>
-        <Navbar
-          title={fallbackTitle}
-          activePage={activePage}
-          items={fallbackItems}
-        />
-      </>
     );
   } else {
     return <div></div>;
