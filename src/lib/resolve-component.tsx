@@ -46,12 +46,6 @@ export const resolveComponent = async (
           Component: <Doc.DocTemplate doc={pageData.data.doc} />,
           template: "doc",
         };
-      } else if (template === "terminuspage") {
-        const Doc = await import(`@/templates/doc`);
-        return {
-          Component: <Doc.DocTemplate doc={pageData.data.doc} />,
-          template: "doc",
-        };
       } else if (template === "video") {
         const Video = await import(`@/templates/guide`);
         return {
