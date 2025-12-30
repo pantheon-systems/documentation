@@ -53,14 +53,10 @@ export const resolveComponent = async (
           template: "terminuspage",
         };
       } else if (template === "certificationpage") {
-        const Certification = await import(`@/templates/certification`);
+        const Doc = await import(`@/templates/doc`);
         return {
-          Component: (
-            <Certification.CertificationTemplate
-              certification={pageData.data.doc}
-            />
-          ),
-          template: "certification",
+          Component: <Doc.DocTemplate doc={pageData.data.doc} />,
+          template: "doc",
         };
       } else if (template === "video") {
         const Video = await import(`@/templates/guide`);

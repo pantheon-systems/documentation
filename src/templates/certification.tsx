@@ -33,6 +33,7 @@ const ContentLayoutType = ({
     );
   }
 
+
   return <ContainerDiv>{children}</ContainerDiv>;
 };
 
