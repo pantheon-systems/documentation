@@ -227,6 +227,9 @@ export function middleware(request: NextRequest) {
   // See https://github.com/pantheon-systems/documentation/issues/9791
   // for more context.
   const siteMachineName = process.env.PANTHEON_SITE_MACHINE_NAME || "documentation-in-nextjs";
+
+console.log('the siteMachineName is:' + siteMachineName)
+
   const incomingProtocol = request.headers.get('x-proto') || '';
   const policyDocSurrogateKey = request.headers.get('policy-doc-surrogate-key') || '';
   if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
