@@ -226,7 +226,7 @@ export function middleware(request: NextRequest) {
   // This section handles the HTTP to HTTPS redirects for Pantheon sites.
   // See https://github.com/pantheon-systems/documentation/issues/9791
   // for more context.
-  const siteMachineName = "documentation-in-nextjs";
+  const siteMachineName = process.env.PANTHEON_SITE_MACHINE_NAME || "documentation-in-nextjs";
   const incomingProtocol = request.headers.get('x-proto') || '';
   const policyDocSurrogateKey = request.headers.get('policy-doc-surrogate-key') || '';
   if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
