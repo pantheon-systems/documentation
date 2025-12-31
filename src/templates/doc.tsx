@@ -36,13 +36,23 @@ const ContentLayoutType = ({
   return <ContainerDiv>{children}</ContainerDiv>;
 };
 
-export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
-  // Get prev/next URLs from frontmatter for NavButtons
-  const prevUrl = doc.frontmatter.previousurl ?? "";
-  const nextUrl = doc.frontmatter.nexturl ?? "";
+export const DocTemplate = ({
+  doc,
+  prev,
+  next,
+  tocDefault = true,
+}: {
+  doc: ProcessedFile;
+  prev?: { fields: { slug: string } } | null;
+  next?: { fields: { slug: string } } | null;
+  tocDefault?: boolean;
+}) => {
+  // Use props if provided, otherwise fall back to frontmatter
+  const prevUrl = prev?.fields.slug ?? doc.frontmatter.previousurl ?? "";
+  const nextUrl = next?.fields.slug ?? doc.frontmatter.nexturl ?? "";
 
-  // Show TOC by default, but allow hiding via frontmatter
-  const hasTOC = doc.frontmatter.showtoc ?? true;
+  // Use frontmatter if set, otherwise use the default for this content type
+  const hasTOC = doc.frontmatter.showtoc ?? tocDefault;
 
   return (
     <Layout containerWidth="standard" excludeSearch={true}>

@@ -4,9 +4,7 @@ description: Understand frontend and backend caching on our platform.
 contributors:  [dwayne]
 permalink:  docs/cache
 tags: [cache]
-layout: video
 searchboost: 50
-type: video
 contenttype: [doc]
 innav: [true]
 categories: [cache]
