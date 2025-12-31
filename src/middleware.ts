@@ -236,7 +236,6 @@ console.log('the siteMachineName is: ' + siteMachineName)
 console.log('the incoming protocol is: ' + incomingProtocol)
 console.log('the policy doc surrogate key is: ' + policyDocSurrogateKey);
 
-
   if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
     if (policyDocSurrogateKey.trim().endsWith(siteMachineName + '.pantheonsite.io')) {
       url.protocol = "https:";
