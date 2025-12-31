@@ -30,4 +30,4 @@ jobs:
       with:
         expected_sha: ${{ github.sha }}
         target_env: live
-        pantheon_site_machine_name: documentation-in-nextjs
+        pantheon_site_machine_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}

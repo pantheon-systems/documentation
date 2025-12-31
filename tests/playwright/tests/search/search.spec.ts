@@ -43,7 +43,7 @@ test('searching from homepage redirects to search page and shows expected result
 
   await page.waitForSelector('#results .addsearch-searchresults');
 
-  const expectedPolicyHeadline = ' Overages Policy | Traffic | Pantheon Docs';
+  const expectedPolicyHeadline = ' Overages Policy | Pantheon Docs';
   const h3s1 = await page.locator('h3').allTextContents();
   expect(h3s1.some(text => text.includes(expectedPolicyHeadline))).toBeTruthy();
 });
