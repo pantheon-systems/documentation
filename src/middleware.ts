@@ -228,10 +228,15 @@ export function middleware(request: NextRequest) {
   // for more context.
   const siteMachineName = process.env.PANTHEON_SITE_MACHINE_NAME || "documentation-in-nextjs";
 
-console.log('the siteMachineName is:' + siteMachineName)
+console.log('the siteMachineName is: ' + siteMachineName)
 
   const incomingProtocol = request.headers.get('x-proto') || '';
   const policyDocSurrogateKey = request.headers.get('policy-doc-surrogate-key') || '';
+
+console.log('the incoming protocol is: ' + incomingProtocol)
+console.log('the policy doc surrogate key is: ' + policyDocSurrogateKey);
+
+
   if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
     if (policyDocSurrogateKey.trim().endsWith(siteMachineName + '.pantheonsite.io')) {
       url.protocol = "https:";
