@@ -19,8 +19,8 @@
     "update-snapshots": "vitest run --update --silent"
   },
   "dependencies": {
-    "@adobe/mdast-util-gridtables": "^4.0.13",
-    "@adobe/remark-gridtables": "^3.0.14",
+    "@adobe/mdast-util-gridtables": "^4.0.15",
+    "@adobe/remark-gridtables": "^3.0.16",
     "@next/bundle-analyzer": "^15.4.5",
     "@pantheon-systems/pcc-react-sdk": "3.13.0-beta.2",
     "@pantheon-systems/pcc-sdk-core": "3.13.0-beta.2",
@@ -49,7 +49,7 @@
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "lodash.trimend": "^4.5.1",
-    "next": "^15.3.8",
+    "next": "^15.4.10",
     "prismjs": "^1.30.0",
     "query-string": "^8.2.0",
     "react": "19.1.4",
@@ -91,7 +91,7 @@
     "c8": "^7.14.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.3.4",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "jsdom": "^22.1.0",
     "postcss": "^8.5.6",
     "prettier": "3.2.5",
@@ -99,8 +99,8 @@
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "vitest": "^1.6.1",
+    "vite": "^6.4.1",
+    "vitest": "^4.0.16",
     "vitest-fetch-mock": "^0.2.2"
   },
   "engines": {
