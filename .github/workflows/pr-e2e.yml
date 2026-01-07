@@ -22,14 +22,14 @@ jobs:
         with:
          expected_sha: ${{ github.event.pull_request.head.sha }}
          target_env: pr-${{ github.event.pull_request.number }}
-         pantheon_site_machine_name: documentation-in-nextjs
+         pantheon_site_machine_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
 
       - name: warm containers
         id: warm_containers
         shell: bash
         env:
-          REFERENCE_BASE_URL: "https://dev-documentation-in-nextjs.pantheonsite.io"
-          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-documentation-in-nextjs.pantheonsite.io"
+          REFERENCE_BASE_URL: "https://dev-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
+          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
         run: |
           #!/bin/bash
           set +e
@@ -54,7 +54,7 @@ jobs:
       - name: Check all status codes
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-          SITE_NAME: "documentation-in-nextjs"
+          SITE_NAME: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}"
         run: |
           cd tests/404checking
           export URL="https://pr-${PR_NUMBER}-${SITE_NAME}.pantheonsite.io"
@@ -86,8 +86,8 @@ jobs:
         id: backstop_tests
         shell: bash
         env:
-          REFERENCE_BASE_URL: "https://dev-documentation-in-nextjs.pantheonsite.io"
-          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-documentation-in-nextjs.pantheonsite.io"
+          REFERENCE_BASE_URL: "https://dev-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
+          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
         run: |
           #!/bin/bash
           set +e
@@ -125,7 +125,7 @@ jobs:
         id: playwright_tests
         shell: bash
         env:
-          PLAYWRIGHT_DOMAIN: "pr-${{ github.event.pull_request.number }}-documentation-in-nextjs.pantheonsite.io"
+          PLAYWRIGHT_DOMAIN: "pr-${{ github.event.pull_request.number }}-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
         run: |
           #!/bin/bash
           set +e
