@@ -18,7 +18,7 @@ jobs:
         id: warm_containers
         shell: bash
         env:
-          URL: "https://newdocs.pantheon.io"
+          URL: "https://docs.pantheon.io"
         run: |
           #!/bin/bash
           set +e
