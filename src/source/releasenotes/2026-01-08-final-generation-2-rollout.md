@@ -1,6 +1,6 @@
 ---
 title: "Final PHP Runtime Generation 2 rollout for previously excluded Solr 3 sites"
-published_date: "2026-01-07"
+published_date: "2026-01-08"
 categories: [infrastructure]
 ---
 
