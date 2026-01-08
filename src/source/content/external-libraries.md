@@ -49,22 +49,28 @@ Tika can extract content from a number of document formats such as HTML, XML, M
 
 <Tab title="PHP Runtime Generation 2" id="tab-1-anchor" active={true}>
 
-By default, sites using [PHP Runtime Generation 2](/php-runtime-generation-2) have access to Tika 1.18 and 1.21. These versions are available at the following paths:
+New sites created on the Pantheon platform default to Tika 3.x. The Tika 3 jar is available at:
+
+- `/opt/pantheon/tika/tika.jar`
+
+Existing sites may still be using Tika 1.18 or 1.21, which are available at:
 
 - `/srv/bin/tika-app-1.18.jar`
 - `/srv/bin/tika-app-1.21.jar`
 
-Sites that are using these older versions of Tika should be upgraded to a newer version of Tika as soon as possible.
+<Alert title="Tika 1.x End of Life" type="warning">
 
-Tika 3 is available and recommended. To enable Tika 3, add the following to your `pantheon.yml`:
+Tika 1.x will be removed on January 19, 2026. Sites using Tika 1.x should migrate to Tika 3 before this date. See the [Tika 1.x EOL release note](/release-notes/2025/10/tika1x-eol) for details.
+
+</Alert>
+
+To explicitly set your Tika version, add the following to your `pantheon.yml`:
 
 ```yaml:title=pantheon.yml
 tika_version: 3
 ```
 
-Once you have committed the line above, the latest version of Tika 3 will be available at the following path:
-
-- `/opt/pantheon/tika/tika.jar`
+Valid values are `1`, `3`, or `none` (to disable Tika).
 
 </Tab>
 <Tab title="PHP Runtime Generation 1" id="tab-2-id">
