@@ -5,19 +5,54 @@ import { ProcessedFile } from "@/server/processor/mdx";
 import SearchBar from "@/components/header/search-bar";
 import { MdxWrapper } from "@/components/ui/mdx-wrapper";
 import HeaderBody from "@/components/common/header-body";
+import NavButtons from "@/components/common/nav-buttons";
 import { TOC } from "@/components/common/toc";
 
 const ContainerDiv = ({ children }: { children: React.ReactNode }) => (
   <div className="content-wrapper">{children}</div>
 );
 
-export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
-  const items: any[] = []; // todo: add items @aniketbiprojit
-
-  let image = "/images/" + doc.frontmatter.image;
-  if (image === "/images/null") {
-    image = "/images/default-thumb-guides.png";
+const ContentLayoutType = ({
+  children,
+  hasTOC,
+}: {
+  children: React.ReactNode;
+  hasTOC: boolean;
+}) => {
+  if (hasTOC) {
+    return (
+      <DocsSidebarLayout
+        mobileMenuMaxWidth={900}
+        sidebarLocation="right"
+        sidebarWidth="narrow"
+        gridGap="narrow"
+        sidebarMobileLocation="after"
+      >
+        {children}
+      </DocsSidebarLayout>
+    );
   }
+
+  return <ContainerDiv>{children}</ContainerDiv>;
+};
+
+export const DocTemplate = ({
+  doc,
+  prev,
+  next,
+  tocDefault = true,
+}: {
+  doc: ProcessedFile;
+  prev?: { fields: { slug: string } } | null;
+  next?: { fields: { slug: string } } | null;
+  tocDefault?: boolean;
+}) => {
+  // Use props if provided, otherwise fall back to frontmatter
+  const prevUrl = prev?.fields.slug ?? doc.frontmatter.previousurl ?? "";
+  const nextUrl = next?.fields.slug ?? doc.frontmatter.nexturl ?? "";
+
+  // Use frontmatter if set, otherwise use the default for this content type
+  const hasTOC = doc.frontmatter.showtoc ?? tocDefault;
 
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
@@ -30,22 +65,12 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
       >
         <div slot="sidebar" className="guide-sidebar">
           <OmniSidebarNav
-            slot="guide-menu"
             activePage={doc.fields.slug}
-            fallbackTitle={doc.frontmatter.title ?? ""}
-            fallbackItems={items}
-            submenuPathToUse=""
           />
         </div>
 
         <div id="docs-main" slot="content" tabIndex={-1}>
-          <DocsSidebarLayout
-            mobileMenuMaxWidth={900}
-            sidebarLocation="right"
-            sidebarWidth="narrow"
-            gridGap="narrow"
-            sidebarMobileLocation="after"
-          >
+          <ContentLayoutType hasTOC={hasTOC}>
             <div slot="content">
               <SearchBar />
             </div>
@@ -78,13 +103,18 @@ export const DocTemplate = ({ doc }: { doc: ProcessedFile }) => {
                     }}
                     componentMap={{}}
                   />
+                  {(prevUrl || nextUrl) && (
+                    <NavButtons prev={prevUrl} next={nextUrl} />
+                  )}
                 </div>
               </article>
             </main>
-            <div slot="sidebar" className="sticky-wrapper">
-              <TOC title="Contents" />
-            </div>
-          </DocsSidebarLayout>
+            {hasTOC && (
+              <div slot="sidebar" className="sticky-wrapper">
+                <TOC title="Contents" />
+              </div>
+            )}
+          </ContentLayoutType>
         </div>
       </DocsSidebarLayout>
     </Layout>
