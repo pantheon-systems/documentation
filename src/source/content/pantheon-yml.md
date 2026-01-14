@@ -359,7 +359,7 @@ remote:
 
 ### Pantheon.yml changes aren't reflected when creating a new Multidev
 
-**Issue:** Changes to your `pantheon.yml` file won't be reflected if you created a Git branch locally, made a change to the `pantheon.yml file`, and then pushed the branch, or used a CI pipeline to create a new Multidev.
+**Issue:** Changes to your `pantheon.yml` file won't be reflected if you created a Git branch locally, made a change to the `pantheon.yml` file, and then pushed the branch, or used a CI pipeline to create a new Multidev.
 
 **Solution:**
 
