@@ -65,13 +65,13 @@ Note that each custom domain is counted regardless of the environment to which i
 
   It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 
-    - Ensure that there's no "parking page" or redirect configured in your DNS.
-    - The TXT record's Host value doesn't have a trailing `.`.
-    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
+  - Ensure that there's no "parking page" or redirect configured in your DNS.
+  - The TXT record's Host value doesn't have a trailing `.`.
+  - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
-    You'll automatically be taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
+  You'll automatically be taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
-   ![Custom domain Details page](../../../images/dashboard/new-dashboard/2024/_domainadded.png)
+  ![Custom domain Details page](../../../images/dashboard/new-dashboard/2024/_domainadded.png)
 
   If you instead see:
 
