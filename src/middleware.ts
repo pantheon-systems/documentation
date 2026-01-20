@@ -230,7 +230,7 @@ export function middleware(request: NextRequest) {
   const siteMachineName = process.env.PANTHEON_SITE_MACHINE_NAME || "documentation-in-nextjs";
   const incomingProtocol = request.headers.get('x-proto') || '';
   const policyDocSurrogateKey = request.headers.get('policy-doc-surrogate-key') || '';
-  if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
+  if (incomingProtocol === 'http' && policyDocSurrogateKey) {
       url.protocol = "https:";
       url.hostname = policyDocSurrogateKey;
       url.port = "";
