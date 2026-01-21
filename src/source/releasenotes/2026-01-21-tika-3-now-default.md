@@ -15,7 +15,7 @@ If you need to use Tika 1.x for a new site, you can explicitly set the version i
 tika_version: 1
 ```
 
-However, [Tika 1.x will be removed on January 19, 2026](/release-notes/2025/10/tika1x-eol). We recommend testing your site with Tika 3.x and migrating before this date.
+However, [Tika 1.x will be removed on January 26, 2026](/release-notes/2025/10/tika1x-eol). We recommend testing your site with Tika 3.x and migrating before this date.
 
 ## More information
 

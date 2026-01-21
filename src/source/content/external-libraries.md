@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, libraries, modules, plugins]
-reviewed: "2025-12-10"
+reviewed: "2026-01-21"
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
@@ -60,7 +60,7 @@ Existing sites may still be using Tika 1.18 or 1.21, which are available at:
 
 <Alert title="Tika 1.x End of Life" type="warning">
 
-Tika 1.x will be removed on January 19, 2026. Sites using Tika 1.x should migrate to Tika 3 before this date. See the [Tika 1.x EOL release note](/release-notes/2025/10/tika1x-eol) for details.
+Tika 1.x will be removed on January 26, 2026. Sites using Tika 1.x should migrate to Tika 3 before this date. See the [Tika 1.x EOL release note](/release-notes/2025/10/tika1x-eol) for details.
 
 </Alert>
 
