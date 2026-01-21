@@ -1,6 +1,6 @@
 ---
 title: "Tika 3.x is now the default for new sites"
-published_date: "2025-01-08"
+published_date: "2025-01-21"
 categories: [infrastructure, drupal]
 ---
 New sites created on the Pantheon platform now default to Tika 3.x. Previously, new sites defaulted to Tika 1.x.
