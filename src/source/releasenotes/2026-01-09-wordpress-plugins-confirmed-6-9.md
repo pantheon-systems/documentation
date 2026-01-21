@@ -11,7 +11,7 @@ The following plugins have been tested and verified for compatibility:
 - WP SAML Auth
 - Pantheon Advanced Page Cache
 [- Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)
-- Native PHP Sessions
+- [Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/)
 - Pantheon Content Publisher
 - WP Redis 
 
