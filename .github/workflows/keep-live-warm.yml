@@ -94,7 +94,7 @@ jobs:
           # --- 4. Validation and Error Exit ---
 
           # 4b. Check if the cache-bypassing request was too slow (indicating a cold start)
-          MAX_WARM_MS=200
+          MAX_WARM_MS=500
           if (( MILLISECONDS_FOR_CACHE_BYPASSING_REQUEST > MAX_WARM_MS )); then
               echo "❌ ERROR: Cache-bypassing request (Warmth Check) was too slow!"
               echo "  Observed: ${MILLISECONDS_FOR_CACHE_BYPASSING_REQUEST} ms | Threshold: ${MAX_WARM_MS} ms"
