@@ -3,6 +3,15 @@ title: "Transactional emails now sent via SendGrid API"
 published_date: "2024-05-10"
 categories: [new-feature, wordpress, drupal]
 ---
+
+<Alert type="warning" title="Warning">
+
+**Editorial note:** This entry describes a feature that is not available on Pantheon today. We continue to recommend integrating a third-party service provider instead. For details, see [related documentation](/email).
+
+_January 21, 2026_
+
+</Alert>
+
 Beginning this week, Pantheon will start transitioning individual WordPress and Drupal sites to use Sendgrid's API for the delivery of outgoing email initiated by these CMSes. We expect all sites to be fully transitioned by May 31, 2024. This change is happening at the platform level, not within the CMS code or configuration, and therefore requires no action by customers. 
 
 ## Reason for transition
