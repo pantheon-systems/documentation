@@ -9,11 +9,11 @@ reviewed: "2026-01-26"
 ---
 ## Before you begin
 1. Determine what [owning entity](/guides/secrets/overview#owning-entity) is appropriate for the given secret (site vs org).
-    * Only site-level secrets can be managed via the dashboard interface, setting organization-level secrets is only supported [via the command-line](#from-the-command-line).
+    * Only site-owned secrets can be managed via the dashboard interface, setting organization-owned secrets is only supported [via the command-line](#from-the-command-line).
 1. Determine the [secret type](/guides/secrets/overview#secret-type) and [secret scope](/guides/secrets/overview#secret-scope) required for your given scenario:
    * For example, setting an API key for third-party email integration should use the `runtime` type and `web` scope. 
 1. Consider whether your scenario requies different values based on the given environment.
-   * For example, if you want to use different accounts on live and non-live environments for your site's third party email integration.
+   * For example, if you want to use different accounts on live and non-live environments for your site's third-party email integration.
      * If yes, first create the secret with your non-live API key and then [add an environment override for that new secret](#add-environment-override) to change the API key for the live environment.
 
 ## Create new secret
@@ -34,7 +34,7 @@ Only [site-owned secrets](/guides/secrets/overview#site-owned-secrets) can be ma
 
     You can create one or more secrets at a time via the dashboard interface. After entering your first key/value pairs, click **+ Add another** if you have additional secrets to set.
 
-    Additionally, Developers managing environment variables for Next.js sites through `.env` files can add those variables in bulk when creating secrets.
+    Additionally, developers managing environment variables for Next.js sites through `.env` files can add those variables in bulk when creating secrets.
 
     </Alert>
 
@@ -43,13 +43,13 @@ Only [site-owned secrets](/guides/secrets/overview#site-owned-secrets) can be ma
 ### From the command-line
 1. [Install](/terminus/install#installation-and-update-methods) and authenticate [Terminus](/terminus/install#authentication) if you have not done so already. 
 1. Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation).
-1. Run the following command to set EITHER a [site-wide secret](/guides/secrets/overview#site-owned-secrets) (replace `<site>` `<secret_name>` `<secret_value>` `<secret_type>` and `<secret_scope>`):
+1. Run the following command to set EITHER a [site-owned secret](/guides/secrets/overview#site-owned-secrets) (replace `<site>` `<secret_name>` `<secret_value>` `<secret_type>` and `<secret_scope>`):
     
    ```bash{promptUser: user}
    terminus secret:site:set <site> <secret_name> <secret_value> --type=<secret_type> --scope=<secret_scope>
    ```
    
-     * OR set an [organization-wide secret](/guides/secrets/overview#organization-owned-secrets) (replace `<org>` `<secret_name>` `<secret_value>` `<secret_type>` and `<secret_scope>`):  
+     * OR set an [organization-owned secret](/guides/secrets/overview#organization-owned-secrets) (replace `<org>` `<secret_name>` `<secret_value>` `<secret_type>` and `<secret_scope>`):  
 
       
        ```bash{promptUser: user}
