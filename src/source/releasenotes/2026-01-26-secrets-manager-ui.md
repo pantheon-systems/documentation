@@ -11,12 +11,12 @@ Secrets Managers encrypts values at rest and then makes them available to your a
 ## What's new? 
 * Create new site-level secrets from the site dashboard
 * Create new site-level secrets **in bulk** from the site dashboard by either: 
-  * manually add multiple keys at once of the same type and scope
+  * manually adding multiple keys at once of the same type and scope
   * or importing secrets from `.env` files (e.g., Next.js sites)
 * Manage existing site-level secrets from the site dashboard:
   * Edit default secret value and/or secret scope
   * Add/edit/delete environment overrides 
-  
+
 For details, see [related documentation](/guides/secrets/create).
 
   ![A list of secrets for a site, displayed in the Pantheon dashboard](../images/dashboard/secrets/secrets-management.png)
