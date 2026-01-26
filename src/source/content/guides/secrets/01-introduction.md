@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets
-reviewed: "2024-08-22"
+reviewed: "2026-01-26"
 showtoc: true
 ---
 Pantheon Secrets is key to maintaining industry best practices for secure builds and application implementation. This feature provides a convenient mechanism for you to manage your secrets and API keys directly on the Pantheon platform.
@@ -38,11 +38,11 @@ This feature is available for anyone to use today at no additional cost. Current
 How to get started and use this feature:
 1. [Install & authenticate Terminus](/terminus/install) if you have not done so already.
 1. Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin):
-
-  ```bash{promptUser: user}
-  terminus self:plugin:install terminus-secrets-manager-plugin
-  ```
-
+    
+   ```bash{promptUser: user}
+   terminus self:plugin:install terminus-secrets-manager-plugin
+   ```
+     
 1. You can now use the newly installed Terminus commands, such as `secret:site:set`, to manage secrets securely on Pantheon.
 
 To see all available commands added by this plugin, refer to the [plugin's README file](https://github.com/pantheon-systems/terminus-secrets-manager-plugin?tab=readme-ov-file#site-secrets-commands).
