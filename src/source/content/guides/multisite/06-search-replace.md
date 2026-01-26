@@ -85,7 +85,6 @@ By default, Subdomain Multisites do not run any Search and Replace. Enabling Sea
 1. Define and pair the environments to be replaced like the sample code below.
 
     ```yaml:title=private/sites.yml
-    ---
     api_version: 1 # Currently only one api version.
     # file should be placed in the /private folder
     # "domain_maps" is a collection of blog URLs for each environment used to
