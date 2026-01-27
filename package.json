@@ -49,11 +49,11 @@
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "lodash.trimend": "^4.5.1",
-    "next": "^15.3.8",
+    "next": "^15.3.9",
     "prismjs": "^1.30.0",
     "query-string": "^8.2.0",
-    "react": "19.1.4",
-    "react-dom": "19.1.4",
+    "react": "19.1.5",
+    "react-dom": "19.1.5",
     "react-icons": "^5.5.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-loading-skeleton": "^3.5.0",
@@ -107,8 +107,8 @@
     "node": "22.x"
   },
   "overrides": {
-    "react": "19.1.4",
-    "react-dom": "19.1.4",
+    "react": "19.1.5",
+    "react-dom": "19.1.5",
     "glob": "10.5.0",
     "playwright": "1.57.0"
   }
