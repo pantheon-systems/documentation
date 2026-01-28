@@ -88,7 +88,6 @@ const learning = () => {
           '/drupal-commandline',
           'All CLI workflow with Terminus and Drupal',
         ),
-        simpleLink('/pivotal-tracker', 'Pivotal Tracker'),
         simpleLink('/pingdom-uptime-check', 'Pingdom Uptime Check'),
 
         simpleLink('/drupal-advanced-page-cache', 'Drupal Advanced Page Cache'),
