@@ -191,7 +191,6 @@ const RedirectMap: Record<string, string> = {
   "/lockr": "/guides/secrets/overview",
   "/pivotal-tracker": "/integrations#project-management",
 
-
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.
   "/undo-commits": "/guides/git/undo-commits",
