@@ -49,7 +49,7 @@
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "lodash.trimend": "^4.5.1",
-    "next": "^15.3.9",
+    "next": "15.3.9",
     "prismjs": "^1.30.0",
     "query-string": "^8.2.0",
     "react": "19.1.5",
