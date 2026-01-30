@@ -5,7 +5,7 @@ categories: [content-publisher]
 ---
 
 ## Key Changes: CLI Rename
-We've renamed the Content Publisher CLI from `pcc` to `cpub` to reflect our product branding. This change affects all CLI commands and the associated NPM package.
+We've renamed the Content Publisher CLI from `pcc` to `cpub` to reflect our product naming. This change affects all CLI commands and the associated NPM package.
 
 ### CLI Command
 * Old: `pcc`
@@ -32,5 +32,5 @@ npm install -g @pantheon-systems/cpub-cli
 * Connected Accounts are no longer tied to the user’s browser and has been migrated to server-side account management improving overall user experience
 * Dashboard now displays user account subscription and usage allowing users to keep track of their account usage limits
 * A search function has been added to the Collections dropdown in the Tokens modal for easier navigation in workspaces with many collections
-* The App Router starter kit no longer uses Static Site Generation (SSG) by default
+* The App Router starter kit default installation no longer uses Static Site Generation (SSG)
 * Minor bug fixes and UX improvements
