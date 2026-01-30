@@ -21,13 +21,29 @@ Please update your existing commands by replacing `pcc` with `cpub`. All flags a
 
 ### To update your installation:
 
-```bash
-# Uninstall the old package
-npm uninstall -g @pantheon-systems/pcc-cli
+1. First, log out of the old CLI: 
 
-# Install the new package
-npm install -g @pantheon-systems/cpub-cli
-```
+    ```bash
+    pcc logout
+    ```
+
+1. Uninstall the old package:
+
+    ```bash
+    npm uninstall -g @pantheon-systems/pcc-cli
+    ```
+
+1. Install the new package:
+
+    ```bash
+    npm install -g @pantheon-systems/cpub-cli
+    ```
+
+1. Login to the new CLI: 
+
+    ```bash
+    cpub login
+    ```
 
 ## Additional Changes
 
