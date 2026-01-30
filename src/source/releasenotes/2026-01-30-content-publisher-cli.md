@@ -5,7 +5,7 @@ categories: [content-publisher, action-required]
 ---
 
 ## Key Changes: CLI Rename
-We've renamed the Content Publisher CLI from `pcc` to `cpub` to reflect our product naming. This change affects all CLI commands and the associated NPM package.
+We've renamed the [Content Publisher CLI](https://docs.content.pantheon.io/cli-setup) from `pcc` to `cpub` to reflect our product naming. This change affects all CLI commands and the associated NPM package.
 
 ### CLI Command
 * Old: `pcc`
