@@ -1,7 +1,7 @@
 ---
 title: Content Publisher CLI Rename and other updates 
 published_date: "2026-01-30"
-categories: [content-publisher]
+categories: [content-publisher, action-required]
 ---
 
 ## Key Changes: CLI Rename
@@ -14,6 +14,8 @@ We've renamed the Content Publisher CLI from `pcc` to `cpub` to reflect our prod
 ### NPM Package
 * Old: `@pantheon-systems/pcc-cli`
 * New: `@pantheon-systems/cpub-cli`
+
+## Action Required
 
 Please update your existing commands by replacing `pcc` with `cpub`. All flags and arguments remain the same. Deprecated `pcc` CLI still functional with warning messages.
 
