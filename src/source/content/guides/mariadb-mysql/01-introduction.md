@@ -35,13 +35,15 @@ MariaDB provides a full database solution, including:
 
 The default database version for new sites is MariaDB `10.4`.
 
-The latest version of Drupal requires MariaDB `10.3` or later. If you have a site that you plan to upgrade, confirm that the database has been upgraded to MariaDB `10.3` or `10.4` in all environments before you begin the upgrade.
+Pantheon currently does not support MariaDB `10.5` or later. This may change in the future.
+
+The latest version of Drupal (11.3 at the time of writing) requires MariaDB `10.3` or later. If you have a site that you plan to upgrade, confirm that the database has been upgraded to MariaDB `10.3` or `10.4` in all environments before you begin the upgrade.
 
 You can confirm your MariaDB verison with `ddev mariadb --version`:
 
 ```bash
 $ ddev mariadb --version
-mariadb  Ver 15.1 Distrib 10.11.14-MariaDB ...
+mariadb  Ver 15.1 Distrib 10.6.24-MariaDB ...
 ```
 
 If your site has any older contrib modules that are not compatible with MariaDB `10.4`, set the MariaDB version of the new site to `10.3` in your `pantheon.yml` file. 
