@@ -1,7 +1,7 @@
 ---
-title: Search API Pantheon 8.4.0
+title: Search API Pantheon 8.4.0 is now available
 published_date: "2026-02-03"
-categories: [drupal]
+categories: [action-required, drupal]
 ---
 
 This is a major cleanup release with significant architectural improvements and enhanced developer experience.
@@ -37,17 +37,22 @@ This is a major cleanup release with significant architectural improvements and 
 
 ##  Pantheon Search Server Migration
 
-**Note:** This automatic migration functionality was introduced in version 8.3.x and continues to be available in 8.4.0.
+Since version 8.3.0, the default server Id is `pantheon_search`. New installations use this automatically. Existing sites upgrading from versions earlier than 8.3.x can migrate from `pantheon_solr8` via an update hook.
 
-If you are upgrading from a version prior to 8.3.x, the update process will automatically migrate your search server id from `pantheon_solr8` to `pantheon_search`.
+If you proceed with migration, the update hook will update the server id from `pantheon_solr8` to `pantheon_search`, reassign all indexes to the new server, and flag content for reindexing.
 
-The  update hook handle server migration when running database updates (`drush updb` or `/update.php`). The migration updates the server id, reassigns all indexes to the new server, and flags content for reindexing.
+After running database updates (`drush updb`), reindex your content:
 
-You can opt out of this migration if you prefer to keep using `pantheon_solr8` by adding the following to your settings.php before running database updates:
+```bash
+drush search-api:index
+```
+
+**To opt out of migration** and continue using `pantheon_solr8`, add this to your settings.php before running database updates:
 
 ```php
 $settings['default_search_server'] = 'pantheon_solr8';
 ```
+
 
 ## Upgrade Instructions
 
