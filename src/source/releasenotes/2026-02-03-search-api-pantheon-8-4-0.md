@@ -8,7 +8,7 @@ This is a major cleanup release with significant architectural improvements and 
 
 ## What's Changed
 
-- License updated from MIT to GNU General Public License v2.0 or later (GPL-2.0+)
+- License updated to GPL-2.0+ to align with Drupal Core standards.
 - Major code refactoring resulting in a 60% reduction in code length.
 - Simplified service architecture for better maintainability.
 - Removed unnecessary overrides for Guzzle, Endpoint, and the Solarium client.
@@ -37,9 +37,9 @@ This is a major cleanup release with significant architectural improvements and 
 
 ##  Pantheon Search Server Migration
 
-Since version 8.3.0, the default server Id is `pantheon_search`. New installations use this automatically. Existing sites upgrading from versions earlier than 8.3.x can migrate from `pantheon_solr8` via an update hook.
+Since version 8.3.0, the default server ID is `pantheon_search`. New installations use this automatically. Existing sites upgrading from earlier versions can migrate from `pantheon_solr8` to `pantheon_search` via an update hook.
 
-If you proceed with migration, the update hook will update the server id from `pantheon_solr8` to `pantheon_search`, reassign all indexes to the new server, and flag content for reindexing.
+If you proceed with migration, the update hook will update the server ID from `pantheon_solr8` to `pantheon_search`, reassign all indexes to the new server, and flag content for reindexing.
 
 After running database updates (`drush updb`), reindex your content:
 
