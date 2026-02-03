@@ -41,13 +41,18 @@ The number of unique visits displayed in Pantheon’s Site Dashboard represents 
 
 The data comes directly from our Global CDN, which tracks _all_ requests for resources on Pantheon. However, many known bots and crawlers do not count towards site traffic limits, nor do we meter requests for static assets (images, PDFs, CSS, JS, etc.).
 
+* [Visits](#site-visits)
+* [Pages Served](#pages-served)
+* [Cache Hit Ratio](#cache-hit-ratio)
+* [Top Traffic Patterns](#top-traffic-patterns)
+
 ### Visitor
 
 A visitor is a person or device who/that receives information from the site. The platform counts each visitor once per day, regardless of the number of times they return that day or the number of pages they visit that day.
 
 ### Site Visits
 
-We consider a Site Visit as a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) (and some [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection)<Popover content="300-level response codes that count as traffic: 303, 304, 305." />) response code in response to a visitor, and we identify unique consumers as a combination of user agent (device/browser) and IP address (network source), as shown in the diagram below.
+We consider a Site Visit as a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) (as well as 303, 304, 305) response code in response to a visitor, and we identify unique consumers as a combination of user agent (device/browser) and IP address (network source), as shown in the diagram below.
 
 ### Pages Served
 
@@ -72,6 +77,22 @@ A low Cache Hit Ratio may be caused by:
 - Setting a cookie on page requests bypasses the GCDN cache. Refer to [Debugging Cookies and Global CDN](/guides/global-cdn/global-cdn-caching#debugging-cookies-and-global-cdn) for more information.
 
 Learn more about how to enable and improve caching in the [Pantheon Global CDN](/guides/global-cdn) guide.
+
+### Top Traffic Patterns 
+These metrics can help you identify aggressive crawlers or scrapers, that you may want to [block manually when troubleshooting traffic events](/guides/account-mgmt/traffic/remedy#dos-attack-mitigation). 
+
+You can also inform your prioties for caching and performance optimization efforts based on the specific pages receiving the highest traffic.
+
+Toggle displayed date ranges by clicking **Day**, **Week**, or **Month**. 
+
+#### Top visited paths
+The most frequently requested pages and resources on your site. High-traffic paths are good candidates for performance optimization
+
+#### Top IPs
+The individual IP addresses sending the highest volume of requests to your site.
+
+#### Top User Agents
+A breakdown of traffic by browser type, operating system, and automated tools, sorted by highest volume.
 
 ## How Do You Know if a Visit Counts?
 
