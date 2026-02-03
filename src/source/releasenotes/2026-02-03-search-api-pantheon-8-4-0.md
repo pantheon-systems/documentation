@@ -4,7 +4,7 @@ published_date: "2026-02-03"
 categories: [action-required, drupal]
 ---
 
-This is a major cleanup release with significant architectural improvements and enhanced developer experience.
+Pantheon's Solr search Drupal module, `search_api_pantheon`, has been updated to version 8.4.0. This is a major cleanup release with significant architectural improvements and enhanced developer experience.
 
 ## What's Changed
 
