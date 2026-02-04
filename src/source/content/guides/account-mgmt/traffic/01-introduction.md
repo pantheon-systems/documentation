@@ -83,6 +83,12 @@ These metrics can help you identify aggressive crawlers or scrapers, that you ma
 
 You can also inform your prioties for caching and performance optimization efforts based on the specific pages receiving the highest traffic.
 
+<Alert type="info" title="Note">
+
+**Top traffic patterns** data includes both [counted](#counted-visits) and [uncounted](#uncounted-visits) visits.
+
+</Alert>
+
 Toggle displayed date ranges by clicking **Day**, **Week**, or **Month**. 
 
 #### Top visited paths
