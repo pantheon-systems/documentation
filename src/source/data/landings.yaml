@@ -486,9 +486,6 @@
         - text: "Automatically Label Code Changes in New Relic using Quicksilver Hooks"
           url: "/guides/new-relic/new-relic-quicksilver"
           icons: "fa fa-book"
-        - text: "Integrate Pivotal Tracker Project Management Application with a site on Pantheon"
-          url: "/guides/pivotal-tracker"
-          icons: "fa fa-book"
         - text: "Integrate Trello on Pantheon with Quicksilver Hooks"
           url: "/guides/quicksilver/trello"
           icons: "fa fa-book"
@@ -810,8 +807,6 @@
           url: "/guides/pagerduty"
         - image: "logos/pingdom.png"
           url: "/guides/pingdom-uptime-check"
-        - image: "logos/pivotal.png"
-          url: "/guides/pivotal-tracker"
         - image: "logos/trello.png"
           url: "/guides/quicksilver/trello"
   topics-groups:

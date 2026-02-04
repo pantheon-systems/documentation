@@ -189,6 +189,7 @@ const RedirectMap: Record<string, string> = {
   "/guides/agcdn/agcdn-wafio": "/guides/agcdn",
   "/guides/agcdn/agcdn-features": "/guides/agcdn",
   "/lockr": "/guides/secrets/overview",
+  "/pivotal-tracker": "/integrations#project-management",
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.

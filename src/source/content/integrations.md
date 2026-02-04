@@ -85,12 +85,6 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title="Pivotal Tracker" link="/pivotal-tracker/">
-
-  [Pivotal Tracker](https://www.pivotaltracker.com/) offers product planning and management.
-
-  </Product>
-
   <Product title="Trello" link="/guides/quicksilver/trello/">
 
   [Trello](https://trello.com/) helps teams to collaborate on projects in an agile framework.
