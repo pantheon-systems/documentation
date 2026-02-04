@@ -31,24 +31,15 @@ MariaDB provides a full database solution, including:
 
 - Columnar storage
 
-### Default MariaDB versions for new environments
+## CMS Compatibility 
 
-The default database version for new sites is MariaDB `10.4`.
+<Partial file="cms-mariadb-compat-chart.md" />
 
-Pantheon currently does not support MariaDB `10.5` or later. This may change in the future.
+#### Considerations - Drupal
 
-The latest version of Drupal (11.3 at the time of writing) requires MariaDB `10.3` or later. If you have a site that you plan to upgrade, confirm that the database has been upgraded to MariaDB `10.3` or `10.4` in all environments before you begin the upgrade.
+<Partial file="drupal/drupal-mariadb-considerations.md" />
 
-You can confirm your MariaDB verison with `ddev mariadb --version`:
-
-```bash
-$ ddev mariadb --version
-mariadb  Ver 15.1 Distrib 10.6.24-MariaDB ...
-```
-
-If your site has any older contrib modules that are not compatible with MariaDB `10.4`, set the MariaDB version of the new site to `10.3` in your `pantheon.yml` file. 
-
-Remember to rebuild your Docker containers locally to test them before deploying - for DDEV users, this is done by running `ddev rebuild`.
+Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](/pantheon-yml#specify-a-version-of-mariadb).
 
 ## More Resources
 
