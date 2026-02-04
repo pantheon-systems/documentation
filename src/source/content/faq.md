@@ -157,4 +157,4 @@ Refer to [Get Support](/guides/support) and explore our [support features](https
 
 ### PCI Compliance on Pantheon
 
-Since you can alter your code on Pantheon, you must certify your own applications. PCI compliance for applications deployed on any platform cannot be guaranteed by the platform alone. We recommend architectures designed to work with PCI SAQ-A to minimize both risk and compliance efforts.
+Pantheon operates on a Shared Responsibility Model for PCI compliance. While we secure the underlying platform, customers are responsible for the PCI validation of their individual applications. This includes the requirement to conduct quarterly Approved Scanning Vendor (ASV) scans on your own site URLs. Pantheon does not perform ASV scans on customer-deployed sites as part of our own attestation. We recommend utilizing architectures that qualify for SAQ-A to significantly reduce your local compliance burden.
