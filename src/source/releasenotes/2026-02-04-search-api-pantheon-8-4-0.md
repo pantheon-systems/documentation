@@ -1,6 +1,6 @@
 ---
 title: Search API Pantheon 8.4.0 is now available
-published_date: "2026-02-03"
+published_date: "2026-02-04"
 categories: [action-required, drupal]
 ---
 
