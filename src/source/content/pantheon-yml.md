@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2025-08-12"
+reviewed: "2026-02-04"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -151,7 +151,7 @@ php_version: 8.0
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2022-03-17" />
+<ReviewDate date="2026-02-04" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
@@ -176,18 +176,7 @@ This can also be accomplished via [one-click updates in the Site Dashboard](/cor
 
    Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-This table shows the supported MariaDB version for each CMS:
-
-| CMS           | Supported MariaDB Version(s) |
-| ------------- | ---------------------------- |
-| Drupal < 7.76 | 10.3                         |
-| Drupal ≥ 7.76 | 10.4                         |
-| Drupal < 8.5  | 10.3                         |
-| Drupal ≥ 8.6  | 10.4                         |
-| Drupal ≥ 9.0  | 10.4 or 10.6                 |
-| WordPress     | 10.4 or 10.6                 |
-
-Users of Drupal 6 sites should consider [upgrading to the latest version of Drupal](/drupal-updates) for better support.
+<Partial file="cms-mariadb-compat-chart.md" />
 
 #### Considerations - Drupal
 
