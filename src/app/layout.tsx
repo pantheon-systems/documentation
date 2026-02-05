@@ -74,6 +74,12 @@ function MyApp({ children }: PropsWithChildren) {
           data-domain-script="fba5027b-04c0-4165-8778-4e10fb9f5fa3"
         />
       </head>
+      {process.env.NEXT_PUBLIC_GA_ID && typeof window !== "undefined" && (
+        <AnalyticsGA4 />
+      )}
+      {process.env.NEXT_PUBLIC_GTM_ID && (
+        <AnalyticsGTM />
+      )}
 
       <body
         className={`${poppins.className} ${aleo.className} ${sourceCodePro.className}`}
@@ -81,6 +87,9 @@ function MyApp({ children }: PropsWithChildren) {
         {children}
 
       </body>
+      <Suspense>
+        <SegmentAnalytics />
+      </Suspense>
 
     </html>
   );
