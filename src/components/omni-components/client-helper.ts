@@ -29,6 +29,6 @@ export const turnItemsIntoLinks = (
     links: item.children
       ? item.children.map((child: any) => turnItemsIntoLinks(child, activePage))
       : false,
-    linkContent: React.createElement(Link, { href: item.link }, linkText),
+    linkContent: React.createElement('a', { href: item.link }, linkText),
   };
 };
