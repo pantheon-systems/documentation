@@ -42,6 +42,20 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        // Match _next/static files (JS chunks, CSS, etc)
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, must-revalidate",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
