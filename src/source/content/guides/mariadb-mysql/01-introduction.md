@@ -31,9 +31,20 @@ MariaDB provides a full database solution, including:
 
 - Columnar storage
 
+## CMS Compatibility 
+
+<Partial file="cms-mariadb-compat-chart.md" />
+
+#### Considerations - Drupal
+
+<Partial file="drupal/drupal-mariadb-considerations.md" />
+
+Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](/pantheon-yml#specify-a-version-of-mariadb).
+
 ## More Resources
 
 - [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool)
 
 - [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 
+- [Upgrading your MariaDB version](/guides/drupal-hosted-createbt/upgrade)

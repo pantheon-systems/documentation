@@ -61,6 +61,8 @@ The table below contains the dates we upgraded sites to Gen 2 that were not set 
 | October 29 | Performance/Elite | Dev/Multidevs |
 | November 3 | Basic | Test/Live |
 | November 17 | Performance/Elite | Test/Live |
+| January 7, 2026 | Solr 3 sites (all plans) | Dev/Multidev |
+| January 14, 2026 | Solr 3 sites (all plans) | Test/Live |
 
 
 <Alert type="info" title="Deploying code will upgrade test/live environments">
@@ -108,15 +110,11 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 <sup>1</sup> Review the <a href="/tls-compatibility">TLS documentation</a> to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.<br /><br />
 
-## Known Issues
-
-- Drupal 8+ sites using Solr 3 are not compatible with PHP Runtime Generation 2.  [Upgrading to Solr 8](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) or disabling Solr is required. These sites were not included in the initial automatic upgrade rollout. The dev/multidev environments of these sites will be upgraded on December 9, and the test/live environments will be upgraded on December 16. Opting out of Generation 2 is still available for these sites.
-
 ## Reporting Issues
 
 If you encounter any issues with PHP Runtime Generation 2:
 
-1. Check the Known Issues section above
+1. Check the [Known Changes and Requirements](#known-changes-and-requirements) section above
 2. Verify the issue is related to the new PHP runtime by reverting back to `1` in your `pantheon.yml` file.
 3. Submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2" in your message to support.
 

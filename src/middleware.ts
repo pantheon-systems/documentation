@@ -188,6 +188,8 @@ const RedirectMap: Record<string, string> = {
   "/wp-cfm": "/guides/wordpress-configurations/wp-cfm",
   "/guides/agcdn/agcdn-wafio": "/guides/agcdn",
   "/guides/agcdn/agcdn-features": "/guides/agcdn",
+  "/lockr": "/guides/secrets/overview",
+  "/pivotal-tracker": "/integrations#project-management",
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.
@@ -227,9 +229,9 @@ export function middleware(request: NextRequest) {
   // See https://github.com/pantheon-systems/documentation/issues/9791
   // for more context.
   const siteMachineName = process.env.PANTHEON_SITE_MACHINE_NAME || "documentation-in-nextjs";
-  const incomingProtocol = request.headers.get('x-proto') || '';
-  const policyDocSurrogateKey = request.headers.get('policy-doc-surrogate-key') || '';
-  if (incomingProtocol === 'http://' && policyDocSurrogateKey) {
+  const incomingProtocol = request.headers.get('x-forwarded-proto') || '';
+  const policyDocSurrogateKey = request.headers.get('Policy-Doc-Surrogate-Key') || '';
+  if (incomingProtocol === 'http' && policyDocSurrogateKey) {
       url.protocol = "https:";
       url.hostname = policyDocSurrogateKey;
       url.port = "";
