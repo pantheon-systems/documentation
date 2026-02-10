@@ -17,7 +17,7 @@ The Model Context Protocol (MCP) is an open standard that allows AI assistants a
 ## Example workflows
 * "Create a Google Doc about our product launch and connect it to the Marketing collection, go through the preview, enrich and publish phase"
 * "Update the description metadata for the Q1 report and publish it"
-* "Add sarah@company.com as a collaborator on the Documentation collection"
+* "Add `sarah@company.com` as a collaborator on the Documentation collection"
 * “Find all documents with Author set at “John Doe” and replace with “Jane Doe”
 
 And really, any other content operation workflow you might think of!
