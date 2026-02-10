@@ -3,19 +3,14 @@ title: Terminus Guide
 subtitle: Authenticate Terminus in a CircleCI Pipeline
 description: Learn how to authenticate Terminus in a CircleCI pipeline without errors.
 contributors: [stovak]
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/ci/circleci
-contenttype: [guide]
-innav: [false]
 categories: [automate]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
 reviewed: "2023-06-08"
+showtoc: false
 ---
 
 This section provides information on how to authenticate Terminus in a CircleCI pipeline without receiving errors and avoiding authentication rate limits.

@@ -4,18 +4,13 @@ subtitle: Authenticate Terminus in a Bitbucket CI Pipeline
 description: Learn how to authenticate Terminus in a Bitbucket CI pipeline without receiving errors.
 permalink: docs/terminus/ci/bitbucket
 contributors: [stovak]
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
-contenttype: [guide]
-innav: [false]
 categories: [automate]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
 reviewed: "2023-06-08"
+showtoc: false
 ---
 
 This section provides information on how to to authenticate Terminus in a Bitbucket CI pipeline without receiving errors and avoiding authentication rate limits.

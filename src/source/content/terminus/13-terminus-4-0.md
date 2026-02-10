@@ -2,19 +2,14 @@
 title: Terminus Guide
 subtitle: Terminus 4
 description: Learn what's new with the latest Terminus major version upgrade.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 contributors: [kporras07]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/terminus-4-0
-contenttype: [guide]
-innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
+showtoc: false
 ---
 
 This section provides information about Terminus 4.0. Terminus 4.0 is the most recent major version of Terminus and is recommended in place of Terminus 3.x.
