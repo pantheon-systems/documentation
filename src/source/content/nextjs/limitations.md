@@ -100,6 +100,10 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
 
+### **Yarn**
+
+Pantheon infrastructure supports [Yarn](https://yarnpkg.com/) but as of now, that requires using a separate build target in `package.json`: `gcp-build`. We expect to unify this in regular `build` script in the near future but as of now, please add `gcp-build` as a new script so your codebase can be built in Pantheon Next.js infrastructure.
+
 ### **Astro, Remix, and other frameworks beyond Next.js**
 
 Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
