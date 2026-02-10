@@ -80,11 +80,11 @@ If you need compilation of front-end assets in your WordPress or Drupal theme th
 
 ### Alignment between GitHub repos/organizations and Pantheon sites/workspaces
 
-The main purpose of the Pantheon GitHub application is to create a mapping between a repository on GitHub and a website on Pantheon.
+The main purpose of the Pantheon GitHub Application is to create a mapping between a repository on GitHub and a website on Pantheon.
 Configuring the Application requires granting permission to Pantheon to read one or more repositories.
-This permission granting is tracked at the Pantheon Workspace level.
+This permission granting is tracked at the [Pantheon Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) level.
 
-People who are members of a Pantheon workspace (at the developer level or above) can see all sites in that workspace regardless of whether their corresponding GitHub accounts have direct access to the corresponding GitHub repositories.
+People who are members of a Pantheon workspace ([at the developer level or above](/guides/account-mgmt/workspace-sites-teams/teams)) can see all sites in that workspace regardless of whether their corresponding GitHub accounts have direct access to the corresponding GitHub repositories.
 
 <Alert title="Think twice before granting Pantheon access to read all GitHub repositories" type="danger" >
 
@@ -95,8 +95,6 @@ However by granting Pantheon the permission to create new repositories within yo
 Depending on the size and nature of your company, you may not want all members of your Pantheon workspace to have that permission, especially if not all members of your Pantheon workspace are members of your GitHub organization.
 
 </Alert>
-
-
 
 ## Limitations prior to General Availability
 
