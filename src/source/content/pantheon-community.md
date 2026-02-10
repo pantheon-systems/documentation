@@ -11,25 +11,41 @@ product: [--]
 integration: [slack]
 ---
 
-Whether you're looking to expand your knowledge and expertise, connect with other Pantheon customers, or discover new opportunities to give back to the open web, we’ve got you covered.
+At Pantheon, we know that the best work happens when people come together. Our community is where Pantheon customers share the solutions that actually work, swap insights from the trenches, and push what's possible with WordPress and Drupal. It's a space where ideas flourish, partnerships form, and knowledge flows freely. 
 
-By joining the Pantheon Community you will:
+Whether you're optimizing performance, scaling your agency, tackling a complex build, or just looking for people who speak your language, you're in the right place.
 
-- Have the opportunity to make a tangible impact by sharing your experiences, ideas, and feedback, and contributions with the broader open-source community and the broader organization
-- Participate in polls, surveys, and discussions to help shape the development of future Pantheon product offerings
-- Gain access to a knowledge-sharing community full of developers, WebOps thought leaders and Pantheon experts at your finger-tips.
-- Score limited-edition Pantheon swag and other amazing perks for participating in Early Access programs, user research calls, and other amazing opportunities
+## Who Can Join
 
-## Get Involved
+At this time, access to our community is limited to Pantheon customers and partner agencies. 
 
-- [Join Pantheon Community Slack](http://slackin.pantheon.io)
+## How to Join
+Getting in is easy:
 
-  This peer-to-peer support channel is home to nearly 6K+ Pantheon customers. If you prefer real-time interactions and are seeking a response, the Pantheon Community Slack is a great place to start.
+[Join the Community](https://pantheon.io/developer-community) → Fill out a quick form → Check your inbox for the invite
 
-### Looking for other ways to make a difference on the open web?
+That's it. Takes about 30 seconds, and you're in!
 
-Send us an email at Community@Pantheon.io. We look forward to connecting with you soon!
 
-## Community Code of Conduct
+## What's in it for me? 
+In the new community, you’ll get:
+* All Pantheon alpha and beta programs in one place 
+* A dedicated `#product-feedback` channel that makes product feedback more transparent, so you can see what other customers are suggesting, join the conversation, and upvote the ideas that matter most to you.
+* Early access to select programs, events, and quarterly product reviews with our Product leaders (exclusive to community members only)
+* Topic-based channels so you can jump into conversations around the features, products, and interests that matter most to you
 
-Pantheon is dedicated to creating a positive and harassment-free community experience for everyone. See our [full code of conduct for details](/code-of-conduct), including how to report abuse. Please review [Pantheon's Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+## Other Ways to Give Back
+We're passionate about supporting the open web, and there are plenty of ways to connect with us and contribute, even if you're not a Pantheon customer yet.
+
+Explore these opportunities or drop us a line at [community@pantheon.io](mailto:community@pantheon.io). We're friendly, we promise!
+
+## Our Community Guidelines
+We're committed to making this a welcoming, respectful space for everyone. No exceptions.
+
+We have zero tolerance for harassment, discrimination, or anything that makes people feel unwelcome. Read our [Community Code of Conduct](/code-of-conduct) to see how we maintain this space and what to do if something doesn't feel right.
+
+Also, if you're exploring our software, take a look at [Pantheon's Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for the official details on access.
+
+## Questions or Concerns
+
+Our team is here to help. Email [community@pantheon.io](mailto:community@pantheon.io) and let us know what's going on. We'll respond as soon as we can!
