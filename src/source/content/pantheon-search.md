@@ -37,5 +37,5 @@ Two search technologies are available on Pantheon:
 
 ## More Resources
 
-- [Pantheon Search powered by Elasticsearch and ElasticPress](/docs/guides/search/elasticsearch)
-- [Pantheon Search powered by Solr for Drupal and WordPress](/docs/solr)
+- [Pantheon Search powered by Elasticsearch and ElasticPress](/docs/guides/pantheon-search/elasticsearch)
+- [Pantheon Search powered by Solr for Drupal and WordPress](/docs/pantheon-search/solr)
