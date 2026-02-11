@@ -12,12 +12,12 @@ integration: [--]
 tags: [solr, elasticsearch, search]
 contributors: [jazzsequence, carolynshannon]
 showtoc: true
-permalink: docs/guides/search/elasticsearch-setup
-editpath: search/03-elasticsearch-setup.md
+permalink: docs/guides/pantheon-search/elasticsearch/setup-config
+editpath: search/02-setup-config.md
 reviewed: "2026-02-10"
 ---
 
-<notice about beta>
+<Partial file="elasticsarch-pre-ga.md" />
 
 Getting Elasticsearch running on your Pantheon WordPress site involves activating the service on the platform and then installing and configuring the ElasticPress plugin within WordPress.
 
