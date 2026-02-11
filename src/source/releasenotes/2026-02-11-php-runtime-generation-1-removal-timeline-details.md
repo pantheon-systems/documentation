@@ -4,7 +4,7 @@ published_date: "2026-02-11"
 categories: [infrastructure, action-required]
 ---
 
-As a follow-up to our release note announcing the [removal of PHP Runtime Generation 1](/releasenotes/2025-12-09-php-runtime-generation-1-removal-date), we're now providing specific dates for the removal from the platform.
+As a follow-up to our release note announcing the [removal of PHP Runtime Generation 1](/2025/12/php-runtime-generation-1-removal-date), we're now providing specific dates for the removal from the platform.
 
 ## What's changing when?
 
