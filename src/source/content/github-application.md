@@ -86,7 +86,7 @@ This permission granting is tracked at the [Pantheon Workspace](/guides/account-
 
 People who are members of a Pantheon workspace ([at the developer level or above](/guides/account-mgmt/workspace-sites-teams/teams)) can see all sites in that workspace regardless of whether their corresponding GitHub accounts have direct access to the corresponding GitHub repositories.
 
-<Alert title="Think twice before granting Pantheon access to read all GitHub repositories" type="danger" >
+<Alert title="Permission to create repositories in a GitHub Organization extends to members of a Pantheon workspace" type="danger" >
 
 When configuring Pantheon's GitHub Application (like most any GitHub integration) you have the choice between granting access to individually selected repositories or all repositories within a GitHub organization.
 
