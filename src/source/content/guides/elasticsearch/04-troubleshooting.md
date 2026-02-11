@@ -24,7 +24,13 @@ reviewed: "2026-02-11"
 
 **Do I have to pay extra for Elasticsearch?**
 
-Access to Elasticsearch is included for sites on Performance plans and above. Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.
+Access to Elasticsearch is included for sites on Performance plans and above. 
+
+During the Alpha and Beta phases, Elasticsearch must be enabled manually by the Pantheon team. If you are interested in testing Elasticsearch on your site during the Alpha or Beta phases, please get in touch via the Elasticsearch Alpha access form.
+
+<!-- This is not true yet>Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.<!-->
+
+<Partial file="pantheon-search-table.md" />
 
 **What plugin do I use?**
 
@@ -40,7 +46,7 @@ Pantheon uses shared Elasticsearch clusters. For high-value enterprise sites req
 
 **Do I get all the features of ElasticPress?**
 
-Yes. All features available in the ElasticPress plugin are supported on Pantheon's Elasticsearch integration.
+Yes. All features available in the ElasticPress plugin are supported on Pantheon's Elasticsearch integration, including features that are specific to ElasticPress.io.
 
 **Can I use ElasticPress AI features?**
 
@@ -56,11 +62,12 @@ Yes. Every environment on your site — Dev, Test, Live, and Multidevs — recei
 
 - Verify that Elasticsearch has been activated in the Pantheon Dashboard or via Terminus.
 - If you are in the Beta phase, confirm that the EP constants are properly defined in `wp-config.php`.
-- Check that the environment variables are available by running `terminus env:info <site>.<env>`.
+- Check the ElasticPress Status Report for connection errors and details.
+- Use the ElasticPress WP-CLI command `wp elasticpress status` to check connectivity from the command line (`terminus wp <site>.<env> -- elasticpress status`).
 
 **Search results are outdated or missing content**
 
-- Run a full index sync from the ElasticPress dashboard or via WP-CLI (`wp elasticpress sync`).
+- Run a full index sync from the ElasticPress dashboard or via WP-CLI (`terminus wp <site>.<env> -- elasticpress sync`).
 - If you recently published or updated content, allow a moment for the sync to complete before testing.
 
 **Site performance has not improved after enabling Elasticsearch**
@@ -73,10 +80,10 @@ Yes. Every environment on your site — Dev, Test, Live, and Multidevs — recei
 
 - Ensure you are running a supported version of WordPress and PHP.
 - Deactivate other search plugins that may conflict with ElasticPress.
-- If using WP Solr Power, disable it before activating ElasticPress to avoid conflicts.
 
 ### Getting Help
 
-For support with Elasticsearch on Pantheon, contact Pantheon Support through the Dashboard. Include details about your site, the environment you're working in, and the specific issue you're encountering.
+During Alpha and Beta, please report any issues or questions to the Pantheon team in the private `#alpha-elasticsearch` channel in the Pantheon Community Slack.
+<!--This is not true yet>For support with Elasticsearch on Pantheon, contact Pantheon Support through the Dashboard. Include details about your site, the environment you're working in, and the specific issue you're encountering.<!-->
 
 For ElasticPress plugin-specific questions, refer to the [ElasticPress documentation](https://www.elasticpress.io/resources/).
