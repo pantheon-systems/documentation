@@ -22,9 +22,9 @@ reviewed: "2026-02-10"
 
 One of the most powerful aspects of Elasticsearch on Pantheon is its ability to offload `WP_Query` requests from your database. The ElasticPress plugin integrates with WordPress at the query level, routing eligible queries to Elasticsearch instead of MySQL.
 
-### How ElasticPress Integrates with WP_Query
+### How ElasticPress Integrates with `WP_Query`
 
-When ElasticPress is active and configured, it automatically intercepts qualifying `WP_Query` calls and redirects them to Elasticsearch. This happens transparently — your existing theme and plugin code that uses `WP_Query` continues to work as expected, but the queries are now served by Elasticsearch instead of your database.
+When ElasticPress is active and configured, it automatically routes WordPress search queries (any `WP_Query` with an `s` parameter) through Elasticsearch instead of MySQL. For non-search queries — archives, custom loops, filtered post lists — you can opt in to Elasticsearch by setting the `ep_integrate` parameter to `true`
 
 ### The `ep_integrate` Parameter
 
@@ -50,6 +50,41 @@ $query = new WP_Query( array(
 ) );
 ```
 
+For more general use integration with query blocks or archive pages, you can use the `ep_integrate` parameter with the `pre_get_posts` action:
+
+```php
+/**
+ * Integrate ElasticPress with specific queries using pre_get_posts.
+ *
+ * This approach allows you to selectively route existing WordPress queries
+ * through Elasticsearch without modifying theme or plugin code that creates
+ * those queries.
+ */
+add_action( 'pre_get_posts', 'my_ep_integrate_queries' );
+
+function my_ep_integrate_queries( $query ) {
+    // Don't integrate on feed queries.
+    if ( $query->is_feed() ) {
+        return;
+    }
+
+    // Blog page (posts index)
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'ep_integrate', true );
+    }
+
+    // Post type archives
+    if ( $query->is_post_type_archive() && $query->is_main_query() ) {
+        $query->set( 'ep_integrate', true );
+    }
+
+    // Category and tag archives
+    if ( ( $query->is_category() || $query->is_tag() ) && $query->is_main_query() ) {
+        $query->set( 'ep_integrate', true );
+    }
+}
+```
+
 ### When to Use `ep_integrate`
 
 Use `ep_integrate => true` for queries that are:
@@ -58,11 +93,7 @@ Use `ep_integrate => true` for queries that are:
 - Search-related or involve complex filtering
 - Serving high-traffic pages where database load is a concern
 
-Use `ep_integrate => false` for queries that:
-
-- Need to return results that have not yet been indexed
-- Require real-time data accuracy immediately after content changes (before a sync)
-- Are simple queries where the database performs adequately
+In many cases, `ep_integrate` may be _slower_ for simple queries that the database can handle efficiently, especially if the content is not yet indexed in Elasticsearch. For these cases, you can use `ep_integrate => false` or not add the `ep_integrate` parameter to ensure the query runs against the database instead.
 
 ### Keeping Your Index Current
 
