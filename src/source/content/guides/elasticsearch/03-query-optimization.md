@@ -1,6 +1,7 @@
 ---
 title: Pantheon Search
 subtitle: Elasticsearch Query Optimization
+navtitle: Query Optimization
 description: Instructions for optimizing queries with the ElasticPress plugin on your Pantheon WordPress site.
 contenttype: [guide]
 innav: [true]

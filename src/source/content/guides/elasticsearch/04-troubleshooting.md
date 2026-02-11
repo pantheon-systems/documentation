@@ -1,6 +1,7 @@
 ---
 title: Pantheon Search
 subtitle: Elasticsearch Troubleshooting and Frequently Asked Questions
+navtitle: Troubleshooting & FAQs
 description: Instructions for troubleshooting Elasticsearch issues with the ElasticPress plugin on your Pantheon WordPress site.
 contenttype: [guide]
 innav: [true]
