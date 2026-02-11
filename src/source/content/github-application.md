@@ -81,10 +81,11 @@ If you need compilation of front-end assets in your WordPress or Drupal theme th
 ### Security and Permissions
 
 The main purpose of the Pantheon GitHub Application is to create a mapping between a repository on GitHub and a website on Pantheon.
-Configuring the Application requires granting permission to Pantheon to read one or more repositories.
+Configuring the Application requires granting permission to Pantheon to read one or more GitHub repositories.
 This permission granting is tracked at the [Pantheon Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) level.
 
-People who are members of a Pantheon Workspace and have the Developer role or higher can see all sites in the Workspace. This means they can see sites on Pantheon even if their corresponding Github account doesn't have permission to view the site's GitHub repository.
+People who are members of a Pantheon Workspace and have the Developer role or higher can see all sites in the Workspace.
+This means they can see sites on Pantheon even if their corresponding _Github account_ doesn't have permission to view the site's GitHub repository.
 
 <Alert title="Permission to create repositories in a GitHub Organization extends to members of a Pantheon workspace" type="danger" >
 
