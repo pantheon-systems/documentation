@@ -89,7 +89,7 @@ This means they can see sites on Pantheon even if their corresponding _Github ac
 
 <Alert title="Permission to create repositories in a GitHub Organization extends to members of a Pantheon workspace" type="danger" >
 
-When configuring the Pantheon's GitHub Application (PAG) you will have the choice between granting access to individually selected repositories or "all" repositories within your GitHub organization.
+When configuring Pantheon's GitHub Application you will have the choice between granting access to individually selected repositories or "all" repositories within your GitHub organization.
 
 Selecting "all repositories" can be more convenient because it allows for faster creation of new repositories and sites. However, by granting Pantheon the "all repositories" permission you also grant that permission to every member of the Pantheon Workspace who has a Developer role or higher.
 Depending on the size and nature of your company, you may not want your Pantheon Workspace members to have this permission, especially they are not members of your GitHub organization.
