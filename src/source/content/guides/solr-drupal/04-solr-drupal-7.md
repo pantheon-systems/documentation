@@ -13,7 +13,7 @@ tags: [solr, search, modules]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
 showtoc: true
-permalink: docs/guides/solr-drupal/solr-drupal-7
+permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal-7
 editpath: solr-drupal/04-solr-drupal-7.md
 ---
 
