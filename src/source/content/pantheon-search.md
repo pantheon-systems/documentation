@@ -22,17 +22,7 @@ Pantheon offers integrated search services to improve site performance and deliv
 
 Two search technologies are available on Pantheon:
 
-| Feature | Elasticsearch (via ElasticPress) | Apache Solr |
-|---------|----------------------------------|-------------|
-| **CMS Support** | WordPress | WordPress, Drupal |
-| **Plan Availability** | Performance, Elite (not Sandbox) | Sandbox (dev only), Performance, Elite |
-| **Plugin** | [ElasticPress](https://wordpress.org/plugins/elasticpress/) | [Solr Power](https://wordpress.org/plugins/solr-power/) (WP), [Search API Solr](https://www.drupal.org/project/search_api_solr) (Drupal) |
-| **Fuzzy Search** | Yes | Limited |
-| **Autosuggest** | Yes | No |
-| **Faceted Search** | Yes | Yes |
-| **WooCommerce Support** | Yes | No |
-| **WP_Query Offloading** | Yes | No |
-| **Status** | Beta (GA targeted Q2 2026) | Generally Available |
+<Partial file="pantheon-search-table.md" />
 
 
 ## More Resources

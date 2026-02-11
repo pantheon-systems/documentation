@@ -31,6 +31,8 @@ By bringing Elasticsearch directly onto the Pantheon platform, you get a fully m
 
 Elasticsearch is available for WordPress sites on **Performance** and **Elite** site plans. Every environment on your site (Dev, Test, Live, and Multidevs) receives its own Elasticsearch endpoint. Elasticsearch is not available on Sandbox sites.
 
+<Partial file="pantheon-search-table.md" />
+
 ### Elasticsearch and Solr
 
 Pantheon also offers [Solr-based search](/solr). You can have both Solr and Elasticsearch activated on a site at the same time, which is useful during migration. However, running both simultaneously in production is not recommended. For new search implementations, Elasticsearch with ElasticPress is the recommended path.
