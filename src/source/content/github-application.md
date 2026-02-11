@@ -78,7 +78,7 @@ Our separate [GitHub Action](/github-actions) is designed for more customized wo
 Currently, Pantheon executes a `composer install` command through our [Integrated Composer](/guides/integrated-composer) feature.
 If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use [our GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) now and [follow this item on our roadmap for eventual inclusion of such functionality within a Pantheon-prodived build step](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
 
-### Alignment between GitHub repos/organizations and Pantheon sites/workspaces
+### Security and Permissions
 
 The main purpose of the Pantheon GitHub Application is to create a mapping between a repository on GitHub and a website on Pantheon.
 Configuring the Application requires granting permission to Pantheon to read one or more repositories.
