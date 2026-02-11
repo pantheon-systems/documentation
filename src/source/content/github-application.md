@@ -84,7 +84,7 @@ The main purpose of the Pantheon GitHub Application is to create a mapping betwe
 Configuring the Application requires granting permission to Pantheon to read one or more repositories.
 This permission granting is tracked at the [Pantheon Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) level.
 
-People who are members of a Pantheon workspace ([at the developer level or above](/guides/account-mgmt/workspace-sites-teams/teams)) can see all sites in that workspace regardless of whether their corresponding GitHub accounts have direct access to the corresponding GitHub repositories.
+People who are members of a Pantheon Workspace and have the Developer role or higher can see all sites in the Workspace. This means they can see sites on Pantheon even if their corresponding Github account doesn't have permission to view the site's GitHub repository.
 
 <Alert title="Permission to create repositories in a GitHub Organization extends to members of a Pantheon workspace" type="danger" >
 
