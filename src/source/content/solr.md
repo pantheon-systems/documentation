@@ -11,6 +11,7 @@ audience: [agency, development]
 product: [search]
 integration: [--]
 contributors: [jazzsequence, stevector]
+permalink: docs/pantheon-search/solr
 ---
 
 Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments.
