@@ -33,7 +33,7 @@ export const getGuideDirectory = (
   guides.forEach((guide) => {
     ChildItems.push({
       link: guide.fields.slug,
-      title: guide.frontmatter.subtitle || "",
+      title: guide.frontmatter.navtitle || guide.frontmatter.subtitle || "",
     });
 
     if (guide.fields.slug === "/" + guideDirectory) {
