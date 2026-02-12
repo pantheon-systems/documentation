@@ -1,0 +1,33 @@
+name: Auto-Tag Live Deployments
+
+concurrency:
+  group: ${{ github.workflow }}-live
+  cancel-in-progress: false
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create_next_test_tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      # We need to fetch all tags to find the highest one
+      with:
+        fetch-depth: 0
+
+    - uses: ./.github/actions/pantheon-auto-tag
+      with:
+        target_env: live
+
+    - uses: ./.github/actions/wait-for-deployment
+      with:
+        expected_sha: ${{ github.sha }}
+        target_env: live
+        pantheon_site_machine_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}

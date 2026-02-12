@@ -1,0 +1,134 @@
+name: Confirm that live environment is warm and caching
+permissions:
+  contents: read
+
+on:
+  push:
+  schedule:
+  # Runs every 5 minutes
+  - cron: '*/5 * * * *'
+
+jobs:
+  check_live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+
+    steps:
+      - name: warm containers
+        id: warm_containers
+        shell: bash
+        env:
+          URL: "https://docs.pantheon.io"
+        run: |
+          #!/bin/bash
+          set +e
+          # --- Function to extract the 'VE' value from the x-timer header ---
+          # The VE value is the number of milliseconds spent by Fastly communicating with the origin.
+          extract_ve_milliseconds() {
+              local header_output="$1"
+              if [[ "$header_output" =~ VE([0-9]+) ]]; then
+                  echo "${BASH_REMATCH[1]}"
+              else
+                  echo "-1" # Error value if not found
+              fi
+          }
+
+          # --- Function to extract the 'X-Cache' value and ensure it is clean ---
+          extract_xcache_status() {
+              local header_output="$1"
+              local status
+
+              # 1. Use grep to find the line, awk to get the second field (the value)
+              status=$(echo "$header_output" | grep -i "x-cache:" | awk '{print $2}')
+
+              # 2. Use Bash Parameter Expansion to trim all leading and trailing whitespace
+              # This is more robust than relying solely on tr or awk for cleanup.
+              status="${status##*( )}"  # Remove leading spaces
+              status="${status%%*( )}"  # Remove trailing spaces
+              status="${status%\r}"     # Remove carriage return (\r) if present
+
+              # 3. Print the clean status
+              echo "$status"
+          }
+
+          # --- 2. Request with Cache Bypass (Warmth and MISS Check) ---
+          echo "--- Performing Cache-Bypassing Request (Warmth & MISS Check) ---"
+
+          # Add a unique GET parameter (UNIX timestamp) to bypass the Fastly cache
+          CACHE_BYPASS_URL="${URL}?timestamp=$(date +%s%N)"
+
+          # Curl the URL, sending output to /dev/null, but capture all headers
+          ALL_HEADERS_BYPASS=$(curl -s -o /dev/null -D - "$CACHE_BYPASS_URL")
+          echo "ALL_HEADERS_BYPASS: $ALL_HEADERS_BYPASS"
+          X_TIMER_HEADER_BYPASS=$(echo "$ALL_HEADERS_BYPASS" | grep -i "x-timer:")
+
+          # 2b. Set variable for milliseconds
+          MILLISECONDS_FOR_CACHE_BYPASSING_REQUEST=$(extract_ve_milliseconds "$X_TIMER_HEADER_BYPASS")
+          # Extract X-Cache status
+          X_CACHE_BYPASS_STATUS=$(extract_xcache_status "$ALL_HEADERS_BYPASS")
+
+          # 2c. Print the variables
+          echo "Milliseconds (Cache Bypass, VE): ${MILLISECONDS_FOR_CACHE_BYPASSING_REQUEST} ms"
+          echo "X-Cache Status: ${X_CACHE_BYPASS_STATUS}"
+          echo "--------------------------------------------------------"
+
+
+          # --- 3. Request without Cache Bypass (Cache Hit Check) ---
+          echo "--- Performing Cacheable Request (Cache Hit Check) ---"
+
+          # Curl the original URL (should be served from Fastly cache after the first request)
+          ALL_HEADERS_CACHEABLE=$(curl -s -o /dev/null -D - "$URL")
+          echo "ALL_HEADERS_CACHEABLE: $ALL_HEADERS_CACHEABLE"
+          X_TIMER_HEADER_CACHEABLE=$(echo "$ALL_HEADERS_CACHEABLE" | grep -i "x-timer:")
+
+          # 3b. Set variable for milliseconds
+          MILLISECONDS_FOR_CACHEABLE_REQUEST=$(extract_ve_milliseconds "$X_TIMER_HEADER_CACHEABLE")
+          # Extract X-Cache status
+          X_CACHE_CACHEABLE_STATUS=$(extract_xcache_status "$ALL_HEADERS_CACHEABLE")
+
+          # 3c. Print the variables
+          echo "Milliseconds (Cacheable, VE): ${MILLISECONDS_FOR_CACHEABLE_REQUEST} ms"
+          echo "X-Cache Status: ${X_CACHE_CACHEABLE_STATUS}"
+          echo "--------------------------------------------------------"
+
+          # --- 4. Validation and Error Exit ---
+
+          # 4b. Check if the cache-bypassing request was too slow (indicating a cold start)
+          MAX_WARM_MS=500
+          if (( MILLISECONDS_FOR_CACHE_BYPASSING_REQUEST > MAX_WARM_MS )); then
+              echo "❌ ERROR: Cache-bypassing request (Warmth Check) was too slow!"
+              echo "  Observed: ${MILLISECONDS_FOR_CACHE_BYPASSING_REQUEST} ms | Threshold: ${MAX_WARM_MS} ms"
+              exit 1
+          fi
+
+          # 4c. Check if the cache-bypassing request was a MISS
+          if [[ "$X_CACHE_BYPASS_STATUS" != "MISS" ]]; then
+              echo "❌ ERROR: Cache-bypassing request returned X-Cache: ${X_CACHE_BYPASS_STATUS}. Expected MISS."
+              # Commenting out this failure.
+              # The logic needs to be more robust to handle values like "MISS, MISS"
+              # Not just "MISS"
+              # https://github.com/pantheon-systems/documentation-in-nextjs/issues/190
+              # exit 3
+          fi
+
+          # 4a. Check if the cacheable request was too slow (indicating a Fastly miss/no cache)
+          // todo Lower this threshold since cached responses should be very fast
+          // https://github.com/pantheon-systems/documentation-in-nextjs/issues/190
+          MAX_CACHE_MS=200
+          if (( MILLISECONDS_FOR_CACHEABLE_REQUEST > MAX_CACHE_MS )); then
+              echo "❌ ERROR: Cacheable request (Cache Hit Check) was too slow!"
+              echo "  Observed: ${MILLISECONDS_FOR_CACHEABLE_REQUEST} ms | Threshold: ${MAX_CACHE_MS} ms"
+              exit 2
+          fi
+
+          # 4d. Check if the cacheable request was a HIT
+          # todo, re-enable this check once we confirm Fastly caching is working as expected
+          # https://github.com/pantheon-systems/documentation-in-nextjs/issues/190
+          if [[ "$X_CACHE_CACHEABLE_STATUS" != "HIT" ]]; then
+              echo "❌ ERROR: Cacheable request returned X-Cache: ${X_CACHE_CACHEABLE_STATUS}. Expected HIT."
+              # exit 4
+          fi
+
+          # If all checks pass
+          echo "✅ Success: All performance and caching checks passed."
+          exit 0

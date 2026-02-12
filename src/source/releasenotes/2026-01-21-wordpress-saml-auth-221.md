@@ -1,0 +1,29 @@
+---
+title: "WP SAML Auth 2.3 update now available"
+published_date: "2026-01-21"
+categories: [action-required, wordpress, security]
+---
+
+Pantheon has released a new version of our [WP SAML Auth WordPress plugin](https://wordpress.org/plugins/wp-saml-auth/). This update focuses on modernizing PHP support and providing developers with more granular control over SAML configurations.
+
+## What's New
+- PHP 8.4 Compatibility: Full support for PHP 8.4 has been added.
+- Updated PHP Requirements: The minimum supported PHP version has been increased to 7.4 to ensure better security and performance.
+- WordPress 6.9 Compatibility: Confirmed compatibility with WordPress 6.9.
+- Enhanced Configuration: Added the `wp_saml_auth_internal_config` filter, allowing developers to customize the OneLogin SAML configuration.
+- SimpleSAMLphp 2.x Support: Improved auto-detection for SimpleSAMLphp 2.x and optimized autoloader discovery to skip redundant processes when the `SimpleSAML\Auth\Simple` class is already loaded.
+
+## Bug Fixes
+Settings Page Warnings: Fixed a warning message on the plugin's settings page that appeared for users not utilizing SimpleSAML.
+
+## Important: Compatibility & Testing
+While this update improves autoloader discovery, it changes how the plugin interacts with the local environment. We strongly recommend testing in a lower environment before upgrading especially if you use:
+
+- Non-Standard Installations: Custom SimpleSAMLphp installations located in non-standard directories.
+- Manual Autoloaders: Custom autoloader code that manually handles the loading of SimpleSAMLphp.
+
+## Action required
+We encourage you to upgrade to the latest version of WP SAML Auth as soon as possible to take advantage of the latest features and compatibility updates.
+updating to get the latest features and compatibility updates.
+
+If you have questions or concerns, [please open issues in the queue for the plugin](https://github.com/pantheon-systems/wp-saml-auth). 
