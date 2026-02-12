@@ -68,6 +68,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
 | **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
 | **Apache Tika** | 1.18, 1.21 | 1.18, 1.21, [3.2](/external-libraries#apache-tika) |
+| **Tesseract OCR** | 4.1.1 | 5.3.0 |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
 
 <sup>1</sup> Support for this OS Package will be added soon. If you depend on this OS Package, remain on PHP Runtime Generation 1 for now. <br /><br />
