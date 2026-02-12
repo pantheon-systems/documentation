@@ -93,7 +93,7 @@ Currently, when running ElasticPress WP-CLI commands through Terminus, you must 
 terminus wp <site>.<env> -- elasticpress sync --url=https://yoursite.com
 ```
 
-**Elasticsearch instance is not reachable on Pantheon platform domains (`*.pantheonsite.io`**
+**Elasticsearch instance is not reachable on Pantheon platform domains (`*.pantheonsite.io`)**
 
 Currently, if your environment has a Pantheon platform domain (e.g. `<env>-<site>.pantheonsite.io`) and _that is not the domain configured in the Elasticsearch instance_ (during Alpha this is the one that you would have given to the team for the site you are testing on), then requests to the Elasticsearch instance from the site will fail. This is because the Elasticsearch instance is configured to only accept requests from the domain you provided, and the Pantheon platform domain does not match that.
 
