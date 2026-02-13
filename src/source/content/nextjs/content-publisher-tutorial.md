@@ -1,7 +1,7 @@
 ---
 title: Content Publisher Tutorial for Next.js
 description: Integrate Content Publisher with a Next.js site on Pantheon
-reviewed: "2025-11-17"
+reviewed: "2026-02-13"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -50,7 +50,7 @@ With all the requirements above in place, we will now make a local codebase for 
 Run this command (replacing `my-site-name` with a unique name for your site):
 
 ```bash{promptUser: user}
- pcc init my-site-name --eslint --ts --appRouter
+ cpub init my-site-name --eslint --ts --appRouter
 ```
 
 You can answer the interactive prompts that follow with "no" since we have not yet made a Content Publisher collection or token to go with this site.
@@ -71,7 +71,7 @@ Since this repository is meant to be a tutorial, you may want to make it private
 
 ### Push the codebase to GitHub
 
-Now, we will push the codebase we made with `pcc init` to the new repository on GitHub.
+Now, we will push the codebase we made with `cpub init` to the new repository on GitHub.
 
 1. First, change into the directory holding the codebase:
 
