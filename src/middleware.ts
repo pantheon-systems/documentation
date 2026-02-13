@@ -196,8 +196,6 @@ const RedirectMap: Record<string, string> = {
   "/guides/solr-drupal/custom-config": "/guides/pantheon-search/solr-drupal/custom-config",
   "/guides/solr-drupal/solr-drupal-7": "/guides/pantheon-search/solr-drupal/solr-drupal-7",
   "/guides/wordpress-developer/wordpress-solr": "/guides/pantheon-search/wordpress-developer/wordpress-solr",
-  "/solr": "/pantheon-search/solr",
-
 
 
   // These are redirects that were not in AGCDN but discovered in the
