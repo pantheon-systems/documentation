@@ -12,7 +12,7 @@ integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon]
 showtoc: true
-permalink: docs/guides/solr-drupal
+permalink: docs/guides/pantheon-search/solr-drupal
 editpath: solr-drupal/01-introduction.md
 reviewed: "2022-12-13"
 ---

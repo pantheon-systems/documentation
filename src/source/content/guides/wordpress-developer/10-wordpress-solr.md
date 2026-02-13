@@ -12,7 +12,7 @@ integration: [plugins]
 tags: [solr, plugins]
 contributors: [cityofoaksdesign, ccharlton]
 showtoc: true
-permalink: docs/guides/wordpress-developer/wordpress-solr
+permalink: docs/guides/pantheon-search/solr/wordpress-solr
 reviewed: "2024-09-09"
 ---
 

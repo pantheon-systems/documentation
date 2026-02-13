@@ -190,6 +190,13 @@ const RedirectMap: Record<string, string> = {
   "/guides/agcdn/agcdn-features": "/guides/agcdn",
   "/lockr": "/guides/secrets/overview",
   "/pivotal-tracker": "/integrations#project-management",
+  "/solr": "/pantheon-search/solr",
+  "/guides/solr-drupal": "/guides/pantheon-search/solr-drupal",
+  "/guides/solr-drupal/solr-drupal": "/guides/pantheon-search/solr-drupal/solr-drupal",
+  "/guides/solr-drupal/custom-config": "/guides/pantheon-search/solr-drupal/custom-config",
+  "/guides/solr-drupal/solr-drupal-7": "/guides/pantheon-search/solr-drupal/solr-drupal-7",
+  "/guides/wordpress-developer/wordpress-solr": "/guides/pantheon-search/solr/wordpress-solr",
+
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.

@@ -12,7 +12,7 @@ integration: [--]
 tags: [solr, search, modules]
 reviewed: "2025-02-11"
 showtoc: true
-permalink: docs/guides/solr-drupal/custom-config
+permalink: docs/guides/pantheon-search/solr-drupal/custom-config
 editpath: solr-drupal/03-custom-config.md
 ---
 ## Before you begin
