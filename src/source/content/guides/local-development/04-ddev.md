@@ -48,25 +48,25 @@ Be sure that you have:
 
 1. [Clone the site's codebase](/guides/git/git-config#clone-your-site-codebase), and from the site's root directory run: 
 
-  ```bash{promptUser: user}
-  ddev config
-  ```
+    ```bash{promptUser: user}
+    ddev config
+    ```
 
 1. Start your DDEV project locally by running the following command. 
 
-  ```bash{promptUser: user}
-  ddev start
-  ```
+    ```bash{promptUser: user}
+    ddev start
+    ```
 
-  In addition to starting local Docker containers for the site, this command will also install DDEV provider integration recipes to your site's codebase at `.ddev/providers`, which we will use in the next step.
+    In addition to starting local Docker containers for the site, this command will also install DDEV provider integration recipes to your site's codebase at `.ddev/providers`, which we will use in the next step.
 
 1. Copy your site's `.ddev/providers/pantheon.yaml.example` provider file to `.ddev/providers/pantheon.yaml`.
 
-  <Alert title="Note" type="info" >
+    <Alert title="Note" type="info" >
 
-  Do this in your site's `.ddev` directory, not the global `.ddev` directory. The `.ddev/providers/pantheon.yaml` file is a DDEV recipe for integration with Pantheon. For more information on DDEV provider integrations, see [DDEV docs](https://ddev.readthedocs.io/en/latest/users/providers/).
+    Do this in your site's `.ddev` directory, not the global `.ddev` directory. The `.ddev/providers/pantheon.yaml` file is a DDEV recipe for integration with Pantheon. For more information on DDEV provider integrations, see [DDEV docs](https://ddev.readthedocs.io/en/latest/users/providers/).
 
-  </Alert>
+    </Alert>
 
 1. Update the project name and environment variable in your new `.ddev/providers/pantheon.yaml` file. In the example below, the Pantheon project name is `de8` and the targeted Pantheon environment is `dev`.
 
@@ -77,27 +77,27 @@ Be sure that you have:
 
 1. Now that you have the provider file created and edited, restart your DDEV containers with the following command: 
 
-  ```bash{promptUser: user}
-  ddev restart
-  ```
+    ```bash{promptUser: user}
+    ddev restart
+    ```
 
 1. If you haven't already, create a backup on the Pantheon environment you configured in step 6 above. You can [create a new backup from the site dashboard](/guides/backups/create-backups#create-a-backup-in-the-dashboard), or via Terminus: 
 
-  ```bash{promptUser: user}
-  terminus backup:create <site>.<env>
-  ```
+    ```bash{promptUser: user}
+    terminus backup:create <site>.<env>
+    ```
 
 1. Run the following command to pull your site's database and files from Pantheon into your local DDEV environment. You can add the `--skip-files` parameter if you don't want to sync the content files to your local. 
 
-  ```bash{promptUser: user}
-  ddev pull pantheon
-  ```
+    ```bash{promptUser: user}
+    ddev pull pantheon
+    ```
 
 1. Run the following command to open your local development URL in your browser: 
 
-  ```bash{promptUser: user}
-  ddev launch
-  ```
+    ```bash{promptUser: user}
+    ddev launch
+    ```
 
 
 ## More Resources
