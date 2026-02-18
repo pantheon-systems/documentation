@@ -8,4 +8,4 @@
 | **Faceted Search** | Yes | Yes |
 | **WooCommerce Support** | Yes | No |
 | **`WP_Query` Offloading** | Yes | No |
-| **Status** | Beta (GA targeted Q2 2026) | Generally Available |
+| **Status** | Alpha (Beta targeted Q2 2026) | Generally Available |
