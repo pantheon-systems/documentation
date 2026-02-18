@@ -115,6 +115,7 @@ const webInfrastructure = () => {
         simpleLink("/pantheon-search", "Overview"),
         getGuideDirectory("guides/elasticsearch", "Elasticsearch"),
         simpleLink("/pantheon-search/solr", "Solr", [
+          simpleLink("/pantheon-search/solr", "Introduction"),
           getGuideDirectory("guides/solr-drupal", "Drupal Solr"),
           simpleLink("/guides/pantheon-search/solr/wordpress-solr?double-menu", "WordPress Solr"),
           simpleLink("/opensolr", "Open Solr"),
