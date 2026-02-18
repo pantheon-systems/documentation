@@ -33,7 +33,7 @@ Before you begin, confirm the following:
 
 <Alert type="info" title="Note">
 
-During the Alpha phase, self-service activation of the Elasticsearch add-on is not yet available. If you are interested in testing Elasticsearch on your site during the Alpha phase, please get in touch via the Elasticsearch Alpha access form. Once you receive a confirmation from the Pantheon team, you can install and activate the ElasticPress plugin on your site to connect to the Elasticsearch service.
+During the Alpha phase, self-service activation of the Elasticsearch add-on is not yet available. If you are interested in testing Elasticsearch on your site during the Alpha phase, please get in touch via the [Elasticsearch Alpha access form](https://forms.gle/q5qWS17L9VsH2fkg6). Once you receive a confirmation from the Pantheon team, you can install and activate the ElasticPress plugin on your site to connect to the Elasticsearch service.
 
 </Alert>
 
