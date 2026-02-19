@@ -61,6 +61,14 @@ tika_version: 3
 
 Valid values are `3` or `none` (to disable Tika).
 
+#### OCR in Tika 3
+
+Tika 3.x defaults to `AUTO` OCR mode, which can significantly increase PDF processing times when Tesseract is available. A `tika-config.xml` that disables OCR is available at `/opt/pantheon/tika/tika-config.xml` and can be passed to Tika using the `--config` flag:
+
+```bash
+/opt/pantheon/tika/tika.jar --config=/opt/pantheon/tika/tika-config.xml
+```
+
 </Tab>
 <Tab title="PHP Runtime Generation 1" id="tab-2-id">
 
