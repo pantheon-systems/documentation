@@ -63,7 +63,7 @@ Valid values are `3` or `none` (to disable Tika).
 
 #### OCR in Tika 3
 
-Tika 3.x defaults to `AUTO` OCR mode, which can significantly increase PDF processing times when Tesseract is available. A `tika-config.xml` that disables OCR is available at `/opt/pantheon/tika/tika-config.xml` and can be passed to Tika using the `--config` flag:
+Tika 3.x defaults to `AUTO` OCR mode, which can significantly increase PDF processing times when Tesseract is used for OCR. A `tika-config.xml` that disables OCR is available at `/opt/pantheon/tika/tika-config.xml` and can be passed to Tika using the `--config` flag:
 
 ```bash
 /opt/pantheon/tika/tika.jar --config=/opt/pantheon/tika/tika-config.xml
