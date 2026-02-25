@@ -1,14 +1,14 @@
 ---
-title: Quality Assistant now available in Content Publisher
+title: Quality assistant now available in Content Publisher
 published_date: "2026-02-25"
 categories: [content-publisher, tools-apis]
 ---
 
-[Content Publisher](https://docs.content.pantheon.io) now includes Quality Assistant — an intelligent review system that helps you create better content before you publish. Starting with accessibility checking at no added cost, quality assistant will expand to help ensure your content meets brand standards, performs well in search, and satisfies compliance requirements.
+[Content Publisher](https://docs.content.pantheon.io) now includes a quality assistant — an intelligent review system that helps you create better content before you publish. Starting with accessibility checking at no added cost, the quality assistant will expand to help ensure your content meets brand standards, performs well in search, and satisfies compliance requirements.
 
 ## What’s new?
 
-Quality Assistant's automatic accessibility checking helps catch common issues before you publish:
+The quality assistant's automatic accessibility checking helps catch common issues before you publish:
 
 * Missing alt text on images
 * Improper heading hierarchy
@@ -19,4 +19,4 @@ Issues are displayed in the sidebar with plain-language descriptions of the prob
 
 ![content publisher quality assistant accessibility checker](../images/release-notes/cp-quality_assistant-accessibility_checker.png)
 
-For more information, see the [Quality Assistant in the Content Publisher documentation](https://docs.content.pantheon.io/#).
+For more information, see the [quality assistant in the Content Publisher documentation](https://docs.content.pantheon.io/#).
