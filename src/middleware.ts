@@ -225,6 +225,12 @@ const wildcardRedirects = [
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
 
+  // Log all headers (shows the external FQDN and other forwarding info)
+  console.log('\n--- Request Headers ---');
+  const headers: Record<string, string> = {};
+  for (const [key, value] of Array.from(request.headers.entries())) {
+    headers[key] = value;
+  }
   // Use JSON.stringify for a clean, readable output of all headers
   console.log(JSON.stringify(headers, null, 2));
   // This section handles the HTTP to HTTPS redirects for Pantheon sites.
@@ -238,13 +244,6 @@ export function middleware(request: NextRequest) {
       url.port = "";
       // Use a 301 permanent redirect
       return NextResponse.redirect(url.toString(), 301);
-  }
-  // Redirect newdocs.pantheon.io to docs.pantheon.io
-  if (xForwardedHost.trim().endsWith('newdocs.pantheon.io')) {
-    url.hostname = 'docs.pantheon.io';
-    url.port = "";
-    // Use a 301 permanent redirect
-    return NextResponse.redirect(url.toString(), 301);
   }
 
   // regex to match the wildcard redirects
