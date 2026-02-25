@@ -61,14 +61,12 @@ From there, requests are routed to one of the Node.js containers running the Nex
 These containers can use a cache handler to read from the [Full Route Cache](https://nextjs.org/docs/app/guides/caching#2-nextjs-caching-on-the-server-full-route-cache) which containers prerendered HTML and React Server Component Payloads.
 When Next.js finds a usable cached response, it quickly serves that directly to the client.
 
-<Alert title="Cache handler not yet available to customer sites" type="info" >
-
-The shared cache which enables Incremental Static Regeneration behavior is currently undergoing internal testing.
-
-[Follow this GitHub issue for updates](https://github.com/pantheon-systems/documentation/issues/9727).
-
-</Alert>
-
 Cache misses trigger Next.js to render the requested page, often requiring content to be fetched from external data sources like WordPress, Drupal, or Content Publisher.
 The returned HTML and React Server Component Payloads are then stored in the Full Route Cache for future requests.
 This behavior is called of repopulated the cache with fresh versions of webpages is called [Incremental Static Regeneration](https://nextjs.org/docs/pages/guides/incremental-static-regeneration).
+
+### Cache handler
+
+Pantheon provides a cache handler package to connect Next.js-specific cache behavior to a persistent cache as well as our CDN.
+
+Learn more about installation and usage of this cache handler in [the readme file of its repository](https://github.com/pantheon-systems/nextjs-cache-handler).

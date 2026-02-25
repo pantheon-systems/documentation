@@ -1,6 +1,6 @@
 ---
 title: "Next.js Cache Handler package now available"
-published_date: "2026-02-23"
+published_date: "2026-02-26"
 categories: [nextjs, new-feature]
 ---
 
@@ -8,11 +8,11 @@ The [`@pantheon-systems/nextjs-cache-handler`](https://www.npmjs.com/package/@pa
 
 ## Features
 
-* **Dual cache handlers** - Support for both Google Cloud Storage (production) and file-based (development) caching.
 * **Next.js 16 `use cache` support** - Handlers for the new `cacheHandlers` API introduced in Next.js 16.
 * **Tag-based invalidation** - Efficient cache invalidation using tag mapping.
 * **Edge cache clearing** - Automatic CDN cache invalidation on Pantheon infrastructure.
 * **Build-aware caching** - Automatically invalidates route cache on new builds while preserving data cache.
+* **Dual cache handlers** - Support for both Google Cloud Storage (production) and file-based (development) caching.
 
 ## Getting started
 
