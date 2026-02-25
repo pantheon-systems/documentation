@@ -236,7 +236,7 @@ export function middleware(request: NextRequest) {
   // This section handles the HTTP to HTTPS redirects for Pantheon sites.
   // See https://github.com/pantheon-systems/documentation/issues/9791
   // for more information.
-  const incomingProtocol = request.headers.get('x-proto') || '';
+  const incomingProtocol = request.headers.get('x-forwarded-proto') || '';
   const incomingHost = request.headers.get('pantheon-host') || '';
   if (incomingProtocol === 'http' && incomingHost) {
       url.protocol = "https:";
