@@ -122,7 +122,7 @@ Not all automated traffic is unwanted. Many requests that appear to come from bo
 #### Top User Agents
 A user agent identifies the software making requests to your site — typically a browser, operating system, or automated tool. This table shows which user agents are generating the most traffic, sorted by request count.
 
-![top User Agents](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-4.png)
+![top User Agents](../../../../images/guides/account-mgmt/docs-top-traffic-patterns4.png)
 
 **What you can do with this data**
 
