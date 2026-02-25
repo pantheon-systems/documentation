@@ -225,6 +225,8 @@ const wildcardRedirects = [
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
 
+  // Use JSON.stringify for a clean, readable output of all headers
+  console.log(JSON.stringify(headers, null, 2));
   // This section handles the HTTP to HTTPS redirects for Pantheon sites.
   // See https://github.com/pantheon-systems/documentation/issues/9791
   // for more information.
