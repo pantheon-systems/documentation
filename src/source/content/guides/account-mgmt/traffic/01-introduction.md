@@ -81,7 +81,7 @@ Learn more about how to enable and improve caching in the [Pantheon Global CDN](
 ### Top Traffic Patterns 
 The Top Traffic Patterns section of the Site Metrics dashboard gives you a detailed breakdown of which pages, IP addresses, and user agents are generating the most requests to your site. Use this data to identify aggressive crawlers or scrapers you may want to [block manually when troubleshooting traffic events](/guides/account-mgmt/traffic/remedy#dos-attack-mitigation), and to prioritize caching and performance optimization based on the specific pages receiving the highest traffic.
 
-[screenshot]
+![top traffic patterns](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-1.png)
 
 You can toggle the displayed date range by clicking **Day**, **Week**, or **Month** at the top of the section. Data is refreshed every minute.
 
@@ -94,7 +94,7 @@ You can toggle the displayed date range by clicking **Day**, **Week**, or **Mont
 #### Top visited paths
 This table lists the most frequently requested pages and resources on your site, ranked by request count. Each row shows the URL path and the total number of requests it received during the selected time period.
 
-[screenshot]
+![top visited paths](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-2.png)
 
 **What you can do with this data**
 
@@ -105,7 +105,7 @@ This table lists the most frequently requested pages and resources on your site,
 #### Top IPs
 This table displays the individual IP addresses generating the highest volume of requests to your site, along with each IP’s request count.
 
-[screenshot]
+![top IPs](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-3.png)
 
 **What you can do with this data**
 
@@ -122,7 +122,7 @@ Not all automated traffic is unwanted. Many requests that appear to come from bo
 #### Top User Agents
 A user agent identifies the software making requests to your site — typically a browser, operating system, or automated tool. This table shows which user agents are generating the most traffic, sorted by request count.
 
-[screenshot]
+![top User Agents](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-4.png)
 
 **What you can do with this data**
 
