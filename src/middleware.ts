@@ -238,7 +238,7 @@ export function middleware(request: NextRequest) {
   // for more information.
   const incomingProtocol = request.headers.get('x-forwarded-proto') || '';
   const incomingHost = request.headers.get('pantheon-host') || '';
-  if (incomingProtocol === 'http' && incomingHost) {
+  if (incomingProtocol === 'http://' && incomingHost) {
       url.protocol = "https:";
     url.hostname = incomingHost;
       url.port = "";
