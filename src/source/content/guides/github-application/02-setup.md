@@ -106,5 +106,11 @@ Usage instructions for the specific site creation commands are included in the [
 If you find yourself at a screen that asks you to *configure* the app, it typically means you’ve already installed the GitHub Application and connected it to another Pantheon organization. You will need to connect the application to this organization using `terminus vcs:connection:link`. See the documentation in [Usage](/guides/github-application/usage).
  
  ![Configure existing app](../../../images/github-app/github-app-configure-app.png)
- 
+
  ![GitHub application configuration screen](../../../images/github-app/github-app-integration-config.png)
+
+## More Resources
+
+- [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin) - GitHub repository and documentation for the Terminus Repository Plugin
+- [Terminus Commands](/terminus/commands/site-create) - Documentation for the `terminus site:create` command
+- [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation

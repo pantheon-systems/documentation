@@ -29,3 +29,8 @@ Merging pull requests, or pushing code to the `main` branch of the GitHub reposi
 
 ![Diagram of the GitHub application process of deploying main to Pantheon](../images/github-app/diagram--deploying-main.png)
 
+## More Resources
+
+- [Multidev](/guides/multidev) - Learn about Pantheon's Multidev environments created for each pull request
+- [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
+- [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin) - GitHub repository for the Terminus Repository Plugin

@@ -99,3 +99,8 @@ Verify that your change is working by visiting the Multidev environment URL.
 
 Once you are happy with the change, you can merge the pull request and the GitHub Application will automatically deploy the code to the Pantheon Dev environment.
 
+## More Resources
+
+- [Multidev](/guides/multidev) - Learn how to work with Multidev environments
+- [Terminus Commands](/terminus/commands) - Documentation for Terminus commands
+- [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation

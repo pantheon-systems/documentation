@@ -65,3 +65,10 @@ New sites made with the GitHub Application do not support "[SFTP Mode](/guides/s
 ## Support
 
 Before this functionality is made generally available, please direct questions and feedback to [the issue queue on the related Terminus plugin](https://github.com/pantheon-systems/terminus-repository-plugin) rather than general support channels.
+
+## More Resources
+
+- [Pantheon Support](/guides/support) - Learn about Pantheon's support offerings
+- [Multidev](/guides/multidev) - Common questions about Multidev environments
+- [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
+- [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin) - Report issues or contribute
