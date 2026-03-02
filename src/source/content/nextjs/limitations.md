@@ -70,6 +70,37 @@ For many teams this restriction is counterproductive. That is especially true in
 
 While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
 
+## GitHub App installation requirements
+
+The Pantheon GitHub App must be installed by a user who is both:
+
+- A **GitHub organization admin**
+- A **member** of the corresponding Pantheon workspace
+
+Other workspace members cannot install the app themselves. The GitHub organization admin must complete the installation first, and then any workspace member can create Next.js sites using repositories the app has access to.
+
+### Options for the GitHub organization admin
+
+The GitHub organization admin does not need to create a site to install the app. They can choose one of the following approaches:
+
+#### Option 1: Install the app without creating a site
+
+Run the following Terminus command to install the GitHub App on the organization without creating a site:
+
+```bash
+terminus vcs:connection:add <workspace>
+```
+
+Replace `<workspace>` with the Pantheon workspace name, label, or ID. This installs the app and connects it to the GitHub organization. The GitHub organization admin can stop here — no site creation is required.
+
+#### Option 2: Start site creation and stop after app installation
+
+The GitHub organization admin can begin the site creation process through the Pantheon dashboard. During this process, the GitHub App installation is triggered. The GitHub organization admin can cancel the site creation after the app is installed, without completing the full workflow.
+
+### After the app is installed
+
+Once the GitHub App is installed on the organization, any member of the Pantheon workspace can create a Next.js site — through the dashboard or Terminus — using any repository the app has access to.
+
 ## General
 
 ### Compatibility and Requirements
