@@ -103,5 +103,5 @@ Usage instructions for the specific site creation commands are included in the [
 
 ### Common issues
 
-If you find yourself at a screen that asks you to configure the app, it typically means you’ve already installed the GitHub Application and connected it to another Pantheon organization. You will need to connect the application to this organization using terminus vcs:connection:link. See the documentation in Usage.
+If you find yourself at a screen that asks you to *configure* the app, it typically means you’ve already installed the GitHub Application and connected it to another Pantheon organization. You will need to connect the application to this organization using `terminus vcs:connection:link`. See the documentation in [Usage](/guides/github-application/usage).
  
