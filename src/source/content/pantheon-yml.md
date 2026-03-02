@@ -149,6 +149,26 @@ php_version: 8.0
 - From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 - You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
+### PHP JIT
+
+Enable PHP's JIT (Just-In-Time) compiler with the `php_jit` property. JIT compiles PHP bytecode into native machine code at runtime, which can improve performance for CPU-intensive workloads.
+
+```yaml:title=pantheon.yml
+php_jit: low
+```
+
+#### Considerations
+
+- Requires **PHP 8.3 or higher** and [PHP Runtime Generation 2](/php-runtime-generation-2).
+- Valid values are `off` (default), `low`, and `high`. Any other value will cause a validation error.
+- The JIT buffer size is allocated automatically based on your site's plan tier. Refer to the [PHP JIT release note](/release-notes/2026/03/php-jit-support) for the full memory allocation table.
+
+<Alert title="Warning" type="danger">
+
+JIT compilation can cause unexpected behavior on some sites, including white screen errors and memory exhaustion. Test thoroughly in a Dev or Multidev environment before enabling JIT on Live.
+
+</Alert>
+
 ### Specify a Version of MariaDB
 
 <ReviewDate date="2026-02-04" />
@@ -204,34 +224,36 @@ For more information on how to diagnose tables and troubleshoot potential issues
 
 ### Specify a Redis Version
 
-There are two available versions of Redis available for the [Object Cache](/object-cache): `2.8` and `6.2`.  The default version for the platform is `2.8` currently.
+There are two available versions of Redis available for the [Object Cache](/object-cache): `2.8` and `6.2`. The default version for the platform is `2.8` currently.
 
 #### Change the Redis Version
+
 1. Add the following block to your pantheon.yml file:
 
-  ```yaml:title=pantheon.yml
-  object_cache:
-    version: 6.2
-  ```
+```yaml:title=pantheon.yml
+object_cache:
+  version: 6.2
+```
+
 1. Push the change.
 
-
 #### Rollback the Redis Version
+
 1. Change the value of `version` to `2.8`
 1. Push the change.
 
 #### Test the Redis 6 Update
+
 We recommend that you push the Redis version change to a Multidev environment:
+
 1. Create a new Multidev environment. Refer to [Multidev Environment](/guides/multidev)for more information.
 1. Push the `pantheon.yml` Redis change to the branch associated with the Multidev environment.
 1. Wait for the upgrade workflow to complete.
 1. Confirm the Redis version upgrade using [redis-cli](/object-cache/cli).
-
    - Get the redis-cli connection string from the “Connection Info” button on the Pantheon Dashboard for your Multidev environment.
 
 1. Connect to the Redis container with redis-cli.
 1. Type `INFO Server` when you are connected and verify that the `redis_version`is correct.
-
 
 ### Specify a Solr Version
 
@@ -332,7 +354,6 @@ The PHP version changes automatically when you modify the `pantheon.yml` file of
 1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
 
 1. Modify your `pantheon.yml` file and re-commit to the Multidev.
-
    - It does not matter what change you make to the file. Any change- even a comment- will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```none
