@@ -19,4 +19,4 @@ Issues are displayed in the sidebar with plain-language descriptions of the prob
 
 ![content publisher quality assistant accessibility checker](../images/release-notes/cp-quality_assistant-accessibility_checker.png)
 
-For more information, see the [quality assistant in the Content Publisher documentation](https://docs.content.pantheon.io/#).
+For more information, see the [quality assistant in the Content Publisher documentation](https://docs.content.pantheon.io/quality-assistant).
