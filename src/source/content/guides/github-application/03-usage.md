@@ -18,10 +18,33 @@ permalink: docs/guides/github-application/usage
 
 This page covers common usage scenarios for the GitHub Application, including linking GitHub connections across Pantheon organizations and working with the pull request workflow.
 
+<Alert title="Note" type="warning">
+
+The Pantheon GitHub Application must be installed by a user who is both:
+
+- A **GitHub organization admin**
+- A **member** of the corresponding Pantheon workspace
+
+Other workspace members cannot install the app themselves. The GitHub organization admin must complete the installation first, and then any workspace member can create Next.js sites using repositories the app has access to.
+
+</Alert>
+
+## Create a new VCS connection to a Pantheon organization without creating a site
+
+The GitHub organization admin does not need to create a site in order to install the GitHub Application. If you want to use the GitHub Application in a Pantheon organization that does not yet have a GitHub connection, you can create a new connection without creating a site using `terminus vcs:connection:add`. This is useful if you want to set up the connection before creating a site or if you want to link an existing GitHub connection to a new Pantheon organization.
+
+```bash{promptUser: user}
+terminus vcs:connection:add <organization-id>
+```
+
+In the above example, `<organization-id>` represents the Pantheon organization you want to add a GitHub connection to. 
+
 ## Linking an existing VCS connection with a new Pantheon organization
 
 If you have already installed the GitHub application on your account or organization, you will likely have already linked it with a Pantheon organization. If you then want to use the GitHub Application for PHP or Next.js sites on a different organization, you need to create a new link with this organization. Currently this can only be done using the Terminus command `vcs:connection:link`.
-Using terminus vcs:connection commands
+
+## Using `terminus vcs:connection` commands
+
 You can display all the current connections between GitHub and a Pantheon organization with the `vcs:connection:list` command. Using `terminus vcs:connection:list <org ID>`  will produce output like this:
 
 ```bash{promptUser: user}
@@ -106,3 +129,4 @@ Once you are happy with the change, you can merge the pull request and the GitHu
 - [Multidev](/guides/multidev) - Learn how to work with Multidev environments
 - [Terminus Commands](/terminus/commands) - Documentation for Terminus commands
 - [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
+- [Limitations and considerations for Next.js Beta](/nextjs/considerations)
