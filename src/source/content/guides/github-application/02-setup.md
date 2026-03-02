@@ -33,7 +33,7 @@ Currently, from the dashboard it is only possible to create Next.js sites using 
 
 1. Choose Next.js from the Create New Site page
 
-![create new site dashboard](../../../images/github-app/github-app-create-new-site.png)
+	![create new site dashboard](../../../images/github-app/github-app-create-new-site.png)
 
 1. Connect your GitHub account. 
 
