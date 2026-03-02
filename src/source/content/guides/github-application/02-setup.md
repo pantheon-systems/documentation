@@ -33,11 +33,11 @@ Currently, from the dashboard it is only possible to create Next.js sites using 
 
 1. Choose Next.js from the Create New Site page
 
-[screenshot]
+![create new site dashboard](../../../images/github-app/github-app-create-new-site.png)
 
 1. Connect your GitHub account. 
 
-	[screenshot]
+	![connect GitHub account](../../../images/github-app/github-app-connect-git.png)
 
 	<Alert title="Note" type="danger">
 
@@ -51,7 +51,7 @@ Currently, from the dashboard it is only possible to create Next.js sites using 
 
 	After authorizing the GitHub application, you may be redirected to the initial site creation step to name the site and choose the region. Once continuing past that, you should see a dropdown with your user or organization listed. Select your user/organization and click Continue.
 
-	[screenshot]
+	![select user or organization](../../../images/github-app/github-app-selectaccount.png)
 
 1. You will be prompted to create a new repository or use an existing one. 
 
@@ -61,15 +61,15 @@ Currently, from the dashboard it is only possible to create Next.js sites using 
 
 	</Alert>
 	
-	[screenshot]
+	![create new repository](../../../images/github-app/github-app-configure-git.png)
 
 	After naming your repository (the Pantheon site name will be automatically filled in when you click inside the Repository name field), wait for your site to be created. In the background, a Pantheon site environment will be initialized and a new git repository on GitHub will be created with the Next.js starter kit upstream code. This may take several minutes. Be sure to leave this screen up until it changes.
 	
-	[screenshot]
+	![site creation in progress](../../../images/github-app/github-app-creating-nextjs.png)
 
 After the site is created, you will be redirected to the Builds page of your new Next.js site. You should also see a new repository for the site on GitHub and a Pantheon dashboard link to take you there.
 
-[screenshot]
+![builds page](../../../images/github-app/github-app-build-progress.png)
 
 </Tab>
 
@@ -105,3 +105,6 @@ Usage instructions for the specific site creation commands are included in the [
 
 If you find yourself at a screen that asks you to *configure* the app, it typically means you’ve already installed the GitHub Application and connected it to another Pantheon organization. You will need to connect the application to this organization using `terminus vcs:connection:link`. See the documentation in [Usage](/guides/github-application/usage).
  
+ ![Configure existing app](../../../images/github-app/github-app-configure-app.png)
+ 
+ ![GitHub application configuration screen](../../../images/github-app/github-app-integration-config.png)
