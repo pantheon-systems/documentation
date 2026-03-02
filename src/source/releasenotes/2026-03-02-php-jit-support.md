@@ -42,9 +42,11 @@ The amount of memory allocated to the JIT buffer (`opcache.jit_buffer_size`) dep
 
 ## Testing and Known Issues
 
+Pantheon supports JIT mode `1205` (tracing JIT), which provides the best balance of performance and stability for web workloads.
+
 <Alert title="Warning" type="danger">
 
-JIT compilation can cause unexpected behavior on some sites, including **white screen errors** and **fatal memory exhaustion**. You must thoroughly test your site in a Dev or Multidev environment before enabling JIT on your Live environment.
+JIT compilation can cause unexpected behavior on some sites, including **white screen errors** and **fatal memory exhaustion** (runtime errors such as `PHP Fatal error: Allowed memory size of X bytes exhausted`). Some third-party plugins, modules, and libraries may not be fully compatible with JIT. You must verify that your site's dependencies are JIT-compatible and thoroughly test in a Dev or Multidev environment before enabling JIT on your Live environment.
 
 </Alert>
 
