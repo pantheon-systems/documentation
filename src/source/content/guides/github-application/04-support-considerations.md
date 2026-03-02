@@ -20,7 +20,7 @@ This page outlines important assumptions, current limitations, and support infor
 
 ## Assumptions of GitHub Application
 
-### Multidev is available at to customers with Gold or higher plans
+### Multidev is available to customers with Gold or higher plans
 
 This GitHub Application is designed to work with Multidev environments. Multidev is available to customers on [Gold or higher plans](/guides/multidev). If you are on a lower plan, you can still use the GitHub Application, but you will not be able to use the Multidev features.
 
