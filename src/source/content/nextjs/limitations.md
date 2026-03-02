@@ -70,6 +70,50 @@ For many teams this restriction is counterproductive. That is especially true in
 
 While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
 
+## GitHub App installation by a non-GitHub organization admin
+
+Installing Pantheon's GitHub App on a GitHub organization requires GitHub organization admin permissions. If you are not a GitHub organization admin, the installation cannot complete in a single step — it requires an admin to approve the request first.
+
+Because of this two-step process, **do not start by creating a site** through the Pantheon dashboard or Terminus. The site creation flow expects the GitHub App to already be installed on the organization, and it will fail if it is not. Instead, install the app first using the steps below, and then create your site.
+
+### Step 1: Initiate the GitHub App installation
+
+Run the following Terminus command to trigger the installation request:
+
+```bash
+terminus vcs:connection:add <site_name> <github_repo_url>
+```
+
+Because you are not a GitHub organization admin, the app will not be installed immediately. Instead, GitHub sends a notification to the organization admins requesting they approve the Pantheon GitHub App. You will see a message in the browser confirming the request was sent:
+
+```json
+{"success":true,"timestamp":1772466039,"data":{"message":"setup action requested - installation needs approval"}}
+```
+
+![Browser message confirming the GitHub App installation request was sent](../../../images/nextjs/gh-app-installation-request-message.png)
+
+### Step 2: Wait for admin approval
+
+Contact your GitHub organization admin and ask them to approve the Pantheon GitHub App installation. The admin must:
+
+1. Review the pending installation request in GitHub.
+
+![GitHub admin viewing the pending Pantheon app installation request](../../../images/nextjs/gh-app-admin-pending-request.png)
+
+2. Approve the app installation request and select which repositories the app can access — ensure the admin grants access to the repository you need.
+
+![GitHub admin approving the Pantheon app installation](../../../images/nextjs/gh-app-admin-approve.png)
+
+### Step 3: Create your site
+
+Once the admin has approved the installation, the GitHub App is active on the organization. You can now create your Next.js site normally — either through the [Pantheon dashboard](/nextjs/hello-world-tutorial) or via Terminus.
+
+### Known limitations
+
+- **Site creation fails without prior app installation.** Creating a Next.js site through the dashboard or Terminus requires the GitHub App to already be installed on the organization. If you are not a GitHub org admin, you must complete the installation steps above before creating a site.
+- **No visibility into request status from Pantheon.** Pantheon does not indicate whether the installation request has been sent or approved. Check with your GitHub organization admin directly.
+- **Repository access depends on admin configuration.** The organization admin controls which repositories the Pantheon app can access. If the admin does not grant access to your repository, it will not be available during site creation.
+
 ## General
 
 ### Compatibility and Requirements
