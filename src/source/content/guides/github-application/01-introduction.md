@@ -1,16 +1,19 @@
 ---
 title: GitHub Application (Private Beta)
+subtitle: Introduction
 description: Pantheon's GitHub Application handles moving code from individual GitHub repositories to individual Pantheon sites.
 tags: [continuous-integration, workflow, D8, D9, D10]
-contributors: [stevector]
-contenttype: [doc]
+contributors: [stevector,jazzs3quence]
+contenttype: [guide]
+showtoc: true
 innav: [true]
 categories: [automate, workflows]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-03-02"
+permalink: docs/guides/github-application
 ---
 
 Pantheon's GitHub Application directly integrates a GitHub repository with a Pantheon site.
