@@ -1,10 +1,10 @@
 ---
-title: Next.js 16 Support Now Available
+title: Next.js 16 Now Default for New Sites
 published_date: "2026-03-02"
 categories: [nextjs, new-feature]
 ---
 
-Pantheon now supports Next.js 16, the latest version of the leading React framework for building web applications.
+Next.js 16 is now the default version for new site creation on Pantheon. When creating a new Next.js site, you will automatically get Next.js 16, the latest version of the leading React framework for building web applications.
 
 ## What's New
 
@@ -12,7 +12,7 @@ Next.js 16 introduces [Cache Components](https://nextjs.org/docs/app/getting-sta
 
 ## Creating New Sites
 
-To create a new Next.js 16 site, use the `nextjs-16` upstream when creating your site via Terminus:
+When you create a new Next.js site, it will default to Next.js 16. You can create sites via Terminus:
 
 ```bash
 terminus site:create my-site-name my-site-label nextjs-16 \
@@ -22,7 +22,7 @@ terminus site:create my-site-name my-site-label nextjs-16 \
   --repository-name=my-repository-name
 ```
 
-You can also create Next.js 16 sites through the [Pantheon Dashboard](/nextjs/hello-world-tutorial).
+You can also create Next.js sites through the [Pantheon Dashboard](/nextjs/hello-world-tutorial), which will automatically use Next.js 16.
 
 ## Additional Information
 
