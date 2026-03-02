@@ -41,9 +41,9 @@ Currently, from the dashboard it is only possible to create Next.js sites using 
 
 	<Alert title="Note" type="danger">
 
-	If you are part of a GitHub organization, the application must be installed by an owner of the GitHub organization. The user who installs the application must have the correct permissions. 
+	If you are part of a GitHub organization, the application must be installed by an *owner* of the GitHub organization. The user who installs the application must have the correct permissions. 
 
-	If you have previously connected the GitHub application to a site in a different Pantheon organization, see the instructions below for connecting your GitHub application to another Pantheon organization.
+	If you have previously connected the GitHub application to a site in a *different* Pantheon organization, see the instructions below for connecting your GitHub application to *another* Pantheon organization.
 
 	</Alert>
 
