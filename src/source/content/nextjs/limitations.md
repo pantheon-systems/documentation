@@ -72,7 +72,7 @@ While we intend to remove the limitation on streaming for Next.js sites, [join t
 
 ## GitHub App installation requirements
 
-The Pantheon GitHub App must be installed by a user who is both:
+The Pantheon GitHub Application must be installed by a user who is both:
 
 - A **GitHub organization admin**
 - A **member** of the corresponding Pantheon workspace
@@ -87,7 +87,7 @@ The GitHub organization admin does not need to create a site to install the app.
 
 Run the following Terminus command to install the GitHub App on the organization without creating a site:
 
-```bash
+```bash{promptUser: user}
 terminus vcs:connection:add <workspace>
 ```
 
