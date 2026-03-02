@@ -16,6 +16,8 @@ reviewed: "2026-03-02"
 permalink: docs/guides/github-application/usage
 ---
 
+This page covers common usage scenarios for the GitHub Application, including linking GitHub connections across Pantheon organizations and working with the pull request workflow.
+
 ## Linking an existing VCS connection with a new Pantheon organization
 
 If you have already installed the GitHub application on your account or organization, you will likely have already linked it with a Pantheon organization. If you then want to use the GitHub Application for PHP or Next.js sites on a different organization, you need to create a new link with this organization. Currently this can only be done using the Terminus command `vcs:connection:link`.

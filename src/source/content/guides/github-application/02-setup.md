@@ -16,6 +16,7 @@ reviewed: "2026-03-02"
 permalink: docs/guides/github-application/setup
 ---
 
+This page provides instructions for setting up a new site using the GitHub Application. You can create sites through the Pantheon dashboard or via Terminus with the Repository Plugin.
 
 ## Creating a new site
 

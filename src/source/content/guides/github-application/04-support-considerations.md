@@ -16,6 +16,8 @@ reviewed: "2026-03-02"
 permalink: docs/guides/github-application/support-considerations
 ---
 
+This page outlines important assumptions, current limitations, and support information for the GitHub Application. Review these considerations before implementing the GitHub Application for your projects.
+
 ## Assumptions of GitHub Application
 
 ### Multidev is available at to customers with Gold or higher plans
