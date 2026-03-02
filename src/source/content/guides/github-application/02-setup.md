@@ -79,22 +79,27 @@ To create sites via Terminus, you must install the [Terminus Repository Plugin](
 This is a public Terminus plugin that can be installed normally, e.g. `terminus self:plugin:install terminus-repository-plugin`.
 Usage instructions for the specific site creation commands are included in the [README](https://github.com/pantheon-systems/terminus-repository-plugin/blob/main/README.md#creating-a-new-site).
 
-Use the terminus site:create command as normal (see documentation) with the following additional flags: 
-<upstream ID|machine name> Not a flag, this field is required whenever using terminus site:create. Any upstream that your Pantheon user has access to is valid here. For example nextjs16 ,  WordPress or an upstream UUID, e.g. f9c1a10c-bd05-448f-9c0d-b73839e69e58. If an upstream is not provided or is unrecognized, a list of available upstreams and their names will be provided.
---org=<organization name|ID> the Organization is required for creating a new site via terminus site:create.
---vcs-provider=github For sites using the GitHub application, the --vcs-provider must be included and must be set to gitnub. The available parameters are github or pantheon.
---vcs-org=<GitHub user/organization ID> You must pass the GitHub organization or user ID to the command or you will be prompted for it. This is so Terminus knows what GitHub account and connection to use.
---repository-name=<repository name> The repository name is the name of the repository that will be created on GitHub. This must be unique to the user/organization.
+1. Use the `terminus site:create` command as normal (see [documentation](/terminus/commands/site-create)) with the following additional flags: 
 
-The final command should look something like this:
+	* `<upstream ID|machine name>` - Not a flag, this field is required whenever using terminus site:create. Any upstream that your Pantheon user has access to is valid here. For example nextjs16 ,  WordPress or an upstream UUID, e.g. `f9c1a10c-bd05-448f-9c0d-b73839e69e58`. If an upstream is not provided or is unrecognized, a list of available upstreams and their names will be provided.
+	* `--org=<organization name|ID>` - The Organization is required for creating a new site via terminus `site:create`.
+	* `--vcs-provider=github` - For sites using the GitHub application, the `--vcs-provider` must be included and must be set to `github`. The available parameters are `github` or `pantheon`.
+	* `--vcs-org=<GitHub user/organization ID>` - You must pass the GitHub organization or user ID to the command or you will be prompted for it. This is so Terminus knows what GitHub account and connection to use.
+	* `--repository-name=<repository name>` - The repository name is the name of the repository that will be created on GitHub. This must be unique to the user/organization.
 
- terminus site:create <pantheon site name> <site label> <upstream name|ID> --org=<organization name|ID> --vcs-provider=github --vcs-org=<GitHub organization|username> --repository-name=<GitHub repository name>
+	The final command should look something like this:
 
-Once the command is issued, the site creation process will begin to initialize the Pantheon site environment and the GitHub repository. This may take several minutes. Be sure not to close your terminal window before the process is complete. The command will output logs to the the terminal output during the process. When you see Site creation workflow completed successfully. and Waiting for site dev environment to become available… you should be able to see the site in your sites list in the Pantheon dashboard and see the build workflow in progress.
+	```bash{promptUser: user}
+	terminus site:create <pantheon site name> <site label> <upstream name|ID> --org=<organization name|ID> --vcs-provider=github --vcs-org=<GitHub organization|username> --repository-name=<GitHub repository name>
+	```
 
-When the workflow is complete, you will see Code repository cloned successfully to the current directory. and the dashboard link in the log.
+1. Once the command is issued, the site creation process will begin to initialize the Pantheon site environment and the GitHub repository. This may take several minutes. Be sure not to close your terminal window before the process is complete. The command will output logs to the the terminal output during the process. When you see `Site creation workflow completed successfully.` and `Waiting for site dev environment to become available…` you should be able to see the site in your sites list in the Pantheon dashboard and see the build workflow in progress.
+
+1. When the workflow is complete, you will see `Code repository cloned successfully to the current directory.` and the dashboard link in the log.
 
 </Tab>
+
+</TabList>
 
 ### Common issues
 
