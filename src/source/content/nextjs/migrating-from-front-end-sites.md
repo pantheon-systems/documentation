@@ -50,7 +50,7 @@ Configuring that new connection to our GitHub Application is the first step of m
 ### Connect the GitHub application to your repository
 
 ```bash{promptUser: user}
-terminus site:create my-site-name my-site-label nextjs15 \
+terminus site:create my-site-name my-site-label nextjs-16 \
 --org="My Pantheon Org name" \
 --vcs-provider=github \
 --vcs-org=my-github-org-name \
@@ -58,7 +58,7 @@ terminus site:create my-site-name my-site-label nextjs15 \
 --no-create-repo
 ```
 
-(Even if your codebase is not spefic to Next.js 15, use the `nextjs15` option to create the site.)
+(Even if your codebase is not specific to Next.js 16, use the `nextjs-16` option to create the site.)
 
 This command will provision new infrastructure for your Next.js site and will take a few minutes to complete. You can monitor the progress of the initial build in the Pantheon Dashboard or by using the [Node Logs Plugin for Terminus](/nextjs/cli-tools).
 
