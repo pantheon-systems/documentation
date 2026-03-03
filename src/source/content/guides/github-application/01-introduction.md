@@ -29,6 +29,10 @@ Merging pull requests, or pushing code to the `main` branch of the GitHub reposi
 
 ![Diagram of the GitHub application process of deploying main to Pantheon](../images/github-app/diagram--deploying-main.png)
 
+## How This Differs from Build Tools
+
+The GitHub integration is distinct from [Build Tools](/guides/build-tools). Build Tools uses a CI service (such as CircleCI or GitHub Actions) as an intermediary to build and deploy your site. The GitHub integration connects your repository directly to Pantheon without requiring a separate CI pipeline.
+
 ## More Resources
 
 - [Multidev](/guides/multidev) - Learn about Pantheon's Multidev environments created for each pull request
