@@ -6,7 +6,7 @@ categories: [content-publisher, tools-apis]
 
 Pantheon Content Publisher now supports Microsoft Word thanks to our new Microsoft Add-in. This add-in allows organizations and teams to publish content directly to their website from their Microsoft 365 account in Microsoft Word. 
 
-![screenshot]()
+![Microsoft Word Content Publisher workflow](../images/release-notes/ms-publish.gif)
 
 ## What's new?
 
