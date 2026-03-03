@@ -14,7 +14,7 @@ Pantheon Content Publisher now supports Microsoft Word thanks to our new Microso
 * Preview how your content will look before it goes live
 * Collaborative editing: Use comments, suggestions, and other collaboration features available on Microsoft 365
 
-## Documenttion
+## Documentation
 
 Learn how to set up Content Publisher on your Drupal, WordPress, or Next.js website:
 
