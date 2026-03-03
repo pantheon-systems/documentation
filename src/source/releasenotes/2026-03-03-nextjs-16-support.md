@@ -1,6 +1,6 @@
 ---
 title: Next.js 16 is now the default for new sites
-published_date: "2026-03-02"
+published_date: "2026-03-03"
 categories: [nextjs, new-feature]
 ---
 
