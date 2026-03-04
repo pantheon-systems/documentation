@@ -66,7 +66,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | Package | Gen 1 | Gen 2 |
 |---------|---------|---------|
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
-| **Microsoft ODBC Driver 17 and 18 for SQL Server** | Not available | Available for PHP 8.2+ |
+| **Microsoft ODBC Driver 17 and 18 for SQL Server** | — | Available for PHP 8.2+ |
 | **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
 | **Apache Tika** | 1.18, 1.21 | [3.2](/external-libraries#apache-tika) |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
