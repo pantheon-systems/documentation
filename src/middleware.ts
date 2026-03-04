@@ -231,26 +231,17 @@ const wildcardRedirects = [
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-
   // This section handles the HTTP to HTTPS redirects for Pantheon sites.
   // See https://github.com/pantheon-systems/documentation/issues/9791
-  // for more context.
-  const siteMachineName = process.env.PANTHEON_SITE_MACHINE_NAME || "documentation-in-nextjs";
+  // for more information.
   const incomingProtocol = request.headers.get('x-forwarded-proto') || '';
-  const policyDocSurrogateKey = request.headers.get('Policy-Doc-Surrogate-Key') || '';
-  if (incomingProtocol === 'http' && policyDocSurrogateKey) {
+  const incomingHost = request.headers.get('pantheon-host') || '';
+  if (incomingProtocol === 'http://' && incomingHost) {
       url.protocol = "https:";
-      url.hostname = policyDocSurrogateKey;
+      url.hostname = incomingHost;
       url.port = "";
       // Use a 301 permanent redirect
       return NextResponse.redirect(url.toString(), 301);
-  }
-  // Redirect newdocs.pantheon.io to docs.pantheon.io
-  if (policyDocSurrogateKey.trim().endsWith('newdocs.pantheon.io')) {
-    url.hostname = 'docs.pantheon.io';
-    url.port = "";
-    // Use a 301 permanent redirect
-    return NextResponse.redirect(url.toString(), 301);
   }
 
   // regex to match the wildcard redirects
