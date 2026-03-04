@@ -123,3 +123,160 @@ Items marked **(Pantheon)** are additions or modifications. Everything else is s
 </Tab>
 
 </TabList>
+
+## Modified Files
+
+<TabList>
+
+<Tab title="WordPress">
+
+### `wp-config.php`
+
+The Pantheon version replaces hardcoded database credentials with a three-way conditional that selects the appropriate configuration source at runtime.
+
+**How it works:**
+	
+1. If `$_ENV['PANTHEON_ENVIRONMENT']` is set and `wp-config-pantheon.php` exists, load Pantheon settings.
+2. Otherwise, if `wp-config-local.php` exists, load local development settings.
+3. Otherwise, fall back to placeholder values.
+
+Source: [wp-config.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php)
+
+### wp-config-pantheon.php
+
+This file is the core Pantheon platform integration. It is loaded by `wp-config.php` when the `PANTHEON_ENVIRONMENT` environment variable is set.
+
+<Alert title="Do Not Modify" type="danger">
+
+Do not modify this file. It is maintained by Pantheon and may change in future releases. Site-specific modifications belong in `wp-config.php`.
+
+</Alert>
+
+**What it does:**
+
+- **Database credentials** — reads `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, and `DB_PORT` from Pantheon-injected `$_ENV` variables.
+- **Authentication keys and salts** — reads all 8 keys/salts from `$_ENV`.
+- **HTTPS detection** — checks the `HTTP_USER_AGENT_HTTPS` header (set by Pantheon's edge layer) and dynamically defines `WP_HOME` and `WP_SITEURL`.
+- **Temp directory** — sets `WP_TEMP_DIR` to `sys_get_temp_dir()`.
+- **File modification lockdown** — sets `DISALLOW_FILE_MODS = true` on Test and Live environments.
+- **Environment type mapping** — maps Pantheon environments to WordPress's `WP_ENVIRONMENT_TYPE` (`live` → `production`, `test` → `staging`, everything else → `development`).
+- **Cron** — disables `WP_CRON` because Pantheon runs cron externally via `wp-cli`.
+
+Source: [wp-config-pantheon.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php)
+
+### `.gitignore`
+
+WordPress on Pantheon commits the entire codebase to Git. The `.gitignore` excludes user uploads, local configuration, and runtime-generated files.
+
+**Key rules:**
+
+- `wp-config-local.php` — local dev config must never be committed
+- `wp-content/uploads` — user uploads are managed by Pantheon's filesystem, not Git
+- `!wp-includes/**/*.gz` — exception to allow gzipped assets in WordPress core
+
+Source: [example `.gitignore`](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore)
+
+### `wp-config-local-sample.php` (Optional)
+
+A template that developers copy to `wp-config-local.php` (which is gitignored) for local development. This file must NOT include `wp-settings.php` — that is handled by `wp-config.php` after loading the local config.
+
+Source: [wp-config-local-sample.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php)
+
+</Tab>
+
+<Tab title="WordPress (Composer Managed)">
+
+## `.env.pantheon`
+
+ Uses Dotenv to set required environment variables and load .env file in root. Used in `config/application.php` to load Pantheon environment variables.
+ 
+Source: [`.env.pantheon`](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/.env.pantheon)
+
+## `composer.json`
+
+The `composer.json` file defines the project as a Composer-managed WordPress installation based on the Bedrock structure. It includes Pantheon-specific configuration such as the `installer-paths` for plugins and themes, and the `pantheon-systems/pantheon-mu-plugin`.
+
+It is expected that you will update this file from the original and Pantheon does not maintain it for you.
+
+Source: [`composer.json`](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/composer.json)
+
+## `web/wp-config.php`
+
+The base `wp-config.php` file for the site. All configuration is handled through the `config/application.php` and `config/application.pantheon.php` files, which are loaded by `wp-config.php`.
+
+Do not modify this file.
+
+Source: [web/wp-config.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/web/wp-config.php)
+
+## `web/index.php`
+
+The main `index.php` file for WordPress. Loads WordPress core from `/web/wp/`. Required by WordPress. Do not modify this file.
+
+Source: [web/index.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/web/index.php)
+
+## `config/application.php`
+
+The main configuration file for the site. This file is responsible for loading your WordPress configuration based on the environment. It loads `application.pantheon.php`.
+
+Source: [config/application.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/config/application.php)
+
+## `config/application.pantheon.php`
+
+This file is the core Pantheon platform integration,  loaded by `application.php`. Defines `WP_HOME`, `WP_ENVIRONMENT_TYPE`, `PANTHEON_HOSTNAME` and cookie-related constants based on Pantheon environment variables.
+
+Source: [config/application.pantheon.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/config/application.pantheon.php)
+
+</Tab>
+
+</TabList>
+
+### `pantheon.upstream.yml`
+
+This file configures the Pantheon platform infrastructure. For a GitHub-connected site, you may alternatively use `pantheon.yml` (same format).
+
+| Setting | Purpose |
+|---|---|
+| `api_version` | Pantheon config API version (always `1`) |
+| `php_version` | PHP runtime version |
+| `database.version` | MariaDB version |
+| `enforce_https` | HTTPS enforcement mode (`transitional` or `full`) |
+| `protected_web_paths` | Paths blocked from public web access |
+
+Source: [`pantheon.upstream.yml`](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+
+## Must-Use Plugins
+
+WordPress on Pantheon requires a `wp-content/mu-plugins/` directory containing the Pantheon MU-plugin. This provides:
+
+- **Page cache integration** with Pantheon's Varnish/edge cache layer
+- **Site health checks** specific to Pantheon
+- **Update notices** customized for the Pantheon workflow
+- **Login form modifications** (adds a "Return to Pantheon" button)
+- **WP-CLI integration** for Pantheon-specific CLI commands
+- **Multisite support**
+- **Filesystem method** set to `direct`
+- **Plugin compatibility layer** with automatic fixes for 15+ popular plugins
+
+The `loader.php` file is the entry point that loads the `pantheon-mu-plugin/pantheon.php` plugin from its subdirectory.
+
+<Alert title="Note" type="info">
+
+The MU-plugin only activates its features when `$_ENV['PANTHEON_ENVIRONMENT']` is set.
+
+</Alert>
+
+Source: [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin)
+`loader.php` source: [loader.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/loader.php)
+
+## Checklist
+
+Use this checklist to verify your WordPress repository is ready for Pantheon's GitHub integration:
+
+- [ ] `wp-config.php` uses the three-way conditional pattern (Pantheon → local → fallback)
+- [ ] `wp-config-pantheon.php` exists at the repository root with environment-variable-based configuration
+- [ ] `pantheon.upstream.yml` (or `pantheon.yml`) exists with `api_version`, `php_version`, and `database.version`
+- [ ] `wp-content/mu-plugins/loader.php` exists and loads the Pantheon MU-plugin
+- [ ] `wp-content/mu-plugins/pantheon-mu-plugin/` directory is present with the full plugin
+- [ ] `.gitignore` excludes `wp-config-local.php`, `wp-content/uploads`, and runtime paths
+- [ ] WordPress core files (`wp-admin/`, `wp-includes/`, root PHP files) are committed and unmodified
+- [ ] `wp-content/uploads/` is NOT committed
