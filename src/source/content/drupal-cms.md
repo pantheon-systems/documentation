@@ -28,13 +28,11 @@ Recipes also reduce the time and knowledge it requires to install and setup some
 
 ### Drupal CMS 2.0
 
-Recently released, Drupal CMS 2.0 is now available on Pantheon. CMS 2.0 introduces several architectural changes over the 1.x release:
+Recently released, Drupal CMS 2.0 is now available on Pantheon. CMS 2.0 introduces several architectural changes over the 1.x release. See the following sections for more details:
 
-- **Drupal Core 11.3**: Upgraded from Drupal 11.1.
-- **Site templates**: Replaces the deprecated recipe-based content models (`drupal_cms_blog`, `drupal_cms_page`, `drupal_cms_news`, `drupal_cms_events`, `drupal_cms_case_study`, `drupal_cms_person`, `drupal_cms_project`) with `drupal_cms_site_template_base`.
-- **New packages**: `drupal/byte`, `drupal/core-recipe-unpack`, `drupal/core-vendor-hardening`, and `drupal/recipe_installer_kit`.
-- **Module updates**: `drupal_cms_google_analytics` replaces `drupal_cms_analytics`. All CMS packages now use `^2` version constraints.
-- **Removed packages**: `project_browser` and the content-type-specific recipe packages listed above are no longer included.
+* [Upgrading from Drupal CMS 1.x to 2.0](#upgrading-from-drupal-cms-1x-to-20)
+* [Changes from CMS 1.0 to 2.0](#changes-from-cms-10-to-20)
+
 
 ## Installing Drupal CMS on Pantheon
 
@@ -77,22 +75,22 @@ This indicates that certain modules were enabled during installation but their d
 
 #### Resolving installation errors
 
-**Step 1: Clear caches** via the dashboard or Terminus:
+1. Clear caches via the dashboard or Terminus:
 
-  ![Clear Cache Button](../images/clear-cache-button.png)
+    ![Clear Cache Button](../images/clear-cache-button.png)
 
-```bash
-terminus drush <site>.<env> -- cache:rebuild
-```
+    ```bash
+    terminus drush <site>.<env> -- cache:rebuild
+    ```
 
-**Step 2: Run database updates** if clearing caches alone does not resolve the error. This will create any missing entity tables:
+1. If the above step did not resolve the issue, run database updates. This will create any missing entity tables:
 
-```bash
-terminus drush <site>.<env> -- updatedb -y
-terminus drush <site>.<env> -- cache:rebuild
-```
+    ```bash
+    terminus drush <site>.<env> -- updatedb -y
+    terminus drush <site>.<env> -- cache:rebuild
+    ```
 
-**Step 3: Reinstall** if the above steps do not resolve the issue. Wipe your database and install again. Wiping can be done via the [dashboard](/site-dashboard) or [Terminus](/terminus/commands/env-wipe).
+1. If the above steps do not resolve the issue, wipe your database and install again. Wiping can be done via the [dashboard](/site-dashboard) or [Terminus](/terminus/commands/env-wipe).
 
 [See this GitHub issue for more discussion of timeouts and errors during Drupal CMS installation.](https://github.com/pantheon-upstreams/drupal-cms-composer-managed/issues/1)
 
@@ -121,21 +119,21 @@ To remove these scripts:
 
 1. Delete the `upstream-configuration` entry from the `repositories` section of `composer.json`:
 
-```json
-        {
-            "type": "path",
-            "url": "upstream-configuration"
-        }
-```
+    ```json
+            {
+                "type": "path",
+                "url": "upstream-configuration"
+            }
+    ```
 
-2. Delete the `"upstream-configuration` entry from the `require` section of `composer.json`:
+1. Delete the `"upstream-configuration` entry from the `require` section of `composer.json`:
 
 
-```json
-        "pantheon-upstreams/upstream-configuration": "dev-main",
-```
+    ```json
+            "pantheon-upstreams/upstream-configuration": "dev-main",
+    ```
 
-3. Delete the `autoload`, `scripts`, and `scripts-descriptions` entries that reference `upstream-configuration` or `DrupalComposerManaged` from `composer.json`.
+1. Delete the `autoload`, `scripts`, and `scripts-descriptions` entries that reference `upstream-configuration` or `DrupalComposerManaged` from `composer.json`.
 
    **Drupal CMS 1.x sites:**
 
@@ -183,7 +181,7 @@ To remove these scripts:
 
    </Alert>
 
-4. Delete the `upstream-configuration` directory from the root of your project:
+1. Delete the `upstream-configuration` directory from the root of your project:
 
 ```bash
 rm -rf upstream-configuration
@@ -199,27 +197,38 @@ Drupal CMS 2.0 removes several modules and content types that were included in 1
 
 </Alert>
 
-### What changes in CMS 2.0
+### Changes from CMS 1.0 to 2.0
 
-**Removed theme**: The `drupal_cms_olivero` theme is removed in CMS 2.0. This is the most significant upgrade issue — after upgrading, your site will show a "missing or invalid theme" error. CMS 2.0 introduces `byte` as the replacement theme.
-
-**Removed content type packages**: The following recipe-based content type packages have been replaced by `drupal_cms_site_template_base`:
-
-- `drupal/drupal_cms_blog`
-- `drupal/drupal_cms_page`
-- `drupal/drupal_cms_news`
-- `drupal/drupal_cms_events`
-- `drupal/drupal_cms_case_study`
-- `drupal/drupal_cms_person`
-- `drupal/drupal_cms_project`
+- **Core**: 
+  - Updates from Drupal 11.1 to Drupal 11.3
+- **Site templates**: 
+  - Replaces the following deprecated recipe-based content models with `drupal_cms_site_template_base`:
+    - `drupal_cms_blog`
+    - `drupal_cms_page`
+    - `drupal_cms_news`
+    - `drupal_cms_events`
+    - `drupal_cms_case_study`
+    - `drupal_cms_person`
+    - `drupal_cms_project`
+- **New packages**:
+  - `drupal/byte`
+  - `drupal/core-recipe-unpack`
+  - `drupal/core-vendor-hardening`
+  - `drupal/recipe_installer_kit`
+- **Module updates**: 
+  - Replaces `drupal_cms_analytics` with `drupal_cms_google_analytics`
+  - All CMS packages now use `^2` version constraints.
+- **Removed packages**:  
+  - `project_browser`
+  - Content-type-specific recipe packages listed above 
+- **Removed theme**: 
+  - The `drupal_cms_olivero` theme is removed in CMS 2.0. This is the most significant upgrade issue — after upgrading, your site will show a "missing or invalid theme" error. CMS 2.0 introduces `byte` as the replacement theme.
 
 <Alert title="Note" type="info">
 
 These content type modules only have beta releases for their 2.x versions. You will need `@beta` stability flags in `composer.json` if you want to continue using them.
 
 </Alert>
-
-**Renamed modules**: `drupal/drupal_cms_analytics` is replaced by `drupal/drupal_cms_google_analytics`.
 
 **New Composer plugins**: CMS 2.0 introduces new plugins such as `drupal/site_template_helper` that must be added to the `allow-plugins` section of `composer.json`, or Composer builds will fail. This is especially relevant on Pantheon with Integrated Composer.
 
