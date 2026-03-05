@@ -191,6 +191,89 @@ rm -rf upstream-configuration
 
 [See this GitHub issue for more discussion of updated guidance for these scripts.](https://github.com/pantheon-systems/documentation/issues/9420)
 
+## Upgrading from Drupal CMS 1.x to 2.0
+
+<Alert title="Warning" type="danger">
+
+Drupal CMS 2.0 removes several modules and content types that were included in 1.x. If your site relies on any of the removed packages, upgrading without preparation could result in data loss or a broken site. Always test in a Multidev environment before applying changes to Dev, Test, or Live.
+
+</Alert>
+
+### What changes in CMS 2.0
+
+**Removed theme**: The `drupal_cms_olivero` theme is removed in CMS 2.0. This is the most significant upgrade issue — after upgrading, your site will show a "missing or invalid theme" error. CMS 2.0 introduces `byte` as the replacement theme.
+
+**Removed content type packages**: The following recipe-based content type packages have been replaced by `drupal_cms_site_template_base`:
+
+- `drupal/drupal_cms_blog`
+- `drupal/drupal_cms_page`
+- `drupal/drupal_cms_news`
+- `drupal/drupal_cms_events`
+- `drupal/drupal_cms_case_study`
+- `drupal/drupal_cms_person`
+- `drupal/drupal_cms_project`
+
+<Alert title="Note" type="info">
+
+These content type modules only have beta releases for their 2.x versions. You will need `@beta` stability flags in `composer.json` if you want to continue using them.
+
+</Alert>
+
+**Renamed modules**: `drupal/drupal_cms_analytics` is replaced by `drupal/drupal_cms_google_analytics`.
+
+**New Composer plugins**: CMS 2.0 introduces new plugins such as `drupal/site_template_helper` that must be added to the `allow-plugins` section of `composer.json`, or Composer builds will fail. This is especially relevant on Pantheon with Integrated Composer.
+
+**Project Browser**: The plugin source IDs have changed in CMS 2.0. After upgrading, you may see warnings about missing plugin sources until they are reconfigured.
+
+**Obsolete extensions**: The `automatic_updates` module is marked as obsolete in CMS 2.0 and should be uninstalled after upgrading.
+
+### Recommended upgrade steps
+
+1. **Create a Multidev environment** to test the upgrade without affecting your live site:
+
+   ```bash
+   terminus multidev:create <site>.dev cms2-upgrade
+   ```
+
+2. **Review your content**: Identify any content stored in the content types being removed (Blog, Page, News, Events, Case Study, Person, Project). Plan to migrate or recreate this content using site templates before upgrading.
+
+3. **Update your `composer.json`** in the Multidev environment to use CMS 2.0 packages:
+   - Update CMS package version constraints from `^1` to `^2`
+   - Remove deprecated packages listed above
+   - Replace `drupal/drupal_cms_analytics` with `drupal/drupal_cms_google_analytics`
+   - Add `drupal/site_template_helper` to `allow-plugins`
+   - Add `@beta` stability flags for any content type modules you want to keep
+
+4. **Run updates**:
+
+   ```bash
+   terminus drush <site>.cms2-upgrade -- updatedb -y
+   terminus drush <site>.cms2-upgrade -- cache:rebuild
+   ```
+
+5. **Fix the theme**: After upgrading, switch from the missing `drupal_cms_olivero` theme to `byte`:
+
+   ```bash
+   terminus drush <site>.cms2-upgrade -- theme:install byte
+   terminus drush <site>.cms2-upgrade -- config:set system.theme default byte -y
+   terminus drush <site>.cms2-upgrade -- theme:uninstall drupal_cms_olivero
+   terminus drush <site>.cms2-upgrade -- cache:rebuild
+   ```
+
+6. **Clean up obsolete extensions**:
+
+   ```bash
+   terminus drush <site>.cms2-upgrade -- pm:uninstall automatic_updates -y
+   ```
+
+7. **Verify the site**: Check that all pages load correctly, content is intact, and there are no errors in the watchdog logs:
+
+   ```bash
+   terminus drush <site>.cms2-upgrade -- watchdog:show --count=50
+   ```
+
+8. **Merge to Dev** once you've confirmed everything works as expected in the Multidev environment.
+
 ## Applying Recipes from Drupal CMS to existing sites
 
 Recipes from Drupal CMS can be applied to existing Drupal 11 sites using Drush.
