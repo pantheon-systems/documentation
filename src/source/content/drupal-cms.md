@@ -11,12 +11,12 @@ cms: [drupal]
 audience: [development]
 product: [dashboard, terminus]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-03-05"
 ---
 
 # Drupal CMS
 
-Released in January of 2025, Drupal CMS is a wrapper around Drupal Core.
+[Drupal CMS](https://www.drupal.org/about/drupal-cms) is a wrapper around Drupal Core.
 Drupal CMS builds on the concept of [Recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes) to [radically reduce the amount of time and expertise required to stand up common functionality](https://pantheon.io/blog/drupal-cms-innovations).
 In particular, Drupal CMS is aimed at Marketers and Content Editors who commonly use Drupal, but who may not have the technical expertise to install and configure modules themselves.
 
@@ -24,7 +24,17 @@ For Pantheon's developer-centric community, Drupal CMS can be used as a referenc
 
 After trial usage of recipe combinations in sandbox sites, experienced development teams can then replicate their favorite recipes on new or pre-existing live sites, or provide those recipes for an easy deployment on their sites for less experienced users.
 
-Recipes also reduce the time and knowledge it requires to install and setup some functionalities and modules. While in the past installing some specific modules would require having a minimum knowledge of what we are installing, how to configure them, etc, in the era of the Drupal recipes adding new functionality to any site has been highly simplified. 
+Recipes also reduce the time and knowledge it requires to install and setup some functionalities and modules. While in the past installing some specific modules would require having a minimum knowledge of what we are installing, how to configure them, etc, in the era of the Drupal recipes adding new functionality to any site has been highly simplified.
+
+### Drupal CMS 2.0
+
+Recently released, Drupal CMS 2.0 is now available on Pantheon. CMS 2.0 introduces several architectural changes over the 1.x release:
+
+- **Drupal Core 11.3**: Upgraded from Drupal 11.1.
+- **Site templates**: Replaces the deprecated recipe-based content models (`drupal_cms_blog`, `drupal_cms_page`, `drupal_cms_news`, `drupal_cms_events`, `drupal_cms_case_study`, `drupal_cms_person`, `drupal_cms_project`) with `drupal_cms_site_template_base`.
+- **New packages**: `drupal/byte`, `drupal/core-recipe-unpack`, `drupal/core-vendor-hardening`, and `drupal/recipe_installer_kit`.
+- **Module updates**: `drupal_cms_google_analytics` replaces `drupal_cms_analytics`. All CMS packages now use `^2` version constraints.
+- **Removed packages**: `project_browser` and the content-type-specific recipe packages listed above are no longer included.
 
 ## Installing Drupal CMS on Pantheon
 
@@ -49,13 +59,40 @@ In addition to Recipes, Drupal CMS elevates other new technical constructs withi
 
 ### Timeouts and Errors during Drupal CMS Installation
 
-Selecting a large number of recipes in during installation seems to correlate with an increased likelihood of timeouts and errors.
+Selecting a large number of recipes during installation seems to correlate with an increased likelihood of timeouts and errors.
 
-If you encounter a timeout or error during installation you can likely resolve it by clearing caches:
+These timeouts can result in a partially completed installation where the site displays a generic error:
+
+> **The website encountered an unexpected error. Try again later.**
+
+When this happens, the watchdog logs (`drush watchdog:show`) will typically show `PluginNotFoundException` errors for one or more entity types, such as:
+
+- `The "klaro_app" entity type does not exist.`
+- `The "webform_submission" entity type does not exist.`
+- `The "easy_email" entity type does not exist.`
+- `The "simple_sitemap" entity type does not exist.`
+- `The "search_api_task" entity type does not exist.`
+
+This indicates that certain modules were enabled during installation but their database tables were not fully created before the timeout occurred.
+
+#### Resolving installation errors
+
+**Step 1: Clear caches** via the dashboard or Terminus:
 
   ![Clear Cache Button](../images/clear-cache-button.png)
 
-If clearing caches does not resolve the error, you may need to wipe your database and install again. Wiping can be done via the [dashboard](/site-dashboard) or [Terminus](/terminus/commands/env-wipe).
+```bash
+terminus drush <site>.<env> -- cache:rebuild
+```
+
+**Step 2: Run database updates** if clearing caches alone does not resolve the error. This will create any missing entity tables:
+
+```bash
+terminus drush <site>.<env> -- updatedb -y
+terminus drush <site>.<env> -- cache:rebuild
+```
+
+**Step 3: Reinstall** if the above steps do not resolve the issue. Wipe your database and install again. Wiping can be done via the [dashboard](/site-dashboard) or [Terminus](/terminus/commands/env-wipe).
 
 [See this GitHub issue for more discussion of timeouts and errors during Drupal CMS installation.](https://github.com/pantheon-upstreams/drupal-cms-composer-managed/issues/1)
 
