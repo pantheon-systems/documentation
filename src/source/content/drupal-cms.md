@@ -135,26 +135,53 @@ To remove these scripts:
         "pantheon-upstreams/upstream-configuration": "dev-main",
 ```
 
-3. Delete the `autoload`, `scripts`, and `scripts-descriptions` that reference `upstream-configuration` or `DrupalComposerManaged` from `composer.json`:
+3. Delete the `autoload`, `scripts`, and `scripts-descriptions` entries that reference `upstream-configuration` or `DrupalComposerManaged` from `composer.json`.
 
-```json
-    "autoload": {
-        "classmap": [
-            "upstream-configuration/scripts/ComposerScripts.php"
-        ]
-    },
-    "scripts": {
-        "pre-update-cmd": [
-            "DrupalComposerManaged\\ComposerScripts::preUpdate"
-        ],
-        "upstream-require": [
-            "DrupalComposerManaged\\ComposerScripts::upstreamRequire"
-        ]
-    },
-    "scripts-descriptions": {
-        "upstream-require": "Add a dependency to an upstream. See https://pantheon.io/docs/create-custom-upstream for information on creating custom upstreams."
-    },
-```
+   **Drupal CMS 1.x sites:**
+
+   ```json
+       "autoload": {
+           "classmap": [
+               "upstream-configuration/scripts/ComposerScripts.php"
+           ]
+       },
+       "scripts": {
+           "pre-update-cmd": [
+               "DrupalComposerManaged\\ComposerScripts::preUpdate"
+           ],
+           "upstream-require": [
+               "DrupalComposerManaged\\ComposerScripts::upstreamRequire"
+           ]
+       },
+       "scripts-descriptions": {
+           "upstream-require": "Add a dependency to an upstream. See https://pantheon.io/docs/create-custom-upstream for information on creating custom upstreams."
+       },
+   ```
+
+   **Drupal CMS 2.x sites:**
+
+   ```json
+       "autoload": {
+           "classmap": [
+               "upstream-configuration/scripts/ComposerScripts.php"
+           ]
+       },
+       "scripts": {
+           "pre-update-cmd": [
+               "DrupalComposerManaged\\ComposerScripts::preUpdate"
+           ],
+           "post-update-cmd": [
+               "@php -r \"@unlink('vendor/bin/composer');\"",
+               "DrupalComposerManaged\\ComposerScripts::postUpdate"
+           ]
+       },
+   ```
+
+   <Alert title="Note" type="info">
+
+   For CMS 2.x sites, keep the `@php -r "@unlink('vendor/bin/composer');"` line in `post-update-cmd`. Only remove the `DrupalComposerManaged\\ComposerScripts::postUpdate` entry.
+
+   </Alert>
 
 4. Delete the `upstream-configuration` directory from the root of your project:
 
