@@ -1,6 +1,6 @@
 ---
 title: "PHP JIT compilation support now available"
-published_date: "2026-03-02"
+published_date: "2026-03-05"
 categories: [new-feature, infrastructure]
 ---
 
