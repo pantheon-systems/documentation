@@ -31,7 +31,7 @@ Recipes also reduce the time and knowledge it requires to install and setup some
 CMS 2.0 introduces several architectural changes over the 1.x release. See the following sections for more details:
 
 * [Upgrading from Drupal CMS 1.x to 2.0](#upgrading-from-drupal-cms-1x-to-20)
-* [Changes from CMS 1.0 to 2.0](#changes-from-cms-10-to-20)
+* [What changed in CMS 2.0](#what-changed-in-cms-20)
 
 
 ## Installing Drupal CMS on Pantheon
