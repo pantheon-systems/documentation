@@ -1,6 +1,6 @@
 ---
 title: "Drupal CMS 2 upstream update now available"
-published_date: "2026-03-05"
+published_date: "2026-03-06"
 categories: [drupal, upstream]
 ---
 
