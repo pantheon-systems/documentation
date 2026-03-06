@@ -4,7 +4,8 @@ published_date: "2026-03-06"
 categories: [action-required, drupal]
 ---
 
-Pantheon's Solr search Drupal module, `search_api_pantheon`, has been updated with two new releases — [8.4.0](https://www.drupal.org/project/search_api_pantheon/releases/8.4.0) and [8.4.1](https://www.drupal.org/project/search_api_pantheon/releases/8.4.1). These releases include significant architectural improvements and enhanced developer experience. 
+Pantheon's Solr search Drupal module, `search_api_pantheon`, has been updated with two new releases — [8.4.0](https://www.drupal.org/project/search_api_pantheon/releases/8.4.0) and [8.4.1](https://www.drupal.org/project/search_api_pantheon/releases/8.4.1). These releases include significant architectural improvements and enhanced developer experience.
+
 **We recommend upgrading directly to 8.4.1.**
 
 ## What's Changed in 8.4.0
