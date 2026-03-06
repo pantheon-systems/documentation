@@ -1,6 +1,6 @@
 ---
 title: "SQL Server connectivity improvements for PHP RUNTIME GENERATION 2 (8.2+)"
-published_date: "2026-03-04"
+published_date: "2026-03-06"
 categories: [infrastructure]
 ---
 The `sqlsrv` and `pdo_sqlsrv` PECL extensions (v5.13.0) are now available for PHP 8.3 and 8.4. This gives sites native SQL Server connectivity beyond the existing ODBC driver support.
