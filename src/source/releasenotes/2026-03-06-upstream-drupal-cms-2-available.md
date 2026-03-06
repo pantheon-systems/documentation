@@ -1,5 +1,5 @@
 ---
-title: "Drupal CMS 2 upstream update now available"
+title: "Upstream update for Drupal CMS 2 now available"
 published_date: "2026-03-06"
 categories: [drupal, upstream]
 ---
