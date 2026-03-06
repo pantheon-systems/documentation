@@ -10,7 +10,7 @@ Pantheon's Solr search Drupal module, `search_api_pantheon`, has been updated wi
 
 ## What's Changed in 8.4.0
 
-- License updated to GPL-2.0+ to align with Drupal Core standards.
+- License corrected to GPL-2.0+ to align with Drupal standards.
 - Major code refactoring resulting in a 60% reduction in code length.
 - Simplified service architecture for better maintainability.
 - Removed unnecessary overrides for Guzzle, Endpoint, and the Solarium client.
