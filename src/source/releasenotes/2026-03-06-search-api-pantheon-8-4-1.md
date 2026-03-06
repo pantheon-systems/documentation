@@ -25,7 +25,7 @@ Pantheon's Solr search Drupal module, `search_api_pantheon`, has been updated wi
 
 ## What's Changed in 8.4.1
 
-- Restored the `search_api_pantheon_admin submodule` (removed in 8.4.0) as an obsolete module to support smooth upgrades from earlier versions.
+- Restored the `search_api_pantheon_admin` submodule (removed in 8.4.0) as an obsolete module to support smooth upgrades from earlier versions.
 
 ## Action Required
 
