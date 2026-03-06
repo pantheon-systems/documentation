@@ -66,6 +66,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | Package | Gen 1 | Gen 2 |
 |---------|---------|---------|
 | **IBM PHP ODBC Driver** | Available for PHP 7.4-8.2 | Coming soon <sup>1</sup> |
+| **Microsoft ODBC Driver 17 and 18 for SQL Server** | — | Available for PHP 8.2+ |
 | **wkhtmltopdf** | Available | Not available - [switch to dompdf](/external-libraries#wkhtmltopdf-deprecated) |
 | **Apache Tika** | 1.18, 1.21 | [3.2](/external-libraries#apache-tika) |
 | **PhantomJS** | 1.7.0, 2.1.1 available | Not available |
@@ -77,7 +78,8 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 | Extension | Gen 1 | Gen 2 |
 |-----------|---------|---------|
 | **ioncube** | Available for PHP 7.1 only | Not available  |
-| **pdo_sqlsrv** | Available for PHP 7.2 only<br/>5.2.0 | Coming soon for PHP 8.2+  |
+| **sqlsrv** | Available for PHP 7.2 only | Available for PHP 8.3+<br/>5.13.0 |
+| **pdo_sqlsrv** | Available for PHP 7.2 only<br/>5.2.0 | Available for PHP 8.3+<br/>5.13.0 |
 | **curl** | v7.61.1 | 7.88.1 |
 | **gd** | 2.1.0 | 2.3.3 |
 | **iconv** | 2.28 | 2.36 |
