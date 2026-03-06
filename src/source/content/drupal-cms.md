@@ -197,44 +197,16 @@ Drupal CMS 2.0 removes several modules and content types that were included in 1
 
 </Alert>
 
-### Changes from CMS 1.0 to 2.0
+### What changed in CMS 2.0
 
-- **Core**: 
-  - Updates from Drupal 11.1 to Drupal 11.3
-- **Site templates**: 
-  - Replaces the following deprecated recipe-based content models with `drupal_cms_site_template_base`:
-    - `drupal_cms_blog`
-    - `drupal_cms_page`
-    - `drupal_cms_news`
-    - `drupal_cms_events`
-    - `drupal_cms_case_study`
-    - `drupal_cms_person`
-    - `drupal_cms_project`
-- **New packages**:
-  - `drupal/byte`
-  - `drupal/core-recipe-unpack`
-  - `drupal/core-vendor-hardening`
-  - `drupal/recipe_installer_kit`
-- **Module updates**: 
-  - Replaces `drupal_cms_analytics` with `drupal_cms_google_analytics`
-  - All CMS packages now use `^2` version constraints.
-- **Removed packages**:  
-  - `project_browser`
-  - Content-type-specific recipe packages listed above 
-- **Removed theme**: 
-  - The `drupal_cms_olivero` theme is removed in CMS 2.0. This is the most significant upgrade issue — after upgrading, your site will show a "missing or invalid theme" error. CMS 2.0 introduces `byte` as the replacement theme.
+For a full list of changes, see the [Drupal CMS 2.0.0 release notes on Drupal.org](https://www.drupal.org/project/cms/releases/2.0.0).
 
-<Alert title="Note" type="info">
+Key changes that affect Pantheon sites:
 
-These content type modules only have beta releases for their 2.x versions. You will need `@beta` stability flags in `composer.json` if you want to continue using them.
-
-</Alert>
-
-**New Composer plugins**: CMS 2.0 introduces new plugins such as `drupal/site_template_helper` that must be added to the `allow-plugins` section of `composer.json`, or Composer builds will fail. This is especially relevant on Pantheon with Integrated Composer.
-
-**Project Browser**: The plugin source IDs have changed in CMS 2.0. After upgrading, you may see warnings about missing plugin sources until they are reconfigured.
-
-**Obsolete extensions**: The `automatic_updates` module is marked as obsolete in CMS 2.0 and should be uninstalled after upgrading.
+- The `drupal_cms_olivero` theme is removed and replaced by `byte`. After upgrading, your site will show a "missing or invalid theme" error until you switch themes.
+- Several content type recipe packages (`drupal_cms_blog`, `drupal_cms_page`, `drupal_cms_news`, `drupal_cms_events`, `drupal_cms_case_study`, `drupal_cms_person`, `drupal_cms_project`) have been replaced by `drupal_cms_site_template_base`.
+- New Composer plugins such as `drupal/site_template_helper` must be added to the `allow-plugins` section of `composer.json`, or Integrated Composer builds will fail.
+- The `automatic_updates` module is marked as obsolete and should be uninstalled after upgrading.
 
 ### Recommended upgrade steps
 
