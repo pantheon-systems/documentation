@@ -21,7 +21,7 @@ We will be launching a new Slack instance for our Pantheon Customer Community on
 
 ## Action required
 - If you are a member in our existing Community Slack and using a different email to sign into Pantheon (e.g. a business email) than what you are using to sign onto the Pantheon Slack, we ask that you update your email addresses to match by **end-of-day March 6, 2026**.
-- If you are unable to connect to the Pantheon Community Slack after the migration on March 9, 2026 email community@pantheon.io.
+- If you are unable to connect to the Pantheon Community Slack after the migration on March 9, 2026, please submit [this form](https://pantheon.io/customer-community) and our team will review.
 
 ## Considerations
 - The migration is happening on Friday, March 6th. There will be 2 days of data not migrated from the existing (old) Slack instance into the new Community Slack.
