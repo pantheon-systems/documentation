@@ -23,7 +23,7 @@ export const TabList = async ({ children }: { children: any }) => {
     .map((tab: { props: any }) => {
       const tabData = {
         tabLabel: tab.props?.title ?? "Title",
-        panelContent: tab.props.children.filter((e: any) => e !== "\n"),
+        panelContent: React.Children.toArray(tab.props.children).filter((e: any) => e !== "\n"),
       };
 
       processedTabs.push(tabData);
