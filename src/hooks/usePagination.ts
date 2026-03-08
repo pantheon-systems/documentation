@@ -1,8 +1,8 @@
-import {
-  ArticleWithoutContent,
-  PaginatedArticle,
-} from "@pantheon-systems/pcc-react-sdk";
 import { useEffect, useState } from "react";
+import { ArticleWithoutContent } from "@/lib/utils";
+
+// PaginatedArticle is the same as ArticleWithoutContent for our purposes
+type PaginatedArticle = ArticleWithoutContent;
 
 interface Props {
   cursor?: string;

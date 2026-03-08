@@ -1,8 +1,23 @@
-import {
-  Article,
-  ArticleWithoutContent,
-} from "@pantheon-systems/pcc-react-sdk";
 import { clsx, type ClassValue } from "clsx";
+
+// Local type definitions (previously from pcc-react-sdk)
+export interface ArticleMetadata {
+  image?: string;
+  description?: string;
+  [key: string]: unknown;
+}
+
+export interface ArticleWithoutContent {
+  id: string;
+  title: string | null;
+  tags?: string[];
+  metadata?: ArticleMetadata;
+  slug?: string;
+}
+
+export interface Article extends ArticleWithoutContent {
+  content?: string;
+}
 import { Metadata } from "next";
 import { twMerge } from "tailwind-merge";
 
