@@ -111,10 +111,15 @@ const webInfrastructure = () => {
         ),
       ]),
 
-      simpleLink("/solr", "Solr Search", [
-        simpleLink("/solr", "Pantheon Search"),
-        getGuideDirectory("guides/solr-drupal", "Drupal"),
-        simpleLink("/opensolr", "Open Solr"),
+      simpleLink("/pantheon-search", "Pantheon Search", [
+        simpleLink("/pantheon-search", "Overview"),
+        getGuideDirectory("guides/elasticsearch", "Elasticsearch"),
+        simpleLink("/pantheon-search/solr", "Solr", [
+          simpleLink("/pantheon-search/solr", "Introduction"),
+          getGuideDirectory("guides/solr-drupal", "Drupal Solr"),
+          simpleLink("/guides/pantheon-search/solr/wordpress-solr?double-menu", "WordPress Solr"),
+          simpleLink("/opensolr", "Open Solr"),
+        ]),
       ]),
       getGuideDirectory("guides/redirect", "Redirects"),
 

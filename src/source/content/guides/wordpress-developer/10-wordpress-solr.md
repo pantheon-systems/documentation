@@ -12,8 +12,8 @@ integration: [plugins]
 tags: [solr, plugins]
 contributors: [cityofoaksdesign, ccharlton]
 showtoc: true
-permalink: docs/guides/wordpress-developer/wordpress-solr
-reviewed: "2024-09-09"
+permalink: docs/guides/pantheon-search/solr/wordpress-solr
+reviewed: "2026-02-18"
 ---
 
 This section provides information on how to use Apache Solr with your WordPress Pantheon site.
@@ -50,21 +50,21 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/guides/sftp) via the Pantheon Dashboard, or with [Terminus](/terminus):
 
- ```bash{promptUser: user}
- terminus connection:set <site>.<env> sftp
- ```
+    ```bash{promptUser: user}
+    terminus connection:set <site>.<env> sftp
+    ```
 
 1. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard, or with Terminus:
 
- ```bash{promptUser: user}
- terminus wp <site>.<env> -- plugin install --activate solr-power
- ```
+    ```bash{promptUser: user}
+    terminus wp <site>.<env> -- plugin install --activate solr-power
+    ```
 
- Or for WordPress Multisites:
+    Or for WordPress Multisites:
 
- ```bash{promptUser: user}
- terminus wp <site>.<env> -- plugin install solr-power --activate-network
- ```
+    ```bash{promptUser: user}
+    terminus wp <site>.<env> -- plugin install solr-power --activate-network
+    ```
 
 1. Open your WordPress Dashboard, navigate to **Solr Power** (previously under **Settings**), and then select the **Info** tab to see your site's Solr Server details.
 
@@ -80,15 +80,15 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Navigate to the **Actions** tab and click **Start Index** (next to **Index Searchable Post Types**) to index all publicly queryable post types, or via Terminus:
 
- ```bash{promptUser: user}
- terminus wp <site>.<env> -- solr index
- ```
+    ```bash{promptUser: user}
+    terminus wp <site>.<env> -- solr index
+    ```
 
- For WordPress Multisites, you must index all your subsites individually:
+    For WordPress Multisites, you must index all your subsites individually:
 
- ```bash{promptUser: user}
- terminus wp <site>.<env> -- solr index --url=example.pantheonsite.io/subsite
- ```
+    ```bash{promptUser: user}
+    terminus wp <site>.<env> -- solr index --url=example.pantheonsite.io/subsite
+    ```
 
 1. Deploy the plugin to the site's Test and Live environments after validation and testing.
 
@@ -96,13 +96,13 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Open **Appearance**, select **Widgets**, and then add the Solr Search Widget in your desired widget position.
 
-  ![Solr Widget](../../../images/add-solr-widget.png)
+    ![Solr Widget](../../../images/add-solr-widget.png)
 
 1. Open **Solr Power**, select the **Facet Options** tab, check **AJAX Facet Search Support**, and enter the Div ID in **AJAX Div ID (displays search results)**, such as `primary`.
 
-  ![Solr Settings](../../../images/solr-widget-settings.png)
+    ![Solr Settings](../../../images/solr-widget-settings.png)
 
-   Search results appear under **Div ID**. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
+    Search results appear under **Div ID**. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
 
 1. Check your desired Facets and save your settings.
 

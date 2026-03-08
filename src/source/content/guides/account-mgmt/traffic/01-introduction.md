@@ -79,26 +79,67 @@ A low Cache Hit Ratio may be caused by:
 Learn more about how to enable and improve caching in the [Pantheon Global CDN](/guides/global-cdn) guide.
 
 ### Top Traffic Patterns 
-These metrics can help you identify aggressive crawlers or scrapers, that you may want to [block manually when troubleshooting traffic events](/guides/account-mgmt/traffic/remedy#dos-attack-mitigation). 
+The Top Traffic Patterns section of the Site Metrics dashboard gives you a detailed breakdown of which pages, IP addresses, and user agents are generating the most requests to your site. Use this data to identify aggressive crawlers or scrapers you may want to [block manually when troubleshooting traffic events](/guides/account-mgmt/traffic/remedy#dos-attack-mitigation), and to prioritize caching and performance optimization based on the specific pages receiving the highest traffic.
 
-You can also inform your prioties for caching and performance optimization efforts based on the specific pages receiving the highest traffic.
+![top traffic patterns](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-1.png)
+
+You can toggle the displayed date range by clicking **Day**, **Week**, or **Month** at the top of the section. Data is refreshed every minute.
 
 <Alert type="info" title="Note">
 
-**Top traffic patterns** data includes both [counted](#counted-visits) and [uncounted](#uncounted-visits) visits.
+**Top traffic patterns** data includes both counted and uncounted visits. This means you will see all successful and redirected requests hitting your site, including traffic from known bots that Pantheon does not bill for. For details on what counts toward your plan, see [Counted Visits](#counted-visits) and [Uncounted Visits](#uncounted-visits).
 
 </Alert>
 
-Toggle displayed date ranges by clicking **Day**, **Week**, or **Month**. 
-
 #### Top visited paths
-The most frequently requested pages and resources on your site. High-traffic paths are good candidates for performance optimization
+This table lists the most frequently requested pages and resources on your site, ranked by request count. Each row shows the URL path and the total number of requests it received during the selected time period.
+
+![top visited paths](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-2.png)
+
+**What you can do with this data**
+
+* **Identify your highest-traffic pages**: These are your best candidates for caching and performance optimization. Ensuring these pages are served from cache can significantly improve load times.
+* **Spot unexpected paths**: If you see paths you don’t recognize or paths receiving unexpectedly high traffic relative to your site's typical patterns (e.g., admin endpoints, XML-RPC), this may indicate automated activity or misconfigured redirects.
+* **Run performance audits**: Click **View Insights** next to any path to launch a Lighthouse audit. This analyzes performance, accessibility, SEO, and best practices for that specific page and each audit produces a score and specific recommendations you can act on to improve load times, search rankings, and overall site quality.
 
 #### Top IPs
-The individual IP addresses sending the highest volume of requests to your site.
+This table displays the individual IP addresses generating the highest volume of requests to your site, along with each IP’s request count.
+
+![top IPs](../../../../images/guides/account-mgmt/docs-top-traffic-patterns-3.png)
+
+**What you can do with this data**
+
+* **Check for abusive IPs**: Click the any IP address link to look it up. This helps you determine whether the source is a legitimate user, a known bot, or a potentially malicious actor.
+* **Manage traffic at the edge**: Click ‘Manage traffic’ in the Edge column to configure traffic rules using AGCDN (Advanced Global CDN). This allows you to block, rate-limit, or redirect requests from specific IPs at the CDN level, before they reach your application server.
+* **Identify traffic patterns**: A single IP generating a disproportionately high number of requests may indicate a bot, scraper, or brute-force attempt. Compare the IP’s request volume against normal traffic levels to assess whether action is needed.
+
+<Alert type="info" title="Understand automated traffic sources">
+
+Not all automated traffic is unwanted. Many requests that appear to come from bots are actually triggered by real human activity. For example, when someone asks an AI assistant a question or uses a browser with built-in search features, those tools send requests to your site on behalf of that person. Google alone operates multiple user agents, most of which are driven by actual user intent rather than random crawling. Blocking these requests could prevent real visitors from finding your content. Before taking action on any IP or user agent, consider whether that traffic may be delivering value to your business, such as improving your visibility in search results, AI-powered recommendations, or voice assistant responses.
+
+</Alert>
 
 #### Top User Agents
-A breakdown of traffic by browser type, operating system, and automated tools, sorted by highest volume.
+A user agent identifies the software making requests to your site — typically a browser, operating system, or automated tool. This table shows which user agents are generating the most traffic, sorted by request count.
+
+![top User Agents](../../../../images/guides/account-mgmt/docs-top-traffic-patterns4.png)
+
+**What you can do with this data**
+
+* **Distinguish human traffic from bots**: Common browsers like Chrome, Safari, and Firefox will appear as standard user agent strings. Bot traffic often includes identifiers such as Googlebot, Bingbot, or AI crawler names.
+* **How to evaluate automated traffic**: [Click the IP link](#top-ips) to look up its owner. Search engine crawlers and AI-powered tools driven by user intent generally benefit your site's visibility. If a source is generating unusually high request volume and you can't identify a clear benefit, consider blocking it through [Advanced Global CDN (AGCDN)](/guides/agcdn) or your site's robots.txt file.
+* **How to evaluate user agents**: Copy the User Agent string into a parser, such as [BrowserScan](https://www.browserscan.net/user-agent) or [WhatIsMyBrowser](https://explore.whatismybrowser.com/useragents/parse/) to parse and see the details on the user agent.
+* **Block unwanted user agents**: If you identify aggressive scrapers or unwanted crawlers, you can block them by adding entries to your site’s robots.txt file or by using PHP to block specific user agents. See [Block User Agents in Drupal or WordPress](/guides/account-mgmt/traffic/remedy#block-user-agents-in-drupal-or-wordpress) for detailed instructions.
+
+### Understanding Your Traffic Data
+
+The request counts shown in Top Traffic Patterns represent all requests reaching your site through Pantheon’s Global CDN. This includes both traffic that counts toward your plan’s visit limit and traffic that does not (such as known bot requests and static assets).
+
+Some things to keep in mind when reviewing this data:
+
+* **Request counts differ from analytics tools**: Pantheon tracks every request to the platform, while tools like Google Analytics only track pageviews where a tracking snippet fires in a browser. See the FAQ section for a detailed comparison.
+* **Bot traffic is reflected**: Known bots like Googlebot appear in these tables even though Pantheon does not count them toward your plan’s visit limit. This is valuable information for understanding the full picture of what’s hitting your site.
+* **Use this data alongside the charts above**: The Visits, Pages Served, and Cache Hit Ratio charts at the top of the Metrics page give you trend data over time. The Top Traffic Patterns tables below complement the charts by showing you trends across all your site’s traffic, showing you exactly which pages, IPs, and user agents are driving that traffic.
 
 ## How Do You Know if a Visit Counts?
 

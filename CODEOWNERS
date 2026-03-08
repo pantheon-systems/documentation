@@ -1,0 +1,21 @@
+# These owners will be the default owners for everything in the repo. Unless a later match takes precedence, @pantheon-systems/docs-admins, as primary maintainers will be requested for review when someone opens a Pull Request.
+# Additional code owners can be added for specific paths.
+# For more information about CODEOWNERS files, refer to https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+* @pantheon-systems/docs-admins
+
+# The Platform-Edge-Routing team is responsible for connecting custom domains to Pantheon
+src/source/content/guides/domains/ @pantheon-systems/platform-edge-routing
+# The Platform-Edge-Routing team is responsible for traffic limits
+src/source/content/guides/account-mgmt/traffic/ @pantheon-systems/platform-edge-routing
+# The Platform-Edge-Routing team is responsible for bots and indexing
+src/source/content/bots-and-indexing @pantheon-systems/platform-edge-routing
+# The FileSystem team is responsible for managing static files on Pantheon
+src/source/content/guides/filesystem/ @pantheon-systems/filesystem
+# The lifecycle-ops team is responsible for Integrated Composer
+src/source/content/guides/integrated-composer/ @pantheon-systems/developer-experience
+# The cms-platform team is responsible for WordPress Multisite
+src/source/content/guides/multisite/ @pantheon-systems/site-experience
+# The cms-platform team is responsible for External Libraries on Pantheon
+src/source/content/external-libraries @pantheon-systems/site-experience
+# There is a team just for release note permissions
+src/source/releasenotes/ @pantheon-systems/release-note-authors

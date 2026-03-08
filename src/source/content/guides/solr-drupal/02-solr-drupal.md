@@ -13,7 +13,7 @@ tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence]
 reviewed: "2025-01-15"
 showtoc: true
-permalink: docs/guides/solr-drupal/solr-drupal
+permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 

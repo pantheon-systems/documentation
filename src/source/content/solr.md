@@ -1,8 +1,8 @@
 ---
-title: Pantheon Search
+title: Pantheon Search powered by Solr
 description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
 tags: [solr,search]
-reviewed: "2025-03-19"
+reviewed: "2026-02-10"
 contenttype: [doc]
 innav: [true]
 categories: [search]
@@ -10,6 +10,8 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [search]
 integration: [--]
+contributors: [jazzsequence, stevector]
+permalink: docs/pantheon-search/solr
 ---
 
 Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments.
@@ -18,7 +20,7 @@ Pantheon provides Solr-based search as a service for most plans including Sandbo
 
 <Alert title="Important Note" type="info">
 
-**Pantheon Search** derives from Solr and can perform full-text content searching in a single language.
+**Pantheon Search powered by Solr** can perform full-text content searching in a single language.
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
@@ -26,9 +28,9 @@ Pantheon's Drupal integration builds upon the [Search API](https://www.drupal.or
 
 </Alert>
 
-## Which Plans Can Use Pantheon Search?
+## Which Plans Can Use Solr Search?
 
-All plans except for a Basic plan can use Pantheon Search. Pantheon Search is available to Sandbox site plans for developmental purposes, but Pantheon Search will not be available going live on a Basic plan.
+All plans except for a Basic plan can use search with Pantheon Search with Solr. Solr is available to Sandbox site plans for developmental purposes, but Solr will not be available going live on a Basic plan.
 
 | Plans         | Pantheon Search Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ---------------------------------- |
@@ -37,12 +39,12 @@ All plans except for a Basic plan can use Pantheon Search. Pantheon Search is av
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
-## Using Pantheon Search with WordPress or Drupal
+## Using Solr with WordPress or Drupal
 
 For installation instructions and additional details, refer to [Enabling Solr for WordPress](/guides/wordpress-developer/wordpress-solr) or [Enabling Solr with Drupal](/guides/solr-drupal).
 
 
-## Known Limitations of Pantheon's Search Service
+## Known Limitations of Pantheon Search powered by Solr
 
 - Solr can only be enabled by [Admin users or Users in Charge](/guides/account-mgmt/workspace-sites-teams/teams#site-level-roles-and-permissions).
 

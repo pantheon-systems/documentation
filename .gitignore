@@ -61,3 +61,4 @@ out
 /public/current-sha.txt
 
 pnpm-lock.yaml
+.idea

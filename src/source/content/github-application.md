@@ -29,7 +29,7 @@ Merging pull requests, or pushing code to the `main` branch of the GitHub reposi
 
 ## Creating a new site
 
-Once accepted into the private Beta, you must install the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin). 
+Once accepted into the private Beta, you must install the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin).
 This is a public Terminus plugin that can be installed normally, e.g. `terminus self:plugin:install terminus-repository-plugin`.
 Usage instructions for the specific site creation commands are included in the [README](https://github.com/pantheon-systems/terminus-repository-plugin/blob/main/README.md#creating-a-new-site).
 
@@ -77,6 +77,24 @@ Our separate [GitHub Action](/github-actions) is designed for more customized wo
 
 Currently, Pantheon executes a `composer install` command through our [Integrated Composer](/guides/integrated-composer) feature.
 If you need compilation of front-end assets in your WordPress or Drupal theme through something like `npm run build` you should use [our GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) now and [follow this item on our roadmap for eventual inclusion of such functionality within a Pantheon-prodived build step](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
+
+### Security and Permissions
+
+The main purpose of the Pantheon GitHub Application is to create a mapping between a repository on GitHub and a website on Pantheon.
+Configuring the Application requires granting permission to Pantheon to read one or more GitHub repositories.
+This permission granting is tracked at the [Pantheon Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) level.
+
+People who are members of a Pantheon Workspace and have the Developer role or higher can see all sites in the Workspace.
+This means they can see sites on Pantheon even if their corresponding _Github account_ doesn't have permission to view the site's GitHub repository.
+
+<Alert title="Permission to create repositories in a GitHub Organization extends to members of a Pantheon workspace" type="danger" >
+
+When configuring Pantheon's GitHub Application you will have the choice between granting access to individually selected repositories or "all" repositories within your GitHub organization.
+
+Selecting "all repositories" can be more convenient because it allows for faster creation of new repositories and sites. However, by granting Pantheon the "all repositories" permission you also grant that permission to every member of the Pantheon Workspace who has a Developer role or higher.
+Depending on the size and nature of your company, you may not want your Pantheon Workspace members to have this permission, especially they are not members of your GitHub organization.
+
+</Alert>
 
 ## Limitations prior to General Availability
 
