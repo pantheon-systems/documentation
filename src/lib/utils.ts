@@ -1,24 +1,4 @@
 import { clsx, type ClassValue } from "clsx";
-
-// Local type definitions (previously from pcc-react-sdk)
-export interface ArticleMetadata {
-  image?: string;
-  description?: string;
-  [key: string]: unknown;
-}
-
-export interface ArticleWithoutContent {
-  id: string;
-  title: string | null;
-  tags?: string[];
-  metadata?: ArticleMetadata;
-  slug?: string;
-}
-
-export interface Article extends ArticleWithoutContent {
-  content?: string;
-}
-import { Metadata } from "next";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -32,70 +12,6 @@ export function formatDate(input: string | number): string {
     day: "numeric",
     year: "numeric",
   });
-}
-
-export function getSeoMetadata(
-  article: ArticleWithoutContent | null
-): Metadata {
-  if (article == null) {
-    return {
-      openGraph: {
-        type: "website",
-      },
-    };
-  }
-
-  const tags: string[] =
-    article.tags && article.tags.length > 0 ? article.tags : [];
-  const imageProperties = [
-    article.metadata?.image,
-    article.metadata?.["image"],
-    // Extend as needed
-  ]
-    .filter((url): url is string => typeof url === "string")
-    .map((url) => ({ url }));
-  const description = article.metadata?.description
-    ? String(article.metadata?.description)
-    : "Article hosted using Pantheon Content Cloud";
-
-  const authors: Metadata["authors"] = [];
-
-  // Collecting data from metadata fields
-  Object.entries(article.metadata || {}).forEach(([k, v]) => {
-    const key = k.toLowerCase().trim();
-
-    switch (key) {
-      case "author": {
-        if (typeof v === "string") {
-          authors.push({ name: v });
-        }
-        break;
-      }
-      case "complex-author": {
-        if (typeof v === "string") {
-          const authorName = undefined;
-
-          if (authorName) {
-            authors.push({ name: v });
-          }
-        }
-        break;
-      }
-    }
-  });
-
-  return {
-    title: article.title,
-    description,
-    keywords: tags,
-    authors,
-    openGraph: {
-      type: "website",
-      title: article.title || undefined,
-      images: imageProperties,
-      description,
-    },
-  };
 }
 
 export const isExternalLink = (url: string) => {
