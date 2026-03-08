@@ -108,6 +108,10 @@
     "react": "19.1.5",
     "react-dom": "19.1.5",
     "glob": "10.5.0",
-    "playwright": "1.57.0"
+    "playwright": "1.57.0",
+    "fast-xml-parser": "4.5.4",
+    "@remix-run/router": "1.23.2",
+    "rollup": "4.59.0",
+    "minimatch": "10.2.4"
   }
 }
