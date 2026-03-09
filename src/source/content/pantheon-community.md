@@ -15,12 +15,8 @@ At Pantheon, we know that the best work happens when people come together. Our c
 
 Whether you're optimizing performance, scaling your agency, tackling a complex build, or just looking for people who speak your language, you're in the right place.
 
-## Who Can Join
-
-At this time, access to our community is limited to Pantheon customers and partner agencies. 
-
 ## How to Join
-Getting in is easy:
+Pantheon's community Slack is open to all customers and partners. Getting in is easy:
 
 [Join the Community](https://pantheon.io/developer-community) → Fill out a quick form → Check your inbox for the invite
 
