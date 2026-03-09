@@ -9,7 +9,6 @@ import { notFound } from "next/navigation";
 export interface DynamicViewProps {
   params: Promise<{ uri: string[] }>;
   searchParams: Promise<{
-    local: "true" | "false" | undefined;
     category?: string[];
   }>;
 }

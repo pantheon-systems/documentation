@@ -9,11 +9,6 @@ import {
 
 export interface DynamicViewProps {
   params: { uri: string[] };
-  searchParams: {
-    publishingLevel: "PRODUCTION" | "REALTIME";
-    pccGrant: string | undefined;
-    local: "true" | "false" | undefined;
-  };
 }
 
 const getPages = async (
@@ -83,7 +78,6 @@ const getPages = async (
 
 export default async function Page(props: {
   params: Promise<DynamicViewProps["params"]>;
-  searchParams: Promise<DynamicViewProps["searchParams"]>;
 }) {
   // create landing pages for each of the pages in the data/landings.yaml file
 
@@ -104,7 +98,6 @@ export default async function Page(props: {
 
 export async function generateMetadata(props: {
   params: Promise<DynamicViewProps["params"]>;
-  searchParams: Promise<DynamicViewProps["searchParams"]>;
 }) {
   const { uri } = await props.params;
 
