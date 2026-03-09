@@ -2,18 +2,13 @@
 title: Terminus Guide
 subtitle: Plugin Directory
 description: A non-exclusive directory of plugins to extend Terminus features.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/directory
-contenttype: [guide]
-innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
+showtoc: false
 ---
 
 You can extend Terminus functionality and add commands by installing [third-party plugins](https://github.com/terminus-plugin-project) or by [creating your own plugins](/terminus/create).
