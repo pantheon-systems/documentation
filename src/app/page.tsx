@@ -10,14 +10,6 @@ import { generateMetadataFromUri } from "@/lib/site-metadata";
 const containerWidth = "standard";
 
 export default async function Home() {
-  // Fetch the articles and site in parallel
-  // const [{ data: articles }, site] = await Promise.all([
-  //   PCCConvenienceFunctions.getPaginatedArticles({
-  //     pageSize: 3,
-  //   }),
-  //   PCCConvenienceFunctions.getSite(),
-  // ]);
-
   const homeYaml = processDirectoryForYaml("source/data", {
     filter: (filePath) => filePath.includes("home.yaml"),
   })[0].content[0];
