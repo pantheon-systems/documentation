@@ -1,9 +1,6 @@
 ---
 title: "Benefits of Becoming WebOps Certified"
 subtitle: "Learn about the Pantheon WebOps Certification program"
-showtoc: true
-contributors: []
-layout: certificationpage
 permalink: docs/certification/about
 ---
 
