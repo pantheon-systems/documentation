@@ -1,5 +1,6 @@
 name: Wait for Next.js Deployment
 description: Waits for a Pantheon Next.js deployment to complete by polling the build API
+# A more mature way to fulfill this need will be done via https://getpantheon.atlassian.net/browse/DEVX-6685
 
 inputs:
   pantheon_site_name:

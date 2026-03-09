@@ -26,8 +26,21 @@ jobs:
       with:
         target_env: live
 
+
     - uses: ./.github/actions/wait-for-deployment
       with:
-        expected_sha: ${{ github.sha }}
-        target_env: live
-        pantheon_site_machine_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+        expected_commit: ${{ github.event.pull_request.head.sha }}
+        env_name: pr-${{ github.event.pull_request.number }}
+        pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+        pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
+    - name: clear cache
+      id: clear_cache
+      shell: bash
+      env:
+        SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.live"
+      run: |
+        #!/bin/bash
+        set +e
+        terminus env:cc $SITE_ENV
+
