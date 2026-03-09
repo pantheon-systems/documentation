@@ -22,7 +22,8 @@ jobs:
         with:
          expected_sha: ${{ github.event.pull_request.head.sha }}
          target_env: pr-${{ github.event.pull_request.number }}
-         pantheon_site_machine_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 
       - name: warm containers
         id: warm_containers
