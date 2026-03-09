@@ -23,6 +23,7 @@ Pantheon's community Slack is open to all customers and partners. Getting in is 
 That's it. Takes about 30 seconds, and you're in!
 
 
+
 ## What's in it for me? 
 In the new community, you’ll get:
 * All Pantheon alpha and beta programs in one place 
