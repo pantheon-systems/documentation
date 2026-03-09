@@ -1,38 +1,5 @@
 import { PageDataWithoutComponent, calculateTemplate } from "./page-utils";
 
-export const serveLocal = (search?: { local?: "true" | "false" }) => {
-  let useLocal = false;
-  if (process.env.SERVE_LOCAL === "false") {
-    return false;
-  }
-
-  if (process.env.SERVE_LOCAL === "true") {
-    return true;
-  }
-
-  if (process.env.NODE_ENV === "development") {
-    useLocal = true;
-    if (search?.local === "false") {
-      useLocal = false;
-    }
-  }
-
-  return useLocal;
-};
-
-export const serveLocalAsync = async (
-  searchParams?: Promise<{
-    local?: "true" | "false";
-  }>
-) => {
-  const search = await searchParams;
-
-  // @todo, don't hard code this to true
-  // https://github.com/pantheon-systems/documentation-in-nextjs/issues/84
-  return true;
-  // return serveLocal(search);
-};
-
 export const resolveComponent = async (
   pageData: PageDataWithoutComponent & { relativeFilePath?: string }
 ): Promise<{ Component: React.ReactNode; template: string }> => {

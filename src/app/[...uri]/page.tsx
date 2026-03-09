@@ -93,10 +93,7 @@ export default async function Page(props: {
     return notFound();
   }
 
-  const { Component } = await getPages(
-    uri,
-    // await serveLocalAsync(props.searchParams)
-  );
+  const { Component } = await getPages(uri);
 
   if (Component === null) {
     return notFound();
@@ -118,10 +115,7 @@ export async function generateMetadata(props: {
     };
   }
 
-  const { seoMetadata } = await getPages(
-    uri,
-   // await serveLocalAsync(props.searchParams)
-  );
+  const { seoMetadata } = await getPages(uri);
 
   const { authors, ...returnData } = generateMetadataFromUri({
     ...seoMetadata,
