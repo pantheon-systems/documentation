@@ -27,13 +27,9 @@ jobs:
 
       - name: clear cache
         id: clear_cache
-        shell: bash
         env:
           SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pr-${{ github.event.pull_request.number }}"
-        run: |
-          #!/bin/bash
-          set +e
-          terminus env:cc $SITE_ENV
+        run: terminus env:cc $SITE_ENV
 
       - name: warm containers
         id: warm_containers
