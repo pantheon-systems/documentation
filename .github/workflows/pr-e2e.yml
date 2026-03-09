@@ -25,6 +25,16 @@ jobs:
          pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
          pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 
+      - name: clear cache
+        id: clear_cache
+        shell: bash
+        env:
+          SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.${{ github.event.pull_request.number }}"
+        run: |
+          #!/bin/bash
+          set +e
+          terminus env:cc $SITE_ENV
+
       - name: warm containers
         id: warm_containers
         shell: bash
