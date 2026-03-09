@@ -28,18 +28,8 @@ import { Popover } from "@/components/common/popover";
 import { Wistia } from "@/components/common/wistia";
 import Enablement from "@/components/common/enablement";
 
-// Local type definition (previously extracted from pcc-react-sdk ArticleRenderer)
 export interface MdxWrapperArticle {
   content?: string;
-  contentType?: string;
-  id?: string;
-  metadata?: Record<string, unknown>;
-  publishedDate?: string | null;
-  publishingLevel?: string;
-  tags?: string[];
-  title?: string;
-  updatedAt?: string | null;
-  previewActiveUntil?: string | null;
 }
 
 export interface MdxWrapperProps {
