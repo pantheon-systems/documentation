@@ -1,10 +1,7 @@
 "use server";
 import { notFound } from "next/navigation";
-import { getAllPages, singleSlugForFetch } from "@/lib/page-utils";
-import { resolveComponent, serveLocalAsync } from "@/lib/resolve-component";
-import { LandingTemplate } from "@/templates/landing";
-import { getMdxProcessed } from "@/server/processor/mdx";
-import { basename, join } from "path";
+import { getAllPages } from "@/lib/page-utils";
+import { resolveComponent } from "@/lib/resolve-component";
 import {
   generateMetadataFromUri,
   GenerateMetadataParams,
