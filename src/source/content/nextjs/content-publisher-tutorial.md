@@ -43,6 +43,41 @@ This tutorial will walk you through:
 
 \* Requires logging in after installation.
 
+## Create a Content Publisher collection
+
+Before you can make a Next.js site to display content from Content Publisher, we will need a Content Publisher collection.
+You _can_ reuse an existing Content Publisher collection if you have one, but for this tutorial we will make a new one.
+
+1. Go to the [Content Publisher dashboard](https://content.pantheon.io) and log in.
+
+1. Next create a new collection by clicking the **"New collection"** button.
+
+1. Enter something simple for **Collection name** like "Next.js tutorial content".
+
+1. For the **URL** field, enter the URL of the Next.js site you intend to make a Pantheon. You can change this field later. For instance, use `https://dev-my-site-name.pantheonsite.io` if you intend to make a site with a machine name of `my-site-name`.
+
+  <Alert title="Tutorial vs. production usage" type="info" >
+
+  When using this combination of Content Publisher and Next.js in production, you would likely use the URL of your live environment here. For more information on deploying to Test and Live environments, see [Deploying to Test and Live](/docs/nextjs/test-and-live-env).
+
+  </Alert>
+
+1. Set [Collection access](https://docs.content.pantheon.io/publishing-permissions#h.q3xmgo7a5kws). Since this collection is meant to be a tutorial, you may want to select **Only managers and authorized users**.
+
+1. Click **Create collection**.
+
+
+### Get Content Publisher ID and Token
+
+Now that we have a Content Publisher collection, we can grab variables for the collection ID and a token that we will soon give to Next.js.
+
+1. From the **Tokens** tab of the [Content Publisher dashboard](https://content.pantheon.io/dashboard/settings/tokens) click **Create access token** and fill in the prompt. The token will only be shown once, copy it to a local text file and delete it later.
+
+1. From the **Home** tab of the [Content Publisher dashboard](https://content.pantheon.io/dashboard/collections) find and select your new collection. Copy the collection ID to the same text file. For example:
+
+  ![Screenshot from the Content Publisher dashboard highlighting the collection ID](../../images/nextjs/collection-id.png)
+
+
 ## Create a local Next.js codebase
 
 With all the requirements above in place, we will now make a local codebase for our Next.js site.
@@ -107,71 +142,15 @@ With a GitHub repository holding our Next.js codebase, we can now create a new P
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Create New Site** button. Then click **Next.js**.
 1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application.
 1. Select the newly authorized account, then click **Continue**.
-1. In the **Configure Site** step, switch tabs to **Use existing repository**, then enter a **Site name** and select your existing repository from the dropdown menu. Click **Deploy site**:
+1. In the **Configure Site** step, switch tabs to **Use existing repository**, then enter a **Site name** and select your existing repository from the dropdown menu.
 
   ![Create new site configured from existing repository](../../images/nextjs/configure-existing-repo.png)
 
-1. Click **Begin Deployment**. Do not close the tab or navigate away from this page until the workflow is complete.
+Next enter your Content Publisher Collection ID and Token using the variables `PCC_SITE_ID` and `PCC_TOKEN`.
 
-The build process will return an error because we have not yet configured the environment variables needed to connect to Content Publisher.
+  ![Setting secrets at site creation](../../images/nextjs/setting-pcc-secrets-at-site-creation-time.png)
 
-(Optional) You can see this progression of build statuses using Terminus:
-
-```bash{promptUser: user}
-terminus node:logs:build:list my-site.dev
-```
-
-To make the build and deployment succeed, will will need a Content Publisher collection and token.
-
-## Create a Content Publisher collection
-
-Now let's make a Content Publisher collection that will send content to our new Next.js site.
-
-You _can_ reuse an existing Content Publisher collection if you have one, but for this tutorial we will make a new one.
-
-1. Go to the [Content Publisher dashboard](https://content.pantheon.io) and log in.
-
-1. Next create a new collection by clicking the **"New collection"** button.
-
-1. Enter something simple for **Collection name** like "Next.js tutorial content".
-
-1. For the **URL** field, enter the URL of your new Pantheon site's Dev environment, like `https://dev-my-site-name.pantheonsite.io`.
-
-  <Alert title="Tutorial vs. production usage" type="info" >
-
-  When using this combination of Content Publisher and Next.js in production, you would likely use the URL of your live environment here. For more information on deploying to Test and Live environments, see [Deploying to Test and Live](/docs/nextjs/test-and-live-env).
-
-  </Alert>
-
-1. Set [Collection access](https://docs.content.pantheon.io/publishing-permissions#h.q3xmgo7a5kws). Since this collection is meant to be a tutorial, you may want to select **Only managers and authorized users**.
-
-1. Click **Create collection**.
-
-## Connect Content Publisher to your site
-
-Now that we have a Content Publisher collection, we can configure the environment variables needed to connect our Next.js site to that collection.
-
-1. From the **Tokens** tab of the [Content Publisher dashboard](https://content.pantheon.io/dashboard/settings/tokens) click **Create access token** and fill in the prompt. The token will only be shown once, copy it to your clipboard now for use in the following step.
-
-1. Set `PCC_TOKEN` as an environment variable on Pantheon using [Terminus Secrets](/guides/secrets). Replace `my-site-name` and `your-token-here`:
-
-  ```bash{promptUser: user}
-  terminus secret:site:set my-site-name  PCC_TOKEN your-token-here --type=env --scope=web,ic --no-interaction
-  ```
-
-1. From the **Home** tab of the [Content Publisher dashboard](https://content.pantheon.io/dashboard/collections) find and select your new collection. Copy the collection ID. For example:
-
-  ![Screenshot from the Content Publisher dashboard highlighting the collection ID](../../images/nextjs/collection-id.png)
-
-1. Set `PCC_SITE_ID` as an environment variable on Pantheon using [Terminus Secrets](/guides/secrets). Replace `my-site-name` and `your-collection-id-here`:
-
-  ```bash{promptUser: user}
-  terminus secret:site:set my-site-name  PCC_SITE_ID your-collection-id-here --type=env --scope=web,ic --no-interaction
-  ```
-
-### Trigger another build
-
-To see the changes take effect make another commit to the GitHub repository to trigger a new build and deployment. For example, you can add a new line to the README file in the main branch to trigger a build on Dev.
+You can name complete the form and site creation will begin.
 
 #### (Optional) Review Build Status from the CLI
 To view the status of that process, run this command, replacing `<site>` with your sitename:
@@ -180,9 +159,9 @@ To view the status of that process, run this command, replacing `<site>` with yo
 terminus node:logs:build:list <site>
 ```
 
-## Publish from Google Docs to your Next.js site 
+## Publish from Google Docs to your Next.js site
 
 1. [Create a new Google Doc](https://docs.new/) and [connect it to your collection](https://docs.content.pantheon.io/add-on-install#h.25elm2hpgwjj) using the Google Docs add-on.
 1. [Publish your new page using the add-on](https://docs.content.pantheon.io/preview-publish#h.7ovppm53h4ec).
-1. Click **View live content** and you should see your new page, for example: 
+1. Click **View live content** and you should see your new page, for example:
   ![New article published in Next.js from Google Docs](../../images/nextjs/example-first-article.png)
