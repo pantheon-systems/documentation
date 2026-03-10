@@ -51,7 +51,7 @@ reviewed: "2026-02-11"
 
 Access to Elasticsearch is included for sites on Performance plans and above. 
 
-During the Alpha and Beta phases, Elasticsearch must be enabled manually by the Pantheon team. If you are interested in testing Elasticsearch on your site during the Alpha or Beta phases, please get in touch via the Elasticsearch Alpha access form.
+During the Beta and Beta phases, Elasticsearch must be enabled manually by the Pantheon team. If you are interested in testing Elasticsearch on your site during the Beta or Beta phases, please get in touch via the Elasticsearch Beta access form.
 
 <!-- This is not true yet>Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.<!-->
 

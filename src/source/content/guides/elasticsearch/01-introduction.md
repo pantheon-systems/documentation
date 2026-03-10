@@ -40,7 +40,7 @@ Pantheon also offers [Solr-based search](/solr). You can have both Solr and Elas
 
 ## Known Issues
 
-There are currently a few known issues with the Elasticsearch integration on Pantheon in the Alpha phase. If you find any others, please let the team know in the `#beta-elasticsearch` channel in the Pantheon Community Slack.
+There are currently a few known issues with the Elasticsearch integration on Pantheon in the Beta phase. If you find any others, please let the team know in the `#beta-elasticsearch` channel in the Pantheon Community Slack.
 
 ### ElasticPress WP-CLI commands require full URL flag
 
@@ -52,7 +52,7 @@ terminus wp <site>.<env> -- elasticpress sync --url=https://yoursite.com
 
 ### Elasticsearch instance is not reachable on Pantheon platform domains (`*.pantheonsite.io`)
 
-Currently, if your environment has a Pantheon platform domain (e.g. `<env>-<site>.pantheonsite.io`) and _that is not the domain configured in the Elasticsearch instance_ (during Alpha this is the one that you would have given to the team for the site you are testing on), then requests to the Elasticsearch instance from the site will fail. This is because the Elasticsearch instance is configured to only accept requests from the domain you provided, and the Pantheon platform domain does not match that.
+Currently, if your environment has a Pantheon platform domain (e.g. `<env>-<site>.pantheonsite.io`) and _that is not the domain configured in the Elasticsearch instance_ (during Beta this is the one that you would have given to the team for the site you are testing on), then requests to the Elasticsearch instance from the site will fail. This is because the Elasticsearch instance is configured to only accept requests from the domain you provided, and the Pantheon platform domain does not match that.
 
 This means that multidev environments are not currently able to connect to the Elasticsearch instance, since they use the Pantheon platform domain, and Dev and Test environments will only work if you have attached a domain to those environments in the Pantheon dashboard (e.g. `dev.yoursite.com`, `test.yoursite.com`).
 
