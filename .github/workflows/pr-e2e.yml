@@ -20,9 +20,16 @@ jobs:
 
       - uses: ./.github/actions/wait-for-deployment
         with:
-         expected_sha: ${{ github.event.pull_request.head.sha }}
-         target_env: pr-${{ github.event.pull_request.number }}
-         pantheon_site_machine_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+         expected_commit: ${{ github.event.pull_request.head.sha }}
+         env_name: pr-${{ github.event.pull_request.number }}
+         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
+      - name: clear cache
+        id: clear_cache
+        env:
+          SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pr-${{ github.event.pull_request.number }}"
+        run: terminus env:cc $SITE_ENV
 
       - name: warm containers
         id: warm_containers
