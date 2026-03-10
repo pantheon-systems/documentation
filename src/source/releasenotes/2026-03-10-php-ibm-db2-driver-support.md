@@ -1,5 +1,5 @@
 ---
-title: "IBM php dbc driver support for PHP Runtime Generation 2"
+title: "IBM PHP ODBC driver support for PHP Runtime Generation 2"
 published_date: "2026-03-10"
 categories: [infrastructure]
 ---
