@@ -4,7 +4,7 @@ published_date: "2026-03-10"
 categories: [nextjs, new-feature]
 ---
 
-The Next.js site creation process now includes prompts for settings secrets at site creation time. This change benefits sites that need API tokens or other variables in order to build successfully. Prior to this change, developers would newly created site fail its first build before they could set the necessary secrets.
+The Next.js site creation process now includes prompts for setting secrets at site creation time. This change benefits sites that need API tokens or other variables in order to build successfully. Previously, sites requiring these secrets would fail their automatic first build.
 
   ![Setting secrets at site creation](../images/nextjs/setting-pcc-secrets-at-site-creation-time.png)
 
