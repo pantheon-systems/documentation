@@ -58,7 +58,7 @@ This means that multidev environments are not currently able to connect to the E
 
 ## Support
 
-During Beta, please report any issues or questions to the Pantheon team in the private `#beta-elasticsearch` channel in the [Pantheon Community Slack](https://pantheon.io/customer-community). To request an invite, [submit this form](https://forms.gle/q5qWS17L9VsH2fkg6).
+During Beta, please report any issues or questions to the Pantheon team in the private `#beta-elasticsearch` channel in the [Pantheon Community Slack](https://pantheon.io/customer-community). To participate in the Beta, simply toggle the **Elasticsearch (beta)** add-on in your Site Settings.
 <!--This is not true yet>For support with Elasticsearch on Pantheon, contact Pantheon Support through the Dashboard. Include details about your site, the environment you're working in, and the specific issue you're encountering.<!-->
 
 For ElasticPress plugin-specific questions, refer to the [ElasticPress documentation](https://www.elasticpress.io/resources/).
