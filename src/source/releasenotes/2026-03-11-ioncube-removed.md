@@ -1,6 +1,6 @@
 ---
 title: "ionCube has been removed from PHP Runtime Generation 1"
-published_date: "2026-03-09"
+published_date: "2026-03-11"
 categories: [infrastructure]
 ---
 
