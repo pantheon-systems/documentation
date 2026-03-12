@@ -1,7 +1,6 @@
 ---
 title: "Manage Pantheon email preferences from the Pantheon Dashboard"
 published_date: "2026-03-11"
-published_at: "2026-03-12T19:40:58Z"
 categories: [new-feature, general]
 ---
 
