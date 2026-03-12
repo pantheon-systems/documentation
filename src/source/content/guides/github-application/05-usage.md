@@ -27,6 +27,8 @@ The Pantheon GitHub Application must be installed by a user who is both:
 
 Other workspace members cannot install the app themselves. The GitHub organization admin must complete the installation first, and then any workspace member can create Next.js sites using repositories the app has access to.
 
+The GitHub Application **cannot** be used with GitHub Enterprise Server.
+
 </Alert>
 
 ## Create a new VCS connection to a Pantheon organization without creating a site
