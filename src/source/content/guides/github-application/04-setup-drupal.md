@@ -190,7 +190,7 @@ Use this checklist to verify your Drupal 11 repository is ready for Pantheon's G
 
 ## More Resources
 
-- [Drupal on Pantheon](/drupal) - Comprehensive guide to running Drupal on Pantheon
+- [Drupal on Pantheon](/develop-drupal) - Comprehensive guide to running Drupal on Pantheon
 - [Using Git with Drupal](/guides/git/drupal) - Learn Git workflows specifically for Drupal development
 - [Integrated Composer](/guides/integrated-composer) - Managing Drupal dependencies with Composer
 - [Drush on Pantheon](/guides/drush) - Command-line tools for managing Drupal sites
