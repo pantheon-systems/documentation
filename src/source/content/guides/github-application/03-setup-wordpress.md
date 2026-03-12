@@ -186,13 +186,13 @@ Source: [wp-config-local-sample.php](https://github.com/pantheon-systems/WordPre
 
 <Tab title="WordPress (Composer Managed)">
 
-## `.env.pantheon`
+### `.env.pantheon`
 
  Uses Dotenv to set required environment variables and load .env file in root. Used in `config/application.php` to load Pantheon environment variables.
  
 Source: [`.env.pantheon`](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/.env.pantheon)
 
-## `composer.json`
+### `composer.json`
 
 The `composer.json` file defines the project as a Composer-managed WordPress installation based on the Bedrock structure. It includes Pantheon-specific configuration such as the `installer-paths` for plugins and themes, and the `pantheon-systems/pantheon-mu-plugin`.
 
@@ -200,7 +200,7 @@ It is expected that you will update this file from the original and Pantheon doe
 
 Source: [`composer.json`](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/composer.json)
 
-## `web/wp-config.php`
+### `web/wp-config.php`
 
 The base `wp-config.php` file for the site. All configuration is handled through the `config/application.php` and `config/application.pantheon.php` files, which are loaded by `wp-config.php`.
 
@@ -208,19 +208,19 @@ Do not modify this file.
 
 Source: [web/wp-config.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/web/wp-config.php)
 
-## `web/index.php`
+### `web/index.php`
 
 The main `index.php` file for WordPress. Loads WordPress core from `/web/wp/`. Required by WordPress. Do not modify this file.
 
 Source: [web/index.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/web/index.php)
 
-## `config/application.php`
+### `config/application.php`
 
 The main configuration file for the site. This file is responsible for loading your WordPress configuration based on the environment. It loads `application.pantheon.php`.
 
 Source: [config/application.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/config/application.php)
 
-## `config/application.pantheon.php`
+### `config/application.pantheon.php`
 
 This file is the core Pantheon platform integration,  loaded by `application.php`. Defines `WP_HOME`, `WP_ENVIRONMENT_TYPE`, `PANTHEON_HOSTNAME` and cookie-related constants based on Pantheon environment variables.
 
