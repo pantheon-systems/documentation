@@ -34,7 +34,7 @@ jobs:
 
         if [ -z "$NEW_FILES" ]; then
           echo "No new release note files"
-          echo "made_commit=false" >> $GITHUB_OUTPUT
+          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
           exit 0
         fi
 
@@ -66,36 +66,31 @@ jobs:
           git add -A
           git commit -m "chore: set published_at timestamp for new release notes"
           git push
-          echo "made_commit=true" >> $GITHUB_OUTPUT
-          echo "Pushed timestamp commit - exiting to let new workflow run handle tagging"
+          # Output the new commit SHA for subsequent steps
+          NEW_SHA=$(git rev-parse HEAD)
+          echo "deploy_commit=$NEW_SHA" >> $GITHUB_OUTPUT
+          echo "Pushed timestamp commit: $NEW_SHA"
         else
-          echo "made_commit=false" >> $GITHUB_OUTPUT
+          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
         fi
 
-    # If we pushed a timestamp commit, skip remaining steps. The new commit
-    # will trigger a fresh workflow run that handles tagging (and skips the
-    # timestamp step since files will already have published_at).
-
+    # change back to live before merging
     - uses: ./.github/actions/pantheon-auto-tag
-      if: steps.set_timestamps.outputs.made_commit != 'true'
       with:
-        # change back to live before merging
         target_env: test
 
+    # change back to live before merging
     - uses: ./.github/actions/wait-for-deployment
-      if: steps.set_timestamps.outputs.made_commit != 'true'
       with:
-        expected_commit: ${{ github.sha }}
-        # change back to live before merging
+        expected_commit: ${{ steps.set_timestamps.outputs.deploy_commit }}
         env_name: test
         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 
+    # change back to live before merging
     - name: clear cache
-      if: steps.set_timestamps.outputs.made_commit != 'true'
       id: clear_cache
       shell: bash
-      # change back to live before merging
       env:
         SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.test"
       run: |
