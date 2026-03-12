@@ -1,6 +1,7 @@
 ---
 title: "Pantheon Content Publisher now Generally Available"
 published_date: "2026-03-05"
+published_at: "2026-03-12T19:40:58Z"
 categories: [content-publisher, new-feature]
 ---
 

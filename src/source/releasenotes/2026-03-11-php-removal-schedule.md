@@ -1,6 +1,7 @@
 ---
 title: "PHP version removal schedule announced"
 published_date: "2026-03-11"
+published_at: "2026-03-12T19:40:58Z"
 categories: [infrastructure, security, action-required]
 ---
 Pantheon is announcing a PHP version removal schedule. The following PHP versions will be removed from the platform on **September 30, 2026**:

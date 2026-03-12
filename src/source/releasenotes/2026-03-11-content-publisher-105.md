@@ -1,6 +1,7 @@
 ---
 title: "Pantheon Content Publisher 1.0.5 for Drupal now available"
 published_date: "2026-03-11"
+published_at: "2026-03-12T19:40:58Z"
 categories: [content-publisher, drupal, modules]
 ---
 
