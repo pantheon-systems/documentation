@@ -142,7 +142,7 @@ The Pantheon version replaces hardcoded database credentials with a three-way co
 
 Source: [wp-config.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php)
 
-### wp-config-pantheon.php
+### `wp-config-pantheon.php`
 
 This file is the core Pantheon platform integration. It is loaded by `wp-config.php` when the `PANTHEON_ENVIRONMENT` environment variable is set.
 
