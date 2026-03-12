@@ -26,15 +26,13 @@ Once accepted into the private Beta, there are two main ways of creating a new s
 
 <Tab title="Via the Pantheon Dashboard">
 
-<Alert title="Note" type="info">
-
-Currently, from the dashboard it is only possible to create Next.js sites using the GitHub integration. To create a WordPress or Drupal site with the GitHub Application, you must use Terminus. We plan to add the ability to create WordPress and Drupal sites through the dashboard in the future.
-
-</Alert>
-
-1. Choose Next.js from the Create New Site page
+1. Choose WordPress, Drupal or Next.js from the Create New Site page
 
 	![create new site dashboard](../../../images/github-app/github-app-create-new-site.png)
+
+1. Select **External Repository** as the location for your site's codebase.
+
+	![select external repository](../../../images/github-app/github-app-create-site.png)
 
 1. Connect your GitHub account. 
 
