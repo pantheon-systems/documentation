@@ -1,5 +1,5 @@
 ---
-title: Release Note RSS Test 2
+title: Release Note RSS Test 3
 published_date: "2026-03-12"
 categories: [wordpress]
 ---
