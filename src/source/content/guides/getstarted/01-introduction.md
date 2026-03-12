@@ -27,6 +27,12 @@ You must have the following information to complete this process:
 - Either the URLs of any sites you want to migrate, or the information to create a new site (site name, content managment system to use, etc.).
 - Optional: payment method information.
 
+<Alert title="Note" type="info">
+
+After creating your account, you can customize your [email preferences](/personal-settings#email-preferences) to control which marketing communications you receive from Pantheon, including newsletters, events, and product updates.
+
+</Alert>
+
 
 <Alert title="Note" type="info" >
 
