@@ -281,3 +281,12 @@ Use this checklist to verify your WordPress repository is ready for Pantheon's G
 - [ ] `.gitignore` excludes `wp-config-local.php`, `wp-content/uploads`, and runtime paths
 - [ ] WordPress core files (`wp-admin/`, `wp-includes/`, root PHP files) are committed and unmodified
 - [ ] `wp-content/uploads/` is NOT committed
+
+## More Resources
+
+- [WordPress on Pantheon](/guides/wordpress-pantheon) - Comprehensive guide to running WordPress on Pantheon
+- [Using Git with WordPress](/guides/wordpress-git) - Learn Git workflows specifically for WordPress development
+- [WordPress Configurations](/guides/wordpress-configurations) - Managing plugins, themes, and WordPress-specific configurations
+- [WP-CLI on Pantheon](/guides/wp-cli) - Command-line tools for managing WordPress sites
+- [pantheon.yml](/pantheon-yml) - Platform configuration file reference
+- [GitHub Application Usage](/guides/github-application/usage) - Working with pull requests and deployments
