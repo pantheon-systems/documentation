@@ -24,9 +24,7 @@ Pantheon sends two types of emails:
 
 - **Marketing Email Preferences**: Configurable communications including newsletters, events, and product updates. You can manage these preferences in [Personal Settings](/personal-settings#email-preferences) by navigating to **Personal Settings > Email Notifications**.
 
-The emails listed below are platform notifications that all users receive based on their role and actions.
-
-The emails listed below are received by all users, regardless of their assigned role. Refer to [Roles and Permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions) for more information.
+The platform notifications listed below are sent as emails to all users, regardless of their assigned role. Refer to [Roles and Permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions) for more information.
 
 - **New membership:** a site admin-generated invitation to a user. The invited user is not required to have an account yet.
 
