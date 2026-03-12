@@ -70,3 +70,18 @@ This behavior is called of repopulated the cache with fresh versions of webpages
 Pantheon provides a cache handler package to connect Next.js-specific cache behavior to a persistent cache as well as our CDN.
 
 Learn more about installation and usage of this cache handler in [the readme file of its repository](https://github.com/pantheon-systems/nextjs-cache-handler).
+
+## Environment variables
+
+Pantheon sets the following environment variables for your Next.js application. These are available via `process.env` in your application code.
+
+In addition to these platform-set variables, you can set your own environment variables using [Secrets Manager](/nextjs/environment-variables).
+
+| Variable | Description | Build | Runtime |
+|----------|-------------|:-----:|:-------:|
+| `APP_ENV` | Current environment name, such as `dev`, `test`, `live`, or `pr-<number>` for pull request environments. | Yes | Yes |
+| `PANTHEON_ENVIRONMENT` | Current environment name. Same value as `APP_ENV`. | Yes | Yes |
+| `PORT` | Port the application listens on. Set to `3000`. | No | Yes |
+| `NODE_PORT` | Port the Node.js server listens on. Set to `3000`. | No | Yes |
+| `CACHE_BUCKET` | GCS bucket name used for persistent cache storage. | Yes | Yes |
+| `OUTBOUND_PROXY_ENDPOINT` | Address of the outbound HTTP proxy to talk to internal services. Set to `localhost:8000`. | No | Yes |
