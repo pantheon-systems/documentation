@@ -40,6 +40,12 @@ jobs:
 
         MODIFIED=false
         for file in $NEW_FILES; do
+          # Skip files that already exist in origin/main (e.g., came in via merge)
+          if git cat-file -e "origin/main:$file" 2>/dev/null; then
+            echo "Skipping $file - already exists in main"
+            continue
+          fi
+
           # Skip if file already has published_at
           if grep -q "^published_at:" "$file"; then
             echo "Skipping $file - already has published_at"
