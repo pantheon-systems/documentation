@@ -76,8 +76,14 @@ These tables detail the actions each role can execute on each Dashboard.
 <p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is used by Workspaces to determine who created the site. This role does not grant permissions for billing, changing site ownership, nor managing the site plan, unless the user is also an Administrator of the owning Workspace. If you are an Administrator for a Workspace and want to change the User in Charge on a site, please <a href="/guides/support/contact-support">contact support</a>.</p>
 
 Pantheon uses the email address associated with the User in Charge (Enterprise and EDU customers) or Site Owner (self-serve customers) for the following two situations:
-- Activating New Relic will send a validation request to this email address, which much be completed in order to finish account setup. 
+- Activating New Relic will send a validation request to this email address, which much be completed in order to finish account setup.
 - Pantheon Support will use this email address as the default point of contact for any proactive support tickets about the site.
+
+<Alert title="Note" type="info">
+
+Individual users can manage their own [marketing email preferences](/personal-settings#email-preferences) (newsletters, events, product updates) separately from system notifications. System notifications related to team membership, site activity, and workspace changes are sent based on user roles and cannot be disabled.
+
+</Alert>
 
 
 ## Manage Teams
