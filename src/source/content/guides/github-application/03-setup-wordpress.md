@@ -266,6 +266,7 @@ The MU-plugin only activates its features when `$_ENV['PANTHEON_ENVIRONMENT']` i
 </Alert>
 
 Source: [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin)
+
 `loader.php` source: [loader.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/loader.php)
 
 ## Checklist
