@@ -72,15 +72,13 @@ To manage your email preferences:
 
 1. Select **Personal Settings**.
 
-1. Click the **Notifications** tab.
-
 1. Navigate to **Email Notifications**.
 
-1. Confirm your email address and select the categories of emails you want to receive.
+1. Select the categories of emails you want to receive.
 
 1. Click **Save Changes** to save your preferences.
 
-![Email Notifications settings in the Pantheon Dashboard](../images/dashboard/new-dashboard/2024/dashboard-email-preferences.png)
+![Email Notifications settings in the Pantheon Dashboard](../images/dashboard-email-preferences.png)
 
 Changes take effect after clicking **Save Changes**. You can update your preferences at any time.
 
