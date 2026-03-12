@@ -273,6 +273,10 @@ Source: [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plu
 
 Use this checklist to verify your WordPress repository is ready for Pantheon's GitHub integration:
 
+<TabList>
+
+<Tab title="WordPress">
+
 - [ ] `wp-config.php` uses the three-way conditional pattern (Pantheon → local → fallback)
 - [ ] `wp-config-pantheon.php` exists at the repository root with environment-variable-based configuration
 - [ ] `pantheon.upstream.yml` (or `pantheon.yml`) exists with `api_version`, `php_version`, and `database.version`
@@ -281,6 +285,27 @@ Use this checklist to verify your WordPress repository is ready for Pantheon's G
 - [ ] `.gitignore` excludes `wp-config-local.php`, `wp-content/uploads`, and runtime paths
 - [ ] WordPress core files (`wp-admin/`, `wp-includes/`, root PHP files) are committed and unmodified
 - [ ] `wp-content/uploads/` is NOT committed
+
+</Tab>
+
+<Tab title="WordPress (Composer Managed)">
+
+- [ ] `config/application.php` loads `application.pantheon.php` and uses environment variables for configuration
+- [ ] `config/application.pantheon.php` exists with Pantheon-specific configuration
+- [ ] `pantheon.upstream.yml` (or `pantheon.yml`) exists with `api_version`, `php_version`, and `database.version`
+- [ ] Pantheon MU Plugin is installed as a Composer dependency and exists in `web/app/mu-plugins/pantheon-mu-plugin/`
+- [ ] `roots/bedrock-autoloader` is installed as a Composer dependency or a `loader.php` file exists to load the Pantheon MU Plugin
+- [ ] `roots/wordpress` and `roots/wp-config` are installed as Composer dependencies and WordPress core files are NOT committed
+- [ ] `composer/installers` is installed as a Composer dependency and `installer-paths` are configured for plugins, themes and mu-plugins
+- [ ] `vlucas/phpdotenv` and `oscarotero/env` are installed as Composer dependencies if using Bedrock-based Composer WordPress and `.env.pantheon` exists to load Pantheon environment variables
+- [ ] `.gitignore` excludes `config/application-local.php`, `web/app/uploads`, and runtime paths
+- [ ] Application files (custom plugins, themes) are committed unless managed by Composer	
+- [ ] Third-party plugins and themes managed by Composer are NOT committed
+- [ ] `composer.json` includes Pantheon-specific configuration and dependencies
+
+</Tab>
+
+</TabList>
 
 ## More Resources
 
