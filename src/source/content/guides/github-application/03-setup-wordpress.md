@@ -105,8 +105,8 @@ Items marked **(Pantheon)** are additions or modifications. Everything else is s
 ├── composer.json                        # (Pantheon) Composer config
 ├── composer.lock                        # (Pantheon) Composer lock file
 ├── config/
-│   ├── application.php                   # (Pantheon) Modified — multi-environment
-│   └── application.pantheon.php          # (Pantheon) New — platform settings
+│   ├── application.php                  # (Pantheon) Modified — multi-environment
+│   └── application.pantheon.php         # (Pantheon) New — platform settings
 ├── pantheon.upstream.yml                # (Pantheon) Platform config
 ├── web/
 │   ├── app/
