@@ -16,18 +16,14 @@ This guide walks through transferring a Next.js site from one Pantheon workspace
 
 <Alert title="Note" type="info">
 
-The actual site transfer between workspaces must be performed by Pantheon's Customer Success Engineering (CSE) team. This guide covers the prerequisites you must complete before requesting the transfer.
+The actual site transfer between workspaces must be performed by Pantheon support. This guide covers the prerequisites you must complete before requesting the transfer.
 
 </Alert>
 
 ## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * Administrative access to both the source and destination Pantheon workspaces
-* The [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub App installed in the GitHub organization used by the site
-* Install the following CLI applications:
-  - [Terminus](/terminus/install)
-  - [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
+* [Terminus](/terminus/install) with the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
 
 ## Step 1: Link the VCS connection to the destination workspace
 
@@ -64,13 +60,13 @@ Once you have linked the VCS connection to the destination workspace, [contact P
 
 ## Step 3: Verify
 
-After the CSE team completes the transfer, confirm:
+After Pantheon support completes the transfer, confirm:
 
 1. The site appears in the destination workspace.
 1. Push a small change to the repository and verify it triggers a build on the site.
 
 ## GitHub User accounts
 
-If the GitHub App was installed on a personal GitHub account (rather than a GitHub organization), the standard `vcs:connection:link` command may not work as expected. In this case, the user who originally installed the GitHub App should be the one to run the `vcs:connection:link` command, since they have direct access to the installation.
+When the GitHub App is installed on a personal GitHub account (rather than a GitHub organization), the installation is only accessible to the user who created it. This means the user who originally installed the GitHub App must be the one to run the `vcs:connection:link` command.
 
-If you encounter issues with this scenario, [contact Pantheon support](/guides/support/contact-support/) for assistance.
+If that user is unavailable, [contact Pantheon support](/guides/support/contact-support/) for assistance.

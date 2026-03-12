@@ -16,19 +16,13 @@ This guide walks through moving a Next.js site's GitHub repository from one GitH
 
 ## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
-* Administrative access to both the source and destination GitHub organizations
-* Install the following CLI applications:
-  - [Terminus](/terminus/install)
-  - [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
+* [Terminus](/terminus/install) with the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
 
-## Before you begin
+## Step 1: Make sure the GitHub App is installed in the destination organization
 
-When you transfer a GitHub repository between organizations, the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub App must be installed in the destination GitHub organization. Without this, Pantheon cannot detect code changes and trigger builds.
+Before transferring the repository, the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub App must be installed in the destination GitHub organization. Without this, Pantheon cannot detect code changes and trigger builds.
 
-## Step 1: Install the GitHub App in the destination organization
-
-Ensure the Pantheon Site Integration GitHub App is installed in the destination GitHub organization. You can do this in one of two ways:
+You can install the GitHub App in one of two ways:
 
 * **Create a new site** in the destination organization's Pantheon workspace. The site creation flow prompts you to install and authorize the GitHub App.
 * **Use Terminus** to add the VCS connection directly:
@@ -58,6 +52,15 @@ After the transfer, confirm that the Pantheon build integration is working:
 
 ## Troubleshooting
 
-If builds are not triggered after the transfer, the GitHub App may not be properly installed in the destination organization. Verify the installation by checking the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) app settings in your destination GitHub organization.
+### Builds are not triggered after the transfer
+
+The GitHub App may not be properly installed in the destination organization. Verify the installation by checking the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) app settings in your destination GitHub organization.
 
 If the issue persists, [contact Pantheon support](/guides/support/contact-support/) for assistance reconnecting the integration.
+
+### Repository was transferred before installing the GitHub App
+
+If you transferred the repository to a new GitHub organization before installing the Pantheon Site Integration GitHub App in that organization, your site's build integration is broken. To fix this:
+
+1. Install the GitHub App in the destination organization by following [Step 1](#step-1-make-sure-the-github-app-is-installed-in-the-destination-organization).
+1. [Contact Pantheon support](/guides/support/contact-support/) to restore the connection between your site and the repository.
