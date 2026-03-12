@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-03"
+reviewed: "2026-03-12"
 permalink: docs/guides/github-application/setup-wordpress
 ---
 
