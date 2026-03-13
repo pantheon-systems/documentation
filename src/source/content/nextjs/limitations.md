@@ -107,6 +107,10 @@ Once the GitHub App is installed on the organization, any member of the Pantheon
 See the following page for Next.js compatibility and requirements on Pantheon:
 * [Next.js Overview](/nextjs#compatibility--requirements)
 
+### GitHub Enterprise Server
+
+The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
+
 ### **Bun, Deno, and other runtimes beyond Node.js**
 
 Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
