@@ -21,8 +21,11 @@ The first thing you need to do when starting with Pantheon is create an account.
 - Purchase plans
 - Manage your workspaces
 - Pay your bills
+- Customize your email communication preferences
 
 [Create your account for free](https://pantheon.io/register?docs).
+
+After creating your account, you can manage your [email preferences](/personal-settings#email-preferences) to control which marketing communications you receive from Pantheon.
 
 
 <Alert title="Note" type="info" >

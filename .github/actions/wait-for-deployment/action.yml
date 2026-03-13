@@ -89,8 +89,15 @@ runs:
           BUILDS_RESPONSE=$(curl -s "https://terminus.pantheon.io/api/sites/$SITE_UUID/environment/${ENV_NAME}/build/list?limit=10" \
             -H "X-Pantheon-Session: $SESSION_TOKEN")
 
+          # Validate response is JSON before parsing (API may return HTML errors)
+          if ! echo "$BUILDS_RESPONSE" | jq -e . >/dev/null 2>&1; then
+            echo "Received non-JSON response, retrying..."
+            sleep $SLEEP_TIME
+            continue
+          fi
+
           # Find build matching this commit SHA
-          BUILD=$(echo "$BUILDS_RESPONSE" | jq -r ".[] | select(.commit == \"$EXPECTED_COMMIT\")")
+          BUILD=$(echo "$BUILDS_RESPONSE" | jq -r ".[] | select(.commit == \"$EXPECTED_COMMIT\")" 2>/dev/null)
 
           if [ -z "$BUILD" ] || [ "$BUILD" == "null" ]; then
             echo "No build found yet for commit ${EXPECTED_COMMIT:0:7}"
