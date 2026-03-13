@@ -1,4 +1,4 @@
----
+---sobus
 title: Pantheon Site Dashboard
 description: A developer console for all your sites.
 contributors: [wordsmither]
