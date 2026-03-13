@@ -180,6 +180,14 @@ const webInfrastructure = () => {
             "Tutorial: Content Publisher",
           ),
           simpleLink(
+            "/nextjs/wordpress-revalidation-tutorial",
+            "Tutorial: WordPress Revalidation",
+          ),
+          simpleLink(
+            "/nextjs/next15-wordpress-surrogate-keys",
+            "Guide: Next.js 15 WordPress Cache Integration",
+          ),
+          simpleLink(
             "/nextjs/migrating-from-front-end-sites",
             "How to migrate from Front-End Sites",
           ),
