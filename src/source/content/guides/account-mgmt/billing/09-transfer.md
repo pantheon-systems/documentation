@@ -34,7 +34,9 @@ Use this option to send a payment request to another user, who will become the n
 5. Enter the new owner's email address to send them the payment request. They will become the site owner upon completing payment.
 
 <Alert title="Note" type="info">
+
 The recipient cannot change the site plan you selected. Please ensure you choose the correct plan before sending the invitation.
+
 </Alert>
 
 ## Accept an Invitation to Pay
