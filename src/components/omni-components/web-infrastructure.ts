@@ -191,6 +191,14 @@ const webInfrastructure = () => {
             "/nextjs/connecting-custom-domain-name",
             "How to connect a custom domain name",
           ),
+          simpleLink(
+            "/nextjs/transfer-repository",
+            "How to transfer a repository",
+          ),
+          simpleLink(
+            "/nextjs/transfer-site",
+            "How to transfer a site between workspaces",
+          ),
         ]),
       ]),
       simpleLink("/addons", "Performance Add-ons"),
