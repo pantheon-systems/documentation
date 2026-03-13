@@ -43,6 +43,24 @@ This tutorial uses the `'use cache'` directive, `cacheTag()`, and `cacheLife()` 
 
 </Alert>
 
+## Quick start with test upstreams
+
+If you want to skip the manual setup and get a working site immediately, create a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
+
+| Upstream | Next.js Version | Cache Strategy |
+|---|---|---|
+| `nextjs_15_cache_starter` | 15 | ISR + `Surrogate-Key` headers in `next.config.mjs` |
+| `nextjs_16_cache_starter` | 16 | `'use cache'` + `cacheTag()` — adapter exposes tags to internal router |
+
+These upstreams include the `@pantheon-systems/nextjs-cache-handler` package, WordPress REST API integration, surrogate key tagging, and a secured revalidation endpoint. To get end-to-end cache invalidation working:
+
+1. Create a site from the upstream.
+1. Set `WORDPRESS_API_URL` to your WordPress site's REST API base URL.
+1. Set a shared `WEBHOOK_SECRET` on both the Next.js and WordPress sites.
+1. Install the [WordPress mu-plugin](#add-the-wordpress-mu-plugin) on your WordPress site.
+
+The rest of this tutorial walks through each piece in detail if you want to understand or customize the setup.
+
 ## How it works
 
 The revalidation flow has three parts:
@@ -81,26 +99,16 @@ export default CacheHandler;
 
 ### Create the use cache handler
 
-Create `use-cache-handler.mjs` in the root of your project. This handler supports the Next.js 16 `'use cache'` directive:
+Create `cacheHandlers/remote-handler.mjs` in your project. This handler supports the Next.js 16 `'use cache'` directive:
 
-```javascript:title=use-cache-handler.mjs
+```javascript:title=cacheHandlers/remote-handler.mjs
 import { createUseCacheHandler } from '@pantheon-systems/nextjs-cache-handler';
 
-globalThis.__pantheonSurrogateKeyTags = globalThis.__pantheonSurrogateKeyTags || [];
-
-const UseCacheHandlerClass = createUseCacheHandler({
+const UseCacheHandler = createUseCacheHandler({
   type: 'auto',
 });
 
-const handler = new UseCacheHandlerClass();
-
-export default {
-  get: handler.get.bind(handler),
-  set: handler.set.bind(handler),
-  refreshTags: handler.refreshTags.bind(handler),
-  getExpiration: handler.getExpiration.bind(handler),
-  updateTags: handler.updateTags.bind(handler),
-};
+export default new UseCacheHandler();
 ```
 
 ### Configure next.config.mjs
@@ -115,20 +123,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-
   cacheComponents: true,
 
   cacheHandler: path.resolve(__dirname, './cache-handler.mjs'),
 
   cacheHandlers: {
-    default: path.resolve(__dirname, './use-cache-handler.mjs'),
-    remote: path.resolve(__dirname, './use-cache-handler.mjs'),
+    remote: path.resolve(__dirname, './cacheHandlers/remote-handler.mjs'),
   },
 
   cacheMaxMemorySize: 0,
-
-  transpilePackages: ['@pantheon-systems/nextjs-cache-handler'],
 };
 
 export default nextConfig;
@@ -136,10 +139,9 @@ export default nextConfig;
 
 Key settings:
 
-* `output: 'standalone'` — Required for Pantheon deployment.
 * `cacheComponents: true` — Enables the `'use cache'` directive.
 * `cacheHandler` — Legacy handler for ISR, route handlers, and fetch cache.
-* `cacheHandlers` — Next.js 16 handlers for `'use cache'`.
+* `cacheHandlers` — Next.js 16 handler for `'use cache'`.
 * `cacheMaxMemorySize: 0` — Disables the default in-memory cache so all caching goes through the Pantheon cache handler.
 
 ## Tag cached data with surrogate keys
@@ -257,8 +259,8 @@ const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
 function validateWebhookSecret(request: NextRequest, bodySecret?: string): boolean {
   if (!WEBHOOK_SECRET) {
-    console.warn('[Revalidate] WEBHOOK_SECRET not set');
-    return true;
+    console.warn('[Revalidate] WEBHOOK_SECRET not set — rejecting request');
+    return false;
   }
 
   const headerSecret = request.headers.get('X-Webhook-Secret');
@@ -290,7 +292,7 @@ export async function POST(request: NextRequest) {
     const results = [];
     for (const key of surrogate_keys) {
       try {
-        revalidateTag(key);
+        revalidateTag(key, { expire: 0 });
         results.push({ key, status: 'success' });
       } catch (error) {
         results.push({ key, status: 'error', message: String(error) });
@@ -315,7 +317,7 @@ export async function POST(request: NextRequest) {
 }
 ```
 
-The endpoint validates the shared secret from either the `X-Webhook-Secret` header or the request body, then iterates over the `surrogate_keys` array and revalidates each tag.
+The endpoint validates the shared secret from either the `X-Webhook-Secret` header or the request body, then iterates over the `surrogate_keys` array and revalidates each tag. Note that `revalidateTag()` in Next.js 16 requires a second argument — `{ expire: 0 }` forces immediate expiration of the cached entry.
 
 ## Add the WordPress mu-plugin
 

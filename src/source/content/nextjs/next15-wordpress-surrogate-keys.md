@@ -20,6 +20,24 @@ This approach is for **Next.js 15**, which does not support the `'use cache'` di
 
 </Alert>
 
+## Quick start with test upstreams
+
+If you want to skip the manual setup and get a working site immediately, create a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
+
+| Upstream | Next.js Version | Cache Strategy |
+|---|---|---|
+| `nextjs_15_cache_starter` | 15 | ISR + `Surrogate-Key` headers in `next.config.mjs` |
+| `nextjs_16_cache_starter` | 16 | `'use cache'` + `cacheTag()` — adapter exposes tags to internal router |
+
+These upstreams include the `@pantheon-systems/nextjs-cache-handler` package, WordPress REST API integration, surrogate key tagging, and a secured revalidation endpoint. To get end-to-end cache invalidation working:
+
+1. Create a site from the upstream.
+1. Set `WORDPRESS_API_URL` to your WordPress site's REST API base URL.
+1. Set a shared `WEBHOOK_SECRET` on both the Next.js and WordPress sites.
+1. Install the [WordPress mu-plugin](/nextjs/wordpress-revalidation-tutorial#add-the-wordpress-mu-plugin) on your WordPress site.
+
+The rest of this guide walks through the Next.js 15 header-based approach in detail.
+
 ## How it works
 
 In Next.js 16, you can tag cached data with `cacheTag()` and expose those tags via the `next-cache-tags` header. Next.js 15 does not support this.
