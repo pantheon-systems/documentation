@@ -21,7 +21,7 @@
     "@adobe/mdast-util-gridtables": "^4.0.13",
     "@adobe/remark-gridtables": "^3.0.14",
     "@next/bundle-analyzer": "^15.4.5",
-    "@pantheon-systems/pds-toolkit-react": "1.0.0-dev.256",
+    "@pantheon-systems/pds-toolkit-react": "^1.10.0",
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
     "@segment/analytics-next": "^1.81.1",
