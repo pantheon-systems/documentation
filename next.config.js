@@ -9,6 +9,7 @@ require("dotenv").config({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  turbopack: {}, // Allow Turbopack builds (Next.js 16 default)
   output: "standalone",
   images: {
     remotePatterns: [

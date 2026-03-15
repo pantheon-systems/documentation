@@ -113,7 +113,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
           {topic.video_id && (
             <div className="landing-page__video-background">
               <Container
-                width={"containerWidth"}
+                width={containerWidth}
                 className="video-container pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
               >
                 <Youtube src={topic.video_id} title={topic.title} />
