@@ -96,11 +96,11 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. Navigate to your personal workspace.
 
-1. Select **Billing**, then **Invite a business owner to pay for this site**.
+2. Select **Settings > Billing**
 
-1. Enter the email address for the new site owner.
+3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
 
    When the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site and will receive future invoices.
 
@@ -139,29 +139,23 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
-1. Click the **Billing** tab.
+1. Navigate to your personal workspace.
 
-1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
+2. Select **Settings > Billing**
 
-1. Click **Send Request**.
+3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
 
   A link is immediately sent to the email address to pay through the secure site.
 
 ### New Site
 
-Agencies should follow the steps below to maintain Preferred Pricing through a plan change.
+Agencies should follow the steps below to maintain Preferred Pricing through a plan change. This will only work for paid plans, not a sandbox site. If you want to invite a sandbox to become a paid site with preferred pricing, please follow the [Transfer Ownership](/guides/account-mgmt/billing/transfer) instructions
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. Navigate to your personal workspace.
 
-1. Click the **Billing** tab.
+2. Select **Settings > Billing**
 
-1. Click **View All Plans**, then click **Select** for the plan you want.
-
-1. Click **Pay Annually** or **Pay Monthly** to set the billing frequency > click **Continue**.
-
-1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
-
-1. Click **Send Request**.
+3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
 
   A link is immediately sent to the email address to pay through the secure site.
 
