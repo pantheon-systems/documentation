@@ -2,19 +2,8 @@
 title: WebOps Certification
 subtitle: "Chapter 1: WebOps"
 description: Learn about the principles and benefits of WebOps.
-certificationpage: true
-showtoc: true
-type: certificationpage
-layout: certificationpage
-tags: []
 permalink: docs/certification/study-guide/webops
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide
 nexturl: /certification/study-guide/platform
 ---
