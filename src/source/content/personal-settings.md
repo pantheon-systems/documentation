@@ -64,7 +64,29 @@ You can configure email notifications for Autopilot alerts and activity digests.
 
 ### Email Preferences
 
-Manage your email preferences and only receive the emails you want. Confirm your email, check off any relevant categories, and click **Update Settings**.
+You can manage your Pantheon marketing email preferences directly from the Dashboard to control which communications you receive from Pantheon, including newsletters, events, and product updates.
+
+To manage your email preferences:
+
+1. Click your user gravatar in the upper right corner.
+
+1. Select **Personal Settings**.
+
+1. Navigate to **Email Notifications**.
+
+1. Select the categories of emails you want to receive.
+
+1. Click **Save Changes** to save your preferences.
+
+![Email Notifications settings in the Pantheon Dashboard](../images/dashboard-email-preferences.png)
+
+Changes take effect after clicking **Save Changes**. You can update your preferences at any time.
+
+<Alert title="Note" type="info">
+
+Email preferences control marketing communications only. System notifications (such as site alerts, team invitations, and billing notifications) are managed separately and cannot be disabled through this interface. For more information about system notifications, see [Platform Notifications](/platform-notifications).
+
+</Alert>
 
 ## SSH Keys
 
