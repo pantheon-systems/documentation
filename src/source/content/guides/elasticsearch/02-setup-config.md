@@ -33,7 +33,7 @@ Before you begin, confirm the following:
 
 <Alert type="info" title="Note">
 
-During the Alpha phase, self-service activation of the Elasticsearch add-on is not yet available. If you are interested in testing Elasticsearch on your site during the Alpha phase, please get in touch via the [Elasticsearch Alpha access form](https://forms.gle/q5qWS17L9VsH2fkg6). Once you receive a confirmation from the Pantheon team, you can install and activate the ElasticPress plugin on your site to connect to the Elasticsearch service.
+During the Beta phase, self-service activation of the Elasticsearch add-on is available. Simply toggle the **Elasticsearch (Beta)** add-on in your Site Settings. Once activated, you can install and activate the ElasticPress plugin on your site to connect to the Elasticsearch service.
 
 </Alert>
 
@@ -67,7 +67,7 @@ terminus wp <site>.<env> -- plugin install elasticpress --activate
 
 <Alert type="info" title="Note">
 
-During the Alpha and Beta phases, you need to manually define three ElasticPress constants in your `wp-config.php` based on Pantheon-provided environment variables. At GA, the Pantheon MU Plugin will handle this configuration automatically.
+During the Beta phase, you need to manually define three ElasticPress constants in your `wp-config.php` based on Pantheon-provided environment variables. At GA, the Pantheon MU Plugin will handle this configuration automatically.
 
 </Alert>
 
