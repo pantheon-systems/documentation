@@ -92,19 +92,21 @@ export default async function Page(props: DynamicViewProps) {
   }
 }
 
+const defaultReleaseNoteMetadata = {
+  ...generateMetadataFromUri({
+    title: "Pantheon Release Notes",
+    description: "A summary of changes to the Pantheon Platform",
+  }),
+  authors: [],
+};
+
 export async function generateMetadata(props: DynamicViewProps) {
   try {
     const { uri } = await props.params;
 
     // For listing pages (e.g., /release-notes/1), use generic metadata
     if (uri.length === 1 && !Number.isNaN(parseInt(uri[0]))) {
-      return {
-        ...generateMetadataFromUri({
-          title: "Pantheon Release Notes",
-          description: "A summary of changes to the Pantheon Platform",
-        }),
-        authors: [],
-      };
+      return defaultReleaseNoteMetadata;
     }
 
     // For individual release notes, fetch the specific note's data
@@ -114,21 +116,35 @@ export async function generateMetadata(props: DynamicViewProps) {
     );
 
     if (!page || page.type !== "release-note") {
-      return {
-        ...generateMetadataFromUri({
-          title: "Pantheon Release Notes",
-          description: "A summary of changes to the Pantheon Platform",
-        }),
-        authors: [],
-      };
+      return defaultReleaseNoteMetadata;
     }
 
     const node = page.data.node;
     const title = node.frontmatter.title || "Pantheon Release Note";
-    const excerptRaw = node.excerpt || "";
-    const description =
-      excerptRaw.substring(0, 200).trim() ||
-      "A summary of changes to the Pantheon Platform";
+
+    // Try excerpt first, then fall back to extracting from content
+    let description = node.excerpt?.trim();
+    if (!description && node.content) {
+      // Strip markdown formatting
+      const cleaned = node.content
+        .replace(/^---[\s\S]*?---\n*/m, "") // Remove frontmatter if present
+        .replace(/!\[.*?\]\(.*?\)/g, "") // Remove images
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Convert links to text
+        .replace(/[#*_`~>]/g, "") // Remove markdown symbols (keep hyphens)
+        .replace(/\n+/g, " ") // Replace newlines with spaces
+        .replace(/\s+/g, " ") // Collapse multiple spaces
+        .trim();
+
+      // Truncate at word boundary around 200 chars
+      if (cleaned.length > 200) {
+        const truncated = cleaned.substring(0, 200);
+        const lastSpace = truncated.lastIndexOf(" ");
+        description = lastSpace > 100 ? truncated.substring(0, lastSpace) + "..." : truncated + "...";
+      } else {
+        description = cleaned;
+      }
+    }
+    description = description || "A summary of changes to the Pantheon Platform";
 
     return {
       ...generateMetadataFromUri({
@@ -140,9 +156,6 @@ export async function generateMetadata(props: DynamicViewProps) {
       authors: [],
     };
   } catch {
-    return {
-      title: "Not Found",
-      description: "Not Found",
-    };
+    return defaultReleaseNoteMetadata;
   }
 }
