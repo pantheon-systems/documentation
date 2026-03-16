@@ -1,10 +1,20 @@
-"use server";
-import { getOmniSidebarActiveSection } from "./omni-components/helpers";
-
-import { SideNavCompact } from "./ui/pds-re-export";
-import { MOBILE_MENU_BREAKPOINT } from "@/constants";
+import { getOmniSidebarActiveSection, OmniItem } from "./omni-components/helpers";
 import { getOmniItems } from "./omni-components";
-import { turnItemsIntoLinks } from "./omni-components/client-helper";
+import { SideNavClient, NavItemData } from "./omni-components/SideNavClient";
+
+// Convert OmniItem to plain NavItemData (no React elements)
+const convertToNavData = (item: OmniItem, activePage: string): NavItemData => {
+  return {
+    link: item.link,
+    title: item.title,
+    isActive: item.link === activePage || item.link === "/" + activePage,
+    children: item.children && item.children.length > 0
+      ? item.children
+          .filter((child) => child && child.link)
+          .map((child) => convertToNavData(child, activePage))
+      : undefined,
+  };
+};
 
 export const OmniSidebarNav = async ({
   activePage,
@@ -12,18 +22,14 @@ export const OmniSidebarNav = async ({
   activePage: string;
 }) => {
   const OmniItems = await getOmniItems();
-
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
   if (menuItems) {
-    const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
+    const navData = convertToNavData(menuItems, activePage);
     return (
-      <SideNavCompact
-        mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
-        className="sidenav-compact"
-        ariaLabel={OmniLinks.linkContent}
-        headingText={OmniLinks.linkContent}
-        menuItems={OmniLinks.links}
+      <SideNavClient
+        headingText={navData.title}
+        menuItemsData={navData.children || []}
       />
     );
   } else {
