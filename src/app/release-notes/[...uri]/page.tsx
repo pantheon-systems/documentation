@@ -92,12 +92,50 @@ export default async function Page(props: DynamicViewProps) {
   }
 }
 
-export async function generateMetadata() {
+export async function generateMetadata(props: DynamicViewProps) {
   try {
+    const { uri } = await props.params;
+
+    // For listing pages (e.g., /release-notes/1), use generic metadata
+    if (uri.length === 1 && !Number.isNaN(parseInt(uri[0]))) {
+      return {
+        ...generateMetadataFromUri({
+          title: "Pantheon Release Notes",
+          description: "A summary of changes to the Pantheon Platform",
+        }),
+        authors: [],
+      };
+    }
+
+    // For individual release notes, fetch the specific note's data
+    const pages = await getAllPages(["release-notes", ...uri]);
+    const page = pages.find(
+      (page) => page.uri === ["release-notes", ...uri].join("/")
+    );
+
+    if (!page || page.type !== "release-note") {
+      return {
+        ...generateMetadataFromUri({
+          title: "Pantheon Release Notes",
+          description: "A summary of changes to the Pantheon Platform",
+        }),
+        authors: [],
+      };
+    }
+
+    const node = page.data.node;
+    const title = node.frontmatter.title || "Pantheon Release Note";
+    const excerptRaw = node.excerpt || "";
+    const description =
+      excerptRaw.substring(0, 200).trim() ||
+      "A summary of changes to the Pantheon Platform";
+
     return {
       ...generateMetadataFromUri({
-        title: "Pantheon release notes",
-        description: "A summary of changes to the Pantheon Platform",
+        title,
+        description,
+        categories: node.frontmatter.categories,
+        reviewed: node.frontmatter.published_date,
       }),
       authors: [],
     };
