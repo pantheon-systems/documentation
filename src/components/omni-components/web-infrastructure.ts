@@ -184,7 +184,7 @@ const webInfrastructure = () => {
             "Tutorial: WordPress Revalidation",
           ),
           simpleLink(
-            "/nextjs/next15-wordpress-surrogate-keys",
+            "/nextjs/wordpress-revalidation-tutorial-next-15",
             "Guide: Next.js 15 WordPress Cache Integration",
           ),
           simpleLink(

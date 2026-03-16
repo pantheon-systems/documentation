@@ -7,7 +7,7 @@ innav: [true]
 audience: [development]
 product: [--]
 integration: [--]
-permalink: docs/nextjs/next15-wordpress-surrogate-keys
+permalink: docs/nextjs/wordpress-revalidation-tutorial-next-15
 ---
 
 <Partial file="nextjs-pre-ga.md" />
