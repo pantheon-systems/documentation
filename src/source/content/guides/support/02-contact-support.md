@@ -21,7 +21,7 @@ This section provides information on how to open a support ticket as well as oth
 
 <Alert title="Note" type="info" >
 
-We recommend you begin your Support journey from the affected [My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard). This ensures that the appropriate Support options are available to you, and simplifies the process of contacting us.
+We recommend you begin your Support journey from the affected [Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard). This ensures that the appropriate Support options are available to you, and simplifies the process of contacting us.
 
 </Alert>
 

@@ -282,8 +282,8 @@ The following directions and instructions were captured by a user on a MacOS dev
 *   List and Describe the permissions that are associated with the Workspace Team Member role.
 *   List and Describe the permissions that are associated with the Workspace Developer role.
 *   List and Describe the permissions that are associated with the Workspace Contributor role.
-*   List the features that are available only in Professional Workspaces, but not in My Dashboard.
-*   List and Describe the features and functionality accessible through the left navigation bar within My Dashboard.
+*   List the features that are available only in Professional Workspaces, but not in Personal Workspaces.
+*   List and Describe the features and functionality accessible through the left navigation bar within the Personal Workspace.
 
 ### Runtime Matrix
 

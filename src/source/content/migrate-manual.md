@@ -71,7 +71,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 ## Create Pantheon Site
 
-1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Migrate Existing Site** button:
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Migrate Existing Site** button:
 
 1. Choose your site type, and click **Continue**:
 

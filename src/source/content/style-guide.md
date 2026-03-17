@@ -1042,7 +1042,7 @@ You can add a TOC to the right side of a document using the following frontmatte
 
 ## Terminology
 
-- My Dashboard: a user's personal work area, containing sites/settings specific to that user.
+- Personal Workspace: a user's personal work area, containing sites/settings specific to that user.
 - Professional Workspace: (formerly Organization) a feature set for a collection of users or sites.
 - Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
 - Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
@@ -1191,10 +1191,10 @@ Here are code snippets you can use to direct users to the correct location:
 [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
 ```
 
-**My Dashboard**
+**Personal Workspace**
 
 ```markdown
-[Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+[Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 ```
 
 **Professional Workspace**
