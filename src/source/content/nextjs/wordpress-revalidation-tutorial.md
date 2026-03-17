@@ -76,7 +76,7 @@ Both sides use the same surrogate key pattern, which enables targeted invalidati
 
 ## Set up the cache handler
 
-The `@pantheon-systems/nextjs-cache-handler` package provides persistent caching across Pantheon's horizontally scaled containers. Install it and configure both the legacy cache handler and the Next.js 16 `'use cache'` handler.
+The `@pantheon-systems/nextjs-cache-handler` package provides persistent caching across Pantheon's horizontally scaled containers. Install it and configure both the cache handler and the Next.js 16 `'use cache'` directive.
 
 ### Install the package
 
@@ -84,7 +84,7 @@ The `@pantheon-systems/nextjs-cache-handler` package provides persistent caching
 npm install @pantheon-systems/nextjs-cache-handler
 ```
 
-### Create the legacy cache handler
+### Create the cache handler
 
 Create `cache-handler.mjs` in the root of your project:
 
@@ -98,7 +98,7 @@ const CacheHandler = createCacheHandler({
 export default CacheHandler;
 ```
 
-### Create the use cache handler
+### Create the `use cache` handler
 
 Create `cacheHandlers/remote-handler.mjs` in your project. This handler supports the Next.js 16 `'use cache'` directive:
 
@@ -141,7 +141,7 @@ export default nextConfig;
 Key settings:
 
 * `cacheComponents: true` — Enables the `'use cache'` directive.
-* `cacheHandler` — Legacy handler for ISR, route handlers, and fetch cache.
+* `cacheHandler` — Handler for ISR, route handlers, and fetch cache.
 * `cacheHandlers` — Next.js 16 handler for `'use cache'`.
 * `cacheMaxMemorySize: 0` — Disables the default in-memory cache so all caching goes through the Pantheon cache handler.
 
