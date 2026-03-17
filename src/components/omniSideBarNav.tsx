@@ -2,7 +2,7 @@ import { getOmniSidebarActiveSection, OmniItem } from "./omni-components/helpers
 import { getOmniItems } from "./omni-components";
 import { SideNavClient, NavItemData } from "./omni-components/SideNavClient";
 
-// Convert OmniItem to plain NavItemData (no React elements)
+// Convert OmniItem to plain NavItemData
 const convertToNavData = (item: OmniItem, activePage: string): NavItemData => {
   return {
     link: item.link,
