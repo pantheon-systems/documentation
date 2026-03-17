@@ -1,5 +1,5 @@
 ---
-title: WordPress on-demand revalidation for Next.js
+title: WordPress on-demand cache revalidation for Next.js
 description: Update Next.js content in real time when WordPress posts change using webhook-driven cache revalidation
 reviewed: "2026-02-19"
 contenttype: [doc]
