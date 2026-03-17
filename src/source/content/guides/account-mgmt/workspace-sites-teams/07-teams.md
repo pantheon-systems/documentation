@@ -109,7 +109,7 @@ When a team member is added to a Workspace:
 <Tab title="To a Site" id="addsite">
 
 When a team member is added to a site:
-- That site will be available in My Dashboard
+- That site will be available in their Personal Workspace
 - That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies only to that site - not to any of the others in the same Workspace
 

@@ -96,7 +96,7 @@ Pantheon offers savings for sites purchased with annual billing. Refer to [Panth
 Please note that only Site owners can update plans. There are several places within the Pantheon Dashboard you can upgrade your site plan:
 
 1.  [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), and click **Upgrade** next to the site's name.
-2.  Within My Dashboard, navigate to Settings>Subscriptions. Click the 'Actions' dropdown and choose, **Change Site Plan**
+2.  Within your personal workspace, navigate to Settings>Subscriptions. Click the 'Actions' dropdown and choose, **Change Site Plan**
 3.  If you are in a workspace, you can navigate to **Settings** > **Billing**. Scroll to see **Supported Sites** table. Within that table, if you are the site owner, you'll be able to click the **Site Plan** column to upgrade or downgrade your site.
 
 

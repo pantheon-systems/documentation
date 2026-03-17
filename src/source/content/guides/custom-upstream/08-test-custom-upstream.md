@@ -16,7 +16,8 @@ integration: [--]
 reviewed: "2022-12-09"
 ---
 
-Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend using the workflow example below to test and update core.
+
+Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend using the workflow example below to  test and update core.
 
 <Alert title="Note" type="info">
 
@@ -50,7 +51,7 @@ Follow the procedure to [create a custom upstream](/guides/custom-upstream/creat
 
 This test site will be used later for evaluating Custom Upstream changes.
 
-1. [Go to your ](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) > click **Create New Site**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) > click **Create New Site**.
 
 1. Name your site.
 
@@ -78,25 +79,25 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   <Tab title="WordPress" id="wp1" active={true}>
 
-```git
-git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
-```
+  ```git
+  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
+  ```
 
   </Tab>
 
   <Tab title="Drupal 7" id="d71">
 
-```git
-git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
-```
+  ```git
+  git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
+  ```
 
   </Tab>
 
   <Tab title="Drupal (Latest)" id="d10">
 
-```git
-git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
-```
+  ```git
+  git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+  ```
 
   </Tab>
 
@@ -104,23 +105,24 @@ git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-c
 
 2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
 
-   ```bash
-   terminus connection:info <site>.dev --field=git_url
-   ```
+    ```bash
+    terminus connection:info <site>.dev --field=git_url
+    ```
 
 3. Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote):
 
-   ```git
-   git remote add pantheon-test <git_url>
-   ```
+    ```git
+    git remote add pantheon-test <git_url>
+    ```
+
 
 4. Checkout a new branch:
 
-   ```git
-   git checkout -b "core-update"
-   ```
+    ```git
+    git checkout -b "core-update"
+    ```
 
-It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives you a chance to reveal issues before distributing updates.
+  It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives you a chance to reveal issues before distributing updates.
 
 5. Pull down Pantheon's core updates from the appropriate upstream:
 
@@ -128,28 +130,28 @@ It's important to use feature branches when applying and testing updates. Update
 
   <Tab title="WordPress" id="wp" active={true}>
 
-```git
-git fetch pantheon-wordpress
-git merge pantheon-wordpress/master
-```
+  ```git
+  git fetch pantheon-wordpress
+  git merge pantheon-wordpress/master
+  ```
 
   </Tab>
 
   <Tab title="Drupal 7" id="d7">
 
-```git
-git fetch pantheon-drops-7
-git merge pantheon-drops-7/master
-```
+  ```git
+  git fetch pantheon-drops-7
+  git merge pantheon-drops-7/master
+  ```
 
   </Tab>
 
   <Tab title="Drupal (Latest)" id="d10">
 
-```git
-git fetch pantheon-drupal-10
-git merge pantheon-drupal-10/master
-```
+  ```git
+  git fetch pantheon-drupal-10
+  git merge pantheon-drupal-10/master
+  ```
 
   </Tab>
 
@@ -157,9 +159,9 @@ git merge pantheon-drupal-10/master
 
 6. Push to your new test site on Pantheon:
 
-```git
-git push pantheon-test core-update
-```
+  ```git
+  git push pantheon-test core-update
+  ```
 
 7. Return to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for your test site > navigate to the **Multidev** overview tab > click **Git Branches**.
 
@@ -167,13 +169,13 @@ git push pantheon-test core-update
 
 9. Use the new Multidev environment to evaluate your `core-update` branch > merge the branch into master > push to your remote repository on GitHub or Bitbucket when you're ready to release:
 
-```git
-git checkout master
-git merge --no-ff core-update
-git push origin master
-```
+  ```git
+  git checkout master
+  git merge --no-ff core-update
+  git push origin master
+  ```
 
-The example command above assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
+  The example command above assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
 
 Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
 
@@ -184,3 +186,4 @@ Updates will become available to sites downstream as one-click updates within an
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
+
