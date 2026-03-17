@@ -35,6 +35,7 @@ These upstreams include the `@pantheon-systems/nextjs-cache-handler` package, Wo
 1. Set `WORDPRESS_API_URL` to your WordPress site's REST API base URL.
 1. Set a shared `WEBHOOK_SECRET` on both the Next.js and WordPress sites.
 1. Install the [WordPress mu-plugin](/nextjs/wordpress-revalidation-tutorial#add-the-wordpress-mu-plugin) on your WordPress site.
+1. Install the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin on WordPress so that WordPress' CDN caches are cleared appropriately.
 
 The rest of this guide walks through the Next.js 15 header-based approach in detail.
 
@@ -280,7 +281,7 @@ The `headers` config in `next.config.mjs` can only interpolate values that are p
 If you need cache tags based on runtime data (for example, tagging `/blogs/my-post` with `post-123` using the numeric ID), you have two options:
 
 * **Use slug-based keys consistently** on both sides. Configure the WordPress webhook to send `post-my-post` instead of `post-123`, and match that in your `Surrogate-Key` header.
-* **Set headers from middleware.** Use Next.js [middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) to set the `Surrogate-Key` header dynamically based on runtime logic. This gives you full control but requires custom code.
+* **Set headers from middleware.** Use Next.js [middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) to set the `Surrogate-Key` header dynamically based on runtime logic. This gives you full control but requires more custom code.
 
 ## Next steps
 

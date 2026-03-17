@@ -58,6 +58,7 @@ These upstreams include the `@pantheon-systems/nextjs-cache-handler` package, Wo
 1. Set `WORDPRESS_API_URL` to your WordPress site's REST API base URL.
 1. Set a shared `WEBHOOK_SECRET` on both the Next.js and WordPress sites.
 1. Install the [WordPress mu-plugin](#add-the-wordpress-mu-plugin) on your WordPress site.
+1. Install the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin on WordPress so that WordPress' CDN caches are cleared appropriately.
 
 The rest of this tutorial walks through each piece in detail if you want to understand or customize the setup.
 
