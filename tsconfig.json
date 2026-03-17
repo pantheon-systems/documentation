@@ -40,7 +40,6 @@
   ],
   "exclude": [
     "node_modules",
-    "playwright-tests"
   ],
   "types": [
     "react",
