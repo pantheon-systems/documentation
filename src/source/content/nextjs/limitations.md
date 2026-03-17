@@ -62,26 +62,6 @@ We do not yet support the creation of [Custom Upstreams](/guides/custom-upstream
 * The [`pantheon.yml` configuration file](/pantheon-yml) is not currently supported on Next.js sites, and is ignored if present.
 * [Quicksilver](/guides/quicksilver) hooks are not currently supported on Next.js sites.
 
-## CDN and caching
-
-Pantheon has differentiated itself in the WordPress and Drupal ecosystem with a number of performance optimizations especially around the interaction between CMS and CDN.
-
-In the current Beta phase for our Next.js support, Next.js runs behind our Global CDN but we have not yet replicated all of that functionality for Next.js. Here are our current limitations with links to further discussions of how we intend to close these gaps.
-
-###  Package for shared, persistent cache
-
-Next.js provides [many layers of caching](https://nextjs.org/docs/app/guides/caching#overview). The "Full Route Cache" and "Data Cache" are meant to be persistent caches. Those caches hold information generated in the build process and can be changed over time by the behavior of [Incremental Static Regeneration](https://nextjs.org/docs/pages/guides/incremental-static-regeneration).
-
-Pantheon will be providing guidance on how sites can implement a cache handler to share these persistent caches across the horizontally scaled containers which hold the runtime code. Let us know if you have thoughts on whether this functionality should go in a [deployment adapter,](https://github.com/pantheon-systems/documentation/issues/9732) a [stand-alone package, or something else](https://github.com/pantheon-systems/documentation/issues/9727).
-
-### Clearing CDN caches by tag
-
-Content Delivery Networks cache webpages so that responses reach visitors faster and with resilience to traffic spikes. That benefit can come with the downside of serving old, outdated content. Mitigating the risk of outdated content by clearing all caches in response to content changes then defeats the benefit of caching in the first place.
-
-Pantheon, and most other modern providers, can balance the competing needs for fast and fresh web pages by "tagging" web pages with the relevant data that produced them. When a given piece of content changes, only the web pages that used that piece of content are cleared from the CDN cache. Our ["Pantheon Advanced Page Cache" plugin for WordPress](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and a [module for Drupal](https://www.drupal.org/project/pantheon_advanced_page_cache) enable this functionality by passing tags from the origin CMS to the CDN. When CRUD operations (create, read, update, delete) fire within the CMS, these packages can then reach out from origin infrastructure to the CDN to purge the appropriate caches.
-
-We will create the same capacity for Next.js to clear CDN caches itself in response to appropriate events like [revalidateTag](https://nextjs.org/docs/app/api-reference/functions/revalidateTag). If you have thoughts or feedback please share it here in [this thread specific to the question of tag-based clearing](https://github.com/pantheon-systems/documentation/issues/9762) or [the general question of deployment adapters](https://github.com/pantheon-systems/documentation/issues/9732).
-
 ### HTTP streaming
 
 Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress, Drupal, and Next.js. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).
@@ -90,15 +70,54 @@ For many teams this restriction is counterproductive. That is especially true in
 
 While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
 
+## GitHub App installation requirements
+
+The Pantheon GitHub Application must be installed by a user who is both:
+
+- A **GitHub organization admin**
+- A **member** of the corresponding Pantheon workspace
+
+Other workspace members cannot install the app themselves. The GitHub organization admin must complete the installation first, and then any workspace member can create Next.js sites using repositories the app has access to.
+
+### Options for the GitHub organization admin
+
+The GitHub organization admin does not need to create a site to install the app. They can choose one of the following approaches:
+
+#### Option 1: Install the app without creating a site
+
+Run the following Terminus command to install the GitHub App on the organization without creating a site:
+
+```bash{promptUser: user}
+terminus vcs:connection:add <workspace>
+```
+
+Replace `<workspace>` with the Pantheon workspace name, label, or ID. This installs the app and connects it to the GitHub organization. The GitHub organization admin can stop here — no site creation is required.
+
+#### Option 2: Start site creation and stop after app installation
+
+The GitHub organization admin can begin the site creation process through the Pantheon dashboard. During this process, the GitHub App installation is triggered. The GitHub organization admin can cancel the site creation after the app is installed, without completing the full workflow.
+
+### After the app is installed
+
+Once the GitHub App is installed on the organization, any member of the Pantheon workspace can create a Next.js site — through the dashboard or Terminus — using any repository the app has access to.
+
 ## General
 
 ### Compatibility and Requirements
 See the following page for Next.js compatibility and requirements on Pantheon:
 * [Next.js Overview](/nextjs#compatibility--requirements)
 
+### GitHub Enterprise Server
+
+The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
+
 ### **Bun, Deno, and other runtimes beyond Node.js**
 
 Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
+
+### **Yarn**
+
+Pantheon infrastructure supports [Yarn](https://yarnpkg.com/) but as of now, that requires using a separate build target in `package.json`: `gcp-build`. We expect to unify this in regular `build` script in the near future but as of now, please add `gcp-build` as a new script so your codebase can be built in Pantheon Next.js infrastructure.
 
 ### **Astro, Remix, and other frameworks beyond Next.js**
 

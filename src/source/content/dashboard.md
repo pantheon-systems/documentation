@@ -29,6 +29,7 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 
 * Manage users
 * Manage invoices and billing
+* Manage marketing email preferences
 * Test sites
 * One-click updates to Drupal core and WordPress
 * Site crash reporting with backtraces
