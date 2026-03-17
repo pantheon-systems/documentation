@@ -76,7 +76,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 | Extension | Gen 1 | Gen 2 |
 |-----------|---------|---------|
-| **ioncube** | Previously available for PHP 7.1 only<br>Removed March 11, 2026 | Not available  |
+| **ioncube** | Previously available for PHP 7.1 only<br>Removed March 17, 2026 | Not available  |
 | **pdo_sqlsrv** | Available for PHP 7.2 only<br/>5.2.0 | Coming soon for PHP 8.2+  |
 | **curl** | v7.61.1 | 7.88.1 |
 | **gd** | 2.1.0 | 2.3.3 |
