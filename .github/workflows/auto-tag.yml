@@ -1,15 +1,13 @@
 name: Auto-Tag Live Deployments
 
 concurrency:
-  # change back to live before merging
-  group: ${{ github.workflow }}-test
+  group: ${{ github.workflow }}-live
   cancel-in-progress: false
 
 on:
   push:
     branches:
-      # todo, change this back to main before publishing.
-      - release-note-metadata
+      - main
 
 jobs:
   create_next_test_tag:
@@ -74,25 +72,22 @@ jobs:
           echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
         fi
 
-    # change back to live before merging
     - uses: ./.github/actions/pantheon-auto-tag
       with:
-        target_env: test
+        target_env: live
 
-    # change back to live before merging
     - uses: ./.github/actions/wait-for-deployment
       with:
         expected_commit: ${{ steps.set_timestamps.outputs.deploy_commit }}
-        env_name: test
+        env_name: live
         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 
-    # change back to live before merging
     - name: clear cache
       id: clear_cache
       shell: bash
       env:
-        SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.test"
+        SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.live"
       run: |
         #!/bin/bash
         set +e
