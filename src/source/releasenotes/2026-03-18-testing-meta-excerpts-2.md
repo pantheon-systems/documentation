@@ -1,6 +1,7 @@
 ---
 title: "This is a test 2"
 published_date: "2026-03-18"
+published_at: "2026-03-18T18:04:11Z"
 categories: [user-interface]
 description: "This is another test description. It should also show up in slack and social shares."
 ---
