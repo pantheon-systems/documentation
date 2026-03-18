@@ -1,7 +1,8 @@
 ---
 title: "This is a test"
-published_date: "2026-03-17"
+published_date: "2026-03-18"
 categories: [user-interface]
+description: "This is a test description. It should show up in slack and social shares."
 ---
 
 Pantheon has released version 2.3.1 of the [WP SAML Auth WordPress plugin](https://wordpress.org/plugins/wp-saml-auth/). This update adds a new filter for multisite environments to give developers more control over how SAML-provisioned users are added to sites. No action is required — existing behavior is unchanged.
