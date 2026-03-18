@@ -144,7 +144,7 @@ export async function generateMetadata(props: DynamicViewProps) {
         description = cleaned;
       }
     }
-    description = description || "A summary of changes to the Pantheon Platform";
+    description = node.frontmatter.description || description || "A summary of changes to the Pantheon Platform";
 
     return {
       ...generateMetadataFromUri({

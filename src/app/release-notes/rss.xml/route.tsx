@@ -41,7 +41,7 @@ export const GET = async () => {
 
   const output = releaseNotes.map((releaseNote) => ({
     title: releaseNote.data.node.frontmatter.title,
-    excerpt: releaseNote.data.node.excerpt,
+    excerpt: releaseNote.data.node.frontmatter.description || "A summary of changes to the Pantheon Platform",
     link: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://docs.pantheon.io"}/${releaseNote.data.node.fields.slug}`,
     id: uuidv5(releaseNote.data.node.id, namespace),
     published_date: new Date(
