@@ -147,18 +147,7 @@ export const ReleaseNoteListingTemplate = async ({
                       />
 
                       <MdxWrapper
-                        article={{
-                          content: node.content,
-                          contentType: "TEXT_MARKDOWN",
-                          id: node.id,
-                          metadata: { ...(node.frontmatter ?? {}) },
-                          publishedDate: node.frontmatter.published_date,
-                          publishingLevel: "PRODUCTION",
-                          tags: [],
-                          title: node.frontmatter.title || "",
-                          updatedAt: null,
-                          previewActiveUntil: null,
-                        }}
+                        article={{ content: node.content }}
                         componentMap={{
                           h1: headline2,
                           h2: headline3,
