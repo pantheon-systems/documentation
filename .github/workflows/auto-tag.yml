@@ -9,7 +9,7 @@ on:
   push:
     branches:
       # todo, change this back to main before publishing.
-      - releasenote-exact-published-at
+      - release-note-metadata
 
 jobs:
   create_next_test_tag:
