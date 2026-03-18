@@ -2,19 +2,8 @@
 title: WebOps Certification
 subtitle: "Chapter 8: Extend with CLI and Hooks"
 description: "Terminus and Quicksilver can work together to help facilitate complex WebOps workflows"
-certificationpage: true
-type: certificationpage
-layout: certificationpage
-showtoc: true
-tags: []
 permalink: docs/certification/study-guide/extend
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide/people
 nexturl: /certification/study-guide/automate
 ---

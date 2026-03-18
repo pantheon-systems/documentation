@@ -2,18 +2,13 @@
 title: Terminus Guide
 subtitle: Create Terminus Plugins
 description: Learn how to create your own Terminus plugins.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/create
-contenttype: [guide]
-innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
+showtoc: false
 ---
 
 This section provides information on how to create Terminus plugins.
