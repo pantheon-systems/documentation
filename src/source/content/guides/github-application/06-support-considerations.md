@@ -1,73 +1,26 @@
 ---
 title: GitHub Application (Private Beta)
-description: Pantheon's GitHub Application handles moving code from individual GitHub repositories to individual Pantheon sites.
+subtitle: Support & Considerations
+description: Additional notes about the GitHub Application, including assumptions, limitations, and support information.
 tags: [continuous-integration, workflow, D8, D9, D10]
-contributors: [stevector]
-contenttype: [doc]
+contributors: [stevector,jazzs3quence]
+contenttype: [guide]
+showtoc: true
 innav: [true]
 categories: [automate, workflows]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-03-02"
+permalink: docs/guides/github-application/support-considerations
 ---
 
-Pantheon's GitHub Application directly integrates a GitHub repository with a Pantheon site.
-This allows you to use GitHub as your code repository while still using Pantheon to run your site.
-
-The GitHub Application is currently in private Beta. [Request access for your Pantheon workspace here](https://docs.google.com/forms/d/e/1FAIpQLSf0vYrRbPQBxR-hT8kGJ4bEdYPtpkTtfDvPM89xD2dNZeqLqA/viewform).
-
-Once enabled, this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
-
-![Diagram of the GitHub application process of deploying a PR to a Pantheon Multidev](../images/github-app/diagram--deploying-pr.png)
-
-Merging pull requests, or pushing code to the `main` branch of the GitHub repository, will automatically deploy the code to the Pantheon development environment.
-
-![Diagram of the GitHub application process of deploying main to Pantheon](../images/github-app/diagram--deploying-main.png)
-
-
-## Creating a new site
-
-Once accepted into the private Beta, you must install the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin).
-This is a public Terminus plugin that can be installed normally, e.g. `terminus self:plugin:install terminus-repository-plugin`.
-Usage instructions for the specific site creation commands are included in the [README](https://github.com/pantheon-systems/terminus-repository-plugin/blob/main/README.md#creating-a-new-site).
-
-## Try the pull request workflow
-
-To get comfortable using the workflow, you might want to do a few practice pull requests.
-
-First, after the site is created, install the CMS (WordPress or Drupal) within the Dev environment.
-Then create the Test and Live environments.
-
-### Make a pull request
-
-Make a local clone of the GitHub repository and make a change to the code.
-For example, you could add your favorite plugin or module.
-
-```bash
-git clone git[@github](https://github.com/github).com:<your_organization_name>/<your_site_id>.git
-```
-
-Make a new branch and then push to GitHub to open a pull request.
-
-```bash
-git checkout -b <branch_name>
-git push --set-upstream origin <branch_name>
-```
-
-Once the pull request is open, the GitHub Application will automatically create a new Multidev environment on Pantheon.
-
-When the Multidev environment is created, you will be able to see it in the Pantheon dashboard.
-Verify that your change is working by visiting the Multidev environment URL.
-
-### Merge the pull request
-
-Once you are happy with the change, you can merge the pull request and the GitHub Application will automatically deploy the code to the Pantheon Dev environment.
+This page outlines important assumptions, current limitations, and support information for the GitHub Application. Review these considerations before implementing the GitHub Application for your projects.
 
 ## Assumptions of GitHub Application
 
-### Multidev is available at to customers with Gold or higher plans
+### Multidev is available to customers with Gold or higher plans
 
 This GitHub Application is designed to work with Multidev environments. Multidev is available to customers on [Gold or higher plans](/guides/multidev). If you are on a lower plan, you can still use the GitHub Application, but you will not be able to use the Multidev features.
 
@@ -114,3 +67,10 @@ New sites made with the GitHub Application do not support "[SFTP Mode](/guides/s
 ## Support
 
 Before this functionality is made generally available, please direct questions and feedback to [the issue queue on the related Terminus plugin](https://github.com/pantheon-systems/terminus-repository-plugin) rather than general support channels.
+
+## More Resources
+
+- [Pantheon Support](/guides/support) - Learn about Pantheon's support offerings
+- [Multidev](/guides/multidev) - Common questions about Multidev environments
+- [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
+- [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin) - Report issues or contribute
