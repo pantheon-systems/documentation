@@ -14,4 +14,4 @@ Pantheon's Content Publisher has officially entered General Availability. All fe
 
 For more information on Content Publisher, check out our [documentation site](https://docs.content.pantheon.io) for guidance on using Content Publisher.
 
-To get started with Content Publisher, visit the [product page](https://pantheon.io/platform/content-publisher) on the Pantheon’s website. If you are curious to engage, get in touch in the `#content-publisher` channel of our recently relaunched [Pantheon Community Slack](https://pantheon.io/customer-community!
+To get started with Content Publisher, visit the [product page](https://pantheon.io/platform/content-publisher) on the Pantheon’s website. If you are curious to engage, get in touch in the `#content-publisher` channel of our recently relaunched [Pantheon Community Slack](https://pantheon.io/customer-community)!
