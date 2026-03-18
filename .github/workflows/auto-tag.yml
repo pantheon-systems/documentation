@@ -1,13 +1,15 @@
 name: Auto-Tag Live Deployments
 
 concurrency:
-  group: ${{ github.workflow }}-live
+  # change back to live before merging
+  group: ${{ github.workflow }}-test
   cancel-in-progress: false
 
 on:
   push:
     branches:
-      - main
+      # todo, change this back to main before publishing.
+      - releasenote-exact-published-at
 
 jobs:
   create_next_test_tag:
@@ -22,23 +24,75 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Set timestamps on new release notes
+      id: set_timestamps
+      run: |
+        TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+        # Get list of release note files added in this commit (not modified)
+        NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'src/source/releasenotes/*.md' 2>/dev/null || true)
+
+        if [ -z "$NEW_FILES" ]; then
+          echo "No new release note files"
+          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
+        MODIFIED=false
+        for file in $NEW_FILES; do
+          # Skip files that already exist in origin/main (e.g., came in via merge)
+          if git cat-file -e "origin/main:$file" 2>/dev/null; then
+            echo "Skipping $file - already exists in main"
+            continue
+          fi
+
+          # Skip if file already has published_at
+          if grep -q "^published_at:" "$file"; then
+            echo "Skipping $file - already has published_at"
+            continue
+          fi
+
+          # Add published_at after the published_date line
+          if grep -q "^published_date:" "$file"; then
+            sed -i "s/^published_date: \(.*\)$/published_date: \1\npublished_at: \"$TIMESTAMP\"/" "$file"
+            echo "Added published_at to $file"
+            MODIFIED=true
+          fi
+        done
+
+        if [ "$MODIFIED" = true ]; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: set published_at timestamp for new release notes"
+          git push
+          # Output the new commit SHA for subsequent steps
+          NEW_SHA=$(git rev-parse HEAD)
+          echo "deploy_commit=$NEW_SHA" >> $GITHUB_OUTPUT
+          echo "Pushed timestamp commit: $NEW_SHA"
+        else
+          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
+        fi
+
+    # change back to live before merging
     - uses: ./.github/actions/pantheon-auto-tag
       with:
-        target_env: live
+        target_env: test
 
-
+    # change back to live before merging
     - uses: ./.github/actions/wait-for-deployment
       with:
-        expected_commit: ${{ github.sha }}
-        env_name: live
+        expected_commit: ${{ steps.set_timestamps.outputs.deploy_commit }}
+        env_name: test
         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 
+    # change back to live before merging
     - name: clear cache
       id: clear_cache
       shell: bash
       env:
-        SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.live"
+        SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.test"
       run: |
         #!/bin/bash
         set +e

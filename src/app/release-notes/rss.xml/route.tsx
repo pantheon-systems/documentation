@@ -44,9 +44,13 @@ export const GET = async () => {
     excerpt: releaseNote.data.node.frontmatter.description || "A summary of changes to the Pantheon Platform",
     link: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://docs.pantheon.io"}/${releaseNote.data.node.fields.slug}`,
     id: uuidv5(releaseNote.data.node.id, namespace),
-    published_date: new Date(
-      `${releaseNote.data.node.frontmatter.published_date}T${getSeededTime(releaseNote.data.node.frontmatter.title ?? "")}Z`
-    ).toUTCString(),
+    // Use published_at (set by GitHub Action) if available, otherwise fall back to
+    // synthetic time based on title hash for backwards compatibility with older notes
+    published_date: releaseNote.data.node.frontmatter.published_at
+      ? new Date(releaseNote.data.node.frontmatter.published_at).toUTCString()
+      : new Date(
+          `${releaseNote.data.node.frontmatter.published_date}T${getSeededTime(releaseNote.data.node.frontmatter.title ?? "")}Z`
+        ).toUTCString(),
   }));
 
   // convert to xml
