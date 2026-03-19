@@ -8,11 +8,11 @@ Elasticsearch is now available as a Beta add-on for WordPress sites on Pantheon.
 
 ## What's included?
 
-ElasticPress offloads search queries from your database to Elasticsearch, improving WP_Query performance and reducing load on your application server. Capabilities include:
+ElasticPress offloads search queries from your database to Elasticsearch, improving `WP_Query` performance and reducing load on your application server. Capabilities include:
 
 * **Full-text search** — Fuzzy matching, synonyms, and weighted fields for more relevant search results.
 * **Instant Search** — Real-time search-as-you-type results without full page reloads.
-* **WP_Query integration** — Elasticsearch can handle WP_Query requests, reducing database load and improving page load times.
+* **`WP_Query` integration** — Elasticsearch can handle `WP_Query` requests, reducing database load and improving page load times.
 * **Faceted filtering** — Narrow results by category, tag, custom taxonomy, and other attributes.
 * **WooCommerce support** — Product search and filtering for WooCommerce storefronts.
 * **Related content** — Surface related posts and pages automatically.
@@ -34,7 +34,11 @@ Elasticsearch can be enabled in two ways:
   terminus search:enable <site>.<env>
   ```
 
-[Terminus 4.1.6](https://docs.pantheon.io/release-notes/2026/03/terminus-4-1-6) is required.
+<Alert type="info" title="Note">
+
+In order to activate Elasticsearch in Terminus, it is required that you have [Terminus 4.1.6](https://docs.pantheon.io/release-notes/2026/03/terminus-4-1-6) installed.
+
+</Alert>
 
 Once enabled, install and activate the [ElasticPress](https://wordpress.org/plugins/elasticpress/) plugin in your WordPress admin and run your initial content sync. No manual credential configuration is required — `EP_HOST`, `EP_INDEX_PREFIX`, and `EP_CREDENTIALS` are set automatically across all environments.
 
