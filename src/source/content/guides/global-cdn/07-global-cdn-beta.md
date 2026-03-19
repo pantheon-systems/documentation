@@ -182,6 +182,18 @@ Add the TXT and DNS records to your DNS provider with the output from the comman
 
 ## FAQ
 
+### How do I know if my site is eligible?
+
+Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, Multi-Zone Failover, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+
+### I have a Custom Certificate. Can I migrate?
+
+Not yet. Custom certificate management is not supported in the Beta. This will be addressed before General Availability.
+
+### I use AGCDN. What should I do?
+
+No action is required. AGCDN has its own migration initiative and timeline. Your current AGCDN configuration continues to work. AGCDN customers are excluded from the Beta.
+
 ### What is the timeline for GCDN GA and new AGCDN?
 
 GCDN GA is late Q2/Early Q3. AGCDN features will be moved to a new self managed AGCDN service beginning late Q2. As feature parity is reached, you will be contacted.
@@ -190,25 +202,17 @@ GCDN GA is late Q2/Early Q3. AGCDN features will be moved to a new self managed 
 
 Your site's CDN infrastructure is upgraded to the next-generation GCDN. You get bot protection automatically. Caching behavior remains the same, including Pantheon Advanced Page Cache support. You will need to update your DNS records.
 
-### Will my site have downtime during migration?
-
-No. The migration process is designed to avoid downtime. During DNS propagation, traffic may temporarily alternate between the old and new CDN, but your site remains accessible throughout.
-
 ### Do I need to change my application code?
 
 No. The migration is transparent to your Drupal or WordPress application. No code changes are required.
 
+### Will my site have downtime during migration?
+
+No. The migration process is designed to avoid downtime. During DNS propagation, traffic may temporarily alternate between the old and new CDN, but your site remains accessible throughout.
+
 ### Does the Pantheon Advanced Page Cache module/plugin still work?
 
 Yes. The Drupal module and WordPress plugin for Pantheon Advanced Page Cache work the same way on the new infrastructure. Surrogate-key-based cache clearing is fully supported.
-
-### I use AGCDN. What should I do?
-
-No action is required. AGCDN has its own migration initiative and timeline. Your current AGCDN configuration continues to work. AGCDN customers are excluded from the Beta.
-
-### I have a Custom Certificate. Can I migrate?
-
-Not yet. Custom certificate management is not supported in the Beta. This will be addressed before General Availability.
 
 ### What is Content Converter?
 
@@ -221,7 +225,3 @@ Your bot or automated service may be receiving a managed challenge from bot prot
 ### How do I report issues or give feedback?
 
 Join `#beta-gcdn` in the Pantheon Community Slack to share feedback, report issues, or ask questions. You can also contact Pantheon support through the normal channels.
-
-### How do I know if my site is eligible?
-
-Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, Multi-Zone Failover, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
