@@ -3,10 +3,9 @@ title: Pantheon Global CDN
 subtitle: GCDN Beta with Bot Protection
 description: The GCDN Beta introduces built-in bot protection. Learn what's included, how to migrate, and what to expect.
 tags: [cache, cdn, security]
-contributors: [conorbauer]
+contributors: [conorbauer, jazzsequence]
 showtoc: true
 permalink: docs/guides/global-cdn/global-cdn-beta
-earlyaccess: true
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]
@@ -61,8 +60,6 @@ Caching behavior is the same as the current GCDN. Your existing caching configur
 - Tracking parameters (`utm_*`, `__*`) are stripped from cache keys, consistent with current GCDN behavior (`PANTHEON_STRIPPED` logic).
 - Analytics cookies (Google Analytics, HubSpot, etc.) are excluded from cache key generation so they don't fragment your cache.
 
-## Setup
-
 ### Eligibility
 
 The Beta is open to most GCDN customers running Drupal or WordPress sites. The following configurations are not eligible at this time:
@@ -73,6 +70,8 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 | Custom Certificates | Special certificate management not yet supported |
 | Multi-Zone Failover | Feature not available in Beta |
 | Next.js / Front-End Sites (FES) | Not yet supported |
+
+## Setup
 
 ### Activation
 
