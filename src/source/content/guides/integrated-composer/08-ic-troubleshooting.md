@@ -21,7 +21,7 @@ This section provides information on troubleshooting common Integrated Composer 
 ## Restore overwritten `composer.json`
 Sometimes, when a given upstream update includes changes to the `composer.json` file, it can  conflict with your site's `composer.json` file. In these cases, applying the upstream update could result in the loss of content in your `composer.json` file.
 
-After applying such an update, check the commit log in the site dashboard. If you see many packages have been **removed**, you'll know the site's `composer.json` file has been overwritten by the upstream and needs to be resotred:
+After applying such an update, check the commit log in the site dashboard. If you see many packages have been **removed**, you'll know the site's `composer.json` file has been overwritten by the upstream and needs to be restored:
 
 ![Pantheon update removing Composer packages](../../../images/wordpress-composer/02-wordpress-composer-json-removals.png)
 
