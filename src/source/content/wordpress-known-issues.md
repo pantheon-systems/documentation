@@ -1787,6 +1787,15 @@ ___
 
 ___
 
+### Yoast LLMS feature
+
+<ReviewDate date="2026-02-14" />
+
+**Issue:** [Yoast SEO 25.3](https://developer.yoast.com/changelog/yoast-seo/25.3/) introduces the LLMS feature, which generates an llms.txt file in the root directory of the WordPress installation. On Pantheon, the Test and Live environments use a read-only filesystem for the application codebase. As a result, plugins that attempt to write files to the root directory are unable to do so in these environments.
+
+While this functionality will work in the Dev environment when using SFTP mode, it is not usable in the Test and Live environments due to Pantheon’s filesystem restrictions.
+
+
 ### Yoast Indexables
 
 <ReviewDate date="2022-06-14" />
