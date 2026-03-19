@@ -73,19 +73,67 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 
 ## Setup
 
+<TabList>
+
+<Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
+
 ### Activation
 
 Eligible sites will see a GCDN Beta banner on the site dashboard in Pantheon.
 
 1. Look for the banner on your site dashboard in Pantheon.
 1. Click the banner and follow the guided activation steps.
-1. Update your DNS records to point to the new GCDN infrastructure (see below).
-
-You can also activate via the Terminus CLI (see [Terminus CLI](#terminus-cli) below).
+1. Update your DNS records to point to the new GCDN infrastructure (instructions will be provided in the dashboard).
 
 ### Domains and DNS
 
-After activating the GCDN Beta, you will need to update your DNS records to point to the new infrastructure. The process is:
+After activating the GCDN Beta through the dashboard, you will need to update your DNS records to point to the new infrastructure.
+
+1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider.
+
+1. Once domain verification completes, the dashboard will display the recommended DNS settings (CNAME targets).
+
+1. Update your DNS records with the provided CNAME values at your DNS provider.
+
+- You will receive new CNAME targets pointing to Pantheon's new GCDN infrastructure.
+- Set your TTL as low as possible before making changes to minimize propagation delay.
+- TLS certificates are automatically provisioned once domain verification completes.
+
+<Alert title="Note" type="info">
+
+DNS changes may take time to propagate depending on your current TTL settings. During propagation, traffic may alternate between the old and new CDN. This is normal and resolves once propagation completes.
+
+</Alert>
+
+</Tab>
+
+<Tab title="Terminus CLI" id="terminus-setup">
+
+<Alert title="Note" type="info">
+
+Before proceeding with Terminus commands, you must first install the GCDN Terminus plugin.
+
+</Alert>
+
+### Install the plugin
+
+A Terminus plugin is available to upgrade your site to GCDN with bot protection.
+
+```bash{promptUser: user}
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+```
+
+### Upgrade a site
+
+```bash{promptUser: user}
+terminus gcdn:upgrade <site>
+```
+
+This activates the GCDN upgrade for the specified site, enabling the migration to the new GCDN infrastructure.
+
+### Verify domains and update DNS
+
+After running `gcdn:upgrade`, you need to verify your domains and update DNS records:
 
 1. Verify domain ownership:
 
@@ -117,29 +165,7 @@ DNS changes may take time to propagate depending on your current TTL settings. D
 
 </Alert>
 
-### Terminus CLI
-
-A Terminus plugin is available to upgrade your site to GCDN with bot protection.
-
-#### Install the plugin
-
-```bash{promptUser: user}
-terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
-```
-
-#### Upgrade a site
-
-```bash{promptUser: user}
-terminus gcdn:upgrade <site>
-```
-
-This activates the GCDN upgrade for the specified site, enabling the migration to the new GCDN infrastructure.
-
-#### Post-upgrade steps
-
-After running `gcdn:upgrade`, follow the [Domains and DNS](#domains-and-dns) steps above to re-add, verify, and point your custom domains to the new infrastructure.
-
-#### Full workflow example
+### Full workflow example
 
 ```bash{promptUser: user}
 terminus gcdn:upgrade my-site
@@ -149,6 +175,10 @@ terminus domain:dns my-site.live
 ```
 
 Add the TXT and DNS records to your DNS provider with the output from the commands above.
+
+</Tab>
+
+</TabList>
 
 ## FAQ
 
