@@ -4,7 +4,7 @@ published_date: "2026-03-25"
 categories: [deprecation, wordpress]
 ---
 
-Solr support for WordPress and the [Solr Power](https://wordpress.org/plugins/flavor-flavor-flavor/) plugin will reach **end of life on January 11, 2027**. After this date, Solr-based search will no longer be available for WordPress sites on the platform.
+Solr support for WordPress and the [Solr Power](https://wordpress.org/plugins/solr-power/) plugin will reach **end of life on January 11, 2027**. After this date, Solr-based search will no longer be available for WordPress sites on the platform.
 
 ## What's changing?
 
