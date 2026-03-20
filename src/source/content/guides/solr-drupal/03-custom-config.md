@@ -17,12 +17,6 @@ editpath: solr-drupal/03-custom-config.md
 ---
 ## Before you begin
 
-<Alert title="Version 8.4.x" type="info">
-
-The `search_api_pantheon_admin` module is obsolete and no longer functional in 8.4.x. Custom schema posting is handled via the `drush search-api-pantheon:postSchema [path]` command.
-
-</Alert>
-
 Ensure you have [installed the Search API Pantheon module](/guides/solr-drupal/solr-drupal#install-the-search-module) before proceeding.
 
 ## Apply Custom Solr Configurations
