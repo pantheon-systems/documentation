@@ -59,7 +59,6 @@ There are instances where you may want to edit the configuration file like `sche
     1. Click into the **Pantheon Search Admin** tab towards the top right of the page, then click the **+ Post Solr Schema** button.
     1. Specify the path of your custom configuration (e.g., `/code/solr/config`), then click the **Post Schema** button.
 
-    ![Pantheon admin tab solr drupal posting custom configurations](../../../images/custom-solr-config.png)
 
 1. Pantheon's platform checks for updated Solr configurations every 5 minutes. Wait 5 minutes to ensure your new custom configuration has been detected and applied by the platform before proceeding to the next step.
 
