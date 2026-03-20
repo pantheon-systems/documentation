@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence]
-reviewed: "2025-01-15"
+reviewed: "2026-03-19"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -127,8 +127,6 @@ The commands specified in the next section install the following dependencies:
 
 - Search API Solr makes search API work with Apache Solr. Composer manages which version will be installed.
 
-- Guzzle version 6 is standard with Drupal Core 8 or 9.
-
 ### Install the Search Module
 
 To install the Search API Pantheon module, switch to your local machine.
@@ -149,15 +147,21 @@ To install the Search API Pantheon module, switch to your local machine.
 
 #### Enable Pantheon Search
 
-You can enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush.
+You can enable the `search_api_pantheon` module from the command line using Terminus and Drush.
 
 Enter the following command, replacing `$ENV` with the environment:
 
 ```shell{promptUser:user}
-terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon
 ```
 
-You can also enable the modules from the site’s Extend page located in `/admin/modules`.
+You can also enable the module from the site’s Extend page located in `/admin/modules`.
+
+<Alert title="Version 8.3.x and earlier" type="info">
+
+If you are using Search API Pantheon version 8.3.x or earlier, also enable the `search_api_pantheon_admin` module. This module is obsolete in 8.4.x and its admin UI is no longer functional.
+
+</Alert>
 
 ## Configure Pantheon Search
 
@@ -192,6 +196,20 @@ Follow the steps below to index existing content.
 Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
+
+<Alert title="Version 8.4.x" type="info">
+
+The `search_api_pantheon_admin` module is obsolete and no longer functional in 8.4.x. Use the Drush command to post the schema instead:
+
+```shell{promptUser:user}
+drush search-api-pantheon:postSchema [path]
+```
+
+The `[path]` argument is optional. Provide it only if you want to use a custom config set directory. If omitted, the default config set matching the installed Search API Solr version is used.
+
+</Alert>
+
+For versions prior to 8.4.x, you can post the schema via the Drupal admin UI or by post schema drush command:
 
 1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
 1. Select the **Pantheon Search Admin** tab to save and post the schema information.
