@@ -157,12 +157,6 @@ terminus drush $SITE.$ENV -- pm-enable search_api_pantheon
 
 You can also enable the module from the site’s Extend page located in `/admin/modules`.
 
-<Alert title="Version 8.3.x and earlier" type="info">
-
-If you are using Search API Pantheon version 8.3.x or earlier, also enable the `search_api_pantheon_admin` module. This module is obsolete in 8.4.x and its admin UI is no longer functional.
-
-</Alert>
-
 ## Configure Pantheon Search
 
 ### Add Search Index
