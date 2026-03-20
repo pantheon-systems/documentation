@@ -10,19 +10,14 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-reviewed: "2025-02-11"
+reviewed: "2026-03-19"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/custom-config
 editpath: solr-drupal/03-custom-config.md
 ---
 ## Before you begin
-### Install the Pantheon Search Admin module
 
-[If you have not done so already](/guides/solr-drupal/solr-drupal#install-the-search-module), install the `search_api_pantheon_admin` module, either from the Extend page in Drupal admin (`/admin/modules`) or from the command line using Terminus and Drush:
-
-```shell{promptUser:user}
-terminus drush <site>.<env> -- pm-enable search_api_pantheon_admin
-```
+Ensure you have [installed the Search API Pantheon module](/guides/solr-drupal/solr-drupal#install-the-search-module) before proceeding.
 
 ## Apply Custom Solr Configurations
 
@@ -45,11 +40,25 @@ There are instances where you may want to edit the configuration file like `sche
   (Optional) Modify the [Solr Schema version name](https://git.drupalcode.org/project/search_api_solr/-/blob/4.x/jump-start/solr8/config-set/schema.xml?ref_type=heads#L52), so there is a differentiator to your custom configuration from the default (e.g., `drupal-4.3.5-solr-8.x-1-YOUR-CUSTOM-IDENTIFIER`).
 
 1. Commit the changes, it is recommended to test this in a multidev environment.
-1. Login to Drupal Admin and navigate to to `/admin/config/search/search-api` then select your server.
-1. Click into the **Pantheon Search Admin** tab towards the top right of the page, then click the **+ Post Solr Schema** button. 
-1. Specify the path of your custom configuration (e.g., `/code/solr/config`), then click the **Post Schema** button.
 
-  ![Pantheon admin tab solr drupal posting custom configurations](../../../images/custom-solr-config.png)
+1. Post the custom schema to the Solr server.
+
+    <Alert title="Version 8.4.x" type="info">
+
+    Use the Drush command with the path to your custom config set:
+
+    ```shell{promptUser:user}
+    drush search-api-pantheon:postSchema /code/solr/config
+    ```
+
+    </Alert>
+
+    For versions prior to 8.4.x, you can post the schema via the Drupal admin UI (`search_api_pantheon_admin` module) or the post schema Drush command:
+
+    1. Login to Drupal Admin and navigate to `/admin/config/search/search-api` then select your server.
+    1. Click into the **Pantheon Search Admin** tab towards the top right of the page, then click the **+ Post Solr Schema** button.
+    1. Specify the path of your custom configuration (e.g., `/code/solr/config`), then click the **Post Schema** button.
+
 
 1. Pantheon's platform checks for updated Solr configurations every 5 minutes. Wait 5 minutes to ensure your new custom configuration has been detected and applied by the platform before proceeding to the next step.
 
@@ -57,7 +66,15 @@ There are instances where you may want to edit the configuration file like `sche
 
 ### Reloading Solr Core
 
-Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site. You can follow this steps on how to enable the Reload Core in your Search API configuration:
+Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site.
+
+#### Using Drush
+
+```shell{promptUser:user}
+drush search-api-pantheon:reload
+```
+
+#### Using the Drupal Admin UI
 
 1. Go to `/admin/modules`
 1. Enable `Search API Solr Admin`
