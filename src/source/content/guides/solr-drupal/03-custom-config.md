@@ -53,7 +53,7 @@ There are instances where you may want to edit the configuration file like `sche
 
     </Alert>
 
-    For versions prior to 8.4.x, you can post the schema via the Drupal admin UI or the post schema Drush command:
+    For versions prior to 8.4.x, you can post the schema via the Drupal admin UI (`search_api_pantheon_admin` module) or the post schema Drush command:
 
     1. Login to Drupal Admin and navigate to `/admin/config/search/search-api` then select your server.
     1. Click into the **Pantheon Search Admin** tab towards the top right of the page, then click the **+ Post Solr Schema** button.
@@ -69,14 +69,13 @@ There are instances where you may want to edit the configuration file like `sche
 
 Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site.
 
-
-Use the Drush command to reload the Solr core:
+#### Using Drush
 
 ```shell{promptUser:user}
 drush search-api-pantheon:reload
 ```
 
-or
+#### Using the Drupal Admin UI
 
 1. Go to `/admin/modules`
 1. Enable `Search API Solr Admin`

@@ -209,7 +209,7 @@ The `[path]` argument is optional. Provide it only if you want to use a custom c
 
 </Alert>
 
-For versions prior to 8.4.x, you can post the schema via the Drupal admin UI or by post schema drush command:
+For versions prior to 8.4.x, you can post the schema via the Drupal admin UI (`search_api_pantheon_admin` module) or by post schema drush command:
 
 1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
 1. Select the **Pantheon Search Admin** tab to save and post the schema information.
