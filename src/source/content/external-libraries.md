@@ -29,8 +29,8 @@ dompdf is included with the [Entity Print](https://www.drupal.org/project/entity
 For Drupal 7 websites using <a href="https://www.drupal.org/project/print">the print module</a>, begin by downloading the dompdf library compatible with your PHP version.
 
 | PHP version | dompdf lib |
-|---------|---------|---------|
-| 5.6 - 7.0 | [Dompdf 0.8.3](https://github.com/dompdf/dompdf/releases/tag/v0.8.3) | 
+|---------|---------|
+| 5.6 - 7.0 | [Dompdf 0.8.3](https://github.com/dompdf/dompdf/releases/tag/v0.8.3) |
 | 7.1 to 8.4 | [Dompdf 3.1.x or the latest](https://github.com/dompdf/dompdf/releases) |
 
 Place the dompdf folder inside the following folder:
