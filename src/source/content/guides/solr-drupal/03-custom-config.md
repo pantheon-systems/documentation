@@ -67,11 +67,13 @@ There are instances where you may want to edit the configuration file like `sche
 ### Reloading Solr Core
 
 Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site.
+Enable the module search_api_solr_admin and then execute the Drush command to reload the Solr server. 
 
 #### Using Drush
 
 ```shell{promptUser:user}
-drush search-api-pantheon:reload
+ drush en search_api_solr_admin
+ drush solr-reload [SOLR-SERVER-ID]
 ```
 
 #### Using the Drupal Admin UI
