@@ -11,7 +11,7 @@ Following a successful Alpha phase, the next-generation Global CDN (GCDN) is now
 - **Automated bot detection and scoring** — Incoming traffic is automatically evaluated and scored, with managed challenges issued to suspicious requests.
 - **Verified bot identification** — Legitimate bots (such as search engine crawlers) are recognized and allowed through while unverified bots are challenged.
 
-## How to get started
+## Action Required
 
 Eligible sites will see a banner at the site level in the Pantheon dashboard. To participate in the Beta:
 
@@ -26,3 +26,7 @@ The following configurations are **not** eligible for the GCDN Beta at this time
 - Sites using Advanced Global CDN (AGCDN), WAF, or Security Starter packages
 - Sites with Multi Zone Failover enabled
 - Sites using Custom Certificates
+ 
+## More information
+
+To learn more about the new GCDN Beta with Bot Protection, see our [beta documentation page](/guides/global-cdn/global-cdn-beta) on our docs site.
