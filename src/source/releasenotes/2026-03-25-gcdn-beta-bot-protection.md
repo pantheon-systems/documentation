@@ -19,8 +19,6 @@ Eligible sites will see a banner at the site level in the Pantheon dashboard. To
 2. Click the banner and follow the guided steps.
 3. Update your DNS records to point to the new GCDN infrastructure.
 
-For detailed instructions, see the [GCDN Beta with Bot Protection guide](/guides/global-cdn/global-cdn-beta).
-
 ## Eligibility
 
 The following configurations are **not** eligible for the GCDN Beta at this time:
