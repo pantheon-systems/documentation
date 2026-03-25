@@ -85,6 +85,8 @@ Eligible sites will see a GCDN Beta banner on the site dashboard in Pantheon.
 1. Click the banner and follow the guided activation steps.
 1. Update your DNS records to point to the new GCDN infrastructure (instructions will be provided in the dashboard).
 
+![gcdn beta banner in pantheon dashboard](../../../images/guides/gcdn-beta-banner.png)
+
 ### Domains and DNS
 
 After activating the GCDN Beta through the dashboard, you will need to update your DNS records to point to the new infrastructure.
