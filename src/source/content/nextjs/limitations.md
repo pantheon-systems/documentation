@@ -10,8 +10,6 @@ integration: [--]
 permalink: docs/nextjs/considerations
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 This page highlights differences between how Pantheon Next.js and how it run WordPress or Drupal, along with other considerations.
 
 <Alert title="Input wanted" type="code" >

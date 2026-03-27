@@ -11,8 +11,6 @@ permalink: docs/nextjs/environment-variables
 
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 Many Next.js sites rely on environment variables to provide API keys, and other configuration values critical to the operation of the site.
 
 For instance, a Next.js site that connects reads data out of a content management system might rely on a secret on an environment variable to set the URL where the CMS lives.

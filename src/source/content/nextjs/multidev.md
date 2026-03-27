@@ -11,7 +11,6 @@ permalink: docs/nextjs/multidev
 
 ---
 
-<Partial file="nextjs-pre-ga.md" />
 
 To support teams who are developing multiple features and bug fixes simultaneously, Pantheon creates environments per Git branch.
 
