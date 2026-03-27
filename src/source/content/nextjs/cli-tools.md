@@ -11,6 +11,8 @@ permalink: docs/nextjs/cli-tools
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 In addition to Pantheon's primary command line tool, [Terminus](https://docs.pantheon.io/terminus), there are a few plugins and other command line tools that are useful when working with Next.js sites on Pantheon.
 
 ## Terminus Plugins

@@ -10,6 +10,8 @@ integration: [--]
 permalink: docs/nextjs
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 Next.js is the leading React framework for building web applications and sites.
 It stands out for its use of cutting edge development techniques and strong commitment to performance for the end users of the web.
 

@@ -10,6 +10,8 @@ integration: [--]
 permalink: docs/nextjs/transfer-site
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 This guide walks through transferring a Next.js site from one Pantheon workspace to another. When a site is transferred, the VCS connection (GitHub App installation) must also be linked to the destination workspace.
 
 <Alert title="Note" type="info">

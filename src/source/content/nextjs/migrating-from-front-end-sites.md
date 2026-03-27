@@ -11,6 +11,8 @@ permalink: docs/nextjs/migrating-from-front-end-sites
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 This guide walks through moving a Next.js site away from Pantheon's earlier [Front-End Sites offering](/guides/decoupled/overview).
 
 ## Requirements

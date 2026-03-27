@@ -11,6 +11,8 @@ permalink: docs/nextjs/test-and-live-env
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 By default, all sites on Pantheon have at least three environments: Dev, Test, and Live. Additionally, Multidev workflows correspond to separate branches or pull requests.
 These environments generate unique subdomains in the pattern of `<environment>-<site_machine_name>.pantheonsite.io`.
 

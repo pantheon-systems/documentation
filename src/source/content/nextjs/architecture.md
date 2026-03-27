@@ -11,6 +11,9 @@ permalink: docs/nextjs/architecture
 
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
+
 Pantheon hosts Next.js in containers running Node.js behind a global CDN. Those containers can read and write static assets to a persistance cache that are shared across all containers in an environment for a given site.
 
 Both the containers and the cache are populated by the result of a build process which prepares Next.js by running `npm clean-install` and `npm run build` on a codebase.

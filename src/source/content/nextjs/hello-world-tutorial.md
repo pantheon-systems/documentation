@@ -10,6 +10,8 @@ integration: [--]
 permalink: docs/nextjs/hello-world-tutorial
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 ## Learning Objectives
 
 This tutorial will walk you through:

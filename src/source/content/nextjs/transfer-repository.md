@@ -10,6 +10,8 @@ integration: [--]
 permalink: docs/nextjs/transfer-repository
 ---
 
+<Partial file="nextjs-pre-ga.md" />
+
 This guide walks through moving a Next.js site's GitHub repository from one GitHub organization to another while maintaining the Pantheon build integration.
 
 ## Requirements
