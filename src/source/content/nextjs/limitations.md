@@ -1,6 +1,6 @@
 ---
-title: "Comparison to CMS Hosting and other considerations"
-description: Learn about the differences between Pantheon's support for Next.js compared to how it runs WordPress and Drupal.
+title: "Limitations and considerations for Next.js Beta"
+description: Learn about current limitations of Next.js Beta functionality on Pantheon, and how to weigh in to inform feature development.
 reviewed: "2025-11-17"
 contenttype: [doc]
 innav: [true]
@@ -12,13 +12,13 @@ permalink: docs/nextjs/considerations
 
 <Partial file="nextjs-pre-ga.md" />
 
-This page highlights differences between how Pantheon Next.js and how it run WordPress or Drupal, along with other considerations.
+While in the Beta phase, some aspects of Next.js on Pantheon are still under active development. This page tracks known limitations worthy of consideration for early adopters.
 
 <Alert title="Input wanted" type="code" >
 
 We want your input! Help inform when, how, and if we build any given feature.
 
-See instructions for submitting your input below, provided in context of the given topic. Otherwise, [open a new issue](https://github.com/pantheon-systems/documentation/issues/new?title=Known%20issues%20and%20considerations%20for%20Next.js%20&body=Re%3A%20%5BKnown%20issues%20and%20considerations%20for%20Next.js%5D(https%3A%2F%2Fdocs.pantheon.io%2Fnextjs/considerations)%0A%0APriority%3A%20Low%2FMedium%2FHigh%20(choose%20one%2C%20remove%20the%20other%20options)%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution&labels=Topic%3A%20Next.js) for discussions not covered below.
+See instructions for submitting your input below, provided in context of the given topic. Otherwise, [open a new issue](https://github.com/pantheon-systems/documentation/issues/new?title=Known%20issues%20and%20considerations%20for%20Next.js%20Beta%20Feedback&body=Re%3A%20%5BKnown%20issues%20and%20considerations%20for%20Next.js%20Beta%5D(https%3A%2F%2Fdocs.pantheon.io%2Fnextjs/considerations)%0A%0APriority%3A%20Low%2FMedium%2FHigh%20(choose%20one%2C%20remove%20the%20other%20options)%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution&labels=Topic%3A%20Next.js) for discussions not covered below.
 
 </Alert>
 
@@ -28,6 +28,7 @@ See instructions for submitting your input below, provided in context of the giv
 Certain dashboard functionality is not currently supported for Next.js sites:
 * Status reports
 * Errors <Popover title="Note" content="Instead, refer to the Build tab on the given environment - checking build logs for errors related to Next.js deployments." />
+* Domains & HTTPS, Upgrading site plan <Popover title="Note" content="Launch is not currently self-serve, for details see <a href='/nextjs/connecting-custom-domain-name'>Connecting a custom domain to Next.js on Pantheon</a>." />
 
 ### Core Terminus commands
 
@@ -44,12 +45,17 @@ If you encounter a command that does not work as you expect for Next.js, or have
 Pantheon supplies [automatic integration with New Relic](/guides/new-relic) for WordPress and Drupal for all sites except those on the Basic plan. We do not yet have any such integration for Next.js. If you have input on how monitoring and telemetry should work, [please join this discussion](https://github.com/pantheon-systems/documentation/issues/9768).
 
 ### Redis
-All WordPress and Drupal sites (except those on the Basic plan) can access their own Redis cache. For Next.js [we provide a cache handler](https://github.com/pantheon-systems/nextjs-cache-handler) to coordinate a shared persistent cache between containers and our CDN in front of the containers.
+All WordPress and Drupal sites (except those on the Basic plan) can access their own Redis cache. While some teams do choose to use Redis as a cache handler with Next.js, we want more [input and testing of a baseline cache handler](https://github.com/pantheon-systems/documentation/issues/9727) first before providing multiple cache handler options.
 
+See also [this related caching section](#package-for-shared-persistent-cache) below.
 
 ### Autopilot
 
 Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's GitHub Application (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
+
+### Custom Upstreams
+
+We do not yet support the creation of [Custom Upstreams](/guides/custom-upstream) for Next.js sites. If your team would benefit from something like Custom Upstreams for Next.js, please tell us more [when you fill out the form to request access to the Beta program](https://pantheon.io/nextjs-beta).
 
 ### Advanced site configurations
 
@@ -103,11 +109,11 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let your Customer Success Manager know.
+The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 
-Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, [please submit an idea via our roadmap](https://roadmap.pantheon.io/tabs/73-under-consideration).
+Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
 
 ### **Yarn**
 
@@ -117,7 +123,7 @@ Pantheon infrastructure supports [Yarn](https://yarnpkg.com/) but as of now, tha
 
 Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
 
-Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams using Pantheon we are focusing on the most used. If you think we should add another framework [please submit an idea through our roadmap](https://roadmap.pantheon.io/tabs/73-under-consideration).
+Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams in our Beta period, we are focusing our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please request access to our Beta program](https://pantheon.io/nextjs-beta) and tell us more about your projects.
 
 ### Webhooks and build triggers
 

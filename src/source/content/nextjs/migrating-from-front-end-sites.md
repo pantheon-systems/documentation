@@ -17,6 +17,7 @@ This guide walks through moving a Next.js site away from Pantheon's earlier [Fro
 
 ## Requirements
 
+* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * Administrative access to the GitHub repo used for your Next.js site.
 * Install the following CLI applications:
   - [Terminus](/terminus/install)

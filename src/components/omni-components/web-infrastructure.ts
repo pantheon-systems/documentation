@@ -188,6 +188,10 @@ const webInfrastructure = () => {
             "How to set environment variables",
           ),
           simpleLink(
+            "/nextjs/connecting-custom-domain-name",
+            "How to connect a custom domain name",
+          ),
+          simpleLink(
             "/nextjs/transfer-repository",
             "How to transfer a repository",
           ),
