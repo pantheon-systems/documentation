@@ -1,0 +1,14 @@
+---
+title: "PHP 8.5 now available on the platform"
+published_date: "2026-03-27"
+categories: [infrastructure, new-feature]
+---
+PHP 8.5 is now available on the Pantheon platform. You can select PHP 8.5 for your site via your `pantheon.yml` file or the Pantheon Dashboard.
+
+Key changes in PHP 8.5:
+
+- **OPcache is now built into PHP core** and no longer requires a separate extension package.
+- **Pipe operator (`|>`)** for improved function chaining.
+- **`curl_close()` and `imagedestroy()` are deprecated** but remain functional. These will emit deprecation notices but do not affect site behavior.
+
+For more information on supported PHP versions and how to upgrade, refer to [PHP on Pantheon](/guides/php).
