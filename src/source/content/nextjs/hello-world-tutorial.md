@@ -12,17 +12,16 @@ permalink: docs/nextjs/hello-world-tutorial
 
 <Partial file="nextjs-pre-ga.md" />
 
-## Learning Objectives 
+## Learning Objectives
 
-This tutorial will walk you through: 
+This tutorial will walk you through:
 
 * Creating a Next.js site via the Pantheon Workspace Dashboard, with a corresponding GitHub repository.
 * Making a minor code change using the pull request workflow in GitHub and creating a new Multidev environment in the Pantheon Site Dashboard.
 * Accepting that change by merging the pull request and subsequently deploying to the Dev environment.
 
-## Requirements 
+## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * Install [Git](https://git-scm.com/)
 * (Optional) Install the following applications:
@@ -37,7 +36,7 @@ This tutorial will walk you through:
 
   ![Create new site next.js from the Pantheon Workspace](../../images/nextjs/create-new-site.png)
 
-1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application: 
+1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application:
 
   ![Authorize access for Pantheon's GitHub Application across all repositories](../../images/nextjs/auth-all-repos.png)
 
@@ -47,7 +46,7 @@ This tutorial will walk you through:
 
   </Alert>
 
-1. Select the newly authorized account, then click **Continue**: 
+1. Select the newly authorized account, then click **Continue**:
 
   ![Select authorized account](../../images/nextjs/connect-git-provider-again.png)
 
@@ -55,7 +54,7 @@ This tutorial will walk you through:
 
   ![Configure site](../../images/nextjs/configure-site.png)
 
-1. Click **Begin Deployment**. Do not close the tab or navigate away from this page until the workflow is complete. 
+1. Click **Begin Deployment**. Do not close the tab or navigate away from this page until the workflow is complete.
 
 ### Site creation results
 
