@@ -98,4 +98,4 @@ In practice, what makes a Live environment different from Dev or Multidev enviro
 The custom domain name is what your end users will use to access your site.
 Platform domains, those ending in `pantheonsite.io`, are typically only used by members of the web team for testing and development purposes.
 
-To connect a custom domain name to your Live environment, follow the instructions in [Connecting a Custom Domain Name](/nextjs/connecting-custom-domain-name).
+To connect a custom domain name to your Live environment, follow the instructions [here](/guides/domains/custom-domains).
