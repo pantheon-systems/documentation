@@ -1,5 +1,5 @@
 ---
-title: "Comparison to CMS Hosting and other considerations"
+title: "Comparison to CMS Hosting and other Considerations"
 description: Learn about the differences between how Pantheon supports Next.js compared to how it runs WordPress and Drupal.
 reviewed: "2026-03-28"
 contenttype: [doc]
@@ -7,7 +7,7 @@ innav: [true]
 audience: [development]
 product: [--]
 integration: [--]
-permalink: docs/nextjs/considerations
+permalink: docs/nextjs/comparison-to-cms-hosting
 ---
 
 This page highlights differences between how Pantheon Next.js and how it run WordPress or Drupal, along with other considerations.

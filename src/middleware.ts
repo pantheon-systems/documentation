@@ -197,7 +197,7 @@ const RedirectMap: Record<string, string> = {
   "/guides/solr-drupal/solr-drupal-7": "/guides/pantheon-search/solr-drupal/solr-drupal-7",
   "/guides/wordpress-developer/wordpress-solr": "/guides/pantheon-search/solr/wordpress-solr",
   "/github-application": "/guides/github-application",
-
+  "/nextjs/considerations": "/nextjs/comparison-to-cms-hosting",
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.
