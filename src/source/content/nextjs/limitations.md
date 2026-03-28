@@ -1,7 +1,7 @@
 ---
 title: "Comparison to CMS Hosting and other considerations"
-description: Learn about the differences between Pantheon's support for Next.js compared to how it runs WordPress and Drupal.
-reviewed: "2025-11-17"
+description: Learn about the differences between how Pantheon supports Next.js compared to how it runs WordPress and Drupal.
+reviewed: "2026-03-28"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -21,11 +21,6 @@ See instructions for submitting your input below, provided in context of the giv
 </Alert>
 
 ## Parity with CMS infrastructure
-
-### Site dashboard
-Certain dashboard functionality is not currently supported for Next.js sites:
-* Status reports
-* Errors <Popover title="Note" content="Instead, refer to the Build tab on the given environment - checking build logs for errors related to Next.js deployments." />
 
 ### Core Terminus commands
 
