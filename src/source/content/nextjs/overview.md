@@ -15,7 +15,7 @@ It stands out for its use of cutting edge development techniques and strong comm
 
 ## Access & Availability
 
-Support for Next.js is available to customers with Gold, Platinum or Diamond Workspaces because those workspaces have access to [Multidev](/guides/multidev). Multidev environments create a unique site per Git branch which we consider essential for teams to be productive with Next.js.
+Support for Next.js is available to customers with Gold, Platinum or Diamond Workspaces because those workspaces have access to [Multidev](/guides/multidev). Multidev environments create a unique site per Git branch which we consider essential for teams to be productive with Next.js on Pantheon.
 
 
 ### Compatibility & Requirements
