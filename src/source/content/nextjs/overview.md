@@ -16,11 +16,9 @@ Next.js is the leading React framework for building web applications and sites.
 It stands out for its use of cutting edge development techniques and strong commitment to performance for the end users of the web.
 
 ## Access & Availability
-Access to Pantheon's Next.js support is currently available through a **Private Beta** program.
 
-To request an invite, [submit this form](https://pantheon.io/nextjs-beta).
+Support for Next.js is available to customers with Gold, Platinum or Diamond Workspaces because those workspaces have access to [Multidev](/guides/multidev). Multidev environments create a unique site per Git branch which we consider essential for teams to be productive with Next.js.
 
-Pantheon's product engineering team is rolling out new functionality often while this product is in Private Beta. Certain features and functionality are limited, for details see [this section below](#considerations).
 
 ### Compatibility & Requirements
 * **Node versions:**
@@ -52,7 +50,3 @@ Pantheon makes teams using Next.js more effective by:
 We do all of this on the same platform that powers thousands of Drupal and WordPress sites.
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
-
-## Considerations
-See the following page for current limitations of Next.js Beta functionality on Pantheon:
-* [Limitations and considerations for Next.js Beta](/nextjs/considerations)
