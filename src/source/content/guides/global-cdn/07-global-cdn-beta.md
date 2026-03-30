@@ -73,6 +73,12 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 
 ## Setup
 
+<Alert title="Important" type="danger">
+
+For the best experience, be prepared to update your DNS records as soon as possible after starting the migration. Delaying DNS migration can result in inconsistent behavior, as your site will remain on the old CDN infrastructure until DNS is pointed to the new GCDN.
+
+</Alert>
+
 <TabList>
 
 <Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
