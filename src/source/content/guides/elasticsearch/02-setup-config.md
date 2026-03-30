@@ -45,6 +45,8 @@ You can activate Elasticsearch through the Pantheon Dashboard or via Terminus.
 
 Elasticsearch will be provisioned for all environments on your site. Each environment receives its own dedicated endpoint.
 
+![enable elasticsearch](../../../images/guides/enable-elasticsearch.png)
+
 </Tab>
 
 <Tab title="Terminus" id="terminus">
