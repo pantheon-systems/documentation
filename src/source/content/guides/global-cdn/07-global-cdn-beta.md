@@ -125,45 +125,45 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 ### Install the plugin
 
-A Terminus plugin is available to upgrade your site to GCDN with bot protection.
-
 ```bash{promptUser: user}
 terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
 ```
 
-### Upgrade a site
+If you have existing custom domains on your site, follow all of the steps below to upgrade and migrate your DNS.
+
+### 1. Upgrade your site to GCDN
 
 ```bash{promptUser: user}
 terminus gcdn:upgrade <site>
 ```
 
-This activates the GCDN upgrade for the specified site, enabling the migration to the new GCDN infrastructure.
+This migrates the site from Fastly to GCDN across all environments.
 
-### Verify domains and update DNS
+### 2. Get your DNS records and TXT verification challenges
 
-After running `gcdn:upgrade`, you need to verify your domains and update DNS records:
+```bash{promptUser: user}
+terminus gcdn:dns <site>.live
+```
 
-1. Verify domain ownership:
+This will show the TXT records needed for domain ownership and certificate validation.
 
-   ```bash{promptUser: user}
-   terminus domain:verify <site>.live example.com
-   ```
+### 3. Add TXT records to your DNS provider
 
-   This will show TXT records. Add them to your DNS provider.
+Add the TXT records from step 2 to your DNS provider.
 
-   ```bash{promptUser: user}
-   terminus domain:verify <site>.live www.example.com
-   ```
+### 4. Verify your domains
 
-1. Review the recommended DNS settings:
+Wait a few minutes for DNS propagation, then verify each domain. Verification typically takes a few minutes to complete:
 
-   ```bash{promptUser: user}
-   terminus domain:dns <site>.live
-   ```
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com
+terminus gcdn:verify <site>.live www.example.com
+```
 
-1. Update your DNS records with the values from step 2 at your DNS provider.
+### 5. Update your DNS records
 
-- You will receive new CNAME targets pointing to Pantheon's new GCDN infrastructure.
+Once verification passes, add the CNAME or A/AAAA records shown in the `gcdn:dns` output to point your domains to the new GCDN edge.
+
 - Set your TTL as low as possible before making changes to minimize propagation delay.
 - TLS certificates are automatically provisioned once domain verification completes.
 
@@ -177,12 +177,12 @@ DNS changes may take time to propagate depending on your current TTL settings. D
 
 ```bash{promptUser: user}
 terminus gcdn:upgrade my-site
-terminus domain:verify my-site.live example.com
-terminus domain:verify my-site.live www.example.com
-terminus domain:dns my-site.live
+terminus gcdn:dns my-site.live
+# Add TXT records to your DNS provider, wait a few minutes, then verify:
+terminus gcdn:verify my-site.live example.com
+terminus gcdn:verify my-site.live www.example.com
+# Once verified, add the CNAME or A/AAAA records from gcdn:dns output
 ```
-
-Add the TXT and DNS records to your DNS provider with the output from the commands above.
 
 </Tab>
 
