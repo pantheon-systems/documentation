@@ -31,14 +31,11 @@ Before you begin, confirm the following:
 
 ### Step 1: Activate Elasticsearch on Pantheon
 
-<Alert type="info" title="Note">
-
-During the Beta phase, self-service activation of the Elasticsearch add-on is available. Simply toggle the **Elasticsearch (Beta)** add-on in your Site Settings. Once activated, you can install and activate the ElasticPress plugin on your site to connect to the Elasticsearch service.
-
-</Alert>
-
-<!-- This information is not true yet but will be in the future>
 You can activate Elasticsearch through the Pantheon Dashboard or via Terminus.
+
+<TabList>
+
+<Tab title="Dashboard" id="dashboard" active={true}>
 
 **Via the Dashboard:**
 
@@ -48,12 +45,19 @@ You can activate Elasticsearch through the Pantheon Dashboard or via Terminus.
 
 Elasticsearch will be provisioned for all environments on your site. Each environment receives its own dedicated endpoint.
 
+</Tab>
+
+<Tab title="Terminus" id="terminus">
+
 **Via Terminus:**
 
 ```bash
 terminus site:addon:enable <site>.<env> elasticsearch
 ```
-<-->
+
+</Tab>
+
+</TabList>
 
 ### Step 2: Install the ElasticPress Plugin
 
