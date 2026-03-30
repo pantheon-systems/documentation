@@ -230,6 +230,16 @@ Content Converter (Markdown for Agents) is a feature enabled on all GCDN Beta zo
 
 Your bot or automated service may be receiving a managed challenge from bot protection. Check whether the service's user agent is being challenged by reviewing its error logs (look for 403 responses or HTML challenge pages). Contact Pantheon support to request a bot exclusion for your user agent.
 
+### I am using Cloudflare in front of my site. How does this work with the new GCDN?
+
+The new Pantheon GCDN supports Orange-to-Orange (O2O) configurations, allowing you to keep your existing CDN or WAF rules in place. Your site's DNS entries must use CNAME records pointing to the Pantheon GCDN zone entries (e.g., `fe1.cfp-us-central1-ch-1.edge.pantheon.io`).
+
+O2O is based on CNAME records. It does not apply when A/AAAA records are used for the DNS entry. Using A/AAAA records is not compatible with O2O and may result in site downtime or inaccessibility.
+
+For more information on how O2O works, refer to the [SaaS customer documentation](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/).
+
+We are actively testing this configuration during the Beta and welcome customer feedback in the `#beta-gcdn` channel in Pantheon Community Slack.
+
 ### How do I report issues or give feedback?
 
 Join `#beta-gcdn` in the Pantheon Community Slack to share feedback, report issues, or ask questions. You can also contact Pantheon support through the normal channels.
