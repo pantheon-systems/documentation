@@ -131,4 +131,4 @@ Once you are happy with the change, you can merge the pull request and the GitHu
 - [Multidev](/guides/multidev) - Learn how to work with Multidev environments
 - [Terminus Commands](/terminus/commands) - Documentation for Terminus commands
 - [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
-- [Limitations and considerations for Next.js Beta](/nextjs/considerations)
+- [Limitations and considerations for Next.js](/nextjs/considerations)

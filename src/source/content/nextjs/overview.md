@@ -48,3 +48,8 @@ Pantheon makes teams using Next.js more effective by:
 We do all of this on the same platform that powers thousands of Drupal and WordPress sites.
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
+
+## Considerations
+
+See the following page for current limitations of Next.js functionality on Pantheon:
+* [Limitations and considerations for Next.js](/nextjs/considerations)

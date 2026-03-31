@@ -11,7 +11,6 @@ permalink: docs/nextjs/multidev
 
 ---
 
-
 To support teams who are developing multiple features and bug fixes simultaneously, Pantheon creates environments per Git branch.
 
 These environments are created automatically per pull request by Pantheon's GitHub Application.

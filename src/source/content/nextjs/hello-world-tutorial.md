@@ -10,9 +10,9 @@ integration: [--]
 permalink: docs/nextjs/hello-world-tutorial
 ---
 
-## Learning Objectives
+## Learning Objectives 
 
-This tutorial will walk you through:
+This tutorial will walk you through: 
 
 * Creating a Next.js site via the Pantheon Workspace Dashboard, with a corresponding GitHub repository.
 * Making a minor code change using the pull request workflow in GitHub and creating a new Multidev environment in the Pantheon Site Dashboard.

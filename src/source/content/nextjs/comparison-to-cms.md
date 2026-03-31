@@ -96,11 +96,11 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let your Customer Success Manager know.
+The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 
-Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, [please submit an idea via our roadmap](https://roadmap.pantheon.io/tabs/73-under-consideration).
+Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
 ### **Yarn**
 
@@ -110,7 +110,7 @@ Pantheon infrastructure supports [Yarn](https://yarnpkg.com/) but as of now, tha
 
 Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
 
-Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams using Pantheon we are focusing on the most used. If you think we should add another framework [please submit an idea through our roadmap](https://roadmap.pantheon.io/tabs/73-under-consideration).
+Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams in our Beta period, we are focusing our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please let us know through our Roadmap site](https://roadmap.pantheon.io/) and tell us more about your projects.
 
 ### Webhooks and build triggers
 
