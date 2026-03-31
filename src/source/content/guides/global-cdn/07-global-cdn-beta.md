@@ -79,12 +79,6 @@ For the best experience, be prepared to update your DNS records as soon as possi
 
 </Alert>
 
-<Alert title="Note" type="info">
-
-During the Beta, DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
-
-</Alert>
-
 <TabList>
 
 <Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
@@ -126,6 +120,12 @@ DNS changes may take time to propagate depending on your current TTL settings. D
 <Alert title="Note" type="info">
 
 Before proceeding with Terminus commands, you must first install the GCDN Terminus plugin.
+
+</Alert>
+
+<Alert title="Note" type="info">
+
+During the Beta, DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
 
 </Alert>
 
