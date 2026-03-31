@@ -19,6 +19,8 @@ Eligible sites will see a banner at the site level in the Pantheon dashboard. To
 2. Click the banner and follow the guided steps.
 3. Update your DNS records to point to the new GCDN infrastructure.
 
+During the Beta, DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
+
 ## Eligibility
 
 The following configurations are **not** eligible for the GCDN Beta at this time:
