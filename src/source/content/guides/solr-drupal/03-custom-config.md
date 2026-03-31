@@ -5,7 +5,7 @@ description: Steps for how to apply customized Solr configuration on Pantheon.
 contenttype: [guide]
 innav: [false]
 categories: [search]
-cms: [drupal9]
+cms: [drupal11]
 audience: [development]
 product: [search]
 integration: [--]
