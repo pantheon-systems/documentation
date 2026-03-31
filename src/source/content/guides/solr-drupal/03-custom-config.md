@@ -10,7 +10,7 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-reviewed: "2026-03-19"
+reviewed: "2026-03-31"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/custom-config
 editpath: solr-drupal/03-custom-config.md
@@ -41,23 +41,11 @@ There are instances where you may want to edit the configuration file like `sche
 
 1. Commit the changes, it is recommended to test this in a multidev environment.
 
-1. Post the custom schema to the Solr server.
-
-    <Alert title="Version 8.4.x" type="info">
-
-    Use the Drush command with the path to your custom config set:
+1. Post the custom schema to the Solr server using the Drush command with the path to your custom config set:
 
     ```shell{promptUser:user}
-    drush search-api-pantheon:postSchema /code/solr/config
+    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema /code/solr/config
     ```
-
-    </Alert>
-
-    For versions prior to 8.4.x, you can post the schema via the Drupal admin UI (`search_api_pantheon_admin` module) or the post schema Drush command:
-
-    1. Login to Drupal Admin and navigate to `/admin/config/search/search-api` then select your server.
-    1. Click into the **Pantheon Search Admin** tab towards the top right of the page, then click the **+ Post Solr Schema** button.
-    1. Specify the path of your custom configuration (e.g., `/code/solr/config`), then click the **Post Schema** button.
 
 
 1. Pantheon's platform checks for updated Solr configurations every 5 minutes. Wait 5 minutes to ensure your new custom configuration has been detected and applied by the platform before proceeding to the next step.
@@ -67,13 +55,13 @@ There are instances where you may want to edit the configuration file like `sche
 ### Reloading Solr Core
 
 Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site.
-Enable the module search_api_solr_admin and then execute the Drush command to reload the Solr server. 
+Enable the module `search_api_solr_admin` and then execute the Drush command to reload the Solr server.
 
 #### Using Drush
 
 ```shell{promptUser:user}
- drush en search_api_solr_admin
- drush solr-reload [SOLR-SERVER-ID]
+terminus drush $SITE.$ENV -- en search_api_solr_admin
+terminus drush $SITE.$ENV -- solr-reload [SOLR-SERVER-ID]
 ```
 
 #### Using the Drupal Admin UI

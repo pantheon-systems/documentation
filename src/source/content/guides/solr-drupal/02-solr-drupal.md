@@ -10,8 +10,8 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [carolynshannon, joan-ing, jazzsequence]
-reviewed: "2026-03-19"
+contributors: [carolynshannon, joan-ing, jazzsequence, rkunjappan]
+reviewed: "2026-03-31"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -191,25 +191,13 @@ Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
 
-<Alert title="Version 8.4.x" type="info">
-
-The `search_api_pantheon_admin` module is obsolete and no longer functional in 8.4.x. Use the Drush command to post the schema instead:
+Post the schema to the Solr server using the Drush command:
 
 ```shell{promptUser:user}
-drush search-api-pantheon:postSchema [path]
+terminus drush $SITE.$ENV -- search-api-pantheon:postSchema [path]
 ```
 
 The `[path]` argument is optional. Provide it only if you want to use a custom config set directory. If omitted, the default config set matching the installed Search API Solr version is used.
-
-</Alert>
-
-For versions prior to 8.4.x, you can post the schema via the Drupal admin UI (`search_api_pantheon_admin` module) or by post schema drush command:
-
-1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
-1. Select the **Pantheon Search Admin** tab to save and post the schema information.
-1. Enable the **Execute Pantheon Search admin task** permission for users who need access to the **Pantheon Search Admin** tab.
-1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server.
-   - The server responds with a `200 - OK` status for each schema file posted.
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal
 
