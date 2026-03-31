@@ -1,0 +1,80 @@
+name: Update Terminus Commands
+
+on:
+  schedule:
+    # Run every 4 hours
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v4
+
+      - name: Get current Terminus version from commands.json
+        id: current
+        run: |
+          version=$(jq -r '.application.version' src/source/data/commands.json)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Get latest Terminus release
+        id: latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag=$(gh api repos/pantheon-systems/terminus/releases/latest --jq '.tag_name')
+          echo "version=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: Compare versions
+        id: compare
+        run: |
+          if [ "${{ steps.current.outputs.version }}" = "${{ steps.latest.outputs.version }}" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Terminus commands.json is already up to date (${{ steps.current.outputs.version }})"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "New Terminus release detected: ${{ steps.current.outputs.version }} -> ${{ steps.latest.outputs.version }}"
+          fi
+
+      - name: Set up PHP
+        if: steps.compare.outputs.changed == 'true'
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Download and install Terminus
+        if: steps.compare.outputs.changed == 'true'
+        run: |
+          mkdir -p /tmp/terminus
+          curl -sL "https://github.com/pantheon-systems/terminus/releases/download/${{ steps.latest.outputs.version }}/terminus.phar" -o /tmp/terminus/terminus
+          chmod +x /tmp/terminus/terminus
+
+      - name: Generate updated commands.json
+        if: steps.compare.outputs.changed == 'true'
+        run: |
+          /tmp/terminus/terminus list --format=json | python3 -c "
+          import sys, json
+          data = json.load(sys.stdin)
+          with open('src/source/data/commands.json', 'w') as f:
+              json.dump(data, f, indent=4)
+              f.write('\n')
+          "
+
+      - name: Create pull request
+        if: steps.compare.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Update Terminus commands.json to ${{ steps.latest.outputs.version }}"
+          title: "Update Terminus commands.json to ${{ steps.latest.outputs.version }}"
+          body: |
+            ## Summary
+            - Auto-generated update of `src/source/data/commands.json` from Terminus ${{ steps.latest.outputs.version }}
+            - Previous version: ${{ steps.current.outputs.version }}
+
+            ## Test plan
+            - [ ] Verify `/terminus/commands` page loads and lists all commands
+            - [ ] Spot-check individual command pages for correct rendering
+          branch: auto/update-terminus-commands
+          delete-branch: true
