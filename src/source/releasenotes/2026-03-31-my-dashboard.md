@@ -1,7 +1,7 @@
 ---
 title: "Personal Workspace renamed to My Dashboard and related site creation changes"
 published_date: "2026-03-31"
-categories: [user-interface, tools-api]
+categories: [user-interface, tools-apis]
 description: "We have renamed Personal Workspaces to My Dashboard and have removed the ability to create new sites directly within it. Going forward, all new sites must be created within a Professional Workspace."
 ---
 We have renamed Personal Workspaces to My Dashboard and have removed the ability to create new sites directly within it. Going forward, all new sites must be created within a Professional Workspace.
