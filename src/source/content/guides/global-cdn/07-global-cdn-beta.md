@@ -123,6 +123,12 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 </Alert>
 
+<Alert title="Note" type="info">
+
+During the Beta, DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
+
+</Alert>
+
 ### Install the plugin
 
 ```bash{promptUser: user}
