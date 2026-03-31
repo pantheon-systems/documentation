@@ -80,8 +80,14 @@ You must enable Pantheon Search at the site-level and add the Apache Solr Index 
 Enter the following command. Replace `$SITE` with the specified name of the site:
 
 ```shell{promptUser:user}
-terminus solr:enable $SITE
+terminus search:enable $SITE
 ```
+
+<Alert title="Note" type="info">
+
+The `solr:enable` and `solr:disable` commands are deprecated as of [Terminus 4.1.6](https://github.com/pantheon-systems/terminus/releases/tag/4.1.6). Use `search:enable` and `search:disable` instead.
+
+</Alert>
 
 #### Using the Site Dashboard
 
