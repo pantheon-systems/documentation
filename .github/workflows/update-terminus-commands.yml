@@ -9,6 +9,9 @@ on:
 jobs:
   update-commands:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout docs repo
         uses: actions/checkout@v4
