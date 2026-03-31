@@ -1119,7 +1119,7 @@
     - title: "Accounts"
       subtitle: ""
       links:
-        - text: "Personal Workspace"
+        - text: "My Dashboard"
           url: "/guides/account-mgmt/account/workspace"
         - text: "Recover Account"
           url: "/guides/account-mgmt/account/recover"

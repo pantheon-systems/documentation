@@ -21,7 +21,7 @@ Pantheon offers an abundance of products and features to help you manage your si
 
 Use this table to determine where you can find each feature.
 
-| Feature          | Personal Workspace | Professional Workspace | Site Dashboard |
+| Feature          | My Dashboard       | Professional Workspace | Site Dashboard |
 | ---------------- | ------------------ | ---------------------- | -------------- |
 | Autopilot        | No                 | Yes                    | No             |
 | Billing          | No                 | Yes - for all sites in this Workspace                   | Yes - for this site only           |
