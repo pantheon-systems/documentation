@@ -41,10 +41,6 @@ See also [this related caching section](#package-for-shared-persistent-cache) be
 
 Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's GitHub Application (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
 
-### Custom Upstreams
-
-We do not yet support the creation of [Custom Upstreams](/guides/custom-upstream) for Next.js sites. If your team would benefit from something like Custom Upstreams for Next.js, please tell us more [when you fill out the form to request access to the Beta program](https://pantheon.io/nextjs-beta).
-
 ### Advanced site configurations
 
 * The [`pantheon.yml` configuration file](/pantheon-yml) is not currently supported on Next.js sites, and is ignored if present.
@@ -97,11 +93,11 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
+The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 
-Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [when you fill out the Beta request form](https://pantheon.io/nextjs-beta).
+Node.js is the most common run time for Next.js. Bun and Deno both have compelling performance and security advantages that may make them preferable for some teams. If you want Pantheon to offer Bun, Deno, or any other runtime for JavaScript/TypeScript, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
 ### **Yarn**
 
@@ -111,7 +107,7 @@ Pantheon infrastructure supports [Yarn](https://yarnpkg.com/) but as of now, tha
 
 Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
 
-Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams in our Beta period, we are focusing our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please request access to our Beta program](https://pantheon.io/nextjs-beta) and tell us more about your projects.
+Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams in our Beta period, we are focusing our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please let us know through our Roadmap site](https://roadmap.pantheon.io/) and tell us more about your projects.
 
 ### Webhooks and build triggers
 
