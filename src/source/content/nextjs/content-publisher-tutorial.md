@@ -10,8 +10,6 @@ integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 Pantheon's Content Publisher shines as a way to send content straight from Google Docs to a Next.js site hosted on Pantheon.
 This tutorial will walk you through the steps needed to make a simple site combining the two.
 
@@ -27,7 +25,6 @@ This tutorial will walk you through:
 
 ## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * A [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with [Administrator access](https://docs.content.pantheon.io/roles)
 * Install the following applications:

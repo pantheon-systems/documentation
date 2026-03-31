@@ -10,18 +10,6 @@ integration: [--]
 permalink: docs/nextjs/considerations
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
-While in the Beta phase, some aspects of Next.js on Pantheon are still under active development. This page tracks known limitations worthy of consideration for early adopters.
-
-<Alert title="Input wanted" type="code" >
-
-We want your input! Help inform when, how, and if we build any given feature.
-
-See instructions for submitting your input below, provided in context of the given topic. Otherwise, [open a new issue](https://github.com/pantheon-systems/documentation/issues/new?title=Known%20issues%20and%20considerations%20for%20Next.js%20Beta%20Feedback&body=Re%3A%20%5BKnown%20issues%20and%20considerations%20for%20Next.js%20Beta%5D(https%3A%2F%2Fdocs.pantheon.io%2Fnextjs/considerations)%0A%0APriority%3A%20Low%2FMedium%2FHigh%20(choose%20one%2C%20remove%20the%20other%20options)%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution&labels=Topic%3A%20Next.js) for discussions not covered below.
-
-</Alert>
-
 ## Parity with CMS infrastructure
 
 ### Site dashboard
