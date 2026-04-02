@@ -1,6 +1,6 @@
 ---
 title: Elasticsearch for WordPress now available in Beta
-published_date: "2026-03-25"
+published_date: "2026-04-07"
 categories: [new-feature, wordpress]
 ---
 
@@ -31,12 +31,12 @@ Elasticsearch can be enabled in two ways:
 * **From Terminus** — Use the `search` command:
 
   ```bash
-  terminus search:enable <site>.<env>
+  terminus search:enable <site>
   ```
 
 <Alert type="info" title="Note">
 
-In order to activate Elasticsearch in Terminus, it is required that you have [Terminus 4.1.6](https://docs.pantheon.io/release-notes/2026/03/terminus-4-1-6) installed.
+In order to activate Elasticsearch in Terminus, ensure you have the [latest version of Terminus](/terminus/install#installation-and-update-methods) installed.
 
 </Alert>
 
