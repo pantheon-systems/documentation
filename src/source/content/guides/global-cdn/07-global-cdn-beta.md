@@ -93,6 +93,10 @@ Eligible sites will see a GCDN Beta banner on the site dashboard in Pantheon.
 
 ![gcdn beta banner in pantheon dashboard](../../../images/guides/gcdn-beta-banner.png)
 
+### Platform Hostnames
+
+After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are automatically migrated to the new GCDN infrastructure. You do not need to take any action for these domains. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
+
 ### Domains and DNS
 
 After activating the GCDN Beta through the dashboard, you will need to update your DNS records to point to the new infrastructure.
@@ -143,7 +147,7 @@ If you have existing custom domains on your site, follow all of the steps below 
 terminus gcdn:upgrade <site>
 ```
 
-This migrates the site from Fastly to GCDN across all environments.
+This migrates the site from Fastly to GCDN across all environments. Your platform hostnames (`*.pantheonsite.io`) are automatically migrated as part of this step. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
 ### 2. Get your DNS records and TXT verification challenges
 
