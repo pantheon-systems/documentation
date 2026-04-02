@@ -77,6 +77,8 @@ If your Drupal site uses the [Search API Attachments](https://www.drupal.org/pro
 /opt/pantheon/tika/tika-config.xml
 ```
 
+![Search API Attachments Tika configuration](../images/search-api-attachments-tika-config.png)
+
 </Tab>
 <Tab title="PHP Runtime Generation 1" id="tab-2-id">
 
