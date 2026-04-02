@@ -69,51 +69,13 @@ Install the [ElasticPress](https://wordpress.org/plugins/elasticpress/) plugin f
 terminus wp <site>.<env> -- plugin install elasticpress --activate
 ```
 
-### Step 3: Configure ElasticPress Constants (Pre-GA Only)
-
-<Alert type="info" title="Note">
-
-During the Beta phase, you need to manually define three ElasticPress constants in your `wp-config.php` based on Pantheon-provided environment variables. At GA, the Pantheon MU Plugin will handle this configuration automatically.
-
-</Alert>
-
-Add the following to your site's `wp-config.php` file (or `config/application.php` for [WordPress (Composer Managed)](https://github.com/pantheon-systems/wordpress-composer-managed)). Be sure to check if the constants are already defined before setting them, in case the MU Plugin has already set them:
-
-<TabList>
-
-<Tab title="WordPress (standard)" id="wordpress" active={true}>
-
-```php:title=wp-config.php
-// ElasticPress Configuration (Beta)
-defined( 'EP_INDEX_PREFIX' ) || define( 'EP_INDEX_PREFIX', $_ENV['PANTHEON_ELASTICSEARCH_INDEX_PREFIX'] ?? '' );
-defined( 'EP_HOST' ) || define( 'EP_HOST', $_ENV['PANTHEON_ELASTICSEARCH_HOST'] ?? '' );
-defined( 'EP_CREDENTIALS' ) || define( 'EP_CREDENTIALS', $_ENV['PANTHEON_ELASTICSEARCH_CREDENTIALS'] ?? '' );
-```
-    
-</Tab>
-
-<Tab title="WordPress (Composer Managed)" id="wordpress-composer">
-
-```php:title=config/application.php
-// ElasticPress Configuration (Beta)
-defined( 'EP_INDEX_PREFIX' ) || Config::define( 'EP_INDEX_PREFIX', $_ENV['PANTHEON_ELASTICSEARCH_INDEX_PREFIX'] ?? '' );
-defined( 'EP_HOST' ) || Config::define( 'EP_HOST', $_ENV['PANTHEON_ELASTICSEARCH_HOST'] ?? '' );
-defined( 'EP_CREDENTIALS' ) || Config::define( 'EP_CREDENTIALS', $_ENV['PANTHEON_ELASTICSEARCH_CREDENTIALS'] ?? '' );
-```
-
-</Tab>
-
-</TabList>
-
-Refer to the [ElasticPress documentation on using EP constants](https://www.elasticpress.io/resources/articles/using-ep-constants-in-wp-config-php/) for additional configuration options.
-
-### Step 4: Activate ElasticPress in WordPress
+### Step 3: Activate ElasticPress in WordPress
 
 1. In your WordPress admin, navigate to **ElasticPress > Settings**.
 2. Verify that the host connection is established. If the constants are configured correctly, the ElasticPress.io Host URL, Subscription ID and Subscription Token fields should be pre-populated.
 3. Run your first **index sync** from the ElasticPress dashboard. This sends your WordPress content to Elasticsearch so it can be searched.
 
-### Step 5: Enable ElasticPress Features
+### Step 4: Enable ElasticPress Features
 
 ElasticPress offers several features you can enable based on your needs:
 
