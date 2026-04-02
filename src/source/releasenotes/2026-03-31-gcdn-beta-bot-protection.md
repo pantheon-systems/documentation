@@ -21,6 +21,10 @@ Eligible sites will see a banner at the site level in the Pantheon dashboard. To
 
 During the Beta, DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
 
+## Known limitations
+
+- **Traffic metrics** — The traffic metrics page in the Pantheon dashboard will not reflect GCDN Beta traffic during the initial Beta period. Traffic metrics for migrated sites will be restored in a future update.
+
 ## Eligibility
 
 The following configurations are **not** eligible for the GCDN Beta at this time:
