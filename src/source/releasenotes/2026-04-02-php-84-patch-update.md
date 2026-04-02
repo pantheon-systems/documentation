@@ -1,6 +1,6 @@
 ---
 title: "PHP 8.4 updated to its latest patch release"
-published_date: "2026-03-20"
+published_date: "2026-04-02"
 categories: [infrastructure]
 description: "PHP version 8.4.19 is now available on the platform. This update includes bug fixes and enhancements that improve performance and stability."
 ---
