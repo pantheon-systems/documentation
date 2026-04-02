@@ -196,11 +196,10 @@ terminus gcdn:verify my-site.live www.example.com
 
 ## Known Limitations
 
-<Alert title="Traffic Metrics Unavailable" type="warning">
+### Traffic Metrics Unavailable
 
 The traffic metrics page in the Pantheon dashboard will not reflect GCDN Beta traffic during the initial Beta period. Traffic data for migrated sites will be restored in a future update.
 
-</Alert>
 
 ## FAQ
 
