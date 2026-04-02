@@ -1,6 +1,6 @@
 ---
 title: "Global CDN Beta now available with built-in bot protection"
-published_date: "2026-03-31"
+published_date: "2026-04-02"
 categories: [new-feature, action-required]
 ---
 
