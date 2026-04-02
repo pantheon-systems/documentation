@@ -61,6 +61,12 @@ terminus site:addon:enable <site>.<env> elasticsearch
 
 </TabList>
 
+<Alert type="info" title="Note">
+
+During the Beta phase, activating Elasticsearch may take up to 12 minutes to complete.
+
+</Alert>
+
 ### Step 2: Install the ElasticPress Plugin
 
 Install the [ElasticPress](https://wordpress.org/plugins/elasticpress/) plugin from the WordPress.org plugin repository. You can install it from your WordPress admin dashboard or via WP-CLI:
