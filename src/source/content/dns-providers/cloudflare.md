@@ -86,6 +86,13 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
   </Accordion>
 
 1. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
+
+  <Alert title="GCDN Beta: Proxy Must Be Disabled" type="danger">
+
+  If you are migrating to the GCDN Beta and manage your DNS with a Cloudflare Free, Pro, or Business account, the proxy status **must** be set to **DNS Only** (gray cloud). When a domain is proxied through Cloudflare, Pantheon cannot verify domain ownership or provision a TLS certificate for your site. Domain verification will fail with a "Pending (Error)" status until the proxy is disabled.
+
+  </Alert>
+
 1. Click on **Save**.
 1. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/guides/redirect) for more information.
 
