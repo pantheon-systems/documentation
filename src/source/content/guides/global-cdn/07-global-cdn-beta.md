@@ -70,6 +70,7 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 | Custom Certificates | Special certificate management not yet supported |
 | Multi-Zone Failover | Feature not available in Beta |
 | Next.js / Front-End Sites (FES) | Not yet supported |
+| Platform Vanity Domains | Not yet supported |
 
 ## Setup
 
@@ -256,6 +257,10 @@ O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and 
 For more information on how O2O works, refer to the [SaaS customer documentation](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/).
 
 We are actively testing this configuration during the Beta and welcome customer feedback in the `#beta-gcdn` channel in Pantheon Community Slack.
+
+### I use a platform vanity domain. Can I migrate?
+
+Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdomains) are not eligible for the GCDN Beta at this time. Support for vanity domains will be added in a future update.
 
 ### How do I report issues or give feedback?
 
