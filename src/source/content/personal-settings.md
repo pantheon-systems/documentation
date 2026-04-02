@@ -10,13 +10,13 @@ product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [wordsmither]
-reviewed: "2025-12-10"
+reviewed: "2026-03-30"
 showtoc: true
 ---
 
 Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner, then **Personal Settings**.
 
-![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/2024/_personal-settings-profile.png)
+![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/2024/_personal-settings-profile-updated.png)
 
 
 ## Profile
@@ -27,11 +27,10 @@ The user gravatar is a personalized image you can upload.  If you have not perso
 
 You can also add your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
 
-### Account and Security
-
+## Login Details
 You can update the current email address or password associated with your Dashboard. 
 
-#### Email
+### Email address
 
 To update the email address, click **Change Email Address**. Enter the updated email address in the **New Email Address** field and click **Save Changes**.
 
@@ -41,7 +40,7 @@ Members of SSO-enabled workspaces cannot update email addresses as described abo
 
 </Alert>
 
-#### Password
+### Password
 
 To update the password, click **Change Password**. You are directed to a page where you are prompted to enter your current password and your desired new password. Enter the updated password in the **New Password** field, confirm your entry, and then click **Save Changes**.
 
@@ -54,7 +53,7 @@ When changing your password, make sure the new password meets the following requ
 
 You’ll need to log in again after your password is changed.
 
-## Notifications
+## Email Notifications
 
 ### Autopilot Email Notifications
 
@@ -87,6 +86,10 @@ Changes take effect after clicking **Save Changes**. You can update your prefere
 Email preferences control marketing communications only. System notifications (such as site alerts, team invitations, and billing notifications) are managed separately and cannot be disabled through this interface. For more information about system notifications, see [Platform Notifications](/platform-notifications).
 
 </Alert>
+
+## Security 
+### Multi-Factor Authentication (MFA)
+Multi-Factor Authentication (MFA) adds an extra layer of security to your Pantheon account. Once MFA is enabled, you will be prompted to verify your identity with a second factor authenticator application upon login. For more details, see [related documentation](/guides/account-mgmt/account/mfa).
 
 ## SSH Keys
 
