@@ -3,7 +3,7 @@ title: "PHP 8.5 now available on the platform"
 published_date: "2026-04-06"
 categories: [infrastructure, new-feature]
 ---
-PHP 8.5 is now available on the Pantheon platform. You can select PHP 8.5 for your site via your `pantheon.yml` file or the Pantheon Dashboard.
+[PHP 8.5](https://www.php.net/releases/8.5/en.php) is now available on the Pantheon platform. You can set PHP 8.5 as the version to use for your site via [your `pantheon.yml` file](/pantheon-yml#php-version).
 
 Key changes in PHP 8.5:
 
