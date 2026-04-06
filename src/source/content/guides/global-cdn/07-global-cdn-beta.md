@@ -70,8 +70,15 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 | Custom Certificates | Special certificate management not yet supported |
 | Multi-Zone Failover | Feature not available in Beta |
 | Next.js / Front-End Sites (FES) | Not yet supported |
+| Platform Vanity Domains | Not yet supported |
 
 ## Setup
+
+<Alert title="Important" type="danger">
+
+For the best experience, be prepared to update your DNS records as soon as possible after starting the migration. Delaying DNS migration can result in inconsistent behavior, as your site will remain on the old CDN infrastructure until DNS is pointed to the new GCDN.
+
+</Alert>
 
 <TabList>
 
@@ -86,6 +93,10 @@ Eligible sites will see a GCDN Beta banner on the site dashboard in Pantheon.
 1. Update your DNS records to point to the new GCDN infrastructure (instructions will be provided in the dashboard).
 
 ![gcdn beta banner in pantheon dashboard](../../../images/guides/gcdn-beta-banner.png)
+
+### Platform Hostnames
+
+After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are automatically migrated to the new GCDN infrastructure. You do not need to take any action for these domains. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
 ### Domains and DNS
 
@@ -117,47 +128,53 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 </Alert>
 
-### Install the plugin
+<Alert title="Note" type="info">
 
-A Terminus plugin is available to upgrade your site to GCDN with bot protection.
+During the Beta, DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
+
+</Alert>
+
+### Install the plugin
 
 ```bash{promptUser: user}
 terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
 ```
 
-### Upgrade a site
+If you have existing custom domains on your site, follow all of the steps below to upgrade and migrate your DNS.
+
+### 1. Upgrade your site to GCDN
 
 ```bash{promptUser: user}
 terminus gcdn:upgrade <site>
 ```
 
-This activates the GCDN upgrade for the specified site, enabling the migration to the new GCDN infrastructure.
+This migrates the site from Fastly to GCDN across all environments. Your platform hostnames (`*.pantheonsite.io`) are automatically migrated as part of this step. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
-### Verify domains and update DNS
+### 2. Get your DNS records and TXT verification challenges
 
-After running `gcdn:upgrade`, you need to verify your domains and update DNS records:
+```bash{promptUser: user}
+terminus gcdn:dns <site>.live
+```
 
-1. Verify domain ownership:
+This will show the TXT records needed for domain ownership and certificate validation.
 
-   ```bash{promptUser: user}
-   terminus domain:verify <site>.live example.com
-   ```
+### 3. Add TXT records to your DNS provider
 
-   This will show TXT records. Add them to your DNS provider.
+Add the TXT records from step 2 to your DNS provider.
 
-   ```bash{promptUser: user}
-   terminus domain:verify <site>.live www.example.com
-   ```
+### 4. Verify your domains
 
-1. Review the recommended DNS settings:
+Wait a few minutes for DNS propagation, then verify each domain. Verification typically takes a few minutes to complete:
 
-   ```bash{promptUser: user}
-   terminus domain:dns <site>.live
-   ```
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com
+terminus gcdn:verify <site>.live www.example.com
+```
 
-1. Update your DNS records with the values from step 2 at your DNS provider.
+### 5. Update your DNS records
 
-- You will receive new CNAME targets pointing to Pantheon's new GCDN infrastructure.
+Once verification passes, add the CNAME or A/AAAA records shown in the `gcdn:dns` output to point your domains to the new GCDN edge.
+
 - Set your TTL as low as possible before making changes to minimize propagation delay.
 - TLS certificates are automatically provisioned once domain verification completes.
 
@@ -171,16 +188,23 @@ DNS changes may take time to propagate depending on your current TTL settings. D
 
 ```bash{promptUser: user}
 terminus gcdn:upgrade my-site
-terminus domain:verify my-site.live example.com
-terminus domain:verify my-site.live www.example.com
-terminus domain:dns my-site.live
+terminus gcdn:dns my-site.live
+# Add TXT records to your DNS provider, wait a few minutes, then verify:
+terminus gcdn:verify my-site.live example.com
+terminus gcdn:verify my-site.live www.example.com
+# Once verified, add the CNAME or A/AAAA records from gcdn:dns output
 ```
-
-Add the TXT and DNS records to your DNS provider with the output from the commands above.
 
 </Tab>
 
 </TabList>
+
+## Known Limitations
+
+### Traffic Metrics Unavailable
+
+The traffic metrics page in the Pantheon dashboard will not reflect GCDN Beta traffic during the initial Beta period. Traffic data for migrated sites will be restored in a future update.
+
 
 ## FAQ
 
@@ -223,6 +247,20 @@ Content Converter (Markdown for Agents) is a feature enabled on all GCDN Beta zo
 ### My automated integration stopped working after migration. What do I do?
 
 Your bot or automated service may be receiving a managed challenge from bot protection. Check whether the service's user agent is being challenged by reviewing its error logs (look for 403 responses or HTML challenge pages). Contact Pantheon support to request a bot exclusion for your user agent.
+
+### I have another CDN or WAF in front of my site. Is that supported?
+
+The new Pantheon GCDN supports Orange-to-Orange (O2O) configurations, allowing you to keep your existing CDN or WAF in front of Pantheon. Your site's DNS entries must use CNAME records pointing to the Pantheon GCDN zone entries (e.g., `fe1.cfp-us-central1-ch-1.edge.pantheon.io`).
+
+O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and may result in site downtime or inaccessibility.
+
+For more information on how O2O works, refer to the [SaaS customer documentation](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/).
+
+We are actively testing this configuration during the Beta and welcome customer feedback in the `#beta-gcdn` channel in Pantheon Community Slack.
+
+### I use a platform vanity domain. Can I migrate?
+
+Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdomains) are not eligible for the GCDN Beta at this time. Support for vanity domains will be added in a future update.
 
 ### How do I report issues or give feedback?
 

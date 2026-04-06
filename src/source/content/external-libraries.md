@@ -69,6 +69,14 @@ Tika 3.x defaults to `AUTO` OCR mode, which can significantly increase PDF proce
 /opt/pantheon/tika/tika.jar --config=/opt/pantheon/tika/tika-config.xml
 ```
 
+If your Drupal site uses the [Search API Attachments](https://www.drupal.org/project/search_api_attachments) module (version 10.0.8+) with the Tika extractor and you don't need OCR, disabling it can significantly improve performance. You can disable OCR through the module's admin UI at `/admin/config/search/search_api_attachments`. Set the **Path to Tika configuration file** field to:
+
+```
+/opt/pantheon/tika/tika-config.xml
+```
+
+![Search API Attachments Tika configuration](../images/search-api-attachments-tika-config.png)
+
 </Tab>
 <Tab title="PHP Runtime Generation 1" id="tab-2-id">
 
