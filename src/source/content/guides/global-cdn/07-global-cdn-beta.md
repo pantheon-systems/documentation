@@ -80,6 +80,12 @@ For the best experience, be prepared to update your DNS records as soon as possi
 
 </Alert>
 
+<Alert title="SSL/TLS Certificate Issuance — TXT Records Required" type="danger">
+
+During the Beta, **TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
+
+</Alert>
+
 <TabList>
 
 <Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
@@ -102,9 +108,9 @@ After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are autom
 
 After activating the GCDN Beta through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
-1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider.
+1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider. **TXT record validation is the only supported method for issuing SSL/TLS certificates during the Beta.** HTTP validation and other methods are not available.
 
-1. Once domain verification completes, the dashboard will display the recommended DNS settings (CNAME targets).
+1. Once domain verification completes and your SSL/TLS certificate has been issued, the dashboard will display the recommended DNS settings (CNAME targets).
 
 1. Update your DNS records with the provided CNAME values at your DNS provider.
 
@@ -261,6 +267,10 @@ We are actively testing this configuration during the Beta and welcome customer 
 ### I use a platform vanity domain. Can I migrate?
 
 Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdomains) are not eligible for the GCDN Beta at this time. Support for vanity domains will be added in a future update.
+
+### How are SSL/TLS certificates issued during the Beta?
+
+SSL/TLS certificates are issued exclusively through DNS TXT record validation during the Beta. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
 
 ### How do I report issues or give feedback?
 
