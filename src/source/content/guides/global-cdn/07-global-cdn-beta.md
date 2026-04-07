@@ -80,12 +80,6 @@ For the best experience, be prepared to update your DNS records as soon as possi
 
 </Alert>
 
-<Alert title="SSL/TLS Certificate Issuance — TXT Records Required" type="danger">
-
-During the Beta, **TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
-
-</Alert>
-
 <TabList>
 
 <Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
@@ -105,6 +99,11 @@ Eligible sites will see a GCDN Beta banner on the site dashboard in Pantheon.
 After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are automatically migrated to the new GCDN infrastructure. You do not need to take any action for these domains. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
 ### Domains and DNS
+<Alert title="SSL/TLS Certificate Issuance — TXT Records Required" type="danger">
+
+During the Beta, **TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
+
+</Alert>
 
 After activating the GCDN Beta through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
