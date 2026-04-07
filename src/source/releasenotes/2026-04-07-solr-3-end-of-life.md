@@ -1,6 +1,6 @@
 ---
 title: WordPress Solr support will be removed January 11, 2027
-published_date: "2026-03-25"
+published_date: "2026-04-07"
 categories: [deprecation, wordpress]
 ---
 
@@ -14,7 +14,7 @@ Solr 3 is a legacy search technology that is being retired in favor of modern al
 
 ### Pantheon customers
 
-We recommend migrating to **Elasticsearch**, now available as a Beta add-on for WordPress sites on Pantheon. Elasticsearch offers improved search relevance, real-time search-as-you-type, WooCommerce support, and more. See the [Elasticsearch for WordPress Beta announcement](/releasenotes/2026/03/elasticsearch-wordpress-beta) for details.
+We recommend migrating to **Elasticsearch**, now available as a Beta add-on for WordPress sites on Pantheon. Elasticsearch offers improved search relevance, real-time search-as-you-type, WooCommerce support, and more. See the [Elasticsearch for WordPress Beta announcement](/release-notes/2026/04/elasticsearch-wordpress-beta) for details.
 
 ### Other options
 
