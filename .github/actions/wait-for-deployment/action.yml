@@ -9,10 +9,10 @@ inputs:
   env_name:
     description: The environment name (e.g., dev, pr-123)
     required: true
-  max_wait_minutes:
-    description: Maximum number of minutes to wait for deployment
+  max_wait_seconds:
+    description: Maximum number of seconds to wait for deployment
     required: false
-    default: '30'
+    default: '1200'
   pantheon_machine_token:
     description: Pantheon machine token for API authentication
     required: true
@@ -47,9 +47,8 @@ runs:
       env:
         PANTHEON_SITE_NAME: ${{ inputs.pantheon_site_name }}
         ENV_NAME: ${{ inputs.env_name }}
-        # todo, change to seconds
-        MAX_WAIT_MINUTES: ${{ inputs.max_wait_minutes }}
+        MAX_WAIT_SECONDS: ${{ inputs.max_wait_minutes }}
         PANTHEON_MACHINE_TOKEN: ${{ inputs.pantheon_machine_token }}
         EXPECTED_COMMIT: ${{ inputs.expected_commit }}
       run: |
-         terminus node:builds:wait ${PANTHEON_SITE_NAME}.${ENV_NAME} --commit=$EXPECTED_COMMIT --max=1200
+         terminus node:builds:wait ${PANTHEON_SITE_NAME}.${ENV_NAME} --commit=${EXPECTED_COMMIT} --max=${MAX_WAIT_SECONDS}
