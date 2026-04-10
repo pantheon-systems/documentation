@@ -47,9 +47,9 @@ runs:
       env:
         PANTHEON_SITE_NAME: ${{ inputs.pantheon_site_name }}
         ENV_NAME: ${{ inputs.env_name }}
+        # todo, change to seconds
         MAX_WAIT_MINUTES: ${{ inputs.max_wait_minutes }}
         PANTHEON_MACHINE_TOKEN: ${{ inputs.pantheon_machine_token }}
         EXPECTED_COMMIT: ${{ inputs.expected_commit }}
       run: |
-       # terminus workflow:wait ${PANTHEON_SITE_NAME}.${ENV_NAME}  --commit=$EXPECTED_COMMIT --max=1200
          terminus node:builds:wait ${PANTHEON_SITE_NAME}.${ENV_NAME} --commit=$EXPECTED_COMMIT --max=1200
