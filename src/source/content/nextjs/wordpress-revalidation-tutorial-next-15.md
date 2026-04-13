@@ -62,7 +62,7 @@ The `headers` config supports two mechanisms for building dynamic header values:
 * Install the following:
   - [Git](https://git-scm.com/)
   - [Terminus](/terminus/install)\*
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) (built into Terminus 4.2.0+; earlier versions require the plugin)
 
 \* Requires logging in after installation.
 

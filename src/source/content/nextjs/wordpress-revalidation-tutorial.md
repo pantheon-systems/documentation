@@ -31,7 +31,7 @@ This tutorial walks you through:
 * Install the following:
   - [Git](https://git-scm.com/)
   - [Terminus](/terminus/install)\*
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) (built into Terminus 4.2.0+; earlier versions require the plugin)
 
 \* Requires logging in after installation.
 
@@ -614,7 +614,7 @@ With both sites configured, verify that content changes in WordPress automatical
 If the content does not update, check the following:
 
 * Verify that the secrets are set correctly on both sites using `terminus secret:site:list`.
-* Review the Next.js application logs for revalidation messages using `terminus node:logs`.
+* Review the Next.js application logs for revalidation messages using `terminus node:logs:runtime:get <site>.<env>` (built into Terminus 4.2.0+; earlier versions require the [terminus-node-logs-plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)).
 * Confirm the mu-plugin file is in `wp-content/mu-plugins/` and is loaded by WordPress.
 
 ## Conclusion
