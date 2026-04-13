@@ -37,7 +37,7 @@ If you encounter a command that does not work as you expect for Next.js, or have
 Pantheon supplies [automatic integration with New Relic](/guides/new-relic) for WordPress and Drupal for all sites except those on the Basic plan. We do not yet have any such integration for Next.js. If you have input on how monitoring and telemetry should work, [please join this discussion](https://github.com/pantheon-systems/documentation/issues/9768).
 
 ### Redis
-All WordPress and Drupal sites (except those on the Basic plan) can access their own Redis cache. For Next.js [we provide a cache handler](https://github.com/pantheon-systems/nextjs-cache-handler) to coordinate a shared persistent cache between containers and our CDN in front of the containers.
+All WordPress and Drupal sites (except those on the Basic plan) can access their own Redis cache. For Next.js [we provide a cache handler](https://www.npmjs.com/package/@pantheon-systems/nextjs-cache-handler) to coordinate a shared persistent cache between containers and our CDN in front of the containers.
 
 
 ### Autopilot
