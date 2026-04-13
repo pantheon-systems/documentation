@@ -1,6 +1,6 @@
 ---
 title: WordPress cache integration for Next.js 15
-description: Use Surrogate-Key headers in Next.js 15 to enable edge cache clearing when WordPress content changes
+description: Use the Pantheon cache handler to enable automatic edge cache clearing when WordPress content changes
 reviewed: "2026-04-13"
 contenttype: [doc]
 innav: [true]
@@ -10,11 +10,13 @@ integration: [--]
 permalink: docs/nextjs/wordpress-revalidation-tutorial-next-15
 ---
 
-This guide shows you how to associate cache tags with routes in a Next.js 15 site on Pantheon so that Pantheon's edge cache can be selectively cleared when WordPress content changes. It uses `Surrogate-Key` response headers defined in `next.config.mjs`, which Pantheon's internal routers and CDN use to map cache tags to routes.
+This guide shows you how to integrate WordPress cache invalidation with a Next.js 15 site on Pantheon. The `@pantheon-systems/nextjs-cache-handler` package automatically extracts cache tags from rendered pages and maintains a tag-to-path mapping. When WordPress content changes and `revalidateTag()` is called, the cache handler resolves the affected page paths and clears them from Pantheon's edge CDN.
 
-<Alert title="Next.js 15 only" type="info">
+<Alert title="Next.js 15 and 16" type="info">
 
-This approach is for **Next.js 15**, which does not support the `'use cache'` directive or `cacheTag()` API. If you are using **Next.js 16**, see [WordPress on-demand revalidation for Next.js](/nextjs/wordpress-revalidation-tutorial), which uses `cacheTag()` to expose `next-cache-tags` headers directly.
+This approach works for both **Next.js 15** and **Next.js 16**. The cache handler extracts tags from the internal `x-next-cache-tags` header on cached page data regardless of version. You do not need to define `Surrogate-Key` headers in `next.config.mjs`.
+
+For Next.js 16-specific features like `'use cache'` and `cacheTag()`, see [WordPress on-demand revalidation for Next.js 16](/nextjs/wordpress-revalidation-tutorial).
 
 </Alert>
 
@@ -24,8 +26,8 @@ If you want to skip the manual setup and get a working site immediately, create 
 
 | Upstream | Next.js Version | Cache Strategy |
 |---|---|---|
-| `nextjs_15_cache_starter` | 15 | ISR + `Surrogate-Key` headers in `next.config.mjs` |
-| `nextjs_16_cache_starter` | 16 | `'use cache'` + `cacheTag()` — adapter exposes tags to internal router |
+| `nextjs_15_cache_starter` | 15 | ISR + fetch tags — cache handler extracts tags automatically |
+| `nextjs_16_cache_starter` | 16 | `'use cache'` + `cacheTag()` — cache handler extracts tags automatically |
 
 These are not `core` upstreams and are not shown by default in `terminus upstream:list`. Use the `--all` flag to find them:
 
@@ -41,23 +43,19 @@ These upstreams include the `@pantheon-systems/nextjs-cache-handler` package, Wo
 1. Install the [WordPress mu-plugin](/nextjs/wordpress-revalidation-tutorial#add-the-wordpress-mu-plugin) on your WordPress site.
 1. Install the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin on WordPress so that WordPress' CDN caches are cleared appropriately.
 
-The rest of this guide walks through the Next.js 15 header-based approach in detail.
+The rest of this guide walks through the setup in detail.
 
 ## How it works
 
-Next.js 15 does not support cache tags like Next.js 16.
+When you tag your `fetch()` calls with surrogate keys (e.g., `post-list`, `post-123`), the `@pantheon-systems/nextjs-cache-handler` automatically tracks which tags are associated with which pages. When WordPress content changes and `revalidateTag()` is called, the cache handler clears the affected pages from Pantheon's edge CDN.
 
-Instead, you define `Surrogate-Key` response headers in the `headers` config of `next.config.mjs`. Pantheon's routers and CDN read these headers and associate the listed cache tags with each route. When WordPress content changes and a webhook fires, Pantheon purges only the routes whose `Surrogate-Key` headers contain the matching tags.
-
-The `headers` config supports two mechanisms for building dynamic header values:
-
-* **Path parameters** — Named segments like `:slug` in the `source` pattern can be interpolated into header values. For example, `/blogs/:slug` makes `:slug` available as a variable.
-* **Named captures from `has` conditions** — Regex capture groups in query parameter matchers like `(?<categoryId>\\d+)` are available as `:categoryId` in header values.
+No `Surrogate-Key` headers in `next.config.mjs` are needed.
 
 ## Requirements
 
 * A Next.js 15 site on Pantheon (see [Hello World tutorial](/nextjs/hello-world-tutorial) to create one)
 * A WordPress site on Pantheon
+* `@pantheon-systems/nextjs-cache-handler` version 0.7.0 or later
 * Install the following:
   - [Git](https://git-scm.com/)
   - [Terminus](/terminus/install)\*
@@ -65,230 +63,173 @@ The `headers` config supports two mechanisms for building dynamic header values:
 
 \* Requires logging in after installation.
 
-## Configure Surrogate-Key headers
+## Install the cache handler
 
-Add the `headers` function to your `next.config.mjs`. Each rule maps a route pattern to a `Surrogate-Key` header whose value contains space-delimited cache tags.
+```bash
+npm install @pantheon-systems/nextjs-cache-handler
+```
+
+## Configure Next.js
+
+Create a `cache-handler.mjs` file in your project root:
+
+```javascript:title=cache-handler.mjs
+import { createCacheHandler } from '@pantheon-systems/nextjs-cache-handler';
+
+const CacheHandler = createCacheHandler({
+  type: 'auto', // Auto-detect: GCS on Pantheon, file-based locally
+});
+
+export default CacheHandler;
+```
+
+Reference it in `next.config.mjs`:
 
 ```javascript:title=next.config.mjs
+import path from "path";
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-
-  async headers() {
-    return [
-      // Blog listing page
-      {
-        source: '/blogs',
-        headers: [
-          {
-            key: 'Surrogate-Key',
-            value: 'post-list',
-          },
-        ],
-      },
-
-      // Blog listing filtered by category (e.g. /blogs?category=5)
-      {
-        source: '/blogs',
-        has: [
-          {
-            type: 'query',
-            key: 'category',
-            value: '(?<categoryId>\\d+)',
-          },
-        ],
-        headers: [
-          {
-            key: 'Surrogate-Key',
-            value: 'post-list term-:categoryId',
-          },
-        ],
-      },
-
-      // Blog listing filtered by tag (e.g. /blogs?tag=12)
-      {
-        source: '/blogs',
-        has: [
-          {
-            type: 'query',
-            key: 'tag',
-            value: '(?<tagId>\\d+)',
-          },
-        ],
-        headers: [
-          {
-            key: 'Surrogate-Key',
-            value: 'post-list term-:tagId',
-          },
-        ],
-      },
-
-      // Blog listing with both category and tag filters
-      // (e.g. /blogs?category=5&tag=12)
-      {
-        source: '/blogs',
-        has: [
-          {
-            type: 'query',
-            key: 'category',
-            value: '(?<categoryId>\\d+)',
-          },
-          {
-            type: 'query',
-            key: 'tag',
-            value: '(?<tagId>\\d+)',
-          },
-        ],
-        headers: [
-          {
-            key: 'Surrogate-Key',
-            value: 'post-list term-:categoryId term-:tagId',
-          },
-        ],
-      },
-
-      // Individual blog post — :slug is captured from the path
-      {
-        source: '/blogs/:slug',
-        headers: [
-          {
-            key: 'Surrogate-Key',
-            value: 'post-:slug post-list',
-          },
-        ],
-      },
-
-      // Paginated blog listing (e.g. /blogs?page=2)
-      {
-        source: '/blogs',
-        has: [
-          {
-            type: 'query',
-            key: 'page',
-            value: '(?<page>\\d+)',
-          },
-        ],
-        headers: [
-          {
-            key: 'Surrogate-Key',
-            value: 'post-list page-:page',
-          },
-        ],
-      },
-    ];
-  },
+  cacheHandler: path.resolve(__dirname, './cache-handler.mjs'),
+  cacheMaxMemorySize: 0, // Disable in-memory cache — use persistent storage
 };
 
 export default nextConfig;
 ```
 
-### Header values by route
+No `headers` config is needed. The cache handler extracts tags automatically.
 
-The following table shows the `Surrogate-Key` header value that each route produces and what triggers cache invalidation:
+## Add fetch tags to your data fetching
 
-| Route | Surrogate-Key value | Invalidated when |
-|---|---|---|
-| `/blogs` | `post-list` | Any post changes |
-| `/blogs?category=5` | `post-list term-5` | Any post changes or category 5 content changes |
-| `/blogs?tag=12` | `post-list term-12` | Any post changes or tag 12 content changes |
-| `/blogs?category=5&tag=12` | `post-list term-5 term-12` | Any post, category 5, or tag 12 changes |
-| `/blogs/my-post` | `post-my-post post-list` | That specific post or any post list change |
-| `/blogs?page=2` | `post-list page-2` | Any post changes or page 2 specific purge |
+Tag your `fetch()` calls with surrogate keys that match what your WordPress mu-plugin sends:
 
-### Using slug-based routes for categories and tags
+```typescript:title=lib/wordpress.ts
+const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL
+  || 'https://your-site.pantheonsite.io/wp-json/wp/v2';
 
-If your routes use slugs instead of numeric IDs (for example, `/blogs?category=tutorials` instead of `/blogs?category=5`), adjust the regex capture to match word characters:
+// Generate surrogate keys from a WordPress post
+function generateSurrogateKeys(post) {
+  return [
+    `post-${post.id}`,
+    `post-${post.slug}`,
+    'post-list',
+    ...(post.categories || []).map(id => `term-${id}`),
+    ...(post.tags || []).map(id => `term-${id}`),
+  ];
+}
 
-```javascript:title=next.config.mjs
-{
-  source: '/blogs',
-  has: [
-    {
-      type: 'query',
-      key: 'category',
-      value: '(?<categorySlug>[\\w-]+)',
+export async function getAllPosts() {
+  const url = `${WORDPRESS_API_URL}/posts?_embed&per_page=10`;
+
+  // Tags on the fetch call are propagated to the page cache
+  const res = await fetch(url, {
+    next: {
+      tags: ['post-list'],
+      revalidate: 300,
     },
-  ],
-  headers: [
-    {
-      key: 'Surrogate-Key',
-      value: 'post-list term-:categorySlug',
+  });
+
+  return res.json();
+}
+
+export async function getPostBySlug(slug) {
+  const url = `${WORDPRESS_API_URL}/posts?_embed&slug=${slug}`;
+
+  const res = await fetch(url, {
+    next: {
+      tags: [`post-${slug}`, 'post-list'],
+      revalidate: 300,
     },
-  ],
-},
+  });
+
+  const posts = await res.json();
+  return posts[0] || null;
+}
 ```
 
-Make sure the WordPress side sends matching slug-based keys (e.g., `term-tutorials` instead of `term-5`).
+The tags you pass to `fetch()` via `next: { tags: [...] }` are automatically propagated by Next.js to the page-level cache. The cache handler extracts them and maps them to the page's URL path.
 
-## Rule ordering and cumulative headers
+## Create the revalidation endpoint
 
-Next.js applies headers cumulatively. If multiple rules match a request, all of their headers are added. For example, a request to `/blogs?category=5` matches both the base `/blogs` rule and the category-filtered rule, so the response includes both `post-list` and `post-list term-5`.
+Create an API route that receives WordPress webhook requests and calls `revalidateTag()`:
 
-If you need exclusive matching — where only the most specific rule applies — use the `missing` condition on the base rule to exclude requests handled by more specific rules:
+```typescript:title=app/api/revalidate/route.ts
+import { NextRequest, NextResponse } from 'next/server';
+import { revalidateTag } from 'next/cache';
 
-```javascript:title=next.config.mjs
-// Base rule: only applies when no category or tag filter is present
-{
-  source: '/blogs',
-  missing: [
-    { type: 'query', key: 'category' },
-    { type: 'query', key: 'tag' },
-  ],
-  headers: [
-    {
-      key: 'Surrogate-Key',
-      value: 'post-list',
-    },
-  ],
-},
+export async function POST(request: NextRequest) {
+  const body = await request.json();
+  const { secret, surrogate_keys } = body;
 
-// Category-filtered rule
-{
-  source: '/blogs',
-  has: [
-    {
-      type: 'query',
-      key: 'category',
-      value: '(?<categoryId>\\d+)',
-    },
-  ],
-  headers: [
-    {
-      key: 'Surrogate-Key',
-      value: 'post-list term-:categoryId',
-    },
-  ],
-},
+  // Validate webhook secret
+  const headerSecret = request.headers.get('X-Webhook-Secret');
+  if (headerSecret !== process.env.WEBHOOK_SECRET
+      && secret !== process.env.WEBHOOK_SECRET) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  if (!Array.isArray(surrogate_keys) || surrogate_keys.length === 0) {
+    return NextResponse.json(
+      { error: 'surrogate_keys array required' },
+      { status: 400 }
+    );
+  }
+
+  // Revalidate each tag — the cache handler resolves tags to paths
+  // and clears those paths from the edge CDN
+  const results = [];
+  for (const key of surrogate_keys) {
+    try {
+      revalidateTag(key);
+      results.push({ key, status: 'success' });
+    } catch (error) {
+      results.push({ key, status: 'error', message: String(error) });
+    }
+  }
+
+  return NextResponse.json({
+    message: `Revalidated ${surrogate_keys.length} tags`,
+    revalidated_at: new Date().toISOString(),
+    results,
+  });
+}
 ```
+
+When `revalidateTag('post-list')` is called, the cache handler:
+
+1. Looks up the tag mapping: `post-list → ["/blogs", "/blogs/my-post"]`
+2. Deletes the cached page entries for those paths
+3. Calls the edge CDN to purge `/blogs` and `/blogs/my-post`
 
 ## Connect WordPress webhooks
 
-The WordPress side of the integration is the same as the Next.js 16 approach. You need:
-
-1. **A revalidation API endpoint** in your Next.js app that receives webhook requests and purges the matching surrogate keys. See [Create the revalidation endpoint](/nextjs/wordpress-revalidation-tutorial#create-the-revalidation-endpoint) in the Next.js 16 tutorial.
+You need:
 
 1. **A WordPress mu-plugin** that sends webhooks when content changes. See [Add the WordPress mu-plugin](/nextjs/wordpress-revalidation-tutorial#add-the-wordpress-mu-plugin).
 
 1. **Shared secrets** configured on both sites. See [Configure secrets](/nextjs/wordpress-revalidation-tutorial#configure-secrets).
 
-The surrogate key patterns (`post-{id}`, `post-{slug}`, `post-list`, `term-{id}`) must match between the WordPress mu-plugin and your `next.config.mjs` header rules.
+The surrogate key patterns (`post-{id}`, `post-{slug}`, `post-list`, `term-{id}`) must match between the WordPress mu-plugin and your `fetch()` tag values.
 
-## Limitations
 
-The `headers` config in `next.config.mjs` can only interpolate values that are present in the URL — path segments and query parameters. It cannot include data that is resolved at runtime, such as:
+## Differences from Next.js 16
 
-* WordPress post IDs looked up from a slug
-* Category or tag IDs resolved from a database query
-* Any value that requires fetching external data
+| Feature | Next.js 15 | Next.js 16 |
+|---|---|---|
+| Cache tags set via | `fetch()` with `next: { tags }` | `cacheTag()` in `'use cache'` functions |
+| Tags on page cache | Propagated from fetch tags | Explicitly set via `cacheTag()` |
+| Cache handler config | `cacheHandler` only | `cacheHandler` + `cacheHandlers.default` |
+| `revalidateTag()` args | 1 arg: `revalidateTag(tag)` | 2 args: `revalidateTag(tag, { expire: 0 })` |
+| Tag granularity | Tags from fetch calls | All `cacheTag()` values (more granular) |
 
-If you need cache tags based on runtime data (for example, tagging `/blogs/my-post` with `post-123` using the numeric ID), you have two options:
-
-* **Use slug-based keys consistently** on both sides. Configure the WordPress webhook to send `post-my-post` instead of `post-123`, and match that in your `Surrogate-Key` header.
-* **Set headers from middleware.** Use Next.js [middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) to set the `Surrogate-Key` header dynamically based on runtime logic. This gives you full control but requires more custom code.
+Both versions use the same cache handler tag extraction mechanism. The main difference is that Next.js 16's `cacheTag()` gives more granular control over which tags are associated with each page.
 
 ## Next steps
 
-* [WordPress on-demand revalidation for Next.js 16](/nextjs/wordpress-revalidation-tutorial) — If you upgrade to Next.js 16, use `cacheTag()` for more granular, runtime-driven cache tagging.
+* [WordPress on-demand revalidation for Next.js 16](/nextjs/wordpress-revalidation-tutorial) — Use `cacheTag()` for more granular, runtime-driven cache tagging.
 * [Set environment variables](/nextjs/environment-variables)
 * [Deploy to Test and Live environments](/nextjs/test-and-live-env)
   
