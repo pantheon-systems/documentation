@@ -25,7 +25,6 @@ This tutorial walks you through:
 
 ## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A Next.js 16 site on Pantheon (see [Hello World tutorial](/nextjs/hello-world-tutorial) to create one)
 * A WordPress site on Pantheon
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)

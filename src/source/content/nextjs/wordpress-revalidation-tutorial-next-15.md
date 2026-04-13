@@ -57,7 +57,6 @@ The `headers` config supports two mechanisms for building dynamic header values:
 
 ## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A Next.js 15 site on Pantheon (see [Hello World tutorial](/nextjs/hello-world-tutorial) to create one)
 * A WordPress site on Pantheon
 * Install the following:
