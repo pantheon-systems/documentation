@@ -110,7 +110,7 @@ Pantheon infrastructure supports [Yarn](https://yarnpkg.com/) but as of now, tha
 
 Pantheon began many years ago as a Drupal-only platform. But the nature of our free trial allowed many customers to try other LAMP stack frameworks, many of which worked. In 2014 we made our support for WordPress official. We made that policy change because our ecosystem has so much overlapping usage between WordPress and Drupal and because we value the success of web teams, and the web as a whole over the success of any given framework.
 
-Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams in our Beta period, we are focusing our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please let us know through our Roadmap site](https://roadmap.pantheon.io/) and tell us more about your projects.
+Similarly, the technology we now use to run Next.js is capable of serving many other frameworks. However, to increase the likelihood of success for teams during the Beta period, we primarily focused our attention on Next.js specifically. If you have a strong need to run a non-Next.js framework on Pantheon, [please let us know through our Roadmap site](https://roadmap.pantheon.io/) and tell us more about your projects.
 
 ### Webhooks and build triggers
 
