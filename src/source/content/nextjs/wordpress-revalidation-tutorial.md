@@ -146,12 +146,37 @@ export default nextConfig;
 
 Your Next.js application needs to tag cached WordPress data with surrogate keys so the revalidation endpoint knows which cache entries to invalidate. This example uses a `lib/wordpressService.ts` file that wraps WordPress REST API calls.
 
-### Low-level fetch functions
-
-These functions call the WordPress REST API and tag the fetch-level cache using `next: { tags: [...] }`:
-
 ```typescript:title=lib/wordpressService.ts
-// Tags the fetch cache with 'post-list' — any post change triggers revalidation of the listing
+import { cacheTag, cacheLife } from 'next/cache';
+
+const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL;
+
+/**
+ * Builds the surrogate key set for a WordPress post.
+ * Produces post-{id}, post-{slug}, post-list, and term-{id} tags.
+ * These must match the keys the WordPress mu-plugin sends in the webhook payload.
+ */
+function generateSurrogateKeys(wpPost: WPPost): string[] {
+  const keys: string[] = [];
+
+  keys.push(`post-${wpPost.id}`);
+  keys.push(`post-${wpPost.slug}`);
+  keys.push('post-list');
+
+  if (wpPost.categories) {
+    wpPost.categories.forEach(categoryId => keys.push(`term-${categoryId}`));
+  }
+  if (wpPost.tags) {
+    wpPost.tags.forEach(tagId => keys.push(`term-${tagId}`));
+  }
+
+  return [...new Set(keys)];
+}
+
+/**
+ * Fetches all published posts from the WordPress REST API.
+ * Tags the fetch cache with 'post-list' so any post change triggers revalidation of the listing.
+ */
 async function fetchAllWPPosts(): Promise<{ posts: BlogPost[]; surrogateKeys: string[] }> {
   const url = `${WORDPRESS_API_URL}/posts?_embed&per_page=100&status=publish&orderby=date&order=desc`;
 
@@ -169,7 +194,10 @@ async function fetchAllWPPosts(): Promise<{ posts: BlogPost[]; surrogateKeys: st
   return { posts: wpPosts.map(transformWordPressPost), surrogateKeys: uniqueKeys };
 }
 
-// Tags the fetch cache with 'post-{slug}' for per-post invalidation
+/**
+ * Fetches a single post by slug from the WordPress REST API.
+ * Tags the fetch cache with 'post-{slug}' for per-post invalidation.
+ */
 async function fetchSingleWPPost(slug: string): Promise<{ post: BlogPost | null; surrogateKeys: string[] }> {
   const url = `${WORDPRESS_API_URL}/posts?_embed&slug=${encodeURIComponent(slug)}&status=publish`;
 
@@ -185,36 +213,12 @@ async function fetchSingleWPPost(slug: string): Promise<{ post: BlogPost | null;
 
   return { post: transformWordPressPost(wpPosts[0]), surrogateKeys };
 }
-```
 
-### Surrogate key generation
-
-The `generateSurrogateKeys` function produces a consistent set of cache tags from a WordPress post. The same pattern is used on the WordPress side:
-
-```typescript:title=lib/wordpressService.ts
-function generateSurrogateKeys(wpPost: WPPost): string[] {
-  const keys: string[] = [];
-
-  keys.push(`post-${wpPost.id}`);
-  keys.push(`post-${wpPost.slug}`);
-  keys.push('post-list');
-
-  if (wpPost.categories) {
-    wpPost.categories.forEach(categoryId => keys.push(`term-${categoryId}`));
-  }
-  if (wpPost.tags) {
-    wpPost.tags.forEach(tagId => keys.push(`term-${tagId}`));
-  }
-
-  return [...new Set(keys)];
-}
-```
-
-### Cached wrapper functions
-
-These exported functions use the `'use cache'` directive with infinite `cacheLife` and apply `cacheTag()` for each surrogate key. They rely entirely on on-demand revalidation to refresh:
-
-```typescript:title=lib/wordpressService.ts
+/**
+ * Cached wrapper for the posts listing, called directly by page components.
+ * Uses 'use cache' so the result is cached server-side and only refreshed
+ * when WordPress sends a webhook that triggers revalidateTag() for a matching key.
+ */
 export async function fetchWordPressPostsWithMetadata(): Promise<{
   posts: BlogPost[];
   cachedAt: string;
@@ -228,6 +232,11 @@ export async function fetchWordPressPostsWithMetadata(): Promise<{
   return { posts, cachedAt: new Date().toISOString() };
 }
 
+/**
+ * Cached wrapper for a single post, called directly by page components.
+ * Same caching strategy as fetchWordPressPostsWithMetadata — on-demand
+ * invalidation only, triggered by a WordPress webhook for the matching post keys.
+ */
 export async function fetchWordPressPostWithMetadata(slug: string): Promise<{
   post: BlogPost | null;
   cachedAt: string;
