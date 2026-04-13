@@ -124,26 +124,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enables the 'use cache' directive, cacheTag(), and cacheLife()
   cacheComponents: true,
 
+  // Handler for ISR, route handlers, and fetch cache
   cacheHandler: path.resolve(__dirname, './cache-handler.mjs'),
 
+  // Next.js 16 handler for 'use cache'
   cacheHandlers: {
     remote: path.resolve(__dirname, './cacheHandlers/remote-handler.mjs'),
   },
 
+  // Disables the default in-memory cache so all caching goes through the Pantheon cache handler
   cacheMaxMemorySize: 0,
 };
 
 export default nextConfig;
 ```
-
-Key settings:
-
-* `cacheComponents: true` — Enables the `'use cache'` directive.
-* `cacheHandler` — Handler for ISR, route handlers, and fetch cache.
-* `cacheHandlers` — Next.js 16 handler for `'use cache'`.
-* `cacheMaxMemorySize: 0` — Disables the default in-memory cache so all caching goes through the Pantheon cache handler.
 
 ## Tag cached data with surrogate keys
 
@@ -154,6 +151,7 @@ Your Next.js application needs to tag cached WordPress data with surrogate keys 
 These functions call the WordPress REST API and tag the fetch-level cache using `next: { tags: [...] }`:
 
 ```typescript:title=lib/wordpressService.ts
+// Tags the fetch cache with 'post-list' — any post change triggers revalidation of the listing
 async function fetchAllWPPosts(): Promise<{ posts: BlogPost[]; surrogateKeys: string[] }> {
   const url = `${WORDPRESS_API_URL}/posts?_embed&per_page=100&status=publish&orderby=date&order=desc`;
 
@@ -171,6 +169,7 @@ async function fetchAllWPPosts(): Promise<{ posts: BlogPost[]; surrogateKeys: st
   return { posts: wpPosts.map(transformWordPressPost), surrogateKeys: uniqueKeys };
 }
 
+// Tags the fetch cache with 'post-{slug}' for per-post invalidation
 async function fetchSingleWPPost(slug: string): Promise<{ post: BlogPost | null; surrogateKeys: string[] }> {
   const url = `${WORDPRESS_API_URL}/posts?_embed&slug=${encodeURIComponent(slug)}&status=publish`;
 
@@ -187,9 +186,6 @@ async function fetchSingleWPPost(slug: string): Promise<{ post: BlogPost | null;
   return { post: transformWordPressPost(wpPosts[0]), surrogateKeys };
 }
 ```
-
-* `fetchAllWPPosts` tags the fetch cache with `post-list` so any change to the post listing triggers revalidation.
-* `fetchSingleWPPost` tags with `post-{slug}` for per-post invalidation.
 
 ### Surrogate key generation
 
@@ -338,8 +334,8 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Configuration management for Next.js webhook integration.
- * Reads secrets from Pantheon Secrets Manager or wp-config constants.
+ * Reads the webhook URL and secret from Pantheon Secrets Manager,
+ * with a fallback to wp-config.php constants.
  */
 class NextJS_Webhook_Config {
     public static function get_webhook_url() {
@@ -375,6 +371,8 @@ class NextJS_Webhook_Config {
 
 /**
  * Generates surrogate keys for cache invalidation.
+ * Produces post-{id}, post-{slug}, post-list, and term-{id} tags
+ * that match the Next.js tagging pattern.
  */
 class NextJS_Surrogate_Keys {
     public static function get_post_keys($post_id) {
@@ -451,6 +449,8 @@ class NextJS_Webhook_Delivery {
 
 /**
  * Hooks into WordPress post lifecycle events.
+ * Fires the webhook on post publish, update, unpublish, and delete.
+ * Skips autosaves, revisions, and non-post post types.
  */
 class NextJS_Webhook_Hooks {
     public static function init() {
@@ -494,13 +494,6 @@ class NextJS_Webhook_Hooks {
 
 NextJS_Webhook_Hooks::init();
 ```
-
-The plugin has four parts:
-
-* **NextJS_Webhook_Config** reads the webhook URL and secret from Pantheon Secrets Manager, with a fallback to `wp-config.php` constants.
-* **NextJS_Surrogate_Keys** generates cache tags (`post-{id}`, `post-{slug}`, `post-list`, `term-{id}`) that match the Next.js side.
-* **NextJS_Webhook_Delivery** sends a non-blocking POST request to the Next.js revalidation endpoint.
-* **NextJS_Webhook_Hooks** fires the webhook on post publish, update, unpublish, and delete events. It skips autosaves, revisions, and non-post post types.
 
 ## Configure secrets
 
