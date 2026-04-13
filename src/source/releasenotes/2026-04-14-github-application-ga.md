@@ -6,7 +6,7 @@ categories: [new-feature, tools-apis]
 
 Support for creating Drupal and WordPress sites using an external repository on GitHub is now generally available to Pantheon customers with Gold, Platinum or Diamond Workspaces. Previously, [this capability was restricted to a private beta program](/release-notes/2025/05/github-application); now, it is included as part of the recent [Terminus 4.2.0 Release](https://docs.pantheon.io/release-notes/2026-04-13-terminus-4-2-0.md).
 
-![Create new site next.js from the Pantheon Workspace](../../images/github-app/gihub-app-create-site.png)
+![Create new site next.js from the Pantheon Workspace](../images/github-app/gihub-app-create-site.png)
 
 Sites created on an external GitHub repository utilize a GitHub *Application* that moves code to Pantheon Multidev environments and the Dev environment when correspond to changes are made to on that repository.
 
