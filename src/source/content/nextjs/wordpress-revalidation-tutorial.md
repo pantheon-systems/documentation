@@ -318,7 +318,7 @@ export async function POST(request: NextRequest) {
 }
 ```
 
-The endpoint validates the shared secret from either the `X-Webhook-Secret` header or the request body, then iterates over the `surrogate_keys` array and revalidates each tag. Note that `revalidateTag()` in Next.js 16 requires a second argument — `{ expire: 0 }` forces immediate expiration of the cached entry.
+The endpoint validates the shared secret from either the `X-Webhook-Secret` header or the request body, then iterates over the `surrogate_keys` array and revalidates each tag. In Next.js 16, `revalidateTag()` accepts an optional second argument specifying revalidation behavior — passing `{ expire: 0 }` forces immediate expiration so the next request fetches fresh content rather than serving a stale cached response. This is the recommended pattern for webhook-triggered revalidation.
 
 ## Add the WordPress mu-plugin
 
