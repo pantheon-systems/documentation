@@ -257,7 +257,66 @@ export async function fetchWordPressPostWithMetadata(slug: string): Promise<{
 }
 ```
 
-Your page components call these functions directly. For example, `app/blogs/page.tsx` calls `fetchWordPressPostsWithMetadata()` and `app/blogs/[slug]/page.tsx` calls `fetchWordPressPostWithMetadata(slug)`.
+Your page components call these functions directly:
+
+```typescript:title=app/blogs/page.tsx
+import { fetchWordPressPostsWithMetadata } from '@/lib/wordpressService';
+
+/**
+ * Listing page for all blog posts.
+ * Calls the cached service function — no fetch happens here. The result is
+ * served from the 'use cache' layer in wordpressService.ts and only refreshed
+ * when WordPress sends a webhook that invalidates the 'post-list' tag.
+ */
+export default async function BlogsPage() {
+  const { posts } = await fetchWordPressPostsWithMetadata();
+
+  return (
+    <main>
+      <h1>Blog</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <a href={`/blogs/${post.slug}`}>{post.title}</a>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+```
+
+```typescript:title=app/blogs/[slug]/page.tsx
+import { notFound } from 'next/navigation';
+import { fetchWordPressPostWithMetadata } from '@/lib/wordpressService';
+
+interface PostPageProps {
+  params: Promise<{ slug: string }>;
+}
+
+/**
+ * Individual post page.
+ * Calls the cached service function for the given slug. The result is served
+ * from the 'use cache' layer and only refreshed when WordPress sends a webhook
+ * that invalidates 'post-{slug}' or 'post-{id}' tags for this post.
+ * notFound() triggers Next.js's 404 page if WordPress returns no matching post.
+ */
+export default async function BlogPostPage({ params }: PostPageProps) {
+  const { slug } = await params;
+  const { post } = await fetchWordPressPostWithMetadata(slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  return (
+    <main>
+      <h1>{post.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    </main>
+  );
+}
+```
 
 ## Create the revalidation endpoint
 
