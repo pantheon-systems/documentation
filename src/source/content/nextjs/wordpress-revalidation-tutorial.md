@@ -1,7 +1,7 @@
 ---
 title: WordPress on-demand cache revalidation for Next.js
 description: Update Next.js content in real time when WordPress posts change using webhook-driven cache revalidation
-reviewed: "2026-02-19"
+reviewed: "2026-04-13"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -9,7 +9,6 @@ product: [--]
 integration: [--]
 permalink: docs/nextjs/wordpress-revalidation-tutorial
 ---
-
 
 This tutorial shows you how to keep a Next.js site on Pantheon in sync with a WordPress CMS using on-demand, tag-based cache revalidation. When you publish or update a post in WordPress, a webhook fires and tells Next.js exactly which cached data to refresh — no full rebuild required.
 
@@ -122,6 +121,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
+
   // Enables the 'use cache' directive, cacheTag(), and cacheLife()
   cacheComponents: true,
 

@@ -1,7 +1,7 @@
 ---
 title: WordPress cache integration for Next.js 15
 description: Use Surrogate-Key headers in Next.js 15 to enable edge cache clearing when WordPress content changes
-reviewed: "2026-03-10"
+reviewed: "2026-04-13"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -9,7 +9,6 @@ product: [--]
 integration: [--]
 permalink: docs/nextjs/wordpress-revalidation-tutorial-next-15
 ---
-
 
 This guide shows you how to associate cache tags with routes in a Next.js 15 site on Pantheon so that Pantheon's edge cache can be selectively cleared when WordPress content changes. It uses `Surrogate-Key` response headers defined in `next.config.mjs`, which Pantheon's internal routers and CDN use to map cache tags to routes.
 
