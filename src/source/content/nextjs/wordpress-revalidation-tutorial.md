@@ -39,7 +39,7 @@ This tutorial walks you through:
 
 <Alert title="Next.js 16 required" type="info">
 
-This tutorial uses the `'use cache'` directive, `cacheTag()`, and `cacheLife()` APIs, which require Next.js 16. Pantheon currently provisions Next.js 15 sites by default. To upgrade, follow the [official Next.js upgrade guide](https://nextjs.org/docs/app/building-your-application/upgrading) or create your site using an existing repository with a Next.js 16 codebase.
+This tutorial uses the `'use cache'` directive, `cacheTag()`, and `cacheLife()` APIs, which require Next.js 16. Pantheon currently provisions Next.js 15 sites by default. To upgrade, follow the [Next.js 15 to 16 upgrade guide](https://nextjs.org/docs/app/guides/upgrading/version-16) or create your site using an existing repository with a Next.js 16 codebase.
 
 </Alert>
 
