@@ -10,7 +10,6 @@ integration: [--]
 permalink: docs/nextjs/wordpress-revalidation-tutorial-next-15
 ---
 
-<Partial file="nextjs-pre-ga.md" />
 
 This guide shows you how to associate cache tags with routes in a Next.js 15 site on Pantheon so that Pantheon's edge cache can be selectively cleared when WordPress content changes. It uses `Surrogate-Key` response headers defined in `next.config.mjs`, which Pantheon's internal routers and CDN use to map cache tags to routes.
 
@@ -47,7 +46,7 @@ The rest of this guide walks through the Next.js 15 header-based approach in det
 
 ## How it works
 
-In Next.js 16, you can tag cached data with `cacheTag()` and expose those tags via the `next-cache-tags` header. Next.js 15 does not support this.
+Next.js 15 does not support cache tags like Next.js 16.
 
 Instead, you define `Surrogate-Key` response headers in the `headers` config of `next.config.mjs`. Pantheon's routers and CDN read these headers and associate the listed cache tags with each route. When WordPress content changes and a webhook fires, Pantheon purges only the routes whose `Surrogate-Key` headers contain the matching tags.
 
