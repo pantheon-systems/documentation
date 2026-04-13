@@ -10,7 +10,6 @@ integration: [--]
 permalink: docs/nextjs/wordpress-revalidation-tutorial
 ---
 
-<Partial file="nextjs-pre-ga.md" />
 
 This tutorial shows you how to keep a Next.js site on Pantheon in sync with a WordPress CMS using on-demand, tag-based cache revalidation. When you publish or update a post in WordPress, a webhook fires and tells Next.js exactly which cached data to refresh — no full rebuild required.
 
