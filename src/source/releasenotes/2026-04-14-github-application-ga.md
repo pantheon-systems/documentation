@@ -4,7 +4,7 @@ published_date: "2026-04-14"
 categories: [new-feature, tools-apis]
 ---
 
-Support for creating Drupal and WordPress sites using an external repository on GitHub is now generally available to Pantheon customers with Gold, Platinum or Diamond Workspaces. Previously, [this capability was restricted to a private beta program](/release-notes/2025/05/github-application); now, it is included as part of the recent [Terminus 4.2.0 Release]().
+Support for creating Drupal and WordPress sites using an external repository on GitHub is now generally available to Pantheon customers with Gold, Platinum or Diamond Workspaces. Previously, [this capability was restricted to a private beta program](/release-notes/2025/05/github-application); now, it is included as part of the recent [Terminus 4.2.0 Release](https://docs.pantheon.io/release-notes/2026-04-13-terminus-4-2-0.md).
 
 ![Create new site next.js from the Pantheon Workspace](../../images/github-app/gihub-app-create-site.png)
 
@@ -16,8 +16,4 @@ This Application is intended for teams that want the simplest possible tool for 
 
 Pantheon continues to offer a [GitHub Action](https://github.com/pantheon-systems/push-to-pantheon) that performs a similar function for teams who want to make customization to their workflows and treat the deployment of code as one step in a larger Continuous Integration workflow.
 
-### **More information**
-
-* [See our documentation page for more instruction on usage and a breakdown of limitations](https://docs.pantheon.io/github-application).
-* For support and questions, please file issues on [Terminus issue queue](https://github.com/pantheon-systems/terminus).
-* [For general feedback and to express interest in similar integrations with BitBucket, GitLab or other services, please see our roadmap](https://roadmap.pantheon.io/c/115-github-gitlab-and-bitbucket-integration).
+See our [Github application documentation page](https://docs.pantheon.io/github-application) for more instruction on usage and a breakdown of limitations.
