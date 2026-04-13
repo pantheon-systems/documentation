@@ -35,12 +35,6 @@ This tutorial walks you through:
 
 \* Requires logging in after installation.
 
-<Alert title="Next.js 16 required" type="info">
-
-This tutorial uses the `'use cache'` directive, `cacheTag()`, and `cacheLife()` APIs, which require Next.js 16. Pantheon currently provisions Next.js 15 sites by default. To upgrade, follow the [Next.js 15 to 16 upgrade guide](https://nextjs.org/docs/app/guides/upgrading/version-16) or create your site using an existing repository with a Next.js 16 codebase.
-
-</Alert>
-
 ## Quick start with test upstreams
 
 If you want to skip the manual setup and get a working site immediately, create a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
