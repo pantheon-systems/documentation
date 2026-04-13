@@ -110,17 +110,6 @@ Tag your `fetch()` calls with surrogate keys that match what your WordPress mu-p
 const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL
   || 'https://your-site.pantheonsite.io/wp-json/wp/v2';
 
-// Generate surrogate keys from a WordPress post
-function generateSurrogateKeys(post) {
-  return [
-    `post-${post.id}`,
-    `post-${post.slug}`,
-    'post-list',
-    ...(post.categories || []).map(id => `term-${id}`),
-    ...(post.tags || []).map(id => `term-${id}`),
-  ];
-}
-
 export async function getAllPosts() {
   const url = `${WORDPRESS_API_URL}/posts?_embed&per_page=10`;
 
