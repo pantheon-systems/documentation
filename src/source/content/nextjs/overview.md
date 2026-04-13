@@ -10,17 +10,13 @@ integration: [--]
 permalink: docs/nextjs
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 Next.js is the leading React framework for building web applications and sites.
 It stands out for its use of cutting edge development techniques and strong commitment to performance for the end users of the web.
 
 ## Access & Availability
-Access to Pantheon's Next.js support is currently available through a **Private Beta** program.
 
-To request an invite, [submit this form](https://pantheon.io/nextjs-beta).
+Support for Next.js is available to customers with Gold, Platinum or Diamond Workspaces because those workspaces have access to [Multidev](/guides/multidev). Multidev environments create a unique site per Git branch which we consider essential for teams to be productive with Next.js on Pantheon.
 
-Pantheon's product engineering team is rolling out new functionality often while this product is in Private Beta. Certain features and functionality are limited, for details see [this section below](#considerations).
 
 ### Compatibility & Requirements
 * **Node versions:**
@@ -54,5 +50,6 @@ While Next.js is fundamentally a server-side application, it does not dicate whe
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
 ## Considerations
-See the following page for current limitations of Next.js Beta functionality on Pantheon:
-* [Limitations and considerations for Next.js Beta](/nextjs/considerations)
+
+See the following page for current limitations of Next.js functionality on Pantheon:
+* [Limitations and considerations for Next.js](/nextjs/considerations)

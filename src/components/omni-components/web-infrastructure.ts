@@ -165,7 +165,7 @@ const webInfrastructure = () => {
       ]),
       simpleLink("/nextjs", "Next.js", [
         simpleLink("/nextjs", "Next.js Overview"),
-        simpleLink("/nextjs/considerations", "Considerations"),
+        simpleLink("/nextjs/comparison-to-cms-hosting", "Comparison to CMS Hosting"),
         simpleLink("/nextjs/architecture", "Architecture and Git Workflow", [
           simpleLink("/nextjs/architecture", "Architecture"),
           simpleLink("/nextjs/multidev", "Multidev environments"),
@@ -186,10 +186,6 @@ const webInfrastructure = () => {
           simpleLink(
             "/nextjs/environment-variables",
             "How to set environment variables",
-          ),
-          simpleLink(
-            "/nextjs/connecting-custom-domain-name",
-            "How to connect a custom domain name",
           ),
           simpleLink(
             "/nextjs/transfer-repository",
