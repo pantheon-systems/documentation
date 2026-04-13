@@ -90,7 +90,7 @@ npm install @pantheon-systems/nextjs-cache-handler
 
 ### Create the cache handler
 
-Create `cache-handler.mjs` in the root of your project:
+Create `cache-handler.mjs` in the root of your project. These files use `.mjs` rather than `.ts` because cache handlers are loaded by Next.js at runtime outside the TypeScript compilation pipeline — Node.js executes them directly as ES modules:
 
 ```javascript:title=cache-handler.mjs
 import { createCacheHandler } from '@pantheon-systems/nextjs-cache-handler';
