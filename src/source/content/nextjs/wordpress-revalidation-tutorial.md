@@ -52,6 +52,12 @@ If you want to skip the manual setup and get a working site immediately, create 
 | `nextjs_15_cache_starter` | 15 | ISR + `Surrogate-Key` headers in `next.config.mjs` |
 | `nextjs_16_cache_starter` | 16 | `'use cache'` + `cacheTag()` — adapter exposes tags to internal router |
 
+These are not `core` upstreams and are not shown by default in `terminus upstream:list`. Use the `--all` flag to find them:
+
+```bash{promptUser: user}
+terminus upstream:list --all | grep nextjs
+```
+
 These upstreams include the `@pantheon-systems/nextjs-cache-handler` package, WordPress REST API integration, surrogate key tagging, and a secured revalidation endpoint. To get end-to-end cache invalidation working:
 
 1. Create a site from the upstream.
