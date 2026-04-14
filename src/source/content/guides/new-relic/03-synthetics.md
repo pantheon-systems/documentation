@@ -45,7 +45,7 @@ The table below shows how quickly checks accumulate:
 | Every 15 min | 2         | 5,760          | 58%               |
 | Every 15 min | 1         | 2,880          | 29%               |
 
-A single non-ping monitor at 1-minute frequency from 5 locations consumes more than 21x the monthly quota on its own. **Always calculate your projected monthly check volume before creating a new monitor**.
+A single non-ping monitor at 1-minute frequency from 5 locations consumes more than 21x the monthly limit on its own. **Always calculate your projected monthly check volume before creating a new monitor**.
 
 ## Choose the Right Monitor Type
 ### Ping monitors (do not count toward limit)
