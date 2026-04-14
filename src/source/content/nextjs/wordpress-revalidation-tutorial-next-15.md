@@ -32,7 +32,7 @@ For Next.js 16-specific features like `'use cache'` and `cacheTag()`, see [WordP
 
 ## Requirements
 
-* A Next.js 15 site on Pantheon ([Quick start](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/f9c1a10c-bd05-448f-9c0d-b73839e69e58))
+* A Next.js 15 site on Pantheon ([Quick start](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/8237ab98-c56c-4c52-a36b-af0a54956e5b))
 * A WordPress site on Pantheon
 * `@pantheon-systems/nextjs-cache-handler` version 0.7.0 or later
 * Install the following:
@@ -44,7 +44,7 @@ For Next.js 16-specific features like `'use cache'` and `cacheTag()`, see [WordP
 
 ## Quick start with test upstreams
 
-If you want to skip the manual setup and get a working site immediately, [create](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/f9c1a10c-bd05-448f-9c0d-b73839e69e58) a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
+If you want to skip the manual setup and get a working site immediately, [create](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/8237ab98-c56c-4c52-a36b-af0a54956e5b) a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
 
 | Upstream | Next.js Version | Cache Strategy |
 |---|---|---|
