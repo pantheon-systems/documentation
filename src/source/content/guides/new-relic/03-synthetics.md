@@ -15,9 +15,13 @@ permalink: docs/guides/new-relic/synthetics
 ---
 
 ## Overview
-Each Pantheon site includes a quota of **10,000 non-ping synthetic checks per month** as part of its New Relic integration. Ping monitors are unlimited and do not count toward this quota. All other monitor types – Simple Browser, Scripted Browser, and Scripted API – do count and must be managed carefully.
+New Relic provides an availability monitoring service within their Synthetics tool suite which can be enabled by [contacting support](/guides/support/contact-support/). Each Pantheon site includes a quota of **10,000 non-ping synthetic checks per month** as part of its New Relic integration. Ping monitors are unlimited and do not count toward this quota. All other monitor types – Simple Browser, Scripted Browser, and Scripted API – do count and must be managed carefully.
 
-Exceeding this quota can cause Pantheon to reduce the frequency or number of locations your Synthetics checks run from in order to keep your monitoring operational. 
+<Alert title="Note" type="info">
+
+Exceeding this quota can cause Pantheon to reduce the frequency or number of locations your Synthetics checks run from in order to keep your monitoring operational.
+
+</Alert>
 
 There is also a site performance impact to consider: every synthetic check sends a real, uncached HTTP request to your site. Unlike traffic from actual visitors, synthetic checks bypass Pantheon's page cache, which means each check consumes real PHP workers, database connections, and server CPU. At high check frequencies or with many monitors running simultaneously, this can compete with your real visitors for server resources – the opposite of what monitoring is meant to achieve.
 
