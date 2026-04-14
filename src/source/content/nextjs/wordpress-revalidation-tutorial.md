@@ -24,7 +24,7 @@ This tutorial walks you through:
 
 ## Requirements
 
-* A Next.js 16 site on Pantheon (see [Hello World tutorial](/nextjs/hello-world-tutorial) to create one)
+* A Next.js 16 site on Pantheon ([Quick start](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/70d5726e-d5b4-4a81-8fba-606f339597e5))
 * A WordPress site on Pantheon
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * Install the following:
@@ -36,7 +36,7 @@ This tutorial walks you through:
 
 ## Quick start with test upstreams
 
-If you want to skip the manual setup and get a working site immediately, create a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
+If you want to skip the manual setup and get a working site immediately, [create](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/70d5726e-d5b4-4a81-8fba-606f339597e5) a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
 
 | Upstream | Next.js Version | Cache Strategy |
 |---|---|---|

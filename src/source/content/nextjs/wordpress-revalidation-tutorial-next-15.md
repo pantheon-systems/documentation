@@ -10,7 +10,17 @@ integration: [--]
 permalink: docs/nextjs/wordpress-revalidation-tutorial-next-15
 ---
 
-This guide shows you how to integrate WordPress cache invalidation with a Next.js 15 site on Pantheon. The `@pantheon-systems/nextjs-cache-handler` package automatically extracts cache tags from rendered pages and maintains a tag-to-path mapping. When WordPress content changes and `revalidateTag()` is called, the cache handler resolves the affected page paths and clears them from Pantheon's edge CDN.
+This guide shows you how to integrate WordPress cache invalidation with a Next.js 15 site on Pantheon. When you publish or update a post in WordPress, a webhook fires and tells Next.js exactly which cached data to refresh — no full rebuild required.
+
+## Learning objectives
+
+This tutorial walks you through:
+
+* Setting up `@pantheon-systems/nextjs-cache-handler` in a Next.js 15 project
+* Tagging WordPress data with surrogate keys using `fetch()` cache tags
+* Creating a revalidation API endpoint that accepts WordPress webhook requests
+* Connecting a WordPress mu-plugin that sends webhooks when content changes
+* Configuring shared secrets on both sites via Terminus Secrets Manager
 
 <Alert title="Next.js 15 and 16" type="info">
 
@@ -20,9 +30,21 @@ For Next.js 16-specific features like `'use cache'` and `cacheTag()`, see [WordP
 
 </Alert>
 
+## Requirements
+
+* A Next.js 15 site on Pantheon ([Quick start](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/f9c1a10c-bd05-448f-9c0d-b73839e69e58))
+* A WordPress site on Pantheon
+* `@pantheon-systems/nextjs-cache-handler` version 0.7.0 or later
+* Install the following:
+  - [Git](https://git-scm.com/)
+  - [Terminus](/terminus/install)\*
+  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) (built into Terminus 4.2.0+; earlier versions require the plugin)
+
+\* Requires logging in after installation.
+
 ## Quick start with test upstreams
 
-If you want to skip the manual setup and get a working site immediately, create a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
+If you want to skip the manual setup and get a working site immediately, [create](https://dashboard.pantheon.io/site/create-site/node/custom-upstreams/f9c1a10c-bd05-448f-9c0d-b73839e69e58) a Pantheon site from one of the test upstreams that have WordPress cache invalidation pre-configured:
 
 | Upstream | Next.js Version | Cache Strategy |
 |---|---|---|
@@ -50,18 +72,6 @@ The rest of this guide walks through the setup in detail.
 When you tag your `fetch()` calls with surrogate keys (e.g., `post-list`, `post-123`), the `@pantheon-systems/nextjs-cache-handler` automatically tracks which tags are associated with which pages. When WordPress content changes and `revalidateTag()` is called, the cache handler clears the affected pages from Pantheon's edge CDN.
 
 No `Surrogate-Key` headers in `next.config.mjs` are needed.
-
-## Requirements
-
-* A Next.js 15 site on Pantheon (see [Hello World tutorial](/nextjs/hello-world-tutorial) to create one)
-* A WordPress site on Pantheon
-* `@pantheon-systems/nextjs-cache-handler` version 0.7.0 or later
-* Install the following:
-  - [Git](https://git-scm.com/)
-  - [Terminus](/terminus/install)\*
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) (built into Terminus 4.2.0+; earlier versions require the plugin)
-
-\* Requires logging in after installation.
 
 ## Install the cache handler
 

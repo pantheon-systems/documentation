@@ -185,7 +185,11 @@ const webInfrastructure = () => {
           ),
           simpleLink(
             "/nextjs/wordpress-revalidation-tutorial-next-15",
-            "Guide: Next.js 15 WordPress Cache Revalidation",
+            "Tutorial: WordPress Cache Revalidation for Next.js 15",
+          ),
+          simpleLink(
+            "/nextjs/wordpress-revalidation-tutorial-pages-router",
+            "Tutorial: WordPress Cache Revalidation for Next.js Pages Router",
           ),
           simpleLink(
             "/nextjs/migrating-from-front-end-sites",
