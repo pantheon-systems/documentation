@@ -1,6 +1,6 @@
 ---
 title: "PHP Runtime Generation 2 auto-upgrades starting for Test and Live environments"
-published_date: "2026-04-13"
+published_date: "2026-04-14"
 categories: [infrastructure, action-required]
 ---
 
