@@ -1,7 +1,7 @@
 ---
 title: New Relic Performance Monitoring on Pantheon
 subtitle: Using Synthetic Monitors
-description: Learn how to manage your New Relic Synthetics quota effectively to avoid service disruptions and protect your site's performance.
+description: Learn how to manage your New Relic Synthetics limit effectively to avoid service disruptions and protect your site's performance.
 contenttype: [guide]
 innav: [false]
 categories: [track]
@@ -15,19 +15,19 @@ permalink: docs/guides/new-relic/synthetics
 ---
 
 ## Overview
-New Relic provides an availability monitoring service within their Synthetics tool suite which can be enabled by [contacting support](/guides/support/contact-support/). Each Pantheon site includes a quota of **10,000 non-ping synthetic checks per month** as part of its New Relic integration. Ping monitors are unlimited and do not count toward this quota. All other monitor types – Simple Browser, Scripted Browser, and Scripted API – do count and must be managed carefully.
+New Relic provides an availability monitoring service within their Synthetics tool suite which can be enabled by [contacting support](/guides/support/contact-support/). Each Pantheon site includes a limit of **10,000 non-ping synthetic checks per month** as part of its New Relic integration. Ping monitors are unlimited and do not count toward this limit. All other monitor types – Simple Browser, Scripted Browser, and Scripted API – do count and must be managed carefully.
 
 <Alert title="Note" type="info">
 
-Exceeding this quota can cause Pantheon to reduce the frequency or number of locations your Synthetics checks run from in order to keep your monitoring operational.
+Exceeding this limit can cause Pantheon to reduce the frequency or number of locations your Synthetics checks run from in order to keep your monitoring operational.
 
 </Alert>
 
 There is also a site performance impact to consider: every synthetic check sends a real, uncached HTTP request to your site. Unlike traffic from actual visitors, synthetic checks bypass Pantheon's page cache, which means each check consumes real PHP workers, database connections, and server CPU. At high check frequencies or with many monitors running simultaneously, this can compete with your real visitors for server resources – the opposite of what monitoring is meant to achieve.
 
-This guide walks through how to audit your existing monitors, choose the right monitor type for each use case, and set up a sustainable monitoring configuration that stays within your quota.
+This guide walks through how to audit your existing monitors, choose the right monitor type for each use case, and set up a sustainable monitoring configuration that stays within your limit.
 
-## Understand the Quota Math
+## Understand the Limit Math
 
 Your monthly check count is determined by a simple formula:
 
@@ -36,7 +36,7 @@ Monthly checks = (60 ÷ frequency in minutes) × 24 hours × 30 days × number o
 ```
 The table below shows how quickly checks accumulate:
 
-| Frequency    | Locations | Monthly checks | % of 10,000 quota |
+| Frequency    | Locations | Monthly checks | % of 10,000 limit |
 | ------------ | --------- | -------------- | ----------------- |
 | Every 1 min  | 5         | 216,000        | 2,160%            |
 | Every 1 min  | 1         | 43,200         | 432%              |
@@ -74,7 +74,7 @@ Before creating a non-ping monitor, ask: **could a ping monitor cover this use c
 For more on monitor types, see [New Relic's Synthetic Monitoring documentation](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/using-monitors/intro-synthetic-monitoring/).
 
 ## Use Browser Monitoring for Core Web Vitals
-If you are using Simple Browser monitors to track frontend performance metrics – page load time, Largest Contentful Paint (LCP), Interaction to Next Paint (INP), or Cumulative Layout Shift (CLS) – you may not need them. New Relic's browser monitoring agent already captures all of these metrics automatically from real visitor sessions, at no cost to your synthetic check quota.
+If you are using Simple Browser monitors to track frontend performance metrics – page load time, Largest Contentful Paint (LCP), Interaction to Next Paint (INP), or Cumulative Layout Shift (CLS) – you may not need them. New Relic's browser monitoring agent already captures all of these metrics automatically from real visitor sessions, at no cost to your synthetic check limit.
 
 This data is available under **Browser → [your entity name] → Web Vitals** in your New Relic account. You can set up alert conditions directly on these metrics – for example, alerting when LCP exceeds 2.5 seconds – using the **Add recommended conditions** button on the browser monitoring Summary page.
 
@@ -89,7 +89,7 @@ Real user monitoring (RUM) data is also more representative than synthetic check
 Review your monitors regularly. Navigate to your site's New Relic account via the Pantheon Dashboard, then go to **Synthetic Monitoring**.
 
 ### Step 1: Remove failed monitors
-Filter your monitor list by status and look for monitors in a persistent error or failed state. A monitor that has been failing for more than a few days is not providing useful signal — it is consuming quota without delivering value.
+Filter your monitor list by status and look for monitors in a persistent error or failed state. A monitor that has been failing for more than a few days is not providing useful signal — it is consuming limit without delivering value.
 
 For each persistently failed monitor:
 1. Check when it last had a successful run
