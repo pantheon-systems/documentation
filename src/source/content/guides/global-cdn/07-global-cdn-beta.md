@@ -208,7 +208,7 @@ terminus gcdn:verify my-site.live www.example.com
 
 ### Traffic Metrics Unavailable
 
-The traffic metrics page in the Pantheon dashboard will not reflect GCDN Beta traffic during the initial Beta period. Traffic data for migrated sites will be restored in a future update.
+The traffic metrics page in the Pantheon dashboard will not contain any traffic data during the initial Beta period. This includes historical data before GCDN Beta was enabled. Traffic data for migrated sites will be restored in a future update.
 
 
 ## FAQ
