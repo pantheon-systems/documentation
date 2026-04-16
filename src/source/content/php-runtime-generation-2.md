@@ -90,7 +90,7 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 ## Reporting Issues
 
-If you encounter any issues with PHP Runtime Generation 2, submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2" in your message to support.
+[Contact support](/guides/support/contact-support) if you encounter any issues with PHP Runtime Generation 2. Provide a detailed report and include "PHP Runtime Generation 2" in your message.
 
 ## Frequently Asked Questions
 
