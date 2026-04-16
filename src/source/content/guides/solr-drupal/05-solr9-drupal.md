@@ -219,42 +219,41 @@ The `[path]` argument is optional. Provide it only if you want to use a custom c
 
 ## Upgrading from Solr 8 to Solr 9
 
-If you are upgrading an existing site from Solr 8 to Solr 9, review the following considerations before proceeding.
+If you are upgrading an existing site from Solr 8 to Solr 9, complete the following steps in order.
 
-### Update pantheon.yml
+1. **Update `pantheon.yml`** — Change the Solr version from `8` to `9`:
 
-Change the Solr version in your `pantheon.yml` from `8` to `9`:
+   ```yml:title=pantheon.yml
+   search:
+     version: 9
+   ```
 
-```yml:title=pantheon.yml
-search:
-  version: 9
-```
+   Commit and push this change before proceeding.
 
-Commit and push this change before proceeding with the remaining steps.
+2. **Update the Search API modules** — Update `search_api_solr` to 4.3.x or later and `search_api_pantheon` to 8.5.x or later:
 
-### Reindex Your Content
+   ```shell{promptUser:user}
+   composer update drupal/search_api_solr --with-dependencies
+   ```
 
-It is strongly recommended that you reindex all content after upgrading to Solr 9. Reindexing is mandatory if your collections were originally created on Solr 7 or older.
+   ```shell{promptUser:user}
+   composer update drupal/search_api_pantheon --with-dependencies
+   ```
 
-1. Navigate to **Configuration > Search & Metadata > Search API** in the Drupal Admin interface.
-1. Select your search index.
-1. Click **Clear all indexed data** on the **View** tab.
-1. Click **Index now** to reindex all content.
+   Commit and push the updated `composer.json` and `composer.lock`.
 
-### Update the Search API Solr Module
+3. **Reindex your content** — Reindexing is mandatory if your collections were originally created on Solr 7 or older, and strongly recommended for Solr 8 collections.
 
-Ensure your `search_api_solr` module is updated to version 4.3.x or later, which includes Solr 9 compatibility:
+   1. Navigate to **Configuration > Search & Metadata > Search API** in the Drupal Admin interface.
+   2. Select your search index.
+   3. Click **Clear all indexed data** on the **View** tab.
+   4. Click **Index now** to reindex all content.
 
-```shell{promptUser:user}
-composer update drupal/search_api_solr --with-dependencies
-```
+4. **Post a fresh schema** — After updating the module and reindexing, post the updated schema to the Solr server:
 
-After updating, post a fresh schema to the Solr server:
-
-```shell{promptUser:user}
-terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
-```
-
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```
 
 ## Troubleshooting Pantheon Search with Solr 9 for Drupal
 
