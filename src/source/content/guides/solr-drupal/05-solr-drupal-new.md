@@ -37,7 +37,7 @@ Search API module processors provide a variety of configuration options for your
 
 Refer to the [Search API module processors documentation](https://www.drupal.org/docs/8/modules/search-api/getting-started/processors) for details.
 
-## Before You Begin
+## First-Time Setup
 
 Complete the following steps in order to set up Pantheon Search for the first time.
 
@@ -276,7 +276,7 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 
 6. **Test search functionality** thoroughly on non-production environments. Use `terminus drush $SITE.$ENV -- search-api-pantheon:diagnose` to verify the configuration.
 
-### Rolling Back to Solr 8
+## Rolling Back to Solr 8
 
 For some reason if you need to revert to Solr 8 after upgrading, the `search_api_pantheon` 8.5.x module supports both Solr 8 and Solr 9, so you do not need to downgrade the module version.
 
@@ -300,7 +300,7 @@ For some reason if you need to revert to Solr 8 after upgrading, the `search_api
    terminus drush $SITE.$ENV -- search-api:index
    ```
 
-### Upgrading from 8.4.x to 8.5.x
+## Upgrading from 8.4.x to 8.5.x
 
 If you are upgrading from 8.4.x and want to continue using Solr 8, no migration is needed:
 
