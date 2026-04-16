@@ -255,11 +255,6 @@ After updating, post a fresh schema to the Solr server:
 terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
 ```
 
-<Alert title="Note" type="info">
-
-Solr 9 requires Java 11 as the minimum Java version and is also tested with Java 17. This requirement is handled by Pantheon's infrastructure and does not require action on your part for Pantheon-hosted sites.
-
-</Alert>
 
 ## Troubleshooting Pantheon Search with Solr 9 for Drupal
 
