@@ -13,39 +13,29 @@ integration: [--]
 
 ## Overview
 
-The new generation of Pantheon's serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
+The latest generation of Pantheon's serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
 
-Depending on your website's features, this new PHP runtime may have major effects on the operation of your site. The previous generation will be removed in April 2026.
+The previous generation was removed in April 2026.
 
 ## What's included?
 
 - Long Term Support (LTS) coverage for EOL PHP versions (PHP 5.6+)
 - Better CMS functionality via updated PHP extensions
-- PHP 8.4 availability
+- PHP 8.4 and 8.5 availability
 
-## How to set your PHP Runtime version
 
-New sites on the platform are provisioned with the latest PHP Runtime, Generation 2. Sites that do not specify the PHP Runtime Version in `pantheon.yml` are set to use Generation 2. 
-
-To revert to the previous PHP Runtime, add the following to your `pantheon.yml`:
-
-```yaml:title=pantheon.yml
-php_runtime_generation: 1
-```
-
-## Timeline
+## Rollout Timeline
 
 | Phase | Date | Details |
 |-----------|------------------|--------------|
 | **Beta** | May - September 16, 2025 | Environments could be opted-in. All other environments remained on the previous generation. |
 | **New Sites** | September 17, 2025 | New sites created on the platform use PHP Runtime Generation 2. |
 | **Gen 2 Rollout** | September 24 - November 20, 2025 | A 60-day rollout gradually upgraded sites to PHP Runtime Generation 2. An opt-out is available. |
-| **Gen 1 Removal** | April 6 - 17, 2026  | PHP Runtime Generation 1 will no longer be available. All remaining sites will be auto-upgraded. |
+| **Gen 1 Removal** | April 6 - 17, 2026  | PHP Runtime Generation 1 is no longer be available. All remaining sites are auto-upgraded. |
 
 ### Current Phase Details 
-We have completed the initial Gen 2 Rollout. Sites may continue to opt-out until Gen 1 is removed and all sites are auto-upgraded.
 
-The table below details the dates for the Gen 1 removal.
+We are currently upgrading any opted-out sites to PHP Runtime Generation 2.
 
 | Start Date for Auto-Upgrades | Site Plans | Environments |
 |-----------|------------------|--------------|
@@ -96,15 +86,11 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 |---------|---------|---------|
 | **TLS** | 1.0-1.3 | 1.2-1.3 <sup>1</sup>|
 
-<sup>1</sup> Review the <a href="/tls-compatibility">TLS documentation</a> to check which version of TLS your external connections are using, and how to ensure you are compatible with this change.<br /><br />
+<sup>1</sup> Review the <a href="/tls-compatibility">TLS documentation</a> to check which version of TLS your external connections are using, and how to ensure you are compatible with TLS 1.2+.<br /><br />
 
 ## Reporting Issues
 
-If you encounter any issues with PHP Runtime Generation 2:
-
-1. Check the [Known Changes and Requirements](#known-changes-and-requirements) section above
-2. Verify the issue is related to the new PHP runtime by reverting back to `1` in your `pantheon.yml` file.
-3. Submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2" in your message to support.
+If you encounter any issues with PHP Runtime Generation 2, submit a detailed report through our [Support Portal](https://pantheon.io/support). Include "PHP Runtime Generation 2" in your message to support.
 
 ## Frequently Asked Questions
 
@@ -116,19 +102,6 @@ The PHP runtime is set at the environment-level. You can find out which generati
 * Use the Terminus command `env:list <site> --fields=id,php_runtime_generation,php_version`. This requires Terminus 4.1.0+
 * View your site on the Pantheon Dashboard, navigate to the environment's Status page, then review the Software Versions block
 
-### Q: Will I need to make changes to my website to be compatible with Generation 2?
-
-Potentially. Depending on your integrations with our PHP extensions and operating system libraries, you may need to update your website to be compatible with new PHP runtime.
-
-### Q: How do I switch back to PHP Runtime Generation 1?
-
-You may switch to PHP Runtime Generation 1 by setting the following in your `pantheon.yml`:
-
-```yaml:title=pantheon.yml
-php_runtime_generation: 1
-```
-
-Note: All sites on Generation 1 will be auto-upgraded to Generation 2 starting April 6, 2026, if they haven't already.
 
 ### Q: Can I be excluded from the removal of PHP Runtime Generation 1?
 
