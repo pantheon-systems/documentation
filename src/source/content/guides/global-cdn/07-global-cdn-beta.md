@@ -210,6 +210,9 @@ terminus gcdn:verify my-site.live www.example.com
 
 The traffic metrics page in the Pantheon dashboard will not reflect GCDN Beta traffic during the initial Beta period. Traffic data for migrated sites will be restored in a future update.
 
+### Terminus commands experience syntax errors
+
+GCDN Beta sites must use Terminus [version 4.1.9](https://github.com/pantheon-systems/terminus/releases/tag/4.1.9) or higher when interacting with sites that have Global CDN Beta enabled. Using older versions of Terminus may result in errors such as `[debug] json_decode exception: Syntax error` or `[error]  Pantheon headers missing, which is not quite right.`. 
 
 ## FAQ
 
