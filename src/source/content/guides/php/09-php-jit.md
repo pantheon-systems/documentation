@@ -18,7 +18,6 @@ PHP's JIT (Just-In-Time) compiler compiles PHP bytecode into native machine code
 ## Requirements
 
 - **PHP 8.3 or higher**
-- **[PHP Runtime Generation 2](/php-runtime-generation-2)**
 
 ## Configuration
 

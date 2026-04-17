@@ -16,7 +16,7 @@ There are some scenarios when an external library is required. The Pantheon plat
 
 ## wkhtmltopdf (Deprecated)
 
-wkhtmltopdf has been abandoned by its maintainers and no longer receives updates. While it is still available on PHP Runtime Generation 1, the package is not available on [PHP Runtime Generation 2](/php-runtime-generation-2). We recommend all sites using wkhtmltopdf switch to [dompdf](https://github.com/dompdf/dompdf).
+wkhtmltopdf has been abandoned by its maintainers and no longer receives updates. As such, the package is not available on [PHP Runtime Generation 2](/php-runtime-generation-2). We recommend all sites using wkhtmltopdf switch to [dompdf](https://github.com/dompdf/dompdf).
 
 ### Switching from wkhtmltopdf to dompdf
 
@@ -44,10 +44,6 @@ From `<your_url>/admin/config/user-interface/print/pdf`, choose dompdf as PDF Ge
 The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
-
-<TabList>
-
-<Tab title="PHP Runtime Generation 2" id="tab-1-anchor" active={true}>
 
 The Tika 3.x jar is available at:
 
@@ -77,19 +73,6 @@ If your Drupal site uses the [Search API Attachments](https://www.drupal.org/pro
 
 ![Search API Attachments Tika configuration](../images/search-api-attachments-tika-config.png)
 
-</Tab>
-<Tab title="PHP Runtime Generation 1" id="tab-2-id">
-
-Tika 1.18 and 1.21 are available for PHP Runtime Generation 1. These versions are available at the following paths:
-
-- `/srv/bin/tika-app-1.18.jar`
-- `/srv/bin/tika-app-1.21.jar`
-
-Sites that are using these older versions of Tika should be upgraded to a newer version of Tika as soon as possible. See the PHP Runtime Generation 2 tab for more information.
-
-
-</Tab>
-</TabList>
 
 ## ImageMagick
 

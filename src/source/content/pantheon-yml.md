@@ -159,7 +159,7 @@ php_jit: low
 
 #### Considerations
 
-- Requires **PHP 8.3 or higher** and [PHP Runtime Generation 2](/php-runtime-generation-2).
+- Requires **PHP 8.3 or higher**.
 - Valid values are `off` (default), `low`, and `high`. Any other value will cause a validation error.
 - The JIT buffer size is allocated automatically based on your site's plan tier. Refer to the [PHP JIT guide](/guides/php/php-jit) for the full memory allocation table and additional details.
 
