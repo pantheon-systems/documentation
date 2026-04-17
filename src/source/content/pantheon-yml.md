@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2026-02-04"
+reviewed: "2026-04-17"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -137,10 +137,10 @@ Refer to [Integrated Composer](/guides/integrated-composer) for more information
 
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
 
-For example, to override the upstream default value at the site level to PHP 8:
+For example, to override the upstream default value at the site level to PHP 8.5:
 
 ```yaml:title=pantheon.yml
-php_version: 8.0
+php_version: 8.5
 ```
 
 #### Considerations
