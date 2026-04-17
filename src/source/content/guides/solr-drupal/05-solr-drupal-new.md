@@ -85,7 +85,7 @@ Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr serv
 
 1. Click **Settings**.
 
-1. Click **Add Ons > Apache Solr Index Server: Add**.
+1. Click **Add Ons > Apache Solr: Add**.
 
 #### Using Terminus
 
