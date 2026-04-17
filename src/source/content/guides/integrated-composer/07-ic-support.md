@@ -83,6 +83,10 @@ All modules will be overwritten by Integrated Composer if you don't add the exce
 
 </Alert>
 
+### Can I trigger Integrated Composer to re-run its build again?
+
+Yes, you can use Terminus to run `terminus env:code-rebuild site-id.dev`, which will cause Integrated Composer to run its build process again on the environment you specify.
+
 ### Can I hotfix an Integrated Composer site?
 
 No. Integrated Composer is not compatible with the [hotfix](/guides/git/hotfixes) workflow.
