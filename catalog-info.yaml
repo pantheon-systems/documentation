@@ -9,4 +9,4 @@ metadata:
 spec:
   type: service
   lifecycle: mature
-  owner: developer-experience
+  owner: docs-admins
