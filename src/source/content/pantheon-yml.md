@@ -171,7 +171,7 @@ JIT compilation can cause unexpected behavior on some sites, including white scr
 
 ### Specify a Version of MariaDB
 
-<ReviewDate date="2026-04-17" />
+<ReviewDate date="2026-02-04" />
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
