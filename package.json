@@ -6,7 +6,6 @@
   "homepage": "https://docs.pantheon.io",
   "author": "@pantheon-systems",
   "scripts": {
-    "update": "tsx seed/update.ts",
     "build": "next build",
     "coverage": "vitest run --coverage",
     "dev": "next dev -p 3002",
@@ -22,8 +21,6 @@
     "@adobe/mdast-util-gridtables": "^4.0.13",
     "@adobe/remark-gridtables": "^3.0.14",
     "@next/bundle-analyzer": "^15.4.5",
-    "@pantheon-systems/pcc-react-sdk": "3.13.0-beta.2",
-    "@pantheon-systems/pcc-sdk-core": "3.13.0-beta.2",
     "@pantheon-systems/pds-toolkit-react": "1.0.0-dev.256",
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
