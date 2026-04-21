@@ -71,7 +71,7 @@ For detailed setup steps, see the [documentation](https://docs.pantheon.io/guide
 
 ## What about Solr 8?
 
-Solr 8 (8.11.4) remains fully supported. Existing Solr 8 sites can update to 8.5.x without any configuration changes.
+Solr 8 (8.11.4) remains fully supported. Existing Solr 8 sites can update to Search API Pantheon 8.5.x without any configuration changes.
 
 ## Older Drupal versions
 
