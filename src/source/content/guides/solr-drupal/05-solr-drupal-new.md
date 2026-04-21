@@ -268,9 +268,10 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    terminus drush $SITE.$ENV -- cr
    ```
 
-5. **Reindex content:**
+5. **Clear the index and reindex content:**
 
    ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:clear
    terminus drush $SITE.$ENV -- search-api:index
    ```
 
@@ -313,11 +314,6 @@ terminus drush $SITE.$ENV -- cr
 ```
 
 ## Troubleshooting
-
-### Solr 9
-empty for now, need to be populated
-
-### Solr 8
 
 #### Incorrect Solr Version
 
