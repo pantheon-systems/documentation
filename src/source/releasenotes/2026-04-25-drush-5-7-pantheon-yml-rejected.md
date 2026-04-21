@@ -18,4 +18,4 @@ Customers with sites configured for Drush 5 or 7 should [upgrade the Drush versi
 drush_version: 8
 ```
 
-Sites created with custom upstreams using these versions may also encounter errors on upstream updates if `drush_version` is still set to `5` or `7`.
+Sites created with custom upstreams using these versions may also encounter errors on site creation or upstream updates if `drush_version` is still set to `5` or `7`.
