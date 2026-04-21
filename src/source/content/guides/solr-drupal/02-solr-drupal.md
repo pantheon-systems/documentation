@@ -86,7 +86,7 @@ Ensure you review our documentation on [Git](/guides/git/git-config), [Composer]
     <Tab title="Solr 8" id="solr8">
       
     ```shell{promptUser:user}
-    brew install git composer php@8.1
+    brew install git composer php@7.4
     ```
 
     </Tab>
