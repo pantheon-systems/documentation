@@ -235,37 +235,44 @@ Indices are specific to the Solr core they were created for. Indices cannot be e
 
 </Alert>
 
-### Using the Default Primary Index
+### Add Search Index
 
-1. Navigate to **Configuration > Search & Metadata > Search API** and select the **Primary** index.
-1. Click the **Fields** tab and add the fields you want to search, such as **Title** and **Body**.
-1. Click **Save changes**.
-1. Post the schema to the Solr server before indexing content:
+Navigate to **Configuration > Search & Metadata > Search API** within Drupal's Admin interface. The server labeled **Pantheon Search** should be displayed with an enabled status.
 
-   ```shell{promptUser:user}
-   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema [path]
-   ```
+**Using the Primary Index:** Select the **Primary** index to use the default index automatically created when the module was enabled.
 
-   The `[path]` argument is optional. Provide it only if you want to use a custom config set directory. If omitted, the default config set matching the installed Search API Solr version is used.
+**Creating a Custom Index:**
 
-1. Click **Index now** to populate the index with your content. Content will also be indexed automatically when cron runs.
-
-### Creating a Custom Index
-
-1. Navigate to **Configuration > Search & Metadata > Search API** and click **Add Index**.
+1. Click **Add Index**.
 1. Give the index a name and select a datasource. If this is your first time using Search API, select **Content** to index your site's nodes.
 1. Select **Pantheon Search** as the Server.
 1. In the Index Options panel, ensure **Index items immediately** is checked.
 1. Click **Save** to add the new index.
-1. Click the **Fields** tab and add the fields you want to search.
-1. Click **Save changes**.
-1. Post the schema to the Solr server before indexing content:
 
-   ```shell{promptUser:user}
-   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema [path]
-   ```
+The Index status page should indicate that the newly created index was successfully saved.
 
-1. Click **Index now** to populate the index with your content.
+### Add Fields to the Index
+
+1. Click the **Fields** tab and click **Add fields**.
+1. Add the fields you want to search, such as **Title** and **Body**.
+1. Click **Save changes** when you are finished.
+
+### Post the Schema
+
+Post the schema to the Solr server before indexing content:
+
+```shell{promptUser:user}
+terminus drush $SITE.$ENV -- search-api-pantheon:postSchema [path]
+```
+
+The `[path]` argument is optional. Provide it only if you want to use a custom config set directory. If omitted, the default config set matching the installed Search API Solr version is used.
+
+### Index Content
+
+1. Click **Index now** on the **View** tab of your index's Overview page to populate the index with your content. Content will also be indexed automatically when cron runs.
+1. Click **Search API** to return to the Search API overview page at `admin/config/search/search-api`.
+
+Both the server and index you just created should be displayed on the page.
 
 ## Upgrading from Solr 8 to Solr 9
 
