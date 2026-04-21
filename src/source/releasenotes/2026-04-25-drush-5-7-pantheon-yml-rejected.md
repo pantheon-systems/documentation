@@ -1,6 +1,6 @@
 ---
 title: "Drush 5 and 7 are no longer accepted in pantheon.yml"
-published_date: "2026-04-25"
+published_date: "2026-04-22"
 categories: [action-required, infrastructure, drupal, security]
 ---
 
