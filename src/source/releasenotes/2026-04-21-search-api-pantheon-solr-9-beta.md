@@ -67,7 +67,7 @@ search:
 composer require 'drupal/search_api_pantheon:^8.5@beta'
 ```
 
-For detailed setup steps, see the [README](https://github.com/pantheon-systems/search_api_pantheon/blob/8.5.x/README.md#setup).
+For detailed setup steps, see the [documentation](https://docs.pantheon.io/guides/pantheon-search/solr-drupal/solr-drupal/#first-time-setup).
 
 ## What about Solr 8?
 
@@ -75,4 +75,4 @@ Solr 8 (8.11.4) remains fully supported. Existing Solr 8 sites can update to 8.5
 
 ## Feedback and documentation
 
-Bug reports, feature requests, and feedback should be posted in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All). For detailed upgrade instructions, see [UPGRADE.md](https://github.com/pantheon-systems/search_api_pantheon/blob/8.5.x/UPGRADE.md). For general setup and schema management, see the [README](https://github.com/pantheon-systems/search_api_pantheon/blob/8.5.x/README.md).
+Bug reports, feature requests, and feedback should be posted in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All). For detailed installation and upgrade  instructions,[Pantheon Search documentation](/guides/pantheon-search/solr-drupal/solr-drupal).
