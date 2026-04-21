@@ -19,7 +19,11 @@ editpath: solr-drupal/02-solr-drupal.md
 
 Pantheon Search gives Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates. Pantheon Search supports both Apache Solr 8 and Solr 9. Solr 9 builds on the foundation of Solr 8 with improved performance, more secure defaults, and new search capabilities.
 
-## Solr 9 Features
+## Solr Features
+
+<TabList>
+
+<Tab title="Solr 9" id="solr9" active={true}>
 
 Solr 9 introduces the following new capabilities for Drupal sites running on Pantheon:
 
@@ -28,6 +32,26 @@ Solr 9 introduces the following new capabilities for Drupal sites running on Pan
 
 - Unified highlighter is now the default in Solr 9, improving search result excerpt quality.
   - When Drupal displays search results, Solr generates the snippet of text shown below each result title. Solr 9 produces more accurate snippets that better reflect where the search term actually appears in the content, improving the user experience on Search API-powered results pages.
+
+</Tab>
+
+<Tab title="Solr 8" id="solr8">
+
+Pantheon Search with Solr 8 includes multiple built-in features to make scalable, high-performance search more customizable, including the following:
+
+- Media/rich content type indexing for attachments such as PDFs and Word documents
+  - Solr has the ability to store information about document relationships in the index. The stored information can be used for queries and can also return child pages in nested form if the relationship is properly stored in the index.
+
+- Multiple language support
+  - Use Solr’s stemming and language identification libraries that allow for the searching of multiple languages using separate fields, the same field (separate Solr cores), or the same field and Solr core.
+
+- Drupal Views integration for building search results pages and custom search forms.
+
+- Partial string search.
+
+</Tab>
+
+</TabList>
 
 For more information, refer to the [Drupal Search API Solr](https://www.drupal.org/project/search_api_solr) documentation.
 
