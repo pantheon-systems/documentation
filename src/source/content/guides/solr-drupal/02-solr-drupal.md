@@ -229,7 +229,7 @@ When you enable the Search API Pantheon module, a default **Primary** index is a
 
 <Alert title="Note" type="info">
 
-Indices are specific to the Solr core they were created for. Indices cannot be exported or moved once created. You will need to create an index for each environment and ensure content is indexed after creation.
+Each environment has its own Solr core with its own indexed data. While the Search API index configuration deploys with your code via config management, the indexed content does not transfer between environments. After deploying to a new environment, you must re-index content by running `terminus drush <site>.<env> -- search-api:index` or allowing cron to index content incrementally.
 
 </Alert>
 
