@@ -4,7 +4,7 @@ published_date: "2026-04-22"
 categories: [action-required, infrastructure, drupal, security]
 ---
 
-As noted in our [June 2025 release notes](/release-notes/2025/06/drush-5-7-eol), Drush 5 and 7 are no longer available on Pantheon, and `pantheon.yml` files retaining these retired values would eventually cause a `git push` to be rejected. That enforcement is now in effect.
+As noted in our [June 2025 release note](/release-notes/2025/06/drush-5-7-eol), Drush 5 and 7 are no longer available on Pantheon, and `pantheon.yml` files retaining these retired values would eventually cause a `git push` to be rejected. That enforcement is now in effect.
 
 Pantheon now rejects `git push` when `drush_version` is set to `5` or `7` in [`pantheon.yml`](/pantheon-yml). The supported values are `8`, `9`, and `10`.
 
