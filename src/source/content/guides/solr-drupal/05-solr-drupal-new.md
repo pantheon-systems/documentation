@@ -231,7 +231,7 @@ Version 8.5.x of the Search API Pantheon module is currently in beta. Test thoro
 
 <Alert title="Note" type="info">
 
-Switching from Solr 8 to Solr 9 provisions a new Solr core. Existing indexed data will not carry over. A full reindex is required after the switch.
+Switching from Solr 8 to Solr 9 provisions a new Solr core. You must post the schema, clear the index tracker, and reindex all content.
 
 </Alert>
 
@@ -241,9 +241,10 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 
    ```shell{promptUser:user}
    composer require 'drupal/search_api_pantheon:^8.5@beta'
+   git add composer.json composer.lock
+   git commit -m "Update search_api_pantheon to 8.5.x"
+   git push
    ```
-
-   Commit and push this change.
 
 2. **Update your `pantheon.yml`:**
 
@@ -252,20 +253,22 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
      version: 9
    ```
 
-   Commit and push this change.
-
-3. **Post the schema for the new Solr version:**
-
    ```shell{promptUser:user}
-   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema [path]
+   git add pantheon.yml
+   git commit -m "Switch to Solr 9"
+   git push
    ```
 
-   The `[path]` argument is optional and only required if you are using a custom Solr config set. If omitted, the default config set matching the installed Search API Solr version is used.
-
-4. **Clear the cache:**
+3. **Clear the cache:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- cr
+   ```
+
+4. **Post the schema for the new Solr version:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
 5. **Clear the index and reindex content:**
@@ -281,23 +284,37 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 
 For some reason if you need to revert to Solr 8 after upgrading, the `search_api_pantheon` 8.5.x module supports both Solr 8 and Solr 9, so you do not need to downgrade the module version.
 
-1. Change `pantheon.yml` back to `version: 8` and commit and push the change.
+1. Change `pantheon.yml` back to `version: 8`:
 
-2. Re-post the Solr 8 schema:
-
-   ```shell{promptUser:user}
-   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```yml:title=pantheon.yml
+   search:
+     version: 8
    ```
 
-3. Clear the cache:
+2. Commit and push the change:
+
+   ```shell{promptUser:user}
+   git add pantheon.yml
+   git commit -m "Revert to Solr 8"
+   git push
+   ```
+
+3. **Clear the cache:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- cr
    ```
 
-4. Reindex all content:
+4. **Re-post the Solr 8 schema:**
 
    ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```
+
+5. **Clear the index and reindex content:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:clear
    terminus drush $SITE.$ENV -- search-api:index
    ```
 
@@ -305,15 +322,89 @@ For some reason if you need to revert to Solr 8 after upgrading, the `search_api
 
 If you are upgrading from 8.4.x and want to continue using Solr 8, no migration is needed:
 
-```shell{promptUser:user}
-composer require 'drupal/search_api_pantheon:^8.5@beta'
-```
+1. **Update the module:**
 
-```shell{promptUser:user}
-terminus drush $SITE.$ENV -- cr
-```
+   ```shell{promptUser:user}
+   composer require 'drupal/search_api_pantheon:^8.5@beta'
+   git add composer.json composer.lock
+   git commit -m "Update search_api_pantheon to 8.5.x"
+   git push
+   ```
+
+2. **Clear the cache:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- cr
+   ```
+
+If you were previously running Search API Solr 4.2.x or earlier, you must also resolve a schema incompatibility. See [Schema incompatibility with Search API Solr 4.3.x](#schema-incompatibility-with-search-api-solr-43x) below.
 
 ## Troubleshooting
+
+### Schema incompatibility with Search API Solr 4.3.x
+
+Search API Solr 4.3.x introduced fundamental schema changes that are incompatible with indexes created by 4.2.x or earlier. This affects any site upgrading the module to 4.3.x, regardless of Solr server version. After upgrading, you may encounter the following error:
+
+```
+cannot change field "xyz" from index options=DOCS_AND_FREQS_AND_POSITIONS
+to inconsistent index options=DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS
+```
+
+<Alert title="Note" type="info">
+
+If you are upgrading to Solr 9, you can skip the below section. The Solr 9 upgrade process already requires a full reindex, which resolves this incompatibility.
+
+</Alert>
+
+<Alert title="Note" type="info">
+
+Resolving this requires clearing all indexed data and performing a full reindex. Plan for temporary search downtime.
+
+</Alert>
+
+1. **Post the updated schema:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```
+
+2. **Disable and re-enable the Solr server** to clear all tracked index data:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:server-disable <server_id>
+   terminus drush $SITE.$ENV -- search-api:server-enable <server_id>
+   ```
+
+   Find your `<server_id>` with `terminus drush $SITE.$ENV -- search-api:server-list`.
+
+3. **Reload the Solr core:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-solr:reload <server_id>
+   ```
+
+4. **Wait at least 5 minutes**, then verify the schema version has updated:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
+   ```
+
+   The platform checks for new schemas and issues a core reload within 1-5 minutes.
+
+5. **Re-enable all indexes** (they are automatically disabled when the server is disabled):
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:enable
+   ```
+
+6. **Reindex all content:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:index
+   ```
+
+7. **Verify** search functionality is working as expected.
+
 
 #### Incorrect Solr Version
 
