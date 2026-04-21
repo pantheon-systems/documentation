@@ -22,6 +22,8 @@ Pantheon Search now supports [Apache Solr 9.10.0](https://solr.apache.org/docs/9
    composer require 'drupal/search_api_pantheon:^8.5@beta'
    ```
 
+   Commit and deploy the changes to your Pantheon environment.
+
 2. **Update your `pantheon.yml`:**
 
    ```yaml:title=pantheon.yml
@@ -29,28 +31,28 @@ Pantheon Search now supports [Apache Solr 9.10.0](https://solr.apache.org/docs/9
      version: 9
    ```
 
-3. **Commit and deploy** the `composer.json`, `composer.lock`, and `pantheon.yml` changes to your Pantheon environment.
+   Commit and deploy the changes to your Pantheon environment.
 
-4. **Clear the cache:**
+3. **Clear the cache:**
 
    ```bash
    terminus drush <site>.<env> -- cr
    ```
 
-5. **Post the schema for the new Solr version:**
+4. **Post the schema for the new Solr version:**
 
    ```bash
    terminus drush <site>.<env> -- search-api-pantheon:postSchema
    ```
 
-6. **Clear the index and reindex content:**
+5. **Clear the index and reindex content:**
 
    ```bash
    terminus drush <site>.<env> -- search-api:clear
    terminus drush <site>.<env> -- search-api:index
    ```
 
-7. **Test search functionality** thoroughly and report any issues in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All).
+6. **Test search functionality** thoroughly and report any issues in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All).
 
 ### New installations
 
