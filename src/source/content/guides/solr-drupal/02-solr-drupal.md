@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence, rkunjappan, mehta-asim]
-reviewed: "2026-04-17"
+reviewed: "2026-04-21"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
