@@ -37,15 +37,13 @@ Search API module processors provide a variety of configuration options for your
 
 Refer to the [Search API module processors documentation](https://www.drupal.org/docs/8/modules/search-api/getting-started/processors) for details.
 
-## First-Time Setup
+## Before You Begin
 
-Complete the following steps in order to set up Pantheon Search for the first time.
+### Drupal Site Setup
 
-### 1. Set Up a Drupal Site
+Pantheon Search with Solr can be used on Drupal sites. You can set up a [new Drupal site](/drupal) or visit the [Drupal upgrade and migration](/drupal-migration) guide to create a Drupal site.
 
-Pantheon Search can be used on Drupal sites. You can set up a [new Drupal site](/drupal) or visit the [Drupal upgrade and migration](/drupal-migration) guide to create a Drupal site.
-
-### 2. Prepare Your Local Environment
+### Prepare the Local Environment
 
 Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer/ic-support) at a minimum.
 
@@ -79,7 +77,8 @@ Ensure you review our documentation on [Git](/guides/git/git-config), [Composer]
 
   * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
 
-### 3. Enable Pantheon Search
+
+### Enable Pantheon Search
 
 Enable Pantheon Search under **Settings** in your Pantheon Site Dashboard. This feature is available for sandbox sites as well as paid plans at the Professional level and above.
 
@@ -111,23 +110,33 @@ The `solr:enable` and `solr:disable` commands are deprecated as of [Terminus 4.1
 
 </Alert>
 
-### 4. Configure the Solr Version
+### Configure the Solr Version
 
 Add or update the following in your `pantheon.yml` file before installing the Drupal search module to avoid incompatibilities.
 
-- For Solr 9:
+<TabList>
+
+<Tab title="Solr 9" id="solr9" active={true}>
+
 
   ```yml:title=pantheon.yml
   search:
     version: 9
   ```
 
-- For Solr 8:
+</Tab>
+
+<Tab title="Solr 8" id="solr8">
+
 
   ```yml:title=pantheon.yml
   search:
     version: 8
   ```
+
+</Tab>
+
+</TabList>
 
 <Alert title="Note" type="info">
 
@@ -139,7 +148,7 @@ Push the changes to `pantheon.yml`. A confirmation message is returned in Git, w
 
 For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version).
 
-### 5. Install the Search API Pantheon Module
+### Install the Search API Pantheon Module
 
 Composer automatically installs the following dependencies when you install `drupal/search_api_pantheon`:
 
@@ -148,19 +157,22 @@ Composer automatically installs the following dependencies when you install `dru
 - **Search API Solr** — connects Search API to Apache Solr. Version 4.3.x or later is required for Solr 9 compatibility.
 
 1. Clone the Git repository for the desired environment from the Pantheon Site Dashboard.
-1. Run `composer install` to install existing dependencies:
+1. Enter the following command in the terminal to run `composer install`:
 
    ```shell{promptUser:user}
    composer install
    ```
 
-1. Add the Search API Pantheon module:
+1. Add the Search API Pantheon module as a required dependency:
 
    ```shell{promptUser:user}
    composer require drupal/search_api_pantheon:^8 --prefer-dist
    ```
 
-   <Alert title="Note" type="info">
+1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
+1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
+   
+<Alert title="Note" type="info">
 
    For Solr 9, install the beta release instead:
 
@@ -175,17 +187,17 @@ Composer automatically installs the following dependencies when you install `dru
 1. Run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes. Integrated Composer will take a few moments to install these on your site.
 
-### 6. Enable the Search API Pantheon Module
+### Enable the Search API Pantheon Module
 
 Navigate to **Admin > Extend** (`/admin/modules`) and enable **Search API Pantheon**. Enabling this module also enables Search API and Search API Solr if they are not already enabled.
 
-You can also enable it from the command line using Terminus and Drush:
+You can also enable it from the command line using Terminus and Drush replacing `$ENV` with the environment:
 
 ```shell{promptUser:user}
 terminus drush $SITE.$ENV -- pm-enable search_api_pantheon
 ```
 
-### 7. Verify the Installation
+### Verify the Installation
 
 Navigate to **Configuration > Search & Metadata > Search API** in the Drupal Admin interface. Confirm that the **Pantheon Search** server and **Primary** index exist and are enabled.
 
