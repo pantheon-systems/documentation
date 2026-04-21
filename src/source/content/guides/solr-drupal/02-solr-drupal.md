@@ -51,15 +51,25 @@ Ensure you review our documentation on [Git](/guides/git/git-config), [Composer]
 
 * Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
 
+    <TabList>
+
+    <Tab title="Solr 9" id="solr9" active={true}>
+      
     ```shell{promptUser:user}
     brew install git composer php@8.1
     ```
 
-    <Alert title="Note" type="info">
+    </Tab>
 
-    If you are using Solr 8, the minimum PHP version is 7.4. Replace `php@8.1` with `php@7.4` in the command above.
+    <Tab title="Solr 8" id="solr8">
+      
+    ```shell{promptUser:user}
+    brew install git composer php@8.1
+    ```
 
-    </Alert>
+    </Tab>
+
+    </TabList>
 
 * Windows users should install the following dependencies:
 
