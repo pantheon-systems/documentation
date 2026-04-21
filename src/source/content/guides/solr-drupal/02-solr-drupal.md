@@ -297,7 +297,7 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    git push
    ```
 
-2. **Update your `pantheon.yml`:**
+1. **Update your `pantheon.yml`:**
 
    ```yml:title=pantheon.yml
    search:
@@ -310,26 +310,26 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    git push
    ```
 
-3. **Clear the cache:**
+1. **Clear the cache:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- cr
    ```
 
-4. **Post the schema for the new Solr version:**
+1. **Post the schema for the new Solr version:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
-5. **Clear the index and reindex content:**
+1. **Clear the index and reindex content:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:clear
    terminus drush $SITE.$ENV -- search-api:index
    ```
 
-6. **Test search functionality** thoroughly on non-production environments. Use `terminus drush $SITE.$ENV -- search-api-pantheon:diagnose` to verify the configuration.
+1. **Test search functionality** thoroughly on non-production environments. Use `terminus drush $SITE.$ENV -- search-api-pantheon:diagnose` to verify the configuration.
 
 ## Rolling Back to Solr 8
 
@@ -342,7 +342,7 @@ For some reason if you need to revert to Solr 8 after upgrading, the `search_api
      version: 8
    ```
 
-2. Commit and push the change:
+1. Commit and push the change:
 
    ```shell{promptUser:user}
    git add pantheon.yml
@@ -350,19 +350,19 @@ For some reason if you need to revert to Solr 8 after upgrading, the `search_api
    git push
    ```
 
-3. **Clear the cache:**
+1. **Clear the cache:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- cr
    ```
 
-4. **Re-post the Solr 8 schema:**
+1. **Re-post the Solr 8 schema:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
-5. **Clear the index and reindex content:**
+1. **Clear the index and reindex content:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:clear
@@ -382,7 +382,7 @@ If you are upgrading from 8.4.x and want to continue using Solr 8, no migration 
    git push
    ```
 
-2. **Clear the cache:**
+1. **Clear the cache:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- cr
@@ -419,7 +419,7 @@ Resolving this requires clearing all indexed data and performing a full reindex.
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
-2. **Disable and re-enable the Solr server** to clear all tracked index data:
+1. **Disable and re-enable the Solr server** to clear all tracked index data:
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:server-disable <server_id>
@@ -428,13 +428,13 @@ Resolving this requires clearing all indexed data and performing a full reindex.
 
    Find your `<server_id>` with `terminus drush $SITE.$ENV -- search-api:server-list`.
 
-3. **Reload the Solr core:**
+1. **Reload the Solr core:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api-solr:reload <server_id>
    ```
 
-4. **Wait at least 5 minutes**, then verify the schema version has updated:
+1. **Wait at least 5 minutes**, then verify the schema version has updated:
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
@@ -442,19 +442,19 @@ Resolving this requires clearing all indexed data and performing a full reindex.
 
    The platform checks for new schemas and issues a core reload within 1-5 minutes.
 
-5. **Re-enable all indexes** (they are automatically disabled when the server is disabled):
+1. **Re-enable all indexes** (they are automatically disabled when the server is disabled):
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:enable
    ```
 
-6. **Reindex all content:**
+1. **Reindex all content:**
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:index
    ```
 
-7. **Verify** search functionality is working as expected.
+1. **Verify** search functionality is working as expected.
 
 
 #### Incorrect Solr Version
