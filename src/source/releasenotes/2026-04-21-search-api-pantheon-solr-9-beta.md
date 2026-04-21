@@ -73,6 +73,12 @@ For detailed setup steps, see the [documentation](https://docs.pantheon.io/guide
 
 Solr 8 (8.11.4) remains fully supported. Existing Solr 8 sites can update to 8.5.x without any configuration changes.
 
+## Older Drupal versions
+
+[Pantheon Search is no longer supported for **Drupal 8-9.3**](/release-notes/2025/07/drupal-8-93-solr-eol) as of December 2, 2025.  
+
+[Solr 3 is no longer supported by **Drupal 9.4+**](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) as of December 9, 2025. Those sites must use Solr 8 or above.
+
 ## Feedback and documentation
 
 Bug reports, feature requests, and feedback should be posted in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All). For detailed installation and upgrade  instructions,[Pantheon Search documentation](/guides/pantheon-search/solr-drupal/solr-drupal).
