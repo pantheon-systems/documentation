@@ -282,7 +282,7 @@ Version 8.5.x of the Search API Pantheon module is currently in beta. Test thoro
 
 <Alert title="Note" type="info">
 
-Switching from Solr 8 to Solr 9 provisions a new core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
+Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
 
 </Alert>
 
