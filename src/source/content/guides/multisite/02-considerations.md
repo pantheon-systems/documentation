@@ -21,6 +21,7 @@ Before you start using WordPress Multisite, keep these key details in mind:
 
 * [The decision is permanent](#the-decision-is-permanent).
 * [Choose between subdirectories and subdomains](#choose-between-subdirectories-and-subdomains).
+* [Do not set a primary domain on subdomain-based networks](#do-not-set-a-primary-domain-on-subdomain-based-networks).
 * [Users are shared](#users-are-shared).
 * [Themes and plugins are shared](#themes-and-plugins-are-shared).
 
@@ -43,6 +44,12 @@ The key functional differences are:
 - Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can't be mapped to sites on subdomains.
 - Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `*.<env>-<site>.pantheonsite.io` namespace for WordPress Multisites.
 - Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain. In choosing subdirectories, all sites share the same domain and SSL certificate.
+
+## Do Not Set a Primary Domain on Subdomain-based Networks
+
+Pantheon allows you to set a [primary domain](/guides/domains/primary-domain) per site environment, which redirects all traffic to a single domain. For subdomain-based WordPress Multisites, **do not use this feature**. Setting a primary domain causes every site in the network to redirect to that domain — effectively taking all other subsites offline.
+
+For example, if your network's root domain is `example.com` and you set `example.com` as the primary domain, all traffic to `site1.example.com` will be redirected to `example.com`.
 
 ## Users are Shared
 User data is shared among all sites on a WordPress Multisite. If you were to create a user with a username of `janedoe`, she will have the only `janedoe` username across all of the sites. If you were to change her display name from “Jane Doe” to “J. Doe”, the change would apply everywhere her name is displayed, regardless of the site.
