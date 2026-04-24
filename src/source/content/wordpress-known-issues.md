@@ -1841,7 +1841,7 @@ ___
    git push origin master
    ```
 
-1. Add the following to a [custom MU plugin](/guides/wordpress-configurations/plugins#create-a-custom-mu-plugin) to redirect Yoast’s file writes to the uploads directory. Update the path if your uploads directory is not at the default location:
+1. Add the following to a [custom MU plugin](/guides/wordpress-configurations/mu-plugin) to redirect Yoast’s file writes to the uploads directory. Update the path if your uploads directory is not at the default location:
 
    ```php:title=wp-content/mu-plugins/yoast-llmstxt-path.php
    <?php
