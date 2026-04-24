@@ -2,19 +2,8 @@
 title: WebOps Certification
 subtitle: "Chapter 9: Additional Automation"
 description: "Learn how to leverage Integrated Composer and Autopilot"
-certificationpage: true
-type: certificationpage
-layout: certificationpage
-showtoc: true
-tags: []
 permalink: docs/certification/study-guide/automate
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide/extend
 nexturl: /certification/study-guide/custom-upstreams
 ---

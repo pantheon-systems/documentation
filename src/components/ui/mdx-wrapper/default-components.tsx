@@ -1,5 +1,4 @@
-import { ComponentProps } from "react";
-import { ArticleRenderer } from "../pds-re-export";
+import { ReactNode } from "react";
 import { Alert } from "@/components/common/alert";
 import { Callout } from "@/components/common/callout";
 import { Accordion } from "@/components/common/accordion";
@@ -29,7 +28,14 @@ import { Popover } from "@/components/common/popover";
 import { Wistia } from "@/components/common/wistia";
 import Enablement from "@/components/common/enablement";
 
-export type MdxWrapperProps = ComponentProps<typeof ArticleRenderer>;
+export interface MdxWrapperArticle {
+  content?: string;
+}
+
+export interface MdxWrapperProps {
+  article: MdxWrapperArticle;
+  componentMap?: Record<string, React.ComponentType<any>>;
+}
 
 const ImageRenderer = async ({ src = "", alt }: any) => {
   let resolvedSrc = path.join(process.cwd(), "src", "source", "images", src);
