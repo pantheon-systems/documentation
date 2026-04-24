@@ -1815,8 +1815,8 @@ ___
 
    ```php:title=wp-content/mu-plugins/yoast-llmstxt-path.php
    <?php
-   add_filter( ‘wpseo_llmstxt_filesystem_path’, function() {
-       return WP_CONTENT_DIR . ‘/uploads’;
+   add_filter( 'wpseo_llmstxt_filesystem_path', function() {
+       return WP_CONTENT_DIR . '/uploads';
    } );
    ```
 
