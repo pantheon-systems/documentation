@@ -63,8 +63,9 @@ Sample `services.yml` file:
     allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin','x-allowed-header','*']
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
     allowedMethods: ['*']
-    # Configure requests allowed from specific origins.
-    allowedOrigins: ['http://localhost/','http://localhost:3000','http://localhost:3001','http://localhost:3002','*']
+    # List each allowed origin explicitly. http:// and https:// are distinct origins,
+    # as are www and non-www. Wildcard origins are not valid when supportsCredentials is true.
+    allowedOrigins: ['http://localhost/','http://localhost:3000','http://localhost:3001','http://localhost:3002','https://example.com','https://www.example.com']
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.
@@ -72,6 +73,18 @@ Sample `services.yml` file:
     # Sets the Access-Control-Allow-Credentials header.
     supportsCredentials: true
 ```
+
+<Alert title="Safari and CORS" type="info">
+
+Safari enforces CORS more strictly than Chromium-based browsers. Even with correctly configured headers, you may encounter CORS errors in Safari that do not appear in other browsers:
+
+- **Wildcard subdomains are not supported.** `*.example.com` is not a valid `Access-Control-Allow-Origin` value. Each origin must be listed explicitly.
+- **Protocol is part of the origin.** `http://example.com` and `https://example.com` are distinct origins and must be listed separately if both are needed.
+- **`www` and non-`www` are distinct origins** and must each be listed if your site serves traffic on both.
+- **Wildcard origins cannot be used with credentialed requests** in any browser. If `supportsCredentials` (Drupal) or `Access-Control-Allow-Credentials` (WordPress) is enabled, every allowed origin must be explicit.
+- **Safari's Intelligent Tracking Prevention (ITP)** may block credentialed cross-origin requests regardless of your CORS configuration. This is a browser-enforced privacy restriction with no server-side workaround.
+
+</Alert>
 
 
 ## CSS Preprocessors
