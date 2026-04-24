@@ -227,7 +227,7 @@ composer require drupal/simplesamlphp_auth:"^4"
 
 ## WordPress Multisite Issues
 
-On WordPress Multisite, auto-provisioned users are added to the site where they log in with the default role. Use the `wp_saml_auth_auto_add_to_blog` filter in a [custom MU plugin](/guides/wordpress-configurations/plugins#create-a-custom-mu-plugin) to control this behavior. See the [WP SAML Auth README](https://github.com/pantheon-systems/wp-saml-auth#description) for full documentation on this filter.
+On WordPress Multisite, auto-provisioned users are added to the site where they log in with the default role. Use the `wp_saml_auth_auto_add_to_blog` filter in a [custom MU plugin](/guides/wordpress-configurations/mu-plugin) to control this behavior. See the [WP SAML Auth README](https://github.com/pantheon-systems/wp-saml-auth#description) for full documentation on this filter.
 
 To prevent auto-provisioned users from being added to any site (creating them as network-only users):
 
