@@ -282,7 +282,7 @@ Version 8.5.x of the Search API Pantheon module is currently in beta. Test thoro
 
 <Alert title="Note" type="info">
 
-Switching from Solr 8 to Solr 9 provisions a new Solr core. You must post the schema, clear the index tracker, and reindex all content.
+Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
 
 </Alert>
 
@@ -318,7 +318,10 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 
 1. **Post the schema for the new Solr version:**
 
+   Wait a few minutes for the platform to provision the new Solr 9 core. Verify the core is ready by running the diagnose command or checking the server status page (`admin/config/search/search-api` > Pantheon Search), then post the schema:
+
    ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
@@ -328,6 +331,8 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    terminus drush $SITE.$ENV -- search-api:clear
    terminus drush $SITE.$ENV -- search-api:index
    ```
+
+   After switching Solr versions, Drupal's index tracker may still show items as indexed from the old core. Running `drush search-api:clear` resets the tracker and queues all content for reindexing, which is processed when `drush search-api:index` runs.
 
 1. **Test search functionality** thoroughly on non-production environments. Use `terminus drush $SITE.$ENV -- search-api-pantheon:diagnose` to verify the configuration.
 
