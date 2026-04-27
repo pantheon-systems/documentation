@@ -22,3 +22,7 @@ This release spans two MU Plugin versions, with updates concerning [WordPress si
 **[1.5.6](https://github.com/pantheon-systems/pantheon-mu-plugin/releases/tag/1.5.6)**
 
 - Fixes ElasticPress Autosuggest and Instant Results on sites using ElasticPress.io by routing browser-side search requests to the public host rather than an internal proxy URL that browsers cannot reach.
+
+**WordPress upstream**
+
+- `WP_HOME` and `WP_SITEURL` definitions in `wp-config-pantheon.php` are now conditional, so customer-defined values are respected and PHP notices are no longer generated when these constants are already set — for example, in sites using AGCDN domain masking.
