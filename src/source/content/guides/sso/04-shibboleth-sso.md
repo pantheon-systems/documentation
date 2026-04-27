@@ -29,11 +29,7 @@ The instructions below are only for advanced users working on integrating a Shib
 
 ## Install SimpleSAMLphp
 
-<Alert title="Security requirement" type="warning">
-
-SimpleSAMLphp 2.4.0 or later is required. Versions 2.0.0 and below contain a signature validation bypass vulnerability ([CVE-2025-27773](https://nvd.nist.gov/vuln/detail/CVE-2025-27773)). Always use the latest stable release.
-
-</Alert>
+[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php) is still used in SimpleSAMLphp 1.14.x, but was removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
 
 <TabList>
 
@@ -109,8 +105,6 @@ The commands below require a [nested docroot](/nested-docroot) structure and mus
 
 1. [Generate or install certificates](https://simplesamlphp.org/docs/stable/simplesamlphp-sp) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
-WP SAML Auth automatically detects Composer-installed SimpleSAMLphp at the standard `vendor/simplesamlphp/simplesamlphp` path. You do not need to set the `simplesamlphp_autoload` option unless SimpleSAMLphp is in a non-standard location.
-
 You should now have a docroot structure similar to the output below:
 
 ```bash
@@ -168,7 +162,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
        'certdir' => 'cert/',
        'logging.handler' => 'errorlog',
        'datadir' => 'data/',
-       'cachedir' => $_ENV['HOME'] . '/tmp/simplesaml',
+       'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
 
        // Your $config array continues for a while...
        // until we get to the "store.type" value, where we put in DB config...
@@ -227,32 +221,15 @@ composer require drupal/simplesamlphp_auth:"^4"
 
 ## WordPress Multisite Issues
 
-On WordPress Multisite, auto-provisioned users are added to the site where they log in with the default role. Use the `wp_saml_auth_auto_add_to_blog` filter in a [custom MU plugin](/guides/wordpress-configurations/mu-plugin) to control this behavior. See the [WP SAML Auth README](https://github.com/pantheon-systems/wp-saml-auth#description) for full documentation on this filter.
+WordPress Multisite users have reported a possible solution to enable SSO on their site. To use this solution, modify `inc/class-wp-saml-auth.php` to include:
 
-To prevent auto-provisioned users from being added to any site (creating them as network-only users):
-
-```php:title=wp-content/mu-plugins/wp-saml-auth-multisite.php
-<?php
-add_filter( 'wp_saml_auth_auto_add_to_blog', '__return_false' );
+```php:title=class-wp-saml-auth.php
+//$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_URL );
+//$redirect_to = $redirect_to ? : $_SERVER['REQUEST_URI'];
+// added to resolve multisite SSO issues
+$redirect_to = get_admin_url();
+$this->provider->login( $redirect_to );
 ```
-
-To prevent users from being added to a specific site only:
-
-```php:title=wp-content/mu-plugins/wp-saml-auth-multisite.php
-<?php
-add_filter( 'wp_saml_auth_auto_add_to_blog', function( $add_user, $blog_id ) {
-    if ( 1 === $blog_id ) {
-        return false;
-    }
-    return $add_user;
-}, 10, 2 );
-```
-
-<Alert title="Note" type="info">
-
-When `wp_saml_auth_auto_add_to_blog` returns `false`, users passed to the `wp_saml_auth_new_user_authenticated` action will have no role on the current site. If your code checks `$user->roles`, account for an empty array.
-
-</Alert>
 
 ## Troubleshooting
 
