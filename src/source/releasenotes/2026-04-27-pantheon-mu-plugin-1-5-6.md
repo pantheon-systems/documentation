@@ -25,4 +25,4 @@ This release spans two MU Plugin versions, with updates concerning [WordPress si
 
 **WordPress upstream**
 
-- `WP_HOME` and `WP_SITEURL` definitions in `wp-config-pantheon.php` are now conditional, so customer-defined values are respected and PHP notices are no longer generated when these constants are already set — for example, in sites using AGCDN domain masking.
+- `WP_HOME` and `WP_SITEURL` definitions in `wp-config-pantheon.php` are now conditional, so customer-defined values are respected and PHP notices are no longer generated when these constants are already set before `wp-config-pantheon.php` is included.
