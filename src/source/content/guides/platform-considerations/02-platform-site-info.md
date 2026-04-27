@@ -81,11 +81,11 @@ Safari enforces CORS more strictly than Chromium-based browsers. Even with corre
 - **Wildcard subdomains are not supported.** `*.example.com` is not a valid `Access-Control-Allow-Origin` value. Each origin must be listed explicitly.
 - **Protocol is part of the origin.** `http://example.com` and `https://example.com` are distinct origins and must be listed separately if both are needed.
 - **`www` and non-`www` are distinct origins** and must each be listed if your site serves traffic on both.
-- **Wildcard origins cannot be used with credentialed requests** in any browser. If `supportsCredentials` (Drupal) or `Access-Control-Allow-Credentials` (WordPress) is enabled, every allowed origin must be explicit.
 - **Safari's Intelligent Tracking Prevention (ITP)** may block credentialed cross-origin requests regardless of your CORS configuration. This is a browser-enforced privacy restriction with no server-side workaround.
 
 </Alert>
 
+**Note:** Wildcard origins cannot be used with credentialed requests in any browser. If `supportsCredentials` (Drupal) or `Access-Control-Allow-Credentials` (WordPress) is enabled, every allowed origin must be listed explicitly — `Access-Control-Allow-Origin: *` will be rejected by the browser.
 
 ## CSS Preprocessors
 
