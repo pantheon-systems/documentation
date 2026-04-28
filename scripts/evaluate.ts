@@ -1,9 +1,10 @@
 import { execSync, execFileSync } from "child_process";
-import { readFileSync, writeFileSync, unlinkSync } from "fs";
+import { readFileSync, writeFileSync, unlinkSync, mkdirSync } from "fs";
 import { join, basename, extname } from "path";
 import { tmpdir } from "os";
 import { AnthropicVertex } from "@anthropic-ai/vertex-sdk";
 import { GoogleAuth } from "google-auth-library";
+import matter from "gray-matter";
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const BATCH_SIZE = 50;
@@ -17,7 +18,8 @@ interface StaleSection {
   heading: string;
   date: string;
   days_since_review: number;
-  stale: boolean;
+  line_start: number;
+  line_end: number;
 }
 
 interface InlineAuditResult {
@@ -27,7 +29,6 @@ interface InlineAuditResult {
   frontmatter_days_since_review: number | null;
   stale_sections: StaleSection[];
   oldest_stale_days_since_review: number | null;
-  stale: boolean;
 }
 
 interface DateAuditResult {
@@ -35,7 +36,6 @@ interface DateAuditResult {
   staleness_source: "frontmatter" | "git";
   date: string;
   days_since_review: number;
-  stale: boolean;
 }
 
 type AuditResult = InlineAuditResult | DateAuditResult;
@@ -52,6 +52,8 @@ interface ReviewToolInput {
   action: "bump_date" | "update_content";
   confidence: "high" | "low";
   reason: string;
+  resolution: string;
+  confidence_reason: string;
   changes: LineChange[];
 }
 
@@ -63,7 +65,7 @@ const REVIEW_TOOL = {
     "Submit documentation review results with line-level changes. For bump_date, changes must be an empty array — dates are applied programmatically.",
   input_schema: {
     type: "object" as const,
-    required: ["action", "confidence", "reason", "changes"],
+    required: ["action", "confidence", "reason", "resolution", "confidence_reason", "changes"],
     properties: {
       action: {
         type: "string",
@@ -80,7 +82,17 @@ const REVIEW_TOOL = {
       reason: {
         type: "string",
         description:
-          "Summary of what is outdated, or confirmation that content is still accurate.",
+          "What is outdated and why — the assessment. For bump_date, confirm why the content is still accurate. Format as GitHub-flavored markdown: use numbered lists (1. item), bullet lists (- item), **bold**, paragraphs separated by blank lines. Do not use heading syntax.",
+      },
+      resolution: {
+        type: "string",
+        description:
+          "What should be done to resolve the staleness. For bump_date, state that no content changes are needed. For update_content, describe specifically what needs updating. Format as GitHub-flavored markdown: numbered or bullet lists, **bold** for emphasis, paragraphs separated by blank lines. Do not use heading syntax.",
+      },
+      confidence_reason: {
+        type: "string",
+        description:
+          "One or two sentences explaining the confidence rating. For low: cite the specific reason (e.g. more than 5 lines changed, cannot verify third-party behavior, training data cutoff). For high: state why the assessment is reliable. Plain prose only — no markdown lists or headings.",
       },
       changes: {
         type: "array",
@@ -135,61 +147,6 @@ function addLineNumbers(content: string): string {
     .join("\n");
 }
 
-function extractStaleSections(
-  content: string,
-  staleHeadings: string[]
-): Array<{
-  heading: string;
-  lineStart: number;
-  lineEnd: number;
-  numbered: string;
-}> {
-  const lines = content.split("\n");
-  const results = [];
-
-  for (const heading of staleHeadings) {
-    let headingIdx = -1;
-    let headingLevel = 0;
-
-    for (let i = 0; i < lines.length; i++) {
-      const m = lines[i].match(/^(#{1,6})\s+(.+)/);
-      if (m && m[2].trim() === heading) {
-        headingIdx = i;
-        headingLevel = m[1].length;
-        break;
-      }
-    }
-
-    if (headingIdx === -1) {
-      console.error(`  [warn] Heading not found: "${heading}"`);
-      continue;
-    }
-
-    // End of section = next heading at same or higher level
-    let endIdx = lines.length;
-    for (let i = headingIdx + 1; i < lines.length; i++) {
-      const m = lines[i].match(/^(#{1,6})\s+/);
-      if (m && m[1].length <= headingLevel) {
-        endIdx = i;
-        break;
-      }
-    }
-
-    const sectionLines = lines.slice(headingIdx, endIdx);
-    const numbered = sectionLines
-      .map((line, idx) => `${headingIdx + idx + 1}: ${line}`)
-      .join("\n");
-
-    results.push({
-      heading,
-      lineStart: headingIdx + 1, // 1-indexed
-      lineEnd: endIdx,
-      numbered,
-    });
-  }
-
-  return results;
-}
 
 function bumpFrontmatterDate(content: string): string {
   // Handles: reviewed: "2023-01-01"  |  reviewed: 2023-01-01  |  reviewed: ""
@@ -279,6 +236,127 @@ function staleDaysFor(result: AuditResult): number {
   return result.days_since_review;
 }
 
+function docMetadata(filePath: string): { title: string; url: string } {
+  const raw = readFileSync(filePath, "utf8");
+  const { data } = matter(raw);
+
+  const title = (data.title as string | undefined) ?? basename(filePath, extname(filePath));
+
+  let urlPath: string;
+  if (data.permalink) {
+    // permalink is like "docs/guides/backups/create-backups" — strip leading "docs/"
+    urlPath = (data.permalink as string).replace(/^docs\//, "");
+  } else {
+    // derive from file path: src/source/content/foo/bar.md → foo/bar
+    urlPath = filePath
+      .replace(/.*src\/source\/content\//, "")
+      .replace(/\.md$/, "");
+  }
+
+  return { title, url: `https://docs.pantheon.io/${urlPath}` };
+}
+
+function buildPRContent(
+  result: AuditResult,
+  review: ReviewToolInput
+): { title: string; body: string } {
+  const filePath = join(process.cwd(), "..", result.file);
+  const { title: docTitle, url } = docMetadata(filePath);
+
+  const reviewDate =
+    result.staleness_source === "inline"
+      ? result.oldest_stale_date ?? "unknown"
+      : result.date;
+
+  const confidenceLabel =
+    review.confidence === "high" ? "High" : "Low ⚠️";
+
+  const body = [
+    `[${docTitle}](${url})`,
+    `Date: ${reviewDate}`,
+    `Days since last review: ${staleDaysFor(result)}`,
+    `Confidence rating: ${confidenceLabel}`,
+    ``,
+    `## Review notes`,
+    ``,
+    review.reason,
+    ``,
+    `*Confidence: ${confidenceLabel} — ${review.confidence_reason}*`,
+    ``,
+    `## Suggested resolution`,
+    ``,
+    review.resolution,
+  ].join("\n");
+
+  return { title: `[Update Stale] ${docTitle}`, body };
+}
+
+function applyReview(
+  raw: string,
+  result: AuditResult,
+  review: ReviewToolInput
+): string {
+  if (review.action === "bump_date") {
+    if (result.staleness_source === "inline") {
+      return bumpInlineReviewDates(
+        raw,
+        result.stale_sections.map((s) => s.heading)
+      );
+    }
+    return bumpFrontmatterDate(raw);
+  }
+  return applyLineChanges(raw, review.changes);
+}
+
+function generateDiff(original: string, updated: string, label: string): string {
+  const orig = join(tmpdir(), `audit-orig-${Date.now()}`);
+  const upd = join(tmpdir(), `audit-upd-${Date.now()}`);
+  writeFileSync(orig, original);
+  writeFileSync(upd, updated);
+  try {
+    // diff exits 1 when files differ — that's expected, not an error
+    return execSync(`diff -u --label "a/${label}" --label "b/${label}" "${orig}" "${upd}"`, {
+      encoding: "utf8",
+      stdio: "pipe",
+      maxBuffer: 10 * 1024 * 1024, // 10MB — well above any realistic doc diff
+    });
+  } catch (err: any) {
+    return err.stdout ?? "";
+  } finally {
+    try { unlinkSync(orig); unlinkSync(upd); } catch {}
+  }
+}
+
+function writeDryRunFile(
+  result: AuditResult,
+  review: ReviewToolInput,
+  raw: string,
+  updated: string
+): void {
+  const DRY_RUN_DIR = join(process.cwd(), "dry-run");
+  mkdirSync(DRY_RUN_DIR, { recursive: true });
+
+  const slug = slugifyPath(result.file);
+  const { title, body } = buildPRContent(result, review);
+  const diff = generateDiff(raw, updated, result.file);
+
+  const content = [
+    `# ${title}`,
+    ``,
+    body,
+    ``,
+    `## Diff`,
+    ``,
+    "```diff",
+    diff.trimEnd(),
+    "```",
+  ].join("\n");
+
+  const outPath = join(DRY_RUN_DIR, `${slug}.md`);
+  writeFileSync(outPath, content, "utf8");
+  console.error(`  ✓ dry-run/${slug}.md`);
+}
+
 function createBranchAndPR(
   result: AuditResult,
   updatedContent: string,
@@ -288,68 +366,25 @@ function createBranchAndPR(
   const filePath = join(process.cwd(), "..", result.file);
   const slug = slugifyPath(result.file);
   const branchName = `docs-audit/${TODAY}-${slug}`;
-
-  const staleSections =
-    result.staleness_source === "inline"
-      ? result.stale_sections.filter((s) => s.stale)
-      : [];
-
-  const confidenceNote =
-    review.confidence === "low"
-      ? "\n\n> ⚠️ **Low confidence** — reviewer should independently verify accuracy before merging."
-      : "";
-
-  const sectionList =
-    staleSections.length > 0
-      ? `\n\n**Sections reviewed:**\n${staleSections
-          .map(
-            (s) =>
-              `- \`${s.heading}\` (last reviewed ${s.date}, ${s.days_since_review} days ago)`
-          )
-          .join("\n")}`
-      : "";
-
-  const prBody = [
-    `Automated documentation accuracy review.`,
-    ``,
-    `**Action:** ${review.action === "bump_date" ? "Date bump only — content verified as still accurate" : "Content updated"}`,
-    `**Staleness source:** ${result.staleness_source}`,
-    `**Days since last review:** ${staleDaysFor(result)}`,
-    sectionList,
-    ``,
-    `**Review notes:** ${review.reason}`,
-    confidenceNote,
-    ``,
-    `---`,
-    `*Generated by \`npm run evaluate\` in \`scripts/\`*`,
-  ]
-    .join("\n")
-    .trim();
-
-  const prTitle =
-    review.action === "bump_date"
-      ? `docs: bump reviewed date for ${basename(result.file)}`
-      : `docs: update stale content in ${basename(result.file)}`;
-
+  const { title, body } = buildPRContent(result, review);
   const tmpBody = join(tmpdir(), `pr-body-${Date.now()}.md`);
 
   try {
-    writeFileSync(tmpBody, prBody, "utf8");
+    writeFileSync(tmpBody, body, "utf8");
 
-    // Branch from pantheon/main
     execSync(`git checkout -b "${branchName}" ${REMOTE}/main 2>/dev/null`, {
       stdio: "pipe",
     });
 
     writeFileSync(filePath, updatedContent, "utf8");
     execSync(`git add "${filePath}"`, { stdio: "pipe" });
-    execSync(`git commit -m "${prTitle}"`, { stdio: "pipe" });
+    execSync(`git commit -m "${title}"`, { stdio: "pipe" });
     execSync(`git push ${REMOTE} "${branchName}" 2>/dev/null`, {
       stdio: "pipe",
     });
 
     execSync(
-      `gh pr create --repo ${REPO} --head "${branchName}" --base main --title "${prTitle}" --body-file "${tmpBody}"`,
+      `gh pr create --repo ${REPO} --head "${branchName}" --base main --title "${title}" --body-file "${tmpBody}" --draft`,
       { stdio: "inherit" }
     );
 
@@ -357,12 +392,8 @@ function createBranchAndPR(
   } catch (err) {
     console.error(`  ✗ Failed for ${result.file}:`, (err as Error).message);
   } finally {
-    try {
-      unlinkSync(tmpBody);
-    } catch {}
-    execSync(`git checkout "${originalBranch}" 2>/dev/null`, {
-      stdio: "pipe",
-    });
+    try { unlinkSync(tmpBody); } catch {}
+    execSync(`git checkout "${originalBranch}" 2>/dev/null`, { stdio: "pipe" });
   }
 }
 
@@ -379,27 +410,20 @@ async function evaluateFile(
   let userContent: string;
 
   if (result.staleness_source === "inline") {
-    const staleHeadings = result.stale_sections
-      .filter((s) => s.stale)
-      .map((s) => s.heading);
+    const fileLines = raw.split("\n");
 
-    const sections = extractStaleSections(raw, staleHeadings);
-    if (sections.length === 0) {
-      console.error(`  [warn] Could not extract sections for ${result.file}`);
-      return null;
-    }
-
-    const sectionBlocks = sections
+    const sectionBlocks = result.stale_sections
       .map((s) => {
-        const meta = result.stale_sections.find(
-          (ss) => ss.heading === s.heading
-        );
+        const sectionText = fileLines
+          .slice(s.line_start - 1, s.line_end)
+          .map((line, idx) => `${s.line_start + idx}: ${line}`)
+          .join("\n");
         return [
           `### Section: "${s.heading}"`,
-          `Last reviewed: ${meta?.date ?? "unknown"} (${meta?.days_since_review ?? 0} days ago)`,
-          `Line range in full file: ${s.lineStart}–${s.lineEnd}`,
+          `Last reviewed: ${s.date} (${s.days_since_review} days ago)`,
+          `Line range in full file: ${s.line_start}–${s.line_end}`,
           ``,
-          s.numbered,
+          sectionText,
         ].join("\n");
       })
       .join("\n\n---\n\n");
@@ -470,7 +494,11 @@ async function main() {
 
   const audit = JSON.parse(readFileSync(auditFile, "utf8"));
   const toProcess: AuditResult[] = (audit.results as AuditResult[])
-    .filter((r) => r.stale)
+    .filter((r) =>
+      r.staleness_source === "inline"
+        ? r.stale_sections.length > 0
+        : r.days_since_review > 365
+    )
     .sort((a, b) => staleDaysFor(b) - staleDaysFor(a))
     .slice(0, limit);
 
@@ -504,27 +532,14 @@ async function main() {
     );
     console.error(`  ${review.reason.slice(0, 120)}`);
 
-    if (dryRun) {
-      console.error("  [dry-run] skipping branch/PR\n");
-      continue;
-    }
-
-    // Apply changes to content in memory
     const filePath = join(process.cwd(), "..", result.file);
     const raw = readFileSync(filePath, "utf8");
-    let updated: string;
+    const updated = applyReview(raw, result, review);
 
-    if (review.action === "bump_date") {
-      if (result.staleness_source === "inline") {
-        const staleHeadings = result.stale_sections
-          .filter((s) => s.stale)
-          .map((s) => s.heading);
-        updated = bumpInlineReviewDates(raw, staleHeadings);
-      } else {
-        updated = bumpFrontmatterDate(raw);
-      }
-    } else {
-      updated = applyLineChanges(raw, review.changes);
+    if (dryRun) {
+      writeDryRunFile(result, review, raw, updated);
+      console.error("");
+      continue;
     }
 
     createBranchAndPR(result, updated, review, originalBranch);
