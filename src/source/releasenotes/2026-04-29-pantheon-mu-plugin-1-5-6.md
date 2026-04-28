@@ -1,6 +1,6 @@
 ---
 title: Pantheon MU Plugin v1.5.6 now available with revised update strategy 
-published_date: "2026-04-27"
+published_date: "2026-04-29"
 categories: [wordpress, plugins]
 ---
 
