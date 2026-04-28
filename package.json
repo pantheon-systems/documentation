@@ -6,6 +6,7 @@
   "homepage": "https://docs.pantheon.io",
   "author": "@pantheon-systems",
   "scripts": {
+    "audit": "tsx scripts/audit.ts",
     "update": "tsx seed/update.ts",
     "build": "next build",
     "coverage": "vitest run --coverage",
