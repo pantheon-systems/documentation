@@ -62,3 +62,6 @@ out
 
 pnpm-lock.yaml
 .idea
+
+# Docs audit results
+audit-results.json
