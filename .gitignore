@@ -65,3 +65,4 @@ pnpm-lock.yaml
 
 # Docs audit results
 audit-results.json
+scripts/dry-run/
