@@ -1,10 +1,10 @@
 import { execSync, execFileSync } from "child_process";
 import { readFileSync, writeFileSync, unlinkSync, mkdirSync } from "fs";
 import { join, basename, extname } from "path";
-import { tmpdir } from "os";
 import { AnthropicVertex } from "@anthropic-ai/vertex-sdk";
 import { GoogleAuth } from "google-auth-library";
 import matter from "gray-matter";
+import tmp from "tmp";
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const BATCH_SIZE = 50;
@@ -309,8 +309,8 @@ function applyReview(
 }
 
 function generateDiff(original: string, updated: string, label: string): string {
-  const orig = join(tmpdir(), `audit-orig-${Date.now()}`);
-  const upd = join(tmpdir(), `audit-upd-${Date.now()}`);
+  const orig = tmp.fileSync({ prefix: "audit-orig-", discardDescriptor: true }).name;
+  const upd = tmp.fileSync({ prefix: "audit-upd-", discardDescriptor: true }).name;
   writeFileSync(orig, original);
   writeFileSync(upd, updated);
   try {
