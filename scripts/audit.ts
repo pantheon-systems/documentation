@@ -10,7 +10,8 @@ interface Section {
   heading: string;
   date: string;
   days_since_review: number;
-  stale: boolean;
+  line_start: number;
+  line_end: number;
 }
 
 interface InlineAuditResult {
@@ -21,7 +22,6 @@ interface InlineAuditResult {
   stale_sections: Section[];
   oldest_stale_date: string | null;
   oldest_stale_days_since_review: number | null;
-  stale: boolean;
 }
 
 interface DateAuditResult {
@@ -29,7 +29,6 @@ interface DateAuditResult {
   staleness_source: "frontmatter" | "git";
   date: string;
   days_since_review: number;
-  stale: boolean;
 }
 
 type AuditResult = InlineAuditResult | DateAuditResult;
@@ -69,25 +68,47 @@ function parseInlineSections(content: string): Section[] {
 
     const date = match[1];
     let heading = "(unknown section)";
+    let headingIdx = -1;
+    let headingLevel = 0;
 
     for (let j = i - 1; j >= 0; j--) {
-      const headingMatch = lines[j].match(/^#{1,6}\s+(.+)/);
+      const headingMatch = lines[j].match(/^(#{1,6})\s+(.+)/);
       if (headingMatch) {
-        heading = headingMatch[1].trim();
+        heading = headingMatch[2].trim();
+        headingIdx = j;
+        headingLevel = headingMatch[1].length;
         break;
       }
     }
 
-    const days = daysSince(date);
+    // Find end of section: next heading at same or higher level
+    let endIdx = lines.length;
+    const searchFrom = headingIdx >= 0 ? headingIdx + 1 : i + 1;
+    for (let k = searchFrom; k < lines.length; k++) {
+      const nextHeading = lines[k].match(/^(#{1,6})\s+/);
+      if (nextHeading && nextHeading[1].length <= headingLevel) {
+        endIdx = k;
+        break;
+      }
+    }
+
     sections.push({
       heading,
       date,
-      days_since_review: days,
-      stale: days > STALE_THRESHOLD_DAYS,
+      days_since_review: daysSince(date),
+      line_start: (headingIdx >= 0 ? headingIdx : i) + 1, // 1-indexed
+      line_end: endIdx, // 1-indexed exclusive (points at first line of next section)
     });
   }
 
   return sections;
+}
+
+function isStale(result: AuditResult): boolean {
+  if (result.staleness_source === "inline") {
+    return result.stale_sections.length > 0;
+  }
+  return result.days_since_review > STALE_THRESHOLD_DAYS;
 }
 
 function* walkFiles(dir: string): Generator<string> {
@@ -113,7 +134,7 @@ function auditFile(filepath: string): AuditResult | null {
   if (hasInline) {
     const sections = parseInlineSections(content);
     const staleSections = sections
-      .filter((s) => s.stale)
+      .filter((s) => s.days_since_review > STALE_THRESHOLD_DAYS)
       .sort((a, b) => b.days_since_review - a.days_since_review);
     const oldest = staleSections.at(0) ?? null;
 
@@ -127,7 +148,6 @@ function auditFile(filepath: string): AuditResult | null {
       stale_sections: staleSections,
       oldest_stale_date: oldest?.date ?? null,
       oldest_stale_days_since_review: oldest?.days_since_review ?? null,
-      stale: staleSections.length > 0,
     };
   }
 
@@ -138,7 +158,6 @@ function auditFile(filepath: string): AuditResult | null {
       staleness_source: "frontmatter",
       date: frontmatterDate,
       days_since_review: days,
-      stale: days > STALE_THRESHOLD_DAYS,
     };
   }
 
@@ -151,7 +170,6 @@ function auditFile(filepath: string): AuditResult | null {
     staleness_source: "git",
     date: gitDate,
     days_since_review: days,
-    stale: days > STALE_THRESHOLD_DAYS,
   };
 }
 
@@ -166,11 +184,10 @@ function main() {
   for (const filepath of walkFiles(CONTENT_DIR)) {
     const result = auditFile(filepath);
     if (!result) continue;
-    if (onlyStale && !result.stale) continue;
+    if (onlyStale && !isStale(result)) continue;
     results.push(result);
   }
 
-  // Sort: inline files first (oldest stale section wins), then frontmatter/git by days desc
   results.sort((a, b) => {
     const aDays =
       a.staleness_source === "inline"
@@ -183,10 +200,12 @@ function main() {
     return bDays - aDays;
   });
 
+  const staleCount = results.filter(isStale).length;
+
   const summary = {
     generated_at: new Date().toISOString(),
     total_files_audited: results.length,
-    stale_count: results.filter((r) => r.stale).length,
+    stale_count: staleCount,
     by_source: {
       inline: results.filter((r) => r.staleness_source === "inline").length,
       frontmatter: results.filter((r) => r.staleness_source === "frontmatter")
@@ -199,9 +218,7 @@ function main() {
 
   if (outputFile) {
     writeFileSync(outputFile, output);
-    console.error(
-      `Wrote ${results.length} results (${summary.stale_count} stale) to ${outputFile}`
-    );
+    console.error(`Wrote ${results.length} results (${staleCount} stale) to ${outputFile}`);
   } else {
     console.log(output);
   }
