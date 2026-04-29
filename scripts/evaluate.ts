@@ -157,11 +157,15 @@ function addLineNumbers(content: string): string {
 
 
 function bumpFrontmatterDate(content: string): string {
-  // Handles: reviewed: "2023-01-01"  |  reviewed: 2023-01-01  |  reviewed: ""
-  return content.replace(
-    /^(reviewed:\s*)["']?[\d-]*["']?/m,
-    `$1"${TODAY}"`
-  );
+  // Update existing reviewed: field
+  if (/^reviewed:/m.test(content)) {
+    return content.replace(
+      /^(reviewed:\s*)["']?[\d-]*["']?/m,
+      `$1"${TODAY}"`
+    );
+  }
+  // No reviewed: field (git-fallback files) — insert before closing frontmatter ---
+  return content.replace(/^---\s*$/m, `reviewed: "${TODAY}"\n---`);
 }
 
 function bumpInlineReviewDates(
@@ -337,16 +341,21 @@ function applyReview(
   result: AuditResult,
   review: ReviewToolInput
 ): string {
-  if (review.action === "bump_date") {
-    if (result.staleness_source === "inline") {
-      return bumpInlineReviewDates(
-        raw,
-        result.stale_sections.map((s) => s.heading)
-      );
-    }
-    return bumpFrontmatterDate(raw);
+  if (result.staleness_source === "inline") {
+    const staleHeadings = result.stale_sections.map((s) => s.heading);
+    const withContent =
+      review.action === "update_content"
+        ? applyLineChanges(raw, review.changes)
+        : raw;
+    return bumpInlineReviewDates(withContent, staleHeadings);
   }
-  return applyLineChanges(raw, review.changes);
+
+  // frontmatter or git — always bump the reviewed: date
+  const withContent =
+    review.action === "update_content"
+      ? applyLineChanges(raw, review.changes)
+      : raw;
+  return bumpFrontmatterDate(withContent);
 }
 
 function generateDiff(original: string, updated: string, label: string): string {
