@@ -6,10 +6,10 @@ Tooling for identifying and resolving stale documentation using Claude on Vertex
 
 **Prerequisites:** Node.js 22+, `gh` CLI authenticated to `pantheon-systems`, a GCP service account JSON with Vertex AI access.
 
-**One-time install:**
+**One-time install** (installs dependencies for the audit/evaluate scripts, separate from the main project):
 
 ```bash
-cd scripts && npm install
+cd scripts && npm install && cd ..
 ```
 
 **Create `.env` in the repo root** (gitignored):
@@ -77,20 +77,18 @@ Reads the audit JSON, sends stale content to Claude (Sonnet via Vertex AI) for a
 
 Claude may flag docs as candidates for **deprecation or removal** when the content is so outdated or ecosystem-changed that updating would be less useful than removing. This appears as a `⚠️ Deprecation consideration` section in the PR description — the final call is always with the human reviewer.
 
-Run from the **`scripts/`** directory.
+Run from the **repo root** via `npm run evaluate`.
 
 | Flag | Description | Default |
 |---|---|---|
 | `--dry-run` | Evaluate with Claude, write results to `scripts/dry-run/` instead of opening PRs | off |
 | `--limit <n>` | Number of files to process | `50` |
-| `--audit <path>` | Path to audit JSON | `../audit-results.json` |
+| `--audit <path>` | Path to audit JSON | `audit-results.json` |
 | `--file <path>` | Evaluate a single specific file (e.g. `src/source/content/drupal-s3.md`) | — |
 | `--older-than <n>m` | Staleness threshold (e.g. `6m`, `12m`, `24m`) | `12m` |
 | `--all` | When used with `--file`, evaluate regardless of staleness | off |
 
 ```bash
-cd scripts
-
 # Dry run — inspect proposed changes before opening PRs
 npm run evaluate -- --dry-run
 
@@ -110,6 +108,6 @@ npm run evaluate -- --dry-run --file src/source/content/jenkins.md --all
 npm run evaluate -- --dry-run --older-than 6m
 ```
 
-Env vars are loaded automatically from the repo root `.env` via `--env-file`. No `source` needed.
+Env vars are loaded automatically from the root `.env`. No `source` needed.
 
 Dry-run output lands in `scripts/dry-run/<doc-slug>.md` — one file per result, containing the PR title, description, and a unified diff of the proposed changes.
