@@ -148,14 +148,12 @@ If you prefer not to edit your theme files, you can instruct our platform to for
 1. Open your project's code repository.
 1. Locate the `pantheon.yml` file in the root directory.
 1. Look for the following configuration flag and set it to `true`:
-
     ```yml:title=pantheon.yml
     # NEW RELIC BROWSER AGENT AUTO-INJECT - For Drupal 10.2+
     # Warning: Setting this to 'true' will remove Drupal's default Content-Length headers for responses.
     # DO NOT enable this if you have already manually pasted the New Relic snippet into your theme.
     nr_browser_auto_inject: true
     ```
-
 1. Commit and push the `pantheon.yml` file to your environment.
 1. Changes will take effect within 24 hours and you should see data populating in the Browser section in your site’s New Relic.
 
