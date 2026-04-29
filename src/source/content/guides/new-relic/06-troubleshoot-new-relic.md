@@ -112,12 +112,35 @@ You have two options to enable the New Relic Browser Agent. You **must only choo
 #### Option 1: Manual Theme Instrumentation (Recommended)
 This is New Relic’s officially recommended workaround. By manually placing the JavaScript snippet into your theme, you avoid header conflicts entirely.
 
+<TabList>
+
+<Tab title="Add your first browser app" id="create" active={true}>
+
+If you have **not** already created a browser monitor in New Relic for this specific site, follow these steps:
+
 1. Log into your New Relic dashboard.
-1. Navigate to your APM application.
-1. In the left-hand menu, click **Browser/Views** > **Application Settings**.
-1. Select the option to copy the JavaScript snippet.
-1. Paste this snippet directly into your Drupal theme's header file (typically `html.html.twig`), placing it as high up in the `<head>` tag as possible.
+1. Click **Browser** from the lefthand navigation menu.
+1. Select **Add your first browser app** then click **Browser monitoring**.
+1. Click **Place a JavaScript snippet in frontend code**, then enter a name for your browser app and click **Save and continue**.
+1. Based on your site requirements, determine whether to enable [**distributed tracing**](https://docs.newrelic.com/docs/browser/new-relic-browser/browser-pro-features/browser-data-distributed-tracing/) for this browser app.
+1. Copy the provided code snippet from New Relic and paste it directly into your Drupal theme's header file (typically `html.html.twig`), placing it as high up in the `<head>` tag as possible.
 1. Commit and deploy your code.
+
+</Tab>
+
+<Tab title="Existing browser app" id="existing">
+
+If you have existing browser monitor(s) in New Relic for this specific site, follow these steps:
+
+1. Log into your New Relic dashboard.
+1. Click **Browser** from the lefthand navigation menu.
+1. Select the desired entity from your existing browser apps, then scroll down and click **Application Settings**.
+1. Copy the provided code snippet from New Relic and paste it directly into your Drupal theme's header file (typically `html.html.twig`), placing it as high up in the `<head>` tag as possible.
+1. Commit and deploy your code.
+
+</Tab>
+
+</TabList>
 
 #### Option 2: Platform Auto-Injection via `pantheon.yml`
 If you prefer not to edit your theme files, you can instruct our platform to forcefully handle the injection for you. Enabling this setting tells our platform to intercept the Drupal response, strip the `Content-Length` header, and safely inject the New Relic script.
