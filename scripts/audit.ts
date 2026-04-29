@@ -22,6 +22,7 @@ interface InlineAuditResult {
   stale_sections: Section[];
   oldest_stale_date: string | null;
   oldest_stale_days_since_review: number | null;
+  related_issues: number[];
 }
 
 interface DateAuditResult {
@@ -29,6 +30,7 @@ interface DateAuditResult {
   staleness_source: "frontmatter" | "git";
   date: string;
   days_since_review: number;
+  related_issues: number[];
 }
 
 type AuditResult = InlineAuditResult | DateAuditResult;
@@ -123,10 +125,11 @@ function* walkFiles(dir: string): Generator<string> {
   }
 }
 
-function auditFile(filepath: string): AuditResult | null {
+function auditFile(filepath: string, issues: OpenIssue[]): AuditResult | null {
   const raw = readFileSync(filepath, "utf8");
   const { data: frontmatter, content } = matter(raw);
   const relPath = relative(process.cwd(), filepath);
+  const related_issues = relatedIssueNumbers(filepath, issues);
 
   const hasInline = /<ReviewDate date="[^"]+"\s*\/>/.test(content);
   const frontmatterDate = normalizeDateField(frontmatter.reviewed);
@@ -148,6 +151,7 @@ function auditFile(filepath: string): AuditResult | null {
       stale_sections: staleSections,
       oldest_stale_date: oldest?.date ?? null,
       oldest_stale_days_since_review: oldest?.days_since_review ?? null,
+      related_issues,
     };
   }
 
@@ -158,6 +162,7 @@ function auditFile(filepath: string): AuditResult | null {
       staleness_source: "frontmatter",
       date: frontmatterDate,
       days_since_review: days,
+      related_issues,
     };
   }
 
@@ -170,6 +175,7 @@ function auditFile(filepath: string): AuditResult | null {
     staleness_source: "git",
     date: gitDate,
     days_since_review: days,
+    related_issues,
   };
 }
 
@@ -177,6 +183,33 @@ function fileSlug(filepath: string): string {
   return basename(filepath, extname(filepath))
     .replace(/[^a-z0-9]+/gi, "-")
     .toLowerCase();
+}
+
+// ── Issue linking ─────────────────────────────────────────────────────────────
+
+interface OpenIssue { number: number; title: string; body: string; }
+
+let _issueCache: OpenIssue[] | null = null;
+
+function fetchOpenIssues(): OpenIssue[] {
+  if (_issueCache) return _issueCache;
+  try {
+    const out = execSync(
+      "gh issue list --repo pantheon-systems/documentation --state open --json number,title,body --limit 500",
+      { encoding: "utf8" }
+    );
+    _issueCache = JSON.parse(out) as OpenIssue[];
+  } catch {
+    _issueCache = [];
+  }
+  return _issueCache;
+}
+
+function relatedIssueNumbers(filepath: string, issues: OpenIssue[]): number[] {
+  const slug = fileSlug(filepath);
+  return issues
+    .filter((i) => (i.body ?? "").includes(slug) || (i.title ?? "").includes(slug))
+    .map((i) => i.number);
 }
 
 function getOpenPRSlugs(): Set<string> {
@@ -276,11 +309,16 @@ function main() {
     console.error(`Skipping ${openPRSlugs.size} file(s) with open PRs`);
   }
 
+  const openIssues = fetchOpenIssues();
+  if (openIssues.length > 0) {
+    console.error(`Loaded ${openIssues.length} open issues for cross-reference`);
+  }
+
   const results: AuditResult[] = [];
 
   for (const filepath of walkFiles(CONTENT_DIR)) {
     if (openPRSlugs.has(fileSlug(filepath))) continue;
-    const result = auditFile(filepath);
+    const result = auditFile(filepath, openIssues);
     if (!result) continue;
     if (onlyStale && !isStale(result)) continue;
     results.push(result);
