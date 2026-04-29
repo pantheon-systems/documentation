@@ -381,7 +381,7 @@ function createBranchAndPR(
 
     execFileSync(
       "gh",
-      ["pr", "create", "--repo", REPO, "--head", branchName, "--base", "main", "--title", title, "--body-file", tmpBody, "--draft"],
+      ["pr", "create", "--repo", REPO, "--head", branchName, "--base", "main", "--title", title, "--body-file", tmpBody, "--draft", "--label", "automation: Claude 🤖"],
       { stdio: "inherit" }
     );
 
