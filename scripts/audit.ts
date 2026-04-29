@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import { execSync, execFileSync } from "child_process";
 import { readFileSync, readdirSync, statSync, writeFileSync } from "fs";
 import { join, relative, basename, extname } from "path";
 import matter from "gray-matter";
@@ -48,10 +48,10 @@ function normalizeDateField(val: unknown): string | null {
 
 function getGitDate(filepath: string): string | null {
   try {
-    const result = execSync(`git log -1 --format="%ai" -- "${filepath}"`, {
-      encoding: "utf8",
-      cwd: process.cwd(),
-    }).trim();
+    const result = execFileSync(
+      "git", ["log", "-1", '--format="%ai"', "--", filepath],
+      { encoding: "utf8", cwd: process.cwd() }
+    ).trim();
     return result || null;
   } catch {
     return null;

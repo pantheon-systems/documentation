@@ -218,6 +218,16 @@ function slugifyPath(filePath: string): string {
     .toLowerCase();
 }
 
+const REPO_ROOT = join(process.cwd(), "..");
+
+function safeRepoPath(relativePath: string): string {
+  const resolved = join(REPO_ROOT, relativePath);
+  if (!resolved.startsWith(REPO_ROOT + "/")) {
+    throw new Error(`Path traversal rejected: ${relativePath}`);
+  }
+  return resolved;
+}
+
 function getCurrentBranch(): string {
   return execSync("git rev-parse --abbrev-ref HEAD", {
     encoding: "utf8",
@@ -260,7 +270,7 @@ function buildPRContent(
   result: AuditResult,
   review: ReviewToolInput
 ): { title: string; body: string } {
-  const filePath = join(process.cwd(), "..", result.file);
+  const filePath = safeRepoPath(result.file);
   const { title: docTitle, url } = docMetadata(filePath);
 
   const reviewDate =
@@ -363,7 +373,7 @@ function createBranchAndPR(
   review: ReviewToolInput,
   originalBranch: string
 ): void {
-  const filePath = join(process.cwd(), "..", result.file);
+  const filePath = safeRepoPath(result.file);
   const slug = slugifyPath(result.file);
   const branchName = `docs-audit/${TODAY}-${slug}`;
   const { title, body } = buildPRContent(result, review);
@@ -401,7 +411,7 @@ async function evaluateFile(
   result: AuditResult
 ): Promise<ReviewToolInput | null> {
   // Path relative to scripts/ parent (the repo root)
-  const filePath = join(process.cwd(), "..", result.file);
+  const filePath = safeRepoPath(result.file);
   const raw = readFileSync(filePath, "utf8");
 
   let userContent: string;
@@ -529,7 +539,7 @@ async function main() {
     );
     console.error(`  ${review.reason.slice(0, 120)}`);
 
-    const filePath = join(process.cwd(), "..", result.file);
+    const filePath = safeRepoPath(result.file);
     const raw = readFileSync(filePath, "utf8");
     const updated = applyReview(raw, result, review);
 
