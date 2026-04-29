@@ -314,12 +314,12 @@ function generateDiff(original: string, updated: string, label: string): string 
   writeFileSync(orig, original);
   writeFileSync(upd, updated);
   try {
-    // diff exits 1 when files differ — that's expected, not an error
-    return execSync(`diff -u --label "a/${label}" --label "b/${label}" "${orig}" "${upd}"`, {
-      encoding: "utf8",
-      stdio: "pipe",
-      maxBuffer: 10 * 1024 * 1024, // 10MB — well above any realistic doc diff
-    });
+    // diff exits 1 when files differ — expected, not an error
+    return execFileSync(
+      "diff",
+      ["-u", "--label", `a/${label}`, "--label", `b/${label}`, orig, upd],
+      { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 }
+    );
   } catch (err: any) {
     return err.stdout ?? "";
   } finally {
@@ -367,24 +367,21 @@ function createBranchAndPR(
   const slug = slugifyPath(result.file);
   const branchName = `docs-audit/${TODAY}-${slug}`;
   const { title, body } = buildPRContent(result, review);
-  const tmpBody = join(tmpdir(), `pr-body-${Date.now()}.md`);
+  const tmpBody = tmp.fileSync({ prefix: "pr-body-", postfix: ".md", discardDescriptor: true }).name;
 
   try {
     writeFileSync(tmpBody, body, "utf8");
 
-    execSync(`git checkout -b "${branchName}" ${REMOTE}/main 2>/dev/null`, {
-      stdio: "pipe",
-    });
+    execFileSync("git", ["checkout", "-b", branchName, `${REMOTE}/main`], { stdio: "pipe" });
 
     writeFileSync(filePath, updatedContent, "utf8");
-    execSync(`git add "${filePath}"`, { stdio: "pipe" });
-    execSync(`git commit -m "${title}"`, { stdio: "pipe" });
-    execSync(`git push ${REMOTE} "${branchName}" 2>/dev/null`, {
-      stdio: "pipe",
-    });
+    execFileSync("git", ["add", filePath], { stdio: "pipe" });
+    execFileSync("git", ["commit", "-m", title], { stdio: "pipe" });
+    execFileSync("git", ["push", REMOTE, branchName], { stdio: "pipe" });
 
-    execSync(
-      `gh pr create --repo ${REPO} --head "${branchName}" --base main --title "${title}" --body-file "${tmpBody}" --draft`,
+    execFileSync(
+      "gh",
+      ["pr", "create", "--repo", REPO, "--head", branchName, "--base", "main", "--title", title, "--body-file", tmpBody, "--draft"],
       { stdio: "inherit" }
     );
 
@@ -393,7 +390,7 @@ function createBranchAndPR(
     console.error(`  ✗ Failed for ${result.file}:`, (err as Error).message);
   } finally {
     try { unlinkSync(tmpBody); } catch {}
-    execSync(`git checkout "${originalBranch}" 2>/dev/null`, { stdio: "pipe" });
+    execFileSync("git", ["checkout", originalBranch], { stdio: "pipe" });
   }
 }
 
