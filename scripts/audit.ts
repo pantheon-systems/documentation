@@ -250,12 +250,8 @@ function runImageScan(thresholdDays: number, outputFile: string | null): void {
 
   const output = JSON.stringify({ summary, results }, null, 2);
 
-  if (outputFile) {
-    writeFileSync(outputFile, output);
-    console.error(`Wrote ${results.length} potentially stale images to ${outputFile}`);
-  } else {
-    console.log(output);
-  }
+  writeFileSync(outputFile, output);
+  console.error(`Wrote ${results.length} potentially stale images to ${outputFile}`);
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -263,10 +259,12 @@ function runImageScan(thresholdDays: number, outputFile: string | null): void {
 function main() {
   const args = process.argv.slice(2);
   const outputIndex = args.indexOf("--output");
-  const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : null;
+  const isImages = args.includes("--images");
+  const defaultOutput = isImages ? "image-audit-results.json" : "audit-results.json";
+  const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : defaultOutput;
   const onlyStale = args.includes("--stale-only");
 
-  if (args.includes("--images")) {
+  if (isImages) {
     const ageArg = args.find((a, i) => args[i - 1] === "--age") ?? "12m";
     const thresholdDays = parseAgeDays(ageArg);
     runImageScan(thresholdDays, outputFile);
@@ -316,12 +314,8 @@ function main() {
 
   const output = JSON.stringify({ summary, results }, null, 2);
 
-  if (outputFile) {
-    writeFileSync(outputFile, output);
-    console.error(`Wrote ${results.length} results (${staleCount} stale) to ${outputFile}`);
-  } else {
-    console.log(output);
-  }
+  writeFileSync(outputFile, output);
+  console.error(`Wrote ${results.length} results (${staleCount} stale) to ${outputFile}`);
 }
 
 main();
