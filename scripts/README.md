@@ -18,6 +18,7 @@ cd scripts && npm install
 GOOGLE_CLOUD_PROJECT=your-gcp-project-id
 VERTEX_CREDENTIALS=/path/to/service-account.json
 VERTEX_REGION=global
+GIT_REMOTE=origin            # optional — defaults to "origin"
 ```
 
 ---

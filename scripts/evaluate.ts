@@ -10,7 +10,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const BATCH_SIZE = 50;
 const MODEL = "claude-sonnet-4-6";
 const REPO = "pantheon-systems/documentation";
-const REMOTE = "pantheon";
+const REMOTE = process.env.GIT_REMOTE ?? "origin";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
