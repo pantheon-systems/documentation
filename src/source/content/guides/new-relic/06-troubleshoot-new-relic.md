@@ -79,7 +79,60 @@ You must manually [remove a deleted Multidev environment in New Relic](https://d
 
 ## Enable Browser Monitoring for Drupal 10.2+
 
-With the release of Drupal 10.2, [a change to http headers in Drupal core](https://www.drupal.org/node/3298551) prevents automatic injection of New Relic Browser Monitoring code. To continue using this feature, manually insert the tracking script into your templates. [Visit the New Relic documentation for an example configuration](https://docs.newrelic.com/docs/apm/agents/php-agent/features/browser-monitoring-php-agent/#manual_drupal).
+If you are running Drupal 10.2 or higher, [New Relic’s Browser Agent](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring/) auto-instrumentation is disabled by default. 
+
+### The Context: Why is Auto-Instrumentation disabled?
+Starting in version 10.2, Drupal automatically calculates and sets a `Content-Length` HTTP header for most page responses to optimize web server performance.
+
+Normally, New Relic’s server-side PHP Agent acts as a middleman, automatically injecting the Browser Agent into your HTML before it reaches the user. However, this injection increases the total size of the file. This creates a mismatch between the originally declared `Content-Length` and the new, larger payload size. This mismatch can cause modern browsers to truncate (cut off) the page before it fully loads, breaking your site's layout and functionality.
+
+In order to avoid this, **we automatically disable the Browser auto-injection feature for sites using Drupal 10.2+**. This is in line with New Relic’s official documentation, and your PHP agent instrumentation remains unchanged.
+
+Instead, one option provided by New Relic is to manually instrument your site by pasting the Browser Agent snippets directly into your page templates. This should restore the previous metrics collection, but can be a tedious process.
+
+Another option is to enable Pantheon’s automatic Browser Agent injection, which will automatically add the Browser Agent headers and footers on demand via PHP prepend files behind the scenes.  Because removing this header can negatively impact edge caching and how browsers download your site's assets, we do not strip this header or auto-inject the script by default for Drupal 10.2+ environments.
+
+<Alert title="Note" type="info">
+
+WordPress sites and older versions of Drupal (pre-10.2) do not enforce this header strictly. Auto-instrumentation of New Relic’s Browser agent continues to work out-of-the-box for those frameworks.
+
+</Alert>
+
+### How to Enable Browser Monitoring
+You have two options to enable the New Relic Browser Agent. You **must only choose one**. Using both methods simultaneously will result in double-counted metrics and skewed performance data.
+
+#### Option 1: Manual Theme Instrumentation (Recommended)
+This is New Relic’s officially recommended workaround. By manually placing the JavaScript snippet into your theme, you avoid header conflicts entirely.
+
+1. Log into your New Relic dashboard.
+1. Navigate to your APM application.
+1. In the left-hand menu, click **Browser/Views** > **Application Settings**.
+1. Select the option to copy the JavaScript snippet.
+1. Paste this snippet directly into your Drupal theme's header file (typically `html.html.twig`), placing it as high up in the `<head>` tag as possible.
+1. Commit and deploy your code.
+
+#### Option 2: Platform Auto-Injection via `pantheon.yml`
+If you prefer not to edit your theme files, you can instruct our platform to forcefully handle the injection for you. Enabling this setting tells our platform to intercept the Drupal response, strip the `Content-Length` header, and safely inject the New Relic script.
+
+1. Open your project's code repository.
+1. Locate the `pantheon.yml` file in the root directory.
+1. Look for the following configuration flag and set it to `true`:
+
+    ```yml:title=pantheon.yml
+    # NEW RELIC BROWSER AGENT AUTO-INJECT - For Drupal 10.2+
+    # Warning: Setting this to 'true' will remove Drupal's default Content-Length headers for responses.
+    # DO NOT enable this if you have already manually pasted the New Relic snippet into your theme.
+    nr_browser_auto_inject: true
+    ```
+
+1. Commit and push the `pantheon.yml` file to your environment.
+1. Changes will take effect within 24 hours and you should see data populating in the Browser section in your site’s New Relic.
+
+### Important Considerations
+
+* **Manually Instrumented:** If you previously implemented Option 1 (Manual Instrumentation), you must leave `nr_browser_auto_inject` set to `false` (or omit it entirely). Turning it on may result in incorrect recording of Browser metrics.
+* **Edge Caching impact:** If you choose Option 2, be aware that stripping the `Content-Length` header modifies core Drupal HTTP behavior. While generally safe, if you utilize highly customized edge caching rules that strictly rely on this header, you may experience unexpected caching behavior. If this occurs, revert to Option 1.
+
 
 ## Disable New Relic Browser Monitoring Agent
 
