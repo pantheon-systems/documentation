@@ -262,7 +262,7 @@ function main() {
   const isImages = args.includes("--images");
   const defaultOutput = isImages ? "image-audit-results.json" : "audit-results.json";
   const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : defaultOutput;
-  const onlyStale = args.includes("--stale-only");
+  const onlyStale = !args.includes("--all");
 
   if (isImages) {
     const ageArg = args.find((a, i) => args[i - 1] === "--age") ?? "12m";
