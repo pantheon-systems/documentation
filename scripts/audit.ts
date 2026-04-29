@@ -49,7 +49,7 @@ function normalizeDateField(val: unknown): string | null {
 function getGitDate(filepath: string): string | null {
   try {
     const result = execFileSync(
-      "git", ["log", "-1", '--format="%ai"', "--", filepath],
+      "git", ["log", "-1", "--format=%ai", "--", filepath],
       { encoding: "utf8", cwd: process.cwd() }
     ).trim();
     return result || null;
@@ -198,11 +198,80 @@ function getOpenPRSlugs(): Set<string> {
   }
 }
 
+// ── Image scan ────────────────────────────────────────────────────────────────
+
+const IMAGES_DIR = join(process.cwd(), "src/source/images");
+
+interface ImageAuditResult {
+  file: string;
+  days_since_modified: number;
+}
+
+function parseAgeDays(ageStr: string): number {
+  const m = ageStr.match(/^(\d+)m$/);
+  if (!m) throw new Error(`Invalid --age format "${ageStr}" — use e.g. 12m, 6m, 3m, 24m`);
+  return parseInt(m[1], 10) * 30;
+}
+
+function* walkImageFiles(dir: string): Generator<string> {
+  for (const entry of readdirSync(dir)) {
+    const fullPath = join(dir, entry);
+    const stat = statSync(fullPath);
+    if (stat.isDirectory()) {
+      yield* walkImageFiles(fullPath);
+    } else if (/\.(png|jpe?g|gif|svg|webp|avif)$/i.test(entry)) {
+      yield fullPath;
+    }
+  }
+}
+
+function runImageScan(thresholdDays: number, outputFile: string | null): void {
+  const results: ImageAuditResult[] = [];
+
+  for (const filepath of walkImageFiles(IMAGES_DIR)) {
+    const gitDate = getGitDate(filepath);
+    if (!gitDate) continue;
+    const days = daysSince(gitDate);
+    if (days > thresholdDays) {
+      results.push({
+        file: relative(process.cwd(), filepath),
+        days_since_modified: days,
+      });
+    }
+  }
+
+  results.sort((a, b) => b.days_since_modified - a.days_since_modified);
+
+  const summary = {
+    generated_at: new Date().toISOString(),
+    threshold_days: thresholdDays,
+    stale_image_count: results.length,
+  };
+
+  const output = JSON.stringify({ summary, results }, null, 2);
+
+  if (outputFile) {
+    writeFileSync(outputFile, output);
+    console.error(`Wrote ${results.length} potentially stale images to ${outputFile}`);
+  } else {
+    console.log(output);
+  }
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────────
+
 function main() {
   const args = process.argv.slice(2);
   const outputIndex = args.indexOf("--output");
   const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : null;
   const onlyStale = args.includes("--stale-only");
+
+  if (args.includes("--images")) {
+    const ageArg = args.find((a, i) => args[i - 1] === "--age") ?? "12m";
+    const thresholdDays = parseAgeDays(ageArg);
+    runImageScan(thresholdDays, outputFile);
+    return;
+  }
 
   const openPRSlugs = getOpenPRSlugs();
   if (openPRSlugs.size > 0) {
