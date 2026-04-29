@@ -258,6 +258,95 @@ function safeRepoPath(relativePath: string): string {
   return resolved;
 }
 
+function parseOlderThanDays(arg: string): number {
+  const m = arg.match(/^(\d+)m$/);
+  if (!m) throw new Error(`Invalid --older-than format "${arg}" — use e.g. 12m, 6m, 24m`);
+  return parseInt(m[1], 10) * 30;
+}
+
+function buildAuditResultForFile(relPath: string): AuditResult {
+  const filePath = safeRepoPath(relPath);
+  const raw = readFileSync(filePath, "utf8");
+  const { data: frontmatter, content } = matter(raw);
+
+  const hasInline = /<ReviewDate date="[^"]+"\s*\/>/.test(content);
+
+  if (hasInline) {
+    const lines = content.split("\n");
+    const sections: StaleSection[] = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const match = lines[i].match(/<ReviewDate date="([^"]+)"\s*\/>/);
+      if (!match) continue;
+
+      const date = match[1];
+      let heading = "(unknown section)";
+      let headingIdx = -1;
+      let headingLevel = 0;
+
+      for (let j = i - 1; j >= 0; j--) {
+        const m = lines[j].match(/^(#{1,6})\s+(.+)/);
+        if (m) { heading = m[2].trim(); headingIdx = j; headingLevel = m[1].length; break; }
+      }
+
+      let endIdx = lines.length;
+      for (let k = (headingIdx >= 0 ? headingIdx : i) + 1; k < lines.length; k++) {
+        const m = lines[k].match(/^(#{1,6})\s+/);
+        if (m && m[1].length <= headingLevel) { endIdx = k; break; }
+      }
+
+      sections.push({
+        heading,
+        date,
+        days_since_review: Math.floor((Date.now() - new Date(date).getTime()) / 86400000),
+        line_start: (headingIdx >= 0 ? headingIdx : i) + 1,
+        line_end: endIdx,
+      });
+    }
+
+    const reviewed = frontmatter.reviewed;
+    const frontmatterDate = reviewed instanceof Date
+      ? reviewed.toISOString().slice(0, 10)
+      : typeof reviewed === "string" && reviewed.trim() ? reviewed.trim() : null;
+
+    const oldest = [...sections].sort((a, b) => b.days_since_review - a.days_since_review)[0];
+
+    return {
+      file: relPath,
+      staleness_source: "inline",
+      frontmatter_date: frontmatterDate,
+      frontmatter_days_since_review: frontmatterDate
+        ? Math.floor((Date.now() - new Date(frontmatterDate).getTime()) / 86400000)
+        : null,
+      stale_sections: sections,
+      oldest_stale_days_since_review: oldest?.days_since_review ?? null,
+    };
+  }
+
+  const reviewed = frontmatter.reviewed;
+  const date = reviewed instanceof Date
+    ? reviewed.toISOString().slice(0, 10)
+    : typeof reviewed === "string" && reviewed.trim()
+      ? reviewed.trim()
+      : null;
+
+  return {
+    file: relPath,
+    staleness_source: date ? "frontmatter" : "git",
+    date: date ?? TODAY,
+    days_since_review: date
+      ? Math.floor((Date.now() - new Date(date).getTime()) / 86400000)
+      : 0,
+  };
+}
+
+function fileIsStale(result: AuditResult, thresholdDays: number): boolean {
+  if (result.staleness_source === "inline") {
+    return result.stale_sections.some((s) => s.days_since_review > thresholdDays);
+  }
+  return result.days_since_review > thresholdDays;
+}
+
 function getCurrentBranch(): string {
   return execSync("git rev-parse --abbrev-ref HEAD", {
     encoding: "utf8",
@@ -520,6 +609,10 @@ async function main() {
   const auditFile =
     args.find((a, i) => args[i - 1] === "--audit") ?? "../audit-results.json";
   const dryRun = args.includes("--dry-run");
+  const includeAll = args.includes("--all");
+  const fileArg = args.find((a, i) => args[i - 1] === "--file");
+  const olderThanArg = args.find((a, i) => args[i - 1] === "--older-than");
+  const thresholdDays = olderThanArg ? parseOlderThanDays(olderThanArg) : 365;
   const limit = parseInt(
     args.find((a, i) => args[i - 1] === "--limit") ?? String(BATCH_SIZE),
     10
@@ -539,28 +632,6 @@ async function main() {
 
   const originalBranch = getCurrentBranch();
 
-  const openPRSlugs = getOpenPRSlugs();
-  if (openPRSlugs.size > 0) {
-    console.error(`Skipping ${openPRSlugs.size} file(s) with open PRs`);
-  }
-
-  const audit = JSON.parse(readFileSync(auditFile, "utf8"));
-  const toProcess: AuditResult[] = (audit.results as AuditResult[])
-    .filter((r) =>
-      r.staleness_source === "inline"
-        ? r.stale_sections.length > 0
-        : r.days_since_review > 365
-    )
-    .filter((r) => !openPRSlugs.has(slugifyPath(r.file)))
-    .sort((a, b) => staleDaysFor(b) - staleDaysFor(a))
-    .slice(0, limit);
-
-  console.error(
-    `\nProcessing ${toProcess.length} files (dry-run: ${dryRun})\n`
-  );
-
-  // VERTEX_CREDENTIALS lets you point at a specific service account key without
-  // overriding your global GOOGLE_APPLICATION_CREDENTIALS.
   const googleAuth = process.env.VERTEX_CREDENTIALS
     ? new GoogleAuth({
         keyFile: process.env.VERTEX_CREDENTIALS,
@@ -574,6 +645,46 @@ async function main() {
     ...(googleAuth ? { googleAuth } : {}),
   });
 
+  // ── Single-file mode ────────────────────────────────────────────────────────
+  if (fileArg) {
+    const result = buildAuditResultForFile(fileArg);
+    if (!includeAll && !fileIsStale(result, thresholdDays)) {
+      console.error(`No changes needed — ${fileArg} is not stale.`);
+      return;
+    }
+    console.error(`→ ${fileArg} [single-file mode]`);
+    const review = await evaluateFile(client, result);
+    if (!review) return;
+    console.error(`  action=${review.action}  confidence=${review.confidence}`);
+    const raw = readFileSync(safeRepoPath(fileArg), "utf8");
+    const updated = applyReview(raw, result, review);
+    if (dryRun) { writeDryRunFile(result, review, raw, updated); }
+    else { createBranchAndPR(result, updated, review, originalBranch); }
+    return;
+  }
+
+  const openPRSlugs = getOpenPRSlugs();
+  if (openPRSlugs.size > 0) {
+    console.error(`Skipping ${openPRSlugs.size} file(s) with open PRs`);
+  }
+
+  const audit = JSON.parse(readFileSync(auditFile, "utf8"));
+  const toProcess: AuditResult[] = (audit.results as AuditResult[])
+    .filter((r) =>
+      r.staleness_source === "inline"
+        ? r.stale_sections.length > 0
+        : r.days_since_review > thresholdDays
+    )
+    .filter((r) => !openPRSlugs.has(slugifyPath(r.file)))
+    .sort((a, b) => staleDaysFor(b) - staleDaysFor(a))
+    .slice(0, limit);
+
+  console.error(
+    `\nProcessing ${toProcess.length} files (dry-run: ${dryRun})\n`
+  );
+
+  // VERTEX_CREDENTIALS lets you point at a specific service account key without
+  // overriding your global GOOGLE_APPLICATION_CREDENTIALS.
   for (const result of toProcess) {
     console.error(`→ ${result.file} [${staleDaysFor(result)}d stale]`);
 

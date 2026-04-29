@@ -83,6 +83,9 @@ Run from the **`scripts/`** directory.
 | `--dry-run` | Evaluate with Claude, write results to `scripts/dry-run/` instead of opening PRs | off |
 | `--limit <n>` | Number of files to process | `50` |
 | `--audit <path>` | Path to audit JSON | `../audit-results.json` |
+| `--file <path>` | Evaluate a single specific file (e.g. `src/source/content/drupal-s3.md`) | — |
+| `--older-than <n>m` | Staleness threshold (e.g. `6m`, `12m`, `24m`) | `12m` |
+| `--all` | When used with `--file`, evaluate regardless of staleness | off |
 
 ```bash
 cd scripts
@@ -96,8 +99,14 @@ npm run evaluate -- --dry-run --limit 10
 # Live run — opens one draft PR per file
 npm run evaluate
 
-# Live run against a specific audit file
-npm run evaluate -- --audit /path/to/audit-results.json --limit 20
+# Evaluate a specific file
+npm run evaluate -- --dry-run --file src/source/content/drupal-s3.md
+
+# Evaluate a specific file even if not stale
+npm run evaluate -- --dry-run --file src/source/content/jenkins.md --all
+
+# Use a different staleness threshold
+npm run evaluate -- --dry-run --older-than 6m
 ```
 
 Env vars are loaded automatically from the repo root `.env` via `--env-file`. No `source` needed.
