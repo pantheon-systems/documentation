@@ -1,6 +1,7 @@
 import { execSync, execFileSync } from "child_process";
 import { readFileSync, writeFileSync, unlinkSync, mkdirSync } from "fs";
-import { join, basename, extname } from "path";
+import { join, basename, extname, dirname } from "path";
+import { fileURLToPath } from "url";
 import { AnthropicVertex } from "@anthropic-ai/vertex-sdk";
 import { GoogleAuth } from "google-auth-library";
 import matter from "gray-matter";
@@ -29,6 +30,7 @@ interface InlineAuditResult {
   frontmatter_days_since_review: number | null;
   stale_sections: StaleSection[];
   oldest_stale_days_since_review: number | null;
+  related_issues: number[];
 }
 
 interface DateAuditResult {
@@ -36,9 +38,21 @@ interface DateAuditResult {
   staleness_source: "frontmatter" | "git";
   date: string;
   days_since_review: number;
+  related_issues: number[];
 }
 
 type AuditResult = InlineAuditResult | DateAuditResult;
+
+interface GithubIssue {
+  number: number;
+  title: string;
+  body: string;
+}
+
+interface IssueClassification {
+  issue_number: number;
+  relationship: "fixes" | "should_fix" | "related";
+}
 
 interface LineChange {
   line_start: number;
@@ -248,7 +262,87 @@ function getOpenPRSlugs(): Set<string> {
   }
 }
 
-const REPO_ROOT = join(process.cwd(), "..");
+// Resolves relative to this file's location (scripts/) regardless of cwd
+const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+const CLASSIFY_TOOL = {
+  name: "classify_issues",
+  description: "Classify the relationship between the PR and each related issue",
+  input_schema: {
+    type: "object" as const,
+    required: ["classifications"],
+    properties: {
+      classifications: {
+        type: "array",
+        items: {
+          type: "object",
+          required: ["issue_number", "relationship"],
+          properties: {
+            issue_number: { type: "number" },
+            relationship: {
+              type: "string",
+              enum: ["fixes", "should_fix", "related", "unrelated"],
+              description:
+                '"fixes": PR directly resolves the issue. "should_fix": PR is related and should be expanded to address this issue. "related": loosely related but PR does not fix it. "unrelated": no meaningful connection.',
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
+async function classifyIssues(
+  issueNumbers: number[],
+  docTitle: string,
+  docUrl: string,
+  review: ReviewToolInput,
+  client: AnthropicVertex
+): Promise<IssueClassification[]> {
+  if (issueNumbers.length === 0) return [];
+
+  // Fetch issue details
+  const issues: { number: number; title: string; body: string }[] = [];
+  for (const num of issueNumbers) {
+    try {
+      const out = execSync(
+        `gh issue view ${num} --repo ${REPO} --json number,title,body`,
+        { encoding: "utf8" }
+      );
+      issues.push(JSON.parse(out));
+    } catch { /* skip if unavailable */ }
+  }
+  if (issues.length === 0) return [];
+
+  const issueList = issues
+    .map((i) => `Issue #${i.number}: ${i.title}\n${(i.body ?? "").slice(0, 800)}`)
+    .join("\n\n---\n\n");
+
+  const response = await client.messages.create({
+    model: MODEL,
+    max_tokens: 1024,
+    tools: [CLASSIFY_TOOL],
+    tool_choice: { type: "any" },
+    messages: [{
+      role: "user",
+      content: [
+        `Document: [${docTitle}](${docUrl})`,
+        `PR action: ${review.action}`,
+        `PR notes: ${review.reason.slice(0, 600)}`,
+        ``,
+        `Classify the relationship between this PR and each open issue:`,
+        ``,
+        issueList,
+      ].join("\n"),
+    }],
+  });
+
+  const toolUse = response.content.find((b) => b.type === "tool_use");
+  if (!toolUse || toolUse.type !== "tool_use") return [];
+
+  const input = toolUse.input as { classifications: IssueClassification[] };
+  return input.classifications.filter((c) => c.relationship !== "unrelated");
+}
 
 function safeRepoPath(relativePath: string): string {
   const resolved = join(REPO_ROOT, relativePath);
@@ -264,10 +358,24 @@ function parseOlderThanDays(arg: string): number {
   return parseInt(m[1], 10) * 30;
 }
 
+function fetchRelatedIssuesForFile(relPath: string): number[] {
+  const slug = slugifyPath(relPath);
+  try {
+    const out = execSync(
+      `gh issue list --repo ${REPO} --state open --search ${JSON.stringify(slug)} --json number --limit 20`,
+      { encoding: "utf8" }
+    );
+    return (JSON.parse(out) as Array<{ number: number }>).map((i) => i.number);
+  } catch {
+    return [];
+  }
+}
+
 function buildAuditResultForFile(relPath: string): AuditResult {
   const filePath = safeRepoPath(relPath);
   const raw = readFileSync(filePath, "utf8");
   const { data: frontmatter, content } = matter(raw);
+  const related_issues = fetchRelatedIssuesForFile(relPath);
 
   const hasInline = /<ReviewDate date="[^"]+"\s*\/>/.test(content);
 
@@ -320,6 +428,7 @@ function buildAuditResultForFile(relPath: string): AuditResult {
         : null,
       stale_sections: sections,
       oldest_stale_days_since_review: oldest?.days_since_review ?? null,
+      related_issues,
     };
   }
 
@@ -337,6 +446,7 @@ function buildAuditResultForFile(relPath: string): AuditResult {
     days_since_review: date
       ? Math.floor((Date.now() - new Date(date).getTime()) / 86400000)
       : 0,
+    related_issues,
   };
 }
 
@@ -387,7 +497,8 @@ function docMetadata(filePath: string): { title: string; url: string } {
 
 function buildPRContent(
   result: AuditResult,
-  review: ReviewToolInput
+  review: ReviewToolInput,
+  issueClassifications: IssueClassification[] = []
 ): { title: string; body: string } {
   const filePath = safeRepoPath(result.file);
   const { title: docTitle, url } = docMetadata(filePath);
@@ -402,6 +513,25 @@ function buildPRContent(
 
   const deprecationSection = review.deprecation_note
     ? [``, `## ⚠️ Deprecation consideration`, ``, review.deprecation_note]
+    : [];
+
+  const fixes = issueClassifications.filter((c) => c.relationship === "fixes");
+  const shouldFix = issueClassifications.filter((c) => c.relationship === "should_fix");
+  const related = issueClassifications.filter((c) => c.relationship === "related");
+
+  const issueSection = (fixes.length + shouldFix.length + related.length) > 0
+    ? [
+        ``,
+        `## Related issues`,
+        ``,
+        ...fixes.map((c) => `Fixes #${c.issue_number}`),
+        ...related.map((c) => `Possibly related to #${c.issue_number}`),
+        ...(shouldFix.length > 0 ? [
+          ``,
+          `> ⚠️ The following issue(s) are related and this PR should be expanded to address them before merging:`,
+          ...shouldFix.map((c) => `> - #${c.issue_number}`),
+        ] : []),
+      ]
     : [];
 
   const body = [
@@ -420,6 +550,7 @@ function buildPRContent(
     ``,
     review.resolution,
     ...deprecationSection,
+    ...issueSection,
   ].join("\n");
 
   return { title: `[Update Stale] ${docTitle}`, body };
@@ -470,13 +601,14 @@ function writeDryRunFile(
   result: AuditResult,
   review: ReviewToolInput,
   raw: string,
-  updated: string
+  updated: string,
+  issueClassifications: IssueClassification[] = []
 ): void {
-  const DRY_RUN_DIR = join(process.cwd(), "dry-run");
+  const DRY_RUN_DIR = join(dirname(fileURLToPath(import.meta.url)), "dry-run");
   mkdirSync(DRY_RUN_DIR, { recursive: true });
 
   const slug = slugifyPath(result.file);
-  const { title, body } = buildPRContent(result, review);
+  const { title, body } = buildPRContent(result, review, issueClassifications);
   const diff = generateDiff(raw, updated, result.file);
 
   const content = [
@@ -500,12 +632,13 @@ function createBranchAndPR(
   result: AuditResult,
   updatedContent: string,
   review: ReviewToolInput,
-  originalBranch: string
+  originalBranch: string,
+  issueClassifications: IssueClassification[] = []
 ): void {
   const filePath = safeRepoPath(result.file);
   const slug = slugifyPath(result.file);
   const branchName = `docs-audit/${TODAY}-${slug}`;
-  const { title, body } = buildPRContent(result, review);
+  const { title, body } = buildPRContent(result, review, issueClassifications);
   const tmpBody = tmp.fileSync({ prefix: "pr-body-", postfix: ".md", discardDescriptor: true }).name;
 
   try {
@@ -607,7 +740,7 @@ async function evaluateFile(
 async function main() {
   const args = process.argv.slice(2);
   const auditFile =
-    args.find((a, i) => args[i - 1] === "--audit") ?? "../audit-results.json";
+    args.find((a, i) => args[i - 1] === "--audit") ?? join(REPO_ROOT, "audit-results.json");
   const dryRun = args.includes("--dry-run");
   const includeAll = args.includes("--all");
   const fileArg = args.find((a, i) => args[i - 1] === "--file");
@@ -656,10 +789,18 @@ async function main() {
     const review = await evaluateFile(client, result);
     if (!review) return;
     console.error(`  action=${review.action}  confidence=${review.confidence}`);
+    const { title: docTitle, url: docUrl } = docMetadata(safeRepoPath(fileArg));
+    const issueClassifications = await classifyIssues(
+      result.related_issues ?? [],
+      docTitle,
+      docUrl,
+      review,
+      client
+    );
     const raw = readFileSync(safeRepoPath(fileArg), "utf8");
     const updated = applyReview(raw, result, review);
-    if (dryRun) { writeDryRunFile(result, review, raw, updated); }
-    else { createBranchAndPR(result, updated, review, originalBranch); }
+    if (dryRun) { writeDryRunFile(result, review, raw, updated, issueClassifications); }
+    else { createBranchAndPR(result, updated, review, originalBranch, issueClassifications); }
     return;
   }
 
@@ -696,17 +837,29 @@ async function main() {
     );
     console.error(`  ${review.reason.slice(0, 120)}`);
 
+    const { title: docTitle, url: docUrl } = docMetadata(safeRepoPath(result.file));
+    const issueClassifications = await classifyIssues(
+      result.related_issues ?? [],
+      docTitle,
+      docUrl,
+      review,
+      client
+    );
+    if (issueClassifications.length > 0) {
+      console.error(`  issues: ${issueClassifications.map((c) => `#${c.issue_number}(${c.relationship})`).join(", ")}`);
+    }
+
     const filePath = safeRepoPath(result.file);
     const raw = readFileSync(filePath, "utf8");
     const updated = applyReview(raw, result, review);
 
     if (dryRun) {
-      writeDryRunFile(result, review, raw, updated);
+      writeDryRunFile(result, review, raw, updated, issueClassifications);
       console.error("");
       continue;
     }
 
-    createBranchAndPR(result, updated, review, originalBranch);
+    createBranchAndPR(result, updated, review, originalBranch, issueClassifications);
     console.error("");
 
     // Pace API calls
