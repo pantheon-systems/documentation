@@ -54,6 +54,7 @@ interface ReviewToolInput {
   reason: string;
   resolution: string;
   confidence_reason: string;
+  deprecation_note?: string;
   changes: LineChange[];
 }
 
@@ -93,6 +94,11 @@ const REVIEW_TOOL = {
         type: "string",
         description:
           "One or two sentences explaining the confidence rating. For low: cite the specific reason (e.g. more than 5 lines changed, cannot verify third-party behavior, training data cutoff). For high: state why the assessment is reliable. Plain prose only — no markdown lists or headings.",
+      },
+      deprecation_note: {
+        type: "string",
+        description:
+          "Optional. Include only when the document may be a candidate for deprecation, archiving, or removal — for example, when the underlying product/feature no longer exists, the ecosystem has changed so dramatically that the doc is fundamentally misleading, or the content is so outdated it would be less effort to remove than to fix. One or two sentences explaining why removal might be worth considering. Leave absent if the doc should simply be updated.",
       },
       changes: {
         type: "array",
@@ -136,7 +142,9 @@ HARD RULES — violating these will break the documentation site:
 For bump_date: the changes array MUST be empty []. Dates are applied programmatically.
 For update_content: return only the specific lines that need to change, not unchanged surrounding lines.
 
-Your training cutoff is August 2025. When evaluating content about third-party plugin versions, security advisories, or external service behavior that may have changed after that date, flag confidence: "low".`;
+Your training cutoff is August 2025. When evaluating content about third-party plugin versions, security advisories, or external service behavior that may have changed after that date, flag confidence: "low".
+
+If the document is a strong candidate for deprecation, archiving, or removal — because the underlying product no longer exists, the ecosystem has changed so fundamentally that updating would be misleading, or the content is so outdated it would be less effort to remove than fix — populate the deprecation_note field. This is especially relevant for low-confidence items. The final decision rests with human reviewers; your role is to surface the possibility.`;
 
 // ── Content helpers ───────────────────────────────────────────────────────────
 
@@ -218,6 +226,24 @@ function slugifyPath(filePath: string): string {
     .toLowerCase();
 }
 
+function getOpenPRSlugs(): Set<string> {
+  try {
+    const output = execSync(
+      "gh pr list --repo pantheon-systems/documentation --state open --json headRefName --limit 200",
+      { encoding: "utf8" }
+    );
+    const prs = JSON.parse(output) as Array<{ headRefName: string }>;
+    const slugs = new Set<string>();
+    for (const pr of prs) {
+      const match = pr.headRefName.match(/^docs-audit\/\d{4}-\d{2}-\d{2}-(.+)$/);
+      if (match) slugs.add(match[1]);
+    }
+    return slugs;
+  } catch {
+    return new Set();
+  }
+}
+
 const REPO_ROOT = join(process.cwd(), "..");
 
 function safeRepoPath(relativePath: string): string {
@@ -281,6 +307,10 @@ function buildPRContent(
   const confidenceLabel =
     review.confidence === "high" ? "High" : "Low ⚠️";
 
+  const deprecationSection = review.deprecation_note
+    ? [``, `## ⚠️ Deprecation consideration`, ``, review.deprecation_note]
+    : [];
+
   const body = [
     `[${docTitle}](${url})`,
     `Date: ${reviewDate}`,
@@ -296,6 +326,7 @@ function buildPRContent(
     `## Suggested resolution`,
     ``,
     review.resolution,
+    ...deprecationSection,
   ].join("\n");
 
   return { title: `[Update Stale] ${docTitle}`, body };
@@ -499,6 +530,11 @@ async function main() {
 
   const originalBranch = getCurrentBranch();
 
+  const openPRSlugs = getOpenPRSlugs();
+  if (openPRSlugs.size > 0) {
+    console.error(`Skipping ${openPRSlugs.size} file(s) with open PRs`);
+  }
+
   const audit = JSON.parse(readFileSync(auditFile, "utf8"));
   const toProcess: AuditResult[] = (audit.results as AuditResult[])
     .filter((r) =>
@@ -506,6 +542,7 @@ async function main() {
         ? r.stale_sections.length > 0
         : r.days_since_review > 365
     )
+    .filter((r) => !openPRSlugs.has(slugifyPath(r.file)))
     .sort((a, b) => staleDaysFor(b) - staleDaysFor(a))
     .slice(0, limit);
 
