@@ -209,7 +209,7 @@ interface ImageAuditResult {
 
 function parseAgeDays(ageStr: string): number {
   const m = ageStr.match(/^(\d+)m$/);
-  if (!m) throw new Error(`Invalid --age format "${ageStr}" — use e.g. 12m, 6m, 3m, 24m`);
+  if (!m) throw new Error(`Invalid --older-than format "${ageStr}" — use e.g. 12m, 6m, 3m, 24m`);
   return parseInt(m[1], 10) * 30;
 }
 
@@ -265,7 +265,7 @@ function main() {
   const onlyStale = !args.includes("--all");
 
   if (isImages) {
-    const ageArg = args.find((a, i) => args[i - 1] === "--age") ?? "12m";
+    const ageArg = args.find((a, i) => args[i - 1] === "--older-than") ?? "12m";
     const thresholdDays = parseAgeDays(ageArg);
     runImageScan(thresholdDays, outputFile);
     return;

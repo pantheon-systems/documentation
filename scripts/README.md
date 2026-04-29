@@ -43,7 +43,7 @@ Outputs only stale files by default.
 | `--all` | Include non-stale files in output |
 | `--output <path>` | Override the default output filename/path |
 | `--images` | Run image scan instead of doc audit (see below) |
-| `--age <n>m` | Age threshold for image scan — e.g. `6m`, `12m`, `24m` (default: `12m`) |
+| `--older-than <n>m` | Age threshold for image scan — e.g. `6m`, `12m`, `24m` (default: `12m`) |
 
 ```bash
 # Generate audit results — writes to audit-results.json automatically
@@ -59,8 +59,8 @@ Scans `src/source/images/` and flags images not updated in git within the thresh
 npm run audit -- --images
 
 # Use a different age threshold
-npm run audit -- --images --age 6m
-npm run audit -- --images --age 24m --output image-audit-24m.json
+npm run audit -- --images --older-than 6m
+npm run audit -- --images --older-than 24m --output image-audit-24m.json
 ```
 
 ---
