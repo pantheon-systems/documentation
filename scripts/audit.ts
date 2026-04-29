@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 import { readFileSync, readdirSync, statSync, writeFileSync } from "fs";
-import { join, relative } from "path";
+import { join, relative, basename, extname } from "path";
 import matter from "gray-matter";
 
 const CONTENT_DIR = join(process.cwd(), "src/source/content");
@@ -173,15 +173,46 @@ function auditFile(filepath: string): AuditResult | null {
   };
 }
 
+function fileSlug(filepath: string): string {
+  return basename(filepath, extname(filepath))
+    .replace(/[^a-z0-9]+/gi, "-")
+    .toLowerCase();
+}
+
+function getOpenPRSlugs(): Set<string> {
+  try {
+    const output = execSync(
+      "gh pr list --repo pantheon-systems/documentation --state open --json headRefName --limit 200",
+      { encoding: "utf8" }
+    );
+    const prs = JSON.parse(output) as Array<{ headRefName: string }>;
+    const slugs = new Set<string>();
+    for (const pr of prs) {
+      const match = pr.headRefName.match(/^docs-audit\/\d{4}-\d{2}-\d{2}-(.+)$/);
+      if (match) slugs.add(match[1]);
+    }
+    return slugs;
+  } catch {
+    // gh unavailable or unauthenticated — skip filtering
+    return new Set();
+  }
+}
+
 function main() {
   const args = process.argv.slice(2);
   const outputIndex = args.indexOf("--output");
   const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : null;
   const onlyStale = args.includes("--stale-only");
 
+  const openPRSlugs = getOpenPRSlugs();
+  if (openPRSlugs.size > 0) {
+    console.error(`Skipping ${openPRSlugs.size} file(s) with open PRs`);
+  }
+
   const results: AuditResult[] = [];
 
   for (const filepath of walkFiles(CONTENT_DIR)) {
+    if (openPRSlugs.has(fileSlug(filepath))) continue;
     const result = auditFile(filepath);
     if (!result) continue;
     if (onlyStale && !isStale(result)) continue;
