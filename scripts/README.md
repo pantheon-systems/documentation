@@ -36,16 +36,18 @@ Run from the **repo root** via `npm run audit`.
 
 Always writes to a file. Default output is `audit-results.json` in the repo root (or `image-audit-results.json` for `--images`).
 
+Outputs only stale files by default.
+
 | Flag | Description |
 |---|---|
-| `--stale-only` | Output only stale files |
+| `--all` | Include non-stale files in output |
 | `--output <path>` | Override the default output filename/path |
 | `--images` | Run image scan instead of doc audit (see below) |
 | `--age <n>m` | Age threshold for image scan — e.g. `6m`, `12m`, `24m` (default: `12m`) |
 
 ```bash
 # Generate audit results — writes to audit-results.json automatically
-npm run audit -- --stale-only
+npm run audit
 ```
 
 ### Image scan
