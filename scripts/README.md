@@ -38,10 +38,25 @@ Run from the **repo root** via `npm run audit`.
 |---|---|
 | `--stale-only` | Output only stale files |
 | `--output <path>` | Write JSON to file instead of stdout |
+| `--images` | Run image scan instead of doc audit (see below) |
+| `--age <n>m` | Age threshold for image scan — e.g. `6m`, `12m`, `24m` (default: `12m`) |
 
 ```bash
 # Generate audit results (required before running evaluate)
 npm run audit -- --stale-only --output audit-results.json
+```
+
+### Image scan
+
+Scans `src/source/images/` and flags images not updated in git within the threshold. Uses the last git commit date, not the filesystem mtime. Outputs a separate report — does not affect the main audit results or trigger PR creation.
+
+```bash
+# Scan for images not updated in the last 12 months (default)
+npm run audit -- --images --output image-audit.json
+
+# Use a different age threshold
+npm run audit -- --images --age 6m --output image-audit-6m.json
+npm run audit -- --images --age 24m --output image-audit-24m.json
 ```
 
 ---
@@ -53,6 +68,9 @@ Reads the audit JSON, sends stale content to Claude (Sonnet via Vertex AI) for a
 - **Inline files** — only the stale sections are sent to Claude
 - **Frontmatter files** — the full document is sent
 - Each file gets its own draft PR; the 50 oldest stale files are processed per run
+- Files with an open `docs-audit/*` PR are skipped automatically, even if present in the audit JSON
+
+Claude may flag docs as candidates for **deprecation or removal** when the content is so outdated or ecosystem-changed that updating would be less useful than removing. This appears as a `⚠️ Deprecation consideration` section in the PR description — the final call is always with the human reviewer.
 
 Run from the **`scripts/`** directory.
 
