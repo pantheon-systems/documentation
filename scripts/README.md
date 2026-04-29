@@ -34,16 +34,18 @@ Files that already have an open `docs-audit/*` PR are automatically excluded fro
 
 Run from the **repo root** via `npm run audit`.
 
+Always writes to a file. Default output is `audit-results.json` in the repo root (or `image-audit-results.json` for `--images`).
+
 | Flag | Description |
 |---|---|
 | `--stale-only` | Output only stale files |
-| `--output <path>` | Write JSON to file instead of stdout |
+| `--output <path>` | Override the default output filename/path |
 | `--images` | Run image scan instead of doc audit (see below) |
 | `--age <n>m` | Age threshold for image scan — e.g. `6m`, `12m`, `24m` (default: `12m`) |
 
 ```bash
-# Generate audit results (required before running evaluate)
-npm run audit -- --stale-only --output audit-results.json
+# Generate audit results — writes to audit-results.json automatically
+npm run audit -- --stale-only
 ```
 
 ### Image scan
@@ -51,11 +53,11 @@ npm run audit -- --stale-only --output audit-results.json
 Scans `src/source/images/` and flags images not updated in git within the threshold. Uses the last git commit date, not the filesystem mtime. Outputs a separate report — does not affect the main audit results or trigger PR creation.
 
 ```bash
-# Scan for images not updated in the last 12 months (default)
-npm run audit -- --images --output image-audit.json
+# Scan for images not updated in the last 12 months — writes to image-audit-results.json
+npm run audit -- --images
 
 # Use a different age threshold
-npm run audit -- --images --age 6m --output image-audit-6m.json
+npm run audit -- --images --age 6m
 npm run audit -- --images --age 24m --output image-audit-24m.json
 ```
 
