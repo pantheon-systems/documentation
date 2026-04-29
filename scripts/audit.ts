@@ -1,9 +1,11 @@
 import { execSync, execFileSync } from "child_process";
 import { readFileSync, readdirSync, statSync, writeFileSync } from "fs";
-import { join, relative, basename, extname } from "path";
+import { join, relative, basename, extname, dirname } from "path";
+import { fileURLToPath } from "url";
 import matter from "gray-matter";
 
-const CONTENT_DIR = join(process.cwd(), "src/source/content");
+const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const CONTENT_DIR = join(REPO_ROOT, "src/source/content");
 const STALE_THRESHOLD_DAYS = 365;
 
 interface Section {
@@ -52,7 +54,7 @@ function getGitDate(filepath: string): string | null {
   try {
     const result = execFileSync(
       "git", ["log", "-1", "--format=%ai", "--", filepath],
-      { encoding: "utf8", cwd: process.cwd() }
+      { encoding: "utf8", cwd: REPO_ROOT }
     ).trim();
     return result || null;
   } catch {
@@ -128,7 +130,7 @@ function* walkFiles(dir: string): Generator<string> {
 function auditFile(filepath: string, issues: OpenIssue[]): AuditResult | null {
   const raw = readFileSync(filepath, "utf8");
   const { data: frontmatter, content } = matter(raw);
-  const relPath = relative(process.cwd(), filepath);
+  const relPath = relative(REPO_ROOT, filepath);
   const related_issues = relatedIssueNumbers(filepath, issues);
 
   const hasInline = /<ReviewDate date="[^"]+"\s*\/>/.test(content);
@@ -233,7 +235,7 @@ function getOpenPRSlugs(): Set<string> {
 
 // ── Image scan ────────────────────────────────────────────────────────────────
 
-const IMAGES_DIR = join(process.cwd(), "src/source/images");
+const IMAGES_DIR = join(REPO_ROOT, "src/source/images");
 
 interface ImageAuditResult {
   file: string;
@@ -267,7 +269,7 @@ function runImageScan(thresholdDays: number, outputFile: string | null): void {
     const days = daysSince(gitDate);
     if (days > thresholdDays) {
       results.push({
-        file: relative(process.cwd(), filepath),
+        file: relative(REPO_ROOT, filepath),
         days_since_modified: days,
       });
     }
@@ -293,7 +295,9 @@ function main() {
   const args = process.argv.slice(2);
   const outputIndex = args.indexOf("--output");
   const isImages = args.includes("--images");
-  const defaultOutput = isImages ? "image-audit-results.json" : "audit-results.json";
+  const defaultOutput = isImages
+    ? join(REPO_ROOT, "image-audit-results.json")
+    : join(REPO_ROOT, "audit-results.json");
   const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : defaultOutput;
   const onlyStale = !args.includes("--all");
 
