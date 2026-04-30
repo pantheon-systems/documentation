@@ -68,7 +68,6 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 | --- | --- |
 | Advanced Global CDN (AGCDN) | Separate migration initiative |
 | Custom Certificates | Special certificate management not yet supported |
-| Multi-Zone Failover | Feature not available in Beta |
 | Next.js / Front-End Sites (FES) | Not yet supported |
 | Platform Vanity Domains | Not yet supported |
 
@@ -218,7 +217,7 @@ GCDN Beta sites must use Terminus [version 4.1.9](https://github.com/pantheon-sy
 
 ### How do I know if my site is eligible?
 
-Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, Multi-Zone Failover, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
 
 ### I have a Custom Certificate. Can I migrate?
 
