@@ -40,7 +40,7 @@ Composer encourages a mental model where code not written specifically for a giv
 
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed with Composer:
 
-- WordPress: <https://wpackagist.org>
+- WordPress: <https://wp-packages.org>
 - Drupal: <https://packages.drupal.org/7>
 
 Sites created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file.

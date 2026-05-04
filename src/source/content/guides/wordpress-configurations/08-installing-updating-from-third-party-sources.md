@@ -94,8 +94,8 @@ The [Composer documentation provides guidance](https://getcomposer.org/doc/05-re
 For more information about using WordPress and Composer, refer to our [Integrated Composer documentation](https://docs.pantheon.io/guides/integrated-composer).
 For an example of how to use a custom Composer repository for a premium plugin, see our [Object Cache Pro documentation for our WordPress (Composer Managed) upstream](https://docs.pantheon.io/object-cache/wordpress#installation-and-configuration-for-composer-managed-wordpress-sites).
 
-For WordPress, [WPackagist.org](https://wpackagist.org) acts as a Composer-based mirror of the WordPress.org plugin and theme repository.
-WPackagist allows Composer-based WordPress installs to require any plugin or theme that exists in the WordPress repository. Referencing plugins through WPackagist will pull code from WordPress.org.
+For WordPress, [WP Packages](https://wp-packages.org) acts as a Composer-based mirror of the WordPress.org plugin and theme repository.
+WP Packages allows Composer-based WordPress installs to require any plugin or theme that exists in the WordPress repository. Referencing plugins through WP Packages will pull code from WordPress.org.
 For the purpose of this document, we will focus only on including packages from third-party sources.
 
 ### Adding a plugin from Packagist.org
