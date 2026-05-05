@@ -129,15 +129,9 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 
 ## Solr 9 for Drupal 7 (Beta)
 
-<Alert title="Beta" type="info">
-
-Solr 9 for Drupal 7 is currently in Beta. The delivery mechanism for the updated Pantheon Apache Solr module is being finalized. Instructions in this section will be updated once the Beta is finalized.
-
-</Alert>
-
 <Alert title="Warning" type="danger">
 
-During the Beta period, test Solr 9 on a [Multidev](/guides/multidev) environment only. Do not deploy Solr 9 changes to Dev, Test, or Live until the Beta is finalized.
+Solr 9 for Drupal 7 is currently in Beta. Test Solr 9 on a [Multidev](/guides/multidev) environment only. Do not deploy Solr 9 changes to Dev, Test, or Live until the Beta is finalized.
 
 </Alert>
 
@@ -145,7 +139,13 @@ Drupal 7 sites can now use Apache Solr 9.10.0. This requires updates to the Pant
 
 ### What You Need
 
-1. The updated `pantheon_apachesolr` module with Solr 9 support from the [drops-7 Solr 9 branch](https://github.com/pantheon-systems/drops-7/pull/223). Replace the module at `modules/pantheon/pantheon_apachesolr/`.
+1. The updated `pantheon_apachesolr` module with Solr 9 support. Merge the drops-7 Solr 9 branch into your site:
+
+   ```bash
+   git remote add drops-7 git@github.com:pantheon-systems/drops-7.git
+   git fetch drops-7
+   git merge drops-7/SITE-5456-solr9
+   ```
 
 1. An updated search module with Solr 9 schema configs from [Tag1 D7ES](https://d7es.tag1.com/):
 

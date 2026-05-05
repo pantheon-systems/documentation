@@ -8,7 +8,13 @@ Pantheon Search now supports [Apache Solr 9.10.0](https://solr.apache.org/docs/9
 
 Solr 9 on Drupal 7 requires updates to three components:
 
-1. **Pantheon Apache Solr module** with Solr 9 support (from the [drops-7 Solr 9 branch](https://github.com/pantheon-systems/drops-7/pull/223))
+1. **Pantheon Apache Solr module** with Solr 9 support. Merge the drops-7 Solr 9 branch into your site:
+
+   ```bash
+   git remote add drops-7 git@github.com:pantheon-systems/drops-7.git
+   git fetch drops-7
+   git merge drops-7/SITE-5456-solr9
+   ```
 2. **Search module** with Solr 9 schema configs from [Tag1 D7ES](https://d7es.tag1.com/):
    - [Apache Solr Search](https://gitlab.com/tag1consulting/public/apachesolr/-/releases) version **7.x-1.15**, or
    - [Search API Solr](https://gitlab.com/tag1consulting/public/search_api_solr/-/releases) version **7.x-1.19**
