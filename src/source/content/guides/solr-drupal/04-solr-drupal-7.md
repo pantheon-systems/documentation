@@ -131,7 +131,7 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 
 <Alert title="Warning" type="danger">
 
-Solr 9 for Drupal 7 is currently in Beta. Test Solr 9 on a [Multidev](/guides/multidev) environment only. Do not deploy Solr 9 changes to Dev, Test, or Live until the Beta is finalized.
+Solr 9 for Drupal 7 is currently in Beta. Test Solr 9 on a [Multidev](/guides/multidev) environment only. Do not deploy Solr 9 changes to Dev, Test, or Live.
 
 </Alert>
 
