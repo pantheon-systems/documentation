@@ -81,6 +81,10 @@ Pantheon provides New Relic Performance Monitoring for sites on [supported plans
 
 Yes, for details see [Monitor and Improve Site Performance](/guides/new-relic/monitor-new-relic/#configure-ping-monitors-synthetics-for-availability).
 
+### Why do I see vulnerability warnings about "trentm/json" and "CVE-2020-7712" in my New Relic dashboard?
+
+We worked directly with New Relic and confirmed these messages are usually false-positives and can be safely ignored for your Pantheon-hosted site. By default, the Pantheon platform is not vulnerable to CVE-2020-7712. To be safe, you should review your site's codebase for references to the "trentm" package and ensure they're on the latest version, if present.
+
 ## More Resources
 
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
