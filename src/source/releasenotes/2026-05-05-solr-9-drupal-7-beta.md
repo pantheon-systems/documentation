@@ -15,9 +15,9 @@ Solr 9 on Drupal 7 requires updates to three components:
    git fetch drops-7
    git merge drops-7/SITE-5456-solr9
    ```
-2. **Search module** with Solr 9 schema configs from [Tag1 D7ES](https://d7es.tag1.com/):
-   - [Apache Solr Search](https://gitlab.com/tag1consulting/public/apachesolr/-/releases) version **7.x-1.15**, or
-   - [Search API Solr](https://gitlab.com/tag1consulting/public/search_api_solr/-/releases) version **7.x-1.19**
+2. **Search module** with Solr 9 schema configs, available through [Tag1 D7ES](/supported-drupal#drupal-7-long-term-support):
+   - Apache Solr Search version **7.x-1.15** or later, or
+   - Search API Solr version **7.x-1.19** or later
 3. **`pantheon.yml`** with `search: version: 9`
 
 During the Beta period, test Solr 9 on a [Multidev](/guides/multidev) environment only. Do not deploy Solr 9 changes to Dev, Test, or Live until the Beta is finalized.

@@ -147,19 +147,19 @@ Drupal 7 sites can now use Apache Solr 9.10.0. This requires updates to the Pant
    git merge drops-7/SITE-5456-solr9
    ```
 
-1. An updated search module with Solr 9 schema configs from [Tag1 D7ES](https://d7es.tag1.com/):
+1. An updated search module with Solr 9 schema configs, available through [Tag1 D7ES](/supported-drupal#drupal-7-long-term-support). If you have not already configured the Tag1 D7ES module, see [Tag1 D7ES Module Usage](/supported-drupal#tag1-d7es-module-usage) for setup instructions. Once configured, apply the update via Drush, Autopilot, or SFTP:
 
 <TabList>
 
 <Tab title="Apache Solr Search" id="solr9-prereq-apachesolr" active={true}>
 
-Download [Apache Solr Search **7.x-1.15**](https://gitlab.com/tag1consulting/public/apachesolr/-/releases) from Tag1 D7ES. This version adds the `solr-conf/solr-9.x/` schema directory. Replace the module at `sites/all/modules/apachesolr/`.
+Update to Apache Solr Search **7.x-1.15** or later. This version adds the `solr-conf/solr-9.x/` schema directory required for Solr 9.
 
 </Tab>
 
 <Tab title="Search API Solr" id="solr9-prereq-searchapi">
 
-Download [Search API Solr **7.x-1.19**](https://gitlab.com/tag1consulting/public/search_api_solr/-/releases) from Tag1 D7ES. This version adds the `solr-conf/9.x/` schema directory. Replace the module at `sites/all/modules/search_api_solr/`.
+Update to Search API Solr **7.x-1.19** or later. This version adds the `solr-conf/9.x/` schema directory required for Solr 9.
 
 </Tab>
 
