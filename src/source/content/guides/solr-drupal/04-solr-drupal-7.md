@@ -149,7 +149,7 @@ Drupal 7 sites can now use Apache Solr 9.10.0. This requires updates to the Pant
    git push origin <multidev-branch>
    ```
 
-   If you encounter merge conflicts while merging this upstream, refer to [Troubleshooting Custom Upstreams](/guides/custom-upstream/troubleshooting) for guidance on resolving them.
+   If you encounter merge conflicts while merging this upstream, refer to this [documentation](/guides/custom-upstream/troubleshooting) for guidance on resolving them.
 
 1. An updated search module with Solr 9 schema configs, available through [Tag1 D7ES](/supported-drupal#drupal-7-long-term-support). If you have not already configured the Tag1 D7ES module, see [Tag1 D7ES Module Usage](/supported-drupal#tag1-d7es-module-usage) for setup instructions. Once configured, apply the update via Drush, Autopilot, or SFTP:
 
