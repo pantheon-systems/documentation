@@ -8,7 +8,7 @@ We are removing Solr 3 from the platform on **February 9, 2027** and Solr 8 on *
 
 ## Solr 9 — General Availability: June 30, 2026
 
-Solr 9 has been [available as a Beta](/release-notes/2026/04/search-api-pantheon-solr-9-beta) for Drupal 10 and 11 sites through `search_api_pantheon` version 8.5.0-beta1. Solr 9 Beta for Drupal 7 is now available as of **May 12, 2026**.
+Solr 9 has been [available as a Beta](/release-notes/2026/04/search-api-pantheon-solr-9-beta) for Drupal 10 and 11 sites through `search_api_pantheon` version 8.5.0-beta1. Solr 9 Beta for Drupal 7 is now available as of **May 12, 2026**. General Availability is targeted for **June 30, 2026**.
 
 ## Solr 3 — Removal: February 9, 2027
 
