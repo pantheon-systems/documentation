@@ -13,6 +13,7 @@ tags: [code, newrelic, quicksilver, workflow]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/new-relic/troubleshoot-new-relic
+reviewed: "2026-05-11"
 ---
 
 This section provides solutions for common New Relic troubleshooting scenarios.
@@ -103,7 +104,7 @@ You have two options to enable the New Relic Browser Agent. You **must only choo
 
 <Alert title="Important Considerations" type="danger">
 
-* If you have previously implemented [Option 1 (manual instrumentation)](#option-1-manual-theme-instrumentation-recommended), you must not use [Option 2 (Pantheon's auto-inject)](#option-2-platform-auto-injection-via-pantheonyml) as it may result in incorrect recording of Browser metrics. Instead, leave `nr_browser_auto_inject` set to `false` (or omit it entirely) within your site's `pantheon.yml` configuration file.
+* If you have previously implemented [Option 1 (manual instrumentation)](#option-1-manual-theme-instrumentation-recommended), you must not use [Option 2 (Pantheon's auto-inject)](#option-2-platform-auto-injection-via-pantheonyml) as it may result in incorrect recording of Browser metrics. Instead, leave `browser_auto_inject` set to `false` (or omit it entirely) within your site's `pantheon.yml` configuration file.
 
 * If you choose [Option 2 (Pantheon's auto-inject)](#option-2-platform-auto-injection-via-pantheonyml), be aware that stripping the `Content-Length` header modifies core Drupal HTTP behavior. While generally safe, if you utilize highly customized edge caching rules that strictly rely on this header, you may experience unexpected caching behavior. If this occurs, revert to [Option 1](#option-1-manual-theme-instrumentation-recommended).
 
@@ -111,12 +112,6 @@ You have two options to enable the New Relic Browser Agent. You **must only choo
 
 #### Option 1: Manual Theme Instrumentation (Recommended)
 This is New Relic’s officially recommended workaround. By manually placing the JavaScript snippet into your theme, you avoid header conflicts entirely.
-
-<TabList>
-
-<Tab title="Add your first browser app" id="create" active={true}>
-
-If you have **not** already created a browser monitor in New Relic for this specific site, follow these steps:
 
 1. Log into your New Relic dashboard.
 1. Click **Browser** from the lefthand navigation menu.
@@ -126,36 +121,32 @@ If you have **not** already created a browser monitor in New Relic for this spec
 1. Copy the provided code snippet from New Relic and paste it directly into your Drupal theme's header file (typically `html.html.twig`), placing it as high up in the `<head>` tag as possible.
 1. Commit and deploy your code.
 
-</Tab>
-
-<Tab title="Existing browser app" id="existing">
-
-If you have existing browser monitor(s) in New Relic for this specific site, follow these steps:
-
-1. Log into your New Relic dashboard.
-1. Click **Browser** from the lefthand navigation menu.
-1. Select the desired entity from your existing browser apps, then scroll down and click **Application Settings**.
-1. Copy the provided code snippet from New Relic and paste it directly into your Drupal theme's header file (typically `html.html.twig`), placing it as high up in the `<head>` tag as possible.
-1. Commit and deploy your code.
-
-</Tab>
-
-</TabList>
-
 #### Option 2: Platform Auto-Injection via `pantheon.yml`
-If you prefer not to edit your theme files, you can instruct our platform to forcefully handle the injection for you. Enabling this setting tells our platform to intercept the Drupal response, strip the `Content-Length` header, and safely inject the New Relic script.
+If you prefer not to edit your theme files, you can instruct our platform to forcefully handle the injection for you using PHP prepend files and the output buffer. Enabling this setting tells our high-level prepend logic to grab the output buffer, strip the `Content-Length` header, and safely inject the Browser Agent script via the PHP agent according to [New Relic standards](https://docs.newrelic.com/docs/apm/agents/php-agent/features/browser-monitoring-php-agent/#manual_instrumentation).
 
 1. Open your project's code repository.
 1. Locate the `pantheon.yml` file in the root directory.
-1. Look for the following configuration flag and set it to `true`:
+1. Find or add the `new_relic:` key, and add `browser_auto_inject: true` . For example: 
+
     ```yml:title=pantheon.yml
-    # NEW RELIC BROWSER AGENT AUTO-INJECT - For Drupal 10.2+
-    # Warning: Setting this to 'true' will remove Drupal's default Content-Length headers for responses.
-    # DO NOT enable this if you have already manually pasted the New Relic snippet into your theme.
-    nr_browser_auto_inject: true
+    # Put overrides to your pantheon.upstream.yml file here.
+    # For more information, see: https://pantheon.io/docs/pantheon-yml/
+    api_version: 1
+
+    new_relic:
+      browser_auto_inject: true
     ```
 1. Commit and push the `pantheon.yml` file to your environment.
-1. Changes will take effect within 24 hours and you should see data populating in the Browser section in your site’s New Relic.
+1. Changes will take effect within 5 minutes and you should see data populating in the Browser section in your site’s New Relic.
+
+Before touching the output buffer, or injecting the Browser Agent snippet, we run several checks (in the following order) to ensure we are only instrumenting in the correct cases. Auto-injection will not occur unless all of the following are true:
+
+* PHP interface (`php_sapi_name()`) is not cli
+* PHP has the `newrelic` extension loaded
+* Site has Browser Auto-Inject enabled (`browser_auto_inject: true`) in `pantheon.yml`
+* Request is not from a Pantheon healthcheck (`REQUEST_URI` of "`/healthz`")
+* Request is for HTML content (`HTTP_ACCEPT` of '`text/html`')
+
 
 ## Disable New Relic Browser Monitoring Agent
 
