@@ -1,6 +1,6 @@
 ---
 title: "Solr 9 support for Drupal 7 now available in Beta"
-published_date: "2026-05-05"
+published_date: "2026-05-12"
 categories: [new-feature, drupal]
 ---
 
@@ -28,6 +28,6 @@ For setup instructions, upgrading from Solr 3, and custom config details, see [U
 
 ## What about Solr 3?
 
-Solr 3 remains supported for Drupal 7 sites. Existing Solr 3 sites are not affected by this Beta.
+Solr 3 remains supported for Drupal 7 sites during the Beta period. [Solr 3 will be removed on **February 9, 2027**](/release-notes/2026/05/solr-9-ga-solr-3-8-removal-dates). Sites using Solr 3 should plan to upgrade to Solr 9.
 
 [Solr 3 is no longer supported for **Drupal 9.4+**](https://docs.pantheon.io/release-notes/2025/08/solr-3-drupal-94-eol) as of December 9, 2025. Those sites must use Solr 8 or above.

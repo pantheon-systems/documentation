@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [cityofoaksdesign, carolynshannon, mehta-asim]
-reviewed: "2026-05-05"
+reviewed: "2026-05-12"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal-7
 editpath: solr-drupal/04-solr-drupal-7.md
