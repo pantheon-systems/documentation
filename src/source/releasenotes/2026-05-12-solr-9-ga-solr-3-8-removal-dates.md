@@ -1,6 +1,6 @@
 ---
 title: "Solr 3 and Solr 8 removal schedule announced"
-published_date: "2026-05-13"
+published_date: "2026-05-12"
 categories: [infrastructure, security, action-required]
 description: "Today Pantheon announces a removal schedule for Solr 3 on February 9, 2027 and Solr 8 on July 11, 2027. Solr 9 will reach General Availability on June 30, 2026 ahead of these removals."
 ---
