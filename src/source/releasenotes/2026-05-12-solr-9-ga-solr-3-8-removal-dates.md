@@ -37,5 +37,5 @@ Solr 8 (8.11.4) will be removed from the platform on **July 11, 2027**. Solr 9 s
 
    For guidance on upgrading, see [Drupal Solr](/guides/pantheon-search/solr-drupal).
 * WordPress:
-  * Migrate to [Elasticsearch](/guides/pantheon-search/elasticsearch) before **February 9, 2027**.
+  * Migrate to [Elasticsearch](/guides/pantheon-search/elasticsearch) before **January 11, 2027**.
     
