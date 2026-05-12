@@ -151,7 +151,7 @@ HARD RULES — violating these will break the documentation site:
 2. NEVER change the position or format of <ReviewDate /> components. These are handled programmatically — do not include them in changes[].
 3. NEVER add or remove sections.
 4. Make the minimum viable change. If content is conceptually correct but slightly dated in phrasing, prefer bump_date over rewriting prose.
-5. Set confidence: "low" if: more than 5 lines would change, you cannot verify whether specific version numbers or third-party behavior is current, or the content covers rapidly-changing topics (plugin compatibility, CVEs, external service APIs).
+5. Set confidence: "low" if: more than 5 lines would change, you cannot verify whether specific version numbers or third-party behavior is current, or the content covers rapidly-changing topics (plugin compatibility, CVEs, external service APIs). The confidence rating is independent of how many changes are needed — include all line changes you have identified in changes[] regardless of scope. confidence: "low" tells human reviewers to scrutinize the PR carefully before merging; it does not mean limiting or omitting changes.
 
 For bump_date: the changes array MUST be empty []. Dates are applied programmatically.
 For update_content: return only the specific lines that need to change, not unchanged surrounding lines.
