@@ -156,7 +156,7 @@ HARD RULES — violating these will break the documentation site:
 For bump_date: the changes array MUST be empty []. Dates are applied programmatically.
 For update_content: return only the specific lines that need to change, not unchanged surrounding lines.
 
-Your training cutoff is August 2025. When evaluating content about third-party plugin versions, security advisories, or external service behavior that may have changed after that date, flag confidence: "low".
+When evaluating content about third-party plugin versions, security advisories, or external service behavior that may have changed after your last training update, flag confidence: "low".
 
 If the document is a strong candidate for deprecation, archiving, or removal — because the underlying product no longer exists, the ecosystem has changed so fundamentally that updating would be misleading, or the content is so outdated it would be less effort to remove than fix — populate the deprecation_note field. This is especially relevant for low-confidence items. The final decision rests with human reviewers; your role is to surface the possibility.`;
 
