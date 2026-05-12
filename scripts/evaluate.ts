@@ -826,8 +826,12 @@ async function main() {
     console.error(`Skipping ${openPRSlugs.size} file(s) with open PRs`);
   }
 
-  const audit = JSON.parse(readFileSync(auditFile, "utf8"));
-  const toProcess: AuditResult[] = (audit.results as AuditResult[])
+  const audit: unknown = JSON.parse(readFileSync(auditFile, "utf8"));
+  if (typeof audit !== "object" || audit === null || !Array.isArray((audit as Record<string, unknown>).results)) {
+    console.error(`Error: audit file at ${auditFile} is missing a "results" array`);
+    process.exit(1);
+  }
+  const toProcess: AuditResult[] = ((audit as { results: AuditResult[] }).results)
     .filter((r) =>
       r.staleness_source === "inline"
         ? r.stale_sections.length > 0
