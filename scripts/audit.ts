@@ -207,11 +207,30 @@ function fetchOpenIssues(): OpenIssue[] {
   return _issueCache;
 }
 
+function fetchInReviewIssues(): OpenIssue[] {
+  try {
+    const out = execSync(
+      'gh issue list --repo pantheon-systems/documentation --state open --label "Process: In Review" --json number,title,body --limit 500',
+      { encoding: "utf8" }
+    );
+    return JSON.parse(out) as OpenIssue[];
+  } catch {
+    return [];
+  }
+}
+
 function relatedIssueNumbers(filepath: string, issues: OpenIssue[]): number[] {
   const slug = fileSlug(filepath);
   return issues
     .filter((i) => (i.body ?? "").includes(slug) || (i.title ?? "").includes(slug))
     .map((i) => i.number);
+}
+
+function isInReview(filepath: string, inReviewIssues: OpenIssue[]): boolean {
+  const slug = fileSlug(filepath);
+  return inReviewIssues.some(
+    (i) => (i.body ?? "").includes(slug) || (i.title ?? "").includes(slug)
+  );
 }
 
 function getOpenPRSlugs(): Set<string> {
