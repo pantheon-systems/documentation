@@ -10,8 +10,8 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [cityofoaksdesign, carolynshannon]
-reviewed: "2020-02-26"
+contributors: [cityofoaksdesign, carolynshannon, mehta-asim]
+reviewed: "2026-05-12"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal-7
 editpath: solr-drupal/04-solr-drupal-7.md
@@ -126,6 +126,154 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 </Tab>
 
 </TabList>
+
+## Solr 9 for Drupal 7 (Beta)
+
+Apache Solr 9.10.0 support for Drupal 7 is available as a beta release for testing on [Multidev](/guides/multidev) environments. This requires updates to the Pantheon Apache Solr module and your search module. We recommend not deploying Solr 9 changes to Dev, Test, or Live until GA.
+
+### What You Need
+
+1. The updated `pantheon_apachesolr` module with Solr 9 support.
+
+   <Alert title="Note" type="info">
+
+   During the beta period, merge the `drops-7` Solr 9 branch into your site manually. At GA, the updated module will be available as a [one-click upstream update](/core-updates#apply-upstream-updates-via-the-site-dashboard) and these manual steps will no longer be needed.
+
+   </Alert>
+
+   ```bash
+   git checkout -b <multidev-branch>
+   git remote add drops-7 git@github.com:pantheon-systems/drops-7.git
+   git fetch drops-7
+   git merge drops-7/SITE-5456-solr9
+   git push origin <multidev-branch>
+   ```
+
+   If you encounter merge conflicts while merging this upstream, refer to this [documentation](/guides/custom-upstream/troubleshooting) for guidance on resolving them.
+
+1. An updated search module with Solr 9 schema configs, available through [Tag1 D7ES](/supported-drupal#drupal-7-long-term-support). If you have not already configured the Tag1 D7ES module, see [Tag1 D7ES Module Usage](/supported-drupal#tag1-d7es-module-usage) for setup instructions. Once configured, apply the update via Drush, Autopilot, or SFTP:
+
+<TabList>
+
+<Tab title="Apache Solr Search" id="solr9-prereq-apachesolr" active={true}>
+
+Update to Apache Solr Search **7.x-1.15** or later. This version adds the `solr-conf/solr-9.x/` schema directory required for Solr 9.
+
+</Tab>
+
+<Tab title="Search API Solr" id="solr9-prereq-searchapi">
+
+Update to Search API Solr **7.x-1.19** or later. This version adds the `solr-conf/9.x/` schema directory required for Solr 9.
+
+</Tab>
+
+</TabList>
+
+### Setting Up Solr 9 From Scratch
+
+1. Follow the steps in [Before You Begin](#before-you-begin) to add the Solr Index Server to your site.
+
+1. Create a new or use an existing [Multidev](/guides/multidev) environment for testing Solr 9.
+
+1. Install the updated `pantheon_apachesolr` module and your preferred search module (see [What You Need](#what-you-need) above).
+
+1. Add the following to your `pantheon.yml`:
+
+   ```yaml:title=pantheon.yml
+   search:
+     version: 9
+   ```
+
+1. Commit and push your changes to the Multidev branch. Wait for the Solr upgrade workflow to complete. You can track the status from the Workflows drop-down on the Dashboard.
+
+1. Enable the **core Search module**, the **Pantheon Apache Solr** module, and your search module.
+
+1. Post the Solr 9 schema at **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr** > **Post schema.xml**:
+
+<TabList>
+
+<Tab title="Apache Solr Search" id="solr9-schema-apachesolr" active={true}>
+
+Select `sites/all/modules/apachesolr/solr-conf/solr-9.x/schema.xml` and click **Post schema**.
+
+</Tab>
+
+<Tab title="Search API Solr" id="solr9-schema-searchapi">
+
+Select `sites/all/modules/search_api_solr/solr-conf/9.x/schema.xml` and click **Post schema**.
+
+</Tab>
+
+</TabList>
+
+7. Configure your search module and index content (see [Enable and Configure Your Solr Module](#enable-and-configure-your-solr-module) above).
+
+<Alert title="Note" type="info">
+
+When posting a schema for Solr 9, the module posts all files from the schema directory (schema.xml, solrconfig.xml, synonyms.txt, stopwords.txt, etc.), not just the schema.xml. This enables full config set customization including custom synonyms and stopwords.
+
+</Alert>
+
+### Upgrading from Solr 3 to Solr 9
+
+<Alert title="Note" type="info">
+
+Upgrading from Solr 3 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
+
+</Alert>
+
+If your Drupal 7 site is currently using Solr 3 and you want to upgrade to Solr 9:
+
+1. Update your `pantheon_apachesolr` module and search module (see [What You Need](#what-you-need) above).
+
+1. Change `pantheon.yml` from `version: 3` to `version: 9`:
+
+   ```yaml:title=pantheon.yml
+   search:
+     version: 9
+   ```
+
+1. Commit and push your changes to the Multidev. Wait for the Solr upgrade workflow to complete in the Dashboard.
+
+1. Post the Solr 9 schema at **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr** > **Post schema.xml**. Select the `9.x/schema.xml` for your module (see tab options above).
+
+1. Mark all content for reindexing, then reindex. After switching Solr versions, Drupal's index tracker may still show items as indexed from the old core. Marking or clearing the tracker queues all content for reindexing against the new Solr 9 schema.
+
+<TabList>
+
+<Tab title="Apache Solr Search" id="solr9-reindex-apachesolr" active={true}>
+
+   ```bash
+   terminus drush <site>.<env> -- solr-mark-all
+   terminus drush <site>.<env> -- solr-index
+   ```
+
+</Tab>
+
+<Tab title="Search API Solr" id="solr9-reindex-searchapi">
+
+   ```bash
+   terminus drush <site>.<env> -- search-api-clear
+   terminus drush <site>.<env> -- search-api-index
+   ```
+
+</Tab>
+
+</TabList>
+
+<Alert title="Note" type="info">
+
+You must post the schema and reindex on your Multidev environment after pushing.
+
+</Alert>
+
+You can also reindex through the Drupal admin UI (see [Re-Index Content](#re-index-content)). Note that reindexing via cron jobs can take significantly longer than using Drush commands, as cron processes items in smaller batches based on the configured items-per-cron-event setting.
+
+### Custom Solr Configuration (Solr 9)
+
+Solr 9 supports custom config sets on Drupal 7. Place your custom config files (schema.xml, solrconfig.xml, synonyms.txt, stopwords.txt, elevate.xml, etc.) in a directory anywhere under `sites/all/modules/`. The directory must contain a `schema.xml` file for it to appear in the schema posting UI. When you post the schema, all files in that directory are sent to the Solr server.
+
+For Solr 3, only the `schema.xml` file is posted. Custom synonyms, stopwords, and other config files are not supported with Solr 3.
 
 ## Extend Solr for Drupal 7
 
