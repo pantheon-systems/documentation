@@ -109,7 +109,7 @@ ___
 
 This module has been deprecated by its authors for Drupal 8 and above. The suggestions made below are for Drupal 7 users, and are not guaranteed to be successful in all use cases.
 
-If you're creating a new site that needs Composer-managed libraries, we strongly recommend using Drupal 9 or newer.
+If you're creating a new site that needs Composer-managed libraries, we strongly recommend using Drupal 10 or newer.
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
@@ -342,7 +342,7 @@ ___
 
 <ReviewDate date="2020-05-05" />
 
-**Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
+**Issue 1:** If your site is running an outdated version of PHP, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This can be caused by a mismatch in the default `arg_separator.output` value.
 
 **Solution:** Override the default arg_separator.output value in `settings.php` by adding the following line:
 
@@ -412,9 +412,8 @@ ___
 
 **Issue**: This module requires a very specific set of permissions for the folder and the keys to be uploaded.
 
-**Solution**: Apply the following patches (which have been tested and validated by Pantheon), based on your site's PHP version, to solve for this issue:
+**Solution**: Apply the following patch (which has been tested and validated by Pantheon) to solve for this issue:
 * [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 8.0+)](https://patch-diff.githubusercontent.com/raw/pantheon-systems/oauth2-server/pull/1.patch)
-* [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 7.4)](https://patch-diff.githubusercontent.com/raw/pantheon-systems/oauth2-server/pull/2.patch)
 
 ___
 
