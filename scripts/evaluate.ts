@@ -371,6 +371,19 @@ function fetchRelatedIssuesForFile(relPath: string): number[] {
   }
 }
 
+function fileIsInReview(relPath: string): boolean {
+  const slug = slugifyPath(relPath);
+  try {
+    const out = execSync(
+      `gh issue list --repo ${REPO} --state open --label "Process: In Review" --search ${JSON.stringify(slug)} --json number --limit 1`,
+      { encoding: "utf8" }
+    );
+    return (JSON.parse(out) as Array<{ number: number }>).length > 0;
+  } catch {
+    return false;
+  }
+}
+
 function buildAuditResultForFile(relPath: string): AuditResult {
   const filePath = safeRepoPath(relPath);
   const raw = readFileSync(filePath, "utf8");
@@ -780,6 +793,10 @@ async function main() {
 
   // ── Single-file mode ────────────────────────────────────────────────────────
   if (fileArg) {
+    if (fileIsInReview(fileArg)) {
+      console.error(`Warning: ${fileArg} has an open issue labeled "Process: In Review" — skipping.`);
+      return;
+    }
     const result = buildAuditResultForFile(fileArg);
     if (!includeAll && !fileIsStale(result, thresholdDays)) {
       console.error(`No changes needed — ${fileArg} is not stale.`);
