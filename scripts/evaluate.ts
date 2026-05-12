@@ -305,8 +305,8 @@ async function classifyIssues(
   const issues: { number: number; title: string; body: string }[] = [];
   for (const num of issueNumbers) {
     try {
-      const out = execSync(
-        `gh issue view ${num} --repo ${REPO} --json number,title,body`,
+      const out = execFileSync(
+        "gh", ["issue", "view", String(num), "--repo", REPO, "--json", "number,title,body"],
         { encoding: "utf8" }
       );
       issues.push(JSON.parse(out));
@@ -361,8 +361,8 @@ function parseOlderThanDays(arg: string): number {
 function fetchRelatedIssuesForFile(relPath: string): number[] {
   const slug = slugifyPath(relPath);
   try {
-    const out = execSync(
-      `gh issue list --repo ${REPO} --state open --search ${JSON.stringify(slug)} --json number --limit 20`,
+    const out = execFileSync(
+      "gh", ["issue", "list", "--repo", REPO, "--state", "open", "--search", slug, "--json", "number", "--limit", "20"],
       { encoding: "utf8" }
     );
     return (JSON.parse(out) as Array<{ number: number }>).map((i) => i.number);
@@ -374,8 +374,8 @@ function fetchRelatedIssuesForFile(relPath: string): number[] {
 function fileIsInReview(relPath: string): boolean {
   const slug = slugifyPath(relPath);
   try {
-    const out = execSync(
-      `gh issue list --repo ${REPO} --state open --label "Process: In Review" --search ${JSON.stringify(slug)} --json number --limit 1`,
+    const out = execFileSync(
+      "gh", ["issue", "list", "--repo", REPO, "--state", "open", "--label", "Process: In Review", "--search", slug, "--json", "number", "--limit", "1"],
       { encoding: "utf8" }
     );
     return (JSON.parse(out) as Array<{ number: number }>).length > 0;
