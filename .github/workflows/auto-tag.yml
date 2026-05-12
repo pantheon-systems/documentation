@@ -24,9 +24,11 @@ jobs:
 
     - name: Set timestamps on new release notes
       id: set_timestamps
+      env:
+        COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
         # Avoid re-processing the commit this step itself pushes
-        if [[ "${{ github.event.head_commit.message }}" == "chore: set published_at timestamp"* ]]; then
+        if [[ "$COMMIT_MSG" == "chore: set published_at timestamp"* ]]; then
           echo "Skipping - timestamp commit detected"
           echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
           exit 0
