@@ -1,11 +1,10 @@
 import { execSync, execFileSync } from "child_process";
-import { readFileSync, writeFileSync, unlinkSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, basename, extname, dirname } from "path";
 import { fileURLToPath } from "url";
 import { AnthropicVertex } from "@anthropic-ai/vertex-sdk";
 import { GoogleAuth } from "google-auth-library";
 import matter from "gray-matter";
-import tmp from "tmp";
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const BATCH_SIZE = 50;
@@ -352,6 +351,15 @@ function safeRepoPath(relativePath: string): string {
   return resolved;
 }
 
+function isValidContentPath(relPath: string): boolean {
+  return (
+    !relPath.startsWith("/") &&
+    !relPath.includes("..") &&
+    relPath.startsWith("src/source/content/") &&
+    relPath.endsWith(".md")
+  );
+}
+
 function parseOlderThanDays(arg: string): number {
   const m = arg.match(/^(\d+)m$/);
   if (!m) throw new Error(`Invalid --older-than format "${arg}" — use e.g. 12m, 6m, 24m`);
@@ -591,23 +599,74 @@ function applyReview(
   return bumpFrontmatterDate(withContent);
 }
 
-function generateDiff(original: string, updated: string, label: string): string {
-  const orig = tmp.fileSync({ prefix: "audit-orig-", discardDescriptor: true }).name;
-  const upd = tmp.fileSync({ prefix: "audit-upd-", discardDescriptor: true }).name;
-  writeFileSync(orig, original);
-  writeFileSync(upd, updated);
-  try {
-    // diff exits 1 when files differ — expected, not an error
-    return execFileSync(
-      "diff",
-      ["-u", "--label", `a/${label}`, "--label", `b/${label}`, orig, upd],
-      { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 }
-    );
-  } catch (err: any) {
-    return err.stdout ?? "";
-  } finally {
-    try { unlinkSync(orig); unlinkSync(upd); } catch {}
+type DiffOp = "keep" | "insert" | "delete";
+interface DiffEdit { op: DiffOp; line: string; }
+
+function computeEdits(a: string[], b: string[]): DiffEdit[] {
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0) as number[]);
+  for (let i = 1; i <= m; i++)
+    for (let j = 1; j <= n; j++)
+      dp[i][j] = a[i - 1] === b[j - 1] ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
+
+  const edits: DiffEdit[] = [];
+  let i = m, j = n;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && a[i - 1] === b[j - 1]) {
+      edits.unshift({ op: "keep", line: a[i - 1] }); i--; j--;
+    } else if (j > 0 && (i === 0 || dp[i][j - 1] >= dp[i - 1][j])) {
+      edits.unshift({ op: "insert", line: b[j - 1] }); j--;
+    } else {
+      edits.unshift({ op: "delete", line: a[i - 1] }); i--;
+    }
   }
+  return edits;
+}
+
+function generateDiff(original: string, updated: string, label: string): string {
+  if (original === updated) return "";
+
+  const a = original.split("\n");
+  const b = updated.split("\n");
+  const edits = computeEdits(a, b);
+
+  // Annotate each edit with original/updated line numbers
+  const annotated: Array<DiffEdit & { aLine: number; bLine: number }> = [];
+  let ai = 1, bi = 1;
+  for (const e of edits) {
+    annotated.push({ ...e, aLine: ai, bLine: bi });
+    if (e.op !== "insert") ai++;
+    if (e.op !== "delete") bi++;
+  }
+
+  // Collect indices of changed lines, then expand by CONTEXT lines each side
+  const CONTEXT = 3;
+  const changed = new Set(annotated.flatMap((e, idx) => e.op !== "keep" ? [idx] : []));
+  const include = new Set<number>();
+  for (const idx of changed)
+    for (let k = Math.max(0, idx - CONTEXT); k <= Math.min(annotated.length - 1, idx + CONTEXT); k++)
+      include.add(k);
+
+  if (include.size === 0) return "";
+
+  // Group consecutive included indices into hunks
+  const indices = [...include].sort((x, y) => x - y);
+  const hunks: string[] = [];
+  let g = 0;
+  while (g < indices.length) {
+    let end = g;
+    while (end + 1 < indices.length && indices[end + 1] === indices[end] + 1) end++;
+    const group = indices.slice(g, end + 1).map((idx) => annotated[idx]);
+    const aStart = group.find((e) => e.op !== "insert")?.aLine ?? 1;
+    const bStart = group.find((e) => e.op !== "delete")?.bLine ?? 1;
+    const aLen = group.filter((e) => e.op !== "insert").length;
+    const bLen = group.filter((e) => e.op !== "delete").length;
+    const lines = group.map((e) => (e.op === "keep" ? " " : e.op === "insert" ? "+" : "-") + e.line);
+    hunks.push(`@@ -${aStart},${aLen} +${bStart},${bLen} @@\n${lines.join("\n")}`);
+    g = end + 1;
+  }
+
+  return `--- a/${label}\n+++ b/${label}\n${hunks.join("\n")}`;
 }
 
 function writeDryRunFile(
@@ -652,11 +711,8 @@ function createBranchAndPR(
   const slug = slugifyPath(result.file);
   const branchName = `docs-audit/${TODAY}-${slug}`;
   const { title, body } = buildPRContent(result, review, issueClassifications);
-  const tmpBody = tmp.fileSync({ prefix: "pr-body-", postfix: ".md", discardDescriptor: true }).name;
 
   try {
-    writeFileSync(tmpBody, body, "utf8");
-
     execFileSync("git", ["checkout", "-b", branchName, `${REMOTE}/main`], { stdio: "pipe" });
 
     writeFileSync(filePath, updatedContent, "utf8");
@@ -666,7 +722,7 @@ function createBranchAndPR(
 
     execFileSync(
       "gh",
-      ["pr", "create", "--repo", REPO, "--head", branchName, "--base", "main", "--title", title, "--body-file", tmpBody, "--draft", "--label", "automation: Claude 🤖"],
+      ["pr", "create", "--repo", REPO, "--head", branchName, "--base", "main", "--title", title, "--body", body, "--draft", "--label", "automation: Claude 🤖"],
       { stdio: "inherit" }
     );
 
@@ -674,7 +730,6 @@ function createBranchAndPR(
   } catch (err) {
     console.error(`  ✗ Failed for ${result.file}:`, (err as Error).message);
   } finally {
-    try { unlinkSync(tmpBody); } catch {}
     execFileSync("git", ["checkout", originalBranch], { stdio: "pipe" });
   }
 }
@@ -793,6 +848,10 @@ async function main() {
 
   // ── Single-file mode ────────────────────────────────────────────────────────
   if (fileArg) {
+    if (!isValidContentPath(fileArg)) {
+      console.error(`Error: "${fileArg}" is not a valid content path — must be a relative .md path under src/source/content/`);
+      process.exit(1);
+    }
     if (fileIsInReview(fileArg)) {
       console.error(`Warning: ${fileArg} has an open issue labeled "Process: In Review" — skipping.`);
       return;
@@ -832,6 +891,7 @@ async function main() {
     process.exit(1);
   }
   const toProcess: AuditResult[] = ((audit as { results: AuditResult[] }).results)
+    .filter((r) => isValidContentPath(r.file))
     .filter((r) =>
       r.staleness_source === "inline"
         ? r.stale_sections.length > 0
