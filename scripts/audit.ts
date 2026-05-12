@@ -337,10 +337,16 @@ function main() {
     console.error(`Loaded ${openIssues.length} open issues for cross-reference`);
   }
 
+  const inReviewIssues = fetchInReviewIssues();
+  if (inReviewIssues.length > 0) {
+    console.error(`Found ${inReviewIssues.length} issue(s) with "Process: In Review" label — matching files will be excluded`);
+  }
+
   const results: AuditResult[] = [];
 
   for (const filepath of walkFiles(CONTENT_DIR)) {
     if (openPRSlugs.has(fileSlug(filepath))) continue;
+    if (isInReview(filepath, inReviewIssues)) continue;
     const result = auditFile(filepath, openIssues);
     if (!result) continue;
     if (onlyStale && !isStale(result)) continue;
