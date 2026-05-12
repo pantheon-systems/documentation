@@ -129,7 +129,7 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 
 ## Solr 9 for Drupal 7 (Beta)
 
-Apache Solr 9.10.0 support for Drupal 7 is available as a beta release for testing on [Multidev](/guides/multidev) environments. This requires updates to the Pantheon Apache Solr module and your search module. Do not deploy Solr 9 changes to Dev, Test, or Live until GA.
+Apache Solr 9.10.0 support for Drupal 7 is available as a beta release for testing on [Multidev](/guides/multidev) environments. This requires updates to the Pantheon Apache Solr module and your search module. We recommend not deploying Solr 9 changes to Dev, Test, or Live until GA.
 
 ### What You Need
 
@@ -137,7 +137,7 @@ Apache Solr 9.10.0 support for Drupal 7 is available as a beta release for testi
 
    <Alert title="Note" type="info">
 
-   During the beta period, merge the drops-7 Solr 9 branch into your site manually. At GA, the updated module will be available as a [one-click upstream update](/core-updates#apply-upstream-updates-via-the-site-dashboard) and these manual steps will no longer be needed.
+   During the beta period, merge the `drops-7` Solr 9 branch into your site manually. At GA, the updated module will be available as a [one-click upstream update](/core-updates#apply-upstream-updates-via-the-site-dashboard) and these manual steps will no longer be needed.
 
    </Alert>
 
