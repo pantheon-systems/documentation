@@ -101,7 +101,7 @@ curl -i "https://live-mysite.pantheon.io/landing_page.html?utm_source=test-sourc
 
 To resolve these links before they hit the application, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
 
-```php:title=settings.php%20or%20wp-config.php
+```php
 // Remove query strings and tracking parameters from URLs
 $strip = array('/[&?]__.+?(&|$)$/', '/[&?]utm_.+?(&|$)$/');
 $_SERVER['REQUEST_URI'] = preg_replace($strip, '', $_SERVER['REQUEST_URI']);
