@@ -6,6 +6,8 @@
   "homepage": "https://docs.pantheon.io",
   "author": "@pantheon-systems",
   "scripts": {
+    "audit": "tsx scripts/audit.ts",
+    "evaluate": "tsx --env-file=.env scripts/evaluate.ts",
     "update": "tsx seed/update.ts",
     "build": "next build",
     "coverage": "vitest run --coverage",
