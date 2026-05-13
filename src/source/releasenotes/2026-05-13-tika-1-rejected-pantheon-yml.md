@@ -6,7 +6,6 @@ categories: [infrastructure, action-required, drupal]
 
 Setting `tika_version: 1` in `pantheon.yml` is now rejected at validation time. Sites with this setting will receive a validation error on their next commit:
 
-```none
 1 is not one of [3, 'none']
 ```
 
