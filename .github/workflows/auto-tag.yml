@@ -24,7 +24,16 @@ jobs:
 
     - name: Set timestamps on new release notes
       id: set_timestamps
+      env:
+        COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
+        # Avoid re-processing the commit this step itself pushes
+        if [[ "$COMMIT_MSG" == "chore: set published_at timestamp"* ]]; then
+          echo "Skipping - timestamp commit detected"
+          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
         TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
         # Get list of release note files added in this commit (not modified)
@@ -38,12 +47,6 @@ jobs:
 
         MODIFIED=false
         for file in $NEW_FILES; do
-          # Skip files that already exist in origin/main (e.g., came in via merge)
-          if git cat-file -e "origin/main:$file" 2>/dev/null; then
-            echo "Skipping $file - already exists in main"
-            continue
-          fi
-
           # Skip if file already has published_at
           if grep -q "^published_at:" "$file"; then
             echo "Skipping $file - already has published_at"
