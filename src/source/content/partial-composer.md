@@ -48,7 +48,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 1. Initialize composer to create a `composer.json` file with the WordPress package repository:
 
   ```bash{promptUser: user}
-  composer init --repository=https://wpackagist.org --no-interaction
+  composer init --repository=https://repo.wp-packages.org --no-interaction
   ```
 
 1. Edit the `composer.json` to add extra configuration that specifies installation paths for WordPress plugins and themes.
@@ -64,7 +64,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
     "repositories": [
       {
         "type": "composer",
-        "url": "https://wpackagist.org"
+        "url": "https://repo.wp-packages.org"
       }
     ],
     "require": {},
@@ -152,12 +152,12 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
 1. Require the plugin, [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) for example, with Composer:
 
   ```bash{promptUser: user}
-  composer require wpackagist-plugin/pantheon-advanced-page-cache
+  composer require wp-plugin/pantheon-advanced-page-cache
   ```
 
 1. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
 
-  ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../images/guides/partial-composer/require-papc-plugin.png)
+  ![Require wp-plugin/pantheon-advanced-page-cache output](../images/guides/partial-composer/require-papc-plugin.png)
 
   Notice a missing dependency was also installed, `composer/installers`. This package is needed to support the installation paths configured in the previous section, and needs to be tracked in version control.
 

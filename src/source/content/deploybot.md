@@ -41,9 +41,9 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
     "vendor-dir": "wp-content/vendor"
   },
   "repositories": {
-    "wpackagist": {
+    "wp-packages": {
       "type": "composer",
-      "url": "https://wpackagist.org"
+      "url": "https://repo.wp-packages.org"
     },
     "packagist": {
       "type": "composer",
@@ -51,22 +51,22 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
     }
   },
   "require-dev": {
-    "wpackagist-plugin/debug-bar": "dev-trunk"
+    "wp-plugin/debug-bar": "dev-trunk"
   },
   "require": {
     "composer/installers": "^1.0.21",
     "koodimonni/composer-dropin-installer": "*",
-    "wpackagist-plugin/wp-cfm": "1.*",
-    "wpackagist-plugin/debug-bar": "dev-trunk",
-    "wpackagist-plugin/lh-hsts": "1.*",
-    "wpackagist-plugin/solr-power": "*",
-    "wpackagist-plugin/pantheon-hud": "0.1.*",
-    "wpackagist-plugin/wp-native-php-sessions": "0.6",
-    "wpackagist-plugin/wp-redis": "*",
-    "wpackagist-plugin/wordpress-seo": "4.*",
-    "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.*",
-    "wpackagist-plugin/google-analytics-for-wordpress": "6.1.6",
-    "wpackagist-theme/twentyseventeen": "1.*"
+    "wp-plugin/wp-cfm": "1.*",
+    "wp-plugin/debug-bar": "dev-trunk",
+    "wp-plugin/lh-hsts": "1.*",
+    "wp-plugin/solr-power": "*",
+    "wp-plugin/pantheon-hud": "0.1.*",
+    "wp-plugin/wp-native-php-sessions": "0.6",
+    "wp-plugin/wp-redis": "*",
+    "wp-plugin/wordpress-seo": "4.*",
+    "wp-plugin/sendgrid-email-delivery-simplified": "1.*",
+    "wp-plugin/google-analytics-for-wordpress": "6.1.6",
+    "wp-theme/twentyseventeen": "1.*"
   },
   "extra": {
     "installer-paths": {
@@ -76,7 +76,7 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
     },
     "dropin-paths": {
       "wp-content": [
-        "package:wpackagist-plugin/wp-redis:object-cache.php"
+        "package:wp-plugin/wp-redis:object-cache.php"
       ]
     }
   }
