@@ -47,6 +47,7 @@ jobs:
         fi
 
         MODIFIED=false
+        MODIFIED_FILES=""
         for file in $NEW_FILES; do
           # Skip if file already has published_at
           if grep -q "^published_at:" "$file"; then
@@ -59,14 +60,16 @@ jobs:
             sed -i "s/^published_date: \(.*\)$/published_date: \1\npublished_at: \"$TIMESTAMP\"/" "$file"
             echo "Added published_at to $file"
             MODIFIED=true
+            MODIFIED_FILES="$MODIFIED_FILES $(basename "$file" .md)"
           fi
         done
 
         if [ "$MODIFIED" = true ]; then
+          FILE_LIST=$(echo "$MODIFIED_FILES" | xargs | tr ' ' ', ')
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore: set published_at timestamp for new release notes"
+          git commit -m "chore: set published_at timestamp for $FILE_LIST [skip ci]"
           git push
           # Output the new commit SHA for subsequent steps
           NEW_SHA=$(git rev-parse HEAD)
