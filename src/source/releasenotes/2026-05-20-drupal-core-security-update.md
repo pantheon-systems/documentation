@@ -1,6 +1,7 @@
 ---
 title: Drupal core highly critical security update (CVE-2026-9082)
 published_date: "2026-05-20"
+published_at: "2026-05-20T18:54:33Z"
 categories: [drupal, security, action-required]
 ---
 
