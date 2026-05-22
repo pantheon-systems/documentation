@@ -1,5 +1,5 @@
 ---
-title: GitHub Application (Private Beta)
+title: GitHub Application
 subtitle: Support & Considerations
 description: Additional notes about the GitHub Application, including assumptions, limitations, and support information.
 tags: [continuous-integration, workflow, D8, D9, D10]
@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-02"
+reviewed: "2026-05-22"
 permalink: docs/guides/github-application/support-considerations
 ---
 
@@ -49,16 +49,7 @@ Depending on the size and nature of your company, you may not want your Pantheon
 
 </Alert>
 
-## Limitations prior to General Availability
-
-The GitHub Application is currently in private Beta.
-
-We will address these limitations before the application is made generally available.
-
-### Limited to new projects created by the Terminus
-
-Activating the GitHub Application presently runs through a Terminus command that creates a new site on Pantheon and a new GitHub repository. The GitHub Application does not yet support retrofitting existing GitHub repositories or Pantheon sites.
-Follow [this issue](https://github.com/pantheon-systems/terminus/issues/2683) in the queue to find out when this limitation is removed.
+## Limitations
 
 ### No On Server Development  (SFTP Mode)
 
