@@ -12,14 +12,12 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-02"
+reviewed: "2026-05-22"
 permalink: docs/guides/github-application
 ---
 
 Pantheon's GitHub Application directly integrates a GitHub repository with a Pantheon site.
 This allows you to use GitHub as your code repository while still using Pantheon to run your site.
-
-The GitHub Application is currently in private Beta. [Request access for your Pantheon workspace here](https://docs.google.com/forms/d/e/1FAIpQLSf0vYrRbPQBxR-hT8kGJ4bEdYPtpkTtfDvPM89xD2dNZeqLqA/viewform).
 
 Once enabled, this application accommodates a pull request workflow where a Multidev environment is created for each pull request. This allows you to test the code in the pull request before merging it.
 

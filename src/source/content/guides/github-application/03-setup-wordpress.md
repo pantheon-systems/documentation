@@ -1,5 +1,5 @@
 ---
-title: GitHub Application (Private Beta)
+title: GitHub Application
 subtitle: Setup WordPress
 description: Configure a WordPress GitHub repository for Pantheon's GitHub integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, wordpress]
@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-12"
+reviewed: "2026-05-22"
 permalink: docs/guides/github-application/setup-wordpress
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: GitHub Application (Private Beta)
+title: GitHub Application
 subtitle: Setup Drupal
 description: Configure a Drupal GitHub repository for Pantheon's GitHub integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, drupal]
@@ -12,7 +12,7 @@ cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-12"
+reviewed: "2026-05-22"
 permalink: docs/guides/github-application/setup-drupal
 ---
 

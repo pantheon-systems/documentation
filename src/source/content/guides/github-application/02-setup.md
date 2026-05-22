@@ -1,5 +1,5 @@
 ---
-title: GitHub Application (Private Beta)
+title: GitHub Application
 subtitle: Setup
 description: Instructions for setting up the GitHub Application, including installation of the Terminus Repository Plugin and creating a new site.
 tags: [continuous-integration, workflow, D8, D9, D10]
@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-03"
+reviewed: "2026-05-22"
 permalink: docs/guides/github-application/setup
 ---
 

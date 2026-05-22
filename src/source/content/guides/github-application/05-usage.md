@@ -1,5 +1,5 @@
 ---
-title: GitHub Application (Private Beta)
+title: GitHub Application
 subtitle: Usage
 description: Instructions for using the GitHub Application, including managing pull requests and deploying code.
 tags: [continuous-integration, workflow, D8, D9, D10]
@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-03-02"
+reviewed: "2026-05-22"
 permalink: docs/guides/github-application/usage
 ---
 
