@@ -79,6 +79,16 @@ For the best experience, be prepared to update your DNS records as soon as possi
 
 </Alert>
 
+<Alert title="Custom Domains Must Not Use CNAMEs to Platform Hostnames" type="danger">
+
+Custom domains CNAME'd to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported in the GCDN Beta and will not be supported going forward. Sites configured this way will experience interruptions when migrated.
+
+Before activating the Beta, check your live custom domain's DNS. It must resolve via A/AAAA records as shown on the site's **Domains** page, not via a CNAME pointing at a `*.pantheonsite.io` hostname. If the **Domains** page shows `Remove this detected record` next to a CNAME, remove it from your DNS provider. See [Custom Domains](/guides/domains/custom-domains) for details.
+
+If your custom domain currently points at a platform hostname via CNAME, contact Pantheon Support before requesting migration.
+
+</Alert>
+
 <TabList>
 
 <Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
@@ -212,6 +222,10 @@ The traffic metrics page in the Pantheon dashboard will not contain any traffic 
 ### Terminus commands experience syntax errors
 
 GCDN Beta sites must use Terminus [version 4.1.9](https://github.com/pantheon-systems/terminus/releases/tag/4.1.9) or higher when interacting with sites that have Global CDN Beta enabled. Using older versions of Terminus may result in errors such as `[debug] json_decode exception: Syntax error` or `[error]  Pantheon headers missing, which is not quite right.`. 
+
+### CNAMEs to Platform Hostnames Not Supported
+
+Custom domains that CNAME to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported. Custom domains must resolve via A/AAAA records, or — after migration — via the CNAME values for the GCDN edge provided by the dashboard. Sites with a CNAME to a platform hostname will experience interruptions when migrated. See [Custom Domains](/guides/domains/custom-domains) and contact Pantheon Support before migration if affected.
 
 ## FAQ
 
