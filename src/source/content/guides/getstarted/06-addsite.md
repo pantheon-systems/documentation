@@ -10,8 +10,8 @@ audience: [business, sysadmin, development]
 product: [--]
 integration: [--]
 tags: [--]
-contributors: [wordsmither]
-reviewed: "2025-12-10"
+contributors: [wordsmither, jazzs3quence]
+reviewed: "2026-05-22"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
@@ -58,6 +58,12 @@ When you complete this step, your site will be live for anyone to see, at the Pa
 You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
+
+### Create a Site with the GitHub Application
+
+Pantheon's [GitHub Application](/guides/github-application/setup) directly integrates a GitHub repository with a Pantheon site, allowing you to use GitHub as your code repository while Pantheon handles hosting and deployments. It supports WordPress, Drupal, and Next.js, and automatically creates a Multidev environment for each pull request. Merging to the `main` branch of your GitHub repository deploys code to your Pantheon Dev environment.
+
+See the [GitHub Application Setup guide](/guides/github-application/setup) to get started.
 
 ## Migrate an Existing Site
 
