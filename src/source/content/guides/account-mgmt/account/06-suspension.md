@@ -21,7 +21,7 @@ Pantheon's security systems continuously monitor account registrations and login
 Suspensions are issued only after a thorough review by our security team.
 If your account has been suspended, access has been permanently restricted. We do not share details about what triggers a suspension or the criteria used to make this determination.
 
-<Alert title="Important" type="warn">
+<Alert title="Important" type="danger">
 
 This decision is not handled by Pantheon Support. Please do not submit a support ticket. Our Support team cannot review or reverse account suspensions.
 
