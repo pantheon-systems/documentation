@@ -40,6 +40,15 @@ reviewed: "2026-02-11"
 - Check that `ep_integrate` is not set to `false` on your critical queries.
 - Use the ElasticPress Status Report (under **ElasticPress > Status Report**) to verify that queries are being routed to Elasticsearch.
 
+### Instant Results returns "Search template not found"
+
+The Instant Results feature requires a stored search template on ElasticPress.io. This template is separate from your index mappings and synced content.
+
+- **Verify the template exists:** Run `terminus wp <site>.<env> -- elasticpress get-search-template`. If it returns `null`, the template is missing.
+- **Push the template:** Run `terminus wp <site>.<env> -- elasticpress put-search-template`, then verify again with `get-search-template`.
+- **If `put-search-template` reports success but `get-search-template` still returns `null`:** The **Search** feature ("Post Search & Filter") is likely not active. Instant Results depends on it to generate the template. Enable it first: `terminus wp <site>.<env> -- elasticpress activate-feature search`, then retry `put-search-template`.
+- **The template is automatically pushed** at the end of `sync` and `sync --setup`, but only if both the **Instant Results** and **Search** features are active. If the Search feature is inactive, the template body will be empty and the push will silently fail.
+
 ### Plugin activation errors
 
 - Ensure you are running a supported version of WordPress and PHP.

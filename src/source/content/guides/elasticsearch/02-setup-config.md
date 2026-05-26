@@ -54,7 +54,7 @@ Elasticsearch will be provisioned for all environments on your site. Each enviro
 **Via Terminus:**
 
 ```bash
-terminus site:addon:enable <site>.<env> elasticsearch
+terminus search:enable <site>
 ```
 
 </Tab>
@@ -96,3 +96,10 @@ ElasticPress offers several features you can enable based on your needs:
 Additionally, the [ElasticPress](https://www.elasticpress.io/) service provides admin-level capabilities including **Synonyms** (connecting different terms to the same content), **Weighted Results** (prioritizing specific fields like titles or categories), and **Custom Results** (shaping rankings for specific queries) — these are managed through the ElasticPress settings rather than the Features screen.
 
 Navigate to **ElasticPress > Features** in your WordPress admin to enable and configure each feature.
+
+<Alert type="warning" title="Important: Feature Dependencies">
+
+**Instant Results** and **Autosuggest** require the **Search** feature to be active. If Search is not enabled, these features will not function correctly. Always enable Search first before enabling Instant Results or Autosuggest.
+
+</Alert>
+
