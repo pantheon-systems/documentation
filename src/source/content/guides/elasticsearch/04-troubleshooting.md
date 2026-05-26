@@ -47,7 +47,7 @@ The Instant Results feature requires a stored search template on ElasticPress.io
 - **Verify the template exists:** Run `terminus wp <site>.<env> -- elasticpress get-search-template`. If it returns `null`, the template is missing.
 - **Push the template:** Run `terminus wp <site>.<env> -- elasticpress put-search-template`, then verify again with `get-search-template`.
 - **If `put-search-template` reports success but `get-search-template` still returns `null`:** The **Search** feature ("Post Search & Filter") is likely not active. Instant Results depends on it to generate the template. Enable it first: `terminus wp <site>.<env> -- elasticpress activate-feature search`, then retry `put-search-template`.
-- **The template is not pushed by `sync` or `sync --setup`**. It must be pushed explicitly via `put-search-template` or by saving the Instant Results settings in wp-admin (**ElasticPress > Features > Instant Results > Save**).
+- **The template is automatically pushed** at the end of `sync` and `sync --setup`, but only if both the **Instant Results** and **Search** features are active. If the Search feature is inactive, the template body will be empty and the push will silently fail.
 
 ### Plugin activation errors
 
