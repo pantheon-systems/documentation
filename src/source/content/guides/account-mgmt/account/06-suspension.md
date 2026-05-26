@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [jazzs3quence]
-showtoc: true
+showtoc: false
 permalink: docs/guides/account-mgmt/account/suspension
 editpath: docs/guides/account-mgmt/account/06-suspension.md
 reviewed: "2026-05-26"
