@@ -20,8 +20,8 @@ The following table indicates availability of the specified Drupal versions, as 
 | Drupal CMS          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 11          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
-| 9           |<span style="color:green">✔</span> <Popover title="Drupal 9 Availability" content="Drupal 9 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
-| 8           |<span style="color:green">✔</span> <Popover title="Drupal 8 Availability" content="Drupal 8 is past its end of life date and is not an available option during site creation in the Pantheon dashboard. For a workaround, see the  <a href='#drupal-8-and-9-on-pantheon'>section below.</a>  While it remains functional on the platform, do not build for the future on it." /> | ❌           | <span style="color:green">✔</span> |
+| 9           |<span style="color:green">✔</span> <Popover title="Drupal 9 — End of Life" content="Drupal 9 reached its end of life on November 1, 2023. It no longer receives security updates from the Drupal community. Existing sites continue to run on Pantheon, but we strongly recommend migrating to Drupal 10 or 11." /> | ❌           | ❌ |
+| 8           |<span style="color:green">✔</span> <Popover title="Drupal 8 — End of Life" content="Drupal 8 reached its end of life on November 2, 2021. It no longer receives security updates from the Drupal community. Existing sites continue to run on Pantheon, but we strongly recommend migrating to Drupal 10 or 11." /> | ❌           | ❌ |
 | 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span> <Popover title="Drupal 7 LTS" content="Pantheon offers Long-Term Support for Drupal 7 sites on the platform at no extra cost. For more information, see the <a href='#drupal-7-long-term-support'>section below.</a>" />        |
 | 6           | ❌          | ❌           | ❌          |
 
@@ -42,11 +42,10 @@ Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-si
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
 ## Drupal 8 and 9 on Pantheon
-Drupal 8 and 9 are not available as an option during site creation in the Pantheon dashboard. However, they can still be created on the platform using [Terminus](/terminus). For example:
 
-```bash{promptUser: user}
-terminus site:create <site> <label> drupal8
-```
+**Drupal 8** reached its end of life in [November 2021](https://www.drupal.org/psa-2021-11-30). **Drupal 9** reached its end of life on [November 1, 2023](https://www.drupal.org/psa-2023-11-01). Neither version receives security updates from the Drupal community.
+
+Existing Drupal 8 and 9 sites continue to run on the Pantheon platform, but Pantheon does not provide support for issues specific to these end-of-life Drupal versions. New Drupal 8 and 9 sites are not available for creation in the Pantheon dashboard.
 
 ## Drupal 7 on Pantheon
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 7 site from the Pantheon dashboard.
