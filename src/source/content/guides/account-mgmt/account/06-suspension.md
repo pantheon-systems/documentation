@@ -18,7 +18,9 @@ reviewed: "2026-05-26"
 ---
 
 Pantheon's security systems continuously monitor account registrations and login activity for patterns associated with fraudulent or unauthorized use.
+
 Suspensions are issued only after a thorough review by our security team.
+
 If your account has been suspended, access has been permanently restricted. We do not share details about what triggers a suspension or the criteria used to make this determination.
 
 <Alert title="Important" type="danger">
