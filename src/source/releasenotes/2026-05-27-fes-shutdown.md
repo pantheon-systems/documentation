@@ -1,6 +1,7 @@
 ---
 title: "Shutdown of Front-End Sites scheduled for October 1st"
 published_date: "2026-05-27"
+published_at: "2026-05-27T19:30:16Z"
 categories: [front-end-sites, action-required, nextjs]
 description: "Customers using separate 'Front-End Sites' offering should switch to newer Next.js support"
 ---
