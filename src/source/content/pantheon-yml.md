@@ -267,7 +267,7 @@ search:
 #### Considerations
 
 - The valid values for the versions are `3`, `8`, and `9`.
-- Solr 8 and Solr 9 are supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
+- Drupal 7 supports Solr 3/9. [Drupal 10+](/guides/solr-drupal/solr-drupal) supports Solr 8/9.
 
 ### Drush Version
 
