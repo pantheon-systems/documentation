@@ -2,7 +2,7 @@
 title: Supported Drupal Versions
 description: Learn which versions of Drupal are currently supported, as well as additional compatibility information.
 tags: [libraries, updates]
-contributors: [wordsmither, scottbuscemi]
+contributors: [wordsmither, scottbuscemi, rkunjappan]
 contenttype: [doc]
 innav: [true]
 categories: [cms]
@@ -10,7 +10,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2025-05-02"
+reviewed: "2026-05-28"
 ---
 
 The following table indicates availability of the specified Drupal versions, as well as our usage recommendations and our support scope.
