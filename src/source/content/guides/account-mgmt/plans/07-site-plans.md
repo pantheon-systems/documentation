@@ -122,7 +122,7 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 
 You can enable the following add-ons:
 
-- [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
+- [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6, v8.11, and v9.10 as a service for most plans including the Sandbox site plan.
  - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
