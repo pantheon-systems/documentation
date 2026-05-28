@@ -266,8 +266,8 @@ search:
 
 #### Considerations
 
-- The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
+- The valid values for the versions are `3`, `8`, and `9`.
+- Solr 8 and Solr 9 are supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
 
 ### Drush Version
 
