@@ -1,6 +1,7 @@
 ---
 title: "User Agent Parsing"
 published_date: "2026-06-01"
+published_at: "2026-06-01T19:13:36Z"
 categories: [new-feature, user-interface]
 description: "A User Agent Parser in the site metrics traffic tables translates raw user agent strings into readable browser, OS, device, and CPU details."
 ---

@@ -20,64 +20,7 @@ jobs:
       uses: actions/checkout@v6
       # We need to fetch all tags to find the highest one
       with:
-        token: ${{ secrets.DOCS_PAT }}
         fetch-depth: 0
-
-    - name: Set timestamps on new release notes
-      id: set_timestamps
-      env:
-        COMMIT_MSG: ${{ github.event.head_commit.message }}
-      run: |
-        # Avoid re-processing the commit this step itself pushes
-        if [[ "$COMMIT_MSG" == "chore: set published_at timestamp"* ]]; then
-          echo "Skipping - timestamp commit detected"
-          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
-          exit 0
-        fi
-
-        TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-
-        # Get list of release note files added in this commit (not modified)
-        NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'src/source/releasenotes/*.md' 2>/dev/null || true)
-
-        if [ -z "$NEW_FILES" ]; then
-          echo "No new release note files"
-          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
-          exit 0
-        fi
-
-        MODIFIED=false
-        MODIFIED_FILES=""
-        for file in $NEW_FILES; do
-          # Skip if file already has published_at
-          if grep -q "^published_at:" "$file"; then
-            echo "Skipping $file - already has published_at"
-            continue
-          fi
-
-          # Add published_at after the published_date line
-          if grep -q "^published_date:" "$file"; then
-            sed -i "s/^published_date: \(.*\)$/published_date: \1\npublished_at: \"$TIMESTAMP\"/" "$file"
-            echo "Added published_at to $file"
-            MODIFIED=true
-            MODIFIED_FILES="$MODIFIED_FILES $(basename "$file" .md)"
-          fi
-        done
-
-        if [ "$MODIFIED" = true ]; then
-          FILE_LIST=$(echo "$MODIFIED_FILES" | xargs | tr ' ' ', ')
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "chore: set published_at timestamp for $FILE_LIST [skip ci]"
-          git push
-          # Output the new commit SHA for subsequent steps
-          NEW_SHA=$(git rev-parse HEAD)
-          echo "deploy_commit=$NEW_SHA" >> $GITHUB_OUTPUT
-          echo "Pushed timestamp commit: $NEW_SHA"
-        else
-          echo "deploy_commit=${{ github.sha }}" >> $GITHUB_OUTPUT
-        fi
 
     - uses: ./.github/actions/pantheon-auto-tag
       with:
@@ -85,7 +28,7 @@ jobs:
 
     - uses: ./.github/actions/wait-for-deployment
       with:
-        expected_commit: ${{ steps.set_timestamps.outputs.deploy_commit }}
+        expected_commit: ${{ github.sha }}
         env_name: live
         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
