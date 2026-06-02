@@ -3,7 +3,7 @@ title: "Customer Scheduled Jobs Now Available to All Customers"
 published_date: "2026-06-02"
 published_at: "2026-06-02T00:00:00Z"
 categories: [new-feature, tools-apis]
-description: "Customer Scheduled Jobs is now generally available to all Pantheon customers, with no Early Access enrollment required."
+description: "Customer Scheduled Jobs is now generally available to all Pantheon customers."
 ---
 
 Customer Scheduled Jobs is now available to all Pantheon customers. The feature allows you to schedule automated cron jobs tailored to your site's needs — set the frequency (hourly, daily, weekly, or monthly) and the actions to perform, and Pantheon handles execution automatically. Each site has a daily budget of 300 minutes for running jobs.
