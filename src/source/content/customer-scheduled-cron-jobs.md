@@ -14,20 +14,6 @@ showtoc: true
 reviewed: 2025-12-10
 ---
 
-<!-- Note to authors: this is early access content. When the feature goes to general access, this content should likely be added to the Terminus guide - or at least, the terminus commands should be, and an entry to the plugins page. 
-
-Also, this URL has been added to addsearch to exclude it from search results. that entry should be removed when EA is over
-
--->
-
-<Alert title="Early Access" type="info" icon="leaf">
-
-Customer scheduled cron jobs [Early Access](/guides/support/early-access/) program is closed for new participants.
-
-While this feature is in Early Access, Pantheon's development team releases new functionality often. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about support expectations for and access to Pantheon's pre-release software.
-
-</Alert>
-
 The [Terminus](/terminus) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
 
 ## Requirements
