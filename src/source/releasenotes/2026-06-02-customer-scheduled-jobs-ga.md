@@ -1,7 +1,7 @@
 ---
 title: "Customer Scheduled Jobs Now Available to All Customers"
 published_date: "2026-06-02"
-published_at: "2026-06-02T00:00:00Z"
+published_at: "2026-06-02T21:37:10Z"
 categories: [new-feature, tools-apis]
 description: "Customer Scheduled Jobs is now generally available to all Pantheon customers."
 ---
