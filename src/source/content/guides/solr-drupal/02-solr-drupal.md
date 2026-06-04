@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence, rkunjappan, mehta-asim]
-reviewed: "2026-04-21"
+reviewed: "2026-06-04"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -462,6 +462,14 @@ Resolving this requires clearing all indexed data and performing a full reindex.
 1. **Verify** search functionality is working as expected.
 
 
+#### `<lib/>` directives deprecated in Solr 9.8+
+
+Solr uses `<lib/>` directives in its configuration to load modules and custom JARs (such as `extraction`, `langid`, `analysis-extras`, `ltr`, etc.). [Apache Solr 9.8](https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-9.html#solr-9-8) made these directives opt-in by default as a security hardening measure. They will be removed entirely in Solr 10.0.
+
+**No action is needed on Pantheon environments** — required Solr modules are loaded automatically at the server level.
+
+For more details, refer to the Search API Solr issues [#3505915](https://www.drupal.org/project/search_api_solr/issues/3505915) and [#3508084](https://www.drupal.org/project/search_api_solr/issues/3508084).
+
 #### Incorrect Solr Version
 
 This error is indicative of Solr 3 being active when Solr 8 is expected:
@@ -495,3 +503,4 @@ This message can safely be ignored. It resolves once a search index has been cre
 #### Fatal error: Cannot redeclare config_get_config_directory()
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer. If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed). See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
+
