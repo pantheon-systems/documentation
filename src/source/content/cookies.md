@@ -120,6 +120,14 @@ If you prefer a regular expression, the name must match the following format: `S
 
 1. Use the stored value to generate varied content as appropriate for your use case and implementation.
 
+<Alert title="Warning" type="danger">
+
+Use `STYXKEY` cookies only for low-cardinality values (for example, role, locale, plan, or A/B test bucket). Each distinct cookie value becomes part of the Edge cache key and produces a separate cached object, so a high-cardinality or user-unique value (such as a user ID, session identifier, or JWT) fragments the cache to one entry per value. This effectively disables caching for those responses and consumes cache capacity, the opposite of the intended outcome.
+
+The `STYXKEY` prefix serves two purposes at once: it varies the Edge cache key by the cookie value, and it allows the cookie to pass through to your application. Do not reach for `STYXKEY` purely as a way to forward a per-user cookie to the CMS, as doing so will fragment your cache.
+
+</Alert>
+
 ## Setting Cookies for Platform Domains
 
 Setting cookies for the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies for platform domains (for example `dev-site-name.pantheonsite.io`) and custom domains (for example `example.com`, `xyz.example.com`).
