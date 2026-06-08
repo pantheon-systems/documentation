@@ -103,3 +103,14 @@ Navigate to **ElasticPress > Features** in your WordPress admin to enable and co
 
 </Alert>
 
+### Content Filtering Considerations
+
+When Elasticsearch indexes your site, it sends post content and metadata to the ElasticPress service. Be mindful of content on your site that may contain sensitive information such as user profiles, or posts with personally identifiable information (PII), and consider whether those post types should be included in the search index.
+
+ElasticPress provides filters to control what gets indexed:
+
+- **Exclude post types from indexing** — Use the [`ep_indexable_post_types`](https://www.elasticpress.io/resources/articles/excluding-post-types-from-being-indexed/) filter to prevent specific post types (such as orders or account pages) from being sent to Elasticsearch.
+- **Exclude metadata from indexing** — Use the [`ep_prepare_meta_data`](https://www.elasticpress.io/resources/articles/how-to-exclude-metadata-from-indexing/) filter to remove sensitive meta fields before they are indexed.
+
+After changing your indexing filters, run a full [index sync](/guides/pantheon-search/elasticsearch/query-optimization#keeping-your-index-current) to rebuild the index without the excluded content.
+
