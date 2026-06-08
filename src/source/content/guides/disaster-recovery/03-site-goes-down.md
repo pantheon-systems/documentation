@@ -25,7 +25,7 @@ In cases of downtime or significant functional failure in the live environment, 
 From the Support tab in the workspace of the affected site:
 
 * **Diamond** and **Platinum** customers can open an **emergency ticket** to report and escalate business-critical site downtime.
-  * In cases where the dashboard is inaccessible, a support ticket can be filed using a telephone ticketing service, accessible at 1(866)415-7624. Note that this is strictly for filing a ticket, and you will not reach our support engineers by using this method.
+  * In cases where the dashboard is inaccessible, a support ticket can be filed using a telephone ticketing service, accessible at the number displayed in the Support tab. Note that this is strictly for filing a ticket, and you will not reach our support engineers by using this method.
 * **Gold** customers can open a **general support ticket** to report site downtime.
 * **Silver** customers can start a **live chat** to report site downtime.
 
