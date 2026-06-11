@@ -75,7 +75,7 @@ Yes. Solr can be enabled at the same time as Elasticsearch to support migration.
 
 ### Do I get a dedicated Elasticsearch instance?
 
-Pantheon uses shared Elasticsearch clusters. For high-value enterprise sites requiring total isolation, dedicated clusters may be provisioned upon request and approval.
+Pantheon uses shared Elasticsearch clusters.
 
 ### Do I get all the features of ElasticPress?
 
