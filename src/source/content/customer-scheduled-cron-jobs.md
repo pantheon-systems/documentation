@@ -1,7 +1,7 @@
 ---
 title: Schedule Cron Jobs with Terminus
 description: Schedule and automate specific tasks or jobs.
-contributors: [wordsmither]
+contributors: [wordsmither,rachelwhitton,jazzsequence]
 contenttype: [doc]
 innav: [true]
 categories: [cli, automate]
@@ -11,7 +11,7 @@ product: [terminus]
 integration: [--]
 tags: [--]
 showtoc: true
-reviewed: 2025-12-10
+reviewed: 2026-06-11
 ---
 
 The [Terminus](/terminus) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
@@ -30,17 +30,26 @@ terminus self:plugin:install pantheon-systems/terminus-scheduled-jobs-plugin
 
 For more information about installing Terminus Plugins, see [Install Plugins](/terminus/plugins) in our Terminus Guide.
 
+## Schedules and Jobs
+
+The plugin uses two distinct concepts:
+
+- **Schedule**: the definition of a recurring task — its name, the command to run, and the cron expression that determines frequency. Each schedule has a unique `<schedule_ID>`. Commands that
+  manage schedules (`schedule:create`, `schedule:pause`, `schedule:resume`, `schedule:delete`) require a `<schedule_ID>`.
+
+- **Job**: a single execution of a schedule. Each time a schedule fires, it produces a job with its own `<job_ID>`. Commands that inspect executions (`job:list`, `job:logs`) require a `<job_ID>`.
+
+Use `terminus scheduledjobs:schedule:list <site>.<env>` to retrieve schedule IDs, and `terminus scheduledjobs:job:list <site>.<env>` to retrieve job IDs.
+
 ## Usage
 
-The plugin uses the following syntax:
+To create a new scheduled job:
 
 ```bash
-terminus scheduledjobs:<command>:<subcommand> <site>.<env> "<job_name>" "<cron_command>" "<cron_schedule>"
+terminus scheduledjobs:schedule:create <site>.<env> "<job_name>" "<cron_command>" "<cron_schedule>"
 ```
 
 Where:
-
-- `<command>:<subcommand>`: the Scheduled Jobs Plugin command and subcommand. See the [Commands](/customer-scheduled-cron-jobs#commands) section for details.
 
 - `<site>.<env>`: the site name or UUID.  Use `terminus site:list` to retrieve a list of site names and UUIDs.
 
@@ -51,6 +60,22 @@ Where:
   - New Relic
 
 - `<cron_schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
+
+### Job Schedules
+
+Job schedules are characterized as job definitions which allow setting a name for each job, a command and schedule in the [UNIX cron](https://en.wikipedia.org/wiki/Cron) format.
+
+```
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                   7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * * <command to execute>
+```
 
 ### Jobs "Budget"
 
@@ -64,103 +89,6 @@ Timeouts are dynamic and dependent on the remaining budget plus the 15 minute gr
 
 ## Commands
 
-These commands may require the following variables, indicated by `<variable_name>`. 
+For a full list of available commands, see the [Terminus Scheduled Jobs Plugin
+  documentation](https://github.com/pantheon-systems/terminus-scheduled-jobs-plugin).
 
-- `<site>.<env>`: the site name or UUID.  Use `terminus site:list` to retrieve a list of site names and UUIDs.
-
-- `<job_name>`: a brief description of the job.
-
-- `<cron_command>`: the cron command you are scheduling. The following commands cannot be used:
-
-- `<cron_schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
-
-- `<job_ID>`: The unique ID of the job, which you can find using the [`jobs:list`](/customer-scheduled-cron-jobs#list) command.
-
-- `<schedule_ID>`: the unique ID of the schedule, which you can find using the [`schedule:list`](/customer-scheduled-cron-jobs#schedulelist) command.
-
-### budget:info
-
-View your current budget status.
-
-```bash{promptUser: user}{outputLines: 2-7}
-terminus scheduledjobs:budget:info <site>.<env>
-
----------------------- ------------------------ -----------
- Daily Budget Elapsed   Daily Budget Remaining   Resets In
----------------------- ------------------------ -----------
- 100m                   200m                     16h11m29s
----------------------- ------------------------ -----------
-```
-
-### jobs:list
-
-Returns a list of all active jobs.
-
-```bash{promptUser: user}{outputLines: 2-12}
-terminus scheduledjobs:job:list <site>.<env> 
-
--------------------------------------- ------------------------------- ------------------------------- ---------
- ID                                     Start Time                      End Time                        Status
--------------------------------------- ------------------------------- ------------------------------- ---------
- ca93e729-58e8-489f-805b-f73d4102c5c0   2023-05-26 07:00:03 +0000 UTC   2023-05-26 07:01:57 +0000 UTC   SUCCESS
- 808a3a84-b1c6-42cf-92c8-f0b6afe959c8   2023-05-26 06:00:03 +0000 UTC   2023-05-26 06:01:51 +0000 UTC   SUCCESS
- e0a74a62-6705-4f0c-830c-0190f57dc1c0   2023-05-26 05:00:00 +0000 UTC   2023-05-26 05:01:34 +0000 UTC   SUCCESS
- 7effda3b-be2e-42b9-9093-cd373b7b3079   2023-05-26 04:00:00 +0000 UTC   2023-05-26 04:01:33 +0000 UTC   SUCCESS
- 54c39e63-fcf5-41f0-81ec-4163fc1f498b   2023-05-26 03:00:00 +0000 UTC   2023-05-26 03:01:54 +0000 UTC   SUCCESS
- fdf2cf55-88f5-44a1-8a7e-d422291f625a   2023-05-26 02:00:02 +0000 UTC   2023-05-26 02:01:51 +0000 UTC   SUCCESS
--------------------------------------- ------------------------------- ------------------------------- ---------
-```
-
-### jobs:logs
-
-View logs associated with a job ID.
-
-```bash
-terminus scheduledjobs:job:logs <site>.<env> <job_ID>
-```
-
-### schedule:create
-
-Creates a new scheduled job.
-
-```bash
-terminus scheduledjobs:schedule:create <site>.<env> "<job_name>" "<cron_command>" "<cron_schedule>"
-```
-
-### schedule:delete
-
-Delete an existing schedule. 
-
-```bash
-terminus scheduledjobs:schedule:delete <site>.<env> <schedule_ID>
-```
-
-### schedule:list
-
-Generates a list of all schedules for the specified site environment. 
-
-```bash{promptUser: user}{outputLines: 2-7}
-terminus scheduledjobs:schedule:list <site>.<env> 
-
--------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
- ID                                     Name                        Schedule      Command                            Status    Created At (UTC)
--------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
- d178dd16-b0e3-47dc-a446-1bf4343f7fff   test-scheduled-job-hourly   0 * * * *     ls -la /files && drush -vvv cron   ENABLED   2023-05-19T07:34:26Z
--------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
-```
-
-### schedule:pause
-
-Pause a schedule. 
-
-```bash
-terminus scheduledjobs:schedule:pause <site>.<env> <schedule_ID>
-```
-
-### schedule:resume
-
-Resume a paused schedule. 
-
-```bash
-terminus scheduledjobs:schedule:resume <site>.<env> <schedule_ID>
-```
