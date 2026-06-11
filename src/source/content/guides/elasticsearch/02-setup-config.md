@@ -63,7 +63,7 @@ terminus search:enable <site>
 
 <Alert type="info" title="Note">
 
-During the Beta phase, activating Elasticsearch may take up to 12 minutes to complete.
+Activating Elasticsearch may take up to a minute to complete.
 
 </Alert>
 
