@@ -36,6 +36,12 @@ Elasticsearch is available for WordPress sites on **Performance** and **Elite** 
 
 Pantheon also offers [Solr-based search](/solr). You can have both Solr and Elasticsearch activated on a site at the same time, which is useful during migration. However, running both simultaneously in production is not recommended. For new search implementations, Elasticsearch with ElasticPress is the recommended path.
 
+<Alert type="warning" title="Solr 3 deprecation">
+
+Pantheon is deprecating Solr 3 support. WordPress sites using the Solr Power plugin will lose Solr 3 support in January 2027. If your WordPress site currently uses Solr, plan your migration to Elasticsearch before that date.
+
+</Alert>
+
 <Partial file="pantheon-search-table.md" />
 
 ## Support
