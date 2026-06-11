@@ -4,7 +4,7 @@ subtitle: Pantheon Search powered by Elasticsearch
 navtitle: Introduction
 description: Detailed information on using Elasticsearch with your Pantheon WordPress site with ElasticPress.
 tags: [elasticsearch,search]
-reviewed: "2026-02-10"
+reviewed: "2026-06-11"
 contenttype: [doc]
 innav: [true]
 categories: [search]
@@ -36,25 +36,13 @@ Elasticsearch is available for WordPress sites on **Performance** and **Elite** 
 
 Pantheon also offers [Solr-based search](/solr). You can have both Solr and Elasticsearch activated on a site at the same time, which is useful during migration. However, running both simultaneously in production is not recommended. For new search implementations, Elasticsearch with ElasticPress is the recommended path.
 
+<Alert type="warning" title="Solr 3 deprecation">
+
+Pantheon is deprecating Solr 3 support. WordPress sites using the Solr Power plugin will lose Solr 3 support in January 2027. If your WordPress site currently uses Solr, plan your migration to Elasticsearch before that date.
+
+</Alert>
+
 <Partial file="pantheon-search-table.md" />
-
-## Known Issues
-
-There are currently a few known issues with the Elasticsearch integration on Pantheon in the Beta phase. If you find any others, please let the team know in the `#beta-elasticsearch` channel in the Pantheon Community Slack.
-
-### ElasticPress WP-CLI commands require full URL flag
-
-Currently, when running ElasticPress WP-CLI commands through Terminus, you must include the `--url` flag with your site's URL for the command to work properly. This is due to how ElasticPress detects the host connection and how the Pantheon hostname is read on the platform. For example:
-
-```bash
-terminus wp <site>.<env> -- elasticpress sync --url=https://yoursite.com
-```
-
-### Elasticsearch instance is not reachable on Pantheon platform domains (`*.pantheonsite.io`)
-
-Currently, if your environment has a Pantheon platform domain (e.g. `<env>-<site>.pantheonsite.io`) and _that is not the domain configured in the Elasticsearch instance_ (during Beta this is the one that you would have given to the team for the site you are testing on), then requests to the Elasticsearch instance from the site will fail. This is because the Elasticsearch instance is configured to only accept requests from the domain you provided, and the Pantheon platform domain does not match that.
-
-This means that multidev environments are not currently able to connect to the Elasticsearch instance, since they use the Pantheon platform domain, and Dev and Test environments will only work if you have attached a domain to those environments in the Pantheon dashboard (e.g. `dev.yoursite.com`, `test.yoursite.com`).
 
 ## Support
 

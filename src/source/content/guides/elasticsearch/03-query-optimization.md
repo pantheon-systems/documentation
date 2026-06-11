@@ -15,7 +15,7 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/query-optimization
 editpath: search/03-query-optimization.md
-reviewed: "2026-02-10"
+reviewed: "2026-06-11"
 ---
 
 <Partial file="elasticsarch-pre-ga.md" />

@@ -15,7 +15,7 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/troubleshooting
 editpath: search/04-troubleshooting.md
-reviewed: "2026-02-11"
+reviewed: "2026-06-11"
 ---
 
 <Partial file="elasticsarch-pre-ga.md" />
@@ -25,7 +25,6 @@ reviewed: "2026-02-11"
 ### ElasticPress cannot connect to the host
 
 - Verify that Elasticsearch has been activated in the Pantheon Dashboard or via Terminus.
-- If you are in the Beta phase, confirm that the EP constants are properly defined in `wp-config.php`.
 - Check the ElasticPress Status Report for connection errors and details.
 - Use the ElasticPress WP-CLI command `wp elasticpress status` to check connectivity from the command line (`terminus wp <site>.<env> -- elasticpress status`).
 
@@ -76,7 +75,7 @@ Yes. Solr can be enabled at the same time as Elasticsearch to support migration.
 
 ### Do I get a dedicated Elasticsearch instance?
 
-Pantheon uses shared Elasticsearch clusters. For high-value enterprise sites requiring total isolation, dedicated clusters may be provisioned upon request and approval.
+Pantheon uses shared Elasticsearch clusters.
 
 ### Do I get all the features of ElasticPress?
 
