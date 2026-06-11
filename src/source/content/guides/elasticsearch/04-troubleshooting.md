@@ -25,7 +25,6 @@ reviewed: "2026-02-11"
 ### ElasticPress cannot connect to the host
 
 - Verify that Elasticsearch has been activated in the Pantheon Dashboard or via Terminus.
-- If you are in the Beta phase, confirm that the EP constants are properly defined in `wp-config.php`.
 - Check the ElasticPress Status Report for connection errors and details.
 - Use the ElasticPress WP-CLI command `wp elasticpress status` to check connectivity from the command line (`terminus wp <site>.<env> -- elasticpress status`).
 
