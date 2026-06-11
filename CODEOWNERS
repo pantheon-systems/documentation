@@ -17,5 +17,13 @@ src/source/content/guides/integrated-composer/ @pantheon-systems/developer-exper
 src/source/content/guides/multisite/ @pantheon-systems/site-experience
 # The cms-platform team is responsible for External Libraries on Pantheon
 src/source/content/external-libraries @pantheon-systems/site-experience
+# The site-experience team is responsible for Elasticsearch docs
+src/source/content/guides/elasticsearch/ @pantheon-systems/site-experience
+# The site-experience team is responsible for Solr docs
+src/source/content/guides/solr-drupal/ @pantheon-systems/site-experience
+src/source/content/solr.md @pantheon-systems/site-experience
+src/source/content/opensolr.md @pantheon-systems/site-experience
+# The site-experience team is responsible for WordPress developer docs
+src/source/content/guides/wordpress-developer/ @pantheon-systems/site-experience
 # There is a team just for release note permissions
 src/source/releasenotes/ @pantheon-systems/release-note-authors
