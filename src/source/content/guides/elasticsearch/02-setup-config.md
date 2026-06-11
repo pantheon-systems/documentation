@@ -14,7 +14,7 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/setup-config
 editpath: search/02-setup-config.md
-reviewed: "2026-02-10"
+reviewed: "2026-06-11"
 ---
 
 <Partial file="elasticsarch-pre-ga.md" />
@@ -78,7 +78,7 @@ terminus wp <site>.<env> -- plugin install elasticpress --activate
 ### Step 3: Activate ElasticPress in WordPress
 
 1. In your WordPress admin, navigate to **ElasticPress > Settings**.
-2. Verify that the host connection is established. If the constants are configured correctly, the ElasticPress.io Host URL, Subscription ID and Subscription Token fields should be pre-populated.
+2. Verify that the host connection is established. The ElasticPress.io Host URL, Subscription ID and Subscription Token fields should be pre-populated.
 3. Run your first **index sync** from the ElasticPress dashboard. This sends your WordPress content to Elasticsearch so it can be searched.
 
 ### Step 4: Enable ElasticPress Features
