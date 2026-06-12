@@ -14,11 +14,9 @@ integration: [--]
 ---
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
 
-## Become a Partner Agency / Join the Partner Program
+## Join the Agency Partner Program
 
-One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Agency Partner Program Page](https://pantheon.io/partners?docs) to learn more.
-
-Partner Agencies are added to the [Agency Partner Directory](https://directory.pantheon.io/agencies?docs) to make it easier for customers to be matched with the right agency.
+Joining the Agency Partner Program gives your agency access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), [Autopilot](/guides/autopilot), commission incentives, co-marketing resources, and a listing in the [Agency Partner Directory](https://directory.pantheon.io/agencies?docs). Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) to learn more and apply.
 
 ## Learn Pantheon through Product Trainings, Resources, and Guides
 [Get hands on training](https://pantheon.io/learn-pantheon?docs) from knowledgeable experts at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
@@ -26,8 +24,9 @@ Partner Agencies are added to the [Agency Partner Directory](https://directory.p
 ## Become a Supporting Workspace
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/teams/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your Workspace permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
-## Extend Preferred Pricing to Your Clients
-[Qualified agencies](https://pantheon.io/plans/partner-program?docs) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
+## Offer End-Customer Discounts
+
+Premier and Strategic tier Agency Partners can offer referred customers a discount on Year 1 hosting — 10% for Premier partners and 15% for Strategic partners. Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) for details on tiers and how to apply.
 
 ## Training Resources for New Team Members
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
