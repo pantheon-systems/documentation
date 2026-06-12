@@ -16,7 +16,7 @@ We've compiled some great tips for agencies working on Pantheon. They are loosel
 
 ## Become a Partner Agency / Join the Partner Program
 
-One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more.
+One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Agency Partner Program Page](https://pantheon.io/partners?docs) to learn more.
 
 Partner Agencies are added to the [Agency Partner Directory](https://directory.pantheon.io/agencies?docs) to make it easier for customers to be matched with the right agency.
 

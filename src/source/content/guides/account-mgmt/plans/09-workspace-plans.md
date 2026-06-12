@@ -53,7 +53,7 @@ Platinum and Diamond Account Plans offer all the tools and features of the Gold 
 
 ## Partner Program
 
-You will only be assigned a [Partner Program](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency. 
+You will only be assigned an [Agency Partner Program](https://pantheon.io/partners) workspace if you are creating the workspace for a web agency. 
 
 As a Pantheon Partner, you receive access to:
 
@@ -66,7 +66,7 @@ As a Pantheon Partner, you receive access to:
 
 **Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
 
-For more information about our partner program and how to unlock higher partner tiers, check out our [Partner Program Guide](https://pantheon.io/resources/pantheon-partner-program-guide).
+For more information about the Agency Partner Program and how to unlock higher partner tiers, download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide).
 
 
 

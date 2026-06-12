@@ -66,7 +66,7 @@ New features and functionality can be continuously developed in the Custom Upstr
 
 ### Custom Upstreams for Digital Agencies and Pantheon Resellers
 
-Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and other benefits of becoming a Pantheon Partner. Digital agencies that serve clients and resellers of Pantheon are qualified to join the Partner program.
+Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to Custom Upstreams.
 
 ### Custom Upstreams for Corporate and Higher Education Customers
 
