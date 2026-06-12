@@ -1,6 +1,6 @@
 ---
 title: Bun package manager and Node.js 26 support for Next.js sites
-published_date: "2026-05-25"
+published_date: "2026-06-22"
 categories: [nextjs, new-feature]
 ---
 
