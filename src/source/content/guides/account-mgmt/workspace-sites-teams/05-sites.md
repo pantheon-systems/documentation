@@ -131,43 +131,6 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 </TabList>
 
-## Share Preferred Pricing for a Site
-
-### Existing Site
-
-Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client.
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
-
-1. Navigate to My Dashboard.
-
-2. Select **Settings > Billing**
-
-3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
-
-  A link is immediately sent to the email address to pay through the secure site.
-
-### New Site
-
-Agencies should follow the steps below to maintain Preferred Pricing through a plan change. This will only work for paid plans, not a sandbox site. If you want to invite a sandbox to become a paid site with preferred pricing, please follow the [Transfer Ownership](/guides/account-mgmt/billing/transfer) instructions
-
-1. Navigate to My Dashboard.
-
-2. Select **Settings > Billing**
-
-3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
-
-  A link is immediately sent to the email address to pay through the secure site.
-
-
-  <Alert title="Note" type="info">
-
-  A site transferred as a Sandbox will not receive Preferred Pricing. A site plan and billing preference (Annual or Monthly) must be selected prior to sending your client a payment invitation.
-
-  </Alert>
-
-After the person has accepted the invitation and has paid for the site, they will receive the next invoice at the end of the billing cycle.
-
 ## Delete Sites
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
