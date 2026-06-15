@@ -3,8 +3,8 @@ title: Integrated Composer
 subtitle: Support and FAQs
 description: Learn about support for Integrated Composer.
 tags: [composer, workflow]
-contributors: [ari, edwardangert]
-reviewed: "2024-10-15"
+contributors: [ari, edwardangert, jazzs3quence]
+reviewed: "2026-06-15"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-support
 contenttype: [guide]

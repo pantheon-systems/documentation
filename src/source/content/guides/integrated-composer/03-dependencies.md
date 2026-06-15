@@ -3,7 +3,7 @@ title: Integrated Composer
 subtitle: Manage Dependencies
 description: Learn how to add or remove an individual site dependency.
 tags: [composer, workflow]
-contributors: [ari, edwardangert]
+contributors: [ari, edwardangert, jazzs3quence]
 showtoc: true
 permalink: docs/guides/integrated-composer/dependencies
 contenttype: [guide]
@@ -13,7 +13,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-06-15"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.
