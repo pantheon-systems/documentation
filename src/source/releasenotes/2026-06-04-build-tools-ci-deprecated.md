@@ -13,16 +13,17 @@ We've released the final update to the `build-tools-ci` Docker image. We will no
 - `quay.io/pantheon-public/build-tools-ci:9.x-php8.3`
 - `quay.io/pantheon-public/build-tools-ci:9.x-php8.4`
 
+## Background
+
+These base images were created at a time when CI providers recommend using customized Docker images to speed up execution and reduce the need for replicating boilerplate configration. It has since become more common to run CI jobs on standard base images for speed and the reduction in boilerplate code comes from reusable GitHub Actions or CircleCI Orbs.
 ## Recommended migration
 
 Use a standard base image from your CI provider and install the Pantheon tools you need during the CI run. Standard images are better cached by CI runners, so your pipelines will perform better overall than with a custom image.
 
-To install Terminus in a CI job, use the [Terminus GitHub Action](https://github.com/marketplace/actions/setup-terminus) or download the phar directly:
+Learn more about Pantheon's reusable [GitHub Actions](/github-actions) and [CircleCI Orb](https://github.com/pantheon-systems/circleci-orb).
 
-```bash
-curl -L https://github.com/pantheon-systems/terminus/releases/latest/download/terminus.phar -o /usr/local/bin/terminus
-chmod +x /usr/local/bin/terminus
-```
+
+
 
 ## Action required
 
