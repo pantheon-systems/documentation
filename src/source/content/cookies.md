@@ -124,7 +124,7 @@ If you prefer a regular expression, the name must match the following format: `S
 
 Use `STYXKEY` cookies only for low-cardinality values (for example, role, locale, plan, or A/B test bucket). Each distinct cookie value becomes part of the Edge cache key and produces a separate cached object, so a high-cardinality or user-unique value (such as a user ID, session identifier, or JWT) fragments the cache to one entry per value. This effectively disables caching for those responses and consumes cache capacity, the opposite of the intended outcome.
 
-The `STYXKEY` prefix serves two purposes at once: it varies the Edge cache key by the cookie value, and it allows the cookie to pass through to your application. Do not reach for `STYXKEY` purely as a way to forward a per-user cookie to the CMS, as doing so will fragment your cache.
+`STYXKEY` cookies are not stripped at the Edge on cache misses. The cookie value is forwarded to your application to generate the cached variant.  Using `STYXKEY` cookies to forward per-user cookies to the CMS requires a unique value per user, which fragments your cache as described above. To forward a cookie to your application on every request regardless of cache state, use a [cache-busting cookie](/cookies#cache-busting-cookies) instead.
 
 </Alert>
 
