@@ -1,6 +1,7 @@
 ---
 title: "Build Tools CI Docker image deprecated"
-published_date: "2026-06-04"
+published_date: "2026-06-15"
+published_at: 2026-06-15T16:28:34.000Z
 categories: [deprecation, tools-apis]
 ---
 
