@@ -30,7 +30,7 @@ Drupal modules / themes and WordPress plugins / themes should always be in the `
 
 You should use the `require-dev` section for dependencies that are not a part of the web application but are necessary to build or test your project. Some examples are `php_codesniffer` and `phpunit`. Dev dependencies are deployed to Pantheon Dev and Multidev environments, but not to Test and Live environments.
 
-Third-party dependencies, such as modules / plugins and themes, are added to the project via `composer.json`. The `composer.lock` file keeps track of the exact version of dependency. [Composer `installer-paths`](https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md#how-do-i-install-a-package-to-a-custom-path-for-my-framework-) are used to ensure the dependencies are downloaded into the appropriate directory.
+Third-party dependencies, such as modules / plugins and themes, are added to the project via `composer.json`. The `composer.lock` file records the exact resolved version of every dependency. We highly recommend committing `composer.lock` to your repository so that Integrated Composer installs the precise versions you have tested locally rather than resolving dependencies fresh on each push. [Composer `installer-paths`](https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md#how-do-i-install-a-package-to-a-custom-path-for-my-framework-) are used to ensure the dependencies are downloaded into the appropriate directory.
 
 ### Select Dependencies Locally
 
