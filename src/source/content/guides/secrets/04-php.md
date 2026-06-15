@@ -2,7 +2,7 @@
 title: Pantheon Secrets Guide
 subtitle: PHP Usage
 description: How to read Pantheon Secrets from code.
-contributors: [stovak]
+contributors: [stovak, jazzs3quence]
 contenttype: [guide]
 innav: [true]
 categories: [secrets]
@@ -12,16 +12,20 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/php
-reviewed: "2025-12-10"
+reviewed: "2026-06-15"
 showtoc: true
 ---
 
 ## Reading secrets from PHP
-Secrets can be read, updated, created, and deleted via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin). WordPress and Drupal however, can only read secrets at runtime - there is no way to modify secrets via the application or in code.
+Secrets can be read, updated, created, and deleted via [Terminus](/terminus) or the Site Dashboard. WordPress and Drupal however, can only read secrets at runtime - there is no way to modify secrets via the application or in code.
 
 Secrets must have the scope `web` to be visible from your application. Secrets are cached in the server for 15 minutes, so you must wait for a while after modifying secret values before they will be available for use. This cache is also encrypted at rest.
 
-Note: this also applies to quicksilver scripts.
+<Alert title="Note" type="info">
+
+This also applies to Quicksilver scripts.
+
+</Alert>
 
 ### Use the pantheon_get_secret PHP function
 
@@ -40,9 +44,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 - Make sure you have access to a WordPress site on Pantheon.
 
-- Make sure you have [Terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) on your local machine.
-
-- Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation).
+- Make sure you have [Terminus](/terminus/install#install-terminus) 4.2.0 or later installed on your local machine.
 
 ### Steps
 
