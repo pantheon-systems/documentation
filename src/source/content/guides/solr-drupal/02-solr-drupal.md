@@ -318,7 +318,7 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 
 1. **Post the schema for the new Solr version:**
 
-   Wait for the **Change Search Version** workflow to complete in your Site Dashboard, then verify the core is ready by running the diagnose command or checking the server status page (`admin/config/search/search-api` > Pantheon Search). Post the schema:
+   Wait for the **Change Search Version** workflow to complete on your site dashboard. Once complete, verify the core is ready by running the diagnose command or checking the server status page (`admin/config/search/search-api` > Pantheon Search), then post the schema:
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
@@ -363,7 +363,7 @@ For some reason if you need to revert to Solr 8 after upgrading, the `search_api
 
 1. **Re-post the Solr 8 schema:**
 
-   Wait for the **Change Search Version** workflow to complete in your Site Dashboard, then re-post the schema:
+   Wait for the **Change Search Version** workflow to complete on your site dashboard. Once complete, re-post the schema:
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
