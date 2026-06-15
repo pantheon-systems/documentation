@@ -58,6 +58,10 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
     terminus secret:site:set <site> sendgrid_api <api_key> --scope=web --type=runtime
     ```
 
+    Alternatively, you can set this secret via the Site Dashboard. See [Create a new secret](/guides/secrets/create) for dashboard instructions.
+
+    ![Create new secret in the dashboard with options for type and scope](../../../images/dashboard/secrets/secrets-creation-markedup.png)
+
     As a best practice, the non-production environments should be the default and then override that value with a [secret environment override](/guides/secrets/overview#environment-override) to change the API key for the live environment (for example, if you want to use different SendGrid accounts for live and dev environments).
 
 1. Add the Key entity in one of the different available ways:

@@ -41,6 +41,8 @@ To get started:
 
 To see all available Terminus secrets commands, refer to the [Terminus command reference](/terminus/commands).
 
+![A list of secrets for a site, displayed in the Pantheon dashboard](../../../images/dashboard/secrets/secrets-management.png)
+
 ### Older plugins now deprecated
 Terminus 4.2.0 integrates secrets management directly into Terminus core. If you previously installed the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) separately, you no longer need it — the same commands are available in Terminus 4.2.0 and later without any plugin installation.
 

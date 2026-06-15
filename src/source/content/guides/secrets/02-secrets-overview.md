@@ -58,6 +58,8 @@ Organization-owned secrets are available to every site and environment that are 
 ### Site-owned secrets
 Site-owned secrets are available to the site and all of its environments. A common use case is GitHub tokens that a site's Composer build can use to access private repos referenced in the composer file. Site-owned secrets can be managed via the **Secrets** tab in your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) or via Terminus.
 
+![A list of secrets for a site, displayed in the Pantheon dashboard](../../../images/dashboard/secrets/secrets-management.png)
+
 ### Environment override
 Environment overrides provide overrides to a secret value for a specific environment. A common use case for this are API keys that are different in production and non-production environments.
 
