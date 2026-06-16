@@ -15,10 +15,8 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/troubleshooting
 editpath: search/04-troubleshooting.md
-reviewed: "2026-06-11"
+reviewed: "2026-06-16"
 ---
-
-<Partial file="elasticsarch-pre-ga.md" />
 
 ## Troubleshooting
 
