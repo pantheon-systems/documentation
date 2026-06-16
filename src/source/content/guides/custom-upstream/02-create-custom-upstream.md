@@ -347,7 +347,9 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
        ![Bitbucket HTTPS Repo URL](../../../images/bitbucket-https-url.png)
 
-   - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear. If your repository is publicly accessible, you can skip this step.
+   - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+      ![BitBucket Upstream Authentication](../../../images/dashboard/create-upstream-auth-bb.png)
+      If your repository is publicly accessible, you can skip this step.
         1. In your Bitbucket repository, go to **Repository settings** > **Access tokens**.
         1. Click **Create Repository Access Token**.
         1. Enter a name and select the **Read** permission under **Repositories**.
