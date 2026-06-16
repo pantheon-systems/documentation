@@ -3,8 +3,8 @@ title: Integrated Composer
 subtitle: Support and FAQs
 description: Learn about support for Integrated Composer.
 tags: [composer, workflow]
-contributors: [ari, edwardangert]
-reviewed: "2024-10-15"
+contributors: [ari, edwardangert, jazzs3quence]
+reviewed: "2026-06-15"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-support
 contenttype: [guide]
@@ -41,6 +41,13 @@ Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5
 This section provides answers to frequently asked Integrated Composer questions.
 
 
+### Should I commit `composer.lock`?
+
+Yes. Always commit `composer.lock` to your site repository. When you push code to Pantheon, Integrated Composer runs `composer install`, which installs the exact dependency versions recorded in `composer.lock`.
+
+If `composer.lock` is absent, Composer resolves dependencies to their latest compatible versions rather than your pinned versions, then commits the generated `composer.lock` back to your repository. That extra commit triggers a second `sync_code` workflow, causing Quicksilver hooks to fire twice for a single push. When you later pull those changes, you may also encounter merge conflicts if your local copy diverges from the file Pantheon committed, or if `composer.lock` was previously removed from your repository's git history.
+
+**Note:** It is **not** recommended to commit your `composer.lock` file to _upstream_ repositories. A `composer.lock` file in an upstream repository can lead to merge conflicts on downstream sites. For more information, see our documentation about [custom upstream usage](/guides/integrated-composer/ic-upstreams).
 ### What Composer commands does Pantheon run?
 
 All Composer commands are available through the **Commit Log** in the Site Dashboard's development environment.
