@@ -1,8 +1,8 @@
 ---
 title: Pantheon Secrets Guide
 subtitle: Troubleshooting
-description: Securely store secrets in the Pantheon Platform.
-contributors: [stovak]
+description: Troubleshoot common issues with Pantheon Secrets.
+contributors: [stovak, jazzs3quence]
 contenttype: [guide]
 innav: [true]
 categories: [secrets]
@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/troubleshooting
-reviewed: "2025-12-10"
+reviewed: "2026-06-15"
 showtoc: true
 ---
 
@@ -75,15 +75,15 @@ Some possible causes for this error:
 
 - **Problem:** Secrets are not correctly set for the site. Secrets for Integrated Composer to use need to be type `composer` and have scope `ic`. Secret types and scopes are covered in the [Overview](/guides/secrets/overview) documentation.
 
-  **Solution:** ask the client to delete and recreate the secret if scope and type do not match for the given secret name
+  **Solution:** Delete and recreate the secret if the scope and type do not match for the given secret name.
 
 - **Problem:** Secret value/token may be expired
 
-  **Solution:** ask the client to set the secret again to an updated value
+  **Solution:** Set the secret again with an updated value.
 
 - **Problem**: Site may be running on a PHP version below 8.0. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP below 8.0”
 
-  **Solution**: Upgrade the client to a supported PHP version.
+  **Solution**: Upgrade your PHP version to 8.0 or above.
 
 - **Problem:** Errors with paid WordPress plugins.
 
@@ -113,7 +113,7 @@ Some possible causes for this error:
 
 ## Rate limiting
 ### Pantheon rate limiting
-The service supports up to 3 requests per second per user through Terminus. If you hit that limit, the API will return a `429` error code and the plugin will throw an error.
+The service supports up to 3 requests per second per user through Terminus. If you hit that limit, the API will return a `429` error code and Terminus will throw an error.
 
 The PHP SDK and `pantheon_get_secret()` function are not affected by this rate limiting.
 
