@@ -4,18 +4,28 @@
 * @pantheon-systems/docs-admins
 
 # The Platform-Edge-Routing team is responsible for connecting custom domains to Pantheon
-source/content/guides/domains/ @pantheon-systems/platform-edge-routing
+src/source/content/guides/domains/ @pantheon-systems/platform-edge-routing
 # The Platform-Edge-Routing team is responsible for traffic limits
-source/content/guides/account-mgmt/traffic/ @pantheon-systems/platform-edge-routing
+src/source/content/guides/account-mgmt/traffic/ @pantheon-systems/platform-edge-routing
 # The Platform-Edge-Routing team is responsible for bots and indexing
-source/content/bots-and-indexing @pantheon-systems/platform-edge-routing
+src/source/content/bots-and-indexing @pantheon-systems/platform-edge-routing
 # The FileSystem team is responsible for managing static files on Pantheon
-source/content/guides/filesystem/ @pantheon-systems/filesystem
-# The lifecycle-ops team is responsible for Integrated Composer
-source/content/guides/integrated-composer/ @pantheon-systems/lifecycle-ops
+src/source/content/guides/filesystem/ @pantheon-systems/filesystem
+# The developer-experience team is responsible for Integrated Composer
+src/source/content/guides/integrated-composer/ @pantheon-systems/developer-experience
+# The developer-experience team is responsible for Secrets
+src/source/content/guides/secrets/ @pantheon-systems/developer-experience
 # The cms-platform team is responsible for WordPress Multisite
-source/content/guides/multisite/ @pantheon-systems/cms-platform
+src/source/content/guides/multisite/ @pantheon-systems/site-experience
 # The cms-platform team is responsible for External Libraries on Pantheon
-source/content/external-libraries @pantheon-systems/cms-platform
+src/source/content/external-libraries @pantheon-systems/site-experience
+# The site-experience team is responsible for Elasticsearch docs
+src/source/content/guides/elasticsearch/ @pantheon-systems/site-experience
+# The site-experience team is responsible for Solr docs
+src/source/content/guides/solr-drupal/ @pantheon-systems/site-experience
+src/source/content/solr.md @pantheon-systems/site-experience
+src/source/content/opensolr.md @pantheon-systems/site-experience
+# The site-experience team is responsible for WordPress developer docs
+src/source/content/guides/wordpress-developer/ @pantheon-systems/site-experience
 # There is a team just for release note permissions
-source/releasenotes/ @pantheon-systems/release-note-authors
+src/source/releasenotes/ @pantheon-systems/release-note-authors

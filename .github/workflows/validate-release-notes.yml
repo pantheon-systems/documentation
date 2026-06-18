@@ -1,0 +1,48 @@
+name: Validate Release Notes
+
+on:
+  pull_request:
+    paths:
+      - 'src/source/releasenotes/*.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate release note
+        run: |
+          FILES=$(git diff --name-only --diff-filter=AM \
+            "${{ github.event.pull_request.base.sha }}" \
+            "${{ github.event.pull_request.head.sha }}" \
+            -- 'src/source/releasenotes/*.md')
+
+          COUNT=$(echo "$FILES" | grep -c '.' || true)
+
+          if [ "$COUNT" -gt 1 ]; then
+            echo "::error::PRs must contain only one release note. Found $COUNT:"
+            echo "$FILES"
+            exit 1
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No release note files added or modified — skipping."
+            exit 0
+          fi
+
+          FRONTMATTER=$(awk '/^---/{count++; if(count==2) exit} count==1' "$FILES")
+
+          if echo "$FRONTMATTER" | grep -qE '^published_at:[[:space:]]+\S+'; then
+            VALUE=$(echo "$FRONTMATTER" | grep -E '^published_at:' | sed 's/^published_at:[[:space:]]*//' | tr -d '"')
+            echo "OK: $FILES (published_at: $VALUE)"
+          else
+            echo "::error file=$FILES::Missing 'published_at' in frontmatter. Add 'published_at: \"2026-06-01T00:00:00Z\"' after 'published_date'."
+            exit 1
+          fi

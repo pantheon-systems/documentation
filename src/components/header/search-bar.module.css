@@ -1,0 +1,27 @@
+.searchContainer {
+  padding: 1rem 0;
+  width: 100%;
+  flex: 1;
+}
+
+.desktopSearch {
+  display: flex;
+}
+
+.searchForm {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #171717; /* text-neutral-900 */
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.searchForm:focus-within {
+  border-color: #171717; /* focus-within:border-neutral-900 */
+}
+
+.searchInput {
+  width: 100%;
+}

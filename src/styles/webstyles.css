@@ -1,0 +1,101 @@
+/* Fonts */
+
+/* 
+  These are webstyle declarations. They work out of the box with the playground site.
+  Follow the instructions in https://docs.content.pantheon.io/webstyles to configure these or your own custom styles for your site.
+*/
+
+/* Responsive table webstyle */
+
+.responsive-table {
+  --min-col-width: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-col-width), 1fr));
+  gap: 1rem;
+  width: 100%;
+  border: none;
+}
+
+.responsive-table tr,
+.responsive-table tbody,
+.responsive-table thead,
+.responsive-table tfoot {
+  display: contents;
+  border: none;
+}
+
+.responsive-table td,
+.responsive-table th {
+  box-sizing: border-box;
+  border: none;
+}
+
+.responsive-table img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Pull quote webstyle */
+p.pull-quote,
+p:has(span.pull-quote) {
+  font-family: Aleo, serif;
+  font-style: italic;
+  font-size: 1.875rem;
+  color: theme("colors.neutral.800");
+  line-height: 1.6;
+  border-left: 4px solid theme("colors.neutral.300");
+  padding: 48px 0 48px 48px;
+  margin: 2em 0;
+}
+
+/* Section Message webstyle */
+.section-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: theme("colors.neutral.100");
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 100%;
+  color: theme("colors.neutral.800");
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.section-message::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 27px;
+  height: 26px;
+  background-image: url("data:image/svg+xml,%3csvg width='27' height='26' viewBox='0 0 27 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.5 25.125C9.00781 25.125 4.90625 22.7812 2.66016 18.875C0.414062 15.0176 0.414062 10.2812 2.66016 6.375C4.90625 2.51758 9.00781 0.125 13.5 0.125C17.9434 0.125 22.0449 2.51758 24.291 6.375C26.5371 10.2812 26.5371 15.0176 24.291 18.875C22.0449 22.7812 17.9434 25.125 13.5 25.125ZM11.5469 16.5312C10.8633 16.5312 10.375 17.0684 10.375 17.7031C10.375 18.3867 10.8633 18.875 11.5469 18.875H15.4531C16.0879 18.875 16.625 18.3867 16.625 17.7031C16.625 17.0684 16.0879 16.5312 15.4531 16.5312H15.0625V12.2344C15.0625 11.5996 14.5254 11.0625 13.8906 11.0625H11.5469C10.8633 11.0625 10.375 11.5996 10.375 12.2344C10.375 12.918 10.8633 13.4062 11.5469 13.4062H12.7188V16.5312H11.5469ZM13.5 6.375C12.6211 6.375 11.9375 7.10742 11.9375 7.9375C11.9375 8.81641 12.6211 9.5 13.5 9.5C14.3301 9.5 15.0625 8.81641 15.0625 7.9375C15.0625 7.10742 14.3301 6.375 13.5 6.375Z' fill='%23262626'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section-message > :first-child {
+  margin-top: 0;
+}
+
+.section-message > :last-child {
+  margin-bottom: 0;
+}
+
+/* Inline code webstyle */
+.inline-code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: theme("colors.neutral.800") !important;
+  background-color: theme("colors.purple.50");
+  border: 1px solid theme("colors.purple.300");
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  /* stylelint-disable -- These do not go through the CSS processor */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}

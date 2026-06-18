@@ -1,0 +1,64 @@
+.pdsTailwind {
+  /* This class is already being used, keeping it for compatibility */
+}
+
+.skipLink {
+  /* Skip link styles - keeping the existing pds-skiplink class */
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  height: 4.678rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logoContainer {
+  /* Logo container styles */
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: block;
+  }
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.desktopButtons {
+  display: none;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .desktopButtons {
+    display: flex;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenu {
+    display: none;
+  }
+}

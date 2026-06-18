@@ -1,0 +1,125 @@
+import Layout from "@/components/layout";
+import { OmniSidebarNav } from "@/components/omniSideBarNav";
+import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layout";
+import { ProcessedFile } from "@/server/processor/mdx";
+import SearchBar from "@/components/header/search-bar";
+import { MdxWrapper } from "@/components/ui/mdx-wrapper";
+import HeaderBody from "@/components/common/header-body";
+import NavButtons from "@/components/common/nav-buttons";
+import { TOC } from "@/components/common/toc";
+
+const ContainerDiv = ({ children }: { children: React.ReactNode }) => (
+  <div className="content-wrapper">{children}</div>
+);
+
+const ContentLayoutType = ({
+  children,
+  hasTOC,
+}: {
+  children: React.ReactNode;
+  hasTOC: boolean;
+}) => {
+  if (hasTOC) {
+    return (
+      <DocsSidebarLayout
+        mobileMenuMaxWidth={900}
+        sidebarLocation="right"
+        sidebarWidth="narrow"
+        gridGap="narrow"
+        sidebarMobileLocation="after"
+      >
+        {children}
+      </DocsSidebarLayout>
+    );
+  }
+
+  return <ContainerDiv>{children}</ContainerDiv>;
+};
+
+export const CertificationTemplate = ({
+  certification,
+}: {
+  certification: ProcessedFile;
+}) => {
+  const items: any[] = []; // todo: add items @aniketbiprojit
+
+  const hasTOC = certification.frontmatter.showtoc ?? false;
+
+  let image = "/images/" + certification.frontmatter.image;
+  if (image === "/images/null") {
+    image = "/images/default-thumb-guides.png";
+  }
+
+  return (
+    <Layout containerWidth="standard" excludeSearch={true}>
+      <DocsSidebarLayout
+        sidebarWidth="narrow"
+        gridGap="narrow"
+        sidebarLocation="left"
+        mobileMenuMaxWidth={1025}
+        className="pds-container pds-container--x-wide"
+      >
+        <div slot="sidebar" className="guide-sidebar">
+          <OmniSidebarNav
+            slot="guide-menu"
+            activePage={certification.fields.slug ?? ""}
+            submenuPathToUse="/learning"
+            fallbackTitle={certification.frontmatter.title ?? ""}
+            fallbackItems={items}
+          />
+        </div>
+
+        <div id="docs-main" slot="content" tabIndex={-1}>
+          <ContentLayoutType hasTOC={hasTOC}>
+            <div slot="content">
+              <SearchBar />
+            </div>
+            <main id="docs-main" slot="content" tabIndex={-1}>
+              <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
+                <div>
+                  <HeaderBody
+                    title={certification.frontmatter.title ?? ""}
+                    subtitle={certification.frontmatter.subtitle ?? ""}
+                    description={certification.frontmatter.description ?? ""}
+                    slug={certification.fields.slug}
+                    contributors={certification.frontmatter.contributors ?? []}
+                    featured={
+                      certification.frontmatter.featuredcontributor ?? false
+                    }
+                    editPath={certification.fields.editPath}
+                    reviewDate={certification.frontmatter.reviewed}
+                    // isoDate={guide.frontmatter.reviewed}
+                  />
+                  <MdxWrapper
+                    article={{
+                      content: certification.content,
+                      contentType: "TEXT_MARKDOWN",
+                      id: certification.id,
+                      metadata: { ...(certification.frontmatter ?? {}) },
+                      publishedDate: certification.frontmatter.published_date,
+                      publishingLevel: "PRODUCTION",
+                      tags: [],
+                      title: certification.frontmatter.title || "",
+                      updatedAt: null,
+                      previewActiveUntil: null,
+                    }}
+                    componentMap={{}}
+                  />
+                  <NavButtons
+                    prev={certification.frontmatter.previousurl ?? ""}
+                    next={certification.frontmatter.nexturl ?? ""}
+                  />
+                </div>
+              </article>
+            </main>
+            {hasTOC && (
+              <div slot="sidebar" className="sticky-wrapper">
+                <TOC title="Contents" />
+              </div>
+            )}
+          </ContentLayoutType>
+        </div>
+      </DocsSidebarLayout>
+    </Layout>
+  );
+};

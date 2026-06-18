@@ -1,0 +1,16 @@
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.pagination:has(.paginationPrev) {
+  justify-content: space-between;
+}
+
+.paginationPrev,
+.paginationNext {
+  /* Add any specific styles for prev/next items if needed */
+}

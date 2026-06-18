@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: documentation
+  description: Pantheon Docs
+  annotations:
+    github.com/project-slug: pantheon-systems/documentation
+spec:
+  type: service
+  lifecycle: mature
+  owner: docs-admins

@@ -1,0 +1,43 @@
+.pluginCard {
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-border-radius-container);
+  padding: var(--pds-spacing-l);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--pds-spacing-l);
+}
+
+.pluginCardHeader {
+  display: flex;
+  align-items: center;
+  column-gap: var(--pds-spacing-l);
+}
+
+.pluginCardPantheonOfficial .pds-pantheon-logo,
+.pluginCardPantheonOfficial .pds-pantheon-logo svg {
+  height: 3.5rem;
+}
+
+.pluginCardTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--pds-spacing-6xs);
+}
+
+.pluginCardTitle {
+  font-size: var(--pds-typography-size-xl);
+  margin: 0;
+}
+
+.pluginCardPantheonOfficial {
+  font-size: var(--pds-typography-size-s);
+  color: var(--pds-color-text-default-secondary);
+}
+
+.pluginCardText p {
+  font-size: var(--pds-typography-size-m);
+}
+
+p.pluginCardAuthor {
+  font-weight: 600;
+}

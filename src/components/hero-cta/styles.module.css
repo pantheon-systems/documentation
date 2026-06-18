@@ -1,0 +1,22 @@
+.heroCta {
+  align-items: center;
+  margin-block-end: var(--pds-spacing-4xl);
+}
+
+.heroCtaImage img {
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 350px;
+  z-index: 10;
+}
+
+.heroTitle {
+  font-weight: 700;
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 2.5rem;
+}

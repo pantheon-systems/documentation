@@ -1,0 +1,17 @@
+.productCard {
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-border-radius-container);
+  padding: var(--pds-spacing-l);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--pds-spacing-l);
+}
+
+.productCardTitle {
+  font-size: var(--pds-typography-size-xl);
+  margin: 0;
+}
+
+.productCardText {
+  font-size: var(--pds-typography-size-m);
+}

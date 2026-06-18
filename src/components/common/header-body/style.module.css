@@ -1,0 +1,18 @@
+.docContentHeader {
+  border-bottom: 1px solid var(--pds-color-border-default);
+  margin-block-end: var(--pds-spacing-xl);
+  padding-block-end: var(--pds-spacing-m);
+}
+
+.docContentHeaderActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-xl);
+  margin-block-start: var(--pds-spacing-2xl);
+}
+
+.docContentHeaderDiscuss,
+.docContentHeaderGithub {
+  column-gap: var(--pds-spacing-l);
+  display: flex;
+}

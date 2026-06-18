@@ -1,0 +1,68 @@
+.popoverContent {
+  color: var(--popover-foreground, #000);
+  z-index: 50;
+  margin-top: 1rem;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  padding-top: 1rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+.popoverContent[data-state="open"] {
+  animation: slideInFromRight 300ms ease-out;
+}
+
+.popoverContent[data-state="closed"] {
+  animation: slideOutToRight 300ms ease-out;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.mobileNavContainer {
+  /* Container for mobile navigation */
+}
+
+.mobileNavContent {
+  /* Content wrapper */
+}
+
+.mobileButtonsContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileButtonLink {
+  display: block;
+}
+
+.mobileButton {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobileButton {
+    width: auto;
+  }
+}

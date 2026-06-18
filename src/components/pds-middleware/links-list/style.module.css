@@ -1,0 +1,13 @@
+.linksList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  row-gap: var(--pds-spacing-m);
+}
+
+.linksListAnchor {
+  color: var(--pds-color-interactive-link-default) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out 0s !important;
+}

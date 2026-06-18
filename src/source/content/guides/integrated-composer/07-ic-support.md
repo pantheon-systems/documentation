@@ -1,0 +1,99 @@
+---
+title: Integrated Composer
+subtitle: Support and FAQs
+description: Learn about support for Integrated Composer.
+tags: [composer, workflow]
+contributors: [ari, edwardangert, jazzs3quence]
+reviewed: "2026-06-15"
+showtoc: true
+permalink: docs/guides/integrated-composer/ic-support
+contenttype: [guide]
+innav: [false]
+categories: [dependencies]
+cms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
+---
+
+This section provides information on support for Integrated Composer.
+
+## Pantheon Supports Composer 2
+
+The version of Composer on the platform is Composer 2.
+
+Some packages are not compatible with Composer 2. If you encounter a build error that instructs you to contact [Support](/guides/support/contact-support), validate the package version's compatibility locally first, and check Drupal's [Preparing your site for Composer 2](https://www.drupal.org/docs/develop/using-composer/preparing-your-site-for-composer-2#s-composer-plugins) documentation for packages that have already been identified.
+
+## Pantheon's Scope of Support for Composer
+
+Pantheon supports the version of Composer integrated into the Pantheon platform and available for use with all Drupal 8+ and WordPress sites. Pantheon’s support for Composer is limited to the application level, and any Composer scripts or modifications made with a Composer script are outside the [Pantheon Scope of Support](/guides/support/).
+
+## Report an Issue
+
+If you discover any issue for either framework, create an issue in the respective GitHub repo for our team to review and address: 
+* [Drupal Composer Managed issue queue](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
+* [WordPress Composer Managed issue queue](https://github.com/pantheon-upstreams/wordpress-composer-managed/issues)
+
+Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account).
+
+## FAQs
+
+This section provides answers to frequently asked Integrated Composer questions.
+
+
+### Should I commit `composer.lock`?
+
+Yes. Always commit `composer.lock` to your site repository. When you push code to Pantheon, Integrated Composer runs `composer install`, which installs the exact dependency versions recorded in `composer.lock`.
+
+If `composer.lock` is absent, Composer resolves dependencies to their latest compatible versions rather than your pinned versions, then commits the generated `composer.lock` back to your repository. That extra commit triggers a second `sync_code` workflow, causing Quicksilver hooks to fire twice for a single push. When you later pull those changes, you may also encounter merge conflicts if your local copy diverges from the file Pantheon committed, or if `composer.lock` was previously removed from your repository's git history.
+
+**Note:** It is **not** recommended to commit your `composer.lock` file to _upstream_ repositories. A `composer.lock` file in an upstream repository can lead to merge conflicts on downstream sites. For more information, see our documentation about [custom upstream usage](/guides/integrated-composer/ic-upstreams).
+### What Composer commands does Pantheon run?
+
+All Composer commands are available through the **Commit Log** in the Site Dashboard's development environment.
+
+### Can I view live logs?
+
+Composer build logs are only available after the task or action completes (or fails).
+
+### How do I view Composer's changes?
+
+Use `git diff` to view changes, excluding `composer.lock`:
+
+```bash{promptUser: user}
+git diff d94d1a1179 -- . ':(exclude)composer.lock'
+```
+
+Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to see what packages have changed after `composer update`.
+
+### Can I use a Composer GUI?
+
+Pantheon does not offer support for Composer GUIs or any conflicts that might be caused by one.
+
+### On what environments does the require-dev section of composer.json get loaded?
+
+The `require-dev` section of the `composer.json` file is loaded on the Dev and Multidev environments. Every time Integrated Composer does a build, it creates a Dev artifact and a Live artifact. When you deploy from Dev to Test, Integrated Composer deploys the Live artifact rather than the Dev artifact.
+
+### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
+
+Contrib modules added by Integrated Composer from the now deprecated [Drupal Project](https://github.com/pantheon-upstreams/drupal-project/blob/master/composer.json#L29) upstream are placed in the `/modules/composer` directory in case a site already has non-Composer-managed modules in the standard `/modules/contrib` directory. If your site does not fall into this category, it is safe to rename the `composer` directory back to the standard `contrib` and alter the installer path to match.
+
+We recommend upgrading to the [Drupal Composer Managed Project](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json#L50), which installs modules to the standard `contrib` directory. This `/modules/contrib` directory is added by default to the `.gitignore` file which tells Git to ignore files generated by Composer. You can manually add packages and make commits up to the repository by modifying the `.gitignore` file with the following exception:
+
+```bash
+!/web/modules/contrib/my-non-composer-module
+```
+
+<Alert title="Note"  type="info" >
+
+All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file, as this can create a conflict that causes Integrated Composer to fail.
+
+</Alert>
+
+### Can I trigger Integrated Composer to re-run its build again?
+
+Yes, you can use Terminus to run `terminus env:code-rebuild site-id.dev`, which will cause Integrated Composer to run its build process again on the environment you specify.
+
+### Can I hotfix an Integrated Composer site?
+
+No. Integrated Composer is not compatible with the [hotfix](/guides/git/hotfixes) workflow.

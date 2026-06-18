@@ -1,119 +1,51 @@
 [![Actively Maintained](https://img.shields.io/badge/Pantheon-Actively_Maintained-yellow?logo=pantheon&color=FFDC28)](https://docs.pantheon.io/oss-support-levels#actively-maintained-support)
 
-Pantheon Documentation
-======================
 
-https://docs.pantheon.io/
+# Pantheon Documentation
 
-This repository contains the [Pantheon](https://pantheon.io) documentation as well as the tools to build local test environments.
+This repository contains the Next.js source code and the content of [Pantheon's Documentation site](https://newdocs.pantheon.io/).
 
-## Changelog
- - 2023/02: Pantheon Docs is now a [Pantheon Front-End site](https://docs.pantheon.io/guides/decoupled/overview) running Gatsby 4.
- - 2019/08: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
+## Contributing documentation changes
 
-### Contributing
+The content of this website lives within markdown files in the [`src/source`](src/source) folder.
+If you wish to [contribute to or edit documentation](https://docs.pantheon.io/contribute), you can make pull requests to this repository like any other on GitHub.
 
-Our docs are written in [Markdown](https://daringfireball.net/projects/markdown/) and extended with [MDX](https://github.com/mdx-js/mdx) components. The pages live in `source/content`. Read [CONTRIBUTING](<CONTRIBUTING.md>) for more details on contributing documentation improvements.
+## Site Architecture
 
-### Style Guide
+This site is built in Next.js and relies mainly on dynamic rendering (SSR) of routes. While a site like this one could function just as well with pages rendered statically, dynamic rendering is used
 
-Read [our Style Guide](https://docs.pantheon.io/style-guide) for our guidelines on how to write documentation.
+* to reduce initial build times
+* to fit with the trend in Next.js sites toward "[dynamic by default](https://pantheon.io/blog/next-js-beta)" architectures
+* to accommodate future changes in which some content will be sourced from Pantheon's [Content Publisher](https://docs.content.pantheon.io/) in addition to local markdown files
 
-## Local Installation
+## Local Development
 
-### Prerequisites
+To perform local development tasks on this Next.js site, clone it to your local machine.
 
- - MacOS or Linux system (untested with Bash on Windows)
- - [Node.js](https://nodejs.org/en/)
- - [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)
- - Gatsby CLI:
+Install dependencies:
 
-   ```bash
-   npm install -g gatsby-cli
-    ```
-
- - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine. Lando requires a Docker version in the `2.1.0.0` - `3.1.99` range.
-
-#### Mac Steps
-
-This list of steps should work on a Mac with [Homebrew](https://brew.sh/):
-
-```bash
-brew install node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install 18
-npm install -g gatsby-cli
+```
+npm install
 ```
 
-### Get the Code
+Start a local development server:
 
-Fork and clone this repository:
-
-```bash
-git clone git@github.com:pantheon-systems/documentation.git
-cd documentation
+```
+npm run dev
 ```
 
-### Create a GitHub API Token
+For some development tasks you may want to do a full build that matches how this site is [deployed to the web on Pantheon's own Next.js infrastructure](https://docs.pantheon.io/nextjs/architecture#build-and-deploy-process).
 
-We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
+Execute a full production build with:
 
-1. Log in to GitHub and go to <https://github.com/settings/tokens>
-1. Click **Generate new token**.
-1. Give the token a name, expiration, and description.
-1. Select your GitHub user as the resource owner.
-1. For repository access, select **Only select repositories** and select your fork of this repository.
-1. Under Repository permissions, choose **Access: Read-only** from the **Access** dropdown button for **Contents**.
-1. Click **Generate token**.
-
-#### GitHub Tokens (classic)
-
-Alternatively, if you'd rather create a classic-style token:
-
-1. Log in to GitHub and go to <https://github.com/settings/tokens>
-1. Click **Generate new token (classic)**
-1. Give the token a name and click the **public_repo** checkbox, then the **Generate Token** button at the bottom
-1. Copy the token to your clipboard
-1. In the root `documentation` directory, create a new file called `.env.development` and add (replacing `$TOKENHASH` ):
-
-   ```bash
-   GITHUB_API=$TOKENHASH
-   ```
-
-## Install With The Gatsby Cli
-
-From the `documentation` directory:
-
-```bash
-npm ci
+```
+npm run build
 ```
 
-### Run
+Then start that site with
 
-Still in the `documentation` directory:
-
-```bash
-npm start
+```
+npm run start
 ```
 
-Use your local browser to navigate to `localhost:8000/`.
-
-Locally saved updates to docs are automatically refreshed in the browser.
-
-## Install With Lando
-
-Alternatively, you can use [Lando](https://gist.github.com/tormi/a8b8fc39f9481373b24dc94cb8d2ee31). The `lando start` command initiates the app, installs node dependencies, and starts the `gatsby develop` server for you:
-
-```bash
-lando start
-```
-
-You can view the local environment at `localhost:8000/`. Updates to docs are automatically refreshed in the browser.
-
-## Testing
-
-We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
-
-### Merge Conflicts
-
-To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
+Some pages and React components may behave differently in the dev server compared to a full build.

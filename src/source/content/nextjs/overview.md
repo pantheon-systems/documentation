@@ -1,0 +1,55 @@
+---
+title: Next.js Overview
+description: How Next.js works on Pantheon
+reviewed: "2025-11-17"
+contenttype: [doc]
+innav: [true]
+audience: [development]
+product: [--]
+integration: [--]
+permalink: docs/nextjs
+---
+
+Next.js is the leading React framework for building web applications and sites.
+It stands out for its use of cutting edge development techniques and strong commitment to performance for the end users of the web.
+
+## Access & Availability
+
+Support for Next.js is available to customers with Gold, Platinum or Diamond Workspaces because those workspaces have access to [Multidev](/guides/multidev). Multidev environments create a unique site per Git branch which we consider essential for teams to be productive with Next.js on Pantheon.
+
+
+### Compatibility & Requirements
+* **Node versions:**
+  * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
+* **Package managers:**
+  * Pantheon will use `npm`, `yarn`, or `pnpm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
+* **Expected commands in `package.json`:**
+  * Pantheon assumes that a Next.js site has a `package.json` file with `build` and `start` commands. Sites using `yarn` must have a `gcp-build` script instead of, or in addition to `build`. We consider inconsistency a bug in underlying Google Cloud build processes we leverage and [will update this guidance once it is resolved](https://github.com/pantheon-systems/documentation/issues/9888).
+
+* **External version control:**
+  * Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
+
+### Usage
+To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
+
+If you have previously launched a Next.js site via [Pantheon's Front-End Sites, use this guide for migration](/nextjs/migrating-from-front-end-sites).
+
+Most of the tasks related to developing a site with Next.js on Pantheon can be done through the Pantheon dashboard.
+We also provide [command line equivalents](/nextjs/cli-tools) for many tasks like log viewing and site creation.
+
+## Key Features
+Pantheon makes teams using Next.js more effective by:
+
+* Providing a container-based runtime environment that holds all the dependencies needed to run Next.js applications.
+* Storing cached responses both in our Global CDN and a persistent layer that is shared across horitzontally scaled containers.
+* Providing a Git-based workflow that integrates with GitHub to enable Continuous Integration and Continuous Deployment.
+* Offering a dashboard and command line tool for managing environments, viewing logs, and scaling resources.
+
+We do all of this on the same platform that powers thousands of Drupal and WordPress sites.
+While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
+By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
+
+## Considerations
+
+See the following page for current limitations of Next.js functionality on Pantheon:
+* [Limitations and considerations for Next.js](/nextjs/considerations)

@@ -1,0 +1,23 @@
+{
+  "name": "docs-audit-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "tsx audit.ts",
+    "evaluate": "tsx --env-file=../.env evaluate.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/vertex-sdk": "^0.16.0",
+    "google-auth-library": "^10.0.0",
+    "gray-matter": "^4.0.3",
+    "tmp": "^0.2.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "gaxios": "^7.1.4"
+  }
+}

@@ -1,0 +1,50 @@
+/* Show menu variants based on breakpoint */
+
+/* Mobile menu */
+@media (max-width: 900px) {
+  .guideNavMobile {
+    margin-block-end: var(--pds-spacing-3xl);
+  }
+
+  .guideNavDefault {
+    display: none;
+  }
+
+  .guideNavMobile .pds-expansion-panel__content {
+    padding-block: 0;
+    padding-inline-start: var(--pds-spacing-xl);
+  }
+}
+
+/* Default menu */
+@media (min-width: 901px) {
+  .guideNavMobile {
+    display: none;
+  }
+  .manualGuideToc {
+    padding-block-start: var(--pds-spacing-xl);
+    padding-inline-end: var(--pds-spacing-xl);
+  }
+
+  h2.manualGuideTocHeading {
+    font-size: var(--pds-typography-size-l);
+    line-height: var(--pds-typography-line-height-m);
+    margin-block-end: var(--pds-spacing-s);
+  }
+}
+
+h2.manualGuideTocHeading {
+  margin-block-start: var(--pds-spacing-xs);
+}
+
+.manualGuideTocMenu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  row-gap: var(--pds-spacing-3xs);
+}
+
+.guideNavDefault {
+  padding-inline-end: var(--pds-spacing-xl);
+}
