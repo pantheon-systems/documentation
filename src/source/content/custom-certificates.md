@@ -51,17 +51,17 @@ GCDN with Bot Protection supports custom certificates, including **wildcard cert
 
 ### Before You Begin
 
-Your domain must already be added to your environment and serving traffic through GCDN with Bot Protection before a custom certificate can be applied. Domains are initially secured with an automatically issued Let's Encrypt certificate; the custom certificate replaces it.
+Your domain must already be added to your environment and serving traffic through GCDN with Bot Protection. Domains are initially secured with an automatically issued Let's Encrypt certificate, which your custom certificate then replaces.
 
-If your domain cannot use Let's Encrypt (for example, because of CAA restrictions), your Customer Success Engineer (CSE) can apply the custom certificate directly.
+If your CAA records block Let's Encrypt from issuing that initial certificate, work with your Customer Success Engineer (CSE) to permit Let's Encrypt or temporarily lift the restriction.
 
 ### Send the CSR to Your CA
 
-[Contact Pantheon Support](/guides/support/contact-support/) to request a Certificate Signing Request (CSR). Pantheon generates the CSR and stores the private key securely — the private key is never shared or exported.
+[Contact Pantheon Support](/guides/support/contact-support/) to request a Certificate Signing Request (CSR). Pantheon generates the CSR and keeps the private key secure — it is never shared or exported.
 
-Pass the CSR to your **Certificate Authority** (CA) to obtain your signed certificate. For a wildcard certificate, request a wildcard certificate from your CA using the CSR Pantheon provides.
+Send the CSR to your **Certificate Authority** (CA) to obtain your signed certificate. For wildcard coverage, request a wildcard certificate from your CA.
 
-Return the signed certificate, along with any intermediate certificates, to Pantheon Support. Allow two business days for your Account Team to apply the certificate.
+Return the signed certificate and any intermediate certificates to Pantheon Support. Allow two business days for your Account Team to apply it.
 
 #### CSR Notes
 
@@ -123,7 +123,7 @@ Test production domain(s) before updating DNS by overriding DNS on your local co
 
 <Partial file="_hosts-file.md" />
 
-For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
+For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially include non-production domains.
 
 ### Disable Let's Encrypt with CAA Records
 
