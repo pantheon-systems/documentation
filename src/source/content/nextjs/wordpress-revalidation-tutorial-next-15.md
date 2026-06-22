@@ -38,7 +38,6 @@ For Next.js 16-specific features like `'use cache'` and `cacheTag()`, see [WordP
 * Install the following:
   - [Git](https://git-scm.com/)
   - [Terminus](/terminus/install)\*
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) (built into Terminus 4.2.0+; earlier versions require the plugin)
 
 \* Requires logging in after installation.
 
