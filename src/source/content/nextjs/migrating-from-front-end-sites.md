@@ -53,7 +53,7 @@ terminus site:create my-site-name my-site-label nextjs-16 \
 
 (Even if your codebase is not specific to Next.js 16, use the `nextjs-16` option to create the site.)
 
-This command will provision new infrastructure for your Next.js site and will take a few minutes to complete. You can monitor the progress of the initial build in the Pantheon Dashboard or by using the [Node Logs Plugin for Terminus](/nextjs/cli-tools).
+This command will provision new infrastructure for your Next.js site and will take a few minutes to complete. You can monitor the progress of the initial build in the Pantheon Dashboard or by using [Terminus node log commands](/nextjs/cli-tools).
 
 For many sites, builds will fail until required environment variables are set.
 
