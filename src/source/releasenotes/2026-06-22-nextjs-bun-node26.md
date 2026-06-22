@@ -4,7 +4,7 @@ published_date: "2026-06-22"
 categories: [nextjs, new-feature]
 ---
 
-Pantheon now supports [Bun](https://bun.sh) as a package manager for Next.js sites, alongside npm, yarn, and pnpm. Pantheon also adds support for Node.js 26 (LTS).
+Pantheon now supports [Bun](https://bun.sh) as a package manager for Next.js sites, alongside npm, yarn, and pnpm. We've also added support for Node.js 26 (LTS).
 
 ## Bun support
 
