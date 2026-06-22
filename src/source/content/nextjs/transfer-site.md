@@ -21,7 +21,7 @@ The actual site transfer between workspaces must be performed by Pantheon suppor
 ## Requirements
 
 * Administrative access to both the source and destination Pantheon workspaces
-* [Terminus](/terminus/install) with the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
+* [Terminus](/terminus/install)
 
 ## Step 1: Link the VCS connection to the destination workspace
 
