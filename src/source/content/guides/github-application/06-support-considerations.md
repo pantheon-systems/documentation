@@ -57,11 +57,10 @@ New sites made with the GitHub Application do not support "[SFTP Mode](/guides/s
 
 ## Support
 
-For questions and feedback about the GitHub Application, please use [Pantheon Support](/guides/support/contact-support/) or the [Terminus issue queue](https://github.com/pantheon-systems/terminus/issues).
+For questions and feedback about the GitHub Application, please use [Pantheon Support](/guides/support/contact-support/).
 
 ## More Resources
 
 - [Pantheon Support](/guides/support) - Learn about Pantheon's support offerings
 - [Multidev](/guides/multidev) - Common questions about Multidev environments
 - [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
-- [Terminus](https://github.com/pantheon-systems/terminus/issues) - Report issues or contribute
