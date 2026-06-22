@@ -35,4 +35,4 @@ The GitHub integration is distinct from [Build Tools](/guides/build-tools). Buil
 
 - [Multidev](/guides/multidev) - Learn about Pantheon's Multidev environments created for each pull request
 - [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
-- [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin) - GitHub repository for the Terminus Repository Plugin
+
