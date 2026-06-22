@@ -14,7 +14,7 @@ This guide walks through moving a Next.js site's GitHub repository from one GitH
 
 ## Requirements
 
-* [Terminus](/terminus/install) with the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
+* [Terminus](/terminus/install)
 
 ## Step 1: Make sure the GitHub App is installed in the destination organization
 
