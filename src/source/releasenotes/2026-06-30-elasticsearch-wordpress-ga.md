@@ -3,7 +3,7 @@ title: "Elasticsearch for WordPress is now available"
 published_date: "2026-06-30"
 published_at: "2026-06-30T00:00:00Z"
 categories: [new-feature, wordpress]
-description: "Elasticsearch is now available as an add-on for WordPress sites on Pantheon for all Performance sites and above."
+description: "Pantheon Search powered by Elasticsearch is now available as a managed add-on for WordPress sites on Performance Small plans and above."
 ---
 
 Elasticsearch is now available as an add-on for WordPress sites on Pantheon for all Performance sites and above. This new capability is powered by [ElasticPress](https://elasticpress.io/), the leading Elasticsearch solution for WordPress.
