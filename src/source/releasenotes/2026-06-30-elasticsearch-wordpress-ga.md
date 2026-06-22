@@ -26,8 +26,8 @@ Elasticsearch is available to WordPress sites on **Performance Small** plans and
 
 ## How to enable it
 
-Review the [Setup and Configuration](https://docs.pantheon.io/guides/pantheon-search/elasticsearch/setup-config) documentation for detailed instructions on setting up Elasticsearch and ElasticPress.
+Review the [Setup and Configuration](/guides/pantheon-search/elasticsearch/setup-config) documentation for detailed instructions on setting up Elasticsearch and ElasticPress.
 
 ## More information
 
-For additional guidance and a walkthrough of these features, see the [Elasticsearch on Pantheon](https://docs.pantheon.io/guides/pantheon-search/elasticsearch) documentation.
+For additional guidance and a walkthrough of these features, see the [Elasticsearch on Pantheon](/guides/pantheon-search/elasticsearch) documentation.
