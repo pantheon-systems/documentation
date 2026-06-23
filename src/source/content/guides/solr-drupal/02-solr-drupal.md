@@ -69,38 +69,7 @@ Pantheon Search with Solr can be used on Drupal sites. You can set up a [new Dru
 
 ### Prepare the Local Environment
 
-Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer/ic-support) at a minimum.
-
-* Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
-
-    <TabList>
-
-    <Tab title="Solr 9" id="solr9" active={true}>
-      
-    ```shell{promptUser:user}
-    brew install git composer php@8.1
-    ```
-
-    </Tab>
-
-    <Tab title="Solr 8" id="solr8">
-      
-    ```shell{promptUser:user}
-    brew install git composer php@7.4
-    ```
-
-    </Tab>
-
-    </TabList>
-
-* Windows users should install the following dependencies:
-
-  * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-
-  * [Git](https://git-scm.com/download/win)
-
-  * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
-
+Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine.
 
 ### Enable Pantheon Search
 
@@ -193,18 +162,6 @@ Composer automatically installs the following dependencies when you install `dru
    ```
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
-   
-<Alert title="Note" type="info">
-
-   For Solr 9, install the beta release instead:
-
-   ```shell{promptUser:user}
-   composer require 'drupal/search_api_pantheon:^8.5@beta' --prefer-dist
-   ```
-
-   Version 8.5.x is currently in beta. Test thoroughly on non-production environments and report issues in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All).
-
-   </Alert>
 
 1. Run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes. Integrated Composer will take a few moments to install these on your site.
@@ -274,12 +231,6 @@ Both the server and index you just created should be displayed on the page.
 
 ## Upgrading from Solr 8 to Solr 9
 
-<Alert title="Beta Release" type="info">
-
-Version 8.5.x of the Search API Pantheon module is currently in beta. Test thoroughly on non-production environments and report issues in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All).
-
-</Alert>
-
 <Alert title="Note" type="info">
 
 Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
@@ -291,7 +242,7 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 1. **Update the module:**
 
    ```shell{promptUser:user}
-   composer require 'drupal/search_api_pantheon:^8.5@beta'
+   composer require 'drupal/search_api_pantheon:^8.5'
    git add composer.json composer.lock
    git commit -m "Update search_api_pantheon to 8.5.x"
    git push
@@ -381,7 +332,7 @@ If you are upgrading from 8.4.x and want to continue using Solr 8, no migration 
 1. **Update the module:**
 
    ```shell{promptUser:user}
-   composer require 'drupal/search_api_pantheon:^8.5@beta'
+   composer require 'drupal/search_api_pantheon:^8.5'
    git add composer.json composer.lock
    git commit -m "Update search_api_pantheon to 8.5.x"
    git push
