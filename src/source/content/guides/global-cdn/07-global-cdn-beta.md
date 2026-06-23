@@ -132,6 +132,23 @@ DNS changes may take time to propagate depending on your current TTL settings. D
 
 </Alert>
 
+### Re-running Domain Verification
+
+If you've added the TXT records and a domain is still pending verification, you can manually trigger a recheck from the dashboard. Open the domain on the **Domains** page; once verification has been attempted, a troubleshooting message appears with a **Force Recheck** action.
+
+The platform retries DNS validation automatically on a backoff schedule:
+
+- The first 10 attempts run roughly every 60 seconds (about 20 minutes total).
+- Attempts 10 through 39 stretch from about 4 minutes apart up to 4 hours apart.
+- Attempt 40 and beyond stay capped at 4 hours between checks.
+
+**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now deep into the slower part of the backoff — instead of waiting hours for the next scheduled attempt, you can kick off a new check right away.
+
+Before you click:
+
+- Confirm your TXT records have propagated using a DNS lookup tool (for example, `dig TXT _acme-challenge.example.com`).
+- ACME TXT challenges are valid for 7–14 days depending on the certificate authority. If yours have expired, regenerate them from the dashboard before forcing a recheck.
+
 </Tab>
 
 <Tab title="Terminus CLI" id="terminus-setup">
@@ -286,6 +303,10 @@ Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdoma
 ### How are SSL/TLS certificates issued during the Beta?
 
 SSL/TLS certificates are issued exclusively through DNS TXT record validation during the Beta. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
+
+### My domain hasn't verified yet. What can I do?
+
+The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](#re-running-domain-verification) in Setup for details and pre-flight tips.
 
 ### How do I report issues or give feedback?
 
