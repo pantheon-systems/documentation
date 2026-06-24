@@ -127,29 +127,15 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 
 </TabList>
 
-## Solr 9 for Drupal 7 (Beta)
+## Solr 9 for Drupal 7
 
-Apache Solr 9.10.0 support for Drupal 7 is available as a beta release for testing on [Multidev](/guides/multidev) environments. This requires updates to the Pantheon Apache Solr module and your search module. We recommend not deploying Solr 9 changes to Dev, Test, or Live until GA.
+Apache Solr 9.10.0 support for Drupal 7 requires updates to the Pantheon Apache Solr module and your search module. We recommend testing Solr 9 changes on a Multidev or Dev environment before deploying to Test or Live.
 
 ### What You Need
 
-1. The updated `pantheon_apachesolr` module with Solr 9 support.
+1. The updated `pantheon_apachesolr` module with Solr 9 support. This is included in Drupal 7 core upstream **7.105.1** and later. Use [one-click updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) to update your site to the latest version of Drupal 7 core.
 
-   <Alert title="Note" type="info">
-
-   During the beta period, merge the `drops-7` Solr 9 branch into your site manually. At GA, the updated module will be available as a [one-click upstream update](/core-updates#apply-upstream-updates-via-the-site-dashboard) and these manual steps will no longer be needed.
-
-   </Alert>
-
-   ```bash
-   git checkout -b <multidev-branch>
-   git remote add drops-7 git@github.com:pantheon-systems/drops-7.git
-   git fetch drops-7
-   git merge drops-7/SITE-5456-solr9
-   git push origin <multidev-branch>
-   ```
-
-   If you encounter merge conflicts while merging this upstream, refer to this [documentation](/guides/custom-upstream/troubleshooting) for guidance on resolving them.
+   If you encounter merge conflicts while applying the upstream update, refer to this [documentation](/guides/custom-upstream/troubleshooting) for guidance on resolving them.
 
 1. An updated search module with Solr 9 schema configs, available through [Tag1 D7ES](/supported-drupal#drupal-7-long-term-support). If you have not already configured the Tag1 D7ES module, see [Tag1 D7ES Module Usage](/supported-drupal#tag1-d7es-module-usage) for setup instructions. Once configured, apply the update via Drush, Autopilot, or SFTP:
 
@@ -173,7 +159,7 @@ Update to Search API Solr **7.x-1.19** or later. This version adds the `solr-con
 
 1. Follow the steps in [Before You Begin](#before-you-begin) to add the Solr Index Server to your site.
 
-1. Create a new or use an existing [Multidev](/guides/multidev) environment for testing Solr 9.
+1. We recommend testing on a [Multidev](/guides/multidev) or Dev environment before deploying to Test or Live.
 
 1. Install the updated `pantheon_apachesolr` module and your preferred search module (see [What You Need](#what-you-need) above).
 
@@ -184,7 +170,7 @@ Update to Search API Solr **7.x-1.19** or later. This version adds the `solr-con
      version: 9
    ```
 
-1. Commit and push your changes to the Multidev branch. Wait for the Solr upgrade workflow to complete. You can track the status from the Workflows drop-down on the Dashboard.
+1. Commit and push your changes. Wait for the Solr upgrade workflow to complete. You can track the status from the Workflows drop-down on the Dashboard.
 
 1. Enable the **core Search module**, the **Pantheon Apache Solr** module, and your search module.
 
@@ -233,7 +219,7 @@ If your Drupal 7 site is currently using Solr 3 and you want to upgrade to Solr 
      version: 9
    ```
 
-1. Commit and push your changes to the Multidev. Wait for the Solr upgrade workflow to complete in the Dashboard.
+1. Commit and push your changes. Wait for the Solr upgrade workflow to complete in the Dashboard.
 
 1. Post the Solr 9 schema at **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr** > **Post schema.xml**. Select the `9.x/schema.xml` for your module (see tab options above).
 
@@ -263,7 +249,7 @@ If your Drupal 7 site is currently using Solr 3 and you want to upgrade to Solr 
 
 <Alert title="Note" type="info">
 
-You must post the schema and reindex on your Multidev environment after pushing.
+You must post the schema and reindex in each environment after pushing.
 
 </Alert>
 
