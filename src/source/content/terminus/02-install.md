@@ -83,7 +83,7 @@ While you can install Terminus using a PHAR as described in the [Windows and Lin
 
 <hr/>
 
-Before upgrading, you must trust the Terminus formula. This is a one-time step required by Homebrew for formulas installed from third-party taps — see [Homebrew Tap Trust](https://docs.brew.sh/Tap-Trust) for more information. Without it, `brew upgrade` will silently skip the update.
+Before upgrading, you may need to trust the Terminus formula. This is a one-time step required by Homebrew for formulas installed from third-party taps — see [Homebrew Tap Trust](https://docs.brew.sh/Tap-Trust) for more information. Without it, `brew upgrade` will silently skip the update.
 
 ```bash{promptUser: user}
 brew trust --formula pantheon-systems/external/terminus
