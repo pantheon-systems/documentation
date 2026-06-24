@@ -13,6 +13,8 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [cdn]
 integration: [--]
+reviewed: "2026-06-24"
+contributors: [conorbauer23, jazzsequence]
 ---
 
 The new GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
