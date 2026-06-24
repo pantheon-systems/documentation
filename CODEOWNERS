@@ -31,3 +31,6 @@ src/source/content/opensolr.md @pantheon-systems/site-experience
 src/source/content/guides/wordpress-developer/ @pantheon-systems/site-experience
 # There is a team just for release note permissions
 src/source/releasenotes/ @pantheon-systems/release-note-authors
+# Edge Routing handles GCDN and AGCDN
+src/source/content/guides/global-cdn/ @pantheon-systems/platform-edge-routing
+src/source/content/guides/agcdn/ @pantheon-systems/platform-edge-routing
