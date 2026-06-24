@@ -5,7 +5,6 @@ description: The GCDN Beta introduces built-in bot protection. Learn what's incl
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-contributors: [conorbauer23, jazzsequence]
 reviewed: "2026-06-24"
 permalink: docs/guides/global-cdn/global-cdn-beta
 contenttype: [guide]
