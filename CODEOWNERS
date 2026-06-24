@@ -14,7 +14,7 @@ src/source/content/guides/filesystem/ @pantheon-systems/filesystem
 # The developer-experience team is responsible for Integrated Composer
 src/source/content/guides/integrated-composer/ @pantheon-systems/developer-experience
 # The developer-experience team is responsible for Terminus
-src/source/conent/terminus/ @pantheon-systems/developer-experience
+src/source/content/terminus/ @pantheon-systems/developer-experience
 # The developer-experience team is responsible for Secrets
 src/source/content/guides/secrets/ @pantheon-systems/developer-experience
 # The developer-experience team is responsible for Next.js
