@@ -12,7 +12,9 @@ src/source/content/bots-and-indexing @pantheon-systems/platform-edge-routing
 # The FileSystem team is responsible for managing static files on Pantheon
 src/source/content/guides/filesystem/ @pantheon-systems/filesystem
 # The developer-experience team is responsible for Integrated Composer
-src/source/content/guides/integrated-composer/ @pantheon-systems/developer-experience
+src/source/content/guides/integrated-composer/ @pantheon-systems/developer-
+# The developer-experience team is responsible for Terminus
+src/source/conent/terminus/ @pantheon-systems/developer-experience
 # The developer-experience team is responsible for Secrets
 src/source/content/guides/secrets/ @pantheon-systems/developer-experience
 # The cms-platform team is responsible for WordPress Multisite
