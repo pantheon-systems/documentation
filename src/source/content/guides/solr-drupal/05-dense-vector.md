@@ -90,11 +90,11 @@ Simplest setup. A free tier is available, with no GCP project or service account
 
 Available embedding models:
 
-| Model | Dimensions | Cost | Notes |
+| Model | Dimensions | Cost (per 1M tokens) | Notes |
 | --- | --- | --- | --- |
-| `gemini-embedding-001` | 3072 | Free tier available | Stable. |
-| `gemini-embedding-2-preview` | 3072 | Free tier available | Preview. Dimension bug in the Drupal provider (see Troubleshooting). |
-| `gemini-embedding-2` | 3072 | Free tier available | Same dimension bug as 2-preview. |
+| `gemini-embedding-001` | 3072 | Free tier available; $0.15 paid (standard) | Stable. |
+| `gemini-embedding-2-preview` | 3072 | Free tier available; $0.20 paid (standard) | Preview of `gemini-embedding-2`. Dimension bug in the Drupal provider (see Troubleshooting). |
+| `gemini-embedding-2` | 3072 | Free tier available; $0.20 paid (standard) | Same dimension bug as 2-preview. |
 
 ## Step 1: Install the Dense Vector Modules
 
