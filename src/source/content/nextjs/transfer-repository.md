@@ -76,7 +76,7 @@ If you transferred the repository to a new GitHub organization before installing
 Whether you need to take action before transferring depends on your token type:
 
 - **Personal access token** — If the token owner has access to the repository in its new group, the connection will continue to work after the transfer. No Terminus action is required.
-- **Group access token** — A group access token is scoped to a specific group and will lose access after the transfer. Before or immediately after transferring, provide a new token for the destination group:
+- **Group access token** — A group access token is scoped to a specific group and will lose access after the transfer. Before transferring, provide a new token for the destination group:
 
   ```bash{promptUser: user}
   terminus vcs:connection:add <workspace> --vcs-provider=gitlab
