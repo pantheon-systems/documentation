@@ -23,7 +23,7 @@ Traditional keyword search matches exact words. Dense vector search converts tex
 
 <Alert title="Beta Release" type="info">
 
-Dense vector search on Pantheon requires Solr 9.6 or higher (Pantheon runs 9.10.0), and its setup ordering is sensitive. Follow the steps in the exact order described in this guide. Tested on Solr 9.10.0, Drupal 10.6.7 / 11.3.8.
+Dense vector search requires Solr 9.6 or higher (Pantheon runs 9.10.1), and its setup ordering is sensitive. Follow the steps in the exact order described in this guide. Tested on Solr 9.10.1, Drupal 10.6.7 / 11.3.8.
 
 This setup relies on **alpha** contributed modules: `search_api_solr_dense_vector` (1.0.0-alpha9) for dense vector search, and `ai_search` (2.0.0-alpha2), which is required for RAG search (Step 11). Alpha modules are unstable and can change or break between releases. Test thoroughly on non-production environments and do not rely on them for production search.
 
@@ -35,7 +35,7 @@ This setup uses contributed modules that Pantheon does not support, and an AI em
 
 - Complete the base [Pantheon Search setup](/guides/pantheon-search/solr-drupal/solr-drupal#before-you-begin) first.
 - Install and enable the Search API Pantheon module. Refer to [Install the Search API Pantheon Module](/guides/pantheon-search/solr-drupal/solr-drupal#install-the-search-api-pantheon-module).
-- Set Solr 9 in `pantheon.yml` (requires Solr 9.6+; Pantheon runs 9.10.0). Refer to [Configure the Solr Version](/guides/pantheon-search/solr-drupal/solr-drupal#configure-the-solr-version).
+- Set Solr 9 in `pantheon.yml` (requires Solr 9.6+; Pantheon runs 9.10.1). Refer to [Configure the Solr Version](/guides/pantheon-search/solr-drupal/solr-drupal#configure-the-solr-version).
 - Create a Search API server and index with Title and Body fields. Refer to [Add Search Index](/guides/pantheon-search/solr-drupal/solr-drupal#add-search-index).
 - Install and authenticate [Terminus](/terminus).
 - Make Composer changes with [Integrated Composer](/guides/integrated-composer) (commit only `composer.json` and `composer.lock`).
