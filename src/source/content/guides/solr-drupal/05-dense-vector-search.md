@@ -13,7 +13,7 @@ tags: [solr, search, modules]
 contributors: [mehta-asim,jazzsequence,rkunjappan]
 reviewed: "2026-06-25"
 showtoc: true
-permalink: docs/guides/pantheon-search/solr-drupal/dense-vector
+permalink: docs/guides/pantheon-search/solr-drupal/dense-vector-search
 editpath: solr-drupal/05-dense-vector.md
 ---
 
