@@ -57,9 +57,9 @@ For many teams this restriction is counterproductive. That is especially true in
 
 While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
 
-## external repositories installation requirements
+## GitHub App installation requirements
 
-The Pantheon external repository integration must be configured by a user who is both:
+The Pantheon GitHub App must be installed by a user who is both:
 
 - A **GitHub organization admin**
 - A **member** of the corresponding Pantheon workspace
@@ -96,7 +96,7 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The external repository integration **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
+The GitHub App **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
 Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. See the [external repository setup guide](/guides/external-repositories/setup) for details.
 
