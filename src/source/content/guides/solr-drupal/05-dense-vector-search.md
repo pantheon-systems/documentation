@@ -232,17 +232,37 @@ To confirm it loaded, check that the key details page shows a key length of arou
 
 <Tab title="OpenAI">
 
-- **Key name**: for example, `openai-key`
+**Using Pantheon Secrets (recommended):** Store the key in Pantheon's secure vault using the `runtime` type, then reference it with the Key module's Pantheon Secret provider.
+
+```shell{promptUser:user}
+terminus secret:site:set <site> openai-key "sk-proj-..." --type=runtime --scope=web
+```
+
+Then create the key in Drupal at `/admin/config/system/keys`:
+
+- **Key name**: `openai-key` (must match the secret name above)
 - **Key type**: Authentication
-- **Key provider**: **Pantheon Secret** (recommended) or **File** (upload to `private://openai-key.txt`). See the note above. The OpenAI key looks like `sk-proj-...`.
+- **Key provider**: Pantheon Secret
+
+**Using File (alternative):** Upload the key to `private://openai-key.txt` and use the **File** key provider with **File location** set to `private://openai-key.txt`. The OpenAI key looks like `sk-proj-...`.
 
 </Tab>
 
 <Tab title="Google Gemini">
 
-- **Key name**: for example, `gemini-key`
+**Using Pantheon Secrets (recommended):** Store the key in Pantheon's secure vault using the `runtime` type, then reference it with the Key module's Pantheon Secret provider.
+
+```shell{promptUser:user}
+terminus secret:site:set <site> gemini-key "AIza..." --type=runtime --scope=web
+```
+
+Then create the key in Drupal at `/admin/config/system/keys`:
+
+- **Key name**: `gemini-key` (must match the secret name above)
 - **Key type**: Authentication
-- **Key provider**: **Pantheon Secret** (recommended) or **File** (upload to `private://gemini-key.txt`). See the note above. The Gemini key looks like `AIza...`.
+- **Key provider**: Pantheon Secret
+
+**Using File (alternative):** Upload the key to `private://gemini-key.txt` and use the **File** key provider with **File location** set to `private://gemini-key.txt`. The Gemini key looks like `AIza...`.
 
 </Tab>
 
