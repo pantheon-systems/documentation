@@ -1,7 +1,7 @@
 ---
-title: External Version Control
+title: External Repositories
 subtitle: Setup Drupal
-description: Configure a Drupal repository for Pantheon's External Version Control integration with the required file structure and platform settings.
+description: Configure a Drupal repository for Pantheon's external repository integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, drupal]
 contributors: [duncanschouten,jazzs3quence]
 contenttype: [guide]
@@ -13,10 +13,10 @@ audience: [development]
 product: [terminus]
 integration: [--]
 reviewed: "2026-06-24"
-permalink: docs/guides/external-vcs/setup-drupal
+permalink: docs/guides/external-repositories/setup-drupal
 ---
 
-This page describes how to configure a Drupal 11 repository for Pantheon's External Version Control integration. Unlike WordPress, Drupal on Pantheon uses Integrated Composer — most Pantheon-specific configuration is handled automatically by the `pantheon-systems/drupal-integrations` Composer package.
+This page describes how to configure a Drupal 11 repository for Pantheon's external repository integration. Unlike WordPress, Drupal on Pantheon uses Integrated Composer — most Pantheon-specific configuration is handled automatically by the `pantheon-systems/drupal-integrations` Composer package.
 
 ## Summary of Differences
 
@@ -175,7 +175,7 @@ The `ComposerScripts.php` ensures that the PHP version used for dependency resol
 
 ## Checklist
 
-Use this checklist to verify your Drupal 11 repository is ready for Pantheon's External Version Control integration:
+Use this checklist to verify your Drupal 11 repository is ready for Pantheon's external repository integration:
 
 - [ ] `composer.json` includes `pantheon-systems/drupal-integrations: ^11` as a dependency
 - [ ] `composer.json` has `drupal-scaffold.allowed-packages` including `pantheon-systems/drupal-integrations`
@@ -194,4 +194,4 @@ Use this checklist to verify your Drupal 11 repository is ready for Pantheon's E
 - [Integrated Composer](/guides/integrated-composer) - Managing Drupal dependencies with Composer
 - [Drush on Pantheon](/guides/drush) - Command-line tools for managing Drupal sites
 - [pantheon.yml](/pantheon-yml) - Platform configuration file reference
-- [External Version Control Usage](/guides/external-vcs/usage) - Working with pull requests, merge requests, and deployments
+- [external repositories Usage](/guides/external-repositories/usage) - Working with pull requests, merge requests, and deployments

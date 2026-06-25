@@ -1,7 +1,7 @@
 ---
-title: External Version Control
+title: External Repositories
 subtitle: Setup
-description: Instructions for setting up Pantheon's External Version Control integration and creating a new site via the Pantheon Dashboard or Terminus.
+description: Instructions for setting up Pantheon's external repository integration and creating a new site via the Pantheon Dashboard or Terminus.
 tags: [continuous-integration, workflow]
 contributors: [stevector,jazzs3quence]
 contenttype: [guide]
@@ -13,10 +13,10 @@ audience: [development]
 product: [terminus]
 integration: [--]
 reviewed: "2026-06-24"
-permalink: docs/guides/external-vcs/setup
+permalink: docs/guides/external-repositories/setup
 ---
 
-This page provides instructions for setting up a new site using Pantheon's External Version Control (eVCS) integration. You can create new sites through the Pantheon Dashboard (GitHub only) or via Terminus (GitHub and GitLab). You can also connect sites using existing repositories.
+This page provides instructions for setting up a new site using Pantheon's external repository integration. You can create new sites through the Pantheon Dashboard (GitHub only) or via Terminus (GitHub and GitLab). You can also connect sites using existing repositories.
 
 ## Creating a new site with a new repository
 
@@ -150,7 +150,7 @@ You will be prompted to enter your GitLab group name or path. You will also be p
 
 ## Creating a new site with an existing repository
 
-Pantheon's eVCS integration allows you to maintain your site's source code in a GitHub or GitLab repository while deploying to Pantheon. When you push code to your repository, Pantheon automatically syncs and deploys the changes.
+Pantheon's external repository integration allows you to maintain your site's source code in a GitHub or GitLab repository while deploying to Pantheon. When you push code to your repository, Pantheon automatically syncs and deploys the changes.
 
 For this integration to work, your repository must include certain Pantheon-specific configuration files alongside your CMS code. The exact requirements differ between WordPress and Drupal.
 
@@ -168,8 +168,8 @@ The two CMS platforms take different approaches to Pantheon integration:
 
 Select the guide for your CMS to get started:
 
-- [WordPress Repository Specification](/guides/external-vcs/setup-wordpress)
-- [Drupal Repository Specification](/guides/external-vcs/setup-drupal)
+- [WordPress Repository Specification](/guides/external-repositories/setup-wordpress)
+- [Drupal Repository Specification](/guides/external-repositories/setup-drupal)
 
 ### Via Terminus
 
@@ -197,7 +197,7 @@ terminus site:create <pantheon site name> <site label> <upstream name|ID> --org=
 
 ### Common issues
 
-If you find yourself at a screen that asks you to *configure* the app, it typically means you've already installed the GitHub Application and connected it to another Pantheon organization. You will need to connect the application to this organization using `terminus vcs:connection:link`. See the documentation in [Usage](/guides/external-vcs/usage).
+If you find yourself at a screen that asks you to *configure* the app, it typically means you've already installed the GitHub Application and connected it to another Pantheon organization. You will need to connect the application to this organization using `terminus vcs:connection:link`. See the documentation in [Usage](/guides/external-repositories/usage).
 
 ![Configure existing app](../../../images/github-app/github-app-configure-app.png)
 

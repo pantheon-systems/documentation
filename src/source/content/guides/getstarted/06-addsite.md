@@ -59,11 +59,11 @@ You have successfully finished adding a site in its Live environment.  Click **V
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
 
-### Create a Site with External Version Control
+### Create a Site with external repositories
 
-Pantheon's [External Version Control](/guides/external-vcs/setup) integration connects a GitHub or GitLab repository directly to a Pantheon site, allowing you to use your preferred VCS provider as your code repository while Pantheon handles hosting and deployments. It supports WordPress, Drupal, and Next.js, and automatically creates a Multidev environment for each pull request or merge request. Merging to the `main` branch of your repository deploys code to your Pantheon Dev environment.
+Pantheon's [external repositories](/guides/external-repositories/setup) integration connects a GitHub or GitLab repository directly to a Pantheon site, allowing you to use your preferred VCS provider as your code repository while Pantheon handles hosting and deployments. It supports WordPress, Drupal, and Next.js, and automatically creates a Multidev environment for each pull request or merge request. Merging to the `main` branch of your repository deploys code to your Pantheon Dev environment.
 
-See the [External Version Control Setup guide](/guides/external-vcs/setup) to get started.
+See the [external repository setup guide](/guides/external-repositories/setup) to get started.
 
 ## Migrate an Existing Site
 

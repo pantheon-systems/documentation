@@ -35,7 +35,7 @@ Additional differences between Front-End Sites and our updated Next.js offering 
 * Sites are routed through Pantheon's Global CDN and get URLs structured as `https://<env>-<site>.pantheonsite.io` instead of routing through a different CDN that used `https://<env>-<site>.appa.pantheon.site/` as the pattern of domain names.
 * Our new support for Next.js _does not_ supply "webhooks" for triggering full rebuilds and deployments when content changes in a connected CMS. Next.js running in a container can re-fetch content when needed.
 
-Front-End Sites and our new support for Next.js both use distinct External Version Control (eVCS) integrations as the mechanism for triggering builds and deployments.
+Front-End Sites and our new support for Next.js both use distinct external repository integrations as the mechanism for triggering builds and deployments.
 Configuring that new connection is the first step of migrating.
 
 ## Replicating your Front-End Site on new Next.js infrastructure

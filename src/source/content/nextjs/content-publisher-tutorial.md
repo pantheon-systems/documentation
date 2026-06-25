@@ -131,7 +131,7 @@ Now, we will push the codebase we made with `cpub init` to the new repository on
 
 ## Create a new Pantheon site
 
-With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site and use [Pantheon's External Version Control integration](/guides/external-vcs) to trigger builds in response to code changes.
+With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site and use [Pantheon's external repository integration](/guides/external-repositories) to trigger builds in response to code changes.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Create New Site** button. Then click **Next.js**.
 1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application.

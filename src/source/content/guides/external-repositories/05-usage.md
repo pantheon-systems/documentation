@@ -1,7 +1,7 @@
 ---
-title: External Version Control
+title: External Repositories
 subtitle: Usage
-description: Instructions for using Pantheon's External Version Control integration, including managing pull requests, merge requests, and deploying code.
+description: Instructions for using Pantheon's external repository integration, including managing pull requests, merge requests, and deploying code.
 tags: [continuous-integration, workflow, D8, D9, D10]
 contributors: [stevector,jazzs3quence]
 contenttype: [guide]
@@ -13,10 +13,10 @@ audience: [development]
 product: [terminus]
 integration: [--]
 reviewed: "2026-06-24"
-permalink: docs/guides/external-vcs/usage
+permalink: docs/guides/external-repositories/usage
 ---
 
-This page covers common usage scenarios for Pantheon's External Version Control (eVCS) integration, including linking VCS connections across Pantheon organizations and working with the pull request and merge request workflow.
+This page covers common usage scenarios for Pantheon's external repository integration, including linking VCS connections across Pantheon organizations and working with the pull request and merge request workflow.
 
 <Alert title="Note" type="warning">
 
@@ -24,13 +24,13 @@ This page covers common usage scenarios for Pantheon's External Version Control 
 
 The GitHub Application **cannot** be used with GitHub Enterprise Server.
 
-**GitLab:** The eVCS integration requires a Pantheon workspace member with a GitLab legacy personal access token (`api` and `write_repository` scopes) belonging to a user who has access to the GitLab group or namespace where repositories will be created. Self-hosted GitLab instances are supported via the `--vcs-host` flag. See [Setup](/guides/external-vcs/setup) for details.
+**GitLab:** The external repository integration requires a Pantheon workspace member with a GitLab legacy personal access token (`api` and `write_repository` scopes) belonging to a user who has access to the GitLab group or namespace where repositories will be created. Self-hosted GitLab instances are supported via the `--vcs-host` flag. See [Setup](/guides/external-repositories/setup) for details.
 
 </Alert>
 
 ## Create a new VCS connection to a Pantheon organization without creating a site
 
-You do not need to create a site in order to establish a VCS connection. If you want to use the eVCS integration in a Pantheon organization that does not yet have a VCS connection, you can create a new connection without creating a site using `terminus vcs:connection:add`. This is useful if you want to set up the connection before creating a site or if you want to link an existing connection to a new Pantheon organization.
+You do not need to create a site in order to establish a VCS connection. If you want to use the integration in a Pantheon organization that does not yet have a VCS connection, you can create a new connection without creating a site using `terminus vcs:connection:add`. This is useful if you want to set up the connection before creating a site or if you want to link an existing connection to a new Pantheon organization.
 
 ```bash{promptUser: user}
 terminus vcs:connection:add <organization-id>
@@ -40,7 +40,7 @@ In the above example, `<organization-id>` represents the Pantheon organization y
 
 ## Linking an existing VCS connection with a new Pantheon organization
 
-If you have already set up the eVCS integration for an account or organization, you will likely have already linked it with a Pantheon organization. If you then want to use the External Version Control integration for PHP or Next.js sites on a different Pantheon organization, you need to create a new link with this organization. Currently this can only be done using the Terminus command `vcs:connection:link`.
+If you have already set up the integration for an account or organization, you will likely have already linked it with a Pantheon organization. If you then want to use the external repository integration for PHP or Next.js sites on a different Pantheon organization, you need to create a new link with this organization. Currently this can only be done using the Terminus command `vcs:connection:link`.
 
 ## Using `terminus vcs:connection` commands
 

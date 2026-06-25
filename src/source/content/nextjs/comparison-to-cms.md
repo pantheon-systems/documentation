@@ -42,7 +42,7 @@ All WordPress and Drupal sites (except those on the Basic plan) can access their
 
 ### Autopilot
 
-Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's External Version Control integration (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
+Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's external repository integration (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
 
 ### Advanced site configurations
 
@@ -57,9 +57,9 @@ For many teams this restriction is counterproductive. That is especially true in
 
 While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
 
-## eVCS installation requirements
+## external repositories installation requirements
 
-The Pantheon External Version Control integration must be configured by a user who is both:
+The Pantheon external repository integration must be configured by a user who is both:
 
 - A **GitHub organization admin**
 - A **member** of the corresponding Pantheon workspace
@@ -96,9 +96,9 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The eVCS integration **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
+The external repository integration **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
-Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. See the [External Version Control Setup guide](/guides/external-vcs/setup) for details.
+Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. See the [external repository setup guide](/guides/external-repositories/setup) for details.
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 
