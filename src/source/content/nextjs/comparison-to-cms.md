@@ -49,6 +49,10 @@ Autopilot currently functions only with sites that use the Pantheon-supplied Git
 * The [`pantheon.yml` configuration file](/pantheon-yml) is not currently supported on Next.js sites, and is ignored if present.
 * [Quicksilver](/guides/quicksilver) hooks are not currently supported on Next.js sites.
 
+### Locking environments (Security tab)
+
+The **Security** tab in the Site Dashboard lets you password protect Next.js environments with basic authentication, just as it does for WordPress and Drupal. The behavior differs in one important way: on WordPress and Drupal the lock applies immediately, but on Next.js sites a change to the lock or unlock status only takes effect after a **new build is deployed** to the environment. After toggling the status in the Security tab, trigger a new build using the **Rebuild** option (available in the Site Dashboard and through Terminus) or by pushing a new commit to the connected branch, so the change is applied. See [Lock Environments with the Dashboard Security Tool](/guides/secure-development/security-tool) for details.
+
 ### HTTP streaming
 
 Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress, Drupal, and Next.js. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).

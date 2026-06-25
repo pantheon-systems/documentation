@@ -49,6 +49,16 @@ We do all of this on the same platform that powers thousands of Drupal and WordP
 While Next.js is fundamentally a server-side application, it does not dicate where and how data is stored.
 By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Content Publisher to provided a unified approach to content management and delivery.
 
+## Secure your environments
+
+You can password protect any Next.js environment from the **Security** tab in the Site Dashboard, the same way you can for Drupal and WordPress sites. When an environment is locked, visitors are prompted for a username and password (basic authentication) before the site is served. For step-by-step instructions, see [Lock Environments with the Dashboard Security Tool](/guides/secure-development/security-tool).
+
+<Alert title="Run a new build after changing lock status" type="warning">
+
+On Next.js sites, locking or unlocking an environment does not take effect until a new build is deployed to that environment. After you change the lock or unlock status in the **Security** tab, trigger a new build by either using the **Rebuild** option (available in the Site Dashboard and through Terminus) or pushing a new commit to the connected branch, so the change is applied to the running site.
+
+</Alert>
+
 ## Considerations
 
 See the following page for current limitations of Next.js functionality on Pantheon:
