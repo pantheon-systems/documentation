@@ -26,7 +26,7 @@ See instructions for submitting your input below, provided in context of the giv
 
 Many of [the core Terminus commands](/terminus/commands) will return an error if run against a Next.js site.
 
-For instance, the `backup:create` command creates a backup consisting of 3 separate archives (database, files, and code) when used with WordPress or Drupal. This command returns an error for Next.js on Pantheon. Since Next.js sites are maintained in an external version control source like GitHub there is nothing to backup on Pantheon.
+For instance, the `backup:create` command creates a backup consisting of 3 separate archives (database, files, and code) when used with WordPress or Drupal. This command returns an error for Next.js on Pantheon. Since Next.js sites are maintained in an external repository (GitHub or GitLab) there is nothing to backup on Pantheon.
 
 However commands like `env:clear-cache` will clear caches (like the CDN) for sites of all frameworks (WordPress, Drupal, Next.js)
 

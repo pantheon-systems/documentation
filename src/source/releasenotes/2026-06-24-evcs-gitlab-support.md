@@ -14,4 +14,4 @@ Pantheon's external repository integration now supports GitLab in addition to Gi
 - **Self-hosted GitLab** — Connect sites to self-hosted GitLab instances using the `--vcs-host=<your-gitlab-domain>` flag
 - **Token-based authentication** — GitLab uses legacy personal access tokens or group access tokens rather than OAuth. Tokens require `api` and `write_repository` scopes
 
-For full setup instructions, see the [external repositories documentation](/guides/external-vcs).
+For full setup instructions, see the [external repositories documentation](/guides/external-repositories).

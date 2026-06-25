@@ -103,8 +103,14 @@ Then create the Test and Live environments.
 Make a local clone of your repository and make a change to the code.
 For example, you could add your favorite plugin or module.
 
+**GitHub:**
 ```bash
 git clone git@github.com:<your_organization_name>/<your_site_id>.git
+```
+
+**GitLab:**
+```bash
+git clone git@gitlab.com:<your_group_name>/<your_repository_name>.git
 ```
 
 Make a new branch and then push to open a pull request (GitHub) or merge request (GitLab).
