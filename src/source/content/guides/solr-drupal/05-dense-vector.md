@@ -23,7 +23,9 @@ Traditional keyword search matches exact words. Dense vector search converts tex
 
 <Alert title="Beta Release" type="info">
 
-Dense vector search on Pantheon requires Solr 9.6 or higher (Pantheon runs 9.10.0). The `search_api_solr_dense_vector` module is alpha software and its setup ordering is sensitive. Follow the steps in the exact order described in this guide. Tested on Solr 9.10.0, Drupal 10.6.7 / 11.3.8, `search_api_solr_dense_vector` 1.0.0-alpha9.
+Dense vector search on Pantheon requires Solr 9.6 or higher (Pantheon runs 9.10.0), and its setup ordering is sensitive. Follow the steps in the exact order described in this guide. Tested on Solr 9.10.0, Drupal 10.6.7 / 11.3.8.
+
+This setup relies on **alpha** contributed modules: `search_api_solr_dense_vector` (1.0.0-alpha9) for dense vector search, and `ai_search` (2.0.0-alpha2), which is required for RAG search (Step 11). Alpha modules are unstable and can change or break between releases. Test thoroughly on non-production environments and do not rely on them for production search.
 
 This setup uses contributed modules that Pantheon does not support, and an AI embedding provider that you bring yourself. It is not a Pantheon-supported feature.
 
@@ -378,6 +380,12 @@ If results rank by semantic relevance rather than keyword matching, dense vector
 ## Step 11: RAG Search (Optional, Drupal 11.1+)
 
 RAG (Retrieval-Augmented Generation) adds an LLM answer-generation step on top of vector search: a user asks a question, the system finds relevant content with KNN, then an LLM generates a natural language answer.
+
+<Alert title="Alpha software" type="danger">
+
+RAG search requires the `ai_search` module, which is **alpha** (2.0.0-alpha2). Treat RAG search as experimental, expect breaking changes between releases, and test only on non-production environments.
+
+</Alert>
 
 Prerequisites: Drupal 11.1+ (the `rag_search` module uses D11.1+ APIs), a working dense vector setup (Steps 1-10), and a chat-capable AI provider (OpenAI GPT-4o-mini recommended, or Gemini Pro).
 
