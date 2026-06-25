@@ -448,7 +448,7 @@ foreach ($connector->execute($query)->getDocuments() as $doc) {
 '
 ```
 
-Look for a field starting with `knns_` (for example, `knns_body_1`). If absent, embeddings are not being generated. See Troubleshooting ("no knns_ field").
+Look for a field starting with `knns_` (for example, `knns_body_1`). If absent, embeddings are not being generated. See [Indexing succeeds but no knns_ field in Solr documents](#indexing-succeeds-but-no-knns_-field-in-solr-documents) in Troubleshooting.
 
 ## Step 10: Test Semantic Search
 
@@ -511,7 +511,7 @@ Solr returns HTTP 500 during indexing with `incorrect vector dim`. The schema's 
 
 If the provider returns 0 for dimensions (known issue with `gemini-embedding-2-preview` and `gemini-embedding-2`), set it manually at `/admin/config/search/search-api/server/<server>/solr_field_type/knn_vector_und_9_0_0/edit` (set `vectorDimension` = 3072), then re-post schema and reindex.
 
-### Indexing succeeds but no knns_ field in Solr documents
+### Indexing succeeds but no `knns_` field in Solr documents
 
 `search-api:index` reports all items indexed, but documents have no `knns_body_1` field and search returns keyword matches. The processor is not generating embeddings. Most common causes:
 
