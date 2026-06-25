@@ -10,14 +10,14 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [mehta-asim]
+contributors: [mehta-asim,jazzsequence]
 reviewed: "2026-06-25"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/dense-vector
 editpath: solr-drupal/05-dense-vector.md
 ---
 
-This guide covers the dense-vector-specific setup for semantic (AI-powered) search on a Drupal site on Pantheon, using Solr 9's DenseVectorField and the Search API Solr Dense Vector module. It assumes Pantheon Search is already set up; base Solr steps link out to [Apache Solr for Drupal](/guides/pantheon-search/solr-drupal/solr-drupal).
+This guide covers the dense-vector-specific setup for semantic (AI-powered) search on a Drupal site on Pantheon, using Solr 9's `DenseVectorField` and the Search API Solr Dense Vector module. It assumes Pantheon Search is already set up; base Solr steps link out to [Apache Solr for Drupal](/guides/pantheon-search/solr-drupal/solr-drupal).
 
 Traditional keyword search matches exact words. Dense vector search converts text into numerical vectors (embeddings) with an AI model, then finds content that is semantically similar. For example, a search for "fixing automobiles" matches an article about "car engine maintenance" even though the two share no keywords.
 
@@ -33,8 +33,7 @@ This setup uses contributed modules that Pantheon does not support, and an AI em
 
 ## Before You Begin
 
-Complete the base Pantheon Search setup first. This guide does not repeat it:
-
+- Complete the base [Pantheon Search setup](/guides/pantheon-search/solr-drupal/solr-drupal#before-you-begin) first.
 - Install and enable the Search API Pantheon module. Refer to [Install the Search API Pantheon Module](/guides/pantheon-search/solr-drupal/solr-drupal#install-the-search-api-pantheon-module).
 - Set Solr 9 in `pantheon.yml` (requires Solr 9.6+; Pantheon runs 9.10.0). Refer to [Configure the Solr Version](/guides/pantheon-search/solr-drupal/solr-drupal#configure-the-solr-version).
 - Create a Search API server and index with Title and Body fields. Refer to [Add Search Index](/guides/pantheon-search/solr-drupal/solr-drupal#add-search-index).
@@ -44,7 +43,7 @@ Complete the base Pantheon Search setup first. This guide does not repeat it:
 
 <Alert title="Note" type="info">
 
-**Multidev Solr 9 inheritance.** A multidev created from a Dev environment on Solr 8 inherits Solr 8 even when `pantheon.yml` specifies version 9, because the change is not detected as new. To force the upgrade, set the version to 8, commit and push, then set it to 9 and push again.
+**Multidev Solr version inheritance.** A multidev created from a Dev environment on Solr 8 inherits Solr 8 even when `pantheon.yml` specifies version 9, because the change is not detected as new. To force the upgrade, set the version to 8, commit and push, then set it to 9 and push again.
 
 </Alert>
 
