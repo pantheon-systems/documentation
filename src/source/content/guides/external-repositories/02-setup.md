@@ -110,7 +110,7 @@ You will be prompted for your GitLab token and group name the **first time** you
 
 </Alert>
 
-Your GitLab token must be a **legacy personal access token** (not a fine-grained token) with the `api` and `write_repository` scopes. You can pass the token directly using `--vcs-token` to avoid the interactive prompt.
+Your GitLab token must be a **legacy personal access token** (not a fine-grained token) with the `api` and `write_repository` scopes, or a **group access token** with those scopes and a **Maintainer** role or higher. You can pass the token directly using `--vcs-token` to avoid the interactive prompt.
 
 1. Use the `terminus site:create` command (see [documentation](/terminus/commands/site-create)) with the following flags:
 
@@ -142,7 +142,7 @@ To register a new GitLab connection with a Pantheon organization, or to refresh 
 terminus vcs:connection:add <organization-id> --vcs-provider=gitlab
 ```
 
-You will be prompted to enter your GitLab group name or path. You will also be prompted for your legacy personal access token (`api` and `write_repository` scopes) unless you pass it directly with `--vcs-token=<token>`. For a self-hosted instance, add `--vcs-host=<hostname>`, where `<hostname>` is the domain of your self-hosted GitLab instance (e.g. `git.example.com`).
+You will be prompted to enter your GitLab group name or path. You will also be prompted for your token unless you pass it directly with `--vcs-token=<token>`. The token must be a legacy personal access token or a group access token with `api` and `write_repository` scopes. Group access tokens also require a **Maintainer** role or higher. For a self-hosted instance, add `--vcs-host=<hostname>`, where `<hostname>` is the domain of your self-hosted GitLab instance (e.g. `git.example.com`).
 
 </Tab>
 

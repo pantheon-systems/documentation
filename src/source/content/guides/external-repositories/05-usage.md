@@ -24,7 +24,7 @@ This page covers common usage scenarios for Pantheon's external repository integ
 
 The GitHub Application **cannot** be used with GitHub Enterprise Server.
 
-**GitLab:** The external repository integration requires a Pantheon workspace member with a GitLab legacy personal access token (`api` and `write_repository` scopes) belonging to a user who has access to the GitLab group or namespace where repositories will be created. Self-hosted GitLab instances are supported via the `--vcs-host` flag. See [Setup](/guides/external-repositories/setup) for details.
+**GitLab:** The external repository integration requires a Pantheon workspace member with a GitLab legacy personal access token or group access token with `api` and `write_repository` scopes. Group access tokens also require a **Maintainer** role or higher in the group. Self-hosted GitLab instances are supported via the `--vcs-host` flag. See [Setup](/guides/external-repositories/setup) for details.
 
 </Alert>
 

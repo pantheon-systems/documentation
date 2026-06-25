@@ -82,7 +82,7 @@ Whether you need to take action before transferring depends on your token type:
   terminus vcs:connection:add <workspace> --vcs-provider=gitlab
   ```
 
-  You will be prompted for a new legacy personal access token or group access token with `api` and `write_repository` scopes, and the destination group name.
+  You will be prompted for a new legacy personal access token or group access token with `api` and `write_repository` scopes (group access tokens also require a **Maintainer** role or higher), and the destination group name.
 
 ## Step 2: Transfer the project in GitLab
 

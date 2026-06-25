@@ -46,7 +46,7 @@ When configuring the GitHub Application you will have the choice between grantin
 GitLab supports two token types for this integration, each with different access scope:
 
 - **Personal Access Token** — The `api` scope on a personal access token grants complete read and write access to all groups and projects the token owner belongs to. This cannot be restricted to specific groups or repositories. Use this token type with caution if the token owner has broad access to GitLab resources.
-- **Group Access Token** — Scoped to a specific group and its subprojects only. This is the recommended option when you want to limit Pantheon's access to a single GitLab group. Group Access Tokens require a GitLab Premium or Ultimate subscription on GitLab.com; they are available on any tier for self-managed GitLab instances.
+- **Group Access Token** — Scoped to a specific group and its subprojects only. This is the recommended option when you want to limit Pantheon's access to a single GitLab group. The token must have `api` and `write_repository` scopes and a **Maintainer** role or higher to create repositories and manage webhooks. Group Access Tokens require a GitLab Premium or Ultimate subscription on GitLab.com; they are available on any tier for self-managed GitLab instances.
 
 ## Limitations
 
