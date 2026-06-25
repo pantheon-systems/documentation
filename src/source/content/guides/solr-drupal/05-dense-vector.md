@@ -51,7 +51,9 @@ This guide uses Terminus. Examples use `<site>` and `<env>` placeholders. Substi
 
 ## Choose an Embedding Provider
 
-### Option A: Google Vertex AI
+<TabList>
+
+<Tab title="Google Vertex AI">
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com) and create or select a project.
 1. Enable the Vertex AI API:
@@ -64,7 +66,9 @@ This guide uses Terminus. Examples use `<site>` and `<env>` placeholders. Substi
 1. Grant it the Vertex AI User role (`roles/aiplatform.user`).
 1. Create and download a JSON key file for the service account. Keep it safe. You upload it in Step 3.
 
-### Option B: OpenAI
+</Tab>
+
+<Tab title="OpenAI">
 
 1. Create an account at [platform.openai.com](https://platform.openai.com).
 1. Go to [API keys](https://platform.openai.com/api-keys) and create an API key.
@@ -79,7 +83,9 @@ Available embedding models:
 | `text-embedding-3-large` | 3072 | $0.13 | Highest quality. Use only when needed. |
 | `text-embedding-ada-002` | 1536 | $0.10 | Legacy. Avoid. |
 
-### Option C: Google Gemini (AI Studio)
+</Tab>
+
+<Tab title="Google Gemini">
 
 Simplest setup. A free tier is available, with no GCP project or service account needed.
 
@@ -95,6 +101,10 @@ Available embedding models:
 | `gemini-embedding-2-preview` | 3072 | Free tier available; $0.20 paid (standard) | Preview of `gemini-embedding-2`. Dimension bug in the Drupal provider (see Troubleshooting). |
 | `gemini-embedding-2` | 3072 | Free tier available; $0.20 paid (standard) | Same dimension bug as 2-preview. |
 
+</Tab>
+
+</TabList>
+
 ## Step 1: Install the Dense Vector Modules
 
 Pantheon Search and the `search_api_pantheon` module must already be installed (see Before You Begin). Add the dense-vector modules with Composer on your local clone:
@@ -109,16 +119,33 @@ composer require drupal/ai:^1.3
 
 Install the AI provider that matches your choice from Before You Begin:
 
+<TabList>
+
+<Tab title="Google Vertex AI">
+
 ```shell{promptUser:user}
-# Option A: Google Vertex AI
 composer require drupal/ai_provider_google_vertex
+```
 
-# Option B: OpenAI
+</Tab>
+
+<Tab title="OpenAI">
+
+```shell{promptUser:user}
 composer require drupal/ai_provider_openai
+```
 
-# Option C: Google Gemini (AI Studio)
+</Tab>
+
+<Tab title="Google Gemini">
+
+```shell{promptUser:user}
 composer require drupal/gemini_provider
 ```
+
+</Tab>
+
+</TabList>
 
 Commit and push via Integrated Composer (only `composer.json` and `composer.lock`), then wait for the build to finish.
 
@@ -126,16 +153,33 @@ Commit and push via Integrated Composer (only `composer.json` and `composer.lock
 
 Enable the dense-vector and AI modules with Terminus. The Key module stores API credentials securely; it is installed automatically as a dependency but must be enabled explicitly.
 
+<TabList>
+
+<Tab title="Google Vertex AI">
+
 ```shell{promptUser:user}
-# Option A: Google Vertex AI
 terminus drush <site>.<env> -- en search_api_solr_dense_vector ai key ai_provider_google_vertex -y
+```
 
-# Option B: OpenAI
+</Tab>
+
+<Tab title="OpenAI">
+
+```shell{promptUser:user}
 terminus drush <site>.<env> -- en search_api_solr_dense_vector ai key ai_provider_openai -y
+```
 
-# Option C: Google Gemini
+</Tab>
+
+<Tab title="Google Gemini">
+
+```shell{promptUser:user}
 terminus drush <site>.<env> -- en search_api_solr_dense_vector ai key gemini_provider -y
 ```
+
+</Tab>
+
+</TabList>
 
 (`search_api_pantheon` is enabled as part of the base Solr setup.)
 
@@ -154,7 +198,9 @@ Do not use the **Configuration** key provider for API keys: it stores the value 
 
 </Alert>
 
-### Option A: Google Vertex AI
+<TabList>
+
+<Tab title="Google Vertex AI">
 
 Google Vertex AI requires a service account JSON key file. Upload it to Pantheon's private file storage first:
 
@@ -181,17 +227,25 @@ Then create the key in Drupal:
 
 To confirm it loaded, check that the key details page shows a key length of around 2000 or more characters.
 
-### Option B: OpenAI
+</Tab>
+
+<Tab title="OpenAI">
 
 - **Key name**: for example, `openai-key`
 - **Key type**: Authentication
 - **Key provider**: **Pantheon Secret** (recommended) or **File** (upload to `private://openai-key.txt`). See the note above. The OpenAI key looks like `sk-proj-...`.
 
-### Option C: Google Gemini
+</Tab>
+
+<Tab title="Google Gemini">
 
 - **Key name**: for example, `gemini-key`
 - **Key type**: Authentication
 - **Key provider**: **Pantheon Secret** (recommended) or **File** (upload to `private://gemini-key.txt`). See the note above. The Gemini key looks like `AIza...`.
+
+</Tab>
+
+</TabList>
 
 ## Step 4: Configure the AI Provider
 
@@ -211,7 +265,9 @@ Go to **Configuration > AI > Settings** (`/admin/config/ai/settings`) and scroll
 
 ### Configure Provider Credentials
 
-#### Option A: Google Vertex AI
+<TabList>
+
+<Tab title="Google Vertex AI">
 
 Go to `/admin/config/ai/providers/google_vertex`:
 
@@ -237,7 +293,9 @@ if (is_array($normalized)) { echo "Vector length: " . count($normalized) . "\n";
 
 Expected: an array of 768 floats. If empty or erroring, check credentials and project ID.
 
-#### Option B: OpenAI
+</Tab>
+
+<Tab title="OpenAI">
 
 Go to `/admin/config/ai/providers/openai`, set **API Key** to the key from Step 3, and **Save configuration**. The provider auto-discovers models (text-embedding-3-small, -3-large, ada-002); no manual model creation needed.
 
@@ -254,7 +312,9 @@ if (is_array($normalized)) { echo "Vector length: " . count($normalized) . "\n";
 
 Expected: an array of 1536 floats.
 
-#### Option C: Google Gemini
+</Tab>
+
+<Tab title="Google Gemini">
 
 Go to `/admin/config/ai/providers/gemini`, set **API Key** to the key from Step 3, and **Save configuration**. The provider auto-discovers models (gemini-embedding-001, -2-preview, -2).
 
@@ -276,6 +336,10 @@ if (is_array($normalized)) { echo "Vector length: " . count($normalized) . "\n";
 ```
 
 Expected: an array of 3072 floats.
+
+</Tab>
+
+</TabList>
 
 ## Step 5: Add a Dense Vector Field to the Index
 
