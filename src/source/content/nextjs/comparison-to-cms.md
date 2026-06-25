@@ -59,7 +59,7 @@ While we intend to remove the limitation on streaming for Next.js sites, [join t
 
 ## GitHub App installation requirements
 
-The Pantheon GitHub App must be installed by a user who is both:
+The Pantheon GitHub Application must be installed by a user who is both:
 
 - A **GitHub organization admin**
 - A **member** of the corresponding Pantheon workspace
