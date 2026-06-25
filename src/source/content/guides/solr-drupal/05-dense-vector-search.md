@@ -1,5 +1,6 @@
 ---
 title: Apache Solr for Drupal
+navtitle: AI Semantic Search
 subtitle: Dense Vector (AI Semantic) Search
 description: Set up dense vector (AI-powered semantic) search for Drupal on Pantheon using Solr 9's DenseVectorField and the Search API Solr Dense Vector module.
 contenttype: [guide]
