@@ -27,7 +27,7 @@ Support for Next.js is available to customers with Gold, Platinum or Diamond Wor
   * Pantheon assumes that a Next.js site has a `package.json` file with `build` and `start` commands. Sites using `yarn` must have a `gcp-build` script instead of, or in addition to `build`. We consider inconsistency a bug in underlying Google Cloud build processes we leverage and [will update this guidance once it is resolved](https://github.com/pantheon-systems/documentation/issues/9888).
 
 * **External version control:**
-  * Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
+  * Next.js sites require code hosted in a GitHub or GitLab repository. Bitbucket support is planned for a future release.
 
 ### Usage
 To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
