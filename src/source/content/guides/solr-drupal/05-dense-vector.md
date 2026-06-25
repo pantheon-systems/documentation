@@ -10,7 +10,7 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [mehta-asim,jazzsequence]
+contributors: [mehta-asim,jazzsequence,rkunjappan]
 reviewed: "2026-06-25"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/dense-vector
