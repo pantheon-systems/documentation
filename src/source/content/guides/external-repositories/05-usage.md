@@ -3,7 +3,7 @@ title: External Repositories
 subtitle: Usage
 description: Instructions for using Pantheon's external repository integration, including managing pull requests, merge requests, and deploying code.
 tags: [continuous-integration, workflow, D8, D9, D10]
-contributors: [stevector,jazzs3quence]
+contributors: [stevector,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]

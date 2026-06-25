@@ -10,7 +10,7 @@ audience: [business, sysadmin, development]
 product: [--]
 integration: [--]
 tags: [--]
-contributors: [wordsmither, jazzs3quence]
+contributors: [wordsmither, jazzsequence]
 reviewed: "2026-05-22"
 showtoc: true
 permalink: docs/guides/getstarted/addsite

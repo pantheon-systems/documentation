@@ -3,7 +3,7 @@ title: External Repositories
 subtitle: Introduction
 description: Pantheon's external repository integration connects a GitHub or GitLab repository directly to a Pantheon site.
 tags: [continuous-integration, workflow]
-contributors: [stevector,jazzs3quence]
+contributors: [stevector,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]

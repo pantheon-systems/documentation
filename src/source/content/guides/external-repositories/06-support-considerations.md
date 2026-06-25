@@ -3,7 +3,7 @@ title: External Repositories
 subtitle: Support & Considerations
 description: Additional notes about Pantheon's external repository integration, including assumptions, limitations, and support information.
 tags: [continuous-integration, workflow, D8, D9, D10]
-contributors: [stevector,jazzs3quence]
+contributors: [stevector,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]

@@ -3,7 +3,7 @@ title: External Repositories
 subtitle: Setup
 description: Instructions for setting up Pantheon's external repository integration and creating a new site via the Pantheon Dashboard or Terminus.
 tags: [continuous-integration, workflow]
-contributors: [stevector,jazzs3quence]
+contributors: [stevector,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]

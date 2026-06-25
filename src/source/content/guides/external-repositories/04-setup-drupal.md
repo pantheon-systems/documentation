@@ -3,7 +3,7 @@ title: External Repositories
 subtitle: Setup Drupal
 description: Configure a Drupal repository for Pantheon's external repository integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, drupal]
-contributors: [duncanschouten,jazzs3quence]
+contributors: [duncanschouten,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]

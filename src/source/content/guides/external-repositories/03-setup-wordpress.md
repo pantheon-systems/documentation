@@ -3,7 +3,7 @@ title: External Repositories
 subtitle: Setup WordPress
 description: Configure a WordPress repository for Pantheon's external repository integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, wordpress]
-contributors: [duncanschouten,jazzs3quence]
+contributors: [duncanschouten,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]
