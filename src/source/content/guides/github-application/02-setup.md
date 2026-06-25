@@ -1,7 +1,7 @@
 ---
 title: GitHub Application
 subtitle: Setup
-description: Instructions for setting up the GitHub Application, including installation of the Terminus Repository Plugin and creating a new site.
+description: Instructions for setting up the GitHub Application and creating a new site via the Pantheon Dashboard or Terminus.
 tags: [continuous-integration, workflow, D8, D9, D10]
 contributors: [stevector,jazzs3quence]
 contenttype: [guide]
@@ -16,9 +16,9 @@ reviewed: "2026-05-22"
 permalink: docs/guides/github-application/setup
 ---
 
-This page provides instructions for setting up a new site using the GitHub Application. You can create new sites through the Pantheon dashboard or via Terminus with the Repository Plugin. You can also create sites using existing GitHub repositories and connect them to Pantheon sites. This guide explains how to set up the GitHub Application for each of these scenarios.
+This page provides instructions for setting up a new site using the GitHub Application. You can create new sites through the Pantheon Dashboard or via Terminus. You can also create sites using existing GitHub repositories and connect them to Pantheon sites. This guide explains how to set up the GitHub Application for each of these scenarios.
 
-Once accepted into the private Beta, there are two main ways of creating a new site with the GitHub Application: through the Pantheon dashboard or through Terminus.
+There are two main ways of creating a new site with the GitHub Application: through the Pantheon Dashboard or through Terminus.
 
 ## Creating a new site with a new GitHub repository
 
@@ -73,10 +73,6 @@ After the site is created, you will be redirected to the Builds page of your new
 </Tab>
 
 <Tab title="Via Terminus">
-
-To create sites via Terminus, you must install the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin).
-This is a public Terminus plugin that can be installed normally, e.g. `terminus self:plugin:install terminus-repository-plugin`.
-Usage instructions for the specific site creation commands are included in the [README](https://github.com/pantheon-systems/terminus-repository-plugin/blob/main/README.md#creating-a-new-site).
 
 1. Use the `terminus site:create` command as normal (see [documentation](/terminus/commands/site-create)) with the following additional flags: 
 
@@ -133,6 +129,5 @@ If you find yourself at a screen that asks you to *configure* the app, it typica
 
 ## More Resources
 
-- [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin) - GitHub repository and documentation for the Terminus Repository Plugin
 - [Terminus Commands](/terminus/commands/site-create) - Documentation for the `terminus site:create` command
 - [Next.js Documentation](https://nextjs.org/docs) - Official Next.js documentation
