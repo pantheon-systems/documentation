@@ -129,7 +129,7 @@ Three modules are required; [entity](https://drupal.org/project/entity), [search
 
 ## Solr 9 for Drupal 7
 
-Apache Solr 9.10.0 support for Drupal 7 requires updates to the Pantheon Apache Solr module and your search module. We recommend testing Solr 9 changes on a Multidev or Dev environment before deploying to Test or Live.
+Apache Solr 9.10.1 support for Drupal 7 requires updates to the Pantheon Apache Solr module and your search module. We recommend testing Solr 9 changes on a Multidev or Dev environment before deploying to Test or Live.
 
 ### What You Need
 
