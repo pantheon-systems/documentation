@@ -284,7 +284,8 @@ The processor generates embeddings only for fields with the Dense Vector data ty
 
 1. Select **Add fields** and choose **Content > Body** (or your main content field).
 1. Add it as a new field. Do not modify an existing body field. It is auto-named (for example, `body_1`).
-1. Change the **Type** dropdown to **Dense Vector**. Save.
+1. Change the **Type** dropdown to **Dense Vector**.
+1. Select **Save**.
 
 The same source field can be indexed with multiple types: a Fulltext version for keyword search, a Dense Vector version for semantic search.
 
@@ -302,7 +303,8 @@ Go to `/admin/config/search/search-api/index/<index-name>/edit`, scroll to **Den
 1. **Query/Re-ranking Plugin**: Pure Vector (ranks on vector similarity only).
 1. **topK value**: 10 (nearest neighbors to retrieve).
 1. **Minimum return**: 0.5 (filter results below 50% similarity).
-1. **Minimum traverse**: 0. Save.
+1. **Minimum traverse**: 0.
+1. Select **Save**.
 
 ## Step 7: Configure the Dense Vector Processor
 
@@ -311,7 +313,8 @@ Go to `/admin/config/search/search-api/index/<index-name>/processors`, select **
 1. **AI provider**: the provider from Step 4.
 1. **AI model**: the embedding model from Step 4.
 1. **Similarity function**: Cosine.
-1. **Content field**: the Dense Vector field from Step 5. Save.
+1. **Content field**: the Dense Vector field from Step 5.
+1. Select **Save**.
 
 Verify the config is correct:
 
