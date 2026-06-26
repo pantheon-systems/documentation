@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, security, users]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, kporras07]
 showtoc: true
 permalink: docs/guides/secure-development/security-tool
 reviewed: "2026-06-25"
