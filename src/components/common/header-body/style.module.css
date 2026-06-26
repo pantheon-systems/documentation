@@ -4,16 +4,6 @@
   padding-block-end: var(--pds-spacing-m);
 }
 
-/* Subtitle sits between the guide title (h1) and the description paragraph.
-   Sized and weighted to match PDS h3 (1.728rem / weight 600) so it sits
-   clearly between the h1 title (2.986rem / 700) above and the
-   pds-lead-text--sm description (1.44rem, Aleo serif) below. */
-.docSubtitle {
-  font-size: 1.728rem;
-  font-weight: 600;
-  margin-block-end: var(--pds-spacing-s, 0.512rem);
-}
-
 .docContentHeaderActions {
   display: flex;
   flex-wrap: wrap;
