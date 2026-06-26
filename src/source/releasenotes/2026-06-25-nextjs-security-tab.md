@@ -1,7 +1,7 @@
 ---
 title: "Security tab now available for Next.js sites"
-published_date: "2026-06-25"
-published_at: "2026-06-25T17:30:00Z"
+published_date: "2026-06-26"
+published_at: "2026-06-26T14:57:35Z"
 categories: [nextjs, new-feature]
 description: "You can now password protect Next.js environments from the Security tab in the Site Dashboard. Lock and unlock changes take effect after a new build is deployed."
 ---
