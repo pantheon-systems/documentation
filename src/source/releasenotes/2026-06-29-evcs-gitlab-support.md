@@ -1,7 +1,7 @@
 ---
 title: "GitLab support for external repositories"
-published_date: "2026-06-24"
-published_at: "2026-06-24T22:14:13Z"
+published_date: "2026-06-29"
+published_at: "2026-06-29T20:32:54Z"
 categories: [new-feature, tools-apis]
 description: "Pantheon's external repository integration now supports GitLab repositories, including self-hosted GitLab instances, via Terminus."
 ---
