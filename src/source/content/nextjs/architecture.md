@@ -24,7 +24,7 @@ Both the containers and the cache are populated by the result of a build process
 ## Build and Deploy Process
 
 In response to pushes to the `main` branch of your repository, or to open pull requests, Pantheon will run a build and deployment process.
-This process is initiated by [Pantheon's GitHub application](/github-application), which you will need to install and authorize for your repository.
+This process is initiated by [Pantheon's external repository integration](/guides/external-repositories), which you will need to connect and authorize for your repository.
 
 <!--- This image is pulled from this deck: https://docs.google.com/presentation/d/17k15auDrnpq2LdRC4P35dN5yJ4pOkPY62M7drBDkTCc/edit?slide=id.g39e43c7cf0e_0_15#slide=id.g39e43c7cf0e_0_15 --->
 ![architecture diagram](../../images/nextjs/github-app--nextjs-version.png)

@@ -26,7 +26,7 @@ See instructions for submitting your input below, provided in context of the giv
 
 Many of [the core Terminus commands](/terminus/commands) will return an error if run against a Next.js site.
 
-For instance, the `backup:create` command creates a backup consisting of 3 separate archives (database, files, and code) when used with WordPress or Drupal. This command returns an error for Next.js on Pantheon. Since Next.js sites are maintained in an external version control source like GitHub there is nothing to backup on Pantheon.
+For instance, the `backup:create` command creates a backup consisting of 3 separate archives (database, files, and code) when used with WordPress or Drupal. This command returns an error for Next.js on Pantheon. Since Next.js sites are maintained in an external repository (GitHub or GitLab) there is nothing to backup on Pantheon.
 
 However commands like `env:clear-cache` will clear caches (like the CDN) for sites of all frameworks (WordPress, Drupal, Next.js)
 
@@ -42,7 +42,7 @@ All WordPress and Drupal sites (except those on the Basic plan) can access their
 
 ### Autopilot
 
-Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's GitHub Application (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
+Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's external repository integration (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
 
 ### Advanced site configurations
 
@@ -100,7 +100,9 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
+The GitHub App **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
+
+Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. See the [external repository setup guide](/guides/external-repositories/setup) for details.
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 

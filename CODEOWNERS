@@ -17,6 +17,10 @@ src/source/content/guides/integrated-composer/ @pantheon-systems/developer-exper
 src/source/content/terminus/ @pantheon-systems/developer-experience
 # The developer-experience team is responsible for Secrets
 src/source/content/guides/secrets/ @pantheon-systems/developer-experience
+# The developer-experience team is responsible for the eVCS
+src/source/content/guides/external-vcs/ @pantheon-systems/developer-experience
+# The developer-experience team is responsible for Next.js
+src/source/content/nextjs/ @pantheon-systems/developer-experience
 # The developer-experience team is responsible for Next.js
 src/source/content/nextjs @pantheon-systems/developer-experience
 # The developer-experience team is responsible for GitHub Application

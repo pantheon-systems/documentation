@@ -196,7 +196,13 @@ const RedirectMap: Record<string, string> = {
   "/guides/solr-drupal/custom-config": "/guides/pantheon-search/solr-drupal/custom-config",
   "/guides/solr-drupal/solr-drupal-7": "/guides/pantheon-search/solr-drupal/solr-drupal-7",
   "/guides/wordpress-developer/wordpress-solr": "/guides/pantheon-search/solr/wordpress-solr",
-  "/github-application": "/guides/github-application",
+  "/github-application": "/guides/external-repositories",
+  "/guides/github-application": "/guides/external-repositories",
+  "/guides/github-application/setup": "/guides/external-repositories/setup",
+  "/guides/github-application/setup-wordpress": "/guides/external-repositories/setup-wordpress",
+  "/guides/github-application/setup-drupal": "/guides/external-repositories/setup-drupal",
+  "/guides/github-application/usage": "/guides/external-repositories/usage",
+  "/guides/github-application/support-considerations": "/guides/external-repositories/support-considerations",
   "/nextjs/considerations": "/nextjs/comparison-to-cms-hosting",
 
   // These are redirects that were not in AGCDN but discovered in the
