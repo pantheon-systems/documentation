@@ -1,7 +1,7 @@
 ---
 title: "PHP 8.4 and 8.5 updated to their latest security patch releases"
 published_date: "2026-06-29"
-published_at: "2026-06-29T00:00:00Z"
+published_at: "2026-06-29T18:04:29Z"
 categories: [infrastructure, security]
 description: "PHP versions 8.4.22 and 8.5.7 are now available on the platform."
 ---
