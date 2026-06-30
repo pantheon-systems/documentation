@@ -236,13 +236,13 @@ Both the server and index you just created should be displayed on the page.
 
 <Alert title="Note" type="info">
 
-Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
+Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete. Test the upgrade on a non-production environment before applying it to your production site.
 
-</Alert>
+**Multidev Solr inheritance:** To upgrade the Solr version on a Multidev, create the Multidev first, then set `search.version` in `pantheon.yml` on that branch and push.
 
-<Alert title="Custom Solr Configuration" type="info">
+A Multidev inherits the Solr version from the source environment, so if the version was set before creating the Multidev, the upgrade won't apply.
 
-If you use custom Solr configuration files, start from the base Solr 9 schema and re-apply your customizations on top. Solr 9 removed the legacy cache classes (`LRUCache`, `FastLRUCache`, `LFUCache` — use `CaffeineCache`) and `BlockJoinFacetComponent` (use `uniqueBlock()` in JSON Facet API). Refer to the [custom configuration guide](/guides/pantheon-search/solr-drupal/custom-config) for posting custom configurations.
+To trigger the change in search version, set the version back to `8`, commit and push, then set it to `9` and push again.
 
 </Alert>
 
@@ -284,6 +284,12 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
+
+   <Alert title="Custom Solr Configuration" type="info">
+
+   If you use custom Solr configuration files, start from the base Solr 9 schema and re-apply your customizations on top. Solr 9 removed the legacy cache classes (`LRUCache`, `FastLRUCache`, `LFUCache` — use `CaffeineCache`) and `BlockJoinFacetComponent` (use `uniqueBlock()` in JSON Facet API). Refer to the [custom configuration guide](/guides/pantheon-search/solr-drupal/custom-config) for posting custom configurations.
+
+   </Alert>
 
 1. **Clear the index and reindex content:**
 
