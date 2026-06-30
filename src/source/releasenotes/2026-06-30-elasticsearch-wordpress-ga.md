@@ -1,7 +1,7 @@
 ---
 title: "Elasticsearch for WordPress is now available"
 published_date: "2026-06-30"
-published_at: "2026-06-30T00:00:00Z"
+published_at: "2026-06-30T17:11:25Z"
 categories: [new-feature, wordpress]
 description: "Pantheon Search powered by Elasticsearch is now available as a managed add-on for WordPress sites."
 ---
