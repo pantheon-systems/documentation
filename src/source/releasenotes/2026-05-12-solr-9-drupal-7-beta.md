@@ -8,7 +8,7 @@ Pantheon Search with [Apache Solr 9.10.0](https://solr.apache.org/docs/9_10_0/) 
 
 This extends the Solr 9 beta support [previously announced for Drupal 10 and 11](/release-notes/2026/04/search-api-pantheon-solr-9-beta).
 
-For setup instructions, required module versions, upgrading from Solr 3, and custom config details, see [Using Solr on Drupal 7](/guides/pantheon-search/solr-drupal/solr-drupal-7#solr-9-for-drupal-7-beta).
+For setup instructions, required module versions, upgrading from Solr 3, and custom config details, see [Using Solr on Drupal 7](/guides/pantheon-search/solr-drupal/solr-drupal-7#solr-9-for-drupal-7).
 
 ## What about Solr 3?
 
