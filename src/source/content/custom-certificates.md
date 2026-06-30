@@ -2,7 +2,7 @@
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
 tags: [cdn, https, professional-services]
-reviewed: "2026-06-18"
+reviewed: "2026-06-30"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -53,7 +53,9 @@ GCDN with Bot Protection supports custom certificates, including **wildcard cert
 
 Your domain must already be added to your environment and serving traffic through GCDN with Bot Protection. Domains are initially secured with an automatically issued Let's Encrypt certificate, which your custom certificate then replaces.
 
-If your CAA records block Let's Encrypt from issuing that initial certificate, work with your Customer Success Engineer (CSE) to permit Let's Encrypt or temporarily lift the restriction.
+For wildcard certificates, each subdomain you want the certificate to serve must still be added to your environment as a domain — a wildcard certificate does not automatically apply to subdomains that have not been added.
+
+If your CAA records block Let's Encrypt from issuing that initial certificate, work with your Customer Success Engineer (CSE) to either temporarily permit Let's Encrypt, or have the CSE apply your custom certificate directly.
 
 ### Send the CSR to Your CA
 
@@ -157,6 +159,10 @@ Update `A` and `AAAA` records provided by Pantheon Support. Note that even for s
 ## Renew or Replace a Custom Certificate
 
 About 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
+
+<Alert title="GCDN with Bot Protection" type="info" >
+  For GCDN with Bot Protection, Pantheon retains your private key and original CSR, so renewals reuse the same CSR rather than issuing a new one. When Pantheon opens your renewal ticket, request a new signed certificate from your CA using the existing CSR and return it to Pantheon Support.
+</Alert>
 
 To update a certificate with additional domains, [contact Pantheon Support](/guides/support/contact-support/) with the following details:
 
