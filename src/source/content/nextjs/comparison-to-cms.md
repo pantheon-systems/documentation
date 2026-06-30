@@ -55,11 +55,9 @@ The **Security** tab in the Site Dashboard lets you password protect Next.js env
 
 ### HTTP streaming
 
-Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress, Drupal, and Next.js. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).
+Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress and Drupal. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).
 
-For many teams this restriction is counterproductive. That is especially true in the Next.js ecosystem which is investing further in usage of  [`<Suspense>`](https://react.dev/reference/react/Suspense) components as a performance optimization.
-
-While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
+We support full HTTP streaming for Next.js sites including the use of [`<Suspense>`](https://react.dev/reference/react/Suspense) components. 
 
 ## GitHub App installation requirements
 
