@@ -75,7 +75,7 @@ jobs:
 
   backstop_vrt:
     runs-on: macos-latest
-    needs: http_status_checker_on_sta
+    # needs: http_status_checker_on_sta
 
     steps:
       - name: Checkout repository
