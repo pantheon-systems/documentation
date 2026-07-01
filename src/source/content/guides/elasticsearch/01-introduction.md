@@ -4,7 +4,7 @@ subtitle: Pantheon Search powered by Elasticsearch
 navtitle: Introduction
 description: Detailed information on using Elasticsearch with your Pantheon WordPress site with ElasticPress.
 tags: [elasticsearch,search]
-reviewed: "2026-06-16"
+reviewed: "2026-07-01"
 contenttype: [doc]
 innav: [true]
 categories: [search]
