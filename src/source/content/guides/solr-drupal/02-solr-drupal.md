@@ -238,11 +238,11 @@ Both the server and index you just created should be displayed on the page.
 
 Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete. Test the upgrade on a non-production environment before applying it to your production site.
 
-**Multidev Solr inheritance:** To upgrade the Solr version on a Multidev, create the Multidev first, then set the Solr version in `pantheon.yml` on that branch and push.
+**Multidev Solr inheritance:** To upgrade the Solr version on a Multidev, create the Multidev first, then set `search.version: 9` in `pantheon.yml` on that branch and push.
 
-A Multidev inherits the Solr version from the source environment, so if the version was set before creating the Multidev, the upgrade won't apply.
+A Multidev inherits the Solr version from the source environment, so if the version was set before creating the Multidev, the Multidev will still use Solr 8.
 
-To trigger the change, set the Solr version back to `8`, commit and push, then set it to `9` and push again.
+To force the upgrade, commit and push `search.version: 8`, then commit and push `search.version: 9`.
 
 </Alert>
 
