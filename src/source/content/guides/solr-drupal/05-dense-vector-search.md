@@ -22,11 +22,11 @@ This guide covers the dense-vector-specific setup for semantic (AI-powered) sear
 
 Traditional keyword search matches exact words. Dense vector search converts text into numerical vectors (embeddings) with an AI model, then finds content that is semantically similar. For example, a search for "fixing automobiles" matches an article about "car engine maintenance" even though the two share no keywords.
 
-<Alert title="Beta Release" type="info">
+<Alert title="Alpha Release" type="info">
 
 Dense vector search requires Solr 9.6 or higher (Pantheon runs 9.10.1), and its setup ordering is sensitive. Follow the steps in the exact order described in this guide. Tested on Solr 9.10.1, Drupal 10.6.7 / 11.3.8.
 
-This setup relies on **alpha** contributed modules: `search_api_solr_dense_vector` (1.0.0-alpha9) for dense vector search, and `ai_search` (2.0.0-alpha2), which is required for RAG search (Step 11). Alpha modules are unstable and can change or break between releases. Test thoroughly on non-production environments and do not rely on them for production search.
+This setup relies on **alpha** contributed modules: [`search_api_solr_dense_vector`](https://www.drupal.org/project/search_api_solr_dense_vector) (1.0.0-alpha9) for dense vector search, and [`ai_search`](https://www.drupal.org/project/ai_search) (2.0.0-alpha2), which is required for RAG search (Step 11). Alpha modules are unstable and can change or break between releases. Test thoroughly on non-production environments and do not rely on them for production search.
 
 This setup uses contributed modules that Pantheon does not support, and an AI embedding provider that you bring yourself. It is not a Pantheon-supported feature.
 
@@ -36,17 +36,11 @@ This setup uses contributed modules that Pantheon does not support, and an AI em
 
 - Complete the base [Pantheon Search setup](/guides/pantheon-search/solr-drupal/solr-drupal#before-you-begin) first.
 - Install and enable the Search API Pantheon module. Refer to [Install the Search API Pantheon Module](/guides/pantheon-search/solr-drupal/solr-drupal#install-the-search-api-pantheon-module).
-- Set Solr 9 in `pantheon.yml` (requires Solr 9.6+; Pantheon runs 9.10.1). Refer to [Configure the Solr Version](/guides/pantheon-search/solr-drupal/solr-drupal#configure-the-solr-version).
+- Set Solr 9 in `pantheon.yml` (requires Solr 9.6+; Pantheon runs 9.10.1). Refer to [Configure the Solr Version](/guides/pantheon-search/solr-drupal/solr-drupal#configure-the-solr-version). If you are using a Multidev, create the Multidev first, then set the Solr version — refer to the [Multidev Solr inheritance](/guides/pantheon-search/solr-drupal/solr-drupal#upgrading-from-solr-8-to-solr-9) note.
 - Create a Search API server and index with Title and Body fields. Refer to [Add Search Index](/guides/pantheon-search/solr-drupal/solr-drupal#add-search-index).
 - Install and authenticate [Terminus](/terminus).
 - Make Composer changes with [Integrated Composer](/guides/integrated-composer) (commit only `composer.json` and `composer.lock`).
 - Obtain an AI embedding provider account: Google Vertex AI, OpenAI, or Google Gemini (see below).
-
-<Alert title="Note" type="info">
-
-**Multidev Solr version inheritance.** A multidev created from a Dev environment on Solr 8 inherits Solr 8 even when `pantheon.yml` specifies version 9, because the change is not detected as new. To force the upgrade, set the version to 8, commit and push, then set it to 9 and push again.
-
-</Alert>
 
 This guide uses Terminus. Examples use `<site>` and `<env>` placeholders. Substitute your own site name and environment (for example, `my-site.dev`).
 
@@ -474,7 +468,7 @@ RAG search requires the `ai_search` module, which is **alpha** (2.0.0-alpha2). T
 
 </Alert>
 
-Prerequisites: Drupal 11.1+ (the `rag_search` module uses D11.1+ APIs), a working dense vector setup (Steps 1-10), and a chat-capable AI provider (OpenAI GPT-4o-mini recommended, or Gemini Pro).
+Prerequisites: Drupal 11.1+ (the [`rag_search`](https://www.drupal.org/project/rag_search) module uses D11.1+ APIs), a working dense vector setup (Steps 1-10), and a chat-capable AI provider (OpenAI GPT-4o-mini recommended, or Gemini Pro).
 
 Install and enable:
 
