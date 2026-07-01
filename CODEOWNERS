@@ -4,41 +4,41 @@
 * @pantheon-systems/docs-admins
 
 # The Platform-Edge-Routing team is responsible for connecting custom domains to Pantheon
-src/source/content/guides/domains/ @pantheon-systems/platform-edge-routing
+src/source/content/guides/domains/ @pantheon-systems/platform-edge-routing @pantheon-systems/docs-admins
 # The Platform-Edge-Routing team is responsible for traffic limits
-src/source/content/guides/account-mgmt/traffic/ @pantheon-systems/platform-edge-routing
+src/source/content/guides/account-mgmt/traffic/ @pantheon-systems/platform-edge-routing @pantheon-systems/docs-admins
 # The Platform-Edge-Routing team is responsible for bots and indexing
-src/source/content/bots-and-indexing @pantheon-systems/platform-edge-routing
+src/source/content/bots-and-indexing @pantheon-systems/platform-edge-routing @pantheon-systems/docs-admins
 # The FileSystem team is responsible for managing static files on Pantheon
-src/source/content/guides/filesystem/ @pantheon-systems/filesystem
+src/source/content/guides/filesystem/ @pantheon-systems/filesystem @pantheon-systems/docs-admins
 # The developer-experience team is responsible for Integrated Composer
-src/source/content/guides/integrated-composer/ @pantheon-systems/developer-experience
+src/source/content/guides/integrated-composer/ @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The developer-experience team is responsible for Terminus
-src/source/content/terminus/ @pantheon-systems/developer-experience
+src/source/content/terminus/ @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The developer-experience team is responsible for Secrets
-src/source/content/guides/secrets/ @pantheon-systems/developer-experience
+src/source/content/guides/secrets/ @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The developer-experience team is responsible for the eVCS
-src/source/content/guides/external-vcs/ @pantheon-systems/developer-experience
+src/source/content/guides/external-vcs/ @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The developer-experience team is responsible for Next.js
-src/source/content/nextjs/ @pantheon-systems/developer-experience
+src/source/content/nextjs/ @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The developer-experience team is responsible for Next.js
-src/source/content/nextjs @pantheon-systems/developer-experience
+src/source/content/nextjs @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The developer-experience team is responsible for GitHub Application
-src/source/content/guides/github-application @pantheon-systems/developer-experience
+src/source/content/guides/github-application @pantheon-systems/developer-experience @pantheon-systems/docs-admins
 # The cms-platform team is responsible for WordPress Multisite
-src/source/content/guides/multisite/ @pantheon-systems/site-experience
+src/source/content/guides/multisite/ @pantheon-systems/site-experience @pantheon-systems/docs-admins
 # The cms-platform team is responsible for External Libraries on Pantheon
-src/source/content/external-libraries @pantheon-systems/site-experience
+src/source/content/external-libraries @pantheon-systems/site-experience @pantheon-systems/docs-admins
 # The site-experience team is responsible for Elasticsearch docs
-src/source/content/guides/elasticsearch/ @pantheon-systems/site-experience
+src/source/content/guides/elasticsearch/ @pantheon-systems/site-experience @pantheon-systems/docs-admins
 # The site-experience team is responsible for Solr docs
-src/source/content/guides/solr-drupal/ @pantheon-systems/site-experience
-src/source/content/solr.md @pantheon-systems/site-experience
-src/source/content/opensolr.md @pantheon-systems/site-experience
+src/source/content/guides/solr-drupal/ @pantheon-systems/site-experience @pantheon-systems/docs-admins
+src/source/content/solr.md @pantheon-systems/site-experience @pantheon-systems/docs-admins
+src/source/content/opensolr.md @pantheon-systems/site-experience @pantheon-systems/docs-admins
 # The site-experience team is responsible for WordPress developer docs
-src/source/content/guides/wordpress-developer/ @pantheon-systems/site-experience
+src/source/content/guides/wordpress-developer/ @pantheon-systems/site-experience @pantheon-systems/docs-admins
 # There is a team just for release note permissions
-src/source/releasenotes/ @pantheon-systems/release-note-authors
+src/source/releasenotes/ @pantheon-systems/release-note-authors @pantheon-systems/docs-admins
 # Edge Routing handles GCDN and AGCDN
-src/source/content/guides/global-cdn/ @pantheon-systems/platform-edge-routing
-src/source/content/guides/agcdn/ @pantheon-systems/platform-edge-routing
+src/source/content/guides/global-cdn/ @pantheon-systems/platform-edge-routing @pantheon-systems/docs-admins
+src/source/content/guides/agcdn/ @pantheon-systems/platform-edge-routing @pantheon-systems/docs-admins
