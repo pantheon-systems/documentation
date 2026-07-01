@@ -14,10 +14,8 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/setup-config
 editpath: search/02-setup-config.md
-reviewed: "2026-06-11"
+reviewed: "2026-06-16"
 ---
-
-<Partial file="elasticsarch-pre-ga.md" />
 
 Getting Elasticsearch running on your Pantheon WordPress site involves activating the service on the platform and then installing and configuring the ElasticPress plugin within WordPress.
 

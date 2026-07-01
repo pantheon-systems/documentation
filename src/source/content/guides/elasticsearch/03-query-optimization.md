@@ -15,10 +15,8 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/query-optimization
 editpath: search/03-query-optimization.md
-reviewed: "2026-06-11"
+reviewed: "2026-06-16"
 ---
-
-<Partial file="elasticsarch-pre-ga.md" />
 
 One of the most powerful aspects of Elasticsearch on Pantheon is its ability to offload `WP_Query` requests from your database. The ElasticPress plugin integrates with WordPress at the query level, routing eligible queries to Elasticsearch instead of MySQL.
 

@@ -10,4 +10,3 @@
 | **WooCommerce Support** | Yes | No |
 | **`WP_Query` Offloading** | Yes | Yes |
 | **Related Content** | Yes | Manual |
-| **Status** | Beta | Generally Available |
