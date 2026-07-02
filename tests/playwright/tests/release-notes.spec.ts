@@ -25,7 +25,7 @@ test('Direct navigation to single category returns the expected value', async ({
 });
 
 test('Direct navigation to single category returns the expected value - 2', async ({ page }) => {
-  await page.goto('/release-notes/1/category=billing');
+  await page.goto('/release-notes/1/?category=billing');
   const expectedString = 'Track invoice statuses with new Paid and Unpaid tags';
   const h2s1 = await page.locator('h2').allTextContents();
   expect(h2s1.some(text => text.includes(expectedString))).toBeTruthy();
