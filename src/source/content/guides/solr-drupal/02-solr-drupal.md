@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence, rkunjappan, mehta-asim]
-reviewed: "2026-06-15"
+reviewed: "2026-06-30"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -32,6 +32,9 @@ Solr 9 introduces the following new capabilities for Drupal sites running on Pan
 
 - Unified highlighter is now the default in Solr 9, improving search result excerpt quality.
   - When Drupal displays search results, Solr generates the snippet of text shown below each result title. Solr 9 produces more accurate snippets that better reflect where the search term actually appears in the content, improving the user experience on Search API-powered results pages.
+
+- Dense vector search (KNN) for AI-powered semantic search.
+  - Solr 9 introduces the [DenseVectorField](https://solr.apache.org/guide/solr/9_0/query-guide/dense-vector-search.html) type and a k-nearest neighbors (KNN) query parser, enabling approximate nearest neighbor search using HNSW graphs. Instead of matching exact keywords, dense vector search converts text into numerical embeddings with an AI model and finds content that is semantically similar — for example, a query for "fixing automobiles" can match an article about "car engine maintenance" even though they share no keywords. On Drupal, the [Search API Solr Dense Vector](https://www.drupal.org/project/search_api_solr_dense_vector) module integrates this capability with Search API, supporting embedding providers such as OpenAI, Google Vertex AI, and Google Gemini. Refer to the [Dense Vector Search guide](/guides/pantheon-search/solr-drupal/dense-vector-search) for setup instructions.
 
 </Tab>
 
@@ -233,7 +236,13 @@ Both the server and index you just created should be displayed on the page.
 
 <Alert title="Note" type="info">
 
-Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
+Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete. Test the upgrade on a non-production environment before applying it to your production site.
+
+**Multidev Solr inheritance:** To upgrade the Solr version on a Multidev, create the Multidev first, then set `search.version: 9` in `pantheon.yml` on that branch and push.
+
+A Multidev inherits the Solr version from the source environment, so if the version was set before creating the Multidev, the Multidev will still use Solr 8.
+
+To force the upgrade, commit and push `search.version: 8`, then commit and push `search.version: 9`.
 
 </Alert>
 
@@ -275,6 +284,12 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
+
+   <Alert title="Custom Solr Configuration" type="info">
+
+   If you use custom Solr configuration files, start from the base Solr 9 schema and re-apply your customizations on top. Solr 9 removed the legacy cache classes (`LRUCache`, `FastLRUCache`, `LFUCache` — use `CaffeineCache`) and `BlockJoinFacetComponent` (use `uniqueBlock()` in JSON Facet API). Refer to the [custom configuration guide](/guides/pantheon-search/solr-drupal/custom-config) for posting custom configurations.
+
+   </Alert>
 
 1. **Clear the index and reindex content:**
 
