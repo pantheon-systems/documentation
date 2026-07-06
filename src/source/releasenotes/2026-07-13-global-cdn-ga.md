@@ -30,4 +30,4 @@ GCDN is available to all sites on the platform except those currently using [Adv
 
 ## More information
 
-For full details on GCDN, refer to the [Global CDN guide](/guides/global-cdn) on the Pantheon docs site.
+For full details on GCDN, refer to the [Global CDN guide](/guides/global-cdn/global-cdn-beta) on the Pantheon docs site.
