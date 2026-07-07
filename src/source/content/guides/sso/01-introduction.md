@@ -39,7 +39,7 @@ SAML applies to an entire email domain when enabled on Pantheon. You cannot use 
 
 </Alert>
 
-SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
+SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Agency Partner Program](https://pantheon.io/partners?docs) to qualify.
 
 ## More Resources
 
