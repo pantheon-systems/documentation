@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/overview
-reviewed: 2026-07-07
+reviewed: "2026-07-07"
 showtoc: true
 ---
 
