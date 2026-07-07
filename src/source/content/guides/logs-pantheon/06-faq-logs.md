@@ -42,7 +42,7 @@ No, access to Apache Solr logs is unavailable. Refer to the documentation on [Pa
 
 ### Can I download Varnish logs?
 
-Edge logs are not available to download for sites using Pantheon's [standard (free) Global CDN](/guides/global-cdn) service.
+Edge logs are not available to download for sites using Pantheon's [standard Global CDN](/guides/global-cdn) service.
 
 However, **CDN Log Streaming** is supported by our [Advanced Global CDN (AGCDN) packages](/guides/agcdn#agcdn-package-comparison). 
 
