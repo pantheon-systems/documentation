@@ -1,12 +1,12 @@
 ---
 title: Pantheon Global CDN
-subtitle: GCDN Beta with Bot Protection
-description: The GCDN Beta introduces built-in bot protection. Learn what's included, how to migrate, and what to expect.
+subtitle: Next-generation GCDN with Bot Protection
+description: Pantheon's next-generation GCDN introduces built-in bot protection. Learn what's included, how to migrate, and what to expect.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-06-24"
-permalink: docs/guides/global-cdn/global-cdn-beta
+reviewed: "2026-07-07"
+permalink: docs/guides/global-cdn/next-gen-global-cdn
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]
@@ -16,7 +16,7 @@ product: [cdn]
 integration: [--]
 ---
 
-The new GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
+Pantheon's next-generation GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
 
 ## What's Included
 
@@ -31,46 +31,47 @@ Bot protection is enabled by default on all migrated sites. There is no addition
 
 If your site relies on a custom bot or automated service that is not on the verified bot list, it may be challenged or blocked. Contact Pantheon support to request an exclusion for your bot's user agent.
 
-After migrating to the GCDN Beta, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, check whether its user agent is being challenged and contact support to add an exclusion.
+After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, check whether its user agent is being challenged and contact support to add an exclusion.
+
+### Custom Certificates
+
+Sites using [customer-provided TLS certificates](/custom-certificates) are now supported on GCDN. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
+
+### Platform vanity domains
+
+Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g., `live-mysite.example-agency.com`) are fully supported. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
 
 ### Client Challenges
 
-When the GCDN identifies a request as potentially automated or malicious, it may present a challenge to the visitor. This is a non-intrusive verification that confirms the visitor is human before allowing access to your site.
+When the next-generation GCDN identifies a request as potentially automated or malicious, it may present a challenge to the visitor. This is a non-intrusive verification that confirms the visitor is human before allowing access to your site.
 
 ### Content Converter
 
 Content Converter (Markdown for Agents) is enabled on all new GCDN zones. When a client sends a request with the `Accept: text/markdown` header, the CDN automatically converts the HTML response to Markdown in real time. This makes it easier for LLMs, AI agents, and other programmatic consumers to process your site's content without needing to parse raw HTML.
 
-To request Markdown from a GCDN Beta site:
+To request Markdown from a next-generation GCDN site:
 
 ```bash{promptUser: user}
 curl -H "Accept: text/markdown" https://example.com
 ```
 
-- This is enabled automatically on all GCDN Beta zones — no action is required.
+- This is enabled automatically on all next-generation GCDN zones — no action is required.
 - Standard browser requests (without the `Accept: text/markdown` header) are not affected and receive normal HTML responses.
 - The response includes an `x-markdown-tokens` header indicating the estimated token count of the Markdown document.
 
 ### Caching
 
-Caching behavior is the same as the current GCDN. Your existing caching configuration carries over without changes.
+Caching behavior is the same as the legacy GCDN. Your existing caching configuration carries over without changes.
 
 - The Pantheon Advanced Page Cache module (Drupal) and plugin (WordPress) work the same way. Granular, surrogate-key-based cache clearing is fully supported.
 - `Cache-Control` headers set by your application are respected.
 - Static assets are cached at the edge automatically.
-- Tracking parameters (`utm_*`, `__*`) are stripped from cache keys, consistent with current GCDN behavior (`PANTHEON_STRIPPED` logic).
+- Tracking parameters (`utm_*`, `__*`) are stripped from cache keys, consistent with legacy GCDN behavior (`PANTHEON_STRIPPED` logic).
 - Analytics cookies (Google Analytics, HubSpot, etc.) are excluded from cache key generation so they don't fragment your cache.
 
 ### Eligibility
 
-The Beta is open to most GCDN customers running Drupal or WordPress sites. The following configurations are not eligible at this time:
-
-| Configuration | Reason |
-| --- | --- |
-| Advanced Global CDN (AGCDN) | Separate migration initiative |
-| Custom Certificates | Special certificate management not yet supported |
-| Next.js / Front-End Sites (FES) | Not yet supported |
-| Platform Vanity Domains | Not yet supported |
+GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN customers will be migrated in a future phase — no action is required from them at this time.
 
 ## Setup
 
@@ -82,9 +83,9 @@ For the best experience, be prepared to update your DNS records as soon as possi
 
 <Alert title="Custom Domains Must Not Use CNAMEs to Platform Hostnames" type="danger">
 
-Custom domains that use a CNAME record in their DNS settings that point to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported in the GCDN Beta and will not be supported going forward. Sites configured this way will experience interruptions when migrated.
+Custom domains that use a CNAME record in their DNS settings that point to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported by the next-generation GCDN and will not be supported going forward. Sites configured this way will experience interruptions when migrated.
 
-Before activating the Beta, check your custom domain's DNS configuration. It must resolve via A/AAAA records as shown on the site's **Domains** page, not via a CNAME pointed at a `*.pantheonsite.io` hostname. If the **Domains** page shows `Remove this detected record` next to a CNAME, remove it from your DNS provider. See [Custom Domains](/guides/domains/custom-domains) for details.
+Before activating the next-generation GCDN, check your custom domain's DNS configuration. It must resolve via A/AAAA records as shown on the site's **Domains** page, not via a CNAME pointed at a `*.pantheonsite.io` hostname. If the **Domains** page shows `Remove this detected record` next to a CNAME, remove it from your DNS provider. See [Custom Domains](/guides/domains/custom-domains) for details.
 
 If your custom domain currently points at a platform hostname via CNAME, contact Pantheon Support before requesting migration.
 
@@ -96,13 +97,13 @@ If your custom domain currently points at a platform hostname via CNAME, contact
 
 ### Activation
 
-Eligible sites will see a GCDN Beta banner on the site dashboard in Pantheon.
+Eligible sites will see a next-generation GCDN banner on the site dashboard in Pantheon.
 
 1. Look for the banner on your site dashboard in Pantheon.
 1. Click the banner and follow the guided activation steps.
 1. Update your DNS records to point to the new GCDN infrastructure (instructions will be provided in the dashboard).
 
-![gcdn beta banner in pantheon dashboard](../../../images/guides/gcdn-beta-banner.png)
+![gcdn banner in pantheon dashboard](../../../images/guides/gcdn-beta-banner.png)
 
 ### Platform Hostnames
 
@@ -111,11 +112,11 @@ After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are autom
 ### Domains and DNS
 <Alert title="SSL/TLS Certificate Issuance — TXT Records Required" type="danger">
 
-During the Beta, **TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
+**TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
 
 </Alert>
 
-After activating the GCDN Beta through the dashboard, you will need to update your DNS records to point to the new infrastructure.
+After activating the next-generation GCDN through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
 1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider. **TXT record validation is the only supported method for issuing SSL/TLS certificates during the Beta.** HTTP validation and other methods are not available.
 
@@ -174,13 +175,13 @@ terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
 
 If you have existing custom domains on your site, follow all of the steps below to upgrade and migrate your DNS.
 
-### 1. Upgrade your site to GCDN
+### 1. Upgrade your site to next-generation GCDN
 
 ```bash{promptUser: user}
 terminus gcdn:upgrade <site>
 ```
 
-This migrates the site from Fastly to GCDN across all environments. Your platform hostnames (`*.pantheonsite.io`) are automatically migrated as part of this step. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
+This migrates the site from Fastly to Cloudflare GCDN across all environments. Your platform hostnames (`*.pantheonsite.io`) are automatically migrated as part of this step. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
 ### 2. Get your DNS records and TXT verification challenges
 
@@ -233,13 +234,9 @@ terminus gcdn:verify my-site.live www.example.com
 
 ## Known Limitations
 
-### Traffic Metrics Unavailable
-
-The traffic metrics page in the Pantheon dashboard will not contain any traffic data during the initial Beta period, including historical traffic data. In a future update, sites using GCDN Beta will regain access to traffic data, along with up to 3 months of traffic data from before Beta was activated. 
-
 ### Terminus commands experience syntax errors
 
-GCDN Beta sites must use Terminus [version 4.1.9](https://github.com/pantheon-systems/terminus/releases/tag/4.1.9) or higher when interacting with sites that have Global CDN Beta enabled. Using older versions of Terminus may result in errors such as `[debug] json_decode exception: Syntax error` or `[error]  Pantheon headers missing, which is not quite right.`. 
+Next-generation GCDN sites must use Terminus [version 4.1.9](https://github.com/pantheon-systems/terminus/releases/tag/4.1.9) or higher when interacting with sites that have the next-generation GCDN enabled. Using older versions of Terminus may result in errors such as `[debug] json_decode exception: Syntax error` or `[error]  Pantheon headers missing, which is not quite right.`. 
 
 ### CNAMEs to Platform Hostnames Not Supported
 
@@ -249,19 +246,19 @@ Custom domains that use a CNAME in their DNS configuration pointing to a Pantheo
 
 ### How do I know if my site is eligible?
 
-Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
 
 ### I have a Custom Certificate. Can I migrate?
 
-Not yet. Custom certificate management is not supported in the Beta. This will be addressed before General Availability.
+Yes. Sites using [customer-provided TLS certificates](/custom-certificates) are supported on GCDN. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
 
 ### I use AGCDN. What should I do?
 
 No action is required. AGCDN has its own migration initiative and timeline. Your current AGCDN configuration continues to work. AGCDN customers are excluded from the Beta.
 
-### What is the timeline for GCDN GA and new AGCDN?
+### What is the timeline for AGCDN to be supported?
 
-GCDN GA is late Q2/Early Q3. AGCDN features will be moved to a new self managed AGCDN service beginning late Q2. As feature parity is reached, you will be contacted.
+AGCDN features will be moved to a new self managed AGCDN service beginning late Q2. As feature parity is reached, you will be contacted.
 
 ### What changes when I migrate?
 
@@ -295,15 +292,15 @@ O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and 
 
 For more information on how O2O works, refer to the [SaaS customer documentation](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/).
 
-We are actively testing this configuration during the Beta and welcome customer feedback in the `#beta-gcdn` channel in Pantheon Community Slack.
+We are actively testing this configuration during the Beta and welcome customer feedback in the Pantheon Community Slack.
 
 ### I use a platform vanity domain. Can I migrate?
 
-Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdomains) are not eligible for the GCDN Beta at this time. Support for vanity domains will be added in a future update.
+Yes. Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g., `live-mysite.example-agency.com`) are fully supported. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
 
-### How are SSL/TLS certificates issued during the Beta?
+### How are SSL/TLS certificates issued?
 
-SSL/TLS certificates are issued exclusively through DNS TXT record validation during the Beta. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
+SSL/TLS certificates are issued exclusively through DNS TXT record validation. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
 
 ### My domain hasn't verified yet. What can I do?
 
@@ -311,4 +308,4 @@ The platform re-checks DNS on an automatic backoff schedule that starts at ~60-s
 
 ### How do I report issues or give feedback?
 
-Join `#beta-gcdn` in the Pantheon Community Slack to share feedback, report issues, or ask questions. You can also contact Pantheon support through the normal channels.
+Join the Pantheon Community Slack to share feedback, report issues, or ask questions. You can also contact Pantheon support through the normal channels.
