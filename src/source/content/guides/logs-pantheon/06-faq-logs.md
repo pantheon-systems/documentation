@@ -13,6 +13,7 @@ tags: [logs, measure]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/logs-pantheon/faq-logs
+reviewed: "2026-07-07"
 ---
 
 This section provides answers to frequently asked questions about log files.
@@ -33,7 +34,7 @@ The client IP for the following example is `122.248.101.126`:
 
 ### Can I log to the system logger and access syslog?
 
-No, syslog is unavailable. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them. You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
+No, syslog is unavailable. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them. You can use the [`error_log`](https://secure.php.net/manual/en/function.error-log.php) function to log to the `php-error.log`, which is accessible in the logs directory.
 
 ### Can I access Apache Solr logs?
 
@@ -41,7 +42,9 @@ No, access to Apache Solr logs is unavailable. Refer to the documentation on [Pa
 
 ### Can I download Varnish logs?
 
-No, Varnish logs are unavailable for download.
+Edge logs are not available to download for sites using Pantheon's [standard (free) Global CDN](/guides/global-cdn) service.
+
+However, **CDN Log Streaming** is supported by our [Advanced Global CDN (AGCDN) packages](/guides/agcdn#agcdn-package-comparison). [Contact sales and professional services](https://pantheon.io/contact?docs) to learn more.
 
 ### How do I enable error logging for WordPress?
 
