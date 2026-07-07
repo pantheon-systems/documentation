@@ -11,7 +11,7 @@ product: [terminus]
 integration: [--]
 tags: [--]
 showtoc: true
-reviewed: 2026-06-11
+reviewed: "2026-07-07"
 ---
 
 The [Terminus](/terminus) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
@@ -86,6 +86,19 @@ There are currently no restrictions around the number of schedules that can be c
 ### Job Timeouts
 
 Timeouts are dynamic and dependent on the remaining budget plus the 15 minute grace period. For instance, the daily available budget at the start of the day is 300 minutes, which means the first job's timeout is 315 minutes. When a job is launched throughout the day and the remaining budget is 60 minutes, the timeout will be calculated to 75 minutes.
+
+### Pantheon Secrets Usage
+For cron scenarios where sensitive information (such as access tokens, API keys, etc.) is required, we recommend using [Pantheon Secrets](/guides/secrets).
+
+This allows you to create and manage secrets directly on the Pantheon platform, and then read those secrets securely in context of a given scheduled job. 
+
+<Alert type="info" title="Note">
+
+The [secret scope](/guides/secrets/overview#secret-scope) must be set to `ic` at time of secret creation. The scope of an existing secret cannot be changed after creation. If you want to read an existing secret of a different scope you must first delete and recreate the secret with the additional `ic` scope included. 
+
+For detailed steps, refer to [Creating a New Secret](/guides/secrets/create).
+
+</Alert>
 
 ## Commands
 
