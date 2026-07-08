@@ -1,7 +1,7 @@
 ---
 title: Frontend asset builds are now supported via pantheon.yml
-published_date: "2026-07-06"
-published_at: "2026-07-06T17:00:00Z"
+published_date: "2026-07-08"
+published_at: "2026-07-08T17:00:00Z"
 categories: [new-feature, drupal, wordpress]
 description: "Sites can now compile frontend assets (themes, design systems, and other Node.js-based tooling) automatically as part of the build process."
 ---
@@ -14,7 +14,7 @@ When enabled, Pantheon installs your Node.js dependencies and runs your build sc
 
 Add a `frontend_build` block to your [`pantheon.yml` file](/pantheon-yml#frontend-asset-builds):
 
-```yaml
+```yaml:title=pantheon.yml
 frontend_build:
   enabled: true
   paths:
@@ -23,7 +23,7 @@ frontend_build:
       build_command: build
 ```
 
-Pantheon selects a package manager automatically based on the lock file present in each build path. Supported package manages include `bun`, `pnpm`, `yarn`, and `npm`. 
+Pantheon selects a package manager automatically based on the lock file present in each build path. Supported package managers include `bun`, `pnpm`, `yarn`, and `npm`. 
 
 For full configuration details and examples, see the [frontend asset builds documentation](/frontend-builds).
 
@@ -35,7 +35,7 @@ Site(s) still using Build Tools today should move to our newer platform capabili
 
 * [External Repositories](/guides/external-repositories)
 * [Push to Pantheon](/github-actions)
-* [Scheduled cron jobs](/customer-scheduled-cron-jobs)
+* [Scheduled Cron Jobs](/customer-scheduled-cron-jobs)
 * [Integrated Composer](/guides/integrated-composer)
 * [Frontend Asset Builds](/frontend-builds)
 
