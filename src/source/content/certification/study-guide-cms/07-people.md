@@ -2,19 +2,8 @@
 title: WebOps Certification
 subtitle: "Chapter 7: Connecting People"
 description: Learn how to manage teams, workspaces and permissions before connecting DNS.
-certificationpage: true
-type: certificationpage
-layout: certificationpage
-showtoc: true
-tags: []
 permalink: docs/certification/study-guide/people
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide/deploy
 nexturl: /certification/study-guide/extend
 ---

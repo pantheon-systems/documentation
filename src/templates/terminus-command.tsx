@@ -1,4 +1,5 @@
 import Layout from "@/components/layout";
+import { OmniSidebarNav } from "@/components/omniSideBarNav";
 import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layout";
 import SearchBar from "@/components/header/search-bar";
 import HeaderBody from "@/components/common/header-body";
@@ -7,7 +8,6 @@ import { CommandType } from "@/components/common/commands/types";
 import { Partial } from "@/components/common/partial-component";
 import Link from "next/link";
 import { Pre } from "@/components/ui/mdx-wrapper/pre";
-import { Navbar } from "@/components/common/navbar";
 
 const ContainerDiv = ({ children }: { children: React.ReactNode }) => (
   <div className="content-wrapper">{children}</div>
@@ -36,75 +36,6 @@ const ContentLayoutType = ({
 
   return <ContainerDiv>{children}</ContainerDiv>;
 };
-
-// @TODO relocate this list
-// - To a YAML file and use GraphQL to pull data.
-// - To a GraphQL query order by frontmatter weight/order/index field.
-const items = [
-  {
-    id: "docs-terminus",
-    link: "/terminus",
-    title: "Introduction",
-  },
-  {
-    id: "docs-terminus-install",
-    link: "/terminus/install",
-    title: "Install Terminus",
-  },
-  {
-    id: "docs-terminus-examples",
-    link: "/terminus/examples",
-    title: "Get Started",
-  },
-  {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
-    title: "Command Directory",
-  },
-  {
-    id: "docs-terminus-scripting",
-    link: "/terminus/scripting",
-    title: "Scripting with Terminus",
-  },
-  {
-    id: "docs-terminus-plugins",
-    link: "/terminus/plugins",
-    title: "Install Plugins",
-  },
-  {
-    id: "docs-terminus-directory",
-    link: "/terminus/directory",
-    title: "Plugin Directory",
-  },
-  {
-    id: "docs-terminus-create",
-    link: "/terminus/create",
-    title: "Create Terminus Plugins",
-  },
-  {
-    id: "docs-terminus-configuration",
-    link: "/terminus/configuration",
-    title: "Terminus Configuration File",
-  },
-
-  {
-    id: "docs-supported-terminus",
-    link: "/terminus/supported-terminus",
-    title: "Supported Terminus and PHP Versions",
-  },
-
-  {
-    id: "docs-terminus-updates",
-    link: "/terminus/updates",
-    title: "Terminus Changelog",
-  },
-
-  {
-    id: "docs-terminus-terminus-4-0",
-    link: "/terminus/terminus-4-0",
-    title: "Terminus 4",
-  },
-];
 
 export const TerminusCommandTemplate = ({
   command,
@@ -137,9 +68,7 @@ export const TerminusCommandTemplate = ({
         className="pds-container pds-container--x-wide"
       >
         <div slot="sidebar" className="guide-sidebar">
-          <Navbar
-            title={"Terminus Command Reference"}
-            items={items}
+          <OmniSidebarNav
             activePage={"/terminus/commands"}
           />
         </div>

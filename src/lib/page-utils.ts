@@ -143,21 +143,6 @@ export type PageData = PageDataWithoutComponent & {
   Component: React.ReactNode;
 };
 
-/* This helper function helps determine which template should be applied to a piece of content */
-export const calculateTemplate = (
-  node: ProcessedFile,
-  defaultTemplate: "doc" | "terminuspage" | "certificationpage" | "video"
-) => {
-  if (
-    node.frontmatter &&
-    node.frontmatter.layout &&
-    node.frontmatter.layout !== null
-  ) {
-    return node.frontmatter.layout;
-  }
-  return defaultTemplate;
-};
-
 export const normalizeSlug = (slug: string): string => {
   let normalizedSlug = slug;
   if (normalizedSlug.startsWith("/")) {
