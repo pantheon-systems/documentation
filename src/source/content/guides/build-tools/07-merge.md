@@ -15,6 +15,9 @@ product: [--]
 integration: [--]
 image: buildToolsGuide-thumb.png
 ---
+
+<Partial file="build-tools-cta.md" />
+
 This lesson demonstrates the final process of the Pull Request workflow, merging. After completing an internal peer review process for a given Pull Request, work is considered ready for production and accepted into the master branch.
 
 1.  Go to your GitHub project page, click on the **Pull requests** tab and navigate to the PR open against the `slogan` branch, which we [started in an earlier lesson](/guides/build-tools/pr-workflow#create-a-pull-request).
