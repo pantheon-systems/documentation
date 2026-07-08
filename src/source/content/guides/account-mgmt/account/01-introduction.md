@@ -13,7 +13,7 @@ tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 permalink: docs/guides/account-mgmt/account
 editpath: docs/guides/account-mgmt/account/01-introduction.md
-reviewed: "2026-06-30"
+reviewed: "2026-07-08"
 showtoc: "true"
 ---
 
