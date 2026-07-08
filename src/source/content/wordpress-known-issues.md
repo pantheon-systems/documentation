@@ -1695,7 +1695,37 @@ Learn more in the [WPML Guide](https://wpml.org/faq/install-wpml/#registration-u
 
 ___
 
-**Issue 3:** Your wp-admin becomes too slow or upon activating WPML String Translation plugin, you may see this error:
+**Issue 3:** When pushing the database between environments, the WPML site key stored in the database is overwritten, causing WPML to lose its registration on the destination environment. This results in WPML prompting for re-registration after every database push.
+
+**Solution:** Generate a unique site key for each environment from your [WPML account page](https://wpml.org/account/sites/), then define each key in `wp-config.php` using the `OTGS_INSTALLER_SITE_KEY_WPML` constant. This constant takes precedence over any value stored in the database, so database pushes between environments will not affect registration.
+
+Dev, Test, and Multidev environment keys are registered as "development" sites in your WPML account and do not consume production license seats — all environments can be registered under the same WPML subscription.
+
+```php:title=wp-config.php
+if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+    switch ( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+        case 'live':
+            $site_key_wpml = 'your-live-site-key';
+            break;
+        case 'test':
+            $site_key_wpml = 'your-test-site-key';
+            break;
+        case 'dev':
+            $site_key_wpml = 'your-dev-site-key';
+            break;
+        default:
+            $site_key_wpml = 'your-default-site-key';
+            break;
+    }
+    define( 'OTGS_INSTALLER_SITE_KEY_WPML', $site_key_wpml );
+}
+```
+
+Learn more in [WPML's guide to automatic registration across environments](https://wpml.org/faq/automatic-wpml-registration-using-php-for-easy-moves-between-production-development-and-staging/).
+
+___
+
+**Issue 4:** Your wp-admin becomes too slow or upon activating WPML String Translation plugin, you may see this error:
 
 >WPML String Translation is attempting to write .mo files with translations to folder:
 >
@@ -1786,6 +1816,46 @@ ___
 **Solution:** Only use the "PHP" redirect method.
 
 ___
+
+### Yoast LLMS feature
+
+<ReviewDate date="2026-04-24" />
+
+**Issue:** [Yoast SEO 25.3](https://developer.yoast.com/changelog/yoast-seo/25.3/) introduces the LLMs.txt feature, which writes a physical `llms.txt` file to the root directory of the WordPress installation and refreshes it weekly via WP-Cron. On Pantheon, the Test and Live environments use a read-only filesystem for the application codebase, so Yoast cannot write or update the file in those environments.
+
+**Solution:** Use the [`wpseo_llmstxt_filesystem_path` filter](https://developer.yoast.com/features/llms-txt/functional-specification/) (introduced in Yoast SEO 25.4) to redirect Yoast’s file writes to the writable uploads directory, and commit a symlink in the webroot pointing to that location. This allows Yoast to generate and update `llms.txt` in all environments while keeping it accessible at the standard `/llms.txt` URL.
+
+1. Switch your Dev environment to [Git connection mode](/guides/git) and clone the site locally if you haven’t already.
+
+1. From your site’s webroot (the directory containing `wp-config.php`), create a relative symlink. Update the target path if your uploads directory is not at the default location:
+
+   ```bash{promptUser: user}
+   ln -s wp-content/uploads/llms.txt llms.txt
+   ```
+
+1. Commit the symlink and push to Pantheon:
+
+   ```bash{promptUser: user}
+   git add llms.txt
+   git commit -m "add symlink to redirect Yoast llms.txt to writable path"
+   git push origin master
+   ```
+
+1. Add the following to a [custom MU plugin](/guides/wordpress-configurations/mu-plugin) to redirect Yoast’s file writes to the uploads directory. Update the path if your uploads directory is not at the default location:
+
+   ```php:title=wp-content/mu-plugins/yoast-llmstxt-path.php
+   <?php
+   add_filter( 'wpseo_llmstxt_filesystem_path', function() {
+       return WP_CONTENT_DIR . '/uploads';
+   } );
+   ```
+
+1. Commit the MU plugin and deploy to Test, then Live.
+
+1. After deploying to each environment, open **Yoast SEO → Settings** and save to trigger immediate file generation. Otherwise the file will be created on the next weekly WP-Cron run.
+
+The symlink is committed to your codebase and deploys with your code. The `llms.txt` file itself lives in the uploads directory (part of Pantheon’s writable filesystem) and is managed entirely by Yoast going forward.
+
 
 ### Yoast Indexables
 

@@ -175,16 +175,23 @@ function dynamic_cors_headers( $headers ) {
 	if ( ! array_key_exists( 'HTTP_ORIGIN', $_SERVER ) ) {
 		return $headers;
 	}
-	// Each of the domains in this array will be given an allow header
-	// Note that http or https and the www subdomain are each different origins
+	// List each allowed origin explicitly.
+	// http:// and https:// are distinct origins and must each be listed separately.
+	// www and non-www are distinct origins and must each be listed separately.
+	// Wildcard subdomains (e.g. *.example.com) are not valid CORS origin values.
 	$allowed_domains = array(
 		'https://dev-exampleallowedurl.pantheonsite.io',
 		'http://localhost:8084',
 		'http://example.com',
+		'https://example.com',
+		'http://www.example.com',
 		'https://www.example.com',
 	);
 	if ( in_array( $_SERVER['HTTP_ORIGIN'], $allowed_domains ) ) {
 		$headers['Access-Control-Allow-Origin'] = $_SERVER['HTTP_ORIGIN'];
+		// Required for cross-origin requests that include credentials (cookies, HTTP auth).
+		// Must be used with a specific origin above — never with Access-Control-Allow-Origin: *
+		$headers['Access-Control-Allow-Credentials'] = 'true';
 	}
 	return $headers;
 }

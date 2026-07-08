@@ -10,8 +10,8 @@ audience: [business, sysadmin, development]
 product: [--]
 integration: [--]
 tags: [--]
-contributors: [wordsmither]
-reviewed: "2025-12-10"
+contributors: [wordsmither, jazzsequence]
+reviewed: "2026-05-22"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
@@ -58,6 +58,12 @@ When you complete this step, your site will be live for anyone to see, at the Pa
 You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
+
+### Create a Site with external repositories
+
+Pantheon's [external repositories](/guides/external-repositories/setup) integration connects a GitHub or GitLab repository directly to a Pantheon site, allowing you to use your preferred VCS provider as your code repository while Pantheon handles hosting and deployments. It supports WordPress, Drupal, and Next.js, and automatically creates a Multidev environment for each pull request or merge request. Merging to the `main` branch of your repository deploys code to your Pantheon Dev environment.
+
+See the [external repository setup guide](/guides/external-repositories/setup) to get started.
 
 ## Migrate an Existing Site
 

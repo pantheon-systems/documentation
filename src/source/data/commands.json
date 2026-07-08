@@ -1,7 +1,7 @@
 {
   "application": {
     "name": "Terminus",
-    "version": "4.1.8"
+    "version": "4.2.0"
   },
   "commands": [
     {
@@ -294,7 +294,7 @@
       "usage": [
         "completion [--debug] [--] [<shell>]"
       ],
-      "help": "The <info>completion</> command dumps the shell completion script required\nto use shell autocompletion (currently, bash, fish, zsh completion are supported).\n\n<comment>Static installation\n-------------------</>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>/opt/homebrew/bin/terminus completion zsh | sudo tee $fpath[1]/_terminus</>\n\nOr dump the script to a local file and source it:\n\n    <info>/opt/homebrew/bin/terminus completion zsh > completion.sh</>\n\n    <comment># source the file whenever you use the project</>\n    <info>source completion.sh</>\n\n    <comment># or add this line at the end of your \"~/.zshrc\" file:</>\n    <info>source /path/to/completion.sh</>\n\n<comment>Dynamic installation\n--------------------</>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~/.zshrc\"</>):\n\n    <info>eval \"$(/opt/homebrew/Cellar/terminus/4.1.8/bin/terminus completion zsh)\"</>",
+      "help": "The <info>completion</> command dumps the shell completion script required\nto use shell autocompletion (currently, bash, fish, zsh completion are supported).\n\n<comment>Static installation\n-------------------</>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>/opt/homebrew/bin/terminus completion zsh | sudo tee $fpath[1]/_terminus</>\n\nOr dump the script to a local file and source it:\n\n    <info>/opt/homebrew/bin/terminus completion zsh > completion.sh</>\n\n    <comment># source the file whenever you use the project</>\n    <info>source completion.sh</>\n\n    <comment># or add this line at the end of your \"~/.zshrc\" file:</>\n    <info>source /path/to/completion.sh</>\n\n<comment>Dynamic installation\n--------------------</>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~/.zshrc\"</>):\n\n    <info>eval \"$(/opt/homebrew/Cellar/terminus/4.2.0/bin/terminus completion zsh)\"</>",
       "definition": {
         "arguments": {
           "shell": {
@@ -5358,6 +5358,132 @@
       "hidden": false
     },
     {
+      "name": "github:vcs",
+      "description": "Pushes GitHub VCS event to the VCS API.",
+      "usage": [
+        "github:vcs <site> <event_name> <installation_id> <data>",
+        "github:vcs <data> Pushes GitHub VCS event to the VCS API.",
+        "github-vcs"
+      ],
+      "help": "Pushes GitHub VCS event to the VCS API.",
+      "definition": {
+        "arguments": {
+          "site": {
+            "name": "site",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site name or ID",
+            "default": null
+          },
+          "event_name": {
+            "name": "event_name",
+            "is_required": true,
+            "is_array": false,
+            "description": "GitHub event name",
+            "default": null
+          },
+          "installation_id": {
+            "name": "installation_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "GitHub installation ID",
+            "default": null
+          },
+          "data": {
+            "name": "data",
+            "is_required": true,
+            "is_array": false,
+            "description": "JSON encoded data to send to the VCS API",
+            "default": null
+          }
+        },
+        "options": {
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
       "name": "https:info",
       "description": "Provides information for HTTPS on being used for the environment.",
       "usage": [
@@ -8376,6 +8502,778 @@
       "hidden": false
     },
     {
+      "name": "node:builds:list",
+      "description": "List builds and their deployment status for a site environment.",
+      "usage": [
+        "node:builds:list [--status [STATUS]] [--limit [LIMIT]] [--branch [BRANCH]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_env>",
+        "nbl",
+        "nlbl",
+        "node:logs:build:list"
+      ],
+      "help": "The \"deployed\" field indicates whether the build was successfully deployed.\nThe \"active\" field indicates whether the build is the one currently serving\ntraffic in the environment. After a rollback, the active build may differ\nfrom the most recently deployed build.",
+      "definition": {
+        "arguments": {
+          "site_env": {
+            "name": "site_env",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site & environment in the format `site-name.env` (only Test or Live environment)",
+            "default": null
+          }
+        },
+        "options": {
+          "status": {
+            "name": "--status",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Filter by build status. Valid values: SUCCESS, FAILURE, WORKING, TIMEOUT.",
+            "default": null
+          },
+          "limit": {
+            "name": "--limit",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Limit the number of builds returned.",
+            "default": 10
+          },
+          "branch": {
+            "name": "--branch",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Filter by branch or tag name.",
+            "default": null
+          },
+          "format": {
+            "name": "--format",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
+            "default": "table"
+          },
+          "fields": {
+            "name": "--fields",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Available fields: ID (id), Status (status), Branch/Tag (branch), Commit (commit), Deployed (deployed), Active (active), Created (created), Completed (completed)",
+            "default": ""
+          },
+          "field": {
+            "name": "--field",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Select just one field, and force format to *string*.",
+            "default": ""
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "node:builds:rebuild",
+      "description": "Rebuilds code for a Node.js site environment, optionally from a specific commit.",
+      "usage": [
+        "node:builds:rebuild [--commit [COMMIT]] [--] <site_env>",
+        "node:builds:rebuild <site>.<env> Rebuild the latest code for <site>'s <env> environment.",
+        "node:builds:rebuild <site>.<env> --commit=<hash> Rebuild <site>'s <env> environment from a specific commit.",
+        "nrb",
+        "node:build:rebuild"
+      ],
+      "help": "Rebuilds code for a Node.js site environment, optionally from a specific commit.",
+      "definition": {
+        "arguments": {
+          "site_env": {
+            "name": "site_env",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site & environment in the format `site-name.env`",
+            "default": null
+          }
+        },
+        "options": {
+          "commit": {
+            "name": "--commit",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Specific commit hash to rebuild (optional, rebuilds latest if omitted)",
+            "default": null
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "node:builds:rollback",
+      "description": "Rolls back a deployed build on a Node.js site environment.",
+      "usage": [
+        "node:builds:rollback <site_env> <build_id>",
+        "node:builds:rollback <site>.<env> <build-id> Roll back <site>'s <env> environment to the specified build.",
+        "nbr",
+        "node:build:rollback"
+      ],
+      "help": "Rolls back a deployed build on a Node.js site environment.",
+      "definition": {
+        "arguments": {
+          "site_env": {
+            "name": "site_env",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site & environment in the format `site-name.env`",
+            "default": null
+          },
+          "build_id": {
+            "name": "build_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "The build ID to roll back to",
+            "default": null
+          }
+        },
+        "options": {
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "node:builds:wait",
+      "description": "Wait for a Node.js site build and deployment to complete.",
+      "usage": [
+        "node:builds:wait [--commit [COMMIT]] [--max [MAX]] [--] <site_env>",
+        "node:builds:wait <site>.<env> Wait for the latest build on <site>'s <env> environment.",
+        "node:builds:wait <site>.<env> --commit=<sha> Wait for a specific commit's build on <site>'s <env> environment.",
+        "nbw",
+        "node:build:wait"
+      ],
+      "help": "Wait for a Node.js site build and deployment to complete.",
+      "definition": {
+        "arguments": {
+          "site_env": {
+            "name": "site_env",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site & environment in the format `site-name.env`",
+            "default": null
+          }
+        },
+        "options": {
+          "commit": {
+            "name": "--commit",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Commit SHA to wait for (optional; waits for latest build if omitted)",
+            "default": ""
+          },
+          "max": {
+            "name": "--max",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Maximum number of seconds to wait for the build to complete",
+            "default": 600
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "node:logs:build:get",
+      "description": "Print the build log.",
+      "usage": [
+        "node:logs:build:get <site_env> <build_id>"
+      ],
+      "help": "Print the build log.",
+      "definition": {
+        "arguments": {
+          "site_env": {
+            "name": "site_env",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site & environment in the format `site-name.env` (only Test or Live environment)",
+            "default": null
+          },
+          "build_id": {
+            "name": "build_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "Build ID",
+            "default": null
+          }
+        },
+        "options": {
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "node:logs:runtime:get",
+      "description": "Print the run time log for last 24 hours.",
+      "usage": [
+        "node:logs:runtime:get [--log-name [LOG-NAME]] [--severity [SEVERITY]] [--exclude-requests [EXCLUDE-REQUESTS]] [--string] [--bool [BOOL]] [--] <site_env>"
+      ],
+      "help": "Print the run time log for last 24 hours.",
+      "definition": {
+        "arguments": {
+          "site_env": {
+            "name": "site_env",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site & environment in the format `site-name.env` (only Test or Live environment)",
+            "default": null
+          }
+        },
+        "options": {
+          "log-name": {
+            "name": "--log-name",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "",
+            "default": ""
+          },
+          "severity": {
+            "name": "--severity",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "",
+            "default": ""
+          },
+          "exclude-requests": {
+            "name": "--exclude-requests",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "",
+            "default": ""
+          },
+          "string": {
+            "name": "--string",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "severity Filter by log severity. Valid values: default, debug, info, notice, warning, error, critical, alert, emergency.",
+            "default": false
+          },
+          "bool": {
+            "name": "--bool",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "exclude-requests Exclude requests logs from the output.",
+            "default": "false."
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
       "name": "org:info",
       "description": "Displays information about an organization.",
       "usage": [
@@ -11093,6 +11991,991 @@
       "hidden": false
     },
     {
+      "name": "secret:org:delete",
+      "description": "Delete given secret for a specific org.",
+      "usage": [
+        "secret:org:delete [--env [ENV]] [--debug] [--] <org_id> <name>",
+        "secret:org:delete <org> <name> Delete given secret.",
+        "secret:org:delete <org> <name> --debug Delete given secret (debug mode).",
+        "secret-org-delete"
+      ],
+      "help": "Delete given secret for a specific org.",
+      "definition": {
+        "arguments": {
+          "org_id": {
+            "name": "org_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "The name or UUID of an organization to retrieve information on",
+            "default": null
+          },
+          "name": {
+            "name": "name",
+            "is_required": true,
+            "is_array": false,
+            "description": "The secret name",
+            "default": null
+          }
+        },
+        "options": {
+          "env": {
+            "name": "--env",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "string The environment to delete the secret from",
+            "default": null
+          },
+          "debug": {
+            "name": "--debug",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Run command in debug mode",
+            "default": false
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "secret:org:list",
+      "description": "Lists secrets for a specific org.",
+      "usage": [
+        "secret:org:list [--debug] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <org_id>",
+        "secret:org:list <org> Lists all secrets for current org.",
+        "secret:org:list <org> --debug List all secrets for current org (debug mode).",
+        "secret-org-list"
+      ],
+      "help": "Lists secrets for a specific org.",
+      "definition": {
+        "arguments": {
+          "org_id": {
+            "name": "org_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "The name or UUID of a org to retrieve information on",
+            "default": null
+          }
+        },
+        "options": {
+          "debug": {
+            "name": "--debug",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Run command in debug mode",
+            "default": false
+          },
+          "format": {
+            "name": "--format",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
+            "default": "table"
+          },
+          "fields": {
+            "name": "--fields",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Available fields: Secret name (name), Secret type (type), Secret value (value), Secret scopes (scopes), Environment override values (env-values)",
+            "default": ""
+          },
+          "field": {
+            "name": "--field",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Select just one field, and force format to *string*.",
+            "default": ""
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "secret:org:set",
+      "description": "Set secret for a specific org.",
+      "usage": [
+        "secret:org:set [--type [TYPE]] [--scope [SCOPE]] [--env [ENV]] [--debug] [--] <org_id> <name> <value>",
+        "secret:org:set <org> <name> <value> Set secret <name> with value <value>.",
+        "secret:org:set <org> <name> <value> --debug Set given secret (debug mode).",
+        "secret-org-set"
+      ],
+      "help": "Set secret for a specific org.",
+      "definition": {
+        "arguments": {
+          "org_id": {
+            "name": "org_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "The name or UUID of a org to retrieve information on",
+            "default": null
+          },
+          "name": {
+            "name": "name",
+            "is_required": true,
+            "is_array": false,
+            "description": "The secret name",
+            "default": null
+          },
+          "value": {
+            "name": "value",
+            "is_required": true,
+            "is_array": false,
+            "description": "The secret value",
+            "default": null
+          }
+        },
+        "options": {
+          "type": {
+            "name": "--type",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Secret type. Available options are env, runtime, composer, file and vcs.",
+            "default": null
+          },
+          "scope": {
+            "name": "--scope",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Secret scope. Available options are ic (integrated composer), user, and web. Multiple options should be specified in comma separated format. Ex: --scope=ic,web.",
+            "default": null
+          },
+          "env": {
+            "name": "--env",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Environment name",
+            "default": null
+          },
+          "debug": {
+            "name": "--debug",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Run command in debug mode",
+            "default": false
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "secret:site:delete",
+      "description": "Delete given secret for a specific site.",
+      "usage": [
+        "secret:site:delete [--debug] [--] <siteenv> <name>",
+        "secret:site:delete <site[.env]> <name> Delete given secret.",
+        "secret:site:delete <site[.env]> <name> --debug Delete given secret (debug mode).",
+        "secret-delete",
+        "secret:delete"
+      ],
+      "help": "Delete given secret for a specific site.",
+      "definition": {
+        "arguments": {
+          "siteenv": {
+            "name": "siteenv",
+            "is_required": true,
+            "is_array": false,
+            "description": "<site_name>, site UUID, or <site.env> for environment-specific secrets",
+            "default": null
+          },
+          "name": {
+            "name": "name",
+            "is_required": true,
+            "is_array": false,
+            "description": "The secret name",
+            "default": null
+          }
+        },
+        "options": {
+          "debug": {
+            "name": "--debug",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Run command in debug mode",
+            "default": false
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "secret:site:list",
+      "description": "Lists secrets for a specific site.",
+      "usage": [
+        "secret:site:list [--debug] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
+        "secret:site:list <site> Lists all secrets for current site.",
+        "secret:site:list <site> --debug List all secrets for current site (debug mode).",
+        "secrets",
+        "secret:list"
+      ],
+      "help": "Lists secrets for a specific site.",
+      "definition": {
+        "arguments": {
+          "site_id": {
+            "name": "site_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "The name or UUID of a site to retrieve information on",
+            "default": null
+          }
+        },
+        "options": {
+          "debug": {
+            "name": "--debug",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Run command in debug mode",
+            "default": false
+          },
+          "format": {
+            "name": "--format",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
+            "default": "table"
+          },
+          "fields": {
+            "name": "--fields",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Available fields: Secret name (name), Secret type (type), Secret value (value), Secret scopes (scopes), Environment override values (env-values), Org values (org-values)",
+            "default": ""
+          },
+          "field": {
+            "name": "--field",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Select just one field, and force format to *string*.",
+            "default": ""
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "secret:site:local-generate",
+      "description": "Generate json file for usage in local environment.",
+      "usage": [
+        "secret:site:local-generate [--filepath [FILEPATH]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
+        "secret:site:local-generate <site> Generate json file with secrets for local usage.",
+        "secret:site:local-generate <site> --filepath=/my/path/filename.json Generate json file in given location with secrets for local usage.",
+        "secret:local-generate"
+      ],
+      "help": "Generate json file for usage in local environment.",
+      "definition": {
+        "arguments": {
+          "site_id": {
+            "name": "site_id",
+            "is_required": true,
+            "is_array": false,
+            "description": "The name or UUID of a site to retrieve information on",
+            "default": null
+          }
+        },
+        "options": {
+          "filepath": {
+            "name": "--filepath",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Output to given file path. Default is to output to ./secrets.json",
+            "default": "secrets.json"
+          },
+          "format": {
+            "name": "--format",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
+            "default": "yaml"
+          },
+          "fields": {
+            "name": "--fields",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Limit output to only the listed elements. Name top-level elements by key, e.g. \"--fields=name,date\", or use dot notation to select a nested element, e.g. \"--fields=a.b.c as example\".",
+            "default": []
+          },
+          "field": {
+            "name": "--field",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Select just one field, and force format to *string*.",
+            "default": ""
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "secret:site:set",
+      "description": "Set secret for a specific site.",
+      "usage": [
+        "secret:site:set [--type [TYPE]] [--scope [SCOPE]] [--debug] [--] <siteenv> <name> <value>",
+        "secret:site:set <site[.env]> <name> <value> Set secret <name> with value <value> for all environments.",
+        "secret:site:set <site[.env]> <name> <value> --debug Set given secret (debug mode).",
+        "secret-set",
+        "secret:set"
+      ],
+      "help": "Set secret for a specific site.",
+      "definition": {
+        "arguments": {
+          "siteenv": {
+            "name": "siteenv",
+            "is_required": true,
+            "is_array": false,
+            "description": "<site_name>, site UUID, or <site.env> for environment-specific secrets",
+            "default": null
+          },
+          "name": {
+            "name": "name",
+            "is_required": true,
+            "is_array": false,
+            "description": "The secret name",
+            "default": null
+          },
+          "value": {
+            "name": "value",
+            "is_required": true,
+            "is_array": false,
+            "description": "The secret value",
+            "default": null
+          }
+        },
+        "options": {
+          "type": {
+            "name": "--type",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Secret type. Available options are env, runtime, composer, file and vcs.",
+            "default": null
+          },
+          "scope": {
+            "name": "--scope",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Secret scope. Available options are ic (integrated composer), user, and web. Multiple options should be specified in comma separated format. Ex: --scope=ic,web.",
+            "default": null
+          },
+          "debug": {
+            "name": "--debug",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Run command in debug mode",
+            "default": false
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
       "name": "self:clear-cache",
       "description": "Clears the local Terminus command cache.",
       "usage": [
@@ -12573,34 +14456,36 @@
     },
     {
       "name": "site:create",
-      "description": "Creates a new site.",
+      "description": "Creates a new site",
       "usage": [
-        "site:create [--org [ORG]] [--region [REGION]] [--] <site_name> <label> <upstream_id>",
-        "site:create <site> <label> <upstream> Creates a new site named <site>, human-readably labeled <label>, using code from <upstream>.",
-        "site:create <site> <label> <upstream> --org=<org> Creates a new site named <site>, human-readably labeled <label>, using code from <upstream>, associated with <organization>."
+        "site:create [--org [ORG]] [--region [REGION]] [--vcs-provider [VCS-PROVIDER]] [--vcs-org [VCS-ORG]] [--visibility [VISIBILITY]] [--create-repo [CREATE-REPO]] [--repository-name [REPOSITORY-NAME]] [--skip-clone-repo] [--vcs-token] [--no-create-repo] [--] <site_name> <label> <upstream_id>",
+        "site:create <site> <label> <upstream> Creates a new Pantheon-hosted site named <site>, labeled <label>, using code from <upstream>.",
+        "site:create <site> <label> <upstream> --org=<org> Creates site associated with <organization>, with a Pantheon-hosted git repository.",
+        "site:create <site> <label> <upstream> --org=<org> --vcs-provider=github --vcs-org=<github-org> Creates a new site associated with Pantheon <organization>, using <upstream> code, with the repository hosted on Github in the <github-org> organization.",
+        "site-create"
       ],
-      "help": "Creates a new site.",
+      "help": "Creates a new site",
       "definition": {
         "arguments": {
           "site_name": {
             "name": "site_name",
             "is_required": true,
             "is_array": false,
-            "description": "Site name",
+            "description": "Site name (machine name)",
             "default": null
           },
           "label": {
             "name": "label",
             "is_required": true,
             "is_array": false,
-            "description": "Site label",
+            "description": "Site label (human-readable name)",
             "default": null
           },
           "upstream_id": {
             "name": "upstream_id",
             "is_required": true,
             "is_array": false,
-            "description": "Upstream name or UUID",
+            "description": "Upstream name or UUID (e.g., wordpress, drupal-composer-managed)",
             "default": null
           }
         },
@@ -12611,7 +14496,7 @@
             "accept_value": true,
             "is_value_required": false,
             "is_multiple": false,
-            "description": "Organization name, label, or ID (required starting Q2 2026)",
+            "description": "Organization name, label, or ID. Required if --vcs-provider=github is used.",
             "default": null
           },
           "region": {
@@ -12622,6 +14507,78 @@
             "is_multiple": false,
             "description": "Specify the service region where the site should be created. See documentation for valid regions.",
             "default": null
+          },
+          "vcs-provider": {
+            "name": "--vcs-provider",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "VCS provider for the site repository (e.g., github, pantheon). Default is pantheon.",
+            "default": "pantheon"
+          },
+          "vcs-org": {
+            "name": "--vcs-org",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Name of the Github organization containing the repository. Required if --vcs-provider=github is used.",
+            "default": null
+          },
+          "visibility": {
+            "name": "--visibility",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Visibility of the external repository (private or public). Only applies if --vcs-provider=github. Default is private.",
+            "default": "private"
+          },
+          "create-repo": {
+            "name": "--create-repo",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Whether to create a repository in the VCS provider. Default is true.",
+            "default": true
+          },
+          "repository-name": {
+            "name": "--repository-name",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Name of the repository to create in the VCS provider. Only applies if --vcs-provider is not Pantheon.",
+            "default": null
+          },
+          "skip-clone-repo": {
+            "name": "--skip-clone-repo",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not clone the repository after creation. Default is false.",
+            "default": false
+          },
+          "vcs-token": {
+            "name": "--vcs-token",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Personal access token for the VCS provider. Only applies if --vcs-provider=gitlab.",
+            "default": false
+          },
+          "no-create-repo": {
+            "name": "--no-create-repo",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate --create-repo option.",
+            "default": false
           },
           "help": {
             "name": "--help",
@@ -13638,6 +15595,216 @@
             "is_required": true,
             "is_array": false,
             "description": "Organization name or UUID",
+            "default": null
+          }
+        },
+        "options": {
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "site:pause-builds",
+      "description": "Pauses build for a given site",
+      "usage": [
+        "site:pause-builds <site>",
+        "site:pause-builds <site> Pauses build for <site>.",
+        "pause-builds"
+      ],
+      "help": "Pauses build for a given site",
+      "definition": {
+        "arguments": {
+          "site": {
+            "name": "site",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site name or ID",
+            "default": null
+          }
+        },
+        "options": {
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "site:resume-builds",
+      "description": "Resumes build for a given site",
+      "usage": [
+        "site:resume-builds <site>",
+        "site:resume-builds <site> Resumes build for <site>.",
+        "resume-builds"
+      ],
+      "help": "Resumes build for a given site",
+      "definition": {
+        "arguments": {
+          "site": {
+            "name": "site",
+            "is_required": true,
+            "is_array": false,
+            "description": "Site name or ID",
             "default": null
           }
         },
@@ -15996,6 +18163,379 @@
       "hidden": false
     },
     {
+      "name": "vcs:connection:add",
+      "description": "Registers a GitHub App installation with the VCS API.",
+      "usage": [
+        "vcs:connection:add [--vcs-provider [VCS-PROVIDER]] [--] <organization>",
+        "vcs:connection:add <organization> Registers a GitHub App installation with the VCS API.",
+        "vcs-connection-add"
+      ],
+      "help": "Registers a GitHub App installation with the VCS API.",
+      "definition": {
+        "arguments": {
+          "organization": {
+            "name": "organization",
+            "is_required": true,
+            "is_array": false,
+            "description": "Organization name, label, or ID.",
+            "default": null
+          }
+        },
+        "options": {
+          "vcs-provider": {
+            "name": "--vcs-provider",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "VCS provider for the site repository (e.g., github, pantheon). Default (and only) is github.",
+            "default": "github"
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "vcs:connection:link",
+      "description": "Links an existing VCS organization to a new Pantheon organization.",
+      "usage": [
+        "vcs:connection:link [--vcs-org [VCS-ORG]] [--source-org [SOURCE-ORG]] [--] <destination_org>",
+        "vcs:connection:link <destination-org> --vcs-org=<vcs-org> --source-org=<source-org>",
+        "vcs:connection:link <destination-org> --vcs-org=<vcs-org>",
+        "vcs:connection:link <destination-org> --source-org=<source-org>",
+        "vcs:connection:link <destination-org>",
+        "vcs-connection-link"
+      ],
+      "help": "This command allows you to share a VCS organization connection across multiple\nPantheon organizations, enabling a many-to-many relationship between GitHub\norganizations and Pantheon organizations.",
+      "definition": {
+        "arguments": {
+          "destination_org": {
+            "name": "destination_org",
+            "is_required": true,
+            "is_array": false,
+            "description": "Destination Pantheon organization name, label, or ID (where the VCS connection will be linked).",
+            "default": null
+          }
+        },
+        "options": {
+          "vcs-org": {
+            "name": "--vcs-org",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "VCS organization name (e.g., GitHub organization name). If not provided, you'll be prompted to select from available VCS organizations.",
+            "default": null
+          },
+          "source-org": {
+            "name": "--source-org",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Source Pantheon organization name, label, or ID that already has the VCS connection. If not provided and multiple organizations have the same VCS connection, you'll be prompted to select one.",
+            "default": null
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
+      "name": "vcs:connection:list",
+      "description": "Lists connected VCS installations from the VCS API.",
+      "usage": [
+        "vcs:connection:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <organization>",
+        "vcs:connection:list <organization> Lists connected VCS installations from the VCS API.",
+        "vcs:connection:list Lists connected VCS installations from the VCS API.",
+        "vcs-connection-list"
+      ],
+      "help": "Lists connected VCS installations from the VCS API.",
+      "definition": {
+        "arguments": {
+          "organization": {
+            "name": "organization",
+            "is_required": true,
+            "is_array": false,
+            "description": "Organization name, label, or ID.",
+            "default": null
+          }
+        },
+        "options": {
+          "format": {
+            "name": "--format",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
+            "default": "table"
+          },
+          "fields": {
+            "name": "--fields",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Available fields: Installation ID (id), VCS Provider (vcs_provider), Type (type), Login name (login_name)",
+            "default": ""
+          },
+          "field": {
+            "name": "--field",
+            "shortcut": "",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": false,
+            "description": "Select just one field, and force format to *string*.",
+            "default": ""
+          },
+          "help": {
+            "name": "--help",
+            "shortcut": "-h",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display help for the given command. When no command is given display help for the <info>list</info> command",
+            "default": false
+          },
+          "quiet": {
+            "name": "--quiet",
+            "shortcut": "-q",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not output any message",
+            "default": false
+          },
+          "verbose": {
+            "name": "--verbose",
+            "shortcut": "-v|-vv|-vvv",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+            "default": false
+          },
+          "version": {
+            "name": "--version",
+            "shortcut": "-V",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Display this application version",
+            "default": false
+          },
+          "ansi": {
+            "name": "--ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Force (or disable --no-ansi) ANSI output",
+            "default": null
+          },
+          "no-ansi": {
+            "name": "--no-ansi",
+            "shortcut": "",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Negate the \"--ansi\" option",
+            "default": null
+          },
+          "no-interaction": {
+            "name": "--no-interaction",
+            "shortcut": "-n",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Do not ask any interactive question",
+            "default": false
+          },
+          "define": {
+            "name": "--define",
+            "shortcut": "-D",
+            "accept_value": true,
+            "is_value_required": true,
+            "is_multiple": true,
+            "description": "Define a configuration item value.",
+            "default": []
+          },
+          "yes": {
+            "name": "--yes",
+            "shortcut": "-y",
+            "accept_value": false,
+            "is_value_required": false,
+            "is_multiple": false,
+            "description": "Answer all confirmations with \"yes\"",
+            "default": false
+          }
+        }
+      },
+      "hidden": false
+    },
+    {
       "name": "workflow:info:logs",
       "description": "Displays the details of Quicksilver operation logs.",
       "usage": [
@@ -16799,6 +19339,7 @@
         "domains",
         "drush",
         "envs",
+        "github-vcs",
         "help",
         "lc",
         "lcp",
@@ -16812,18 +19353,35 @@
         "metrics",
         "mts",
         "multidevs",
+        "nbl",
+        "nbr",
+        "nbw",
+        "nlbl",
+        "nrb",
         "org",
         "orgs",
+        "pause-builds",
         "payment-methods",
         "plans",
         "plugins",
         "pms",
+        "resume-builds",
+        "secret-delete",
+        "secret-org-delete",
+        "secret-org-list",
+        "secret-org-set",
+        "secret-set",
+        "secrets",
         "self-update",
+        "site-create",
         "sites",
         "ssh-keys",
         "tags",
         "update",
         "upstreams",
+        "vcs-connection-add",
+        "vcs-connection-link",
+        "vcs-connection-list",
         "whoami",
         "workflows",
         "wp"
@@ -16922,6 +19480,12 @@
       ]
     },
     {
+      "id": "github",
+      "commands": [
+        "github:vcs"
+      ]
+    },
+    {
       "id": "https",
       "commands": [
         "https:add",
@@ -16993,6 +19557,21 @@
         "new-relic:disable",
         "new-relic:enable",
         "new-relic:info"
+      ]
+    },
+    {
+      "id": "node",
+      "commands": [
+        "node:build:rebuild",
+        "node:build:rollback",
+        "node:build:wait",
+        "node:builds:list",
+        "node:builds:rebuild",
+        "node:builds:rollback",
+        "node:builds:wait",
+        "node:logs:build:get",
+        "node:logs:build:list",
+        "node:logs:runtime:get"
       ]
     },
     {
@@ -17095,6 +19674,22 @@
       ]
     },
     {
+      "id": "secret",
+      "commands": [
+        "secret:delete",
+        "secret:list",
+        "secret:local-generate",
+        "secret:org:delete",
+        "secret:org:list",
+        "secret:org:set",
+        "secret:set",
+        "secret:site:delete",
+        "secret:site:list",
+        "secret:site:local-generate",
+        "secret:site:set"
+      ]
+    },
+    {
       "id": "self",
       "commands": [
         "self:cc",
@@ -17139,6 +19734,8 @@
         "site:org:remove",
         "site:org:rm",
         "site:orgs",
+        "site:pause-builds",
+        "site:resume-builds",
         "site:team:add",
         "site:team:list",
         "site:team:remove",
@@ -17185,6 +19782,14 @@
         "upstream:updates:apply",
         "upstream:updates:list",
         "upstream:updates:status"
+      ]
+    },
+    {
+      "id": "vcs",
+      "commands": [
+        "vcs:connection:add",
+        "vcs:connection:link",
+        "vcs:connection:list"
       ]
     },
     {

@@ -5,6 +5,7 @@ description: The GCDN Beta introduces built-in bot protection. Learn what's incl
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
+reviewed: "2026-06-24"
 permalink: docs/guides/global-cdn/global-cdn-beta
 contenttype: [guide]
 innav: [false]
@@ -68,7 +69,6 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 | --- | --- |
 | Advanced Global CDN (AGCDN) | Separate migration initiative |
 | Custom Certificates | Special certificate management not yet supported |
-| Multi-Zone Failover | Feature not available in Beta |
 | Next.js / Front-End Sites (FES) | Not yet supported |
 | Platform Vanity Domains | Not yet supported |
 
@@ -77,6 +77,16 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 <Alert title="Important" type="danger">
 
 For the best experience, be prepared to update your DNS records as soon as possible after starting the migration. Delaying DNS migration can result in inconsistent behavior, as your site will remain on the old CDN infrastructure until DNS is pointed to the new GCDN.
+
+</Alert>
+
+<Alert title="Custom Domains Must Not Use CNAMEs to Platform Hostnames" type="danger">
+
+Custom domains that use a CNAME record in their DNS settings that point to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported in the GCDN Beta and will not be supported going forward. Sites configured this way will experience interruptions when migrated.
+
+Before activating the Beta, check your custom domain's DNS configuration. It must resolve via A/AAAA records as shown on the site's **Domains** page, not via a CNAME pointed at a `*.pantheonsite.io` hostname. If the **Domains** page shows `Remove this detected record` next to a CNAME, remove it from your DNS provider. See [Custom Domains](/guides/domains/custom-domains) for details.
+
+If your custom domain currently points at a platform hostname via CNAME, contact Pantheon Support before requesting migration.
 
 </Alert>
 
@@ -122,6 +132,23 @@ After activating the GCDN Beta through the dashboard, you will need to update yo
 DNS changes may take time to propagate depending on your current TTL settings. During propagation, traffic may alternate between the old and new CDN. This is normal and resolves once propagation completes.
 
 </Alert>
+
+### Re-running Domain Verification
+
+If you've added the TXT records and a domain is still pending verification, you can manually trigger a recheck from the dashboard. Open the domain on the **Domains** page; once verification has been attempted, a troubleshooting message appears with a **Force Recheck** action.
+
+The platform retries DNS validation automatically on a backoff schedule:
+
+- The first 10 attempts run roughly every 60 seconds (about 20 minutes total).
+- Attempts 10 through 39 stretch from about 4 minutes apart up to 4 hours apart.
+- Attempt 40 and beyond stay capped at 4 hours between checks.
+
+**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now deep into the slower part of the backoff — instead of waiting hours for the next scheduled attempt, you can kick off a new check right away.
+
+Before you click:
+
+- Confirm your TXT records have propagated using a DNS lookup tool (for example, `dig TXT _acme-challenge.example.com`).
+- ACME TXT challenges are valid for 7–14 days depending on the certificate authority. If yours have expired, regenerate them from the dashboard before forcing a recheck.
 
 </Tab>
 
@@ -208,14 +235,21 @@ terminus gcdn:verify my-site.live www.example.com
 
 ### Traffic Metrics Unavailable
 
-The traffic metrics page in the Pantheon dashboard will not reflect GCDN Beta traffic during the initial Beta period. Traffic data for migrated sites will be restored in a future update.
+The traffic metrics page in the Pantheon dashboard will not contain any traffic data during the initial Beta period, including historical traffic data. In a future update, sites using GCDN Beta will regain access to traffic data, along with up to 3 months of traffic data from before Beta was activated. 
 
+### Terminus commands experience syntax errors
+
+GCDN Beta sites must use Terminus [version 4.1.9](https://github.com/pantheon-systems/terminus/releases/tag/4.1.9) or higher when interacting with sites that have Global CDN Beta enabled. Using older versions of Terminus may result in errors such as `[debug] json_decode exception: Syntax error` or `[error]  Pantheon headers missing, which is not quite right.`. 
+
+### CNAMEs to Platform Hostnames Not Supported
+
+Custom domains that use a CNAME in their DNS configuration pointing to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported. Custom domains must resolve via A/AAAA records, or — after migration — via the CNAME values for the GCDN edge provided by the dashboard. Sites with a CNAME to a platform hostname will experience interruptions when migrated. See [Custom Domains](/guides/domains/custom-domains) and contact Pantheon Support before migration if affected.
 
 ## FAQ
 
 ### How do I know if my site is eligible?
 
-Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, Multi-Zone Failover, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+Eligible sites will see a GCDN Beta banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
 
 ### I have a Custom Certificate. Can I migrate?
 
@@ -270,6 +304,10 @@ Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdoma
 ### How are SSL/TLS certificates issued during the Beta?
 
 SSL/TLS certificates are issued exclusively through DNS TXT record validation during the Beta. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
+
+### My domain hasn't verified yet. What can I do?
+
+The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](#re-running-domain-verification) in Setup for details and pre-flight tips.
 
 ### How do I report issues or give feedback?
 

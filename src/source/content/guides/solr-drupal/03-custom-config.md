@@ -25,6 +25,14 @@ There are instances where you may want to edit the configuration file like `sche
 
 1. Copy the `config-set` folder to a new directory inside `/code` (e.g. `/code/solr/config`). 
   
+  **Solr 9:**
+
+  ```bash{promptUser: user}
+  cp -r web/modules/contrib/search_api_solr/jump-start/solr9/config-set ./solr/config
+  ```
+
+  **Solr 8:**
+
   ```bash{promptUser: user}
   cp -r web/modules/contrib/search_api_solr/jump-start/solr8/config-set ./solr/config
   ```
@@ -37,7 +45,7 @@ There are instances where you may want to edit the configuration file like `sche
 
 1. Edit the necessary file (e.g.`synonyms_en.txt`) or any configuration files you want to customize.
   
-  (Optional) Modify the [Solr Schema version name](https://git.drupalcode.org/project/search_api_solr/-/blob/4.x/jump-start/solr8/config-set/schema.xml?ref_type=heads#L52), so there is a differentiator to your custom configuration from the default (e.g., `drupal-4.3.5-solr-8.x-1-YOUR-CUSTOM-IDENTIFIER`).
+  (Optional) Modify the [Solr Schema version name](https://git.drupalcode.org/project/search_api_solr/-/blob/4.x/jump-start/solr8/config-set/schema.xml?ref_type=heads#L52), so there is a differentiator to your custom configuration from the default (e.g., `drupal-4.3.10-solr-9.x-1-YOUR-CUSTOM-IDENTIFIER`).
 
 1. Commit the changes, it is recommended to test this in a multidev environment.
 

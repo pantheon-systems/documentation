@@ -2,7 +2,7 @@
 title: Relaunch Existing Pantheon Site
 description: Take a new site live by moving custom domains from one Site Dashboard to another, with minimal HTTPS interruptions.
 tags: [dns, https, launch, migrate]
-reviewed: "2024-09-03"
+reviewed: "2026-04-27"
 contenttype: [doc]
 innav: [true]
 categories: [launch]
@@ -49,40 +49,40 @@ If your site uses [Advanced Global CDN](/guides/agcdn), please [contact Support]
 
 1. Examine existing records pointing to Pantheon.
 
-  <Partial file="standard-dns-config.md" />
+   <Partial file="standard-dns-config.md" />
 
-  <Alert title="Note" type="info">
+   <Alert title="Note" type="info">
 
-  For subdomains that are using Custom Certificates, use the bare domain's recommended A/AAAA records instead of using CNAME records.
+   For subdomains that are using Custom Certificates, use the bare domain's recommended A/AAAA records instead of using CNAME records.
 
-  </Alert>
+   </Alert>
 
 1. Set the TTL of existing DNS records as low as possible to minimize the impact of upcoming DNS changes
 
-  <Accordion title="Learn More" id="ttl" icon="info-sign">
+   <Accordion title="Learn More" id="ttl" icon="info-sign">
 
-  #### Time to Live (TTL)
+   #### Time to Live (TTL)
 
-  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours), 43200 (12 hours), and 3600 (1 hour).
+   The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours), 43200 (12 hours), and 3600 (1 hour).
 
-  When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
+   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
-  </Accordion>
+   </Accordion>
 
 1. In your terminal, use [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) to obtain the new site's A and AAAA records:
 
-  ```bash{promptUser: user}
-  dig +short live-site-name.pantheonsite.io
-  dig +short AAAA live-site-name.pantheonsite.io
-  ```
+   ```bash{promptUser: user}
+   dig +short live-site-name.pantheonsite.io
+   dig +short AAAA live-site-name.pantheonsite.io
+   ```
 
-  You can also use the Google [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
+   You can also use the Google [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
 
-  <Alert title="Note" type="info">
+   <Alert title="Note" type="info">
 
-  The `dig` command will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
+   The `dig` command will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
 
-  </Alert>
+   </Alert>
 
 ### Roles & Permissions
 
@@ -110,15 +110,15 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
-  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details** > **Remove Domain**
+   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details** > **Remove Domain**
 
 1. In the new Site Dashboard, connect the custom domain affected by the relaunch:
 
-  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
+   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
 
 1. Complete domain validation by adding a new DNS TXT record or by uploading a file to a specific URL, then click **Verify Ownership**:
 
-  ![Domain validation prompt](../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
+   ![Domain validation prompt](../images/dashboard/new-dashboard/2024/_verifydomain-with-remove-button.png)
 
 1. In the Live environment tab of the Site Dashboard for the old site, click **Clear Caches**.
 
@@ -126,7 +126,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
-  <Partial file="standard-dns-config.md" />
+   <Partial file="standard-dns-config.md" />
 
 1. Wait for TTL to expire.
 
@@ -150,33 +150,34 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan#purchase-a-new-plan).
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
-
-  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details** > **Remove Domain**
+   
+   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details** > **Remove Domain**
 
 1. In the new Site Dashboard, connect the custom domain affected by the relaunch and **skip** ownership verification.
-
-  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
-  <Alert title="Warning" type="danger">
-
-  Do *not* update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 7 below.
-
-  Once you make this change, traffic will be routed to the new site. However, if you do not complete the rest of the steps as outlined here, you may run into cases where the new site has an invalid HTTPS certificate.
-
-  </Alert>
+ 
+   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
+  
+   <Alert title="Warning" type="danger">
+  
+   Do *not* update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 7 below.
+  
+   Once you make this change, traffic will be routed to the new site. However, if you do not complete the rest of the steps as outlined here, you may run into cases where the new site has an invalid HTTPS certificate.
+  
+   </Alert>
 
 1. In the Live environment tab of the Site Dashboard for the old site, click **Clear Caches**.
 
 1. Repeat on the Live environment of the new site.
 
 1. Wait for HTTPS to provision for the newly connected domains:
-
-  **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details**
+ 
+   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Details**
 
    This process typically takes about an hour.
 
 1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
- <Partial file="standard-dns-config.md" />
+   <Partial file="standard-dns-config.md" />
 
 1. Wait for TTL to expire.
 

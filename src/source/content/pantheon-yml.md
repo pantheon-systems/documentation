@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2026-02-04"
+reviewed: "2026-04-17"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -137,10 +137,10 @@ Refer to [Integrated Composer](/guides/integrated-composer) for more information
 
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
 
-For example, to override the upstream default value at the site level to PHP 8:
+For example, to override the upstream default value at the site level to PHP 8.5:
 
 ```yaml:title=pantheon.yml
-php_version: 8.0
+php_version: 8.5
 ```
 
 #### Considerations
@@ -159,7 +159,7 @@ php_jit: low
 
 #### Considerations
 
-- Requires **PHP 8.3 or higher** and [PHP Runtime Generation 2](/php-runtime-generation-2).
+- Requires **PHP 8.3 or higher**.
 - Valid values are `off` (default), `low`, and `high`. Any other value will cause a validation error.
 - The JIT buffer size is allocated automatically based on your site's plan tier. Refer to the [PHP JIT guide](/guides/php/php-jit) for the full memory allocation table and additional details.
 
@@ -266,8 +266,8 @@ search:
 
 #### Considerations
 
-- The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
+- The valid values for the versions are `3`, `8`, and `9`.
+- [Drupal 7](/guides/pantheon-search/solr-drupal/solr-drupal-7) supports Solr 3/9. [Drupal 10+](/guides/pantheon-search/solr-drupal/solr-drupal) supports Solr 8/9.
 
 ### Drush Version
 

@@ -11,8 +11,6 @@ permalink: docs/nextjs/environment-variables
 
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 Many Next.js sites rely on environment variables to provide API keys, and other configuration values critical to the operation of the site.
 
 For instance, a Next.js site that connects reads data out of a content management system might rely on a secret on an environment variable to set the URL where the CMS lives.
@@ -28,11 +26,7 @@ When the site is deployed to Pantheon, these environment variables need to be se
 
 Pantheon provides a way to set environment variables using [Secrets Manager](/guides/secrets) that can be read by applications running on Pantheon.
 
-First, install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) if you don't already have it:
-
-```bash{promptUser: user}
-terminus self:plugin:install terminus-secrets-manager-plugin
-```
+Secrets Manager commands are built into [Terminus](/terminus) as of [4.2.0](/release-notes/2026/04/terminus-4-2-0). No additional plugins are required.
 
 ```bash{promptUser: user}
 terminus secret:site:set <site_name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web

@@ -18,7 +18,7 @@ integration: [--]
 
 ## Considerations 
 Before you configure a primay domain consider the following: 
-* WordPress Multisites should not use this configuration as it will conflict with subsite routing 
+* WordPress Multisites using subdomains should not use this configuration. Setting a primary domain redirects all traffic to that domain, which will cause all subsites in the network to redirect to the primary domain. See [Multisite Considerations](/guides/multisite/considerations#do-not-set-a-primary-domain-on-subdomain-based-networks) for details.
 * Sites already managing redirects for secondary domains via PHP should not use this configuration 
   * For example, if you are redirecting `one-example.com` to `example.com/one` via [PHP redirects](/guides/redirect/advanced) 
 

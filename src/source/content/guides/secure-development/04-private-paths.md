@@ -13,7 +13,7 @@ integration: [--]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/secure-development/private-paths
-reviewed: "2024-10-09"
+reviewed: "2026-05-13"
 ---
 
 This section provides information on how to use private paths to keep your files and code secure.
@@ -84,7 +84,7 @@ Alternatively, you can store unencrypted keys in a JSON or ini-style text file w
 
 These directories are symbolically linked to Valhalla and can also be accessed from the `files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
 
-```php:title=settings.php%20or%20wp-config.php
+```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
   $stripe_data = json_decode($json_text, TRUE);

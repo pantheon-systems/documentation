@@ -15,17 +15,14 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/troubleshooting
 editpath: search/04-troubleshooting.md
-reviewed: "2026-02-11"
+reviewed: "2026-06-16"
 ---
-
-<Partial file="elasticsarch-pre-ga.md" />
 
 ## Troubleshooting
 
 ### ElasticPress cannot connect to the host
 
 - Verify that Elasticsearch has been activated in the Pantheon Dashboard or via Terminus.
-- If you are in the Beta phase, confirm that the EP constants are properly defined in `wp-config.php`.
 - Check the ElasticPress Status Report for connection errors and details.
 - Use the ElasticPress WP-CLI command `wp elasticpress status` to check connectivity from the command line (`terminus wp <site>.<env> -- elasticpress status`).
 
@@ -40,6 +37,15 @@ reviewed: "2026-02-11"
 - Check that `ep_integrate` is not set to `false` on your critical queries.
 - Use the ElasticPress Status Report (under **ElasticPress > Status Report**) to verify that queries are being routed to Elasticsearch.
 
+### Instant Results returns "Search template not found"
+
+The Instant Results feature requires a stored search template on ElasticPress.io. This template is separate from your index mappings and synced content.
+
+- **Verify the template exists:** Run `terminus wp <site>.<env> -- elasticpress get-search-template`. If it returns `null`, the template is missing.
+- **Push the template:** Run `terminus wp <site>.<env> -- elasticpress put-search-template`, then verify again with `get-search-template`.
+- **If `put-search-template` reports success but `get-search-template` still returns `null`:** The **Search** feature ("Post Search & Filter") is likely not active. Instant Results depends on it to generate the template. Enable it first: `terminus wp <site>.<env> -- elasticpress activate-feature search`, then retry `put-search-template`.
+- **The template is automatically pushed** at the end of `sync` and `sync --setup`, but only if both the **Instant Results** and **Search** features are active. If the Search feature is inactive, the template body will be empty and the push will silently fail.
+
 ### Plugin activation errors
 
 - Ensure you are running a supported version of WordPress and PHP.
@@ -49,11 +55,9 @@ reviewed: "2026-02-11"
 
 ### Do I have to pay extra for Elasticsearch?
 
-Access to Elasticsearch is included for sites on Performance plans and above. 
+Access to Elasticsearch is included for sites on Performance plans and above.
 
-During the Beta phase, the Elasticsearch add-on is able to be activated via Site Settings in the Pantheon Dashboard. There is no need to submit a form to participate in the Beta.
-
-<!-- This is not true yet>Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.<!-->
+Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.
 
 <Partial file="pantheon-search-table.md" />
 
@@ -67,7 +71,7 @@ Yes. Solr can be enabled at the same time as Elasticsearch to support migration.
 
 ### Do I get a dedicated Elasticsearch instance?
 
-Pantheon uses shared Elasticsearch clusters. For high-value enterprise sites requiring total isolation, dedicated clusters may be provisioned upon request and approval.
+Pantheon uses shared Elasticsearch clusters.
 
 ### Do I get all the features of ElasticPress?
 
