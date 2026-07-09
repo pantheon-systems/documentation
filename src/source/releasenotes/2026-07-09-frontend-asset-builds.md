@@ -1,7 +1,7 @@
 ---
 title: Frontend asset builds are now supported via pantheon.yml
-published_date: "2026-07-08"
-published_at: "2026-07-08T17:00:00Z"
+published_date: "2026-07-09"
+published_at: "2026-07-09T14:57:15Z"
 categories: [new-feature, drupal, wordpress]
 description: "Sites can now compile frontend assets (themes, design systems, and other Node.js-based tooling) automatically as part of the build process."
 ---
