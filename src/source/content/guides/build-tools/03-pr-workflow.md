@@ -17,6 +17,8 @@ integration: [--]
 image: buildToolsGuide-thumb.png
 ---
 
+<Partial file="build-tools-cta.md" />
+
 ## Pull Request/Merge Request Introduction
 
 This section demonstrates the Build Tools project workflow by making a code change on a Git feature branch and opening a pull request (GitHub) or merge request (GitLab) to accept that change into the `master` branch.
