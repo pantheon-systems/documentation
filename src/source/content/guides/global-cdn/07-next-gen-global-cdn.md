@@ -5,7 +5,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-07-07"
+reviewed: "2026-07-09"
 permalink: docs/guides/global-cdn/next-gen-global-cdn
 contenttype: [guide]
 innav: [false]
@@ -232,6 +232,83 @@ terminus gcdn:verify my-site.live www.example.com
 
 </TabList>
 
+## Using Cloudflare in Front of Pantheon (Orange-to-Orange)
+
+If your domain is already proxied through your own Cloudflare zone (orange-clouded), the next-generation GCDN supports Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration. This lets you keep your existing Cloudflare zone — including your WAF rules, Workers, and other settings — in front of Pantheon's GCDN.
+
+<Alert title="Terminus Plugin Required" type="danger">
+
+O2O setup is only available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin). The dashboard migration flow does not support O2O. Install the plugin and upgrade your site with `terminus gcdn:upgrade` (see the **Terminus CLI** tab in [Setup](#setup)) before starting the steps below.
+
+</Alert>
+
+Because your DNS is hosted in Cloudflare, the standard TXT-record verification flow does not apply. Instead, you will add a specific set of records in your Cloudflare zone. The order matters: do not point traffic at Pantheon until hostname ownership is verified and your certificate is active.
+
+### Before You Begin
+
+- Your site must already be upgraded to the next-generation GCDN (`terminus gcdn:upgrade <site>`).
+- You need access to your Cloudflare account with permission to edit DNS records, SSL/TLS settings, and Zone Holds.
+
+### 1. Get your O2O record set
+
+```bash{promptUser: user}
+terminus gcdn:o2o <site>.live
+```
+
+This prints the records to add for each domain: the hostname ownership TXT record, the DCV delegation CNAME, and the final traffic CNAME. Pass a domain as a second argument to limit output to a single hostname.
+
+### 2. Release your Zone Hold (if applicable)
+
+If your Cloudflare zone has a [Zone Hold](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) enabled, release it temporarily so Cloudflare can process the new custom hostname. You will re-enable it at the end.
+
+### 3. Set your SSL/TLS encryption mode to Full or Full (strict)
+
+In your Cloudflare zone, set **SSL/TLS** > **Overview** to **Full** or **Full (strict)**. Other modes (such as Flexible) cause infinite redirect loops between your Cloudflare zone and the GCDN.
+
+### 4. Add the hostname ownership TXT record
+
+Add the TXT record from the `gcdn:o2o` output to your Cloudflare DNS:
+
+```none
+_cf-custom-hostname.<hostname>  TXT  <ownership_value>
+```
+
+This verifies that you control the hostname.
+
+### 5. Delete any existing `_acme-challenge` TXT records
+
+If your Cloudflare DNS has existing `_acme-challenge` TXT records for the hostname, delete them. They conflict with the DCV delegation record added in the next step.
+
+### 6. Add the DCV delegation CNAME
+
+Add the CNAME from the `gcdn:o2o` output, set to **DNS only** (grey-clouded):
+
+```none
+_acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
+```
+
+This delegates certificate validation to the GCDN for both initial issuance and automatic renewal. **Leave this record in place permanently and keep it grey-clouded** — removing it or proxying it will break certificate renewal.
+
+### 7. Point traffic at the GCDN
+
+Only after hostname ownership is verified and the certificate is active, update your hostname's CNAME to the GCDN edge:
+
+```none
+<hostname>  CNAME  fe.<zone>.edge.pantheon.io
+```
+
+Traffic routes to Pantheon as soon as this record is in place. The record can be **Proxied** (orange-clouded, O2O) to keep your Cloudflare zone in front, or **DNS only** if you want traffic to reach the GCDN directly.
+
+### 8. Re-enable your Zone Hold (if applicable)
+
+Once traffic is flowing, re-enable the Zone Hold released in step 2 to re-secure your zone.
+
+<Alert title="Note" type="info">
+
+O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and may result in site downtime or inaccessibility. We welcome feedback on O2O configurations in the Pantheon Community Slack.
+
+</Alert>
+
 ## Known Limitations
 
 ### Terminus commands experience syntax errors
@@ -284,15 +361,11 @@ Content Converter (Markdown for Agents) is a feature enabled on all GCDN Beta zo
 
 Your bot or automated service may be receiving a managed challenge from bot protection. Check whether the service's user agent is being challenged by reviewing its error logs (look for 403 responses or HTML challenge pages). Contact Pantheon support to request a bot exclusion for your user agent.
 
-### I have another CDN or WAF in front of my site. Is that supported?
+### I have Cloudflare in front of my site. Is that supported?
 
-The new Pantheon GCDN supports Orange-to-Orange (O2O) configurations, allowing you to keep your existing CDN or WAF in front of Pantheon. Your site's DNS entries must use CNAME records pointing to the Pantheon GCDN zone entries (e.g., `fe1.cfp-us-central1-ch-1.edge.pantheon.io`).
-
-O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and may result in site downtime or inaccessibility.
+Yes. The new Pantheon GCDN supports Orange-to-Orange (O2O) configurations, allowing you to keep your own Cloudflare zone in front of Pantheon. O2O setup requires the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) and a specific DNS record sequence in your Cloudflare zone — see [Using Cloudflare in Front of Pantheon (Orange-to-Orange)](#using-cloudflare-in-front-of-pantheon-orange-to-orange) for the full steps.
 
 For more information on how O2O works, refer to the [SaaS customer documentation](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/).
-
-We are actively testing this configuration during the Beta and welcome customer feedback in the Pantheon Community Slack.
 
 ### I use a platform vanity domain. Can I migrate?
 
