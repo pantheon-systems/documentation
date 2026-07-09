@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/workspace-plans
 editpath: docs/guides/account-mgmt/plans/09-workspace-plans.md
-reviewed: "2022-09-19"
+reviewed: "2026-07-06"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -61,8 +61,6 @@ As a Pantheon Partner, you receive access to:
 - A listing in our Agency Directory
 - Sales playbooks, training, and [Gold Level Support](/guides/support/#support-features-and-response-times)
 - Preferred Pricing on site hosting plans
-
-**Partner Trial**: If you are creating a workspace for a web agency, you will be assigned a [Partner Trial Account](https://pantheon.io/partners/find-pantheon-partner) workspace that lets you try Gold Account Plan features free for 90 days.
 
 **Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
 
