@@ -70,7 +70,6 @@ The Beta is open to most GCDN customers running Drupal or WordPress sites. The f
 | Advanced Global CDN (AGCDN) | Separate migration initiative |
 | Custom Certificates | Special certificate management not yet supported |
 | Next.js / Front-End Sites (FES) | Not yet supported |
-| Platform Vanity Domains | Not yet supported |
 
 ## Setup
 
@@ -299,7 +298,7 @@ We are actively testing this configuration during the Beta and welcome customer 
 
 ### I use a platform vanity domain. Can I migrate?
 
-Not yet. Sites using platform vanity domains (custom `*.pantheonsite.io` subdomains) are not eligible for the GCDN Beta at this time. Support for vanity domains will be added in a future update.
+Yes. Platform vanity domains are now supported on the new GCDN. This is a CSE-assisted migration rather than the self-serve dashboard flow, so contact your Customer Success Engineer (CSE) to enable vanity domains for your workspace.
 
 ### How are SSL/TLS certificates issued during the Beta?
 
