@@ -242,7 +242,7 @@ O2O setup is only available through the [GCDN Terminus plugin](https://github.co
 
 </Alert>
 
-Because your DNS is hosted in Cloudflare, the standard TXT-record verification flow does not apply. Instead, you will add a specific set of records in your Cloudflare zone. Apart from step 1 (Terminus), every step below is performed in the Cloudflare dashboard, in the zone that currently serves your domain. The order matters: do not point traffic at Pantheon until hostname ownership is verified and your certificate is active.
+Because your DNS is hosted in Cloudflare, the standard TXT-record verification flow does not apply. Instead, you will add a specific set of records in your Cloudflare zone. Apart from step 1 (Terminus), every step below is performed in the Cloudflare dashboard, in the zone that currently serves your domain. The order matters: do not point traffic at Pantheon until your certificate is active.
 
 ### Before You Begin
 
@@ -255,7 +255,7 @@ Because your DNS is hosted in Cloudflare, the standard TXT-record verification f
 terminus gcdn:o2o <site>.live [<domain>]
 ```
 
-This prints the records to add for each domain: the hostname ownership TXT record, the DCV delegation CNAME, and the final traffic CNAME. The `<domain>` argument is optional — omit it to list records for every Cloudflare domain on the environment, or pass one to limit output to a single hostname:
+This prints the records for each domain: the hostname ownership TXT record, the DCV delegation CNAME, and the final traffic CNAME. You will only need the DCV delegation CNAME and the traffic CNAME in the steps below. The `<domain>` argument is optional — omit it to list records for every Cloudflare domain on the environment, or pass one to limit output to a single hostname:
 
 ```bash{promptUser: user}
 terminus gcdn:o2o my-site.live www.example.com
@@ -263,7 +263,7 @@ terminus gcdn:o2o my-site.live www.example.com
 
 ### 2. Release your Zone Hold (Enterprise plans only)
 
-[Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are a Cloudflare Enterprise feature, enabled by default on Enterprise zones. If your Cloudflare zone is on a Free, Pro, or Business plan, it does not have a Zone Hold — skip this step and step 8.
+[Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are a Cloudflare Enterprise feature, enabled by default on Enterprise zones. If your Cloudflare zone is on a Free, Pro, or Business plan, it does not have a Zone Hold — skip this step and step 6.
 
 If your zone has a Zone Hold (especially with **Also prevent subdomains** enabled), release it temporarily so Cloudflare can process the new custom hostname: on the zone homepage, go to **Quick Actions** and switch **Zone Hold** to **Off**. You will re-enable it at the end.
 
@@ -271,23 +271,9 @@ If your zone has a Zone Hold (especially with **Also prevent subdomains** enable
 
 In your Cloudflare zone, set **SSL/TLS** > **Overview** to **Full** or **Full (strict)**. Other modes (such as Flexible) cause infinite redirect loops between your Cloudflare zone and the GCDN.
 
-### 4. Add the hostname ownership TXT record
+### 4. Add the DCV delegation CNAME
 
-In the Cloudflare dashboard, go to **DNS** > **Records** for your zone and add the TXT record from the `gcdn:o2o` output:
-
-```none
-_cf-custom-hostname.<hostname>  TXT  <ownership_value>
-```
-
-This verifies that you control the hostname. Once the hostname is verified, this TXT record can be removed.
-
-### 5. Delete any existing `_acme-challenge` TXT records
-
-On the same **DNS** > **Records** page, delete any existing `_acme-challenge` TXT records for the hostname. They conflict with the DCV delegation record added in the next step.
-
-### 6. Add the DCV delegation CNAME
-
-On the **DNS** > **Records** page, add the CNAME from the `gcdn:o2o` output, set to **DNS only** (grey-clouded):
+In the Cloudflare dashboard, go to **DNS** > **Records** for your zone and add the CNAME from the `gcdn:o2o` output, set to **DNS only** (grey-clouded):
 
 ```none
 _acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
@@ -295,9 +281,17 @@ _acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
 
 This delegates certificate validation to the GCDN for both initial issuance and automatic renewal. **Leave this record in place permanently and keep it grey-clouded** — removing it or proxying it will break certificate renewal.
 
-### 7. Point traffic at the GCDN
+Before moving to the next step, confirm the `_acme-challenge` CNAME has propagated using a DNS propagation checker such as [DNS Checker](https://dnschecker.org), or from the command line:
 
-Only after hostname ownership is verified and the certificate is active, update your hostname's CNAME to the GCDN edge:
+```bash{promptUser: user}
+dig +short CNAME _acme-challenge.<hostname>
+```
+
+The record has propagated when the query returns the `dcv.cloudflare.com` target.
+
+### 5. Point traffic at the GCDN
+
+Only after your certificate is active, update your hostname's CNAME to the GCDN edge:
 
 ```none
 <hostname>  CNAME  fe.<zone>.edge.pantheon.io
@@ -305,7 +299,7 @@ Only after hostname ownership is verified and the certificate is active, update 
 
 Traffic routes to Pantheon as soon as this record is in place. The record can be **Proxied** (orange-clouded, O2O) to keep your Cloudflare zone in front, or **DNS only** if you want traffic to reach the GCDN directly.
 
-### 8. Re-enable your Zone Hold (if applicable)
+### 6. Re-enable your Zone Hold (if applicable)
 
 Once traffic is flowing, re-enable the Zone Hold released in step 2 to re-secure your zone.
 
