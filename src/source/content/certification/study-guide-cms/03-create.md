@@ -2,19 +2,8 @@
 title: WebOps Certification
 subtitle: "Chapter 3: Site Creation"
 description: Learn how to create a site on Pantheon.
-certificationpage: true
-showtoc: true
-type: certificationpage
-layout: certificationpage
-tags: []
 permalink: docs/certification/study-guide/create
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide/platform
 nexturl: /certification/study-guide/cdn
 ---
