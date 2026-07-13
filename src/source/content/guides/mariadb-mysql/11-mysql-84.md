@@ -63,7 +63,7 @@ SELECT * FROM `groups`;
 | 10 - 30 GB | 20-60 minutes |
 | 30 - 100 GB | 1-3 hours |
 
-### During Migration
+### During migration
 
 1. A new MySQL 8.4 database is provisioned for your environment.
 2. Your existing MariaDB data is exported and imported into the new MySQL 8.4 database.
@@ -72,13 +72,13 @@ SELECT * FROM `groups`;
 
 Your site's database is **read-only during the export** and **briefly unavailable during the switchover**.
 
-### What Changes after migration
+### What changes after migration
 
 - `SELECT VERSION()` returns `8.4.x` instead of a MariaDB version string.
 - The default collation for new tables is `utf8mb4_0900_ai_ci`. Migrated tables keep their original collation (`utf8mb4_general_ci`).
 - Stricter SQL mode enforcement is enabled by default.
 
-### What Stays the Same after migration
+### What stays the same after migration
 
 - Connection credentials (host, port, username, password).
 - Database name (`pantheon`).
@@ -86,12 +86,13 @@ Your site's database is **read-only during the export** and **briefly unavailabl
 - Backup and restore workflows (within the same engine).
 
 
-## How to Enable MySQL 8.4
+## How to enable MySQL 8.4
 
 Add the following to your site's `pantheon.yml` file:
 
 ```yaml:title=pantheon.yml
 database:
+  type: mysql
   version: 8.4
 ```
 
