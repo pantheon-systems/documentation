@@ -21,7 +21,7 @@ Pantheon supports MySQL 8.4 LTS as a database engine alongside MariaDB. MySQL 8.
 ### Considerations
 Before enabling MySQL 8.4, consider the following limitations:
 
-- **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a [Multidev](/guides/multidev) first.
+- **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a [Multidev](/guides/multidev) or Dev environment before switching your Live environment.
 - **Backups are engine-specific.** A backup taken on MySQL 8.4 cannot be restored to a MariaDB environment, and vice versa.
 - **MariaDB 10.6 required.** Your site must be on MariaDB 10.6 before migrating to MySQL 8.4. Sites on older MariaDB versions will be upgraded to 10.6 first automatically.
 
