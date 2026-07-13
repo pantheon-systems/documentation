@@ -3,8 +3,9 @@ title: Pantheon Global CDN
 subtitle: Global CDN FAQ
 description: Get answers to your Global CDN questions.
 tags: [cache, cdn]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith,jazzsequence,conorbauer]
 showtoc: true
+reviewed: "2026-07-13"
 permalink: docs/guides/global-cdn/global-cdn-faq
 contenttype: [guide]
 innav: [false]
