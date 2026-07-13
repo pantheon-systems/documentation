@@ -12,32 +12,21 @@ integration: [--]
 tags: [database]
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mysql-84
+reviewed: "2026-07-13"
 ---
 
 Pantheon supports MySQL 8.4 LTS as a database engine alongside MariaDB. MySQL 8.4 offers long-term support from Oracle through 2032.
 
-## How to Enable MySQL 8.4
+## Before You Begin
+### Considerations
+Before enabling MySQL 8.4, consider the following limitations:
 
-Add the following to your site's `pantheon.yml` file:
-
-```yaml:title=pantheon.yml
-database:
-  version: 8.4
-```
-
-Commit and push this change. On the next deployment, your environment's database will be migrated from MariaDB to MySQL 8.4.
-
-<Alert title="Warning" type="danger">
-
-Test on a [Multidev](/guides/multidev) environment before applying to Dev, Test, or Live. Reverting from MySQL 8.4 to MariaDB requires Pantheon support intervention.
-
-</Alert>
-
-## Pre-Migration Checklist
-
-Before enabling MySQL 8.4, verify the following:
+- **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a [Multidev](/guides/multidev) first.
+- **Backups are engine-specific.** A backup taken on MySQL 8.4 cannot be restored to a MariaDB environment, and vice versa.
+- **MariaDB 10.6 required.** Your site must be on MariaDB 10.6 before migrating to MySQL 8.4. Sites on older MariaDB versions will be upgraded to 10.6 first automatically.
 
 ### CMS Version Compatibility
+Before enabling MySQL 8.4, verify the following:
 
 | CMS | Minimum Version | Notes |
 |-----|----------------|-------|
@@ -63,15 +52,7 @@ SELECT * FROM groups;
 SELECT * FROM `groups`;
 ```
 
-## What Happens During Migration
-
-1. A new MySQL 8.4 database is provisioned for your environment.
-2. Your existing MariaDB data is exported and imported into the new MySQL 8.4 database.
-3. The platform verifies the data transferred correctly.
-4. The new MySQL 8.4 database is promoted as your active database.
-
-Your site's database is **read-only during the export** and **briefly unavailable during the switchover**.
-
+## What To Expect
 ### Migration Timing
 
 | Database Size | Estimated Total Time |
@@ -82,22 +63,48 @@ Your site's database is **read-only during the export** and **briefly unavailabl
 | 10 - 30 GB | 20-60 minutes |
 | 30 - 100 GB | 1-3 hours |
 
-## After Migration
+### During Migration
 
-### What Changes
+1. A new MySQL 8.4 database is provisioned for your environment.
+2. Your existing MariaDB data is exported and imported into the new MySQL 8.4 database.
+3. The platform verifies the data transferred correctly.
+4. The new MySQL 8.4 database is promoted as your active database.
+
+Your site's database is **read-only during the export** and **briefly unavailable during the switchover**.
+
+### What Changes after migration
 
 - `SELECT VERSION()` returns `8.4.x` instead of a MariaDB version string.
 - The default collation for new tables is `utf8mb4_0900_ai_ci`. Migrated tables keep their original collation (`utf8mb4_general_ci`).
 - Stricter SQL mode enforcement is enabled by default.
 
-### What Stays the Same
+### What Stays the Same after migration
 
 - Connection credentials (host, port, username, password).
 - Database name (`pantheon`).
 - All your data, tables, and indexes.
 - Backup and restore workflows (within the same engine).
 
-## Common Issues After Migration
+
+## How to Enable MySQL 8.4
+
+Add the following to your site's `pantheon.yml` file:
+
+```yaml:title=pantheon.yml
+database:
+  version: 8.4
+```
+
+Commit and push this change. On the next deployment, your environment's database will be migrated from MariaDB to MySQL 8.4.
+
+<Alert title="Warning" type="danger">
+
+Test on a [Multidev](/guides/multidev) environment before applying to Dev, Test, or Live. Reverting from MySQL 8.4 to MariaDB requires Pantheon support intervention.
+
+</Alert>
+
+
+## Troubleshooting
 
 ### ONLY_FULL_GROUP_BY Errors
 
@@ -144,12 +151,6 @@ For WordPress, add to `wp-config.php`:
 ```php
 define('DB_COLLATE', 'utf8mb4_general_ci');
 ```
-
-## Limitations
-
-- **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a Multidev first.
-- **Backups are engine-specific.** A backup taken on MySQL 8.4 cannot be restored to a MariaDB environment, and vice versa.
-- **MariaDB 10.6 required.** Your site must be on MariaDB 10.6 before migrating to MySQL 8.4. Sites on older MariaDB versions will be upgraded to 10.6 first automatically.
 
 ## More Resources
 
