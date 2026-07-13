@@ -19,7 +19,7 @@ integration: [--]
 ## Global CDN (Fastly-based)
 
 This section provides answers to frequently asked Global CDN questions powered by Fastly.
-For information about our next generation GCDN powered by Cloudflare [see the Next Generation GCDN FAQs below](#)
+For information about our next generation GCDN powered by Cloudflare [see the Next Generation GCDN FAQs below](#next-generation-gcdn-cloudflare-based)
 
 ### Can I use my current CDN with the Pantheon Global CDN?
 

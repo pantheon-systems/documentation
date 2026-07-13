@@ -1,6 +1,7 @@
 ---
 title: Pantheon Global CDN
 subtitle: Next-generation GCDN with Bot Protection
+navtitle: Next-generation GCDN
 description: Pantheon's next-generation GCDN introduces built-in bot protection. Learn what's included, how to migrate, and what to expect.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
@@ -321,4 +322,4 @@ Custom domains that use a CNAME in their DNS configuration pointing to a Pantheo
 
 ## More resources
 
-- [Next Generation GCGN Frequently Asked Questions](#)
+- [Next Generation GCGN Frequently Asked Questions](/guides/global-cdn/global-cdn-faq#next-generation-gcdn-cloudflare-based)
