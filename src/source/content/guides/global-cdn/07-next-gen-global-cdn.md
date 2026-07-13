@@ -325,6 +325,10 @@ Custom domains that use a CNAME in their DNS configuration pointing to a Pantheo
 
 Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
 
+### Are new sites created on the next-generation GCDN by default?
+
+Not yet. New sites are currently provisioned on the legacy GCDN and receive legacy GCDN IP addresses. The next-generation GCDN will become the default for new sites in a future phase, and a release note will be published when that change happens.
+
 ### I have a Custom Certificate. Can I migrate?
 
 Yes. Sites using [customer-provided TLS certificates](/custom-certificates) are supported on GCDN. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
