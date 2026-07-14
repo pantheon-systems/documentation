@@ -342,7 +342,13 @@ Updates are available within 72 hours of upstream availability whenever a new Wo
 
 ## Suppress WordPress Admin Notice
 
-On Pantheon, WordPress core updates are applied through the Pantheon Dashboard, so the Pantheon mu-plugin replaces the default WordPress update nag with its own upstream update notice. You can hide or disable that notice in several ways.
+On Pantheon, WordPress core updates are applied through the Pantheon Dashboard, so the Pantheon mu-plugin replaces the default WordPress update nag with its own upstream update notice. You can dismiss, hide, or disable that notice in several ways.
+
+### Dismiss the notice
+
+Any user who sees the notice can dismiss it with the **X** in the top corner. The dismissal is saved per user, so it persists across page loads and logins. The notice reappears only when a newer WordPress version becomes available.
+
+The options below hide the notice more permanently, or for everyone.
 
 ### Hide the notice with CSS
 
