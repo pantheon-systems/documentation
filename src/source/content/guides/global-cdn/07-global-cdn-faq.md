@@ -145,7 +145,7 @@ This section provides answers to frequently asked questions about our Next Gener
 
 ### How do I know if my site is eligible?
 
-Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN, Custom Certificates, or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
 
 ### Are new sites created on the next-generation GCDN by default?
 
