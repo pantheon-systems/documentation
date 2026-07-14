@@ -1,21 +1,10 @@
 "use server";
 
-import {
-  fetchArticleBySlug,
-  getAllPages,
-  singleSlugForFetch,
-} from "@/lib/page-utils";
-import { serveLocalAsync } from "@/lib/resolve-component";
+import { getAllPages } from "@/lib/page-utils";
 import { generateMetadataFromUri } from "@/lib/site-metadata";
-import { getMdxProcessed } from "@/server/processor/mdx";
 import { ReleaseNoteTemplate } from "@/templates/release-note";
 import { ReleaseNoteListingTemplate } from "@/templates/release-note-listing";
-import {
-  getArticleBySlugOrId,
-  PCCConvenienceFunctions,
-} from "@pantheon-systems/pcc-react-sdk/server";
 import { notFound } from "next/navigation";
-import { basename, join } from "path";
 
 export interface DynamicViewProps {
   params: Promise<{ uri: string[] }>;
@@ -25,11 +14,7 @@ export interface DynamicViewProps {
   }>;
 }
 
-const getPage = async (
-  uri: string[],
-  useLocal: boolean,
-  category?: string[]
-) => {
+const getPage = async (uri: string[], category?: string[]) => {
   if (uri.length === 1 && !Number.isNaN(parseInt(uri[0]))) {
 
     // list of articles
@@ -80,7 +65,7 @@ export default async function Page(props: DynamicViewProps) {
 
     const { category } = await props.searchParams;
 
-    const { Component } = await getPage(uri, false, category);
+    const { Component } = await getPage(uri, category);
 
     if (Component === null) {
       return notFound();
