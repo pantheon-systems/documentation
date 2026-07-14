@@ -1,7 +1,7 @@
 ---
 title: "Refreshed look coming to the Pantheon Dashboard"
 published_date: "2026-07-14"
-published_at: "2026-07-14T16:00:00Z"
+published_at: "2026-07-14T17:14:53Z"
 categories: [user-interface]
 description: "A visual refresh of the Pantheon Dashboard is rolling out over the next few weeks, updating colors, typography, and components to match Pantheon's updated design system. The layout, navigation, and workflows you use are unchanged, and no action is required."
 ---
