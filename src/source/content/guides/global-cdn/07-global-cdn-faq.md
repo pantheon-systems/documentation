@@ -157,7 +157,7 @@ Yes. Sites using [customer-provided TLS certificates](/custom-certificates) are 
 
 ### I use AGCDN. What should I do?
 
-No action is required. AGCDN has its own migration initiative and timeline. Your current AGCDN configuration continues to work. AGCDN customers are excluded from the Beta.
+No action is required. AGCDN has its own migration initiative and timeline. Your current AGCDN configuration continues to work. AGCDN customers are excluded from the current migration phase.
 
 ### What is the timeline for AGCDN to be supported?
 
@@ -181,7 +181,7 @@ Yes. The Drupal module and WordPress plugin for Pantheon Advanced Page Cache wor
 
 ### What is Content Converter?
 
-Content Converter (Markdown for Agents) is a feature enabled on all GCDN Beta zones. When a request includes the `Accept: text/markdown` header, the CDN converts HTML responses to Markdown in real time. This makes your site's content easier for LLMs and AI agents to consume. Standard browser traffic is not affected.
+Content Converter (Markdown for Agents) is a feature enabled on all next-generation GCDN zones. When a request includes the `Accept: text/markdown` header, the CDN converts HTML responses to Markdown in real time. This makes your site's content easier for LLMs and AI agents to consume. Standard browser traffic is not affected.
 
 ### My automated integration stopped working after migration. What do I do?
 
