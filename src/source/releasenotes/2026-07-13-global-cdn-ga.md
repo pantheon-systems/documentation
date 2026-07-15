@@ -1,7 +1,7 @@
 ---
 title: "Pantheon's next-generation Global CDN is now generally available"
-published_date: "2026-07-13"
-published_at: "2026-07-13T21:34:07Z"
+published_date: "2026-07-15"
+published_at: "2026-07-15T14:54:28Z"
 categories: [new-feature, action-required]
 ---
 
