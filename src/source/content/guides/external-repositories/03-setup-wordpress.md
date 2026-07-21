@@ -1,9 +1,9 @@
 ---
-title: GitHub Application
+title: External Repositories
 subtitle: Setup WordPress
-description: Configure a WordPress GitHub repository for Pantheon's GitHub integration with the required file structure and platform settings.
+description: Configure a WordPress repository for Pantheon's external repository integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, wordpress]
-contributors: [duncanschouten,jazzs3quence]
+contributors: [duncanschouten,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]
@@ -12,18 +12,18 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-05-22"
-permalink: docs/guides/github-application/setup-wordpress
+reviewed: "2026-06-24"
+permalink: docs/guides/external-repositories/setup-wordpress
 ---
 
-This page describes how a WordPress repository configured for Pantheon differs from a standard WordPress installation. Use it as a reference when preparing your GitHub-hosted WordPress repository.
+This page describes how a WordPress repository configured for Pantheon differs from a standard WordPress installation. Use it as a reference when preparing your GitHub or GitLab-hosted WordPress repository.
 
 ## Requirements
 
 Before you begin, make sure you have:
 
-- A Pantheon account with GitHub integration access enabled
-- A GitHub repository
+- A Pantheon account with external repositories access enabled
+- A GitHub or GitLab repository
 - Familiarity with Git and your CMS's configuration
 
 ## Summary of Differences
@@ -222,7 +222,7 @@ Source: [config/application.php](https://github.com/pantheon-systems/wordpress-c
 
 ### `config/application.pantheon.php`
 
-This file is the core Pantheon platform integration,  loaded by `application.php`. Defines `WP_HOME`, `WP_ENVIRONMENT_TYPE`, `PANTHEON_HOSTNAME` and cookie-related constants based on Pantheon environment variables.
+This file is the core Pantheon platform integration, loaded by `application.php`. Defines `WP_HOME`, `WP_ENVIRONMENT_TYPE`, `PANTHEON_HOSTNAME` and cookie-related constants based on Pantheon environment variables.
 
 Source: [config/application.pantheon.php](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/config/application.pantheon.php)
 
@@ -232,7 +232,7 @@ Source: [config/application.pantheon.php](https://github.com/pantheon-systems/wo
 
 ### `pantheon.upstream.yml`
 
-This file configures the Pantheon platform infrastructure. For a GitHub-connected site, you may alternatively use `pantheon.yml` (same format).
+This file configures the Pantheon platform infrastructure. For an site connected to an external repository, you may alternatively use `pantheon.yml` (same format).
 
 | Setting | Purpose |
 |---|---|
@@ -271,7 +271,7 @@ Source: [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plu
 
 ## Checklist
 
-Use this checklist to verify your WordPress repository is ready for Pantheon's GitHub integration:
+Use this checklist to verify your WordPress repository is ready for Pantheon's external repository integration:
 
 <TabList>
 
@@ -314,4 +314,4 @@ Use this checklist to verify your WordPress repository is ready for Pantheon's G
 - [WordPress Configurations](/guides/wordpress-configurations) - Managing plugins, themes, and WordPress-specific configurations
 - [WP-CLI on Pantheon](/guides/wp-cli) - Command-line tools for managing WordPress sites
 - [pantheon.yml](/pantheon-yml) - Platform configuration file reference
-- [GitHub Application Usage](/guides/github-application/usage) - Working with pull requests and deployments
+- [external repositories Usage](/guides/external-repositories/usage) - Working with pull requests, merge requests, and deployments

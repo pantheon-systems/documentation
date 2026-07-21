@@ -26,7 +26,7 @@ See instructions for submitting your input below, provided in context of the giv
 
 Many of [the core Terminus commands](/terminus/commands) will return an error if run against a Next.js site.
 
-For instance, the `backup:create` command creates a backup consisting of 3 separate archives (database, files, and code) when used with WordPress or Drupal. This command returns an error for Next.js on Pantheon. Since Next.js sites are maintained in an external version control source like GitHub there is nothing to backup on Pantheon.
+For instance, the `backup:create` command creates a backup consisting of 3 separate archives (database, files, and code) when used with WordPress or Drupal. This command returns an error for Next.js on Pantheon. Since Next.js sites are maintained in an external repository (GitHub or GitLab) there is nothing to backup on Pantheon.
 
 However commands like `env:clear-cache` will clear caches (like the CDN) for sites of all frameworks (WordPress, Drupal, Next.js)
 
@@ -42,20 +42,22 @@ All WordPress and Drupal sites (except those on the Basic plan) can access their
 
 ### Autopilot
 
-Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's GitHub Application (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
+Autopilot currently functions only with sites that use the Pantheon-supplied Git repository. Autopilot support for sites using Pantheon's external repository integration (all Next.js sites and some WordPress/Drupal sites) will be added in a future release.
 
 ### Advanced site configurations
 
 * The [`pantheon.yml` configuration file](/pantheon-yml) is not currently supported on Next.js sites, and is ignored if present.
 * [Quicksilver](/guides/quicksilver) hooks are not currently supported on Next.js sites.
 
+### Locking environments (Security tab)
+
+The **Security** tab in the Site Dashboard lets you password protect Next.js environments with basic authentication, just as it does for WordPress and Drupal. The behavior differs in one important way: on WordPress and Drupal the lock applies immediately, but on Next.js sites a change to the lock or unlock status only takes effect after a **new build is deployed** to the environment. After toggling the status in the Security tab, trigger a new build using the **Rebuild** option (available in the Site Dashboard and through Terminus) or by pushing a new commit to the connected branch, so the change is applied. See [Lock Environments with the Dashboard Security Tool](/guides/secure-development/security-tool) for details.
+
 ### HTTP streaming
 
-Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress, Drupal, and Next.js. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).
+Layers of our CDN and load balancing currently prevent HTTP Streaming for WordPress and Drupal. We introduced that limitation many years ago because we wanted to encourage teams to use full page caching in combination with Surrogate Keys for fine-grained purging. In WordPress and Drupal, that approach to CDN caching is accommodated by our [Pantheon Advance Page cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) and [module](https://www.drupal.org/project/pantheon_advanced_page_cache).
 
-For many teams this restriction is counterproductive. That is especially true in the Next.js ecosystem which is investing further in usage of  [`<Suspense>`](https://react.dev/reference/react/Suspense) components as a performance optimization.
-
-While we intend to remove the limitation on streaming for Next.js sites, [join the discussion in this GitHub issue](https://github.com/pantheon-systems/documentation/issues/9767) if you have thoughts on how to provide guidance around situations where full page caching in the CDN. is still preferable to streaming.
+We support full HTTP streaming for Next.js sites including the use of [`<Suspense>`](https://react.dev/reference/react/Suspense) components. 
 
 ## GitHub App installation requirements
 
@@ -96,7 +98,9 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 ### GitHub Enterprise Server
 
-The GitHub Application **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server and you want to use the GitHub Application, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
+The GitHub App **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
+
+Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. See the [external repository setup guide](/guides/external-repositories/setup) for details.
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 

@@ -10,7 +10,7 @@ integration: [--]
 permalink: docs/nextjs/transfer-site
 ---
 
-This guide walks through transferring a Next.js site from one Pantheon workspace to another. When a site is transferred, the VCS connection (GitHub App installation) must also be linked to the destination workspace.
+This guide walks through transferring a Next.js site from one Pantheon workspace to another. When a site is transferred, the VCS connection must also be linked to the destination workspace.
 
 <Alert title="Note" type="info">
 
@@ -21,11 +21,11 @@ The actual site transfer between workspaces must be performed by Pantheon suppor
 ## Requirements
 
 * Administrative access to both the source and destination Pantheon workspaces
-* [Terminus](/terminus/install) with the [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
+* [Terminus](/terminus/install)
 
 ## Step 1: Link the VCS connection to the destination workspace
 
-Before requesting a site transfer, you must link the GitHub App installation to the destination workspace. Run:
+Before requesting a site transfer, you must link the VCS connection to the destination workspace. Run:
 
 ```bash{promptUser: user}
 terminus vcs:connection:link <destination-workspace> --vcs-org=<github-org> --source-org=<source-workspace>

@@ -11,7 +11,7 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joan-ing, jazzsequence, rkunjappan, mehta-asim]
-reviewed: "2026-06-15"
+reviewed: "2026-06-30"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
@@ -32,6 +32,9 @@ Solr 9 introduces the following new capabilities for Drupal sites running on Pan
 
 - Unified highlighter is now the default in Solr 9, improving search result excerpt quality.
   - When Drupal displays search results, Solr generates the snippet of text shown below each result title. Solr 9 produces more accurate snippets that better reflect where the search term actually appears in the content, improving the user experience on Search API-powered results pages.
+
+- Dense vector search (KNN) for AI-powered semantic search.
+  - Solr 9 introduces the [DenseVectorField](https://solr.apache.org/guide/solr/9_0/query-guide/dense-vector-search.html) type and a k-nearest neighbors (KNN) query parser, enabling approximate nearest neighbor search using HNSW graphs. Instead of matching exact keywords, dense vector search converts text into numerical embeddings with an AI model and finds content that is semantically similar — for example, a query for "fixing automobiles" can match an article about "car engine maintenance" even though they share no keywords. On Drupal, the [Search API Solr Dense Vector](https://www.drupal.org/project/search_api_solr_dense_vector) module integrates this capability with Search API, supporting embedding providers such as OpenAI, Google Vertex AI, and Google Gemini. Refer to the [Dense Vector Search guide](/guides/pantheon-search/solr-drupal/dense-vector-search) for setup instructions.
 
 </Tab>
 
@@ -69,38 +72,7 @@ Pantheon Search with Solr can be used on Drupal sites. You can set up a [new Dru
 
 ### Prepare the Local Environment
 
-Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer/ic-support) at a minimum.
-
-* Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
-
-    <TabList>
-
-    <Tab title="Solr 9" id="solr9" active={true}>
-      
-    ```shell{promptUser:user}
-    brew install git composer php@8.1
-    ```
-
-    </Tab>
-
-    <Tab title="Solr 8" id="solr8">
-      
-    ```shell{promptUser:user}
-    brew install git composer php@7.4
-    ```
-
-    </Tab>
-
-    </TabList>
-
-* Windows users should install the following dependencies:
-
-  * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-
-  * [Git](https://git-scm.com/download/win)
-
-  * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
-
+Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine.
 
 ### Enable Pantheon Search
 
@@ -193,18 +165,6 @@ Composer automatically installs the following dependencies when you install `dru
    ```
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
-   
-<Alert title="Note" type="info">
-
-   For Solr 9, install the beta release instead:
-
-   ```shell{promptUser:user}
-   composer require 'drupal/search_api_pantheon:^8.5@beta' --prefer-dist
-   ```
-
-   Version 8.5.x is currently in beta. Test thoroughly on non-production environments and report issues in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All).
-
-   </Alert>
 
 1. Run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes. Integrated Composer will take a few moments to install these on your site.
@@ -274,15 +234,15 @@ Both the server and index you just created should be displayed on the page.
 
 ## Upgrading from Solr 8 to Solr 9
 
-<Alert title="Beta Release" type="info">
-
-Version 8.5.x of the Search API Pantheon module is currently in beta. Test thoroughly on non-production environments and report issues in [the drupal.org issue queue](https://www.drupal.org/project/issues/search_api_pantheon?categories=All).
-
-</Alert>
-
 <Alert title="Note" type="info">
 
-Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete.
+Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete. Test the upgrade on a non-production environment before applying it to your production site.
+
+**Multidev Solr inheritance:** To upgrade the Solr version on a Multidev, create the Multidev first, then set `search.version: 9` in `pantheon.yml` on that branch and push.
+
+A Multidev inherits the Solr version from the source environment, so if the version was set before creating the Multidev, the Multidev will still use Solr 8.
+
+To force the upgrade, commit and push `search.version: 8`, then commit and push `search.version: 9`.
 
 </Alert>
 
@@ -291,7 +251,7 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
 1. **Update the module:**
 
    ```shell{promptUser:user}
-   composer require 'drupal/search_api_pantheon:^8.5@beta'
+   composer require 'drupal/search_api_pantheon:^8.5'
    git add composer.json composer.lock
    git commit -m "Update search_api_pantheon to 8.5.x"
    git push
@@ -324,6 +284,12 @@ Update the module before switching `pantheon.yml`. This order ensures the correc
    terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
+
+   <Alert title="Custom Solr Configuration" type="info">
+
+   If you use custom Solr configuration files, start from the base Solr 9 schema and re-apply your customizations on top. Solr 9 removed the legacy cache classes (`LRUCache`, `FastLRUCache`, `LFUCache` — use `CaffeineCache`) and `BlockJoinFacetComponent` (use `uniqueBlock()` in JSON Facet API). Refer to the [custom configuration guide](/guides/pantheon-search/solr-drupal/custom-config) for posting custom configurations.
+
+   </Alert>
 
 1. **Clear the index and reindex content:**
 
@@ -383,7 +349,7 @@ If you are upgrading from 8.4.x and want to continue using Solr 8, no migration 
 1. **Update the module:**
 
    ```shell{promptUser:user}
-   composer require 'drupal/search_api_pantheon:^8.5@beta'
+   composer require 'drupal/search_api_pantheon:^8.5'
    git add composer.json composer.lock
    git commit -m "Update search_api_pantheon to 8.5.x"
    git push

@@ -16,11 +16,7 @@ This guide walks through moving a Next.js site away from Pantheon's earlier [Fro
 ## Requirements
 
 * Administrative access to the GitHub repo used for your Next.js site.
-* Install the following CLI applications:
-  - [Terminus](/terminus/install)
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
-  - [Terminus Repository Plugin](https://github.com/pantheon-systems/terminus-repository-plugin)
-  - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin) (optional)
+* [Terminus](/terminus/install) — secrets, repository, and log commands are built into Terminus core as of [4.2.0](/release-notes/2026/04/terminus-4-2-0). No additional plugins are required.
 
 
 ## Differences between Front-End Sites and new Next.js sites
@@ -39,8 +35,8 @@ Additional differences between Front-End Sites and our updated Next.js offering 
 * Sites are routed through Pantheon's Global CDN and get URLs structured as `https://<env>-<site>.pantheonsite.io` instead of routing through a different CDN that used `https://<env>-<site>.appa.pantheon.site/` as the pattern of domain names.
 * Our new support for Next.js _does not_ supply "webhooks" for triggering full rebuilds and deployments when content changes in a connected CMS. Next.js running in a container can re-fetch content when needed.
 
-Front-End Sites and our new support for Next.js both use distinct GitHub Applications as the mechanism for trigger builds and deployments.
-Configuring that new connection to our GitHub Application is the first step of migrating.
+Front-End Sites and our new support for Next.js both use distinct external repository integrations as the mechanism for triggering builds and deployments.
+Configuring that new connection is the first step of migrating.
 
 ## Replicating your Front-End Site on new Next.js infrastructure
 
@@ -57,7 +53,7 @@ terminus site:create my-site-name my-site-label nextjs-16 \
 
 (Even if your codebase is not specific to Next.js 16, use the `nextjs-16` option to create the site.)
 
-This command will provision new infrastructure for your Next.js site and will take a few minutes to complete. You can monitor the progress of the initial build in the Pantheon Dashboard or by using the [Node Logs Plugin for Terminus](/nextjs/cli-tools).
+This command will provision new infrastructure for your Next.js site and will take a few minutes to complete. You can monitor the progress of the initial build in the Pantheon Dashboard or by using [Terminus node log commands](/nextjs/cli-tools).
 
 For many sites, builds will fail until required environment variables are set.
 

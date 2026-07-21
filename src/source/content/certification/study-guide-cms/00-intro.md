@@ -24,7 +24,7 @@ We've developed our views of WebOps to reflect and articulate in greater detail 
 
 Our perspective on WebOps is broad. At Pantheon we see WebOps as the composed of three interrelated parts:
 
-* The **people **who define and bring about the website's success
+* The **people** who define and bring about the website's success
 * The **processes** they use to increase their velocity toward success
 * The technology **platform** they rely on to stabilize their success
 
@@ -48,7 +48,7 @@ Were you ever a "webmaster?"
 
 If you are reading this study guide for a Pantheon WebOps Certification test, there is a decent chance that you remember those days. There was a time when one person could hold in their head all the expertise necessary to build, launch, and operate a successful website.
 
-Back then, not only could one person **_know _**all the things about website operations they somehow had enough time to **_do_** all the things.
+Back then, not only could one person **_know_** all the things about website operations they somehow had enough time to **_do_** all the things.
 
 Those days are gone.
 
@@ -77,7 +77,7 @@ Every person in this situation can point blame at someone else. No one here seem
 
 The world of the web is too wide for solo webmasters, but when they're replaced by an uncoordinated web mob, the results can be like the above disaster. A strong and accountable product owner can avert such problems. Jump ahead to the **PEOPLE** section of the next chapter if you want to learn more.
 
-Of course, directly addressing the **people**-problems in this hypothetical disaster is hard. You could avoid that question and blame the technology **platform **instead that allowed such bugs and replace it through a slow **process**.
+Of course, directly addressing the **people**-problems in this hypothetical disaster is hard. You could avoid that question and blame the technology **platform** instead that allowed such bugs and replace it through a slow **process**.
 
 Ignoring the people challenges can bring you straight into a process failure.
 
@@ -110,7 +110,7 @@ Whichever flavor of project management **processes** your **people** like, there
 
 ### Platform failure: Serving Servers
 
-Even with a solid cross-functional team of **people** and iterative **processes, **the path to resolving the above hypothetical web disaster needs a solid technology platform.
+Even with a solid cross-functional team of **people** and iterative **processes,** the path to resolving the above hypothetical web disaster needs a solid technology platform.
 
 LAMP stack systems like WordPress and Drupal evolved first in an era that assumed general purpose servers. Those early webmasters often filled their days with fine-tuning linux boxes to suit a given purpose. Now web architecture revolves more around speciality pieces of infrastructure. Now major cloud providers show reference architectures that suggest buying and configuring 9 or 10 different products to run one environment for one CMS. Both sound like non-starters for our hypothetical.
 

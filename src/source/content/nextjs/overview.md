@@ -22,12 +22,12 @@ Support for Next.js is available to customers with Gold, Platinum or Diamond Wor
 * **Node versions:**
   * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
 * **Package managers:**
-  * Pantheon will use `npm`, `yarn`, or `pnpm` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
+  * Pantheon will use `npm`, `yarn`, `pnpm`, or `bun` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
 * **Expected commands in `package.json`:**
   * Pantheon assumes that a Next.js site has a `package.json` file with `build` and `start` commands. Sites using `yarn` must have a `gcp-build` script instead of, or in addition to `build`. We consider inconsistency a bug in underlying Google Cloud build processes we leverage and [will update this guidance once it is resolved](https://github.com/pantheon-systems/documentation/issues/9888).
 
 * **External version control:**
-  * Next.js sites can only run on Pantheon if the code comes from a GitHub repository. Eventually we will expand that capability to BitBucket and GitLab.
+  * Next.js sites require code hosted in a GitHub or GitLab repository. Bitbucket support is planned for a future release.
 
 ### Usage
 To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).

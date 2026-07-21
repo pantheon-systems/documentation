@@ -1,9 +1,9 @@
 ---
-title: GitHub Application
+title: External Repositories
 subtitle: Setup Drupal
-description: Configure a Drupal GitHub repository for Pantheon's GitHub integration with the required file structure and platform settings.
+description: Configure a Drupal repository for Pantheon's external repository integration with the required file structure and platform settings.
 tags: [continuous-integration, workflow, drupal]
-contributors: [duncanschouten,jazzs3quence]
+contributors: [duncanschouten,jazzsequence]
 contenttype: [guide]
 showtoc: true
 innav: [true]
@@ -12,11 +12,11 @@ cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-05-22"
-permalink: docs/guides/github-application/setup-drupal
+reviewed: "2026-06-24"
+permalink: docs/guides/external-repositories/setup-drupal
 ---
 
-This page describes how to configure a Drupal 11 repository for Pantheon's GitHub integration. Unlike WordPress, Drupal on Pantheon uses Integrated Composer — most Pantheon-specific configuration is handled automatically by the `pantheon-systems/drupal-integrations` Composer package.
+This page describes how to configure a Drupal 11 repository for Pantheon's external repository integration. Unlike WordPress, Drupal on Pantheon uses Integrated Composer — most Pantheon-specific configuration is handled automatically by the `pantheon-systems/drupal-integrations` Composer package.
 
 ## Summary of Differences
 
@@ -175,7 +175,7 @@ The `ComposerScripts.php` ensures that the PHP version used for dependency resol
 
 ## Checklist
 
-Use this checklist to verify your Drupal 11 repository is ready for Pantheon's GitHub integration:
+Use this checklist to verify your Drupal 11 repository is ready for Pantheon's external repository integration:
 
 - [ ] `composer.json` includes `pantheon-systems/drupal-integrations: ^11` as a dependency
 - [ ] `composer.json` has `drupal-scaffold.allowed-packages` including `pantheon-systems/drupal-integrations`
@@ -194,4 +194,4 @@ Use this checklist to verify your Drupal 11 repository is ready for Pantheon's G
 - [Integrated Composer](/guides/integrated-composer) - Managing Drupal dependencies with Composer
 - [Drush on Pantheon](/guides/drush) - Command-line tools for managing Drupal sites
 - [pantheon.yml](/pantheon-yml) - Platform configuration file reference
-- [GitHub Application Usage](/guides/github-application/usage) - Working with pull requests and deployments
+- [external repositories Usage](/guides/external-repositories/usage) - Working with pull requests, merge requests, and deployments
