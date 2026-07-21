@@ -172,6 +172,10 @@ To update a certificate with additional domains, [contact Pantheon Support](/gui
 
 It may take up to two business days to process the request.
 
+## Custom Certificate Expiry
+
+If your custom certificate expires before a renewal is applied, the system will attempt to revert to a managed Let's Encrypt certificate until a new custom certificate is uploaded. In this scenario, your site remains accessible — only the custom certificate is temporarily replaced.
+
 ## Remove a Custom Certificate
 
 All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/guides/global-cdn/https) Let's Encrypt to issue certificates.
