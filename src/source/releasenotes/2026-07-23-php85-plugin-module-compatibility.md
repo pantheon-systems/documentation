@@ -27,7 +27,7 @@ The following WordPress plugins have been updated for PHP 8.5 compatibility:
 - [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) 1.4.5
 - [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) 0.4.5
 - [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) 2.3.2
-- [Pantheon Content Publisher](https://github.com/pantheon-systems/pantheon-content-publisher-wordpress) 1.3.5
+- [Pantheon Content Publisher](https://wordpress.org/plugins/pantheon-content-publisher/) 1.3.5
 - [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) 1.5.7
 
 To switch your site to PHP 8.5, see [Upgrade PHP Versions](/guides/php/php-versions).
