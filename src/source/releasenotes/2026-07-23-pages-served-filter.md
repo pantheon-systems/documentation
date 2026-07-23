@@ -1,7 +1,7 @@
 ---
 title: Pages Served Filtering for Top Traffic Patterns
 published_date: "2026-07-23"
-published_at: "2026-07-23T00:00:00Z"
+published_at: "2026-07-23T17:21:37Z"
 categories: [user-interface]
 description: "We are continuing to enhance the Top Traffic Patterns interface with clearer visibility into what traffic actually counts toward your bill."
 ---
@@ -13,4 +13,4 @@ You can now filter the Top Traffic Sources tables – Top Paths, Top IPs, and To
 **Note**: This feature is currently available only for sites migrated to Pantheon's new Global CDN (GCDN). If you don't yet see the toggle on your dashboard, consider migrating to the new GCDN to unlock this and other upcoming traffic insight enhancements.
 
 
-![traffic patterns interface showing new filter for pages served](../../source/images/release-notes/PagesServedFilter.png)
+![traffic patterns interface showing new filter for pages served](../../source/images/release-notes/PagesServed-Filter.png)
