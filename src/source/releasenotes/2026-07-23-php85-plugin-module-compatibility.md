@@ -16,7 +16,7 @@ The following Drupal modules have been updated for PHP 8.5 compatibility:
 - [Pantheon Secrets](https://www.drupal.org/project/pantheon_secrets) 1.1.0
 - [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon) 8.5.0
 - [Pantheon Content Publisher](https://www.drupal.org/project/pantheon_content_publisher) 1.0.5
-- [Pantheon Domain Masking](https://www.drupal.org/project/pantheon_domain_masking) 2.2.0
+- [Pantheon Domain Masking](https://github.com/pantheon-systems/pantheon-domain-masking) 2.2.0
 
 ## WordPress plugins
 
