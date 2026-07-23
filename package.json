@@ -8,6 +8,7 @@
   "scripts": {
     "audit": "tsx scripts/audit.ts",
     "evaluate": "tsx --env-file=.env scripts/evaluate.ts",
+    "update-terminus-data": "tsx scripts/update-terminus-data.ts",
     "update": "tsx seed/update.ts",
     "build": "next build",
     "coverage": "vitest run --coverage",
