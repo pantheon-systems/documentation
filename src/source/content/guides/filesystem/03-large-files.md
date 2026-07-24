@@ -49,6 +49,18 @@ To optimize performance:
 
 Useful tools for offloading are detailed below under CDNs.
 
+## File Path Length
+
+Google Cloud Storage Fuse (Generation 2 filesystem) enforces a hard limit of 1,024 bytes per file path. Most sites are unaffected by this limit.
+
+Disk-based caching plugins — such as W3 Total Cache, WP Rocket, and Drupal's AdvAgg module — can generate file paths that approach or exceed this limit, depending on configuration. If your site is affected, Pantheon will identify it in advance and reach out with specific guidance before migration.
+
+<Alert title="Info" type="info">
+
+To avoid regenerating long file paths after migrating to Generation 2, configure caching plugins to use a Redis backend instead of disk-based caching. Redis is available on all plan tiers.
+
+</Alert>
+
 ## Large Code Repository
 
 A code repository larger than 2GB increases the possibility of Git errors when committing code on Pantheon. Review the options below to improve performance:
