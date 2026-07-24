@@ -21,11 +21,19 @@ Files are static content not stored in your database, and usually consist of ima
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore)
 
+<Alert title="Filesystem migration in progress" type="info">
+
+Pantheon is migrating sites from Valhalla (Generation 1) to Google Cloud Storage Fuse, or GCS Fuse (Generation 2). New sites created on or after August 3, 2026 use GCS Fuse by default. Existing sites are migrated in batches starting September 1, 2026, with completion targeted by the end of 2026. Migrations are managed by Pantheon and require no action for most sites. See [known limitations](/guides/filesystem/large-files#file-path-length) for details on the small number of sites that may be affected.
+
+</Alert>
+
 ## Files and Application Containers
 
-The Pantheon architecture relies on highly available [application containers](/application-containers) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
+The Pantheon architecture relies on highly available [application containers](/application-containers) that are seamlessly integrated with a cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
-Valhalla creates a symbolic link (**symlink**) to the `files` directory in the appropriate location of your docroot:
+Pantheon refers to filesystem versions as **Generations**. Valhalla, Pantheon's original Cassandra-backed filesystem, is Generation 1. Google Cloud Storage Fuse, Pantheon's current filesystem, is Generation 2. Both may be in use across the platform during the migration period described above; the customer-facing experience is the same on either generation.
+
+Your Generation 1 (Valhalla) or Generation 2 (GCS Fuse) filesystem creates a symbolic link (**symlink**) to the `files` directory in the appropriate location of your docroot:
 
 - **WordPress:** `wp-content/uploads`
 - **Drupal:** `sites/default/files`
@@ -42,7 +50,7 @@ You can connect directly to the filesystem with an SFTP client, such as [WinSCP]
 
 ## Pantheon-Related Files
 
-Pantheon places the files below in your application container because they contain important information:
+On Generation 1 (Valhalla) sites, Pantheon places the files below in your application container because they contain important information:
 
 **fusedav_version**: shows the version of fusedav being used.
 
