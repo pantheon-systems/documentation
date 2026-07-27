@@ -23,7 +23,7 @@ Files are static content not stored in your database, and usually consist of ima
 
 <Alert title="Filesystem Migration in Progress" type="info">
 
-Pantheon is migrating sites from Valhalla (Generation 1) to Google Cloud Storage Fuse, or GCS Fuse (Generation 2). New sites created on or after August 3, 2026 use GCS Fuse by default. Existing sites are migrated in batches starting September 1, 2026, with completion targeted by the end of 2026. Migrations are managed by Pantheon and require no action for most sites. See [known limitations](/guides/filesystem/large-files#file-path-length) for details on the small number of sites that may be affected.
+Pantheon is migrating sites from Valhalla (Generation 1) to Google Cloud Storage FUSE, or gcsfuse, (Generation 2). New sites created on or after August 3, 2026 use gcsfuse by default. Existing sites are migrated in batches starting September 1, 2026, with completion targeted by the end of 2026. Migrations are managed by Pantheon and require no action for most sites. See [known limitations](/guides/filesystem/large-files#file-path-length) for details on the small number of sites that may be affected.
 
 </Alert>
 
