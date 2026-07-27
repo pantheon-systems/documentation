@@ -43,8 +43,8 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 
 ## DreamHost Docs
 
-* [DNS Records](https://help.dreamhost.com/hc/en-us/articles/214694378-What-DreamHost-DNS-records-do-I-point-my-site-to-)
-* [How do I add custom DNS records?](https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records-)
+* [DNS Records](https://help.dreamhost.com/hc/en-us/articles/214694378-What-DreamHost-DNS-records-do-I-point-my-site-to)
+* [How do I add custom DNS records?](https://help.dreamhost.com/hc/en-us/articles/360035516812-Adding-custom-DNS-records)
 
 ## Next Steps
 
