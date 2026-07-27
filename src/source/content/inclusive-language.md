@@ -78,7 +78,7 @@ Phrases like "one throat to choke" can be replaced with "one hand to shake" or "
 
 ### What is racial language?
 
-[<dfn id="racial-lang">Racial language</dfn>](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/) is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence.
+<dfn id="racial-lang">Racial language</dfn> is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence.
 
 #### Examples & Alternatives
 
@@ -96,7 +96,7 @@ Engineering work is ongoing to correct these naming conventions.
 
 ### What is classist language?
 
-[<dfn id="classist-lang">Classist language</dfn>](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/) denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
+<dfn id="classist-lang">Classist language</dfn> denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
 
 #### Examples & Alternatives
 
