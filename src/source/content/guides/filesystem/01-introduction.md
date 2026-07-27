@@ -50,7 +50,7 @@ You can connect directly to the filesystem with an SFTP client, such as [WinSCP]
 
 ## Pantheon-Related Files
 
-On Generation 1 (Valhalla) sites, Pantheon places the files below in your application container because they contain important information:
+Pantheon places the files below in your application container because they contain important information:
 
 **fusedav_version**: shows the version of fusedav being used.
 
