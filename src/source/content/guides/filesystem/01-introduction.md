@@ -31,7 +31,7 @@ Pantheon is migrating sites from Valhalla (Generation 1) to Google Cloud Storage
 
 The Pantheon architecture relies on highly available [application containers](/application-containers) that are seamlessly integrated with a cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
-Pantheon refers to filesystem versions as **Generations**. Valhalla, Pantheon's original Cassandra-backed filesystem, is Generation 1. Google Cloud Storage Fuse, Pantheon's current filesystem, is Generation 2. Both may be in use across the platform during the migration period described above; the customer-facing experience is the same on either generation.
+Pantheon refers to filesystem versions as **Generations**. Valhalla, Pantheon's original filesystem, is Generation 1. Google Cloud Storage FUSE, Pantheon's current filesystem, is Generation 2. Both may be in use across the platform during the migration period described above; the customer-facing experience is the same on either generation.
 
 Your Generation 1 (Valhalla) or Generation 2 (gcsfuse) filesystem creates a symbolic link (**symlink**) to the `files` directory in the appropriate location of your docroot:
 
