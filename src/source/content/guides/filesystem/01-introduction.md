@@ -33,7 +33,7 @@ The Pantheon architecture relies on highly available [application containers](/a
 
 Pantheon refers to filesystem versions as **Generations**. Valhalla, Pantheon's original Cassandra-backed filesystem, is Generation 1. Google Cloud Storage Fuse, Pantheon's current filesystem, is Generation 2. Both may be in use across the platform during the migration period described above; the customer-facing experience is the same on either generation.
 
-Your Generation 1 (Valhalla) or Generation 2 (GCS Fuse) filesystem creates a symbolic link (**symlink**) to the `files` directory in the appropriate location of your docroot:
+Your Generation 1 (Valhalla) or Generation 2 (gcsfuse) filesystem creates a symbolic link (**symlink**) to the `files` directory in the appropriate location of your docroot:
 
 - **WordPress:** `wp-content/uploads`
 - **Drupal:** `sites/default/files`
