@@ -44,7 +44,7 @@ You can create as many Professional Workspaces as you like. Use additional Profe
 
 For example, let's say you have both WordPress and Drupal sites, and you want your WordPress developers to only see the WordPress sites, and your Drupal developers to only see the Drupal Sites.  To do so, [create a Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace) for your Drupal developers, and another for your WordPress developers, then [invite the appropriate team members](/guides/account-mgmt/workspace-sites-teams/teams#add-a-user).  You now have the following Workspaces:
 
-|   | Personal | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
+|   | My Dashboard | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
 |---|---|---|---|---|
 | **Sites Tab** | Sites you have access to | All sites your organization maintains | Sites to which this workspace was added as a Supporting Workspace.  | Sites to which this workspace was added as a Supporting Workspace. |
 | **Teams Tab** | n/a | Team members that have access to all sites | Drupal developers  | WordPress developers  |
@@ -63,28 +63,28 @@ Here are some examples of ways you might organize your sites:
 
 1. Create all your sites in a single Professional Workspace, then create additional Workspaces with team members that will be added as Supporting Workspaces to individual sites. 
 
-    |   | Personal | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
+    |   | My Dashboard | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
     |---|---|---|---|---|
     | **Sites Tab** | Sites you have access to | Contains all sites your organization maintains | Sites to which this workspace was added as a Supporting Workspace.  | Sites to which this workspace was added as a Supporting Workspace. |
     | **Teams Tab** | n/a | Team members that have access to all sites | Drupal developers  | WordPress developers  |
 
 1. Create a Workspace for each CMS, creating sites using that CMS in each, and adding developers specific to each CMS to each. This differs from the first example in that the WordPress and Drupal Workspaces do *not* have to be added as Supporting Workspaces to individual sites - the team members automatically have access to all sites in that Workspace.
 
-    |   | Personal | WordPress Sites Workspace | Drupal Sites Workspace |
+    |   | My Dashboard | WordPress Sites Workspace | Drupal Sites Workspace |
     |---|---|---|---|
     | **Sites Tab** | Sites you have access to | Sites built using WordPress | Sites built using Drupal. |
     | **Teams Tab** | n/a | WordPress Developers | Drupal Developers  |
 
 1. Create one Professional Workspace with a Gold Account plan for sites that require Autopilot and Custom Upstreams (among other features), and another Professional Workspace with a Silver Account plan for those sites that don't.
 
-    |   | Personal | Silver Account Workspace | Gold Account Workspace |
+    |   | My Dashboard | Silver Account Workspace | Gold Account Workspace |
     |---|---|---|---|
     | **Sites Tab** | Sites you have access to | Sites with basic functionality | Sites with access to Autopilot, Custom Upstreams, or Multidev. |
     | **Teams Tab** | n/a | Team members that can work on these sites | Team members that can work on these sites  |
 
 1. Create a Workspace for each department which contains the site(s) that department maintains, and invite any department staff that should have access to the site to the team.
 
-    |   | Personal | Math Department Workspace | Athletics Department Workspace |
+    |   | My Dashboard | Math Department Workspace | Athletics Department Workspace |
     |---|---|---|---|
     | **Sites Tab** | Sites you have access to | Math Department site | Football site, Basketball site, Baseball site, etc. |
     | **Teams Tab** | n/a | Math Department members | Athletics site developers  |
