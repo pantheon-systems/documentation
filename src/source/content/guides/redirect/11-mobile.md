@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [dns, https, redirects]
 contributors: [wordsmither]
-reviewed: "2022-08-01"
+reviewed: "2026-07-28"
 showtoc: true
 permalink: docs/guides/redirect/mobile
 ---
@@ -23,7 +23,7 @@ Cloudflare's mobile redirect service is available to domains hosting DNS on any 
 
 Be sure that you have:
 
-- A registered domain name with DNS hosted on [Cloudflare](https://www.cloudflare.com/a/sign-up).
+- A registered domain name with DNS hosted on [Cloudflare](https://dash.cloudflare.com/sign-up).
 - Added the domain to your site's Live environment on Pantheon.
 - Configured mobile-ready pages (some themes already provide mobile stylesheets).
 

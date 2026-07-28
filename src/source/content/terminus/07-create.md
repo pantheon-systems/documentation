@@ -14,6 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to create Terminus plugins.
@@ -133,7 +134,7 @@ Pantheon recommends adopting Terminus core standards if you plan to distribute y
 - Ensure compatibility with PHP >=7.4 and 8
 - Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/)
 - Review more Terminus standards at:
-[https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
+[https://github.com/pantheon-systems/terminus/blob/4.x/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/4.x/CONTRIBUTING.md)
 
 ## Plugin Versioning
 

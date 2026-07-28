@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
-reviewed: "2026-07-23"
+reviewed: "2026-07-28"
 showtoc: true
 permalink: docs/guides/accessibility/resources
 editpath: accessibility/07-resources.md
@@ -27,7 +27,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 - [How to Meet WCAG Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) (W3)
 - [Levels of Success Criteria](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels)
 - [UK's GDS Accessibility ](https://accessibility.blog.gov.uk/)
-- [USA's 18F Accessibility ](https://accessibility.18f.gov)
+- [USA's 18F Accessibility ](https://18f.github.io/hackathons/a11yhack/resources/)
 - [WCAG 2.0](https://www.w3.org/TR/WCAG20)
 - [WCAG 2.1 ](https://www.w3.org/TR/WCAG21)
 - [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines)
