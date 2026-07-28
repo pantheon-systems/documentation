@@ -32,7 +32,7 @@ Secrets Manager commands are built into [Terminus](/terminus) as of [4.2.0](/rel
 terminus secret:site:set <site_name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
 ```
 
-For somes variables for some sites, you may need a different value for the Live environment than for all other environments.
+For some variables for some sites, you may need a different value for the Live environment than for all other environments.
 
 ## Setting Environment-specific overrides
 
