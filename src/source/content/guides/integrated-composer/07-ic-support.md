@@ -34,7 +34,7 @@ If you discover any issue for either framework, create an issue in the respectiv
 * [Drupal Composer Managed issue queue](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
 * [WordPress Composer Managed issue queue](https://github.com/pantheon-upstreams/wordpress-composer-managed/issues)
 
-Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account).
+Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://pantheon.io/customer-community/) if you don't already have an account).
 
 ## FAQs
 
