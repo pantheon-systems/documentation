@@ -7,7 +7,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
-reviewed: "2022-02-09"
+reviewed: "2026-07-27"
 contenttype: [guide]
 innav: [false]
 categories: [optimize]
@@ -97,7 +97,7 @@ define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 define('AUTOPTIMIZE_CACHEFILE_PREFIX','aggregated_');
 ```
 
-The following blog post walks through how to use results from the [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/) with the Autoptimize plugin so that you have inline critical styles with a deferred stylesheet: [How to Use the Autoptimize “Inline and Defer CSS” Option](https://www.wpfaster.org/blog/how-to-use-autoptimize-inline-and-defer-css-option)
+Use results from the [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/) with the Autoptimize plugin so that you have inline critical styles with a deferred stylesheet.
 
 </Tab>
 
@@ -109,7 +109,7 @@ Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, D
 
 Checking these boxes will take a normal Drupal site from having dozens (or hundreds) of small CSS/JS files to just a few. As you browse around the site the aggregated files loaded will be different as different modules add different source files to the page. [For more details, see the Drupal.org documentation on CSS organization.](https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8)
 
-If you want to make the number of files as low as possible, try [Advanced Aggregation](https://www.drupal.org/project/advagg) module. [It can help take fine grain control over how files are combined](http://www.mediacurrent.com/blog/better-css-js-aggregation-advanced-aggregation). In the past there have been bugs when using Advanced Aggregation on Pantheon. To our knowledge, those are all resolved.
+If you want to make the number of files as low as possible, try [Advanced Aggregation](https://www.drupal.org/project/advagg) module. It can help take fine grain control over how files are combined. In the past there have been bugs when using Advanced Aggregation on Pantheon. To our knowledge, those are all resolved.
 
 </Tab>
 

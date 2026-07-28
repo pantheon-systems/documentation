@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
-reviewed: "2022-06-01"
+reviewed: "2026-07-23"
 showtoc: true
 permalink: docs/guides/accessibility/resources
 editpath: accessibility/07-resources.md
@@ -44,8 +44,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 - [Types of Disabilities](https://usability.yale.edu/web-accessibility/articles/types-disabilities)
 - [WCAG’s Intro to accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
 - [Wordpress Accessibility Handbook](https://make.wordpress.org/accessibility/handbook/)
-- [Wordpress Accessibility Plugin](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/wp-accessibility-plugin/)
-- [Wordpress Useful Plugins](https://make.wordpress.org/accessibility/handbook/which-tools-can-i-use/other-plugins-to-improve-accessibility/)
+- [Wordpress Accessibility Plugins](https://wpaccessibility.org/docs/wp-a11y/wp-a11y-plugins/)
 
 ## Accessibility Testing and Tools
 

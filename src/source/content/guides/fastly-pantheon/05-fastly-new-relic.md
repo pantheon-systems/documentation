@@ -13,6 +13,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [fastly]
+reviewed: "2026-07-27"
 ---
 
 This section provides information on integrating your Fastly account with Pantheon's [New Relic](/guides/new-relic).
@@ -33,9 +34,9 @@ Follow the steps below to use New Relic with your Fastly account on Pantheon.
 
 1. Complete the steps to [create and access your New Relic account](/guides/new-relic#new-relic-performance-monitoring-access).
 
-1. Verify that you have the [Fastly prerequisites](https://docs.fastly.com/en/guides/log-streaming-newrelic-logs#prerequisites) for New Relic.
+1. Verify that you have the [Fastly prerequisites](https://www.fastly.com/documentation/guides/integrations/logging-endpoints/log-management-and-observability/log-streaming-newrelic-logs/#prerequisites) for New Relic.
 
-1. Complete steps to [add New Relic logs as a logging endpoint](https://docs.fastly.com/en/guides/log-streaming-newrelic-logs#adding-new-relic-logs-as-a-logging-endpoint).
+1. Complete steps to [add New Relic logs as a logging endpoint](https://www.fastly.com/documentation/guides/integrations/logging-endpoints/log-management-and-observability/log-streaming-newrelic-logs/#adding-new-relic-logs-as-a-logging-endpoint).
 
 
 ## More Resources

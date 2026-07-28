@@ -250,7 +250,7 @@ You can create more files with `.bats` extensions to add more tests. You must po
 
 ### Automate Tests
 
-You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You must keep a Sandbox site online to run the tests against.
+You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/guides/getting-started/getting-started/). You must keep a Sandbox site online to run the tests against.
 
 1. Copy the contents below into a file named `circle.yml` in your plugin project:
 
@@ -288,11 +288,11 @@ You can [configure your project tests to run automatically on Circle CI](https:/
    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
    - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens) that has access to the test site.
 
-3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/). Leave the `Hostname` field empty.
+3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/guides/integration/add-ssh-key/). Leave the `Hostname` field empty.
 
   Your tests should run successfully on Circle CI.
 
-1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's `README.md` file to show your passing build status.
+1. Add an [embeddable status badge](https://circleci.com/docs/guides/integration/status-badges/#overview) to the top of your plugin's `README.md` file to show your passing build status.
 
 A more complete version of the plugin created above can be found at:
 [https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example)

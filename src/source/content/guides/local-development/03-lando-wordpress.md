@@ -13,6 +13,7 @@ integration: []
 tags: [code, iterate, lando, local, webops]
 showtoc: true
 permalink: docs/guides/local-development/lando-wordpress
+reviewed: "2026-07-27"
 ---
 
 This section provides information on how to use Lando for local development with WordPress sites on Pantheon.
@@ -26,7 +27,7 @@ Be sure that you have:
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
 - A working knowledge of local server environments.
 - Reviewed the [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and the [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
-- Verified that your meet Lando's [system requirements](https://docs.devwithlando.io/installation/system-requirements.html). Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
+- Verified that your meet Lando's [system requirements](https://docs.lando.dev/getting-started/requirements.html#system-requirements). Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 
 ## Download and Install Lando
 
