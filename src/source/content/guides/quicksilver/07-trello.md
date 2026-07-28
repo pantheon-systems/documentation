@@ -13,6 +13,7 @@ tags: [collaborate, quicksilver, webops, workflow]
 contributors: [scottmassey]
 showtoc: true
 permalink: docs/guides/quicksilver/trello
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to integrate Trello with Pantheon using Quicksilver.
@@ -59,7 +60,7 @@ Create a new machine user in your Trello instance. This user is referred to as a
 
     ![Add a team](../../../images/integrations/trello/team-board.png)
 
-1. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
+1. Copy the machine user's API key from [here](https://trello.com/apps/admin), then click the link to manually generate a Token:
 
     ![Copy developer api key](../../../images/integrations/trello/developer-keys.png)
 

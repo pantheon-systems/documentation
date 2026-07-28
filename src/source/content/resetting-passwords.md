@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [dashboard]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 
 ## Pantheon Dashboard Login
@@ -51,7 +52,7 @@ Or you can reset any user's password from the command line:
 
 <Tab title="Drupal 8" id="drupal8" active={true}>
 
-Run the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) in [Terminus](/terminus). Be sure to update `user-password` and `user_name` in the example.
+Run the `user-password` Drush command in [Terminus](/terminus). Be sure to update `user-password` and `user_name` in the example.
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
@@ -64,7 +65,7 @@ terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0
 Run the command below in [Terminus](/terminus). Be sure to update `user-password` and `user_name` in the example.
 
 ```bash{promptUser: user}
-terminus drush <site>.<env> -- user-password user_name 'Astr0nGP455w0rD'
+terminus drush <site>.<env> -- user:password user_name 'Astr0nGP455w0rD'
 ```
 
 </Tab>
