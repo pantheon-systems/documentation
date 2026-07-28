@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [wordsmither]
-reviewed: "2023-11-29"
+reviewed: "2026-07-27"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
@@ -530,7 +530,7 @@ To see the values currently used in our documentation, [install our repository l
 <dt><code>contributors</code></dt>
 <dd>
 
-An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
+An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/src/source/data/contributor.yaml).
 
 </dd>
 
@@ -1106,7 +1106,7 @@ export env=dev
 ## Videos
 Use the Wistia and YouTube components to embed videos across the docs site.
 
-[Landing pages](https://github.com/pantheon-systems/documentation/blob/main/source/data/landings.yaml#L4) (e.g., [Get Started](/get-started), [Develop](/develop), [Go Live](/go-live), etc.) can set a `video_id` attribute to embed a YouTube sourced video to the top of the page. Embedding Wistia videos is not supported on landing pages at this time, however Wistia videos can be embedded elsewhere across the docs using the Wistia component as described below.
+[Landing pages](https://github.com/pantheon-systems/documentation/blob/main/src/source/data/landings.yaml#L4) (e.g., [Get Started](/get-started), [Develop](/develop), [Go Live](/go-live), etc.) can set a `video_id` attribute to embed a YouTube sourced video to the top of the page. Embedding Wistia videos is not supported on landing pages at this time, however Wistia videos can be embedded elsewhere across the docs using the Wistia component as described below.
 
 ### YouTube
 Use the YouTube component to embed YouTube videos. Set both `title` and `src`, for example:

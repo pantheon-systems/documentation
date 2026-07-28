@@ -13,7 +13,7 @@ tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/platform-considerations/media-email-support
-reviewed: "2022-12-13"
+reviewed: "2026-07-27"
 ---
 
 This section provides information on email and media support on the Pantheon platform.
@@ -68,7 +68,7 @@ This will convert the database tables in the existing installation to the correc
 - PDFs
 - Video background images
 - Streaming content such as:
-    - [Podcasts](https://itunespartner.apple.com/podcasts/articles/creating-your-show_requirements)
+    - [Podcasts](https://podcasters.apple.com/support/893-audio-requirements)
     - Videos with pause and resume functions
 
 Byte-range request header parameters are not supported on Pantheon. Modules and plugins that require specified byte-ranges will not work.
