@@ -9,7 +9,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2025-06-24"
+reviewed: "2026-07-28"
 
 ---
 
@@ -56,7 +56,7 @@ jobs:
         site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
 ```
 
-For more detailed usage guidance including availabile parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme file from the Action](https://github.com/pantheon-systems/push-to-pantheon).
+For more detailed usage guidance including available parameters, compilation of front-end assets through `npm`, and concurrency, [see the full readme file from the Action](https://github.com/pantheon-systems/push-to-pantheon).
 
 ## Install Terminus
 

@@ -13,7 +13,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
-reviewed: "2026-06-15"
+reviewed: "2026-07-28"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.
@@ -287,7 +287,7 @@ Run the command below to apply available updates to your site development enviro
 terminus upstream:updates:apply --updatedb --accept-upstream -- <site>.<env>
 ```
 
-### Update a specfic package
+### Update a specific package
 
 To update a specific package, run:
 

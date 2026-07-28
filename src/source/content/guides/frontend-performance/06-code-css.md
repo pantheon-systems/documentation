@@ -7,7 +7,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
-reviewed: "2026-07-27"
+reviewed: "2026-07-28"
 contenttype: [guide]
 innav: [false]
 categories: [optimize]
@@ -26,7 +26,7 @@ This section provides an overview of available tools and techniques to reduce co
 
 ## GZIP Compression
 
-By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd party plugins/modules for gzip compression.
+By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScript files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd party plugins/modules for gzip compression.
 
 If there are any assets that are not being gzipped, most likely they are assets loaded from outside Pantheon.
 

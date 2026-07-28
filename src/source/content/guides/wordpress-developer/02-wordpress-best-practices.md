@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [workflow, security, composer]
-reviewed: "2024-08-12"
+reviewed: "2026-07-28"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-best-practices
 ---
@@ -95,7 +95,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 ### Option 2: Block only the `/users` WordPress REST endpoint
 
-If blocking the entire REST API is not feasible for your site, you can choose a more selective approach. The WordPress REST API exposes the complete users list at the `/wp-json/wp/v2/users` endpoint. This is by design -- the `/users` endpoint contains data that is public elsewhere on your site and availalbe in other public places in WordPress, notably the HTML output and RSS feeds including name, avatar, etc. These endpoints are public so that the data to view and render content from elsewhere in the REST API is available. For example, since a post links to the author user, making user information easily accessible makes it simpler to access from API tools and integrations.
+If blocking the entire REST API is not feasible for your site, you can choose a more selective approach. The WordPress REST API exposes the complete users list at the `/wp-json/wp/v2/users` endpoint. This is by design -- the `/users` endpoint contains data that is public elsewhere on your site and available in other public places in WordPress, notably the HTML output and RSS feeds including name, avatar, etc. These endpoints are public so that the data to view and render content from elsewhere in the REST API is available. For example, since a post links to the author user, making user information easily accessible makes it simpler to access from API tools and integrations.
 
 However, in many cases, exposing the `/user` endpoint is seen as a vulnerability in penetration testing. Additionally, if your site uses email addresses as usernames, it could be exposing every email address of a user that has a published post on the site. You can disable access to `/wp-json/wp/v2/users` with the following filter:
 
