@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-07-22"
+reviewed: "2025-07-28"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -1526,7 +1526,7 @@ define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/up
 define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants.
+**Solution 2b:** If you are running a version between 3.2 and 3.4, you can only set the cache path through constants.
 
 1. [Create symlinks](#assumed-write-access) for the other paths.
 
