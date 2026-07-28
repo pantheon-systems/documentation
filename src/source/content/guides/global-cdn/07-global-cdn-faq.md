@@ -5,7 +5,7 @@ description: Get answers to your Global CDN questions.
 tags: [cache, cdn]
 contributors: [whitneymeredith,jazzsequence,conorbauer]
 showtoc: true
-reviewed: "2026-07-13"
+reviewed: "2026-07-28"
 permalink: docs/guides/global-cdn/global-cdn-faq
 contenttype: [guide]
 innav: [false]
@@ -49,7 +49,7 @@ Hit rates are not currently available, but you can measure traffic for the Live 
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
 
-You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header to alloww WordPress to build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
+You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header to allow WordPress to build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
 
 ```php:title=wp-config.php
 if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {

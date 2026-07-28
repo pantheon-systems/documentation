@@ -4,7 +4,7 @@ subtitle: Custom Upstream Usage
 description: Learn how to use an Upstream with Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert, jazzsequence]
-reviewed: "2024-10-15"
+reviewed: "2026-07-28"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 contenttype: [guide]
@@ -16,7 +16,7 @@ product: [composer]
 integration: [--]
 ---
 
-This section provides usage and maintanenance information for composer-managed [Custom Upstreams](/guides/custom-upstream) on Pantheon, including steps to add upstream dependencies.
+This section provides usage and maintenance information for composer-managed [Custom Upstreams](/guides/custom-upstream) on Pantheon, including steps to add upstream dependencies.
 
 
 ## Custom Upstreams

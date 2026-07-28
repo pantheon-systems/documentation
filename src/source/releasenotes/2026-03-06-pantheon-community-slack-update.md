@@ -12,7 +12,7 @@ We will be launching a new Slack instance for our Pantheon Customer Community on
 - **Quarterly roadmap reviews.** You'll hear directly from our product team on what's coming next.
 - **Dedicated Product Feedback channel.** A dedicated `#product-feedback` channel where you can share ideas, vote on what matters most, and send feedback straight to our product team without ever leaving Slack.
 - **Quarterly challenges.** We will be launching quarterly challenges with awesome perks and giveaways just for showing up and being part of the community.
-- **Limtied-edition swag.** Because being an amazing customer has its perks.
+- **Limited-edition swag.** Because being an amazing customer has its perks.
 
 ## What's not changing
 - We're staying on Slack, just moving to a new workspace. Same app to connect with Pantheon and the wider community.

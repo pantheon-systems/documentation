@@ -614,7 +614,7 @@ ___
 
 <ReviewDate date="2023-09-28" />
 
-**Issue:** Pantheon's database replication architecture is incompatible with HypeDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+**Issue:** Pantheon's database replication architecture is incompatible with HyperDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
 
 
 **Solution:** HyperDB is not supported or recommended on Pantheon and there is no known workaround at this time.
@@ -1422,7 +1422,7 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 
 #### How do I confirm I am using data storage with Wordfence?
 
-You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
+You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewall** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
 
 ___
 
