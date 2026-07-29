@@ -27,4 +27,9 @@ While Valhalla was an innovative solution at Pantheon's founding, it has since b
 - Performance sites: November 16, 2026 - December 27, 2026
 - Elite sites: November 30, 2026 - December 27, 2026
 
+## How to determine which Filesystem your site is using
+
+In Site details, there is a Filesystem Generation field. Sites that are on the new filesystem will have a “2” in this field.
+  
+
 For more information, see our [documentation](/guides/filesystem). Should you have any questions or concerns, please reach out to our customer support team via chat or email us at the [Pantheon Helpdesk](https://pantheon.io/docs/guides/support/contact-support/).
