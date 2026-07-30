@@ -22,8 +22,8 @@ Pantheon supports MySQL 8.4 LTS as a database engine alongside MariaDB. MySQL 8.
 Before enabling MySQL 8.4, consider the following limitations:
 
 - **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a [Multidev](/guides/multidev) or Dev environment before switching your Live environment.
-- **Backups are engine-specific.** A backup taken on MySQL 8.4 cannot be restored to a MariaDB environment, and vice versa.
-- **MariaDB 10.6 required.** Your site must be on MariaDB 10.6 before migrating to MySQL 8.4. Sites on older MariaDB versions will be upgraded to 10.6 first automatically.
+- **Backups are not cross-engine.** The platform handles data conversion during migration automatically. However, a manual backup taken on MySQL 8.4 cannot be restored to a MariaDB environment (and vice versa) because the backup/restore workflow does not perform engine conversion.
+- **MariaDB 10.6 recommended.** We recommend upgrading to MariaDB 10.6 before migrating to MySQL 8.4. The migration currently requires 10.6 as the source version.
 
 ### CMS Version Compatibility
 Before enabling MySQL 8.4, verify the following:
@@ -31,8 +31,8 @@ Before enabling MySQL 8.4, verify the following:
 | CMS | Minimum Version | Notes |
 |-----|----------------|-------|
 | WordPress 6.x | All versions | Fully compatible |
-| WordPress 5.x | 5.9+ | Older versions may hit reserved word or sql_mode issues |
-| Drupal 10 | 10.2+ | Earlier versions may need patches for the `GROUPS` reserved word |
+| WordPress 5.x | Latest point release | Older versions may hit reserved word or sql_mode issues. Upgrade to the latest 5.x release before migrating. |
+| Drupal 10 | Latest point release | Upgrade to the latest 10.x release to pick up reserved word fixes (e.g. the `GROUPS` keyword). |
 | Drupal 9 | 9.5+ | Community support ended |
 | Drupal 7 | 7.x | Works with caveats. See [ONLY_FULL_GROUP_BY](#only_full_group_by-errors) below |
 
@@ -97,6 +97,12 @@ database:
 ```
 
 Commit and push this change. On the next deployment, your environment's database will be migrated from MariaDB to MySQL 8.4.
+
+<Alert title="Note" type="info">
+
+For sites on Pantheon-managed upstreams, the `pantheon.upstream.yml` change will be rolled out by Pantheon on a per-upstream schedule. You do not need to add the database configuration yourself unless you are on a [Custom Upstream](/guides/custom-upstream) or want to opt in early on a non-production environment.
+
+</Alert>
 
 <Alert title="Warning" type="danger">
 
