@@ -22,10 +22,4 @@ reviewed: ""
   A link is immediately sent to the email address to pay through the secure site.
 
 
-  <Alert title="Note" type="info">
-
-  A site transferred as a Sandbox will not receive Preferred Pricing. A site plan and billing preference (Annual or Monthly) must be selected prior to sending your client a payment invitation.
-
-  </Alert>
-
 After the person has accepted the invitation and has paid for the site, they will receive the next invoice at the end of the billing cycle.
