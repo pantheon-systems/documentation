@@ -15,6 +15,8 @@ integration: [--]
 image: buildToolsGuide-thumb.png
 ---
 
+<Partial file="build-tools-cta.md" />
+
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
 <Accordion title="Composer" id="understand-composer" icon="lightbulb">

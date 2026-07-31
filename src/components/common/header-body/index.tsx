@@ -46,9 +46,14 @@ const HeaderBody = ({
             {lastReviewed}
           </time>
         </p> */}
-        {!subtitle && <h1 className="docs-title">{title}</h1>}
-
-        {subtitle && <h1>{subtitle}</h1>}
+        {subtitle ? (
+          <>
+            <p className="pds-overline-text">{title}</p>
+            <h1>{subtitle}</h1>
+          </>
+        ) : (
+          <h1 className="docs-title">{title}</h1>
+        )}
 
         <p className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xl">
           {description}

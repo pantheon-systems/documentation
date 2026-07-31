@@ -3,7 +3,7 @@ title: Log Forwarding
 contenttype: [doc]
 innav: [true]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-07-28"
 permalink: docs/log-forwarding
 ---
 
@@ -15,7 +15,7 @@ Pantheon's Log Forwarding feature enables streaming operational logs from Panthe
 
 This feature is available to **Private Beta** participants at no additional cost. [Submit this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform) to request an invite to participate.
 
-### Compatability
+### Compatibility
 We currently support forwarding logs to the following providers:
 * [Sumo Logic](/log-forwarding/sumo-logic)
 * [Splunk](/log-forwarding/splunk)
@@ -40,7 +40,7 @@ Pantheon forwards the following five binding-level log streams:
 |`php-slow`|Logs for PHP requests exceeding the slow execution threshold.|Identifying performance bottlenecks.|
 
 ## Support
-Once Beta access has been granted, users will recieve a welcome email and be invited to a dedicated slack channel where you can provide feedback, ask questions and discuss usage with the Pantheon product and engineering team. 
+Once Beta access has been granted, users will receive a welcome email and be invited to a dedicated slack channel where you can provide feedback, ask questions and discuss usage with the Pantheon product and engineering team. 
 
 To request an invite, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSd13CB3CNNYAsVQA2y519tQ1bpeBnE5x6XHyuvn7KfW2hTvbQ/viewform).
 

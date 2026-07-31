@@ -15,10 +15,8 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/troubleshooting
 editpath: search/04-troubleshooting.md
-reviewed: "2026-06-11"
+reviewed: "2026-06-16"
 ---
-
-<Partial file="elasticsarch-pre-ga.md" />
 
 ## Troubleshooting
 
@@ -57,11 +55,9 @@ The Instant Results feature requires a stored search template on ElasticPress.io
 
 ### Do I have to pay extra for Elasticsearch?
 
-Access to Elasticsearch is included for sites on Performance plans and above. 
+Access to Elasticsearch is included for sites on Performance plans and above.
 
-During the Beta phase, the Elasticsearch add-on is able to be activated via Site Settings in the Pantheon Dashboard. There is no need to submit a form to participate in the Beta.
-
-<!-- This is not true yet>Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.<!-->
+Activating Elasticsearch is a self-serve operation, similar to how Solr or Redis are enabled on Pantheon.
 
 <Partial file="pantheon-search-table.md" />
 

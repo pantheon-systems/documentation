@@ -59,7 +59,7 @@ function SearchBarForm({}: {
                     "search_suggestion_position": "left",
                     "default_sortby": "relevance",
                     "display_date": false,
-                    "display_meta_description": true,
+                    "display_meta_description": false,
                     "display_result_image": false,
                     "link_target": "_blank",
                     "hide_logo": true,

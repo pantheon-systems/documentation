@@ -13,7 +13,7 @@ For details on workspaces, including how to create a free Professional Workspace
 * The **Personal Workspace** has been renamed to **My Dashboard** throughout the Pantheon dashboard.
 * Site creation: 
   * In the dashboard, the option to select a Personal Workspace during site creation has been removed. Users must now select a **Professional Workspace** when creating a new site.
-  * From the commandline, running `terminus site:create` without the `--org` flag returns this wanring: 
+  * From the commandline, running `terminus site:create` without the `--org` flag returns this warning: 
     > An org must be defined to create a site.
 
     Sites created via Terminus without an org are added to your **My Dashboard** workspace.

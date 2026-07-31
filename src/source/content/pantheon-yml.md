@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2026-04-17"
+reviewed: "2026-07-06"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -132,6 +132,20 @@ build_step: true
 ```
 
 Refer to [Integrated Composer](/guides/integrated-composer) for more information.
+
+### Frontend Asset Builds
+
+Install Node.js dependencies and run frontend compiling script(s) as part of a build step on Pantheon:
+
+```yaml:title=pantheon.yml
+frontend_build:
+  enabled: true
+  paths:
+    - path: web/themes/custom/mytheme
+      node_version: 26
+      build_command: build
+```
+Refer to [Frontend Asset Builds](/frontend-builds) for more information.
 
 ### PHP Version
 

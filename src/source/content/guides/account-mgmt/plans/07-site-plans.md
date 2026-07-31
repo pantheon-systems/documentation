@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/site-plans
 editpath: docs/guides/account-mgmt/plans/07-site-plans.md
-reviewed: "2025-05-08"
+reviewed: "2026-07-27"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -200,15 +200,13 @@ Before making any changes, please review [Before You Make Changes](#before-you-b
 
 </Alert>
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings**.
 
-1. Select the current plan (to the right of the site name).
+1. From the  **Site Details** section, click **Manage site plan**.
 
-1. Click the **Downgrade to free** link to cancel the current plan.
+1. Click the **Switch to free plan** link to cancel the current plan.
 
-1. Check **Yes, cancel my plan**, then click **Continue**.
-
-1. Make sure the change details are correct, then click **Submit**.
+1. Select a reason for canceling, then check **Yes, cancel my plan**, and click **Confirm downgrade**.
 
 1. Remove the existing card as a payment method for the site. Refer to [Billing in the Site Dashboard](/guides/account-mgmt/billing/methods#delete-a-site-specific-payment-method) for more information.
 

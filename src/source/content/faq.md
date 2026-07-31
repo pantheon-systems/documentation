@@ -115,7 +115,7 @@ Pantheon is home to many polylingual and non-English sites, and hosting a multi-
 
 For detailed information on how to configure a multilingual Drupal site, refer to the [Multilingual Guide on Drupal.org](https://drupal.org/documentation/multilingual).
 
-Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](https://webmasters.googleblog.com/2010/03/working-with-multi-regional-websites.html) from The Google Webmaster Central Blog has some fantastic recommendations.
+Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](https://developers.google.com/search/blog/2010/03/working-with-multi-regional-websites) from The Google Webmaster Central Blog has some fantastic recommendations.
 
 It’s possible to specify a site language given a particular domain or path. In order of preference:
 

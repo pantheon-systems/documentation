@@ -1,7 +1,7 @@
 ---
 title: Command Line Tools to use with Next.js on Pantheon
-description: Terminus plugins and other CLI tools to manage Next.js sites on Pantheon
-reviewed: "2025-10-31"
+description: Terminus commands and other CLI tools to manage Next.js sites on Pantheon
+reviewed: "2026-07-14"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -11,30 +11,53 @@ permalink: docs/nextjs/cli-tools
 
 ---
 
-In addition to Pantheon's primary command line tool, [Terminus](https://docs.pantheon.io/terminus), there are a few plugins and other command line tools that are useful when working with Next.js sites on Pantheon.
+In addition to Pantheon's primary command line tool, [Terminus](/terminus), there are built-in Terminus commands and other CLI tools that are useful when working with Next.js sites on Pantheon.
 
-## Terminus Plugins
+## Terminus Commands
 
-Terminus plugins add functionality to Terminus that is either too specialized or too early in development to be included in the core Terminus tool.
+As of [Terminus 4.2.0](/release-notes/2026/04/terminus-4-2-0), commands for managing Next.js sites — including secrets, repository connections, and build logs — are built directly into Terminus core. No additional plugins are required.
 
-### Secrets Manager Plugin for setting environment variables
+### Create a Next.js site
 
-[The Secrets Manager plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) for Terminus allows you to set and manage environment variables which is especially useful for Next.js sites. It has no equivalent functionality in the Pantheon Dashboard.
+You can create a Next.js site from the [Pantheon Dashboard](/nextjs/hello-world-tutorial) or via Terminus. To create a site via Terminus:
 
-See here for [general documentation on using Secrets Manager](/guides/secrets) and here for [specific documentation on using it with Next.js](/nextjs/environment-variables).
+```bash{promptUser: user}
+terminus site:create <pantheon-site-name> <site-label> <upstream-name|ID> --org=<organization-name|ID> --vcs-provider=github --vcs-org=<github-organization|username> --repository-name=<github-repository-name>
+```
 
-### Node Logs Plugin
+Required arguments and flags:
 
-[This plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin) adds commands to Terminus for viewing build and runtime logs for Node.js applications running on Pantheon.
+- `<upstream-name|ID>` — Any upstream your Pantheon user has access to, e.g. `nextjs-16`, `nextjs15` or an upstream UUID. If omitted, Terminus will display available upstreams.
+- `--org` — The Pantheon organization is required for site creation via Terminus.
+- `--vcs-provider=github` — Required for sites using the GitHub application.
+- `--vcs-org` — The GitHub organization or username. If omitted, you will be prompted.
+- `--repository-name` — The GitHub repository name to create. Must be unique within the organization or user account.
 
-Most developers will prefer to view logs through the Pantheon Dashboard, but this plugin is useful for scripting or automating log retrieval.
+For full details see the [GitHub Application setup guide](/guides/github-application/setup).
 
-### Site Repository Plugin
+### Manage secrets and environment variables
 
-[This plugin](https://github.com/pantheon-systems/terminus-repository-plugin) adds commands to Terminus for connecting external Git repositories (such as GitHub) to Pantheon sites.
+Terminus includes commands for setting and managing secrets, which is the recommended way to manage environment variables for Next.js sites on Pantheon.
 
-It is required when creating a Next.js site on Pantheon through the command line.
-It is not needed if you create the site through the Pantheon Dashboard.
+See [general documentation on using Secrets Manager](/guides/secrets) and [specific documentation on using it with Next.js](/nextjs/environment-variables).
+
+### View build and runtime logs
+
+Terminus includes commands for viewing build and runtime logs for Next.js sites on Pantheon. Most developers will prefer to view logs through the Pantheon Dashboard, but these commands are useful for scripting or automating log retrieval.
+
+To list recent builds for a given site and environment:
+
+```bash{promptUser: user}
+terminus node:logs:build:list <site>.<env>
+```
+
+To retrieve runtime logs:
+
+```bash{promptUser: user}
+terminus node:logs:runtime:get <site>.<env>
+```
+
+For a full list of available Node.js commands, run `terminus help` or see the [Terminus command reference](/terminus/commands).
 
 ## Content Publisher CLI
 

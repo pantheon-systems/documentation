@@ -22,11 +22,7 @@ This tutorial will walk you through:
 
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * Install [Git](https://git-scm.com/)
-* (Optional) Install the following applications:
-  - [Terminus](/terminus/install)*
-  - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
-
-\* Requires logging in after installation.
+* (Optional) [Terminus](/terminus/install) — required to view build logs from the command line. Requires logging in after installation.
 
 ## Site creation
 

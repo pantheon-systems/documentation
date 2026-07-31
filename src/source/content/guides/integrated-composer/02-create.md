@@ -15,7 +15,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/create
 anchorid: wordpress-composer-managed
-reviewed: "2024-10-15"
+reviewed: "2026-07-28"
 ---
 
 ## Drupal with Integrated Composer
@@ -44,7 +44,7 @@ Composer installs required packages into configured paths for Drupal, such as:
 * Contributed modules are installed into `web/modules/contrib/`
 * Custom modules are installed into `web/modules/custom/`
 * Drupal core is installed into `web/core/`
-* Librariries are installed into `web/libraries/`
+* Libraries are installed into `web/libraries/`
 
 For more information about managing dependencies with Composer on Pantheon, see our documentation about [dependencies](/guides/integrated-composer/dependencies) or the [Composer documentation](https://getcomposer.org/doc/).
 

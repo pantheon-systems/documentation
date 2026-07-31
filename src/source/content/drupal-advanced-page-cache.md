@@ -10,7 +10,7 @@ cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [modules]
-reviewed: "2022-12-12"
+reviewed: "2026-07-27"
 ---
 
 [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/9.0) and the [Pantheon Global CDN](/guides/global-cdn).
@@ -440,4 +440,3 @@ The code we added clears all references to each taxonomy term every time a node 
 ## Additional Resources
 
 - Where you set and clear tags will vary greatly based on the needs of your site. See the [Drupal.org documentation for how you can set cache metadata directly on render arrays](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays).
-- You can also read this blog post from Aaron Wolfe of Capellic on [Pantheon Advanced Page Cache in Drupal 7](https://capellic.com/2017/11/28/using-pantheon-advanced-page-cache-in-drupal-7/).

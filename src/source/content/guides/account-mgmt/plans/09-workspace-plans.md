@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/workspace-plans
 editpath: docs/guides/account-mgmt/plans/09-workspace-plans.md
-reviewed: "2022-09-19"
+reviewed: "2026-07-06"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -69,6 +69,8 @@ As an Agency Partner, you receive access to:
 - A listing in the [Agency Partner Directory](https://directory.pantheon.io/agencies)
 - Commission incentives: Wallet, Lead Bounty, and PayGo Spiff
 - End-customer discounts: Premier partners can offer 10% off Year 1; Strategic partners can offer 15% off Year 1
+
+**Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
 
 For more information, visit the [Agency Partner Program page](https://pantheon.io/partners) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide).
 

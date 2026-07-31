@@ -10,6 +10,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 
 This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -288,7 +289,7 @@ ___
 
 **Issue**:  This module requires the use of the `tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
 
-**Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+**Solution**: Use drush, as this uses a single application container to process the export. The relevant drush command is `webform:export` (alias wfx).
 
 Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
 ___

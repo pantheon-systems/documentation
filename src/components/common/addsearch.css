@@ -72,6 +72,12 @@
   font-weight: var(--pds-typography-font-weight-semibold);
   padding-inline: var(--pds-spacing-4xs);
 }
+.addsWg--highlight em {
+  background-color: #fff1a9;
+  font-weight: var(--pds-typography-font-weight-semibold) !important;
+  padding-inline: var(--pds-spacing-4xs);
+  font-style: normal;
+}
 
 /* Pagination */
 .search-results__pager {
