@@ -37,10 +37,6 @@ A small number of sites will require action before migration can proceed — Pan
 - Existing site migrations begin September 1, 2026, sequenced in batches through the end of 2026
 - You will be notified in advance of your site's migration window
 
-### Can I opt my existing sites into the new filesystem early?
-
-Yes — contact your Pantheon representative or reach out via a support ticket to request early migration.
-
 ### Can I opt out of the migration?
 
 No. The migration is required for all sites as part of Pantheon's infrastructure modernization. We will notify you in advance and work to make the transition as seamless as possible.
@@ -66,9 +62,17 @@ Cloud Storage FUSE has a maximum file path length of 1,024 bytes. Most sites are
 
 Storage limits are determined by your Pantheon plan. The new filesystem does not impose additional per-folder file count limits beyond your plan's overall storage quota.
 
+### The current filesystem has struggled with single folders/directories having large numbers of files. How does the new filesystem compare in this regard?
+
+Our internal testing indicates the new filesystem handles large file counts significantly better than the current filesystem — we've tested over 200k files in a single directory without the issues we've seen on the current filesystem. That said, listing operations on very large directories can have performance considerations, and this is an area we're continuing to monitor. 
+
 ### How will I know my site has been migrated, or if a new site I created is using the new filesystem?
 
 In Site details, there is a Filesystem Generation field. Sites that are on the new filesystem will have a "2" in this field.
+
+### Does this impact SFTP access or SFTP mode?
+
+On-server development (SFTP mode) and SFTP access remain fully supported
 
 ### Where do I go if I have questions or something goes wrong?
 
