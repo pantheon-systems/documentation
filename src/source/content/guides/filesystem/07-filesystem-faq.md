@@ -54,6 +54,10 @@ The vast majority of migrations will be transparent with no noticeable downtime.
 - Faster, more reliable backups — current backup success rate of 97–98% improves to a target of 99%+
 - More resilient — your file storage is backed by Google Cloud infrastructure with high durability guarantees
 
+### Is the per-file size limit changing?
+
+- The size limit for individual files remains at 256MB. 
+
 ### My site has very long filenames — will there be an issue?
 
 Cloud Storage FUSE has a maximum file path length of 1,024 bytes. Most sites are unaffected. If your site has files that exceed this limit, Pantheon will notify you in advance and work with you to resolve the issue. For most affected sites, the fix involves flushing plugin caches — which Pantheon handles automatically. A very small number of sites with non-cache data in long paths will require direct coordination before migration. If your sites are impacted, your CSM will contact you directly with next steps.
