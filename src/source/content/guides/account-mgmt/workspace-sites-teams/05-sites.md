@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
-reviewed: "2023-06-20"
+reviewed: "2026-07-31"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]

@@ -2,7 +2,7 @@
 title: Relaunch Existing Pantheon Site
 description: Take a new site live by moving custom domains from one Site Dashboard to another, with minimal HTTPS interruptions.
 tags: [dns, https, launch, migrate]
-reviewed: "2026-04-27"
+reviewed: "2026-07-31"
 contenttype: [doc]
 innav: [true]
 categories: [launch]

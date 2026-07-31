@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
 integration: [--]
+reviewed: "2026-07-31"
 ---
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.

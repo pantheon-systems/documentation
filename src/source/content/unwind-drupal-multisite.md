@@ -9,6 +9,7 @@ cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [multisite]
+reviewed: "2026-07-31"
 ---
 
 Pantheon only supports one application codebase and one database per site. We do not recommend using database prefixes or offer support for Drupal Multisite implementations. If you are currently struggling with a Drupal Multisite and want to use Pantheon, you'll need to "unwind" the implementation, separating it into individual sites. You may also create a Custom Upstream if appropriate for your use-case.

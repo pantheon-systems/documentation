@@ -3,7 +3,7 @@ title: Single Sign-on with Pantheon
 subtitle: Introduction
 description: Learn how to use secure Single Sign-on with Pantheon.
 tags: [security]
-reviewed: "2023-05-01"
+reviewed: "2026-07-31"
 contenttype: [guide]
 innav: [true]
 categories: [security]

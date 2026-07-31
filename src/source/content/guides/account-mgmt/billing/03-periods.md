@@ -13,7 +13,7 @@ tags: [billing]
 contributors: [wordsmither, jazzsequence]
 permalink: docs/guides/account-mgmt/billing/periods
 editpath: docs/guides/account-mgmt/billing/03-periods.md
-reviewed: "2026-06-22"
+reviewed: "2026-07-31"
 ---
 
 Pantheon offers both Monthly and Annual Billing. Moving to Annual Billing can result in significant savings. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service. Refer to [Pricing](/guides/account-mgmt/plans/pricing) for information on costs and savings.
