@@ -56,7 +56,7 @@ The vast majority of migrations will be transparent with no noticeable downtime.
 
 ### Is the per-file size limit changing?
 
-- The size limit for individual files remains at 256MB. 
+The size limit for individual files remains at 256MB. 
 
 ### My site has very long filenames — will there be an issue?
 
