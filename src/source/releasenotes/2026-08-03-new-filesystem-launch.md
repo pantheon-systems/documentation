@@ -22,10 +22,10 @@ While Valhalla was an innovative solution at Pantheon's founding, it has since b
 
 **Existing Sites:** Existing site migrations will begin 9/1/2026. Rollout timeline:
 
-- Free sites: September 1, 2026 - November 1, 2026
-- Basic sites: October 5, 2026 - November 15, 2026
-- Performance sites: November 16, 2026 - December 27, 2026
-- Elite sites: November 30, 2026 - December 27, 2026
+- Free sites: September 1, 2026
+- Basic sites: October 5, 2026
+- Performance sites: November 16, 2026
+- Elite sites: November 30, 2026
 
 ## How to determine which Filesystem your site is using
 
