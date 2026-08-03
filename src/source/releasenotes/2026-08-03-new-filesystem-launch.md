@@ -4,7 +4,7 @@ published_date: "2026-08-03"
 categories: [new-feature, infrastructure]
 ---
 
-As of today, all newly created sites on Pantheon will use GCSFuse-based file system for their uploaded files (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal). This filesystem replaces the "Valhalla" system Pantheon pioneered for sharing files across horizontally scalable PHP containers.
+As of today, an increasing percentage of newly created sites on Pantheon will use GCSFuse-based file system for their uploaded files (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal). This filesystem replaces the "Valhalla" system Pantheon pioneered for sharing files across horizontally scalable PHP containers.
 
 Existing sites will migrate to this new filesystem over the remainder of 2026 starting on 09/01/26.
 
