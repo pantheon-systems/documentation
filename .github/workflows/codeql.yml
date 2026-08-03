@@ -39,7 +39,7 @@ jobs:
       matrix:
         # This repo is Next.js: TypeScript + JavaScript are covered by the
         # single "javascript-typescript" CodeQL language.
-        language: [ 'javascript-typescript' ]
+        language: [ 'javascript-typescript', 'actions' ]
 
     steps:
       - name: Checkout repository
