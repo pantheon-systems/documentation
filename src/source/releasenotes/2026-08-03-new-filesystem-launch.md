@@ -1,6 +1,7 @@
 ---
 title: "New filesystem used for newly created WordPress and Drupal sites"
 published_date: "2026-08-03"
+published_at: "2026-08-03T15:36:00Z"
 categories: [new-feature, infrastructure]
 ---
 
