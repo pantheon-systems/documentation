@@ -193,6 +193,19 @@ a.individual-changelog-link:hover {
 }
 
 /* Buttons */
+#onetrust-accept-btn-handler, #onetrust-pc-btn-handler {
+min-height: 44px !important;
+min-width: 44px !important;
+
+}
+.mktoField {
+min-height: 44px !important;
+min-width: 44px;
+}
+.mktoButton {
+  min-height: 44px;
+  min-width: 44px;
+}
 .mktoButtonRow .mktoButtonWrap button.mktoButton {
   background-color: var(
     --pds-color-button-primary-background-default
