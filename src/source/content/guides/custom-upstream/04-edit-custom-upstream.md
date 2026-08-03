@@ -33,7 +33,7 @@ Follow the steps below if you want to change the name or description of your Cus
 
 ### Repository Credentials
 
-You can update the credentials (the username and password, or personal access token) used to authenticate to a private repository directly from the Dashboard:
+You can update the access token used to authenticate to your private repository — a GitHub personal access token or a Bitbucket repository access token — directly from the Dashboard:
 
 1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
 
