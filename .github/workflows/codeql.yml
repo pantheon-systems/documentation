@@ -1,0 +1,65 @@
+name: "CodeQL"
+
+# Runs CodeQL analysis on:
+#  - pushes to main
+#  - any pull request opened/updated against main, INCLUDING pull requests
+#    from forks
+#  - a weekly schedule, as a safety net for dependency-related alerts
+#
+# NOTE: this intentionally uses the `pull_request` trigger rather than
+# `pull_request_target`. `pull_request` runs in the context of the fork
+# (read-only GITHUB_TOKEN, no access to repo secrets), which is the safe
+# way to scan untrusted fork code. Do not switch this to
+# `pull_request_target` unless you understand the security implications
+# of exposing secrets to code you don't control.
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    types: [ opened, synchronize, reopened ]
+  schedule:
+    - cron: '30 3 * * 1'  # weekly, Monday 03:30 UTC
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for all workflows
+      security-events: write
+      # Required to fetch internal or private CodeQL packs
+      packages: read
+      # Only need to read the code that's being scanned
+      contents: read
+      actions: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # This repo is Next.js: TypeScript + JavaScript are covered by the
+        # single "javascript-typescript" CodeQL language.
+        language: [ 'javascript-typescript' ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          config-file: ./.github/codeql/codeql-config.yml
+          # queries: security-extended   # uncomment for a broader query set
+
+      # If you don't have a build step (typical for JS/TS, which CodeQL
+      # analyzes without compiling), the autobuild step below is optional
+      # and can be removed. Kept here for completeness in case build-time
+      # analysis is ever needed for another language added to the matrix.
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"
