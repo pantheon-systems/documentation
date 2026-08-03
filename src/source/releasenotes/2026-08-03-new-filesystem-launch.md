@@ -4,7 +4,7 @@ published_date: "2026-08-03"
 categories: [new-feature, infrastructure]
 ---
 
-As of today, an increasing percentage of newly created sites on Pantheon will use GCSFuse-based file system for their uploaded files (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal). This filesystem replaces the "Valhalla" system Pantheon pioneered for sharing files across horizontally scalable PHP containers.
+As of today, an increasing percentage of newly created sites on Pantheon will use a filesystem backed by Cloud Storage FUSE for their uploaded files (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal). This filesystem replaces the "Valhalla" system Pantheon pioneered for sharing files across horizontally scalable PHP containers.
 
 Existing sites will migrate to this new filesystem over the remainder of 2026 starting on 09/01/26.
 
@@ -14,7 +14,7 @@ With this change, we can create and restore backups faster and more reliably.
 
 Both WordPress and Drupal were originally architected in the early 2000s for systems where developer-controlled application files (`.php`, `.css`, `.js`, etc.) and files uploaded by CMS users (images, PDFs, etc.) would live on the same server. By default, both CMSes will write uploaded files to the local file system. Those defaults break down when the application files are horizontally scaled across multiple servers or containers which need to share access to an ever-changing set of uploaded files. To solve this challenge at Pantheon's founding we created a scalable filesystem (Valhalla) that mounted across containers which allows sites to behave as though they are writing to a local disc while those files are actually shared across containers. Additionally, this approach allows for the wide variance in the amount of files uploaded to WordPress or Drupal, with some sites writing millions of files.
 
-While Valhalla was an innovative solution at Pantheon's founding, it has since been surpassed in performance by solutions like GCSFuse. Thanks to our partnership with Google Cloud, we can deprecate Valhalla in favor of a more robust filesystem.
+While Valhalla was an innovative solution at Pantheon's founding, it has since been surpassed in performance by solutions like Cloud Storage FUSE. Thanks to our partnership with Google Cloud, we can deprecate Valhalla in favor of a more robust filesystem.
 
 ## Rollout Timeline
 
