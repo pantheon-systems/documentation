@@ -15,15 +15,15 @@ tags: [files, filesystem, migration]
 permalink: docs/guides/filesystem/filesystem-faq
 ---
 
-This section provides answers to frequently asked questions about Pantheon's filesystem migration to Google Cloud Storage FUSE (GCS FUSE).
+This section provides answers to frequently asked questions about Pantheon's filesystem migration to Google's Cloud Storage FUSE.
 
 ### What is changing?
 
-Pantheon is upgrading the underlying filesystem that stores your site's uploaded files — images, PDFs, and other media in `wp-content/uploads` (WordPress) or `sites/default/files` (Drupal). We're replacing our legacy shared filesystem with Google's Cloud Storage FUSE (GCS FUSE), a more modern, reliable, and scalable solution built on Google Cloud infrastructure.
+Pantheon is upgrading the underlying filesystem that stores your site's uploaded files — images, PDFs, and other media in `wp-content/uploads` (WordPress) or `sites/default/files` (Drupal). We're replacing our legacy shared filesystem with Cloud Storage FUSE, a more modern, reliable, and scalable solution built on Google Cloud infrastructure.
 
 ### Why is Pantheon making this change?
 
-Pantheon's legacy filesystem was innovative when we built it, but Google Cloud Storage FUSE now surpasses it in performance and reliability. The new filesystem creates and restores backups faster and more reliably. It also scales more effectively as your site grows.
+Pantheon's legacy filesystem was innovative when we built it, but Cloud Storage FUSE now surpasses it in performance and reliability. The new filesystem creates and restores backups faster and more reliably. It also scales more effectively as your site grows.
 
 ### Do I need to do anything?
 
