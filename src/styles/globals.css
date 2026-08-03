@@ -364,3 +364,8 @@ a.glossary__term-link {
 .gatsby-hide-code-line {
   display: none;
 }
+
+.pds-button {
+  min-height: 44px;
+  min-width: 44px;
+}
