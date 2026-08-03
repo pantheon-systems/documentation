@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2022-12-13"
+reviewed: "2026-08-03"
 ---
 
 This section provides information on editing an existing Custom Upstream.
@@ -31,7 +31,21 @@ Follow the steps below if you want to change the name or description of your Cus
 
 ## Change Custom Upstream Repository URL or Password
 
-You cannot modify the repository details on an existing Custom Upstream. we recommend creating a new Custom Upstream if there is a new URL or password you need to use. You will need to switch each site to the new upstream individually with [Terminus](/terminus):
+### Repository Credentials
+
+You can update the credentials (the username and password, or personal access token) used to authenticate to a private repository directly from the Dashboard:
+
+1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
+
+1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+
+1. Click **Settings** next to the existing upstream requiring an update.
+
+1. In the **Repository credentials** section, click **Update credentials** (or **Add credentials** if none are set yet), enter the new credentials, then click **Save**.
+
+### Repository URL
+
+You cannot modify the repository URL on an existing Custom Upstream. We recommend creating a new Custom Upstream if there is a new URL you need to use. You will need to switch each site to the new upstream individually with [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My New Custom Upstream"
