@@ -55,7 +55,6 @@ Google Cloud Storage FUSE (Generation 2 filesystem) enforces a hard limit of 1,0
 
 Disk-based caching plugins — such as W3 Total Cache, WP Rocket, and Drupal's AdvAgg module — can generate file paths that approach or exceed this limit, depending on configuration. If your site is affected, Pantheon will identify it in advance and reach out with specific guidance before migration.
 
-</Alert>
 
 ## Large Code Repository
 
