@@ -45,7 +45,15 @@ You can update the access token used to authenticate to your private repository 
 
 ### Repository URL
 
-You cannot modify the repository URL on an existing Custom Upstream. We recommend creating a new Custom Upstream if there is a new URL you need to use. You will need to switch each site to the new upstream individually with [Terminus](/terminus):
+You cannot modify the repository URL on an existing Custom Upstream. We recommend creating a new Custom Upstream if there is a new URL you need to use.
+
+<Alert title="Important" type="info">
+
+To switch existing sites to the new Custom Upstream, it must **share Git history** with the one they currently use (for example, forked from or based on the original repository). A site cannot switch to an upstream with an unrelated commit history. Review [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) before switching.
+
+</Alert>
+
+You will need to switch each site to the new upstream individually with [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My New Custom Upstream"
