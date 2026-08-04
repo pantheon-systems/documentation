@@ -28,6 +28,7 @@ import Card from "@/components/common/card";
 import { Popover } from "@/components/common/popover";
 import { Wistia } from "@/components/common/wistia";
 import Enablement from "@/components/common/enablement";
+import Image from "next/image";
 
 export type MdxWrapperProps = ComponentProps<typeof ArticleRenderer>;
 
@@ -61,10 +62,13 @@ const ImageRenderer = async ({ src = "", alt }: any) => {
 
   return (
     <span className="next-resp-image-container">
-      <img
+      <Image
         src={image.default.src} // You may copy your images to `public/images` in build step
         alt={alt || ""}
-        style={{ maxWidth: "100%", height: "auto" }}
+        loading="lazy"
+        width={image.default.width}
+        height={image.default.height}
+        style={{ objectFit: "contain" }}
       />
     </span>
   );
