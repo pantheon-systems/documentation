@@ -68,7 +68,11 @@ const ImageRenderer = async ({ src = "", alt }: any) => {
         loading="lazy"
         width={image.default.width}
         height={image.default.height}
-        style={{ objectFit: "contain" }}
+        style={{ 
+          maxWidth: "1032px",
+          height: "auto",
+          width: "100%",
+        }}
       />
     </span>
   );
