@@ -84,6 +84,7 @@ Here are some examples of ways you might organize your sites:
 
 1. Create a Workspace for each department which contains the site(s) that department maintains, and invite any department staff that should have access to the site to the team.
 
+
     |   | My Dashboard | Math Department Workspace | Athletics Department Workspace |
     |---|---|---|---|
     | **Sites Tab** | Sites you have access to | Math Department site | Football site, Basketball site, Baseball site, etc. |
