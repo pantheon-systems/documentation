@@ -2,7 +2,7 @@
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
 tags: [cdn, https, professional-services]
-reviewed: "2025-03-19"
+reviewed: "2026-06-30"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -45,6 +45,37 @@ Allow two business days for your Account Team to load the certificate.
 
 </Tab>
 
+<Tab title="GCDN with Bot Protection" id="ccbotprotection">
+
+GCDN with Bot Protection supports custom certificates, including **wildcard certificates** (for example, `*.example.com`) that cover multiple subdomains.
+
+### Before You Begin
+
+Your domain must already be added to your environment and serving traffic through GCDN with Bot Protection. Domains are initially secured with an automatically issued Let's Encrypt certificate, which your custom certificate then replaces.
+
+For wildcard certificates, each subdomain you want the certificate to serve must still be added to your environment as a domain — a wildcard certificate does not automatically apply to subdomains that have not been added.
+
+If your CAA records block Let's Encrypt from issuing that initial certificate, work with your Customer Success Engineer (CSE) to either temporarily permit Let's Encrypt, or have the CSE apply your custom certificate directly.
+
+### Send the CSR to Your CA
+
+[Contact Pantheon Support](/guides/support/contact-support/) to request a Certificate Signing Request (CSR). Pantheon generates the CSR and keeps the private key secure — it is never shared or exported.
+
+Send the CSR to your **Certificate Authority** (CA) to obtain your signed certificate. For wildcard coverage, request a wildcard certificate from your CA.
+
+Return the signed certificate and any intermediate certificates to Pantheon Support. Allow two business days for your Account Team to apply it.
+
+#### CSR Notes
+
+- You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
+
+- Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate.
+
+### DNS Records
+
+DNS records for GCDN with Bot Protection differ from the Global CDN. Work with your Customer Success Engineer (CSE) to obtain the correct DNS values (`CNAME` or `A`/`AAAA` records) for your domains.
+
+</Tab>
 
 <Tab title="Legacy AGCDN" id="newagcdn">
 
@@ -94,7 +125,7 @@ Test production domain(s) before updating DNS by overriding DNS on your local co
 
 <Partial file="_hosts-file.md" />
 
-For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
+For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially include non-production domains.
 
 ### Disable Let's Encrypt with CAA Records
 
@@ -109,6 +140,10 @@ To help generate CAA records, please see the free online tool: <https://sslmate.
 
 CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
 
+<Alert title="GCDN with Bot Protection" type="info" >
+  With GCDN with Bot Protection, domains are initially validated and secured with a Let's Encrypt certificate before the custom certificate is applied. After your custom certificate is in place, add CAA records to prevent Let's Encrypt from re-issuing certificates for those domains.
+</Alert>
+
 #### Issue: A Let's Encrypt Certificate is being served instead of the custom certificate
 
 If a Let's Encrypt Certificate is deployed before the CAA record preventing it, [contact Pantheon Support](/guides/support/contact-support/) for assistance. Please allow at least 3 business days for Pantheon to resolve the Let's Encrypt Certificate.
@@ -117,9 +152,17 @@ If a Let's Encrypt Certificate is deployed before the CAA record preventing it, 
 
 Update `A` and `AAAA` records provided by Pantheon Support. Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
 
+<Alert title="GCDN with Bot Protection" type="info" >
+  DNS records differ for GCDN with Bot Protection. Work with your Customer Success Engineer (CSE) to obtain the correct DNS values (`CNAME` or `A`/`AAAA` records) for your domains.
+</Alert>
+
 ## Renew or Replace a Custom Certificate
 
 About 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for bringing a custom certificate).
+
+<Alert title="GCDN with Bot Protection" type="info" >
+  For GCDN with Bot Protection, Pantheon retains your private key and original CSR, so renewals reuse the same CSR rather than issuing a new one. When Pantheon opens your renewal ticket, request a new signed certificate from your CA using the existing CSR and return it to Pantheon Support.
+</Alert>
 
 To update a certificate with additional domains, [contact Pantheon Support](/guides/support/contact-support/) with the following details:
 
@@ -129,9 +172,13 @@ To update a certificate with additional domains, [contact Pantheon Support](/gui
 
 It may take up to two business days to process the request.
 
+## Custom Certificate Expiry
+
+If your custom certificate expires before a renewal is applied, the system will attempt to revert to a managed Let's Encrypt certificate until a new custom certificate is uploaded. In this scenario, your site remains accessible — only the custom certificate is temporarily replaced.
+
 ## Remove a Custom Certificate
 
-All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/guides/global-cdn/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
+All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/guides/global-cdn/https) Let's Encrypt to issue certificates.
 
 
 ## Frequently Asked Questions
