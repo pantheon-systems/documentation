@@ -28,8 +28,6 @@
 
 /* Variants */
 .primary {
-  min-width: 44px;
-  min-height: 44px;
   background-color: var(--pantheon-yellow, #ffdc28);
   border-color: var(--pantheon-yellow, #ffdc28);
   color: var(--pantheon-black, #000000);
@@ -41,8 +39,6 @@
 }
 
 .secondary {
-  min-width: 44px;
-  min-height: 44px;
   border: 1px solid var(--pantheon-black, #000000);
   background-color: white;
   color: var(--pantheon-black, #000000);
