@@ -12,12 +12,12 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2026-08-03"
+reviewed: "2026-08-05"
 ---
 
 This section provides information on editing an existing Custom Upstream.
 
-## Change Custom Upstream Name or Description
+## Update Name or Description
 
 Follow the steps below if you want to change the name or description of your Custom Upstream.
 
@@ -29,9 +29,7 @@ Follow the steps below if you want to change the name or description of your Cus
 
 1. Make desired changes > click **Update**.
 
-## Change Custom Upstream Repository URL or Password
-
-### Repository Credentials
+## Update Repository Credentials
 
 You can update the access token used to authenticate to your private repository — a GitHub personal access token or a Bitbucket repository access token — directly from the Dashboard:
 
@@ -43,13 +41,17 @@ You can update the access token used to authenticate to your private repository 
 
 1. In the **Repository credentials** section, click **Update credentials** (or **Add credentials** if none are set yet), enter the new credentials, then click **Save**.
 
-### Repository URL
+## Update Repository URL
 
 You cannot modify the repository URL on an existing Custom Upstream. We recommend creating a new Custom Upstream if there is a new URL you need to use.
 
-<Alert title="Important" type="info">
+<Alert title="Warning" type="warning">
 
-To switch existing sites to the new Custom Upstream, it must **share Git history** with the one they currently use (for example, forked from or based on the original repository). A site cannot switch to an upstream with an unrelated commit history. Review [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) before switching.
+To switch existing sites to the new Custom Upstream, it must **share Git history** with the one they currently use (for example, forked from or based on the original repository). 
+
+A site cannot switch to an upstream with an unrelated commit history. 
+
+Review [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) before switching.
 
 </Alert>
 
