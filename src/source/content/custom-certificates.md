@@ -2,7 +2,7 @@
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
 tags: [cdn, https, professional-services]
-reviewed: "2025-03-19"
+reviewed: "2026-08-05"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -19,7 +19,7 @@ Our Custom Certificates service is available to contract customers only, but it 
 
 ## Add a Custom Certificate
 
-Follow the steps below to request and send the appropriate certificate, and private key information for AGCDN where applicable:
+Choose your CDN type below to see the certificate request steps.
 
 <TabList>
 
