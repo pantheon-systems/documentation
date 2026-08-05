@@ -21,23 +21,19 @@ This section provides information on editing an existing Custom Upstream.
 
 Follow the steps below if you want to change the name or description of your Custom Upstream.
 
-1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to your [workspace dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Upstreams** tab.
 
-1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+1. Next to the existing upstream requiring an update, click the dropdown icon and then click **Edit settings**.
 
-1. Click **Settings** next to the existing upstream requiring an update.
-
-1. Make desired changes > click **Update**.
+1. Make desired changes, then click **Save**.
 
 ## Update Repository Credentials
 
 You can update the access token used to authenticate to your private repository — a GitHub personal access token or a Bitbucket repository access token — directly from the Dashboard:
 
-1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to your [workspace dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Upstreams** tab.
 
-1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-
-1. Click **Settings** next to the existing upstream requiring an update.
+1. Next to the existing upstream requiring an update, click the dropdown icon and then click **Edit settings**.
 
 1. In the **Repository credentials** section, click **Update credentials** (or **Add credentials** if none are set yet), enter the new credentials, then click **Save**.
 
