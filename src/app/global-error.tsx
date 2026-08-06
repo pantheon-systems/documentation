@@ -8,6 +8,7 @@ import styles from "./not-found.module.css";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
+
 export default function GlobalError({
   error,
 }: {
