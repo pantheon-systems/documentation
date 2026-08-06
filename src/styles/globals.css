@@ -1,7 +1,7 @@
 @import url("./webstyles.css");
 @import url("./common.css");
 /* Preparring for v2 migration
-/* https://pds-react.pantheon.io/v2.0/?path=/docs/documentation-v2-migration-gradual-migration--docs 
+/* https://pds-react.pantheon.io/v2.0/?path=/docs/documentation-v2-migration-gradual-migration--docs */
 /*@import 'npm:@pantheon-systems/pds-toolkit-react-v2/dist/css/pds-core.css';*/
 @import "@pantheon-systems/pds-toolkit-react/css/pds-core.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
