@@ -1,8 +1,9 @@
 ---
 title: "Update Custom Upstream credentials in the Dashboard"
-published_date: "2026-08-03"
-published_at: "2026-08-03T00:00:00Z"
-categories: [new-feature]
+published_date: "2026-08-07"
+published_at: "2026-08-07T22:01:45Z"
+categories: [new-feature, user-interface]
+description: “You can now update the credentials for a Custom Upstream directly from the Pantheon Dashboard — no support ticket or new upstream required.”
 ---
 
 You can now update the credentials for a Custom Upstream directly from the Pantheon Dashboard — no support ticket or new upstream required. Previously, changing a private repository's access token meant either creating a new Custom Upstream and switching each site over to it, or contacting Pantheon Support.
