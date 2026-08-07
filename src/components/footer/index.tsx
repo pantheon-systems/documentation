@@ -56,6 +56,17 @@ export const Footer = ({
 }) => {
   return (
     <SiteFooter
+      legalLinks={[
+        'privacy',
+        'dataSubjectRequest',
+        'cookiePolicy',
+        <button id='ot-sdk-btn' class='ot-sdk-show-settings' key='cookie-prefs' onClick={() => openCookiePreferences()} >
+          Manage Cookie Preferences
+          </button>,
+        'termsOfUse',
+        'acceptableUse',
+        'accessibilityStatement',
+      ]}
       containerWidth="standard"
       className={cn(
         className,

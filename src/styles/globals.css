@@ -367,3 +367,14 @@ a.glossary__term-link {
 .gatsby-hide-code-line {
   display: none;
 }
+
+
+.pds-site-footer__legal a, .pds-site-footer__legal button {
+  color: var(--pds-color-fg-default) !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  background: 0 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+}
