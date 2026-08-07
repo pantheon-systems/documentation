@@ -377,4 +377,5 @@ a.glossary__term-link {
   border: none !important;
   padding: 0 !important;
   text-decoration: none !important;
+  text-align: left;
 }
