@@ -60,9 +60,7 @@ export const Footer = ({
         'privacy',
         'dataSubjectRequest',
         'cookiePolicy',
-        <button id='ot-sdk-btn' class='ot-sdk-show-settings' key='cookie-prefs' onClick={() => openCookiePreferences()} >
-          Manage Cookie Preferences
-          </button>,
+        <button id='ot-sdk-btn' className='ot-sdk-show-settings'  />,
         'termsOfUse',
         'acceptableUse',
         'accessibilityStatement',
