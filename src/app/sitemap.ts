@@ -15,6 +15,15 @@ const EXCLUDED_TYPES = new Set(["iframe-embed"]);
 // of the whole route, and the build itself stays fast.
 export const revalidate = 3600;
 
+// Some content filenames contain characters that are illegal in a <loc> value:
+// literal "&" (breaks XML parsing outright) and spaces. Next.js does NOT escape
+// these, so encode them here.
+//
+// encodeURI handles spaces and leaves "/", "," and other legal path characters
+// alone; it deliberately does not touch "&", so that is replaced explicitly.
+const encodePath = (uri: string): string =>
+  encodeURI(uri).replace(/&/g, "%26");
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await getAllPages();
 
@@ -32,7 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (!page.uri) continue;
 
     // getAllPages() returns slugs with no leading/trailing slash (normalizeSlug)
-    const url = `${SITE_URL}/${page.uri}`;
+    const url = `${SITE_URL}/${encodePath(page.uri)}`;
     if (seen.has(url)) continue;
     seen.add(url);
 
