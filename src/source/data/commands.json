@@ -1,7 +1,7 @@
 {
   "application": {
     "name": "Terminus",
-    "version": "4.3.3"
+    "version": "4.3.2"
   },
   "commands": [
     {
@@ -303,7 +303,7 @@
       "usage": [
         "completion [--debug] [--] [<shell>]"
       ],
-      "help": "The <info>completion</> command dumps the shell completion script required\nto use shell autocompletion (currently, bash, fish, zsh completion are supported).\n\n<comment>Static installation\n-------------------</>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>terminus completion bash | sudo tee /etc/bash_completion.d/terminus</>\n\nOr dump the script to a local file and source it:\n\n    <info>terminus completion bash > completion.sh</>\n\n    <comment># source the file whenever you use the project</>\n    <info>source completion.sh</>\n\n    <comment># or add this line at the end of your \"~/.bashrc\" file:</>\n    <info>source /path/to/completion.sh</>\n\n<comment>Dynamic installation\n--------------------</>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~/.bashrc\"</>):\n\n    <info>eval \"$(terminus completion bash)\"</>",
+      "help": "The <info>completion</> command dumps the shell completion script required\nto use shell autocompletion (currently, bash, fish, zsh completion are supported).\n\n<comment>Static installation\n-------------------</>\n\nDump the script to a global completion file and restart your shell:\n\n    <info>terminus completion zsh | sudo tee $fpath[1]/_terminus</>\n\nOr dump the script to a local file and source it:\n\n    <info>terminus completion zsh > completion.sh</>\n\n    <comment># source the file whenever you use the project</>\n    <info>source completion.sh</>\n\n    <comment># or add this line at the end of your \"~/.zshrc\" file:</>\n    <info>source /path/to/completion.sh</>\n\n<comment>Dynamic installation\n--------------------</>\n\nAdd this to the end of your shell configuration file (e.g. <info>\"~/.zshrc\"</>):\n\n    <info>eval \"$(terminus completion zsh)\"</>",
       "definition": {
         "arguments": {
           "shell": {
