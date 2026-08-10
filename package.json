@@ -93,7 +93,7 @@
     "c8": "^7.14.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.3.4",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.3.0",
     "jsdom": "^22.1.0",
     "postcss": "^8.5.6",
     "prettier": "3.2.5",
@@ -116,6 +116,11 @@
     "fast-xml-parser": "4.5.4",
     "@remix-run/router": "1.23.2",
     "rollup": "4.59.0",
-    "minimatch": "10.2.4"
+    "minimatch": "10.2.4",
+    "brace-expansion": "^5.0.7",
+    "js-yaml": "^4.3.0",
+    "gray-matter": {
+      "js-yaml": "^3.15.0"
+    }
   }
 }
