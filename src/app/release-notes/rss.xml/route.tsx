@@ -75,6 +75,8 @@ export const GET = async () => {
   return new Response(`${xmlString}`, {
     headers: {
       "Content-Type": "application/xml",
+      // Public feed: allow cross-origin reads (e.g. the Pantheon Dashboard).
+      "Access-Control-Allow-Origin": "*",
     },
   });
 };
