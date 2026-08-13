@@ -392,6 +392,18 @@ You must do _one_ of the following to ensure that your newly created Multidev ha
 - Re-commit your changes to the Multidev and/or `pantheon.yml` file
 - Push the `pantheon.yml` changes directly to the Dev (master branch) environment
 
+### Internal Error when pushing changes to pantheon.yml to a git branch with no existing Multidev  
+
+**Issue:** When you push a change to pantheon.yml, Pantheon attempts to apply the configuration change but fails if a Multidev environment doesn't exist in your site. This results in an error and prevents the configuration from being applied.
+
+**Solution:**
+
+Before pushing changes to pantheon.yml, ensure that a Multidev environment is already created on your site.
+
+1. Create a Multidev environment in your Pantheon dashboard or through terminus
+
+1. Push your pantheon.yml change
+
 ### Deploying Hotfixes
 
 Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/guides/git/hotfixes). Git tags created manually and pushed on the platform do not invoke all the processes that an actual deployment does. Pantheon standard workflow is done via the dashboard deploy or `terminus env:deploy`. As a workaround for hotfixes:
