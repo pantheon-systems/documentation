@@ -1,7 +1,7 @@
 ---
 title: "Pantheon-maintained plugins and modules are now compatible with PHP 8.5"
-published_date: "2026-07-23"
-published_at: "2026-07-23T12:00:00Z"
+published_date: "2026-08-14"
+published_at: "2026-08-14T12:00:00Z"
 categories: [drupal, wordpress]
 description: "All Pantheon-maintained Drupal modules and WordPress plugins now support PHP 8.5, available on the platform."
 ---
@@ -26,8 +26,8 @@ The following WordPress plugins have been updated for PHP 8.5 compatibility:
 - [WP Redis](https://wordpress.org/plugins/wp-redis/) 1.4.7
 - [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) 1.4.5
 - [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) 0.4.5
-- [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) 2.3.2
-- [Pantheon Content Publisher](https://wordpress.org/plugins/pantheon-content-publisher/) 1.3.5
+- [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) 2.3.4
+- [Pantheon Content Publisher](https://wordpress.org/plugins/pantheon-content-publisher/) 1.3.6
 - [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) 1.5.7
 
 To switch your site to PHP 8.5, see [Upgrade PHP Versions](/guides/php/php-versions).
