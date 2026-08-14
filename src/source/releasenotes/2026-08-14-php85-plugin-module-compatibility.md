@@ -1,7 +1,7 @@
 ---
 title: "Pantheon-maintained plugins and modules are now compatible with PHP 8.5"
 published_date: "2026-08-14"
-published_at: "2026-08-14T12:00:00Z"
+published_at: "2026-08-14T16:55:23Z"
 categories: [drupal, wordpress]
 description: "All Pantheon-maintained Drupal modules and WordPress plugins are confirmed compatible with PHP 8.5."
 ---
@@ -10,6 +10,8 @@ All Pantheon-maintained Drupal modules and WordPress plugins have been confirmed
 
 ## Drupal modules
 
+The following Drupal modules have been updated for PHP 8.5 compatibility:
+
 - [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache/releases/2.4.0) 2.4.0
 - [Pantheon Secrets](https://www.drupal.org/project/pantheon_secrets/releases/1.1.0) 1.1.0
 - [Search API Pantheon](https://www.drupal.org/project/search_api_pantheon/releases/8.5.0) 8.5.0
@@ -17,6 +19,8 @@ All Pantheon-maintained Drupal modules and WordPress plugins have been confirmed
 - [Pantheon Domain Masking](https://github.com/pantheon-systems/pantheon-domain-masking/releases/tag/2.2.0) 2.2.0
 
 ## WordPress plugins
+
+The following WordPress plugins have been updated for PHP 8.5 compatibility:
 
 - [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) 2.1.2
 - [WP Redis](https://wordpress.org/plugins/wp-redis/) 1.4.7
