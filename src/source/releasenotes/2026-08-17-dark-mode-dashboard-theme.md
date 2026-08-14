@@ -10,9 +10,9 @@ description: "You can now choose how the Pantheon Dashboard looks. Switch themes
 
 You can now choose how the Pantheon Dashboard looks. Alongside the classic Light appearance, the Dashboard supports a full **Dark mode**, plus a **System** option that automatically follows your device or browser's own light/dark setting.
 
-Pick your preference from the **Theme** control in your user account menu. Choose:
+Pick your preference from the **Theme** control in your [User Menu](/personal-settings#user-menu):
 
-* **Light** — the classic Dashboard appearance
+* **Light** — the classic Dashboard appearance (default)
 * **Dark** — a full dark color scheme across the Dashboard
 * **System** — automatically matches your OS or browser's current preference, and updates live if that setting changes
 
@@ -24,5 +24,5 @@ Dark mode reduces eye strain in low-light environments, can save battery on some
 
 ## Where to find it
 
-Look for the **Theme** option in your user account menu at the top of the Dashboard.
+Look for the **Theme** option in your User Menu at the top of the Dashboard. For more details, see [related documentation](/personal-settings#user-menu).
 
