@@ -6,7 +6,7 @@ categories: [user-interface]
 description: "Pantheon has extended traffic visibility on the dashboard – you can now see aggregated traffic insights across your entire workspace."
 ---
 
-Pantheon has extended traffic visibility on the dashboard – you can now see aggregated [traffic insights across your entire workspace](/guides/account-mgmt/traffic/workspace), giving portfolio managers and agencies a single view of what's happening across all their sites.
+Pantheon has extended traffic visibility on the dashboard – you can now see aggregated traffic insights across your entire workspace, giving portfolio managers and agencies a single view of what's happening across all their sites.
 
 * **Workspace Top IPs, User Agents, and Visited Paths:** New tabs on the workspace Insights page show the top IP addresses, user agents, and visited paths generating traffic across every site in your workspace – no need to check each site individually to spot patterns.
 * **Drill-Down by Site:** Click into any row to see which specific sites are driving that traffic, so you can quickly pinpoint where to focus your attention.

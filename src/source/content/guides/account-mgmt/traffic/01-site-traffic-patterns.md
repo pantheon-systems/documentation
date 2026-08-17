@@ -40,7 +40,7 @@ The Top Traffic Patterns section of the Site Metrics dashboard gives you a detai
 
 ![top traffic patterns](../../../../images/dashboard/top-traffic-patterns.png)
 
-You can toggle the displayed date range by clicking **Day**, **Week**, or **Month** at the top of the section. Data is refreshed every minute.
+You can toggle the displayed date range by clicking **Day**, **Week**, **Month** or a cutom time range at the top of the section.
 
 <Alert type="info" title="Note">
 
