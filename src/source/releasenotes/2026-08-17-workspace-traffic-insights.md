@@ -1,7 +1,7 @@
 ---
 title: "Introducing Workspace Traffic Insights"
 published_date: "2026-08-17"
-published_at: "2026-08-17T00:00:00Z"
+published_at: "2026-08-17T21:01:03Z"
 categories: [user-interface]
 description: "Pantheon has extended traffic visibility on the dashboard – you can now see aggregated traffic insights across your entire workspace."
 ---
