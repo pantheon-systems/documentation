@@ -48,7 +48,7 @@ For both metrics, the platform counts based on the total volume of requests, whi
 
 As shown here, visits and visitors have different meanings. If two visitors go to the site, and one opens another page but the other leaves, that would be tracked as two visitors and three pages served. If one of those visitors returns again the next day, it would be counted as two visitors, three visits, and four pages served.
 
-This same Pages Served definition also applies to the per-path/IP/user-agent breakdown on GCDN-migrated sites — see [Site Traffic Patterns](/guides/account-mgmt/traffic).
+This same Pages Served definition also applies to the per-path/IP/user-agent breakdown on [next-generation Global CDN](/guides/global-cdn/next-gen-global-cdn)-migrated sites. For details, see [Site Traffic Patterns](/guides/account-mgmt/traffic#requests-vs-pages-served).
 
 ### Cache Hit Ratio
 

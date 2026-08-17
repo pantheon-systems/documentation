@@ -32,7 +32,9 @@ For a deeper portfolio-wide view, the workspace **Insights** page aggregates tra
 
 <Alert type="info" title="Note">
 
-Workspace Insights are available only for sites migrated to the new Pantheon's Global CDN (GCDN). Sites still on the legacy CDN are not included in this view. If none of the sites in your workspace have migrated to the new GCDN, you will not see the Ingishts area in your Workspace dashboard. If only a portion of your sites have migrated, your workspace-level totals and rankings are partial — they don't represent your full portfolio. See the [Global CDN migration guide](/guides/global-cdn/next-gen-global-cdn) to migrate remaining sites.
+Workspace Insights are available only for sites migrated to the next-generation Global CDN (GCDN). Sites still on the legacy Global CDN are not included in this view. If none of the sites in your workspace have migrated to the next-generation GCDN, you will not see the Ingishts area in your Workspace dashboard. If only a portion of your sites have migrated, your workspace-level totals and rankings are partial — they don't represent your full portfolio. 
+
+See the [next-generation Global CDN migration guide](/guides/global-cdn/next-gen-global-cdn) to migrate remaining sites.
 
 </Alert>
 
