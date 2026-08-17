@@ -10,27 +10,37 @@ product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [wordsmither]
-reviewed: "2026-03-30"
+reviewed: "2026-08-17"
 showtoc: true
 ---
+## User Menu
+Open this dropdown menu by clicking your user icon, located at the top right of the Pantheon Dashboard: 
 
-Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner, then **Personal Settings**.
+![Dropdown menu showing theme settings, user settings, and a logout link](../images/dashboard/new-dashboard/user-menu.png)
 
-![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/2024/_personal-settings-profile-updated.png)
+### Theme
+From the User Menu, you can select your preferred Theme for the Pantheon Dashboard: 
+
+* **Light** (default)
+* **Dark** 
+* **System** — automatically follows your device or browser's own light/dark setting
+
+## User Settings
+User Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner, then **User Settings**.
+
+![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/user-settings.png)
 
 
-## Profile
+### Profile
 
 The user gravatar is a personalized image you can upload.  If you have not personalized your gravatar, it will appear as it does in the image below. To customize it, click **Change your Gravator**, to the right of the existing gravatar.
 
-![The user gravatar](../images/dashboard/new-dashboard/2024/_gravatar-user.png)
-
 You can also add your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
 
-## Login Details
+### Login Details
 You can update the current email address or password associated with your Dashboard. 
 
-### Email address
+#### Email address
 
 To update the email address, click **Change Email Address**. Enter the updated email address in the **New Email Address** field and click **Save Changes**.
 
@@ -40,7 +50,7 @@ Members of SSO-enabled workspaces cannot update email addresses as described abo
 
 </Alert>
 
-### Password
+#### Password
 
 To update the password, click **Change Password**. You are directed to a page where you are prompted to enter your current password and your desired new password. Enter the updated password in the **New Password** field, confirm your entry, and then click **Save Changes**.
 
@@ -53,15 +63,15 @@ When changing your password, make sure the new password meets the following requ
 
 You’ll need to log in again after your password is changed.
 
-## Email Notifications
+### Email Notifications
 
-### Autopilot Email Notifications
+#### Autopilot Email Notifications
 
 You can configure email notifications for Autopilot alerts and activity digests.
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
 
-### Email Preferences
+#### Email Preferences
 
 You can manage your Pantheon marketing email preferences directly from the Dashboard to control which communications you receive from Pantheon, including newsletters, events, and product updates.
 
@@ -69,7 +79,7 @@ To manage your email preferences:
 
 1. Click your user gravatar in the upper right corner.
 
-1. Select **Personal Settings**.
+1. Select **User Settings**.
 
 1. Navigate to **Email Notifications**.
 
@@ -87,15 +97,15 @@ Email preferences control marketing communications only. System notifications (s
 
 </Alert>
 
-## Security 
-### Multi-Factor Authentication (MFA)
+### Security 
+#### Multi-Factor Authentication (MFA)
 Multi-Factor Authentication (MFA) adds an extra layer of security to your Pantheon account. Once MFA is enabled, you will be prompted to verify your identity with a second factor authenticator application upon login. For more details, see [related documentation](/guides/account-mgmt/account/mfa).
 
-## SSH Keys
+### SSH Keys
 
 SSH keys allow you to establish a secure connection between your computer and Pantheon. Visit the SSH Keys tab to review your existing configured keys, and add or revoke SSH keys. Follow the steps in [SSH Keys](/ssh-keys) to generate, add, and revoke SSH keys. 
 
-## Machine Tokens
+### Machine Tokens
 
 Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
 
