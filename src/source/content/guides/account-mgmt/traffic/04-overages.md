@@ -6,8 +6,8 @@ tags: [traffic]
 contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/overages
-editpath: docs/guides/account-mgmt/traffic/03-overages.md
-reviewed: "2024-08-15"
+editpath: docs/guides/account-mgmt/traffic/04-overages.md
+reviewed: "2026-08-17"
 contenttype: [guide]
 innav: [false]
 categories: [plans]

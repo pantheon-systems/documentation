@@ -36,7 +36,6 @@ const RedirectMap: Record<string, string> = {
   "/guides/account-mgmt/plans/manage": "/guides/account-mgmt/plans/site-plans",
   "/guides/account-mgmt/plans/purchase": "/guides/account-mgmt/plans/site-plans",
   "/guides/account-mgmt/traffic/faq": "/guides/account-mgmt/traffic",
-  "/guides/account-mgmt/traffic/measure": "/guides/account-mgmt/traffic",
   "/guides/behat": "/behat",
   "/guides/composer": "/composer",
   "/guides/composer-convert": "/composer-convert",
