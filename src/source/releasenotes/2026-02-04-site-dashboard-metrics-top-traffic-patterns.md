@@ -11,6 +11,6 @@ A new user interface is now available in the [Metrics](/guides/account-mgmt/traf
 
 With this data, you can identify aggressive crawlers or scrapers, that you may want to block manually or prioritize caching and optimization efforts based on the specific pages receiving the highest request volume.
 
-**Note**: This data includes both [counted](/guides/account-mgmt/traffic#counted-visits) and [uncounted](/guides/account-mgmt/traffic#uncounted-visits) visits.
+**Note**: This data includes both [counted](/guides/account-mgmt/traffic/measure#counted-visits) and [uncounted](/guides/account-mgmt/traffic/measure#uncounted-visits) visits.
 
 ![metrics page showing tables with top ips, user agents, and visited paths](../images/release-notes/traffic-patterns.png)
