@@ -13,7 +13,7 @@ Pantheon has extended traffic visibility on the dashboard – you can now see ag
 * **User Agent Parsing:** Instantly see a parsed breakdown of any user agent to help you confirm whether high-volume traffic is a real visitor or something worth investigating further.
 * **IP Investigation:** Click any IP address to open its AbuseIPDB report so you can quickly assess whether it has a history of malicious activity.
 
-For more details, see [related documentaiton](/guides/account-mgmt/traffic/workspace).
+For more details, see [related documentation](/guides/account-mgmt/traffic/workspace).
 
 <Alert type="info" title="Note">
 
