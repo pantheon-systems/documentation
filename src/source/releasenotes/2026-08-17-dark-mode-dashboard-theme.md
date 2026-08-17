@@ -1,7 +1,7 @@
 ---
 title: "Dark mode now available in the Pantheon Dashboard"
 published_date: "2026-08-17"
-published_at: "2026-08-17T00:00:00Z"
+published_at: "2026-08-17T21:31:42Z"
 categories: [new-feature, user-interface]
 description: "You can now choose how the Pantheon Dashboard looks. Switch themes between light and dark mode, or use a system option to follow your device settings."
 ---
