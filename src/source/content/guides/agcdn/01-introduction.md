@@ -69,7 +69,7 @@ Unlock the power of the edge to enable secure control over your full stack. Adva
 To learn more about each of these features, see [Features & Use Cases](/guides/agcdn/features).
 ## Is AGCDN Right For Me?
 
-AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation.
+AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/how-fight-cyberattacks-using-pantheons-advanced-global-cdn) for a real-life example of an AGCDN implementation.
 
 ## Get AGCDN
 
