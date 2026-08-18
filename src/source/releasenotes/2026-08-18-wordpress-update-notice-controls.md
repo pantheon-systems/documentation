@@ -1,7 +1,7 @@
 ---
 title: Hide or dismiss the WordPress core update notice
-published_date: "2026-07-15"
-published_at: "2026-07-15T12:00:00Z"
+published_date: "2026-08-18"
+published_at: "2026-08-18T12:00:00Z"
 categories: [new-feature, wordpress]
 description: "The Pantheon WordPress core update notice can now be dismissed per user, or hidden site-wide with CSS, a filter, or a constant."
 ---
