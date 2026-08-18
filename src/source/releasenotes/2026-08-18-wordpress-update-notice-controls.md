@@ -6,7 +6,7 @@ categories: [new-feature, wordpress]
 description: "The Pantheon WordPress core update notice can now be dismissed per user, or hidden site-wide with CSS, a filter, or a constant."
 ---
 
-The Pantheon [WordPress core update notice](/core-updates#suppress-wordpress-admin-notice) ("A new WordPress update is available!") can now be dismissed or hidden.
+Pantheon MU-Plugin 1.5.7 adds dismiss and hide controls for the Pantheon [WordPress core update notice](/core-updates#suppress-wordpress-admin-notice) ("A new WordPress update is available!"). This version is delivered automatically as an upstream update; no action is required to receive it.
 
 ## Dismiss the notice
 
