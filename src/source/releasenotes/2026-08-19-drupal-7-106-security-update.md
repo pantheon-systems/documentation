@@ -7,7 +7,7 @@ categories: [drupal, action-required, security]
 
 As part of [Pantheon's Long-Term Support (LTS) for Drupal 7](https://pantheon.io/drupal-7), Drupal 7.106 is now available with a backported security patch.
 
-This release backports the fix for [SA-CORE-2026-010](https://www.drupal.org/sa-core-2026-010), an information disclosure vulnerability in the Image module. Insufficient access verification for image style derivatives could expose access-restricted images when served through non-private file streams.
+This release backports the fix for [SA-CORE-2026-010](https://www.drupal.org/sa-core-2026-010), an information disclosure vulnerability in the Image module. Image style derivatives stored on file schemes other than the core private scheme could be served without the access checks intended for access-restricted images.
 
 ### Action required
 
