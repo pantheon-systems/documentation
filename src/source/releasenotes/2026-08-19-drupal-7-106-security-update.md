@@ -1,7 +1,7 @@
 ---
 title: Drupal 7 LTS security update now available (Drupal 7.106)
 published_date: "2026-08-19"
-published_at: "2026-08-19T00:00:00Z"
+published_at: "2026-08-19T18:24:02Z"
 categories: [drupal, action-required, security]
 ---
 
