@@ -2,7 +2,7 @@
  * Refresh the machine-generated Terminus data files from a Terminus release.
  *
  * Writes:
- *   src/source/data/commands.json         <- `terminus.phar list --format=json`
+ *   src/source/data/commands.json         <- `terminus list --format=json`
  *   src/source/data/terminusReleases.json <- GitHub Releases API
  *
  * Deliberately does NOT touch src/source/content/terminus/02-install.md. The
@@ -10,21 +10,17 @@
  * never needs bumping, and the only pinned URL left in that file belongs to the
  * legacy Terminus 3 tab, which must stay on 3.6.2.
  *
+ * Expects a `terminus` binary already on PATH, matching --terminus-release (in
+ * CI, installed by the pantheon-systems/terminus-github-actions step that runs
+ * before this script; locally, install it yourself and pass --terminus-release
+ * to match).
+ *
  * Usage:
  *   npx tsx scripts/terminus-docs.ts [--terminus-release=4.3.2] [--dry-run]
  */
 
 import { execFileSync } from "child_process";
-import {
-  chmodSync,
-  mkdirSync,
-  rmSync,
-  readFileSync,
-  realpathSync,
-  writeFileSync,
-  existsSync,
-} from "fs";
-import { tmpdir } from "os";
+import { readFileSync, realpathSync, writeFileSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -158,27 +154,8 @@ function currentVersions(): {
   return { commands, release };
 }
 
-function downloadPhar(tag: string): string {
-  // Fixed directory name, not mkdtemp: Symfony bakes the script's absolute path
-  // into the help text of the built-in `help`, `list` and `completion` commands,
-  // so a random temp dir would churn those three strings on every run.
-  const dir = join(tmpdir(), "terminus-docs");
-  rmSync(dir, { recursive: true, force: true });
-  mkdirSync(dir, { recursive: true });
-  const phar = join(dir, "terminus");
-  const url = `https://github.com/${TERMINUS_REPO}/releases/download/${tag}/terminus.phar`;
-
-  // curl over fetch here: -f fails loudly on a non-200 rather than writing an
-  // error page to disk, and -L follows the release redirect to the CDN.
-  execFileSync("curl", ["-fsSL", url, "--output", phar], {
-    stdio: ["ignore", "ignore", "inherit"],
-  });
-  chmodSync(phar, 0o755);
-  return phar;
-}
-
-function buildCommands(phar: string): string {
-  const raw = execFileSync("php", [phar, "list", "--format=json"], {
+function buildCommands(): string {
+  const raw = execFileSync("terminus", ["list", "--format=json"], {
     encoding: "utf8",
     maxBuffer: 64 * 1024 * 1024,
     // Keep the dump deterministic and independent of the runner's own config.
@@ -187,20 +164,24 @@ function buildCommands(phar: string): string {
 
   const parsed = JSON.parse(raw) as CommandsFile;
 
-  // Symfony interpolates the script's absolute path into the help text of the
-  // built-in `help`, `list` and `completion` commands. That path differs between
-  // macOS (/var/folders/...) and CI (/tmp/...), so normalize it to the command
-  // name users actually type -- otherwise those three strings churn per machine.
-  // Done on the parsed object, since PHP escapes the slashes in the raw JSON.
-  // Both the given and symlink-resolved paths can appear (/var vs /private/var on
-  // macOS), so replace the longest form first.
-  const pharPaths = [...new Set([realpathSync(phar), phar])].sort(
+  // Symfony interpolates the terminus binary's absolute path into the help text
+  // of the built-in `help`, `list` and `completion` commands. That path differs
+  // per install location (e.g. the CI installer's $HOME/terminus/terminus vs a
+  // local install), so normalize it to the command name users actually type --
+  // otherwise those three strings churn per machine. Done on the parsed object,
+  // since PHP escapes the slashes in the raw JSON. Both the symlinked path and
+  // its realpath can appear (e.g. /usr/local/bin/terminus vs $HOME/terminus/terminus),
+  // so replace the longest form first.
+  const binPath = execFileSync("which", ["terminus"], {
+    encoding: "utf8",
+  }).trim();
+  const binPaths = [...new Set([realpathSync(binPath), binPath])].sort(
     (a, b) => b.length - a.length,
   );
   for (const command of parsed.commands) {
     if (typeof command.help !== "string") continue;
-    for (const pharPath of pharPaths) {
-      command.help = command.help.split(pharPath).join("terminus");
+    for (const binPath of binPaths) {
+      command.help = command.help.split(binPath).join("terminus");
     }
   }
 
@@ -251,8 +232,14 @@ async function main(): Promise<void> {
   );
   const releasesJson = buildReleases(releases);
 
-  const phar = downloadPhar(tag);
-  const commandsJson = buildCommands(phar);
+  const commandsJson = buildCommands();
+  const parsed = JSON.parse(commandsJson) as CommandsFile;
+  if (parsed.application.version !== tag) {
+    throw new Error(
+      `terminus on PATH is version ${parsed.application.version}, expected ${tag}. ` +
+        "Install the matching version before running this script.",
+    );
+  }
 
   if (dryRun) {
     console.log("--dry-run: not writing files.");

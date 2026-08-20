@@ -44,27 +44,42 @@ jobs:
           node-version-file: package.json
           cache: npm
 
-      # Only needed to execute the released terminus.phar.
+      # Only needed so the terminus.phar installed below can execute.
       - name: Set up PHP
         uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
         with:
           php-version: "8.2"
           coverage: none
 
+      - name: Resolve Terminus release to install
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TERMINUS_RELEASE: ${{ inputs.terminus_release }}
+        run: |
+          set -euo pipefail
+          if [ -n "${TERMINUS_RELEASE}" ]; then
+            tag="${TERMINUS_RELEASE}"
+          else
+            tag="$(gh release view --repo pantheon-systems/terminus --json tagName -q .tagName)"
+          fi
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+
+      # Installs the pinned terminus.phar from the release above onto PATH, so
+      # scripts/terminus-docs.ts doesn't need to fetch/install it itself.
+      - name: Set up Terminus
+        uses: pantheon-systems/terminus-github-actions@409451ede17f75acac08f42edc823fee6c435057 # v1.2.8
+        with:
+          terminus-version: ${{ steps.release.outputs.tag }}
+          disable-cache: true
+
       - name: Install dependencies
         run: npm ci
 
       - name: Refresh Terminus data files
         env:
-          # Raises the API rate limit; only public data is read.
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TERMINUS_RELEASE: ${{ inputs.terminus_release }}
-        run: |
-          if [ -n "${TERMINUS_RELEASE}" ]; then
-            npx tsx scripts/terminus-docs.ts "--terminus-release=${TERMINUS_RELEASE}"
-          else
-            npx tsx scripts/terminus-docs.ts
-          fi
+          TERMINUS_RELEASE: ${{ steps.release.outputs.tag }}
+        run: npx tsx scripts/terminus-docs.ts "--terminus-release=${TERMINUS_RELEASE}"
 
       - name: Resolve Terminus version
         id: terminus
@@ -85,7 +100,7 @@ jobs:
           body: |
             Regenerated the machine-generated Terminus data files for **${{ steps.terminus.outputs.version }}**.
 
-            - `src/source/data/commands.json` — from `terminus.phar list --format=json`
+            - `src/source/data/commands.json` — from `terminus list --format=json`
             - `src/source/data/terminusReleases.json` — from the GitHub Releases API
 
             Release notes and the version/EOL table in `10-supported-terminus.md` are
