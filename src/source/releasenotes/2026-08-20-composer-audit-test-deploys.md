@@ -1,8 +1,9 @@
 ---
 title: Composer security advisories can block deploys to Test
 published_date: "2026-08-20"
-published_at: "2026-08-20T19:00:00Z"
+published_at: "2026-08-20T19:20:23Z"
 categories: [security, action-required]
+description: "Integrated Composer runs composer audit on every build to check your dependencies against known security advisories."
 ---
 
 Integrated Composer runs [`composer audit`](https://getcomposer.org/doc/03-cli.md#audit) on every build to check your dependencies against known security advisories.
