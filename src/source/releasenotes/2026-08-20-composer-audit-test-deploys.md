@@ -1,6 +1,7 @@
 ---
 title: Composer security advisories can block deploys to Test
 published_date: "2026-08-20"
+published_at: "2026-08-20T13:00:00Z"
 categories: [infrastructure, security, action-required]
 ---
 
