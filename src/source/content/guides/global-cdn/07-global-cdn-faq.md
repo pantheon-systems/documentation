@@ -203,7 +203,7 @@ SSL/TLS certificates are issued exclusively through DNS TXT record validation. Y
 
 ### My domain hasn't verified yet. What can I do?
 
-The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](#re-running-domain-verification) in Setup for details and pre-flight tips.
+The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](/guides/global-cdn/next-gen-global-cdn#setup) in Setup for details and pre-flight tips.
 
 ### How do I report issues or give feedback?
 
