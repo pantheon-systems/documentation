@@ -117,6 +117,7 @@
     "@remix-run/router": "1.23.2",
     "rollup": "4.59.0",
     "minimatch": "10.2.4",
+    "brace-expansion": "^5.0.7",
     "js-yaml": "^4.3.0",
     "gray-matter": {
       "js-yaml": "^3.15.0"
