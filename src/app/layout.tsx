@@ -31,7 +31,7 @@ function MyApp({ children }: PropsWithChildren) {
     enableAnalytics && !enableGA4 && process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
-    <html>
+    <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         {/* Google Analytics: Replace XXXXXXXXXX with your google analytics id and uncomment the following code. */}
