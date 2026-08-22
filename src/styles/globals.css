@@ -4,7 +4,6 @@
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-components.css";
 @import "tocbot/dist/tocbot.css";
-@import "./stoplight-elements-modified.css";
 
 /* custom typefaces */
 @import "prismjs/themes/prism-okaidia.css";
