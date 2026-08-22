@@ -15,6 +15,7 @@ cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
+reviewed: "2026-07-07"
 ---
 
 This section is specific to sites management, not developing and launching sites.
@@ -46,7 +47,7 @@ A <Icon icon="snowflake" /> icon in the site's status column indicates that a si
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-workspace-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site).
 
 ### Tag Sites
 

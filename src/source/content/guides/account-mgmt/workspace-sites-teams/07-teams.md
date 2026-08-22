@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2025-10-23"
+reviewed: "2026-07-07"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -66,7 +66,7 @@ These tables detail the actions each role can execute on each Dashboard.
 | Clear cache on Test and Live                      | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Manage user roles                                 | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Delete sites or remove users from a site          | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Add a [Supporting Workspace](#add-a-supporting-workspace-to-site)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:red">❌</span>  |
 
@@ -220,19 +220,19 @@ Supporting Workspaces are Professional Workspaces that contain team members only
 
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site, then click **Team**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
+1. Under **Supporting workspaces**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
-1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
+1. Click **Add**. All members of the Supporting Workspace receive the role assigned in the Supporting Workspace. The only exception is when an [Enterprise workspace](/guides/account-mgmt/workspace-sites-teams#enterprise-vs-self-serve-customers) owns the site (pictured below); where a given user is a member of both, they will inherit the role set by the owning workspace rather than the supporting workspace. 
 
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/new-dashboard/2024/_manage-site-team.png)
+   ![Site with two Supporting Workspaces](../../../../images/dashboard/new-dashboard/2026/_manage-site-team.png)
 
 ## Remove a Supporting Workspace from a Site
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
 
-1. Click **<Icon icon="users" />Team**.
+1. Click **Site Settings** > **Site Team**.
 
 1. Click the **x** to the right of the Supporting Workspace you wish to remove.
 
