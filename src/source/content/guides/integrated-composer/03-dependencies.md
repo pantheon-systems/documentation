@@ -76,9 +76,11 @@ When running `composer install` on a local clone of your Pantheon site's reposit
 
 [Packagist](https://packagist.org) is a repository of Composer packages that are available by default to projects managed by Composer. Packagist libraries receive updates from their source GitHub repositories automatically.
 
-[WPackagist](https://wpackagist.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box.
+[WP Packages](https://wp-packages.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box.
 
-You can install packages from Packagist or WPackagist without any additional configuration using `composer require`.
+[WPackagist](https://wpackagist.org) is another longstanding Composer mirror for WordPress plugins and themes maintained by [WPEngine in 2026](https://wpengine.com/blog/wp-engine-acquires-wpackagist/).
+
+You can install packages from Packagist, WPackagist or WP Packages without any additional configuration using `composer require`.
 
 ##### Require a Package from Packagist
 
@@ -91,21 +93,27 @@ composer require yoast/wordpress-seo
 
 Packages that are flagged as `wordpress-plugin`, `wordpress-theme` or `wordpress-muplugin` in their `composer.json` files will be installed automatically in the appropriate `web/app/` directory by Composer.
 
-##### Requiring a package from WPackagist
+##### Requiring a package from WP Packages or WPackagist
 
-For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
+For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wp-plugin`/`wp-theme` (for WP Packages) or `wpackagist-plugin`/`wpackagist-theme` (for WPackagist) as the vendor and the plugin or theme slug as the package name.
+
+<Alert title="Choosing a Composer repository or using multiple" type="info">
+
+It is possible to use multiple different Composer repositories, e.g. WPackagist and WP Packages side-by-side. Since they use different vendor names for plugins and themes (`wpackagist-*` and `wp-*` respectively), there is no conflict in using both simultaneously. However, there's no specific benefit in using both. It's recommended to choose one provider in your `composer.json` file and using that provider's vendor prefix for WordPress plugins or themes.
+
+</Alert>
 
 
 ```bash{promptUser: user}
-composer require wpackagist-theme/twentytwentytwo
+composer require wp-theme/twentytwentytwo
 ```
 
 ```bash{promptUser: user}
-composer require wpackagist-plugin/advanced-custom-fields
+composer require wp-plugin/advanced-custom-fields
 ```
 
 ##### Check first
-It's generally a good idea when using either Packagist or WPackagist to check the repository before `require`ing the package. If you search Packagist for a WordPress plugin or theme and don't see it, you can be sure that if it exists in the WordPress plugin or theme repository, it will be available on WPackagist. Checking WPackagist for the package can be beneficial if you want to check what versions are available.
+It's generally a good idea when using either Packagist, WP Packages or WPackagist to check the repository before `require`ing the package. If you search Packagist for a WordPress plugin or theme and don't see it, you can be sure that if it exists in the WordPress plugin or theme repository, it will be available on WP Packages or WPackagist. Checking the WordPress package repositories for the package can be beneficial if you want to check what versions are available.
 
 </Tab>
 
