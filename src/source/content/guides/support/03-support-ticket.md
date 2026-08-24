@@ -14,7 +14,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/support-ticket/
 editpath: support/03-support-ticket.md
-reviewed: "2022-10-10"
+reviewed: "2026-08-24"
 ---
 
 In this section, we go over best practices when writing a support ticket, which helps us resolve your issue faster.
@@ -32,7 +32,7 @@ Contacting Support from My Dashboard will not provide the same support level as 
 
 If you are part of an Workspace with an enhanced Account package, navigate to the Support tab from the Workspace's Dashboard to make use of the Workspace's Support level.
 
-![Select Support from the Workspace's Dashboard](../../../images/dashboard/new-dashboard/2024/workspace-support.png)
+![Select Support from the Workspace's Dashboard](../../../images/dashboard/workspace-support.png)
 
 ### One Ticket Per Issue
 
