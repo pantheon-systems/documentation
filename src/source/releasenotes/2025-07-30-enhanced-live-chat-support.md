@@ -4,7 +4,7 @@ published_date: "2025-07-30"
 categories: [infrastructure]
 ---
 
-Pantheon has deployed a new live chat support experience which unifies our backend infrastructures for [Live Chats](/guides/support/contact-support/#live-chat) and [Support Tickets](/guides/support/contact-support/#general-support-ticket).
+Pantheon has deployed a new live chat support experience which unifies our backend infrastructures for Live Chats and [Support Tickets](/guides/support/contact-support/#general-support-ticket).
 
 ## Key Changes
 
