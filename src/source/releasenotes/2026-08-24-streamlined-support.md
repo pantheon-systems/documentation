@@ -1,7 +1,7 @@
 ---
 title: "A streamlined + modernized support experience in the Pantheon Dashboard"
 published_date: "2026-08-24"
-published_at: "2026-08-24T00:00:00Z"
+published_at: "2026-08-24T19:54:40Z"
 categories: [user-interface]
 ---
 
