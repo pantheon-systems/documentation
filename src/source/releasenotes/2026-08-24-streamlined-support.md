@@ -20,4 +20,4 @@ Nothing—there's no action required, and any current open tickets are unaffecte
 
 Note: You can reach our support team at any time—just ask, and we’ll get you to the right person. Phone support remains available for eligible plans.
 ## Built with your privacy in mind
-Support conversations are processed solely to help resolve your request. Your data is not used to train AI models, and our AI providers do not retain or use your data for their own purposes. Support interactions remain subject to Pantheon's existing Privacy Policy and data protection commitments.
+Support conversations are processed solely to help resolve your request. Your data is not used to train AI models, and our AI providers do not retain or use your data for their own purposes. Support interactions remain subject to Pantheon's existing [Privacy Policy](https://legal.pantheon.io/) and data protection commitments.
