@@ -37,6 +37,8 @@ For every method of contacting Pantheon Support documented on this page, please 
 
 The ticket support feature is available to certain Account packages and account types. Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
+![Select Support from the Workspace's Dashboard](../../../images/dashboard/workspace-support.png)
+
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces).
 
 1. Go to the **Support** tab, then select **Get support**.
