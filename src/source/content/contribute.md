@@ -17,7 +17,7 @@ Become one of our [contributors](/contributors)! Help us create relevant and use
 
 </Wistia>
 
-Pantheon's documentation is a static site built by [Gatsby](https://www.gatsbyjs.com/docs/glossary/static-site-generator/) from files maintained in a public [GitHub repository](https://github.com/pantheon-systems/documentation).
+Pantheon's documentation is a [Next.js](https://www.nextjs.org/) site, built from files maintained in a public [GitHub repository](https://github.com/pantheon-systems/documentation).
 
 Get involved by:
 
