@@ -26,6 +26,14 @@ reviewed: ""
 
 1. Commit and push your changes to your `composer.json` file. **Remember to *not* commit the `composer.lock` file.**
 
+   The `composer.lock` file should not be added to your `.gitignore` file, since it must still be committed for individual sites created from your Custom Upstream. Instead, run the following command to prevent yourself from accidentally committing it while working directly in the Custom Upstream repository:
+
+```bash{promptUser: user}
+    echo /composer.lock >> .git/info/exclude
+```
+
+    This has the same effect as a `.gitignore` entry, but the exclusion isn't tracked in the repository itself. You'll need to re-run this command each time you make a new local clone of your Custom Upstream.
+
 ## Update Dependencies in Your Upstream
 
 You may need to pin specific versions of your dependencies in your Custom Upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the Custom Upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.

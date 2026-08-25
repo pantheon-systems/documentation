@@ -12,7 +12,7 @@ integration: [--]
 tags: [collaborate, workflow, webops, multidev]
 contributors: [whitneymeredith]
 showtoc: true
-reviewed: "2026-07-31"
+reviewed: "2026-08-24"
 permalink: docs/guides/multidev/multidev-faq
 ---
 
@@ -20,7 +20,7 @@ This section provides answers to frequently asked Multidev questions.
 
 ## Is Multidev available for all accounts?
 
-Multidev is available to all Workspaces and users with [Gold Accounts](/guides/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
+Multidev is available to all Workspaces and users with Gold Accounts and above, as well as their supporting partners and agencies.
 
 ### Who can access Multidev?
 

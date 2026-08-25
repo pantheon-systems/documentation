@@ -4,7 +4,7 @@ subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 tags: [webops]
 contributors: [joshlieb, joan-ing]
-reviewed: "2024-09-10"
+reviewed: "2026-08-23"
 type: guide
 permalink: docs/guides/disaster-recovery/site-goes-down
 editpath: disaster-recovery/03-site-goes-down.md
@@ -34,7 +34,7 @@ From the Support tab in the workspace of the affected site:
 Please provide as much detail as possible. Our support engineers will work with you to diagnose the cause of the issue, and any information you provide will help shorten the investigation time.
 
 To learn more about the support features for different account tiers, see also the following:
-* [Scope of Support](/guides/support/#support-features-and-response-times)
+* [Scope of Support](/guides/support/)
 * [Contact Support](/guides/support/contact-support/)
 
 ## Check for Ongoing Platform Incidents
@@ -56,12 +56,6 @@ Filing an emergency ticket will escalate your downtime incident within the Suppo
 * **Slack**: Diamond tier accounts can have access to a dedicated Slack channel in which customers can interact directly with their CSM, AM, and primary support resources. This is primarily intended as a means for quick communication and collaboration, and should not be used in lieu of the ticketing system, as there are no SLOs associated with Slack channels.
 
 * **Phone/Teleconference**: You can request a phone call or teleconference for emergency support. This can be done either when filing the emergency ticket or within the ticket thread once it is open.
-
-  <Alert title="Note" type="info" >
-
-  Tickets and live chat have account tier-specific response times, whereas email, phone, and Slack channels do not. Learn more about [support features for different account tiers](/guides/support/#support-features-and-response-times).
-
-  </Alert>
 
 * **Premium Support Hotline**: Diamond and Platinum customers can call the 24/7 Premium Support Hotline for any technical issues, escalations, site, billing, or overages queries. You can find the phone number in the Support tab of your workspace.
 
