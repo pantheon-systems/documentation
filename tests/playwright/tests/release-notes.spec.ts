@@ -41,7 +41,7 @@ test('Direct navigation to single category returns the expected value - 3', asyn
 
 // verify that categories are persisted when using pagination links
 test('Direct navigation to paginated category page contains expected release note', async ({ page }) => {
-  await page.goto('/release-notes/3?category=drupal');
+  await page.goto('/release-notes/4?category=drupal');
   const expectedString = 'Drush 5 and 7 are no longer available';
   const h2s1 = await page.locator('h2').allTextContents();
   expect(h2s1.some(text => text.includes(expectedString))).toBeTruthy();
@@ -53,7 +53,7 @@ test('clicking pagination works when already filtered by a category', async ({ p
   await page.goto('/release-notes/1?category=drupal');
   await page.getByRole('button', { name: '3', exact: true }).click();
   await page.waitForTimeout(1000);
-  await expect(page).toHaveURL('/release-notes/3?category=drupal');
+  await expect(page).toHaveURL('/release-notes/4?category=drupal');
 
   const expectedString = 'Drush 5 and 7 are no longer available';
   const h2s1 = await page.locator('h2').allTextContents();
