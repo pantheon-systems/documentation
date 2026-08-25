@@ -1,7 +1,7 @@
 ---
 title: "GitLab support for external repositories now available in the Dashboard"
 published_date: "2026-08-25"
-published_at: "2026-08-25T00:00:00Z"
+published_at: "2026-08-25T20:08:05Z"
 categories: [new-feature, tools-apis, user-interface]
 description: "Connecting a GitLab repository to a Pantheon site is now available for everyone directly from the Pantheon Dashboard."
 ---
