@@ -1,7 +1,7 @@
 ---
 title: "GitLab support for external repositories now available in the Dashboard"
-published_date: "2026-08-25"
-published_at: "2026-08-25T20:08:05Z"
+published_date: "2026-08-26"
+published_at: "2026-08-26T18:22:38Z"
 categories: [new-feature, tools-apis, user-interface]
 description: "Connecting a GitLab repository to a Pantheon site is now available for everyone directly from the Pantheon Dashboard."
 ---
@@ -20,4 +20,4 @@ During site creation, select **GitLab** on the **Where will your code be hosted?
 
 ![Where will your code be hosted screen showing GitHub, GitLab, and Pantheon options](../../../../images/dashboard/gitlab-repo-hosting-dashboard.png)
 
-For full setup instructions, see the [external repositories documentation](/guides/external-repositories).
+For full setup instructions, see the [related documentation](/guides/external-repositories/gitlab).
