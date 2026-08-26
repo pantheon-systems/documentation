@@ -199,7 +199,7 @@ Yes. Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g.
 
 ### How are SSL/TLS certificates issued?
 
-SSL/TLS certificates are issued exclusively through DNS TXT record validation. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
+SSL/TLS certificates are issued through DNS TXT record validation by default. Add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP-01 validation is also supported through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin): `terminus gcdn:verify <site>.live <domain> --method=http`.
 
 ### My domain hasn't verified yet. What can I do?
 
