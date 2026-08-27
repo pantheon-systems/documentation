@@ -17,7 +17,7 @@ editpath: support/01-scope.md
 reviewed: "2026-08-24"
 ---
 
-![Screenshot of the Support Tab](../../../images/dashboard/new-dashboard/2024/support-tab.png)
+![Select Support from the Workspace's Dashboard](../../../images/dashboard/workspace-support.png)
 
 ## Support Features and Response Times
 
