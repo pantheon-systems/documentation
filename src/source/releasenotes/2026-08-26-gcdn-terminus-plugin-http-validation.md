@@ -1,6 +1,6 @@
 ---
 title: "HTTP-01 certificate validation now available in the GCDN Terminus plugin"
-published_date: "2026-08-26"
+published_date: "2026-08-27"
 published_at: "2026-08-26T17:38:39Z"
 categories: [tools-apis]
 description: "The GCDN Terminus plugin now supports HTTP-01 certificate validation as an alternative to DNS TXT records when verifying domains on the next-generation Global CDN."
