@@ -6,6 +6,7 @@
   margin-block: var(--pds-spacing-xl) var(--pds-spacing-m);
 }
 
+
 .commandName {
   font-weight: var(--pds-typography-fw-bold);
   margin-block-end: var(--pds-spacing-s);
