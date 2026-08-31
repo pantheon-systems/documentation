@@ -14,7 +14,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2026-08-24"
+reviewed: "2026-08-31"
 ---
 
 ![Select Support from the Workspace's Dashboard](../../../images/dashboard/workspace-support.png)
