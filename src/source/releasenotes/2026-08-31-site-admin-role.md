@@ -20,6 +20,5 @@ Organizations had to either grant broad workspace-level admin access just to man
 
 ## What you need to do
 The Site Administrator role is additive. No existing permissions change. Assign the role when you're ready to delegate site team management. 
-**One change to note:** as part of this update, the default role for newly invited site team members is now **Developer.**
 
 For the full permissions matrix and step-by-step assignment instructions, see [related documentation](/https://docs.pantheon.io/guides/account-mgmt/workspace-sites-teams/teams)
