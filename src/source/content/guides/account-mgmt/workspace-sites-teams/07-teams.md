@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2025-10-23"
+reviewed: "2026-08-31"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -77,7 +77,7 @@ These tables detail the actions each role can execute on each Dashboard.
 
 <p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is used by Workspaces to determine who created the site. This role does not grant permissions for billing, changing site ownership, nor managing the site plan, unless the user is also an Administrator of the owning Workspace. If you are an Administrator for a Workspace and want to change the User in Charge on a site, please <a href="/guides/support/contact-support">contact support</a>.</p>
 
-<p>Because User in Charge is a billing and ownership designation rather than a permissions role, it is not the way to give someone team management access to a site. To delegate site team management, assign the <a href="#site-administrator">Site Administrator</a> role instead. The two are independent: a user can be a User in Charge, a Site Administrator, both, or neither.</p>
+<p>Because User in Charge is a billing and ownership designation rather than a permissions role, it is not the way to give someone team management access to a site. To delegate site team management, assign the <a href="#what-is-the-site-administrator-role-and-when-should-i-use-it">Site Administrator</a> role instead. The two are independent: a user can be a User in Charge, a Site Administrator, both, or neither.</p>
 
 Pantheon uses the email address associated with the User in Charge (Enterprise and EDU customers) or Site Owner (self-serve customers) for the following two situations:
 - Activating New Relic will send a validation request to this email address, which much be completed in order to finish account setup.
@@ -116,12 +116,19 @@ When a team member is added to a site:
 - That site will be available in My Dashboard
 - That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies only to that site - not to any of the others in the same Workspace
+- The default role assigned is Developer
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click **Team**.
 
 1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
+
+<Alert type="info" title="Note">
+
+The Site Administrator role only appears in the dropdown for Workspace Administrators and Site Owners.
+
+</Alert>
 
 </Tab>
 
@@ -154,6 +161,13 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 1. Click **Team**.
 
 1. Under **Team Members**, find the Team Member, and select a new role from the list.
+
+
+<Alert type="info" title="Note">
+
+The Site Administrator role only appears in the dropdown for Workspace Administrators and Site Owners.
+
+</Alert>
 
 </Tab>
 
@@ -254,7 +268,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 ### What is the Site Administrator role and when should I use it?
 
-Site Administrator is a site level role that sits between Workspace Administrator and Team Member. It lets a trusted person manage a single site's team — invite and remove Team Members and Developers, change their roles, and add or remove a Supporting Workspace — without granting billing or destructive access. Use it when you want to delegate day-to-day management of a site, for example handing a site off to a client's technical lead or a department administrator, without giving them workspace-wide access.
+<p><dfn id="site-administrator">Site Administrator</dfn> is a site level role that sits between Workspace Administrator and Team Member. It lets a trusted person manage a single site's team — invite and remove Team Members and Developers, change their roles, and add or remove a Supporting Workspace — without granting billing or destructive access. Use it when you want to delegate day-to-day management of a site, for example handing a site off to a client's technical lead or a department administrator, without giving them workspace-wide access.</p>
 
 ### Who can assign the Site Administrator role?
 
