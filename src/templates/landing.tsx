@@ -160,7 +160,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                           url={link.url}
                           image={link.image || ""}
                         />
-                      )
+                      ),
                     )}
                 </div>
               </Container>
@@ -215,8 +215,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                         <Link
                           style={{
                             color: "var(--pds-color-interactive-link-default)",
-                            fontWeight:
-                              "var(--pds-typography-font-weight-regular)",
+                            fontWeight: "var(--pds-typography-fw-regular)",
                           }}
                           href={link.url ?? "#"}
                         >
