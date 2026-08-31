@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [launch, site, webops]
-reviewed: "2022-12-13"
+reviewed: "2026-08-31"
 ---
  Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
