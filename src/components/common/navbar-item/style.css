@@ -7,9 +7,9 @@
   color: var(--pds-color-menu-item-foreground);
   cursor: pointer;
   font-size: var(--pds-typography-size-m);
-  line-height: var(--pds-typography-line-height-s);
+  line-height: var(--pds-typography-lh-s);
   margin: 0;
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-weight: var(--pds-typography-fw-regular);
   padding: var(--pds-spacing-2xs) var(--pds-spacing-xs);
   margin-inline-start: calc(var(--pds-spacing-xs) * -1);
   text-decoration: none;
