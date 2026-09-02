@@ -14,10 +14,10 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2026-08-24"
+reviewed: "2026-08-31"
 ---
 
-![Screenshot of the Support Tab](../../../images/dashboard/new-dashboard/2024/support-tab.png)
+![Select Support from the Workspace's Dashboard](../../../images/dashboard/workspace-support.png)
 
 ## Support Features and Response Times
 

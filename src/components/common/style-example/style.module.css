@@ -10,8 +10,8 @@
 .source-code::after {
   color: var(--pds-color-text-default-secondary);
   font-size: var(--pds-typography-size-s);
-  font-weight: var(--pds-typography-font-weight-bold);
-  letter-spacing: var(--pds-typography-letter-spacing-s);
+  font-weight: var(--pds-typography-fw-bold);
+  letter-spacing: var(--pds-typography-ls-s);
   position: absolute;
   text-transform: uppercase;
 }

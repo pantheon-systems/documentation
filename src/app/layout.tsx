@@ -29,7 +29,7 @@ function MyApp({ children }: PropsWithChildren) {
     enableAnalytics && process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
-    <html>
+    <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 

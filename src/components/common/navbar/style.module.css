@@ -28,7 +28,7 @@
 
   h2.manualGuideTocHeading {
     font-size: var(--pds-typography-size-l);
-    line-height: var(--pds-typography-line-height-m);
+    line-height: var(--pds-typography-lh-m);
     margin-block-end: var(--pds-spacing-s);
   }
 }
