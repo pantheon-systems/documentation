@@ -6,7 +6,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-07-13"
+reviewed: "2026-09-02"
 permalink: docs/guides/global-cdn/next-gen-global-cdn
 contenttype: [guide]
 innav: [false]
