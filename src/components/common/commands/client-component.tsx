@@ -25,7 +25,7 @@ export const CommandsClientComponent = ({
         label={""}
       />
       <div className={cn("table-responsive", styles.tableResponsive)}>
-        <table className="table table-commands table-bordered table-striped">
+        <table className="table table-commands">
           <thead>
             <tr>
               <th style={{ width: "60%" }}>Command</th>
