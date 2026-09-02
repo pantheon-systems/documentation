@@ -72,6 +72,29 @@ SELECT * FROM `groups`;
 
 Your site's database is **read-only during the export** and **briefly unavailable during the switchover**.
 
+### Tracking the migration
+
+How the migration shows up depends on the environment:
+
+- **Dev and Multidev.** The code deploy finishes first. The migration runs as a separate workflow called **Change database version for `<environment>`** in the Workflows tab. It stays in progress until the new database is promoted. The start and end times show how long the migration took.
+- **Test and Live.** The migration runs inside the deploy workflow. The deploy stays in progress until the migration completes.
+
+You can also list the workflow from the command line:
+
+```bash{promptUser: user}
+terminus workflow:list <site>
+```
+
+To confirm the switchover, check `SELECT VERSION()`. It returns a MariaDB version string until the migration finishes, then `8.4.x`.
+
+```bash{promptUser: user}
+# Drupal
+terminus drush <site>.<env> -- sqlq 'SELECT VERSION();'
+
+# WordPress
+terminus wp <site>.<env> -- db query 'SELECT VERSION();'
+```
+
 ### What changes after migration
 
 - `SELECT VERSION()` returns `8.4.x` instead of a MariaDB version string.
