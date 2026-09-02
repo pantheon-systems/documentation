@@ -6,11 +6,67 @@
   margin-block: var(--pds-spacing-xl) var(--pds-spacing-m);
 }
 
+/*
+ * Command directory: hairline rules between rows, no vertical borders and no
+ * zebra striping, so the eye can track a command across to its usage string.
+ */
+.docCommands table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.docCommands th,
+.docCommands td {
+  border-block-end: 1px solid var(--pds-color-border-default);
+  overflow-wrap: anywhere;
+  padding-block: var(--pds-spacing-m);
+  padding-inline: 0 var(--pds-spacing-l);
+  text-align: start;
+}
+
+.docCommands th:last-child,
+.docCommands td:last-child {
+  padding-inline-end: 0;
+}
+
+.docCommands th {
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-fw-bold, 700);
+  letter-spacing: var(--pds-typography-ls-xl);
+  padding-block-end: var(--pds-spacing-l);
+  text-transform: uppercase;
+}
+
+/*
+ * Command name and its description share a cell, while the adjacent usage
+ * cell often wraps to more lines. Grouping the pair keeps the gap between a
+ * name and its own description smaller than the gap between rows, regardless
+ * of how tall the usage column makes the row.
+ */
+.docCommands td {
+  vertical-align: top;
+}
+
+.commandCell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-s);
+}
+
+/* The usage string centers against the name/description pair beside it. */
+.docCommands td:last-child {
+  vertical-align: middle;
+}
+
+.docCommands td small {
+  font-weight: var(--pds-typography-fw-regular, 400);
+  line-height: var(--pds-typography-lh-m, 140%);
+}
 
 .commandName {
-  font-weight: var(--pds-typography-fw-bold);
-  margin-block-end: var(--pds-spacing-s);
   display: block;
+  font-weight: var(--pds-typography-fw-bold, 700);
+  line-height: var(--pds-typography-lh-m, 140%);
 }
 
 @media screen and (max-width: 767px) {
