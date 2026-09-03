@@ -33,6 +33,55 @@ Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-cu
 
 <Partial file="upstream-management-dependencies.md" />
 
+## Add a Composer Plugin to Your Upstream
+
+Composer loads plugin code once, when Composer starts, from the `vendor` directory that is already on disk. A plugin that arrives in the same update that first needs it is not on disk yet, so it does not run.
+
+Add the plugin to your upstream and deploy it to every site first, then make the change that depends on it. This example uses [`mglaman/composer-drupal-lenient`](https://github.com/mglaman/composer-drupal-lenient), which relaxes a contributed module's published `drupal/core` constraint.
+
+1. In the **root** `composer.json` of your Custom Upstream, require the plugin and allow it to run:
+
+    ```json:title=composer.json
+    "require": {
+        "mglaman/composer-drupal-lenient": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "mglaman/composer-drupal-lenient": true
+        }
+    }
+    ```
+
+1. Commit and push the upstream, then apply the update to your sites and let each one build.
+
+<Alert title="Note" type="info">
+
+`config` and `repositories` are root-only properties. Composer reads them from the root `composer.json` only, so a plugin added to `upstream-configuration/composer.json` has no effect.
+
+</Alert>
+
+1. Confirm the plugin is installed on a site before you rely on it. Over [SFTP](/guides/sftp), the plugin's directory is present under `code/vendor`:
+
+    ```bash{promptUser: user}
+    ls code/vendor/mglaman
+    ```
+
+1. Only after every site has the plugin, push the change that needs it as a second upstream commit. For `composer-drupal-lenient`, that is the module's `require` entry plus the `extra.drupal-lenient.allowed-list` entry naming it:
+
+    ```json:title=composer.json
+    "extra": {
+        "drupal-lenient": {
+            "allowed-list": ["drupal/module-name"]
+        }
+    }
+    ```
+
+<Alert title="Warning" type="danger">
+
+Changes to the root `composer.json` in an upstream overwrite edits that individual sites have made to their own root `composer.json`, without a merge conflict and without failing the build. Review your sites for local edits before you push. See [Changes Lost During Upstream Updates](/guides/integrated-composer/ic-troubleshooting#changes-lost-during-upstream-updates).
+
+</Alert>
+
 ## Maintain Your Integrated Composer Custom Upstream
 
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
