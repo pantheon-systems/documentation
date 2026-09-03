@@ -14,7 +14,7 @@ This release fixes a command injection issue in the `git_commit_message` paramet
 Versions 0.9.0 through 0.9.3 interpolated the `git_commit_message` value into a shell string and evaluated it, so shell metacharacters in the message ran as commands rather than being passed as text.
 Arbitrary commands, passed through the `git_commit_message` could run on the GitHub Actions runner, which holds your `PANTHEON_MACHINE_TOKEN` and `PANTHEON_SSH_KEY`.
 
-Only workflows that pass text into `git_commit_message` that someone else could control (e.g. via a PR title or branch name) are affected, and only on a site that has a Live environment and the workflow does not set `skip_build_tools: true`. 
+Only workflows that pass text into `git_commit_message` that someone else could control (e.g. via a PR title or branch name) are affected, and only on a site that has a Live environment and the workflow does not set `skip_build_tools: true` (e.g. uses the default behavior). 
 The commit message the action generates on its own by default contains no such text, so default configurations are not affected. 
 Versions earlier than 0.9.0 pass the message as a single quoted argument and are also unaffected.
 
