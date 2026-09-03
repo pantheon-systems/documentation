@@ -1,7 +1,7 @@
 ---
 title: "Push to Pantheon GitHub Action 0.9.4 security update is now available"
 published_date: "2026-09-03"
-published_at: "2026-09-03T16:38:43Z"
+published_at: "2026-09-03T17:14:22Z"
 categories: [tools-apis, security, action-required]
 description: "Version 0.9.4 of the Push to Pantheon GitHub Action is now available and fixes a command injection issue in the git_commit_message parameter and other improvements."
 ---
