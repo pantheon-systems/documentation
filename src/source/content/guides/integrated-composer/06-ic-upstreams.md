@@ -4,7 +4,7 @@ subtitle: Custom Upstream Usage
 description: Learn how to use an Upstream with Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert, jazzsequence]
-reviewed: "2026-07-28"
+reviewed: "2026-09-03"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 contenttype: [guide]
@@ -33,6 +33,65 @@ Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-cu
 
 <Partial file="upstream-management-dependencies.md" />
 
+## Add a Composer Plugin to Your Upstream
+
+Composer loads plugin code once, when Composer starts, from the `vendor` directory that is on disk at that moment. A plugin that arrives in the same upstream update that first needs it is not installed yet, so it does not run.
+
+Add the plugin to your upstream in one release, then run an upstream update on all sites created from that upstream. Once the plugin is deployed everywhere, add the change that uses it in a later release. The example below uses [`mglaman/composer-drupal-lenient`](https://github.com/mglaman/composer-drupal-lenient), which relaxes a contributed module's published `drupal/core` constraint so that the module can install on a newer version of Drupal core.
+
+<Alert title="Note" type="info">
+
+`config` and `repositories` are root-only properties. Composer reads them from the root `composer.json` and nowhere else, so a plugin added to `upstream-configuration/composer.json` has no effect.
+
+</Alert>
+
+1. In the root `composer.json` of your Custom Upstream, require the plugin and add it to the `allow-plugins` list:
+
+    ```json:title=composer.json
+    "require": {
+        "mglaman/composer-drupal-lenient": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "mglaman/composer-drupal-lenient": true
+        }
+    }
+    ```
+
+1. Commit and push this release to your Custom Upstream, then [apply the upstream update](/core-updates) to each site and let the build finish.
+
+1. Confirm that the plugin is installed before you rely on it. Connect to an environment over [SFTP](/guides/sftp) and list the vendor directory:
+
+    ```bash{promptUser: user}
+    ls code/vendor/mglaman
+    ```
+
+1. In a later upstream release, add the change that depends on the plugin. For `composer-drupal-lenient`, that is the module itself in `upstream-configuration/composer.json`:
+
+    ```json:title=upstream-configuration/composer.json
+    "require": {
+        "drupal/module-name": "^2.0"
+    }
+    ```
+
+    Along with an `extra.drupal-lenient.allowed-list` entry in the root `composer.json` that names the same module:
+
+    ```json:title=composer.json
+    "extra": {
+        "drupal-lenient": {
+            "allowed-list": ["drupal/module-name"]
+        }
+    }
+    ```
+
+1. Apply the upstream update to your sites again. Composer now loads the plugin from `vendor` and resolves the module.
+
+<Alert title="Warning" type="danger">
+
+A change to the root `composer.json` in your Custom Upstream replaces edits that individual sites have made to their own root `composer.json`. This happens without a merge conflict and without failing the build. Review your sites for local changes before you push. For more information, see [Changes Lost During Upstream Updates](/guides/integrated-composer/ic-troubleshooting#changes-lost-during-upstream-updates).
+
+</Alert>
+
 ## Maintain Your Integrated Composer Custom Upstream
 
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
@@ -51,4 +110,5 @@ Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-cu
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
+- [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
 - [Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed)
