@@ -66,7 +66,15 @@ Deploy the plugin to your sites in one upstream commit, then push the change tha
     ls code/vendor/mglaman
     ```
 
-1. Push the change that depends on the plugin as a separate upstream commit. For `composer-drupal-lenient`, that is the module in `upstream-configuration/composer.json` and an `extra.drupal-lenient.allowed-list` entry in the root `composer.json` that names it:
+1. Push the change that depends on the plugin as a separate upstream commit. For `composer-drupal-lenient`, that is the module itself in `upstream-configuration/composer.json`:
+
+    ```json:title=upstream-configuration/composer.json
+    "require": {
+        "drupal/module-name": "^2.0"
+    }
+    ```
+
+    Along with an `extra.drupal-lenient.allowed-list` entry in the root `composer.json` that names the same module:
 
     ```json:title=composer.json
     "extra": {
