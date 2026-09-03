@@ -1,7 +1,7 @@
 ---
 title: "Push to Pantheon GitHub Action 0.9.5 update is now available"
 published_date: "2026-09-03"
-published_at: "2026-09-03T19:30:00Z"
+published_at: "2026-09-03T20:01:13Z"
 categories: [tools-apis, new-feature]
 description: "Version 0.9.5 of the Push to Pantheon GitHub Action skips deployments to branches without PRs instead of reporting a deployment failure."
 ---
