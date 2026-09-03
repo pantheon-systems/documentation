@@ -37,7 +37,7 @@ Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-cu
 
 Composer loads plugin code once, when Composer starts, from the `vendor` directory that is on disk at that moment. A plugin that arrives in the same upstream update that first needs it is not installed yet, so it does not run.
 
-Deploy the plugin to your sites in one upstream commit, then push the change that depends on it in a second commit. The example below uses [`mglaman/composer-drupal-lenient`](https://github.com/mglaman/composer-drupal-lenient), which relaxes a contributed module's published `drupal/core` constraint so that the module can install on a newer version of Drupal core.
+Add the plugin to your upstream in one release, then run an upstream update on all sites created from that upstream. Once the plugin is deployed everywhere, add the change that uses it in a later release. The example below uses [`mglaman/composer-drupal-lenient`](https://github.com/mglaman/composer-drupal-lenient), which relaxes a contributed module's published `drupal/core` constraint so that the module can install on a newer version of Drupal core.
 
 <Alert title="Note" type="info">
 
@@ -58,7 +58,7 @@ Deploy the plugin to your sites in one upstream commit, then push the change tha
     }
     ```
 
-1. Commit and push the change to your Custom Upstream, then [apply the upstream update](/core-updates) to each site and let the build finish.
+1. Commit and push this release to your Custom Upstream, then [apply the upstream update](/core-updates) to each site and let the build finish.
 
 1. Confirm that the plugin is installed before you rely on it. Connect to an environment over [SFTP](/guides/sftp) and list the vendor directory:
 
@@ -66,7 +66,7 @@ Deploy the plugin to your sites in one upstream commit, then push the change tha
     ls code/vendor/mglaman
     ```
 
-1. Push the change that depends on the plugin as a separate upstream commit. For `composer-drupal-lenient`, that is the module itself in `upstream-configuration/composer.json`:
+1. In a later upstream release, add the change that depends on the plugin. For `composer-drupal-lenient`, that is the module itself in `upstream-configuration/composer.json`:
 
     ```json:title=upstream-configuration/composer.json
     "require": {
