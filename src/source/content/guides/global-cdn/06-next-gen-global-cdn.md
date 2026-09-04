@@ -6,7 +6,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-07-13"
+reviewed: "2026-09-02"
 permalink: docs/guides/global-cdn/next-gen-global-cdn
 contenttype: [guide]
 innav: [false]
@@ -310,7 +310,27 @@ O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and 
 
 </Alert>
 
+## Using a Third-Party CDN in Front of Pantheon
+
+You can place a third-party CDN or reverse proxy in front of the next-generation GCDN, with one hard requirement: on every request it sends to Pantheon, the fronting service must present a TLS Server Name Indication (SNI) value that matches the HTTP `Host` header.
+
+The next-generation GCDN routes and validates custom domains using the SNI value in the TLS handshake. Requests whose SNI does not match the `Host` header are rejected at the edge with a `403` response before they reach your site. This is intentional security behavior that prevents [domain fronting](https://en.wikipedia.org/wiki/Domain_fronting), and it cannot be disabled for individual domains.
+
+When configuring your CDN, for each custom domain:
+
+- Add the domain to your Pantheon environment and complete [domain verification](#domains-and-dns) so a certificate is provisioned.
+- Set the CDN's origin address to the GCDN edge hostname shown in your dashboard DNS values (the `fe.` CNAME target).
+- Set both the origin `Host` header and the outbound TLS SNI to the custom domain itself (for example, `www.example.com`), not the `fe.` edge hostname.
+
+If your CDN cannot set the outbound SNI independently of the configured origin hostname, it cannot be used in front of the next-generation GCDN. Azure Front Door currently has this limitation (see [Known Limitations](#known-limitations)).
+
+If the service in front of Pantheon is your own Cloudflare zone, use the [Orange-to-Orange configuration](#using-cloudflare-in-front-of-pantheon-orange-to-orange) instead.
+
 ## Known Limitations
+
+### Azure Front Door is not supported in front of the next-generation GCDN
+
+Azure Front Door always sets the outbound TLS SNI to the configured origin hostname and does not provide a way to override SNI independently of the origin `Host` header. Because of this, requests from Azure Front Door cannot satisfy the [SNI and `Host` header match requirement](#using-a-third-party-cdn-in-front-of-pantheon) and receive `403` responses from the GCDN edge. Disabling certificate subject name validation in Azure Front Door does not change the SNI it sends and does not work around this.
 
 ### Terminus commands experience syntax errors
 
