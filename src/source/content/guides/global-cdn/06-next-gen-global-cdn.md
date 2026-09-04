@@ -111,15 +111,15 @@ Eligible sites will see a next-generation GCDN banner on the site dashboard in P
 After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are automatically migrated to the new GCDN infrastructure. You do not need to take any action for these domains. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
 ### Domains and DNS
-<Alert title="SSL/TLS Certificate Issuance — TXT Records Required" type="danger">
+<Alert title="SSL/TLS Certificate Issuance: TXT Records Required" type="danger">
 
-**TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
+**DNS TXT record validation is the default method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. If you cannot add TXT records at your DNS provider, HTTP-01 validation is available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) (see the **Terminus CLI** tab).
 
 </Alert>
 
 After activating the next-generation GCDN through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
-1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider. **TXT record validation is the only supported method for issuing SSL/TLS certificates.** HTTP validation and other methods are not available.
+1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider. **The dashboard flow uses DNS TXT record validation.** To verify with HTTP-01 validation instead, use the Terminus plugin (see the **Terminus CLI** tab).
 
 1. Once domain verification completes and your SSL/TLS certificate has been issued, the dashboard will display the recommended DNS settings (CNAME targets).
 
@@ -164,7 +164,7 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 <Alert title="Note" type="info">
 
-DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
+DNS-01 TXT record validation is the default method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership. To verify using HTTP-01 challenges instead, pass `--method=http` to `terminus gcdn:verify`.
 
 </Alert>
 
@@ -203,6 +203,12 @@ Wait a few minutes for DNS propagation, then verify each domain. Verification ty
 ```bash{promptUser: user}
 terminus gcdn:verify <site>.live example.com
 terminus gcdn:verify <site>.live www.example.com
+```
+
+Verification uses DNS-01 challenges by default. To verify using HTTP-01 challenges instead:
+
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com --method=http
 ```
 
 ### 5. Update your DNS records
