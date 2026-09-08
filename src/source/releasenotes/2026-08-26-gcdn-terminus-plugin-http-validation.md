@@ -8,7 +8,7 @@ description: "The GCDN Terminus plugin now supports HTTP-01 certificate validati
 
 The [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) now supports HTTP-01 certificate validation as an alternative to DNS TXT records when verifying domains on the [next-generation Global CDN](/guides/global-cdn/next-gen-global-cdn).
 
-DNS-01 TXT record validation remains the default. If you cannot add TXT records at your DNS provider, you can now verify a domain using HTTP-01 challenges instead:
+Certificate validation uses DNS-01 (TXT record) by default, letting your certificate be issued before you update DNS. You can now use HTTP-01 challenges instead as an alternative setup — some customers prefer pointing traffic directly rather than managing DNS records, though the certificate can't be pre-provisioned this way, so there may be brief downtime during cutover:
 
 ```bash
 terminus gcdn:verify <site>.live <domain> --method=http
