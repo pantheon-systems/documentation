@@ -113,13 +113,13 @@ After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are autom
 ### Domains and DNS
 <Alert title="Domain Verification and Certificate Issuance" type="danger">
 
-**A DNS TXT record is required once to verify domain ownership** — this record can be removed once your domain is active. By default, certificate issuance also uses DNS TXT validation, which lets your certificate be issued before you point DNS to Pantheon, avoiding downtime during cutover. HTTP-01 validation is available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) (see the **Terminus CLI** tab) as an alternative setup — some customers prefer pointing traffic directly rather than managing DNS records. With HTTP-01, the certificate can't be pre-provisioned, so there may be a brief window of downtime during cutover.
+**A DNS TXT record is required once to verify domain ownership** — this record can be removed once your domain is active. By default, certificate issuance also uses DNS TXT validation, which lets your certificate be issued before you point DNS to Pantheon, avoiding downtime during cutover. If you'd rather not add that second TXT record, HTTP-01 validation is available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) (see the **Terminus CLI** tab): once your one domain-ownership TXT record verifies, you just point DNS at Cloudflare and the certificate is issued over HTTP on that hostname. With HTTP-01, the certificate can't be pre-provisioned, so there may be a brief window of downtime during cutover.
 
 </Alert>
 
 After activating the next-generation GCDN through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
-1. The dashboard will provide a TXT record for domain ownership verification, plus a TXT record for certificate validation. Add both to your DNS provider. **The dashboard flow uses DNS TXT record validation for both steps**, which lets your certificate be issued before you update DNS. HTTP-01 is available as an alternative setup for certificate validation (the domain-ownership TXT record is still required either way) via the Terminus plugin — see the **Terminus CLI** tab.
+1. The dashboard will provide a TXT record for domain ownership verification, plus a TXT record for certificate validation. Add both to your DNS provider. **The dashboard flow uses DNS TXT record validation for both steps**, which lets your certificate be issued before you update DNS. If you'd rather skip the second TXT record, HTTP-01 is available as an alternative setup for certificate validation (the domain-ownership TXT record is still required either way) via the Terminus plugin — see the **Terminus CLI** tab.
 
 1. Once domain verification completes and your SSL/TLS certificate has been issued, the dashboard will display the recommended DNS settings (CNAME targets).
 
@@ -164,7 +164,7 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 <Alert title="Note" type="info">
 
-DNS-01 TXT record validation is the default method for domain verification and lets your certificate be issued before you update DNS. You will need to add TXT records to your DNS provider to verify domain ownership. HTTP-01 is available as an alternative setup — pass `--method=http` to `terminus gcdn:verify` — though the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
+DNS-01 TXT record validation is the default method for domain verification and lets your certificate be issued before you update DNS. You will need to add TXT records to your DNS provider to verify domain ownership. If you'd rather not add a second TXT record for the certificate, HTTP-01 is available as an alternative setup — pass `--method=http` to `terminus gcdn:verify` and, once your domain-ownership TXT record verifies, point DNS and the certificate issues over HTTP. With HTTP-01, the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
 
 </Alert>
 
@@ -205,7 +205,7 @@ terminus gcdn:verify <site>.live example.com
 terminus gcdn:verify <site>.live www.example.com
 ```
 
-Verification uses DNS-01 challenges by default, which lets your certificate be issued before DNS cutover. HTTP-01 is available as an alternative setup, though it can't pre-provision the certificate. To use it instead:
+Verification uses DNS-01 challenges by default, which lets your certificate be issued before DNS cutover. If you'd rather not add a second TXT record for the certificate, use HTTP-01 instead: once your domain-ownership TXT record verifies, point DNS and the certificate is issued over HTTP. It can't pre-provision the certificate, so there may be brief downtime during cutover. To use it:
 
 ```bash{promptUser: user}
 terminus gcdn:verify <site>.live example.com --method=http
