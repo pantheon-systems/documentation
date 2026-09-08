@@ -134,8 +134,8 @@ a.pds-skiplink:focus {
 
 .toc-container {
   border-left: 1px solid var(--pds-color-border-default);
-  font-family: var(--pds-typography-font-default);
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-family: var(--pds-typography-ff-default);
+  font-weight: var(--pds-typography-fw-regular);
   margin-block-start: var(--pds-spacing-xl);
   overflow: auto;
   position: sticky;
@@ -157,7 +157,7 @@ a.pds-skiplink:focus {
 
 #toc-nav {
   font-size: 1.44rem;
-  font-weight: var(--pds-typography-font-weight-semibold);
+  font-weight: var(--pds-typography-fw-semibold);
   margin-block-end: var(--pds-spacing-l);
   padding-inline-start: var(--pds-spacing-xl);
 }
@@ -198,11 +198,11 @@ ul.toc-list ul li {
 }
 
 .tocify-item {
-  line-height: var(--pds-typography-line-height-s);
+  line-height: var(--pds-typography-lh-s);
 }
 
 .tocify-item.is-active-li a {
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-weight: var(--pds-typography-fw-regular);
 }
 
 pre {
@@ -230,8 +230,8 @@ pre {
 .source-code::after {
   color: var(--pds-color-text-default-secondary);
   font-size: var(--pds-typography-size-s);
-  font-weight: var(--pds-typography-font-weight-bold);
-  letter-spacing: var(--pds-typography-letter-spacing-s);
+  font-weight: var(--pds-typography-fw-bold);
+  letter-spacing: var(--pds-typography-ls-s);
   position: absolute;
   text-transform: uppercase;
 }

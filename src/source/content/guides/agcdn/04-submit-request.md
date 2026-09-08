@@ -4,7 +4,7 @@ subtitle: Submit a Change Request
 description: Learn how to submit a configuration or support request.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
-reviewed: "2025-01-15"
+reviewed: "2026-08-31"
 showtoc: true
 permalink: docs/guides/agcdn/submit-request
 contenttype: [guide]
@@ -30,8 +30,14 @@ Follow the steps below to submit a ticket for a configuration change or support 
 1. Click the **Go to request form** button.
 1. Complete the form with all relevant details about your request. 
 1. Submit your request.
+  
+  <Alert type="info" title="Note">
 
- ![AGCDN change request form to submit tickets for configuration changes](../../../images/dashboard/new-dashboard/2024/agcdn-change-request.png)
+  [Advanced Global CDN](/guides/agcdn) is a paid service, and only members of an enabled workspace will see the "**Go to request form**" button. Reach out to your Customer Success Manager or [contact us](https://pantheon.io/contact-us?docs) to learn more about enabling this paid feature. 
+  
+  </Alert>
+  
+  ![AGCDN change request form to submit tickets for configuration changes](../../../images/dashboard/agcdn-change-request.png)
 
 After submission, you will be switched to the **Support** tab of your professional workspace and the new AGCDN ticket will be open.
 

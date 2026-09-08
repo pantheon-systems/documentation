@@ -9,7 +9,7 @@
 .subtopic__list {
   display: flex;
   flex-direction: column;
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-weight: var(--pds-typography-fw-regular);
   list-style-type: none;
   margin: 0;
   padding: 0;
