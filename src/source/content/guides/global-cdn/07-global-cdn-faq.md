@@ -185,7 +185,7 @@ Content Converter (Markdown for Agents) is a feature enabled on all next-generat
 
 ### My automated integration stopped working after migration. What do I do?
 
-Your bot or automated service may be receiving a managed challenge from bot protection. Check whether the service's user agent is being challenged by reviewing its error logs (look for 403 responses or HTML challenge pages). Contact Pantheon support to request a bot exclusion for your user agent.
+Check whether the service is receiving a managed challenge from bot protection (look for 403 responses or HTML challenge pages in its error logs). If so, generate a bot bypass token for your site with `terminus gcdn:bot-bypass <site>` and configure the service to send it in the `x-pantheon-bot-bypass` request header — see [Bot Bypass Tokens](/guides/global-cdn/next-gen-global-cdn#bot-bypass-tokens) for setup steps. If the token doesn't cover your situation, contact Pantheon support to request an exception.
 
 ### I have Cloudflare in front of my site. Is that supported?
 

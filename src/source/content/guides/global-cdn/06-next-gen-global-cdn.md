@@ -28,11 +28,37 @@ Bot protection is enabled by default on all migrated sites. There is no addition
 - **Automated bot detection and scoring** — Incoming traffic is automatically evaluated and scored. Requests identified as malicious receive managed challenges.
 - **Verified bot identification** — Legitimate bots (such as Googlebot, Bingbot, and other search engine crawlers) are recognized and allowed through automatically. Unverified malicious bots are challenged.
 
-### Bot Exclusions
+### Bot Bypass Tokens
 
-If your site relies on a custom bot or automated service that is not on the verified bot list, it may be challenged or blocked. Contact Pantheon support to request an exclusion for your bot's user agent.
+If your site relies on automation that is not on the verified bot list, such as uptime monitors, CI/CD tools, feed importers, or custom API clients, bot protection may challenge or block it. You can exempt your own automation by generating a bot bypass token and sending it with your requests.
 
-After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, check whether its user agent is being challenged and contact support to add an exclusion.
+**1. Install the plugin and generate your site's token:**
+
+```
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+terminus gcdn:bot-bypass <site>
+```
+
+Use `--format=json` if you're wiring this into CI or a monitoring config. The command prints two tokens for your site — a current token and a next token — each with its Valid From date, Expires date, and the header name to use. You must have access to the site in Pantheon to generate its tokens. The site argument accepts a name or UUID; one token pair covers every environment (dev, test, live, and multidevs).
+
+**2. Add the current token to your automation** as an HTTP request header:
+
+```
+x-pantheon-bot-bypass: <token>
+```
+
+For example, configure your uptime monitor or CI job to send this custom header on every request to your site.
+
+Requests that carry a valid token skip the standard challenge applied to automated traffic. Targeted protections, rate limiting, the managed WAF, and other platform-level security rules still apply to every request, with or without a token.
+
+Keep in mind:
+
+- **Tokens are valid for 6 months.** Each time you run the command you get the current token plus a next token that starts 3 months later; both are accepted during that overlap. Switch your automation to the next token on or after its Valid From date, and re-run the command each quarter to pick up the following pair.
+- **Treat the token like a credential.** Send it only from servers and services you control. Never expose it in client-side code, public repositories, or logs. If a token is leaked, contact Pantheon support to revoke it; a replacement token becomes available at the start of the following month.
+- **A missing token gets normal bot evaluation** — no penalty. **An incorrect token is rejected with a 403** on every request, so if your automation starts failing, check the header value first.
+- Verified bots (such as Googlebot and Bingbot) are allowed through automatically and do not need a token.
+
+After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, generate a bot bypass token and add it to that service's requests as described above. If the bypass token doesn't cover your situation, contact Pantheon support to request an exception.
 
 ### Custom Certificates
 
