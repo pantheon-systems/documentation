@@ -12,6 +12,7 @@ cms: [--]
 audience: [--]
 product: [--]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 ## Before You Begin
 Be sure that you have a:
@@ -31,7 +32,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the target environment (typically <Icon icon="wavePulse" /> Live) then click **<Icon icon="global" /> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [Dyn DNS account](https://portal.dynect.net/login/) in a new tab before you continue.
+Keep this page open and login to your [Dyn DNS account](https://account.dyn.com/) in a new tab before you continue.
 
 ## Configure DNS Records on Dyn
 
@@ -72,8 +73,7 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 
 ## Dyn Docs
 
-* [Creating a Zone](https://help.dyn.com/creating-a-zone/)
-* [Zone Records](https://help.dyn.com/zone-records/)
+* [Creating a Zone](https://help.dyn.com/creating-a-zone-in-dyn-standard-dns.html)
 
 ## Next Steps
 

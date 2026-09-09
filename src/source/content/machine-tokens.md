@@ -2,7 +2,7 @@
 title: Creating and Revoking Machine Tokens
 description: Learn how to create a machine token in order to use Terminus on your Drupal or WordPress site.
 tags: [sso, security, terminus]
-reviewed: "2020-12-09"
+reviewed: "2026-07-27"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -89,6 +89,3 @@ The following token names are not allowed, and will be automatically renamed to 
 - pantheonHud
 - pantheon-hud
 
-## More Resources
-
-[The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)

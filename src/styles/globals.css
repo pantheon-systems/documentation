@@ -1,5 +1,8 @@
 @import url("./webstyles.css");
 @import url("./common.css");
+/* Preparring for v2 migration
+/* https://pds-react.pantheon.io/v2.0/?path=/docs/documentation-v2-migration-gradual-migration--docs 
+/*@import 'npm:@pantheon-systems/pds-toolkit-react-v2/dist/css/pds-core.css';*/
 @import "@pantheon-systems/pds-toolkit-react/css/pds-core.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-components.css";
@@ -131,8 +134,8 @@ a.pds-skiplink:focus {
 
 .toc-container {
   border-left: 1px solid var(--pds-color-border-default);
-  font-family: var(--pds-typography-font-default);
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-family: var(--pds-typography-ff-default);
+  font-weight: var(--pds-typography-fw-regular);
   margin-block-start: var(--pds-spacing-xl);
   overflow: auto;
   position: sticky;
@@ -154,7 +157,7 @@ a.pds-skiplink:focus {
 
 #toc-nav {
   font-size: 1.44rem;
-  font-weight: var(--pds-typography-font-weight-semibold);
+  font-weight: var(--pds-typography-fw-semibold);
   margin-block-end: var(--pds-spacing-l);
   padding-inline-start: var(--pds-spacing-xl);
 }
@@ -195,11 +198,11 @@ ul.toc-list ul li {
 }
 
 .tocify-item {
-  line-height: var(--pds-typography-line-height-s);
+  line-height: var(--pds-typography-lh-s);
 }
 
 .tocify-item.is-active-li a {
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-weight: var(--pds-typography-fw-regular);
 }
 
 pre {
@@ -227,8 +230,8 @@ pre {
 .source-code::after {
   color: var(--pds-color-text-default-secondary);
   font-size: var(--pds-typography-size-s);
-  font-weight: var(--pds-typography-font-weight-bold);
-  letter-spacing: var(--pds-typography-letter-spacing-s);
+  font-weight: var(--pds-typography-fw-bold);
+  letter-spacing: var(--pds-typography-ls-s);
   position: absolute;
   text-transform: uppercase;
 }
@@ -363,4 +366,16 @@ a.glossary__term-link {
 
 .gatsby-hide-code-line {
   display: none;
+}
+
+
+.pds-site-footer__legal a, .pds-site-footer__legal button {
+  color: var(--pds-color-fg-default) !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  background: 0 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+  text-align: left;
 }

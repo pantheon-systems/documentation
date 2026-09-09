@@ -3,7 +3,7 @@ title: Object Cache Errors
 description: Review solutions to common troubleshooting scenarios for Object Cache.
 permalink: docs/object-cache/errors
 tags: [cache, plugins, modules, database]
-reviewed: "2023-08-17"
+reviewed: "2026-07-28"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -121,7 +121,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ### Out of Memory Errors
 
-You can use the `info memory` option to view your site's memory metrics. Running out of storage is a regular occurrance and is handled by the eviction policy. Memory limits per plan and more details about the eviction policy are in the [Object Cache FAQs](/object-cache/faq#how-much-object-cache-is-available-for-each-plan-level)
+You can use the `info memory` option to view your site's memory metrics. Running out of storage is a regular occurrence and is handled by the eviction policy. Memory limits per plan and more details about the eviction policy are in the [Object Cache FAQs](/object-cache/faq#how-much-object-cache-is-available-for-each-plan-level)
 
 Run the following command to access your site's memory usage metrics:
 

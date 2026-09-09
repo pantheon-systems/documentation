@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2026-04-17"
+reviewed: "2026-07-06"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -132,6 +132,20 @@ build_step: true
 ```
 
 Refer to [Integrated Composer](/guides/integrated-composer) for more information.
+
+### Frontend Asset Builds
+
+Install Node.js dependencies and run frontend compiling script(s) as part of a build step on Pantheon:
+
+```yaml:title=pantheon.yml
+frontend_build:
+  enabled: true
+  paths:
+    - path: web/themes/custom/mytheme
+      node_version: 26
+      build_command: build
+```
+Refer to [Frontend Asset Builds](/frontend-builds) for more information.
 
 ### PHP Version
 
@@ -377,6 +391,18 @@ You must do _one_ of the following to ensure that your newly created Multidev ha
 
 - Re-commit your changes to the Multidev and/or `pantheon.yml` file
 - Push the `pantheon.yml` changes directly to the Dev (master branch) environment
+
+### Internal Error when pushing changes to pantheon.yml to a git branch with no existing Multidev  
+
+**Issue:** When you push a change to pantheon.yml, Pantheon attempts to apply the configuration change but fails if a Multidev environment doesn't exist in your site. This results in an error and prevents the configuration from being applied.
+
+**Solution:**
+
+Before pushing changes to pantheon.yml, ensure that a Multidev environment is already created on your site.
+
+1. Create a Multidev environment in your Pantheon dashboard or through terminus
+
+1. Push your pantheon.yml change
 
 ### Deploying Hotfixes
 

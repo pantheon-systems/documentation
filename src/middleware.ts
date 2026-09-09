@@ -36,7 +36,6 @@ const RedirectMap: Record<string, string> = {
   "/guides/account-mgmt/plans/manage": "/guides/account-mgmt/plans/site-plans",
   "/guides/account-mgmt/plans/purchase": "/guides/account-mgmt/plans/site-plans",
   "/guides/account-mgmt/traffic/faq": "/guides/account-mgmt/traffic",
-  "/guides/account-mgmt/traffic/measure": "/guides/account-mgmt/traffic",
   "/guides/behat": "/behat",
   "/guides/composer": "/composer",
   "/guides/composer-convert": "/composer-convert",
@@ -204,6 +203,9 @@ const RedirectMap: Record<string, string> = {
   "/guides/github-application/usage": "/guides/external-repositories/usage",
   "/guides/github-application/support-considerations": "/guides/external-repositories/support-considerations",
   "/nextjs/considerations": "/nextjs/comparison-to-cms-hosting",
+  "/guides/global-cdn/global-cdn-beta": "/guides/global-cdn/next-gen-global-cdn",
+  "/guides/global-cdn/global-cdn-beta#faq": "/guides/global-cdn/global-cdn-faq",
+  "/guides/external-repositories/setup": "/guides/external-repositories/github",
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.

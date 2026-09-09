@@ -82,8 +82,7 @@ const ReleaseNotePopoverCategorySelector = ({
   };
 
   // Set the icon based on the popover state: 'angleUp' if open, 'angleDown' if closed
-  let popoverTriggerIcon = isPopoverOpen ? "angleUp" : "angleDown";
-
+  const popoverTriggerIcon = isPopoverOpen ? ("angleUp" as const) : ("angleDown" as const);
   // Popover columns config
   const itemsPerColumn = 7;
   const totalItems = activeCategories.length;

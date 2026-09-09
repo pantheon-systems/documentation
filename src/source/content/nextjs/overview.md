@@ -1,7 +1,7 @@
 ---
 title: Next.js Overview
 description: How Next.js works on Pantheon
-reviewed: "2025-11-17"
+reviewed: "2027-07-28"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -41,7 +41,7 @@ We also provide [command line equivalents](/nextjs/cli-tools) for many tasks lik
 Pantheon makes teams using Next.js more effective by:
 
 * Providing a container-based runtime environment that holds all the dependencies needed to run Next.js applications.
-* Storing cached responses both in our Global CDN and a persistent layer that is shared across horitzontally scaled containers.
+* Storing cached responses both in our Global CDN and a persistent layer that is shared across horizontally scaled containers.
 * Providing a Git-based workflow that integrates with GitHub to enable Continuous Integration and Continuous Deployment.
 * Offering a dashboard and command line tool for managing environments, viewing logs, and scaling resources.
 

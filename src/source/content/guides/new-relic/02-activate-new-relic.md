@@ -13,6 +13,7 @@ tags: [logs, measure, newrelic]
 contributors: [whitneymeredith, jspellman814]
 showtoc: true
 permalink: docs/guides/new-relic/activate-new-relic
+reviewed: "2026-07-28"
 ---
 
 This section provides steps on how to activate and configure your New Relic&reg; account.
@@ -62,6 +63,6 @@ Moving forward, to open New Relic&reg; Performance Monitoring:
 
 - [New Relic&reg; Ping Monitors](/guides/pagerduty/monitor/)
 
-- [New Relic&reg; Labelling with Quicksilver](/guides/new-relic/new-relic-quicksilver)
+- [New Relic&reg; Labels with Quicksilver](/guides/new-relic/new-relic-quicksilver)
 
 - [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)

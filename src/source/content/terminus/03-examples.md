@@ -14,7 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2025-01-23"
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
@@ -82,7 +82,7 @@ The example above is equivalent to `terminus env:info mysite.dev`.
 
 ### Drush and WP-CLI
 
-Pantheon supports [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
+Pantheon supports [Drush (Drupal)](https://www.drush.org/13.x/commands/all/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
 
 1. Use the [basic command structure described above](#command-structure).
 

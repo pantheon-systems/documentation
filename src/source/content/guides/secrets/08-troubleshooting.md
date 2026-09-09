@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/troubleshooting
-reviewed: "2026-06-15"
+reviewed: "2026-07-28"
 showtoc: true
 ---
 
@@ -109,7 +109,7 @@ Some possible causes for this error:
   Failed to execute git clone --mirror -- 'git@github.com:biltmoreco/advanced-custom-fields-pro.git' '/home/pantheon-app/.cache/composer/vcs/git-github.com-biltmoreco-advanced-custom-fields-pro.git/'
   ```
 
-  **Solution:** Change the repository definition (in composer.json) to use https instead of ssh. In this example, the repository would be https://github.com/biltmoreco/advanced-custom-fields-pro.git
+  **Solution:** Change the repository definition (in composer.json) to use https instead of ssh. In this example, the repository would be `https://github.com/biltmoreco/advanced-custom-fields-pro.git`
 
 ## Rate limiting
 ### Pantheon rate limiting

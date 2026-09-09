@@ -5,7 +5,7 @@ categories: [user-interface]
 ---
 A refreshed, modernized site creation experience is now available in the Pantheon Dashboard for all users. 
 
-Share questions and feedback in the [Pantheon Community Slack](http://slackin.pantheon.io/).
+Share questions and feedback in the [Pantheon Community Slack](https://pantheon.io/customer-community/).
 
 ![New user interface showing the creation of a WordPress site in the dashboard](../images/create-new-site-form.png)
 

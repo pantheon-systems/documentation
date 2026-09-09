@@ -13,6 +13,5 @@ Available exclusively to Platinum and Diamond customers, this option is for busi
 
 ### General support ticket
 Available to Gold, Platinum, and Diamond customers for other support needs. Gold customers should use this option for site downtime or urgent issues, which will be handled promptly.
-Learn more about [support features for different account tiers](/guides/support/#support-features-and-response-times).
 
 ![Emergency ticket workspace phase 1 image](../images/emergency-ticket-workspace-phase1.png)

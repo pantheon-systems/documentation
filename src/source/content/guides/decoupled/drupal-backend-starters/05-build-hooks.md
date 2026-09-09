@@ -15,6 +15,7 @@ cms: [decoupled]
 audience: [development]
 product: [decoupled]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 <Partial file="fes-deprecated.md" />
 
@@ -36,7 +37,7 @@ The Build Hooks module is already included as a Composer dependency if you are u
       composer require 'drupal/build_hooks:^3.3'
       ```
 
-1. Install the dependency. This can be done either through the Drupal admin dashboard or using [drush pm-enable](https://drushcommands.com/drush-9x/pm/pm:enable/).
+1. Install the dependency. This can be done either through the Drupal admin dashboard or using [drush pm:install](https://www.drush.org/13.x/commands/pm_install/).
 
 ## Set Up a Build Hook
 

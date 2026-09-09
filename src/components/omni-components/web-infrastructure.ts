@@ -25,6 +25,7 @@ const webInfrastructure = () => {
         simpleLink("/pantheon-yml", "App Configuration", [
           simpleLink("/pantheon-yml", "pantheon.yml"),
           simpleLink("/nested-docroot", "Nested Docroot"),
+          simpleLink("/frontend-builds", "Frontend Asset Builds"),
           simpleLink(
             "/server_name-and-server_port",
             "Server Name and Server Port"

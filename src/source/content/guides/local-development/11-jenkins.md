@@ -12,7 +12,7 @@ integration: []
 tags: [collaborate, continuous-integration, git, iterate]
 showtoc: true
 permalink: docs/guides/local-development/jenkins
-reviewed: "2025-12-10"
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to configure your Jenkins server to test and deploy code changes to Pantheon automatically.
@@ -222,9 +222,9 @@ You must create a site on Pantheon for this part of the process. The example in 
 
     ![SCM view](../../../images/integrations/scm_settings.png)
 
-1. Click  **Build Triggers** and check the box labelled **GitHub hook trigger for GITScm polling**. This allows code changes to trigger your build (as opposed to setting up a periodic build, for example).
+1. Click  **Build Triggers** and check the box labeled **GitHub hook trigger for GITScm polling**. This allows code changes to trigger your build (as opposed to setting up a periodic build, for example).
 
-1. Click **Build Environment** and check the box labelled **Inject environment variables to the build process**.
+1. Click **Build Environment** and check the box labeled **Inject environment variables to the build process**.
 
 1. Enter the path to your Jenkins environment variables file in the **Properties File Path** field. On Debian-based systems, this is usually `/var/lib/jenkins/envVars.properties`. If it doesn't already exist, create an empty file.
 

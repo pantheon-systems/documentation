@@ -13,6 +13,7 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/config/
 editpath: multisite/03-config.md
+reviewed: "2026-07-27"
 ---
 
 This section is intended for customers who have had a WordPress Multisite upstream created for them by a Pantheon employee. If you do not have a WordPress Multisite upstream, refer to the [introduction](/guides/multisite) page of this guide. After you create a new site on the Multisite upstream and visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
@@ -176,7 +177,7 @@ The [Bedrock](https://roots.io/bedrock/)-based [WordPress (Composer Managed)](ht
 
 <Alert type="danger" title="Multisite Search and Replace with WordPress (Composer Managed)">
 
-Currently, the built-in dashboard [WordPress Multisite Search and Replace](/guides/multisite/search-replace/) does not support Composer-based WordPress multisites. To perform a search and replace on a WordPress (Composer Managed) multisite, you will need to use WP-CLI via Terminus manually. For more information, see our [WordPress Multisite Search and Replace](guides/multisite/workflows/#run-wp-cli-search-replace-manually) guide.
+Currently, the built-in dashboard [WordPress Multisite Search and Replace](/guides/multisite/search-replace/) does not support Composer-based WordPress multisites. To perform a search and replace on a WordPress (Composer Managed) multisite, you will need to use WP-CLI via Terminus manually. For more information, see our [WordPress Multisite Search and Replace](/guides/multisite/workflows/#run-wp-cli-search-replace-manually) guide.
 </Alert>
 
 </Tab>

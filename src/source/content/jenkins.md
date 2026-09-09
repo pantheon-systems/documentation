@@ -9,7 +9,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-07-28"
 ---
 
 [Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server which can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. However, it is very customizable and can even run non-CI related tasks, such as calling periodic cron jobs.
@@ -210,9 +210,9 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
     ![SCM view](../images/integrations/scm_settings.png)
 
-5. We want code changes to trigger our build (as opposed to setting up a periodic build, for example). Under **Build Triggers**, Check the box labelled, "GitHub hook trigger for GITScm polling".
+5. We want code changes to trigger our build (as opposed to setting up a periodic build, for example). Under **Build Triggers**, Check the box labeled, "GitHub hook trigger for GITScm polling".
 
-6. Under **Build Environment**, check the box labelled "Inject environment variables to the build process."
+6. Under **Build Environment**, check the box labeled "Inject environment variables to the build process."
 
 7. In the **Properties File Path** field, enter the path to your Jenkins environment variables file. On Debian-based systems, it's usually `/var/lib/jenkins/envVars.properties`. If it doesn't already exist, create an empty file.
 
@@ -304,7 +304,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
 ### Add Post-build Actions
 
-Under **Post-build Actions** is another button labelled **Add post-build action**. Click on it and select the option "Set GitHub commit status (universal)". In the fields that appear, choose the following options:
+Under **Post-build Actions** is another button labeled **Add post-build action**. Click on it and select the option "Set GitHub commit status (universal)". In the fields that appear, choose the following options:
 
 - **Commit SHA**: "Latest build revision".
 

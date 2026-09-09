@@ -11,6 +11,7 @@ product: [dashboard]
 integration: [--]
 showtoc: true
 permalink: docs/guides/sftp/rsync-and-sftp
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to use your SFTP client or rsync to transfer large files.
@@ -42,7 +43,7 @@ There are a number of GUI SFTP clients available, such as [WinSCP](https://winsc
 
 1. Click **Connection Info** to access your credentials. 
 
-1. Connect to your SFTP client. The example belows uses a command-line SFTP client to connect to a site environment's file directory.
+1. Connect to your SFTP client. The example below uses a command-line SFTP client to connect to a site environment's file directory.
 
     <Alert title="Note" type="info">
 

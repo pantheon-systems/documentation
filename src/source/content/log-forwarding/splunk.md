@@ -3,7 +3,7 @@ title: Log Forwarding with Splunk
 contenttype: [doc]
 innav: [true]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-07-28"
 permalink: docs/log-forwarding/splunk
 ---
 <Partial file="log-forwarding-beta.md" />
@@ -32,7 +32,7 @@ Configure a secure HTTP Event Collector (HEC) in Splunk:
 Reply to your beta program welcome email, or reach out to your Customer Success Manager (CSM), with the following information: 
 
 1. **Workspace UUID:** Specify which workspace you want enabled.
-1. **Splunk HEC Endpoint URL:** The host and port (e.g., https://my-splunk.com:8088).
+1. **Splunk HEC Endpoint URL:** The host and port (e.g., `https://my-splunk.com:8088`).
 1. **HEC Token:** The unique GUID copied in [the previous section](#add-splunk-configuration).
 
 ### Test log streaming

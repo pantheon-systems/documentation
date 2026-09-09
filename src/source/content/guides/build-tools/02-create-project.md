@@ -6,7 +6,7 @@ tags: [composer, terminus, webops, workflow, D8, D9, wordpress]
 type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
-reviewed: "2025-12-10"
+reviewed: "2026-07-27"
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
@@ -16,6 +16,8 @@ product: [--]
 integration: [--]
 image: buildToolsGuide-thumb.png
 ---
+
+<Partial file="build-tools-cta.md" />
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, [Composer](https://getcomposer.org), a Continuous Integration (CI) service, and a Pantheon site with Automated Testing. This guide will get you started, but you will need to customize and maintain the CI/testing set up for your projects.
 
@@ -85,7 +87,7 @@ export BITBUCKET_USER=exampleUserName
 export BITBUCKET_PASS=exampleUserPassword
 ```
 
-Navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app) if you need to replace a token.
+Navigate to your [project settings page in CircleCI](https://circleci.com/docs/guides/security/env-vars/#private-keys-and-secrets) if you need to replace a token.
 
 ## Create a Build Tools Project
 

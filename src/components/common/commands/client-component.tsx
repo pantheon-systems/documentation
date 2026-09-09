@@ -25,7 +25,7 @@ export const CommandsClientComponent = ({
         label={""}
       />
       <div className={cn("table-responsive", styles.tableResponsive)}>
-        <table className="table table-commands table-bordered table-striped">
+        <table className="table table-commands">
           <thead>
             <tr>
               <th style={{ width: "60%" }}>Command</th>
@@ -41,17 +41,19 @@ export const CommandsClientComponent = ({
                 return (
                   <tr key={i}>
                     <td>
-                      <Link
-                        className={styles.commandName}
-                        href={`/terminus/commands/${command.name.replace(
-                          slugRegExp,
-                          "-"
-                        )}`}
-                      >
-                        {command.name}
-                      </Link>
+                      <div className={styles.commandCell}>
+                        <Link
+                          className={styles.commandName}
+                          href={`/terminus/commands/${command.name.replace(
+                            slugRegExp,
+                            "-"
+                          )}`}
+                        >
+                          {command.name}
+                        </Link>
 
-                      <small>{command.description}</small>
+                        <small>{command.description}</small>
+                      </div>
                     </td>
                     <td>
                       <small>{command.usage[0].replace(/\[|\]/g, "")}</small>

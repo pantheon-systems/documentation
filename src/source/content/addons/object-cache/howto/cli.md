@@ -115,7 +115,7 @@ maxmemory
 
 ## Hit/Miss Ratio
 
-Use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency, because most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of a project when you can only guess which data you should cache.
+Use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency, because most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’ performance. A low cache hit is usually the result of premature optimization in the early stages of a project when you can only guess which data you should cache.
 
 Run the following code to access your Hit/Miss ratio:
 

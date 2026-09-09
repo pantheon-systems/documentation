@@ -13,7 +13,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/faq/
 editpath: support/06-faq.md
-reviewed: "2024-09-10"
+reviewed: "2026-08-24"
 ---
 
 ### Can I request a feature be added to the platform?
@@ -47,3 +47,19 @@ Yes. Reply directly to the email thread to continue an existing chat session and
 ### Who do I talk to about billing questions?
 
 The best way to get help with your billing questions is to contact our support team [via chat](#real-time-chat-support) or through a [ticket](#ticket-support).
+
+### Am I talking to a real person or an AI?
+Initially, You chat with our AI-powered support assistant. It can instantly answer most questions and help troubleshoot basic issues. If it can't solve your issue, you can request a human agent at any time.
+
+### What can the AI assistant actually help with?	
+Our assistant can answer questions about Pantheon and basic CMS questions— often faster than waiting for a human agent. For more complex or sensitive issues, it will connect you with our support team.
+
+### How do I reach a human agent?
+Just ask — type "talk to a person" or "human agent" anytime. Depending on your membership tier, we'll either connect you to a live agent right away (Diamond & Platinum) or open a support ticket so our team can follow up with you directly (Silver & Gold).
+
+### Is my personal information safe when I use the chatbot?
+Yes. Conversations are handled securely and only used to help resolve your request. Our bot lives on its own server and none of your information is retained or used to train anything outside of Pantheon’s support bot. 
+
+### What if the AI gives me an unhelpful or incorrect answer?
+You can flag any response as unhelpful directly in the chat (thumbs down / "report issue"), and it'll be reviewed by our team. You can also request a human agent to pick up from there.
+

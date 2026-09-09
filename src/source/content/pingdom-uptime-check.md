@@ -29,7 +29,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 2.  Review and choose from available plans and select either monthly or discounted annual billing. For this guide, we selected the **Pingdom Starter account**. Plans can be upgraded at anytime.
 
-    Add your credit card information. If you chose the free trial, you have until the end of the trial time to try Pingdom before the card is billed. Once you've read and agreed to Pingdom's [services agreement](https://www.pingdom.com/legal/software-service-agreement), click **START FREE TRIAL** to continue.
+    Add your credit card information. If you chose the free trial, you have until the end of the trial time to try Pingdom before the card is billed. Once you've read and agreed to Pingdom's [services agreement](https://www.solarwinds.com/legal/software-services-agreement), click **START FREE TRIAL** to continue.
 
     Now we will log in and set up monitoring. Click the **SET UP YOUR MONITORING** button to go directly to the Pingdom dashboard.
 

@@ -83,7 +83,7 @@ const learning = () => {
       simpleLink('/guides/wordpress-git', 'Tutorials', [
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
         getGuideDirectory('guides/pagerduty', 'Incident Management'),
-        getGuideDirectory('guides/accessibility', 'Web Accesibility'),
+        getGuideDirectory('guides/accessibility', 'Web Accessibility'),
         simpleLink(
           '/drupal-commandline',
           'All CLI workflow with Terminus and Drupal',

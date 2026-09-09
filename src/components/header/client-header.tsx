@@ -2,7 +2,6 @@
 
 import { MOBILE_MENU_BREAKPOINT } from "@/constants";
 import {
-  MenuItem,
   NavMenu as PDSNavMenu,
 } from "@pantheon-systems/pds-toolkit-react";
 import { createElement, useState } from "react";
@@ -18,6 +17,7 @@ export const ClientHeader: React.FC<{
   const OmniLinks = omniLinks.map((item) => {
     const theLink = createElement(Link, { href: item.link }, item.title);
     return {
+      label: item.title,
       linkContent: theLink,
     };
   });
@@ -37,7 +37,7 @@ export const ClientHeader: React.FC<{
       menuItems={[
         {
           label: "Documentation",
-          links: OmniLinks as MenuItem[],
+          links: OmniLinks,
         },
         {
           label: "Support",

@@ -26,7 +26,7 @@
     "@next/bundle-analyzer": "^15.4.5",
     "@pantheon-systems/pcc-react-sdk": "3.13.0-beta.2",
     "@pantheon-systems/pcc-sdk-core": "3.13.0-beta.2",
-    "@pantheon-systems/pds-toolkit-react": "1.0.0-dev.256",
+    "@pantheon-systems/pds-toolkit-react": "^1.0.0",
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
     "@segment/analytics-next": "^1.81.1",
@@ -52,6 +52,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.trimend": "^4.5.1",
     "next": "15.3.9",
+    "pds-toolkit-react-v2": "npm:@pantheon-systems/pds-toolkit-react@^2.0.0-alpha",
     "prismjs": "^1.30.0",
     "query-string": "^8.2.0",
     "react": "19.1.5",
@@ -93,7 +94,7 @@
     "c8": "^7.14.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.3.4",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.3.0",
     "jsdom": "^22.1.0",
     "postcss": "^8.5.6",
     "prettier": "3.2.5",
@@ -116,6 +117,13 @@
     "fast-xml-parser": "4.5.4",
     "@remix-run/router": "1.23.2",
     "rollup": "4.59.0",
-    "minimatch": "10.2.4"
+    "minimatch": "10.2.4",
+    "brace-expansion": "^5.0.7",
+    "js-yaml": "^4.3.0",
+    "gray-matter": {
+      "js-yaml": "^3.15.0"
+    },
+    "sharp": "^0.35.0",
+    "dompurify": "^3.4.13"
   }
 }

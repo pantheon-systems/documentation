@@ -12,6 +12,7 @@ integration: [--]
 tags: [collaborate, workflow, webops, multidev]
 contributors: [whitneymeredith]
 showtoc: true
+reviewed: "2026-08-24"
 permalink: docs/guides/multidev/multidev-faq
 ---
 
@@ -19,7 +20,7 @@ This section provides answers to frequently asked Multidev questions.
 
 ## Is Multidev available for all accounts?
 
-Multidev is available to all Workspaces and users with [Gold Accounts](/guides/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
+Multidev is available to all Workspaces and users with Gold Accounts and above, as well as their supporting partners and agencies.
 
 ### Who can access Multidev?
 
@@ -37,7 +38,7 @@ Site admins of an Workspace with Multidev can invite independent contractors or 
 
 </Alert>
 
-Visit the [Partner Program](https://pantheon.io/plans/partner-program?docs) page to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
+Visit the [Agency Partner Program](https://pantheon.io/partners?docs) page to learn more about the benefits of joining the Agency Partner Program, or [contact us](https://pantheon.io/contact-us?docs).
 
 If you meet the conditions and still don't have access to an existing Multidev or the ability to create a new Multidev, please [contact Support](https://dashboard.pantheon.io/#support).
 

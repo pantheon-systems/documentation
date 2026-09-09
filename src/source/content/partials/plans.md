@@ -14,19 +14,6 @@ The List Price is the set price for new sites created after March 4, 2024 that a
 
 </Tab>
 
-<Tab title="Preferred Price" id="tab-2-id">
-
-[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partners).
-
-
-|                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
-|:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
-| Monthly Price      | $44.16  | $166.66           | $283.33            | $566.66           | $925            |
-| Annual Price       | $420    | $1,500            | $2700              | $5,400            | $9,000          |
-| **Annual Savings** | **$110**| **$500**          | **$700**           | **$1400**         | **$2100**       |
-
-</Tab>
-
 <Tab title="2X Large" id="2x">
 
 The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:

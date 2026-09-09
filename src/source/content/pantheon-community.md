@@ -18,7 +18,7 @@ Whether you're optimizing performance, scaling your agency, tackling a complex b
 ## How to Join
 Pantheon's community Slack is open to all customers and partners. Getting in is easy:
 
-[Join the Community](https://pantheon.io/developer-community) → Fill out a quick form → Check your inbox for the invite
+[Join the Community](https://pantheon.io/customer-community) → Fill out a quick form → Check your inbox for the invite
 
 That's it. Takes about 30 seconds, and you're in!
 

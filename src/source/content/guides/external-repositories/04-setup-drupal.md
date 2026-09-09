@@ -86,6 +86,7 @@ This is the most important file. It configures Pantheon-specific dependencies, i
 | Quicksilver installer path | Not present | Maps `type:quicksilver-script` to `web/private/scripts/quicksilver/` |
 | `config.platform.php` | Not set or varies | Must match `php_version` in `pantheon.upstream.yml` |
 | `cweagans/composer-patches` | Not present | Included for patching support |
+| `symfony/runtime` | Not present | Must be added in allow-plugins for the build process for Pantheon `composer config --no-plugins allow-plugins.symfony/runtime true` |
 
 It is expected that you will update this file from the original and Pantheon does not maintain it for you.
 

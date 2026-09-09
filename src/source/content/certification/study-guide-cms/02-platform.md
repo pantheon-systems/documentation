@@ -1,7 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 2: Pantheon Platform"
-description: Understand the layers of Pantheon's platform and how it can be used to solve problems using WebOps best practicies.
+description: Understand the layers of Pantheon's platform and how it can be used to solve problems using WebOps best practices.
 certificationpage: true
 showtoc: true
 type: certificationpage
@@ -17,6 +17,7 @@ product: []
 integration: [--]
 previousurl: /certification/study-guide/webops
 nexturl: /certification/study-guide/create
+reviewed: "2026-07-28"
 ---
 
 <Alert title="Learning Objectives for This Chapter" type="info" >
@@ -50,7 +51,7 @@ Neither of those other options is _wrong._ But the pressures on website operatio
 
 At Pantheon, one of our four core company values is "customer-first." That leads us to think about our direct customers (web teams) and also _their_ customers (the site visitors). Those site visitors generally do not care at all which CMS or framework generated the site (they care about whether the site meets their needs).
 
-The wide web ecosystem will _always_ be changing and developing better ways of meeting the needs of those customers. It would be unwise of us to overfit Pantheon to only one CMS or framework. We support a handful of frameworks across CMS Sites and Front-End Sites so that we can develop the deep expertise necessary to build a polished platform for a given framework. But not over-specializing so as to limit options when the wider web world moves. In another decade a not-yet-created framework may best serve site visitors's needs.
+The wide web ecosystem will _always_ be changing and developing better ways of meeting the needs of those customers. It would be unwise of us to overfit Pantheon to only one CMS or framework. We support a handful of frameworks across CMS Sites and Front-End Sites so that we can develop the deep expertise necessary to build a polished platform for a given framework. But not over-specializing so as to limit options when the wider web world moves. In another decade a not-yet-created framework may best serve site visitor needs.
 
 
 ## What Works for Web Teams

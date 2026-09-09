@@ -192,7 +192,7 @@ This process is 2 steps. First you need to manually create the target folder `co
   mkdir ./uploads/nitropack​ && touch ./uploads/advanced-cache.php
   ```
 
-1. Now create the symlinks tageting the directory and file in the `code/wp-content/` directory of your Local environment. 
+1. Now create the symlinks targeting the directory and file in the `code/wp-content/` directory of your Local environment. 
 
   ```bash{promptUser: user}
   ln -s ./uploads/nitropack/ ./nitropack
