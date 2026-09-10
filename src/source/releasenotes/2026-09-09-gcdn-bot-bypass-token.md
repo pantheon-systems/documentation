@@ -1,7 +1,7 @@
 ---
 title: "Self-service bot bypass tokens for Next Generation GCDN"
-published_date: "2026-09-09"
-published_at: "2026-09-09T20:33:13Z"
+published_date: "2026-09-10"
+published_at: "2026-09-10T15:36:09Z"
 categories: [new-feature, tools-apis]
 description: "Generate a per-site token with Terminus to exempt your own trusted automation from Next Generation GCDN bot protection, without contacting support."
 ---
