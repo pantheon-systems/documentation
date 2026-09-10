@@ -10,6 +10,6 @@ Starting September 10, 2026, new sites created on Pantheon are provisioned on th
 
 This change applies to newly created sites only. Existing sites are not affected and remain eligible for migration through the normal [migration path](/guides/global-cdn/next-gen-global-cdn#setup).
 
-No action is required — the next-generation GCDN is provisioned automatically at site creation.
+No action is required: the next-generation GCDN is provisioned automatically at site creation.
 
 [Advanced Global CDN (AGCDN)](/guides/agcdn) customers are not affected by this change. If you have any questions, [contact Pantheon Support](/guides/support/contact-support/).

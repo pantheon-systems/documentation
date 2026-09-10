@@ -149,7 +149,7 @@ Eligible sites will see a next-generation GCDN banner on the site dashboard. If 
 
 ### Are new sites created on the next-generation GCDN by default?
 
-Yes, as of September 10, 2026. New sites created on Pantheon are provisioned on the next-generation GCDN by default. Sites created before this date are not affected and remain eligible for migration through the normal [migration path](/guides/global-cdn/next-gen-global-cdn#setup). [Advanced Global CDN (AGCDN)](/guides/agcdn) customers are not affected by this change — if you have questions, [contact Pantheon Support](/guides/support/contact-support/).
+Yes, as of September 10, 2026. New sites created on Pantheon are provisioned on the next-generation GCDN by default. Sites created before this date are not affected and remain eligible for migration through the normal [migration path](/guides/global-cdn/next-gen-global-cdn#setup). [Advanced Global CDN (AGCDN)](/guides/agcdn) customers are not affected by this change. If you have questions, [contact Pantheon Support](/guides/support/contact-support/).
 
 ### I have a Custom Certificate. Can I migrate?
 
