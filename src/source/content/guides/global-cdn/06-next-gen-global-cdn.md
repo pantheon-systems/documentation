@@ -28,11 +28,37 @@ Bot protection is enabled by default on all migrated sites. There is no addition
 - **Automated bot detection and scoring** — Incoming traffic is automatically evaluated and scored. Requests identified as malicious receive managed challenges.
 - **Verified bot identification** — Legitimate bots (such as Googlebot, Bingbot, and other search engine crawlers) are recognized and allowed through automatically. Unverified malicious bots are challenged.
 
-### Bot Exclusions
+### Bot Bypass Tokens
 
-If your site relies on a custom bot or automated service that is not on the verified bot list, it may be challenged or blocked. Contact Pantheon support to request an exclusion for your bot's user agent.
+If your site relies on automation that is not on the verified bot list, such as uptime monitors, CI/CD tools, feed importers, or custom API clients, bot protection may challenge or block it. You can exempt your own automation by generating a bot bypass token and sending it with your requests.
 
-After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, check whether its user agent is being challenged and contact support to add an exclusion.
+**1. Install the plugin and generate your site's token:**
+
+```
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+terminus gcdn:bot-bypass <site>
+```
+
+Use `--format=json` if you're wiring this into CI or a monitoring config. The command prints two tokens for your site — a current token and a next token — each with its Valid From date, Expires date, and the header name to use. You must have access to the site in Pantheon to generate its tokens. The site argument accepts a name or UUID; one token pair covers every environment (dev, test, live, and multidevs).
+
+**2. Add the current token to your automation** as an HTTP request header:
+
+```
+x-pantheon-bot-bypass: <token>
+```
+
+For example, configure your uptime monitor or CI job to send this custom header on every request to your site.
+
+Requests that carry a valid token skip the standard challenge applied to automated traffic. Targeted protections, rate limiting, the managed WAF, and other platform-level security rules still apply to every request, with or without a token.
+
+Keep in mind:
+
+- **Tokens are valid for 6 months.** Each time you run the command you get the current token plus a next token that starts 3 months later; both are accepted during that overlap. Switch your automation to the next token on or after its Valid From date, and re-run the command each quarter to pick up the following pair.
+- **Treat the token like a credential.** Send it only from servers and services you control. Never expose it in client-side code, public repositories, or logs. If a token is leaked, contact Pantheon support to revoke it; a replacement token becomes available at the start of the following month.
+- **A missing token gets normal bot evaluation** — no penalty. **An incorrect token is rejected with a 403** on every request, so if your automation starts failing, check the header value first.
+- Verified bots (such as Googlebot and Bingbot) are allowed through automatically and do not need a token.
+
+After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, generate a bot bypass token and add it to that service's requests as described above. If the bypass token doesn't cover your situation, contact Pantheon support to request an exception.
 
 ### Custom Certificates
 
@@ -111,15 +137,15 @@ Eligible sites will see a next-generation GCDN banner on the site dashboard in P
 After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are automatically migrated to the new GCDN infrastructure. You do not need to take any action for these domains. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
 ### Domains and DNS
-<Alert title="SSL/TLS Certificate Issuance — TXT Records Required" type="danger">
+<Alert title="Domain Verification and Certificate Issuance" type="danger">
 
-**TXT record validation is the only supported method for issuing SSL/TLS certificates**. You must add DNS TXT records to verify domain ownership before a certificate can be provisioned. HTTP validation and other methods are not available at this time. If you cannot add TXT records at your DNS provider, you will not be able to complete the migration.
+**A DNS TXT record is required once to verify domain ownership** — this record can be removed once your domain is active. By default, certificate issuance also uses DNS TXT validation, which lets your certificate be issued before you point DNS to Pantheon, avoiding downtime during cutover. If you'd rather not add that second TXT record, HTTP-01 validation is available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) (see the **Terminus CLI** tab): once your one domain-ownership TXT record verifies, you just point DNS at Cloudflare and the certificate is issued over HTTP on that hostname. With HTTP-01, the certificate can't be pre-provisioned, so there may be a brief window of downtime during cutover.
 
 </Alert>
 
 After activating the next-generation GCDN through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
-1. The dashboard will provide TXT records for domain verification. Add these TXT records to your DNS provider. **TXT record validation is the only supported method for issuing SSL/TLS certificates.** HTTP validation and other methods are not available.
+1. The dashboard will provide a TXT record for domain ownership verification, plus a TXT record for certificate validation. Add both to your DNS provider. **The dashboard flow uses DNS TXT record validation for both steps**, which lets your certificate be issued before you update DNS. If you'd rather skip the second TXT record, HTTP-01 is available as an alternative setup for certificate validation (the domain-ownership TXT record is still required either way) via the Terminus plugin — see the **Terminus CLI** tab.
 
 1. Once domain verification completes and your SSL/TLS certificate has been issued, the dashboard will display the recommended DNS settings (CNAME targets).
 
@@ -164,7 +190,7 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 <Alert title="Note" type="info">
 
-DNS-01 TXT record validation is the only supported method for domain verification. You will need to add TXT records to your DNS provider to verify domain ownership.
+DNS-01 TXT record validation is the default method for domain verification and lets your certificate be issued before you update DNS. You will need to add TXT records to your DNS provider to verify domain ownership. If you'd rather not add a second TXT record for the certificate, HTTP-01 is available as an alternative setup — pass `--method=http` to `terminus gcdn:verify` and, once your domain-ownership TXT record verifies, point DNS and the certificate issues over HTTP. With HTTP-01, the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
 
 </Alert>
 
@@ -203,6 +229,12 @@ Wait a few minutes for DNS propagation, then verify each domain. Verification ty
 ```bash{promptUser: user}
 terminus gcdn:verify <site>.live example.com
 terminus gcdn:verify <site>.live www.example.com
+```
+
+Verification uses DNS-01 challenges by default, which lets your certificate be issued before DNS cutover. If you'd rather not add a second TXT record for the certificate, use HTTP-01 instead: once your domain-ownership TXT record verifies, point DNS and the certificate is issued over HTTP. It can't pre-provision the certificate, so there may be brief downtime during cutover. To use it:
+
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com --method=http
 ```
 
 ### 5. Update your DNS records

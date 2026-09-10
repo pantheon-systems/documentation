@@ -185,7 +185,7 @@ Content Converter (Markdown for Agents) is a feature enabled on all next-generat
 
 ### My automated integration stopped working after migration. What do I do?
 
-Your bot or automated service may be receiving a managed challenge from bot protection. Check whether the service's user agent is being challenged by reviewing its error logs (look for 403 responses or HTML challenge pages). Contact Pantheon support to request a bot exclusion for your user agent.
+Check whether the service is receiving a managed challenge from bot protection (look for 403 responses or HTML challenge pages in its error logs). If so, generate a bot bypass token for your site with `terminus gcdn:bot-bypass <site>` and configure the service to send it in the `x-pantheon-bot-bypass` request header — see [Bot Bypass Tokens](/guides/global-cdn/next-gen-global-cdn#bot-bypass-tokens) for setup steps. If the token doesn't cover your situation, contact Pantheon support to request an exception.
 
 ### I have Cloudflare in front of my site. Is that supported?
 
@@ -199,7 +199,7 @@ Yes. Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g.
 
 ### How are SSL/TLS certificates issued?
 
-SSL/TLS certificates are issued exclusively through DNS TXT record validation. You must add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. HTTP validation and other certificate issuance methods are not supported at this time.
+SSL/TLS certificates are issued through DNS TXT record validation by default, which lets your certificate be issued before you update DNS. Add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. If you'd rather not add a second TXT record for the certificate, HTTP-01 validation is also available as an alternative setup through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin): once your one domain-ownership TXT record verifies, run `terminus gcdn:verify <site>.live <domain> --method=http` to point DNS and issue the certificate over HTTP. With HTTP-01, the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
 
 ### My domain hasn't verified yet. What can I do?
 
