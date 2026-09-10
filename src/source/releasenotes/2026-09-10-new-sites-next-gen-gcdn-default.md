@@ -1,7 +1,7 @@
 ---
 title: "New sites now provision on the next-generation Global CDN by default"
 published_date: "2026-09-10"
-published_at: "2026-09-10T16:00:00Z"
+published_at: "2026-09-10T18:08:52Z"
 categories: [infrastructure, new-feature]
 description: "Starting September 10, 2026, all new sites created on Pantheon are provisioned on the next-generation Global CDN, powered by Cloudflare, instead of the legacy Global CDN."
 ---
