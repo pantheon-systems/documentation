@@ -68,7 +68,7 @@ We recommend leaving the object cache option disabled when using this plugin on 
 1. Run the following Composer command:
 
     ```bash{promptUser: user}
-    composer require wpackagist-plugin/pantheon-advanced-page-cache
+    composer require wp-plugin/pantheon-advanced-page-cache
     ```
 
 1. Open the WordPress dashboard and enable the Pantheon Advanced Page Cache plugin.
