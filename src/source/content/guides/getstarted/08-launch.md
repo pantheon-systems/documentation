@@ -70,6 +70,8 @@ Then, configure your DNS:
 
 1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an A record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
 
+**Important**: Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+
 Click below for detailed instructions for your specific DNS host.
 
 <Accordion title=" DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
