@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2026-09-09"
+reviewed: "2026-09-15"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -102,9 +102,7 @@ When a team member is added to a Workspace:
 - That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies to all sites in that Workspace
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Add User**.
-
-1. Click **Invite Team Member**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Invite Members**.
 
 1. Enter the email address of the new user, select a role, then click **Send Invite**.
 
@@ -118,11 +116,9 @@ When a team member is added to a site:
 - The role they are given applies only to that site - not to any of the others in the same Workspace
 - The default role assigned is Developer
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Click **Team**.
-
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
+1. Under **Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add**.
 
 <Alert type="info" title="Note">
 
@@ -156,12 +152,9 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 <Tab title="In a Site" id="chs">
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Click **Team**.
-
-1. Under **Team Members**, find the Team Member, and select a new role from the list.
-
+1. Under **Members**, find the Team Member, then select a new role for the user. The role change is triggered upon selection in the dropdown menu.
 
 <Alert type="info" title="Note">
 
@@ -244,7 +237,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Click **Add**. 
 
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/new-dashboard/2026/_manage-site-team.png)
+   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
 
 ### Role Resolution
 The dashboard uses Fine-Grained Authorization (FGA) to determine a user's effective role through a role resolution process. FGA evaluates all possible paths to each role level (from highest to lowest: owner -> admin -> team_member -> developer -> unprivileged). 
@@ -287,9 +280,9 @@ team_member > developer in role hierarchy, so team_member wins.
 
    - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
 
-     ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-supporting.png)
+     ![Alt text](../../../../images/dashboard/workspace-offboarding-supporting.png)
 
-1. Click **Yes, remove access**. The Supporting Workspace is removed based on the selection you made.
+1. Click **Remove**. The Supporting Workspace is removed based on the selection you made.
 
 ## FAQ
 
