@@ -45,6 +45,8 @@ You can validate that HTTPS configuration for the domain is ready on Pantheon by
 
 1. Remove the edits made to your hosts file when you finish testing.
 
+**Important**: Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+
 ## Configure DNS
 
 The instructions in this section cover the common `example.com` and `www.example.com` domain configuration. Refer to [Platform and Custom Domains](/guides/domains) for other domain configurations.
