@@ -39,13 +39,13 @@ The recommended way to migrate WordPress sites from another host is to use the [
    
 1. Click **Generate Machine Token** and re-authenticate if prompted:
 
-   ![Begin process of installing plugin](../../../images/dashboard/new-dashboard/2025/migrate-create-token.png)
+   ![Begin process of installing plugin](../../../images/dashboard/migrate-create-token.png)
 
    Copy the token to your clipboard now or in the following step. Click the **Continue to Migration** button.
 
 1. Click **Go to wp-admin**, and a new tab will open for your WordPress admin dashboard. Do not close the Pantheon Site Dashboard tab in your browser.
    
-   ![Install on /wp-admin](../../../images/dashboard/new-dashboard/2025/migrate-install-plugin.png)
+   ![Install on /wp-admin](../../../images/dashboard/migrate-install-plugin.png)
 
 1. Log into your existing site as an admin, the button from the above step sends you directly to our plugin page. Click **Install Now**, then click **Activate**.
    
@@ -53,7 +53,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Copy and paste your machine token and site name from the Pantheon Site Dashboard into the plugin form: 
    
-   ![Copying and pasting info](../../../images/dashboard/new-dashboard/2025/migrate-site-wp-activate-info.png)
+   ![Copying and pasting info](../../../images/dashboard/migrate-site-wp-activate-info.png)
 
    You will see a new page where BlogVault validates the information provided (site name and token), then updates once the migration is in progress and updates once again when completed. You'll also receive an email upon migration completion.
    

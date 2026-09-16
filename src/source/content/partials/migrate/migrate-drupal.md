@@ -26,7 +26,7 @@ The process described on this page is supported for Drupal 7 sites only.
 
 1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**:
 
-   ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../../../images/dashboard/new-dashboard/2025/migrate-site-drupal-create-site.png)
+   ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../../../images/dashboard/migrate-site-drupal-create-site.png)
 
    When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
@@ -34,7 +34,7 @@ The process described on this page is supported for Drupal 7 sites only.
 
 1. When the Drupal site deployment is complete, click **Continue**:
 
-   ![Site creation step showing a completed deployment and a prompt to visit the new site dashboard](../../../images/dashboard/new-dashboard/2025/drupal-deploy-complete.png)
+   ![Site creation step showing a completed deployment and a prompt to visit the new site dashboard](../../../images/dashboard/drupal-deploy-complete.png)
 
 1. Complete the following procedures, as prompted in the Site Dashboard:
    
@@ -44,4 +44,4 @@ The process described on this page is supported for Drupal 7 sites only.
 
 1. Once all 3 components of your site have been added manually, click **Finish site migration**:
    
-   ![Newly created site dashboard showing manual migration prompts at the top to import code, db and files](../../../images/dashboard/new-dashboard/2025/drupal-finish-migration.png)
+   ![Newly created site dashboard showing manual migration prompts at the top to import code, db and files](../../../images/dashboard/drupal-finish-migration.png)
