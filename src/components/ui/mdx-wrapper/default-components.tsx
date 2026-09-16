@@ -68,10 +68,9 @@ const ImageRenderer = async ({ src = "", alt }: any) => {
         loading="lazy"
         width={image.default.width}
         height={image.default.height}
-        style={{ 
-          maxWidth: "1032px",
+        style={{
+          maxWidth: "100%",
           height: "auto",
-          width: "100%",
         }}
       />
     </span>
