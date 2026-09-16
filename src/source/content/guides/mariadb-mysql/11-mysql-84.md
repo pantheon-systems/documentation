@@ -23,15 +23,17 @@ Before enabling MySQL 8.4, consider the following limitations:
 
 - **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a [Multidev](/guides/multidev) or Dev environment before switching your Live environment.
 - **Backups are not cross-engine.** The platform handles data conversion during migration automatically. However, a manual backup taken on MySQL 8.4 cannot be restored to a MariaDB environment (and vice versa) because the backup/restore workflow does not perform engine conversion.
-- **MariaDB 10.6 recommended.** We recommend upgrading to MariaDB 10.6 before migrating to MySQL 8.4. The migration currently requires 10.6 as the source version.
+- **MariaDB 10.6 required.** The migration currently requires MariaDB 10.6 as the source version. Upgrade to 10.6 first if you are on an older release.
 
 ### CMS Version Compatibility
 Before enabling MySQL 8.4, verify the following:
 
 | CMS | Minimum Version | Notes |
 |-----|----------------|-------|
+| WordPress 7.x | All versions | Fully compatible |
 | WordPress 6.x | All versions | Fully compatible |
 | WordPress 5.x | Latest point release | Older versions may hit reserved word or sql_mode issues. Upgrade to the latest 5.x release before migrating. |
+| Drupal 11 | All versions | Fully compatible |
 | Drupal 10 | Latest point release | Upgrade to the latest 10.x release to pick up reserved word fixes (e.g. the `GROUPS` keyword). |
 | Drupal 9 | 9.5+ | Community support ended |
 | Drupal 7 | 7.x | Works with caveats. See [ONLY_FULL_GROUP_BY](#only_full_group_by-errors) below |
@@ -123,7 +125,7 @@ Commit and push this change. On the next deployment, your environment's database
 
 <Alert title="Note" type="info">
 
-For sites on Pantheon-managed upstreams, the `pantheon.upstream.yml` change will be rolled out by Pantheon on a per-upstream schedule. You do not need to add the database configuration yourself unless you are on a [Custom Upstream](/guides/custom-upstream) or want to opt in early on a non-production environment.
+For sites on Pantheon-managed upstreams, the `pantheon.upstream.yml` change will be rolled out by Pantheon on a per-upstream schedule. You do not need to add the database configuration yourself unless you are on a [Custom Upstream](/guides/custom-upstream) or want to opt in ahead of the scheduled rollout. You can opt in early on any environment, including Live. Test on a Multidev first, as the warning below describes.
 
 </Alert>
 
