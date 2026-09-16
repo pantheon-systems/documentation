@@ -12,7 +12,7 @@ integration: [--]
 tags: [database]
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mysql-84
-reviewed: "2026-07-13"
+reviewed: "2026-09-16"
 ---
 
 Pantheon supports MySQL 8.4 LTS as a database engine alongside MariaDB. MySQL 8.4 offers long-term support from Oracle through 2032.
@@ -35,14 +35,15 @@ Before enabling MySQL 8.4, verify the following:
 | WordPress 5.x | Latest point release | Older versions may hit reserved word or sql_mode issues. Upgrade to the latest 5.x release before migrating. |
 | Drupal 11 | All versions | Fully compatible |
 | Drupal 10 | Latest point release | Upgrade to the latest 10.x release to pick up reserved word fixes (e.g. the `GROUPS` keyword). |
-| Drupal 9 | 9.5+ | Community support ended |
-| Drupal 7 | 7.x | Works with caveats. See [ONLY_FULL_GROUP_BY](#only_full_group_by-errors) below |
+| Drupal 9 | 9.5 | End of life since November 2023. Upgrade to Drupal 10 or 11. |
+| Drupal 7 | 7.76 | End of life since January 2025. Releases before 7.76 cannot connect to MySQL 8 because their default `sql_mode` sets `NO_AUTO_CREATE_USER`, which MySQL 8 removed. |
 
 ### Reserved Word Conflicts
 
-MySQL 8.4 added several reserved words. If your database uses any of these as table or column names, queries will fail unless the names are quoted with backticks:
+MySQL 8.x reserves several words that MariaDB does not. If your database uses any of these as table or column names, queries will fail unless the names are quoted with backticks:
 
 - `GROUPS` (common in Drupal sites using the Groups module)
+- `SYSTEM` (the Drupal 7 `system` table; Drupal 7.76 and later quote it)
 - `RANK`, `DENSE_RANK`, `ROW_NUMBER`
 - `JSON_TABLE`, `LATERAL`, `RECURSIVE`
 
@@ -55,6 +56,15 @@ SELECT * FROM `groups`;
 ```
 
 ## What To Expect
+### During Migration
+
+1. The platform provisions a new MySQL 8.4 database for your environment.
+2. The platform exports your existing MariaDB data and imports it into the new MySQL 8.4 database.
+3. The platform verifies the data transferred correctly.
+4. The platform promotes the new MySQL 8.4 database as your active database.
+
+Your site's database is **read-only during the export** and **briefly unavailable during the switchover**.
+
 ### Migration Timing
 
 | Database Size | Estimated Total Time |
@@ -65,16 +75,7 @@ SELECT * FROM `groups`;
 | 10 - 30 GB | 20-60 minutes |
 | 30 - 100 GB | 1-3 hours |
 
-### During migration
-
-1. A new MySQL 8.4 database is provisioned for your environment.
-2. Your existing MariaDB data is exported and imported into the new MySQL 8.4 database.
-3. The platform verifies the data transferred correctly.
-4. The new MySQL 8.4 database is promoted as your active database.
-
-Your site's database is **read-only during the export** and **briefly unavailable during the switchover**.
-
-### Tracking the migration
+### Tracking the Migration
 
 How the migration shows up depends on the environment:
 
@@ -97,13 +98,13 @@ terminus drush <site>.<env> -- sqlq 'SELECT VERSION();'
 terminus wp <site>.<env> -- db query 'SELECT VERSION();'
 ```
 
-### What changes after migration
+### What Changes After Migration
 
 - `SELECT VERSION()` returns `8.4.x` instead of a MariaDB version string.
 - The default collation for new tables is `utf8mb4_0900_ai_ci`. Migrated tables keep their original collation (`utf8mb4_general_ci`).
-- Stricter SQL mode enforcement is enabled by default.
+- The server default `sql_mode` includes `ONLY_FULL_GROUP_BY` and the strict modes. WordPress and Drupal set their own `sql_mode` when they connect, so this only affects code that opens its own database connection. See [ONLY_FULL_GROUP_BY Errors](#only_full_group_by-errors).
 
-### What stays the same after migration
+### What Stays the Same After Migration
 
 - Connection credentials (host, port, username, password).
 - Database name (`pantheon`).
@@ -111,7 +112,7 @@ terminus wp <site>.<env> -- db query 'SELECT VERSION();'
 - Backup and restore workflows (within the same engine).
 
 
-## How to enable MySQL 8.4
+## How to Enable MySQL 8.4
 
 Add the following to your site's `pantheon.yml` file:
 
@@ -140,7 +141,7 @@ Test on a [Multidev](/guides/multidev) environment before applying to Dev, Test,
 
 ### ONLY_FULL_GROUP_BY Errors
 
-MySQL 8.4 enables `ONLY_FULL_GROUP_BY` in sql_mode by default. Queries that SELECT columns not listed in the GROUP BY clause will fail:
+The MySQL 8.4 server default `sql_mode` includes `ONLY_FULL_GROUP_BY`. WordPress core and Drupal override `sql_mode` on connect, so queries through `$wpdb` or Drupal's database API are not affected. Custom code that opens its own connection with PDO or mysqli gets the server default. On that connection, queries that SELECT columns not listed in the GROUP BY clause fail:
 
 ```
 ERROR 1055: Expression #1 of SELECT list is not in GROUP BY clause
@@ -156,13 +157,13 @@ SELECT name, department, MAX(salary) FROM employees GROUP BY department;
 SELECT ANY_VALUE(name), department, MAX(salary) FROM employees GROUP BY department;
 ```
 
-For Drupal sites, you can override the sql_mode in `settings.php`:
+Or set `sql_mode` on your own connection after connecting:
 
-```php
-$databases['default']['default']['init_commands'] = [
-  'sql_mode' => "SET sql_mode = 'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'",
-];
+```sql
+SET SESSION sql_mode = 'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 ```
+
+If your Drupal `settings.php` already overrides `init_commands`, make sure the override does not include `NO_AUTO_CREATE_USER`. MySQL 8 rejects it and the site cannot connect.
 
 ### Collation Mismatch Errors
 

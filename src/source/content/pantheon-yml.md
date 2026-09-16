@@ -202,6 +202,8 @@ database:
   version: 10.6
 ```
 
+To run MySQL 8.4 instead of MariaDB, add `type: mysql` and set `version: 8.4`. The migration has CMS version prerequisites and changes the default collation and `sql_mode`. Read [Migrating to MySQL 8.4](/guides/mariadb-mysql/mysql-84) before you enable it.
+
 This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 1. Confirm that the database upgrade completed successfully:
