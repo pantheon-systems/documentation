@@ -2,11 +2,36 @@
 
 import { TextInput } from "@/components/ui/pds-re-export";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import styles from "./style.module.css";
 import { cn } from "@/lib/utils";
 import { CommandsClientComponentProps } from "./types";
+
+// Escapes characters that are meaningful to RegExp so a search term typed by
+// a user (e.g. "site:info") can be used to build a safe matching pattern.
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+// Wraps every occurrence of `query` inside `text` in a <mark> so it matches
+// the same (case-sensitive) substring matching the filter above uses.
+const highlightMatch = (text: string, query: string) => {
+  if (!query) {
+    return text;
+  }
+
+  const parts = text.split(new RegExp(`(${escapeRegExp(query)})`, "g"));
+
+  return parts.map((part, index) =>
+    part === query ? (
+      <mark key={index} className={styles.highlight}>
+        {part}
+      </mark>
+    ) : (
+      <Fragment key={index}>{part}</Fragment>
+    ),
+  );
+};
 
 export const CommandsClientComponent = ({
   commands,
@@ -46,10 +71,10 @@ export const CommandsClientComponent = ({
                           className={styles.commandName}
                           href={`/terminus/commands/${command.name.replace(
                             slugRegExp,
-                            "-"
+                            "-",
                           )}`}
                         >
-                          {command.name}
+                          {highlightMatch(command.name, search)}
                         </Link>
 
                         <small>{command.description}</small>

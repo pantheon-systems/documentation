@@ -69,6 +69,12 @@
   line-height: var(--pds-typography-lh-m, 140%);
 }
 
+/* Marks the portion of a command name that matches the current search term. */
+.highlight {
+  background-color: #fff1a9;
+  border-radius: 2px;
+}
+
 @media screen and (max-width: 767px) {
   .tableResponsive > .table > tbody > tr > td,
   .tableResponsive > .table > tbody > tr > th,
