@@ -15,7 +15,6 @@ cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
-reviewed: "2026-07-07"
 ---
 
 This section is specific to sites management, not developing and launching sites.
