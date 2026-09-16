@@ -2,7 +2,7 @@
 title: "Introducing the Site Administrator role"
 published_date: "2026-08-31"
 published_at: "2026-08-31T20:03:06Z"
-categories: [acccount-management]
+categories: [account-management]
 description: "You can now delegate site team management with a new site-level role. Site Administrator gives a trusted person full control over a single site's team, without workspace-level access or the ability to change billing or site plans."
 ---
 
