@@ -23,7 +23,8 @@ Before enabling MySQL 8.4, consider the following limitations:
 
 - **No self-service rollback.** Reverting from MySQL 8.4 to MariaDB requires Pantheon support. Always test on a [Multidev](/guides/multidev) or Dev environment before switching your Live environment.
 - **Backups are not cross-engine.** The platform handles data conversion during migration automatically. However, a manual backup taken on MySQL 8.4 cannot be restored to a MariaDB environment (and vice versa) because the backup/restore workflow does not perform engine conversion.
-- **MariaDB 10.6 required.** The migration currently requires MariaDB 10.6 as the source version. Upgrade to 10.6 first if you are on an older release.
+- **MariaDB 10.6 required.** The migration currently requires MariaDB 10.6 as the source version. Upgrade to 10.6 first if you are on an older release. Pantheon rejects a push that sets `type: mysql` on an environment running an older MariaDB. See [Push Rejected When Enabling MySQL 8.4](#push-rejected-when-enabling-mysql-84).
+- **New environments inherit Dev's database.** A new Multidev, Test, or Live environment gets the same database engine and version as Dev. Once Dev runs MySQL 8.4, new environments start on MySQL 8.4 with no migration.
 
 ### CMS Version Compatibility
 Before enabling MySQL 8.4, verify the following:
@@ -138,6 +139,18 @@ Test on a [Multidev](/guides/multidev) environment before applying to Dev, Test,
 
 
 ## Troubleshooting
+
+### Push Rejected When Enabling MySQL 8.4
+
+When you push a `pantheon.yml` change, Pantheon validates the `database` block before accepting the commit. A rejected push prints `PANTHEON ERROR` followed by one of these reasons:
+
+| Reason | Cause | Fix |
+|--------|-------|-----|
+| `Cross-engine database migration from mariadb to mysql is not supported.` | The environment runs a MariaDB version other than 10.6. | Push `version: 10.6` first and wait for that upgrade to finish. Then push `type: mysql` with `version: 8.4`. |
+| `Database version "8.4" requires database kind "mysql".` | `version: 8.4` without `type: mysql`. | Add `type: mysql`. |
+| `MySQL type only supports version 8.4, got version <n>` | `type: mysql` with a version other than 8.4. | Set `version: 8.4`. |
+| `Changing database kind to "mysql" also requires a database version.` | `type: mysql` without `version`. | Add `version: 8.4`. |
+| `MariaDB type does not support version 8.4, use type: mysql instead` | `type: mariadb` with `version: 8.4`. | Change `type` to `mysql`. |
 
 ### ONLY_FULL_GROUP_BY Errors
 
