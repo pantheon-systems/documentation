@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2026-08-31"
+reviewed: "2026-09-15"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -66,7 +66,7 @@ These tables detail the actions each role can execute on each Dashboard.
 | Clear cache on Test and Live | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
 | Enable Pantheon Search | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
 | Invite, remove, and change roles for Team Members and Developers | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
-| Add or remove a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Add or remove a [Supporting Workspace](#add-a-supporting-workspace-to-site) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Assign or remove the Site Administrator role | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Manage a site's plan | <span style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Transfer site ownership | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
@@ -102,9 +102,7 @@ When a team member is added to a Workspace:
 - That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies to all sites in that Workspace
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Add User**.
-
-1. Click **Invite Team Member**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Invite Members**.
 
 1. Enter the email address of the new user, select a role, then click **Send Invite**.
 
@@ -118,11 +116,9 @@ When a team member is added to a site:
 - The role they are given applies only to that site - not to any of the others in the same Workspace
 - The default role assigned is Developer
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Click **Team**.
-
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
+1. Under **Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add**.
 
 <Alert type="info" title="Note">
 
@@ -156,12 +152,9 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 <Tab title="In a Site" id="chs">
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Click **Team**.
-
-1. Under **Team Members**, find the Team Member, and select a new role from the list.
-
+1. Under **Members**, find the Team Member, then select a new role for the user. The role change is triggered upon selection in the dropdown menu.
 
 <Alert type="info" title="Note">
 
@@ -238,19 +231,46 @@ Supporting Workspaces are Professional Workspaces that contain team members only
 
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site, then click **Team**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
+1. Under **Supporting workspaces**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
-1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
+1. Click **Add**. 
 
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/new-dashboard/2024/_manage-site-team.png)
+   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+
+### Role Resolution
+The dashboard uses Fine-Grained Authorization (FGA) to determine a user's effective role through a role resolution process. FGA evaluates all possible paths to each role level (from highest to lowest: owner -> admin -> team_member -> developer -> unprivileged). 
+
+#### Parent Workspace (Owning/Billing Organization)
+* Full role inheritance: admin, team_member, developer, unprivileged
+* Users inherit their workspace role directly to the site
+* Example: Admin in parent workspace -> Admin on site
+
+#### Supporting Workspaces
+* Limited role inheritance: Capped at team_member level
+* Admin users in supporting workspaces get team_member on the site (not admin)
+* This is by design: supporting workspaces represent external collaborators/agencies with restricted access
+
+#### Example Scenario 
+* User is developer in the parent (owning) workspace
+* User is admin in a supporting workspace
+* Site belongs to both workspaces
+
+#### Example Role Resolution
+* Path 1 (via parent): developer role on workspace -> grants developer on site owned by workspace
+* Path 2 (via supporting): admin role on workspace-> grants team_member on site supported by workspace
+
+**Result:** FGA returns team_member
+
+team_member > developer in role hierarchy, so team_member wins. 
+
 
 ## Remove a Supporting Workspace from a Site
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
 
-1. Click **<Icon icon="users" />Team**.
+1. Click **Site Settings** > **Site Team**.
 
 1. Click the **x** to the right of the Supporting Workspace you wish to remove.
 
@@ -260,9 +280,9 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
    - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
 
-     ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-supporting.png)
+     ![Alt text](../../../../images/dashboard/workspace-offboarding-supporting.png)
 
-1. Click **Yes, remove access**. The Supporting Workspace is removed based on the selection you made.
+1. Click **Remove**. The Supporting Workspace is removed based on the selection you made.
 
 ## FAQ
 
