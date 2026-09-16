@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
-reviewed: "2025-02-14"
+reviewed: "2026-08-17"
 contenttype: [guide]
 innav: [false]
 categories: [plans]

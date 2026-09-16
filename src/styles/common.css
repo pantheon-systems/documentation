@@ -114,7 +114,7 @@ hr.landing-page__guides-separator {
 
 .landing-page__guides-title {
   font-size: var(--pds-typography-size-l);
-  font-weight: var(--pds-typography-font-weight-semibold);
+  font-weight: var(--pds-typography-fw-semibold);
   padding-block-start: var(--pds-spacing-xl);
 }
 
@@ -201,11 +201,11 @@ a.individual-changelog-link:hover {
   border-radius: var(--pds-border-radius-default);
   box-shadow: none !important;
   color: var(--pds-color-button-primary-foreground-default) !important;
-  font-family: var(--pds-typography-font-default) !important;
+  font-family: var(--pds-typography-ff-default) !important;
   font-size: 1rem !important;
-  font-weight: var(--pds-typography-font-weight-semibold) !important;
+  font-weight: var(--pds-typography-fw-semibold) !important;
   height: 2.25rem;
-  letter-spacing: var(--pds-typography-letter-spacing-m);
+  letter-spacing: var(--pds-typography-ls-m);
   transition: var(--pds-animation-button-transition);
 }
 
@@ -335,7 +335,7 @@ article {
 }
 
 strong {
-  font-weight: var(--pds-typography-font-weight-semibold);
+  font-weight: var(--pds-typography-fw-semibold);
 }
 
 .pds-tag {
@@ -3127,7 +3127,7 @@ span.line-numbers-rows {
 
 code {
   background-color: #f0ecff;
-  font-weight: var(--pds-typography-font-weight-semibold);
+  font-weight: var(--pds-typography-fw-semibold);
   margin-inline: var(--pds-spacing-6xs);
   padding: var(--pds-spacing-6xs) var(--pds-spacing-4xs);
 }
@@ -3135,7 +3135,7 @@ code {
 pre > code {
   background-color: inherit;
   color: #ffffff;
-  font-weight: var(--pds-typography-font-weight-regular);
+  font-weight: var(--pds-typography-fw-regular);
 }
 
 .gatsby-highlight {

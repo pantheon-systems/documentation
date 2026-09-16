@@ -44,6 +44,6 @@ terminus secret:site:set <site_name>.live  MY_VARIABLE my-variable-value-for-liv
 
 ## Reading environment variables in Next.js
 
-Once set, these environment variables can be read in your Next.js application code using `process.env.VARIABLE_NAME`.
+Newly set or updated environment variables take effect starting with your next build. Once that build runs, they are available during the build phase, and at runtime after the build completes successfully. In your Next.js application code, read them using `process.env.VARIABLE_NAME`.
 
 To learn more about using Secrets Manager to set environment variables, see [Managing Environment Variables with Secrets Manager](/guides/secrets).
