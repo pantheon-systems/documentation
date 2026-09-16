@@ -127,7 +127,7 @@ Commit and push this change. On the next deployment, your environment's database
 
 <Alert title="Note" type="info">
 
-For sites on Pantheon-managed upstreams, the `pantheon.upstream.yml` change will be rolled out by Pantheon on a per-upstream schedule. You do not need to add the database configuration yourself unless you are on a [Custom Upstream](/guides/custom-upstream) or want to opt in ahead of the scheduled rollout. You can opt in early on any environment, including Live. Test on a Multidev first, as the warning below describes.
+For sites on Pantheon-managed upstreams, the `pantheon.upstream.yml` change will be rolled out by Pantheon on a per-upstream schedule. You do not need to add the database configuration yourself unless you are on a [Custom Upstream](/guides/custom-upstream) or want to opt in ahead of the scheduled rollout. You can opt in early on any environment, including Live. Test on a Multidev or Development environment first, as the warning below describes.
 
 </Alert>
 
