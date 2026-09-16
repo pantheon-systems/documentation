@@ -13,6 +13,7 @@ audience: [agency, development]
 product: [--]
 integration: [--]
 image: launchGuide-twitterLarge.png
+reviewed: "2026-09-16"
 ---
 
 This section provides information on how to configure DNS and provision [free, automated HTTPS](/guides/global-cdn/https) on Pantheon.
@@ -45,7 +46,11 @@ You can validate that HTTPS configuration for the domain is ready on Pantheon by
 
 1. Remove the edits made to your hosts file when you finish testing.
 
-**Important**: Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+<Alert type="info" title="Note">
+
+Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+
+</Alert>
 
 ## Configure DNS
 
