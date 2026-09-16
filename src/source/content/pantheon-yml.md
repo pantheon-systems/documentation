@@ -193,7 +193,7 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
 1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 
-Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
+Apply this change to an existing environment. A new Multidev, Test, or Live environment ignores the `database` key and starts with the Dev environment's database version. The key takes effect on Dev or a Multidev when you push a commit that changes `pantheon.yml`, and it follows the code to Test and Live on deploy.
 
 1. Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
