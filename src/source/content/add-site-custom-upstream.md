@@ -45,7 +45,7 @@ You've now created the core portion of your Dev environment; now you have to ins
 
 <Partial file="cms-dev.md" />
 
-You have successfully finished adding a site in its Dev environment. Click **Visit Dev Site** to view your site.
+You have successfully finished adding a site in its Dev environment. Click **Dev site** to view your site.
 
 ## Initialize the Test environment
 
@@ -55,7 +55,7 @@ You have successfully finished adding a site in its Dev environment. Click **Vis
 
 <Partial file="test-initialize.md" />
 
-You have successfully finished adding a site in its Test environment. Click **Visit Test Site** to view your site.
+You have successfully finished adding a site in its Test environment. Click **Test site** to view your site.
 
 ## Create the Live environment
 
@@ -69,6 +69,6 @@ When you complete this step, your site will be live for anyone to see, at the Pa
 
 <Partial file="live-initialize.md" />
 
-You have successfully finished adding a site in its Live environment. Click **Visit Live Site** to view your site.
+You have successfully finished adding a site in its Live environment. Click **Live site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider. Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.

@@ -6,13 +6,3 @@ To create your Test environment:
    ![Initializing the test environment](../../images/dashboard/test-initialize.png)
 
    This takes a few moments.
-
-1. Go to the <Icon icon="server" text="Database / Files"/> tab and select the following:
-
-   - **From this Environment**: Development
-   - **Clone Database**: Checked
-   - **Clone Files**: Checked
-
-1. Click **Clone to Test**.
-
-   ![Cloning Dev to Test](../../images/dashboard/launch-clone-dev-to-test.png)

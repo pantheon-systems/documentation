@@ -24,7 +24,7 @@ And now it's time to finally make your site available to the public! This sectio
 
 <Partial file="test-initialize.md" />
 
-You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
+You have successfully finished adding a site in its Test environment.  Click **Test site** to view your site.
 
 ## Deploy Your Site to Live
 
@@ -32,7 +32,7 @@ After you [purchase a plan](/guides/getstarted/purchase), you can deploy your si
 
 <Partial file="live-initialize.md" />
 
-You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
+You have successfully finished adding a site in its Live environment.  Click **Live site** to view your site.
 
 ## Domain Configuration
 

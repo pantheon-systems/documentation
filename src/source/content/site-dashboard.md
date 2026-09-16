@@ -61,9 +61,9 @@ This environment is for your live site, where content creators actively post and
 
 The following buttons are found above the lefthand navigation menu on every environment in the site dashboard:
 
-- **Visit `Environment` Site**: Where `Environment` is a placeholder for the active environment you're currently looking at in the dashboard, such as **Visit Test Site** or **Visit Development Site** etc. This will open the homepage of your site for the given environment in a new tab.
+- **`Environment` site**: Where `Environment` is a placeholder for the active environment you're currently looking at in the dashboard, such as **Test site** or **Dev Site** etc. This will open the homepage of your site for the given environment in a new tab.
 
-- **Site Admin**: This will open your sites admin login page for the given environment in a new tab. If you're not already logged into your sites admin interface, this button will open `/user/login` for Drupal and `/wp-login.php` for WordPress. Once you've logged in and have an active admin session, this button will take you to `/user` for Drupal and `/wp-admin` for WordPress.
+- **`Environment` admin**: This will open your sites admin login page for the given environment in a new tab. If you're not already logged into your sites admin interface, this button will open `/user/login` for Drupal and `/wp-login.php` for WordPress. Once you've logged in and have an active admin session, this button will take you to `/user` for Drupal and `/wp-admin` for WordPress.
 
 <Alert title="Note" type="info">
 
