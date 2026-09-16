@@ -11,11 +11,6 @@ import {
 } from "@/components/common/release-headlines";
 import { ProcessedFile } from "@/server/processor/mdx";
 import { ReleaseNoteListingClientComponent } from "./client-component";
-import {
-  ReleaseNoteSearchProvider,
-  ReleaseNoteSearchInput,
-  ReleaseNoteSearchResults,
-} from "./release-note-search";
 import ReleaseNotesPager from "./release-note-pager";
 import { processDirectoryForJson } from "@/server/processor/json";
 import Link from "next/link";
@@ -110,84 +105,78 @@ export const ReleaseNoteListingTemplate = async ({
             <span>Subscribe to RSS feed</span>
           </a>
 
-          <ReleaseNoteSearchProvider>
-            <ReleaseNoteSearchInput />
+          <ReleaseNoteListingClientComponent
+            allCategories={allCategoriesData[0].content.categories}
+            categories={categories}
+            pageNumber={pageNumber}
+          />
 
-            <ReleaseNoteListingClientComponent
-              allCategories={allCategoriesData[0].content.categories}
-              categories={categories}
-              pageNumber={pageNumber}
-            />
+          <div className="pds-spacing-mar-block-end-2xl pds-spacing-mar-block-start-2xl">
+            {releaseNotes.map(({ node }, idx) => (
+              <div key={`${node.id}-${idx}`}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Link
+                    href={`/${sanitizeSlug(node.fields.slug)}`}
+                    className="pds-spacing-mar-block-end-l individual-changelog-link"
+                  >
+                    <h2 className="pds-spacing-mar-block-end-l">
+                      {node.frontmatter.title}
+                    </h2>
+                  </Link>
 
-            <div className="pds-spacing-mar-block-end-2xl pds-spacing-mar-block-start-2xl">
-              <ReleaseNoteSearchResults>
-                {releaseNotes.map(({ node }, idx) => (
-                  <div key={`${node.id}-${idx}`}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Link
-                        href={`/${sanitizeSlug(node.fields.slug)}`}
-                        className="pds-spacing-mar-block-end-l individual-changelog-link"
-                      >
-                        <h2 className="pds-spacing-mar-block-end-l">
-                          {node.frontmatter.title}
-                        </h2>
-                      </Link>
+                  <ReleaseNoteCategories
+                    categories={node.frontmatter.categories || []}
+                    displayType="page"
+                    className="pds-spacing-mar-block-end-xl"
+                    allCategoriesData={allCategoriesData}
+                  />
+                </div>
 
-                      <ReleaseNoteCategories
-                        categories={node.frontmatter.categories || []}
-                        displayType="page"
-                        className="pds-spacing-mar-block-end-xl"
-                        allCategoriesData={allCategoriesData}
+                <article className="pds-spacing-pad-block-end-xl">
+                  <div id="doc" className="doc changelog__content">
+                    <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                      <PublishedDate
+                        dateString={node.frontmatter.published_date}
+                        className="pds-spacing-mar-block-end-m"
+                      />
+
+                      <MdxWrapper
+                        article={{
+                          content: node.content,
+                          contentType: "TEXT_MARKDOWN",
+                          id: node.id,
+                          metadata: { ...(node.frontmatter ?? {}) },
+                          publishedDate: node.frontmatter.published_date,
+                          publishingLevel: "PRODUCTION",
+                          tags: [],
+                          title: node.frontmatter.title || "",
+                          updatedAt: null,
+                          previewActiveUntil: null,
+                        }}
+                        componentMap={{
+                          h1: headline2,
+                          h2: headline3,
+                          h3: headline4,
+                        }}
                       />
                     </div>
-
-                    <article className="pds-spacing-pad-block-end-xl">
-                      <div id="doc" className="doc changelog__content">
-                        <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                          <PublishedDate
-                            dateString={node.frontmatter.published_date}
-                            className="pds-spacing-mar-block-end-m"
-                          />
-
-                          <MdxWrapper
-                            article={{
-                              content: node.content,
-                              contentType: "TEXT_MARKDOWN",
-                              id: node.id,
-                              metadata: { ...(node.frontmatter ?? {}) },
-                              publishedDate: node.frontmatter.published_date,
-                              publishingLevel: "PRODUCTION",
-                              tags: [],
-                              title: node.frontmatter.title || "",
-                              updatedAt: null,
-                              previewActiveUntil: null,
-                            }}
-                            componentMap={{
-                              h1: headline2,
-                              h2: headline3,
-                              h3: headline4,
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </article>
                   </div>
-                ))}
+                </article>
+              </div>
+            ))}
 
-                <ReleaseNotesPager
-                  currentPage={pageNumber}
-                  totalPages={totalPages}
-                  queryStrings={queryStrings}
-                />
-              </ReleaseNoteSearchResults>
-            </div>
-          </ReleaseNoteSearchProvider>
+            <ReleaseNotesPager
+              currentPage={pageNumber}
+              totalPages={totalPages}
+              queryStrings={queryStrings}
+            />
+          </div>
         </Container>
       </main>
     </Layout>

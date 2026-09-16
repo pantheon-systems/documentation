@@ -17,10 +17,12 @@ const ReleaseNotePopoverCategorySelector = ({
     description: string;
   }[];
   filters: {
+    query: string;
     categories: { slug: string; displayName?: string }[];
   };
   setFilters: Dispatch<
     SetStateAction<{
+      query: string;
       categories: { slug: string; displayName?: string }[];
     }>
   >;
