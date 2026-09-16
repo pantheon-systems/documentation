@@ -24,7 +24,7 @@ reviewed: ""
 
 	![select external repository](../../images/github-app/select-external-repository.png)
 
-1. Enter the following information and click **Continue**:
+1. Enter the following information and click **Create site**:
    - Sitename
    - Select a region for this site.
    - If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
