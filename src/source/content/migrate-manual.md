@@ -75,7 +75,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Choose your site type, and click **Continue**:
 
-   ![Enter URL and select CMS](../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
+   ![Enter URL and select CMS](../images/dashboard/migrate-site-cms.png)
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
@@ -85,7 +85,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
   When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
-  ![Confirmation prompt for workspace selection during site creation in the dashboard](../images/dashboard/new-dashboard/2025/confirm-workspace-prompt.png)
+  ![Confirmation prompt for workspace selection during site creation in the dashboard](../images/dashboard/confirm-workspace-prompt.png)
 
 1. For WordPress sites, click the link at the bottom to manually migrate your site then select **Yes** to confirm:
   

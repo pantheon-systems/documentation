@@ -8,7 +8,7 @@ A refreshed, modernized site migration experience is now available in the Panthe
 
 Share questions and feedback in the [Pantheon Community Slack](https://pantheon.io/customer-community/).
 
-![Migration interface for WordPress](../images/dashboard/new-dashboard/2025/migrate-wp-site-url.png)
+![Migration interface for WordPress](../images/dashboard/migrate-wp-site-url.png)
 
 
 ## Key Changes

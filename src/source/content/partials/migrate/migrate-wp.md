@@ -19,23 +19,23 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Open your Personal or Professional Workspace dashboard and select the **Migrate Existing Site** button on the lower right side of the page:
 
-   ![Migrate site button](../../../images/dashboard/new-dashboard/2025/migrate-site-button.png)
+   ![Migrate site button](../../../images/dashboard/migrate-site-button.png)
 
 1. Select **WordPress**:
 
-   ![Enter URL and select CMS](../../../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
+   ![Enter URL and select CMS](../../../images/dashboard/migrate-site-cms.png)
 
    Then enter your existing production URL for the site you want to migrate (e.g., `example.com`) and click **Continue**:
    
-   ![Enter URL](../../../images/dashboard/new-dashboard/2025/migrate-wp-site-url.png)
+   ![Enter URL](../../../images/dashboard/migrate-wp-site-url.png)
    
 1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**:
    
-   ![Site creation form for WordPress migrations prompting user to input site name and associated workspace](../../../images/dashboard/new-dashboard/2025/migrate-site-wp-create-site.png)
+   ![Site creation form for WordPress migrations prompting user to input site name and associated workspace](../../../images/dashboard/migrate-site-wp-create-site.png)
    
    When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
-   ![Confirmation prompt for workspace selection during site creation in the dashboard](../../../images/dashboard/new-dashboard/2025/confirm-workspace-prompt.png)
+   ![Confirmation prompt for workspace selection during site creation in the dashboard](../../../images/dashboard/confirm-workspace-prompt.png)
    
 1. Click **Generate Machine Token** and re-authenticate if prompted:
 
