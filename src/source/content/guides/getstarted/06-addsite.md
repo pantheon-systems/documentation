@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither, jazzsequence]
-reviewed: "2026-08-26"
+reviewed: "2026-09-16"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md

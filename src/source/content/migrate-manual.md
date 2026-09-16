@@ -9,6 +9,7 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [--]
 integration: [--]
+reviewed: "2026-09-16"
 ---
 
 Manually migrate your site to Pantheon when any of the following apply:
