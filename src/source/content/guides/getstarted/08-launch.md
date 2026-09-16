@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2023-03-21"
+reviewed: "2026-09-16"
 showtoc: true
 permalink: docs/guides/getstarted/launch
 editpath: getstarted/08-launch.md
@@ -70,7 +70,11 @@ Then, configure your DNS:
 
 1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an A record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
 
-**Important**: Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+<Alert type="info" title="Note">
+
+Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+
+</Alert>
 
 Click below for detailed instructions for your specific DNS host.
 
