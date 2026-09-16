@@ -2,7 +2,7 @@
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
 tags: [cdn, https, professional-services]
-reviewed: "2026-06-30"
+reviewed: "2026-09-16"
 contenttype: [doc]
 innav: [true]
 categories: [security]
@@ -45,9 +45,9 @@ Allow two business days for your Account Team to load the certificate.
 
 </Tab>
 
-<Tab title="GCDN with Bot Protection" id="ccbotprotection">
+<Tab title="Next Gen Global CDN" id="ccbotprotection">
 
-GCDN with Bot Protection supports custom certificates, including **wildcard certificates** (for example, `*.example.com`) that cover multiple subdomains.
+[Next Gen GCDN with Bot Protection](/guides/global-cdn/next-gen-global-cdn) supports custom certificates, including **wildcard certificates** (for example, `*.example.com`) that cover multiple subdomains.
 
 ### Before You Begin
 
