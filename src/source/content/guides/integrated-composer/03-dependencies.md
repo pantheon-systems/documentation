@@ -3,7 +3,7 @@ title: Integrated Composer
 subtitle: Manage Dependencies
 description: Learn how to add or remove an individual site dependency.
 tags: [composer, workflow]
-contributors: [ari, edwardangert]
+contributors: [ari, edwardangert, jazzsequence]
 showtoc: true
 permalink: docs/guides/integrated-composer/dependencies
 contenttype: [guide]
@@ -13,10 +13,36 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
-reviewed: "2025-12-10"
+reviewed: "2026-09-17"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.
+
+## Composer `repositories` Section
+
+The [`repositories`](https://getcomposer.org/doc/05-repositories.md) section in `composer.json` specifies the locations where Composer should look for packages. This is useful when you need to include packages that are not available on Packagist, such as private repositories or custom package sources. For Composer-managed WordPress projects, this often includes custom plugin or theme repositories. 
+
+If you are initializing your `composer.json` from scratch on a WordPress site, be sure to include one of the [repositories](#using-composer-to-manage-plugins-and-themes) appropriate for your project. That section should look like this:
+
+```json
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://repo.wp-packages.org"
+    }
+]
+```
+
+If you are using Composer with Drupal, the `repositories` section should include the Drupal package repository. For example:
+
+```json
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }
+]
+```
 
 ## Composer `require` and `require dev` Sections
 
