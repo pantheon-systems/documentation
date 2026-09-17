@@ -129,14 +129,28 @@ It is possible to use multiple different Composer repositories, e.g. WPackagist 
 
 </Alert>
 
+<TabList>
+  <Tab title="Using wp-packages repository" selected>
 
-```bash{promptUser: user}
-composer require wp-theme/twentytwentytwo
-```
+   ```bash{promptUser: user}
+   composer require wp-theme/twentytwentytwo
+   ```
 
-```bash{promptUser: user}
-composer require wp-plugin/advanced-custom-fields
-```
+   ```bash{promptUser: user}
+   composer require wp-plugin/advanced-custom-fields
+   ```
+  </Tab>
+  <Tab title="Using wpackagist repository">
+
+   ```bash{promptUser: user}
+   composer require wpackagist-theme/twentytwentytwo
+   ```
+
+   ```bash{promptUser: user}
+   composer require wpackagist-plugin/advanced-custom-fields
+   ```
+  </Tab>
+</TabList>
 
 ##### Check first
 It's generally a good idea when using either Packagist, WP Packages or WPackagist to check the repository before `require`ing the package. If you search Packagist for a WordPress plugin or theme and don't see it, you can be sure that if it exists in the WordPress plugin or theme repository, it will be available on WP Packages or WPackagist. Checking the WordPress package repositories for the package can be beneficial if you want to check what versions are available.
