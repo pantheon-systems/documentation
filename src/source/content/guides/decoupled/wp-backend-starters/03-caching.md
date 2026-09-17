@@ -3,7 +3,7 @@ title: WordPress Backend Starter for Front-End Sites
 subtitle: Caching Recommendations
 description: Learn about caching recommendations for your WordPress backend starter kit.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia]
+contributors: [backlineint, cobypear, hckia, jazzsequence]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-backend-starters/caching
@@ -15,6 +15,7 @@ cms: [decoupled]
 audience: [development]
 product: [decoupled]
 integration: [--]
+reviewed: "2026-09-17"
 ---
 
 <Partial file="fes-deprecated.md" />
@@ -65,11 +66,24 @@ We recommend leaving the object cache option disabled when using this plugin on 
 
 ### Enable Edge Caching
 
+<TabList>
+  <Tab title="Using wp-packages repository" selected>
+
 1. Run the following Composer command:
 
     ```bash{promptUser: user}
     composer require wp-plugin/pantheon-advanced-page-cache
     ```
+
+  </Tab>
+  <Tab title="Using wpackagist repository">
+    1. Run the following Composer command:
+
+        ```bash{promptUser: user}
+        composer require wpackagist-plugin/pantheon-advanced-page-cache
+        ```
+  </Tab>
+</TabList>
 
 1. Open the WordPress dashboard and enable the Pantheon Advanced Page Cache plugin.
 
