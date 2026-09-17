@@ -10,7 +10,12 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2026-09-17"
 ---
+
+<Alert title="DeployBot is deprecated" type="warning">
+DeployBot has become part of DeployHQ. Information in this guide may be outdated. Consider using alternative continuous integration solutions (like [GitHub Actions](/github-actions/)) for deploying to Pantheon.
+</Alert>
 
 DeployBot is a continuous integration service with a friendly user interface. Instead of managing options with `yml` files, DeployBot offers an easy web GUI. For sites that already use external Git hosting, DeployBot can be integrated into your workflow to test and deploy sites that require additional build steps.
 
