@@ -13,7 +13,7 @@ tags: [billing]
 contributors: [wordsmither]
 permalink: docs/guides/account-mgmt/billing
 editpath: docs/guides/account-mgmt/billing/01-introduction.md
-reviewed: "2022-09-19"
+reviewed: "2026-08-24"
 ---
 
 This guide covers billing periods, payment methods, managing invoices, and more.
@@ -35,7 +35,7 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 
 ## Tax Exempt Status Billing
 
-To make it easy for our team to confirm your tax-exempt status and have it reflected on your bill quickly, [contact Support](/guides/support/contact-support/) and provide the following information in the [chat](/guides/support/contact-support/#live-chat) or [support ticket](/guides/support/contact-support/#general-support-ticket):
+To make it easy for our team to confirm your tax-exempt status and have it reflected on your bill quickly, [contact Support](/guides/support/contact-support/) and provide the following information:
 
 - An attached copy of the organization's [tax exemption determination letter](https://www.irs.gov/charities-non-profits/exempt-organizations-affirmation-letters)
 - Email address of Site Owner

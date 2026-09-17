@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [email]
-reviewed: "2022-08-03"
+reviewed: "2026-07-27"
 ---
 
 ## Incoming Email
@@ -35,8 +35,8 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
 | Provider   | Port Documentation                                                                                          |
 |:---------- |:----------------------------------------------------------------------------------------------------------- |
 | Amazon SES | [2587 (STARTTLS), 2465 (TLSWRAPPER)](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html) |
-| Mailgun    | [2525](http://blog.mailgun.com/25-465-587-what-port-should-i-use/)                                          |
-| Mandrill   | [2525](https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-)                |
+| Mailgun    | [2525](https://www.mailgun.com/blog/email/which-smtp-port-understanding-ports-25-465-587/)                                          |
+| Mailchimp   | [2525](https://mailchimp.com/developer/transactional/docs/smtp-integration/)                |
 | Sendgrid   | [2525](https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html)                 |
 | SparkPost  | [2525](https://www.sparkpost.com/docs/faq/smtp-connection-problems/)                                        |
 
@@ -132,10 +132,6 @@ Adjust the above example record as needed for your domain:
 - Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
 - If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
 - To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd-party mail systems** text box.
-
-### Why does my Gmail user name and password not work?
-
-Please see Google's help article: [My client isn't accepting my username and password](https://support.google.com/mail/answer/14257?p=client_login&rd=1).
 
 ### Can I use Microsoft Exchange or Office 365 for my emails?
 

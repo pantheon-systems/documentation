@@ -1,7 +1,7 @@
 ---
 title: WordPress on-demand cache revalidation for Next.js
 description: Update Next.js content in real time when WordPress posts change using webhook-driven cache revalidation
-reviewed: "2026-04-13"
+reviewed: "2026-07-27"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -30,7 +30,6 @@ This tutorial walks you through:
 * Install the following:
   - [Git](https://git-scm.com/)
   - [Terminus](/terminus/install)\*
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) (built into Terminus 4.2.0+; earlier versions require the plugin)
 
 \* Requires logging in after installation.
 
@@ -615,7 +614,7 @@ With both sites configured, verify that content changes in WordPress automatical
 If the content does not update, check the following:
 
 * Verify that the secrets are set correctly on both sites using `terminus secret:site:list`.
-* Review the Next.js application logs for revalidation messages using `terminus node:logs:runtime:get <site>.<env>` (built into Terminus 4.2.0+; earlier versions require the [terminus-node-logs-plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)).
+* Review the Next.js application logs for revalidation messages using `terminus node:logs:runtime:get <site>.<env>`.
 * Confirm the mu-plugin file is in `wp-content/mu-plugins/` and is loaded by WordPress.
 
 ## Conclusion
@@ -626,4 +625,4 @@ To continue building your Next.js site on Pantheon:
 
 * [Set environment variables](/nextjs/environment-variables)
 * [Deploy to Test and Live environments](/nextjs/test-and-live-env)
-* [Connect a custom domain](/nextjs/connecting-custom-domain)
+* [Connect a custom domain](/nextjs/test-and-live-env#connecting-a-custom-domain-name)

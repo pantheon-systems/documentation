@@ -14,10 +14,8 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/setup-config
 editpath: search/02-setup-config.md
-reviewed: "2026-02-10"
+reviewed: "2026-06-16"
 ---
-
-<Partial file="elasticsarch-pre-ga.md" />
 
 Getting Elasticsearch running on your Pantheon WordPress site involves activating the service on the platform and then installing and configuring the ElasticPress plugin within WordPress.
 
@@ -54,7 +52,7 @@ Elasticsearch will be provisioned for all environments on your site. Each enviro
 **Via Terminus:**
 
 ```bash
-terminus site:addon:enable <site>.<env> elasticsearch
+terminus search:enable <site>
 ```
 
 </Tab>
@@ -63,7 +61,7 @@ terminus site:addon:enable <site>.<env> elasticsearch
 
 <Alert type="info" title="Note">
 
-During the Beta phase, activating Elasticsearch may take up to 12 minutes to complete.
+Activating Elasticsearch may take up to a minute to complete.
 
 </Alert>
 
@@ -78,7 +76,7 @@ terminus wp <site>.<env> -- plugin install elasticpress --activate
 ### Step 3: Activate ElasticPress in WordPress
 
 1. In your WordPress admin, navigate to **ElasticPress > Settings**.
-2. Verify that the host connection is established. If the constants are configured correctly, the ElasticPress.io Host URL, Subscription ID and Subscription Token fields should be pre-populated.
+2. Verify that the host connection is established. The ElasticPress.io Host URL, Subscription ID and Subscription Token fields should be pre-populated.
 3. Run your first **index sync** from the ElasticPress dashboard. This sends your WordPress content to Elasticsearch so it can be searched.
 
 ### Step 4: Enable ElasticPress Features
@@ -96,3 +94,21 @@ ElasticPress offers several features you can enable based on your needs:
 Additionally, the [ElasticPress](https://www.elasticpress.io/) service provides admin-level capabilities including **Synonyms** (connecting different terms to the same content), **Weighted Results** (prioritizing specific fields like titles or categories), and **Custom Results** (shaping rankings for specific queries) — these are managed through the ElasticPress settings rather than the Features screen.
 
 Navigate to **ElasticPress > Features** in your WordPress admin to enable and configure each feature.
+
+<Alert type="warning" title="Important: Feature Dependencies">
+
+**Instant Results** and **Autosuggest** require the **Search** feature to be active. If Search is not enabled, these features will not function correctly. Always enable Search first before enabling Instant Results or Autosuggest.
+
+</Alert>
+
+### Content Filtering Considerations
+
+When Elasticsearch indexes your site, it sends post content and metadata to the ElasticPress service. Be mindful of content on your site that may contain sensitive information such as user profiles, or posts with personally identifiable information (PII), and consider whether those post types should be included in the search index.
+
+ElasticPress provides filters to control what gets indexed:
+
+- **Exclude post types from indexing** — Use the [`ep_indexable_post_types`](https://www.elasticpress.io/resources/articles/excluding-post-types-from-being-indexed/) filter to prevent specific post types (such as orders or account pages) from being sent to Elasticsearch.
+- **Exclude metadata from indexing** — Use the [`ep_prepare_meta_data`](https://www.elasticpress.io/resources/articles/how-to-exclude-metadata-from-indexing/) filter to remove sensitive meta fields before they are indexed.
+
+After changing your indexing filters, run a full [index sync](/guides/pantheon-search/elasticsearch/query-optimization#keeping-your-index-current) to rebuild the index without the excluded content.
+

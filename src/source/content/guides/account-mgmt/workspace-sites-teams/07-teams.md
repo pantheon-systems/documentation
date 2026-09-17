@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2025-10-23"
+reviewed: "2026-09-15"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -53,27 +53,31 @@ These tables detail the actions each role can execute on each Dashboard.
 
 ### Site Level Permissions
 
-| Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner workspaces only" /> | Team Member | Developer <Popover content="Enterprise workspace only" /> |
-|:------------------------------------------------- |:----------------------------------- |:----------------------------------- |:----------------------------------- |
-| Access the site Dashboard                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
-| Work in Dev environments                          | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
-| Change site upstream                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
-| Deploy from Custom Upstreams <Popover title="Custom Upstream availability" content="Applies only when a workspace has Custom Upstreams enabled, and has already created one." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span>  | <span style="color:green">✔</span>  |
-| Add/Manage Custom Domains           | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
-| Deploy to Test and Live                           | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
-| Upload files to Test and Live                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
-| Access SFTP download logs on Test and Live           | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
-| Clear cache on Test and Live                      | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
-| Manage user roles                                 | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Delete sites or remove users from a site          | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:red">❌</span>  |
+| Permissions | Org Admin / Owner <Popover title="Owner" content="Partner workspaces only" /> | Site Administrator | Team Member | Developer <Popover content="Enterprise workspace only" /> |
+|:----------- |:----------------- |:----------------- |:----------- |:--------- |
+| Access the site Dashboard | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| Work in Dev environments | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| Change site upstream | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| Deploy from Custom Upstreams <Popover title="Custom Upstream availability" content="Applies only when a workspace has Custom Upstreams enabled, and has already created one." /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+| Add/Manage Custom Domains | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Deploy to Test and Live | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Upload files to Test and Live | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Access SFTP download logs on Test and Live | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Clear cache on Test and Live | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Enable Pantheon Search | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Invite, remove, and change roles for Team Members and Developers | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Add or remove a [Supporting Workspace](#add-a-supporting-workspace-to-site) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Assign or remove the Site Administrator role | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Manage a site's plan | <span style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Transfer site ownership | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Delete the site | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 
 #### User in Charge vs Site Owner
 <p><dfn id="site-owner">Site Owner</dfn> is a site level role tied to billing and ownership. <ul><li>For self-serve customers, the site owner is set to an individual user account. The site owner role grants permissions for billing, managing the site plan, updating payment methods, and transferring site ownership. See also <a href="/guides/account-mgmt/billing">Billing for Self-Serve Accounts</a></li><li> For Enterprise and EDU customers, the site owner is set to the Workspace responsible for billing. Users with the Administrator role within this Workspace will have billing permissions. See also <a href="/guides/enterprise-billing-center">Enterprise Billing Center</a></li></ul></p>
 
 <p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is used by Workspaces to determine who created the site. This role does not grant permissions for billing, changing site ownership, nor managing the site plan, unless the user is also an Administrator of the owning Workspace. If you are an Administrator for a Workspace and want to change the User in Charge on a site, please <a href="/guides/support/contact-support">contact support</a>.</p>
+
+<p>Because User in Charge is a billing and ownership designation rather than a permissions role, it is not the way to give someone team management access to a site. To delegate site team management, assign the <a href="#what-is-the-site-administrator-role-and-when-should-i-use-it">Site Administrator</a> role instead. The two are independent: a user can be a User in Charge, a Site Administrator, both, or neither.</p>
 
 Pantheon uses the email address associated with the User in Charge (Enterprise and EDU customers) or Site Owner (self-serve customers) for the following two situations:
 - Activating New Relic will send a validation request to this email address, which much be completed in order to finish account setup.
@@ -98,9 +102,7 @@ When a team member is added to a Workspace:
 - That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies to all sites in that Workspace
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Add User**.
-
-1. Click **Invite Team Member**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Invite Members**.
 
 1. Enter the email address of the new user, select a role, then click **Send Invite**.
 
@@ -112,12 +114,17 @@ When a team member is added to a site:
 - That site will be available in My Dashboard
 - That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies only to that site - not to any of the others in the same Workspace
+- The default role assigned is Developer
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Click **Team**.
+1. Under **Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add**.
 
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
+<Alert type="info" title="Note">
+
+The Site Administrator role only appears in the dropdown for Workspace Administrators and Site Owners.
+
+</Alert>
 
 </Tab>
 
@@ -145,11 +152,15 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 <Tab title="In a Site" id="chs">
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Click **Team**.
+1. Under **Members**, find the Team Member, then select a new role for the user. The role change is triggered upon selection in the dropdown menu.
 
-1. Under **Team Members**, find the Team Member, and select a new role from the list.
+<Alert type="info" title="Note">
+
+The Site Administrator role only appears in the dropdown for Workspace Administrators and Site Owners.
+
+</Alert>
 
 </Tab>
 
@@ -220,19 +231,46 @@ Supporting Workspaces are Professional Workspaces that contain team members only
 
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site, then click **Team**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
-1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
+1. Under **Supporting workspaces**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
-1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
+1. Click **Add**. 
 
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/new-dashboard/2024/_manage-site-team.png)
+   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+
+### Role Resolution
+The dashboard uses Fine-Grained Authorization (FGA) to determine a user's effective role through a role resolution process. FGA evaluates all possible paths to each role level (from highest to lowest: owner -> admin -> team_member -> developer -> unprivileged). 
+
+#### Parent Workspace (Owning/Billing Organization)
+* Full role inheritance: admin, team_member, developer, unprivileged
+* Users inherit their workspace role directly to the site
+* Example: Admin in parent workspace -> Admin on site
+
+#### Supporting Workspaces
+* Limited role inheritance: Capped at team_member level
+* Admin users in supporting workspaces get team_member on the site (not admin)
+* This is by design: supporting workspaces represent external collaborators/agencies with restricted access
+
+#### Example Scenario 
+* User is developer in the parent (owning) workspace
+* User is admin in a supporting workspace
+* Site belongs to both workspaces
+
+#### Example Role Resolution
+* Path 1 (via parent): developer role on workspace -> grants developer on site owned by workspace
+* Path 2 (via supporting): admin role on workspace-> grants team_member on site supported by workspace
+
+**Result:** FGA returns team_member
+
+team_member > developer in role hierarchy, so team_member wins. 
+
 
 ## Remove a Supporting Workspace from a Site
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
 
-1. Click **<Icon icon="users" />Team**.
+1. Click **Site Settings** > **Site Team**.
 
 1. Click the **x** to the right of the Supporting Workspace you wish to remove.
 
@@ -242,11 +280,27 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
    - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
 
-     ![Alt text](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding-supporting.png)
+     ![Alt text](../../../../images/dashboard/workspace-offboarding-supporting.png)
 
-1. Click **Yes, remove access**. The Supporting Workspace is removed based on the selection you made.
+1. Click **Remove**. The Supporting Workspace is removed based on the selection you made.
 
 ## FAQ
+
+### What is the Site Administrator role and when should I use it?
+
+<p><dfn id="site-administrator">Site Administrator</dfn> is a site level role that sits between Workspace Administrator and Team Member. It lets a trusted person manage a single site's team — invite and remove Team Members and Developers, change their roles, and add or remove a Supporting Workspace — without granting billing or destructive access. Use it when you want to delegate day-to-day management of a site, for example handing a site off to a client's technical lead or a department administrator, without giving them workspace-wide access.</p>
+
+### Who can assign the Site Administrator role?
+
+Workspace Administrators and Site Owners can assign it, from the **Team** tab on the Site Dashboard. Site Administrators cannot assign the role to anyone else.
+
+### Can a Site Administrator manage billing, change the plan, or delete a site?
+
+No. Site Administrators cannot access billing, change a site's plan, transfer ownership, or delete the site. Those actions remain with Site Owners and Workspace Administrators. This boundary is what makes the role safe to delegate.
+
+### What's the difference between a User in Charge and a Site Administrator?
+
+The [User in Charge](#user-in-charge) is a billing and ownership designation that identifies Pantheon's point of contact for a site. The [Site Administrator](#site-administrator) role is the supported way to grant someone team management permissions on a site. The two are independent: a user can be a User in Charge, a Site Administrator, both, or neither, and being one does not grant the other.
 
 ### Can I restrict access to a specific site with the Developer role?
 

@@ -26,17 +26,13 @@ When the site is deployed to Pantheon, these environment variables need to be se
 
 Pantheon provides a way to set environment variables using [Secrets Manager](/guides/secrets) that can be read by applications running on Pantheon.
 
-First, install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) if you don't already have it:
-
-```bash{promptUser: user}
-terminus self:plugin:install terminus-secrets-manager-plugin
-```
+Secrets Manager commands are built into [Terminus](/terminus) as of [4.2.0](/release-notes/2026/04/terminus-4-2-0). No additional plugins are required.
 
 ```bash{promptUser: user}
 terminus secret:site:set <site_name> NEXT_PUBLIC_CMS_BASE_URL "http://example.com" --type=env --scope=web
 ```
 
-For somes variables for some sites, you may need a different value for the Live environment than for all other environments.
+For some variables for some sites, you may need a different value for the Live environment than for all other environments.
 
 ## Setting Environment-specific overrides
 
@@ -48,6 +44,6 @@ terminus secret:site:set <site_name>.live  MY_VARIABLE my-variable-value-for-liv
 
 ## Reading environment variables in Next.js
 
-Once set, these environment variables can be read in your Next.js application code using `process.env.VARIABLE_NAME`.
+Newly set or updated environment variables take effect starting with your next build. Once that build runs, they are available during the build phase, and at runtime after the build completes successfully. In your Next.js application code, read them using `process.env.VARIABLE_NAME`.
 
 To learn more about using Secrets Manager to set environment variables, see [Managing Environment Variables with Secrets Manager](/guides/secrets).

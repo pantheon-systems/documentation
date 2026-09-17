@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [plugins]
 tags: [plugins]
-reviewed: "2025-02-14"
+reviewed: "2026-07-28"
 permalink: docs/guides/wordpress-configurations/mu-plugin
 ---
 
@@ -200,7 +200,7 @@ add_filter( 'wp_headers', 'dynamic_cors_headers' );
 
 ### Custom Cookies
 
-You can aslo set custom cookies in an MU-plugin like the example below. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
+You can also set custom cookies in an MU-plugin like the example below. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {

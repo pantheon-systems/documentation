@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2023-03-21"
+reviewed: "2026-09-16"
 showtoc: true
 permalink: docs/guides/getstarted/launch
 editpath: getstarted/08-launch.md
@@ -24,7 +24,7 @@ And now it's time to finally make your site available to the public! This sectio
 
 <Partial file="test-initialize.md" />
 
-You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
+You have successfully finished adding a site in its Test environment.  Click **Test site** to view your site.
 
 ## Deploy Your Site to Live
 
@@ -32,7 +32,7 @@ After you [purchase a plan](/guides/getstarted/purchase), you can deploy your si
 
 <Partial file="live-initialize.md" />
 
-You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
+You have successfully finished adding a site in its Live environment.  Click **Live site** to view your site.
 
 ## Domain Configuration
 
@@ -69,6 +69,12 @@ Then, configure your DNS:
 1. Click **Details** next to the bare domain.
 
 1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an A record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
+
+<Alert type="info" title="Note">
+
+Once the DNS is verified and has been provisioned, do not remove any recommended TXT records to ensure there are no issues with the succeeding renewals.
+
+</Alert>
 
 Click below for detailed instructions for your specific DNS host.
 
