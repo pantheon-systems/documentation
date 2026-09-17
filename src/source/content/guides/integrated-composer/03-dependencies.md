@@ -104,7 +104,7 @@ When running `composer install` on a local clone of your Pantheon site's reposit
 
 [WP Packages](https://wp-packages.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box.
 
-[WPackagist](https://wpackagist.org) is another longstanding Composer mirror for WordPress plugins and themes maintained by [WPEngine in 2026](https://wpengine.com/blog/wp-engine-acquires-wpackagist/).
+[WPackagist](https://wpackagist.org) is another longstanding Composer mirror for WordPress plugins and themes maintained by [WPEngine since April 2026](https://wpengine.com/blog/wp-engine-acquires-wpackagist/).
 
 You can install packages from Packagist, WPackagist or WP Packages without any additional configuration using `composer require`.
 
