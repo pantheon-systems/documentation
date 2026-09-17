@@ -11,10 +11,10 @@
     "@anthropic-ai/vertex-sdk": "^0.16.0",
     "google-auth-library": "^10.0.0",
     "gray-matter": "^4.0.3",
-    "tmp": "^0.2.5"
+    "tmp": "^0.2.7"
   },
   "devDependencies": {
-    "tsx": "^4.20.3",
+    "tsx": "^4.23.13",
     "typescript": "^5.8.3"
   },
   "overrides": {
