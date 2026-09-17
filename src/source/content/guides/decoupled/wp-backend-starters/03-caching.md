@@ -67,7 +67,7 @@ We recommend leaving the object cache option disabled when using this plugin on 
 ### Enable Edge Caching
 
 <TabList>
-  <Tab title="Using wp-packages repository" selected>
+  <Tab title="Using wp-packages repository" active={true}>
 
 1. Run the following Composer command:
 

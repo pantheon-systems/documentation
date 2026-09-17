@@ -130,7 +130,7 @@ It is possible to use multiple different Composer repositories, e.g. WPackagist 
 </Alert>
 
 <TabList>
-  <Tab title="Using wp-packages repository" selected>
+  <Tab title="Using wp-packages repository" active={true}>
 
    ```bash{promptUser: user}
    composer require wp-theme/twentytwentytwo
