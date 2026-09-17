@@ -13,6 +13,7 @@ integration: [--]
 tags: [multisite, workflow]
 permalink: docs/guides/multisite/workflows/
 editpath: multisite/05-workflows.md
+reviewed: "2026-09-16"
 ---
 This section provides information on important Multisite fundamentals.
 
@@ -40,7 +41,7 @@ WordPress stores full URLs in the database. These URLs can be links within the p
 
   This takes a few moments.
 
-4. Click **<Icon icon="externalLink" /> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
+4. Click **<Icon icon="externalLink" /> Test site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
 5. Deploy your code change from Dev to Test and refresh the Pantheon Dashboard.
 

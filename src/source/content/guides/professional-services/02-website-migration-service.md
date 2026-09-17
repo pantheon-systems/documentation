@@ -10,7 +10,7 @@ audience: [development, sysadmin]
 product: [--]
 integration: [--]
 tags: [professional-services, migration]
-reviewed: "2021-04-01"
+reviewed: "2026-07-28"
 showtoc: true
 permalink: docs/guides/professional-services/website-migration-service
 editpath: professional-services/02-website-migration-service.md
@@ -168,7 +168,7 @@ You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migratio
 
 - Configuring or decommissioning S3 (existing S3 integrations are fine, this is just for changes to the file structures in the application)
 
-- Ensuring your applications are working with any required [Secure Integrations](//guides/secure-development/secure-integration)
+- Ensuring your applications are working with any required [Secure Integrations](/guides/secure-development/secure-integration)
 
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 

@@ -9,12 +9,13 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 
 Pantheon only supports one application codebase and one database per site. We do not support database prefixes or Drupal multisite. Our workflow, backup, and deployment tools only perform as expected given the standard Pantheon setup.
 
 ## Best Practice Recommendations
-We can't provide specific recommendations for your sites. However, we can provide general best practices if you have two sites under one domain. This is a common CMS problem, but there are strategies and workarounds available. Refer to [Multi-headed Drupal](https://www.palantir.net/blog/multi-headed-drupal) for more information.
+We can't provide specific recommendations for your sites. However, we can provide general best practices if you have two sites under one domain. This is a common CMS problem, but there are strategies and workarounds available. 
 
 ### What Works on Pantheon
 

@@ -19,7 +19,7 @@ Our Custom Certificates service is available to contract customers only, but it 
 
 ## Add a Custom Certificate
 
-Follow the steps below to request and send the appropriate certificate, and private key information for AGCDN where applicable:
+Choose your CDN type below to see the certificate request steps.
 
 <TabList>
 

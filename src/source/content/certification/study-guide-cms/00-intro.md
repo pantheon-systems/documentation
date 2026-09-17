@@ -16,6 +16,7 @@ audience: []
 product: []
 integration: [--]
 nexturl: /certification/study-guide/webops
+reviewed: "2026-07-28"
 ---
 
 At Pantheon we consider velocity to be the indispensable shared characteristic of successful websites and web teams. Successful web teams make changes confidently and quickly because the target for what will win on the web never stops moving.
@@ -112,7 +113,7 @@ Whichever flavor of project management **processes** your **people** like, there
 
 Even with a solid cross-functional team of **people** and iterative **processes,** the path to resolving the above hypothetical web disaster needs a solid technology platform.
 
-LAMP stack systems like WordPress and Drupal evolved first in an era that assumed general purpose servers. Those early webmasters often filled their days with fine-tuning linux boxes to suit a given purpose. Now web architecture revolves more around speciality pieces of infrastructure. Now major cloud providers show reference architectures that suggest buying and configuring 9 or 10 different products to run one environment for one CMS. Both sound like non-starters for our hypothetical.
+LAMP stack systems like WordPress and Drupal evolved first in an era that assumed general purpose servers. Those early webmasters often filled their days with fine-tuning linux boxes to suit a given purpose. Now web architecture revolves more around specialty pieces of infrastructure. Now major cloud providers show reference architectures that suggest buying and configuring 9 or 10 different products to run one environment for one CMS. Both sound like non-starters for our hypothetical.
 
 Again there's a risk carried over from the old mindset of website operations that valued this layer of technical expertise above all else. The risk is that this platform layer consumes all your energy and budget.
 
