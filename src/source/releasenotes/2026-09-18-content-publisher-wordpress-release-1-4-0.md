@@ -1,5 +1,5 @@
 ---
-title: "Pantheon Content Publisher 1.4.0 for Wordpress now available"
+title: "Pantheon Content Publisher 1.4.0 for WordPress now available"
 published_date: "2026-09-18"
 published_at: "2026-09-18T19:40:53Z"
 categories: [content-publisher, wordpress, plugins, new-feature]
