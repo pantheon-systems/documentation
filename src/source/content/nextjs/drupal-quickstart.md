@@ -69,7 +69,7 @@ The backend ships as a Pantheon Custom Upstream following the [`drupal-composer-
 
 1. On the installer's **Configure front end** step, copy the `.env` block it displays. It contains the values your Next.js site needs:
 
-    ```env
+    ```none
     NEXT_PUBLIC_DRUPAL_BASE_URL=<this Drupal site's URL>
     NEXT_IMAGE_DOMAIN=<this Drupal host>
     DRUPAL_CLIENT_ID=default_consumer
