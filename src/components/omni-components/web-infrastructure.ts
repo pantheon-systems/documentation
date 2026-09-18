@@ -181,6 +181,18 @@ const webInfrastructure = () => {
             "Tutorial: Content Publisher",
           ),
           simpleLink(
+            "/nextjs/drupal-quickstart",
+            "Tutorial: Drupal + Next.js Quick Start",
+          ),
+          simpleLink(
+            "/nextjs/drupal-revalidation-tutorial",
+            "Tutorial: Drupal Cache Revalidation",
+          ),
+          simpleLink(
+            "/nextjs/drupal-preview-tutorial",
+            "Tutorial: Drupal Draft Preview",
+          ),
+          simpleLink(
             "/nextjs/wordpress-revalidation-tutorial",
             "Tutorial: WordPress Cache Revalidation",
           ),
