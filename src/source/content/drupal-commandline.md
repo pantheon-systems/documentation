@@ -14,7 +14,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]
-reviewed: "2026-07-28"
+reviewed: "2026-09-22"
 ---
 
 [Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.

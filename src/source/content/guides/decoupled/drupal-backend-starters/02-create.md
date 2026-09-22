@@ -15,6 +15,7 @@ cms: [decoupled]
 audience: [development]
 product: [decoupled]
 integration: [--]
+reviewed: "2026-09-22"
 ---
 <Partial file="fes-deprecated.md" />
 

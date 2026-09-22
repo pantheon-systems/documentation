@@ -13,6 +13,7 @@ tags: [collaborate, quicksilver, webops, workflow]
 contributors: [scottmassey]
 showtoc: true
 permalink: docs/guides/quicksilver/jira
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to use Quicksilver to integrate Jira with Pantheon.

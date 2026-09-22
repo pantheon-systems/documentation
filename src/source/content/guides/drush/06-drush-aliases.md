@@ -12,6 +12,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to use Drush aliases.

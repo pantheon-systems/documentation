@@ -14,6 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to automate your workflow with Terminus scripting.

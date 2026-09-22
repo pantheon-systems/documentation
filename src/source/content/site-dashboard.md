@@ -11,7 +11,7 @@ product: [dashboard]
 integration: [--]
 tags: [--]
 showtoc: true
-reviewed: "2026-09-16"
+reviewed: "2026-09-22"
 ---
 
 The Pantheon Site Dashboard is the hub of all development and activity for an individual site.

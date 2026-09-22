@@ -12,6 +12,7 @@ audience: [development]
 product: [--]
 integration: [saml, sso, azure]
 permalink: docs/guides/sso/sso-organizations
+reviewed: "2026-09-22"
 ---
 
 This section provides information on SSO workflow on Pantheon, as well as authentication and IdP configuration requirements.

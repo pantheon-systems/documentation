@@ -13,6 +13,7 @@ tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
 contributors: [scottmassey]
 showtoc: true
 permalink: docs/guides/quicksilver/asana
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to use Quicksilver to integrate Asana with Pantheon.

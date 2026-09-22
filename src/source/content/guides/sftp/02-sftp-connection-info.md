@@ -3,7 +3,7 @@ title: SFTP on Pantheon
 subtitle: SFTP Access and Authentication
 description: Access your SFTP Connection Info and authenticate your SFTP client.
 tags: [files, sftp, code]
-reviewed: "2020-02-18"
+reviewed: "2026-09-22"
 innav: [false]
 categories: [sftp]
 cms: [drupal, wordpress]

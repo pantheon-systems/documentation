@@ -14,7 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-07-28"
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to create Terminus plugins.

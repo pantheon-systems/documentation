@@ -15,7 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2023-06-08"
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to to authenticate Terminus in a Bitbucket CI pipeline without receiving errors and avoiding authentication rate limits.
