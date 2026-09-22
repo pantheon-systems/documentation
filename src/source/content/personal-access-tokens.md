@@ -31,13 +31,15 @@ Already have a Machine Token? It continues to work and does not expire — see [
 
 1. [Go to your Personal Settings](/personal-settings) and select **Personal Access Tokens**.
 
-1. Click **Create Token**.
+1. Click **Add token**.
 
-1. Enter a token name, and click **Generate Token**.
+1. Enter a token name, and click **Save**.
 
 1. Copy and save your Personal Access Token now, as you will not be able to view it again.
 
-1. Click **I understand** to continue.
+5. Click **"I've saved my token"** to continue.
+
+  ![New Personal Access Token successfully created](../../../images/dashboard/token-ready.png)
 
 ## Authenticate into Terminus
 
@@ -75,7 +77,7 @@ Personal Access Tokens expire 90 days after creation. Once a token expires, `ter
 
 1. [Go to your Personal Settings](/personal-settings) and select **Personal Access Tokens**.
 
-1. Click **Create Token** to generate a new token, then authenticate Terminus with it as described above.
+1. Click **Add token** to generate a new token, then authenticate Terminus with it as described above.
 
 ## Revoke a Personal Access Token
 

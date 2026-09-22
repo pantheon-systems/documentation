@@ -124,14 +124,14 @@ Some features of Personal Access Tokens:
 To set up a Personal Access Token on Pantheon, follow these steps:
 
 1. Go to your [Personal Settings](/personal-settings) and select Personal Access Tokens.
-2. Click Create Token.
-3. Enter a token name, and click Generate Token.
+2. Click **Add token**.
+3. Enter a token name, and click **Save**.
 4. Copy and save your Personal Access Token now, as you will not be able to view or edit it later.
-5. Click I understand to continue.
+5. Click **"I've saved my token"** to continue.
 
 You should see the following screen upon completion:
 
-![New Personal Access Token successfully created](../../../images/dashboard/machine-token-ready.png)
+![New Personal Access Token successfully created](../../../images/dashboard/token-ready.png)
 
 Once you have generated your token, you can use it to authenticate with Terminus. In order to authenticate with Terminus, run the following command (using the unique token string you have just generated in the Pantheon Dashboard):
 
