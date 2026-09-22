@@ -139,6 +139,7 @@ const RedirectMap: Record<string, string> = {
   "/hotfixes": "/guides/git/hotfixes",
   "/local": "/guides/local-development",
   "/local-development": "/guides/local-development",
+  "/machine-tokens": "/personal-access-tokens",
   "/metrics": "/guides/account-mgmt/traffic",
   "/migrate-wordpress": "/guides/guided/migrate",
   "/modules-plugins-known-issues": "/modules-known-issues",

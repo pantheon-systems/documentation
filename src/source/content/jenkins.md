@@ -162,7 +162,7 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
     Press OK to add the new credential to the system.
 
-4. Create another credential for a Terminus Token, using  either an existing token or [create a new token](/machine-tokens) from your Jenkins user dashboard:
+4. Create another credential for a Terminus Token, using  either an existing token or [create a new token](/personal-access-tokens) from your Jenkins user dashboard:
 
     - **Kind**: Secret Text
     - **Scope**: Global

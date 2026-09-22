@@ -29,11 +29,17 @@ If so, consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. You must authenticate Terminus with a [machine token](/terminus/install#machine-token) that has the correct permissions before running a script.
+Terminus must be authenticated before you can execute most commands. You must authenticate Terminus with a [Personal Access Token](/personal-access-tokens) that has the correct permissions before running a script.
+
+<Alert title="Note" type="info">
+
+Personal Access Tokens expire 90 days after creation. A script or CI pipeline authenticated with one will need its stored secret rotated periodically, or it will start failing auth once the token lapses.
+
+</Alert>
 
 ### Authenticate Terminus for Continuous Integration
 
-You can run a complete backend authorization in Terminus by accessing Auth0 behind the scenes to positively identify the Terminus client with an OAuth token. Auth0 places limits on how many times this can be done in a given time period. Use your machine token to authorize Terminus sparingly to avoid exceeding Auth0 rate limits.
+You can run a complete backend authorization in Terminus by accessing Auth0 behind the scenes to positively identify the Terminus client with an OAuth token. Auth0 places limits on how many times this can be done in a given time period. Use your Personal Access Token to authorize Terminus sparingly to avoid exceeding Auth0 rate limits.
 
 1. Running `terminus auth:login --machine-token=${TOKEN}` to run a complete backend authorization. This process:
 

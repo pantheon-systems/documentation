@@ -136,7 +136,7 @@ Verify that you have:
 
 - A Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/guides/getstarted/addsite/).
 
-- A unique Pantheon [machine token](/machine-tokens).
+- A unique Pantheon [Personal Access Token](/personal-access-tokens).
 
 ### Install WordPress with the Pantheon Recipe
 
@@ -156,7 +156,7 @@ Verify that you have:
 
   The only difference between this and `lando init` is that defining the source as Pantheon allows you to skip some prompts.
 
-1. Paste the Pantheon machine token you created for Lando when prompted. Most Terminal emulators use **CTRL/Command + V** to paste, and you will not see any characters added, `*` or otherwise.
+1. Paste the Pantheon Personal Access Token you created for Lando when prompted. Most Terminal emulators use **CTRL/Command + V** to paste, and you will not see any characters added, `*` or otherwise.
 
 1. Choose the Pantheon site you want to pull from to create your local site.
 

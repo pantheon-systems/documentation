@@ -139,18 +139,18 @@ terminus self:update --compatible
 ```
 
 ## Authentication
-### Login via Machine Token (Required)
-You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. Refer to [Machine Tokens](/machine-tokens/) for more information.
+### Login via Personal Access Token (Required)
+You must log in with a Personal Access Token after the installation completes. A Personal Access Token is used to securely authenticate your account, and expires automatically 90 days after creation. Refer to [Personal Access Tokens](/personal-access-tokens/) for more information.
 
-1. [Go to your Personal Settings](/personal-settings), select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/), then [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
+1. [Go to your Personal Settings](/personal-settings), select **Personal Access Tokens**, then [Generate a Personal Access Token](/personal-access-tokens#create-a-personal-access-token).
 
-1. Use your machine token to authenticate into Terminus, replacing `<email@example.com>` and `<machine_token>`:
+1. Use your Personal Access Token to authenticate into Terminus, replacing `<email@example.com>` and `<personal_access_token>`:
 
   ```bash{promptUser: user}
-  terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
+  terminus auth:login --email=<email@example.com> --machine-token=<personal_access_token>
   ```
 
-Machine tokens are keyed to the email address associated with your Pantheon user account. Future sessions are authenticated with your email address after a token has been used to authenticate Terminus:
+Personal Access Tokens are keyed to the email address associated with your Pantheon user account. Future sessions are authenticated with your email address after a token has been used to authenticate Terminus:
 
 ```bash{promptUser: user}
 terminus auth:login --email <email@example.com>

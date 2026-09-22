@@ -22,7 +22,7 @@ Downloading the Pantheon aliases to your local Drush aliases file allows you to 
 
 1. Use [Terminus](/terminus) to download your Drush aliases.
 
-1. Authenticate Terminus with [machine tokens](/machine-tokens), then update your local aliases file in a single step:
+1. Authenticate Terminus with a [Personal Access Token](/personal-access-tokens), then update your local aliases file in a single step:
 
   ```bash{promptUser: user}
   terminus aliases
