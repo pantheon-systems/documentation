@@ -5,6 +5,8 @@ published_at: "2026-08-03T15:36:00Z"
 categories: [new-feature, infrastructure]
 ---
 
+Editor's note, September 21st, 2026: the rollout of this filesystem change has been paused due to increases in site creation time. Once that latency is resolved, new site creation will resume using the updated filesystem.
+
 As of today, an increasing percentage of newly created sites on Pantheon will use a filesystem backed by Cloud Storage FUSE for their uploaded files (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal). This filesystem replaces the "Valhalla" system Pantheon pioneered for sharing files across horizontally scalable PHP containers.
 
 Existing sites will migrate to this new filesystem over the remainder of 2026 starting on 09/01/26.
