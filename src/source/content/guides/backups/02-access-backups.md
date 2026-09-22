@@ -15,6 +15,7 @@ showtoc: true
 permalink: docs/guides/backups/access-backups
 anchorid: access-backups
 contenttype: [guide]
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to access your backups from your Pantheon dashboard and the command line.

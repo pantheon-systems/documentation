@@ -16,7 +16,7 @@ audience: [development]
 product: [terminus]
 integration: [--]
 showtoc: true
-reviewed: "2025-07-22"
+reviewed: "2026-09-22"
 ---
 
 This page provides information on how to install, authenticate, and update Terminus.

@@ -13,7 +13,7 @@ integration: []
 tags: [code, iterate, lando, local, webops]
 showtoc: true
 permalink: docs/guides/local-development/lando-wordpress
-reviewed: "2026-07-27"
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to use Lando for local development with WordPress sites on Pantheon.

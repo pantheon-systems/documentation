@@ -5,6 +5,7 @@ contributors: []
 showtoc: true
 layout: certificationpage
 permalink: docs/certification/exam
+reviewed: "2026-09-22"
 ---
 ## Exam Instructions
 The following directions and instructions were captured by a user on a MacOS device. However, most of the steps here should also be applicable for Windows users. If you run into any technical difficulties or have any questions, you can launch a support session with ProctorFree by clicking the Support Chat icon in the lower right-hand portion of the screen.

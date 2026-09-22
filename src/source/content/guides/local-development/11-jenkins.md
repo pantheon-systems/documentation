@@ -12,7 +12,7 @@ integration: []
 tags: [collaborate, continuous-integration, git, iterate]
 showtoc: true
 permalink: docs/guides/local-development/jenkins
-reviewed: "2026-07-28"
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to configure your Jenkins server to test and deploy code changes to Pantheon automatically.

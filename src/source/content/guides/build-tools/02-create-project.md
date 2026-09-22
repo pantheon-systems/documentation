@@ -6,7 +6,7 @@ tags: [composer, terminus, webops, workflow, D8, D9, wordpress]
 type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
-reviewed: "2026-07-27"
+reviewed: "2026-09-22"
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

@@ -17,6 +17,7 @@ product: []
 integration: [--]
 previousurl: /certification/study-guide/people
 nexturl: /certification/study-guide/automate
+reviewed: "2026-09-22"
 ---
 
 <Alert title="By the end of this chapter, you will be able to:"  type="info" >

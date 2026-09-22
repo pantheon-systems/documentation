@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site
 anchorid: site
-reviewed: "2025-11-17"
+reviewed: "2026-09-22"
 contenttype: [guide]
 innav: [false]
 categories: [create]

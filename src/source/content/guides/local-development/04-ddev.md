@@ -13,6 +13,7 @@ integration: []
 tags: [code, iterate, local, webops]
 showtoc: true
 permalink: docs/guides/local-development/ddev
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to use DDEV for local development with Drupal sites on Pantheon.
