@@ -134,7 +134,3 @@ The following token names are not allowed, and will be automatically renamed to 
 - pantheon hud
 - pantheonHud
 - pantheon-hud
-
-## More Resources
-
-[The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)

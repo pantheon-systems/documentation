@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [launch, site, webops]
-reviewed: "2022-12-13"
+reviewed: "2026-08-31"
 ---
  Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
@@ -45,7 +45,7 @@ reviewed: "2022-12-13"
 
  ### Users
 
- Launch Check looks at at users, including reports on number of users, roles, etc.
+ Launch Check looks at users, including reports on number of users, roles, etc.
 
  ### Database
 
@@ -59,31 +59,32 @@ reviewed: "2022-12-13"
 
  1. Locate the `getSubscribedEvents()` function.
 
- This is the only member function required by the `EventSubscriberInterface`.
+    This is the only member function required by the `EventSubscriberInterface`.
 
  1. Enter the code below to run `onSave()` whenever a configuration is saved.
 
     ```php
     <?php
     public static function getSubscribedEvents() {
-    $events[ConfigEvents::SAVE][] = ['onSave'];
-    return $events;
+        $events[ConfigEvents::SAVE][] = ['onSave'];
+        return $events;
     }
     ?>
     ```
 
  Using the `onSave()` callback invalidates the cache when the appropriate configuration keys change. For example, if `system.theme` or `system.theme.global` change, the code will call the appropriate function to invalidate the cache:
 
-    ```php 
-    <?php
-    public function onSave(ConfigCrudEvent $event) {
-    if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) 
+ ```php
+ <?php
+ public function onSave(ConfigCrudEvent $event) {
+    if (in_array($event->getConfig()->getName(), ['system.theme', 'system.theme.global'], TRUE)) {
+       \Drupal::cache('render')->invalidateAll();
     }
-    ?>
-    ```
+ }
+ ?>
+ ```
 
-
- For more resources on troubleshooting autoloaded data in Drupal, see [Hard Things Are Possible: Configuration Management in Drupal](https://pantheon.io/blog/hard-things-are-possible-configuration-management-drupal-8)
+ For more resources on troubleshooting autoloaded data in Drupal, see [Hard Things Are Possible: Configuration Management in Drupal](https://pantheon.io/blog/hard-things-are-possible-configuration-management-drupal-8).
 
  ## What Doesn't Launch Check Address?
 
@@ -100,8 +101,7 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
 
- ```json
- {promptUser: user}
+ ```bash{promptUser: user}
  terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
  ```
 

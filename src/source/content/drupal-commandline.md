@@ -14,6 +14,7 @@ cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]
+reviewed: "2026-07-28"
 ---
 
 [Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
@@ -78,7 +79,7 @@ The next few sections use the example variables `my-site` and `"My D9 Site"` as 
 
   Keep this window open while you continue reading so you can see the changes you are making in Terminus appear almost immediately in your Site Dashboard.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install the latest version of Drupal on the Dev environment:
+1. Use the Drush [`site-install`](https://www.drush.org/13.x/commands/site_install/) command to install the latest version of Drupal on the Dev environment:
 
   ```bash{promptUser: user}
   terminus drush my-site.dev -- site-install -y
@@ -249,7 +250,7 @@ In the lifecycle of managing a site, content editors will add new material to th
 
 Follow the steps below for a demonstration of the typical workflow on Pantheon.
 
-1. Create content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
+1. Create content in Live using [the `generate-content` command](https://www.drupal.org/docs/extending-drupal/contributed-modules/contributed-module-documentation/devel/drush-commands#s-devel-generate):
 
   ```bash{promptUser: user}
   terminus drush $TERMINUS_SITE.live -- devel-generate-content --bundles=page  25

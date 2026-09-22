@@ -41,8 +41,8 @@ const workflows = () => {
         simpleLink("/automate", "Overview"),
         simpleLink("/continuous-integration", "CI Solutions"),
         getGuideDirectory(
-          "guides/github-application",
-          "GitHub Application"
+          "guides/external-repositories",
+          "External Repositories"
         ),
         simpleLink("/github-actions", "GitHub Actions"),
         getGuideDirectory("guides/build-tools", "Build Tools"),

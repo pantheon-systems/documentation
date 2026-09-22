@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
-reviewed: "2023-06-20"
+reviewed: "2026-07-31"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -46,7 +46,7 @@ A <Icon icon="snowflake" /> icon in the site's status column indicates that a si
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-workspace-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site).
 
 ### Tag Sites
 

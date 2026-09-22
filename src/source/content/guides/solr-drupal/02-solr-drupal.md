@@ -1,26 +1,44 @@
 ---
 title: Apache Solr for Drupal
-subtitle: Using Solr 8 on the Latest Version of Drupal
-description: Information on using Pantheon Search with Solr 8 on the latest version of Drupal
+subtitle: Using Solr 8 and Solr 9 on Drupal
+description: Information on using Pantheon Search with Solr 8 and Solr 9 on Drupal, including setup, upgrade, and troubleshooting
 contenttype: [guide]
 innav: [false]
 categories: [search]
-cms: [drupal9]
+cms: [drupal10, drupal11]
 audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [carolynshannon, joan-ing, jazzsequence]
-reviewed: "2025-01-15"
+contributors: [carolynshannon, joan-ing, jazzsequence, rkunjappan, mehta-asim]
+reviewed: "2026-06-30"
 showtoc: true
 permalink: docs/guides/pantheon-search/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 
-Pantheon Search with Solr 8 gives the latest version of Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
+Pantheon Search gives Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates. Pantheon Search supports both Apache Solr 8 and Solr 9. Solr 9 builds on the foundation of Solr 8 with improved performance, more secure defaults, and new search capabilities.
 
+## Solr Features
 
-## Solr 8 Features
+<TabList>
+
+<Tab title="Solr 9" id="solr9" active={true}>
+
+Solr 9 introduces the following new capabilities for Drupal sites running on Pantheon:
+
+- Six new Snowball stemmers for multilingual sites: Hindi, Indonesian, Nepali, Serbian, Tamil, and Yiddish.
+  - Stemmers help Solr understand that "running", "runs", and "runner" are the same word, so your Drupal search index returns relevant results even when visitors use different word forms. Solr 9 adds built-in support for six more languages, making it easier to build accurate search for multilingual Drupal sites without custom configuration.
+
+- Unified highlighter is now the default in Solr 9, improving search result excerpt quality.
+  - When Drupal displays search results, Solr generates the snippet of text shown below each result title. Solr 9 produces more accurate snippets that better reflect where the search term actually appears in the content, improving the user experience on Search API-powered results pages.
+
+- Dense vector search (KNN) for AI-powered semantic search.
+  - Solr 9 introduces the [DenseVectorField](https://solr.apache.org/guide/solr/9_0/query-guide/dense-vector-search.html) type and a k-nearest neighbors (KNN) query parser, enabling approximate nearest neighbor search using HNSW graphs. Instead of matching exact keywords, dense vector search converts text into numerical embeddings with an AI model and finds content that is semantically similar — for example, a query for "fixing automobiles" can match an article about "car engine maintenance" even though they share no keywords. On Drupal, the [Search API Solr Dense Vector](https://www.drupal.org/project/search_api_solr_dense_vector) module integrates this capability with Search API, supporting embedding providers such as OpenAI, Google Vertex AI, and Google Gemini. Refer to the [Dense Vector Search guide](/guides/pantheon-search/solr-drupal/dense-vector-search) for setup instructions.
+
+</Tab>
+
+<Tab title="Solr 8" id="solr8">
 
 Pantheon Search with Solr 8 includes multiple built-in features to make scalable, high-performance search more customizable, including the following:
 
@@ -34,7 +52,11 @@ Pantheon Search with Solr 8 includes multiple built-in features to make scalable
 
 - Partial string search.
 
-For more information on Solr 8 features, refer to the [Drupal Search API Solr](https://www.drupal.org/project/search_api_solr) documentation.
+</Tab>
+
+</TabList>
+
+For more information, refer to the [Drupal Search API Solr](https://www.drupal.org/project/search_api_solr) documentation.
 
 ### Custom Processors
 
@@ -46,92 +68,89 @@ Refer to the [Search API module processors documentation](https://www.drupal.org
 
 ### Drupal Site Setup
 
-Pantheon Search with Solr 8 can be used on Drupal sites. You can set up a [new Drupal site](/drupal) or visit the [Drupal upgrade and migration](/drupal-migration) guide to create a Drupal site.
+Pantheon Search with Solr can be used on Drupal sites. You can set up a [new Drupal site](/drupal) or visit the [Drupal upgrade and migration](/drupal-migration) guide to create a Drupal site.
 
 ### Prepare the Local Environment
 
-Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine. Pantheon requires [Composer 2](/guides/integrated-composer/ic-support) at a minimum.
+Ensure you review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and have them installed and configured on your local machine.
 
-* Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP 7.4, along with their required dependencies. Restart the shell or terminal environment after entering the following command:
+### Enable Pantheon Search
 
-    ```shell{promptUser:user}
-    brew install git composer php@7.4
-    ```
+Enable Pantheon Search under **Settings** in your Pantheon Site Dashboard. This feature is available for sandbox sites as well as paid plans at the Professional level and above.
 
-* Windows users should install the following dependencies:
-
-  * [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-
-  * [Git](https://git-scm.com/download/win)
-
-  * The [XAMPP](https://www.apachefriends.org/index.html) development environment or a similar package might need to be installed to satisfy some dependencies.
-
-
-### Pantheon Environments
+<Alert title="Note" type="info">
 
 Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr server. Indexing and searching in one environment does not impact any other environment.
 
-### Enable at the Site Level
+</Alert>
 
-You must enable Pantheon Search at the site-level and add the Apache Solr Index Server. This can be done by using either the Terminus CLI or through the Site Dashboard.
+#### Using the Site Dashboard
+
+1. Navigate to the site and environment you would like to configure.
+
+1. Click **Settings**.
+
+1. Click **Add Ons > Apache Solr: Add**.
 
 #### Using Terminus
 
 Enter the following command. Replace `$SITE` with the specified name of the site:
 
 ```shell{promptUser:user}
-terminus solr:enable $SITE
+terminus search:enable $SITE
 ```
 
-#### Using the Site Dashboard
+<Alert title="Note" type="info">
 
-To enable at the Site level follow the following steps:
+The `solr:enable` and `solr:disable` commands are deprecated as of [Terminus 4.1.6](https://github.com/pantheon-systems/terminus/releases/tag/4.1.6). Use `search:enable` and `search:disable` instead.
 
-1. Navigate to the site and environment you would like to configure.
+</Alert>
 
-1. Click **Settings**.
+### Configure the Solr Version
 
-1. Click **Add Ons > Apache Solr Index Server: Add**.
+Add or update the following in your `pantheon.yml` file before installing the Drupal search module to avoid incompatibilities.
 
-### Configure the Version
+<TabList>
 
-You must configure the `pantheon.yml` for the platform environment after you enable the Apache Solr Index Server.
+<Tab title="Solr 9" id="solr9" active={true}>
 
-1. Specify the Solr version in the `pantheon.yml` before you install the Drupal search module to avoid incompatibilities.
 
-    - Currently, Solr 8 is supported for Drupal sites. Specify Solr 8 as the search version for Drupal sites by adding the following to `pantheon.yml`:
+  ```yml:title=pantheon.yml
+  search:
+    version: 9
+  ```
 
-      ```yml:title=pantheon.yml
-      search:
-        version: 8
-      ```
-1. Push the changes to `pantheon.yml`.
+</Tab>
 
-   - A confirmation message indicating the file has successfully updated is returned in Git. The platform may take a few minutes to update, especially if you use Pantheon’s [Integrated Composer](/guides/integrated-composer) to update your site modules.
+<Tab title="Solr 8" id="solr8">
 
-For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version)
 
-## Install and Enable the Search API Pantheon Module
+  ```yml:title=pantheon.yml
+  search:
+    version: 8
+  ```
 
-To install and enable the Search API Pantheon Module, access to Solr 8 must be enabled and `pantheon.yml` should be configured to use the Solr 8 version as described in the steps above.
+</Tab>
 
-### Dependencies
+</TabList>
 
-Composer automatically installs dependencies as part of the Search API Pantheon Module `drupal/search_api_pantheon:^8`.
+<Alert title="Note" type="info">
 
-The commands specified in the next section install the following dependencies:
+If no search version is specified in `pantheon.yml`, Pantheon defaults to Solr 3. Explicitly set the version to avoid running an outdated Solr version.
 
-- Solarium is a Solr client library for PHP and is not Drupal-specific.
+</Alert>
 
-- Search API is Drupal's module for indexing content entities.
+Push the changes to `pantheon.yml`. A confirmation message is returned in Git, which is also visible in the Site Dashboard's commit history within **Code** tab. The `pantheon.yml` file follows code through environments as you promote it, enabling the Solr server in each environment automatically.
 
-- Search API Solr makes search API work with Apache Solr. Composer manages which version will be installed.
+For more information, refer to the documentation on [Specifying a Solr version](/pantheon-yml#specify-a-solr-version).
 
-- Guzzle version 6 is standard with Drupal Core 8 or 9.
+### Install the Search API Pantheon Module
 
-### Install the Search Module
+Composer automatically installs the following dependencies when you install `drupal/search_api_pantheon`:
 
-To install the Search API Pantheon module, switch to your local machine.
+- **Solarium** — a Solr client library for PHP.
+- **Search API** — Drupal's module for indexing content entities.
+- **Search API Solr** — connects Search API to Apache Solr. Version 4.3.x or later is required for Solr 9 compatibility.
 
 1. Clone the Git repository for the desired environment from the Pantheon Site Dashboard.
 1. Enter the following command in the terminal to run `composer install`:
@@ -147,28 +166,43 @@ To install the Search API Pantheon module, switch to your local machine.
 1. You should now have the Search API Pantheon module installed along with its dependencies. You can run `git status` to verify that only `composer.json` and `composer.lock` were modified.
 1. Commit and push the changes, Integrated Composer will take a few moments to install these on your site.
 
-#### Enable Pantheon Search
+1. Run `git status` to verify that only `composer.json` and `composer.lock` were modified.
+1. Commit and push the changes. Integrated Composer will take a few moments to install these on your site.
 
-You can enable the `search_api_pantheon` and `search_api_pantheon_admin` modules from the command line using Terminus and Drush.
+### Enable the Search API Pantheon Module
 
-Enter the following command, replacing `$ENV` with the environment:
+Navigate to **Admin > Extend** (`/admin/modules`) and enable **Search API Pantheon**. Enabling this module also enables Search API and Search API Solr if they are not already enabled.
+
+You can also enable it from the command line using Terminus and Drush replacing `$ENV` with the environment:
 
 ```shell{promptUser:user}
-terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
+terminus drush $SITE.$ENV -- pm-enable search_api_pantheon
 ```
 
-You can also enable the modules from the site’s Extend page located in `/admin/modules`.
+### Verify the Installation
+
+Navigate to **Configuration > Search & Metadata > Search API** in the Drupal Admin interface. Confirm that the **Pantheon Search** server and **Primary** index exist and are enabled.
 
 ## Configure Pantheon Search
 
+When you enable the Search API Pantheon module, a default **Primary** index is automatically created and linked to the Pantheon Search server. You can use this index or create a custom one.
+
+<Alert title="Note" type="info">
+
+Each environment has its own Solr core with its own indexed data. While the Search API index configuration deploys with your code via config management, the indexed content does not transfer between environments. After deploying to a new environment, you must re-index content by running `terminus drush <site>.<env> -- search-api:index` or allowing cron to index content incrementally.
+
+</Alert>
+
 ### Add Search Index
 
-Enable the Search API Solr Admin module.
+Navigate to **Configuration > Search & Metadata > Search API** within Drupal's Admin interface. The server labeled **Pantheon Search** should be displayed with an enabled status.
 
-Navigate to **Configuration > Search & Metadata > Search API** within Drupal’s Admin interface. The server labeled Pantheon Search should be displayed, and the status should indicate the server has been enabled.
+**Using the Primary Index:** Select the **Primary** index to use the default index automatically created when the module was enabled.
 
-1. Click **Add Index** to configure a new search index.
-1. Give the index a name, and select the datasources that should be indexed. For each datasource enabled, select the desired bundles, languages, and options.
+**Creating a Custom Index:**
+
+1. Click **Add Index**.
+1. Give the index a name and select a datasource. If this is your first time using Search API, select **Content** to index your site's nodes.
 1. Select **Pantheon Search** as the Server.
 1. In the Index Options panel, ensure **Index items immediately** is checked.
 1. Click **Save** to add the new index.
@@ -177,31 +211,234 @@ The Index status page should indicate that the newly created index was successfu
 
 ### Add Fields to the Index
 
-Follow the steps below to add fields to your new index.
-
-1. Click **Fields** > click **Add fields**.
+1. Click the **Fields** tab and click **Add fields**.
+1. Add the fields you want to search, such as **Title** and **Body**.
 1. Click **Save changes** when you are finished.
-
-### Index Content
-
-Follow the steps below to index existing content.
-
-1. Click **Index now** on the **View** tab of your index’s Overview page.
-1. Click **Search API** to return to the Search API overview page located in `admin/config/search/search-api`.
-
-Both the server and index you just created should be displayed on the page.
 
 ### Post the Schema
 
-1. Click on the server’s name to view the server > select the **View** tab to display the server connection information, schema version, and indices.
-1. Select the **Pantheon Search Admin** tab to save and post the schema information.
-1. Enable the **Execute Pantheon Search admin task** permission for users who need access to the **Pantheon Search Admin** tab.
-1. Click **Post Solr Schema** to send your custom schema to the Solr 8 server.
-   - The server responds with a `200 - OK` status for each schema file posted.
+Post the schema to the Solr server before indexing content:
 
-## Troubleshooting Pantheon Search with Solr 8 for Drupal
+```shell{promptUser:user}
+terminus drush $SITE.$ENV -- search-api-pantheon:postSchema [path]
+```
 
-### Incorrect Solr Version
+The `[path]` argument is optional. Provide it only if you want to use a custom config set directory. If omitted, the default config set matching the installed Search API Solr version is used.
+
+### Index Content
+
+1. Click **Index now** on the **View** tab of your index's Overview page to populate the index with your content. Content will also be indexed automatically when cron runs.
+1. Click **Search API** to return to the Search API overview page at `admin/config/search/search-api`.
+
+Both the server and index you just created should be displayed on the page.
+
+## Upgrading from Solr 8 to Solr 9
+
+<Alert title="Note" type="info">
+
+Switching from Solr 8 to Solr 9 provisions a new Solr core and requires a full reindex, so search will be unavailable or return incomplete results until reindexing is complete. Test the upgrade on a non-production environment before applying it to your production site.
+
+**Multidev Solr inheritance:** To upgrade the Solr version on a Multidev, create the Multidev first, then set `search.version: 9` in `pantheon.yml` on that branch and push.
+
+A Multidev inherits the Solr version from the source environment, so if the version was set before creating the Multidev, the Multidev will still use Solr 8.
+
+To force the upgrade, commit and push `search.version: 8`, then commit and push `search.version: 9`.
+
+</Alert>
+
+Update the module before switching `pantheon.yml`. This order ensures the correct Solr 9 schema and connector are in place before Pantheon provisions the new Solr 9 server.
+
+1. **Update the module:**
+
+   ```shell{promptUser:user}
+   composer require 'drupal/search_api_pantheon:^8.5'
+   git add composer.json composer.lock
+   git commit -m "Update search_api_pantheon to 8.5.x"
+   git push
+   ```
+
+1. **Update your `pantheon.yml`:**
+
+   ```yml:title=pantheon.yml
+   search:
+     version: 9
+   ```
+
+   ```shell{promptUser:user}
+   git add pantheon.yml
+   git commit -m "Switch to Solr 9"
+   git push
+   ```
+
+1. **Clear the cache:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- cr
+   ```
+
+1. **Post the schema for the new Solr version:**
+
+   Wait for the **Change Search Version** workflow to complete on your site dashboard. Once complete, verify the core is ready by running the diagnose command or checking the server status page (`admin/config/search/search-api` > Pantheon Search), then post the schema:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```
+
+   <Alert title="Custom Solr Configuration" type="info">
+
+   If you use custom Solr configuration files, start from the base Solr 9 schema and re-apply your customizations on top. Solr 9 removed the legacy cache classes (`LRUCache`, `FastLRUCache`, `LFUCache` — use `CaffeineCache`) and `BlockJoinFacetComponent` (use `uniqueBlock()` in JSON Facet API). Refer to the [custom configuration guide](/guides/pantheon-search/solr-drupal/custom-config) for posting custom configurations.
+
+   </Alert>
+
+1. **Clear the index and reindex content:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:clear
+   terminus drush $SITE.$ENV -- search-api:index
+   ```
+
+   After switching Solr versions, Drupal's index tracker may still show items as indexed from the old core. Running `drush search-api:clear` resets the tracker and queues all content for reindexing, which is processed when `drush search-api:index` runs.
+
+1. **Test search functionality** thoroughly on non-production environments. Use `terminus drush $SITE.$ENV -- search-api-pantheon:diagnose` to verify the configuration.
+
+## Rolling Back to Solr 8
+
+For some reason if you need to revert to Solr 8 after upgrading, the `search_api_pantheon` 8.5.x module supports both Solr 8 and Solr 9, so you do not need to downgrade the module version.
+
+1. Change `pantheon.yml` back to `version: 8`:
+
+   ```yml:title=pantheon.yml
+   search:
+     version: 8
+   ```
+
+1. Commit and push the change:
+
+   ```shell{promptUser:user}
+   git add pantheon.yml
+   git commit -m "Revert to Solr 8"
+   git push
+   ```
+
+1. **Clear the cache:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- cr
+   ```
+
+1. **Re-post the Solr 8 schema:**
+
+   Wait for the **Change Search Version** workflow to complete on your site dashboard. Once complete, re-post the schema:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```
+
+1. **Clear the index and reindex content:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:clear
+   terminus drush $SITE.$ENV -- search-api:index
+   ```
+
+## Upgrading from 8.4.x to 8.5.x
+
+If you are upgrading from 8.4.x and want to continue using Solr 8, no migration is needed:
+
+1. **Update the module:**
+
+   ```shell{promptUser:user}
+   composer require 'drupal/search_api_pantheon:^8.5'
+   git add composer.json composer.lock
+   git commit -m "Update search_api_pantheon to 8.5.x"
+   git push
+   ```
+
+1. **Clear the cache:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- cr
+   ```
+
+If you were previously running Search API Solr 4.2.x or earlier, you must also resolve a schema incompatibility. See [Schema incompatibility with Search API Solr 4.3.x](#schema-incompatibility-with-search-api-solr-43x) below.
+
+## Troubleshooting
+
+### Schema incompatibility with Search API Solr 4.3.x
+
+Search API Solr 4.3.x introduced fundamental schema changes that are incompatible with indexes created by 4.2.x or earlier. This affects any site upgrading the module to 4.3.x, regardless of Solr server version. After upgrading, you may encounter the following error:
+
+```
+cannot change field "xyz" from index options=DOCS_AND_FREQS_AND_POSITIONS
+to inconsistent index options=DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS
+```
+
+<Alert title="Note" type="info">
+
+If you are upgrading to Solr 9, you can skip the below section. The Solr 9 upgrade process already requires a full reindex, which resolves this incompatibility.
+
+</Alert>
+
+<Alert title="Note" type="info">
+
+Resolving this requires clearing all indexed data and performing a full reindex. Plan for temporary search downtime.
+
+</Alert>
+
+1. **Post the updated schema:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
+   ```
+
+1. **Disable and re-enable the Solr server** to clear all tracked index data:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:server-disable <server_id>
+   terminus drush $SITE.$ENV -- search-api:server-enable <server_id>
+   ```
+
+   Find your `<server_id>` with `terminus drush $SITE.$ENV -- search-api:server-list`.
+
+1. **Reload the Solr core:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-solr:reload <server_id>
+   ```
+
+1. **Wait at least 5 minutes**, then verify the schema version has updated:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api-pantheon:diagnose
+   ```
+
+   The platform checks for new schemas and issues a core reload within 1-5 minutes.
+
+1. **Re-enable all indexes** (they are automatically disabled when the server is disabled):
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:enable
+   ```
+
+1. **Reindex all content:**
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:index
+   ```
+
+1. **Verify** search functionality is working as expected.
+
+
+#### `<lib/>` directives deprecated in Solr 9.8+
+
+Solr uses `<lib/>` directives in its configuration to load modules and custom JARs (such as `extraction`, `langid`, `analysis-extras`, `ltr`, etc.). [Apache Solr 9.8](https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-9.html#solr-9-8) made these directives opt-in by default as a security hardening measure. They will be removed entirely in Solr 10.0.
+
+**No action is needed on Pantheon environments** — required Solr modules are loaded automatically at the server level.
+
+For more details, refer to the Search API Solr issues [#3505915](https://www.drupal.org/project/search_api_solr/issues/3505915) and [#3508084](https://www.drupal.org/project/search_api_solr/issues/3508084).
+
+#### Incorrect Solr Version
 
 This error is indicative of Solr 3 being active when Solr 8 is expected:
 
@@ -217,13 +454,13 @@ Apache Tomcat/7.0.68 - Error report HTTP Status 400
 
 This can be fixed by [updating pantheon.yml to use Solr 8](/pantheon-yml#specify-a-solr-version).
 
-### Diagnose Issues
+#### Diagnose Issues
 
 The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working.
 
 The `drush search-api-pantheon:select` (saps) command runs the query against the Solr server. It is recommended that you use `?debug=true` on any Solr page to allow a query to pass.
 
-### Deploy an Updated `config.zip` to your Solr Server
+#### Deploy an Updated `config.zip` to your Solr Server
 
 If the Search API Solr displays the following after the Search module is installed:
 
@@ -231,30 +468,7 @@ If the Search API Solr displays the following after the Search module is install
 
 This message can safely be ignored. It resolves once a search index has been created and the schema files have been posted.
 
-### Running Composer with a Lenient Endpoint
+#### Fatal error: Cannot redeclare config_get_config_directory()
 
-If you are using the Lenient endpoint, you may encounter an error when running Composer that resembles the following text:
+This error occurs after installing `search_api_pantheon` for Drupal using Composer. If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed). See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
 
-> Package drupal/search_api_pantheon exists in composer repo (https://packages.drupal.org/8) and composer repo (https://packages.drupal.org/lenient) which has a higher repository priority. The packages with higher priority do not match your constraint and are therefore not installable. See https://getcomposer.org/repoprio for details and assistance.
-
-This occurs because both repositories contain a package called `drupal/search_api_pantheon`, and Composer cannot discern which package is being requested. Change the `repositories` definition by adding a definition for the Lenient repository in the site's `packages.json` file with an explicit `exclude` argument:
-
-```json:title=packages.json
-"repositories": {
-    "lenient": {
-        "type": "composer",
-        "url": "https://packages.drupal.org/lenient",
-        "exclude": [
-            "drupal/search_api_pantheon"
-        ]
-    },
-    "drupal": {
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-    }
-}
-```
-
-### Fatal error: Cannot redeclare config_get_config_directory()
-
-This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.

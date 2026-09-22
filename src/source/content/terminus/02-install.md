@@ -83,7 +83,13 @@ While you can install Terminus using a PHAR as described in the [Windows and Lin
 
 <hr/>
 
-Update to the newest version of the [Homebrew installation](#macos) by running the command below:
+Before upgrading, you may need to trust the Terminus formula. This is a one-time step required by Homebrew for formulas installed from third-party taps — see [Homebrew Tap Trust](https://docs.brew.sh/Tap-Trust) for more information. Without it, `brew upgrade` will silently skip the update.
+
+```bash{promptUser: user}
+brew trust --formula pantheon-systems/external/terminus
+```
+
+Then update to the newest version of the [Homebrew installation](#macos) by running:
 
 ```bash{promptUser: user}
 brew upgrade terminus
@@ -111,9 +117,8 @@ The commands below will:
 
 ```bash{promptUser: user}
 mkdir -p ~/terminus && cd ~/terminus
-curl -L https://github.com/pantheon-systems/terminus/releases/download/4.1.1/terminus.phar --output terminus
+curl -L https://github.com/pantheon-systems/terminus/releases/latest/download/terminus.phar --output terminus
 chmod +x terminus
-./terminus self:update
 sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
 ```
 

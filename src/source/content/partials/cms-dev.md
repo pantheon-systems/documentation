@@ -1,5 +1,5 @@
-1. Click **Site Admin**.
-   ![The Site Admin button](../../images/create-site-site-admin.png)
+1. Click **Dev admin**.
+   ![The Site Admin button](../../images/dashboard/create-site-site-admin.png)
 
 1. You will be presented with either a Drupal or WordPress setup screen. You may also see an [interstitial warning message when visiting an environment for the first time](/guides/account-mgmt/plans/site-plans#interstitial-warning-pages).
    ![Drupal and WordPress installation screens.](../../images/create-site-cms-both.png)

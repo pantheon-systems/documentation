@@ -1,0 +1,25 @@
+name: "Documentation site CodeQL config"
+
+# Use the default query suites, plus the broader security-and-quality suite.
+queries:
+  - uses: security-and-quality
+
+paths:
+  - src
+  - scripts
+  - playwright-tests
+  - tests
+
+paths-ignore:
+  - node_modules
+  - public
+  - .next
+  - dist
+  - build
+  - coverage
+  - '**/*.test.ts'
+  - '**/*.test.tsx'
+  - '**/*.spec.ts'
+  - '**/*.spec.tsx'
+  - '**/*.md'
+  - '**/*.mdx'

@@ -10,7 +10,12 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2026-09-17"
 ---
+
+<Alert title="DeployBot is deprecated" type="warning">
+DeployBot has become part of DeployHQ. Information in this guide may be outdated. Consider using alternative continuous integration solutions (like [GitHub Actions](/github-actions/)) for deploying to Pantheon.
+</Alert>
 
 DeployBot is a continuous integration service with a friendly user interface. Instead of managing options with `yml` files, DeployBot offers an easy web GUI. For sites that already use external Git hosting, DeployBot can be integrated into your workflow to test and deploy sites that require additional build steps.
 
@@ -41,9 +46,9 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
     "vendor-dir": "wp-content/vendor"
   },
   "repositories": {
-    "wpackagist": {
+    "wp-packages": {
       "type": "composer",
-      "url": "https://wpackagist.org"
+      "url": "https://repo.wp-packages.org"
     },
     "packagist": {
       "type": "composer",
@@ -51,22 +56,22 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
     }
   },
   "require-dev": {
-    "wpackagist-plugin/debug-bar": "dev-trunk"
+    "wp-plugin/debug-bar": "dev-trunk"
   },
   "require": {
     "composer/installers": "^1.0.21",
     "koodimonni/composer-dropin-installer": "*",
-    "wpackagist-plugin/wp-cfm": "1.*",
-    "wpackagist-plugin/debug-bar": "dev-trunk",
-    "wpackagist-plugin/lh-hsts": "1.*",
-    "wpackagist-plugin/solr-power": "*",
-    "wpackagist-plugin/pantheon-hud": "0.1.*",
-    "wpackagist-plugin/wp-native-php-sessions": "0.6",
-    "wpackagist-plugin/wp-redis": "*",
-    "wpackagist-plugin/wordpress-seo": "4.*",
-    "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.*",
-    "wpackagist-plugin/google-analytics-for-wordpress": "6.1.6",
-    "wpackagist-theme/twentyseventeen": "1.*"
+    "wp-plugin/wp-cfm": "1.*",
+    "wp-plugin/debug-bar": "dev-trunk",
+    "wp-plugin/lh-hsts": "1.*",
+    "wp-plugin/solr-power": "*",
+    "wp-plugin/pantheon-hud": "0.1.*",
+    "wp-plugin/wp-native-php-sessions": "0.6",
+    "wp-plugin/wp-redis": "*",
+    "wp-plugin/wordpress-seo": "4.*",
+    "wp-plugin/sendgrid-email-delivery-simplified": "1.*",
+    "wp-plugin/google-analytics-for-wordpress": "6.1.6",
+    "wp-theme/twentyseventeen": "1.*"
   },
   "extra": {
     "installer-paths": {
@@ -76,7 +81,7 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
     },
     "dropin-paths": {
       "wp-content": [
-        "package:wpackagist-plugin/wp-redis:object-cache.php"
+        "package:wp-plugin/wp-redis:object-cache.php"
       ]
     }
   }

@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-07-22"
+reviewed: "2025-07-28"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -614,7 +614,7 @@ ___
 
 <ReviewDate date="2023-09-28" />
 
-**Issue:** Pantheon's database replication architecture is incompatible with HypeDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+**Issue:** Pantheon's database replication architecture is incompatible with HyperDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
 
 
 **Solution:** HyperDB is not supported or recommended on Pantheon and there is no known workaround at this time.
@@ -721,7 +721,7 @@ ___
 
 ### [ManageWP worker](https://wordpress.org/plugins/worker/)
 
-<ReviewDate date="2018-10-12" />
+<ReviewDate date="2026-07-27" />
 
 **Issue 1:** The [ManageWP Worker](https://wordpress.org/plugins/worker/) plugin displays an error when adding a site in the ManageWP dashboard:
 
@@ -729,7 +729,7 @@ ___
 
 This error sometimes leads users to believe that ManageWP's IP addresses need to be allowlisted on the platform.
 
-**Solution:** Pantheon does not block any IPs, and there is nothing that would require an allowlist. Most likely there is a security plugin that temporary blocks the connection, or a conflicting plugin like those listed [here](https://managewp.com/user-guide/known-issues). Temporary disable all other plugins, or the security plugins, then try adding your site again. For full troubleshooting, consult the [ManageWP troubleshooting page](https://managewp.com/troubleshooting/site-connection/why-cant-i-add-some-of-my-sites).
+**Solution:** Pantheon does not block any IPs, and there is nothing that would require an allowlist. Most likely there is a security plugin that temporary blocks the connection, or a conflicting plugin. Temporary disable all other plugins, or the security plugins, then try adding your site again. For full troubleshooting, consult [ManageWP](https://managewp.com/troubleshooting/).
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
@@ -878,7 +878,7 @@ ___
 
 **Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/guides/redirect) for more information.
 
-**Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
+**Issue 2:** [Redirection](https://redirection.me) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
 
 **Solution:** In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
@@ -1121,7 +1121,7 @@ ___
 
 ### Weather Station
 
-**Issue:** The [Weather Station](https://wordpress.org/plugins/live-weather-station/) plugin uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+**Issue:** The [Weather Station](https://wordpress.org/plugins/live-weather-station/) plugin uses [`php-intl`]( https://www.php.net/manual/en/book.intl.php), which is not currently supported by Pantheon.
 
 ___
 
@@ -1388,7 +1388,7 @@ Occassionally, when configuring the Web Application Firewall (WAF), it can resul
 
 If you experience degraded performance with Wordfence active, using [Wordfence's data storage option](https://www.wordfence.com/help/firewall/mysqli-storage-engine/) might be appropriate. Modify `wordfence-waf.php` to include the MySQLi storage engine constant. Combined with the constants previously mentioned, the plugin will write to your database instead of your file system. If you do this, we recommend wrapping the constants in a condition that checks `wp-config.php` for a conflicting constant. The end result of your modified `wordfence-waf.php` should resemble the following:
 
-  ```php:title=wp-config.php
+  ```php:title=wordfence-waf.php
 <?php
 // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
 // This file was the current value of auto_prepend_file during the Wordfence WAF installation (Sun, 21 Nov 2021 23:40:56 +0000)
@@ -1422,7 +1422,7 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 
 #### How do I confirm I am using data storage with Wordfence?
 
-You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
+You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewall** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
 
 ___
 
@@ -1526,7 +1526,7 @@ define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/up
 define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants.
+**Solution 2b:** If you are running a version between 3.2 and 3.4, you can only set the cache path through constants.
 
 1. [Create symlinks](#assumed-write-access) for the other paths.
 
@@ -1695,7 +1695,37 @@ Learn more in the [WPML Guide](https://wpml.org/faq/install-wpml/#registration-u
 
 ___
 
-**Issue 3:** Your wp-admin becomes too slow or upon activating WPML String Translation plugin, you may see this error:
+**Issue 3:** When pushing the database between environments, the WPML site key stored in the database is overwritten, causing WPML to lose its registration on the destination environment. This results in WPML prompting for re-registration after every database push.
+
+**Solution:** Generate a unique site key for each environment from your [WPML account page](https://wpml.org/account/sites/), then define each key in `wp-config.php` using the `OTGS_INSTALLER_SITE_KEY_WPML` constant. This constant takes precedence over any value stored in the database, so database pushes between environments will not affect registration.
+
+Dev, Test, and Multidev environment keys are registered as "development" sites in your WPML account and do not consume production license seats — all environments can be registered under the same WPML subscription.
+
+```php:title=wp-config.php
+if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+    switch ( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+        case 'live':
+            $site_key_wpml = 'your-live-site-key';
+            break;
+        case 'test':
+            $site_key_wpml = 'your-test-site-key';
+            break;
+        case 'dev':
+            $site_key_wpml = 'your-dev-site-key';
+            break;
+        default:
+            $site_key_wpml = 'your-default-site-key';
+            break;
+    }
+    define( 'OTGS_INSTALLER_SITE_KEY_WPML', $site_key_wpml );
+}
+```
+
+Learn more in [WPML's guide to automatic registration across environments](https://wpml.org/faq/automatic-wpml-registration-using-php-for-easy-moves-between-production-development-and-staging/).
+
+___
+
+**Issue 4:** Your wp-admin becomes too slow or upon activating WPML String Translation plugin, you may see this error:
 
 >WPML String Translation is attempting to write .mo files with translations to folder:
 >
@@ -1786,6 +1816,46 @@ ___
 **Solution:** Only use the "PHP" redirect method.
 
 ___
+
+### Yoast LLMS feature
+
+<ReviewDate date="2026-04-24" />
+
+**Issue:** [Yoast SEO 25.3](https://developer.yoast.com/changelog/yoast-seo/25.3/) introduces the LLMs.txt feature, which writes a physical `llms.txt` file to the root directory of the WordPress installation and refreshes it weekly via WP-Cron. On Pantheon, the Test and Live environments use a read-only filesystem for the application codebase, so Yoast cannot write or update the file in those environments.
+
+**Solution:** Use the [`wpseo_llmstxt_filesystem_path` filter](https://developer.yoast.com/features/llms-txt/functional-specification/) (introduced in Yoast SEO 25.4) to redirect Yoast’s file writes to the writable uploads directory, and commit a symlink in the webroot pointing to that location. This allows Yoast to generate and update `llms.txt` in all environments while keeping it accessible at the standard `/llms.txt` URL.
+
+1. Switch your Dev environment to [Git connection mode](/guides/git) and clone the site locally if you haven’t already.
+
+1. From your site’s webroot (the directory containing `wp-config.php`), create a relative symlink. Update the target path if your uploads directory is not at the default location:
+
+   ```bash{promptUser: user}
+   ln -s wp-content/uploads/llms.txt llms.txt
+   ```
+
+1. Commit the symlink and push to Pantheon:
+
+   ```bash{promptUser: user}
+   git add llms.txt
+   git commit -m "add symlink to redirect Yoast llms.txt to writable path"
+   git push origin master
+   ```
+
+1. Add the following to a [custom MU plugin](/guides/wordpress-configurations/mu-plugin) to redirect Yoast’s file writes to the uploads directory. Update the path if your uploads directory is not at the default location:
+
+   ```php:title=wp-content/mu-plugins/yoast-llmstxt-path.php
+   <?php
+   add_filter( 'wpseo_llmstxt_filesystem_path', function() {
+       return WP_CONTENT_DIR . '/uploads';
+   } );
+   ```
+
+1. Commit the MU plugin and deploy to Test, then Live.
+
+1. After deploying to each environment, open **Yoast SEO → Settings** and save to trigger immediate file generation. Otherwise the file will be created on the next weekly WP-Cron run.
+
+The symlink is committed to your codebase and deploys with your code. The `llms.txt` file itself lives in the uploads directory (part of Pantheon’s writable filesystem) and is managed entirely by Yoast going forward.
+
 
 ### Yoast Indexables
 

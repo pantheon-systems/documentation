@@ -4,7 +4,7 @@ subtitle: Pantheon Search powered by Elasticsearch
 navtitle: Introduction
 description: Detailed information on using Elasticsearch with your Pantheon WordPress site with ElasticPress.
 tags: [elasticsearch,search]
-reviewed: "2026-02-10"
+reviewed: "2026-07-01"
 contenttype: [doc]
 innav: [true]
 categories: [search]
@@ -20,7 +20,7 @@ showtoc: true
 
 Elasticsearch on Pantheon gives WordPress teams a fully managed search service that goes beyond basic site search — offloading database queries, handling traffic spikes, and delivering features like fuzzy matching and autosuggest without the overhead of managing an external provider.
 
-<Partial file="elasticsarch-pre-ga.md" />
+<Youtube src="SKu-NY5lQ50" title="Getting Started with Elasticsearch on Pantheon" />
 
 ## Overview
 
@@ -32,33 +32,20 @@ By bringing Elasticsearch directly onto the Pantheon platform, you get a fully m
 
 Elasticsearch is available for WordPress sites on **Performance** and **Elite** site plans. Every environment on your site (Dev, Test, Live, and Multidevs) receives its own Elasticsearch endpoint. Elasticsearch is not available on Sandbox sites.
 
-<Partial file="pantheon-search-table.md" />
-
 ### Elasticsearch and Solr
 
 Pantheon also offers [Solr-based search](/solr). You can have both Solr and Elasticsearch activated on a site at the same time, which is useful during migration. However, running both simultaneously in production is not recommended. For new search implementations, Elasticsearch with ElasticPress is the recommended path.
 
-## Known Issues
+<Alert type="warning" title="Solr 3 deprecation">
 
-There are currently a few known issues with the Elasticsearch integration on Pantheon in the Beta phase. If you find any others, please let the team know in the `#beta-elasticsearch` channel in the Pantheon Community Slack.
+Pantheon is deprecating Solr 3 support. WordPress sites using the Solr Power plugin will lose Solr 3 support in January 2027. If your WordPress site currently uses Solr, plan your migration to Elasticsearch before that date.
 
-### ElasticPress WP-CLI commands require full URL flag
+</Alert>
 
-Currently, when running ElasticPress WP-CLI commands through Terminus, you must include the `--url` flag with your site's URL for the command to work properly. This is due to how ElasticPress detects the host connection and how the Pantheon hostname is read on the platform. For example:
-
-```bash
-terminus wp <site>.<env> -- elasticpress sync --url=https://yoursite.com
-```
-
-### Elasticsearch instance is not reachable on Pantheon platform domains (`*.pantheonsite.io`)
-
-Currently, if your environment has a Pantheon platform domain (e.g. `<env>-<site>.pantheonsite.io`) and _that is not the domain configured in the Elasticsearch instance_ (during Beta this is the one that you would have given to the team for the site you are testing on), then requests to the Elasticsearch instance from the site will fail. This is because the Elasticsearch instance is configured to only accept requests from the domain you provided, and the Pantheon platform domain does not match that.
-
-This means that multidev environments are not currently able to connect to the Elasticsearch instance, since they use the Pantheon platform domain, and Dev and Test environments will only work if you have attached a domain to those environments in the Pantheon dashboard (e.g. `dev.yoursite.com`, `test.yoursite.com`).
+<Partial file="pantheon-search-table.md" />
 
 ## Support
 
-During Beta, please report any issues or questions to the Pantheon team in the private `#beta-elasticsearch` channel in the [Pantheon Community Slack](https://pantheon.io/customer-community). To participate in the Beta, simply toggle the **Elasticsearch (beta)** add-on in your Site Settings.
-<!--This is not true yet>For support with Elasticsearch on Pantheon, contact Pantheon Support through the Dashboard. Include details about your site, the environment you're working in, and the specific issue you're encountering.<!-->
+For support with Elasticsearch on Pantheon, contact Pantheon Support through the Dashboard. Include details about your site, the environment you're working in, and the specific issue you're encountering.
 
-For ElasticPress plugin-specific questions, refer to the [ElasticPress documentation](https://www.elasticpress.io/resources/).
+For ElasticPress plugin-specific questions, refer to the [ElasticPress documentation](https://www.elasticpress.io/resources/articles/).
