@@ -39,7 +39,8 @@ This pipeline does the following:
 
 Before you use this script:
 
-- Add a Pantheon account machine token to your GitHub **environment** (preferred) or **repository** secrets named `TERMINUS_TOKEN`. _(Always store production secrets in a GitHub "Environment" that restricts which branches can deploy to it, and protect those branches with rules including code reviews and security tests)._
+- Add a Pantheon [Personal Access Token](/personal-access-tokens) to your GitHub **environment** (preferred) or **repository** secrets named `TERMINUS_TOKEN`. _(Always store production secrets in a GitHub "Environment" that restricts which branches can deploy to it, and protect those branches with rules including code reviews and security tests)._
+- Personal Access Tokens expire 90 days after creation — rotate this secret before it lapses, or the pipeline will start failing auth.
 
 </Alert>
 

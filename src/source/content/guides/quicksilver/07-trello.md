@@ -30,7 +30,7 @@ Be sure that you:
 
 - Install [Terminus](/terminus/install#install-terminus)
 
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): [Go to your Personal Settings](/personal-settings), select **Machine Tokens**, and then authenticate Terminus:
+- [Generate a Personal Access Token](/personal-access-tokens#create-a-personal-access-token): [Go to your Personal Settings](/personal-settings), select **Personal Access Tokens**, and then authenticate Terminus:
 
   ```bash{promptUser: user}
   terminus auth:login --machine-token=‹machine-token›

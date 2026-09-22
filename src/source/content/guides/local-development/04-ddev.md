@@ -37,9 +37,9 @@ Be sure that you have:
 
 ## Use DDEV with Pantheon
 
-1. Navigate to your Pantheon Dashboard and [generate a machine token](/machine-tokens/) for use with your DDEV site.
+1. Navigate to your Pantheon Dashboard and [generate a Personal Access Token](/personal-access-tokens/) for use with your DDEV site.
 
-1. Open your global DDEV configuration file at `~/.ddev/global_config.yaml` and add your Pantheon machine token to the `web_environment` section, replace `insertyourtoken` with your token value:
+1. Open your global DDEV configuration file at `~/.ddev/global_config.yaml` and add your Pantheon Personal Access Token to the `web_environment` section, replace `insertyourtoken` with your token value:
 
     ```yaml
     web_environment:

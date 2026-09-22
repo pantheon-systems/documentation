@@ -174,7 +174,7 @@ You must create a site on Pantheon for this part of the process. The example in 
 
 1. Click **OK** to add the new credential to the system.
 
-1. Create another credential for a Terminus Token, using either an existing token or [a new token](/machine-tokens) from your Jenkins user dashboard:
+1. Create another credential for a Terminus Token, using either an existing token or [a new token](/personal-access-tokens) from your Jenkins user dashboard:
 
     - **Kind**: Secret Text
     - **Scope**: Global

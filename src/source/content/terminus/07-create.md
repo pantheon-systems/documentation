@@ -287,7 +287,7 @@ You can [configure your project tests to run automatically on Circle CI](https:/
 1. Open the Circle CI settings to set up the following environment variables:
 
    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
-   - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens) that has access to the test site.
+   - `TERMINUS_TOKEN`: A [Pantheon Personal Access Token](/personal-access-tokens) that has access to the test site. Because Personal Access Tokens expire after 90 days, plan to rotate this secret periodically.
 
 3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/guides/integration/add-ssh-key/). Leave the `Hostname` field empty.
 

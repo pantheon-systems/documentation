@@ -105,8 +105,8 @@ Multi-Factor Authentication (MFA) adds an extra layer of security to your Panthe
 
 SSH keys allow you to establish a secure connection between your computer and Pantheon. Visit the SSH Keys tab to review your existing configured keys, and add or revoke SSH keys. Follow the steps in [SSH Keys](/ssh-keys) to generate, add, and revoke SSH keys. 
 
-### Machine Tokens
+### Personal Access Tokens
 
-Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
+Personal Access Tokens (PATs) are used to uniquely identify you and securely authenticate via Terminus. Tokens expire automatically 90 days after creation.
 
-The token key will only be shown once and provides the same access as your username and password. To learn more about machine tokens, refer to the [Creating and Revoking Machine Tokens](/machine-tokens) documentation.
+The token key will only be shown once and provides the same access as your username and password. To learn more, including how to use a legacy Machine Token, refer to the [Creating and Revoking Personal Access Tokens](/personal-access-tokens) documentation.

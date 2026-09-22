@@ -31,7 +31,7 @@ Pantheon backups are stored offsite on Google Cloud Storage instances. We recomm
 #
 # Requirements:
 #   - Pantheon terminus cli
-#   - Valid terminus machine token
+#   - Valid terminus Personal Access Token
 #   - Amazon aws cli
 #   - s3 cli access and user configured
 

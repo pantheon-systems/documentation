@@ -85,5 +85,5 @@ Refer to [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp)
 
 ## More Resources
 
-- [Creating and Revoking Machine Tokens](/machine-tokens)
+- [Creating and Revoking Personal Access Tokens](/personal-access-tokens)
 - [Single Sign-On for Pantheon Organizations](/guides/sso/sso-organizations)

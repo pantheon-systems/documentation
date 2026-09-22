@@ -116,9 +116,9 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title="Machine Tokens" link="/machine-tokens">
+  <Product title="Personal Access Tokens" link="/personal-access-tokens">
 
-  Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
+  Personal Access Tokens are used to uniquely identify you and securely authenticate via Terminus.
 
   </Product>
 
