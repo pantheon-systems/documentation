@@ -2,7 +2,6 @@
 
 import { MOBILE_MENU_BREAKPOINT } from "@/constants";
 import {
-  NavMenuItem,
   NavMenu as PDSNavMenu,
 } from "@pantheon-systems/pds-toolkit-react";
 import { createElement, useState } from "react";

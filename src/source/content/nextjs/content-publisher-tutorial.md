@@ -10,8 +10,6 @@ integration: [--]
 permalink: docs/nextjs/content-publisher-tutorial
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 Pantheon's Content Publisher shines as a way to send content straight from Google Docs to a Next.js site hosted on Pantheon.
 This tutorial will walk you through the steps needed to make a simple site combining the two.
 
@@ -27,19 +25,15 @@ This tutorial will walk you through:
 
 ## Requirements
 
-* Access granted for the [Next.js Private Beta Program](/nextjs/#access--availability)
 * A GitHub account with [SSH configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * A [Content Publisher account](https://docs.content.pantheon.io/#h.9owhdt6w06gr) with [Administrator access](https://docs.content.pantheon.io/roles)
 * Install the following applications:
   - [Git](https://git-scm.com/)
-  - [Terminus](/terminus/install)*
-  - [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+  - [Terminus](/terminus/install)* — secrets and log commands are built into Terminus core as of [4.2.0](/release-notes/2026/04/terminus-4-2-0). No additional plugins are required.
   - Content Publisher requirements:
     - [Node.js and npm](https://docs.content.pantheon.io/cli-setup#h.tqdsaj5gmjzp)
     - [Content Publisher CLI](https://docs.content.pantheon.io/cli-setup#h.6sxx14u8zeur)*
     - [Content Publisher Google Docs add-on ](https://docs.content.pantheon.io/add-on-install#h.32fczwiey3t0)
-  - Optional:
-    - [Terminus Node Logs Plugin](https://github.com/pantheon-systems/terminus-node-logs-plugin)
 
 \* Requires logging in after installation.
 
@@ -137,7 +131,7 @@ Now, we will push the codebase we made with `cpub init` to the new repository on
 
 ## Create a new Pantheon site
 
-With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site and use [Pantheon's GitHub Application](https://docs.pantheon.io/github-application) to trigger builds in response to code changes.
+With a GitHub repository holding our Next.js codebase, we can now create a new Pantheon site and use [Pantheon's external repository integration](/guides/external-repositories) to trigger builds in response to code changes.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Create New Site** button. Then click **Next.js**.
 1. Click **Connect** next to GitHub. You will be prompted to install and authorize the [Pantheon Site Integration](https://github.com/apps/pantheon-site-integration) GitHub application.

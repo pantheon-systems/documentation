@@ -13,7 +13,7 @@ tags: [database, professional-services, redis, security]
 ayout: guide
 showtoc: true
 permalink: docs/guides/secure-development/secure-integration
-reviewed: "2022-07-21"
+reviewed: "2026-07-27"
 ---
 
 This section provides information on [Pantheon Secure Integration](https://pantheon.io/features/secure-integration).
@@ -106,7 +106,7 @@ It is important to set reasonable timeouts for requests sent via Secure Integrat
 
 </Alert>
 
-Set reasonable timeouts using [PHP's cURL functions](https://secure.php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
+Set reasonable timeouts using [PHP's cURL functions](https://secure.php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`.
 
 ### Patch LDAP Module (Drupal 7 Only)
 

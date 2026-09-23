@@ -38,11 +38,6 @@
     "src/components/common/marketo-form.jsx",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-  ],
-  "types": [
-    "react",
-    "react-dom"
-  ]
+  "exclude": ["node_modules", "scripts"],
+  "types": ["react", "react-dom"]
 }

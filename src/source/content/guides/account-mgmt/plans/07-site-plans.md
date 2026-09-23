@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/site-plans
 editpath: docs/guides/account-mgmt/plans/07-site-plans.md
-reviewed: "2025-05-08"
+reviewed: "2026-07-27"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -71,13 +71,9 @@ To safely disable Redis, refer to the following how-to guide:
 
 Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
 
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact the site's Supporting Workspace for assistance in order to retain your special pricing rate.
-
 ### Downgrades
 
 Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan. No prorated refunds or credits will be issued for site downgrades.
-
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Workspace for assistance, in order to retain your special pricing rate.
 
 [Custom domains](/guides/domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
@@ -96,7 +92,7 @@ Pantheon offers savings for sites purchased with annual billing. Refer to [Panth
 Please note that only Site owners can update plans. There are several places within the Pantheon Dashboard you can upgrade your site plan:
 
 1.  [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), and click **Upgrade** next to the site's name.
-2.  Within your personal workspace, navigate to Settings>Subscriptions. Click the 'Actions' dropdown and choose, **Change Site Plan**
+2.  Within My Dashboard, navigate to Settings>Subscriptions. Click the 'Actions' dropdown and choose, **Change Site Plan**
 3.  If you are in a workspace, you can navigate to **Settings** > **Billing**. Scroll to see **Supported Sites** table. Within that table, if you are the site owner, you'll be able to click the **Site Plan** column to upgrade or downgrade your site.
 
 
@@ -122,7 +118,7 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 
 You can enable the following add-ons:
 
-- [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
+- [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6, v8.11, and v9.10 as a service for most plans including the Sandbox site plan.
  - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
@@ -132,7 +128,7 @@ Pantheon Search and Object Cache are available to Sandbox plans for testing. Pan
 
 ## Sandbox Sites
 
-Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. Pantheon allocates two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live, or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more Sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
+Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. Pantheon allocates two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live, or join an organization. If you're building sites for third parties, join the [Agency Partner Program](https://pantheon.io/partners?docs) for more Sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
 
 To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/site-plans#cancel-your-plan).
 
@@ -204,15 +200,13 @@ Before making any changes, please review [Before You Make Changes](#before-you-b
 
 </Alert>
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings**.
 
-1. Select the current plan (to the right of the site name).
+1. From the  **Site Details** section, click **Manage site plan**.
 
-1. Click the **Downgrade to free** link to cancel the current plan.
+1. Click the **Switch to free plan** link to cancel the current plan.
 
-1. Check **Yes, cancel my plan**, then click **Continue**.
-
-1. Make sure the change details are correct, then click **Submit**.
+1. Select a reason for canceling, then check **Yes, cancel my plan**, and click **Confirm downgrade**.
 
 1. Remove the existing card as a payment method for the site. Refer to [Billing in the Site Dashboard](/guides/account-mgmt/billing/methods#delete-a-site-specific-payment-method) for more information.
 
@@ -220,6 +214,6 @@ Optionally, you can remove the Sandbox site after downgrading. Refer to [Deletin
 
 <Alert title="Note" type="info" >
 
-For any site plan downgrades, no refunds or prorated credits will be issued as per our [Terms of Service](https://pantheon.pactsafe.io/legal.html#tos).
+For any site plan downgrades, no refunds or prorated credits will be issued as per our [Terms of Service](https://legal.pantheon.io/).
 
 </Alert>

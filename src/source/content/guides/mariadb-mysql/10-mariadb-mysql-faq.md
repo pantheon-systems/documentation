@@ -39,7 +39,7 @@ To access [MySQL binary logs](https://dev.mysql.com/doc/internals/en/binary-log-
 
 1. Replace the word `appserver` with `dbserver` in the connection string.
 
-1. Navigate to the `data` subdirectory to view the MySQL Slow Query logs.
+1. Navigate to the `data` subdirectory to view the MySQL binary logs.
 
 ### Are table prefixes supported?
 

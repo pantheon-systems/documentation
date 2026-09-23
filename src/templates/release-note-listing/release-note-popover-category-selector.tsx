@@ -17,12 +17,10 @@ const ReleaseNotePopoverCategorySelector = ({
     description: string;
   }[];
   filters: {
-    query: string;
     categories: { slug: string; displayName?: string }[];
   };
   setFilters: Dispatch<
     SetStateAction<{
-      query: string;
       categories: { slug: string; displayName?: string }[];
     }>
   >;
@@ -82,8 +80,7 @@ const ReleaseNotePopoverCategorySelector = ({
   };
 
   // Set the icon based on the popover state: 'angleUp' if open, 'angleDown' if closed
-  const popoverTriggerIcon: "angleUp" | "angleDown" = isPopoverOpen ? "angleUp" : "angleDown";
-
+  const popoverTriggerIcon = isPopoverOpen ? ("angleUp" as const) : ("angleDown" as const);
   // Popover columns config
   const itemsPerColumn = 7;
   const totalItems = activeCategories.length;
