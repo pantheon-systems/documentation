@@ -8,13 +8,9 @@ categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-<<<<<<< HEAD
-reviewed: "2025-01-23"
 showtoc: false
-=======
 integration: [--]
 reviewed: "2026-07-28"
->>>>>>> origin/main
 ---
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
