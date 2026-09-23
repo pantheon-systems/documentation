@@ -15,7 +15,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -38,6 +38,12 @@
     "src/components/common/marketo-form.jsx",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "scripts"],
-  "types": ["react", "react-dom"]
+  "exclude": [
+    "node_modules",
+    "scripts"
+  ],
+  "types": [
+    "react",
+    "react-dom"
+  ]
 }

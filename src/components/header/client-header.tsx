@@ -14,7 +14,7 @@ export const ClientHeader: React.FC<{
     title: string;
   }[];
 }> = ({ omniLinks }) => {
-  const OmniLinks: NavMenuItem[] = omniLinks.map((item) => {
+  const OmniLinks = omniLinks.map((item) => {
     const theLink = createElement(Link, { href: item.link }, item.title);
     return {
       label: item.title,
