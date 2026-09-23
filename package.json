@@ -22,7 +22,7 @@
   "dependencies": {
     "@adobe/mdast-util-gridtables": "^4.0.13",
     "@adobe/remark-gridtables": "^3.0.14",
-    "@next/bundle-analyzer": "^16.1.6",
+    "@next/bundle-analyzer": "16.3.6",
     "@pantheon-systems/pds-toolkit-react": "^1.10.0",
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
@@ -34,8 +34,8 @@
     "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20.19.9",
     "@types/prismjs": "^1.26.5",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "^19.1.7",
+    "@types/react": "~19.2.18",
+    "@types/react-dom": "~19.2.7",
     "@types/rss": "^0.0.32",
     "@types/showdown": "^2.0.6",
     "class-variance-authority": "^0.7.1",
@@ -48,12 +48,8 @@
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "lodash.trimend": "^4.5.1",
-<<<<<<< HEAD
-    "next": "16.1.6",
-=======
-    "next": "15.3.9",
+    "next": "16.3.6",
     "pds-toolkit-react-v2": "npm:@pantheon-systems/pds-toolkit-react@^2.0.0-alpha",
->>>>>>> remove-unused-code-from-migration
     "prismjs": "^1.30.0",
     "query-string": "^8.2.0",
     "react": "19.2.4",
@@ -93,15 +89,9 @@
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.21",
     "c8": "^7.14.0",
-<<<<<<< HEAD
     "eslint": "^9.0.0",
-    "eslint-config-next": "16.1.6",
-    "js-yaml": "^4.1.0",
-=======
-    "eslint": "^8.57.1",
-    "eslint-config-next": "15.3.4",
+    "eslint-config-next": "16.3.6",
     "js-yaml": "^4.3.0",
->>>>>>> remove-unused-code-from-migration
     "jsdom": "^22.1.0",
     "postcss": "^8.5.6",
     "prettier": "3.2.5",
