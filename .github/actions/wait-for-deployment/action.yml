@@ -4,7 +4,7 @@ description: Waits for a Pantheon Next.js deployment to complete by polling the 
 
 inputs:
   pantheon_site_name:
-    description: The Pantheon site name
+    description: The Pantheon site machine name
     required: true
   env_name:
     description: The environment name (e.g., dev, pr-123)
