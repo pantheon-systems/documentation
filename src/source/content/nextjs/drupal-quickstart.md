@@ -48,7 +48,7 @@ Content flows one direction — Drupal to Next.js — over three channels:
 
 <Alert title="Front-End Sites is the legacy offering" type="info">
 
-If you are following an older Drupal + Next.js guide under [Front-End Sites](/guides/decoupled), that offering is deprecated. This guide targets Pantheon's current [Next.js hosting](/nextjs/overview). See [How to migrate from Front-End Sites](/nextjs/migrating-from-front-end-sites) if you have an existing Front-End Site.
+If you are following an older Drupal + Next.js guide under [Front-End Sites](/guides/decoupled), that offering is deprecated. This guide targets Pantheon's current [Next.js hosting](/nextjs). See [How to migrate from Front-End Sites](/nextjs/migrating-from-front-end-sites) if you have an existing Front-End Site.
 
 </Alert>
 
@@ -58,14 +58,20 @@ The backend ships as a Pantheon Custom Upstream following the [`drupal-composer-
 
 | Recipe | Type | Provides |
 |---|---|---|
-| `pantheon-systems-ps/pantheon_nextjs_demo` | Site | JSON:API, OAuth, the `next` / `decoupled_router` / `consumers` / `simple_oauth` / `pathauto` modules, the Page / Article / Event content types, the `nextjs` menu, and the `next_site` connection |
+| `pantheon-systems-ps/pantheon_nextjs_demo` | Site | JSON:API, OAuth, the `next` / `decoupled_router` / `consumers` / `simple_oauth` / `pathauto` modules, the Page / Article / Event content types, the `nextjs` menu, the `next_site` connection, preview and cache-tag revalidation for each content type, and the `nextjs_preview` role and OAuth scope |
 | `pantheon-systems-ps/pantheon_nextjs_demo_content` | Content | Demo Articles, Events, Pages, Tags, images, and menu links |
 
 1. Add the repository as a Custom Upstream in your Pantheon workspace. See [Custom Upstream Usage](/guides/integrated-composer/ic-upstreams).
 
 1. Create a site from that upstream. See [Create a Composer-managed CMS site](/guides/integrated-composer/create). Integrated Composer installs Drupal core, the contrib modules, and the recipe packages.
 
-1. Install the site through the browser. The upstream ships a recipe-driven install profile that applies both recipes and provisions the OAuth pieces for draft preview.
+1. Install the site through the browser. The upstream ships a recipe-driven install profile that applies both recipes, generates the OAuth keys, and attaches the `nextjs_preview` scope to the default consumer.
+
+<Alert title="Sites installed before recipe 1.1.0" type="info">
+
+Version 1.1.0 of the `pantheon_nextjs_demo` recipe added preview and revalidation for each content type and the `nextjs_preview` role and scope. On a site installed with an earlier version, Drupal will not call the front end or allow draft reads until you configure them. See [Drupal cache revalidation](/nextjs/drupal-revalidation-tutorial#configure-drupal) and [Drupal draft preview](/nextjs/drupal-preview-tutorial#create-the-oauth-consumer).
+
+</Alert>
 
 1. On the installer's **Configure front end** step, copy the `.env` block it displays. It contains the values your Next.js site needs:
 
@@ -129,7 +135,7 @@ terminus secret:site:set my-nextjs-site DRUPAL_CLIENT_SECRET "<one-time-secret>"
 | `DRUPAL_CLIENT_ID` | Simple OAuth consumer client ID |
 | `DRUPAL_CLIENT_SECRET` | Consumer secret, used for authenticated calls and draft preview |
 | `DRUPAL_REVALIDATE_SECRET` | Shared secret for on-demand revalidation — see [Drupal cache revalidation](/nextjs/drupal-revalidation-tutorial) |
-| `DRUPAL_PREVIEW_SECRET` | Shared secret for draft mode — see [Drupal draft preview](/nextjs/drupal-preview-tutorial) |
+| `DRUPAL_PREVIEW_SECRET` | Not read by the front end. The installer prints it, but Drupal signs and validates preview links itself — see [Drupal draft preview](/nextjs/drupal-preview-tutorial) |
 
 To override a value for a single environment, target `<site>.<env>`:
 
