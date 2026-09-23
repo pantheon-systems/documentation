@@ -47,7 +47,7 @@ Both revalidator plugins issue a plain `GET` with query parameters — there is 
 
 | Drupal plugin | Request |
 |---|---|
-| **Cache Tag** | `GET {revalidate_url}?tags=node:12,node_list:article&secret={secret}` |
+| **Cache Tag** | `GET {revalidate_url}?tags=node:12,node_list,node_list:article&secret={secret}` |
 | **Path** | `GET {revalidate_url}?path=/posts/my-post&secret={secret}` |
 
 The `secret` parameter is appended only when a **Revalidate secret** is set on the Drupal `next_site`. The revalidate route below handles both shapes, so you can switch plugins without changing front-end code.
@@ -132,6 +132,12 @@ const nextConfig = {
 export default nextConfig;
 ```
 
+<Alert title="cacheComponents and route segment config" type="info">
+
+Next.js rejects `cacheComponents: true` while any page exports route segment config such as `export const dynamic = 'force-dynamic'`. If your pages use it and you are not adopting `'use cache'`, leave out `cacheComponents` and `cacheHandlers` and keep only `cacheHandler`. That still covers the fetch cache, tagging, and `revalidateTag()`. The demo front end is set up this way.
+
+</Alert>
+
 <Alert title="Do not add the package to transpilePackages" type="danger">
 
 Transpiling this package makes the Next.js edge compiler bundle its source and ignore the `edge-light` export condition. That pulls the Node-only handlers into the edge bundle and breaks the build with errors such as `edge runtime does not support Node.js 'fs'` or `Can't resolve 'net'`. Leave it as a normal, externalized dependency.
@@ -170,37 +176,49 @@ export async function getArticles() {
 
 /**
  * Fetches a single article by path alias.
- * Tagged with both the entity tag and the list tag, so the page refreshes
- * whether this article changes or the listing it belongs to does.
+ * JSON:API cannot filter on path aliases, so resolve the alias with the
+ * Decoupled Router first. It also returns the internal node ID, which is what
+ * Drupal's entity cache tag uses.
  */
 export async function getArticleBySlug(slug: string) {
-  const alias = `/posts/${slug}`;
-  const url = `${DRUPAL_BASE_URL}/jsonapi/node/article`
-    + `?filter[path.alias]=${encodeURIComponent(alias)}`
-    + `&include=field_image,field_tags`;
+  const route = await fetch(
+    `${DRUPAL_BASE_URL}/router/translate-path?path=${encodeURIComponent(`/posts/${slug}`)}`,
+    {
+      cache: 'force-cache',
+      // Aliases change when content does.
+      next: { tags: ['node_list'] },
+    }
+  );
 
-  const response = await fetch(url, {
-    headers: { Accept: 'application/vnd.api+json' },
-    cache: 'force-cache',
-    next: {
-      tags: ['node_list:article'],
-    },
-  });
-
-  const { data } = await response.json();
-  const article = data?.[0];
-
-  if (!article) {
+  if (!route.ok) {
     return null;
   }
 
-  return article;
+  const { entity } = await route.json();
+
+  const response = await fetch(
+    `${DRUPAL_BASE_URL}/jsonapi/node/article/${entity.uuid}?include=field_image,field_tags`,
+    {
+      headers: { Accept: 'application/vnd.api+json' },
+      cache: 'force-cache',
+      next: {
+        tags: [`node:${entity.id}`, 'node_list:article'],
+      },
+    }
+  );
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const { data } = await response.json();
+  return data;
 }
 ```
 
 <Alert title="Entity tags need the Drupal internal ID" type="info">
 
-JSON:API identifies resources by UUID, while Drupal cache tags use the internal entity ID (`node:12`). Request `drupal_internal__nid` in your `fields` parameter, or add the entity tag once you have the ID, so your `node:{id}` tags match what Drupal sends.
+JSON:API identifies resources by UUID, while Drupal cache tags use the internal entity ID (`node:12`). The Decoupled Router response above includes it as `entity.id`; otherwise request `drupal_internal__nid` in your `fields` parameter, so your `node:{id}` tags match what Drupal sends.
 
 </Alert>
 
@@ -288,11 +306,11 @@ When `revalidateTag('node_list:article')` runs, the Pantheon cache handler:
 
 ### Choose a revalidator plugin
 
-Configure a revalidator per entity type at `/admin/config/services/next/entity-types`. The `next` module ships two:
+Configure a revalidator per entity type at `/admin/config/services/next/entity-types`. Sites installed from the demo upstream with version 1.1.0 or later of the `pantheon_nextjs_demo` recipe already use **Cache Tag** for Page, Article, and Event. The `next` module ships two:
 
 | Plugin | Sends | Best for |
 |---|---|---|
-| **Cache Tag** | `?tags=node:12,node_list:article` | New builds. Granular, and the tags come from Drupal natively. Pairs directly with `revalidateTag()` and the cache handler's edge purge. |
+| **Cache Tag** | `?tags=node:12,node_list,node_list:article` | New builds. Granular, and the tags come from Drupal natively. Pairs directly with `revalidateTag()` and the cache handler's edge purge. |
 | **Path** | `?path=/posts/my-post` | Teams migrating an existing decoupled site already using path-based revalidation. Coarser — listing pages must be named manually. |
 
 **To configure Cache Tag revalidation:**

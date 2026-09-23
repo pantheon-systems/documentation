@@ -42,13 +42,19 @@ npm ls next-drupal
 
 1. An editor clicks **Preview** on an unpublished node. Drupal builds a signed preview URL pointing at your site's `/api/draft` route, carrying `path`, `timestamp`, `secret`, `plugin`, `resourceVersion`, and locale parameters.
 
-1. Your `/api/draft` route hands the request to `enableDraftMode()`, which POSTs those parameters back to Drupal's `/next/draft-url` endpoint for validation. Drupal recomputes the signature and confirms it.
+1. Your `/api/draft` route hands the request to `enableDraftMode()`, which POSTs those parameters back to Drupal's `/next/draft-url` endpoint for validation. Drupal recomputes the signature and confirms it. The signature uses Drupal's own private key and hash salt, so there is no preview secret to share with Next.js.
 
 1. If validation passes, Next.js enables draft mode by setting cookies, stores the draft data, and redirects to the content's real path.
 
 1. Your page reads the draft data, sees a `resourceVersion`, and fetches that revision from JSON:API with an OAuth bearer token instead of the published one.
 
 The secret is time-limited and computed from the timestamp, path, and resource version, so a preview link cannot be replayed indefinitely or edited to expose a different node.
+
+<Alert title="Using the demo upstream?" type="info">
+
+Sites installed from [`demo-nextjs-drupal-backend`](https://github.com/pantheon-upstreams/demo-nextjs-drupal-backend) with version 1.1.0 or later of the `pantheon_nextjs_demo` recipe already have the role, scope, consumer, and per-content-type preview configured below. Skip to [Add the draft routes](#add-the-draft-routes).
+
+</Alert>
 
 ## Create the OAuth consumer
 
@@ -57,13 +63,11 @@ Next.js needs authenticated access to read unpublished content. Simple OAuth use
 ### Create a role
 
 1. Go to `/admin/people/roles` and click **+ Add role**.
-1. Name it `Next.js Site` and save.
+1. Name it `Next.js preview`, with the machine name `nextjs_preview`, and save.
 1. Assign it these permissions at `/admin/people/permissions`:
 
+    - View published content
     - Bypass content access control
-    - Issue subrequests
-    - View user information
-    - View all revisions
 
 <Alert title="Why bypass content access control" type="info">
 
@@ -73,18 +77,18 @@ This permission lets Next.js read unpublished nodes and revisions. It applies on
 
 ### Create a user and generate keys
 
-1. Add a user at `/admin/people/create` and assign it the `Next.js Site` role.
+1. Add a user at `/admin/people/create` and assign it the `Next.js preview` role.
 
-1. Go to `/admin/config/people/simple_oauth` and click **Generate keys**. Store them outside the docroot — on Pantheon, use the [private files path](/guides/filesystem/private-files).
+1. Go to `/admin/config/people/simple_oauth` and click **Generate keys**. Store them outside the docroot — on Pantheon, use the [private files path](/guides/secure-development/private-paths#private-path-for-files).
 
 ### Create the scope and consumer
 
 1. At `/admin/config/people/simple_oauth/oauth2_scope/dynamic/add`, create a scope:
 
-    - **Machine-readable Name**: `nextjs_site`
+    - **Machine-readable Name**: `nextjs_preview`
     - **Grant Types**: `Client Credentials`
     - **Granularity**: `Role`
-    - **Role**: `Next.js Site`
+    - **Role**: `Next.js preview`
 
 1. At `/admin/config/services/consumer/add`, create a consumer:
 
@@ -92,19 +96,20 @@ This permission lets Next.js read unpublished nodes and revisions. It applies on
     - **Client ID**: `default_consumer`
     - **Secret**: a strong random value
     - **Grant Types**: `Client Credentials`
-    - **Scopes**: `nextjs_site`
+    - **Scopes**: `nextjs_preview`
     - **User**: the user you created
 
 1. Note the client ID and secret — the secret is hashed on save and cannot be read back.
 
 ## Configure the Drupal site
 
-### Set the preview URL and secret
+### Set the preview URL
 
 1. Go to `/admin/config/services/next` and click **Edit** next to your site.
 1. Set **Preview URL** to `https://dev-my-nextjs-site.pantheonsite.io/api/draft`.
-1. Set **Preview secret** to a strong random value. You will set the same value as `DRUPAL_PREVIEW_SECRET`.
 1. Click **Save**.
+
+The **Preview secret** field on this form is not used for draft mode with `next-drupal` 2.x; you can leave it as it is.
 
 ### Enable preview for entity types
 
@@ -156,9 +161,11 @@ export const drupal = new NextDrupal(baseUrl, {
     clientId,
     clientSecret,
   },
-  withAuth: true,
+  withAuth: false,
 });
 ```
+
+Leave `withAuth` off by default and turn it on per request for draft reads, as the page below does. The consumer's role can read unpublished content, so authenticating every request would let unpublished content into responses that get cached and served to visitors.
 
 ## Render the draft revision
 
@@ -232,11 +239,7 @@ terminus secret:site:set my-nextjs-site DRUPAL_CLIENT_ID "default_consumer" --ty
 terminus secret:site:set my-nextjs-site DRUPAL_CLIENT_SECRET "your-consumer-secret" --type=env --scope=web,ic --no-interaction
 ```
 
-```bash{promptUser: user}
-terminus secret:site:set my-nextjs-site DRUPAL_PREVIEW_SECRET "your-preview-secret" --type=env --scope=web,ic --no-interaction
-```
-
-`DRUPAL_PREVIEW_SECRET` must match the **Preview secret** on the Drupal `next_site`. Push a commit afterward so a new build picks up the values.
+Push a commit afterward so a new build picks up the values.
 
 ## Test draft preview
 
@@ -250,11 +253,12 @@ terminus secret:site:set my-nextjs-site DRUPAL_PREVIEW_SECRET "your-preview-secr
 
 If preview fails, check the following:
 
-* **Redirected to the live URL instead of the draft.** Drupal falls back to the live URL for anonymous users and users with no roles. Confirm you are logged in with a role attached to the OAuth scope.
-* **401 or "The provided secret is invalid."** `DRUPAL_PREVIEW_SECRET` does not match the **Preview secret** on the `next_site`.
+* **Redirected to the live URL instead of the draft.** Drupal falls back to the live URL for anonymous users and for users with no role beyond **Authenticated user**. Confirm the editor has a role such as **Content editor**.
+* **422 "The provided secret is invalid."** The preview link was altered, or Drupal's hash salt or private key changed after the link was made. Click **Preview** in Drupal again for a fresh link.
+* **Every draft read fails with 401, and token requests return "Check the `scope` parameter".** The consumer has no scope. Attach the `nextjs_preview` scope to it.
 * **"The provided secret has expired."** Preview links are short-lived by design. Raise **Secret expiration** at `/admin/config/services/next/settings` if your editors need longer, but keep it short.
 * **Draft renders the published version.** `resourceVersion` is not reaching the JSON:API request, or `withAuth` is not set for the draft request.
-* **403 from JSON:API.** The consumer's user is missing the `Next.js Site` role, or the role lacks *Bypass content access control* and *View all revisions*.
+* **403 from JSON:API.** The consumer's user is missing the `Next.js preview` role, or the role lacks *Bypass content access control*.
 
 Check the runtime logs for detail:
 
