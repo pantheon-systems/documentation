@@ -37,7 +37,7 @@ Click the links below to display complete PHP information for each version, incl
 
 - **End of Sale** — No new sites can be created with this PHP version. Existing sites already running the version will continue to operate.
 - **Removal Date** — This PHP version will no longer be available on the platform. Sites still running a removed version will be automatically upgraded to the oldest available PHP version, which may result in broken functionality if the site's code has not been updated for compatibility.
-- **TBD** — Pantheon guarantees at least **9 months of advance notice** before any PHP version is removed from the platform.
+- **TBD** — Pantheon guarantees at least **90 days of advance notice** before any PHP version is removed from the platform.
 
 While sites previously configured with unlisted versions of PHP may continue running those versions, a site with a listed PHP version cannot be configured to an older, unlisted PHP version.
 

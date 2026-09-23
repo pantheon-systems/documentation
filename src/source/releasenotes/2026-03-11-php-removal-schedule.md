@@ -22,7 +22,7 @@ Sites still running a removed PHP version will be automatically upgraded to the 
 
 **What to expect going forward**
 
-Pantheon will guarantee at least **9 months of advance notice** before removing any PHP version from the platform. Refer to the [PHP version lifecycle table](/guides/php#supported-php-versions) for the latest schedule.
+Pantheon will guarantee at least **90 days of advance notice** before removing any PHP version from the platform. Refer to the [PHP version lifecycle table](/guides/php#supported-php-versions) for the latest schedule.
 
 **Action required**
 
