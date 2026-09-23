@@ -35,7 +35,7 @@ Enterprise customers are those who purchase Pantheon services through a traditio
 
 When you sign a contract, we create a Professional Workspace for you, attached to your billing ID.  This Workspace will contain all your sites (in this example, we've named it "All Sites"). When you log in, you will see the following Workspaces, Sites, and Teams:
 
-|   | My Dashboard  | All Sites Workspace  |
+|   | Personal Workspace  | All Sites Workspace  |
 |---|---|---|
 | **Sites Tab** | Sites you have access to |  All sites your organization maintains |
 | **Teams Tab** | A message to create a Professional Workspace  | Team members that have access to all sites |
@@ -55,7 +55,7 @@ Now, whenever you create a site, you can [add the Drupal Devs or WordPress Devs 
 
 Self Serve customers are those who purchase Pantheon services online with a credit card—typically individuals or small businesses purchase Pantheon services this way.
 
-When you sign up, you will have a My Dashboard, and can create as many Professional Workspaces as you like.  All of these Professional Workspaces can contain sites and teams, and you can organize them any way you like.
+When you sign up, you will have a Personal Workspace, and can create as many Professional Workspaces as you like.  All of these Professional Workspaces can contain sites and teams, and you can organize them any way you like.
 
 The most important thing to remember is an Account Plan is assigned to a specific Workspace, and only sites that have added that Workspace as a supporting organization will have access to the features of your Account Plan. For example, if you have purchased a Gold Account Plan for a given Workspace, only sites that  have that Workspace as a supporting organization will have access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot).
 

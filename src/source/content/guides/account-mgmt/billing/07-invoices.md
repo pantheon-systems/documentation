@@ -23,7 +23,7 @@ Learn how to view and manage your invoices and subscriptions.
 
 To view your invoices:
 
-1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Invoices**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Invoices**.
 
 Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list. Only the most recent invoice is labeled as paid or unpaid.
 
@@ -68,7 +68,7 @@ You can also use the search bar to find a specific invoice. Enter keywords, meth
 
 ## Subscriptions
 
-The Subscriptions page catalogs your access to sites in My Dashboard and the payment methods used.
+The Subscriptions page catalogs your access to sites in your Personal Workspace and the payment methods used.
 
 Subscriptions can be sorted by the following information:
 
@@ -80,9 +80,9 @@ Subscriptions can be sorted by the following information:
 
 ### Account Subscription
 
-The account tier and cost is displayed on the Subscriptions page. You can also view updates to My Dashboard account tier. You cannot edit or manage account tiers within the workspace. 
+The account tier and cost is displayed on the Subscriptions page. You can also view updates to the Personal Workspace account tier. You cannot edit or manage account tiers within the workspace. 
 
 ### Site Subscriptions
 
-By default, sites are listed by name. You can sort according to your preference. For more information on a site in My Dashboard, you can click the site name in the Site Subscriptions table or click the **Sites** tab. Additionally, you can filter sites by site plan or payment method.
+By default, sites are listed by name. You can sort according to your preference. For more information on a site in your Personal Workspace, you can click the site name in the Site Subscriptions table or click the **Sites** tab. Additionally, you can filter sites by site plan or payment method.
 

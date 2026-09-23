@@ -34,7 +34,7 @@ nexturl: /certification/study-guide/extend
 
 * List and Describe the different site plans available on Pantheon, and the resources associated with each type of plan.
 * Describe the limitations of Pantheon's free tier Sandbox site plans.
-* List the features that are available only in Professional Workspaces, but not in My Dashboard.
+* List the features that are available only in Professional Workspaces, but not in Personal Workspaces.
 * List and Describe the permissions that are associated with the Workspace Administrator, Workspace Team Member, Workspace Developer and Workspace Contributor roles.
 * List and Describe the WebOps features that are unlocked in the Professional Dashboard by upgrading to a Gold Plan.
 
@@ -60,7 +60,7 @@ Workspaces, Teams, and Sites work together to help you organize and manage your 
 
 <Alert title="Learning objectives for this chapter:"  type="info" >
 
-* List and describe the features and functionality accessible through My Dashboard.
+* List and describe the features and functionality accessible through the Personal Workspace.
 * List and describe the features and functionality accessible through the Professional Workspace.
 * List and describe the WebOps features that are unlocked in the Professional Dashboard by upgrading to a Gold Plan.
 
@@ -68,11 +68,11 @@ Workspaces, Teams, and Sites work together to help you organize and manage your 
 
 Workspaces bring together sites, teams and features, simplifying the management of large numbers of sites. There are two types of Workspaces on Pantheon: Personal and Professional.
 
-**My Dashboard** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one My Dashboard.
+The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one Personal Workspace.
 
-* Every Pantheon user is assigned one My Dashboard.
-* All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in My Dashboard.
-* Collaboration features such as Multidev and Custom Upstreams are not available in My Dashboard. To access these features, you need a Professional Workspace.
+* Every Pantheon user is assigned one Personal Workspace.
+* All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in your Personal Workspace.
+* Collaboration features such as Multidev and Custom Upstreams are not available in Personal Workspaces. To access these features, you need a Professional Workspace.
 
 **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
 
@@ -80,17 +80,17 @@ Workspaces bring together sites, teams and features, simplifying the management 
 * When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform. 
 * To take advantage of features such as Multidev, Custom Upstreams, and Autopilot, you'll want to upgrade the Workspace to a Gold plan.
 
-### My Dashboard
+### Personal Workspace
 
-We will start by exploring **My Dashboard**, which is what you see after you log in.
+We will start by exploring the **Personal Workspace**, which is what you see after you log in.
 
-My Dashboard displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one My Dashboard.
+The Personal Workspace displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one Personal Workspace.
 
-The Home Page of My Dashboard contains the following information: Workspace type, Sites, Account tier, and Sandbox sites used (fig. 5.1)
+The Home Page of your Personal Workspace contains the following information: Workspace type, Sites, Account tier, and Sandbox sites used (fig. 5.1)
 
 ![Workspace overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
 
-#### Tabs in My Dashboard
+#### Tabs in your Personal Workspace
 
 
 

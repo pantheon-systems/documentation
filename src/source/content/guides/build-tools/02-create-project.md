@@ -35,7 +35,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 * [Terminus](/terminus/)
 * [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 * [PHP version](https://docs.pantheon.io/guides/php/php-versions#verify-current-php-versions) 7.2 or greater
-* [An SSH key](/ssh-keys) in My Dashboard.
+* [An SSH key](/ssh-keys) in your Personal Workspace.
 * [A Pantheon Personal Access Token](/personal-access-tokens), to authenticate Terminus.
 
 ### Access Tokens (Optional)

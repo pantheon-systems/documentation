@@ -96,7 +96,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. Navigate to My Dashboard.
+1. Navigate to your personal workspace.
 
 2. Select **Settings > Billing**
 
@@ -139,7 +139,7 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
-1. Navigate to My Dashboard.
+1. Navigate to your personal workspace.
 
 2. Select **Settings > Billing**
 
@@ -151,7 +151,7 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 Agencies should follow the steps below to maintain Preferred Pricing through a plan change. This will only work for paid plans, not a sandbox site. If you want to invite a sandbox to become a paid site with preferred pricing, please follow the [Transfer Ownership](/guides/account-mgmt/billing/transfer) instructions
 
-1. Navigate to My Dashboard.
+1. Navigate to your personal workspace.
 
 2. Select **Settings > Billing**
 
@@ -200,7 +200,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Enter the site title (provided just above the text field) to confirm you're aware of which site you're deleting.
 
-1. Click **Delete This Site**. After a few moments, the site will be deleted, and you will be returned to My Dashboard home.
+1. Click **Delete This Site**. After a few moments, the site will be deleted, and you will be returned to your Personal Workspace home.
 
 ### Delete a Site from a Workspace
 

@@ -249,7 +249,7 @@ Your computer is now set up to securely connect to the Pantheon Git server.
 
 To [add your SSH Key](/ssh-keys#add-ssh-key---new-dashboard) to Pantheon, follow these steps:
 
-1. **Log in to your Pantheon Dashboard.** In My Dashboard, you should see an avatar icon in the upper right-hand corner of your screen:
+1. **Log in to your Pantheon Dashboard.** In your Personal Workspace, you should see an avatar icon in the upper right-hand corner of your screen:
 
     <figure>
 
