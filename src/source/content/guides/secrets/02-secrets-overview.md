@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/overview
-reviewed: "2026-06-15"
+reviewed: "2026-07-07"
 showtoc: true
 ---
 
@@ -43,7 +43,7 @@ Current types are:
 
 <p>A <dfn id="secret-scope">secret's scope</dfn> is the answer to the question "Where is the secret's value available?". Once set, a secret's scope cannot be changed. The secret must be deleted and recreated to change its scope.</p>
 
-  * `ic`: This secret will be readable during Integrated Composer builds. You should use this scope to get access to your private repositories.
+  * `ic`: This secret will be readable during Integrated Composer builds. You should use this scope to get access to your private repositories. Additionally, you must use this scope to read secrets from [scheduled cron jobs](/customer-scheduled-cron-jobs).
 
   * `web`: this secret will be readable by the application runtime.
 

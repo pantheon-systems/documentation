@@ -1,7 +1,7 @@
 ---
 title: "Comparison to CMS Hosting and other Considerations"
 description: Learn about the differences between how Pantheon supports Next.js compared to how it runs WordPress and Drupal.
-reviewed: "2026-03-28"
+reviewed: "2026-08-26"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -100,7 +100,7 @@ See the following page for Next.js compatibility and requirements on Pantheon:
 
 The GitHub App **cannot** be used with GitHub Enterprise Server. If your team uses GitHub Enterprise Server, please let us know [through our Roadmap site](https://roadmap.pantheon.io/).
 
-Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. See the [external repository setup guide](/guides/external-repositories/setup) for details.
+Self-hosted GitLab instances are supported via the `--vcs-host` flag in Terminus. For details, see [Connect GitLab](/guides/external-repositories/gitlab).
 
 ### **Bun, Deno, and other runtimes beyond Node.js**
 

@@ -11,7 +11,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [plugins, themes, code]
-reviewed: "2025-07-22"
+reviewed: "2025-07-28"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -614,7 +614,7 @@ ___
 
 <ReviewDate date="2023-09-28" />
 
-**Issue:** Pantheon's database replication architecture is incompatible with HypeDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+**Issue:** Pantheon's database replication architecture is incompatible with HyperDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
 
 
 **Solution:** HyperDB is not supported or recommended on Pantheon and there is no known workaround at this time.
@@ -721,7 +721,7 @@ ___
 
 ### [ManageWP worker](https://wordpress.org/plugins/worker/)
 
-<ReviewDate date="2018-10-12" />
+<ReviewDate date="2026-07-27" />
 
 **Issue 1:** The [ManageWP Worker](https://wordpress.org/plugins/worker/) plugin displays an error when adding a site in the ManageWP dashboard:
 
@@ -729,7 +729,7 @@ ___
 
 This error sometimes leads users to believe that ManageWP's IP addresses need to be allowlisted on the platform.
 
-**Solution:** Pantheon does not block any IPs, and there is nothing that would require an allowlist. Most likely there is a security plugin that temporary blocks the connection, or a conflicting plugin like those listed [here](https://managewp.com/user-guide/known-issues). Temporary disable all other plugins, or the security plugins, then try adding your site again. For full troubleshooting, consult the [ManageWP troubleshooting page](https://managewp.com/troubleshooting/site-connection/why-cant-i-add-some-of-my-sites).
+**Solution:** Pantheon does not block any IPs, and there is nothing that would require an allowlist. Most likely there is a security plugin that temporary blocks the connection, or a conflicting plugin. Temporary disable all other plugins, or the security plugins, then try adding your site again. For full troubleshooting, consult [ManageWP](https://managewp.com/troubleshooting/).
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
@@ -878,7 +878,7 @@ ___
 
 **Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/guides/redirect) for more information.
 
-**Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
+**Issue 2:** [Redirection](https://redirection.me) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
 
 **Solution:** In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
@@ -1121,7 +1121,7 @@ ___
 
 ### Weather Station
 
-**Issue:** The [Weather Station](https://wordpress.org/plugins/live-weather-station/) plugin uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+**Issue:** The [Weather Station](https://wordpress.org/plugins/live-weather-station/) plugin uses [`php-intl`]( https://www.php.net/manual/en/book.intl.php), which is not currently supported by Pantheon.
 
 ___
 
@@ -1422,7 +1422,7 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
 
 #### How do I confirm I am using data storage with Wordfence?
 
-You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
+You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewall** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
 
 ___
 
@@ -1526,7 +1526,7 @@ define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/up
 define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants.
+**Solution 2b:** If you are running a version between 3.2 and 3.4, you can only set the cache path through constants.
 
 1. [Create symlinks](#assumed-write-access) for the other paths.
 

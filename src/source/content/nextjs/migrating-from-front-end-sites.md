@@ -1,7 +1,7 @@
 ---
 title: How to migrate from Front-End Sites
 description: Move your existing Next.js site from Pantheon's Front-End Sites to updated Next.js infrastructure.
-reviewed: "2025-12-10"
+reviewed: "2026-07-28"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -21,7 +21,7 @@ This guide walks through moving a Next.js site away from Pantheon's earlier [Fro
 
 ## Differences between Front-End Sites and new Next.js sites
 
-In the years since Front-End Sites was architected, frameworks like Next.js has moved in the direction of "dynamic by default" as seen with the addition of [Cache Components](https://nextjs.org/docs/app/getting-started/cache-components) in [Next.js 16](https://nextjs.org/blog/next-16#cache-components). The infrastucture well suited to this direction (horizontally scalable containers with shared caches) is different from the static-first architecture made for leading JAMStack leaders like Gatsby.
+In the years since Front-End Sites was architected, frameworks like Next.js has moved in the direction of "dynamic by default" as seen with the addition of [Cache Components](https://nextjs.org/docs/app/getting-started/cache-components) in [Next.js 16](https://nextjs.org/blog/next-16#cache-components). The infrastructure well suited to this direction (horizontally scalable containers with shared caches) is different from the static-first architecture made for leading JAMStack leaders like Gatsby.
 
 Pantheon pioneered containerized PHP and runs Next.js in a similar architecture. Read more about [ our Next.js architecture here](/nextjs/architecture).
 

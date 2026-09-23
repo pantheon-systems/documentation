@@ -1,7 +1,7 @@
 ---
 title: Command Line Tools to use with Next.js on Pantheon
 description: Terminus commands and other CLI tools to manage Next.js sites on Pantheon
-reviewed: "2026-06-22"
+reviewed: "2026-07-14"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -27,7 +27,7 @@ terminus site:create <pantheon-site-name> <site-label> <upstream-name|ID> --org=
 
 Required arguments and flags:
 
-- `<upstream-name|ID>` — Any upstream your Pantheon user has access to, e.g. `nextjs16` or an upstream UUID. If omitted, Terminus will display available upstreams.
+- `<upstream-name|ID>` — Any upstream your Pantheon user has access to, e.g. `nextjs-16`, `nextjs15` or an upstream UUID. If omitted, Terminus will display available upstreams.
 - `--org` — The Pantheon organization is required for site creation via Terminus.
 - `--vcs-provider=github` — Required for sites using the GitHub application.
 - `--vcs-org` — The GitHub organization or username. If omitted, you will be prompted.

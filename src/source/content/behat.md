@@ -10,9 +10,10 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [behat]
+reviewed: "2026-07-28"
 ---
 
-[Behat](https://behat.org) is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers) we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](http://mink.behat.org/en/latest/), and how to write simple tests.
+[Behat](https://docs.behat.org/en/latest/) is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers) we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](https://mink.behat.org/en/latest/), and how to write simple tests.
 
 ## Before You Begin
 
@@ -125,4 +126,4 @@ If you find you are repeating the same things over and over, such as logging int
 ## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)
-- [Behat.org](http://behat.org)
+- [Behat.org](https://docs.behat.org/en/latest)

@@ -1,7 +1,7 @@
 ---
 title: WordPress on-demand cache revalidation for Next.js
 description: Update Next.js content in real time when WordPress posts change using webhook-driven cache revalidation
-reviewed: "2026-04-13"
+reviewed: "2026-07-27"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -625,4 +625,4 @@ To continue building your Next.js site on Pantheon:
 
 * [Set environment variables](/nextjs/environment-variables)
 * [Deploy to Test and Live environments](/nextjs/test-and-live-env)
-* [Connect a custom domain](/nextjs/connecting-custom-domain)
+* [Connect a custom domain](/nextjs/test-and-live-env#connecting-a-custom-domain-name)

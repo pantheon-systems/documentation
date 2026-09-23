@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2026-06-24"
+reviewed: "2026-08-26"
 permalink: docs/guides/external-repositories/usage
 ---
 
@@ -24,7 +24,7 @@ This page covers common usage scenarios for Pantheon's external repository integ
 
 The GitHub Application **cannot** be used with GitHub Enterprise Server.
 
-**GitLab:** The external repository integration requires a Pantheon workspace member with a GitLab legacy personal access token or group access token with `api` and `write_repository` scopes. Group access tokens also require a **Maintainer** role or higher in the group. Self-hosted GitLab instances are supported via the `--vcs-host` flag. See [Setup](/guides/external-repositories/setup) for details.
+**GitLab:** The external repository integration requires a Pantheon workspace member with a GitLab legacy personal access token or group access token with `api` and `write_repository` scopes. Group access tokens also require a **Maintainer** role or higher in the group. Self-hosted GitLab instances are supported via the `--vcs-host` flag. See [Connect GitLab](/guides/external-repositories/gitlab) for details.
 
 </Alert>
 

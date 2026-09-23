@@ -3,7 +3,7 @@ title: Network Solutions Domain Configuration
 provider: Network Solutions
 description: Learn how to point your Network Solutions domain to a Pantheon site.
 tags: [domains]
-reviewed: "2021-01-26"
+reviewed: "2026-07-28"
 permalink: docs/:basename
 editpath: dns-providers/network-solutions.md/
 contenttype: [doc]
@@ -81,8 +81,7 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 
 ## Network Solutions Docs
 
-- [Managing Advanced DNS Records](https://knowledge.web.com/subjects/article/KA-01111/)
-- [Adding an IPv6 AAAA record](https://knowledge.web.com/subjects/article/KA-01111/en-us#IPV6%20Address)
+- [Managing Advanced DNS Records](https://www.networksolutions.com/help/article/manage-dns-adns-records)
 
 ## Next Steps
 

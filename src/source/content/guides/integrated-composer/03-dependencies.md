@@ -3,7 +3,7 @@ title: Integrated Composer
 subtitle: Manage Dependencies
 description: Learn how to add or remove an individual site dependency.
 tags: [composer, workflow]
-contributors: [ari, edwardangert, jazzs3quence]
+contributors: [ari, edwardangert, jazzsequence]
 showtoc: true
 permalink: docs/guides/integrated-composer/dependencies
 contenttype: [guide]
@@ -13,10 +13,36 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
-reviewed: "2026-06-15"
+reviewed: "2026-09-17"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.
+
+## Composer `repositories` Section
+
+The [`repositories`](https://getcomposer.org/doc/05-repositories.md) section in `composer.json` specifies the locations where Composer should look for packages. This is useful when you need to include packages that are not available on Packagist, such as private repositories or custom package sources. For Composer-managed WordPress projects, this often includes custom plugin or theme repositories. 
+
+If you are initializing your `composer.json` from scratch on a WordPress site, be sure to include one of the [repositories](#using-composer-to-manage-plugins-and-themes) appropriate for your project. That section should look like this:
+
+```json
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://repo.wp-packages.org"
+    }
+]
+```
+
+If you are using Composer with Drupal, the `repositories` section should include the Drupal package repository. For example:
+
+```json
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }
+]
+```
 
 ## Composer `require` and `require dev` Sections
 
@@ -76,9 +102,11 @@ When running `composer install` on a local clone of your Pantheon site's reposit
 
 [Packagist](https://packagist.org) is a repository of Composer packages that are available by default to projects managed by Composer. Packagist libraries receive updates from their source GitHub repositories automatically.
 
-[WPackagist](https://wpackagist.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box.
+[WP Packages](https://wp-packages.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box.
 
-You can install packages from Packagist or WPackagist without any additional configuration using `composer require`.
+[WPackagist](https://wpackagist.org) is another longstanding Composer mirror for WordPress plugins and themes maintained by [WPEngine since April 2026](https://wpengine.com/blog/wp-engine-acquires-wpackagist/).
+
+You can install packages from Packagist, WPackagist or WP Packages without any additional configuration using `composer require`.
 
 ##### Require a Package from Packagist
 
@@ -91,21 +119,41 @@ composer require yoast/wordpress-seo
 
 Packages that are flagged as `wordpress-plugin`, `wordpress-theme` or `wordpress-muplugin` in their `composer.json` files will be installed automatically in the appropriate `web/app/` directory by Composer.
 
-##### Requiring a package from WPackagist
+##### Requiring a package from WP Packages or WPackagist
 
-For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
+For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wp-plugin`/`wp-theme` (for WP Packages) or `wpackagist-plugin`/`wpackagist-theme` (for WPackagist) as the vendor and the plugin or theme slug as the package name.
 
+<Alert title="Choosing a Composer repository or using multiple" type="info">
 
-```bash{promptUser: user}
-composer require wpackagist-theme/twentytwentytwo
-```
+It is possible to use multiple different Composer repositories, e.g. WPackagist and WP Packages side-by-side. Since they use different vendor names for plugins and themes (`wpackagist-*` and `wp-*` respectively), there is no conflict in using both simultaneously. However, there's no specific benefit in using both. It's recommended to choose one provider in your `composer.json` file and using that provider's vendor prefix for WordPress plugins or themes.
 
-```bash{promptUser: user}
-composer require wpackagist-plugin/advanced-custom-fields
-```
+</Alert>
+
+<TabList>
+  <Tab title="Using wp-packages repository" active={true}>
+
+   ```bash{promptUser: user}
+   composer require wp-theme/twentytwentytwo
+   ```
+
+   ```bash{promptUser: user}
+   composer require wp-plugin/advanced-custom-fields
+   ```
+  </Tab>
+  <Tab title="Using wpackagist repository">
+
+   ```bash{promptUser: user}
+   composer require wpackagist-theme/twentytwentytwo
+   ```
+
+   ```bash{promptUser: user}
+   composer require wpackagist-plugin/advanced-custom-fields
+   ```
+  </Tab>
+</TabList>
 
 ##### Check first
-It's generally a good idea when using either Packagist or WPackagist to check the repository before `require`ing the package. If you search Packagist for a WordPress plugin or theme and don't see it, you can be sure that if it exists in the WordPress plugin or theme repository, it will be available on WPackagist. Checking WPackagist for the package can be beneficial if you want to check what versions are available.
+It's generally a good idea when using either Packagist, WP Packages or WPackagist to check the repository before `require`ing the package. If you search Packagist for a WordPress plugin or theme and don't see it, you can be sure that if it exists in the WordPress plugin or theme repository, it will be available on WP Packages or WPackagist. Checking the WordPress package repositories for the package can be beneficial if you want to check what versions are available.
 
 </Tab>
 
@@ -287,7 +335,7 @@ Run the command below to apply available updates to your site development enviro
 terminus upstream:updates:apply --updatedb --accept-upstream -- <site>.<env>
 ```
 
-### Update a specfic package
+### Update a specific package
 
 To update a specific package, run:
 

@@ -48,3 +48,5 @@ Confirm that the database upgrade completed successfully using the steps at the 
 - [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 
 - [Upgrading your MariaDB version](/guides/drupal-hosted-createbt/upgrade)
+
+- [Migrating to MySQL 8.4](/guides/mariadb-mysql/mysql-84)

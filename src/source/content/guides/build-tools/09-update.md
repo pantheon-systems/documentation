@@ -15,6 +15,8 @@ integration: [--]
 image: buildToolsGuide-thumb.png
 ---
 
+<Partial file="build-tools-cta.md" />
+
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
 <Accordion title="Composer" id="understand-composer" icon="lightbulb">
@@ -40,7 +42,7 @@ Composer encourages a mental model where code not written specifically for a giv
 
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed with Composer:
 
-- WordPress: <https://wpackagist.org>
+- WordPress: <https://wp-packages.org> or <https://wpackagist.org>
 - Drupal: <https://packages.drupal.org/7>
 
 Sites created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file.

@@ -14,6 +14,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to create Terminus plugins.
@@ -133,7 +134,7 @@ Pantheon recommends adopting Terminus core standards if you plan to distribute y
 - Ensure compatibility with PHP >=7.4 and 8
 - Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/)
 - Review more Terminus standards at:
-[https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
+[https://github.com/pantheon-systems/terminus/blob/4.x/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/4.x/CONTRIBUTING.md)
 
 ## Plugin Versioning
 
@@ -250,7 +251,7 @@ You can create more files with `.bats` extensions to add more tests. You must po
 
 ### Automate Tests
 
-You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You must keep a Sandbox site online to run the tests against.
+You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/guides/getting-started/getting-started/). You must keep a Sandbox site online to run the tests against.
 
 1. Copy the contents below into a file named `circle.yml` in your plugin project:
 
@@ -288,11 +289,11 @@ You can [configure your project tests to run automatically on Circle CI](https:/
    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
    - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens) that has access to the test site.
 
-3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/). Leave the `Hostname` field empty.
+3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/guides/integration/add-ssh-key/). Leave the `Hostname` field empty.
 
   Your tests should run successfully on Circle CI.
 
-1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's `README.md` file to show your passing build status.
+1. Add an [embeddable status badge](https://circleci.com/docs/guides/integration/status-badges/#overview) to the top of your plugin's `README.md` file to show your passing build status.
 
 A more complete version of the plugin created above can be found at:
 [https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example)

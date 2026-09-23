@@ -13,6 +13,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [git]
+reviewed: "2026-07-28"
 ---
 
 This section provides solutions to common Git troubleshooting scenarios.
@@ -98,7 +99,7 @@ If your continuous integration pipeline is suddenly failing across a large portf
 
 We recommend the following resources for further learning:
 
-- [Git Documentation](https://git-scm.com/documentation)
+- [Git Documentation](https://git-scm.com/docs)
 - [Pro Git Book](https://git-scm.com/book/en/v2)
 - [First Aid Git](https://github.com/magalhini/firstaidgit)
 - [Git Reference](http://gitref.org/)

@@ -10,26 +10,30 @@ reviewed: ""
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Create New Site** button:
 
-   ![Create new site button](../../images/dashboard/new-dashboard/2024/create-new-site-button.png)
+   ![Create new site button](../../images/dashboard/create-new-site-button.png)
 
 1. Select **WordPress** or **Drupal**.
 
-   ![Select CMS](../../images/dashboard/new-dashboard/2024/create-new-site-cms.png)
+   ![Select CMS](../../images/dashboard/create-new-site-cms.png)
 
    If you select Drupal, you will have the option to select the Drupal version you want to use.
 
-   ![Select Drupal version](../../images/dashboard/new-dashboard/2024/create-new-site-cms-drupal-11crop.png)
+   ![Select Drupal version](../../images/dashboard/create-new-site-cms-drupal-11crop.png)
 
-1. Enter the following information and click **Continue**:
+1. Select where you want to host the codebase for this site. For [external repositories](/guides/external-repositories), use GitHub or GitLab. Otherwise, select Pantheon. 
+
+	![select external repository](../../images/github-app/select-external-repository.png)
+
+1. Enter the following information and click **Create site**:
    - Sitename
    - Select a region for this site.
    - If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
 
-   ![Enter site information](../../images/create-new-site-form.png)
+   ![Enter site information](../../images/dashboard/create-new-site-form.png)
 
 1. The deployment process begins. It can take several minutes to create a new site on Pantheon.
 
-   ![Deploying a new site](../../images/creating-new-wp-site.png)
+   ![Deploying a new site](../../images/dashboard/creating-new-wp-site.png)
 
    <Alert title="Note" type="info" >
 
@@ -39,6 +43,6 @@ reviewed: ""
 
 1. Click **Go to site dashboard** when the process is complete.
 
-   ![Site creation completed](../../images/new-site-setup-deploy-complete.png)
+   ![Site creation completed](../../images/dashboard/new-site-setup-deploy-complete.png)
 
 You've now created the core portion of your Dev environment; now you have to install the CMS.
