@@ -15,7 +15,7 @@
 }
 
 .ccLicenseLogoText {
-  line-height: var(--pds-typography-line-height-m);
+  line-height: var(--pds-typography-lh-m);
   padding-block-start: 0.5rem;
 }
 

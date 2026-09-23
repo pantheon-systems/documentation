@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
 integration: [--]
+reviewed: "2026-07-31"
 ---
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.
@@ -74,7 +75,7 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/git/collaborative-development).
 
-[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/guides/custom-upstream).
+[Agency Partners](https://pantheon.io/partners?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/guides/custom-upstream).
 
 ### Does Pantheon support Drupal Multisite?
 
@@ -115,7 +116,7 @@ Pantheon is home to many polylingual and non-English sites, and hosting a multi-
 
 For detailed information on how to configure a multilingual Drupal site, refer to the [Multilingual Guide on Drupal.org](https://drupal.org/documentation/multilingual).
 
-Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](https://webmasters.googleblog.com/2010/03/working-with-multi-regional-websites.html) from The Google Webmaster Central Blog has some fantastic recommendations.
+Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](https://developers.google.com/search/blog/2010/03/working-with-multi-regional-websites) from The Google Webmaster Central Blog has some fantastic recommendations.
 
 It’s possible to specify a site language given a particular domain or path. In order of preference:
 

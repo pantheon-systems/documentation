@@ -113,7 +113,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
           {topic.video_id && (
             <div className="landing-page__video-background">
               <Container
-                width={"containerWidth"}
+                width={containerWidth}
                 className="video-container pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
               >
                 <Youtube src={topic.video_id} title={topic.title} />
@@ -156,7 +156,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                           url={link.url}
                           image={link.image || ""}
                         />
-                      )
+                      ),
                     )}
                 </div>
               </Container>
@@ -211,8 +211,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                         <Link
                           style={{
                             color: "var(--pds-color-interactive-link-default)",
-                            fontWeight:
-                              "var(--pds-typography-font-weight-regular)",
+                            fontWeight: "var(--pds-typography-fw-regular)",
                           }}
                           href={link.url ?? "#"}
                         >

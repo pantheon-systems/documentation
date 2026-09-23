@@ -21,7 +21,7 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 
 
 ## Add User Contact Info and Notification Rules
-1. [Sign up for a PagerDuty account](https://signup.pagerduty.com/accounts/new) if you do not have one already. This is a paid service, but you can get started for free on a 14-day trial.
+1. [Sign up for a PagerDuty account](https://www.pagerduty.com/sign-up/) if you do not have one already. This is a paid service, but you can get started for free on a 14-day trial.
 
 2. Login to your PagerDuty account and go to **Configuration** > **Users**.
 3. Setup your user profile and contact information. Add your name, a job title, your time zone, phone number, SMS number and an email address:

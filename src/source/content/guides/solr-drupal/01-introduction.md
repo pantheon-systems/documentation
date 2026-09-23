@@ -29,7 +29,7 @@ Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr serv
 
 This module automatically sets the Solr connection options by extending the plugin from Search API Solr. The module also changes the connection information between Pantheon environments, eliminating the need to do extra work setting up Solr servers for each environment.
 
-This module is available for Drupal 8 and higher sites on Pantheon. To learn more about Pantheon Search support for Drupal 7 sites, refer to the [Pantheon Search for Drupal 7](/guides/solr-drupal/solr-drupal-7) guide.
+This module is available for Drupal 10 and higher sites on Pantheon. To learn more about Pantheon Search support for Drupal 7 sites, refer to the [Pantheon Search for Drupal 7](/guides/solr-drupal/solr-drupal-7) guide.
 
 ## Using Pantheon Search on Sites With Multizone Failover
 

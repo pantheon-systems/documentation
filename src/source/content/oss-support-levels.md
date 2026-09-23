@@ -3,7 +3,7 @@ title: Pantheon Open Source Software Support Levels
 description: Learn about Pantheon support levels for open source software
 tags: [collaborate]
 contributors: [greg-1-anderson, kporras07]
-reviewed: "2022-03-02"
+reviewed: "2026-07-28"
 contenttype: [doc]
 innav: [true]
 categories: [help]
@@ -23,7 +23,7 @@ A project with actively maintained support has been publicly launched and [suppo
 
 ## Limited Availability
 
-A Limited Availability project allows Pantheon to closely monitor feature developments and make any necessary adjustments before releasing a product for General Availability. A project in Limited Availabilty includes features that are complete and can be used in all environments including production. Customers can opt-in to use the product, and are highly encouraged to report any bugs so that we can release an improved product for General Availability. Pantheon [support](/guides/support/contact-support/) is available, but can vary depending on the project specifications. 
+A Limited Availability project allows Pantheon to closely monitor feature developments and make any necessary adjustments before releasing a product for General Availability. A project in Limited Availability includes features that are complete and can be used in all environments including production. Customers can opt-in to use the product, and are highly encouraged to report any bugs so that we can release an improved product for General Availability. Pantheon [support](/guides/support/contact-support/) is available, but can vary depending on the project specifications. 
 
 ## Early Access
 
@@ -43,7 +43,7 @@ An unsupported repository is typically a project created only for internal use a
 
 ## Deprecated 
 
-A deprecated repository is a project that has been retired or replaced, and is no longer supported by Pantheon. Details about the repository can be found in the `README.md`. Additional information, such as suitable alternative projects or guidance on finding solutions, might be available in the [Community Slack](https://slackin.pantheon.io/). Using a project that has been deprecated is not encouraged.
+A deprecated repository is a project that has been retired or replaced, and is no longer supported by Pantheon. Details about the repository can be found in the `README.md`. Additional information, such as suitable alternative projects or guidance on finding solutions, might be available in the [Community Slack](https://pantheon.io/customer-community). Using a project that has been deprecated is not encouraged.
 
 ## More Resources
 - [Get Support](/guides/support/)

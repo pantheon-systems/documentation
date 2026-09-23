@@ -2,7 +2,7 @@
 title: Pantheon Secrets Guide
 subtitle: Drupal Key Usage
 description: How to configure Sendgrid using Pantheon Secrets with Drupal's Key module.
-contributors: [stovak]
+contributors: [stovak, jazzs3quence]
 contenttype: [guide]
 innav: [true]
 categories: [secrets]
@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/drupal
-reviewed: "2024-08-22"
+reviewed: "2026-06-15"
 showtoc: true
 ---
 
@@ -24,11 +24,15 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 
 ### Prerequisites
 
-- Make sure you have access to a Drupal 9.4 or greater site running PHP 8.0 or above hosted on Pantheon.
+- Make sure you have access to a Drupal 9.4 or 10 site running PHP 8.0 or above hosted on Pantheon.
 
-- Make sure you have [Terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) on your local machine.
+  <Alert title="Note" type="info">
 
-- Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation).
+  The [SendGrid Mailer](https://www.drupal.org/project/sendgrid_mailer) module used in this example does not support Drupal 11. If you are running Drupal 11, you will need to use a different mail module.
+
+  </Alert>
+
+- Make sure you have [Terminus](/terminus/install#install-terminus) 4.2.0 or later installed on your local machine.
 
 ### Steps
 
@@ -53,6 +57,10 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
     ```bash{promptUser: user}
     terminus secret:site:set <site> sendgrid_api <api_key> --scope=web --type=runtime
     ```
+
+    Alternatively, you can set this secret via the Site Dashboard. See [Create a new secret](/guides/secrets/create) for dashboard instructions.
+
+    ![Create new secret in the dashboard with options for type and scope](../../../images/dashboard/secrets/secrets-creation-markedup.png)
 
     As a best practice, the non-production environments should be the default and then override that value with a [secret environment override](/guides/secrets/overview#environment-override) to change the API key for the live environment (for example, if you want to use different SendGrid accounts for live and dev environments).
 

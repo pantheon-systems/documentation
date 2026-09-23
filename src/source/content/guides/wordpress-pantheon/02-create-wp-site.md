@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2022-05-02"
+reviewed: "2026-09-16"
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/create-wp-site
 ---
@@ -22,7 +22,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Login to your Pantheon account.
 
-   Your Personal Workspace opens by default unless you are registered as an agency and this is your first time logging in. In that case, you’ll land on your Workspace. Go to your Personal Workspace by selecting your name in the menu bar, then Personal Workspace.
+   My Dashboard opens by default unless you are registered as an agency and this is your first time logging in. In that case, you’ll land on your Workspace. Go to My Dashboard by selecting your name in the menu bar, then My Dashboard.
 
 1. Select <Icon icon="plus" text="Create New Site"/>.
 
@@ -48,7 +48,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
    ![Alt text describing the image](../../../images/create-test-environment-updated.png)
 
-1. Click <Icon icon="externalLink" text="Visit Test Site"/> to open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
+1. Click <Icon icon="externalLink" text="Test site"/> to open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
 1. Click the <Icon icon="wavePulse" text="Live"/> tab in your Site Dashboard > click **Create Live Environment** to create your live environment.
 

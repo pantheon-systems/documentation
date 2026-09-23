@@ -342,11 +342,53 @@ Updates are available within 72 hours of upstream availability whenever a new Wo
 
 ## Suppress WordPress Admin Notice
 
-WordPress admin checks for new upstream updates by default, instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin; you will still see upstream updates in the Pantheon dashboard.
+On Pantheon, WordPress core updates are applied through the Pantheon Dashboard, so the Pantheon mu-plugin replaces the default WordPress update nag with its own upstream update notice. You can dismiss, hide, or disable that notice in several ways.
+
+### Dismiss the notice
+
+Any user who sees the notice can dismiss it with the **X** in the top corner. The dismissal is saved per user, so it persists across page loads and logins. The notice reappears only when a newer WordPress version becomes available.
+
+The options below hide the notice more permanently, or for everyone.
+
+### Hide the notice with CSS
+
+The notice renders with `id="pantheon-update-notice"` and a `.pantheon-update-notice` class. Target either from a custom plugin or theme:
+
+```css
+#pantheon-update-notice { display: none; }
+```
+
+### Hide the notice with a filter
+
+Return `false` from the `pantheon_show_update_notice` filter:
+
+```php
+add_filter( 'pantheon_show_update_notice', '__return_false' );
+```
+
+### Hide the notice with a constant
+
+Define `PANTHEON_SHOW_UPDATE_NOTICE` as `false` in your `wp-config.php` file:
+
+```php:title=wp-config.php
+define( 'PANTHEON_SHOW_UPDATE_NOTICE', false );
+```
+
+### Disable Pantheon's update-notice handling
+
+Define `DISABLE_PANTHEON_UPDATE_NOTICES` as `true` in your `wp-config.php` file:
 
 ```php:title=wp-config.php
 define( 'DISABLE_PANTHEON_UPDATE_NOTICES', true );
 ```
+
+<Alert title="Note" type="info">
+
+The CSS, filter, and `PANTHEON_SHOW_UPDATE_NOTICE` options only hide Pantheon's notice while Pantheon continues to manage updates. Updates still appear in the Pantheon Dashboard.
+
+`DISABLE_PANTHEON_UPDATE_NOTICES` is different: it stops Pantheon's update-notice handling from loading at all. Pantheon no longer replaces the WordPress core update notification, so WordPress's own default update nag can appear instead. Use it only if you want Pantheon to step out of update-notice handling, not just hide the notice.
+
+</Alert>
 
 ## Troubleshooting
 
