@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [workflow, security, composer]
-reviewed: "2024-08-12"
+reviewed: "2026-07-28"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-best-practices
 ---
@@ -19,7 +19,7 @@ This section provides suggestions for best practices to develop and manage WordP
 
 ## Development
 
-- Use an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Brackets](https://github.com/adobe/brackets/), [CodeLobster](https://codelobster.com/), or [Visual Studio Code](/guides/local-development/visual-studio-code).
+- Use an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Brackets](https://github.com/adobe/brackets/), or [Visual Studio Code](/guides/local-development/visual-studio-code).
 
 - Do not modify core WordPress files. Core file modification frequently causes unintended issues, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).  Create a custom or [Must Use](/guides/wordpress-configurations/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/) if you need to modify any WP functionality.
 
@@ -33,7 +33,7 @@ This section provides suggestions for best practices to develop and manage WordP
 
 ## Plugins
 
-- Add [Composer](/guides/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a `composer.json` file to your files. This makes future debugging simpler if you need to switch between multiple plugin or WordPress versions to see what caused something to break. Running `composer install` on the environments is not supported (just as Git submodules are not supported). You must commit the dependencies that Composer downloads on Pantheon to workaround this even though [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
+- Add [Composer](/guides/composer) and pull your WordPress plugins from [WP Packages](https://wp-packages.org/). WP Packages mirrors the WordPress.org plugin repository and adds a `composer.json` file to your files. This makes future debugging simpler if you need to switch between multiple plugin or WordPress versions to see what caused something to break. Running `composer install` on the environments is not supported (just as Git submodules are not supported). You must commit the dependencies that Composer downloads on Pantheon to workaround this even though [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
 
 - If you have a custom plugin that retrieves a specific post (or posts), use the `get_post()` function instead of using `wp_query()`. `wp_query` can be useful in some situations, however, the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object.
 
@@ -95,7 +95,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 ### Option 2: Block only the `/users` WordPress REST endpoint
 
-If blocking the entire REST API is not feasible for your site, you can choose a more selective approach. The WordPress REST API exposes the complete users list at the `/wp-json/wp/v2/users` endpoint. This is by design -- the `/users` endpoint contains data that is public elsewhere on your site and availalbe in other public places in WordPress, notably the HTML output and RSS feeds including name, avatar, etc. These endpoints are public so that the data to view and render content from elsewhere in the REST API is available. For example, since a post links to the author user, making user information easily accessible makes it simpler to access from API tools and integrations.
+If blocking the entire REST API is not feasible for your site, you can choose a more selective approach. The WordPress REST API exposes the complete users list at the `/wp-json/wp/v2/users` endpoint. This is by design -- the `/users` endpoint contains data that is public elsewhere on your site and available in other public places in WordPress, notably the HTML output and RSS feeds including name, avatar, etc. These endpoints are public so that the data to view and render content from elsewhere in the REST API is available. For example, since a post links to the author user, making user information easily accessible makes it simpler to access from API tools and integrations.
 
 However, in many cases, exposing the `/user` endpoint is seen as a vulnerability in penetration testing. Additionally, if your site uses email addresses as usernames, it could be exposing every email address of a user that has a published post on the site. You can disable access to `/wp-json/wp/v2/users` with the following filter:
 

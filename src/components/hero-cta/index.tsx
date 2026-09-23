@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@/components/ui/pds-re-export";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import heroImage from "@/source/images/homepage.png";
 
 import styles from "./styles.module.css";
 
@@ -25,9 +26,7 @@ export function HeroCTA(props: Props) {
         slot="first-item"
       >
         <Image
-          src="https://cdn.bfldr.com/MEM5087K/at/933t7sx45wwnmsrrjq94z4f/front-page-hero.png?auto=webp&format=png"
-          width={1080}
-          height={704}
+          src={heroImage}
           alt={"hero image"}
           className={styles.heroImage}
         />

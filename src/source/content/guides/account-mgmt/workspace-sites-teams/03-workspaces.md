@@ -7,7 +7,7 @@ contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
-reviewed: "2025-01-15"
+reviewed: "2026-09-16"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -21,12 +21,12 @@ Workspaces are a home base for your WebOps.
 
 ## Types of Workspaces
 
-- The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one Personal Workspace.
-  - Every Pantheon user is assigned one Personal Workspace.
-  - All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in your Personal Workspace.
-  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
+- **My Dashboard** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one My Dashboard.
+  - Every Pantheon user is assigned one My Dashboard.
+  - All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in My Dashboard.
+  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in My Dashboard. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
 - **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
-  - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
+  - You may be a member of more than one Professional Workspace, and can switch between "My Dashboard" and Professional Workspaces at any time.
   - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
 
   <Alert title="Important" type="danger" >
@@ -57,7 +57,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Settings:** Modify the workspace name, logo, billing information, and if your Workspace is configured for it, billing terms and instructions for your team.
 
-\* Not available in Personal Workspaces.
+\* Not available in My Dashboard.
 
 ## Manage Workspaces
 
@@ -67,9 +67,9 @@ You can switch between Workspaces to work on personal projects or to switch betw
 
 - Click the Workspace Switcher (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices) to switch between Workspaces.
 
-  Your Personal Workspace is at the top, followed by an Professional Workspaces in which you are a member.
+  My Dashboard is at the top, followed by an Professional Workspaces in which you are a member.
 
-  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/2024/workspaces-selector.png)
+  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/workspaces-selector.png)
 
 ### Create a Professional Workspace
 

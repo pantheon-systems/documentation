@@ -9,14 +9,14 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, libraries, modules, plugins]
-reviewed: "2026-01-21"
+reviewed: "2026-07-27"
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
 
 ## wkhtmltopdf (Deprecated)
 
-wkhtmltopdf has been abandoned by its maintainers and no longer receives updates. While it is still available on PHP Runtime Generation 1, the package is not available on [PHP Runtime Generation 2](/php-runtime-generation-2). We recommend all sites using wkhtmltopdf switch to [dompdf](https://github.com/dompdf/dompdf).
+wkhtmltopdf has been abandoned by its maintainers and no longer receives updates. As such, the package is not available on [PHP Runtime Generation 2](/php-runtime-generation-2). We recommend all sites using wkhtmltopdf switch to [dompdf](https://github.com/dompdf/dompdf).
 
 ### Switching from wkhtmltopdf to dompdf
 
@@ -29,8 +29,8 @@ dompdf is included with the [Entity Print](https://www.drupal.org/project/entity
 For Drupal 7 websites using <a href="https://www.drupal.org/project/print">the print module</a>, begin by downloading the dompdf library compatible with your PHP version.
 
 | PHP version | dompdf lib |
-|---------|---------|---------|
-| 5.6 - 7.0 | [Dompdf 0.8.3](https://github.com/dompdf/dompdf/releases/tag/v0.8.3) | 
+|---------|---------|
+| 5.6 - 7.0 | [Dompdf 0.8.3](https://github.com/dompdf/dompdf/releases/tag/v0.8.3) |
 | 7.1 to 8.4 | [Dompdf 3.1.x or the latest](https://github.com/dompdf/dompdf/releases) |
 
 Place the dompdf folder inside the following folder:
@@ -44,10 +44,6 @@ From `<your_url>/admin/config/user-interface/print/pdf`, choose dompdf as PDF Ge
 The [Apache Tika](https://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
-
-<TabList>
-
-<Tab title="PHP Runtime Generation 2" id="tab-1-anchor" active={true}>
 
 The Tika 3.x jar is available at:
 
@@ -69,23 +65,18 @@ Tika 3.x defaults to `AUTO` OCR mode, which can significantly increase PDF proce
 /opt/pantheon/tika/tika.jar --config=/opt/pantheon/tika/tika-config.xml
 ```
 
-</Tab>
-<Tab title="PHP Runtime Generation 1" id="tab-2-id">
+If your Drupal site uses the [Search API Attachments](https://www.drupal.org/project/search_api_attachments) module (version 10.0.8+) with the Tika extractor and you don't need OCR, disabling it can significantly improve performance. You can disable OCR through the module's admin UI at `/admin/config/search/search_api_attachments`. Set the **Path to Tika configuration file** field to:
 
-Tika 1.18 and 1.21 are available for PHP Runtime Generation 1. These versions are available at the following paths:
+```
+/opt/pantheon/tika/tika-config.xml
+```
 
-- `/srv/bin/tika-app-1.18.jar`
-- `/srv/bin/tika-app-1.21.jar`
+![Search API Attachments Tika configuration](../images/search-api-attachments-tika-config.png)
 
-Sites that are using these older versions of Tika should be upgraded to a newer version of Tika as soon as possible. See the PHP Runtime Generation 2 tab for more information.
-
-
-</Tab>
-</TabList>
 
 ## ImageMagick
 
-[ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php), [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
+[ImageMagick](https://imagemagick.org/) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php), [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
 
 To check the available version of ImageMagick on Pantheon, refer to the [PHP 8.3 Info page here](https://v83-php-info.pantheonsite.io/#module_imagick).
 

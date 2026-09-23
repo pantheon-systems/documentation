@@ -14,7 +14,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/support-ticket/
 editpath: support/03-support-ticket.md
-reviewed: "2022-10-10"
+reviewed: "2026-08-24"
 ---
 
 In this section, we go over best practices when writing a support ticket, which helps us resolve your issue faster.
@@ -26,13 +26,13 @@ In this section, we go over best practices when writing a support ticket, which 
 
 If you are a member of an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces), use the Workspace's Dashboard to visit the Support tab.
 
-Contacting Support from your Personal Workspace will not provide the same support level as a Site Dashboard owned by an Workspace with a higher Account package. For a visual, [see below](/guides/support/support-ticket/#workspace-support-tab).
+Contacting Support from My Dashboard will not provide the same support level as a Site Dashboard owned by an Workspace with a higher Account package. For a visual, [see below](/guides/support/support-ticket/#workspace-support-tab).
 
 ### Workspace Support Tab
 
 If you are part of an Workspace with an enhanced Account package, navigate to the Support tab from the Workspace's Dashboard to make use of the Workspace's Support level.
 
-![Select Support from the Workspace's Dashboard](../../../images/dashboard/new-dashboard/2024/workspace-support.png)
+![Select Support from the Workspace's Dashboard](../../../images/dashboard/workspace-support.png)
 
 ### One Ticket Per Issue
 

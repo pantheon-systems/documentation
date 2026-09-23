@@ -2,7 +2,7 @@
 title: Pantheon Secrets Guide
 subtitle: Integrated Composer Usage
 description: How to use Pantheon Secrets with Pantheon's Integrated Composer.
-contributors: [stovak]
+contributors: [stovak, jazzs3quence]
 contenttype: [guide]
 innav: [true]
 categories: [secrets]
@@ -12,7 +12,7 @@ product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/composer
-reviewed: "2024-08-22"
+reviewed: "2026-06-15"
 showtoc: true
 ---
 
@@ -27,7 +27,7 @@ If your Composer-based dependency is private, and the repository supports OAuth 
 
 1. [Generate a GitHub token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The GitHub token must have all "repo" permissions selected.
 
-    **Note:** Check the repo box that selects all child boxes. **Do not** check all child boxes individually as this does not set the correct permissions.
+    Check the repo box that selects all child boxes. Do not check all child boxes individually as this does not set the correct permissions.
 
     ![image](https://user-images.githubusercontent.com/87093053/191616923-67732035-08aa-41c3-9a69-4d954ca02560.png)
 

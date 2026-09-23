@@ -14,7 +14,7 @@ const webInfrastructure = () => {
         ),
         simpleLink(
           "/php-runtime-generation-2",
-          "PHP Runtime Generation 2 (Beta)"
+          "PHP Runtime Generation 2"
         ),
         simpleLink("/horizontal-scalability", "Horizontal Scalability"),
         // This page is oddly short.
@@ -25,6 +25,7 @@ const webInfrastructure = () => {
         simpleLink("/pantheon-yml", "App Configuration", [
           simpleLink("/pantheon-yml", "pantheon.yml"),
           simpleLink("/nested-docroot", "Nested Docroot"),
+          simpleLink("/frontend-builds", "Frontend Asset Builds"),
           simpleLink(
             "/server_name-and-server_port",
             "Server Name and Server Port"
@@ -165,7 +166,7 @@ const webInfrastructure = () => {
       ]),
       simpleLink("/nextjs", "Next.js", [
         simpleLink("/nextjs", "Next.js Overview"),
-        simpleLink("/nextjs/considerations", "Considerations"),
+        simpleLink("/nextjs/comparison-to-cms-hosting", "Comparison to CMS Hosting"),
         simpleLink("/nextjs/architecture", "Architecture and Git Workflow", [
           simpleLink("/nextjs/architecture", "Architecture"),
           simpleLink("/nextjs/multidev", "Multidev environments"),
@@ -180,16 +181,24 @@ const webInfrastructure = () => {
             "Tutorial: Content Publisher",
           ),
           simpleLink(
+            "/nextjs/wordpress-revalidation-tutorial",
+            "Tutorial: WordPress Cache Revalidation",
+          ),
+          simpleLink(
+            "/nextjs/wordpress-revalidation-tutorial-next-15",
+            "Tutorial: WordPress Cache Revalidation for Next.js 15",
+          ),
+          simpleLink(
+            "/nextjs/wordpress-revalidation-tutorial-pages-router",
+            "Tutorial: WordPress Cache Revalidation for Next.js Pages Router",
+          ),
+          simpleLink(
             "/nextjs/migrating-from-front-end-sites",
             "How to migrate from Front-End Sites",
           ),
           simpleLink(
             "/nextjs/environment-variables",
             "How to set environment variables",
-          ),
-          simpleLink(
-            "/nextjs/connecting-custom-domain-name",
-            "How to connect a custom domain name",
           ),
           simpleLink(
             "/nextjs/transfer-repository",

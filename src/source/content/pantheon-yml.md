@@ -2,7 +2,7 @@
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
-reviewed: "2026-02-04"
+reviewed: "2026-07-06"
 contenttype: [doc]
 innav: [true]
 categories: [config]
@@ -133,14 +133,28 @@ build_step: true
 
 Refer to [Integrated Composer](/guides/integrated-composer) for more information.
 
+### Frontend Asset Builds
+
+Install Node.js dependencies and run frontend compiling script(s) as part of a build step on Pantheon:
+
+```yaml:title=pantheon.yml
+frontend_build:
+  enabled: true
+  paths:
+    - path: web/themes/custom/mytheme
+      node_version: 26
+      build_command: build
+```
+Refer to [Frontend Asset Builds](/frontend-builds) for more information.
+
 ### PHP Version
 
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
 
-For example, to override the upstream default value at the site level to PHP 8:
+For example, to override the upstream default value at the site level to PHP 8.5:
 
 ```yaml:title=pantheon.yml
-php_version: 8.0
+php_version: 8.5
 ```
 
 #### Considerations
@@ -159,7 +173,7 @@ php_jit: low
 
 #### Considerations
 
-- Requires **PHP 8.3 or higher** and [PHP Runtime Generation 2](/php-runtime-generation-2).
+- Requires **PHP 8.3 or higher**.
 - Valid values are `off` (default), `low`, and `high`. Any other value will cause a validation error.
 - The JIT buffer size is allocated automatically based on your site's plan tier. Refer to the [PHP JIT guide](/guides/php/php-jit) for the full memory allocation table and additional details.
 
@@ -179,7 +193,7 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
 1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 
-Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
+Apply this change to an existing environment. A new Multidev, Test, or Live environment ignores the `database` key and starts with the Dev environment's database version. The key takes effect on Dev or a Multidev when you push a commit that changes `pantheon.yml`, and it follows the code to Test and Live on deploy.
 
 1. Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
@@ -187,6 +201,8 @@ Apply this change to an existing environment. If you try to create a new environ
 database:
   version: 10.6
 ```
+
+To run MySQL 8.4 instead of MariaDB, add `type: mysql` and set `version: 8.4`. The migration has CMS version prerequisites and changes the default collation and `sql_mode`. Read [Migrating to MySQL 8.4](/guides/mariadb-mysql/mysql-84) before you enable it.
 
 This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
@@ -266,8 +282,8 @@ search:
 
 #### Considerations
 
-- The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
+- The valid values for the versions are `3`, `8`, and `9`.
+- [Drupal 7](/guides/pantheon-search/solr-drupal/solr-drupal-7) supports Solr 3/9. [Drupal 10+](/guides/pantheon-search/solr-drupal/solr-drupal) supports Solr 8/9.
 
 ### Drush Version
 
@@ -377,6 +393,18 @@ You must do _one_ of the following to ensure that your newly created Multidev ha
 
 - Re-commit your changes to the Multidev and/or `pantheon.yml` file
 - Push the `pantheon.yml` changes directly to the Dev (master branch) environment
+
+### Internal Error when pushing changes to pantheon.yml to a git branch with no existing Multidev  
+
+**Issue:** When you push a change to pantheon.yml, Pantheon attempts to apply the configuration change but fails if a Multidev environment doesn't exist in your site. This results in an error and prevents the configuration from being applied.
+
+**Solution:**
+
+Before pushing changes to pantheon.yml, ensure that a Multidev environment is already created on your site.
+
+1. Create a Multidev environment in your Pantheon dashboard or through terminus
+
+1. Push your pantheon.yml change
 
 ### Deploying Hotfixes
 
