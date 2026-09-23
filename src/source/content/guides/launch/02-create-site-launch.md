@@ -4,7 +4,6 @@ subtitle: Create Your Site on Pantheon
 description: Learn how to create your site on Pantheon.
 tags: [cms,]
 contributors: [whitneymeredith]
-showtoc: true
 permalink: docs/guides/launch/create-site-launch
 contenttype: [guide]
 innav: [false]
@@ -16,7 +15,7 @@ integration: [--]
 image: launchGuide-twitterLarge.png
 ---
 
-This section provides information on how to create your Live environment. 
+This section provides information on how to create your Live environment.
 
 1. [Create a New Site](/guides/getstarted/addsite/).
 

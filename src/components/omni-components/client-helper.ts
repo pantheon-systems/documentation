@@ -24,11 +24,15 @@ export const turnItemsIntoLinks = (
     );
   }
 
+  const links = item.children && item.children.length > 0
+    ? item.children
+        .filter((child: any) => child && child.link) // Filter out invalid children
+        .map((child: any) => turnItemsIntoLinks(child, activePage))
+    : undefined;
+
   return {
     isActive: item.link === activePage || item.link === "/" + activePage,
-    links: item.children
-      ? item.children.map((child: any) => turnItemsIntoLinks(child, activePage))
-      : false,
+    links: links && links.length > 0 ? links : undefined,
     linkContent: React.createElement(Link, { href: item.link }, linkText),
   };
 };

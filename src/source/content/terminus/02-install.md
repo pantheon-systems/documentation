@@ -2,19 +2,13 @@
 title: Terminus Guide
 subtitle: Install and Update Terminus
 description:  Learn how to install and update Terminus to your local computer.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 contributors: [whitneymeredith,jazzsequence]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/install
-contenttype: [guide]
-innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
 showtoc: true
 reviewed: "2025-07-22"
 ---
