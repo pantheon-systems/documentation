@@ -11,12 +11,12 @@ product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
-reviewed: "2025-02-05"
+reviewed: "2026-08-14"
 showtoc: true
 permalink: docs/guides/wordpress-configurations/plugins
 ---
 
-Pantheon maintains multiple plugins to facilitate workflow within WordPress. For more discussion of these plugins, find Pantheon developers in our [community spaces](https://pantheon.io/developer-community).
+Pantheon maintains multiple plugins to facilitate workflow within WordPress. For more discussion of these plugins, find Pantheon developers in our [community spaces](https://pantheon.io/customer-community).
 
 <Alert title="Note" type="info">
 
@@ -51,6 +51,9 @@ add_filter('pantheon_should_add_terms', 'custom_should_add_terms', 10, 2);
 ```
 
 For additional details, refer to the [plugin README file](https://github.com/pantheon-systems/pantheon-advanced-page-cache#140).
+
+## Pantheon Content Publisher
+Use the [Pantheon Content Publisher](https://wordpress.org/plugins/pantheon-content-publisher/) plugin to publish content to WordPress directly from Google Docs. For details, see [related documentation](https://docs.content.pantheon.io/wordpress-overview).
 
 ## Pantheon HUD
 

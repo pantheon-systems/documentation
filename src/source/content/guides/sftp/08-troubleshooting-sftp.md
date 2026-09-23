@@ -3,7 +3,7 @@ title: SFTP on Pantheon
 subtitle: Troubleshooting SFTP
 description: Get solutions to common SFTP troubleshooting scenarios.
 tags: [files, sftp, code]
-reviewed: "2020-02-18"
+reviewed: "2026-07-27"
 innav: [false]
 categories: [sftp]
 cms: [drupal, wordpress]
@@ -76,7 +76,7 @@ Error:  Could not connect to server
 
 Trouble resolving the server hostname or other DNS-related issues can generally be resolved by using Google's Public DNS service in place of your ISP's name servers. Refer to [Google's Public DNS](https://developers.google.com/speed/public-dns/) for instructions.
 
-If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, however, Cyberduck (or another client) will. Refer to a list of [SFTP clients](https://en.wikipedia.org/wiki/Comparison_of_FTP_client_software) for more options.
+If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, however, Cyberduck (or another client) will. Refer to a list of [SFTP clients](https://en.wikipedia.org/wiki/Category:FTP_clients) for more options.
 
 ### DNS Hijacking Issues
 

@@ -9,6 +9,7 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [--]
 integration: [--]
+reviewed: "2026-09-16"
 ---
 
 Manually migrate your site to Pantheon when any of the following apply:
@@ -71,25 +72,25 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 ## Create Pantheon Site
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Migrate Existing Site** button:
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Migrate Existing Site** button:
 
 1. Choose your site type, and click **Continue**:
 
-   ![Enter URL and select CMS](../images/dashboard/new-dashboard/2025/migrate-site-cms.png)
+   ![Enter URL and select CMS](../images/dashboard/migrate-site-cms.png)
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
 1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**:
   
-  ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../images/dashboard/new-dashboard/2025/migrate-site-drupal-create-site.png)
+  ![Site creation form for Drupal 7 migrations prompting user to input site name and associated workspace](../images/dashboard/migrate-site-drupal-create-site.png)
 
   When a workspace is selected, you will be prompted to confirm your selection. Review your selection and when ready click **Confirm** in the popup to continue: 
 
-  ![Confirmation prompt for workspace selection during site creation in the dashboard](../images/dashboard/new-dashboard/2025/confirm-workspace-prompt.png)
+  ![Confirmation prompt for workspace selection during site creation in the dashboard](../images/dashboard/confirm-workspace-prompt.png)
 
 1. For WordPress sites, click the link at the bottom to manually migrate your site then select **Yes** to confirm:
   
-  ![Begin process of installing plugin](../images/dashboard/new-dashboard/2025/migrate-create-token.png)
+  ![Begin process of installing plugin](../images/dashboard/migrate-create-token.png)
 
 1. Click **Go to site dashboard**:
 

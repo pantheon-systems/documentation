@@ -5,7 +5,7 @@ export const Slack = () => {
   return (
     <a
       className="pds-button pds-button--secondary pds-button--sm"
-      href="https://pantheon.io/developer-community"
+      href="https://pantheon.io/customer-community"
     >
       <Icon iconName="slack" /> Discuss in Slack
     </a>

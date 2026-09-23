@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
 # iframeembeds are paths meant to be embedded in iframes, so they should not be indexed on their own.
-/iframeembeds
+Disallow: /iframeembeds
+ 
+Sitemap: https://docs.pantheon.io/sitemap.xml

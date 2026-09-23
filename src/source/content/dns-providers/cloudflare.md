@@ -12,7 +12,7 @@ cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2023-02-03"
+reviewed: "2026-07-28"
 ---
 You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan to use features like their WAF or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, however, then ensure you follow the guide below to enforce HTTPS to prevent any issues.
 
@@ -29,7 +29,7 @@ Be sure that you have a:
 
 1. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
 
-1. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
+1. Login to your [Cloudflare account](https://dash.cloudflare.com/login) in a new tab before you continue.
 
 ## Pre-Provision SSL Certificate on Cloudflare (optional)
 
@@ -86,6 +86,13 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
   </Accordion>
 
 1. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
+
+  <Alert title="GCDN Beta: Proxy Must Be Disabled" type="danger">
+
+  If you are migrating to the GCDN Beta and manage your DNS with a Cloudflare Free, Pro, or Business account, the proxy status **must** be set to **DNS Only** (gray cloud). When a domain is proxied through Cloudflare, Pantheon cannot verify domain ownership or provision a TLS certificate for your site. Domain verification will fail with a "Pending (Error)" status until the proxy is disabled.
+
+  </Alert>
+
 1. Click on **Save**.
 1. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/guides/redirect) for more information.
 

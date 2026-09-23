@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
-reviewed: "2023-06-20"
+reviewed: "2026-07-31"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -46,7 +46,7 @@ A <Icon icon="snowflake" /> icon in the site's status column indicates that a si
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-workspace-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site).
 
 ### Tag Sites
 
@@ -96,7 +96,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. Navigate to your personal workspace.
+1. Navigate to My Dashboard.
 
 2. Select **Settings > Billing**
 
@@ -131,43 +131,6 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 </TabList>
 
-## Share Preferred Pricing for a Site
-
-### Existing Site
-
-Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client.
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
-
-1. Navigate to your personal workspace.
-
-2. Select **Settings > Billing**
-
-3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
-
-  A link is immediately sent to the email address to pay through the secure site.
-
-### New Site
-
-Agencies should follow the steps below to maintain Preferred Pricing through a plan change. This will only work for paid plans, not a sandbox site. If you want to invite a sandbox to become a paid site with preferred pricing, please follow the [Transfer Ownership](/guides/account-mgmt/billing/transfer) instructions
-
-1. Navigate to your personal workspace.
-
-2. Select **Settings > Billing**
-
-3. Click the **Actions** dropdown beside the site you want to transfer ownership, and then click **Transfer site ownership**
-
-  A link is immediately sent to the email address to pay through the secure site.
-
-
-  <Alert title="Note" type="info">
-
-  A site transferred as a Sandbox will not receive Preferred Pricing. A site plan and billing preference (Annual or Monthly) must be selected prior to sending your client a payment invitation.
-
-  </Alert>
-
-After the person has accepted the invitation and has paid for the site, they will receive the next invoice at the end of the billing cycle.
-
 ## Delete Sites
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
@@ -200,7 +163,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Enter the site title (provided just above the text field) to confirm you're aware of which site you're deleting.
 
-1. Click **Delete This Site**. After a few moments, the site will be deleted, and you will be returned to your Personal Workspace home.
+1. Click **Delete This Site**. After a few moments, the site will be deleted, and you will be returned to My Dashboard home.
 
 ### Delete a Site from a Workspace
 

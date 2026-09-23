@@ -31,7 +31,7 @@ Payment methods can be added in either your Personal Settings, or in a Site Dash
 
 To add a payment method via Personal Settings:
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **+ Add Payment Method**.
 
@@ -45,7 +45,7 @@ The email address you enter here is the address invoices will be sent to.
 
 ## Update Payment Method
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **View Details** for the payment method you want to edit.
 
@@ -69,7 +69,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 </Alert>
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **View Details** for the payment method you want to edit.
 
@@ -80,7 +80,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 ## View History
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **View Details** for the payment method whose history you want to view.
 
@@ -105,7 +105,7 @@ To add a payment method to a site:
 
 1. Go to the **Billing** tab and click **Add Card**.
 
-   - If you already have payment methods defined in your Personal Workspace, you will see them listed.  To use a listed payment method, select it and click **Update Credit Card**.
+   - If you already have payment methods defined in My Dashboard, you will see them listed.  To use a listed payment method, select it and click **Update Credit Card**.
 
    - If you don’t want to use a listed card, click **Add New Card**, add the information, click **Add Card**, and then click **Update Credit Card**.
 
@@ -113,7 +113,7 @@ To add a payment method to a site:
 
 To change the card used to bill a site:
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Subscriptions**.
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Subscriptions**.
 
 1. Click the **Actions** dropdown next to the site you’d like to update.
 
@@ -131,7 +131,7 @@ Alternatively, you can:
 
 ### Change the Card Used to Bill Multiple Sites
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**. Here you can see all cards you have on file and a count of how many sites are billed to each card
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**. Here you can see all cards you have on file and a count of how many sites are billed to each card
 
 1. Click the **View Details** on the card you wish to move multiple sites away from.
 
@@ -153,7 +153,7 @@ Refer to [upgrade the site plan](/guides/account-mgmt/plans/site-plans) for more
 
 To delete a payment method:
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**. Here you can see all cards you have on file and a count of how many sites are billed to each card
+1. [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**. Here you can see all cards you have on file and a count of how many sites are billed to each card
 
 1. Click the **View Details** on the card you wish to move multiple sites away from.
 

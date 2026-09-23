@@ -7,7 +7,7 @@ contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/troubleshooting
-reviewed: "2025-11-17"
+reviewed: "2026-07-28"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -102,7 +102,7 @@ PANTHEON_CMS_ENDPOINT -> "dev-my-drupal-site.pantheonsite.io"
 
 ```
 
-In order to set an enviornment variable through the Pantheon Dashboard, navigate to your sites **Overview** > **Settings** > **Builds** page and scroll down to **Site Environment Variables**. Add the key of your environment variable and it's corresponding value.
+In order to set an environment variable through the Pantheon Dashboard, navigate to your sites **Overview** > **Settings** > **Builds** page and scroll down to **Site Environment Variables**. Add the key of your environment variable and it's corresponding value.
 
 To mock a backend for local development, define it in your projects `.env.development.local` file: For example:
 ```js

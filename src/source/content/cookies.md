@@ -2,7 +2,7 @@
 title: Working with Cookies on Pantheon
 description: Tips and tricks for working with cookies on your Pantheon Drupal and WordPress sites.
 contributors: [--]
-reviewed: "2022-12-07"
+reviewed: "2026-06-15"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -119,6 +119,14 @@ If you prefer a regular expression, the name must match the following format: `S
     ```
 
 1. Use the stored value to generate varied content as appropriate for your use case and implementation.
+
+<Alert title="Warning" type="danger">
+
+Use `STYXKEY` cookies only for low-cardinality values (for example, role, locale, plan, or A/B test bucket). Each distinct cookie value becomes part of the Edge cache key and produces a separate cached object, so a high-cardinality or user-unique value (such as a user ID, session identifier, or JWT) fragments the cache to one entry per value. This effectively disables caching for those responses and consumes cache capacity, the opposite of the intended outcome.
+
+`STYXKEY` cookies are not stripped at the Edge on cache misses. The cookie value is forwarded to your application to generate the cached variant.  Using `STYXKEY` cookies to forward per-user cookies to the CMS requires a unique value per user, which fragments your cache as described above. To forward a cookie to your application on every request regardless of cache state, use a [cache-busting cookie](/cookies#cache-busting-cookies) instead.
+
+</Alert>
 
 ## Setting Cookies for Platform Domains
 

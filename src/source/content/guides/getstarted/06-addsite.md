@@ -10,8 +10,8 @@ audience: [business, sysadmin, development]
 product: [--]
 integration: [--]
 tags: [--]
-contributors: [wordsmither]
-reviewed: "2025-12-10"
+contributors: [wordsmither, jazzsequence]
+reviewed: "2026-09-16"
 showtoc: true
 permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
@@ -35,13 +35,13 @@ To create a CMS site:
 #### Install the CMS
 <Partial file="cms-dev.md" />
 
-You have successfully finished adding a site in its Dev environment.  Click **Visit Dev Site** to view your site.
+You have successfully finished adding a site in its Dev environment.  Click **Dev site** to view your site.
 
 ### Create the Test environment
 
 <Partial file="test-initialize.md" />
 
-You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
+You have successfully finished adding a site in its Test environment.  Click **Test site** to view your site.
 
 ### Create the Live environment
 
@@ -55,9 +55,18 @@ When you complete this step, your site will be live for anyone to see, at the Pa
 
 <Partial file="live-initialize.md" />
 
-You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
+You have successfully finished adding a site in its Live environment.  Click **Live site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
+
+### Create a Site with external repositories
+
+Pantheon's [external repositories](/guides/external-repositories) integration connects a GitHub or GitLab repository directly to a Pantheon site, allowing you to use your preferred VCS provider as your code repository while Pantheon handles hosting and deployments. It supports WordPress, Drupal, and Next.js, and automatically creates a Multidev environment for each pull request or merge request. Merging to the `main` branch of your repository deploys code to your Pantheon Dev environment.
+
+See the following connection guides to get started with an external respoistory:  
+
+* [Connect GitHub](/guides/external-repositories/github) 
+* [Connect GitLab](/guides/external-repositories/gitlab)
 
 ## Migrate an Existing Site
 

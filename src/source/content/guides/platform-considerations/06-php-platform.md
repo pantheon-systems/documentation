@@ -59,7 +59,7 @@ Pantheon does not support Server Side Includes. We recommend converting those to
 
 ## XML-RPC
 
-The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, as of the last update to this document, listed as experimental and not included on the platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.
+The [XML-RPC PHP extension](https://www.php.net/manual/en/book.xmlrpc.php) is, as of the last update to this document, listed as experimental and not included on the platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.
 
 ## MySQL LOAD DATA LOCAL INFILE
 
