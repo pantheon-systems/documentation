@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Alert } from "@/components/common/alert";
 import { Callout } from "@/components/common/callout";
 import { Accordion } from "@/components/common/accordion";
