@@ -55,7 +55,7 @@ drush_version: 8
 
 <Alert title="Note: Restricted Drush Versions in Pantheon.yml" type="info">
 
-Even though Drush 11 and above are available for site-local installations, they are not available global version options in `pantheon.yml`. This restriction is present to reduce unnecessary or possibily counterproductive settings in `pantheon.yml`
+Even though Drush 11 and above are available for site-local installations, they are not available global version options in `pantheon.yml`. This restriction is present to reduce unnecessary or possibly counterproductive settings in `pantheon.yml`
 
 If you do attempt to set a Drush version that is not supported, you will see an error message like the following:
 

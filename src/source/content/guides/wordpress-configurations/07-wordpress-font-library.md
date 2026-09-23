@@ -12,6 +12,7 @@ integration: [plugins]
 tags: [workflow, code]
 contributors: [jazzsequence]
 permalink: docs/guides/wordpress-configurations/wordpress-font-library
+reviewed: "2026-07-28"
 ---
 
 This section provides information on how to use the WordPress Font Library on Pantheon.
@@ -38,7 +39,7 @@ add_filter( 'font_dir', function( $defaults ) {
 
 <Alert title="Note" type="info" >
 
-If you choose to use the `font_dir` filter, you will need to ensure that the directory you are using is writeable by the web server. This is because WordPress will need to write to this directory when fonts are uploaded. On a Pantheon environment, the easiest way to ensure that a directory is writeable is to use the `wp-content/uploads/` directory. You can dynamically determing the path to the `uploads` directory using the `wp_upload_dir()` function.
+If you choose to use the `font_dir` filter, you will need to ensure that the directory you are using is writeable by the web server. This is because WordPress will need to write to this directory when fonts are uploaded. On a Pantheon environment, the easiest way to ensure that a directory is writeable is to use the `wp-content/uploads/` directory. You can dynamically determining the path to the `uploads` directory using the `wp_upload_dir()` function.
 
 </Alert>
 

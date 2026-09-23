@@ -3,7 +3,7 @@ title: Consolidation of Community Slack Channels
 published_date: "2024-04-16"
 categories: [general]
 ---
-On April 26th, 2024 Pantheon will begin consolidating the channels in our [Community Slack](http://slackin.pantheon.io) instance and convert members to single-channel guests of the #general channel. All other public channels will be archived.
+On April 26th, 2024 Pantheon will begin consolidating the channels in our [Community Slack](https://pantheon.io/customer-community) instance and convert members to single-channel guests of the #general channel. All other public channels will be archived.
 
 In many cases, the benefits of separate channels come with substantial and increasing monetary costs as well as downsides for participants. Pantheon is unique in our level of support for both WordPress and Drupal. We want a free-flowing exchange of ideas between those communities. Steering conversions to separate #wordpress and #drupal channels as we have in the past works against that benefit.
 
@@ -41,7 +41,7 @@ Additionally, we'll explore automations and integrations to ensure that threads 
 To maintain organization within the consolidated Slack channel, we encourage the use of threaded conversations to keep discussions organized. Our team will continue to monitor this channel regularly to ensure discussions stay on topic and address any issues promptly. In the near future, we will look into leveraging automations and integrations to streamline processes and ensure that relevant information is captured and organized efficiently.
 
 ### If My Question Goes Unanswered in Slack, Where Else Can I Seek Additional Support?
-We are committed to supporting you every step of the way! Join us for Office Hours every Wednesday at 2 pm ET / 11 am PT, where one of our Pantheon experts will be available to assist you with any questions you may have. If there's a particular topic you're eager to learn more about let us know, and we'll arrange a [Topic-specific Zoom Office Hours](https://pantheon.io/developer-community/office-hours) session.We believe that scheduling video calls for topics such as Terminus or Upstreams will enable us to share the expertise of power users more effectively. To request topic-specific office hours, simply email us at community@pantheon.io.
+We are committed to supporting you every step of the way! Join us for Office Hours every Wednesday at 2 pm ET / 11 am PT, where one of our Pantheon experts will be available to assist you with any questions you may have. If there's a particular topic you're eager to learn more about let us know, and we'll arrange a [Topic-specific Zoom Office Hours](https://pantheon.io/customer-community) session.We believe that scheduling video calls for topics such as Terminus or Upstreams will enable us to share the expertise of power users more effectively. To request topic-specific office hours, simply email us at community@pantheon.io.
 
 [For urgent issues, please open a chat or submit a support ticket.](/guides/support/)
 
@@ -49,7 +49,7 @@ We are committed to supporting you every step of the way! Join us for Office Hou
 While there are several automated tools we are considering, Pantheon staff will first proactively monitor discussions in the consolidated #general channel, and when appropriate, find or create relevant issues in GitHub repos or elsewhere and share those links in discussion threads. When the topic of discussion is a bug or a feature request related to an open source tool, our product and engineering team can more effectively respond to issues and tickets than they can to one or more Slack threads.
 
 ### Will There Be Opportunities for Feedback or Suggestions Regarding the Consolidated Channel?
-Absolutely! As we look to improve the functionality and experience here in Community Slack we welcome all feedback and suggestions. You can share your thoughts with our team by emailing community@pantheon.io or by attending [regularly scheduled Office Hours on Zoom](https://pantheon.io/developer-community) (Wednesday at 2 pm ET / 11 am PT)
+Absolutely! As we look to improve the functionality and experience here in Community Slack we welcome all feedback and suggestions. You can share your thoughts with our team by emailing community@pantheon.io or by attending [regularly scheduled Office Hours on Zoom](https://pantheon.io/customer-community) (Wednesday at 2 pm ET / 11 am PT)
 
 
 ### Have you considered other tools like Discord or GitHub Discussions?

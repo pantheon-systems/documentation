@@ -12,6 +12,7 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2026-07-28"
 ---
 <Alert title="Warning" type="danger">
 
@@ -43,8 +44,7 @@ Complete the following to configure DNS for the bare domain (e.g., `example.com`
 
 ## 1&1 Docs
 
-* [Manage Domains – DNS](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586)
-* [Change Your Domain's IP Address (A record)](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/change-your-domain-s-ip-address-a-record-a599296.html)
+* [Manage Domains – DNS](https://www.ionos.com/help/domains/dns-settings/)
 
 ## Next Steps
 

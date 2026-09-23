@@ -3,7 +3,7 @@ title: WooCommerce Quick Start
 subtitle: Introduction
 description: This guide covers how to quickly spinup a new WooCommerce site on Pantheon.
 contributors: [BFTrick]
-featuredcontributor: true
+featuredcontributor: false
 contenttype: [guide]
 innav: [true]
 categories: [ecommerce]
@@ -16,6 +16,7 @@ type: guide
 permalink: docs/guides/woocommerce/
 editpath: woocommerce/01-introduction.md
 searchboost: 200
+reviewed: "2026-07-28"
 ---
 Welcome!
 

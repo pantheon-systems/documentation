@@ -270,11 +270,11 @@ Some premium and paid plugins require the license to be explicitly activated on 
 
 </Wistia>
 
-Configure email notifications for Autopilot alerts and activity digests in your Personal Workspace settings:
+Configure email notifications for Autopilot alerts and activity digests in My Dashboard settings:
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
 
-![Personal Workspace Settings include options for Autopilot email notifications](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
+![My Dashboard Settings include options for Autopilot email notifications](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
 
 1. Click the <Icon icon="user" /> avatar in the upper right corner and click <Icon icon="userGear" /> **Personal Settings**.
 

@@ -3,8 +3,8 @@ title: Integrated Composer
 subtitle: Support and FAQs
 description: Learn about support for Integrated Composer.
 tags: [composer, workflow]
-contributors: [ari, edwardangert]
-reviewed: "2024-10-15"
+contributors: [ari, edwardangert, jazzs3quence]
+reviewed: "2026-06-15"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-support
 contenttype: [guide]
@@ -34,13 +34,20 @@ If you discover any issue for either framework, create an issue in the respectiv
 * [Drupal Composer Managed issue queue](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
 * [WordPress Composer Managed issue queue](https://github.com/pantheon-upstreams/wordpress-composer-managed/issues)
 
-Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account).
+Visit [our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://pantheon.io/customer-community/) if you don't already have an account).
 
 ## FAQs
 
 This section provides answers to frequently asked Integrated Composer questions.
 
 
+### Should I commit `composer.lock`?
+
+Yes. Always commit `composer.lock` to your site repository. When you push code to Pantheon, Integrated Composer runs `composer install`, which installs the exact dependency versions recorded in `composer.lock`.
+
+If `composer.lock` is absent, Composer resolves dependencies to their latest compatible versions rather than your pinned versions, then commits the generated `composer.lock` back to your repository. That extra commit triggers a second `sync_code` workflow, causing Quicksilver hooks to fire twice for a single push. When you later pull those changes, you may also encounter merge conflicts if your local copy diverges from the file Pantheon committed, or if `composer.lock` was previously removed from your repository's git history.
+
+**Note:** It is **not** recommended to commit your `composer.lock` file to _upstream_ repositories. A `composer.lock` file in an upstream repository can lead to merge conflicts on downstream sites. For more information, see our documentation about [custom upstream usage](/guides/integrated-composer/ic-upstreams).
 ### What Composer commands does Pantheon run?
 
 All Composer commands are available through the **Commit Log** in the Site Dashboard's development environment.
@@ -82,6 +89,10 @@ We recommend upgrading to the [Drupal Composer Managed Project](https://github.c
 All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file, as this can create a conflict that causes Integrated Composer to fail.
 
 </Alert>
+
+### Can I trigger Integrated Composer to re-run its build again?
+
+Yes, you can use Terminus to run `terminus env:code-rebuild site-id.dev`, which will cause Integrated Composer to run its build process again on the environment you specify.
 
 ### Can I hotfix an Integrated Composer site?
 

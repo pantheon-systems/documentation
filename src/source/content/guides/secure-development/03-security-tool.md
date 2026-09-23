@@ -1,7 +1,7 @@
 ---
 title: Secure Development on Pantheon
 subtitle: Lock Environments with the Dashboard Security Tool
-description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
+description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal, WordPress, or Next.js site development.
 contenttype: [guide]
 innav: [false]
 categories: [security]
@@ -10,10 +10,10 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, security, users]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, kporras07]
 showtoc: true
 permalink: docs/guides/secure-development/security-tool
-reviewed: "2022-07-21"
+reviewed: "2026-06-25"
 ---
 
 This section provides information on how to secure your Pantheon environments by locking them within the Dashboard.
@@ -21,6 +21,14 @@ This section provides information on how to secure your Pantheon environments by
 This is a useful solution when you are working on your site and you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
 This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
+
+The Security tool is available for Drupal, WordPress, and Next.js sites.
+
+<Alert title="Next.js sites require a new build" type="warning">
+
+On Next.js sites, locking or unlocking an environment does not take effect until a new build is deployed to that environment. After you change the lock or unlock status, trigger a new build using the **Rebuild** option (available in the Site Dashboard and through Terminus) or by pushing a new commit to the connected branch. On Drupal and WordPress sites, lock and unlock changes apply immediately.
+
+</Alert>
 
 <Alert title="Note" type="info">
 

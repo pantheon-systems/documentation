@@ -77,7 +77,7 @@ In this section, we will walk through the first method, installing a fresh WordP
 
 1. In your site dashboard, navigate to the Dev tab and click the Site Admin button:
 
-   ![The Site Admin button](../../../images/create-site-site-admin.png)
+   ![The Site Admin button](../../../images/dashboard/create-site-site-admin.png)
 
 1. This will open up a new browser tab containing the WordPress installation process form.
 

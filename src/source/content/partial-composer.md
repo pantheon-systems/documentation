@@ -1,7 +1,7 @@
 ---
 title: Manage Some Dependencies with Composer
 description: Get your feet wet with Composer on WordPress or Drupal  before going all in.
-contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
+contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg, jazzsequence]
 contenttype: [doc]
 innav: [true]
 categories: [dependencies]
@@ -10,6 +10,7 @@ audience: [--]
 product: [--]
 integration: [--]
 tags: [composer, workflow, updates]
+reviewed: "2026-09-17"
 ---
 In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
 
@@ -45,11 +46,23 @@ Use the `init` command to create a `composer.json` file that includes the approp
   cd $SITE
   ```
 
+1. Determine which WordPress package repository you wish to use ([WPackagist](https://wpackagist.org/) or [WP-Packages](https://wp-packages.org/)). See [Composer Dependencies](/guides/integrated-composer/03-dependencies) for more information.
+
 1. Initialize composer to create a `composer.json` file with the WordPress package repository:
 
-  ```bash{promptUser: user}
-  composer init --repository=https://wpackagist.org --no-interaction
-  ```
+  <TabList>
+  <Tab title="WP-Packages" id="wp-packages" active={true}>
+    ```bash{promptUser: user}
+    composer init --repository=https://repo.wp-packages.org --no-interaction
+    ```
+  </Tab>
+  <Tab title="WPackagist" id="wpackagist">
+    ```bash{promptUser: user}
+    composer init --repository=https://wpackagist.org --no-interaction
+    ```
+  </Tab>
+  </TabList>
+
 
 1. Edit the `composer.json` to add extra configuration that specifies installation paths for WordPress plugins and themes.
 
@@ -64,7 +77,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
     "repositories": [
       {
         "type": "composer",
-        "url": "https://wpackagist.org"
+        "url": "https://repo.wp-packages.org"
       }
     ],
     "require": {},
@@ -152,12 +165,12 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
 1. Require the plugin, [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) for example, with Composer:
 
   ```bash{promptUser: user}
-  composer require wpackagist-plugin/pantheon-advanced-page-cache
+  composer require wp-plugin/pantheon-advanced-page-cache
   ```
 
 1. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
 
-  ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../images/guides/partial-composer/require-papc-plugin.png)
+  ![Require wp-plugin/pantheon-advanced-page-cache output](../images/guides/partial-composer/require-papc-plugin.png)
 
   Notice a missing dependency was also installed, `composer/installers`. This package is needed to support the installation paths configured in the previous section, and needs to be tracked in version control.
 
