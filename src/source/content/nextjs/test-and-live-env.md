@@ -11,8 +11,6 @@ permalink: docs/nextjs/test-and-live-env
 
 ---
 
-<Partial file="nextjs-pre-ga.md" />
-
 By default, all sites on Pantheon have at least three environments: Dev, Test, and Live. Additionally, Multidev workflows correspond to separate branches or pull requests.
 These environments generate unique subdomains in the pattern of `<environment>-<site_machine_name>.pantheonsite.io`.
 
@@ -100,4 +98,4 @@ In practice, what makes a Live environment different from Dev or Multidev enviro
 The custom domain name is what your end users will use to access your site.
 Platform domains, those ending in `pantheonsite.io`, are typically only used by members of the web team for testing and development purposes.
 
-To connect a custom domain name to your Live environment, follow the instructions in [Connecting a Custom Domain Name](/nextjs/connecting-custom-domain-name).
+To connect a custom domain name to your Live environment, follow the instructions [here](/guides/domains/custom-domains).

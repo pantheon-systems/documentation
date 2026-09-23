@@ -1119,7 +1119,7 @@
     - title: "Accounts"
       subtitle: ""
       links:
-        - text: "Personal Workspace"
+        - text: "My Dashboard"
           url: "/guides/account-mgmt/account/workspace"
         - text: "Recover Account"
           url: "/guides/account-mgmt/account/recover"
@@ -1305,7 +1305,7 @@
         - text: "Join the community"
           url: "/pantheon-community"
         - text: "Apply to be a Hero"
-          url: "https://pantheon.io/developer-community/heroes/apply"
+          url: "https://pantheon.io/customer-community/heroes/apply"
         - text: "Contribute to Docs"
           url: "/contribute"
     - title: "Product Roadmap"

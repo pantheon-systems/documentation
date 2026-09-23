@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2023-03-21"
+reviewed: "2026-07-28"
 showtoc: false
 permalink: docs/guides/getstarted
 editpath: getstarted/01-introduction.md
@@ -24,7 +24,7 @@ You must have the following information to complete this process:
 - Information to sign up (name, email, company name, password, country and state).
 - An idea of what [workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces) you will need.
 - Email addresses for team members you want to invite.
-- Either the URLs of any sites you want to migrate, or the information to create a new site (site name, content managment system to use, etc.).
+- Either the URLs of any sites you want to migrate, or the information to create a new site (site name, content management system to use, etc.).
 - Optional: payment method information.
 
 <Alert title="Note" type="info">

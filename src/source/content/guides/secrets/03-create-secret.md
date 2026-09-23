@@ -2,17 +2,18 @@
 title: Pantheon Secrets Guide
 subtitle: Create new secret
 description: Learn how to create a new secret using either the Dashboard or the CLI.
+contributors: [stovak, jazzs3quence]
 contenttype: [guide]
 permalink: docs/guides/secrets/create
 showtoc: true
-reviewed: "2026-01-26"
+reviewed: "2026-06-15"
 ---
 ## Before you begin
 1. Determine what [owning entity](/guides/secrets/overview#owning-entity) is appropriate for the given secret (site vs org).
     * Only site-owned secrets can be managed via the dashboard interface, setting organization-owned secrets is only supported [via the command-line](#from-the-command-line).
 1. Determine the [secret type](/guides/secrets/overview#secret-type) and [secret scope](/guides/secrets/overview#secret-scope) required for your given scenario:
    * For example, setting an API key for third-party email integration should use the `runtime` type and `web` scope. 
-1. Consider whether your scenario requies different values based on the given environment.
+1. Consider whether your scenario requires different values based on the given environment.
    * For example, if you want to use different accounts on live and non-live environments for your site's third-party email integration.
      * If yes, first create the secret with your non-live API key and then [add an environment override for that new secret](#add-environment-override) to change the API key for the live environment.
 
@@ -41,8 +42,14 @@ Only [site-owned secrets](/guides/secrets/overview#site-owned-secrets) can be ma
 1. Click **Save Changes**.
 
 ### From the command-line
-1. [Install](/terminus/install#installation-and-update-methods) and authenticate [Terminus](/terminus/install#authentication) if you have not done so already. 
-1. Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation).
+
+<Alert type="info" title="Note">
+
+Secrets management commands require Terminus 4.2.0 or later. Run `terminus --version` to check your installed version, and `terminus self:update` to upgrade if needed.
+
+</Alert>
+
+1. [Install](/terminus/install#installation-and-update-methods) and authenticate [Terminus](/terminus/install#authentication) if you have not done so already.
 1. Run the following command to set EITHER a [site-owned secret](/guides/secrets/overview#site-owned-secrets) (replace `<site>` `<secret_name>` `<secret_value>` `<secret_type>` and `<secret_scope>`):
     
    ```bash{promptUser: user}
@@ -76,7 +83,7 @@ Environment overrides are used for scenarios that require different values for a
    ```
 
 ## Next Steps
-This feature works with WordPress, Drupal, and Next.js sites hosted on Pantheon. After secret creation, your application will require additional configuration to make use of these key/value pairs. See the following documentaiton for usage based on your site framework: 
+This feature works with WordPress, Drupal, and Next.js sites hosted on Pantheon. After secret creation, your application will require additional configuration to make use of these key/value pairs. See the following documentation for usage based on your site framework: 
 * [WordPress - reading secrets from PHP](/guides/secrets/php)
 * [Drupal - using the Key module](/guides/secrets/drupal)
 

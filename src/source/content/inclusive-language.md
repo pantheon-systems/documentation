@@ -1,9 +1,9 @@
 ---
 title: Inclusive Language at Pantheon and in the Pantheon Community
 description: Elevate the way we communicate and support community and contributors in using more inclusive language.
-contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac, cdrmarks]
+contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, cdrmarks]
 tags: [collaborate]
-reviewed: "2020-11-01"
+reviewed: "2026-07-28"
 contenttype: [doc]
 innav: [true]
 categories: [overview]
@@ -51,7 +51,7 @@ This guide applies to everything. Consider inclusive language in the product, pr
 - Avoid describing something as "crippled", "crippling", or "lame". Instead, try words like "broken" or "hindering".
 - Instead of something being "crazy" or "insane", try "baffling," "wild," "unexpected" or similar language.
 - Instead of “OCD”, use “meticulous” or “detail oriented”.
-- [Instead of](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) “mute”, use “non-verbal”.
+- Instead of “mute”, use “non-verbal”.
 - When referring to someone with a disability, do not use the words “high (or low) functioning”.
 “High functioning is not how an autistic person experiences being autistic, it’s how society experiences the autistic person.” - [Kat Williams](https://www.ncmh.info/2019/04/04/fallacy-functioning-labels/)
 
@@ -78,7 +78,7 @@ Phrases like "one throat to choke" can be replaced with "one hand to shake" or "
 
 ### What is racial language?
 
-[<dfn id="racial-lang">Racial language</dfn>](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/) is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence.
+<dfn id="racial-lang">Racial language</dfn> is derogatory to people due to their ethnicity, race, or skin color. These terms, slurs, and stereotypes contributed to decades of prejudice, discrimination, and violence.
 
 #### Examples & Alternatives
 
@@ -96,7 +96,7 @@ Engineering work is ongoing to correct these naming conventions.
 
 ### What is classist language?
 
-[<dfn id="classist-lang">Classist language</dfn>](https://online.rider.edu/online-bachelors-degrees/liberal-studies/guide-to-using-inclusive-language/) denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
+<dfn id="classist-lang">Classist language</dfn> denigrates or erases the experience of those from other socio-economic classes, specifically those classes seen as "below" the speaker.
 
 #### Examples & Alternatives
 
@@ -123,7 +123,7 @@ It's detrimental to suggest victimhood in talking about any group of people. Avo
 
 #### Be Aware of Unconscious Bias
 
-[<dfn id="unc-bias">Unconscious biases</dfn>](https://diversity.ucsf.edu/resources/unconscious-bias) are underlying stereotypes, attitudes, or generalizations we hold toward a group of people that may not be immediately obvious, but affect how we treat others.
+<dfn id="unc-bias">Unconscious biases</dfn> are underlying stereotypes, attitudes, or generalizations we hold toward a group of people that may not be immediately obvious, but affect how we treat others.
 
 Unconscious biases influence how we communicate, make decisions, agree or disagree, hire people, and work with people. Awareness is the first step in avoiding unconscious biases, and there is training you can take to further your education. 
 
@@ -148,4 +148,4 @@ Our [guide on contributing to Pantheon documentation](/contribute) can help you 
 - [Pantheon Style Guide](/style-guide)  
 - [Diversity, Equity, and Inclusion at Pantheon](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon)
 - [Google's Guide to Writing Inclusive Documentation](https://developers.google.com/style/inclusive-documentation)
-- [Gender Bias and Sexism in Language](https://oxfordre.com/communication/view/10.1093/acrefore/9780190228613.001.0001/acrefore-9780190228613-e-470) - Oxford Research Encyclopedia
+- [Gender Bias and Sexism in Language](https://academic.oup.com/edited-volume/61798/chapter-abstract/546180531?login=false&redirectedFrom=fulltext#546180531) - Oxford Research Encyclopedia

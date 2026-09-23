@@ -16,7 +16,7 @@ showtoc: true
 permalink: docs/guides/wordpress-pantheon/plugins
 ---
 
-Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For more discussion of these plugins, find Pantheon developers in our [community spaces](https://pantheon.io/developer-community).
+Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For more discussion of these plugins, find Pantheon developers in our [community spaces](https://pantheon.io/customer-community).
 
 <Alert title="Note" type="info">
 

@@ -40,34 +40,7 @@ For more information on using New Relic&reg;'s features, we encourage you to rev
 - [MySQL Troubleshooting With New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 
 ## Configure Ping Monitors (Synthetics) for Availability
-
-New Relic provides an availability monitoring service within their Synthetics tool suite which can be enabled by [contacting support](/guides/support/contact-support/). This basic monitoring feature sends a request to designated URLs from configured locations. Requests are sent at configured intervals and alerts are sent via email when a response fails.
-
-Pantheon provides unlimited New Relic Synthetics ping monitoring as part of the service. Still, there's a quota for all other monitor types (simple browser, scripted browser, and scripted API monitors). This quota is set at 10K Synthetics monthly checks for each site, so it's crucial to manage it effectively.
-
-<Alert title="Note" type="info">
-
-When a site exceeds the 10K Synthetics monthly quota, Pantheon may adjust the frequency or number of locations a Synthetics check originates from in order to reduce the number of checks. This is required to allow Synthetics to continue to operate correctly under the overall New Relic quota for Pantheon.
-
-</Alert>
-
-More advanced monitoring, including full browser testing and scripted interactions, is only available to customers on an annual contract and requires an additional cost. Contact our [sales team](https://pantheon.io/contact-us) or your dedicated account manager for more information.
-
-Follow the steps below to configure the monitor service.
-
-1. Click **New Relic**, then go to New Relic from the target environment within the Site Dashboard on Pantheon.
-
-1. Select **Synthetic Monitoring** from the main menu.
-
-1. Click **Create Monitor** in the **Monitors** tab (default) and enter the details for the URL you want to monitor.
-
-1. Select the locations you want to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance network mixups.
-
-1. Set the frequency for checks. We suggest five minutes.
-
-1. Provide an email address for notifications.
-
-1. Click **Save monitor**.
+For details, see [Using Synthetic Monitors](/guides/new-relic/synthetics).
 
 ## Enable Drupal Hooks & Modules Metrics
 

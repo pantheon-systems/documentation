@@ -18,6 +18,8 @@ integration: [--]
 image: buildToolsGuide-thumb.png
 ---
 
+<Partial file="build-tools-cta.md" />
+
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site. Continuing from the previous step, we'll be working in the feature branch environment, not Dev.
 
 <Accordion title="Configuration Management" id="understand-config" icon="lightbulb">

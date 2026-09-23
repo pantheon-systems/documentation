@@ -1,0 +1,377 @@
+---
+title: Pantheon Global CDN
+subtitle: Next-generation GCDN with Bot Protection
+navtitle: Next-generation GCDN
+description: Pantheon's next-generation GCDN introduces built-in bot protection. Learn what's included, how to migrate, and what to expect.
+tags: [cache, cdn, security]
+contributors: [conorbauer, jazzsequence]
+showtoc: true
+reviewed: "2026-09-02"
+permalink: docs/guides/global-cdn/next-gen-global-cdn
+contenttype: [guide]
+innav: [false]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
+---
+
+Pantheon's next-generation GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
+
+## What's Included
+
+### Bot Protection
+
+Bot protection is enabled by default on all migrated sites. There is no additional configuration or cost required.
+
+- **Automated bot detection and scoring** — Incoming traffic is automatically evaluated and scored. Requests identified as malicious receive managed challenges.
+- **Verified bot identification** — Legitimate bots (such as Googlebot, Bingbot, and other search engine crawlers) are recognized and allowed through automatically. Unverified malicious bots are challenged.
+
+### Bot Bypass Tokens
+
+If your site relies on automation that is not on the verified bot list, such as uptime monitors, CI/CD tools, feed importers, or custom API clients, bot protection may challenge or block it. You can exempt your own automation by generating a bot bypass token and sending it with your requests.
+
+**1. Install the plugin and generate your site's token:**
+
+```
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+terminus gcdn:bot-bypass <site>
+```
+
+Use `--format=json` if you're wiring this into CI or a monitoring config. The command prints two tokens for your site — a current token and a next token — each with its Valid From date, Expires date, and the header name to use. You must have access to the site in Pantheon to generate its tokens. The site argument accepts a name or UUID; one token pair covers every environment (dev, test, live, and multidevs).
+
+**2. Add the current token to your automation** as an HTTP request header:
+
+```
+x-pantheon-bot-bypass: <token>
+```
+
+For example, configure your uptime monitor or CI job to send this custom header on every request to your site.
+
+Requests that carry a valid token skip the standard challenge applied to automated traffic. Targeted protections, rate limiting, the managed WAF, and other platform-level security rules still apply to every request, with or without a token.
+
+Keep in mind:
+
+- **Tokens are valid for 6 months.** Each time you run the command you get the current token plus a next token that starts 3 months later; both are accepted during that overlap. Switch your automation to the next token on or after its Valid From date, and re-run the command each quarter to pick up the following pair.
+- **Treat the token like a credential.** Send it only from servers and services you control. Never expose it in client-side code, public repositories, or logs. If a token is leaked, contact Pantheon support to revoke it; a replacement token becomes available at the start of the following month.
+- **A missing token gets normal bot evaluation** — no penalty. **An incorrect token is rejected with a 403** on every request, so if your automation starts failing, check the header value first.
+- Verified bots (such as Googlebot and Bingbot) are allowed through automatically and do not need a token.
+
+After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, generate a bot bypass token and add it to that service's requests as described above. If the bypass token doesn't cover your situation, contact Pantheon support to request an exception.
+
+### Custom Certificates
+
+Sites using [customer-provided TLS certificates](/custom-certificates) are now supported on GCDN. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
+
+### Platform vanity domains
+
+Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g., `live-mysite.example-agency.com`) are fully supported. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
+
+### Client Challenges
+
+When the next-generation GCDN identifies a request as potentially automated or malicious, it may present a challenge to the visitor. This is a non-intrusive verification that confirms the visitor is human before allowing access to your site.
+
+### Content Converter
+
+Content Converter (Markdown for Agents) is enabled on all new GCDN zones. When a client sends a request with the `Accept: text/markdown` header, the CDN automatically converts the HTML response to Markdown in real time. This makes it easier for LLMs, AI agents, and other programmatic consumers to process your site's content without needing to parse raw HTML.
+
+To request Markdown from a next-generation GCDN site:
+
+```bash{promptUser: user}
+curl -H "Accept: text/markdown" https://example.com
+```
+
+- This is enabled automatically on all next-generation GCDN zones — no action is required.
+- Standard browser requests (without the `Accept: text/markdown` header) are not affected and receive normal HTML responses.
+- The response includes an `x-markdown-tokens` header indicating the estimated token count of the Markdown document.
+
+### Caching
+
+Caching behavior is the same as the legacy GCDN. Your existing caching configuration carries over without changes.
+
+- The Pantheon Advanced Page Cache module (Drupal) and plugin (WordPress) work the same way. Granular, surrogate-key-based cache clearing is fully supported.
+- `Cache-Control` headers set by your application are respected.
+- Static assets are cached at the edge automatically.
+- Tracking parameters (`utm_*`, `__*`) are stripped from cache keys, consistent with legacy GCDN behavior (`PANTHEON_STRIPPED` logic).
+- Analytics cookies (Google Analytics, HubSpot, etc.) are excluded from cache key generation so they don't fragment your cache.
+
+### Eligibility
+
+GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN customers will be migrated in a future phase — no action is required from them at this time.
+
+## Setup
+
+<Alert title="Important" type="danger">
+
+For the best experience, be prepared to update your DNS records as soon as possible after starting the migration. Delaying DNS migration can result in inconsistent behavior, as your site will remain on the old CDN infrastructure until DNS is pointed to the new GCDN.
+
+</Alert>
+
+<Alert title="Custom Domains Must Not Use CNAMEs to Platform Hostnames" type="danger">
+
+Custom domains that use a CNAME record in their DNS settings that point to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported by the next-generation GCDN and will not be supported going forward. Sites configured this way will experience interruptions when migrated.
+
+Before activating the next-generation GCDN, check your custom domain's DNS configuration. It must resolve via A/AAAA records as shown on the site's **Domains** page, not via a CNAME pointed at a `*.pantheonsite.io` hostname. If the **Domains** page shows `Remove this detected record` next to a CNAME, remove it from your DNS provider. See [Custom Domains](/guides/domains/custom-domains) for details.
+
+If your custom domain currently points at a platform hostname via CNAME, contact Pantheon Support before requesting migration.
+
+</Alert>
+
+<TabList>
+
+<Tab title="Pantheon Dashboard" id="dashboard-setup" active={true}>
+
+### Activation
+
+Eligible sites will see a next-generation GCDN banner on the site dashboard in Pantheon.
+
+1. Look for the banner on your site dashboard in Pantheon.
+1. Click the banner and follow the guided activation steps.
+1. Update your DNS records to point to the new GCDN infrastructure (instructions will be provided in the dashboard).
+
+![gcdn banner in pantheon dashboard](../../../images/guides/gcdn-beta-banner.png)
+
+### Platform Hostnames
+
+After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are automatically migrated to the new GCDN infrastructure. You do not need to take any action for these domains. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
+
+### Domains and DNS
+<Alert title="Domain Verification and Certificate Issuance" type="danger">
+
+**A DNS TXT record is required once to verify domain ownership** — this record can be removed once your domain is active. By default, certificate issuance also uses DNS TXT validation, which lets your certificate be issued before you point DNS to Pantheon, avoiding downtime during cutover. If you'd rather not add that second TXT record, HTTP-01 validation is available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) (see the **Terminus CLI** tab): once your one domain-ownership TXT record verifies, you just point DNS at Cloudflare and the certificate is issued over HTTP on that hostname. With HTTP-01, the certificate can't be pre-provisioned, so there may be a brief window of downtime during cutover.
+
+</Alert>
+
+After activating the next-generation GCDN through the dashboard, you will need to update your DNS records to point to the new infrastructure.
+
+1. The dashboard will provide a TXT record for domain ownership verification, plus a TXT record for certificate validation. Add both to your DNS provider. **The dashboard flow uses DNS TXT record validation for both steps**, which lets your certificate be issued before you update DNS. If you'd rather skip the second TXT record, HTTP-01 is available as an alternative setup for certificate validation (the domain-ownership TXT record is still required either way) via the Terminus plugin — see the **Terminus CLI** tab.
+
+1. Once domain verification completes and your SSL/TLS certificate has been issued, the dashboard will display the recommended DNS settings (CNAME targets).
+
+1. Update your DNS records with the provided CNAME values at your DNS provider.
+
+- You will receive new CNAME targets pointing to Pantheon's new GCDN infrastructure.
+- Set your TTL as low as possible before making changes to minimize propagation delay.
+- TLS certificates are automatically provisioned once domain verification completes.
+
+<Alert title="Note" type="info">
+
+DNS changes may take time to propagate depending on your current TTL settings. During propagation, traffic may alternate between the old and new CDN. This is normal and resolves once propagation completes.
+
+</Alert>
+
+### Re-running Domain Verification
+
+If you've added the TXT records and a domain is still pending verification, you can manually trigger a recheck from the dashboard. Open the domain on the **Domains** page; once verification has been attempted, a troubleshooting message appears with a **Force Recheck** action.
+
+The platform retries DNS validation automatically on a backoff schedule:
+
+- The first 10 attempts run roughly every 60 seconds (about 20 minutes total).
+- Attempts 10 through 39 stretch from about 4 minutes apart up to 4 hours apart.
+- Attempt 40 and beyond stay capped at 4 hours between checks.
+
+**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now deep into the slower part of the backoff — instead of waiting hours for the next scheduled attempt, you can kick off a new check right away.
+
+Before you click:
+
+- Confirm your TXT records have propagated using a DNS lookup tool (for example, `dig TXT _acme-challenge.example.com`).
+- ACME TXT challenges are valid for 7–14 days depending on the certificate authority. If yours have expired, regenerate them from the dashboard before forcing a recheck.
+
+</Tab>
+
+<Tab title="Terminus CLI" id="terminus-setup">
+
+<Alert title="Note" type="info">
+
+Before proceeding with Terminus commands, you must first install the GCDN Terminus plugin.
+
+</Alert>
+
+<Alert title="Note" type="info">
+
+DNS-01 TXT record validation is the default method for domain verification and lets your certificate be issued before you update DNS. You will need to add TXT records to your DNS provider to verify domain ownership. If you'd rather not add a second TXT record for the certificate, HTTP-01 is available as an alternative setup — pass `--method=http` to `terminus gcdn:verify` and, once your domain-ownership TXT record verifies, point DNS and the certificate issues over HTTP. With HTTP-01, the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
+
+</Alert>
+
+### Install the plugin
+
+```bash{promptUser: user}
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+```
+
+If you have existing custom domains on your site, follow all of the steps below to upgrade and migrate your DNS.
+
+### 1. Upgrade your site to next-generation GCDN
+
+```bash{promptUser: user}
+terminus gcdn:upgrade <site>
+```
+
+This migrates the site from Fastly to Cloudflare GCDN across all environments. Your platform hostnames (`*.pantheonsite.io`) are automatically migrated as part of this step. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
+
+### 2. Get your DNS records and TXT verification challenges
+
+```bash{promptUser: user}
+terminus gcdn:dns <site>.live
+```
+
+This will show the TXT records needed for domain ownership and certificate validation.
+
+### 3. Add TXT records to your DNS provider
+
+Add the TXT records from step 2 to your DNS provider.
+
+### 4. Verify your domains
+
+Wait a few minutes for DNS propagation, then verify each domain. Verification typically takes a few minutes to complete:
+
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com
+terminus gcdn:verify <site>.live www.example.com
+```
+
+Verification uses DNS-01 challenges by default, which lets your certificate be issued before DNS cutover. If you'd rather not add a second TXT record for the certificate, use HTTP-01 instead: once your domain-ownership TXT record verifies, point DNS and the certificate is issued over HTTP. It can't pre-provision the certificate, so there may be brief downtime during cutover. To use it:
+
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com --method=http
+```
+
+### 5. Update your DNS records
+
+Once verification passes, add the CNAME or A/AAAA records shown in the `gcdn:dns` output to point your domains to the new GCDN edge.
+
+- Set your TTL as low as possible before making changes to minimize propagation delay.
+- TLS certificates are automatically provisioned once domain verification completes.
+
+<Alert title="Note" type="info">
+
+DNS changes may take time to propagate depending on your current TTL settings. During propagation, traffic may alternate between the old and new CDN. This is normal and resolves once propagation completes.
+
+</Alert>
+
+### Full workflow example
+
+```bash{promptUser: user}
+terminus gcdn:upgrade my-site
+terminus gcdn:dns my-site.live
+# Add TXT records to your DNS provider, wait a few minutes, then verify:
+terminus gcdn:verify my-site.live example.com
+terminus gcdn:verify my-site.live www.example.com
+# Once verified, add the CNAME or A/AAAA records from gcdn:dns output
+```
+
+</Tab>
+
+</TabList>
+
+## Using Cloudflare in Front of Pantheon (Orange-to-Orange)
+
+If your domain is already proxied through your own Cloudflare zone (orange-clouded), the next-generation GCDN supports Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration. This lets you keep your existing Cloudflare zone — including your WAF rules, Workers, and other settings — in front of Pantheon's GCDN.
+
+<Alert title="Terminus Plugin Required" type="danger">
+
+O2O setup is only available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin). The dashboard migration flow does not support O2O. Install the plugin and upgrade your site with `terminus gcdn:upgrade` (see the **Terminus CLI** tab in [Setup](#setup)) before starting the steps below.
+
+</Alert>
+
+Because your DNS is hosted in Cloudflare, the standard TXT-record verification flow does not apply. Instead, you will add a specific set of records in your Cloudflare zone. Apart from step 1 (Terminus), every step below is performed in the Cloudflare dashboard, in the zone that currently serves your domain. The order matters: do not point traffic at Pantheon until your certificate is active.
+
+### Before You Begin
+
+- Your site must already be upgraded to the next-generation GCDN (`terminus gcdn:upgrade <site>`).
+- You need access to your Cloudflare account with permission to edit DNS records and SSL/TLS settings (and, on Enterprise plans, Zone Holds).
+
+### 1. Get your O2O record set
+
+```bash{promptUser: user}
+terminus gcdn:o2o <site>.live [<domain>]
+```
+
+This prints the records for each domain: the hostname ownership TXT record, the DCV delegation CNAME, and the final traffic CNAME. You will only need the DCV delegation CNAME and the traffic CNAME in the steps below. The `<domain>` argument is optional — omit it to list records for every Cloudflare domain on the environment, or pass one to limit output to a single hostname:
+
+```bash{promptUser: user}
+terminus gcdn:o2o my-site.live www.example.com
+```
+
+### 2. Release your Zone Hold (Enterprise plans only)
+
+[Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are a Cloudflare Enterprise feature, enabled by default on Enterprise zones. If your Cloudflare zone is on a Free, Pro, or Business plan, it does not have a Zone Hold — skip this step and step 6.
+
+If your zone has a Zone Hold (especially with **Also prevent subdomains** enabled), release it temporarily so Cloudflare can process the new custom hostname: on the zone homepage, go to **Quick Actions** and switch **Zone Hold** to **Off**. You will re-enable it at the end.
+
+### 3. Set your SSL/TLS encryption mode to Full or Full (strict)
+
+In your Cloudflare zone, set **SSL/TLS** > **Overview** to **Full** or **Full (strict)**. Other modes (such as Flexible) cause infinite redirect loops between your Cloudflare zone and the GCDN.
+
+### 4. Add the DCV delegation CNAME
+
+In the Cloudflare dashboard, go to **DNS** > **Records** for your zone and add the CNAME from the `gcdn:o2o` output, set to **DNS only** (grey-clouded):
+
+```none
+_acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
+```
+
+This delegates certificate validation to the GCDN for both initial issuance and automatic renewal. **Leave this record in place permanently and keep it grey-clouded** — removing it or proxying it will break certificate renewal.
+
+Before moving to the next step, confirm the `_acme-challenge` CNAME has propagated using a DNS propagation checker such as [DNS Checker](https://dnschecker.org), or from the command line:
+
+```bash{promptUser: user}
+dig +short CNAME _acme-challenge.<hostname>
+```
+
+The record has propagated when the query returns the `dcv.cloudflare.com` target.
+
+### 5. Point traffic at the GCDN
+
+Only after your certificate is active, update your hostname's CNAME to the GCDN edge:
+
+```none
+<hostname>  CNAME  fe.<zone>.edge.pantheon.io
+```
+
+Traffic routes to Pantheon as soon as this record is in place. The record can be **Proxied** (orange-clouded, O2O) to keep your Cloudflare zone in front, or **DNS only** if you want traffic to reach the GCDN directly.
+
+### 6. Re-enable your Zone Hold (if applicable)
+
+Once traffic is flowing, re-enable the Zone Hold released in step 2 to re-secure your zone.
+
+<Alert title="Note" type="info">
+
+O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and may result in site downtime or inaccessibility. We welcome feedback on O2O configurations in the Pantheon Community Slack.
+
+</Alert>
+
+## Using a Third-Party CDN in Front of Pantheon
+
+You can place a third-party CDN or reverse proxy in front of the next-generation GCDN, with one hard requirement: on every request it sends to Pantheon, the fronting service must present a TLS Server Name Indication (SNI) value that matches the HTTP `Host` header.
+
+The next-generation GCDN routes and validates custom domains using the SNI value in the TLS handshake. Requests whose SNI does not match the `Host` header are rejected at the edge with a `403` response before they reach your site. This is intentional security behavior that prevents [domain fronting](https://en.wikipedia.org/wiki/Domain_fronting), and it cannot be disabled for individual domains.
+
+When configuring your CDN, for each custom domain:
+
+- Add the domain to your Pantheon environment and complete [domain verification](#domains-and-dns) so a certificate is provisioned.
+- Set the CDN's origin address to the GCDN edge hostname shown in your dashboard DNS values (the `fe.` CNAME target).
+- Set both the origin `Host` header and the outbound TLS SNI to the custom domain itself (for example, `www.example.com`), not the `fe.` edge hostname.
+
+If your CDN cannot set the outbound SNI independently of the configured origin hostname, it cannot be used in front of the next-generation GCDN. Azure Front Door currently has this limitation (see [Known Limitations](#known-limitations)).
+
+If the service in front of Pantheon is your own Cloudflare zone, use the [Orange-to-Orange configuration](#using-cloudflare-in-front-of-pantheon-orange-to-orange) instead.
+
+## Known Limitations
+
+### Azure Front Door is not supported in front of the next-generation GCDN
+
+Azure Front Door always sets the outbound TLS SNI to the configured origin hostname and does not provide a way to override SNI independently of the origin `Host` header. Because of this, requests from Azure Front Door cannot satisfy the [SNI and `Host` header match requirement](#using-a-third-party-cdn-in-front-of-pantheon) and receive `403` responses from the GCDN edge. Disabling certificate subject name validation in Azure Front Door does not change the SNI it sends and does not work around this.
+
+### Terminus commands experience syntax errors
+
+Next-generation GCDN sites must use Terminus [version 4.1.9](https://github.com/pantheon-systems/terminus/releases/tag/4.1.9) or higher when interacting with sites that have the next-generation GCDN enabled. Using older versions of Terminus may result in errors such as `[debug] json_decode exception: Syntax error` or `[error]  Pantheon headers missing, which is not quite right.`. 
+
+### CNAMEs to Platform Hostnames Not Supported
+
+Custom domains that use a CNAME in their DNS configuration pointing to a Pantheon platform hostname (for example, `live-yoursite.pantheonsite.io`) are not supported. Custom domains must resolve via A/AAAA records, or — after migration — via the CNAME values for the GCDN edge provided by the dashboard. Sites with a CNAME to a platform hostname will experience interruptions when migrated. See [Custom Domains](/guides/domains/custom-domains) and contact Pantheon Support before migration if affected.
+
+## More resources
+
+- [Next Generation GCGN Frequently Asked Questions](/guides/global-cdn/global-cdn-faq#next-generation-gcdn-cloudflare-based)

@@ -41,12 +41,16 @@ export const GET = async () => {
 
   const output = releaseNotes.map((releaseNote) => ({
     title: releaseNote.data.node.frontmatter.title,
-    excerpt: releaseNote.data.node.excerpt,
+    excerpt: releaseNote.data.node.frontmatter.description || "A summary of changes to the Pantheon Platform",
     link: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://docs.pantheon.io"}/${releaseNote.data.node.fields.slug}`,
     id: uuidv5(releaseNote.data.node.id, namespace),
-    published_date: new Date(
-      `${releaseNote.data.node.frontmatter.published_date}T${getSeededTime(releaseNote.data.node.frontmatter.title ?? "")}Z`
-    ).toUTCString(),
+    // Use published_at (set by GitHub Action) if available, otherwise fall back to
+    // synthetic time based on title hash for backwards compatibility with older notes
+    published_date: releaseNote.data.node.frontmatter.published_at
+      ? new Date(releaseNote.data.node.frontmatter.published_at).toUTCString()
+      : new Date(
+          `${releaseNote.data.node.frontmatter.published_date}T${getSeededTime(releaseNote.data.node.frontmatter.title ?? "")}Z`
+        ).toUTCString(),
   }));
 
   // convert to xml
@@ -71,6 +75,8 @@ export const GET = async () => {
   return new Response(`${xmlString}`, {
     headers: {
       "Content-Type": "application/xml",
+      // Public feed: allow cross-origin reads (e.g. the Pantheon Dashboard).
+      "Access-Control-Allow-Origin": "*",
     },
   });
 };
