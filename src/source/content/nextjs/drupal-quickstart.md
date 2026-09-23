@@ -187,6 +187,60 @@ If pages are empty, check that `NEXT_PUBLIC_DRUPAL_BASE_URL` points at a reachab
 terminus node:logs:runtime:get my-nextjs-site.dev
 ```
 
+### If pages say Drupal can't be reached
+
+Pages that show **Drupal Connection Issue**, while the `curl` checks above succeed, usually mean Drupal's CDN is challenging your Next.js server's requests. Pantheon's [next-generation Global CDN](/guides/global-cdn/next-gen-global-cdn) scores incoming traffic and challenges anything that looks automated, and a server fetching from Drupal is automated traffic. A challenged request gets a `403` HTML page, with the response header `cf-mitigated: challenge`, instead of JSON.
+
+To confirm, request JSON:API with the same `User-Agent` your front end sends:
+
+```bash{promptUser: user}
+curl -s -o /dev/null -w "%{http_code}\n" -A "<your front end's User-Agent>" \
+  -H "Accept: application/vnd.api+json" \
+  https://dev-my-drupal-site.pantheonsite.io/jsonapi/node/article
+```
+
+A `403` means the request was challenged.
+
+**Don't send a custom `User-Agent`.** A descriptive one such as `NextJS Drupal Client` is reliably challenged, while Node's default is not. The demo front end sets one in `src/lib/drupal-fetch.ts`; remove those `'User-Agent'` lines.
+
+**Send a bot bypass token.** This is the supported way to let your own automation through, and it doesn't depend on how a request is scored. [Bot bypass tokens](/guides/global-cdn/next-gen-global-cdn#bot-bypass-tokens) are generated per Drupal site and cover all its environments:
+
+```bash{promptUser: user}
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+terminus gcdn:bot-bypass my-drupal-site
+```
+
+Store the current token as a secret on the Next.js site. Use a name without the `NEXT_PUBLIC_` prefix, so it stays on the server:
+
+```bash{promptUser: user}
+terminus secret:site:set my-nextjs-site DRUPAL_BOT_BYPASS_TOKEN "<current token>" --type=env --scope=web,ic --no-interaction
+```
+
+Then send it as the `x-pantheon-bot-bypass` header on server-side requests to Drupal, only when it's set:
+
+```typescript
+const token = process.env.DRUPAL_BOT_BYPASS_TOKEN;
+const botBypass = token ? { 'x-pantheon-bot-bypass': token } : {};
+
+const response = await fetch(url, {
+  headers: { Accept: 'application/vnd.api+json', ...botBypass },
+});
+```
+
+If you use the `next-drupal` client, pass the header in its `headers` option. Setting `headers` replaces the client's defaults, so include them:
+
+```typescript
+new NextDrupal(baseUrl, {
+  headers: {
+    'Content-Type': 'application/vnd.api+json',
+    Accept: 'application/vnd.api+json',
+    ...botBypass,
+  },
+});
+```
+
+Tokens last six months, and an incorrect token is rejected with a `403`, so check the value first if requests start failing after a rotation. Never send the token from browser code.
+
 <Alert title="Dev environment interstitial" type="info">
 
 Requests to a Dev environment may return a sandbox interstitial page rather than content. See [bypassing the interstitial page with an HTTP header](/guides/account-mgmt/plans/site-plans#bypassing-the-interstitial-page-with-an-http-header-during-automated-testing) when testing with `curl`.
