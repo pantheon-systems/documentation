@@ -6,6 +6,8 @@ contenttype: [doc]
 innav: [true]
 ---
 
+<Partial file="mcp-pre-ga.md" />
+
 The Pantheon MCP Server is a governed way to let compatible AI agents and coding assistants,  like Claude, Claude Code, and Cursor, interact directly with your Pantheon account through the platform API. It lets these applications perform tasks on your Pantheon fleet on your behalf, following your instructions in natural language, so you can look up and act on your sites, environments, and deployments as part of a normal conversation.
 
 ## Who it's for
