@@ -210,9 +210,9 @@ const webInfrastructure = () => {
           ),
         ]),
       ]),
-      simpleLink("/mcp", "MCP Server", [
-        simpleLink("/mcp", "MCP Server (Beta)"),
-        simpleLink("/mcp-claude", "Install MCP in Claude"),
+      simpleLink("/mcp/introduction", "MCP Server", [
+        simpleLink("/mcp/introduction", "MCP Server (Beta)"),
+        simpleLink("/mcp/mcp-setup", "Setup Pantheon MCP"),
       ]),
 
       simpleLink("/addons", "Performance Add-ons"),
