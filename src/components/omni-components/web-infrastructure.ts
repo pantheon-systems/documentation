@@ -210,6 +210,11 @@ const webInfrastructure = () => {
           ),
         ]),
       ]),
+      // simpleLink("/guides/mcp", "MCP Server", [
+      //   simpleLink("/guides/mcp", "MCP Server (Beta)"),
+      //   simpleLink("/guides/mcp/mcp-setup", "MCP Server Setup"),
+      // ]),
+
       simpleLink("/addons", "Performance Add-ons"),
       simpleLink("/integrations", "Integrations"),
       {
