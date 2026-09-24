@@ -1151,7 +1151,7 @@ Some General Rules:
 - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
 - Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
 - Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
-- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
+- Use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) for all headings.
 
 ## Where's the User?
 
