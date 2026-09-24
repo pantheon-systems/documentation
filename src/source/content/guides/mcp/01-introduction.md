@@ -4,6 +4,7 @@ description: Learn about connecting AI agents to Pantheon using our MCP server.
 reviewed: "2026-09-24"
 contenttype: [doc]
 innav: [true]
+permalink: docs/guides/mcp
 ---
 
 <Partial file="mcp-pre-ga.md" />

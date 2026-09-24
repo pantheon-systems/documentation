@@ -4,6 +4,7 @@ description: Learn how to install Pantheon's MCP server in your LLM of choice.
 reviewed: "2026-09-24"
 contenttype: [doc]
 innav: [true]
+permalink: docs/guides/mcp/mcp-setup
 ---
 
 <Partial file="mcp-pre-ga.md" />
