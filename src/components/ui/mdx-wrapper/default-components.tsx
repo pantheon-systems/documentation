@@ -139,9 +139,5 @@ export const normalizeAllCustomTags = (input: string) => {
   input = input.replaceAll("bash{outputLines: ", "bash{outputLines:");
 
   input = normalizeCustomTags(input, "Enablement");
-  // TabList not added here
-   return input;
-  // This function call caused errors fixed in https://github.com/pantheon-systems/documentation-in-nextjs/pull/217
-  // Todo, consider if it should be re-added later.
-  // return convertJsxPropsToHtml(input);
+  return input;
 };
