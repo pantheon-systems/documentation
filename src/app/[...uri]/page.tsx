@@ -1,14 +1,7 @@
 "use server";
 import { notFound } from "next/navigation";
-import {
-  fetchArticleBySlug,
-  getAllPages,
-  singleSlugForFetch,
-} from "@/lib/page-utils";
-import { resolveComponent, serveLocalAsync } from "@/lib/resolve-component";
-import { LandingTemplate } from "@/templates/landing";
-import { getMdxProcessed } from "@/server/processor/mdx";
-import { basename, join } from "path";
+import { getAllPages } from "@/lib/page-utils";
+import { resolveComponent } from "@/lib/resolve-component";
 import {
   generateMetadataFromUri,
   GenerateMetadataParams,
@@ -16,11 +9,6 @@ import {
 
 export interface DynamicViewProps {
   params: { uri: string[] };
-  searchParams: {
-    publishingLevel: "PRODUCTION" | "REALTIME";
-    pccGrant: string | undefined;
-    local: "true" | "false" | undefined;
-  };
 }
 
 const getPages = async (
@@ -90,7 +78,6 @@ const getPages = async (
 
 export default async function Page(props: {
   params: Promise<DynamicViewProps["params"]>;
-  searchParams: Promise<DynamicViewProps["searchParams"]>;
 }) {
   // create landing pages for each of the pages in the data/landings.yaml file
 
@@ -100,10 +87,7 @@ export default async function Page(props: {
     return notFound();
   }
 
-  const { Component } = await getPages(
-    uri,
-    // await serveLocalAsync(props.searchParams)
-  );
+  const { Component } = await getPages(uri);
 
   if (Component === null) {
     return notFound();
@@ -114,7 +98,6 @@ export default async function Page(props: {
 
 export async function generateMetadata(props: {
   params: Promise<DynamicViewProps["params"]>;
-  searchParams: Promise<DynamicViewProps["searchParams"]>;
 }) {
   const { uri } = await props.params;
 
@@ -125,10 +108,7 @@ export async function generateMetadata(props: {
     };
   }
 
-  const { seoMetadata } = await getPages(
-    uri,
-   // await serveLocalAsync(props.searchParams)
-  );
+  const { seoMetadata } = await getPages(uri);
 
   const { authors, ...returnData } = generateMetadataFromUri({
     ...seoMetadata,

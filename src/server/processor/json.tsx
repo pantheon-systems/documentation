@@ -1,5 +1,5 @@
 import fs from "fs";
-import path, { join } from "path";
+import path from "path";
 import {
   BaseFields,
   BaseInternal,
@@ -19,8 +19,6 @@ import {
   safeProcessFile,
   getFileInfo,
 } from "./helper";
-import { serveLocal, serveLocalAsync } from "@/lib/resolve-component";
-import { fetchArticleBySlug, singleSlugForFetch } from "@/lib/page-utils";
 
 export type JsonFileContent = Record<string, any>;
 
@@ -75,47 +73,6 @@ export const processDirectoryForJson = async (
   fileName: string | null,
   baseDirectory = path.resolve(process.cwd(), "src")
 ): Promise<ProcessedJsonFile[]> => {
-  const useLocal = serveLocal();
-
-  if (useLocal === false && fileName) {
-    fileName = fileName.split(".")[0];
-
-    const article = await fetchArticleBySlug(
-      singleSlugForFetch(`${fileName}-json-file`),
-      undefined,
-      undefined,
-      undefined,
-      1
-    );
-
-    if (article) {
-      const content = JSON.parse(article.content);
-      const parsedContent = JSON.parse(content.content).content;
-
-      const relativePath = article.metadata.relativePath;
-
-      return [
-        {
-          id: generateId(join(process.cwd(), relativePath)),
-          fileAbsolutePath: join(process.cwd(), relativePath),
-          relativePath: relativePath,
-          fileName: article.fileName,
-          content: parsedContent,
-          fields: generateBaseFields(
-            join(process.cwd(), relativePath),
-            article.fileName,
-            parsedContent
-          ),
-          internal: {
-            type: "Json",
-            content: parsedContent,
-            contentDigest: generateContentDigest(content.content),
-          },
-        },
-      ];
-    }
-  }
-
   const options = {
     extensions: [".json"],
     filter: (filePath: string) => {

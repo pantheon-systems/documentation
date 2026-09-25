@@ -89,18 +89,7 @@ export const DocTemplate = ({
                     // isoDate={guide.frontmatter.reviewed}
                   />
                   <MdxWrapper
-                    article={{
-                      content: doc.content,
-                      contentType: "TEXT_MARKDOWN",
-                      id: doc.id,
-                      metadata: { ...(doc.frontmatter ?? {}) },
-                      publishedDate: doc.frontmatter.published_date,
-                      publishingLevel: "PRODUCTION",
-                      tags: [],
-                      title: doc.frontmatter.title || "",
-                      updatedAt: null,
-                      previewActiveUntil: null,
-                    }}
+                    article={{ content: doc.content }}
                     componentMap={{}}
                   />
                   {(prevUrl || nextUrl) && (
