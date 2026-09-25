@@ -103,16 +103,13 @@ export const defaultComponentMap: MdxWrapperProps["componentMap"] = {
   youtube: Youtube,
   wistia: Wistia,
   img: ImageRenderer,
-
   card: Card,
   cardgroup: CardGroup,
-
   // tab: Tab,
   tablist: TabList,
   pre: Pre,
   example: Example,
   popover: Popover,
-
   enablement: Enablement,
 };
 
