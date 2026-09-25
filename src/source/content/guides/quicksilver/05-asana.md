@@ -13,6 +13,7 @@ tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
 contributors: [scottmassey]
 showtoc: true
 permalink: docs/guides/quicksilver/asana
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to use Quicksilver to integrate Asana with Pantheon.
@@ -33,7 +34,7 @@ Be sure that you:
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): [Go to your Personal Settings](/personal-settings), select **Machine Tokens**, and then authenticate Terminus:
+- [Generate a Personal Access Token](/personal-access-tokens#create-a-personal-access-token): [Go to your Personal Settings](/personal-settings), select **Personal Access Tokens**, and then authenticate Terminus:
 
   ```bash{promptUser: user}
   terminus auth:login --machine-token=‹machine-token›

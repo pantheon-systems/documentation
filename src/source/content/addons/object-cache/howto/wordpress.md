@@ -3,7 +3,7 @@ title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
 permalink: docs/object-cache/wordpress
 tags: [cache, plugins, modules, database]
-reviewed: "2025-12-10"
+reviewed: "2026-09-22"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
@@ -24,7 +24,7 @@ Before you can install and activate Object Cache Pro, verify that you have:
     - Redis is enabled for the site
     - The site is running PHP 7.4 or higher
 
-- Terminus installed and authenticated with a machine token to your local machine.
+- Terminus installed and authenticated with a Personal Access Token to your local machine.
     - Installation instructions can be found [here](https://docs.pantheon.io/terminus/install#install-terminus).
     - Authentication instructions can be found [here](https://docs.pantheon.io/terminus/install#authenticate).
 

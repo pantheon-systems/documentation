@@ -484,7 +484,7 @@
   "/terminus/updates",
   "/terminus/terminus-4-0",
   "/terminus/terminus-3-0",
-  "/machine-tokens",
+  "/personal-access-tokens",
   "/ssh-keys",
   "/terminus/ci/bitbucket",
   "/terminus/ci/circleci",

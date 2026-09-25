@@ -15,7 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2023-06-08"
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to to authenticate Terminus in a GitLab CI pipeline without receiving errors and avoiding authentication rate limits.
@@ -38,7 +38,7 @@ This pipeline demonstrates an initial `build` stage which installs and authentic
 
 <Alert title="Note"  type="info" >
 
-Before using this script, you must add a `TERMINUS_TOKEN` variable in the repository's CI/CD settings.
+Before using this script, you must add a [Personal Access Token](/personal-access-tokens) as a `TERMINUS_TOKEN` variable in the repository's CI/CD settings. Personal Access Tokens expire 90 days after creation — rotate this secret before it lapses, or the pipeline will start failing auth.
 
 </Alert>
 

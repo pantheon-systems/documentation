@@ -6,7 +6,7 @@ tags: [composer, terminus, webops, workflow, D8, D9, wordpress]
 type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
-reviewed: "2026-07-27"
+reviewed: "2026-09-22"
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
@@ -36,7 +36,7 @@ Substitute your chosen Git Provider and CI service in these instructions with th
 * [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 * [PHP version](https://docs.pantheon.io/guides/php/php-versions#verify-current-php-versions) 7.2 or greater
 * [An SSH key](/ssh-keys) in My Dashboard.
-* [A Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), to authenticate Terminus.
+* [A Pantheon Personal Access Token](/personal-access-tokens), to authenticate Terminus.
 
 ### Access Tokens (Optional)
 
@@ -312,7 +312,7 @@ BuildToolsCommand.php line 166:
     The site name exampleuniquesitename is already taken on Pantheon.
 ```
 
-To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus and try the build command again:
+To resolve, [generate a Personal Access Token](/personal-access-tokens#create-a-personal-access-token), then authenticate Terminus and try the build command again:
 
 ```bash{promptUser: user}
 terminus auth:login --machine-token=<machine_token>

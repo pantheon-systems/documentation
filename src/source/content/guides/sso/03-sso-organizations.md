@@ -12,6 +12,7 @@ audience: [development]
 product: [--]
 integration: [saml, sso, azure]
 permalink: docs/guides/sso/sso-organizations
+reviewed: "2026-09-22"
 ---
 
 This section provides information on SSO workflow on Pantheon, as well as authentication and IdP configuration requirements.
@@ -45,7 +46,7 @@ An external member is anyone in the organization using an email address on a dif
 
 ## Terminus Authentication
 
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [machine tokens](/machine-tokens).
+Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [Personal Access Tokens](/personal-access-tokens).
 
 ## Manage Users
 
@@ -103,7 +104,7 @@ Azure configuration requires several modifications from the general instructions
 
 ## Troubleshooting
 
-### Cannot Authenticate with Username/Password When Creating a New Machine Token
+### Cannot Authenticate with Username/Password When Creating a New Token
 
 If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.
 

@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site
 anchorid: site
-reviewed: "2025-11-17"
+reviewed: "2026-09-22"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -72,9 +72,9 @@ Confirm the following prerequisites before you create your site:
        - Clear cache for composer: `composer clear-cache`
        - Validate that the required plugins are installed: `terminus self:plugin:list`
 
-1. Create a Machine Token.
-    - [Generate a machine token](/machine-tokens#create-a-machine-token).
-    - [Authenticate the token into Terminus](/machine-tokens#authenticate-into-terminus).
+1. Create a Personal Access Token.
+    - [Generate a Personal Access Token](/personal-access-tokens#create-a-personal-access-token).
+    - [Authenticate the token into Terminus](/personal-access-tokens#authenticate-into-terminus).
 
 1. Create [GitHub Personal Access Tokens](https://github.com/settings/tokens).
 

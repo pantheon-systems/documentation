@@ -17,6 +17,7 @@ product: []
 integration: [--]
 previousurl: /certification/study-guide/people
 nexturl: /certification/study-guide/automate
+reviewed: "2026-09-22"
 ---
 
 <Alert title="By the end of this chapter, you will be able to:"  type="info" >
@@ -24,8 +25,8 @@ nexturl: /certification/study-guide/automate
 - Describe the general functionality Terminus provides as a command line interface (CLI) tool.
 - List five of the most useful tasks that can be automated using Terminus scripting.
 - Describe the scope of access granted through Terminus as it relates to a pre-existing user instance on Pantheon.
-- Describe how Machine Tokens provide access to Pantheon services.
-- List the steps to create a Machine Token on Pantheon.
+- Describe how Personal Access Tokens provide access to Pantheon services.
+- List the steps to create a Personal Access Token on Pantheon.
 - Describe the steps required to install Terminus on a Mac and on a Windows PC.
 - Install Terminus on your local machine by following the steps provided.
 - List and Describe five or more common use cases for Quicksilver platform hook automation
@@ -103,39 +104,39 @@ Follow the steps in the Standalone Terminus PHAR section.
 
 ### Authenticating Terminus
 
-<Alert title="Tutorial Activity #13: Authenticate with Terminus using a Machine Token"  type="info" >
+<Alert title="Tutorial Activity #13: Authenticate with Terminus using a Personal Access Token"  type="info" >
 
-Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus. They provide the same access as your username and password, do not expire, can only be viewed when you’re creating it, and should be revoked when no longer used to help keep your account safe
+Personal Access Tokens are used to uniquely identify you and securely authenticate via Terminus. They provide the same access as your username and password, expire automatically 90 days after creation, can only be viewed when you’re creating them, and should be revoked when no longer used to help keep your account safe
 
 </Alert>
 
-You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. In this section, we will generate a machine token in the Pantheon Dashboard, and use that machine token to authenticate Terminus.
+You must log in with a Personal Access Token after the installation completes. A Personal Access Token is used to securely authenticate your account, and expires automatically 90 days after creation. In this section, we will generate a Personal Access Token in the Pantheon Dashboard, and use that token to authenticate Terminus.
 
-Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus.
+Personal Access Tokens are used to uniquely identify you and securely authenticate via Terminus.
 
-Some features of machine tokens:
+Some features of Personal Access Tokens:
 
 - Provide the same access as your username and password
-- Do not expire
+- Expire automatically 90 days after creation
 - Can only be viewed when they are being created in the dashboard, and must be copied and stored in a secure location for subsequent access.
 - Should be revoked when no longer used to help keep your account safe
 
-To set up a machine token on Pantheon, follow these steps:
+To set up a Personal Access Token on Pantheon, follow these steps:
 
-1. Go to your [Personal Settings](/personal-settings) and select Machine Tokens.
-2. Click Create Token.
-3. Enter a token name, and click Generate Token.
-4. Copy and save your machine token now, as you will not be able to view or edit it later.
-5. Click I understand to continue.
+1. Go to your [Personal Settings](/personal-settings) and select Personal Access Tokens.
+2. Click **Add token**.
+3. Enter a token name, and click **Save**.
+4. Copy and save your Personal Access Token now, as you will not be able to view or edit it later.
+5. Click **"I've saved my token"** to continue.
 
 You should see the following screen upon completion:
 
-![New machine token successfully created](../../../images/dashboard/machine-token-ready.png)
+![New Personal Access Token successfully created](../../../images/dashboard/token-ready.png)
 
-Once you have generated your token, you can use it to authenticate with Terminus. In order to authenticate with Terminus, run the following command (using the unique machine token string you have just generated in the Pantheon Dashboard):
+Once you have generated your token, you can use it to authenticate with Terminus. In order to authenticate with Terminus, run the following command (using the unique token string you have just generated in the Pantheon Dashboard):
 
 ```bash{promptUser: user}
-terminus auth:login -machine-token=<replace_your_machine_token_here>
+terminus auth:login --machine-token=<replace_your_machine_token_here>
 ```
 
 ### Terminus Command Structure
@@ -327,7 +328,7 @@ Consider the repetitive tasks you perform using the Pantheon Dashboard:
 
 If so, consider how you can turn the task into a script. For some quick examples of Bash scripts that use Terminus commands, see [this documentation page](/terminus/scripting).
 
-Terminus must be authenticated before you can execute most commands (using the `terminus auth:login` command). You must authenticate Terminus with a machine token that has the correct permissions before running a script.
+Terminus must be authenticated before you can execute most commands (using the `terminus auth:login` command). You must authenticate Terminus with a Personal Access Token that has the correct permissions before running a script.
 
 Using Terminus commands, you can create customized WebOps automation scripts to further automate tedious tasks, effortlessly enforce quality control guardrails, permit self-service completion of a complex multistep provisioning process, and more.
 

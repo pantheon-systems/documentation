@@ -5,6 +5,7 @@ contributors: []
 showtoc: true
 layout: certificationpage
 permalink: docs/certification/exam
+reviewed: "2026-09-22"
 ---
 ## Exam Instructions
 The following directions and instructions were captured by a user on a MacOS device. However, most of the steps here should also be applicable for Windows users. If you run into any technical difficulties or have any questions, you can launch a support session with ProctorFree by clicking the Support Chat icon in the lower right-hand portion of the screen.
@@ -95,8 +96,8 @@ The following directions and instructions were captured by a user on a MacOS dev
 
 ### Terminus
 
-*   Describe how Machine Tokens provide access to Pantheon services
-*   List the steps to create a Machine Token on Pantheon
+*   Describe how Personal Access Tokens provide access to Pantheon services
+*   List the steps to create a Personal Access Token on Pantheon
 *   List five of the most useful tasks that can be automated using Terminus scripting
 *   Describe the scope of access granted through Terminus as it relates to a pre-existing user instance on Pantheon.
 *   Describe the scope of access granted through Terminus as it relates to a pre-existing user instance on Pantheon.
@@ -114,8 +115,8 @@ The following directions and instructions were captured by a user on a MacOS dev
 
 ### Security
 
-*   Describe how Machine Tokens provide access to Pantheon services
-*   List the steps to create a Machine Token on Pantheon
+*   Describe how Personal Access Tokens provide access to Pantheon services
+*   List the steps to create a Personal Access Token on Pantheon
 *   Describe the limits of access SSH keys provide
 *   List the resources SSH keys provide access to on Pantheon
 *   Describe the process for upgrading PHP within a Multidev environment.
@@ -125,8 +126,8 @@ The following directions and instructions were captured by a user on a MacOS dev
 
 ### Authentication
 
-*   Describe how Machine Tokens provide access to Pantheon services
-*   List the steps to create a Machine Token on Pantheon
+*   Describe how Personal Access Tokens provide access to Pantheon services
+*   List the steps to create a Personal Access Token on Pantheon
 *   Describe the limits of access SSH keys provide
 *   List the resources SSH keys provide access to on Pantheon
 

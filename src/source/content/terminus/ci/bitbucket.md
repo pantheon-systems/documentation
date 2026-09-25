@@ -15,7 +15,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2023-06-08"
+reviewed: "2026-09-22"
 ---
 
 This section provides information on how to to authenticate Terminus in a Bitbucket CI pipeline without receiving errors and avoiding authentication rate limits.
@@ -38,8 +38,9 @@ You can use the example script in this section for a full start-to-finish Termin
 Before you use this script:
 
 - Ensure that you have defined `TERMINUS_TOKEN` in Bitbucket Pipeline's Environment Variables.
-- Replace `${TERMINUS_TOKEN}` in the script below with the machine token provided by Terminus.
-- Add the machine token provided by Terminus to your environment variables in the Bitbucket pipeline settings.
+- Replace `${TERMINUS_TOKEN}` in the script below with a [Personal Access Token](/personal-access-tokens).
+- Add the Personal Access Token to your environment variables in the Bitbucket pipeline settings.
+- Personal Access Tokens expire 90 days after creation — rotate this secret before it lapses, or the pipeline will start failing auth.
 
 </Alert>
 
