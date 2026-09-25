@@ -128,14 +128,11 @@ export const normalizeAllCustomTags = (input: string) => {
   input = normalizeCustomTags(input, "TerminusVersion");
   input = normalizeCustomTags(input, "Commands");
   input = normalizeCustomTags(input, "ReviewDate");
-
   input = normalizeCustomTags(input, "Product");
   input = normalizeCustomTags(input, "ProductGroup");
-
   input = normalizeCustomTags(input, "Youtube");
   input = normalizeCustomTags(input, "Partial");
   input = normalizeCustomTags(input, "Example");
-
   input = normalizeCustomTags(input, "Popover");
 
   input = input.replaceAll("bash{promptUser: ", "bash{promptUser:");
