@@ -1,5 +1,3 @@
-import { ComponentProps } from "react";
-import { ArticleRenderer } from "../pds-re-export";
 import { Alert } from "@/components/common/alert";
 import { Callout } from "@/components/common/callout";
 import { Accordion } from "@/components/common/accordion";
@@ -30,7 +28,14 @@ import { Wistia } from "@/components/common/wistia";
 import Enablement from "@/components/common/enablement";
 import Image from "next/image";
 
-export type MdxWrapperProps = ComponentProps<typeof ArticleRenderer>;
+export interface MdxWrapperArticle {
+  content?: string;
+}
+
+export interface MdxWrapperProps {
+  article: MdxWrapperArticle;
+  componentMap?: Record<string, React.ComponentType<any>>;
+}
 
 const ImageRenderer = async ({ src = "", alt }: any) => {
   let resolvedSrc = path.join(process.cwd(), "src", "source", "images", src);
@@ -98,16 +103,13 @@ export const defaultComponentMap: MdxWrapperProps["componentMap"] = {
   youtube: Youtube,
   wistia: Wistia,
   img: ImageRenderer,
-
   card: Card,
   cardgroup: CardGroup,
-
   // tab: Tab,
   tablist: TabList,
   pre: Pre,
   example: Example,
   popover: Popover,
-
   enablement: Enablement,
 };
 
@@ -126,23 +128,16 @@ export const normalizeAllCustomTags = (input: string) => {
   input = normalizeCustomTags(input, "TerminusVersion");
   input = normalizeCustomTags(input, "Commands");
   input = normalizeCustomTags(input, "ReviewDate");
-
   input = normalizeCustomTags(input, "Product");
   input = normalizeCustomTags(input, "ProductGroup");
-
   input = normalizeCustomTags(input, "Youtube");
   input = normalizeCustomTags(input, "Partial");
   input = normalizeCustomTags(input, "Example");
-
   input = normalizeCustomTags(input, "Popover");
 
   input = input.replaceAll("bash{promptUser: ", "bash{promptUser:");
   input = input.replaceAll("bash{outputLines: ", "bash{outputLines:");
 
   input = normalizeCustomTags(input, "Enablement");
-  // TabList not added here
-   return input;
-  // This function call caused errors fixed in https://github.com/pantheon-systems/documentation-in-nextjs/pull/217
-  // Todo, consider if it should be re-added later.
-  // return convertJsxPropsToHtml(input);
+  return input;
 };
