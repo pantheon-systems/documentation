@@ -90,11 +90,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
       >
         <div slot="sidebar" className="guide-sidebar">
           <OmniSidebarNav
-            slot="guide-menu"
             activePage={topic.path}
-            fallbackItems={[]}
-            fallbackTitle=""
-            submenuPathToUse=""
           />
         </div>
         <main id="docs-main" slot="content" tabIndex={-1}>

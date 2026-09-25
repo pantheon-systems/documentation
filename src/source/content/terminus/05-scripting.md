@@ -2,18 +2,13 @@
 title: Terminus Guide
 subtitle: Scripting with Terminus
 description: Automate your workflow with scripting via Terminus.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/scripting
-contenttype: [guide]
-innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
+showtoc: false
 ---
 
 This section provides information on how to automate your workflow with Terminus scripting.
