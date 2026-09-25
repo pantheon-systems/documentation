@@ -51,4 +51,4 @@ runs:
         PANTHEON_MACHINE_TOKEN: ${{ inputs.pantheon_machine_token }}
         EXPECTED_COMMIT: ${{ inputs.expected_commit }}
       run: |
-         terminus node:builds:wait ${PANTHEON_SITE_NAME}.${ENV_NAME} --commit=${EXPECTED_COMMIT} --max=${MAX_WAIT_SECONDS}
+         terminus node:builds:wait "${PANTHEON_SITE_NAME}"."${ENV_NAME}" --commit="${EXPECTED_COMMIT}" --max="${MAX_WAIT_SECONDS}"
