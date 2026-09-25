@@ -2,19 +2,14 @@
 title: Terminus Guide
 subtitle: Supported Terminus and PHP Versions
 description: Learn which versions of Terminus and PHP are currently supported.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 contributors: [wordsmither]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/supported-terminus
-contenttype: [guide]
-innav: [false]
 categories: [git]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
+showtoc: false
 ---
 
 Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. Refer to the documentation on [Semantic Versioning](https://semver.org/) for more information on versioning.
