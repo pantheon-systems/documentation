@@ -6,7 +6,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-09-02"
+reviewed: "2026-09-28"
 permalink: docs/guides/global-cdn/next-gen-global-cdn
 contenttype: [guide]
 innav: [false]
@@ -18,6 +18,12 @@ integration: [--]
 ---
 
 Pantheon's next-generation GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
+
+<Alert title="Advanced Global CDN (AGCDN) Sites: Do Not Upgrade Yet" type="danger">
+
+If your site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), do not upgrade to the next-generation GCDN yet. AGCDN compatibility with the next-generation GCDN is rolling out in waves. Don't start any upgrade work until you hear from Pantheon Support or your Account Team confirming your site is compatible. We'll reach out directly once your site is ready.
+
+</Alert>
 
 ## What's Included
 
@@ -98,9 +104,17 @@ Caching behavior is the same as the legacy GCDN. Your existing caching configura
 
 ### Eligibility
 
-GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN customers will be migrated in a future phase — no action is required from them at this time.
+Next-gen GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN sites are being made compatible in waves. Until Pantheon confirms your site is ready, do not start the upgrade on an AGCDN site from the dashboard or with Terminus. We'll contact you as soon as your site is ready to upgrade.
 
 ## Setup
+
+<Alert title="Do Not Upgrade Sites That Use AGCDN" type="danger">
+
+The next-generation GCDN is becoming compatible with [Advanced Global CDN (AGCDN)](/guides/agcdn) sites in waves. If your site uses AGCDN, do not start the upgrade from the dashboard or with `terminus gcdn:upgrade` until Pantheon Support or your Account Team confirms your site is compatible. Starting the upgrade automatically moves your site's platform hostnames (`*.pantheonsite.io`) to the next-generation GCDN.
+
+If you've already started the upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps.
+
+</Alert>
 
 <Alert title="Important" type="danger">
 

@@ -5,7 +5,7 @@ description: Get answers to your Global CDN questions.
 tags: [cache, cdn]
 contributors: [whitneymeredith,jazzsequence,conorbauer]
 showtoc: true
-reviewed: "2026-07-28"
+reviewed: "2026-09-28"
 permalink: docs/guides/global-cdn/global-cdn-faq
 contenttype: [guide]
 innav: [false]
@@ -157,11 +157,15 @@ Yes. Sites using [customer-provided TLS certificates](/custom-certificates) are 
 
 ### I use AGCDN. What should I do?
 
-No action is required. AGCDN has its own migration initiative and timeline. Your current AGCDN configuration continues to work. AGCDN customers are excluded from the current migration phase.
+Do not upgrade your site to the next-generation GCDN yet. AGCDN compatibility is being rolled out in waves, so don't start this work on your own. Wait to hear from Pantheon Support or your Account Team, and we'll reach out when your site is ready.
+
+Your current AGCDN configuration continues to work in the meantime.
+
+If you've already started the upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps.
 
 ### What is the timeline for AGCDN to be supported?
 
-AGCDN features will be moved to a new self managed AGCDN service beginning late Q2. As feature parity is reached, you will be contacted.
+AGCDN compatibility is rolling out in waves. Pantheon Support or your Account Team will contact you when your site is ready to upgrade.
 
 ### What changes when I migrate?
 
