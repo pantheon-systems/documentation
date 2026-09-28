@@ -1,0 +1,63 @@
+name: PR Deployment Gate
+
+# Runs as pull_request_target so PANTHEON_MACHINE_TOKEN is available for
+# Dependabot-authored PRs (GitHub withholds secrets from plain
+# `pull_request`-triggered runs whose actor is dependabot[bot]).
+#
+# Security note: do NOT add `ref: ${{ github.event.pull_request.head.sha }}`
+# to the checkout below. Leaving it unset checks out the base branch, which
+# is what keeps this safe -- the composite action this job runs
+# (./.github/actions/wait-for-deployment) is sourced from trusted `main`,
+# not from whatever a PR branch might contain, even though this job has
+# PANTHEON_MACHINE_TOKEN in scope. The commit we're waiting on comes from
+# event metadata (github.event.pull_request.head.sha), not from checked-out
+# files, so the job never needs the PR's actual content.
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+permissions:
+  contents: read
+concurrency:
+  group: pr-deployment-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  wait_for_deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # Intentionally no `ref:` -- see security note above.
+
+      - uses: ./.github/actions/wait-for-deployment
+        with:
+         expected_commit: ${{ github.event.pull_request.head.sha }}
+         env_name: pr-${{ github.event.pull_request.number }}
+         pantheon_site_name: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+         pantheon_machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
+      - name: clear cache
+        id: clear_cache
+        env:
+          SITE_ENV: "${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pr-${{ github.event.pull_request.number }}"
+        run: terminus env:cc $SITE_ENV
+
+      - name: warm containers
+        id: warm_containers
+        shell: bash
+        env:
+          REFERENCE_BASE_URL: "https://docs.pantheon.io"
+          DEPLOYED_BASE_URL: "https://pr-${{ github.event.pull_request.number }}-${{ vars.PANTHEON_SITE_MACHINE_NAME }}.pantheonsite.io"
+        run: |
+          #!/bin/bash
+          set +e
+          # curl to warm the environments.
+          # these shouldn't be necessary if the cold start time is brought down.
+          curl -I ${REFERENCE_BASE_URL}
+          curl -I ${DEPLOYED_BASE_URL}
+          curl -I "${DEPLOYED_BASE_URL}?t=$(date +%s)"
+          sleep 2
+          curl -I "${DEPLOYED_BASE_URL}?t=$(date +%s)"
+          sleep 2
+          curl -I "${DEPLOYED_BASE_URL}?t=$(date +%s)"
