@@ -1,21 +1,5 @@
 name: E2E Tests for a Pull Request deployment
 
-# http_status_checker_on_sta, backstop_vrt, and playwright need the PR's
-# Pantheon multidev to actually be deployed, which is gated by the
-# "PR Deployment Gate" workflow (pull_request_target, so it can use
-# PANTHEON_MACHINE_TOKEN even for Dependabot PRs -- see that workflow file
-# for why). A single workflow file can only have one trigger context, so
-# those three jobs run on workflow_run instead of pull_request and are
-# guarded by `if: github.event_name == 'workflow_run' && ...conclusion ==
-# 'success'`. vitest doesn't depend on the deployment, so it stays on
-# pull_request for fast, independent feedback.
-#
-# workflow_run runs the workflow file from the base branch, but does NOT
-# default to checking out the PR's head content -- these jobs explicitly
-# set `ref: ${{ github.event.workflow_run.head_sha }}` because, unlike the
-# deployment gate, they genuinely need to test the PR's own code. None of
-# these three jobs reference secrets; keep it that way if they're ever
-# touched, since they run PR-authored code (npm ci, playwright specs).
 on:
   pull_request:
     types: [opened, synchronize]
