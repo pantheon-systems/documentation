@@ -35,7 +35,7 @@
     "@types/hast": "^3.0.4",
     "@types/lodash": "^4.17.20",
     "@types/lodash.debounce": "^4.0.9",
-    "@types/node": "^20.19.9",
+    "@types/node": "^22.20.4",
     "@types/prismjs": "^1.26.5",
     "@types/react": "19.1.8",
     "@types/react-dom": "^19.1.7",
@@ -102,8 +102,8 @@
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "vitest": "^1.6.1",
+    "vite": "^6.4.3",
+    "vitest": "^5.0.1",
     "vitest-fetch-mock": "^0.2.2"
   },
   "engines": {
