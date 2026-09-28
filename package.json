@@ -51,7 +51,7 @@
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "lodash.trimend": "^4.5.1",
-    "next": "15.3.9",
+    "next": "16.3.5",
     "pds-toolkit-react-v2": "npm:@pantheon-systems/pds-toolkit-react@^2.0.0-alpha",
     "prismjs": "^1.30.0",
     "query-string": "^8.2.0",
