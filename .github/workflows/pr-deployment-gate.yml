@@ -1,17 +1,5 @@
 name: PR Deployment Gate
 
-# Runs as pull_request_target so PANTHEON_MACHINE_TOKEN is available for
-# Dependabot-authored PRs (GitHub withholds secrets from plain
-# `pull_request`-triggered runs whose actor is dependabot[bot]).
-#
-# Security note: do NOT add `ref: ${{ github.event.pull_request.head.sha }}`
-# to the checkout below. Leaving it unset checks out the base branch, which
-# is what keeps this safe -- the composite action this job runs
-# (./.github/actions/wait-for-deployment) is sourced from trusted `main`,
-# not from whatever a PR branch might contain, even though this job has
-# PANTHEON_MACHINE_TOKEN in scope. The commit we're waiting on comes from
-# event metadata (github.event.pull_request.head.sha), not from checked-out
-# files, so the job never needs the PR's actual content.
 on:
   pull_request_target:
     types: [opened, synchronize]
