@@ -26,19 +26,20 @@ Click the links below to display complete PHP information for each version, incl
 | Version                                          | Available   | Recommended | End of Sale | End of Support | Removal Date |
 | ------------------------------------------------ | :---------: | :---------: | :---------: | :------------: | :----------: |
 | <span style="font-weight: bold">Fully Supported</span> |       |             |             |                |              |
-| [8.5](https://v85-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>  | <span style="color:green">✔</span> | TBD | TBD | TBD |
-| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span> | <span style="color:green">✔</span> | TBD | TBD | TBD |
-| [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> | TBD | TBD | TBD |
-| [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> | TBD | TBD | TBD |
-| [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌          | December 31, 2026 | TBD | TBD |
-| <span style="font-weight: bold">End of Sale</span>                                      |             |             |             |              |
-| [8.1](https://v81-php-info.pantheonsite.io/)   | Existing sites only | ❌           | September 30, 2026 | TBD | TBD |
-| <span style="font-weight: bold">End of Support and planned for Removal</span> - Grace period in effect | |           |             |              |
-| [8.0](https://v80-php-info.pantheonsite.io/) | Existing sites only | ❌          | May 1, 2026 | September 30, 2026 | Grace Period |
-| [7.3](https://v73-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
-| [7.2](https://v72-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
-| [7.0](https://v70-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
-| [5.6](https://v56-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
+| [8.5](https://v85-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [8.4](https://v84-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [8.3](https://v83-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [8.2](https://v82-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [7.4](https://v74-php-info.pantheonsite.io/) | <span style="color:green">✔</span> | ❌ | December 31, 2026 | TBD | TBD |
+| <span style="font-weight: bold">End of Sale</span> |           |             |             |                |              |
+| [8.1](https://v81-php-info.pantheonsite.io/) | Existing sites only | ❌ | September 30, 2026 | TBD | TBD |
+| <span style="font-weight: bold">End of Support and planned for Removal</span> - Grace period in effect | | | |             |
+| [8.0](https://v80-php-info.pantheonsite.io/) | Existing sites only | ❌ | May 1, 2026 | September 30, 2026 | Grace Period |
+| [7.3](https://v73-php-info.pantheonsite.io/) | Existing sites only | ❌ | May 1, 2026 | September 30, 2026 | Grace Period |
+| [7.2](https://v72-php-info.pantheonsite.io/) | Existing sites only | ❌ | May 1, 2026 | September 30, 2026 | Grace Period |
+| [7.1](https://v71-php-info.pantheonsite.io/) | Existing sites only | ❌ | May 15, 2024 | September 30, 2026 | Grace Period |
+| [7.0](https://v70-php-info.pantheonsite.io/) | Existing sites only | ❌ | May 15, 2024 | September 30, 2026 | Grace Period |
+| [5.6](https://v56-php-info.pantheonsite.io/) | Existing sites only | ❌ | May 15, 2024 | September 30, 2026 | Grace Period |
 
 
 - <span style="font-weight: bold">Fully Supported</span> — Available, recommended, and receives upstream security patches automatically.
