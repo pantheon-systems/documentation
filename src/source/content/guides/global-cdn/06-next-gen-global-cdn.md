@@ -104,7 +104,7 @@ Caching behavior is the same as the legacy GCDN. Your existing caching configura
 
 ### Eligibility
 
-GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN sites are being made compatible in waves. Until Pantheon confirms your site is ready, do not start the upgrade on an AGCDN site from the dashboard or with Terminus. We'll contact you as soon as your site is ready to upgrade.
+Next-gen GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN sites are being made compatible in waves. Until Pantheon confirms your site is ready, do not start the upgrade on an AGCDN site from the dashboard or with Terminus. We'll contact you as soon as your site is ready to upgrade.
 
 ## Setup
 
