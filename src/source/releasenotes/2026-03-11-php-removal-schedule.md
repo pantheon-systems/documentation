@@ -14,7 +14,7 @@ Pantheon is announcing a PHP version removal schedule. The following PHP version
 
 PHP 5.6, 7.0, and 7.1 are already end-of-sale. PHP 7.2, 7.3, and 8.0 will reach end-of-sale on **May 1, 2026**, meaning no new sites can be created with these versions after that date.
 
-Additionally, PHP 8.1 will reach end-of-sale on **September 30, 2026**, with a removal date to be announced at least 9 months in advance.
+Additionally, PHP 8.1 will reach end-of-sale on **September 30, 2026**, with a removal date to be announced at least 90 days in advance.
 
 **What happens when a PHP version is removed?**
 
