@@ -2,20 +2,15 @@
 title: Terminus Guide
 subtitle: Introduction
 description: Learn about Terminus, the command line interface for advanced interaction with the Pantheon platform.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 contributors: [whitneymeredith]
-contenttype: [guide]
-innav: [true]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus
 reviewed: "2020-02-05"
+showtoc: false
 ---
 
 Terminus is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more.
