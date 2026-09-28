@@ -23,21 +23,29 @@ Pantheon supports the following PHP versions:
 
 Click the links below to display complete PHP information for each version, including details of supported PHP extensions.
 
-| Version                                          | Available   | Recommended | End of Sale | Removal Date |
-| ------------------------------------------------ | :---------: | :---------: | :---------: | :----------: |
-| [8.5](https://v85-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>  | <span style="color:green">✔</span>     | TBD | TBD |
-| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span> | <span style="color:green">✔</span>     | TBD | TBD |
-| [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | TBD | TBD |
-| [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | TBD | TBD |
-| [8.1](https://v81-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | ❌           | September 30, 2026 | TBD |
-| [8.0](https://v80-php-info.pantheonsite.io/) | <span style="color:green">✔</span>         | ❌          | May 1, 2026 | September 30, 2026 |
-| [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌          | TBD | TBD |
-| [7.3](https://v73-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           | May 1, 2026 | September 30, 2026 |
-| [7.2](https://v72-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           | May 1, 2026 | September 30, 2026 |
+| Version                                          | Available   | Recommended | End of Sale | End of Support | Removal Date |
+| ------------------------------------------------ | :---------: | :---------: | :---------: | :------------: | :----------: |
+| <span style="font-weight: bold">Fully Supported</span> |       |             |             |                |              |
+| [8.5](https://v85-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>  | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [8.4](https://v84-php-info.pantheonsite.io/)   | <span style="color:green">✔</span> | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span> | TBD | TBD | TBD |
+| [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌          | December 31, 2026 | TBD | TBD |
+| <span style="font-weight: bold">End of Sale</span>                                      |             |             |             |              |
+| [8.1](https://v81-php-info.pantheonsite.io/)   | Existing sites only | ❌           | September 30, 2026 | TBD | TBD |
+| <span style="font-weight: bold">End of Support and planned for Removal</span> - Grace period in effect | |           |             |              |
+| [8.0](https://v80-php-info.pantheonsite.io/) | Existing sites only | ❌          | May 1, 2026 | September 30, 2026 | Grace Period |
+| [7.3](https://v73-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
+| [7.2](https://v72-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
+| [7.0](https://v70-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
+| [5.6](https://v56-php-info.pantheonsite.io/)     | Existing sites only | ❌           | May 1, 2026 | September 30, 2026 | Grace Period |
 
-- **End of Sale** — No new sites can be created with this PHP version. Existing sites already running the version will continue to operate.
-- **Removal Date** — This PHP version will no longer be available on the platform. Sites still running a removed version will be automatically upgraded to the oldest available PHP version, which may result in broken functionality if the site's code has not been updated for compatibility.
-- **TBD** — Pantheon guarantees at least **90 days of advance notice** before any PHP version is removed from the platform.
+
+- <span style="font-weight: bold">Fully Supported</span> — Available, recommended, and receives upstream security patches automatically.
+- <span style="font-weight: bold">End of Sale</span> — No longer available for new sites. Existing sites continue; patches still provided where available.
+- <span style="font-weight: bold">End of Support</span> — No longer supported by PHP maintainers. Customers assume additional security risk by staying on these versions.
+- <span style="font-weight: bold">Removal Date</span> — This PHP version will no longer be available on the platform. Sites still running a removed version will be automatically upgraded to the oldest available PHP version, which may result in broken functionality if the site's code has not been updated for compatibility.
+- <span style="font-weight: bold">Grace Period</span> - Removal from the Pantheon platform is imminent. While Pantheon still receives some updates to these EOS versions, we strongly recommend upgrading sites to supported versions. As of September 30, 2026, Pantheon will no longer provide software patches for these versions unless available in upstream open source repositories or from Pantheon contracted vendors, and future platform features will not be backward compatible. By remaining on this version, you accept the risk of unpatched vulnerabilities and release Pantheon from associated liability.  Pantheon will provide 90 days advance notice before requiring removal of a PHP version from the Pantheon platform.
 
 While sites previously configured with unlisted versions of PHP may continue running those versions, a site with a listed PHP version cannot be configured to an older, unlisted PHP version.
 
