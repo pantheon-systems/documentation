@@ -6,7 +6,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-09-02"
+reviewed: "2026-09-28"
 permalink: docs/guides/global-cdn/next-gen-global-cdn
 contenttype: [guide]
 innav: [false]
@@ -18,6 +18,12 @@ integration: [--]
 ---
 
 Pantheon's next-generation GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
+
+<Alert title="Not Available for Advanced Global CDN (AGCDN) Sites" type="danger">
+
+If your site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), do not upgrade to the next-generation GCDN yet. AGCDN sites will be migrated in a future phase. See [Eligibility](#eligibility) for details.
+
+</Alert>
 
 ## What's Included
 
@@ -98,9 +104,17 @@ Caching behavior is the same as the legacy GCDN. Your existing caching configura
 
 ### Eligibility
 
-GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN customers will be migrated in a future phase — no action is required from them at this time.
+GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). The next-generation GCDN does not yet support AGCDN, and AGCDN sites will be migrated in a future phase. Until then, do not start the upgrade on an AGCDN site from the dashboard or with Terminus.
 
 ## Setup
+
+<Alert title="Do Not Upgrade Sites That Use AGCDN" type="danger">
+
+The next-generation GCDN does not yet support [Advanced Global CDN (AGCDN)](/guides/agcdn). If your site uses AGCDN, do not start the upgrade from the dashboard or with `terminus gcdn:upgrade`. Starting the upgrade automatically moves your site's platform hostnames (`*.pantheonsite.io`) to the next-generation GCDN.
+
+If you've already started the upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps.
+
+</Alert>
 
 <Alert title="Important" type="danger">
 
