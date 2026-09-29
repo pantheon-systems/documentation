@@ -6,7 +6,7 @@ categories: [new-feature, tools-apis]
 description: "Generate a per-site token with Terminus to exempt your own trusted automation from Next Generation GCDN bot protection, without contacting support."
 ---
 
-Sites on the [Next Generation GCDN](/guides/global-cdn/next-gen-global-cdn) can now exempt their own trusted automation from bot protection, without contacting support.
+Sites on the [Next Generation GCDN](/guides/nextgen-gcdn) can now exempt their own trusted automation from bot protection, without contacting support.
 
 Bot protection on the Next Generation GCDN automatically challenges traffic that looks automated. That is the right default for scrapers and attack tools, but it can also challenge automation you rely on: uptime monitors, CI/CD pipelines, feed importers, and custom API clients that are not on the verified bot list.
 
@@ -18,4 +18,4 @@ Key details:
 - Treat the token like a credential. Send it only from trusted servers and services, and never expose it in client-side code. If a token is leaked, contact Pantheon support to revoke it; a replacement token becomes available at the start of the following month.
 - Requests without the header are evaluated by bot protection as usual. Requests with an incorrect token are rejected with a 403, so check the header value first if your automation starts failing.
 
-See [Bot Bypass Tokens](/guides/global-cdn/next-gen-global-cdn#bot-bypass-tokens) in the Next Generation GCDN guide for setup instructions.
+See [Bot Bypass Tokens](/guides/nextgen-gcdn#bot-bypass-tokens) in the Next Generation GCDN guide for setup instructions.
