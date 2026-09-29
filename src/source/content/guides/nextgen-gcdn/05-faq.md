@@ -71,7 +71,7 @@ Check whether the service is receiving a managed challenge from bot protection (
 
 ### I have Cloudflare in front of my site. Is that supported?
 
-Yes. The new Pantheon GCDN supports Orange-to-Orange (O2O) configurations, allowing you to keep your own Cloudflare zone in front of Pantheon. O2O setup requires the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) and a specific DNS record sequence in your Cloudflare zone — see [Using Cloudflare in Front of Pantheon (Orange-to-Orange)](#using-cloudflare-in-front-of-pantheon-orange-to-orange) for the full steps.
+Yes. The new Pantheon GCDN supports Orange-to-Orange (O2O) configurations, allowing you to keep your own Cloudflare zone in front of Pantheon. O2O setup requires the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) and a specific DNS record sequence in your Cloudflare zone — see [Migrate a Cloudflare-Proxied Domain (O2O)](/guides/nextgen-gcdn/o2o) for the full steps.
 
 For more information on how O2O works, refer to the [SaaS customer documentation](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/).
 
