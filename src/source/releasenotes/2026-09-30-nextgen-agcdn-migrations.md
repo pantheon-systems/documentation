@@ -34,4 +34,4 @@ If you are eligible for Phase 1, you will receive an email. Respond to the ticke
 
 AGCDN customers who are not contacted for Phase 1 don't need to do anything at this time, and will be contacted at a later date. 
 
-Learn more about our switch to Next-generation with bot protection in [this related blog post](https://pantheon.io/blog/democratizing-pantheon-global-cdn).
+Learn more about our switch to Next-generation GCDN with bot protection in [this related blog post](https://pantheon.io/blog/democratizing-pantheon-global-cdn).
