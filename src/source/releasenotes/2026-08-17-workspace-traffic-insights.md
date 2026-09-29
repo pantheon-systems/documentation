@@ -17,9 +17,9 @@ For more details, see [related documentation](/guides/account-mgmt/traffic/works
 
 <Alert type="info" title="Note">
 
-This feature is only available for sites that have migrated to our [next-generation Global CDN](/guides/global-cdn/next-gen-global-cdn). If your workspace includes sites still on our legacy Global CDN, your insights data will only reflect the migrated sites. 
+This feature is only available for sites that have migrated to our [next-generation Global CDN](/guides/nextgen-gcdn). If your workspace includes sites still on our legacy Global CDN, your insights data will only reflect the migrated sites. 
 
-If you have not started or completed your migration, visit our [documentation to get started](/guides/global-cdn/next-gen-global-cdn#setup).
+If you have not started or completed your migration, visit our [documentation to get started](/guides/nextgen-gcdn/setup).
 
 </Alert>
 

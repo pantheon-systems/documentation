@@ -44,7 +44,7 @@ You can toggle the displayed date range by clicking **Day**, **Week**, **Month**
 
 <Alert type="info" title="Note">
 
-Pages Served filtering and the Total Requests breakdown below are available only for sites migrated to Pantheon's next-generation Global CDN (GCDN). If your site is still on the legacy CDN, see the [Global CDN migration guide](/guides/global-cdn/next-gen-global-cdn) to migrate and unlock this and other newer traffic insight features.
+Pages Served filtering and the Total Requests breakdown below are available only for sites migrated to Pantheon's next-generation Global CDN (GCDN). If your site is still on the legacy CDN, see the [Global CDN migration guide](/guides/nextgen-gcdn) to migrate and unlock this and other newer traffic insight features.
 
 </Alert>
 
