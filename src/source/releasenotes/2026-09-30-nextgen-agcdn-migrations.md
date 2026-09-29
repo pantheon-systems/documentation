@@ -10,7 +10,7 @@ Pantheon is beginning the phased migration of Advanced Global CDN (AGCDN) to our
 
 ## What's included
 
-Once your migration is complete, [you control your edge settings yourself in the Pantheon Dashboard](/guides/nextgen-gcdn/advanced-edge-blocking). Changes no longer require a request to Pantheon. Phase 1 controls are configured at the workspace level, apply to every site and environment in the workspace, and are enforced at the edge before requests reach your site.
+Once your migration is complete, [you control your edge settings yourself in the Pantheon Dashboard](/guides/nextgen-gcdn/advanced-edge). Changes no longer require a request to Pantheon. Phase 1 controls are configured at the workspace level, apply to every site and environment in the workspace, and are enforced at the edge before requests reach your site.
 
 - IP and CIDR blocking
 - Geo blocking

@@ -7,7 +7,7 @@ tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
 reviewed: "2026-09-29"
-permalink: docs/guides/nextgen-gcdn/advanced-edge-blocking
+permalink: docs/guides/nextgen-gcdn/advanced-edge
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]
