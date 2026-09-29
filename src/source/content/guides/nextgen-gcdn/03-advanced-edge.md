@@ -1,8 +1,8 @@
 ---
 title: Next-generation Global CDN
-subtitle: "Pantheon Advanced Edge: Blocking Features"
-navtitle: Advanced Edge Blocking
-description: Learn how to publish configuration changes for Pantheon's Advanced Edge, like how to block certain IPs or regions.
+subtitle: "Pantheon Advanced Edge Features"
+navtitle: Advanced Edge
+description: Learn how to configure Pantheon's Advanced Edge, like how to block certain IPs or regions, turn on the Enterprise WAF, or optimize images.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
@@ -24,13 +24,13 @@ It currently includes:
 * [IP Blocking](#ip-blocking)
 * [ASN Blocking](#asn-blocking)
 * [Geo Blocking](#geo-blocking) 
+* [Enterprise WAF](#enterprise-waf)
+* [Image Optimization](#image-optimization)
 
 The following features are planned to be added in the future, amongst other features:
-* Enterprise WAF
-* AI Bot Allowlist, 
+* AI Bot Allowlist
 * Custom Error Pages
 * Edge Logging
-* Image Optimization 
 
 ### How blocking rules work
 
@@ -130,6 +130,34 @@ Maximum 8,192 entries per version — lower than IP/ASN blocking’s 10,000 ceil
 
 ### Rolling back
 Same instant-rollback pattern as the other two features. For details, see [this section above](#rolling-back).
+
+### Scope
+Applies to all sites in the workspace.
+
+## Enterprise WAF
+A CMS-tuned web application firewall that protects your sites from common attacks. Enterprise WAF is a single on/off setting for your entire workspace.
+
+### Where to find it
+Dashboard nav: **Edge** > **Enterprise WAF**.
+
+URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/enterprise-waf`
+
+### How to turn it on or off
+Click **Enable Enterprise WAF** to turn it on, or **Disable Enterprise WAF** to turn it off. Only workspace Admins can change this setting, and each change is recorded on the Changelog tab.
+
+### Scope
+Applies to all sites in the workspace.
+
+## Image Optimization
+Automatically optimizes images at the edge, including converting them to smaller, modern formats like WebP for browsers that support them. Image Optimization is a single on/off setting for your entire workspace.
+
+### Where to find it
+Dashboard nav: **Edge** > **Image Optimization**.
+
+URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/image-optimization`
+
+### How to turn it on or off
+Click **Enable Image Optimization** to turn it on, or **Disable Image Optimization** to turn it off. Only workspace Admins can change this setting, and each change is recorded on the Changelog tab.
 
 ### Scope
 Applies to all sites in the workspace.
