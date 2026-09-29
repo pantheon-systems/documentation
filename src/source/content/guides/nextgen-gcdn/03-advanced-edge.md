@@ -48,7 +48,6 @@ Dashboard nav: **Edge** > **IP Blocking**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/ip-blocking` 
 
-Requires the publicBetaEdge feature flag and the workspace’s IP blocklist entitlement to be enabled.
 ![dashboard showing ip blocking interface](../../../images/dashboard/ip-blocking.jpg)
 
 ### How to add IP addresses
@@ -110,7 +109,7 @@ Dashboard nav: **Edge** > **Geo Blocking**.
 
 URL: `/workspace/{workspaceId}/edge-agcdn/configurations/geo-blocking`. 
 
-Requires the geo blocklist entitlement. Two independent lists live on this page, switchable by tab: Countries and Subdivisions.
+Two independent lists live on this page, switchable by tab: Countries and Subdivisions.
 
 ![dashboard showing geo blocking interface](../../../images/dashboard/geo-blocking.jpg)
 
