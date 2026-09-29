@@ -142,8 +142,6 @@ Dashboard nav: **Edge** > **Enterprise WAF**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/enterprise-waf`
 
-![dashboard showing enterprise waf interface](../../../images/dashboard/enterprise-waf.jpg)
-
 ### How to turn it on or off
 Click **Enable Enterprise WAF** to turn it on, or **Disable Enterprise WAF** to turn it off. Only workspace Admins can change this setting, and each change is recorded on the Changelog tab.
 
@@ -157,8 +155,6 @@ Automatically optimizes images at the edge, including converting them to smaller
 Dashboard nav: **Edge** > **Image Optimization**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/image-optimization`
-
-![dashboard showing image optimization interface](../../../images/dashboard/image-optimization.jpg)
 
 ### How to turn it on or off
 Click **Enable Image Optimization** to turn it on, or **Disable Image Optimization** to turn it off. Only workspace Admins can change this setting, and each change is recorded on the Changelog tab.
