@@ -30,17 +30,6 @@ Be sure that you have:
 - Access to the Cloudflare account that hosts the zone, with permission to edit DNS records and SSL/TLS settings.
 - The domain added to your Pantheon environment's **Domains** tab.
 
-<Alert title="Exports" type="export">
-
-Set the variables `$site` and `$env` in your terminal:
-
-```bash{promptUser: user}
-export site=yoursitename
-export env=live
-```
-
-</Alert>
-
 <Alert title="Plan Differences" type="info">
 
 [Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are available only on Cloudflare Enterprise plans. If your zone is on a Free, Pro, or Business plan, it has no Zone Hold, so skip the steps that release and re-enable it.
@@ -50,7 +39,7 @@ export env=live
 ## Start the Migration
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
-1. Click the next-generation GCDN banner and confirm the migration, or run `terminus gcdn:upgrade $site` from your terminal.
+1. Click the next-generation GCDN banner and confirm the migration, or run `terminus gcdn:upgrade <site>.<env>` from your terminal.
 
 Your platform hostnames (`*.pantheonsite.io`) move to the new GCDN automatically. A few minutes of downtime on those hostnames is normal.
 
@@ -67,20 +56,20 @@ In your Cloudflare zone, go to **SSL/TLS** > **Overview** and set the encryption
 ## Get Your O2O Records
 
 ```bash{promptUser: user}
-terminus gcdn:o2o $site.$env
+terminus gcdn:o2o <site>.<env>
 ```
 
 Pass a domain as a third argument to limit the output to one hostname:
 
 ```bash{promptUser: user}
-terminus gcdn:o2o $site.$env www.example.com
+terminus gcdn:o2o <site>.<env> www.example.com
 ```
 
 The output lists three records for each domain:
 
 | Record | Purpose |
 |---|---|
-| TXT `_cf-custom-hostname.<hostname>` | Proves you own the hostname. |
+| TXT `_cf-custom-hostname.<hostname>` | Proves you own the hostname. **This record is not required for O2O migrations**. |
 | CNAME `_acme-challenge.<hostname>` | Delegates certificate validation so the certificate can be issued and renewed. |
 | CNAME `<hostname>` | Sends traffic to the GCDN edge. |
 
@@ -88,15 +77,11 @@ The output lists three records for each domain:
 
 Add the records in the order shown here. In the Cloudflare dashboard, go to **DNS** > **Records** for your zone.
 
-### 1. Add the Ownership TXT Record
-
-Add the TXT record whose name begins with `_cf-custom-hostname`, using the value from the `gcdn:o2o` output.
-
 ### 2. Add the ACME Challenge CNAME
 
 Add the `_acme-challenge` CNAME and set its proxy status to **DNS only** (grey cloud):
 
-```none
+```
 _acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
 ```
 
@@ -110,15 +95,15 @@ dig +short CNAME _acme-challenge.<hostname>
 
 The query returns the `dcv.cloudflare.com` target when the record is live.
 
-### 3. Wait for the Certificate
+### 3. Remove all A/AAAA Records
 
-Check the domain on the **Domains** tab of the Site Dashboard. Don't continue until the certificate is issued. Pointing traffic at the GCDN before then results in certificate errors.
+Before pointing the hostname at the GCDN, remove any existing A or AAAA records for the hostname in your Cloudflare zone. This ensures that traffic is directed solely through the CNAME to the GCDN edge.
 
 ### 4. Point the Hostname at the GCDN
 
 Replace the hostname's existing record with a CNAME to the GCDN edge:
 
-```none
+```
 <hostname>  CNAME  fe.<zone>.edge.pantheon.io
 ```
 
@@ -144,13 +129,13 @@ The response should include Cloudflare headers, and the site should load without
 
 ### Error 1014: CNAME Cross-User Banned
 
-While the domain is in transition, requests may return Cloudflare error 1014. It appears when the hostname's CNAME points to Pantheon's edge before Cloudflare has finished associating the custom hostname with the new GCDN. It typically resolves on its own once the transition completes.
+While the domain is in transition, requests may return Cloudflare error 1014. This is normal and appears when the hostname's CNAME points to Pantheon's edge before Cloudflare has finished associating the custom hostname with the new GCDN. It typically resolves on its own once the transition completes. 
 
 If it persists:
 
 - Confirm the ownership TXT record and the `_acme-challenge` CNAME both exist and match the `gcdn:o2o` output.
 - Confirm the `_acme-challenge` CNAME is grey-clouded.
-- Re-run `terminus gcdn:o2o $site.$env` and compare the values against your zone.
+- Re-run `terminus gcdn:o2o <site>.<env>` and compare the values against your zone.
 - Contact [Pantheon Support](/guides/support/contact-support/) if the error remains after the records propagate.
 
 ### Too Many Redirects
