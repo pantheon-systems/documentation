@@ -76,6 +76,7 @@ Our customers have encountered edge cases that may affect Redis performance unde
 | -------- | ------- |
 | [Always return array to mget to avoid breaking transactions](https://www.drupal.org/project/redis/issues/3216874) | [Patch](https://www.drupal.org/files/issues/2021-11-16/3216874-2.patch) |
 
+
 ### If Redis Hits the Upper Limit of Memory Usage, Is This Logged on Pantheon?
 
 Yes. There is a `redis.log` file that is available on the Redis container for each environment.
