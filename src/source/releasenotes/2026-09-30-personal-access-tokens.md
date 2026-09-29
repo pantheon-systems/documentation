@@ -1,7 +1,7 @@
 ---
 title: "Machine tokens are now called personal access tokens, with a 90-day expiration"
-published_date: "2026-09-29"
-published_at: "2026-09-29T16:04:34Z"
+published_date: "2026-09-30"
+published_at: "2026-09-30T00:00:00Z"
 categories: [security, user-interface]
 description: "Pantheon is renaming machine tokens to personal access tokens (PATs) and adding stronger security controls with automatic expiration."
 ---
