@@ -27,7 +27,7 @@ Eligible sites will see a next-generation GCDN banner on the site dashboard. If 
 
 ### Are new sites created on the next-generation GCDN by default?
 
-Yes, as of September 10, 2026. New sites created on Pantheon are provisioned on the next-generation GCDN by default. Sites created before this date are not affected and remain eligible for migration through the normal [migration path](/guides/global-cdn/next-gen-global-cdn#setup). [Advanced Global CDN (AGCDN)](/guides/agcdn) customers are not affected by this change. If you have questions, [contact Pantheon Support](/guides/support/contact-support/).
+Yes, as of September 10, 2026. New sites created on Pantheon are provisioned on the next-generation GCDN by default. Sites created before this date are not affected and remain eligible for migration through the normal [migration path](/guides/nextgen-gcdn/setup). [Advanced Global CDN (AGCDN)](/guides/agcdn) customers are not affected by this change. If you have questions, [contact Pantheon Support](/guides/support/contact-support/).
 
 ### I have a Custom Certificate. Can I migrate?
 
@@ -67,7 +67,7 @@ Content Converter (Markdown for Agents) is a feature enabled on all next-generat
 
 ### My automated integration stopped working after migration. What do I do?
 
-Check whether the service is receiving a managed challenge from bot protection (look for 403 responses or HTML challenge pages in its error logs). If so, generate a bot bypass token for your site with `terminus gcdn:bot-bypass <site>` and configure the service to send it in the `x-pantheon-bot-bypass` request header — see [Bot Bypass Tokens](/guides/global-cdn/next-gen-global-cdn#bot-bypass-tokens) for setup steps. If the token doesn't cover your situation, contact Pantheon support to request an exception.
+Check whether the service is receiving a managed challenge from bot protection (look for 403 responses or HTML challenge pages in its error logs). If so, generate a bot bypass token for your site with `terminus gcdn:bot-bypass <site>` and configure the service to send it in the `x-pantheon-bot-bypass` request header — see [Bot Bypass Tokens](/guides/nextgen-gcdn#bot-bypass-tokens) for setup steps. If the token doesn't cover your situation, contact Pantheon support to request an exception.
 
 ### I have Cloudflare in front of my site. Is that supported?
 
@@ -85,7 +85,7 @@ SSL/TLS certificates are issued through DNS TXT record validation by default, wh
 
 ### My domain hasn't verified yet. What can I do?
 
-The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](/guides/global-cdn/next-gen-global-cdn#setup) in Setup for details and pre-flight tips.
+The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](/guides/nextgen-gcdn/setup) in Setup for details and pre-flight tips.
 
 ### How do I report issues or give feedback?
 
