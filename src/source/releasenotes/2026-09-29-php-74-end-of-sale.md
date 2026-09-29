@@ -1,6 +1,7 @@
 ---
 title: "PHP 7.4 entering End-of-Sale December 31, 2026"
 published_date: "2026-09-29"
+published_at: "2026-09-29T16:11:56Z"
 categories: [infrastructure, deprecated, action-required]
 ---
 
