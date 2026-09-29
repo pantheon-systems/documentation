@@ -6,9 +6,9 @@ categories: [infrastructure, new-feature]
 description: "Starting September 10, 2026, all new sites created on Pantheon are provisioned on the next-generation Global CDN, powered by Cloudflare, instead of the legacy Global CDN."
 ---
 
-Starting September 10, 2026, new sites created on Pantheon are provisioned on the [next-generation Global CDN](/guides/global-cdn/next-gen-global-cdn), powered by Cloudflare, instead of the legacy Global CDN.
+Starting September 10, 2026, new sites created on Pantheon are provisioned on the [next-generation Global CDN](/guides/nextgen-gcdn), powered by Cloudflare, instead of the legacy Global CDN.
 
-This change applies to newly created sites only. Existing sites are not affected and remain eligible for migration through the normal [migration path](/guides/global-cdn/next-gen-global-cdn#setup).
+This change applies to newly created sites only. Existing sites are not affected and remain eligible for migration through the normal [migration path](/guides/nextgen-gcdn/setup).
 
 No action is required: the next-generation GCDN is provisioned automatically at site creation.
 
