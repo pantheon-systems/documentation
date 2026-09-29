@@ -18,7 +18,27 @@ integration: [--]
 ---
 
 ## What is Advanced Edge? 
-The Advanced Edge (former product name: Advanced Global CDN) is a set of workspace-level and YAML/site level edge configuration tools, under the Edge tab in the dashboard, that let customers self-serve CDN-layer changes that previously required a support ticket. It currently includes IP Blocking, ASN Blocking, Geo Blocking, and will soon include: Enterprise WAF, AI Bot Allowlist, Custom Error Pages, Edge Logging, and Image Optimization, amongst other features. 
+The Advanced Edge (formerly [Advanced Global CDN](/guides/agcdn)) is a set of workspace-level and YAML/site level edge configuration tools, under the Edge tab in the dashboard, that let customers self-serve CDN-layer changes that previously required a support ticket. 
+
+It currently includes: 
+* [IP Blocking](#ip-blocking)
+* [ASN Blocking](#asn-blocking)
+* [Geo Blocking](#geo-blocking) 
+
+The following features are planned to be added in the future, amongst other features:
+* Enterprise WAF
+* AI Bot Allowlist, 
+* Custom Error Pages
+* Edge Logging
+* Image Optimization 
+
+### How blocking rules work
+
+* **What a blocked visitor sees**: A blocked request receives an HTTP 403 response. By default the body is the plain text “Forbidden.” If the workspace has a Custom Error Pages configuration for status 403, that custom page is served instead, but only to browser-type requests; API and non-browser clients always receive the plain “Forbidden” response.
+* **How long it takes to go live**: A newly published version can take up to 5 minutes to reach all edge locations.
+* **Who can publish**: Any workspace member can view these pages. Publishing a new version requires the workspace Admin role.
+* **Changelog**: Every publish is recorded on the Changelog tab, next to Configurations, with who published it and when. It is an audit log, not a diff; it does not show which entries were added or removed.
+
 
 ## IP Blocking 
 Block specific IP addresses or CIDR ranges from accessing any site in your workspace. This is a workspace-level rule — once published, it applies to every site in the workspace, not a single site.
@@ -114,10 +134,3 @@ Same instant-rollback pattern as the other two features. For details, see [this 
 
 ### Scope
 Applies to all sites in the workspace.
-
-## How blocking rules work
-
-* What a blocked visitor sees: A blocked request receives an HTTP 403 response. By default the body is the plain text “Forbidden.” If the workspace has a Custom Error Pages configuration for status 403, that custom page is served instead, but only to browser-type requests; API and non-browser clients always receive the plain “Forbidden” response.
-* How long it takes to go live: A newly published version can take up to 5 minutes to reach all edge locations.
-* Who can publish: Any workspace member can view these pages. Publishing a new version requires the workspace Admin role.
-* Changelog: Every publish is recorded on the Changelog tab, next to Configurations, with who published it and when. It is an audit log, not a diff; it does not show which entries were added or removed.
