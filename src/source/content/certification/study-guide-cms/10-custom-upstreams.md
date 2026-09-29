@@ -1,20 +1,9 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 10: Custom Upstreams"
-description: "Understand the relationship between Pantheon’s Core Upstreams, Custom Upstreams, and individual site repositories."
-certificationpage: true
-type: certificationpage
-layout: certificationpage
-showtoc: true
-tags: []
+description: "Understand the relationship between Pantheon's Core Upstreams, Custom Upstreams, and individual site repositories."
 permalink: docs/certification/study-guide/custom-upstreams
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide/automate
 ---
 

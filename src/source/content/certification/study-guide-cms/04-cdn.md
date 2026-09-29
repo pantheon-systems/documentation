@@ -2,19 +2,8 @@
 title: WebOps Certification
 subtitle: "Chapter 4: Content Delivery Network"
 description: Pantheon's edge layer increases the speed and scalability of all sites on the platform. The Advanced Global CDN can be customized for tailored usage.
-certificationpage: true
-type: certificationpage
-layout: certificationpage
-showtoc: true
-tags: []
 permalink: docs/certification/study-guide/cdn
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 previousurl: /certification/study-guide/create
 nexturl: /certification/study-guide/cms
 ---

@@ -2,22 +2,12 @@
 title: WebOps Certification
 subtitle: Study Guide Introduction
 description: Learn about the three failure modes of website operations.
-certificationpage: true
-type: certificationpage
-layout: certificationpage
-showtoc: true
-tags: []
 permalink: docs/certification/study-guide
-contenttype: [guide]
-innav: [false]
-categories: []
 cms: [drupal, wordpress]
-audience: []
-product: []
-integration: [--]
 nexturl: /certification/study-guide/webops
 reviewed: "2026-07-28"
 ---
+
 
 At Pantheon we consider velocity to be the indispensable shared characteristic of successful websites and web teams. Successful web teams make changes confidently and quickly because the target for what will win on the web never stops moving.
 

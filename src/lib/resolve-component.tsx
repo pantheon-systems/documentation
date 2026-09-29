@@ -1,4 +1,4 @@
-import { PageDataWithoutComponent, calculateTemplate } from "./page-utils";
+import { PageDataWithoutComponent } from "./page-utils";
 
 export const serveLocal = (search?: { local?: "true" | "false" }) => {
   let useLocal = false;
@@ -38,59 +38,22 @@ export const resolveComponent = async (
 ): Promise<{ Component: React.ReactNode; template: string }> => {
   switch (pageData.type) {
     case "doc": {
-      const template = calculateTemplate(pageData.data.doc, "doc");
-
-      if (template === "doc") {
-        const Doc = await import(`@/templates/doc`);
-        return {
-          Component: <Doc.DocTemplate doc={pageData.data.doc} />,
-          template: "doc",
-        };
-      } else if (template === "terminuspage") {
-        const Terminus = await import(`@/templates/terminus`);
-        return {
-          Component: <Terminus.TerminusTemplate terminus={pageData.data.doc} />,
-          template: "terminuspage",
-        };
-      } else if (template === "certificationpage") {
-        const Certification = await import(`@/templates/certification`);
-        return {
-          Component: (
-            <Certification.CertificationTemplate
-              certification={pageData.data.doc}
-            />
-          ),
-          template: "certification",
-        };
-      } else if (template === "video") {
-        const Video = await import(`@/templates/guide`);
-        return {
-          Component: (
-            <Video.GuideTemplate
-              guide={pageData.data.doc}
-              prev={null}
-              next={null}
-            />
-          ),
-          template: "video",
-        };
-      } else {
-        const Doc = await import(`@/templates/doc`);
-        return {
-          Component: <Doc.DocTemplate doc={pageData.data.doc} />,
-          template: "doc",
-        };
-      }
+      const Doc = await import(`@/templates/doc`);
+      return {
+        Component: <Doc.DocTemplate doc={pageData.data.doc} />,
+        template: "doc",
+      };
     }
 
     case "guide": {
-      const Guide = await import(`@/templates/guide`);
+      const Doc = await import(`@/templates/doc`);
       return {
         Component: (
-          <Guide.GuideTemplate
-            guide={pageData.data.guide}
+          <Doc.DocTemplate
+            doc={pageData.data.guide}
             prev={pageData.data.prev}
             next={pageData.data.next}
+            tocDefault={false}
           />
         ),
         template: "guide",
