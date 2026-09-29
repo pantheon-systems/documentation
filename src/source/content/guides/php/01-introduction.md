@@ -44,7 +44,7 @@ Click the links below to display complete PHP information for each version, incl
 
 - <span style="font-weight: bold">Fully Supported</span> — Available, recommended, and receives upstream security patches automatically.
 - <span style="font-weight: bold">End of Sale</span> — No longer available for new sites. Existing sites continue; patches still provided where available.
-- <span style="font-weight: bold">End of Support</span> — No longer supported by PHP maintainers. Customers assume additional security risk by staying on these versions.
+- <span style="font-weight: bold">End of Support</span> — No longer supported upstream. Customers assume additional security risk by staying on these versions.
 - <span style="font-weight: bold">Removal Date</span> — This PHP version will no longer be available on the platform. Sites still running a removed version will be automatically upgraded to the oldest available PHP version, which may result in broken functionality if the site's code has not been updated for compatibility.
 - <span style="font-weight: bold">Grace Period</span> - Removal from the Pantheon platform is imminent. While Pantheon still receives some updates to these EOS versions, we strongly recommend upgrading sites to supported versions. As of September 30, 2026, Pantheon will no longer provide software patches for these versions unless available in upstream open source repositories or from Pantheon contracted vendors, and future platform features will not be backward compatible. By remaining on this version, you accept the risk of unpatched vulnerabilities and release Pantheon from associated liability.  Pantheon will provide 90 days advance notice before requiring removal of a PHP version from the Pantheon platform.
 
