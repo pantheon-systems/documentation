@@ -78,9 +78,11 @@ const webInfrastructure = () => {
             ),
             simpleLink("/apcu", "APCu"),
           ]),
-          getGuideDirectory("guides/nextgen-gcdn", "NextGen Global CDN"),
-          getGuideDirectory("guides/global-cdn", "Legacy Global CDN"),
-          getGuideDirectory("guides/agcdn"),
+          getGuideDirectory("guides/nextgen-gcdn", "NextGen GCDN"),
+          simpleLink("/guides/global-", "Legacy Global CDN", [
+             getGuideDirectory("guides/global-cdn", "Legacy GCDN"),
+             getGuideDirectory("guides/agcdn", "Legacy AGCDN"),
+          ]),
           simpleLink("/clear-caches", "Manage Cache", [
             // Think about the order of this section
             simpleLink("/clear-caches", "Clearing Caches"),
