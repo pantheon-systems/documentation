@@ -22,7 +22,7 @@
   "dependencies": {
     "@adobe/mdast-util-gridtables": "^4.0.13",
     "@adobe/remark-gridtables": "^3.0.14",
-    "@next/bundle-analyzer": "16.3.6",
+    "@next/bundle-analyzer": "^16.3.6",
     "@pantheon-systems/pds-toolkit-react": "^1.10.0",
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
@@ -90,7 +90,7 @@
     "autoprefixer": "^10.4.21",
     "c8": "^7.14.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "16.3.6",
+    "eslint-config-next": "^16.3.6",
     "js-yaml": "^4.3.0",
     "jsdom": "^22.1.0",
     "postcss": "^8.5.6",
