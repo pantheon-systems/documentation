@@ -38,7 +38,7 @@ This section provides information on causes and solutions to error messages that
 
 ### Destination Site Not Found Error
 
-**Cause**: This error occurs when you are logged in with one identity and re-authenticate with a different account, or use Single Sign-On with Google. The site created will be associated with one account and the machine token with another.
+**Cause**: This error occurs when you are logged in with one identity and re-authenticate with a different account, or use Single Sign-On with Google. The site created will be associated with one account and the token with another.
 
 **Solution**: Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 

@@ -11,7 +11,7 @@ product: [dashboard]
 integration: [--]
 tags: [--]
 showtoc: true
-reviewed: "2026-09-16"
+reviewed: "2026-09-22"
 ---
 
 The Pantheon Site Dashboard is the hub of all development and activity for an individual site.
@@ -35,7 +35,7 @@ On the right side, there are two rows of options:
 - Billing: [payment methods](/guides/account-mgmt/billing/methods) specific to this site.
 - Support: search for documentation, or start a chat with a Pantheon Customer Success Engineer.
 
-In the top right corner, click your user gravatar to access [Personal Settings](/personal-settings), where you can manage your profile, [email preferences](/personal-settings#email-preferences), SSH keys, and machine tokens.
+In the top right corner, click your user gravatar to access [Personal Settings](/personal-settings), where you can manage your profile, [email preferences](/personal-settings#email-preferences), SSH keys, and Personal Access Tokens.
 
 ## Environment Tabs
 

@@ -24,8 +24,11 @@ const terminus = () => {
           simpleLink("/terminus/terminus-3-0", "Terminus 3"),
         ]),
       ]),
-      simpleLink("/machine-tokens", "Authentication", [
-        simpleLink("/machine-tokens", "Creating and Revoking Machine Tokens"),
+      simpleLink("/personal-access-tokens", "Authentication", [
+        simpleLink(
+          "/personal-access-tokens",
+          "Creating and Revoking Personal Access Tokens"
+        ),
         simpleLink("/ssh-keys", "SSH Keys"),
         simpleLink(
           "/terminus/ci/bitbucket",

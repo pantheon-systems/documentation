@@ -5,4 +5,4 @@ categories: [documentation]
 ---
 ### New Docs
 
-[Creating and Revoking Machine Tokens](/machine-tokens)
+[Creating and Revoking Machine Tokens](/personal-access-tokens)

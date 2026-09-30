@@ -28,7 +28,7 @@ Before you continue, make sure you have:
 
 - Installed [Terminus](/terminus/install)
 - Installed [Node.js](https://nodejs.org/en/download)
-- Created a [Machine Token](/machine-tokens#create-a-machine-token)
+- Created a [Personal Access Token](/personal-access-tokens#create-a-personal-access-token)
 
 1. Open your terminal and run the command below to install the Terminus Decoupled Kit plugin.
 
