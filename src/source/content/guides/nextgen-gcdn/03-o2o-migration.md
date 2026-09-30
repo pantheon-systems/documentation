@@ -106,7 +106,7 @@ terminus gcdn:dns <site>.<env>
 
 Find your hostname in the output and look for the `Cloudflare ownership` line. Proceed once it reads `verified`. If it reads `not verified`, run the command again after a minute or two. Don't point traffic at the GCDN before it verifies, or visitors reach Pantheon's edge without a valid certificate.
 
-The same output lists A and AAAA records marked `[action required]`, with Cloudflare proxy IP addresses as the current values. Ignore those for O2O. Your domain uses the CNAME, which is listed as `fe.<zone>.edge.pantheon.io`.
+The `gcdn:dns` command will list A and AAAA records marked `[action required]`, with Cloudflare proxy IP addresses as the current values. Ignore those for O2O. Your domain uses the CNAME, which is listed as `fe.<zone>.edge.pantheon.io`.
 
 ### 3. Route Traffic to the GCDN
 
