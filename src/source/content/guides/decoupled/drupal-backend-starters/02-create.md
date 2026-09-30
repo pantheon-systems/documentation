@@ -15,6 +15,7 @@ cms: [decoupled]
 audience: [development]
 product: [decoupled]
 integration: [--]
+reviewed: "2026-09-22"
 ---
 <Partial file="fes-deprecated.md" />
 
@@ -94,7 +95,7 @@ Your backend starter is ready to develop!
 ### Prerequisites
 
 - Composer (required for CMS backends): [Install Composer](https://getcomposer.org/download/)
-- [Generate a machine token](/machine-tokens#create-a-machine-token) and [authenticate into Terminus](/machine-tokens#authenticate-into-terminus)
+- [Generate a Personal Access Token](/personal-access-tokens#create-a-personal-access-token) and [authenticate into Terminus](/personal-access-tokens#authenticate-into-terminus)
 - [Install Terminus](/terminus/install) (3.0.0 or above required)
 - Install and confirm Terminus plugins:
 

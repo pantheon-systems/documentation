@@ -11,7 +11,7 @@ cms: [--]
 audience: [agency]
 product: [--]
 integration: [--]
-reviewed: "2026-07-31"
+reviewed: "2026-09-22"
 ---
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
 
@@ -77,7 +77,7 @@ Drupal now includes Composer usage within Drupal Core itself. For details, see [
 ## Advanced Tools
 
 ### Terminus
-[Terminus](/terminus), the Pantheon command-line interface, has a near 1:1 parity with the Pantheon Dashboard. After installing this tool locally, login using a [machine token](/machine-tokens).
+[Terminus](/terminus), the Pantheon command-line interface, has a near 1:1 parity with the Pantheon Dashboard. After installing this tool locally, login using a [Personal Access Token](/personal-access-tokens).
 
 You can [extend Terminus and add new commands](/terminus/plugins) by installing or creating third-party plugins. For a complete list of supported plugins, see our [Plugin Directory](/terminus/directory). Two favorites are [Filer](https://github.com/terminus-plugin-project/terminus-filer-plugin), which assists with opening Pantheon sites in many popular SFTP GUI clients, and [Pancakes](https://github.com/derimagia/terminus-pancakes), which open any Pantheon site database using a SQL GUI client. These two plugins eliminate logging into the Pantheon dashboard and copying/pasting credentials into your client.
 
