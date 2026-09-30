@@ -192,80 +192,7 @@ terminus gcdn:verify my-site.live www.example.com
 
 ## Using Cloudflare in Front of Pantheon (Orange-to-Orange)
 
-If your domain is already proxied through your own Cloudflare zone (orange-clouded), the next-generation GCDN supports Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration. This lets you keep your existing Cloudflare zone — including your WAF rules, Workers, and other settings — in front of Pantheon's GCDN.
-
-<Alert title="Terminus Plugin Required" type="danger">
-
-O2O setup is only available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin). The dashboard migration flow does not support O2O. Install the plugin and upgrade your site with `terminus gcdn:upgrade` (see the **Terminus CLI** tab in [Setup](#setup)) before starting the steps below.
-
-</Alert>
-
-Because your DNS is hosted in Cloudflare, the standard TXT-record verification flow does not apply. Instead, you will add a specific set of records in your Cloudflare zone. Apart from step 1 (Terminus), every step below is performed in the Cloudflare dashboard, in the zone that currently serves your domain. The order matters: do not point traffic at Pantheon until your certificate is active.
-
-### Before You Begin
-
-- Your site must already be upgraded to the next-generation GCDN (`terminus gcdn:upgrade <site>`).
-- You need access to your Cloudflare account with permission to edit DNS records and SSL/TLS settings (and, on Enterprise plans, Zone Holds).
-
-### 1. Get your O2O record set
-
-```bash{promptUser: user}
-terminus gcdn:o2o <site>.live [<domain>]
-```
-
-This prints the records for each domain: the hostname ownership TXT record, the DCV delegation CNAME, and the final traffic CNAME. You will only need the DCV delegation CNAME and the traffic CNAME in the steps below. The `<domain>` argument is optional — omit it to list records for every Cloudflare domain on the environment, or pass one to limit output to a single hostname:
-
-```bash{promptUser: user}
-terminus gcdn:o2o my-site.live www.example.com
-```
-
-### 2. Release your Zone Hold (Enterprise plans only)
-
-[Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are a Cloudflare Enterprise feature, enabled by default on Enterprise zones. If your Cloudflare zone is on a Free, Pro, or Business plan, it does not have a Zone Hold — skip this step and step 6.
-
-If your zone has a Zone Hold (especially with **Also prevent subdomains** enabled), release it temporarily so Cloudflare can process the new custom hostname: on the zone homepage, go to **Quick Actions** and switch **Zone Hold** to **Off**. You will re-enable it at the end.
-
-### 3. Set your SSL/TLS encryption mode to Full or Full (strict)
-
-In your Cloudflare zone, set **SSL/TLS** > **Overview** to **Full** or **Full (strict)**. Other modes (such as Flexible) cause infinite redirect loops between your Cloudflare zone and the GCDN.
-
-### 4. Add the DCV delegation CNAME
-
-In the Cloudflare dashboard, go to **DNS** > **Records** for your zone and add the CNAME from the `gcdn:o2o` output, set to **DNS only** (grey-clouded):
-
-```none
-_acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
-```
-
-This delegates certificate validation to the GCDN for both initial issuance and automatic renewal. **Leave this record in place permanently and keep it grey-clouded** — removing it or proxying it will break certificate renewal.
-
-Before moving to the next step, confirm the `_acme-challenge` CNAME has propagated using a DNS propagation checker such as [DNS Checker](https://dnschecker.org), or from the command line:
-
-```bash{promptUser: user}
-dig +short CNAME _acme-challenge.<hostname>
-```
-
-The record has propagated when the query returns the `dcv.cloudflare.com` target.
-
-### 5. Point traffic at the GCDN
-
-Only after your certificate is active, update your hostname's CNAME to the GCDN edge:
-
-```none
-<hostname>  CNAME  fe.<zone>.edge.pantheon.io
-```
-
-Traffic routes to Pantheon as soon as this record is in place. The record can be **Proxied** (orange-clouded, O2O) to keep your Cloudflare zone in front, or **DNS only** if you want traffic to reach the GCDN directly.
-
-### 6. Re-enable your Zone Hold (if applicable)
-
-Once traffic is flowing, re-enable the Zone Hold released in step 2 to re-secure your zone.
-
-<Alert title="Note" type="info">
-
-O2O requires CNAME records. Using A/AAAA records is not compatible with O2O and may result in site downtime or inaccessibility. We welcome feedback on O2O configurations in the Pantheon Community Slack.
-
-</Alert>
+If your domain is already proxied through your own Cloudflare zone (orange-clouded), the next-generation GCDN supports Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration, which keeps your Cloudflare zone in front of Pantheon's GCDN. See [Migrate a Cloudflare-Proxied Domain (O2O)](/guides/nextgen-gcdn/o2o) for the full walkthrough.
 
 ## Using a Third-Party CDN in Front of Pantheon
 
@@ -281,4 +208,4 @@ When configuring your CDN, for each custom domain:
 
 If your CDN cannot set the outbound SNI independently of the configured origin hostname, it cannot be used in front of the next-generation GCDN. Azure Front Door currently has this limitation (see [Known Limitations](#known-limitations)).
 
-If the service in front of Pantheon is your own Cloudflare zone, use the [Orange-to-Orange configuration](#using-cloudflare-in-front-of-pantheon-orange-to-orange) instead.
+If the service in front of Pantheon is your own Cloudflare zone, use the [Orange-to-Orange configuration](/guides/nextgen-gcdn/o2o) instead.
