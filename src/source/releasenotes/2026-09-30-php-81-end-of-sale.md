@@ -1,7 +1,7 @@
 ---
 title: "PHP 8.1 is now End of Sale"
 published_date: "2026-09-30"
-published_at: "2026-09-30T14:00:00Z"
+published_at: "2026-09-30T14:34:55Z"
 categories: [infrastructure, action-required]
 description: "PHP 8.1 has reached End of Sale on the Pantheon platform. Sites created after September 30, 2026 can no longer use PHP 8.1."
 ---
