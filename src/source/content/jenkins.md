@@ -9,7 +9,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2026-07-28"
+reviewed: "2026-09-22"
 ---
 
 [Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server which can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. However, it is very customizable and can even run non-CI related tasks, such as calling periodic cron jobs.
@@ -162,7 +162,7 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
     Press OK to add the new credential to the system.
 
-4. Create another credential for a Terminus Token, using  either an existing token or [create a new token](/machine-tokens) from your Jenkins user dashboard:
+4. Create another credential for a Terminus Token, using  either an existing token or [create a new token](/personal-access-tokens) from your Jenkins user dashboard:
 
     - **Kind**: Secret Text
     - **Scope**: Global

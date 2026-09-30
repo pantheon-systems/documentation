@@ -2,7 +2,7 @@
 title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 tags: [security, dashboard, ssh]
-reviewed: "2025-12-10"
+reviewed: "2026-09-22"
 contenttype: [doc]
 innav: [true]
 categories: [security, git, config]
@@ -128,7 +128,7 @@ Host codeserver.*.drush.in
 ## Remove SSH Key from Pantheon
 After removing SSH Keys from your user account, you will not be able to interact with remote Pantheon application and codeservers via Git, SFTP, Drush, or WP-CLI.
 
-Removing SSH keys is separate from [revoking the machine tokens used by Terminus](/machine-tokens#revoke-a-machine-token) to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.
+Removing SSH keys is separate from [revoking the Personal Access Token used by Terminus](/personal-access-tokens#revoke-a-personal-access-token) to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.
 
 1. Log in to your Pantheon Dashboard.
 
