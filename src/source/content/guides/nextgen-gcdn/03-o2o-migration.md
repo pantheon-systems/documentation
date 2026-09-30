@@ -116,7 +116,7 @@ O2O requires a CNAME at the hostname. Cloudflare doesn't allow a CNAME alongside
 <hostname>  CNAME  fe.<zone>.edge.pantheon.io
 ```
 
-Create the record as **DNS only** (grey cloud) and leave it that way for 15 to 20 minutes. Cloudflare needs that time to associate the custom hostname with the new GCDN. If you proxy the record before it does, requests return a 1014 error. After the wait, edit the record and switch it to **Proxied** (orange cloud) to complete the O2O configuration.
+Create the record as **DNS only** (grey cloud) and leave it that way for 15 to 20 minutes. Cloudflare needs that time to associate the custom hostname with the new GCDN. If you proxy the record before it does, requests may return a 1014 error. After the wait, edit the record and switch it to **Proxied** (orange cloud) to complete the O2O configuration if you wish to keep your own Cloudflare rules.
 
 <Alert title="Note" type="info">
 
