@@ -11,7 +11,7 @@
     "build": "next build",
     "coverage": "vitest run --coverage",
     "dev": "next dev -p 3002",
-    "lint": "next lint",
+    "lint": "eslint .",
     "prettier": "prettier \"**/*.{js,jsx,md}\" --check --ignore-path .prettierignore",
     "prettier:fix": "prettier \"**/*.{js,jsx,,md}\" --write --ignore-path .prettierignore",
     "start": "next start",
