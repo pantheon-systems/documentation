@@ -47,7 +47,7 @@ Allow two business days for your Account Team to load the certificate.
 
 <Tab title="Next Gen Global CDN" id="ccbotprotection">
 
-[Next Gen GCDN with Bot Protection](/guides/global-cdn/next-gen-global-cdn) supports custom certificates, including **wildcard certificates** (for example, `*.example.com`) that cover multiple subdomains.
+[Next Gen GCDN with Bot Protection](/guides/nextgen-gcdn) supports custom certificates, including **wildcard certificates** (for example, `*.example.com`) that cover multiple subdomains.
 
 ### Before You Begin
 
