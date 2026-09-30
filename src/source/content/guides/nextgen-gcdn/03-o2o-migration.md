@@ -38,11 +38,13 @@ O2O uses the CNAME-based validation described on this page. Don't run `terminus 
 
 ## Release Your Zone Hold (Enterprise Only)
 
-[Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are available only on Cloudflare Enterprise plans. If your zone is on a Free, Pro, or Business plan, it has no Zone Hold, so skip this step and [re-enabling the hold](#re-enable-your-zone-hold-enterprise-only) at the end.
+[Zone Holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/) are enabled by default on Cloudflare Enterprise plans and Cloudflare for SaaS Enterprise accounts. If your zone is on a Free, Pro, or Business plan and your domain was not previously on a Cloudflare for SaaS provider, it has no Zone Hold, so skip this step and [re-enabling the hold](#re-enable-your-zone-hold-enterprise-only) at the end.
 
-Otherwise, do this before you start the migration. If your zone has a Zone Hold, Cloudflare can't issue certificates for the custom hostname. With **Also prevent subdomains** enabled, the hostname becomes `Blocked`, which doesn't recover when you release the hold later and leaves the domain on a 1014 error.
+Otherwise, do this before you start the migration. If a Zone Hold applies to your domain, Cloudflare can't issue certificates for the custom hostname. With **Also prevent subdomains** enabled, the hostname becomes `Blocked`, which doesn't recover when you release the hold later and leaves the domain on a 1014 error.
 
-On the zone homepage, go to **Quick Actions** and switch **Zone Hold** to **Off**.
+**Your own Enterprise zone:** On the zone homepage, go to **Quick Actions** and switch **Zone Hold** to **Off**.
+
+**Cloudflare for SaaS provider zone hold:** If the Zone Hold comes from another Cloudflare for SaaS provider — such as HubSpot, WPEngine, or Kinsta — you can't release it yourself. [Contact Pantheon Support](/guides/support/contact-support/) and the team will work with Cloudflare to clear the hold. This is the more common scenario.
 
 ## Start the Migration
 
@@ -142,20 +144,15 @@ The response should no longer include Fastly headers such as `x-served-by: cache
 
 ## Troubleshooting
 
-### Error 1014: CNAME Cross-User Banned
+### Errors 1014, 1016, and 1034
 
-Requests may return Cloudflare error 1014 while the domain is in transition. Cloudflare validates the hostname on a backoff schedule that starts when the upgrade creates it, not when you change the CNAME. The first checks run about 60 seconds apart for roughly 20 minutes, then stretch to 4 hours apart. If you change the CNAME hours or days after the upgrade, the error can last up to 4 hours.
-
-To speed this up:
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and open the **Domains** tab.
-1. Open the domain and use **Force Recheck** in the troubleshooting message. See [Re-running Domain Verification](/guides/nextgen-gcdn/setup#re-running-domain-verification) for how the schedule works.
+These errors are usually transient. They appear while Cloudflare validates the custom hostname on Pantheon's edge and typically clear on their own.
 
 If the error persists:
 
 - Confirm the `_acme-challenge` CNAME exists, matches the `gcdn:o2o` output, and is grey-clouded.
 - Confirm the hostname CNAME points to `fe.<zone>.edge.pantheon.io`.
-- Confirm you completed the staged grey-cloud then orange-cloud change.
+- Confirm you followed the staged grey-cloud then orange-cloud change.
 
 [Contact Pantheon Support](/guides/support/contact-support/) if the hostname is `Blocked` (the Zone Hold was on when you upgraded) or `moved` (it stayed pending past Cloudflare's 7-day validation window). Neither recovers on its own.
 
