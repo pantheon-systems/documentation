@@ -8,41 +8,13 @@ import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layo
 import { MOBILE_MENU_BREAKPOINT } from "@/constants";
 import HeaderBody from "@/components/common/header-body";
 import { TOC } from "@/components/common/toc";
-import { AllDefs, getGlossaryPageData } from "@/lib/glossary";
-import { serveLocalAsync } from "@/lib/resolve-component";
-import { fetchArticleBySlug } from "@/lib/page-utils";
+import { getGlossaryPageData } from "@/lib/glossary";
 import { generateMetadataFromUri } from "@/lib/site-metadata";
 
 const converter = new showdown.Converter();
 
-const getPageData = async (useLocal: boolean) => {
-  if (!useLocal) {
-    try {
-      const article = await fetchArticleBySlug("glossary");
-      const parsedContent = JSON.parse(JSON.parse(article.content).content);
-
-      const { allDefs, letters } = parsedContent;
-      return { allDefs, letters } as { allDefs: AllDefs; letters: string[] };
-    } catch (error) {
-      console.error("Error fetching glossary page data", error);
-      return { allDefs: [], letters: [] };
-    }
-  }
+export default async function GlossaryPage() {
   const { allDefs, letters } = await getGlossaryPageData();
-  return { allDefs, letters };
-};
-
-export default async function GlossaryPage(props: {
-  searchParams: Promise<{
-    local: "true" | "false" | undefined;
-  }>;
-}) {
-  // @todo, consider un-hardcoding this value.
-  // See https://github.com/pantheon-systems/documentation-in-nextjs/issues/32
-  //const useLocal = await serveLocalAsync(props.searchParams);
-  const useLocal = true;
-
-  const { allDefs, letters } = await getPageData(useLocal);
 
   return (
     <Layout containerWidth="standard">
