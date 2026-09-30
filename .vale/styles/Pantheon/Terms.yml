@@ -1,0 +1,19 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: warning
+# Case-sensitive: correct spellings of Pantheon and ecosystem product names.
+ignorecase: false
+swap:
+  Wordpress: WordPress
+  Word Press: WordPress
+  Wordpress.org: WordPress.org
+  Github: GitHub
+  Gitub: GitHub
+  MultiDev: Multidev
+  Multi-dev: Multidev
+  multidev environment: Multidev environment
+  terminus: Terminus
+  Nextjs: Next.js
+  NextJS: Next.js
+  Nodejs: Node.js
+  NodeJS: Node.js

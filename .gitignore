@@ -71,3 +71,8 @@ pnpm-lock.yaml
 audit-results.json
 image-audit-results.json
 scripts/dry-run/
+
+# Vale synced packages (run `vale sync`); Pantheon style and vocab are committed
+.vale/styles/*
+!.vale/styles/Pantheon/
+!.vale/styles/config/
