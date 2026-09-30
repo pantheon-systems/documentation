@@ -17,8 +17,10 @@ export default defineConfig({
     setupFiles: ["./setupVitest.js"],
     exclude: [...configDefaults.exclude, "./playwright-tests/*", "./tests/playwright/**"],
     css: true,
-    deps: {
-      inline: [/@pantheon-systems\/pds-toolkit-react/],
+    server: {
+      deps: {
+        inline: [/@pantheon-systems\/pds-toolkit-react/],
+      },
     },
   },
   plugins: [react()],

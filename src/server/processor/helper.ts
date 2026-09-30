@@ -124,36 +124,6 @@ export const exportGraphQLData = <T extends BaseProcessedFile>(
   };
 };
 
-// Common file processing pipeline
-export const processDirectoryWithOptions = <T extends BaseProcessedFile>(
-  directoryPath: string,
-  processFile: (filePath: string) => T | null,
-  options: {
-    extensions?: string[];
-    filter?: (filePath: string) => boolean;
-    sortBy?: string;
-  } = {},
-  baseDirectory = path.resolve(process.cwd())
-): T[] => {
-  const {
-    extensions = [],
-    filter = () => true,
-    sortBy = "fileAbsolutePath",
-  } = options;
-
-  const files = getFilesByExtension(
-    path.join(baseDirectory, directoryPath),
-    extensions
-  );
-
-  const processedFiles = files
-    .filter(filter)
-    .map(processFile)
-    .filter((file): file is T => file !== null);
-
-  return sortProcessedFiles(processedFiles, sortBy);
-};
-
 // Common error handling
 export const safeProcessFile = <T>(
   filePath: string,

@@ -207,6 +207,7 @@ const RedirectMap: Record<string, string> = {
   "/guides/global-cdn/next-gen-global-cdn": "/guides/nextgen-gcdn",
   "/guides/global-cdn/global-cdn-beta#faq": "/guides/global-cdn/global-cdn-faq",
   "/guides/external-repositories/setup": "/guides/external-repositories/github",
+  "/guides/nextgen-gcdn/advanced-edge-blocking": "/guides/nextgen-gcdn/advanced-edge",
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.
