@@ -5,7 +5,7 @@ description: View your site's access logs with the Edge tool, found in the live 
 tags: [traffic]
 permalink: docs/guides/account-mgmt/edge-logs
 editpath: docs/guides/account-mgmt/traffic/02-site-edge-logs.md
-reviewed: "2026-09-30"
+reviewed: "2026-10-02"
 showtoc: true
 contenttype: [guide]
 innav: [true]
