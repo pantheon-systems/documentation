@@ -1,7 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: "Chapter 2: Pantheon Platform"
-description: Understand the layers of Pantheon's platform and how it can be used to solve problems using WebOps best practices.
+description: Understand the layers of Pantheon's platform and how it can be used to solve problems using WebOps best practicies.
 permalink: docs/certification/study-guide/platform
 cms: [drupal, wordpress]
 previousurl: /certification/study-guide/webops

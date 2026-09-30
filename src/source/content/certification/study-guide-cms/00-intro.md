@@ -8,6 +8,7 @@ nexturl: /certification/study-guide/webops
 reviewed: "2026-07-28"
 ---
 
+
 At Pantheon we consider velocity to be the indispensable shared characteristic of successful websites and web teams. Successful web teams make changes confidently and quickly because the target for what will win on the web never stops moving.
 
 We've developed our views of WebOps to reflect and articulate in greater detail how web teams can increase their velocity to grow the value of their work.

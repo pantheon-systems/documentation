@@ -1,12 +1,14 @@
+# Managed by github-terraform — do not edit manually
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: documentation
-  description: Pantheon Docs
+  name: "documentation"
+  description: "Pantheon Docs"
   annotations:
-    github.com/project-slug: pantheon-systems/documentation
+    "backstage.io/techdocs-ref": "dir:docs/"
+    "github.com/project-slug": "pantheon-systems/documentation"
 spec:
-  type: service
-  lifecycle: mature
-  owner: devrel
+  type: "gcp-service"
+  lifecycle: "mature"
+  owner: "devrel"
