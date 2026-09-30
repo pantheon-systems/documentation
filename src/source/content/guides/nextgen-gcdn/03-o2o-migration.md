@@ -132,14 +132,13 @@ Once traffic is flowing, switch **Zone Hold** back to **On** in **Quick Actions*
 
 ## Verify the Migration
 
-Check that the hostname now resolves through the GCDN:
+Request the site and check the response headers:
 
 ```bash{promptUser: user}
-dig +short CNAME <hostname>
 curl -sI https://<hostname>
 ```
 
-The CNAME should point to `fe.<zone>.edge.pantheon.io`. Because your zone was already on Cloudflare, `server: cloudflare` and `cf-ray` headers appear before and after the migration and don't confirm anything. Instead, confirm the Fastly headers are gone, such as `x-served-by: cache-...`. The site should load without certificate warnings or redirect loops.
+The response should no longer include Fastly headers such as `x-served-by: cache-...`, `x-cache`, or `x-timer`, and `via` should no longer mention `varnish`. The site should load without certificate warnings or redirect loops.
 
 ## Troubleshooting
 
