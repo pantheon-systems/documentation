@@ -1,7 +1,7 @@
 ---
 title: "Next-generation Advanced Global CDN: Phase 1 migrations begin September 30"
 published_date: "2026-09-30"
-published_at: "2026-09-30T00:00:00Z"
+published_at: "2026-09-30T16:19:10Z"
 categories: [new-feature, infrastructure, action-required]
 description: "Starting September 30, 2026, AGCDN customers whose current configuration is fully supported in Phase 1 are eligible to migrate. Pantheon will contact eligible customers directly."
 ---
