@@ -15,7 +15,7 @@ contributors: [scottmassey]
 
 Monitoring services, such as [Pingdom](https://www.pingdom.com/), allow those responsible for site performance and uptime to know when a website is having problems delivering content. Pingdom provides several different types of uptime and performance checks.
 
-In this guide, we will create and configure the simplest check for a website, an [Uptime Check](https://www.pingdom.com/product/uptime-monitoring), which pings a page and verifies a response. Additional checks include a [Page Speed](https://www.pingdom.com/product/page-speed) check, which tracks page load time, and [Real User Monitoring](https://www.pingdom.com/product/performance-monitoring), which measures other important performance metrics.
+In this guide, we will create and configure the simplest check for a website, an [Uptime Check](https://www.pingdom.com/product/uptime-monitoring/), which pings a page and verifies a response. Additional checks include a [Page Speed](https://www.pingdom.com/product/page-speed/) check, which tracks page load time, and [Real User Monitoring](https://www.pingdom.com/product/performance-monitoring/), which measures other important performance metrics.
 
 ## What You’ll Need
 
@@ -49,7 +49,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
     - **Check Type:** You can monitor several different things with Pingdom: email services, network components such as DNS or specific ports, or a website. Choose **Web**.
 
-    - **URL/IP:** On the **Required** tab, enter the URL for the website. If your site is using HTTPS, select that dropdown option. From the **Optional** tab, you can add user credentials and expected response text. This is very useful if you are using Varnish to cache a site; you can create a simple PHP script which queries the database and returns a specific value to determine if the site is functioning as expected.
+    - **URL/IP:** On the **Required** tab, enter the URL for the website. If your site is using HTTPS, select that dropdown option. From the **Optional** tab, you can add user credentials and expected response text. This is very useful for verifying dynamic content; you can create a simple PHP script which queries the database and returns a specific value to determine if the site is functioning as expected.
 
     - **Test From:** Select the region. We suggest you select the region where the majority of the site's users are located.
 
