@@ -110,11 +110,13 @@ You will need to install the appropriate Drupal module(s) and the AWS SDK librar
 
 The following instructions use Drupal and [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
-These steps require Drush 8, which is run by default on Pantheon for newly created Drupal sites. Sites created prior to November 4, 2015 run 5.x by default.
+These steps require Drush, which is run by default on Pantheon. Check your site's Drush version and update if needed.
 
 Before you begin:
 
-- [Set your site’s Drush version](/guides/drush/drush-versions/#configure-drush-version) to Drush 8 if needed.
+- [Set your site's Drush version](/guides/drush/drush-versions/#configure-drush-version) to a supported version if needed.
+- Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
+- Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/terminus):
 - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
 - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/terminus):
 
@@ -126,21 +128,19 @@ Before you begin:
 
 #### S3 File System
 
-Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
+Install the [S3 File System](https://www.drupal.org/project/s3fs) module. For Drupal 7, also install the [Libraries API](https://www.drupal.org/project/libraries) module:
 
 ```bash{promptUser: user}
-terminus drush <site>.<env> -- en libraries s3fs -y
+terminus drush <site>.<env> -- en s3fs -y
 ```
 
-Get the [AWS SDK Library 2.x](https://github.com/aws/aws-sdk-php/releases):
+Get the [AWS SDK Library 3.x](https://github.com/aws/aws-sdk-php/releases) via Composer:
 
-```bash{outputLines: 2-3}
-terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make -y
-  //or if you have a contrib subfolder for modules use:
-  //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make -y
+```bash{promptUser: user}
+composer require aws/aws-sdk-php
 ```
 
-The above command will add the AWS SDK version 2.x library into the `sites/all/libraries/awssdk2` directory.
+The above command will add the AWS SDK version 3.x library as a Composer dependency.
 
 #### S3 File System CORS
 
