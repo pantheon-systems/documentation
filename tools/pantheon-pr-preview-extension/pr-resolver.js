@@ -26,6 +26,37 @@
     return `https://pr-${prNumber}-pandocs.pantheonsite.io`;
   }
 
+  const REPOSITORY_NAME = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
+
+  // Only these hosts are ever opened or probed; permalinks and PR metadata are untrusted input.
+  function isAllowedUrl(url) {
+    let parsed;
+    try {
+      parsed = new URL(url);
+    } catch {
+      return false;
+    }
+    if (parsed.protocol !== "https:") return false;
+    return (
+      parsed.hostname === "github.com" ||
+      parsed.hostname === new URL(LIVE_ORIGIN).hostname ||
+      /^pr-\d+-pandocs\.pantheonsite\.io$/.test(parsed.hostname)
+    );
+  }
+
+  // Joins a front-matter route onto a fixed origin and rejects anything that escapes it
+  // (for example a permalink starting with a backslash or a second slash).
+  function buildUrl(origin, route, anchor) {
+    try {
+      const url = new URL(route, `${origin}/`);
+      if (url.origin !== origin) return null;
+      if (anchor) url.hash = anchor;
+      return url.href;
+    } catch {
+      return null;
+    }
+  }
+
   function encodePath(path) {
     return path.split("/").map(encodeURIComponent).join("/");
   }
@@ -33,11 +64,14 @@
   function frontMatterValue(markdown, key) {
     const frontMatter = markdown.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s*\r?\n|$)/);
     if (!frontMatter) return null;
-    const keyPattern = new RegExp(`^\\s*${key}\\s*:`, "i");
-    const line = frontMatter[1].split(/\r?\n/).find((entry) => keyPattern.test(entry));
+    const wanted = key.toLowerCase();
+    const line = frontMatter[1].split(/\r?\n/).find((entry) => {
+      const colon = entry.indexOf(":");
+      return colon > 0 && entry.slice(0, colon).trim().toLowerCase() === wanted;
+    });
     if (!line) return null;
     const value = line
-      .replace(keyPattern, "")
+      .slice(line.indexOf(":") + 1)
       .trim()
       .replace(/\s+#.*$/, "")
       .replace(/^['"]|['"]$/g, "")
@@ -168,6 +202,9 @@
     const baseRepository = pullRequest.base?.repo?.full_name || REPOSITORY;
     const baseSha = pullRequest.base?.sha || pullRequest.base?.ref || "main";
     if (!headRepository || !headRef) throw new Error("The PR head repository is unavailable.");
+    if (!REPOSITORY_NAME.test(headRepository) || !REPOSITORY_NAME.test(baseRepository)) {
+      throw new Error("Unexpected repository name in the PR metadata.");
+    }
 
     const { files, truncated } = await listChangedFiles(prNumber);
     const markdownFiles = files.filter((file) => file.status !== "removed" && /\.(md|mdx)$/i.test(file.filename));
@@ -217,14 +254,20 @@
       const route = normalizeRoute(entry.permalink);
       if (!route || seenRoutes.has(route)) continue;
       seenRoutes.add(route);
-      const hash = entry.anchor ? `#${entry.anchor}` : "";
+      const previewUrl = buildUrl(previewOrigin(prNumber), route, entry.anchor);
+      const liveUrl = buildUrl(LIVE_ORIGIN, route, entry.anchor);
+      if (!previewUrl || !liveUrl) {
+        seenRoutes.delete(route);
+        entry.permalink = null;
+        continue;
+      }
       pages.push({
         filename: entry.filename,
         route,
         anchor: entry.anchor,
         release: entry.release,
-        previewUrl: `${previewOrigin(prNumber)}${route}${hash}`,
-        liveUrl: `${LIVE_ORIGIN}${route}${hash}`
+        previewUrl,
+        liveUrl
       });
     }
 
@@ -259,6 +302,7 @@
 
   // Opens url beside sourceTab without taking focus, unless a tab already shows it.
   async function openAdjacentOnce(url, sourceTab, { offset = 0, focusExisting = false } = {}) {
+    if (!isAllowedUrl(url)) throw new Error("Refusing to open a URL outside the Pantheon docs and GitHub hosts.");
     const existing = await findOpenTab(url);
     if (existing) {
       if (focusExisting) {
@@ -278,6 +322,7 @@
   }
 
   async function probePreview(url) {
+    if (!isAllowedUrl(url)) return { ok: false, status: 0, timedOut: false };
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), PROBE_TIMEOUT_MS);
     try {
