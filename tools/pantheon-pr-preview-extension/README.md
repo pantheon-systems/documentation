@@ -1,41 +1,72 @@
 # Pantheon PR Preview Opener
 
-A Chrome-family Manifest V3 extension for reviewing Pantheon documentation pull requests. The toolbar action uses a standalone yellow lightning-bolt mark without letters.
+A Chrome-family Manifest V3 extension for reviewing pull requests in `pantheon-systems/documentation`. It resolves each changed docs page to its multidev preview and its live equivalent, and it adds a per-PR review checklist. The toolbar icon is a standalone yellow lightning bolt.
 
-## What it does
+## Review panel
 
-On a `pantheon-systems/documentation` pull request, click the extension icon to open the review panel:
+Click the toolbar icon on a documentation PR to open the panel.
 
-- **Affected pages.** Lists every page touched by the PR's changed Markdown files. Each row has **Preview** (the `pr-<number>-pandocs.pantheonsite.io` multidev) and **Live** (`docs.pantheon.io`) buttons.
-- **Open all previews.** Opens every preview beside the PR tab (the first 15 for large PRs). Pages that are already open are skipped.
-- **Files changed.** Opens the PR's Files changed tab beside the current tab.
-- **Preview status and Retry preview.** The panel checks whether the multidev answers. If it times out or returns 5xx or 404, the panel says the multidev may be waking up or still deploying and offers **Retry preview**. On a preview tab, **Retry preview** reloads the page and checks again.
-- **Permalink warning.** If a changed file's `permalink` differs from the base branch, the panel lists the old and new paths and reminds you to check the redirects in `src/middleware.ts` and cross-links.
-- **Release-note check.** Changes under `src/source/releasenotes/` show their `published_at` / `published_date`. The value feeds the RSS timestamp, and a date in the past means Slack won't treat the entry as new, so the panel highlights dates more than a day old.
-- **Checklist.** Progress is saved separately for each PR.
+- **Affected pages.** One row per changed Markdown file that has a front-matter `permalink`. Each row shows the full resolved preview URL, for example `pr-10303-pandocs.pantheonsite.io/docs/guides/global-cdn/global-cdn-faq#global-cdn-fastly-based`. The `#heading` anchor comes from the nearest heading above the first changed line.
+- **Preview and Live buttons.** Each row opens the multidev preview (`pr-<number>-pandocs.pantheonsite.io`) or the same route on `docs.pantheon.io` in a background tab next to the PR tab. This is the preview/live comparison. If that page is already open, the button switches to it instead of opening a copy.
+- **Open all previews.** Opens one background tab per affected page, in list order, directly after the PR tab. Pages already open are skipped, and large PRs open the first 15. The button shows the page count.
+- **Open Files changed.** Opens the PR's Files changed tab next to the current tab.
+- **Files without a permalink.** Changed Markdown files with no `permalink` (release notes, for example) are listed in a note below the page list.
+- **Per-PR checklist.** The review steps are saved separately for each PR in `chrome.storage.local`. **Reset** clears the current PR's checklist.
 
-URLs come from each file's front-matter `permalink`, plus a `#heading` anchor taken from the nearest heading above the first changed line.
+## Warnings
+
+- **Permalink changed.** The extension compares each changed file's `permalink` with the base branch (renamed files are matched by their previous name; new files are not flagged). Any change is listed as old → new, with a reminder to check the redirects in `src/middleware.ts` and any cross-links to the old path. **Inspect middleware.ts** opens that file on the PR branch, and a matching checklist item appears.
+- **Release note: check the RSS timestamp.** Files under `src/source/releasenotes/` show their `published_at` (or `published_date`). That value feeds the RSS publication time. A date in the past may not publish as a new RSS item, and Slack won't treat the entry as new, so a quick fixup PR may be needed. Dates more than a day old are highlighted in red, and a matching checklist item appears.
+
+## Slow or idle multidevs
+
+- The panel checks whether the first affected page's preview answers. It reports a timeout, a 404, or a 5xx in plain language, and says when the multidev may be waking up or still deploying.
+- **Retry preview** checks again. On a preview tab it also reloads the page.
+- **View deployment checks** appears when the preview isn't responding. It opens the PR's Checks tab, where the deployment job and its logs live. GitHub exposes no Pantheon environment or build URL for a PR, so the Checks tab is the closest build page the extension can resolve.
 
 ## Automatic preview tab
 
-When you open a PR whose changed Markdown resolves to exactly one page, the extension opens that preview in a background tab next to the PR tab. The GitHub tab keeps focus. It opens at most once per PR per browser session, and it skips a preview that is already open.
+When you open a PR whose changed Markdown resolves to exactly one page, the extension opens that preview in a background tab next to the PR tab. The GitHub tab keeps focus.
 
-If the PR touches several pages, the toolbar badge shows the page count and you choose from the panel. A `?` means no page with a permalink was found, and `!` means GitHub could not be read.
-
-To skip the automatic tab, add `?pantheon_preview=off` to the PR URL.
+- It opens at most once per PR per browser session. The state is kept per PR in `chrome.storage.session`, so revisiting the PR, switching between its Conversation and Files tabs, or opening it in a second tab doesn't create another preview. A preview that's already open is never opened twice.
+- If the PR touches several pages, nothing opens automatically. The toolbar badge shows the page count, and you choose from the panel.
+- Badge `?` means no changed page with a permalink was found. Badge `!` means GitHub could not be read.
+- GitHub is re-read at most once every 5 minutes per PR.
+- To skip the automatic tab, add `?pantheon_preview=off` to the PR URL.
 
 ## Install locally (Chrome, Brave, Edge)
 
-1. Open `chrome://extensions`.
+1. Open the extensions page: `chrome://extensions` in Chrome, `brave://extensions` in Brave, or `edge://extensions` in Edge.
 2. Turn on **Developer mode**.
 3. Select **Load unpacked** and choose this `pantheon-pr-preview-extension` folder.
-4. Open a Pantheon documentation pull request and click the extension icon.
+4. Open a documentation PR and click the extension icon.
 
-After editing files, select the reload icon on the extension's card in `chrome://extensions`.
+After editing files, select the reload icon on the extension's card.
+
+## Permissions
+
+| Permission | Why |
+|---|---|
+| `webNavigation` | Detects navigation to a documentation PR for the automatic preview tab. |
+| `tabs` | Finds already-open preview tabs to avoid duplicates, and opens, focuses, and reloads tabs. |
+| `storage` | Saves checklist progress (`local`) and per-PR automatic-open state (`session`). |
+
+Host access:
+
+- `github.com/pantheon-systems/documentation/*` and `api.github.com/repos/pantheon-systems/documentation/*`: read the PR, its changed files, and its patches.
+- `raw.githubusercontent.com/*/*`: read changed Markdown front matter from the PR head (which can be a fork) and the base branch.
+- `*.pantheonsite.io/*`: check whether the multidev responds and read the preview tab's URL.
+- `docs.pantheon.io/*`: open and read the live pages.
+
+The extension only opens or probes `github.com`, `docs.pantheon.io`, and `pr-<number>-pandocs.pantheonsite.io` URLs.
+
+## Credentials and privacy
+
+The extension has no credentials, sign-in, or tokens. Every request is an unauthenticated read, so GitHub's unauthenticated API rate limit applies (60 requests per hour per IP). It sends no data anywhere beyond those reads.
 
 ## Current limitations
 
 - The repository and preview hostname are hard-coded for Pantheon documentation.
-- It makes unauthenticated GitHub API requests, so GitHub rate limits apply.
-- The heading anchor uses a generated Markdown slug; pages with custom anchor behavior may need a site-specific rule.
 - Only files with a front-matter `permalink` get preview and live links.
+- The heading anchor is a generated Markdown slug; pages with custom anchor behavior may need a site-specific rule.
+- `docs.pantheon.io` may redirect a live URL, so a live page that is already open can be opened a second time.
