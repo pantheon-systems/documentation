@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "Pantheon PR Preview Opener",
   "version": "0.3.0",
+  "minimum_chrome_version": "102",
   "description": "Open Pantheon documentation pull requests at their matching multidev preview and support a focused review workflow.",
   "permissions": [
     "webNavigation",

@@ -5,6 +5,7 @@ const {
   parsePreviewNumber,
   describeAge,
   inspectPullRequest,
+  findOpenTab,
   openAdjacentOnce,
   probePreview,
   describeProbe
@@ -48,6 +49,16 @@ function openBeside(url, options) {
   return openAdjacentOnce(url, currentTab, options);
 }
 
+// Opens the live page directly after the matching preview tab when that preview is open.
+async function openLiveBesidePreview(page) {
+  const preview = await findOpenTab(page.previewUrl);
+  const sameWindow = preview && preview.windowId === currentTab.windowId && preview.index > currentTab.index;
+  return openBeside(page.liveUrl, {
+    focusExisting: true,
+    offset: sameWindow ? preview.index - currentTab.index : 0
+  });
+}
+
 function updateProgress() {
   const visibleChecks = checks.filter((input) => !input.closest("label").hidden);
   const complete = visibleChecks.filter((input) => input.checked).length;
@@ -89,7 +100,9 @@ function pageRow(page, index) {
     button.type = "button";
     button.textContent = label;
     button.setAttribute("aria-label", `Open ${label.toLowerCase()} for ${page.filename}`);
-    button.addEventListener("click", () => openBeside(url, { focusExisting: true }));
+    button.addEventListener("click", () => (
+      label === "Live" ? openLiveBesidePreview(page) : openBeside(url, { focusExisting: true })
+    ));
     actions.append(button);
   }
 

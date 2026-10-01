@@ -358,7 +358,11 @@
     parsePreviewNumber,
     previewOrigin,
     describeAge,
+    frontMatterValue,
+    buildUrl,
+    isAllowedUrl,
     inspectPullRequest,
+    findOpenTab,
     openAdjacentOnce,
     probePreview,
     describeProbe
