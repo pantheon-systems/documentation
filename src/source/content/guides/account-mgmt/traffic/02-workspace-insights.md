@@ -1,5 +1,5 @@
 ---
-title: "Traffic"
+title: "Monitor"
 subtitle: Workspace Insights
 description: Get a portfolio-wide view of the traffic patterns across all the sites in your workspace.
 tags: [traffic]
