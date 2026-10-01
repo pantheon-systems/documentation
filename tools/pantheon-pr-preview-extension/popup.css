@@ -86,7 +86,10 @@ button.primary:hover { background: #1d2939; }
 }
 .alert p { margin-top: 4px; }
 .alert.warning { color: #7a4b00; background: #fff7e0; }
-.alert.release { color: #155eef; background: #eff8ff; }
+.alert.release { color: #155eef; background: #eff8ff; border-left: 4px solid #155eef; }
+.alert ul { margin: 6px 0 0; padding-left: 16px; }
+.alert li { margin-top: 3px; overflow-wrap: anywhere; }
+.alert li.stale { color: #b42318; font-weight: 600; }
 
 .text-button {
   margin-top: 7px;
@@ -107,5 +110,31 @@ footer {
   color: #667085;
   font-size: 12px;
 }
+
+.actions button:disabled { opacity: .55; }
+
+.status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 9px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  color: #054f31;
+  background: #ecfdf3;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.status.bad { color: #7a4b00; background: #fff7e0; }
+.status button { flex: 0 0 auto; }
+
+.pages { margin: 10px 0 0; padding: 0; list-style: none; max-height: 220px; overflow-y: auto; }
+.pages li { padding: 8px 0; border-top: 1px solid #e5e7eb; }
+.pages li:first-child { border-top: 0; }
+.page-title { font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.page-route { margin-top: 2px; color: #667085; font-size: 11px; overflow-wrap: anywhere; }
+.page-actions { display: flex; gap: 6px; margin-top: 6px; }
+.tag { padding: 1px 6px; border-radius: 9px; color: #155eef; background: #eff8ff; font-size: 10px; font-weight: 600; }
 
 [hidden] { display: none !important; }

@@ -1,13 +1,8 @@
-const REPOSITORY = "pantheon-systems/documentation";
-const GITHUB_PR_PATTERN = /^https:\/\/github\.com\/pantheon-systems\/documentation\/pull\/(\d+)(?:\/[^?#]*)?(?:[?#].*)?$/;
-const inFlight = new Set();
-const handledUrls = new Map();
-const handledPrs = new Map();
+importScripts("pr-resolver.js");
 
-function parsePullRequestNumber(url) {
-  const match = url.match(GITHUB_PR_PATTERN);
-  return match ? Number(match[1]) : null;
-}
+const { parsePrNumber, inspectPullRequest, openAdjacentOnce } = globalThis.PantheonPr;
+const RECHECK_AFTER_MS = 5 * 60 * 1000;
+const inFlight = new Set();
 
 function hasOptedOut(url) {
   try {
@@ -17,191 +12,64 @@ function hasOptedOut(url) {
   }
 }
 
-function encodePath(path) {
-  return path.split("/").map(encodeURIComponent).join("/");
+// Per-PR state survives service-worker restarts, so revisiting a PR or switching
+// between its Conversation and Files tabs doesn't open the preview again.
+function stateKey(prNumber) {
+  return `pr-${prNumber}`;
 }
 
-function extractPermalink(markdown) {
-  const frontMatter = markdown.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s*\r?\n|$)/);
-  if (!frontMatter) return null;
-
-  const line = frontMatter[1]
-    .split(/\r?\n/)
-    .find((entry) => /^\s*permalink\s*:/i.test(entry));
-  if (!line) return null;
-
-  let permalink = line.replace(/^\s*permalink\s*:\s*/i, "").trim();
-  permalink = permalink.replace(/\s+#.*$/, "");
-  permalink = permalink.replace(/^['"]|['"]$/g, "").trim();
-  return permalink || null;
+async function readState(prNumber) {
+  const saved = await chrome.storage.session.get(stateKey(prNumber));
+  return saved[stateKey(prNumber)] || null;
 }
 
-
-function headingSlug(text) {
-  return text
-    .replace(/^#{1,6}\s+/, "")
-    .replace(/<[^>]*>/g, "")
-    .replace(/[\u0060*_~]/g, "")
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+async function writeState(prNumber, state) {
+  await chrome.storage.session.set({ [stateKey(prNumber)]: { ...state, at: Date.now() } });
 }
 
-function changedLineNumber(patch) {
-  if (!patch) return null;
-
-  let newLine = null;
-  for (const line of patch.split("\n")) {
-    const hunk = line.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
-    if (hunk) {
-      newLine = Number(hunk[1]);
-      continue;
-    }
-    if (newLine === null) continue;
-
-    if (line.startsWith("+") && !line.startsWith("+++")) {
-      if (line.slice(1).trim()) return newLine;
-      newLine += 1;
-    } else if (line.startsWith("-")) {
-      continue;
-    } else {
-      newLine += 1;
-    }
-  }
-  return null;
+async function setBadge(tabId, text, color) {
+  await chrome.action.setBadgeText({ tabId, text });
+  if (text) await chrome.action.setBadgeBackgroundColor({ tabId, color });
 }
 
-function anchorForChange(file, markdown) {
-  const lines = markdown.split(/\r?\n/);
-  const targetLine = changedLineNumber(file.patch);
-  if (!targetLine) return null;
-
-  let index = Math.min(targetLine - 1, lines.length - 1);
-  let headingIndex = -1;
-  for (; index >= 0; index -= 1) {
-    if (/^#{1,6}\s+\S/.test(lines[index])) {
-      headingIndex = index;
-      break;
-    }
-  }
-
-  if (headingIndex < 0) {
-    headingIndex = lines.findIndex((line) => /^#{1,6}\s+\S/.test(line));
-  }
-  if (headingIndex < 0) return null;
-
-  const slug = headingSlug(lines[headingIndex]);
-  if (!slug) return null;
-
-  const priorSameHeadingCount = lines
-    .slice(0, headingIndex)
-    .filter((line) => headingSlug(line) === slug).length;
-  return priorSameHeadingCount ? `${slug}-${priorSameHeadingCount}` : slug;
+function badgeForCount(tabId, count) {
+  if (count === 0) return setBadge(tabId, "?", "#a15c00");
+  if (count > 1) return setBadge(tabId, String(count), "#175cd3");
+  return setBadge(tabId, "", "#000000");
 }
 
-async function getJson(url) {
-  const response = await fetch(url, {
-    headers: {
-      Accept: "application/vnd.github+json"
-    }
-  });
-  if (!response.ok) {
-    throw new Error(`${response.status} while fetching ${url}`);
-  }
-  return response.json();
-}
-
-async function getText(url) {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`${response.status} while fetching ${url}`);
-  }
-  return response.text();
-}
-
-async function resolvePreviewUrl(prNumber) {
-  const pullRequest = await getJson(
-    `https://api.github.com/repos/${REPOSITORY}/pulls/${prNumber}`
-  );
-  const headRepository = pullRequest.head?.repo?.full_name;
-  const headRef = pullRequest.head?.ref;
-  if (!headRepository || !headRef) return null;
-
-  const files = await getJson(
-    `https://api.github.com/repos/${REPOSITORY}/pulls/${prNumber}/files?per_page=100`
-  );
-  const markdownFiles = files.filter((file) =>
-    file.status !== "removed" && /\.(md|mdx)$/i.test(file.filename)
-  );
-
-  const routes = [];
-  for (const file of markdownFiles) {
-    const rawUrl = `https://raw.githubusercontent.com/${encodePath(headRepository)}/${encodePath(headRef)}/${encodePath(file.filename)}`;
-    try {
-      const markdown = await getText(rawUrl);
-      const permalink = extractPermalink(markdown);
-      if (permalink) {
-        routes.push({ permalink, anchor: anchorForChange(file, markdown) });
-      }
-    } catch (error) {
-      console.warn("Could not read changed file", file.filename, error);
-    }
-  }
-
-  const uniqueRoutes = [...new Map(routes.map((item) => [item.permalink, item])).values()];
-  if (uniqueRoutes.length !== 1) return null;
-
-  const route = uniqueRoutes[0].permalink.replace(/^\/+/, "");
-  const anchor = uniqueRoutes[0].anchor ? `#${uniqueRoutes[0].anchor}` : "";
-  return `https://pr-${prNumber}-pandocs.pantheonsite.io/${route}${anchor}`;
-}
-
-async function maybeRedirect(details) {
+async function maybeOpenPreview(details) {
   if (details.frameId !== 0 || hasOptedOut(details.url)) return;
 
-  const prNumber = parsePullRequestNumber(details.url);
-  if (!prNumber || inFlight.has(details.tabId)) return;
-  if (handledPrs.get(details.tabId) === prNumber) return;
-  if (handledUrls.get(details.tabId) === details.url) return;
+  const prNumber = parsePrNumber(details.url);
+  if (!prNumber || inFlight.has(prNumber)) return;
 
-  handledPrs.set(details.tabId, prNumber);
-  inFlight.add(details.tabId);
+  const state = await readState(prNumber);
+  if (state?.opened) return;
+  if (state && Date.now() - state.at < RECHECK_AFTER_MS) {
+    if (state.count >= 0) await badgeForCount(details.tabId, state.count);
+    return;
+  }
+
+  inFlight.add(prNumber);
   try {
-    const previewUrl = await resolvePreviewUrl(prNumber);
-    if (previewUrl) {
+    const { pages } = await inspectPullRequest(prNumber, { compareBase: false });
+    if (pages.length === 1) {
       const sourceTab = await chrome.tabs.get(details.tabId);
-      await chrome.action.setBadgeText({ tabId: details.tabId, text: "" });
-      await chrome.tabs.create({
-        url: previewUrl,
-        active: false,
-        openerTabId: details.tabId,
-        windowId: sourceTab.windowId,
-        index: sourceTab.index + 1
-      });
-      handledUrls.set(details.tabId, details.url);
+      await openAdjacentOnce(pages[0].previewUrl, sourceTab);
+      await writeState(prNumber, { opened: true, count: 1 });
     } else {
-      handledPrs.delete(details.tabId);
-      await chrome.action.setBadgeText({ tabId: details.tabId, text: "?" });
-      await chrome.action.setBadgeBackgroundColor({ tabId: details.tabId, color: "#a15c00" });
+      await writeState(prNumber, { opened: false, count: pages.length });
     }
+    await badgeForCount(details.tabId, pages.length);
   } catch (error) {
     console.error("Pantheon PR preview resolution failed", error);
-    handledPrs.delete(details.tabId);
-    await chrome.action.setBadgeText({ tabId: details.tabId, text: "!" });
-    await chrome.action.setBadgeBackgroundColor({ tabId: details.tabId, color: "#b42318" });
+    await writeState(prNumber, { opened: false, count: -1 });
+    await setBadge(details.tabId, "!", "#b42318");
   } finally {
-    inFlight.delete(details.tabId);
+    inFlight.delete(prNumber);
   }
 }
 
-chrome.webNavigation.onCommitted.addListener(maybeRedirect);
-chrome.webNavigation.onHistoryStateUpdated.addListener(maybeRedirect);
-
-chrome.tabs.onRemoved.addListener((tabId) => {
-  inFlight.delete(tabId);
-  handledUrls.delete(tabId);
-  handledPrs.delete(tabId);
-});
+chrome.webNavigation.onCommitted.addListener(maybeOpenPreview);
+chrome.webNavigation.onHistoryStateUpdated.addListener(maybeOpenPreview);

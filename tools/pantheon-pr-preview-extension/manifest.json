@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Pantheon PR Preview Opener",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Open Pantheon documentation pull requests at their matching multidev preview and support a focused review workflow.",
   "permissions": [
     "webNavigation",
@@ -16,8 +16,7 @@
     "https://docs.pantheon.io/*"
   ],
   "background": {
-    "service_worker": "service-worker.js",
-    "type": "module"
+    "service_worker": "service-worker.js"
   },
   "action": {
     "default_title": "Pantheon PR Preview Opener",

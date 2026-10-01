@@ -1,47 +1,41 @@
 # Pantheon PR Preview Opener
 
-A first-pass Chrome-family Manifest V3 extension for Pantheon documentation previews. The extension tile and toolbar action use a standalone yellow lightning-bolt mark without letters.
+A Chrome-family Manifest V3 extension for reviewing Pantheon documentation pull requests. The toolbar action uses a standalone yellow lightning-bolt mark without letters.
 
 ## What it does
 
-Click the extension icon while viewing a documentation PR to open a focused review panel. It includes adjacent-tab actions for **Files changed**, the multidev preview, and the live equivalent; it also checks changed Markdown front matter for route changes and release-note files. Checklist progress is saved separately for each PR.
+On a `pantheon-systems/documentation` pull request, click the extension icon to open the review panel:
 
-When a preview tab is active and still loading, the popup explains that the multidev may be waking up and provides a manual **Retry preview** control.
+- **Affected pages.** Lists every page touched by the PR's changed Markdown files. Each row has **Preview** (the `pr-<number>-pandocs.pantheonsite.io` multidev) and **Live** (`docs.pantheon.io`) buttons.
+- **Open all previews.** Opens every preview beside the PR tab (the first 15 for large PRs). Pages that are already open are skipped.
+- **Files changed.** Opens the PR's Files changed tab beside the current tab.
+- **Preview status and Retry preview.** The panel checks whether the multidev answers. If it times out or returns 5xx or 404, the panel says the multidev may be waking up or still deploying and offers **Retry preview**. On a preview tab, **Retry preview** reloads the page and checks again.
+- **Permalink warning.** If a changed file's `permalink` differs from the base branch, the panel lists the old and new paths and reminds you to check the redirects in `src/middleware.ts` and cross-links.
+- **Release-note check.** Changes under `src/source/releasenotes/` show their `published_at` / `published_date`. The value feeds the RSS timestamp, and a date in the past means Slack won't treat the entry as new, so the panel highlights dates more than a day old.
+- **Checklist.** Progress is saved separately for each PR.
 
+URLs come from each file's front-matter `permalink`, plus a `#heading` anchor taken from the nearest heading above the first changed line.
 
-When you navigate to a pull request in `pantheon-systems/documentation`, the extension:
+## Automatic preview tab
 
-1. Opens the resolved preview exactly once per GitHub pull-request tab, immediately after the GitHub tab, while keeping GitHub focused.
-2. Reads the pull request metadata from GitHub.
-3. Finds changed Markdown files.
-4. Reads each file's YAML front matter from the pull-request branch.
-5. Extracts its `permalink`.
-6. Finds the nearest changed Markdown heading from the PR diff.
-7. Opens `https://pr-<PR-number>-pandocs.pantheonsite.io/<permalink>#<heading>` when exactly one unique route is found.
+When you open a PR whose changed Markdown resolves to exactly one page, the extension opens that preview in a background tab next to the PR tab. The GitHub tab keeps focus. It opens at most once per PR per browser session, and it skips a preview that is already open.
 
-For example, PR 10303 resolves to the `docs/guides/global-cdn/global-cdn-faq` route.
+If the PR touches several pages, the toolbar badge shows the page count and you choose from the panel. A `?` means no page with a permalink was found, and `!` means GitHub could not be read.
 
-If the pull request changes zero or multiple uniquely routable Markdown pages, the extension leaves GitHub open and marks the toolbar icon with `?`.
+To skip the automatic tab, add `?pantheon_preview=off` to the PR URL.
 
-## Install locally
+## Install locally (Chrome, Brave, Edge)
 
-1. Download and unzip this folder.
-2. Open `chrome://extensions` in Chrome, Brave, or Edge.
-3. Enable Developer mode.
-4. Select **Load unpacked**.
-5. Choose the unzipped `pantheon-pr-preview-extension` folder.
-6. Navigate to a Pantheon documentation pull request.
+1. Open `chrome://extensions`.
+2. Turn on **Developer mode**.
+3. Select **Load unpacked** and choose this `pantheon-pr-preview-extension` folder.
+4. Open a Pantheon documentation pull request and click the extension icon.
 
-## Temporarily view GitHub instead
-
-Add `?pantheon_preview=off` to the GitHub pull request URL. For example:
-
-`https://github.com/pantheon-systems/documentation/pull/10303?pantheon_preview=off`
+After editing files, select the reload icon on the extension's card in `chrome://extensions`.
 
 ## Current limitations
 
-- The repository and preview hostname are currently hard-coded for Pantheon documentation.
-- It uses unauthenticated GitHub API requests, so GitHub rate limits may apply.
-- It redirects only when one unique Markdown permalink can be resolved.
-- The section jump uses a generated Markdown heading anchor; pages with custom anchor behavior may need a later site-specific slug rule.
-- The checklist is currently scoped to this documentation repository; repository settings and a workflow trigger could be added later.
+- The repository and preview hostname are hard-coded for Pantheon documentation.
+- It makes unauthenticated GitHub API requests, so GitHub rate limits apply.
+- The heading anchor uses a generated Markdown slug; pages with custom anchor behavior may need a site-specific rule.
+- Only files with a front-matter `permalink` get preview and live links.

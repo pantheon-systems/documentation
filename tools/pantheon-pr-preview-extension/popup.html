@@ -29,21 +29,30 @@
     <section id="review-panel" hidden>
       <div class="actions" aria-label="PR links">
         <button id="open-files" class="primary" type="button">Open Files changed</button>
-        <button id="open-preview" type="button">Open preview</button>
-        <button id="open-live" type="button">Open live equivalent</button>
+        <button id="open-all" class="primary" type="button" disabled>Open all previews</button>
       </div>
 
-      <div id="route-status" class="meta" hidden></div>
+      <div id="route-status" class="meta" role="status" hidden></div>
+
+      <div id="preview-status" class="status" role="status" hidden>
+        <p id="preview-status-text"></p>
+        <button id="retry-pr-preview" type="button">Retry preview</button>
+      </div>
+
+      <ul id="pages" class="pages" aria-label="Affected documentation pages"></ul>
+      <p id="unrouted" class="meta" hidden></p>
 
       <div id="signals" hidden>
         <div id="slug-warning" class="alert warning" hidden>
           <strong>Permalink changed</strong>
-          <p id="slug-message"></p>
+          <ul id="slug-list"></ul>
+          <p>Check the redirects in <code>src/middleware.ts</code> and any cross-links to the old path.</p>
           <button id="open-middleware" class="text-button" type="button">Inspect middleware.ts</button>
         </div>
         <div id="release-warning" class="alert release" hidden>
-          <strong>Release-note check</strong>
-          <p>Release-note dates feed the RSS publication timestamp. If the date is already in the past, Slack will not treat the entry as new; a quick fixup PR may be needed.</p>
+          <strong>Release note: check the RSS timestamp</strong>
+          <p>The <code>published_at</code> / <code>published_date</code> value feeds the RSS publication time. If it's already in the past, Slack won't treat the entry as new, and a quick fixup PR may be needed.</p>
+          <ul id="release-list"></ul>
         </div>
       </div>
 
@@ -64,6 +73,7 @@
       <button id="reset" type="button">Reset</button>
     </footer>
   </main>
+  <script src="pr-resolver.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>
