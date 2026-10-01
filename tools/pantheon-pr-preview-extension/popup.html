@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pantheon PR review checklist</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icons/pantheon-lightning-bolt.png" alt="">
+      <div>
+        <h1>Docs PR review</h1>
+        <p id="context">Checking the current tab…</p>
+      </div>
+    </header>
+
+    <section id="not-pr" class="notice" hidden>
+      Open a Pantheon documentation pull request to use this checklist.
+    </section>
+
+    <section id="preview-state" class="notice" hidden>
+      <strong>Preview tab</strong>
+      <p id="preview-message">This multidev preview may still be waking up.</p>
+      <button id="retry-preview" class="primary" type="button">Retry preview</button>
+    </section>
+
+    <section id="review-panel" hidden>
+      <div class="actions" aria-label="PR links">
+        <button id="open-files" class="primary" type="button">Open Files changed</button>
+        <button id="open-preview" type="button">Open preview</button>
+        <button id="open-live" type="button">Open live equivalent</button>
+      </div>
+
+      <div id="route-status" class="meta" hidden></div>
+
+      <div id="signals" hidden>
+        <div id="slug-warning" class="alert warning" hidden>
+          <strong>Permalink changed</strong>
+          <p id="slug-message"></p>
+          <button id="open-middleware" class="text-button" type="button">Inspect middleware.ts</button>
+        </div>
+        <div id="release-warning" class="alert release" hidden>
+          <strong>Release-note check</strong>
+          <p>Release-note dates feed the RSS publication timestamp. If the date is already in the past, Slack will not treat the entry as new; a quick fixup PR may be needed.</p>
+        </div>
+      </div>
+
+      <p class="intro">Rachel’s practical review sequence:</p>
+      <div id="checklist">
+        <label><input type="checkbox" data-check="scope"> Confirm the change scope and timeline.</label>
+        <label><input type="checkbox" data-check="diff"> Review <strong>Files changed</strong> and the front-matter permalink.</label>
+        <label><input type="checkbox" data-check="preview"> Open the multidev preview and verify the changed section renders.</label>
+        <label><input type="checkbox" data-check="comparison"> Compare the preview with the live page.</label>
+        <label><input type="checkbox" data-check="style"> Check tables, formatting, capitalization, and Pantheon terminology.</label>
+        <label id="release-check" hidden><input type="checkbox" data-check="release"> Confirm the release-note date/timestamp is current; otherwise make a quick fixup PR.</label>
+        <label id="slug-check" hidden><input type="checkbox" data-check="slug"> Verify the redirect in <code>middleware.ts</code> and check cross-links.</label>
+      </div>
+    </section>
+
+    <footer id="footer" hidden>
+      <span id="progress">0 of 5 complete</span>
+      <button id="reset" type="button">Reset</button>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

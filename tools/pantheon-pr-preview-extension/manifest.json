@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Pantheon PR Preview Opener",
+  "version": "0.2.0",
+  "description": "Open Pantheon documentation pull requests at their matching multidev preview and support a focused review workflow.",
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://github.com/pantheon-systems/documentation/*",
+    "https://api.github.com/repos/pantheon-systems/documentation/*",
+    "https://raw.githubusercontent.com/*/*",
+    "https://*.pantheonsite.io/*",
+    "https://docs.pantheon.io/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Pantheon PR Preview Opener",
+    "default_icon": {
+      "16": "icons/pantheon-lightning-bolt.png",
+      "32": "icons/pantheon-lightning-bolt.png",
+      "48": "icons/pantheon-lightning-bolt.png",
+      "128": "icons/pantheon-lightning-bolt.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/pantheon-lightning-bolt.png",
+    "32": "icons/pantheon-lightning-bolt.png",
+    "48": "icons/pantheon-lightning-bolt.png",
+    "128": "icons/pantheon-lightning-bolt.png"
+  }
+}

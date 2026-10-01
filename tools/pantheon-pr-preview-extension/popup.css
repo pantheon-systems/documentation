@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #171717;
+  background: #fff;
+}
+
+body {
+  width: 380px;
+  margin: 0;
+  background: #fff;
+}
+
+main { padding: 18px; }
+
+header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header img { width: 34px; height: 34px; object-fit: contain; }
+h1 { margin: 0; font-size: 17px; line-height: 1.2; }
+p { margin: 0; }
+#context { margin-top: 4px; color: #667085; font-size: 12px; }
+
+.intro { margin: 16px 0 10px; color: #475467; font-size: 12px; }
+
+label {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  margin: 0 -5px;
+  padding: 9px 5px;
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+label:hover { background: #f8fafc; }
+input { flex: 0 0 auto; margin-top: 2px; accent-color: #f5b700; }
+code { font-size: 11px; }
+
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 15px; }
+.actions #open-files { grid-column: 1 / -1; }
+button {
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 9px;
+  color: #344054;
+  background: #f2f4f7;
+  cursor: pointer;
+  font-size: 12px;
+}
+button:hover { background: #e4e7ec; }
+button:disabled { color: #98a2b3; cursor: not-allowed; opacity: .8; }
+button.primary { color: #fff; background: #344054; }
+button.primary:hover { background: #1d2939; }
+
+.notice {
+  margin-top: 16px;
+  padding: 11px;
+  border-radius: 7px;
+  color: #7a4b00;
+  background: #fff7e0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.notice p { margin: 4px 0 10px; }
+
+.meta {
+  margin-top: 9px;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.alert {
+  margin-top: 11px;
+  padding: 10px 11px;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.alert p { margin-top: 4px; }
+.alert.warning { color: #7a4b00; background: #fff7e0; }
+.alert.release { color: #155eef; background: #eff8ff; }
+
+.text-button {
+  margin-top: 7px;
+  padding: 0;
+  color: #175cd3;
+  background: transparent;
+  text-decoration: underline;
+}
+.text-button:hover { background: transparent; color: #0b4bb3; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  color: #667085;
+  font-size: 12px;
+}
+
+[hidden] { display: none !important; }
