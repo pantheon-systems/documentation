@@ -1,5 +1,6 @@
 ---
 title: Pantheon Public API
+subtitle: Introduction
 description: Learn about managing your Pantheon sites programmatically with the Pantheon Public API.
 reviewed: "2026-09-29"
 contenttype: [doc]
