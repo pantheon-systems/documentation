@@ -2,6 +2,18 @@
 
 A Chrome-family Manifest V3 extension for reviewing pull requests in `pantheon-systems/documentation`. It resolves each changed docs page to its multidev preview and its live equivalent, and it adds a per-PR review checklist. The toolbar icon is a standalone yellow lightning bolt.
 
+## Requirements
+
+- A Chromium-based browser that supports Manifest V3: Chrome 102 or later, Brave, or Edge. The extension uses a service worker and `chrome.storage.session`, which is why Chrome 102 is the floor (`minimum_chrome_version` in `manifest.json`).
+- It has been tested in Chromium 151 (Chrome for Testing). Brave and Edge use the same extension APIs but haven't been tested.
+- Scope: `pantheon-systems/documentation` only.
+
+## How it recognizes a documentation PR
+
+- A tab whose URL is `https://github.com/pantheon-systems/documentation/pull/<number>`, on any of the PR's sub-pages (Conversation, Commits, Checks, Files changed).
+- A preview tab whose URL is `https://pr-<number>-pandocs.pantheonsite.io/...`. The panel shows the preview-tab view with **Retry preview**.
+- Any other tab shows "Not on a documentation PR".
+
 ## Review panel
 
 Click the toolbar icon on a documentation PR to open the panel.
@@ -63,6 +75,19 @@ The extension only opens or probes `github.com`, `docs.pantheon.io`, and `pr-<nu
 ## Credentials and privacy
 
 The extension has no credentials, sign-in, or tokens. Every request is an unauthenticated read, so GitHub's unauthenticated API rate limit applies (60 requests per hour per IP). It sends no data anywhere beyond those reads.
+
+## Validation
+
+From the repository root:
+
+```sh
+node --check tools/pantheon-pr-preview-extension/popup.js
+node --check tools/pantheon-pr-preview-extension/service-worker.js
+python3 -m json.tool tools/pantheon-pr-preview-extension/manifest.json
+node tools/pantheon-pr-preview-extension/validate-resolver.cjs
+```
+
+`validate-resolver.cjs` runs offline against a mocked GitHub. It checks URL construction, the host allowlist, front-matter parsing, and the permalink-change and release-note detection.
 
 ## Current limitations
 
