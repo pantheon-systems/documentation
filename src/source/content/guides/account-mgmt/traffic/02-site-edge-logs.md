@@ -1,11 +1,11 @@
 ---
-title: "Traffic"
+title: "Monitor"
 subtitle: Site Edge Logs
 description: View your site's access logs with the Edge tool, found in the live environment of the Site Dashboard.
 tags: [traffic]
 permalink: docs/guides/account-mgmt/edge-logs
 editpath: docs/guides/account-mgmt/traffic/02-site-edge-logs.md
-reviewed: "2026-10-02"
+reviewed: "2026-10-01"
 showtoc: true
 contenttype: [guide]
 innav: [true]
@@ -132,3 +132,11 @@ The current version of Edge Logs uses a single full-text search across all field
 
 ### Can I watch traffic update live after I make a change? 
 Yes. However, you will need to manually click the button to refresh. Click refresh to pull in the latest requests after making a change like an IP block or cache rule update.
+
+### Why can't I see Edge Logs on one of my sites?
+Edge Logs only appears for sites that have been migrated to Cloudflare, and only shows Live environment traffic. If a site is still served by Fastly, or you're looking at a Dev, Test, or Multidev environment, Edge Logs won't be available there. If your site is on Cloudflare and you're in the Live environment but still don't see it, check with whoever manages your team's permissions – access to Edge Logs follows your existing site-level permissions.
+
+### A teammate sent me a link to a search, but I can't view it. Why? 
+There are a few possibilities: 
+* You may not have access to that site – permalinks respect the same site-level permissions as the rest of the dashboard, so you'll need access to the site itself to view a linked search.
+* The link has aged out: permalinks are subject to the same 24-hour retention as everything else in Edge Logs, so a link can partially or fully expire depending on how much time has passed since it was created. If it's fully expired, you'll see "This link has expired."

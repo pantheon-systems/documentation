@@ -1,5 +1,5 @@
 ---
-title: "Traffic"
+title: "Monitor"
 subtitle: Site Traffic Patterns
 description: View your site's traffic usage with the Metrics tool, found in the Live environment of the Site Dashboard.
 tags: [traffic]
