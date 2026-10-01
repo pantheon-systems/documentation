@@ -49,7 +49,7 @@ curl -s https://api.pantheon.io/v1/current-user \
   -H "Authorization: Bearer $PANTHEON_TOKEN"
 ```
 
-The response describes your user account, including your user ID, name, and email address. For example, to show only those fields with [jq](https://jqlang.org/):
+The response describes your user account, including your user ID, name, email address and more. This response is large and contains SSH key fingerprints. To show only the ID, name and email address fields with [jq](https://jqlang.org/), structure your request like this:
 
 ```bash{promptUser: user}
 curl -s https://api.pantheon.io/v1/current-user \
