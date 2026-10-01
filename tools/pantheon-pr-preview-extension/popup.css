@@ -127,7 +127,8 @@ footer {
   line-height: 1.4;
 }
 .status.bad { color: #7a4b00; background: #fff7e0; }
-.status button { flex: 0 0 auto; }
+.status-actions { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-end; gap: 4px; }
+.status-actions .text-button { margin-top: 0; font-size: 11px; }
 
 .pages { margin: 10px 0 0; padding: 0; list-style: none; max-height: 220px; overflow-y: auto; }
 .pages li { padding: 8px 0; border-top: 1px solid #e5e7eb; }

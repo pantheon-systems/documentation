@@ -24,6 +24,7 @@
       <strong>Preview tab</strong>
       <p id="preview-message">This multidev preview may still be waking up.</p>
       <button id="retry-preview" class="primary" type="button">Retry preview</button>
+      <button id="checks-preview" class="text-button" type="button" hidden>View deployment checks</button>
     </section>
 
     <section id="review-panel" hidden>
@@ -36,7 +37,10 @@
 
       <div id="preview-status" class="status" role="status" hidden>
         <p id="preview-status-text"></p>
-        <button id="retry-pr-preview" type="button">Retry preview</button>
+        <div class="status-actions">
+          <button id="retry-pr-preview" type="button">Retry preview</button>
+          <button id="checks-pr" class="text-button" type="button" hidden>View deployment checks</button>
+        </div>
       </div>
 
       <ul id="pages" class="pages" aria-label="Affected documentation pages"></ul>

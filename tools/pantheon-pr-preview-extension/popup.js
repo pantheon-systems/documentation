@@ -24,6 +24,8 @@ const routeStatus = document.querySelector("#route-status");
 const previewStatus = document.querySelector("#preview-status");
 const previewStatusText = document.querySelector("#preview-status-text");
 const retryPrPreview = document.querySelector("#retry-pr-preview");
+const checksPreview = document.querySelector("#checks-preview");
+const checksPr = document.querySelector("#checks-pr");
 const pagesList = document.querySelector("#pages");
 const unrouted = document.querySelector("#unrouted");
 const releaseCheck = document.querySelector("#release-check");
@@ -52,6 +54,12 @@ function updateProgress() {
   progress.textContent = `${complete} of ${visibleChecks.length} complete`;
 }
 
+// GitHub exposes no Pantheon environment or build page for a PR, so the PR's Checks tab
+// (where wait_for_deployment runs) is the closest resolvable build page.
+function wireChecksLink(button, prNumber) {
+  button.onclick = () => openBeside(`https://github.com/${REPOSITORY}/pull/${prNumber}/checks`, { focusExisting: true });
+}
+
 function showStatus(message) {
   routeStatus.hidden = false;
   routeStatus.textContent = message;
@@ -72,7 +80,7 @@ function pageRow(page, index) {
 
   const route = document.createElement("div");
   route.className = "page-route";
-  route.textContent = `${page.route}${page.anchor ? `#${page.anchor}` : ""}`;
+  route.textContent = page.previewUrl.replace(/^https:\/\//, "");
 
   const actions = document.createElement("div");
   actions.className = "page-actions";
@@ -167,6 +175,7 @@ async function checkPrPreview(url) {
   previewStatusText.textContent = describeProbe(result);
   previewStatus.classList.toggle("bad", !result.ok);
   retryPrPreview.hidden = result.ok;
+  checksPr.hidden = result.ok;
   retryPrPreview.disabled = false;
 }
 
@@ -197,11 +206,13 @@ async function loadPreviewTab(previewNumber) {
     ? "This preview is still loading; the multidev may be waking up."
     : "Checking the preview…";
 
+  wireChecksLink(checksPreview, previewNumber);
   const recheck = async () => {
     const result = await probePreview(currentTab.url);
     previewMessage.textContent = result.ok
       ? "The preview is responding. Use Retry preview if the page looks stale."
       : describeProbe(result);
+    checksPreview.hidden = result.ok;
   };
 
   retryPreview.onclick = async () => {
@@ -219,6 +230,7 @@ async function loadPullRequest(prNumber) {
   reviewPanel.hidden = false;
   footer.hidden = false;
   openFiles.onclick = () => openBeside(`https://github.com/${REPOSITORY}/pull/${prNumber}/files`, { focusExisting: true });
+  wireChecksLink(checksPr, prNumber);
   showStatus("Reading the changed files…");
 
   const checklistLoaded = loadChecklist(prNumber);
