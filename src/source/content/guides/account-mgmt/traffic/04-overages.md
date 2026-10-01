@@ -1,5 +1,5 @@
 ---
-title: "Traffic"
+title: "Monitor"
 subtitle: Overages Policy
 description: Understand how Pantheon's Overage Process helps to reduce excess billing and unplanned costs should a site exceed plan limits.
 tags: [traffic]
