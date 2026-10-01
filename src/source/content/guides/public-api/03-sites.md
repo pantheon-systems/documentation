@@ -22,7 +22,7 @@ curl -s "https://api.pantheon.io/v1/sites/$SITE_ID" \
   -H "Authorization: Bearer $PANTHEON_TOKEN"
 ```
 
-The response includes the site's name, label, region, upstream, settings, and multidev environments. For example, to show a few of those fields with [jq](https://jqlang.org/):
+The response includes the site's machine name, label, region, upstream, settings, and multidev environments. For example, to show a few of those fields with [jq](https://jqlang.org/):
 
 ```bash{promptUser: user}
 curl -s "https://api.pantheon.io/v1/sites/$SITE_ID" \
@@ -42,7 +42,8 @@ curl -s "https://api.pantheon.io/v1/sites/$SITE_ID" \
 }
 ```
 
-You can only request sites that your Pantheon account has access to.
+You can only request sites that your Pantheon account has access to. If you request a site that doesn't exist or that you can't access, the API returns an HTTP 403 error.
+If a site has no multidev environments, `multidevEnvironmentNames` can be an empty array or `null`. Handle both in your scripts.
 
 ## Find a site's UUID
 
@@ -53,7 +54,7 @@ curl -s "https://api.pantheon.io/v1/sites/by-name/<site_name>" \
   -H "Authorization: Bearer $PANTHEON_TOKEN"
 ```
 
-The response is the site's UUID, which you can use in other requests.
+The response is the site's UUID as a quoted JSON string, which you can use in other requests. Use `jq -r` to remove the quotes.
 
 You can also find a site's UUID in the Site Dashboard URL: `https://dashboard.pantheon.io/sites/<site_uuid>`.
 

@@ -36,7 +36,7 @@ curl -s -X POST "https://api.pantheon.io/v1/sites/$SITE_ID/multidevs" \
   }"
 ```
 
-The response includes the workflow's `id` and its initial `status`. Save the `id` to check on the workflow's progress. For example, to capture it in a variable with [jq](https://jqlang.org/):
+The response is an object that includes the workflow's `id` and a `status` object describing the workflow. At creation, the `status` object's own `status` field is `null`, so use the `id` to poll for the current status. Save the `id` to check on the workflow's progress. To capture it in a variable with [jq](https://jqlang.org/):
 
 ```bash{promptUser: user}
 WORKFLOW_ID=$(curl -s -X POST "https://api.pantheon.io/v1/sites/$SITE_ID/multidevs" \
@@ -69,13 +69,13 @@ The `status` field of the response summarizes the workflow's progress:
 | `IN_PROGRESS` | The workflow is running.                        |
 | `SUCCESS`     | The workflow completed successfully.            |
 | `FAILED`      | The workflow failed. See the `reason` field.    |
-| `CANCELED`    | The workflow was canceled.                      |
+| `CANCELED`    | The workflow was stopped before it ran, for example because of invalid input. See the `reason` field. |
 
-The response also includes `activeDescription`, a human-readable description of the current step, and `progress`, an estimate of the workflow's progress from 0 to 100.
+The response also includes `activeDescription`, a human-readable description of the current step, and `progress`, an estimate of the workflow's progress from 0 to 100. The `reason` field is an array of strings. It is empty unless the workflow failed or was canceled. The `activeDescription` of a failed workflow can still describe the step it was attempting, so check `status` rather than relying on `activeDescription` alone.
 
 ## Poll for completion
 
-To wait for a workflow to finish, check its status in a loop until it reaches `SUCCESS`, `FAILED`, or `CANCELED`. Wait a few seconds between requests:
+To wait for a workflow to finish, check its status in a loop until it reaches `SUCCESS`, `FAILED`, or `CANCELED`. Wait a few seconds between requests. Creating a multidev environment can take several minutes.:
 
 ```bash{promptUser: user}
 while true; do
@@ -90,7 +90,9 @@ while true; do
 done
 ```
 
-When the loop ends, check `STATUS`. If the workflow failed, the `reason` field explains why:
+**Note:** It's possible for polling requests to return `null` in the case of a bad response even while the workflow is still running. When writing your polling function, ensure that the loop continues on errors.
+
+When the loop ends, check STATUS. If the workflow failed or was canceled, the reason field explains why:
 
 ```bash{promptUser: user}
 echo "$WORKFLOW" | jq '.reason'
