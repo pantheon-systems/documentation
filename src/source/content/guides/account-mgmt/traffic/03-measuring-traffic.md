@@ -1,5 +1,5 @@
 ---
-title: "Traffic"
+title: "Monitor"
 subtitle: Measuring Site Traffic
 description: Understand how metrics like pages served and site visitor are used for measuring site traffic.
 tags: [traffic]

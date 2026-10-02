@@ -1,5 +1,5 @@
 ---
-title: "Traffic"
+title: "Monitor"
 subtitle: Troubleshooting Traffic Events
 description: Determine and address the causes of unexpected traffic.
 tags: [traffic, plans]
