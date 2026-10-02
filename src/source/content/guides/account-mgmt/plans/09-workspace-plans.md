@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/workspace-plans
 editpath: docs/guides/account-mgmt/plans/09-workspace-plans.md
-reviewed: "2026-07-06"
+reviewed: "2026-10-02"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -52,27 +52,26 @@ Now that you have a Professional Workspace with a Gold Account Plan, you can [ad
 Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as direct access to experts, advanced support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
 
 ## Agency Partner Program
+The [Agency Partner Program](https://pantheon.io/partners) is open to web agencies and digital service providers that help clients create, run, and evolve the sites that matter.
 
-The [Agency Partner Program](https://pantheon.io/partners) is open to web agencies and digital service providers that build and manage sites on Pantheon. All Agency Partners access the same full platform regardless of tier — [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), [Autopilot](/guides/autopilot), and more. Your tier affects commission rates and end-customer discounts, not your access to platform features.
+Pantheon provides one governed platform across WordPress, Drupal, Next.js, and other framework paths - so partners can move fast, stay in control, and choose the right approach for each client.
 
-Tiers are based on sourced ARR over the trailing twelve months and are reviewed bi-annually:
+All Agency Partners access the same full Pantheon platform regardless of tier, including [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot). Tier affects program economics, support, and go-to-market benefits.
 
-| Tier | Existing Portfolio ARR | New Business ARR |
-|---|---|---|
-| Community | $0 | $0 |
-| Premier | $25,000+ | $5,000+ |
-| Strategic | $100,000+ | $25,000+ |
+For the October 2026 launch, tiers are based on lifetime sourced and influenced revenue. Tiering criteria may change in future program periods; refer to the current program terms for the latest details.
+
+The October program launch expands the partner experience with formal Market Development Funds (MDF), updated incentive and revenue-share options, more ways to use Partner Wallet funds, and broader co-sell, co-marketing, enablement, and partner-community resources. Program terms may evolve, so refer to the current [Agency Partner Program Guide](http://partners.pantheon.io) for the latest details.
 
 As an Agency Partner, you receive access to:
 
-- Partner portal for lead registration, commission tracking, sales enablement, and training
-- A listing in the [Agency Partner Directory](https://directory.pantheon.io/agencies)
-- Commission incentives: Wallet, Lead Bounty, and PayGo Spiff
-- End-customer discounts: Premier partners can offer 10% off Year 1; Strategic partners can offer 15% off Year 1
+* Partner portal for lead registration, incentive tracking, sales enablement, training, and program resources
+* The full Pantheon platform across supported framework paths
+* A listing in the [Agency Partner Directory](https://directory.pantheon.io/agencies), available to Premier and Strategic partners
+* Incentives that recognize eligible contract and PayGo revenue, subject to current program terms
+* Partner Wallet options for deploying eligible funds as direct commission, approved MDF, or Pantheon Professional Services
+* Partner enablement, community, co-sell, and co-marketing opportunities
+* Preferred pricing support for end customers through partners; this update does not change the preferred pricing offering
 
-**Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
-
-For more information, visit the [Agency Partner Program page](https://pantheon.io/partners) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide).
-
+For more information, visit the [Agency Partner Program page](https://pantheon.io/partners).
 
 
