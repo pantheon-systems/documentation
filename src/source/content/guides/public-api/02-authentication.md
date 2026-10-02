@@ -10,6 +10,8 @@ permalink: docs/guides/public-api/authentication
 
 The Pantheon Public API authenticates every request with a Personal Access Token (PAT). Your token identifies you and grants the same access as your Pantheon account.
 
+<Partial file="public-api-pat-only.md" />
+
 ## Create a Personal Access Token
 
 Follow the steps in [Creating and Revoking Personal Access Tokens](/personal-access-tokens) to create a token in your Personal Settings. Copy the token when it's shown, because you can't view it again.

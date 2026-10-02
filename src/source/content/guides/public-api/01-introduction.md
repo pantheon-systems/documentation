@@ -24,6 +24,8 @@ https://api.pantheon.io/v1
 
 Every request is authenticated with a [Personal Access Token](/personal-access-tokens), sent in the `Authorization` header. The API acts as you: it can only see and do what your Pantheon account can already see and do. If your account can't perform an action, such as creating a multidev on a particular site, the API can't either.
 
+<Partial file="public-api-pat-only.md" />
+
 Many actions, such as creating an environment or deploying code, start a _workflow_ that runs in the background. The API returns the workflow's ID right away, and you poll the workflow to find out when it completes. See [Start and monitor workflows](/guides/public-api/workflows) for details.
 
 ## API reference
