@@ -58,9 +58,9 @@ Pantheon provides one governed platform across WordPress, Drupal, Next.js, and o
 
 All Agency Partners access the same full Pantheon platform regardless of tier, including [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot). Tier affects program economics, support, and go-to-market benefits.
 
-For the October 2026 launch, tiers are based on lifetime sourced and influenced revenue. Tiering criteria may change in future program periods; refer to the current program terms for the latest details.
+Tiers are based on lifetime sourced and influenced revenue. Tiering criteria may change in future program periods; refer to the current program terms for the latest details.
 
-The October program launch expands the partner experience with formal Market Development Funds (MDF), updated incentive and revenue-share options, more ways to use Partner Wallet funds, and broader co-sell, co-marketing, enablement, and partner-community resources. Program terms may evolve, so refer to the current [Agency Partner Program Guide](http://partners.pantheon.io) for the latest details.
+The partner experience includes formal Market Development Funds (MDF), updated incentive and revenue-share options, more ways to use Partner Wallet funds, and broader co-sell, co-marketing, enablement, and partner-community resources. Program terms may evolve, so refer to the current [Agency Partner Program Guide](http://partners.pantheon.io) for the latest details.
 
 As an Agency Partner, you receive access to:
 
