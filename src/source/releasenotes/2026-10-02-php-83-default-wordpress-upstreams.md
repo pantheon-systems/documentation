@@ -1,7 +1,7 @@
 ---
 title: "New default PHP version 8.3 for WordPress upstreams"
 published_date: "2026-10-02"
-published_at: "2026-10-02T14:00:00Z"
+published_at: "2026-10-02T20:32:19Z"
 categories: [infrastructure, wordpress, action-required]
 description: "The default PHP version for Pantheon's WordPress upstreams is now PHP 8.3, replacing PHP 8.2."
 ---
