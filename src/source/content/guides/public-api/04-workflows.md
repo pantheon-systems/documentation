@@ -90,7 +90,7 @@ while true; do
 done
 ```
 
-**Note:** It's possible for polling requests to return `null` in the case of a bad response even while the workflow is still running. When writing your polling function, ensure that the loop continues on errors.
+**Note:** It's possible for polling requests to return an error in the case of a bad response even while the workflow is still running. When writing your polling function, ensure that the loop continues on errors rather than stopping the loop.
 
 When the loop ends, check `STATUS`. If the workflow failed or was canceled, the `reason` field explains why:
 
