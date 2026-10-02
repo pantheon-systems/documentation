@@ -1,7 +1,9 @@
 ---
-title: WordPress (composer managed) upstream 1.34.0 update now available
+title: "WordPress (composer managed) upstream 1.34.0 update now available"
 published_date: "2026-10-02"
+published_at: "2026-10-02T21:00:00Z"
 categories: [wordpress, action-required]
+description: "Version 1.34.0 of the WordPress (composer managed) upstream sets PHP 8.3 as the default and syncs with Roots Bedrock, which can cause composer.json merge conflicts."
 ---
 
 The 1.34.0 update is now available for the [WordPress (composer managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. This update changes the default PHP version to 8.3, syncs the upstream with [Roots Bedrock](https://github.com/roots/bedrock), and fixes a PHP warning. The Bedrock sync changes the Composer repository defaults, which can cause merge conflicts in your `composer.json` file.
