@@ -75,7 +75,7 @@ The response also includes `activeDescription`, a human-readable description of 
 
 ## Poll for completion
 
-To wait for a workflow to finish, check its status in a loop until it reaches `SUCCESS`, `FAILED`, or `CANCELED`. Wait a few seconds between requests. Creating a multidev environment can take several minutes.:
+To wait for a workflow to finish, check its status in a loop until it reaches `SUCCESS`, `FAILED`, or `CANCELED`. Wait a few seconds between requests. Creating a multidev environment can take several minutes:
 
 ```bash{promptUser: user}
 while true; do
