@@ -30,7 +30,7 @@ Many actions, such as creating an environment or deploying code, start a _workfl
 
 ## API reference
 
-The complete, interactive API reference is available at [api.pantheon.io/v1/docs](https://api.pantheon.io/v1/docs). The OpenAPI specification is available at [api.pantheon.io/v1/openapi.json](https://api.pantheon.io/v1/openapi.json) for use with API clients and code generators.
+The complete, interactive API reference is available at [api.pantheon.io/docs](https://api.pantheon.io/docs). The OpenAPI specification is available at [api.pantheon.io/v1/openapi.json](https://api.pantheon.io/v1/openapi.json) for use with API clients and code generators.
 
 ## In this guide
 
