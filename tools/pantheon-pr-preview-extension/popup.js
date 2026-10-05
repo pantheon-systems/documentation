@@ -170,12 +170,18 @@ function renderPages(result) {
   openAll.onclick = async () => {
     const targets = pages.slice(0, MAX_OPEN_ALL);
     openAll.disabled = true;
-    let created = 0;
-    for (const page of targets) {
-      const outcome = await openBeside(page.previewUrl, { offset: created });
-      if (outcome.created) created += 1;
+    // Arc destroys the popup when it opens a tab, so the service worker runs the loop.
+    const response = await chrome.runtime.sendMessage({
+      type: "openAllPreviews",
+      urls: targets.map((page) => page.previewUrl),
+      sourceTab: { id: currentTab.id, index: currentTab.index, windowId: currentTab.windowId }
+    });
+    if (!response?.ok) {
+      showStatus("Could not open the previews.");
+      openAll.disabled = false;
+      return;
     }
-    const skipped = targets.length - created;
+    const { created, skipped } = response;
     const capped = pages.length > MAX_OPEN_ALL ? ` Only the first ${MAX_OPEN_ALL} of ${pages.length} were opened.` : "";
     showStatus(`Opened ${created} preview${created === 1 ? "" : "s"}${skipped ? `; ${skipped} already open` : ""}.${capped}`);
     openAll.disabled = false;

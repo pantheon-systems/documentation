@@ -94,5 +94,23 @@ chrome.runtime.onInstalled.addListener(() => chrome.declarativeNetRequest.update
   }]
 }));
 
+async function openPreviews(urls, sourceTab) {
+  let created = 0;
+  for (const url of urls) {
+    const outcome = await openAdjacentOnce(url, sourceTab, { offset: created });
+    if (outcome.created) created += 1;
+  }
+  return { ok: true, created, skipped: urls.length - created };
+}
+
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message?.type !== "openAllPreviews") return false;
+  openPreviews(message.urls, message.sourceTab).then(sendResponse, (error) => {
+    console.error("Opening previews failed", error);
+    sendResponse({ ok: false });
+  });
+  return true;
+});
+
 chrome.webNavigation.onCommitted.addListener(maybeOpenPreview);
 chrome.webNavigation.onHistoryStateUpdated.addListener(maybeOpenPreview);
