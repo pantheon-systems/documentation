@@ -71,5 +71,28 @@ async function maybeOpenPreview(details) {
   }
 }
 
+// review.html embeds GitHub, the live docs and the multidev preview in iframes. GitHub sends
+// X-Frame-Options: deny and a CSP, so strip those headers, only for frames requested by this
+// extension's own pages.
+chrome.runtime.onInstalled.addListener(() => chrome.declarativeNetRequest.updateDynamicRules({
+  removeRuleIds: [1],
+  addRules: [{
+    id: 1,
+    priority: 1,
+    action: {
+      type: "modifyHeaders",
+      responseHeaders: [
+        { header: "x-frame-options", operation: "remove" },
+        { header: "content-security-policy", operation: "remove" }
+      ]
+    },
+    condition: {
+      resourceTypes: ["sub_frame"],
+      initiatorDomains: [chrome.runtime.id],
+      requestDomains: ["github.com", "docs.pantheon.io", "pantheonsite.io"]
+    }
+  }]
+}));
+
 chrome.webNavigation.onCommitted.addListener(maybeOpenPreview);
 chrome.webNavigation.onHistoryStateUpdated.addListener(maybeOpenPreview);

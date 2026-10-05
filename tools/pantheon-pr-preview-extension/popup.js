@@ -7,6 +7,7 @@ const {
   inspectPullRequest,
   findOpenTab,
   openAdjacentOnce,
+  splitReviewUrls,
   probePreview,
   describeProbe
 } = globalThis.PantheonPr;
@@ -45,6 +46,25 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 let currentTab = null;
 let currentStateKey = null;
 
+// One extension-owned tab shows the panes side by side (review.html). An extension can't invoke
+// Arc's Split View, and Arc destroys the popup when it opens a tab, so this is a single create.
+async function openSplitForPage(prNumber, page, includeDiff) {
+  try {
+    const labels = includeDiff ? ["GitHub Diff", "Live Article", "PR Preview"] : ["Live Article", "PR Preview"];
+    const params = new URLSearchParams({ title: `PR #${prNumber} · ${page.filename.split("/").pop()}` });
+    splitReviewUrls(prNumber, page, { includeDiff }).forEach((url, index) => params.append("pane", `${labels[index]}|${url}`));
+    await chrome.tabs.create({
+      url: `${chrome.runtime.getURL("review.html")}?${params}`,
+      openerTabId: currentTab.id,
+      windowId: currentTab.windowId,
+      index: currentTab.index + 1
+    });
+  } catch (error) {
+    console.warn("Could not open the review view", error);
+    showStatus("Could not open the review view.");
+  }
+}
+
 function openBeside(url, options) {
   return openAdjacentOnce(url, currentTab, options);
 }
@@ -76,7 +96,7 @@ function showStatus(message) {
   routeStatus.textContent = message;
 }
 
-function pageRow(page, index) {
+function pageRow(page, index, prNumber) {
   const item = document.createElement("li");
 
   const title = document.createElement("div");
@@ -105,6 +125,19 @@ function pageRow(page, index) {
     ));
     actions.append(button);
   }
+  for (const [label, includeDiff, description] of [
+    ["2-panel", false, "Open Live Article and PR Preview side by side"],
+    ["3-panel", true, "Open GitHub Diff, Live Article, and PR Preview side by side"]
+  ]) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "split-action";
+    button.textContent = label;
+    button.title = description;
+    button.setAttribute("aria-label", `${description} for ${page.filename}`);
+    button.addEventListener("click", () => openSplitForPage(prNumber, page, includeDiff));
+    actions.append(button);
+  }
 
   item.append(title, route, actions);
   item.dataset.index = String(index);
@@ -120,7 +153,7 @@ function listItem(text, className) {
 
 function renderPages(result) {
   const { pages } = result;
-  pagesList.replaceChildren(...pages.map(pageRow));
+  pagesList.replaceChildren(...pages.map((page, index) => pageRow(page, index, result.prNumber)));
   openAll.disabled = pages.length === 0;
   openAll.textContent = pages.length > 1 ? `Open all previews (${pages.length})` : "Open all previews";
 

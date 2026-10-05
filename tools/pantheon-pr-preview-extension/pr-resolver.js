@@ -11,6 +11,7 @@
   const MAX_OPEN_ALL = 15;
   const PROBE_TIMEOUT_MS = 8000;
   const DAY_MS = 24 * 60 * 60 * 1000;
+  const SPLIT_SESSION_KEY = "pantheon-split-review-session";
 
   function parsePrNumber(url) {
     const match = url?.match(/^https:\/\/github\.com\/pantheon-systems\/documentation\/pull\/(\d+)(?:[/?#]|$)/);
@@ -350,10 +351,89 @@
     return "Could not reach the preview. Check your network or VPN, then retry.";
   }
 
+  function splitReviewUrls(prNumber, page, { includeDiff = false } = {}) {
+    if (!page?.liveUrl || !page?.previewUrl) throw new Error("A page needs both live and preview URLs.");
+    const urls = [page.liveUrl, page.previewUrl];
+    if (includeDiff) {
+      urls.unshift(
+        `https://github.com/${REPOSITORY}/pull/${prNumber}/files?path=${encodeURIComponent(page.filename)}`
+      );
+    }
+    if (!urls.every(isAllowedUrl)) throw new Error("Refusing to open a split review URL outside the allowed hosts.");
+    return urls;
+  }
+
+  async function getSplitReviewSession() {
+    const saved = await chrome.storage.session.get(SPLIT_SESSION_KEY);
+    return saved[SPLIT_SESSION_KEY] || null;
+  }
+
+  async function closeSplitReview() {
+    const session = await getSplitReviewSession();
+    await Promise.all(
+      (session?.tabIds || []).map(async (tabId) => {
+        try {
+          await chrome.tabs.remove(tabId);
+        } catch {
+          // The tab may already have been closed.
+        }
+      })
+    );
+    await chrome.storage.session.remove(SPLIT_SESSION_KEY);
+    return session;
+  }
+
+  async function openSplitReview(prNumber, page, sourceTab, { includeDiff = false } = {}) {
+    if (!sourceTab?.windowId) throw new Error("The active tab is unavailable.");
+    const urls = splitReviewUrls(prNumber, page, { includeDiff });
+    await closeSplitReview();
+
+    const tabIds = [];
+    try {
+      for (const [index, url] of urls.entries()) {
+        const tabs = await chrome.tabs.query({ windowId: sourceTab.windowId });
+        const target = comparableUrl(url);
+        const existing = tabs.find((tab) => tab.url && comparableUrl(tab.url) === target);
+        if (existing) continue;
+
+        const created = await chrome.tabs.create({
+          url,
+          active: false,
+          openerTabId: sourceTab.id,
+          windowId: sourceTab.windowId,
+          index: sourceTab.index + 1 + index
+        });
+        if (created?.id !== undefined) tabIds.push(created.id);
+      }
+
+      const session = {
+        prNumber: String(prNumber),
+        filename: page.filename,
+        includeDiff,
+        windowId: sourceTab.windowId,
+        tabIds,
+        urls,
+        createdAt: Date.now()
+      };
+      await chrome.storage.session.set({ [SPLIT_SESSION_KEY]: session });
+      const focusedTabId = tabIds[tabIds.length - 1];
+      if (focusedTabId !== undefined) await chrome.tabs.update(focusedTabId, { active: true });
+      return session;
+    } catch (error) {
+      await Promise.all(tabIds.map((tabId) => chrome.tabs.remove(tabId).catch(() => undefined)));
+      await chrome.storage.session.remove(SPLIT_SESSION_KEY);
+      throw error;
+    }
+  }
+
   root.PantheonPr = {
     REPOSITORY,
     LIVE_ORIGIN,
     MAX_OPEN_ALL,
+    splitReviewUrls,
+    getSplitReviewSession,
+    openSplitReview,
+    closeSplitReview,
     parsePrNumber,
     parsePreviewNumber,
     previewOrigin,

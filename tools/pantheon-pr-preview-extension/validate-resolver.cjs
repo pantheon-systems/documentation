@@ -3,7 +3,7 @@
 const assert = require("node:assert/strict");
 
 require("./pr-resolver.js");
-const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, inspectPullRequest } = globalThis.PantheonPr;
+const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, inspectPullRequest } = globalThis.PantheonPr;
 
 const PREVIEW = "https://pr-7-pandocs.pantheonsite.io";
 const LIVE = "https://docs.pantheon.io";
@@ -46,6 +46,19 @@ assert.equal(parsePrNumber("https://github.com/other/documentation/pull/10303"),
 assert.equal(parsePrNumber("https://github.com/pantheon-systems/documentation/pulls"), null);
 assert.equal(parsePreviewNumber("https://pr-10303-pandocs.pantheonsite.io/docs/a"), "10303");
 assert.equal(parsePreviewNumber("https://pr-10303-pandocs.pantheonsite.io.evil.example/"), null);
+
+// Split review order and sizing
+const page = {
+  filename: "src/source/content/a.md",
+  liveUrl: `${LIVE}/docs/a#section-one`,
+  previewUrl: `${PREVIEW}/docs/a#section-one`
+};
+assert.deepEqual(splitReviewUrls("7", page), [page.liveUrl, page.previewUrl]);
+assert.deepEqual(splitReviewUrls("7", page, { includeDiff: true }), [
+  "https://github.com/pantheon-systems/documentation/pull/7/files?path=src%2Fsource%2Fcontent%2Fa.md",
+  page.liveUrl,
+  page.previewUrl
+]);
 
 // inspectPullRequest against a mocked GitHub
 const respond = (body, text) => ({ ok: true, status: 200, json: async () => body, text: async () => text });

@@ -22,6 +22,7 @@ Click the toolbar icon on a documentation PR to open the panel.
 - **Preview and Live buttons.** Each row opens the multidev preview (`pr-<number>-pandocs.pantheonsite.io`) or the same route on `docs.pantheon.io` in a background tab next to the PR tab. This is the preview/live comparison. If that page is already open, the button switches to it instead of opening a copy.
 - **Open all previews.** Opens one background tab per affected page, in list order, directly after the PR tab. Pages already open are skipped, and large PRs open the first 15. The button shows the page count.
 - **Open Files changed.** Opens the PR's Files changed tab next to the current tab.
+- **Review view.** Each affected-page row has **2-panel** and **3-panel** actions. They open one extension tab (`review.html`) next to the PR tab, with the pages side by side as iframes in the order `Live Article | PR Preview` or `GitHub Diff | Live Article | PR Preview`. Each pane has an **Open in tab** link. GitHub ignores the `path` query as a filter, so the diff pane lists every changed file. An extension can't invoke Arc's native Split View, and Arc closes the popup as soon as it opens a tab, so the view is a single `tabs.create` call.
 - **Files without a permalink.** Changed Markdown files with no `permalink` (release notes, for example) are listed in a note below the page list.
 - **Per-PR checklist.** The review steps are saved separately for each PR in `chrome.storage.local`. **Reset** clears the current PR's checklist.
 
@@ -61,7 +62,8 @@ After editing files, select the reload icon on the extension's card.
 |---|---|
 | `webNavigation` | Detects navigation to a documentation PR for the automatic preview tab. |
 | `tabs` | Finds already-open preview tabs to avoid duplicates, and opens, focuses, and reloads tabs. |
-| `storage` | Saves checklist progress (`local`) and per-PR automatic-open state (`session`). |
+| `storage` | Saves checklist progress (`local`), and per-PR automatic-open state (`session`). |
+| `declarativeNetRequest` | One dynamic rule removes `X-Frame-Options` and `Content-Security-Policy` from iframe requests to `github.com`, `docs.pantheon.io`, and `pantheonsite.io` that the extension's own review page makes, so GitHub can load inside the review view. It doesn't touch other pages or tabs. |
 
 Host access:
 
