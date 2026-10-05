@@ -1,0 +1,52 @@
+extends: capitalization
+message: "Use sentence case for headings: '%s'."
+level: warning
+scope: heading
+match: $sentence
+# A colon starts a new "sentence" so the word after it may be capitalized.
+indicators:
+  - ':'
+# Proper nouns, product names, and acronyms that keep their capitalization mid-heading.
+# Vocab accept.txt covers spelling; this list covers capitalization checks.
+exceptions:
+  - Composer
+  - CDN
+  - CLI
+  - CMS
+  - CSS
+  - Dashboard
+  - Decoupled
+  - Dev
+  - Drupal
+  - Drush
+  - Fastly
+  - Git
+  - GitHub
+  - GitLab
+  - Google
+  - HTTP
+  - HTTPS
+  - Jenkins
+  - Live
+  - MariaDB
+  - Multidev
+  - MySQL
+  - New Relic
+  - Next.js
+  - Node.js
+  - NGINX
+  - PHP
+  - Pantheon
+  - Redis
+  - SSH
+  - SSL
+  - TLS
+  - Terminus
+  - Test
+  - URL
+  - Varnish
+  - WP-CLI
+  - WordPress
+  - YAML
+  - macOS
+  - iOS
