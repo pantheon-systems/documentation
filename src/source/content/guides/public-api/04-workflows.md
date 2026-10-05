@@ -1,5 +1,5 @@
 ---
-title: Start and monitor workflows with the Pantheon Public API
+title: Pantheon Public API V1
 subtitle: Start and monitor workflows
 description: Learn how to start a workflow, such as creating a multidev environment, and poll for its completion using the Pantheon Public API.
 reviewed: "2026-09-29"
@@ -102,5 +102,5 @@ Once the multidev workflow succeeds, the new environment appears in the site's `
 
 ## More information
 
-- [Pantheon Public API reference](https://api.pantheon.io/v1/docs)
+- [Pantheon Public API reference](https://api.pantheon.io/docs)
 - [Multidev](/guides/multidev)
