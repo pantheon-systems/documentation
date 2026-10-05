@@ -1,5 +1,5 @@
 ---
-title: Pantheon Public API V1
+title: Get site information with the Pantheon Public API
 subtitle: Get site information
 description: Learn how to look up a Pantheon site by its UUID or name using the Pantheon Public API.
 reviewed: "2026-09-29"
