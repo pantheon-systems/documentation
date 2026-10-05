@@ -102,5 +102,5 @@ Once the multidev workflow succeeds, the new environment appears in the site's `
 
 ## More information
 
-- [Pantheon Public API reference](https://api.pantheon.io/v1/docs)
+- [Pantheon Public API reference](https://api.pantheon.io/docs)
 - [Multidev](/guides/multidev)
