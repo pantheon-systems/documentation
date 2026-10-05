@@ -1,7 +1,7 @@
 ---
 title: "Introducing Workspace Performance Insights"
 published_date: "2026-10-05"
-published_at: "2026-10-05T20:06:36Z"
+published_at: "2026-10-05T20:36:32Z"
 categories: [user-interface]
 description: "Pantheon has added workspace-level performance visibility to the Workspace dashboard – you can now see which sites in your workspace need attention without checking each site dashboard individually."
 ---
