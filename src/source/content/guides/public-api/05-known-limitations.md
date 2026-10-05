@@ -10,7 +10,7 @@ permalink: docs/guides/public-api/known-limitations
 
 _Last updated: October 5, 2026_
 
-These are known issues in the Pantheon Public API v1 (`https://api.pantheon.io/v1`). We're working to fix these bugs. Expect this page to be updated as we make progress, and expect limitations to be removed as they're resolved.
+These are known issues in the Pantheon Public API v1 (`https://http://api.pantheon.io/docs`). We're working to fix these bugs. Expect this page to be updated as we make progress, and expect limitations to be removed as they're resolved.
 
 ## Workspaces
 
