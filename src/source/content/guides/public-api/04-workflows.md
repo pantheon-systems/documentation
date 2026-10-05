@@ -25,7 +25,7 @@ Create a multidev environment by sending a `POST` request to the site's `multide
 
 ```bash{promptUser: user}
 SITE_ID=<site_uuid>
-curl -s -X POST "https://api.pantheon.io/sites/$SITE_ID/multidevs" \
+curl -s -X POST "https://api.pantheon.io/v1/sites/$SITE_ID/multidevs" \
   -H "Authorization: Bearer $PANTHEON_TOKEN" \
   -H "Content-Type: application/json" \
   -d "{
