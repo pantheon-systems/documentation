@@ -1,5 +1,5 @@
 ---
-title: Public API v1 known limitations
+title: Pantheon Public API V1
 subtitle: Known limitations
 description: Review the known issues in the Pantheon Public API v1 before you build an integration.
 reviewed: "2026-10-05"
@@ -8,9 +8,7 @@ innav: [true]
 permalink: docs/guides/public-api/known-limitations
 ---
 
-_Last updated: October 5, 2026_
-
-These are known issues in the Pantheon Public API v1 (`https://http://api.pantheon.io/docs`). We're working to fix these bugs. Expect this page to be updated as we make progress, and expect limitations to be removed as they're resolved.
+These are known issues in the [Pantheon Public API v1](https://api.pantheon.io/docs). We're working to fix these bugs. Expect this page to be updated as we make progress, and expect limitations to be removed as they're resolved.
 
 ## Workspaces
 
