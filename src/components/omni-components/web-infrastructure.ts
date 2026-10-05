@@ -210,6 +210,10 @@ const webInfrastructure = () => {
             "/nextjs/transfer-site",
             "How to transfer a site between workspaces",
           ),
+          simpleLink(
+            "/nextjs/new-relic",
+            "How to install New Relic trace monitoring on Next.js sites",
+          ),
         ]),
       ]),
       // getGuideDirectory("guides/public-api", "Pantheon Public API"),
