@@ -1,0 +1,18 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: https://docs.pantheon.io/inclusive-language
+level: error
+ignorecase: true
+swap:
+  whitelist: allowlist
+  blacklist: blocklist
+  slave: replica
+  sanity check: validation
+  grandfathered: legacy
+  grandfathered in: legacy
+  you guys: you all
+  crazy: unexpected
+  insane: unexpected
+  crippled: broken
+  crippling: hindering
+  dummy: placeholder
