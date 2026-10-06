@@ -22,5 +22,5 @@ Connect from a compatible AI client, sign in with your normal Pantheon account t
 For more details, see [related documentation](/guides/mcp).
 
 ## Availability
-All Pantheon customers. For feedback, please sign up for the [Pantheon Slack channel here](https://pantheon.io/customer-community/) if you don't already have an account and join us in the `#beta-mcp-server` channel. 
+All Pantheon customers. For feedback, please sign up for the [Pantheon Community Slack here](https://pantheon.io/customer-community/) if you don't already have an account and join us in the `#beta-mcp-server` channel. 
 

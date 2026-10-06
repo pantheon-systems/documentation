@@ -28,5 +28,5 @@ For more details, see [related documentation](/guides/public-api).
 The v0 API keeps running for about 60 days after today's Beta release of v1, then shuts down. The /v1 endpoints reject [legacy machine tokens](/personal-access-tokens#legacy-machine-tokens), so move to [personal access tokens](/personal-access-tokens). 
 
 ## Availability
-All Pantheon customers. For feedback, please sign up for the [Pantheon Slack channel here](https://pantheon.io/customer-community/) if you don't already have an account and join us in the `#beta-public-api` channel. 
+All Pantheon customers. For feedback, please sign up for the [Pantheon Community Slack here](https://pantheon.io/customer-community/) if you don't already have an account and join us in the `#beta-public-api` channel. 
 
