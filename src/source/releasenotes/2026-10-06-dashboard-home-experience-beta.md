@@ -1,8 +1,10 @@
-# New dashboard home experience, bookmarks feature now in beta
-
-Category: [User interface](https://docs.pantheon.io/release-notes?category=user-interface)  
-October 6, 2026
-
+---
+title: "New dashboard home experience, bookmarks feature now in beta"
+published_date: "2026-10-06"
+published_at: "2026-10-06T13:54:00Z"
+categories: [user-interface]
+description: "Pantheon’s new dashboard home experience is now available in beta. It gives you a more useful starting point for finding your sites, accessing frequently used pages, and staying up to date with Pantheon."
+---
 Pantheon’s new dashboard home experience is now available in beta. It gives you a more useful starting point for finding your sites, accessing frequently used pages, and staying up to date with Pantheon.
 
 Recent Sites are available in a card view:
