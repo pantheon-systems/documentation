@@ -3,7 +3,7 @@
 const assert = require("node:assert/strict");
 
 require("./pr-resolver.js");
-const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, headingSlug, changedLineNumber, anchorForChange, panelRequestUrl, parsePanelRequest, reviewPageUrl, inspectPullRequest } = globalThis.PantheonPr;
+const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, withReviewMarker, openAdjacentOnce, headingSlug, changedLineNumber, anchorForChange, panelRequestUrl, parsePanelRequest, reviewPageUrl, inspectPullRequest } = globalThis.PantheonPr;
 
 const PREVIEW = "https://pr-7-pandocs.pantheonsite.io";
 const LIVE = "https://docs.pantheon.io";
@@ -181,6 +181,36 @@ globalThis.fetch = async (url) => {
       : realFetch(url)
   );
   await assert.rejects(() => inspectPullRequest(8), /Unexpected repository name/);
+
+  // Review marker: added to docs and multidev links, ignored when matching open tabs
+  {
+    assert.equal(withReviewMarker("https://docs.pantheon.io/docs/a#sec"), "https://docs.pantheon.io/docs/a?pantheon_review=1#sec", "marker goes before the hash");
+    assert.equal(withReviewMarker("https://pr-7-pandocs.pantheonsite.io/docs/a?x=1#s"), "https://pr-7-pandocs.pantheonsite.io/docs/a?x=1&pantheon_review=1#s", "existing query is kept");
+    assert.equal(withReviewMarker(withReviewMarker("https://docs.pantheon.io/docs/a")), "https://docs.pantheon.io/docs/a?pantheon_review=1", "adding it twice changes nothing");
+    assert.equal(withReviewMarker("https://github.com/pantheon-systems/documentation/pull/7/files"), "https://github.com/pantheon-systems/documentation/pull/7/files", "GitHub links are left alone");
+    assert.equal(withReviewMarker("https://evil.example/x"), "https://evil.example/x", "a foreign host is returned unchanged");
+
+    const open = [{ id: 9, windowId: 1, index: 4, url: "https://docs.pantheon.io/docs/a?pantheon_review=1#x" }, { id: 10, windowId: 1, index: 5, url: "https://pr-7-pandocs.pantheonsite.io/docs/b/" }];
+    const created = [];
+    globalThis.chrome = {
+      tabs: {
+        query: async ({ url }) => open.filter((t) => t.url.startsWith(url.replace("/*", ""))),
+        create: async (o) => { created.push(o); return { id: 100, ...o }; },
+        update: async () => {}
+      },
+      windows: { update: async () => {} }
+    };
+    const source = { id: 1, windowId: 1, index: 3 };
+    assert.equal((await openAdjacentOnce("https://docs.pantheon.io/docs/a", source)).created, false, "a tab opened with the marker counts as open for the plain URL");
+    assert.equal((await openAdjacentOnce("https://pr-7-pandocs.pantheonsite.io/docs/b", source)).created, false, "a tab opened without the marker counts as open too");
+    const fresh = await openAdjacentOnce("https://docs.pantheon.io/docs/new#s", source, { offset: 2 });
+    assert.equal(fresh.created, true);
+    assert.equal(created[0].url, "https://docs.pantheon.io/docs/new?pantheon_review=1#s", "tabs the extension opens carry the marker");
+    assert.equal(created[0].index, 6);
+    await openAdjacentOnce("https://github.com/pantheon-systems/documentation/pull/7/files", source);
+    assert.equal(created[1].url, "https://github.com/pantheon-systems/documentation/pull/7/files", "GitHub tabs don't");
+    delete globalThis.chrome;
+  }
 
   console.log("validate-resolver: all checks passed");
 })().catch((error) => {

@@ -35,5 +35,18 @@
     "32": "icons/pantheon-lightning-bolt.png",
     "48": "icons/pantheon-lightning-bolt.png",
     "128": "icons/pantheon-lightning-bolt.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.pantheon.io/*",
+        "https://*.pantheonsite.io/*"
+      ],
+      "js": [
+        "hide-cookie-banner.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ]
 }

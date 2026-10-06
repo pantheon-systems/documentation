@@ -36,6 +36,19 @@ Preview and Live links end in the `#heading` of the section that holds the first
 - A brand-new page, a front-matter-only change, or a change above the first heading has no anchor, so the page opens at the top.
 - On a sample of 20 changed pages from recent PRs, every anchor the extension produced exists on the live or preview page.
 
+## Cookie banner
+
+The docs site's cookie banner (OneTrust) is hidden only on pages the extension or the review skill supplied:
+
+- Inside the 2-panel and 3-panel review view.
+- On a docs or multidev link ending in `?pantheon_review=1`. The extension adds this to every docs and preview tab it opens (the popup's Preview and Live buttons, Open all previews, and the automatic preview tab), and the review skill adds it to the Multidev and Live links it prints. The site ignores the parameter, so the same link works without the extension.
+
+A normal visit to the docs site, or a multidev you open yourself, keeps its banner. Hiding the banner doesn't click Accept and sets no consent cookie.
+
+One thing to know: the docs site's cookie script treats any scroll as acceptance, with or without this extension (it records the consent cookie the first time you scroll). Hiding the banner removes the notice but doesn't change that, so scrolling in a review pane or on a marked link records consent the same way it does on a normal visit.
+
+On those same pages the extension also re-scrolls to the anchored section for the first few seconds after load, because content above it can load late and leave it below the top. It stops as soon as you scroll or click. Those re-scrolls are hidden from the page's scroll tracking, so they never record consent on their own.
+
 ## Shareable panel links
 
 A link to a PR's Files changed page can carry a marker that opens the 2-panel or 3-panel review view for one changed page:
@@ -96,6 +109,8 @@ Host access:
 - `raw.githubusercontent.com/*/*`: read changed Markdown front matter from the PR head (which can be a fork) and the base branch.
 - `*.pantheonsite.io/*`: check whether the multidev responds and read the preview tab's URL.
 - `docs.pantheon.io/*`: open and read the live pages.
+
+One content script, `hide-cookie-banner.js`, runs on `docs.pantheon.io` and `*.pantheonsite.io` pages, including frames. It does nothing unless the page is inside the review view or the URL carries `pantheon_review=1` (see "Cookie banner").
 
 The extension only opens or probes `github.com`, `docs.pantheon.io`, and `pr-<number>-pandocs.pantheonsite.io` URLs.
 

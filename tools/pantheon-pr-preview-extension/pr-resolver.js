@@ -317,9 +317,22 @@
     };
   }
 
+  // Docs and preview links the extension or the review skill hands out carry this marker, so the
+  // cookie banner is hidden only on pages reached that way (see hide-cookie-banner.js). The site
+  // ignores unknown query parameters, so the link still works without the extension.
+  const REVIEW_PARAM = "pantheon_review";
+
+  function withReviewMarker(url) {
+    const parsed = new URL(url);
+    if (parsed.hostname === "github.com" || !isAllowedUrl(url)) return url;
+    parsed.searchParams.set(REVIEW_PARAM, "1");
+    return parsed.href;
+  }
+
   function comparableUrl(url) {
     const parsed = new URL(url);
     parsed.hash = "";
+    parsed.searchParams.delete(REVIEW_PARAM);
     parsed.pathname = parsed.pathname.replace(/\/+$/, "") || "/";
     return parsed.href;
   }
@@ -342,7 +355,7 @@
       return { tab: existing, created: false };
     }
     const tab = await chrome.tabs.create({
-      url,
+      url: withReviewMarker(url),
       active: false,
       openerTabId: sourceTab.id,
       windowId: sourceTab.windowId,
@@ -497,6 +510,7 @@
     LIVE_ORIGIN,
     MAX_OPEN_ALL,
     splitReviewUrls,
+    withReviewMarker,
     headingSlug,
     changedLineNumber,
     anchorForChange,
