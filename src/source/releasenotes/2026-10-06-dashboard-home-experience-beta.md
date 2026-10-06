@@ -13,13 +13,13 @@ Recent Sites are available in a card view:
 
 * **A new Home experience** - Get a single view of your Recent Sites across all of your workspaces.
 * **Card or list view** - Choose how you want to browse Recent Sites. List view also shows each site’s status and owning workspace.
-* **Bookmarks capability** - Create and access bookmarks for your frequently visited pages, from your Home and dashboard navigation.
+* **Bookmarks capability** - Create and access bookmarks for your frequently visited pages from Home and dashboard navigation.
 * **Release notes in the dashboard** - See the latest Pantheon product updates directly from the Home experience.
 * **Refreshed Workspace Overview** - Workspace Overview has a visual refresh and now supports the same card and list views for Recent Sites.
 
 Switch to list view to see site status and owning workspace:
 
-![Home in list view](src/source/images/release-notes/home-recent-sites-list-view.png)
+![Home in list view](/images/release-notes/home-recent-sites-list-view.png)
 
 Open the Bookmarks panel to quickly access saved pages:
 
