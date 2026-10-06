@@ -1,8 +1,13 @@
 importScripts("pr-resolver.js");
 
-const { parsePrNumber, inspectPullRequest, openAdjacentOnce } = globalThis.PantheonPr;
+const { parsePrNumber, parsePanelRequest, reviewPageUrl, inspectPullRequest, openAdjacentOnce } = globalThis.PantheonPr;
 const RECHECK_AFTER_MS = 5 * 60 * 1000;
 const inFlight = new Set();
+const panelInFlight = new Set();
+// GitHub rewrites the URL right after load and drops the panel marker. That follow-up navigation in
+// the same tab must not start the automatic preview, so remember when a panel link was last seen.
+const PANEL_WINDOW_MS = 8000;
+const panelTabs = new Map();
 
 function hasOptedOut(url) {
   try {
@@ -71,6 +76,46 @@ async function maybeOpenPreview(details) {
   }
 }
 
+// A documentation PR link with ?pantheon_panel=2|3&page=<file> becomes the review view for that page.
+// Returns true when the URL was a panel link, so the automatic preview doesn't also run.
+async function maybeOpenPanel(details) {
+  const request = parsePanelRequest(details.url);
+  if (!request) return false;
+  panelTabs.set(details.tabId, Date.now());
+  if (panelInFlight.has(details.tabId)) return true;
+
+  panelInFlight.add(details.tabId);
+  try {
+    const { pages } = await inspectPullRequest(request.prNumber, { compareBase: false });
+    const page = pages.find((entry) => entry.filename === request.filename);
+    if (!page) {
+      console.warn("The panel link names a page this PR doesn't change", request.filename);
+      await setBadge(details.tabId, "?", "#a15c00");
+      return true;
+    }
+    // The tab may have moved on while the PR was being read. GitHub drops the marker from the URL,
+    // so check that the tab is still on this PR, not that the marker is still there.
+    const tab = await chrome.tabs.get(details.tabId);
+    if (parsePrNumber(tab.url) !== request.prNumber) return true;
+    await chrome.tabs.update(details.tabId, {
+      url: reviewPageUrl(chrome.runtime.getURL("review.html"), request.prNumber, page, request.panels === 3)
+    });
+  } catch (error) {
+    console.error("Opening the panel link failed", error);
+    await setBadge(details.tabId, "!", "#b42318");
+  } finally {
+    panelInFlight.delete(details.tabId);
+  }
+  return true;
+}
+
+async function onNavigation(details) {
+  if (details.frameId !== 0) return;
+  if (await maybeOpenPanel(details)) return;
+  if (Date.now() - (panelTabs.get(details.tabId) || 0) < PANEL_WINDOW_MS) return;
+  await maybeOpenPreview(details);
+}
+
 // review.html embeds GitHub, the live docs and the multidev preview in iframes. GitHub sends
 // X-Frame-Options: deny and a CSP, so strip those headers, only for frames requested by this
 // extension's own pages.
@@ -112,5 +157,5 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   return true;
 });
 
-chrome.webNavigation.onCommitted.addListener(maybeOpenPreview);
-chrome.webNavigation.onHistoryStateUpdated.addListener(maybeOpenPreview);
+chrome.webNavigation.onCommitted.addListener(onNavigation);
+chrome.webNavigation.onHistoryStateUpdated.addListener(onNavigation);

@@ -426,11 +426,51 @@
     }
   }
 
+  // Shareable panel links: a plain GitHub Files changed URL that carries a marker. With the extension
+  // installed, its service worker swaps the tab for the 2- or 3-panel review view. Without it, the
+  // link opens that PR's Files changed page. The URL holds no extension ID, so it works for everyone
+  // and opens from chat apps.
+  const PANEL_PARAM = "pantheon_panel";
+  const PANEL_PAGE_PARAM = "page";
+
+  function panelRequestUrl(prNumber, filename, panels) {
+    const url = new URL(`https://github.com/${REPOSITORY}/pull/${prNumber}/files`);
+    url.searchParams.set(PANEL_PARAM, String(panels));
+    url.searchParams.set(PANEL_PAGE_PARAM, filename);
+    return url.href;
+  }
+
+  function parsePanelRequest(url) {
+    const prNumber = parsePrNumber(url);
+    if (!prNumber) return null;
+    let params;
+    try {
+      params = new URL(url).searchParams;
+    } catch {
+      return null;
+    }
+    const panels = params.get(PANEL_PARAM);
+    const filename = params.get(PANEL_PAGE_PARAM);
+    if ((panels !== "2" && panels !== "3") || !filename || filename.length > 300) return null;
+    return { prNumber, panels: Number(panels), filename };
+  }
+
+  // Mirrors openSplitForPage in popup.js.
+  function reviewPageUrl(reviewBase, prNumber, page, includeDiff) {
+    const labels = includeDiff ? ["GitHub Diff", "Live Article", "PR Preview"] : ["Live Article", "PR Preview"];
+    const params = new URLSearchParams({ title: `PR #${prNumber} · ${page.filename.split("/").pop()}` });
+    splitReviewUrls(prNumber, page, { includeDiff }).forEach((url, index) => params.append("pane", `${labels[index]}|${url}`));
+    return `${reviewBase}?${params}`;
+  }
+
   root.PantheonPr = {
     REPOSITORY,
     LIVE_ORIGIN,
     MAX_OPEN_ALL,
     splitReviewUrls,
+    panelRequestUrl,
+    parsePanelRequest,
+    reviewPageUrl,
     getSplitReviewSession,
     openSplitReview,
     closeSplitReview,

@@ -26,6 +26,21 @@ Click the toolbar icon on a documentation PR to open the panel.
 - **Files without a permalink.** Changed Markdown files with no `permalink` (release notes, for example) are listed in a note below the page list.
 - **Per-PR checklist.** The review steps are saved separately for each PR in `chrome.storage.local`. **Reset** clears the current PR's checklist.
 
+## Shareable panel links
+
+A link to a PR's Files changed page can carry a marker that opens the 2-panel or 3-panel review view for one changed page:
+
+```
+https://github.com/pantheon-systems/documentation/pull/<number>/files?pantheon_panel=<2|3>&page=<path of the changed file>
+```
+
+- With the extension installed, the tab becomes the review view for that page. `pantheon_panel=2` shows `Live Article | PR Preview`, and `3` adds the GitHub diff.
+- Without the extension, the same link opens the PR's Files changed page.
+- The link is a plain `https` URL with no extension ID, so it works for every install and opens from chat apps and Slack.
+- `page` must be the full path of a Markdown file the PR changes (for example `src/source/content/nextjs/overview.md`) and that file needs a `permalink`. If the PR doesn't change it, the tab stays on GitHub and the toolbar badge shows `?`. Any other `pantheon_panel` value is ignored.
+- GitHub removes the marker from the address bar a moment after the page loads. That is expected.
+- A panel link doesn't also open the automatic preview tab.
+
 ## Warnings
 
 - **Permalink changed.** The extension compares each changed file's `permalink` with the base branch (renamed files are matched by their previous name; new files are not flagged). Any change is listed as old → new, with a reminder to check the redirects in `src/middleware.ts` and any cross-links to the old path. **Inspect middleware.ts** opens that file on the PR branch, and a matching checklist item appears.

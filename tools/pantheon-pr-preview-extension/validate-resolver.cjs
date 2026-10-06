@@ -3,7 +3,7 @@
 const assert = require("node:assert/strict");
 
 require("./pr-resolver.js");
-const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, inspectPullRequest } = globalThis.PantheonPr;
+const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, panelRequestUrl, parsePanelRequest, reviewPageUrl, inspectPullRequest } = globalThis.PantheonPr;
 
 const PREVIEW = "https://pr-7-pandocs.pantheonsite.io";
 const LIVE = "https://docs.pantheon.io";
@@ -98,6 +98,36 @@ globalThis.fetch = async (url) => {
   }
   return notFound;
 };
+
+// Shareable panel links: build, parse, and the review page URL they lead to
+{
+  const file = "src/source/content/nextjs/drupal-quickstart.md";
+  const link = panelRequestUrl("10269", file, 3);
+  assert.equal(link, "https://github.com/pantheon-systems/documentation/pull/10269/files?pantheon_panel=3&page=src%2Fsource%2Fcontent%2Fnextjs%2Fdrupal-quickstart.md");
+  assert.deepEqual(parsePanelRequest(link), { prNumber: "10269", panels: 3, filename: file }, "a built link parses back");
+  assert.deepEqual(parsePanelRequest(panelRequestUrl("7", "a b&c=d/é.md", 2)), { prNumber: "7", panels: 2, filename: "a b&c=d/é.md" }, "awkward file names survive the round trip");
+  assert.equal(parsePrNumber(link), "10269", "the link is still an ordinary PR URL");
+  for (const bad of [
+    "https://github.com/pantheon-systems/documentation/pull/7/files",
+    "https://github.com/pantheon-systems/documentation/pull/7/files?pantheon_panel=4&page=a.md",
+    "https://github.com/pantheon-systems/documentation/pull/7/files?pantheon_panel=3",
+    "https://github.com/pantheon-systems/documentation/pull/7/files?pantheon_panel=3&page=",
+    `https://github.com/pantheon-systems/documentation/pull/7/files?pantheon_panel=3&page=${"a".repeat(301)}`,
+    "https://github.com/other/documentation/pull/7/files?pantheon_panel=3&page=a.md",
+    "https://github.com.evil.example/pantheon-systems/documentation/pull/7/files?pantheon_panel=3&page=a.md",
+    "http://github.com/pantheon-systems/documentation/pull/7/files?pantheon_panel=3&page=a.md",
+    "not a url"
+  ]) assert.equal(parsePanelRequest(bad), null, bad);
+
+  const pg = { filename: file, previewUrl: "https://pr-7-pandocs.pantheonsite.io/docs/nextjs/q#learning", liveUrl: "https://docs.pantheon.io/docs/nextjs/q#learning" };
+  const three = new URL(reviewPageUrl("chrome-extension://abc/review.html", "7", pg, true));
+  assert.equal(`${three.protocol}//${three.host}${three.pathname}`, "chrome-extension://abc/review.html");
+  assert.equal(three.searchParams.get("title"), "PR #7 · drupal-quickstart.md");
+  assert.deepEqual(three.searchParams.getAll("pane").map((p) => p.split("|")[0]), ["GitHub Diff", "Live Article", "PR Preview"]);
+  const two = new URL(reviewPageUrl("chrome-extension://abc/review.html", "7", pg, false));
+  assert.deepEqual(two.searchParams.getAll("pane"), [`Live Article|${pg.liveUrl}`, `PR Preview|${pg.previewUrl}`]);
+  assert.throws(() => reviewPageUrl("chrome-extension://abc/review.html", "7", { ...pg, liveUrl: "https://evil.example/x" }, false), /outside the allowed hosts/, "a page with a foreign URL is refused");
+}
 
 (async () => {
   const result = await inspectPullRequest(7);
