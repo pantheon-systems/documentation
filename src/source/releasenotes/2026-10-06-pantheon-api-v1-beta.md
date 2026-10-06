@@ -7,7 +7,7 @@ description: "Pantheon is opening the Beta of the Public API v1, a stable, Auth0
 ---
 Pantheon is opening the Beta of the Public API v1, a stable, Auth0-secured REST API for automating platform operations across your fleet.
 
-The Public API v1 gives partners, DevOps teams, and agencies a documented, contract-stable way to run Pantheon operations programmatically. It extends the earlier alpha with expiring tokens, broader coverage, and an OpenAPI 3.x schema that Pantheon commits to through GA.
+The Public API v1 gives partners, DevOps teams, and agencies a documented, contract-stable way to run Pantheon operations programmatically. It extends the earlier alpha with expiring tokens and an OpenAPI 3.x schema that Pantheon commits to through GA.
 
 ## What's included
 * Auth0-secured authentication with expiration, replacing full-grant session tokens.
