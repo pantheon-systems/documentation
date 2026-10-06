@@ -17,7 +17,7 @@ The MCP server exposes Pantheon operations as agent tools, initially read-only, 
 Developers and teams using compatible AI coding agents who want to manage Pantheon sites and environments through agent workflows while keeping control of what agents can change.
 
 ## How to get started
-Connect from a compatible AI client, sign in with your normal Pantheon account through the OAuth flow, and the client stores your token securely. Disconnect from the Pantheon MCP in the client to log out.
+Connect from Claude Desktop, Web, or Code here: [Pantheon MCP](https://claude.ai/directory/pantheon-mcp), sign in with your normal Pantheon account through the OAuth flow, and the client stores your token securely. Disconnect from the Pantheon MCP in the client to log out.
 
 For more details, see [related documentation](/guides/mcp).
 
