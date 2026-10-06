@@ -25,7 +25,7 @@ The API is served at `api.pantheon.io` under `/v1`. Interactive docs are at `/v1
 For more details, see [related documentation](/guides/public-api).
 
 ## Alpha (v0) users
-The v0 API keeps running for about 60 days after today's Beta release of v1, then shuts down. The /v1 endpoints reject legacy session tokens, so move to [personal access tokens](/personal-access-tokens). 
+The v0 API keeps running for about 60 days after today's Beta release of v1, then shuts down. The /v1 endpoints reject [legacy machine tokens](/personal-access-tokens#legacy-machine-tokens), so move to [personal access tokens](/personal-access-tokens). 
 
 ## Availability
 All Pantheon customers. For feedback, please sign up for the [Pantheon Slack channel here](https://pantheon.io/customer-community/) if you don't already have an account and join us in the `#beta-public-api` channel. 
