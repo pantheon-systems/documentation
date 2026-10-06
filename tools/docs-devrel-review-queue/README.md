@@ -145,7 +145,7 @@ docs-devrel-review-queue/
 ```
 
 - **How links are built.** For a changed Markdown file with a `permalink`, the Multidev URL is `https://pr-<N>-pandocs.pantheonsite.io/<permalink>`, and Live is `https://docs.pantheon.io/<permalink>`. The 2- and 3-panel links carry the file's full path, URL-encoded, in `page=`.
-- **Keep the resolver in step.** `scripts/pr-resolver.js` is copied from `tools/pantheon-pr-preview-extension/pr-resolver.js` so this folder works alone. Check them with `diff tools/docs-devrel-review-queue/scripts/pr-resolver.js tools/pantheon-pr-preview-extension/pr-resolver.js`. Today they differ in the extension's review-marker helper; the packet script adds `?pantheon_review=1` itself. When the extension's file changes, copy it over.
+- **Keep the resolver in step.** `scripts/pr-resolver.js` is copied from `tools/pantheon-pr-preview-extension/pr-resolver.js` so this folder works alone. Check them with `diff tools/docs-devrel-review-queue/scripts/pr-resolver.js tools/pantheon-pr-preview-extension/pr-resolver.js`. When the extension's file changes, copy it over and diff again.
 - **Validate a change.** `for f in tools/docs-devrel-review-queue/scripts/*.cjs; do node --check "$f"; done`, then run both scripts against a real PR.
 - **Input handling.** Repo names are validated against a strict pattern, and GraphQL values go in as variables, never interpolated into the query.
 - **Other repos.** `--repo` works on any repo in the org, but the skill has no repo-specific rules for any repo except `documentation`.
