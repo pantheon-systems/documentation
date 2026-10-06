@@ -19,6 +19,8 @@ Developers and teams using compatible AI coding agents who want to manage Panthe
 ## How to get started
 Connect from Claude Desktop, Web, or Code here: [Pantheon MCP](https://claude.ai/directory/pantheon-mcp), sign in with your normal Pantheon account through the OAuth flow, and the client stores your token securely. Disconnect from the Pantheon MCP in the client to log out.
 
+Support for more agents coming soon!
+
 For more details, see [related documentation](/guides/mcp).
 
 ## Availability
