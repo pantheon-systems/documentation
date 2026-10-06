@@ -50,3 +50,12 @@ exceptions:
   - YAML
   - macOS
   - iOS
+  - A Record
+  - A Records
+  - AAAA
+  - CNAME
+  - FAQ
+  - FAQs
+  - MX
+  - TTL
+  - TXT

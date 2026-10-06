@@ -5,9 +5,10 @@ on:
     paths:
       - 'src/source/content/**/*.md'
       - 'src/source/releasenotes/*.md'
-      - 'src/source/partials/**/*.md'
       - '.vale.ini'
       - '.vale/**'
+      - '.github/workflows/vale.yml'
+      - 'scripts/vale-measure.mjs'
 
 jobs:
   vale:
@@ -17,18 +18,83 @@ jobs:
       contents: read
       pull-requests: write
       checks: write
+    env:
+      # Pinned so every run lints with the same binary. Bump deliberately, in its own PR.
+      VALE_VERSION: 3.24.0
+      VALE_SHA256: 867534ddb678abca7f214bc4706ead0922bd5252ffe8035fc227013f66c8b214
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The changed-files step diffs against the PR's base commit.
+          fetch-depth: 0
+
+      # Lint only the docs files this PR adds, changes, or renames. The action lints whatever
+      # it's given and doesn't compute changed files itself; if `files` isn't valid JSON it
+      # falls back to the whole repo, so the list is built with jq and checked.
+      - name: List changed docs files
+        id: changed
+        run: |
+          set -euo pipefail
+          # -z keeps paths unquoted (git otherwise quotes non-ASCII names, and grep then drops them).
+          git diff --name-only -z --diff-filter=ACMR "$BASE_SHA"...HEAD -- src/source/content src/source/releasenotes \
+            | tr '\0' '\n' | grep -E '\.mdx?$' > changed-files.txt || true
+          json=$(jq -R . changed-files.txt | jq -sc .)
+          echo "$json" | jq -e 'type == "array"' > /dev/null
+          echo "files=$json" >> "$GITHUB_OUTPUT"
+          echo "count=$(wc -l < changed-files.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          echo "Changed docs files: $(wc -l < changed-files.txt | tr -d ' ')"
 
       # filter_mode: added limits comments to lines this PR adds or changes. The existing
       # content predates the sentence-case heading rule, so linting whole files would bury reviewers.
-      # Advisory for now: fail_on_error stays false until the rules are tuned.
-      # Fork PRs get a read-only token and can't post review comments; results are still in the job log.
-      - uses: vale-cli/vale-action@v3
+      # Report-only for four weeks from the first merged run: fail_on_error stays false while
+      # alerts on added lines are labeled. Error level today: Pantheon.Inclusive, Pantheon.TermsStrict,
+      # and two Google rules left at their package level (Google.Gender, Google.Periods; 0 hits
+      # on main). Decide their level before turning fail_on_error on.
+      # Fork PRs get a read-only token and can't post review comments; results are still in the job log
+      # and in the step summary below.
+      - uses: vale-cli/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3
+        if: steps.changed.outputs.count != '0'
         with:
-          files: all
+          version: ${{ env.VALE_VERSION }}
+          files: ${{ steps.changed.outputs.files }}
           reporter: github-pr-review
           filter_mode: added
           fail_on_error: false
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Measurement for the report-only period. The action doesn't put Vale on PATH, so this
+      # step installs the same pinned version and checks its SHA-256 before running it.
+      - name: Install Vale for measurement
+        if: steps.changed.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          curl -sSfL -o "$RUNNER_TEMP/vale.tar.gz" \
+            "https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          echo "${VALE_SHA256}  $RUNNER_TEMP/vale.tar.gz" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/vale"
+          tar -xzf "$RUNNER_TEMP/vale.tar.gz" -C "$RUNNER_TEMP/vale" vale
+
+      - name: Record alerts on added lines
+        if: steps.changed.outputs.count != '0'
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          test -d .vale/styles/Google || "$RUNNER_TEMP/vale/vale" sync
+          xargs -a changed-files.txt -d '\n' "$RUNNER_TEMP/vale/vale" --output=JSON --no-exit > vale-alerts.json
+          node scripts/vale-measure.mjs added \
+            --alerts vale-alerts.json --base "$BASE_SHA" --files changed-files.txt \
+            --pr "$PR_NUMBER" --sha "$HEAD_SHA" --out vale-added-lines.csv --summary "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: steps.changed.outputs.count != '0'
+        with:
+          name: vale-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}-${{ github.run_attempt }}
+          path: |
+            vale-added-lines.csv
+            vale-alerts.json
+            vale-run.json
+          retention-days: 90
