@@ -2,6 +2,42 @@
 
 A Chrome-family Manifest V3 extension for reviewing pull requests in `pantheon-systems/documentation`. It resolves each changed docs page to its multidev preview and its live equivalent, and it adds a per-PR review checklist. The toolbar icon is a standalone yellow lightning bolt.
 
+It exists so you stop hand-assembling `pr-10269-pandocs.pantheonsite.io/docs/...` URLs from a diff. Open a docs PR, click the bolt, and every changed page is one click from its preview, its live page, and a side-by-side view of both.
+
+## Quick start
+
+1. Open `chrome://extensions` (`brave://extensions` in Brave, `edge://extensions` in Edge).
+2. Turn on **Developer mode**.
+3. Select **Load unpacked** and choose the `tools/pantheon-pr-preview-extension` folder, the one that contains `manifest.json`. In the macOS file picker, press **Cmd+Shift+G** and paste the path.
+4. Pin the extension from the puzzle-piece menu so the bolt stays visible.
+5. Open any documentation PR and click the bolt.
+
+![The extension popup on PR 10269: Open Files changed and Open all previews (4) buttons, a note that the preview is responding, and one row per changed page with Preview, Live, 2-panel, and 3-panel buttons.](../images/extension-popup.png)
+
+That's PR #10269, which changes four pages, so you get four rows. Each row is a changed Markdown file that has a front-matter `permalink`. **Preview** and **Live** open the two versions of the page in background tabs, and **2-panel** and **3-panel** open them side by side.
+
+![Two panes side by side: the live overview page on the left and the pull request preview on the right, with the new bullets visible only in the preview.](../images/extension-two-panel.png)
+
+The 2-panel view of `overview.md` on the same PR. The three bullets under "Usage" exist only in the preview. Add the 3-panel view and the GitHub diff joins them on the left.
+
+Open a PR that changes exactly one page and you don't even need to click: the preview opens in a background tab and GitHub keeps focus. To skip that, add `?pantheon_preview=off` to the PR URL.
+
+## When it doesn't do what you expect
+
+| What you see | Why, and what to do |
+|---|---|
+| No tab opened, badge shows a number | The PR changes two or more pages. By design, so use **Open all previews**. |
+| No tab opened, no badge, and you've seen this PR before | The extension opens a PR's preview once per browser session. Use the **Preview** button, or restart the browser. |
+| The preview tab is a 404 | The PR is merged (its multidev is deleted), or the build hasn't published yet. Wait, then **Retry preview**. |
+| Badge shows `?` | The PR changes no Markdown page with a `permalink`, for example a PR that only touches `tools/`. Expected. |
+| Badge shows `!`, or "GitHub metadata could not be loaded" | GitHub's unauthenticated API limit (60 requests an hour per IP). Wait up to an hour. |
+| The panel says the preview isn't responding | A cold multidev can take about 30 seconds on the first request. **Retry preview**, or use **View deployment checks**. |
+| A 2-panel or 3-panel link opens Files changed | The extension isn't loaded, or the link's `page=` isn't a changed file with a `permalink`. The badge shows `?` in that case. |
+| The card shows a red **Errors** button | You selected the wrong folder. Reload with the one that holds `manifest.json`. |
+| You changed code and nothing changed | Select the reload icon on the extension's card. |
+
+Need to look inside? On `chrome://extensions`, select **service worker** on the card for the background console. Right-click the popup and choose **Inspect** for the popup's console.
+
 ## Requirements
 
 - A Chromium-based browser that supports Manifest V3: Chrome 102 or later, Brave, or Edge. The extension uses a service worker and `chrome.storage.session`, which is why Chrome 102 is the floor (`minimum_chrome_version` in `manifest.json`).
@@ -53,7 +89,7 @@ On those same pages the extension also re-scrolls to the anchored section for th
 
 A link to a PR's Files changed page can carry a marker that opens the 2-panel or 3-panel review view for one changed page:
 
-```
+```text
 https://github.com/pantheon-systems/documentation/pull/<number>/files?pantheon_panel=<2|3>&page=<path of the changed file>
 ```
 
@@ -84,15 +120,6 @@ When you open a PR whose changed Markdown resolves to exactly one page, the exte
 - Badge `?` means no changed page with a permalink was found. Badge `!` means GitHub could not be read.
 - GitHub is re-read at most once every 5 minutes per PR.
 - To skip the automatic tab, add `?pantheon_preview=off` to the PR URL.
-
-## Install locally (Chrome, Brave, Edge)
-
-1. Open the extensions page: `chrome://extensions` in Chrome, `brave://extensions` in Brave, or `edge://extensions` in Edge.
-2. Turn on **Developer mode**.
-3. Select **Load unpacked** and choose this `pantheon-pr-preview-extension` folder.
-4. Open a documentation PR and click the extension icon.
-
-After editing files, select the reload icon on the extension's card.
 
 ## Permissions
 
@@ -137,3 +164,8 @@ node tools/pantheon-pr-preview-extension/validate-resolver.cjs
 - Only files with a front-matter `permalink` get preview and live links.
 - The heading anchor is a generated Markdown slug; pages with custom anchor behavior may need a site-specific rule. Only the first changed section is linked, even when a PR changes several.
 - `docs.pantheon.io` may redirect a live URL, so a live page that is already open can be opened a second time.
+
+## Related
+
+- [`tools/README.md`](../README.md): the index of everything in `tools/`.
+- [`docs-devrel-review-queue`](../docs-devrel-review-queue/README.md): a Claude Code skill that lists the PRs waiting on you and prints these same preview, live, and panel links for any PR. Its 2-panel and 3-panel links open the review view here.
