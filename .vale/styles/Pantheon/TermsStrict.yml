@@ -5,6 +5,10 @@ level: error
 # is wrong in any prose context. Ambiguous swaps (for example `terminus`, which is also
 # the command name) stay in Terms.yml at warning.
 ignorecase: false
+# Accepted vocabulary must never exempt a strict error: without this, accept.txt entries
+# such as `Java`, `Amazon Web Services`, and `[Dd]ev` suppressed `Java Script`,
+# `Amazon web services`, and `Multi-dev`.
+vocab: false
 swap:
   Wordpress: WordPress
   Word Press: WordPress
@@ -17,3 +21,30 @@ swap:
   NextJS: Next.js
   Nodejs: Node.js
   NodeJS: Node.js
+  Git Hub: GitHub
+  Gitlab: GitLab
+  Git Lab: GitLab
+  BitBucket: Bitbucket
+  Javascript: JavaScript
+  Java Script: JavaScript
+  Typescript: TypeScript
+  Type Script: TypeScript
+  Next JS: Next.js
+  Node JS: Node.js
+  Reactjs: React
+  Vuejs: Vue.js
+  VueJS: Vue.js
+  Vue JS: Vue.js
+  Tailwindcss: Tailwind CSS
+  Web Pack: Webpack
+  Story Book: Storybook
+  Postgre SQL: PostgreSQL
+  Mongo DB: MongoDB
+  Maria DB: MariaDB
+  Elastic Search: Elasticsearch
+  Cloud Flare: Cloudflare
+  Data Dog: Datadog
+  NewRelic: New Relic
+  Open AI: OpenAI
+  Chat GPT: ChatGPT
+  Amazon web services: Amazon Web Services
