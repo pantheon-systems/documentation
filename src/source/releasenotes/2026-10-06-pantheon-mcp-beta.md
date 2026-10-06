@@ -7,7 +7,7 @@ description: "Pantheon is introducing the official Pantheon MCP Server, a govern
 ---
 Pantheon is introducing the official Pantheon MCP Server, a governed way to let compatible AI agents operate on your Pantheon fleet through the platform API.
 
-The MCP server exposes Pantheon operations as agent tools, initially read-only, with writes to be added soon. It forwards the user's own Pantheon identity, so an agent can only reach what that user already can.
+The MCP server exposes Pantheon operations as agent tools, mostly read-only, with any action that changes something requiring your approval in your AI client. It forwards the user's own Pantheon identity, so an agent can only reach what that user already can.
 
 ## What's included
 * A stateless MCP server that maps Pantheon operations to agent tools, covering workspaces, sites, environments, builds and deploy status, runtime logs, secrets, and upstreams, with no modify or delete capabilities in this beta.
