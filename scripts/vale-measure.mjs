@@ -202,7 +202,7 @@ function added(args) {
     "|---|---|---|",
     ...Object.entries(counts)
       .sort((a, b) => b[1] - a[1])
-      .map(([k, n]) => `| ${k.replace("\t", " | ")} | ${n} |`),
+      .map(([k, n]) => `| ${k.split("\t").join(" | ")} | ${n} |`),
     "",
   ].join("\n");
   if (args.summary) appendFileSync(args.summary, summary + "\n");
