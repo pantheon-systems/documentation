@@ -46,7 +46,7 @@ reviewed: "2022-11-04"
 
    </Alert>
 
-      ![Import MySQL Database from URL](../../../images/dashboard/new-dashboard/2024/import-mysql-url.png)
+   ![Import MySQL Database from URL](../../../images/dashboard/new-dashboard/2024/import-mysql-url.png)
 
   </Tab>
 
