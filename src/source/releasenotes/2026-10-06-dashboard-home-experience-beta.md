@@ -7,7 +7,7 @@ Pantheon’s new dashboard home experience is now available in beta. It gives yo
 
 Recent Sites are available in a card view:
 
-![Home in card view](/images/release-notes/home-recent-sites-card-view.png)
+![Home in card view](../images/release-notes/home-recent-sites-card-view.png)
 
 ## What’s new
 
@@ -19,11 +19,11 @@ Recent Sites are available in a card view:
 
 Switch to list view to see site status and owning workspace:
 
-![Home in list view](/images/release-notes/home-recent-sites-list-view.png)
+![Home in list view](../images/release-notes/home-recent-sites-list-view.png)
 
 Open the Bookmarks panel to quickly access saved pages:
 
-![Bookmarks panel](/images/release-notes/bookmarks-nav.png)
+![Bookmarks panel](../images/release-notes/bookmarks-nav.png)
 
 ## How to try it
 
