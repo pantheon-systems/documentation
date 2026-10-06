@@ -1,6 +1,6 @@
 ---
 title: Pantheon Public API V1
-ssubtitle: Known limitations
+subtitle: Known limitations
 description: Review the known issues in the Pantheon Public API v1 before you build an integration.
 reviewed: "2026-10-05"
 contenttype: [doc]
