@@ -49,9 +49,8 @@ jobs:
       # filter_mode: added limits comments to lines this PR adds or changes. The existing
       # content predates the sentence-case heading rule, so linting whole files would bury reviewers.
       # Report-only for four weeks from the first merged run: fail_on_error stays false while
-      # alerts on added lines are labeled. Error level today: Pantheon.Inclusive, Pantheon.TermsStrict,
-      # and two Google rules left at their package level (Google.Gender, Google.Periods; 0 hits
-      # on main). Decide their level before turning fail_on_error on.
+      # alerts on added lines are labeled. Only Pantheon.Inclusive and Pantheon.TermsStrict are
+      # error level, so turning fail_on_error on later affects only those two.
       # Fork PRs get a read-only token and can't post review comments; results are still in the job log
       # and in the step summary below.
       - uses: vale-cli/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3
