@@ -2,8 +2,7 @@
 // Prints a review packet for a pantheon-systems/documentation PR.
 // Reuses the browser extension's pr-resolver.js for page, permalink and release-note logic.
 // pr-resolver.js here is an unmodified copy of tools/pantheon-pr-preview-extension/pr-resolver.js
-// (kept in sync by hand). To update it, copy the file again
-// from the extension folder, or point PR_RESOLVER_PATH at it.
+// (kept in sync by hand). To update it, copy the file again from the extension folder.
 "use strict";
 
 const path = require("node:path");
@@ -11,8 +10,8 @@ const fs = require("node:fs");
 const { execFileSync, execFile } = require("node:child_process");
 
 const REPOSITORY = "pantheon-systems/documentation";
-const RESOLVER = process.env.PR_RESOLVER_PATH || path.resolve(__dirname, "pr-resolver.js");
-const STATE_FILE = process.env.DOCS_PR_REVIEW_STATE || path.join(__dirname, ".state.json");
+const RESOLVER = path.resolve(__dirname, "pr-resolver.js");
+const STATE_FILE = path.join(__dirname, ".state.json");
 const REOPEN_AFTER_MS = 6 * 60 * 60 * 1000;
 const DAY_MS = 24 * 60 * 60 * 1000;
 

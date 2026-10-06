@@ -91,7 +91,7 @@ node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --
 node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --open
 ```
 
-`--open-live` adds the live pages. It uses macOS `open -g`, skips URLs opened in the last 6 hours (`--force` reopens), opens at most 15, and only allowed hosts. Set `DOCS_PR_REVIEW_STATE` to a writable path if the skill folder is read-only.
+`--open-live` adds the live pages. It uses macOS `open -g`, skips URLs opened in the last 6 hours (`--force` reopens), opens at most 15, and only allowed hosts.
 
 ## Checklist
 

@@ -35,11 +35,11 @@ function level(permissions) {
   return permissions.pull ? "read" : null;
 }
 
-async function graphql(query) {
+async function graphql(query, variables) {
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query })
+    body: JSON.stringify({ query, variables })
   });
   if (!response.ok) throw new Error(`${response.status} from graphql`);
   const body = await response.json();
@@ -61,7 +61,10 @@ async function diagnose(repo, number, now = Date.now()) {
     docs.api(`${base}/pulls/${number}/commits?per_page=100`).catch(() => null),
     docs.api(`${base}/commits/${sha}/check-runs?per_page=100`).then((c) => c.check_runs, () => null),
     docs.api(`${base}/compare/${pull.base.ref}...${sha}`).then((c) => c.behind_by, () => null),
-    graphql(`{repository(owner:"${OWNER}",name:"${repo}"){pullRequest(number:${number}){reviewThreads(first:100){nodes{isResolved comments(last:1){nodes{author{login}}}}}}}}`)
+    graphql(
+      "query($owner:String!,$name:String!,$number:Int!){repository(owner:$owner,name:$name){pullRequest(number:$number){reviewThreads(first:100){nodes{isResolved comments(last:1){nodes{author{login}}}}}}}}",
+      { owner: OWNER, name: repo, number: Number(number) }
+    )
       .then((d) => d.repository.pullRequest.reviewThreads.nodes, () => null)
   ]);
 
@@ -156,7 +159,11 @@ async function main(argv) {
   for (let i = 0; i < argv.length; i += 1) {
     if (argv[i] === "--no-auth") auth = false;
     else if (argv[i] === "--table") table = true;
-    else if (argv[i] === "--repo") repos.push(argv[++i]?.replace(`${OWNER}/`, ""));
+    else if (argv[i] === "--repo") {
+      const name = (argv[++i] || "").replace(`${OWNER}/`, "");
+      if (!/^[A-Za-z0-9_.-]+$/.test(name)) throw new Error("--repo takes a repository name such as documentation.");
+      repos.push(name);
+    }
     else if (argv[i] === "-h" || argv[i] === "--help") { console.log(USAGE); return 0; }
     else throw new Error(`Unknown option ${argv[i]}`);
   }
