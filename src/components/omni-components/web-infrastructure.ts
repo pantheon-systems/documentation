@@ -215,7 +215,7 @@ const webInfrastructure = () => {
       getGuideDirectory("guides/public-api", "Pantheon Public API"),
       simpleLink("/guides/mcp", "MCP Server", [
         simpleLink("/guides/mcp", "MCP Server (Beta)"),
-        simpleLink("/guides/mcp/mcp-setup", "MCP Server Setup"),
+        simpleLink("/guides/mcp/setup", "MCP Server Setup"),
         simpleLink("/guides/mcp/known-limitations", "Known limitations"),
       ]),
 
