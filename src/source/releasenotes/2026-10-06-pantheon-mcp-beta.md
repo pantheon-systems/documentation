@@ -10,7 +10,7 @@ Pantheon is introducing the official Pantheon MCP Server, a governed way to let 
 The MCP server exposes Pantheon operations as agent tools, read-only by default, with writes only by explicit opt-in. It forwards the user's own Pantheon identity, so an agent can only reach what that user already can.
 
 ## What's included
-* A stateless MCP server that maps Pantheon operations to agent tools, covering workspaces, sites, environments, builds & deploy status, runtime logs, secrets, and upstreams, with no delete capabilities in this beta.
+* A stateless MCP server that maps Pantheon operations to agent tools, covering workspaces, sites, environments, builds and deploy status, runtime logs, secrets, and upstreams, with no delete capabilities in this beta.
 * Authorization stays with Pantheon: the server forwards the user's own token and the platform decides what that token may see and do.
 
 ## Who it's for
