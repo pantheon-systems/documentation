@@ -1,5 +1,5 @@
 ---
-title: Pantheon Public API V1
+title: Pantheon Public API v1
 subtitle: Start and monitor workflows
 description: Learn how to start a workflow, such as creating a multidev environment, and poll for its completion using the Pantheon Public API.
 reviewed: "2026-09-29"
