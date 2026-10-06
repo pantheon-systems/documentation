@@ -19,23 +19,20 @@ integration: [--]
 
 Workspaces are a home base for your WebOps.
 
-## Types of Workspaces
+## What are Workspaces
 
-- **My Dashboard** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one My Dashboard.
-  - Every Pantheon user is assigned one My Dashboard.
-  - All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in My Dashboard.
-  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in My Dashboard. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
-- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
-  - You may be a member of more than one Professional Workspace, and can switch between "My Dashboard" and Professional Workspaces at any time.
-  - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
+Workspaces bring together users and sites so that administrators can effectively manage a large number of sites.
 
-  <Alert title="Important" type="danger" >
+- All sites must belong to a workspace.
+- You may be a member of more than one workspace, and can switch between them at any time.
+- When you first create a workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform. To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
+- Supporting Workspaces are workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site. Refer to [Add a Supporting Workspace to a Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
 
-  Every Workspace that is upgraded to Gold or higher is billed as another plan/subscription.
+<Alert title="Important" type="danger" >
 
-  </Alert>
+Every Workspace that is upgraded to Gold or higher is billed as another plan/subscription.
 
-- Supporting Workspaces are Professional Workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site. Refer to [Add a Supporting Workspace to a Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
+</Alert>
 
 ## Workspace Tools
 
