@@ -3,7 +3,7 @@
 const assert = require("node:assert/strict");
 
 require("./pr-resolver.js");
-const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, panelRequestUrl, parsePanelRequest, reviewPageUrl, inspectPullRequest } = globalThis.PantheonPr;
+const { buildUrl, isAllowedUrl, frontMatterValue, parsePrNumber, parsePreviewNumber, splitReviewUrls, headingSlug, changedLineNumber, anchorForChange, panelRequestUrl, parsePanelRequest, reviewPageUrl, inspectPullRequest } = globalThis.PantheonPr;
 
 const PREVIEW = "https://pr-7-pandocs.pantheonsite.io";
 const LIVE = "https://docs.pantheon.io";
@@ -127,6 +127,35 @@ globalThis.fetch = async (url) => {
   const two = new URL(reviewPageUrl("chrome-extension://abc/review.html", "7", pg, false));
   assert.deepEqual(two.searchParams.getAll("pane"), [`Live Article|${pg.liveUrl}`, `PR Preview|${pg.previewUrl}`]);
   assert.throws(() => reviewPageUrl("chrome-extension://abc/review.html", "7", { ...pg, liveUrl: "https://evil.example/x" }, false), /outside the allowed hosts/, "a page with a foreign URL is refused");
+}
+
+// Heading anchors for the first change in the page body
+{
+  const doc = (...body) => ["---", "title: T", "permalink: /p", "---", "Intro text", ...body].join("\n");
+  const base = doc("## Alpha", "alpha body", "## Beta", "beta body", "more");   // Beta is line 8, its body line 9
+  const at = (patch, markdown = base) => anchorForChange({ patch }, markdown);
+
+  assert.equal(at("@@ -8,3 +8,3 @@\n ## Beta\n-beta old\n+beta body\n more"), "beta", "a modified body line points at its section");
+  assert.equal(at("@@ -1,11 +1,11 @@\n ---\n-title: Old\n+title: T\n permalink: /p\n ---\n Intro text\n ## Alpha\n alpha body\n ## Beta\n-beta old\n+beta body"), "beta", "a front matter edit is skipped for the first body change");
+  assert.equal(at("@@ -1,4 +1,4 @@\n ---\n-title: Old\n+title: T\n permalink: /p\n ---"), null, "a front matter only change has no anchor");
+  assert.equal(at("@@ -8,3 +8,2 @@\n ## Beta\n-gone\n beta body"), "beta", "a deletion points at the section it was removed from");
+  assert.equal(at("@@ -8,2 +8,3 @@\n ## Beta\n+\n beta body"), "beta", "an added blank line still counts as a change");
+  assert.equal(at("@@ -4,3 +4,3 @@\n ---\n-Intro old\n+Intro text\n ## Alpha"), null, "a change above the first heading opens the page at the top");
+  assert.equal(at("@@ -8,2 +8,2 @@\n-## Beta\n+## Beta renamed\n beta body", doc("## Alpha", "alpha body", "## Beta renamed", "beta body")), "beta-renamed", "a renamed heading points at itself");
+  assert.equal(at("@@ -8,2 +8,2 @@\n ## Beta\n-old\n\\ No newline at end of file\n+new\n\\ No newline at end of file"), "beta", "no-newline markers don't shift the line");
+
+  const newFile = ["+---", "+title: T", "+permalink: /p", "+---", "+Intro text", "+## Alpha", "+alpha body", "+## Beta", "+beta body", "+more"].join("\n");
+  assert.equal(at(`@@ -0,0 +1,10 @@\n${newFile}`), null, "a new file with an intro before its first heading opens at the top");
+  assert.equal(at(`@@ -0,0 +1,6 @@\n${["+---", "+title: T", "+permalink: /p", "+---", "+## Alpha", "+alpha body"].join("\n")}`, ["---", "title: T", "permalink: /p", "---", "## Alpha", "alpha body"].join("\n")), "alpha", "a new file that starts with a heading points at it");
+
+  const fenced = doc("## Real", "```", "# comment, not a heading", "```", "changed text");
+  assert.equal(at("@@ -10,2 +10,2 @@\n ```\n-old\n+changed text", fenced), "real", "a # line inside a code fence isn't a heading");
+
+  const repeated = doc("## Usage", "first", "Usage", "## Usage", "second");   // second Usage heading is line 9
+  assert.equal(at("@@ -9,2 +9,2 @@\n ## Usage\n-old\n+second", repeated), "usage-1", "a repeated heading gets -1; a body line reading 'Usage' doesn't count");
+  assert.equal(at("@@ -7,2 +7,2 @@\n ## Usage\n-old\n+first", repeated), "usage", "the first of two repeated headings keeps the plain anchor");
+  assert.equal(changedLineNumber(null), null);
+  assert.equal(headingSlug("## Hello, World!"), "hello-world");
 }
 
 (async () => {

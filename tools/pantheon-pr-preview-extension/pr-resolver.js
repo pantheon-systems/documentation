@@ -98,43 +98,72 @@
       .replace(/\s+/g, "-");
   }
 
-  function changedLineNumber(patch) {
+  // Line (1-based) of the closing --- of the front matter, or 0 when the file has none.
+  function frontMatterEndLine(lines) {
+    if (!/^---\s*$/.test(lines[0] || "")) return 0;
+    const close = lines.findIndex((line, index) => index > 0 && /^---\s*$/.test(line));
+    return close === -1 ? 0 : close + 1;
+  }
+
+  // Line in the new file where the first change in the page body happens, or null. Changes at or
+  // before frontMatterEnd are metadata edits and don't point at a place on the page. A block of
+  // changed lines is placed at its first added line past the front matter (blank lines included);
+  // a block that only deletes lines is placed at the line just before them.
+  function changedLineNumber(patch, frontMatterEnd = 0) {
     if (!patch) return null;
+    const lines = patch.split("\n");
+    const isChange = (line) => line.startsWith("+") || line.startsWith("-");
     let newLine = null;
-    for (const line of patch.split("\n")) {
+    for (let index = 0; index < lines.length; index += 1) {
+      const line = lines[index];
       const hunk = line.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
       if (hunk) {
         newLine = Number(hunk[1]);
         continue;
       }
-      if (newLine === null) continue;
-      if (line.startsWith("+") && !line.startsWith("+++")) {
-        if (line.slice(1).trim()) return newLine;
+      if (newLine === null || line.startsWith("\\")) continue;
+      if (!isChange(line)) {
         newLine += 1;
-      } else if (!line.startsWith("-")) {
-        newLine += 1;
+        continue;
       }
+      let blockEnd = index;
+      while (blockEnd < lines.length && (isChange(lines[blockEnd]) || lines[blockEnd].startsWith("\\"))) blockEnd += 1;
+      const block = lines.slice(index, blockEnd);
+      const adds = block.filter((entry) => entry.startsWith("+")).length;
+      if (adds) {
+        // The first added line past the front matter. A new file is one block that starts inside it.
+        const first = Math.max(newLine, frontMatterEnd + 1);
+        if (first < newLine + adds) return first;
+      } else if (newLine - 1 > frontMatterEnd) {
+        return Math.max(1, newLine - 1);
+      }
+      newLine += adds;
+      index = blockEnd - 1;
     }
     return null;
   }
 
+  // The heading anchor of the section holding the first change in the page body, matching the
+  // site's generated ids (repeated headings get -1, -2 ...). Returns null when the change is
+  // metadata only or sits above the first heading, so the page opens at the top.
   function anchorForChange(file, markdown) {
     const lines = markdown.split(/\r?\n/);
-    const targetLine = changedLineNumber(file.patch);
+    const targetLine = changedLineNumber(file.patch, frontMatterEndLine(lines));
     if (!targetLine) return null;
-    let index = Math.min(targetLine - 1, lines.length - 1);
-    let headingIndex = -1;
-    for (; index >= 0; index -= 1) {
-      if (/^#{1,6}\s+\S/.test(lines[index])) {
-        headingIndex = index;
-        break;
-      }
-    }
-    if (headingIndex < 0) headingIndex = lines.findIndex((line) => /^#{1,6}\s+\S/.test(line));
-    if (headingIndex < 0) return null;
+
+    let inFence = false;
+    const headings = [];
+    lines.forEach((line, index) => {
+      if (/^\s*(```|~~~)/.test(line)) inFence = !inFence;
+      else if (!inFence && /^#{1,6}\s+\S/.test(line)) headings.push(index);
+    });
+
+    const target = Math.min(targetLine - 1, lines.length - 1);
+    const headingIndex = headings.filter((index) => index <= target).pop();
+    if (headingIndex === undefined) return null;
     const slug = headingSlug(lines[headingIndex]);
     if (!slug) return null;
-    const duplicates = lines.slice(0, headingIndex).filter((line) => headingSlug(line) === slug).length;
+    const duplicates = headings.filter((index) => index < headingIndex && headingSlug(lines[index]) === slug).length;
     return duplicates ? `${slug}-${duplicates}` : slug;
   }
 
@@ -468,6 +497,9 @@
     LIVE_ORIGIN,
     MAX_OPEN_ALL,
     splitReviewUrls,
+    headingSlug,
+    changedLineNumber,
+    anchorForChange,
     panelRequestUrl,
     parsePanelRequest,
     reviewPageUrl,
