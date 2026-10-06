@@ -9,7 +9,7 @@ Pantheon’s new dashboard home experience is now available in beta. It gives yo
 
 Recent Sites are available in a card view:
 
-![Home in card view](../images/release-notes/)
+![Home in card view](../images/release-notes/home-recent-sites-card-view.png)
 
 ## What’s new
 
