@@ -5,6 +5,9 @@ level: error
 # is wrong in any prose context. Ambiguous swaps (for example `terminus`, which is also
 # the command name) stay in Terms.yml at warning.
 ignorecase: false
+# Accepted vocabulary must never exempt a strict error: without this, the `[Dd]ev`
+# entry in accept.txt suppressed `Multi-dev`.
+vocab: false
 swap:
   Wordpress: WordPress
   Word Press: WordPress
