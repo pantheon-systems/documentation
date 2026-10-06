@@ -10,7 +10,7 @@ Pantheon is opening the Beta of the Public API v1, a stable, Auth0-secured REST 
 The Public API v1 gives partners, DevOps teams, and agencies a documented, contract-stable way to run Pantheon operations programmatically. It extends the earlier alpha with expiring, scoped tokens, broader coverage, and an OpenAPI 3.x schema that Pantheon commits to through GA.
 
 ## What's included
-* Auth0-secured authentication with expiring, scoped tokens (90-day default TTL, configurable down to 1 day, with revocation), replacing full-grant session tokens.
+* Auth0-secured authentication with expiration, replacing full-grant session tokens.
 * Full operational surface: site, environment, backup, domain, and workflow operations.
 * Capabilities that were previously Terminus-only: ,Upstream, Secrets Manager, access to Next.js build and runtime logs, and more.
 * Published as an OpenAPI 3.x schema, so you can generate first-class clients directly. 
