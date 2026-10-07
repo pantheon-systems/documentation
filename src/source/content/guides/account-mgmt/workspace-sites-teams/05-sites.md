@@ -25,7 +25,7 @@ The Pantheon [Site Dashboard](/site-dashboard) is the hub of all development and
 
 To view a Site Dashboard:
 
-1. [Go to the Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 1. Select the **Sites** tab. Here, you can:
    - Search for the site by site name.
    - Narrow the list using the filters on the left.
@@ -167,7 +167,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site from a Workspace
 
-1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
+1. Go to the [Professional workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 
 1. Select the checkbox next to the site(s) you want to delete.
 
