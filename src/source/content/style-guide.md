@@ -1167,7 +1167,7 @@ To create a backup:
 
 </Example>
 
-This instruction does not tell the user where the Backup tab is - is it in a workspacf so, which one?  Is it on a Site Dashboard?
+This instruction does not tell the user where the Backup tab is - is it in a workspace, or is it on a Site Dashboard?
 
 Instead, start by placing the user in the correct location:
 
