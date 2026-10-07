@@ -18,6 +18,8 @@
 | Approved but blocked | Reviewers and author | List what's still requested (`gh pr view <N> --json reviewRequests`) and any failing check. A required review (for example a code owner) may be what blocks it. |
 | Approved, not merged | The person who asked for the review | Say it's clean and approved. The requester merges it; merge for someone else only when they asked for "review and merge". Don't merge it yourself. Merging closes any linked issue. |
 | Contributor PR needs fixes and nobody can push to its branch | A maintainer | Force pushes are off right now. Open a replacement PR from a new branch that carries the contributor's commits, credit them, and link the original. The original shows as closed or superseded, so say so and thank them in the thread. |
+| Labeled `Process: Blocked` | Whoever owns the blocker | The block is outside docs, such as a guide waiting on a platform fix. Read the linked ticket, say what it waits on, and check back when it clears. Don't nudge the author. |
+| Labeled `Process: Hold for Release` | Whoever requested it | It ships with the announcement. Check the docs channel for the release time; merge the doc change and its release note together. |
 | Engineering-owned PR (bot, workflow, dependency, site code) | The engineers who own the site code | Docs reviewers don't judge these. Draft a nudge naming the PR and what's blocking it. |
 | Unresolved review threads | Author, then the reviewer | Count them, name the latest commenter, and offer to summarize them. |
 | Draft untouched | Author | Ask whether to mark it ready or close it. |
@@ -108,7 +110,7 @@ node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --
 | Tables, formatting, capitalization, terminology | You from the diff; the reviewer for rendering |
 | Content type fits the page (tutorial, how-to, reference, interface docs differ) | You, from the headings and what the reader does |
 | Left-nav placement and title pattern match sibling pages | You, from the sibling pages' front matter and nav |
-| Claims that depend on product capability (build logs vs runtime logs, settings customers can't change, versions) | You flag each one; the author or product confirms. Content drafted from search tools needs this most |
+| Claims that depend on product capability (build logs vs runtime logs, settings customers can't change, versions) | You flag each one; the author or product confirms, and you can post the question in the product's SME channel. Content drafted from search tools needs this most |
 | A paired release note exists when the doc change ships with a feature | You, from the PR body and the docs channel thread; merge them together |
 | Release-note date is current | The packet shows it; you state it |
 | Redirect in `middleware.ts` and cross-links | You, with the command above; say what wasn't checked |

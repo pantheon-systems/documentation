@@ -115,7 +115,7 @@ node tools/docs-devrel-review-queue/scripts/docs-pr-review.cjs 10269 --json \
 | Draft untouched | 7 days |
 | No activity at all | 14 days |
 | A check still running | More than 2 hours |
-| Also flagged | Failing checks, merge conflicts, approved but merge blocked, `backstop_vrt` failing on a branch that's behind `main` |
+| Also flagged | Failing checks, merge conflicts, approved but merge blocked, `backstop_vrt` failing on a branch that's behind `main`, PRs labeled `Process: Blocked` or `Process: Hold for Release`, and PRs only a bot or engineers should handle |
 
 A `backstop_vrt` failure on a branch behind `main` is usually drift, not a defect: the check compares the PR's multidev with the `dev` environment, which tracks `main`. Merge `main` in and re-run before judging it. The check is not required to merge. Issue [#10308](https://github.com/pantheon-systems/documentation/issues/10308) tracks it.
 
