@@ -39,4 +39,7 @@ permalink: docs/guides/mcp/setup
 </Tab>
 </TabList>
 
-For other MCP-compatible LLM applications, refer to that application's documentation on adding a remote MCP connector, using `https://mcp.pantheon.io/mcp` as the server URL.
+
+<!-- Removing this because we don't support it yet -->
+
+<!-- For other MCP-compatible LLM applications, refer to that application's documentation on adding a remote MCP connector, using `https://mcp.pantheon.io/mcp` as the server URL. -->
