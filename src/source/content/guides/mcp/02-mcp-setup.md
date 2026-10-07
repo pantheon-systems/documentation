@@ -34,7 +34,7 @@ permalink: docs/guides/mcp/setup
   1. Verify the installation by asking either of these questions:
 
      - Are you connected to Pantheon MCP?
-     - Show me what tools are available in Pantheon MCP.
+     - What tools are available in Pantheon MCP?
 
 </Tab>
 </TabList>
