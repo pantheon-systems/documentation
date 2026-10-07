@@ -62,7 +62,7 @@ reviewed: "2022-11-04"
 
    1. Copy the Database connection string.
 
-    The Database connection string will look similar to this:
+      The Database connection string will look similar to this:
 
       ```bash{promptUser: user}
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
@@ -72,15 +72,15 @@ reviewed: "2022-11-04"
 
    1. Paste the connection string and append it with: `< database.sql`.
 
-    Your command will look like:
+      Your command will look like:
 
       ```bash{promptUser: user}
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
       ```
 
-     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections).
+      If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections).
 
-    The `.sql` file is imported to the **<Icon icon="wrench" /> Dev** environment after you run the command.
+      The `.sql` file is imported to the **<Icon icon="wrench" /> Dev** environment after you run the command.
 
   </Tab>
 
