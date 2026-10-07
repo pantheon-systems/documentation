@@ -67,7 +67,7 @@ You can switch between workspaces to work on personal projects or to switch betw
 
 - Click the Workspace Switcher (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices) to switch between workspaces.
 
-  My Dashboard is at the top, followed by an Professional workspaces in which you are a member.
+  My Dashboard is at the top, followed by the Professional workspaces in which you are a member.
 
   ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/workspaces-selector.png)
 
