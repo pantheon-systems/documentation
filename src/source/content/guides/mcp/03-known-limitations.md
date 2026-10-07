@@ -1,5 +1,6 @@
 ---
 title: Pantheon MCP Server (Beta)
+subtitle: Known limitations
 description: Review the known issues for the Pantheon MCP Server before you build an integration.
 reviewed: "2026-10-05"
 contenttype: [doc]

@@ -1,5 +1,5 @@
 ---
-title: Pantheon Public API V1
+title: Pantheon Public API v1
 subtitle: Authentication
 description: Learn how to authenticate with the Pantheon Public API using a Personal Access Token.
 reviewed: "2026-09-29"
