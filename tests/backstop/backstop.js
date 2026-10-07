@@ -13,7 +13,11 @@ const pathsToTest = [
   '/go-live',
   '/guides/launch/advanced-curls',
   '/platform',
-  '/guides/multisite/search-replace',
+  // This page has recurring low-level visual differences across unrelated PRs.
+  {
+    path: '/guides/multisite/search-replace',
+    misMatchThreshold: 0.5,
+  },
   '/guides/account-mgmt',
   '/guides/wordpress-google-sso/access-and-mappings',
   '/terminus',
