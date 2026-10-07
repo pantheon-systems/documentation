@@ -20,7 +20,7 @@ The Public API v1 gives partners, DevOps teams, and agencies a documented, contr
 Technology partners embedding Pantheon in their own products, enterprise DevOps teams standardizing across many sites, agencies building client dashboards, and regulated-industry customers who require expiring tokens.
 
 ## How to get started
-The API is served at `api.pantheon.io` under `/v1`. Interactive docs are at `/v1/docs` and the OpenAPI spec at `/v1/openapi.json`. Authenticate with your own Auth0-issued token.
+The API is served at `api.pantheon.io` under `/v1`. Interactive docs are at `/docs` and the OpenAPI spec at `/v1/openapi.json`. Authenticate with your own Auth0-issued token.
 
 For more details, see [related documentation](/guides/public-api).
 
