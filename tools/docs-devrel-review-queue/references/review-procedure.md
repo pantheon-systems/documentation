@@ -7,7 +7,8 @@
 | Stuck on | Who acts | What you do |
 |---|---|---|
 | Merge conflicts | Author | Confirm with `gh pr view <N> --json mergeable,mergeStateStatus`. Draft a note asking the author to merge or rebase `main`. |
-| `backstop_vrt` failing, branch behind `main` | Author | Likely drift (issue #10308). Draft a note asking for a merge of `main` and a re-run. Don't call the pages wrong until it passes on a current branch. |
+| `backstop_vrt` failing on a release-note PR | No one | Expected: the homepage lists the latest release notes, so the comparison with `dev` differs. The check also fails when the screenshot is taken before the page renders. Ignore it unless the PR touches design, CSS or packages; then download the run's artifact, open the Backstop report, and look at the diff images. |
+| `backstop_vrt` failing, branch behind `main` | Author | Likely drift (issue #10308). Draft a note asking for a merge of `main` and a re-run. Don't call the pages wrong until it passes on a current branch. Ignore it unless the PR touches design, CSS or packages. |
 | Failing checks | Author | Read the log: `gh run view <run-id> --log-failed`. Quote the error line. If the log shows no cause, say so. |
 | Check not finishing | Author or a maintainer | Say how long it has run. Suggest a re-run from the Actions tab. Don't re-run it yourself. |
 | No review yet, team only | The team | No named reviewer owns it. Suggest one person claim it, and draft a message for the team channel. |
@@ -15,7 +16,9 @@
 | Re-review needed | The reviewer who requested changes | The author pushed after the request. Name the new commits. |
 | Waiting on the author | Author | Draft a reminder quoting the requested change. |
 | Approved but blocked | Reviewers and author | List what's still requested (`gh pr view <N> --json reviewRequests`) and any failing check. A required review (for example a code owner) may be what blocks it. |
-| Approved, not merged | Someone with merge rights | Say it's clean and approved. Don't merge it. |
+| Approved, not merged | The person who asked for the review | Say it's clean and approved. The requester merges it; merge for someone else only when they asked for "review and merge". Don't merge it yourself. Merging closes any linked issue. |
+| Contributor PR needs fixes and nobody can push to its branch | A maintainer | Force pushes are off right now. Open a replacement PR from a new branch that carries the contributor's commits, credit them, and link the original. The original shows as closed or superseded, so say so and thank them in the thread. |
+| Engineering-owned PR (bot, workflow, dependency, site code) | The engineers who own the site code | Docs reviewers don't judge these. Draft a nudge naming the PR and what's blocking it. |
 | Unresolved review threads | Author, then the reviewer | Count them, name the latest commenter, and offer to summarize them. |
 | Draft untouched | Author | Ask whether to mark it ready or close it. |
 
@@ -27,8 +30,9 @@ When several rows trace to one cause, say so. For example, a Dependabot PR whose
 2. **Read the diff.** `gh pr diff <N> --repo ...`. Compare the title and description with the files changed.
 3. **Read the repo's own rules.** `CONTRIBUTING.md`, `CLAUDE.md`, `AGENTS.md`, `CODEOWNERS`. Cite a rule by file and line; don't recite style rules from memory.
 4. **Read failing checks.** `gh run view <run-id> --log-failed | tail -80`. Never call a failure flaky without reading why.
-5. **Give links** (see `SKILL.md`, section 5). Ask before opening any.
-6. **Draft the comment** (below). Hand it over; don't post it.
+5. **Check the product's own wording** when a term is in question. The product's UI text comes before the style guide. If they disagree, review against the product and list a style-guide update as a follow-up.
+6. **Give links** (see `SKILL.md`, section 5). Ask before opening any.
+7. **Draft the comment** (below). Hand it over; don't post it.
 
 Release-aware and rendered items need the reviewer's eyes. Mark them "needs you".
 
@@ -102,6 +106,10 @@ node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --
 | Preview renders the changed section | The reviewer's eyes |
 | Preview matches the live page where it should | The reviewer's eyes |
 | Tables, formatting, capitalization, terminology | You from the diff; the reviewer for rendering |
+| Content type fits the page (tutorial, how-to, reference, interface docs differ) | You, from the headings and what the reader does |
+| Left-nav placement and title pattern match sibling pages | You, from the sibling pages' front matter and nav |
+| Claims that depend on product capability (build logs vs runtime logs, settings customers can't change, versions) | You flag each one; the author or product confirms. Content drafted from search tools needs this most |
+| A paired release note exists when the doc change ships with a feature | You, from the PR body and the docs channel thread; merge them together |
 | Release-note date is current | The packet shows it; you state it |
 | Redirect in `middleware.ts` and cross-links | You, with the command above; say what wasn't checked |
 
@@ -113,3 +121,5 @@ node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --
 4. What you did not check: rendering, cross-links, anything the packet couldn't read.
 
 Use contractions and plain words. No filler or praise openers. Don't pick approve, comment, or request changes.
+
+For a mechanical fix (a typo, a capitalization, a stale phrase), write it as a GitHub suggestion block (` ```suggestion `) so the author can accept it in one click. Use plain bullets for anything that needs a decision. Before asking product to confirm a claim, check for a paired release note or the docs channel request that announces it.

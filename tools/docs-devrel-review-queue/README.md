@@ -87,6 +87,9 @@ Multidev and Live links also end in `?pantheon_review=1`. With the extension ins
 |---|---|
 | See my queue | `node tools/docs-devrel-review-queue/scripts/review-queue.cjs` |
 | See the queue as tables | `... review-queue.cjs --table` |
+| Switch the view | `... review-queue.cjs --filter approved` (also `unclaimed`, `awaiting --reviewer <login>`, `changes-requested`, `no-decision --days 7`, `prs-no-assignee`, `prs-no-label`, `issues-no-assignee`, `issues-no-label`, `coworking`, `my-queue`); `--list-filters` prints them |
+| Combine views with a summary table | `... review-queue.cjs --filter approved,unclaimed` |
+| Write a page with one collapsible section per view | `... review-queue.cjs --filter approved,unclaimed --html queue.html` (use `--pause 15` for long runs; `--json` and `--merge` join two runs) |
 | Check another repo in the org | `... review-queue.cjs --repo p1-docs` (repeat `--repo` for several) |
 | Get one PR's packet | `... docs-pr-review.cjs <PR number or URL>` |
 | Get a links table for several PRs | `... docs-pr-review.cjs 10269 10313 --table` |
