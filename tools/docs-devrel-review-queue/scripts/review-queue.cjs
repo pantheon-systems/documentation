@@ -158,6 +158,14 @@ async function diagnose(repo, number, now = Date.now(), owner = OWNER) {
   const requestedTeams = pull.requested_teams.map((t) => t.slug);
   const failing = (checks || []).filter((c) => c.conclusion === "failure" || c.conclusion === "timed_out");
 
+  const labels = (pull.labels || []).map((l) => l.name);
+  if (labels.includes("Process: Blocked")) {
+    add("Blocked outside docs", "Labeled Process: Blocked", "Read the linked ticket for what it waits on and check back when that clears; don't nudge the author", "whoever owns the blocker");
+  }
+  if (labels.includes("Process: Hold for Release")) {
+    add("Held for release", "Labeled Process: Hold for Release", "Merge it with the announcement; check the docs channel for the release time", `whoever requested it, @${author}`);
+  }
+
   const paths = files || [];
   const inContent = (f) => f.startsWith("src/source/content/") || f.startsWith("src/source/releasenotes/") || f.startsWith("src/source/partials/");
   const releaseNote = paths.some((f) => f.startsWith("src/source/releasenotes/"));
@@ -207,7 +215,7 @@ async function diagnose(repo, number, now = Date.now(), owner = OWNER) {
     const asked = [...requestedUsers.map((u) => `@${u}`), ...requestedTeams.map((t) => `team ${t}`)];
     const teamOnly = requestedUsers.length === 0 && requestedTeams.length > 0;
     add("No review yet", `Open ${days(pull.created_at, now)}d${asked.length ? `; requested: ${asked.join(", ")}` : "; no reviewer requested"}`,
-      teamOnly ? `No named reviewer: someone on ${requestedTeams.join(", ")} needs to claim it (assign yourself and add a label)` : asked.length ? "Review it, or reassign" : "Request a reviewer",
+      teamOnly ? `No named reviewer: someone on ${requestedTeams.join(", ")} needs to claim it (assign yourself and add a Type and a Topic label)` : asked.length ? "Review it, or reassign" : "Request a reviewer",
       teamOnly ? `team ${requestedTeams.join(", ")}` : requestedUsers.length ? `reviewer ${who(requestedUsers)}` : `author @${author}`);
   }
 

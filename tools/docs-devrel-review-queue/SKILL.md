@@ -89,7 +89,8 @@ Rules for the extra filters:
 - **Engineering-owned PRs.** The stuck check tags bot PRs and `documentation` PRs that change no content file as "Engineering-owned". Don't review them as docs; say who owns the site code, and draft a nudge if asked.
 - **`backstop_vrt`.** On a release-note PR it fails by design. Elsewhere it's often a screenshot-timing false positive. The stuck check says which. Read the Backstop report only when the PR touches design, CSS or packages.
 - **Merging.** The person who asked for the review merges, unless they asked the reviewer to "review and merge". Never merge for them.
-- **Claiming a PR.** Assign yourself and add a label.
+- **Claiming a PR.** Assign yourself and add a `Type:` and a `Topic:` label.
+- **Blocked and held PRs.** `Process: Blocked` means something outside docs is in the way (for example a guide waiting on a platform fix). `Process: Hold for Release` means it ships with the announcement. The stuck check reports both from the label. Don't nudge the author; say what it waits on and who owns that.
 - **Your own PRs.** Every filter except `my-queue` includes them, tagged `yours`.
 - **Don't answer from a bookmarked search URL.** A link for "reviewed but no decision" that only says `review-requested:@me` doesn't test for comment-only reviews. Use `no-decision`.
 - **Local config.** An optional, gitignored `scripts/config.local.json` adds repos, review-request orgs, a default `awaiting` team and an `engineering` owner name, for example `{"repos": ["documentation"], "orgs": [], "team": [], "engineering": "..."}`. If `references/repos.local.md` exists, read it for the repos in that file.
