@@ -17,7 +17,7 @@ product: [--]
 integration: [--]
 ---
 
-Pantheon offers an abundance of products and features to help you manage your sites.   Some of our tools can only be used in a workspace, some only in sites, and some can be used in both.
+Pantheon offers an abundance of products and features to help you manage your sites. Some of our tools can only be used in a workspace, some only in sites, and some can be used in both.
 
 Use this table to determine where you can find each feature.
 

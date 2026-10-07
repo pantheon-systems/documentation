@@ -63,7 +63,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 ### Switch Between Workspaces
 
-You can switch between workspaces to work on personal projects or to switch between Professional workspaces.  To do so:
+You can switch between workspaces to work on personal projects or to switch between Professional workspaces. To do so:
 
 - Click the Workspace Switcher (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices) to switch between workspaces.
 
@@ -81,7 +81,7 @@ If you are a contract customer, your contract is associated to one Professional 
 
 </Alert>
 
-The following process will create a Professional workspace with a free Silver Account Plan.  To upgrade a workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
+The following process will create a Professional workspace with a free Silver Account Plan. To upgrade a workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
 
 1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices), then select **Create a Professional Workspace**.
 

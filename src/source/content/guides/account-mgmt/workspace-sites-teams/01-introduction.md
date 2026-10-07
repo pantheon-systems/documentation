@@ -42,7 +42,7 @@ When you sign a contract, we create a Professional workspace for you, attached t
 
 You can create as many Professional workspaces as you like. Use additional Professional workspace to organize teams and the sites they should have access to. Professional workspaces you create cannot contain new sites; they are a place to assign existing sites to teams, much like a playlist contains songs you select from your music library..
 
-For example, let's say you have both WordPress and Drupal sites, and you want your WordPress developers to only see the WordPress sites, and your Drupal developers to only see the Drupal Sites.  To do so, [create a Professional workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace) for your Drupal developers, and another for your WordPress developers, then [invite the appropriate team members](/guides/account-mgmt/workspace-sites-teams/teams#add-a-user).  You now have the following workspaces:
+For example, let's say you have both WordPress and Drupal sites, and you want your WordPress developers to only see the WordPress sites, and your Drupal developers to only see the Drupal Sites. To do so, [create a Professional workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace) for your Drupal developers, and another for your WordPress developers, then [invite the appropriate team members](/guides/account-mgmt/workspace-sites-teams/teams#add-a-user). You now have the following workspaces:
 
 |   | My Dashboard | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
 |---|---|---|---|---|
@@ -55,7 +55,7 @@ Now, whenever you create a site, you can [add the Drupal Devs or WordPress Devs 
 
 Self Serve customers are those who purchase Pantheon services online with a credit card—typically individuals or small businesses purchase Pantheon services this way.
 
-When you sign up, you will have a My Dashboard, and can create as many Professional workspaces as you like.  All of these Professional workspaces can contain sites and teams, and you can organize them any way you like.
+When you sign up, you will have a My Dashboard, and can create as many Professional workspaces as you like. All of these Professional workspaces can contain sites and teams, and you can organize them any way you like.
 
 The most important thing to remember is an Account Plan is assigned to a specific workspace, and only sites that have added that workspace as a supporting organization will have access to the features of your Account Plan. For example, if you have purchased a Gold Account Plan for a given workspace, only sites that  have that workspace as a supporting organization will have access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot).
 
@@ -82,7 +82,7 @@ Here are some examples of ways you might organize your sites:
     | **Sites Tab** | Sites you have access to | Sites with basic functionality | Sites with access to Autopilot, Custom Upstreams, or Multidev. |
     | **Teams Tab** | n/a | Team members that can work on these sites | Team members that can work on these sites  |
 
-1. Create a workspace for each department which contains the site(s) that department maintains, and invite any department staff that should have access to the site to the team.
+1. Create a workspace for each department which contains the sites that department maintains, and invite any department staff that should have access to the site to the team.
 
 
     |   | My Dashboard | Math Department Workspace | Athletics Department Workspace |
