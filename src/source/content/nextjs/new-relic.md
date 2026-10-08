@@ -1,5 +1,5 @@
 ---
-title: Installing New Relic Monitoring on Next.js on Pantheon
+title: How to install New Relic Monitoring on Next.js on Pantheon
 description: How to install and use New Relic on Pantheon Next.js sites
 reviewed: "2026-10-05"
 contenttype: [doc]
@@ -8,27 +8,30 @@ audience: [development]
 product: [--]
 integration: [--]
 permalink: docs/nextjs/new-relic
-
 ---
 
 Use this guide when you need application-level traces, metrics, or errors for a Next.js site running on Pantheon.
 
-> **Current support boundary:** Pantheon provides platform-level signals for your Next.js environments, including environment and runtime logs, workflow/build information, and the dashboard and CLI surfaces used to inspect them. Pantheon does not currently provide the automatic New Relic integration that is available for WordPress and Drupal, and Pantheon does not provide a complete native OpenTelemetry integration for Next.js.
+<Alert title="Note" type="info">
+
+ **Current support boundary:** Pantheon provides platform-level signals for your Next.js environments, including environment and runtime logs, workflow/build information, and the dashboard and CLI surfaces used to inspect them. Pantheon does not currently provide the automatic New Relic integration that is available for WordPress and Drupal, and Pantheon does not provide a complete native OpenTelemetry integration for Next.js.
+
+</Alert>
 
 ## When to bring your own monitoring
 
 Customer-managed monitoring is useful when you need to answer questions that platform signals alone cannot answer, such as:
 
 - Which application route, server action, API call, or external dependency is slow?
-    
+
 - Where does a request spend time inside the Next.js process?
-    
+
 - Which release introduced an error or latency regression?
-    
+
 - Can you correlate a browser interaction with server-side work and a downstream API or CMS request?
-    
+
 - Do you need dashboards, alerting, retention, or cross-service traces in an existing observability platform?
-    
+
 
 Pantheon platform signals and application telemetry complement one another. Start with the platform signals to determine whether the symptom is associated with a deployment, build, environment, runtime, or platform event. Add application instrumentation when you need visibility inside your code or across services.
 
@@ -42,6 +45,7 @@ Pantheon platform signals and application telemetry complement one another. Star
 | Browser performance and real-user monitoring      | Not automatically provided for the Next.js application.                               | Add the browser agent or RUM SDK supplied by your monitoring vendor.                        |
 | Cross-service trace context                       | Not automatically configured across your application and downstream services.         | Configure W3C trace-context propagation and instrument the services you control.            |
 | Dashboards, alerts, retention, and custom SLOs    | Pantheon provides platform surfaces; the scope varies by product capability.          | Configure these in your monitoring provider for customer-managed telemetry.                 |
+
 For the current distinction between Next.js and CMS hosting, see [Comparison to CMS Hosting and other Considerations](https://docs.pantheon.io/nextjs/comparison-to-cms-hosting). Pantheon documents automatic New Relic integration for WordPress and Drupal, but explicitly notes that the same integration is not yet available for Next.js.
 
 ## Recommended setup pattern
@@ -49,17 +53,17 @@ For the current distinction between Next.js and CMS hosting, see [Comparison to 
 The safest general pattern is:
 
 1. Instrument the Node.js side of your Next.js application with an application-owned SDK.
-    
+
 2. Export telemetry over OTLP/HTTPS to your provider or to an OpenTelemetry Collector that you operate or contract for.
-    
+
 3. Store credentials such as ingest keys in Pantheon Secrets Manager rather than committing them to the repository.
-    
+
 4. Give each environment a stable service name and an environment attribute so that Dev, Test, Live, and Multidev data do not mix.
-    
+
 5. Start with traces and error correlation. Add metrics and logs only after confirming their cost, volume, and retention behavior with your provider.
-    
+
 6. Test the setup in a non-Live environment before enabling it for production traffic.
-    
+
 
 Instrumentation is application code. A package that works locally does not become a Pantheon-provided integration simply because the application is deployed to Pantheon.
 
@@ -147,13 +151,13 @@ Use the endpoint and authentication format documented for your New Relic account
 Deploy the instrumentation to a non-Live environment and generate traffic. Then verify, in order:
 
 - The application starts successfully after the instrumentation is enabled.
-    
+
 - The Pantheon runtime logs do not show exporter initialization or connection errors.
-    
+
 - The New Relic application receives traces with the expected service name and environment attributes.
-    
+
 - Trace volume and latency are acceptable before enabling additional instrumentations or higher sampling.
-    
+
 
 A request reaching the application does not guarantee that a trace was exported. Exporter credentials, endpoint reachability, sampling, process shutdown behavior, and vendor-side ingestion can each affect what appears in New Relic.
 
@@ -170,37 +174,22 @@ Pantheon does not host or manage that collector as part of the Next.js service. 
 **Potentially practical, but not Pantheon-validated.** The same application pattern can be adapted for an observability backend that accepts OTLP traces, metrics, or logs. Check the provider's current Node.js and Next.js guidance for:
 
 - OTLP/HTTP or OTLP/gRPC endpoint format.
-    
+
 - Authentication headers and regional endpoints.
-    
+
 - Whether the provider expects traces, metrics, logs, or all three.
-    
+
 - Browser/RUM setup, which is separate from Node.js instrumentation.
-    
+
 - Sampling, cardinality, retention, and data-residency controls.
-    
+
 
 Do not describe a provider as supported by Pantheon unless Pantheon has published and tested that integration.
 
-### Vendor-specific Next.js agents
-
-**Version-sensitive and customer-owned.** A vendor agent may offer deeper framework-specific features than generic OpenTelemetry. Before adopting one, test its startup behavior, memory use, cold-start impact, build compatibility, and behavior across Dev, Test, Live, and Multidev. Follow the vendor's current Next.js instructions and avoid assuming that an agent designed for another hosting environment has a Pantheon-specific integration.
-
-## Current OpenTelemetry direction
-
-OpenTelemetry is the most portable direction for customer-managed telemetry because it separates instrumentation from the backend that stores and analyzes the data. Next.js documents both a convenience package and manual OpenTelemetry configuration; the manual approach is useful when you need to control exporters, resource attributes, instrumentations, or propagation.
-
-For a current framework reference, see [Next.js: How to set up instrumentation with OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry).
-
-**Important limitation:** Pantheon does not currently provide a complete native OpenTelemetry integration for Next.js. This guide describes how a customer can configure application-owned instrumentation and export data from the running application. It does not promise Pantheon-managed collectors, automatic provisioning, a Pantheon-maintained Next.js APM agent, or end-to-end trace correlation across Pantheon-managed components.
-
-The related Site Experience work is still evaluating observability options. Product direction may change; this page should be updated when that work produces a supported capability.
-
 ## What is supported, practical, or experimental?
 
-|   |   |   |
-|---|---|---|
 |Approach|Status in this guide|What you own|
+|---|---|---|
 |Pantheon dashboard, workflow/build information, and runtime logs|Supported platform evidence|None beyond using the documented Pantheon surfaces.|
 |New Relic through customer-configured OTLP export|Practical customer-managed approach|New Relic account, credentials, instrumentation, endpoint, sampling, dashboards, and support relationship.|
 |OpenTelemetry SDK plus your own collector|Practical customer-managed option|SDK compatibility, collector operations, network path, security, routing, cost, and backend.|
@@ -214,17 +203,17 @@ The related Site Experience work is still evaluating observability options. Prod
 ### No traces or metrics appear
 
 1. Confirm the application starts and continues serving requests after instrumentation is enabled.
-    
+
 2. Check Pantheon runtime output for missing secrets, invalid endpoint URLs, TLS errors, authentication failures, or exporter initialization errors.
-    
+
 3. Confirm that the exporter is configured for the correct signal type. A trace exporter does not automatically export metrics or logs.
-    
+
 4. Generate fresh traffic in the environment being inspected. Some providers do not display a new service until data has been ingested.
-    
+
 5. Check provider-side ingestion status, service name, environment attributes, sampling, and account permissions.
-    
+
 6. Test from a non-Live environment before changing production sampling or retention settings.
-    
+
 
 ### The application becomes slow or fails to start
 
@@ -239,24 +228,24 @@ That usually means the downstream service is not instrumented, trace context is 
 ### Is this a Pantheon issue or an application issue?
 
 - **Application-owned:** instrumentation code, package compatibility, exporter credentials, provider configuration, sampling, dashboards, and downstream trace propagation.
-    
+
 - **Pantheon-owned:** inability to deploy or start a valid application, missing or malformed platform runtime evidence, or a suspected platform incident affecting the environment.
-    
+
 - **Shared investigation:** collect timestamps in UTC, environment name, deployment/build identifier, request path, runtime log excerpts, provider service name, and a trace or request identifier when available.
-    
+
 
 When contacting Pantheon Support, do not include license keys, bearer tokens, or other secrets. Include the smallest reproducible example and identify whether the symptom occurs in one environment or across multiple environments.
 
 ## Related documentation
 
 - [Next.js Overview](https://docs.pantheon.io/nextjs)
-    
+
 - [Comparison to CMS Hosting and other Considerations](https://docs.pantheon.io/nextjs/comparison-to-cms-hosting)
-    
+
 - [Environment Log Files on Pantheon](https://docs.pantheon.io/guides/logs-pantheon)
-    
+
 - [Secrets Manager](https://docs.pantheon.io/guides/secrets)
-    
+
 - [New Relic Performance Monitoring on Pantheon](https://docs.pantheon.io/guides/new-relic) — applies to the supported CMS integration, not to automatic Next.js APM
-    
+
 - [New Relic: OpenTelemetry for full-stack JavaScript](https://newrelic.com/blog/apm/opentelemetry-full-stack-javascript)
