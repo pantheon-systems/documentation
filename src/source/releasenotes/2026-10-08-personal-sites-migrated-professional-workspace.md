@@ -1,7 +1,7 @@
 ---
 title: Move sites from My Dashboard to a Professional Workspace
-published_date: "2026-10-07"
-published_at: "2026-10-07T00:00:00Z"
+published_date: "2026-10-08"
+published_at: "2026-10-08T17:25:13Z"
 categories: [action-required, user-interface]
 description: "Moving forward, all Pantheon sites must be owned by a Professional Workspace."
 ---
@@ -26,4 +26,4 @@ Starting in January 2027, Pantheon will automatically migrate sites still in My 
 
 The migration will not affect your site's uptime or other site functionality, but Pantheon will choose the destination workspace and its organization for you.
 
-![this is alt text i need to be better about](../images/release-notes/migrate-personal-sites.png)
+![banner explaining 2 sites have not been moved to a workspace](../images/release-notes/migrate-personal-sites.png)
