@@ -136,7 +136,7 @@ process.on('SIGTERM', () => {
 The exact initialization file name, package APIs, and supported runtime behavior can change with Next.js and OpenTelemetry releases. Treat this as a starting point, not a Pantheon-certified adapter.
 ### 3. Configure secrets and environment variables
 
-Set these values through Pantheon Secrets Manager or your established secret-management workflow. Do not commit the license key or other credentials to Git.
+Set these values with [Secrets Manager](/nextjs/environment-variables), for example `terminus secret:site:set <site>.<env> NEW_RELIC_LICENSE_KEY <your-license-key> --type=env --scope=web`. Do not commit the license key to Git. Secrets take effect on the next build, so rebuild after setting them.
 
 ```text
 OTEL_SERVICE_NAME=nextjs-app-live
