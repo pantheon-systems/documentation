@@ -152,7 +152,7 @@ Deploy the instrumentation to a non-Live environment and generate traffic. Then 
 
 - The application starts successfully after the instrumentation is enabled.
 
-- The Pantheon runtime logs do not show exporter initialization or connection errors.
+- The runtime logs show no exporter initialization or connection errors. Run `terminus node:logs:runtime:get <site>.<env>`, or open the logs in the dashboard.
 
 - The New Relic application receives traces with the expected service name and environment attributes.
 
