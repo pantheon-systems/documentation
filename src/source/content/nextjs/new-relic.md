@@ -34,9 +34,8 @@ Pantheon platform signals and application telemetry complement one another. Star
 
 ## What Pantheon provides and what you configure
 
-|                                                   |                                                                                       |                                                                                             |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | Signal or capability                              | Pantheon-provided                                                                     | Customer-configured in the application                                                      |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | Environment, runtime, and workflow/build evidence | Yes. Use the Pantheon dashboard and CLI/logging surfaces.                             | No application agent is required to view these signals.                                     |
 | Application logs written by the Next.js process   | The platform captures runtime output according to the environment's logging behavior. | You decide what to log, how to structure it, and whether to forward it elsewhere.           |
 | Server-side traces and spans                      | No automatic Next.js APM or tracing agent is included.                                | Add an instrumentation library or OpenTelemetry SDK and configure an exporter or collector. |
