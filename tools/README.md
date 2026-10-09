@@ -8,6 +8,7 @@ Small, self-contained helpers for people who review and maintain the Pantheon do
 |---|---|---|---|
 | Click a docs PR and see its preview, live page, and diff side by side | [PR preview extension](pantheon-pr-preview-extension/README.md) | Browser extension (Chrome, Brave, Edge) | Your browser |
 | Ask "what's waiting on me?", spot stuck PRs, and get links for one PR | [Review queue skill](docs-devrel-review-queue/README.md) | Claude Code skill plus two Node scripts | Your terminal |
+| Check a docs page or PR against the Pantheon style guide | [Style review skill](docs-style-review/README.md) | Claude Code skill plus a Node script | Your terminal |
 
 New here? Install the extension first. It has the shortest path from zero to a working review: load it, open a docs PR, click the lightning bolt.
 
@@ -43,7 +44,7 @@ node tools/docs-devrel-review-queue/scripts/docs-pr-review.cjs 10269  # one PR's
 
 ## Check your work
 
-Run these from the repository root before you push a change to either tool. All of them run offline except the packet script.
+Run these from the repository root before you push a change to any tool. All of them run offline except the packet script.
 
 ```sh
 node --check tools/pantheon-pr-preview-extension/popup.js
@@ -51,6 +52,7 @@ node --check tools/pantheon-pr-preview-extension/service-worker.js
 python3 -m json.tool tools/pantheon-pr-preview-extension/manifest.json > /dev/null && echo "manifest ok"
 node tools/pantheon-pr-preview-extension/validate-resolver.cjs
 for f in tools/docs-devrel-review-queue/scripts/*.cjs; do node --check "$f" && echo "ok $f"; done
+node tools/docs-style-review/scripts/style-check.cjs --self-test
 ```
 
 The skill ships its own copy of the extension's `pr-resolver.js`, so each tool works alone. Copies drift, so check them when you change either one:

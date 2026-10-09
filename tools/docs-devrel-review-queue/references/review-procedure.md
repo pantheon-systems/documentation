@@ -108,7 +108,7 @@ node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --
 | Front-matter `permalink` present where it should be | You, from the diff and packet |
 | Preview renders the changed section | The reviewer's eyes |
 | Preview matches the live page where it should | The reviewer's eyes |
-| Tables, formatting, capitalization, terminology | You from the diff; the reviewer for rendering |
+| Tables, formatting, capitalization, terminology, voice | `docs-style-review` when the reviewer wants the style pass; otherwise you from the diff. The reviewer for rendering |
 | Content type fits the page (tutorial, how-to, reference, interface docs differ) | You, from the headings and what the reader does |
 | Left-nav placement and title pattern match sibling pages | You, from the sibling pages' front matter and nav |
 | Claims that depend on product capability (build logs vs runtime logs, settings customers can't change, versions) | You flag each one; the author or product confirms, and you can post the question in the product's SME channel. Content drafted from search tools needs this most |
