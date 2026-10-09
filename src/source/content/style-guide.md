@@ -1043,9 +1043,9 @@ You can add a TOC to the right side of a document using the following frontmatte
 ## Terminology
 
 - My Dashboard: a user's personal work area, containing sites/settings specific to that user.
-- Professional Workspace: (formerly Organization) a feature set for a collection of users or sites.
-- Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
-- Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
+- workspace: (formerly Organization; older pages also say Professional Workspace) a feature set for a collection of users or sites. Write it in lowercase, as the dashboard does ("Find workspace"), and capitalize it only at the start of a sentence. The dashboard terms in this list stay capitalized.
+- Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a workspace
+- supporting workspace: (formerly Supporting Organization) a workspace that's been added to a specific site's Team.
 
 ## Tooltips
 
@@ -1167,7 +1167,7 @@ To create a backup:
 
 </Example>
 
-This instruction does not tell the user where the Backup tab is - is it in a Workspace?  If so, which one?  Is it on a Site Dashboard?
+This instruction does not tell the user where the Backup tab is - is it in a workspace, or is it on a Site Dashboard?
 
 Instead, start by placing the user in the correct location:
 
@@ -1197,7 +1197,7 @@ Here are code snippets you can use to direct users to the correct location:
 [Go to My Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 ```
 
-**Professional Workspace**
+**Workspace**
 
 ```markdown
 [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
