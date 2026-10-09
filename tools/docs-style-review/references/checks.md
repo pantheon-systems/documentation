@@ -21,6 +21,10 @@ What the review looks for, how to verify each item, and where the rule comes fro
 | `heading-level-skip` | warn | A heading that skips a level | Headings |
 | `heading-case` | info | Two or more capitalized words after the first, outside a short allow list | Voice, Style, and Flow (sentence case) |
 | `be-verbs` | info | is, are, was, were, be, been, being, am (counts and lines) | Voice, Style, and Flow |
+| `bold-labels` | info | Two or more lines that start with a bold label ending in a colon, such as `**Collect:**` | Bold |
+| `link-broken` | warn | A relative internal link whose page returns 404 or 410 on docs.pantheon.io (PR mode). Pages the PR itself adds are skipped, because they aren't live yet. | Hyperlinks |
+| `link-anchor-missing` | warn | The link's `#anchor` isn't an id on the target page (PR mode) | Hyperlinks |
+| `link-unchecked` | info | The check couldn't reach the page: a timeout, a 5xx, or more than 40 distinct pages | Hyperlinks |
 | `quote-mix` | info | Straight and curly apostrophes in the same file | none: consistency only |
 | `frontmatter-missing`, `frontmatter-key` | error | No front matter, or no `title` or `description` | Frontmatter |
 
@@ -42,7 +46,9 @@ The script skips fenced code blocks and, in the front matter, checks only `descr
 
 - `heading-case` is a heuristic. It misses a title-case heading with one capital and flags product names it doesn't know. Vale's `Pantheon.Headings` is the authority; confirm against the line.
 - `be-verbs` counts words, so "is" in a quoted UI label counts. It's a prompt to read, not a finding.
-- Nothing checks that a link target exists, that a screenshot has alt text, or that a callout is used correctly.
+- The link check runs only with `--pr`, only on the lines the PR adds or changes, and uses the network. It fetches each distinct internal page once from docs.pantheon.io, so a page that exists in the repo but isn't published yet looks broken unless this PR adds it. Pass `--no-links` to skip it.
+- `bold-labels` can't tell a run-in label from other bold text that happens to start a line and end in a colon. It's a prompt to read.
+- Nothing checks that a screenshot has alt text or that a callout is used correctly.
 
 ## Judgment
 
@@ -51,6 +57,7 @@ The script skips fenced code blocks and, in the front matter, checks only `descr
 | Be verbs | Read the flagged lines. Rewrite only where the sentence gets shorter or clearer. | Voice, Style, and Flow |
 | Opinion, anecdote, feeling | Read for first-person views, praise, and promises. | Voice, Style, and Flow |
 | Hyperbole and marketing claims | Look for "production-ready", "seamless", superlatives, and promises with no mechanism. Ask the author for the source. | Voice, Style, and Flow |
+| Who is this sentence for? | Read for sentences addressed to a writer or reviewer instead of the reader, such as "Do not describe X as Y unless...", "Avoid saying...", or "Make sure to mention...". Ask who the sentence is for. If it's the reader, rewrite it as what's true. If it's a note to a writer, remove it. | Voice, Style, and Flow |
 | Colloquialisms and inclusive language | Read. Check against the Inclusive Language page the guide links. | Voice, Style, and Flow |
 | Where's the user? | Does each procedure start by placing the reader (dashboard, workspace, tab)? | Where's the User? |
 | Terminology | Compare product terms with the Terminology section, then with the product's own labels. | Terminology |

@@ -25,6 +25,7 @@ Checks a docs page against the mechanical rules in the Pantheon style guide
   --release-note treat the input as a release note (applied automatically for src/source/releasenotes/)
   --all-lines    with --pr: check whole files. By default an edited page is checked only on the
                  lines the PR adds or changes, like the Vale workflow. A new page is always whole.
+  --no-links     with --pr: don't check internal links on docs.pantheon.io (the check uses the network)
   --no-info      hide info findings
   --json         print findings as JSON
   --self-test    run the built-in tests
@@ -38,6 +39,8 @@ Exit code is 1 when any error is found, otherwise 0.`;
 
 const BE_VERB = /\b(is|are|was|were|be|been|being|am)\b/gi;
 const WILL = /\bwill\b/i;
+const BOLD_LABEL = /^\s*(?:[-*+]\s+|\d+\.\s+)?\*\*[^*\n]{1,60}?(?::\*\*|\*\*:)/;
+const SITE = "https://docs.pantheon.io";
 const FIRST_PERSON = /\b(we|we're|we've|we'll|let's|our|ours|us)\b/i;
 const HEADING_ALLOW = new Set(["pantheon", "beta", "wordpress", "drupal", "next.js", "react", "terminus", "github",
   "multidev", "redis", "git", "p1", "node.js", "php", "mysql", "nginx", "cdn", "dns", "ssl", "api", "mcp", "rss"]);
@@ -69,6 +72,7 @@ function analyze(text, opts = {}) {
   const apostrophes = { straight: [], curly: [] };
   const titleCase = [];
   const wsOnly = [];
+  const boldLabels = [];
 
   lines.forEach((raw, idx) => {
     const n = idx + 1;
@@ -101,12 +105,14 @@ function analyze(text, opts = {}) {
     }
     if (/^\|(\s*\|)+\s*$/.test(raw) && /^\|?\s*:?-{3,}/.test(lines[idx + 1] || "")) add("table-empty-header", "warn", n, "The table's header row is empty. Put the column names in the header row.", "Tables (the guide's example puts the column names in the header row)", raw);
     if (/^\s*\|/.test(raw) || /^\s*</.test(raw) || raw.trim() === "") return;
+    if (BOLD_LABEL.test(raw) && inScope(n)) boldLabels.push(n);
     const hits = prose.match(BE_VERB);
     if (hits && inScope(n)) beLines.push({ n, raw, count: hits.length });
     if (/[A-Za-z]'[A-Za-z]/.test(raw) && inScope(n)) apostrophes.straight.push(n);
     if (/[A-Za-z]’[A-Za-z]/.test(raw)) apostrophes.curly.push(n);
   });
 
+  if (boldLabels.length >= 2) add("bold-labels", "info", boldLabels[0], `${boldLabels.length} bold run-in labels (${boldLabels.slice(0, 6).map((l) => "L" + l).join(", ")}${boldLabels.length > 6 ? ", ..." : ""}). The guide limits bold to UI navigation. Consider headings or a table, or confirm the team accepts the pattern.`, "Bold", lines[boldLabels[0] - 1]);
   if (wsOnly.length) add("whitespace-only-lines", "error", wsOnly[0], `${wsOnly.length} whitespace-only line(s) (${wsOnly.slice(0, 6).map((l) => "L" + l).join(", ")}${wsOnly.length > 6 ? ", ..." : ""}). Remove the spaces.`, "Line Breaks and Spaces", "");
   for (const t of titleCase) add("heading-case", "info", t.n, `Possible title case (${t.caps.join(", ")}). Headings use sentence case. Vale's Pantheon.Headings decides.`, "Voice, Style, and Flow", t.raw);
   if (beLines.length) {
@@ -131,6 +137,46 @@ function analyze(text, opts = {}) {
   }
   const order = { error: 0, warn: 1, info: 2 };
   return findings.sort((a, b) => order[a.level] - order[b.level] || a.line - b.line);
+}
+
+// Relative internal links ([text](/path#anchor)) outside code, on the lines in scope.
+function internalLinks(text, scope) {
+  const out = [];
+  let inFence = false;
+  text.split("\n").forEach((raw, idx) => {
+    const n = idx + 1;
+    if (/^\s*(```|~~~)/.test(raw)) { inFence = !inFence; return; }
+    if (inFence || (scope && !scope.has(n))) return;
+    for (const m of raw.replace(/`[^`]*`/g, "").matchAll(/\]\((\/(?!\/)[^)\s]*)\)/g)) out.push({ line: n, url: m[1], raw });
+  });
+  return out;
+}
+
+// Checks each internal link on docs.pantheon.io. Pages the PR itself adds are skipped: they aren't live yet.
+async function checkLinks(items, { fetchImpl = fetch, prPaths = new Set(), limit = 40 } = {}) {
+  const findings = [];
+  const add = (it, id, level, message) => findings.push({ id, level, line: it.line, message, source: "Hyperlinks", excerpt: it.raw.trim().slice(0, 90) });
+  const byPage = new Map();
+  for (const it of items) {
+    const [pagePath, anchor] = it.url.split("#");
+    const key = pagePath.replace(/\/+$/, "") || "/";
+    if (prPaths.has(key)) continue;
+    if (!byPage.has(key)) byPage.set(key, []);
+    byPage.get(key).push({ ...it, anchor });
+  }
+  const pages = [...byPage.entries()];
+  for (const [key, list] of pages.slice(limit)) for (const it of list) add(it, "link-unchecked", "info", `Not checked: more than ${limit} distinct internal pages.`);
+  await Promise.all(pages.slice(0, limit).map(async ([key, list]) => {
+    let res, html = null;
+    try {
+      res = await fetchImpl(SITE + key, { redirect: "follow", signal: AbortSignal.timeout(20000) });
+      if (res.status >= 200 && res.status < 400 && list.some((x) => x.anchor)) html = await res.text();
+    } catch (e) { for (const it of list) add(it, "link-unchecked", "info", `Couldn't check ${key}: ${e.message}.`); return; }
+    if (res.status === 404 || res.status === 410) { for (const it of list) add(it, "link-broken", "warn", `${key} returns ${res.status} on docs.pantheon.io. The page doesn't exist, or isn't published yet.`); return; }
+    if (res.status >= 400) { for (const it of list) add(it, "link-unchecked", "info", `Couldn't check ${key}: HTTP ${res.status}.`); return; }
+    for (const it of list) if (it.anchor && html !== null && !new RegExp(`(?:id|name)=["']${it.anchor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`).test(html)) add(it, "link-anchor-missing", "warn", `#${it.anchor} isn't an id on ${key}.`);
+  }));
+  return findings;
 }
 
 function releaseNoteChecks(fm, file, add) {
@@ -173,18 +219,30 @@ function changedLines(patch) {
   return set;
 }
 
-function checkPr(number, repo, noInfo, allLines) {
+async function checkPr(number, repo, noInfo, allLines, checkLinkTargets) {
   const info = JSON.parse(gh(["api", `repos/${repo}/pulls/${number}`]));
   const sha = info.head.sha;
   const files = JSON.parse(gh(["api", "--paginate", "--slurp", `repos/${repo}/pulls/${number}/files?per_page=100`])).flat();
   const pages = files.filter((f) => f.status !== "removed" && f.filename.endsWith(".md") && CONTENT_DIRS.some((d) => f.filename.startsWith(d)));
   const results = [];
+  const texts = new Map();
   for (const f of pages) {
     const encoded = f.filename.split("/").map(encodeURIComponent).join("/");
     const body = JSON.parse(gh(["api", `repos/${repo}/contents/${encoded}?ref=${sha}`]));
     const text = Buffer.from(body.content, "base64").toString("utf8");
+    texts.set(f.filename, text);
     const lines = allLines || f.status === "added" ? null : changedLines(f.patch);
-    results.push({ file: f.filename, scope: lines ? `${lines.size} changed line(s)` : "whole file", findings: analyze(text, { path: f.filename, lines }) });
+    results.push({ file: f.filename, lines, scope: lines ? `${lines.size} changed line(s)` : "whole file", findings: analyze(text, { path: f.filename, lines }) });
+  }
+  if (checkLinkTargets) {
+    // A page this PR adds or changes isn't live yet, so links to it can't be checked on the site.
+    const prPaths = new Set();
+    for (const t of texts.values()) { const m = t.match(/^permalink:\s*["']?\/?(?:docs\/)?([^\s"']+)/m); if (m) prPaths.add("/" + m[1].replace(/\/+$/, "")); }
+    const order = { error: 0, warn: 1, info: 2 };
+    for (const r of results) {
+      const extra = await checkLinks(internalLinks(texts.get(r.file), r.lines), { prPaths });
+      r.findings = r.findings.concat(extra).sort((a, b) => order[a.level] - order[b.level] || a.line - b.line);
+    }
   }
   const skipped = files.filter((f) => !pages.includes(f)).map((f) => f.filename);
   let vale = [];
@@ -210,7 +268,7 @@ function renderPr(r) {
 // ---------------------------------------------------------------------------------------------
 // Self-test
 
-function selfTest() {
+async function selfTest() {
   const failures = [];
   let total = 0;
   const expect = (cond, what) => { total++; if (!cond) failures.push(what); };
@@ -264,6 +322,19 @@ function selfTest() {
   const ws = analyze("---\ntitle: x\ndescription: y\n---\n\n- one\n    \n- two\n    \n\n|   |   |\n|---|---|\n|Name|Value|\n\n| A | B |\n|---|---|\n| 1 | 2 |\n", {});
   expect(has(ws, "whitespace-only-lines", 7) && ws.find((x) => x.id === "whitespace-only-lines").message.startsWith("2 whitespace-only"), "whitespace-only lines are counted");
   expect(has(ws, "table-empty-header", 11) && !has(ws, "table-empty-header", 15), "empty table header flagged, normal header not");
+  const bold = analyze("---\ntitle: x\ndescription: y\n---\n\n**What you observe:** a thing.\n\n- **Collect:** more.\n\nGo to **Account** > **Security** to see it.\n", {});
+  expect(has(bold, "bold-labels") && bold.find((x) => x.id === "bold-labels").message.startsWith("2 bold run-in"), "bold run-in labels counted, UI-navigation bold not");
+  expect(!analyze("---\ntitle: x\ndescription: y\n---\n\n**Only one:** label.\n", {}).some((x) => x.id === "bold-labels"), "a single bold label isn't flagged");
+  const il = internalLinks("See [a](/nextjs/cli-tools) and [b](/guides/x#frag) and [c](https://docs.pantheon.io/x) and `[d](/code)` and [e](//cdn.example.com/y).\n```\n[f](/fence)\n```\n", null);
+  expect(il.length === 2 && il[0].url === "/nextjs/cli-tools" && il[1].url === "/guides/x#frag", "internal links found outside code, absolute and protocol-relative skipped");
+  const resp = (status, body = "") => ({ status, text: async () => body });
+  const stub = async (url) => url.endsWith("/ok") ? resp(200, '<h2 id="here">x</h2>') : url.endsWith("/gone") ? resp(404) : url.endsWith("/boom") ? (() => { throw new Error("timed out"); })() : url.endsWith("/busy") ? resp(503) : resp(200);
+  const items = [{ line: 1, url: "/ok#here", raw: "a" }, { line: 2, url: "/ok#nope", raw: "b" }, { line: 3, url: "/gone", raw: "c" }, { line: 4, url: "/boom", raw: "d" }, { line: 5, url: "/busy", raw: "e" }, { line: 6, url: "/new-page", raw: "f" }];
+  const lf = await checkLinks(items, { fetchImpl: stub, prPaths: new Set(["/new-page"]) });
+  expect(has(lf, "link-anchor-missing", 2) && !has(lf, "link-anchor-missing", 1), "missing anchor flagged, present anchor not");
+  expect(has(lf, "link-broken", 3) && lf.find((x) => x.id === "link-broken").level === "warn", "404 is a warn");
+  expect(has(lf, "link-unchecked", 4) && has(lf, "link-unchecked", 5), "network error and 503 are unchecked, not broken");
+  expect(!lf.some((x) => x.line === 6), "a page the PR adds is skipped");
   const fenced = analyze("---\ntitle: x\ndescription: y\n---\n\n```sh\nwe will  \n\tcode\n```\n", {});
   expect(!fenced.some((x) => ["will", "first-person-plural", "trailing-space", "tab"].includes(x.id)), "code fences are skipped");
 
@@ -283,17 +354,17 @@ function selfTest() {
 // ---------------------------------------------------------------------------------------------
 // CLI
 
-function main(argv) {
+async function main(argv) {
   const args = argv.slice(2);
   if (!args.length || args.includes("-h") || args.includes("--help")) { console.log(USAGE); return args.length ? 0 : 2; }
-  if (args.includes("--self-test")) return selfTest();
+  if (args.includes("--self-test")) return await selfTest();
   const flag = (n) => args.includes(n);
   const val = (n) => { const i = args.indexOf(n); return i === -1 ? null : args[i + 1]; };
   const noInfo = flag("--no-info"), json = flag("--json"), releaseNote = flag("--release-note");
   let exit = 0;
   const outputs = [];
   if (flag("--pr")) {
-    const r = checkPr(val("--pr"), val("--repo") || DEFAULT_REPO, noInfo, flag("--all-lines"));
+    const r = await checkPr(val("--pr"), val("--repo") || DEFAULT_REPO, noInfo, flag("--all-lines"), !flag("--no-links"));
     if (r.results.some((p) => p.findings.some((x) => x.level === "error"))) exit = 1;
     outputs.push(json ? r : renderPr(r));
   } else if (flag("--text")) {
@@ -313,6 +384,6 @@ function main(argv) {
 }
 
 if (require.main === module) {
-  try { process.exitCode = main(process.argv); } catch (e) { console.error(`style-check: ${e.message}`); process.exitCode = 2; }
+  main(process.argv).then((code) => { process.exitCode = code; }).catch((e) => { console.error(`style-check: ${e.message}`); process.exitCode = 2; });
 }
-module.exports = { analyze };
+module.exports = { analyze, internalLinks, checkLinks };

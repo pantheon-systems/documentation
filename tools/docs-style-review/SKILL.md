@@ -37,6 +37,7 @@ node ~/.claude/skills/docs-style-review/scripts/style-check.cjs --text < page.md
 ```
 
 - For a PR, an edited page is checked only on the lines the PR adds or changes, the same as the Vale workflow, because older lines predate some rules. A new page is checked whole. Pass `--all-lines` only if the reviewer asks.
+- For a PR, the script also checks each relative internal link against docs.pantheon.io (a missing page or anchor). A page the PR adds is skipped. This uses the network; pass `--no-links` to skip it, and treat `link-unchecked` as "couldn't check," never as broken.
 - Files outside `src/source/content/`, `src/source/releasenotes/`, and `src/source/partials/` are skipped. Say how many.
 - Levels: `error` is something the guide or CI states. `warn` is a Google rule Vale enforces. `info` is a candidate for judgment. Never present an `info` finding as a violation.
 - The script also lists Vale's comments on the PR. Treat each as a lead: open the line and confirm it. Vale is wrong on acronyms and product names (for example it can suggest the same text for a heading that is already sentence case). Say when you dismiss one, and why.
@@ -48,10 +49,11 @@ Run the script fresh and quote its output. Don't remember findings from an earli
 The script can't judge these. Read the page for them and check each against the guide section in [references/checks.md](references/checks.md):
 
 - **Voice:** be verbs, personal opinion, hyperbole, colloquialisms, and claims that read as marketing.
+- **Audience:** sentences addressed to a writer or reviewer instead of the reader ("Do not describe X as Y unless..."). Ask who each one is for.
 - **Headings:** confirm sentence case on any heading the script or Vale flagged.
 - **Where's the user?** Does a procedure say where the reader starts (which dashboard, which tab)?
 - **Terminology:** product terms match the guide's Terminology section and the product's own labels.
-- **Emphasis:** bold is for UI navigation only, italics for emphasis.
+- **Emphasis:** bold is for UI navigation only, italics for emphasis. The script counts bold run-in labels (`**Collect:**`); decide whether the pattern should stay.
 - **Claims:** anything that depends on product capability, versions, or settings. Mark it `unverified` and say who can confirm.
 - **Links:** descriptive link text, relative internal paths, no target attribute.
 - **Release notes:** the `description` must read on its own, because it's the only body text feed readers see. State the `published_at` value and that the RSS feed publishes it as the item date. The queue skill owns that check; don't repeat its rule.

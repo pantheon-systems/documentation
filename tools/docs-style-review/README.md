@@ -50,6 +50,7 @@ The full table, with the guide section for each check, is in [references/checks.
 | `--pr N` | Check the pages PR N changes, read at the PR head through `gh` |
 | `--repo owner/name` | With `--pr`: another repo. Default `pantheon-systems/documentation`. |
 | `--all-lines` | With `--pr`: check whole files, not only changed lines |
+| `--no-links` | With `--pr`: skip the internal link check, which uses the network |
 | `--text` | Read one page from stdin |
 | `--release-note` | Treat the input as a release note. Automatic under `src/source/releasenotes/`. |
 | `--no-info` | Hide info findings |
@@ -62,7 +63,7 @@ The exit code is 1 when the script finds an error, otherwise 0.
 
 - It checks `src/source/content/`, `src/source/releasenotes/`, and `src/source/partials/` only. Other files are skipped and counted.
 - `heading-case` and `be-verbs` are heuristics. Vale's `Pantheon.Headings` is the authority on heading case.
-- It doesn't render the page, follow links, or check screenshots. A person does.
+- It doesn't render the page or check screenshots. A person does. With `--pr` it checks that relative internal links resolve on docs.pantheon.io, and skips pages the PR itself adds.
 - It doesn't replace Vale. It reads Vale's PR comments and adds rules Vale doesn't enforce, such as relative internal links.
 
 ## Check your change
