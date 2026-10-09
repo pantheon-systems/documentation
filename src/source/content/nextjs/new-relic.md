@@ -80,7 +80,7 @@ This approach requires a New Relic account, an ingest license key, and customer-
 Use versions that are compatible with the Node.js version and Next.js version selected by your project. Keep these packages pinned or lock them through your normal dependency workflow.
 
 ```bash
-npm install @opentelemetry/api @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-trace-otlp-http @opentelemetry/resources @opentelemetry/sdk-node @opentelemetry/semantic-conventions
+npm install --save-exact @opentelemetry/api@^1.9.1 @opentelemetry/auto-instrumentations-node@^0.80.0 @opentelemetry/exporter-trace-otlp-http@^0.222.0 @opentelemetry/resources@^2.11.0 @opentelemetry/sdk-node@^0.222.0 @opentelemetry/semantic-conventions@^1.43.0
 ```
 
 ### 2. Create instrumentation.ts
@@ -121,6 +121,7 @@ const exporter = new OTLPTraceExporter({
 const sdk = new NodeSDK({
   resource: resourceFromAttributes({
     [ATTR_SERVICE_NAME]: serviceName,
+    'deployment.environment.name': process.env.APP_ENV ?? 'unknown',
   }),
   traceExporter: exporter,
   instrumentations: [getNodeAutoInstrumentations()],
@@ -139,7 +140,6 @@ The exact initialization file name, package APIs, and supported runtime behavior
 Set these values with [Secrets Manager](/nextjs/environment-variables), for example `terminus secret:site:set <site>.<env> NEW_RELIC_LICENSE_KEY <your-license-key> --type=env --scope=web`. Do not commit the license key to Git. Secrets take effect on the next build, so rebuild after setting them.
 
 ```text
-OTEL_SERVICE_NAME=nextjs-app-live
 OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://otlp.nr-data.net:4318/v1/traces
 NEW_RELIC_LICENSE_KEY=<customer-managed-secret>
 ```
@@ -158,12 +158,13 @@ Deploy the instrumentation to a non-Live environment and generate traffic. Then 
 
 - Trace volume and latency are acceptable before enabling additional instrumentations or higher sampling.
 
+![New Relic traces from a Pantheon Next.js website](../../images/nextjs/new-relic.png)
 
 A request reaching the application does not guarantee that a trace was exported. Exporter credentials, endpoint reachability, sampling, process shutdown behavior, and vendor-side ingestion can each affect what appears in New Relic.
 
 ## Other practical options
 
-### OpenTelemetry Collector
+### OpenTelemetry collector
 
 **Practical, customer-managed option.** Send OTLP data from the application to a collector that your team operates or obtains from an observability provider, then forward it to one or more backends. A collector can centralize authentication, sampling, redaction, routing, and fan-out.
 
@@ -182,9 +183,6 @@ Pantheon does not host or manage that collector as part of the Next.js service. 
 - Browser/RUM setup, which is separate from Node.js instrumentation.
 
 - Sampling, cardinality, retention, and data-residency controls.
-
-
-Do not describe a provider as supported by Pantheon unless Pantheon has published and tested that integration.
 
 ## What is supported, practical, or experimental?
 
