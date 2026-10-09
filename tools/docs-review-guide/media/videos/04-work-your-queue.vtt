@@ -1,0 +1,16 @@
+WEBVTT
+
+00:01.800 --> 00:13.300
+In a terminal at the repository root, run the review queue script. For this recording, the output pipes through sed, so GitHub handles show as @name. You don't need that part.
+
+00:16.200 --> 00:24.200
+The first line is your permission on each repo. Below it, each pull request that asks for your review, or a team you're on.
+
+00:24.400 --> 00:29.900
+Each entry has links, what looks stuck, and the next steps. Scroll to read through them.
+
+00:31.500 --> 00:39.500
+To ask a different question, add a filter. This shows approved and unclaimed pull requests, with a summary table first.
+
+00:46.200 --> 00:50.000
+Each filter name in the table links to its GitHub search.

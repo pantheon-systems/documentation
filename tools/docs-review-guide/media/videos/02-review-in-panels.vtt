@@ -1,0 +1,19 @@
+WEBVTT
+
+00:01.730 --> 00:07.430
+Open a documentation pull request on GitHub. This one changes six pages.
+
+00:09.230 --> 00:17.830
+Click the lightning bolt. The popup lists one row for each changed page, with Preview, Live, 2-panel, and 3-panel buttons.
+
+00:18.130 --> 00:26.630
+Select 2-panel on the workspaces page. The tab becomes the live article on the left, and the pull request preview on the right.
+
+00:26.930 --> 00:32.430
+Both panes open at the section that changed, so you compare the same place on each side.
+
+00:32.730 --> 00:37.230
+Go back and select 3-panel to add the GitHub diff on the left.
+
+00:37.540 --> 00:42.040
+Each pane has an Open in tab link, if you want a full-size view.
