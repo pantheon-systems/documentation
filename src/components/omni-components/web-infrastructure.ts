@@ -210,6 +210,10 @@ const webInfrastructure = () => {
             "/nextjs/transfer-site",
             "How to transfer a site between workspaces",
           ),
+          simpleLink(
+            "/nextjs/performance-troubleshooting",
+            "How to debug performance issues in Next.js on Pantheon",
+          )
         ]),
       ]),
       getGuideDirectory("guides/public-api", "Pantheon Public API"),
