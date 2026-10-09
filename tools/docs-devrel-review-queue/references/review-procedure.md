@@ -63,8 +63,9 @@ If the path doesn't exist (the skill is installed elsewhere), find `scripts/docs
 | Preview "answered 404" | The build may not have published the page yet, or the PR is merged. |
 | Permalink changed | Check the redirect and cross-links (below). |
 | "Other changed files" lists non-Markdown files | The packet doesn't review these. Read them in the diff and say when an engineer should review. |
-| Release note, date more than a day old | The date feeds the RSS timestamp; a past date may not publish as new. Show the exact date and say a fixup PR may be needed. |
-| Release note, no date | The RSS timestamp needs one; flag it. |
+| Release note, any `published_at` | Always state the exact value and say the RSS feed publishes it verbatim as the item date (`rss.xml/route.tsx`). It should be the actual publication time at merge. Past or future relative to the merge, flag it and say a fixup commit may be needed. |
+| Release note, `published_at` missing or `T00:00:00Z` | `validate-release-notes.yml` fails on both. Flag it. |
+| Release note has only `published_date` | The feed falls back to a synthetic time and CI fails. Flag it. |
 | "No permalink" files | No preview exists. Say which files; the reviewer reads the diff. |
 | "Check runs could not be read", or a rate-limit error | Say the data is missing. Don't guess a CI result. |
 
@@ -112,7 +113,7 @@ node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N> --
 | Left-nav placement and title pattern match sibling pages | You, from the sibling pages' front matter and nav |
 | Claims that depend on product capability (build logs vs runtime logs, settings customers can't change, versions) | You flag each one; the author or product confirms, and you can post the question in the product's SME channel. Content drafted from search tools needs this most |
 | A paired release note exists when the doc change ships with a feature | You, from the PR body and the docs channel thread; merge them together |
-| Release-note date is current | The packet shows it; you state it |
+| Release-note `published_at` matches the publication time | The queue outline and packet show it; you state the value and that the RSS feed uses it as the item date; the reviewer confirms the release time |
 | Redirect in `middleware.ts` and cross-links | You, with the command above; say what wasn't checked |
 
 ## Draft the comment

@@ -121,4 +121,6 @@ For another repo (a queue run with `--repo`), the procedure's generic path appli
 
 ## 6. Before you call a PR done
 
+**Release notes hit RSS.** For any PR that adds or changes a file in `src/source/releasenotes/`, state its `published_at` value and that the feed publishes it verbatim as the item date, whether or not you ran the packet. Say whether it matches the publication time, and tell the reviewer to update it at merge if it doesn't. Only the front matter and description reach the feed, never the body. The queue outline and the packet both report it; a hand review has to as well.
+
 Re-read the request. State what you checked, what you couldn't (rendering, cross-links, anything behind login), and what needs the reviewer's eyes.
