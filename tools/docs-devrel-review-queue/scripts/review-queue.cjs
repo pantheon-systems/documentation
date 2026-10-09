@@ -169,6 +169,25 @@ async function diagnose(repo, number, now = Date.now(), owner = OWNER) {
   const paths = files || [];
   const inContent = (f) => f.startsWith("src/source/content/") || f.startsWith("src/source/releasenotes/") || f.startsWith("src/source/partials/");
   const releaseNote = paths.some((f) => f.startsWith("src/source/releasenotes/"));
+  // The RSS feed (src/app/release-notes/rss.xml/route.tsx) uses published_at as the item date, verbatim.
+  for (const path of paths.filter((f) => /^src\/source\/releasenotes\/.+\.md$/.test(f))) {
+    const name = path.split("/").pop();
+    const text = await docs.api(`${base}/contents/${path}?ref=${sha}`).then((f) => Buffer.from(f.content, "base64").toString("utf8"), () => null);
+    if (text === null) {
+      add("Release note timestamp unread", `Could not read ${name} at ${sha.slice(0, 7)}`, "Open the file and check published_at by hand; the RSS feed uses it as the item date", `author @${pull.user.login}`);
+      continue;
+    }
+    const value = ((text.split(/^---\s*$/m)[1] || "").match(/^published_at:\s*["']?([^"'\r\n]+)/m) || [])[1];
+    const time = Date.parse(value);
+    if (!value || Number.isNaN(time)) {
+      add("Release note has no published_at", `${name} has no usable published_at (validate-release-notes.yml fails without it)`, "Add published_at with the actual publication time", `author @${pull.user.login}`);
+    } else if (/T00:00:00Z$/.test(value)) {
+      add("Release note timestamp is a placeholder", `${name}: published_at ${value} (validate-release-notes.yml rejects midnight)`, "Set published_at to the actual publication time", `author @${pull.user.login}`);
+    } else {
+      const age = time > now ? `${Math.ceil((time - now) / HOUR)}h from now` : `${hours(value, now)}h ago`;
+      add("Release note timestamp: confirm it", `${name}: published_at ${value} (${age}); the RSS feed publishes this as the item date`, "Set published_at to the actual publication time at merge; confirm the release time in the docs channel", `author @${pull.user.login}, or whoever merges`);
+    }
+  }
   const touchesDesign = paths.some((f) => !f.startsWith("src/source/") && (/\.(s?css|less|tsx?|jsx?)$/.test(f) || /package|lock|tailwind/.test(f)));
   const isBot = pull.user.type === "Bot";
   const engineering = isBot || (repo === "documentation" && owner === OWNER && paths.length > 0 && paths.every((f) => !inContent(f)));
