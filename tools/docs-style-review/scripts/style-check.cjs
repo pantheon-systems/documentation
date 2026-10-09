@@ -68,6 +68,7 @@ function analyze(text, opts = {}) {
   const beLines = [];
   const apostrophes = { straight: [], curly: [] };
   const titleCase = [];
+  const wsOnly = [];
 
   lines.forEach((raw, idx) => {
     const n = idx + 1;
@@ -75,6 +76,7 @@ function analyze(text, opts = {}) {
     if (/^\s*(```|~~~)/.test(raw)) { inFence = !inFence; return; }
     if (inFence) return;
 
+    if (/^[ \t]+$/.test(raw) && inScope(n)) wsOnly.push(n);
     if (/[ \t]+$/.test(raw) && raw.trim() !== "") add("trailing-space", "error", n, "Trailing space at the end of the line.", "Line Breaks and Spaces", raw);
     if (/\t/.test(raw)) add("tab", "error", n, "Tab character. Use spaces.", "Line Breaks and Spaces", raw);
     if (inFrontmatter && !/^\s*description:/.test(raw)) return;
@@ -97,6 +99,7 @@ function analyze(text, opts = {}) {
       if (caps.length >= 2 && inScope(n)) titleCase.push({ n, raw, caps });
       return;
     }
+    if (/^\|(\s*\|)+\s*$/.test(raw) && /^\|?\s*:?-{3,}/.test(lines[idx + 1] || "")) add("table-empty-header", "warn", n, "The table's header row is empty. Put the column names in the header row.", "Tables (the guide's example puts the column names in the header row)", raw);
     if (/^\s*\|/.test(raw) || /^\s*</.test(raw) || raw.trim() === "") return;
     const hits = prose.match(BE_VERB);
     if (hits && inScope(n)) beLines.push({ n, raw, count: hits.length });
@@ -104,6 +107,7 @@ function analyze(text, opts = {}) {
     if (/[A-Za-z]’[A-Za-z]/.test(raw)) apostrophes.curly.push(n);
   });
 
+  if (wsOnly.length) add("whitespace-only-lines", "error", wsOnly[0], `${wsOnly.length} whitespace-only line(s) (${wsOnly.slice(0, 6).map((l) => "L" + l).join(", ")}${wsOnly.length > 6 ? ", ..." : ""}). Remove the spaces.`, "Line Breaks and Spaces", "");
   for (const t of titleCase) add("heading-case", "info", t.n, `Possible title case (${t.caps.join(", ")}). Headings use sentence case. Vale's Pantheon.Headings decides.`, "Voice, Style, and Flow", t.raw);
   if (beLines.length) {
     const total = beLines.reduce((s, b) => s + b.count, 0);
@@ -257,6 +261,9 @@ function selfTest() {
   const scoped = analyze(bad, { path: "src/source/releasenotes/2026-10-08-example.md", lines: new Set([13, 20]) });
   expect(has(scoped, "trailing-space", 13) && has(scoped, "link-target", 20), "in-scope lines are reported");
   expect(!has(scoped, "tab") && !has(scoped, "will") && !has(scoped, "published-at-midnight"), "out-of-scope lines and untouched front matter are skipped");
+  const ws = analyze("---\ntitle: x\ndescription: y\n---\n\n- one\n    \n- two\n    \n\n|   |   |\n|---|---|\n|Name|Value|\n\n| A | B |\n|---|---|\n| 1 | 2 |\n", {});
+  expect(has(ws, "whitespace-only-lines", 7) && ws.find((x) => x.id === "whitespace-only-lines").message.startsWith("2 whitespace-only"), "whitespace-only lines are counted");
+  expect(has(ws, "table-empty-header", 11) && !has(ws, "table-empty-header", 15), "empty table header flagged, normal header not");
   const fenced = analyze("---\ntitle: x\ndescription: y\n---\n\n```sh\nwe will  \n\tcode\n```\n", {});
   expect(!fenced.some((x) => ["will", "first-person-plural", "trailing-space", "tab"].includes(x.id)), "code fences are skipped");
 

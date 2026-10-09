@@ -9,6 +9,8 @@ What the review looks for, how to verify each item, and where the rule comes fro
 | Check (script id) | Level | What it flags | Source |
 |---|---|---|---|
 | `trailing-space` | error | A space or tab at the end of a line | Line Breaks and Spaces |
+| `whitespace-only-lines` | error | Lines that contain only spaces or tabs (counted, first lines listed) | Line Breaks and Spaces |
+| `table-empty-header` | warn | A table whose header row has no text, so the column names sit in the first body row | Tables (the guide's example puts the column names in the header row) |
 | `tab` | error | A tab character outside a code fence | Line Breaks and Spaces |
 | `final-newline` | error | The file doesn't end with a newline | Line Breaks and Spaces |
 | `link-target` | error | `target="_blank"` or another link target | Hyperlinks |
