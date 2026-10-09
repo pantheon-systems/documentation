@@ -15,8 +15,6 @@ This works in Chrome, Chromium, Brave, Edge, and other Chromium-based browsers. 
    git -C ~/pantheon-docs-tools sparse-checkout set tools/pantheon-pr-preview-extension
    ```
 
-   Before PR #10307 merges, add `--branch add-pantheon-pr-preview-extension` to the first command.
-
 2. Open `chrome://extensions` (`brave://extensions` in Brave, `edge://extensions` in Edge) and turn on **Developer mode**.
 3. Select **Load unpacked** and choose `~/pantheon-docs-tools/tools/pantheon-pr-preview-extension`, the folder that contains `manifest.json`. In the macOS file picker, press **Cmd+Shift+G** and paste the path.
 4. Pin the extension from the puzzle-piece menu so the bolt stays visible.
