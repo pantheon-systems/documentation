@@ -362,7 +362,7 @@ Counts are the exact form, then the most common variants, in prose.
 | Redis         | 220         | Redis 220, redis 2                | canonical (already covered)    |
 | SQLite        | 1           | SQLite 1                          | review required: 1 occurrence  |
 | Snowflake     | 0           | snowflake 1                       | review required: not in corpus |
-| Solr          | 561         | Solr 561, solr 1                  | canonical (already covered)    |
+| Apache Solr          | 561         | Solr 561, solr 1                  | canonical (already covered)    |
 
 ### CMSs and content platforms
 
