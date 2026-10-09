@@ -1,0 +1,6 @@
+html, body { height: 100%; margin: 0; font: 13px system-ui, sans-serif; }
+#panes { display: flex; height: 100%; gap: 1px; background: #d0d5dd; }
+.pane { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; background: #fff; }
+.pane header { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #f2f4f7; }
+.pane header a { color: #175cd3; }
+.pane iframe { flex: 1; border: 0; width: 100%; }
