@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pantheon PR review checklist</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icons/pantheon-lightning-bolt.png" alt="">
+      <div>
+        <h1>Docs PR review</h1>
+        <p id="context">Checking the current tab…</p>
+      </div>
+    </header>
+
+    <section id="not-pr" class="notice" hidden>
+      Open a Pantheon documentation pull request to use this checklist.
+    </section>
+
+    <section id="preview-state" class="notice" hidden>
+      <strong>Preview tab</strong>
+      <p id="preview-message">This multidev preview may still be waking up.</p>
+      <button id="retry-preview" class="primary" type="button">Retry preview</button>
+      <button id="checks-preview" class="text-button" type="button" hidden>View deployment checks</button>
+    </section>
+
+    <section id="review-panel" hidden>
+      <div class="actions" aria-label="PR links">
+        <button id="open-files" class="primary" type="button">Open Files changed</button>
+        <button id="open-all" class="primary" type="button" disabled>Open all previews</button>
+      </div>
+
+      <div class="split-review-help">
+        <div>
+          <strong>Review view</strong>
+          <p class="meta">2-panel and 3-panel open one tab with the pages side by side.</p>
+        </div>
+      </div>
+
+      <div id="route-status" class="meta" role="status" hidden></div>
+
+      <div id="preview-status" class="status" role="status" hidden>
+        <p id="preview-status-text"></p>
+        <div class="status-actions">
+          <button id="retry-pr-preview" type="button">Retry preview</button>
+          <button id="checks-pr" class="text-button" type="button" hidden>View deployment checks</button>
+        </div>
+      </div>
+
+      <ul id="pages" class="pages" aria-label="Affected documentation pages"></ul>
+      <p id="unrouted" class="meta" hidden></p>
+
+      <div id="signals" hidden>
+        <div id="slug-warning" class="alert warning" hidden>
+          <strong>Permalink changed</strong>
+          <ul id="slug-list"></ul>
+          <p>Check the redirects in <code>src/middleware.ts</code> and any cross-links to the old path.</p>
+          <button id="open-middleware" class="text-button" type="button">Inspect middleware.ts</button>
+        </div>
+        <div id="release-warning" class="alert release" hidden>
+          <strong>Release note: check the RSS timestamp</strong>
+          <p>The <code>published_at</code> / <code>published_date</code> value feeds the RSS publication time. If it's already in the past, Slack won't treat the entry as new, and a quick fixup PR may be needed.</p>
+          <ul id="release-list"></ul>
+        </div>
+      </div>
+
+      <p class="intro">Rachel’s practical review sequence:</p>
+      <div id="checklist">
+        <label><input type="checkbox" data-check="scope"> Confirm the change scope and timeline.</label>
+        <label><input type="checkbox" data-check="diff"> Review <strong>Files changed</strong> and the front-matter permalink.</label>
+        <label><input type="checkbox" data-check="preview"> Open the multidev preview and verify the changed section renders.</label>
+        <label><input type="checkbox" data-check="comparison"> Compare the preview with the live page.</label>
+        <label><input type="checkbox" data-check="style"> Check tables, formatting, capitalization, and Pantheon terminology.</label>
+        <label id="release-check" hidden><input type="checkbox" data-check="release"> Confirm the release-note date/timestamp is current; otherwise make a quick fixup PR.</label>
+        <label id="slug-check" hidden><input type="checkbox" data-check="slug"> Verify the redirect in <code>middleware.ts</code> and check cross-links.</label>
+      </div>
+    </section>
+
+    <footer id="footer" hidden>
+      <span id="progress">0 of 5 complete</span>
+      <button id="reset" type="button">Reset</button>
+    </footer>
+  </main>
+  <script src="pr-resolver.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
