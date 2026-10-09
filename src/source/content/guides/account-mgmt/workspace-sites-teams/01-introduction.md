@@ -38,7 +38,7 @@ When you sign a contract, we create a Professional Workspace for you, attached t
 |   | My Dashboard  | All Sites Workspace  |
 |---|---|---|
 | **Sites Tab** | Sites you have access to |  All sites your organization maintains |
-| **Teams Tab** | A message to create a Professional Workspace  | Team members that have access to all sites |
+| **Teams Tab** | N/A | Team members that have access to all sites |
 
 You can create as many Professional Workspaces as you like. Use additional Professional Workspace to organize teams and the sites they should have access to. Professional Workspaces you create cannot contain new sites; they are a place to assign existing sites to teams, much like a playlist contains songs you select from your music library..
 
