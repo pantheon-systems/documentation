@@ -1,0 +1,16 @@
+WEBVTT
+
+00:02.460 --> 00:06.560
+Open the extensions page and turn on Developer mode.
+
+00:06.860 --> 00:08.860
+Select Load unpacked.
+
+00:09.160 --> 00:18.260
+Choose the extension folder, the one that holds manifest.json. In the Mac file picker, press Command-Shift-G and paste the path.
+
+00:18.560 --> 00:27.760
+The card shows version 0.5.2. Pin the extension from the puzzle-piece menu, so the lightning bolt stays in your toolbar.
+
+00:28.060 --> 00:32.360
+Now open any documentation pull request and click the bolt.
