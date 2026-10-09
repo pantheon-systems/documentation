@@ -38,11 +38,11 @@ Every Workspace that is upgraded to Gold or higher is billed as another plan/sub
 
 The navigation bar on the left contains several additional tabs to help you manage your sites:
 
-- **Home**: The home page of a Workspace contains information related to your workspace, such as the number of sites, sites recently added, and more.
+- **Home**: The home page of a workspace contains information related to your workspace, such as the number of sites, sites recently added, and more.
 
 - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining.
 
-- **Team*:** Invite people to work on sites in this Workspace.
+- **Team*:** Invite people to work on sites in this workspace.
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
 
@@ -52,7 +52,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Custom Upstreams*:** Create a new workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-- **Settings:** Modify the workspace name, logo, billing information, and if your Workspace is configured for it, billing terms and instructions for your team.
+- **Settings:** Modify the workspace name, logo, billing information, and if your workspace is configured for it, billing terms and instructions for your team.
 
 \* Not available in My Dashboard.
 
@@ -60,11 +60,11 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 ### Switch Between Workspaces
 
-You can switch between Workspaces to work on personal projects or to switch between Professional Workspaces.  To do so:
+You can switch between workspaces to work on personal projects or to switch between Professional workspaces. To do so:
 
-- Click the Workspace Switcher (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices) to switch between Workspaces.
+- Click the Workspace Switcher (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices) to switch between workspaces.
 
-  My Dashboard is at the top, followed by an Professional Workspaces in which you are a member.
+  My Dashboard is at the top, followed by the Professional workspaces in which you are a member.
 
   ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/workspaces-selector.png)
 
@@ -74,11 +74,11 @@ You can create as many workspaces as necessary.
 
 <Alert title="Warning" type="danger" >
 
-If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but they may not contain any sites.
+If you are a contract customer, your contract is associated to one Professional workspace, which is created for you when you sign up. You may still create additional Professional workspaces, but they may not contain any sites.
 
 </Alert>
 
-The following process will create a Professional Workspace with a free Silver Account Plan.  To upgrade a Workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
+The following process will create a Professional workspace with a free Silver Account Plan. To upgrade a workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
 
 1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) (located to the right of the Pantheon logo on desktop devices, or in the top right mobile menu on mobile devices), then select **Create a Professional Workspace**.
 
@@ -110,7 +110,7 @@ You can customize the following for a workspace:
 
 - [Upgrade](/guides/account-mgmt/plans/workspace-plans) a Silver Account Plan to a Gold Account Plan.
 
-To customize a Professional Workspace:
+To customize a Professional workspace:
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to customize.
 1. Click the **Settings** tab.
@@ -140,7 +140,7 @@ As a workaround, we recommend following development best practice workflows by [
 
 ### Why can't I access Multidev on my site when the Supporting Workspace can use it?
 
-Only workspace team members and administrators of a Supporting Workspace with Multidev can use this feature. Site team members who are associated with the site but not the professional workspace can access Multidev environments via the unique URL, will not be able to commit code to them.
+Only workspace team members and administrators of a supporting workspace with Multidev can use this feature. Site team members who are associated with the site but not the professional workspace can access Multidev environments via the unique URL, will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
 
@@ -148,11 +148,11 @@ Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, P
 
 ### Can I add my own Agency as a Supporting Workspace to a client's site?
 
-No. Only the owner of the site can add an agency as a Supporting Workspace. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a Supporting Workspace if you are providing services to the site.
+No. Only the owner of the site can add an agency as a supporting workspace. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a supporting workspace if you are providing services to the site.
 
 ### What privileges and roles are granted when adding a Supporting Workspace?
 
-All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
+All members of the supporting workspace receive the role assigned on the site, regardless of their role in the supporting workspace.
 
 ### Can the site owner override privileges and access for team members of a Supporting Workspace?
 
