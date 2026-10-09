@@ -2,6 +2,8 @@
 
 See which PRs are waiting on you, which look stuck, and what to do next. This assumes the [skill is set up](set-up-the-skill.md).
 
+Watch it first: [Work your review queue](../media/videos/04-work-your-queue.mp4) (51 seconds, captions embedded; [transcript](../media/videos/04-work-your-queue.vtt)). The recording pipes the output through `sed` so GitHub handles show as `@name`. You don't need that.
+
 ## Run the queue
 
 In Claude Code, type `/docs-devrel-review-queue`. From a terminal:

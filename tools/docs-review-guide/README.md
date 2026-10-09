@@ -38,6 +38,21 @@ New to both? Do the [tutorial](tutorial/review-your-first-pr.md). It takes about
 - [Read-only by design](explanation/read-only-by-design.md)
 - [Release notes and the RSS feed](explanation/release-notes-and-rss.md)
 
+## Videos
+
+Each how-to page links its video. Every video has captions embedded and a transcript.
+
+| Video | Length | Page |
+|---|---|---|
+| [Install the extension](media/videos/01-install-extension.mp4) | 40 s | [Install and update the extension](how-to/install-extension.md) |
+| [Review a PR in 2- and 3-panel view](media/videos/02-review-in-panels.mp4) | 47 s | [Review a docs PR in side-by-side panels](how-to/review-in-panels.md) |
+| [Share a panel link](media/videos/03-share-a-panel-link.mp4) | 32 s | [Review a docs PR in side-by-side panels](how-to/review-in-panels.md) |
+| [Work your review queue](media/videos/04-work-your-queue.mp4) | 51 s | [Work your review queue](how-to/work-your-queue.md) |
+| [Review one PR with the packet](media/videos/05-review-one-pr.mp4) | 48 s | [Review one PR](how-to/review-one-pr.md) |
+| [Review a release note](media/videos/06-review-a-release-note.mp4) | 30 s | [Review a release note](how-to/review-release-notes.md) |
+
+There's no video for [Unblock stuck PRs](how-to/unblock-stuck-prs.md). It reads the same output as the queue video.
+
 ## Ground rules
 
 These pages follow the rules for this folder in [`tools/README.md`](../README.md): plain Markdown with no build step, terminal output in code blocks instead of images, and no credentials, names, or personal data in examples.

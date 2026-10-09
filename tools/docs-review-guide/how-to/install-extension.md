@@ -4,6 +4,8 @@ Load the PR preview extension in a Chromium browser and keep it updated from Git
 
 You need Chrome 102 or later, Brave, or Edge, and `git`. The extension isn't in the Chrome Web Store and its manifest has no `update_url`, so your browser never updates it by itself. The folder on disk is what runs, so make that folder a git clone and GitHub stays your source of updates.
 
+Watch it first: [Install the extension](../media/videos/01-install-extension.mp4) (40 seconds, captions embedded). Read the [transcript](../media/videos/01-install-extension.vtt) if you prefer.
+
 ## Install
 
 1. Clone only the extension folder. The sparse, shallow clone is about 2 MB because the full repository is large:
@@ -19,6 +21,12 @@ You need Chrome 102 or later, Brave, or Edge, and `git`. The extension isn't in 
 5. Open any documentation PR and click the bolt.
 
 Already have a full clone of the repository? Skip step 1 and load `tools/pantheon-pr-preview-extension` from it.
+
+![The Chrome extensions page with Developer mode on and the Pantheon PR Preview Opener 0.5.2 card, with an "Extension loaded" message at the bottom left.](../media/images/install-extension-loaded.jpg)
+
+After step 4, the yellow lightning bolt sits in the toolbar next to the puzzle-piece icon:
+
+![The Chrome toolbar with the yellow lightning bolt pinned to the left of the puzzle-piece extensions icon.](../media/images/install-extension-pinned.jpg)
 
 ## Check that it works
 

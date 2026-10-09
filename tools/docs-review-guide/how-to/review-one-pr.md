@@ -2,6 +2,8 @@
 
 Get the links, status, and checks for a single docs PR, then review it and draft your comment. This assumes the [skill is set up](set-up-the-skill.md). The extension is optional but makes the panel links work.
 
+Watch it first: [Review one PR with the packet](../media/videos/05-review-one-pr.mp4) (48 seconds, captions embedded; [transcript](../media/videos/05-review-one-pr.vtt)).
+
 ## Get the packet
 
 ```sh

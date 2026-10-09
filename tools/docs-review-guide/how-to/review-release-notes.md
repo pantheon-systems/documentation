@@ -2,6 +2,8 @@
 
 Check that a release-note PR carries the right `published_at` before it merges. The RSS feed publishes that value as the item date, so a wrong one stamps the entry with the wrong time. For the reason, see [Release notes and RSS](../explanation/release-notes-and-rss.md).
 
+Watch it first: [Review a release note](../media/videos/06-review-a-release-note.mp4) (30 seconds, captions embedded; [transcript](../media/videos/06-review-a-release-note.vtt)).
+
 ## Find the value
 
 The review queue and the packet both report it for any PR that adds or changes a file in `src/source/releasenotes/`:
