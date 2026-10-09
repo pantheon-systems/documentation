@@ -35,3 +35,81 @@ PhpStorm
 SendGrid
 Solr
 Drupal Steward
+GraphQL\b
+HTML\b
+Java\b
+JavaScript\b
+JSON\b
+Markdown\b
+Python\b
+SVG\b
+XML\b
+ARIA\b
+CORS\b
+DOM\b
+HTTP/2\b
+JWT\b
+OAuth\b
+URI\b
+WAI-ARIA\b
+WCAG\b
+Gatsby\b
+React\b
+Sass\b
+Bun\b
+Deno\b
+Grunt\b
+Gulp\b
+npm\b
+pnpm\b
+Webpack\b
+Docusaurus\b
+Bitbucket\b
+CircleCI\b
+GitHub Actions\b
+Travis CI\b
+Azure DevOps\b
+Docker\b
+Amazon Web Services\b
+AWS\b
+Amazon S3\b
+Amazon Route 53\b
+Azure\b
+Google Cloud\b
+Google Cloud Storage\b
+Elasticsearch\b
+PostgreSQL\b
+Contentful\b
+WordPress\.com\b
+WordPress\.org\b
+WooCommerce\b
+Chrome\b
+Firefox\b
+Microsoft Edge\b
+Opera\b
+Safari\b
+Ubuntu\b
+Windows\b
+JetBrains\b
+Visual Studio\b
+Visual Studio Code\b
+Lighthouse\b
+Selenium\b
+Datadog\b
+Splunk\b
+Auth0\b
+Okta\b
+reCAPTCHA\b
+Stripe\b
+Claude\b
+Gemini\b
+Google AI Studio\b
+OpenAI\b
+Vertex AI\b
+Content Publisher\b
+Decoupled Kit\b
+Front-End Sites\b
+Global CDN\b
+My Dashboard\b
+Professional Workspace\b
+Site Dashboard\b
