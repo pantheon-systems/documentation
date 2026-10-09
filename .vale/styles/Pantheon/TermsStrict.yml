@@ -1,0 +1,22 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+# Case-sensitive. Only unambiguous misspellings of product names belong here: each swap
+# is wrong in any prose context. Ambiguous swaps (for example `terminus`, which is also
+# the command name) stay in Terms.yml at warning.
+ignorecase: false
+# Accepted vocabulary must never exempt a strict error: without this, the `[Dd]ev`
+# entry in accept.txt suppressed `Multi-dev`.
+vocab: false
+swap:
+  Wordpress: WordPress
+  Word Press: WordPress
+  Wordpress.org: WordPress.org
+  Github: GitHub
+  Gitub: GitHub
+  MultiDev: Multidev
+  Multi-dev: Multidev
+  Nextjs: Next.js
+  NextJS: Next.js
+  Nodejs: Node.js
+  NodeJS: Node.js

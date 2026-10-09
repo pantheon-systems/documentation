@@ -25,3 +25,13 @@ wp-config
 [Bb]ackend
 [Uu]nmanaged
 subdomain(s)?
+Apache
+Autopilot
+Cloudflare
+ElasticPress
+Lando
+Linux
+PhpStorm
+SendGrid
+Solr
+Drupal Steward

@@ -180,7 +180,7 @@ Of particular note, any documentation that uses Terminus should reference it in 
 
 <Example>
 
-<h2 class="toc-ignore">Before You Begin</h2>
+<h2 class="toc-ignore">Before you begin</h2>
 
 Be sure that you have:
 
@@ -192,7 +192,7 @@ Be sure that you have:
 <hr className="source-code" /> <br/>
 
 ```markdown
-## Before You Begin
+## Before you begin
 
 Be sure that you have:
 
@@ -652,11 +652,11 @@ Give heading levels a meaningful hierarchy to ensure accessible navigation and s
 
 <Example>
 
-<h1 class="toc-ignore">Page Title</h1>
+<h1 class="toc-ignore">Page title</h1>
 
 <h2 class="toc-ignore">Header</h2>
 
-<h3 class="toc-ignore">Sub Header</h3>
+<h3 class="toc-ignore">Sub header</h3>
 
 <h4 class="toc-ignore">Section not listed on TOC</h4>
 
@@ -664,12 +664,12 @@ Give heading levels a meaningful hierarchy to ensure accessible navigation and s
 
 ```markdown
 ---
-title: Page Title
+title: Page title
 ---
 
 ## Header
 
-### Sub Header
+### Sub header
 ##### Section not listed on TOC
 ```
 
@@ -697,7 +697,7 @@ This is the optimal place to provide links to external resources on the subject,
 
 <Example>
 
-<h2 className="toc-ignore"> See Also</h2>
+<h2 className="toc-ignore">More resources</h2>
 
 - [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
@@ -705,7 +705,7 @@ This is the optimal place to provide links to external resources on the subject,
 <hr className="source-code" /> <br/>
 
 ```markdown
-## More Resources
+## More resources
 
 - [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
