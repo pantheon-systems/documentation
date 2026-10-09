@@ -32,6 +32,12 @@ Support for Next.js is available to customers with Gold, Platinum or Diamond Wor
 ### Usage
 To get up and running with Next.js on Pantheon, we recommend [starting with a simple "Hello World" site following this tutorial](/nextjs/hello-world-tutorial) or a basic integration of [Next.js and Content Publisher](/nextjs/content-publisher-tutorial).
 
+To pair Next.js with a CMS backend, start with the guide for your content source:
+
+* [Drupal + Next.js Quick Start](/nextjs/drupal-quickstart) — a decoupled Drupal 11 backend serving Next.js over JSON:API, with [cache revalidation](/nextjs/drupal-revalidation-tutorial) and [draft preview](/nextjs/drupal-preview-tutorial).
+* [WordPress on-demand cache revalidation](/nextjs/wordpress-revalidation-tutorial) — a headless WordPress backend serving Next.js over the WP REST API.
+* [Content Publisher](/nextjs/content-publisher-tutorial) — author in Google Docs with no backend to host.
+
 If you have previously launched a Next.js site via [Pantheon's Front-End Sites, use this guide for migration](/nextjs/migrating-from-front-end-sites).
 
 Most of the tasks related to developing a site with Next.js on Pantheon can be done through the Pantheon dashboard.
