@@ -169,12 +169,15 @@ async function checkLinks(items, { fetchImpl = fetch, prPaths = new Set(), limit
   await Promise.all(pages.slice(0, limit).map(async ([key, list]) => {
     let res, html = null;
     try {
-      res = await fetchImpl(SITE + key, { redirect: "follow", signal: AbortSignal.timeout(20000) });
+      const target = safeSitePath(key);
+      if (!target) { for (const it of list) add(it, "link-unchecked", "info", `Not checked: ${key} isn't a plain site path.`); return; }
+      res = await fetchImpl(target, { redirect: "follow", signal: AbortSignal.timeout(20000) });
       if (res.status >= 200 && res.status < 400 && list.some((x) => x.anchor)) html = await res.text();
     } catch (e) { for (const it of list) add(it, "link-unchecked", "info", `Couldn't check ${key}: ${e.message}.`); return; }
     if (res.status === 404 || res.status === 410) { for (const it of list) add(it, "link-broken", "warn", `${key} returns ${res.status} on docs.pantheon.io. The page doesn't exist, or isn't published yet.`); return; }
     if (res.status >= 400) { for (const it of list) add(it, "link-unchecked", "info", `Couldn't check ${key}: HTTP ${res.status}.`); return; }
-    for (const it of list) if (it.anchor && html !== null && !new RegExp(`(?:id|name)=["']${it.anchor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`).test(html)) add(it, "link-anchor-missing", "warn", `#${it.anchor} isn't an id on ${key}.`);
+    const hasAnchor = (a) => html.includes(`id="${a}"`) || html.includes(`id='${a}'`) || html.includes(`name="${a}"`) || html.includes(`name='${a}'`);
+    for (const it of list) if (it.anchor && html !== null && /^[A-Za-z0-9_.:%-]+$/.test(it.anchor) && !hasAnchor(it.anchor)) add(it, "link-anchor-missing", "warn", `#${it.anchor} isn't an id on ${key}.`);
   }));
   return findings;
 }
@@ -202,6 +205,28 @@ function render(label, findings, noInfo) {
   return out.join("\n");
 }
 
+// Inputs that reach gh arguments, the fetched URL, and the file system are validated before use.
+function assertPrNumber(v) {
+  if (!/^[1-9][0-9]{0,8}$/.test(String(v))) throw new Error("--pr needs a PR number, such as --pr 10346");
+  return String(v);
+}
+function assertRepo(v) {
+  const ok = /^[A-Za-z0-9_.-]{1,100}\/[A-Za-z0-9_.-]{1,100}$/.test(String(v)) && String(v).split("/").every((seg) => !/^\.+$/.test(seg));
+  if (!ok) throw new Error("--repo needs owner/name, such as pantheon-systems/documentation");
+  return String(v);
+}
+// A site path like /nextjs/cli-tools, with no scheme, host, or dot segments. Returns null when it isn't one.
+function safeSitePath(key) {
+  if (!/^\/[A-Za-z0-9._~%\/-]*$/.test(key) || key.split("/").some((seg) => seg === "..")) return null;
+  const url = new URL(key, SITE);
+  return url.origin === SITE ? url.href : null;
+}
+function assertMarkdownFile(file) {
+  if (!/\.(md|markdown)$/i.test(file)) throw new Error(`${file}: style-check reads Markdown files (.md). Use --text to read from stdin.`);
+  if (!fs.statSync(file).isFile()) throw new Error(`${file} isn't a file.`);
+  return file;
+}
+
 function gh(args) {
   return execFileSync("gh", args, { encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "pipe"] });
 }
@@ -220,6 +245,8 @@ function changedLines(patch) {
 }
 
 async function checkPr(number, repo, noInfo, allLines, checkLinkTargets) {
+  number = assertPrNumber(number);
+  repo = assertRepo(repo);
   const info = JSON.parse(gh(["api", `repos/${repo}/pulls/${number}`]));
   const sha = info.head.sha;
   const files = JSON.parse(gh(["api", "--paginate", "--slurp", `repos/${repo}/pulls/${number}/files?per_page=100`])).flat();
@@ -335,6 +362,10 @@ async function selfTest() {
   expect(has(lf, "link-broken", 3) && lf.find((x) => x.id === "link-broken").level === "warn", "404 is a warn");
   expect(has(lf, "link-unchecked", 4) && has(lf, "link-unchecked", 5), "network error and 503 are unchecked, not broken");
   expect(!lf.some((x) => x.line === 6), "a page the PR adds is skipped");
+  const throws = (fn) => { try { fn(); return false; } catch { return true; } };
+  expect(assertPrNumber("10346") === "10346" && throws(() => assertPrNumber("10346; rm")) && throws(() => assertPrNumber("0")) && throws(() => assertPrNumber("../1")), "PR numbers are digits only");
+  expect(assertRepo("pantheon-systems/documentation") === "pantheon-systems/documentation" && throws(() => assertRepo("a/../b")) && throws(() => assertRepo("a/..")) && throws(() => assertRepo("a b/c")) && throws(() => assertRepo("only-one")), "repo names are owner/name, with no dot segments");
+  expect(safeSitePath("/nextjs/cli-tools") === "https://docs.pantheon.io/nextjs/cli-tools" && safeSitePath("/a/../b") === null && safeSitePath("//evil.example/x") === null && safeSitePath("/x y") === null && safeSitePath("/x?q=1") === null, "site paths are plain paths on docs.pantheon.io");
   const fenced = analyze("---\ntitle: x\ndescription: y\n---\n\n```sh\nwe will  \n\tcode\n```\n", {});
   expect(!fenced.some((x) => ["will", "first-person-plural", "trailing-space", "tab"].includes(x.id)), "code fences are skipped");
 
@@ -374,7 +405,7 @@ async function main(argv) {
   } else {
     const files = args.filter((a, i) => !a.startsWith("--") && args[i - 1] !== "--repo");
     for (const file of files) {
-      const f = analyze(fs.readFileSync(file, "utf8"), { path: file, releaseNote });
+      const f = analyze(fs.readFileSync(assertMarkdownFile(file), "utf8"), { path: file, releaseNote });
       if (f.some((x) => x.level === "error")) exit = 1;
       outputs.push(json ? { file, findings: f } : render(file, f, noInfo));
     }
@@ -386,4 +417,4 @@ async function main(argv) {
 if (require.main === module) {
   main(process.argv).then((code) => { process.exitCode = code; }).catch((e) => { console.error(`style-check: ${e.message}`); process.exitCode = 2; });
 }
-module.exports = { analyze, internalLinks, checkLinks };
+module.exports = { analyze, internalLinks, checkLinks, assertPrNumber, assertRepo, safeSitePath };
