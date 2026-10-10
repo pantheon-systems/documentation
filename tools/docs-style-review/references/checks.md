@@ -64,7 +64,7 @@ The script skips fenced code blocks and, in the front matter, checks only `descr
 | Bold and italics | Bold marks UI navigation. Emphasis is italic, never bold. | Bold; Italics |
 | Placeholder text and variables | Placeholders and variables follow the guide's format. | Placeholder Text; Variables |
 | Code samples | Inline code for file names, variables, commands, and output. Blocks are fenced with a language. | Code Samples |
-| Before You Begin | Prerequisites are listed, and Terminus pages link the Terminus guide. | Before You Begin |
+| Before You Begin | Prerequisites are listed, and Terminus pages link the Terminus guide. | Before You Begin Sections |
 | Link text | Descriptive, not "click here" or a whole sentence. | Hyperlinks |
 | Release-note description | Reads on its own as plain text. | RSS feed |
 | Product claims | Capabilities, versions, and limits. Mark `unverified` and name who confirms. | none: evidence |
