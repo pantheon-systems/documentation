@@ -89,7 +89,8 @@ Rules for the extra filters:
 - **Engineering-owned PRs.** The stuck check tags bot PRs and `documentation` PRs that change no content file as "Engineering-owned". Don't review them as docs; say who owns the site code, and draft a nudge if asked.
 - **`backstop_vrt`.** On a release-note PR it fails by design. Elsewhere it's often a screenshot-timing false positive. The stuck check says which. Read the Backstop report only when the PR touches design, CSS or packages.
 - **Merging.** The person who asked for the review merges, unless they asked the reviewer to "review and merge". Never merge for them.
-- **Claiming a PR.** Assign yourself and add a label.
+- **Claiming a PR.** Assign yourself and add a `Type:` and a `Topic:` label.
+- **Blocked and held PRs.** `Process: Blocked` means something outside docs is in the way (for example a guide waiting on a platform fix). `Process: Hold for Release` means it ships with the announcement. The stuck check reports both from the label. Don't nudge the author; say what it waits on and who owns that.
 - **Your own PRs.** Every filter except `my-queue` includes them, tagged `yours`.
 - **Don't answer from a bookmarked search URL.** A link for "reviewed but no decision" that only says `review-requested:@me` doesn't test for comment-only reviews. Use `no-decision`.
 - **Local config.** An optional, gitignored `scripts/config.local.json` adds repos, review-request orgs, a default `awaiting` team and an `engineering` owner name, for example `{"repos": ["documentation"], "orgs": [], "team": [], "engineering": "..."}`. If `references/repos.local.md` exists, read it for the repos in that file.
@@ -106,6 +107,10 @@ Only when the reviewer says yes, and one PR at a time. Follow [references/review
 node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N>
 ```
 
+After the packet, for a PR that changes docs pages, offer the style pass once: "Want a style review of this PR's pages? It runs `docs-style-review`: a mechanical pass, Vale's comments checked against the file, and a read for voice and terminology." Run it only on a yes, and only if `~/.claude/skills/docs-style-review` exists. If it doesn't, say the skill isn't installed and give the install line from `tools/docs-style-review/README.md`.
+
+If the reviewer asks to style review the whole queue, run the outline first. Then take each PR that has changed docs pages, one at a time: the packet, then the style pass, then ask before the next. Skip bot PRs, engineering-owned PRs, and PRs with no changed pages, and say which you skipped.
+
 For another repo (a queue run with `--repo`), the procedure's generic path applies, because there's no preview or published-page rule for it.
 
 ## 5. Rules
@@ -119,5 +124,7 @@ For another repo (a queue run with `--repo`), the procedure's generic path appli
 - **Don't open previews on your own.** `--open` runs only after the reviewer agrees, and starts with `--dry-run`.
 
 ## 6. Before you call a PR done
+
+**Release notes hit RSS.** For any PR that adds or changes a file in `src/source/releasenotes/`, state its `published_at` value and that the feed publishes it verbatim as the item date, whether or not you ran the packet. Say whether it matches the publication time, and tell the reviewer to update it at merge if it doesn't. Only the front matter and description reach the feed, never the body. The queue outline and the packet both report it; a hand review has to as well.
 
 Re-read the request. State what you checked, what you couldn't (rendering, cross-links, anything behind login), and what needs the reviewer's eyes.

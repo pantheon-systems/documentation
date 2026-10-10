@@ -115,7 +115,8 @@ node tools/docs-devrel-review-queue/scripts/docs-pr-review.cjs 10269 --json \
 | Draft untouched | 7 days |
 | No activity at all | 14 days |
 | A check still running | More than 2 hours |
-| Also flagged | Failing checks, merge conflicts, approved but merge blocked, `backstop_vrt` failing on a branch that's behind `main` |
+| Also flagged | Failing checks, merge conflicts, approved but merge blocked, `backstop_vrt` failing on a branch that's behind `main`, PRs labeled `Process: Blocked` or `Process: Hold for Release`, and PRs only a bot or engineers should handle |
+| Release notes | Every PR that adds or changes a file in `src/source/releasenotes/` shows its `published_at` and age. The RSS feed publishes that value as the item date, so set it to the actual publication time at merge. A missing value or a `T00:00:00Z` placeholder is flagged separately. |
 
 A `backstop_vrt` failure on a branch behind `main` is usually drift, not a defect: the check compares the PR's multidev with the `dev` environment, which tracks `main`. Merge `main` in and re-run before judging it. The check is not required to merge. Issue [#10308](https://github.com/pantheon-systems/documentation/issues/10308) tracks it.
 
@@ -152,6 +153,10 @@ docs-devrel-review-queue/
 - **Validate a change.** `for f in tools/docs-devrel-review-queue/scripts/*.cjs; do node --check "$f"; done`, then run both scripts against a real PR.
 - **Input handling.** Repo names are validated against a strict pattern, and GraphQL values go in as variables, never interpolated into the query.
 - **Other repos.** `--repo` works on any repo in the org, but the skill has no repo-specific rules for any repo except `documentation`.
+
+## Style pass
+
+While you walk through a PR, the skill offers a style review of its changed pages with the [style review skill](../docs-style-review/README.md). It runs only on a yes. Say "style review the queue" to run it for each PR in turn.
 
 ## Files
 
