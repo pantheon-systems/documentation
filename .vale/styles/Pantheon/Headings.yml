@@ -24,7 +24,12 @@ exceptions:
   - GitHub
   - GitLab
   - Google
+  - ASN
+  - ASNs
   - HTTP
+  - IP
+  - JA4
+  - WAF
   - HTTPS
   - Jenkins
   - Live
@@ -48,6 +53,8 @@ exceptions:
   - WP-CLI
   - WordPress
   - YAML
+  - pantheon.yml
+  - pantheon-edge.yml
   - macOS
   - iOS
   - A Record
