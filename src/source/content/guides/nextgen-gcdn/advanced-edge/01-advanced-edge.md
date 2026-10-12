@@ -26,8 +26,8 @@ It currently includes:
 * [Geo Blocking](#geo-blocking) 
 * [Enterprise WAF](#enterprise-waf)
 * [Image Optimization](#image-optimization)
-* [Rate Limiting](/guides/nextgen-gcdn/rate-limiting)
-* [Geolocation](/guides/nextgen-gcdn/geolocation)
+* [Rate Limiting](/guides/nextgen-gcdn/advanced-edge/rate-limiting)
+* [Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation)
 
 Workspace-level features are configured under the **Edge** tab in the dashboard. Site-level features, Rate Limiting and Geolocation, are configured in a [`pantheon-edge.yml` file](#configure-features-with-pantheon-edgeyml) in your site's code.
 
@@ -52,7 +52,7 @@ Dashboard nav: **Edge** > **IP Blocking**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/ip-blocking` 
 
-![dashboard showing ip blocking interface](../../../images/dashboard/ip-blocking.jpg)
+![dashboard showing ip blocking interface](../../../../images/dashboard/ip-blocking.jpg)
 
 ### How to add IP addresses
 1. Click **Create new version**.
@@ -67,7 +67,7 @@ URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/ip-blocking`
 1. Duplicate entries are flagged inline as row errors before publishing — they are not silently merged.
 1. Click **Publish configuration** — this creates a new immutable version, it does not edit the active version in place.
 
-   ![dashboard showing ip blocking interface](../../../images/dashboard/block-ip-addresses.jpg)
+   ![dashboard showing ip blocking interface](../../../../images/dashboard/block-ip-addresses.jpg)
 
 ### Limits
 Maximum 10,000 entries per version.
@@ -86,7 +86,7 @@ Dashboard nav: **Edge** > **ASN Blocking**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/asn-blocking` 
 
-![dashboard showing asn blocking interface](../../../images/dashboard/asn-blocking.jpg)
+![dashboard showing asn blocking interface](../../../../images/dashboard/asn-blocking.jpg)
 
 ### How to add ASNs
 
@@ -96,7 +96,7 @@ URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/asn-blocking`
 1. Valid range: 1–4,294,967,295 (32-bit). 
 1. Publish creates a new immutable version.
 
-![dashboard showing asn blocking interface](../../../images/dashboard/block-asn.jpg)
+![dashboard showing asn blocking interface](../../../../images/dashboard/block-asn.jpg)
 
 ### Limits
 10,000 entries per version.
@@ -115,9 +115,9 @@ URL: `/workspace/{workspaceId}/edge-agcdn/configurations/geo-blocking`.
 
 Two independent lists live on this page, switchable by tab: Countries and Subdivisions.
 
-![dashboard showing geo blocking interface](../../../images/dashboard/geo-blocking.jpg)
+![dashboard showing geo blocking interface](../../../../images/dashboard/geo-blocking.jpg)
 
-![dashboard showing geo blocking interface](../../../images/dashboard/geo-blocking-subdivisions.jpg)
+![dashboard showing geo blocking interface](../../../../images/dashboard/geo-blocking-subdivisions.jpg)
 
 ### How to add locations
 1. Click **Create new version**.
@@ -127,7 +127,7 @@ Two independent lists live on this page, switchable by tab: Countries and Subdiv
 1. Click **Add location** to add more rows before publishing.
 1. The publish confirmation groups changes into collapsible “Countries (n)” / “Subdivisions (n)” panels for review.
 
-![dashboard showing geo blocking interface](../../../images/dashboard/block-geo-form.jpg)
+![dashboard showing geo blocking interface](../../../../images/dashboard/block-geo-form.jpg)
 
 ### Limits
 Maximum 8,192 entries per version — lower than IP/ASN blocking’s 10,000 ceiling.
@@ -168,7 +168,7 @@ Applies to all sites in the workspace.
 
 ## Configure features with pantheon-edge.yml
 
-[Rate Limiting](/guides/nextgen-gcdn/rate-limiting) and [Geolocation](/guides/nextgen-gcdn/geolocation) are configured in a file named `pantheon-edge.yml` at the root of your site's code repository, next to [`pantheon.yml`](/pantheon-yml). There is no dashboard page for these two features.
+[Rate Limiting](/guides/nextgen-gcdn/advanced-edge/rate-limiting) and [Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation) are configured in a file named `pantheon-edge.yml` at the root of your site's code repository, next to [`pantheon.yml`](/pantheon-yml). There is no dashboard page for these two features.
 
 ### Requirements
 

@@ -7,7 +7,7 @@ tags: [cache, cdn, geolocation]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
 reviewed: "2026-10-12"
-permalink: docs/guides/nextgen-gcdn/geolocation
+permalink: docs/guides/nextgen-gcdn/advanced-edge/geolocation
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]

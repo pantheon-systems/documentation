@@ -7,7 +7,7 @@ tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
 reviewed: "2026-10-12"
-permalink: docs/guides/nextgen-gcdn/rate-limiting
+permalink: docs/guides/nextgen-gcdn/advanced-edge/rate-limiting
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]
