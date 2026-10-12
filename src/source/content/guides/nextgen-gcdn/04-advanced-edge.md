@@ -2,7 +2,7 @@
 title: Next-generation Global CDN
 subtitle: "Pantheon Advanced Edge Features"
 navtitle: Advanced Edge
-description: Learn how to configure Pantheon's Advanced Edge, like how to block certain IPs or regions, turn on the Enterprise WAF, optimize images, or use pantheon-edge.yml to set up rate limiting and geolocation.
+description: Learn how to configure Pantheon's Advanced Edge, block certain IPs or regions, turn on the Enterprise WAF, optimize images, or use pantheon-edge.yml to set up rate limiting and geolocation.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
