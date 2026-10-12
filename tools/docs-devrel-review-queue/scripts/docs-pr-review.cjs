@@ -245,11 +245,16 @@ function formatMarkdown(packet, now = Date.now(), describeAge = loadResolver().d
     warnings.push(`- Permalink changed in ${change.filename.split("/").pop()}: ${change.before || "none"} -> ${change.after || "none"}. Check redirects in src/middleware.ts (${packet.middlewareUrl}) and cross-links to the old path.`);
   }
   for (const note of packet.releaseNotes) {
+    const name = note.filename.split("/").pop();
     if (note.time === null) {
-      warnings.push(`- Release note ${note.filename.split("/").pop()} has no published_at or published_date. The RSS timestamp needs a date.`);
+      warnings.push(`- Release note ${name} has no published_at or published_date. The RSS feed needs published_at, and validate-release-notes.yml fails without it.`);
+    } else if (!/T\d/.test(note.value)) {
+      warnings.push(`- Release note ${name}: only a date (${note.value}), no published_at. validate-release-notes.yml fails without it, and the feed would use a synthetic time.`);
+    } else if (/T00:00:00Z$/.test(note.value)) {
+      warnings.push(`- Release note ${name}: published_at ${note.value} is a midnight placeholder. validate-release-notes.yml rejects it; set the actual publication time.`);
     } else {
       const stale = now - note.time > DAY_MS;
-      warnings.push(`- Release note ${note.filename.split("/").pop()}: ${note.value} (${describeAge(note.time, now)}). This feeds the RSS timestamp.${stale ? " The date is in the past, so Slack may not treat it as new; a fixup PR may be needed." : ""}`);
+      warnings.push(`- Release note ${name}: published_at ${note.value} (${describeAge(note.time, now)}). The RSS feed publishes this as the item date, so set it to the actual publication time at merge.${stale ? " It is more than a day old; Slack may not treat the item as new." : ""}`);
     }
   }
   lines.push(...(warnings.length ? warnings : ["None."]));
@@ -277,7 +282,7 @@ function formatMarkdown(packet, now = Date.now(), describeAge = loadResolver().d
     "Compare the preview with the live page.",
     "Check tables, formatting, capitalization, and Pantheon terminology."
   ];
-  if (packet.releaseNotes.length) steps.push("Confirm the release-note date/timestamp is current; otherwise make a quick fixup PR.");
+  if (packet.releaseNotes.length) steps.push("Set release-note published_at to the actual publication time at merge (the RSS feed uses it as the item date); confirm the release time in the docs channel.");
   if (packet.permalinkChanges.length) steps.push("Verify the redirect in middleware.ts and check cross-links.");
   lines.push(...steps.map((s) => `- [ ] ${s}`));
   return lines.join("\n");
