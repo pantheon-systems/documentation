@@ -18,7 +18,7 @@ integration: [--]
 ---
 
 ## What is Advanced Edge? 
-The Advanced Edge (formerly [Advanced Global CDN](/guides/agcdn)) is a set of workspace-level and site-level edge configuration tools that let customers self-serve CDN-layer changes that previously required a support ticket. 
+The Advanced Edge (formerly [Advanced Global CDN](/guides/agcdn)) is a set of workspace-level and site-level edge configuration tools that let customers self-serve CDN-layer changes that previously required a support ticket.
 
 It currently includes: 
 * [IP Blocking](#ip-blocking)
