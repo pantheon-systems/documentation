@@ -140,7 +140,8 @@ The exact initialization file name, package APIs, and supported runtime behavior
 Set these values with [Secrets Manager](/nextjs/environment-variables), for example `terminus secret:site:set <site>.<env> NEW_RELIC_LICENSE_KEY <your-license-key> --type=env --scope=web`. Do not commit the license key to Git. Secrets take effect on the next build, so rebuild after setting them.
 
 ```text
-OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://otlp.nr-data.net:4318/v1/traces
+NEW_RELIC_APP_NAME=<your-app-name>
+OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=<your OTLP endpoint>
 NEW_RELIC_LICENSE_KEY=<customer-managed-secret>
 ```
 
@@ -159,6 +160,7 @@ Deploy the instrumentation to a non-Live environment and generate traffic. Then 
 - Trace volume and latency are acceptable before enabling additional instrumentations or higher sampling.
 
 ![New Relic traces from a Pantheon Next.js website](../../images/nextjs/new-relic.png)
+![New Relic trace transactions from a Pantheon Next.js website](../../images/nextjs/new-relic-transactions.png)
 
 A request reaching the application does not guarantee that a trace was exported. Exporter credentials, endpoint reachability, sampling, process shutdown behavior, and vendor-side ingestion can each affect what appears in New Relic.
 
