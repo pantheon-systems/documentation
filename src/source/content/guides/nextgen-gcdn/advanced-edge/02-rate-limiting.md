@@ -19,6 +19,14 @@ integration: [--]
 
 Rate Limiting limits how many requests a single client can make to a site environment in a set time window. Clients that go over the limit receive an HTTP 429 (Too Many Requests) response at the edge, so the extra requests never reach your site. Use Rate Limiting to protect your site from scrapers, aggressive bots, and traffic spikes from a single source.
 
+## Before you begin
+
+Be sure that you have:
+
+- A site on [Next-generation Global CDN](/guides/nextgen-gcdn/setup), in a workspace whose plan includes Rate Limiting.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your site's codebase, so you can add `pantheon-edge.yml`.
+- An estimate of your site's peak traffic from a single client, so you can choose a tier that leaves room for real visitors.
+
 ## Where to configure it
 
 Add a `rate_limit` section to `pantheon-edge.yml`. Your workspace's plan must include Rate Limiting. For how the file works and how changes go live, see [Configure features with pantheon-edge.yml](/guides/nextgen-gcdn/advanced-edge#configure-features-with-pantheon-edgeyml).
@@ -114,3 +122,10 @@ Too Many Requests
 ## Scope
 
 Applies to one site environment, across all of that environment's hostnames. Each environment uses the `pantheon-edge.yml` in its own code.
+
+## More resources
+
+- [Advanced Edge](/guides/nextgen-gcdn/advanced-edge)
+- [Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation)
+- [Next-generation Global CDN](/guides/nextgen-gcdn)
+- [Bypassing Cache with HTTP Headers](/cache-control)
