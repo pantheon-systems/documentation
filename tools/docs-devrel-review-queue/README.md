@@ -154,6 +154,10 @@ docs-devrel-review-queue/
 - **Input handling.** Repo names are validated against a strict pattern, and GraphQL values go in as variables, never interpolated into the query.
 - **Other repos.** `--repo` works on any repo in the org, but the skill has no repo-specific rules for any repo except `documentation`.
 
+## Style pass
+
+While you walk through a PR, the skill offers a style review of its changed pages with the [style review skill](../docs-style-review/README.md). It runs only on a yes. Say "style review the queue" to run it for each PR in turn.
+
 ## Files
 
 - `SKILL.md`: the skill's instructions.

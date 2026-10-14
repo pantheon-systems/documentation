@@ -107,6 +107,10 @@ Only when the reviewer says yes, and one PR at a time. Follow [references/review
 node ~/.claude/skills/docs-devrel-review-queue/scripts/docs-pr-review.cjs <N>
 ```
 
+After the packet, for a PR that changes docs pages, offer the style pass once: "Want a style review of this PR's pages? It runs `docs-style-review`: a mechanical pass, Vale's comments checked against the file, and a read for voice and terminology." Run it only on a yes, and only if `~/.claude/skills/docs-style-review` exists. If it doesn't, say the skill isn't installed and give the install line from `tools/docs-style-review/README.md`.
+
+If the reviewer asks to style review the whole queue, run the outline first. Then take each PR that has changed docs pages, one at a time: the packet, then the style pass, then ask before the next. Skip bot PRs, engineering-owned PRs, and PRs with no changed pages, and say which you skipped.
+
 For another repo (a queue run with `--repo`), the procedure's generic path applies, because there's no preview or published-page rule for it.
 
 ## 5. Rules
