@@ -1,6 +1,7 @@
 ---
 title: Next.js Security Release now available
-published_date: 2026-10-14
+published_date: "2026-10-14"
+published_at: "2026-10-14T17:47:59Z"
 categories:
   - nextjs
   - action-required
