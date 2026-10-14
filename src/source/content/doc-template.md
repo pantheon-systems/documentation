@@ -54,7 +54,7 @@ Because this section will have its own subsections, a line or two to briefly des
 ### Our second subsection
 1. This section may reference concepts already described above easily in each step with `in-line code snippets`.
 
-1. If new concepts or ideas are introduced, we'll use *italics* to emphasize it.
+1. If new concepts or ideas are introduced, we'll use **bold** to emphasize it.
 
 1. Finally, let's some code block examples, with a more interesting syntax to highlight.
 

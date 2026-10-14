@@ -655,7 +655,7 @@ These additional icons will be deprecated but are currently available to represe
 
 ## Italics
 
-Use italics for emphasis in running text, and for the first use of a new term. Use emphasis sparingly. Bold text is read as an interface label or a structural label (see [Bold](#bold)), so it's the wrong signal for emphasis.
+Use italics for emphasis in running text. Use emphasis sparingly. Bold text is read as an interface label or a structural label (see [Bold](#bold)), so it's the wrong signal for emphasis.
 
 <Example>
 
