@@ -8,6 +8,9 @@ indicators:
   - ':'
 # Proper nouns, product names, and acronyms that keep their capitalization mid-heading.
 # Vocab accept.txt covers spelling; this list covers capitalization checks.
+# Names verified against each owner's own site; see the PR that added them. Multi-word entries
+# match as a phrase, so 'WordPress Multisite' (the feature name) is exempt but a bare 'Multisite'
+# in generic use is not.
 exceptions:
   - Composer
   - CDN
@@ -66,3 +69,25 @@ exceptions:
   - MX
   - TTL
   - TXT
+  - Amazon S3
+  - Apache Tika
+  - Behat
+  - Cygwin
+  - Event Espresso
+  - Gandi
+  - Git Updater
+  - GitHub App
+  - Jira
+  - Let's Encrypt
+  - Modernizr
+  - Namecheap
+  - Opensolr
+  - Percona Toolkit
+  - Percona Toolkit's
+  - Pingdom
+  - Pressflow
+  - Salesforce
+  - SendGrid
+  - Trello
+  - WP Offload Media
+  - WordPress Multisite
