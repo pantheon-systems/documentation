@@ -1,7 +1,7 @@
 ---
 title: "Next-generation Advanced Global CDN: Phase 2 migrations begin October 15"
-published_date: "2026-10-15"
-published_at: "2026-10-15T00:00:00Z"
+published_date: "2026-10-14"
+published_at: "2026-10-14T17:24:57Z"
 categories: [new-feature, infrastructure, action-required]
 description: "Starting October 15, 2026, AGCDN customers who use rate limiting or geolocation, and whose current configuration is fully supported in Phase 2, are eligible to migrate. Pantheon will contact eligible customers directly."
 ---
