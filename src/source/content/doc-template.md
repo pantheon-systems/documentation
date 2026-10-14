@@ -93,7 +93,7 @@ Images of terminal output is frowned upon. When small changes are required to co
 </Alert>
 
 ## Other considerations
- - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/)
+ - Prefer active, direct constructions. See [To Be or Not To Be](http://writing.rocks/to-be-or-not-to-be/).
  - Avoid colloquialisms and personal opinions, feelings, or anecdotes.
  - Only assume as much knowledge from the reader as specified in [Before you begin](#before-you-begin). Otherwise explain everything.
 

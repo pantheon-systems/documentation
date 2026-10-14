@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [wordsmither]
-reviewed: "2026-07-27"
+reviewed: "2026-10-14"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
@@ -21,7 +21,12 @@ Detailed style guidelines can be found in the [Google Developers Documentation S
 
 ## Bold
 
-Bold is used for navigational elements within a given interface:
+Use bold for four things:
+
+1. Interface elements: labels, buttons, tabs, menu items, and navigation paths.
+1. Structural labels: a short run-in label that starts a paragraph or list item and ends in a colon, such as `**Alias:**`.
+1. The term being defined, where it first appears: `**Development Mode** is a state where...`.
+1. Emphasis on something the reader must not miss, such as a warning, a required step, or a condition they can't skip. Use it sparingly so it keeps its weight. For anything longer than a phrase, use a [callout](#callouts). For lighter emphasis, use [italics](#italics).
 
 <Example>
 
@@ -34,6 +39,34 @@ Go to **Account** > **Security** > **Personal Access Tokens**.
 ```
 
 </Example>
+
+<Example>
+
+- **WordPress:** `wp-content/uploads`
+- **Drupal:** `sites/default/files`
+
+<hr className="source-code" /> <br/>
+
+```markdown
+- **WordPress:** `wp-content/uploads`
+- **Drupal:** `sites/default/files`
+```
+
+</Example>
+
+<Example>
+
+Deleting a Multidev environment **permanently removes its code and database**.
+
+<hr className="source-code" /> <br/>
+
+```markdown
+Deleting a Multidev environment **permanently removes its code and database**.
+```
+
+</Example>
+
+Keep run-in labels short, and use them consistently within a list. If every item needs a label of more than a few words, use a table or headings instead.
 
 ## Callouts
 
@@ -634,14 +667,16 @@ These additional icons will be deprecated but are currently available to represe
 
 ## Italics
 
+Use italics for lighter emphasis: stressing a word or contrasting two options within a sentence. Use it sparingly. If readers must not miss the point, use [bold](#bold) instead.
+
 <Example>
 
-Emphasis should *always* be stressed with italics, and *never* with bold.
+Back up the site *before* you run the update.
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-Emphasis should *always* be stressed with italics, and *never* with bold.
+Back up the site *before* you run the update.
 ```
 
 </Example>
@@ -1148,7 +1183,7 @@ Use the Wistia component to embed Wistia videos. Set only the `src` without `tit
 Some General Rules:
 
 - Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
-- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
+- Prefer active, direct constructions. Remove unnecessary forms of "to be" when doing so improves clarity. This is editorial guidance, not a strict rule: keep a form of "to be" when the sentence reads better with it. See [To Be or Not To Be](http://writing.rocks/to-be-or-not-to-be/).
 - Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
 - Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
 - Use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) for all headings.
