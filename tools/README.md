@@ -11,6 +11,8 @@ Small, self-contained helpers for people who review and maintain the Pantheon do
 
 New here? Install the extension first. It has the shortest path from zero to a working review: load it, open a docs PR, click the lightning bolt.
 
+Want a walkthrough, daily routines, and lookup tables for both tools? See the [docs review guide](docs-review-guide/README.md).
+
 ## How they fit together
 
 They share one idea: a docs PR is a pull request that changes Markdown, and every changed page has three URLs worth looking at (the multidev preview, the live page, and the GitHub diff).

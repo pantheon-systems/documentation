@@ -1,0 +1,13 @@
+WEBVTT
+
+00:02.390 --> 00:11.290
+To share this view, copy a link to the pull request's Files changed page, with two parameters: pantheon_panel, and page.
+
+00:11.690 --> 00:13.790
+Paste it into a new tab.
+
+00:14.190 --> 00:21.290
+With the extension installed, the tab becomes the review view. Without it, the link opens Files changed.
+
+00:24.190 --> 00:27.290
+The review queue skill prints these links for you.

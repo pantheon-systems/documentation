@@ -1,0 +1,16 @@
+WEBVTT
+
+00:01.900 --> 00:06.400
+To review one pull request, run the packet script with its number.
+
+00:13.200 --> 00:19.600
+The header gives the state, and how far the branch is behind main. This pull request is closed.
+
+00:19.200 --> 00:27.200
+Links lists the multidev preview, the live page, the diff, and the 2-panel and 3-panel links for each changed page.
+
+00:28.000 --> 00:36.200
+Warnings, Preview, and CI follow. A closed pull request's preview returns 404, and the packet says so.
+
+00:36.600 --> 00:42.100
+To get links for several pull requests at once, pass their numbers with the table flag.

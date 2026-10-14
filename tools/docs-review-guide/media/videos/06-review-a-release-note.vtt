@@ -1,0 +1,13 @@
+WEBVTT
+
+00:01.900 --> 00:05.700
+For a release note, run the packet on its pull request.
+
+00:09.000 --> 00:14.000
+Under Warnings, the packet shows the note's published_at value, and its age.
+
+00:14.400 --> 00:21.900
+The RSS feed publishes that value as the item date, so set it to the actual publication time at merge.
+
+00:22.300 --> 00:25.300
+The checklist at the bottom repeats the step.
