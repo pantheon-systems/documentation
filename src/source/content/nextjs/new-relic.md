@@ -89,13 +89,7 @@ This file makes sure the node instrumentation is only called when the `nodejs` r
 ```ts
 // instrumentation.ts
 export async function register() {
-	if (process.env.NEXT_RUNTIME === 'nodejs') {
-		// Dynamically import the Node-specific setup
 		await import('./instrumentation.node');
-	}
-	if (process.env.NEXT_RUNTIME === 'edge') {
-		// Optional: await import('./instrumentation.edge');
-	}
 }
 ```
 
@@ -104,34 +98,25 @@ export async function register() {
 Create `instrumentation.node.ts` (or the JavaScript equivalent) in the location required by your Next.js version. This example instruments the Node.js runtime and exports traces to New Relic over OTLP/HTTP.
 
 ```ts
-import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node'
-import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http'
-import { resourceFromAttributes } from '@opentelemetry/resources'
-import { NodeSDK } from '@opentelemetry/sdk-node'
-import { ATTR_SERVICE_NAME } from '@opentelemetry/semantic-conventions'
+export async function loadNewRelicAgent() {
+  const { default: newrelic } = await import('newrelic')
+  const agent = newrelic?.agent
+  if (!agent || agent.collector?.isConnected?.()) {
+    return
+  }
 
-const serviceName = process.env.OTEL_SERVICE_NAME ?? 'nextjs-app'
-const exporter = new OTLPTraceExporter({
-  url: process.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT,
-  headers: {
-    'api-key': process.env.NEW_RELIC_LICENSE_KEY ?? '',
-  },
-})
-
-const sdk = new NodeSDK({
-  resource: resourceFromAttributes({
-    [ATTR_SERVICE_NAME]: serviceName,
-    'deployment.environment.name': process.env.APP_ENV ?? 'unknown',
-  }),
-  traceExporter: exporter,
-  instrumentations: [getNodeAutoInstrumentations()],
-})
-
-sdk.start()
-
-process.on('SIGTERM', () => {
-  sdk.shutdown().finally(() => process.exit(0))
-})
+  await new Promise((resolve) => {
+    const done = () => {
+      clearTimeout(timer)
+      agent.removeListener('started', done)
+      agent.removeListener('errored', done)
+      resolve()
+    }
+    const timer = setTimeout(done, 8000)
+    agent.once('started', done)
+    agent.once('errored', done)
+  })
+}
 ```
 
 The exact initialization file name, package APIs, and supported runtime behavior can change with Next.js and OpenTelemetry releases. Treat this as a starting point, not a Pantheon-certified adapter.
