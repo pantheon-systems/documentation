@@ -2,11 +2,11 @@
 title: Next-generation Global CDN
 subtitle: "Pantheon Advanced Edge Features"
 navtitle: Advanced Edge
-description: Learn how to configure Pantheon's Advanced Edge, like how to block certain IPs or regions, turn on the Enterprise WAF, or optimize images.
+description: Learn how to configure Pantheon's Advanced Edge, block certain IPs or regions, turn on the Enterprise WAF, optimize images, or use pantheon-edge.yml to set up rate limiting and geolocation.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-09-29"
+reviewed: "2026-10-12"
 permalink: docs/guides/nextgen-gcdn/advanced-edge
 contenttype: [guide]
 innav: [false]
@@ -18,7 +18,7 @@ integration: [--]
 ---
 
 ## What is Advanced Edge? 
-The Advanced Edge (formerly [Advanced Global CDN](/guides/agcdn)) is a set of workspace-level and YAML/site level edge configuration tools, under the Edge tab in the dashboard, that let customers self-serve CDN-layer changes that previously required a support ticket. 
+The Advanced Edge (formerly [Advanced Global CDN](/guides/agcdn)) is a set of workspace-level and site-level edge configuration tools that let customers self-serve CDN-layer changes that previously required a support ticket.
 
 It currently includes: 
 * [IP Blocking](#ip-blocking)
@@ -26,6 +26,10 @@ It currently includes:
 * [Geo Blocking](#geo-blocking) 
 * [Enterprise WAF](#enterprise-waf)
 * [Image Optimization](#image-optimization)
+* [Rate Limiting](/guides/nextgen-gcdn/advanced-edge/rate-limiting)
+* [Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation)
+
+Workspace-level features are configured under the **Edge** tab in the dashboard. Site-level features, Rate Limiting and Geolocation, are configured in a [`pantheon-edge.yml` file](#configure-features-with-pantheon-edgeyml) in your site's code.
 
 The following features are planned to be added in the future, amongst other features:
 * AI Bot Allowlist
@@ -48,7 +52,7 @@ Dashboard nav: **Edge** > **IP Blocking**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/ip-blocking` 
 
-![dashboard showing ip blocking interface](../../../images/dashboard/ip-blocking.jpg)
+![dashboard showing ip blocking interface](../../../../images/dashboard/ip-blocking.jpg)
 
 ### How to add IP addresses
 1. Click **Create new version**.
@@ -63,7 +67,7 @@ URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/ip-blocking`
 1. Duplicate entries are flagged inline as row errors before publishing — they are not silently merged.
 1. Click **Publish configuration** — this creates a new immutable version, it does not edit the active version in place.
 
-   ![dashboard showing ip blocking interface](../../../images/dashboard/block-ip-addresses.jpg)
+   ![dashboard showing ip blocking interface](../../../../images/dashboard/block-ip-addresses.jpg)
 
 ### Limits
 Maximum 10,000 entries per version.
@@ -82,7 +86,7 @@ Dashboard nav: **Edge** > **ASN Blocking**.
 
 URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/asn-blocking` 
 
-![dashboard showing asn blocking interface](../../../images/dashboard/asn-blocking.jpg)
+![dashboard showing asn blocking interface](../../../../images/dashboard/asn-blocking.jpg)
 
 ### How to add ASNs
 
@@ -92,7 +96,7 @@ URL pattern: `/workspace/{workspaceId}/edge-agcdn/configurations/asn-blocking`
 1. Valid range: 1–4,294,967,295 (32-bit). 
 1. Publish creates a new immutable version.
 
-![dashboard showing asn blocking interface](../../../images/dashboard/block-asn.jpg)
+![dashboard showing asn blocking interface](../../../../images/dashboard/block-asn.jpg)
 
 ### Limits
 10,000 entries per version.
@@ -111,9 +115,9 @@ URL: `/workspace/{workspaceId}/edge-agcdn/configurations/geo-blocking`.
 
 Two independent lists live on this page, switchable by tab: Countries and Subdivisions.
 
-![dashboard showing geo blocking interface](../../../images/dashboard/geo-blocking.jpg)
+![dashboard showing geo blocking interface](../../../../images/dashboard/geo-blocking.jpg)
 
-![dashboard showing geo blocking interface](../../../images/dashboard/geo-blocking-subdivisions.jpg)
+![dashboard showing geo blocking interface](../../../../images/dashboard/geo-blocking-subdivisions.jpg)
 
 ### How to add locations
 1. Click **Create new version**.
@@ -123,7 +127,7 @@ Two independent lists live on this page, switchable by tab: Countries and Subdiv
 1. Click **Add location** to add more rows before publishing.
 1. The publish confirmation groups changes into collapsible “Countries (n)” / “Subdivisions (n)” panels for review.
 
-![dashboard showing geo blocking interface](../../../images/dashboard/block-geo-form.jpg)
+![dashboard showing geo blocking interface](../../../../images/dashboard/block-geo-form.jpg)
 
 ### Limits
 Maximum 8,192 entries per version — lower than IP/ASN blocking’s 10,000 ceiling.
@@ -161,3 +165,34 @@ Click **Enable Image Optimization** to turn it on, or **Disable Image Optimizati
 
 ### Scope
 Applies to all sites in the workspace.
+
+## Configure features with pantheon-edge.yml
+
+[Rate Limiting](/guides/nextgen-gcdn/advanced-edge/rate-limiting) and [Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation) are configured in a file named `pantheon-edge.yml` at the root of your site's code repository, next to [`pantheon.yml`](/pantheon-yml). There is no dashboard page for these two features.
+
+### Requirements
+
+- Your workspace's Advanced Edge plan must include the feature. If it doesn't, the edge ignores that part of the file. Contact your account team to add a feature to your plan.
+- Each site environment has its own configuration, taken from the `pantheon-edge.yml` in that environment's code.
+
+### How changes go live
+
+1. Add or edit `pantheon-edge.yml` at the root of your repository.
+1. Commit and push the change to your Dev or Multidev environment. The settings apply to that environment.
+1. Deploy your code to Test and Live as usual. Each environment picks up the settings in the file it receives.
+1. Allow up to 5 minutes for a change to reach all edge locations.
+
+### Turning features off
+
+- To turn off one feature, remove its section from the file (or, for Rate Limiting, set `tier: noop`) and push.
+- To clear all Advanced Edge settings for an environment, delete `pantheon-edge.yml` and push.
+
+### Example: a file that uses both features
+
+```yaml:title=pantheon-edge.yml
+geolocation_header: true
+rate_limit:
+  criteria: ja4
+  tier: standard
+  fingerprint_missing_policy: fallback_ip
+```

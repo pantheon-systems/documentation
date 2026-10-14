@@ -1,5 +1,21 @@
 import { simpleLink, getGuideDirectory } from "./helpers";
 
+// getGuideDirectory() walks subfolders and sorts by path, so Advanced Edge's
+// pages would land flat after the FAQ. Nest them under their own parent instead.
+const nextGenGcdnGuide = () => {
+  const guide = getGuideDirectory("guides/nextgen-gcdn", "NextGen GCDN");
+  const advancedEdge = getGuideDirectory(
+    "guides/nextgen-gcdn/advanced-edge",
+    "Advanced Edge"
+  );
+  const nested = new Set(advancedEdge.children.map((child) => child.link));
+  const children: { link: string; title: string; children?: unknown[] }[] =
+    guide.children.filter((child) => !nested.has(child.link));
+  const faq = children.findIndex((child) => child.link.endsWith("/faq"));
+  children.splice(faq === -1 ? children.length : faq, 0, advancedEdge);
+  return { ...guide, children };
+};
+
 const webInfrastructure = () => {
   return {
     link: "/platform",
@@ -78,7 +94,7 @@ const webInfrastructure = () => {
             ),
             simpleLink("/apcu", "APCu"),
           ]),
-          getGuideDirectory("guides/nextgen-gcdn", "NextGen GCDN"),
+          nextGenGcdnGuide(),
           simpleLink("/guides/global-cdn", "Legacy Global CDN", [
              getGuideDirectory("guides/global-cdn", "Legacy GCDN"),
              getGuideDirectory("guides/agcdn", "Legacy AGCDN"),
