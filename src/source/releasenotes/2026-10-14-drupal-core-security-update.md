@@ -1,6 +1,7 @@
 ---
 title: Drupal core critical security update (CVE-2026-108097)
 published_date: "2026-10-14"
+published_at: "2026-10-14T17:22:35Z"
 categories: [drupal, security, action-required]
 description: "Update Drupal core to 11.4.10, 11.3.19, or 10.6.19 to fix a critical remote code execution vulnerability in the Field UI module (SA-CORE-2026-014)."
 ---
