@@ -21,10 +21,11 @@ Detailed style guidelines can be found in the [Google Developers Documentation S
 
 ## Bold
 
-Use bold for two things:
+Use bold for three things:
 
 1. Interface elements: labels, buttons, tabs, menu items, and navigation paths.
 1. Structural labels: a short run-in label that starts a paragraph or list item and ends in a colon, such as `**Alias:**`.
+1. The term being defined, where it first appears: `**Development Mode** is a state where...`.
 
 Don't use bold for emphasis in running text. Use [italics](#italics) instead.
 
