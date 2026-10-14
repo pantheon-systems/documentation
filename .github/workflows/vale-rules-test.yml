@@ -1,0 +1,42 @@
+name: Vale rules test
+
+# Runs the fixtures in .vale/tests/ when a Vale rule, the config, or the test runner changes.
+# Separate from vale.yml, which lints docs content and is report-only.
+on:
+  pull_request:
+    paths:
+      - '.vale.ini'
+      - '.vale/**'
+      - 'scripts/vale-test.mjs'
+      - '.github/workflows/vale-rules-test.yml'
+
+jobs:
+  fixtures:
+    name: Rule fixtures
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      # Same pinned binary as vale.yml. Bump both together, in their own PR.
+      VALE_VERSION: 3.24.0
+      VALE_SHA256: 867534ddb678abca7f214bc4706ead0922bd5252ffe8035fc227013f66c8b214
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Vale
+        run: |
+          set -euo pipefail
+          curl -sSfL -o "$RUNNER_TEMP/vale.tar.gz" \
+            "https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          echo "${VALE_SHA256}  $RUNNER_TEMP/vale.tar.gz" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/vale"
+          tar -xzf "$RUNNER_TEMP/vale.tar.gz" -C "$RUNNER_TEMP/vale" vale
+          echo "$RUNNER_TEMP/vale" >> "$GITHUB_PATH"
+
+      - name: Sync the Google package
+        run: vale sync
+
+      - name: Run rule fixtures
+        run: node scripts/vale-test.mjs
