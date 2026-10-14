@@ -16,7 +16,7 @@ Apply the latest upstream update to your Drupal 7 site to receive this fix. See 
 
 This fix changes how Field UI overview tables assign rows to regions: Drupal core no longer calls the `#region_callback` function set on a table row. After you update, review whether any custom code uses `#region_callback`, and test the **Manage fields** and **Manage display** pages to confirm the Field UI tables work as expected.
 
-## About Drupal 7 Long-Term Support
+## About Drupal 7 long-term support
 
 Pantheon has partnered with Tag1 Consulting to deliver security updates and maintenance for Drupal 7 sites. This extended support is included at no additional cost.
 
