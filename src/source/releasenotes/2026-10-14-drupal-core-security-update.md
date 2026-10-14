@@ -20,6 +20,8 @@ Drupal 12.0.0-alpha1 through 12.0.0-beta1 are also affected. See the [security a
 
 Drupal 11.2.x and earlier, Drupal 10.5.x and earlier, Drupal 9, and Drupal 8.9 are end-of-life. They are affected and do not receive a patch. Upgrade these sites to a supported release.
 
+Drupal 7 sites on Pantheon receive this fix through Drupal 7 long-term support. See the [Drupal 7.107 release note](/release-notes/2026/10/drupal-7-107-security-update).
+
 To apply the update, use [one-click core updates in the Pantheon dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 ## Mitigation until you update
