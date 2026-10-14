@@ -12,8 +12,8 @@ Pantheon is continuing the phased migration of Advanced Global CDN (AGCDN) to ou
 
 Phase 2 adds two features that you configure yourself in a `pantheon-edge.yml` file at the root of your site's code repository. Each site environment uses its own settings, and changes go live when you push and deploy your code. Changes no longer require a request to Pantheon.
 
-- **Rate limiting:** Limit how many requests a single client, identified by IP address or JA4 fingerprint, can make to a site environment, using one of four pre-defined tiers.
-- **Geolocation:** Send the visitor's approximate location, such as country, region, and city, to your site in a single `Pantheon-Geo` request header.
+- **[Rate limiting](/guides/nextgen-gcdn/advanced-edge/rate-limiting):** Limit how many requests a single client, identified by IP address or JA4 fingerprint, can make to a site environment, using one of four pre-defined tiers.
+- **[Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation):** Send the visitor's approximate location, such as country, region, and city, to your site in a single `Pantheon-Geo` request header.
 
 ## Before you migrate
 
