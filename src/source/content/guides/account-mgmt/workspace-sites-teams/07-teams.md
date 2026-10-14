@@ -21,9 +21,9 @@ Teams allow you to define the users who will have access to a workspace or site.
 
 ## Workspace Teams vs Site Dashboard Teams
 
-There are two places a team can be defined: on a Professional Workspace, or in the Site Dashboard.
+There are two places a team can be defined: on a Professional workspace, or in the Site Dashboard.
 
-- Professional Workspace team members have access to all sites in that Workspace, and any sites that have that Workspace assigned as a Supporting Workspace.
+- Professional workspace team members have access to all sites in that workspace, and any sites that have that workspace assigned as a supporting workspace.
 
 - Site Team members only have access to that site.
 
@@ -66,16 +66,16 @@ These tables detail the actions each role can execute on each Dashboard.
 | Clear cache on Test and Live | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
 | Enable Pantheon Search | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
 | Invite, remove, and change roles for Team Members and Developers | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
-| Add or remove a [Supporting Workspace](#add-a-supporting-workspace-to-site) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Add or remove a [supporting workspace](#add-a-supporting-workspace-to-site) | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Assign or remove the Site Administrator role | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Manage a site's plan | <span style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Transfer site ownership | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 | Delete the site | <span style="color:green">✔</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
 
 #### User in Charge vs Site Owner
-<p><dfn id="site-owner">Site Owner</dfn> is a site level role tied to billing and ownership. <ul><li>For self-serve customers, the site owner is set to an individual user account. The site owner role grants permissions for billing, managing the site plan, updating payment methods, and transferring site ownership. See also <a href="/guides/account-mgmt/billing">Billing for Self-Serve Accounts</a></li><li> For Enterprise and EDU customers, the site owner is set to the Workspace responsible for billing. Users with the Administrator role within this Workspace will have billing permissions. See also <a href="/guides/enterprise-billing-center">Enterprise Billing Center</a></li></ul></p>
+<p><dfn id="site-owner">Site Owner</dfn> is a site level role tied to billing and ownership. <ul><li>For self-serve customers, the site owner is set to an individual user account. The site owner role grants permissions for billing, managing the site plan, updating payment methods, and transferring site ownership. See also <a href="/guides/account-mgmt/billing">Billing for Self-Serve Accounts</a></li><li> For Enterprise and EDU customers, the site owner is set to the workspace responsible for billing. Users with the Administrator role within this workspace will have billing permissions. See also <a href="/guides/enterprise-billing-center">Enterprise Billing Center</a></li></ul></p>
 
-<p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is used by Workspaces to determine who created the site. This role does not grant permissions for billing, changing site ownership, nor managing the site plan, unless the user is also an Administrator of the owning Workspace. If you are an Administrator for a Workspace and want to change the User in Charge on a site, please <a href="/guides/support/contact-support">contact support</a>.</p>
+<p><dfn id="user-in-charge">User in Charge</dfn> is a site level role for Enterprise and EDU customers. This role is used by workspaces to determine who created the site. This role does not grant permissions for billing, changing site ownership, nor managing the site plan, unless the user is also an Administrator of the owning workspace. If you are an Administrator for a workspace and want to change the User in Charge on a site, please <a href="/guides/support/contact-support">contact support</a>.</p>
 
 <p>Because User in Charge is a billing and ownership designation rather than a permissions role, it is not the way to give someone team management access to a site. To delegate site team management, assign the <a href="#what-is-the-site-administrator-role-and-when-should-i-use-it">Site Administrator</a> role instead. The two are independent: a user can be a User in Charge, a Site Administrator, both, or neither.</p>
 
@@ -98,9 +98,9 @@ Individual users can manage their own [marketing email preferences](/personal-se
 
 <Tab title="To a Workspace" id="addwsp" active={true}>
 
-When a team member is added to a Workspace:
-- That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-- The role they are given applies to all sites in that Workspace
+When a team member is added to a workspace:
+- That workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+- The role they are given applies to all sites in that workspace
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Invite Members**.
 
@@ -112,8 +112,8 @@ When a team member is added to a Workspace:
 
 When a team member is added to a site:
 - That site will be available in My Dashboard
-- That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-- The role they are given applies only to that site - not to any of the others in the same Workspace
+- That workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+- The role they are given applies only to that site - not to any of the others in the same workspace
 - The default role assigned is Developer
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
@@ -168,7 +168,7 @@ The Site Administrator role only appears in the dropdown for Workspace Administr
 
 ### Export Users
 
-While you can view a workspace's users using the Dashboard, there may be times when you need to generate a list of users, or view a list of all users associated with the Workspace **and** all of its sites.
+While you can view a workspace's users using the Dashboard, there may be times when you need to generate a list of users, or view a list of all users associated with the workspace **and** all of its sites.
 
 To export a list of users:
 
@@ -227,9 +227,9 @@ For how to revoke access, see our [Offboarding](/guides/account-mgmt/workspace-s
 
 ## Add a Supporting Workspace to Site
 
-Supporting Workspaces are Professional Workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site.
+Supporting workspaces are Professional workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site.
 
-Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
+Workspace Administrators, Users in Charge, or Site Owners can add a [supporting workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Site Settings** > **Site Team**.
 
@@ -237,7 +237,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Click **Add**. 
 
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+   ![Site with two supporting workspaces](../../../../images/dashboard/manage-site-team.png)
 
 ### Role Resolution
 The dashboard uses Fine-Grained Authorization (FGA) to determine a user's effective role through a role resolution process. FGA evaluates all possible paths to each role level (from highest to lowest: owner -> admin -> team_member -> developer -> unprivileged). 
@@ -268,11 +268,11 @@ team_member > developer in role hierarchy, so team_member wins.
 
 ## Remove a Supporting Workspace from a Site
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the supporting workspace you wish to remove.
 
 1. Click **Site Settings** > **Site Team**.
 
-1. Click the **x** to the right of the Supporting Workspace you wish to remove.
+1. Click the **x** to the right of the supporting workspace you wish to remove.
 
 1. [Enterprise customers](/guides/account-mgmt/workspace-sites-teams#enterprise-customers-aka-contract-customers) with the Administrator role will instead be provided additional options to remove the user's access from associated sites and will need to select one of the following:
 
@@ -282,13 +282,13 @@ team_member > developer in role hierarchy, so team_member wins.
 
      ![Alt text](../../../../images/dashboard/workspace-offboarding-supporting.png)
 
-1. Click **Remove**. The Supporting Workspace is removed based on the selection you made.
+1. Click **Remove**. The supporting workspace is removed based on the selection you made.
 
 ## FAQ
 
 ### What is the Site Administrator role and when should I use it?
 
-<p><dfn id="site-administrator">Site Administrator</dfn> is a site level role that sits between Workspace Administrator and Team Member. It lets a trusted person manage a single site's team — invite and remove Team Members and Developers, change their roles, and add or remove a Supporting Workspace — without granting billing or destructive access. Use it when you want to delegate day-to-day management of a site, for example handing a site off to a client's technical lead or a department administrator, without giving them workspace-wide access.</p>
+<p><dfn id="site-administrator">Site Administrator</dfn> is a site level role that sits between Workspace Administrator and Team Member. It lets a trusted person manage a single site's team — invite and remove Team Members and Developers, change their roles, and add or remove a supporting workspace — without granting billing or destructive access. Use it when you want to delegate day-to-day management of a site, for example handing a site off to a client's technical lead or a department administrator, without giving them workspace-wide access.</p>
 
 ### Who can assign the Site Administrator role?
 
@@ -308,10 +308,10 @@ Only sites owned by Enterprise and EDU+ can assign the developer role to specifi
 
 ### Which role should I assign a user to give them the lowest level of access?
 
-At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Contributor role has the least amount of permissions and can only create sites.
+At the site level, the Developer role has the least amount of permissions and can create sites, view the workspace, and deploy to the Development and Multidev environments. At the Professional workspace level, the Contributor role has the least amount of permissions and can only create sites.
 
 ### What exactly does a Contributor see when accessing the Workspace?
-Contributors have limited access to Workspaces:
+Contributors have limited access to workspaces:
 
 | Workspace Context             | Contributor Permission     |
 |:----------------------------- |:-------------------------- |
@@ -322,7 +322,7 @@ Contributors have limited access to Workspaces:
 | Team                          |<span style="color:red">❌</span>|
 | Autopilot                     |<span style="color:red">❌</span>|
 | Edge                          |<span style="color:red">❌</span>|
-| Support                       |⚠️ Limited access: They can start a Live chat, but they cannot open tickets or see Workspace ticket history|
+| Support                       |⚠️ Limited access: They can start a Live chat, but they cannot open tickets or see workspace ticket history|
 | Upstreams                     |<span style="color:red">❌</span>|
 | Settings > Billing            |<span style="color:red">❌</span>|
 | Settings > Profile            |<span style="color:red">❌</span>|
@@ -333,7 +333,7 @@ The Developer role can only deploy to Development and Multidev environments. If 
 
 ### Who can add users to workspaces?
 
-Enterprise Administrators can add site Team Members or Supporting Workspaces to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
+Enterprise Administrators can add site Team Members or supporting workspaces to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
 
 ### How do I recover an account after a site owner leaves?
 

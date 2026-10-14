@@ -54,7 +54,7 @@ To remove a user:
 
    - **Workspace Only**: removes a member from this workspace only. Associated sites will not be impacted.
 
-      ![Pantheon Workspace dashboard with remove user modal open and options for removing the user from everything or for removing the user from just the workspace](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding.png)
+      ![Pantheon workspace dashboard with remove user modal open and options for removing the user from everything or for removing the user from just the workspace](../../../../images/dashboard/new-dashboard/2024/_workspace-offboarding.png)
 
 </Tab>
 
