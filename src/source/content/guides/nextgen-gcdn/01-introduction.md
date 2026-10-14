@@ -59,7 +59,7 @@ Requests that carry a valid token skip the standard challenge applied to automat
 
 Keep in mind:
 
-- **Tokens are valid for 6 months.** Each time you run the command you get the current token plus a next token that starts 3 months later; both are accepted during that overlap. Switch your automation to the next token on or after its Valid From date, and re-run the command each quarter to pick up the following pair.
+- **Tokens are valid for 6 months, and new tokens are issued every month.** Each run of the command returns the current token plus a next token that starts 3 months later; both are accepted during that overlap. If you run the command again in a later month, you'll see different values. That is expected: tokens you already deployed keep working until their Expires date and don't need replacing. Switch your automation to the next token on or after its Valid From date, and re-run the command before the token you're using expires.
 - **Treat the token like a credential.** Send it only from servers and services you control. Never expose it in client-side code, public repositories, or logs. If a token is leaked, contact Pantheon support to revoke it; a replacement token becomes available at the start of the following month.
 - **A missing token gets normal bot evaluation** — no penalty. **An incorrect token is rejected with a 403** on every request, so if your automation starts failing, check the header value first.
 - Verified bots (such as Googlebot and Bingbot) are allowed through automatically and do not need a token.
