@@ -27,7 +27,7 @@ On the top left of the page, you will see the following information:
 - If applicable, a yellow **Upgrade** button, that will allow you to [upgrade the site](/guides/account-mgmt/plans/site-plans)
 - If applicable, the name of the Professional Workspace containing this site
 
-## Site-Level Tabs
+## Site-level tabs
 The top of the site dashboard contains tabs for the main areas of your site. These are accessible from anywhere within the site dashboard without needing to navigate into a specific environment first.
 
 ### Environments
@@ -87,7 +87,7 @@ This environment is for your live site, where content creators actively post and
 
 ![The Pantheon Site Dashboard](../images/dashboard/live-dash.png)
 
-## Inner Left-Hand Navigation
+## Inner left-hand navigation
 When inside an environment (Dev, Test, Live, or Multidev), you'll see a left-hand navigation menu with environment-specific tools.
 
 The following buttons appear above the left-hand navigation menu on every environment:
