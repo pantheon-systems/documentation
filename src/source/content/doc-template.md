@@ -54,7 +54,7 @@ Because this section will have its own subsections, a line or two to briefly des
 ### Our second subsection
 1. This section may reference concepts already described above easily in each step with `in-line code snippets`.
 
-1. If new concepts or ideas are introduced, we'll use **bold** to emphasize it.
+1. If new concepts or ideas are introduced, we'll use *italics* to emphasize it.
 
 1. Finally, let's some code block examples, with a more interesting syntax to highlight.
 
@@ -93,7 +93,7 @@ Images of terminal output is frowned upon. When small changes are required to co
 </Alert>
 
 ## Other considerations
- - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/)
+ - Prefer active, direct constructions. See [To Be or Not To Be](http://writing.rocks/to-be-or-not-to-be/).
  - Avoid colloquialisms and personal opinions, feelings, or anecdotes.
  - Only assume as much knowledge from the reader as specified in [Before you begin](#before-you-begin). Otherwise explain everything.
 
