@@ -21,13 +21,12 @@ Detailed style guidelines can be found in the [Google Developers Documentation S
 
 ## Bold
 
-Use bold for three things:
+Use bold for four things:
 
 1. Interface elements: labels, buttons, tabs, menu items, and navigation paths.
 1. Structural labels: a short run-in label that starts a paragraph or list item and ends in a colon, such as `**Alias:**`.
 1. The term being defined, where it first appears: `**Development Mode** is a state where...`.
-
-Don't use bold for emphasis in running text. Use [italics](#italics) instead.
+1. Emphasis on something the reader must not miss, such as a warning, a required step, or a condition they can't skip. Use it sparingly so it keeps its weight. For anything longer than a phrase, use a [callout](#callouts). For lighter emphasis, use [italics](#italics).
 
 <Example>
 
@@ -55,7 +54,19 @@ Go to **Account** > **Security** > **Personal Access Tokens**.
 
 </Example>
 
-Keep run-in labels short, and use them consistently within a list. If every item needs a label of more than a few words, use a table or headings instead. Product and feature names aren't bold unless they are interface labels.
+<Example>
+
+Deleting a Multidev environment **permanently removes its code and database**.
+
+<hr className="source-code" /> <br/>
+
+```markdown
+Deleting a Multidev environment **permanently removes its code and database**.
+```
+
+</Example>
+
+Keep run-in labels short, and use them consistently within a list. If every item needs a label of more than a few words, use a table or headings instead.
 
 ## Callouts
 
@@ -656,7 +667,7 @@ These additional icons will be deprecated but are currently available to represe
 
 ## Italics
 
-Use italics for emphasis in running text. Use emphasis sparingly. Bold text is read as an interface label or a structural label (see [Bold](#bold)), so it's the wrong signal for emphasis.
+Use italics for lighter emphasis: stressing a word or contrasting two options within a sentence. Use it sparingly. If readers must not miss the point, use [bold](#bold) instead.
 
 <Example>
 
