@@ -1,7 +1,7 @@
 ---
 title: Drupal 7 LTS security update now available (Drupal 7.107)
 published_date: "2026-10-14"
-published_at: "2026-10-14T18:30:08Z"
+published_at: "2026-10-14T20:31:42Z"
 categories: [drupal, action-required, security]
 description: "Drupal 7.107 is now available with a backported fix for SA-CORE-2026-014, a critical remote code execution vulnerability in the Field UI module."
 ---
