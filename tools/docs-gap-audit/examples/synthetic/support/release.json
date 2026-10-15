@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "signal": "release",
+  "provenance": { "source": "synthetic public release notes", "retrievedAt": "2026-10-01" },
+  "items": [
+    { "feature": "widget_create", "status": "ga", "publicEvidence": "release notes 2.0.0 (public)", "date": "2026-02-01" },
+    { "feature": "widget_share", "status": "ga", "publicEvidence": "release notes 2.3.0 (public)", "date": "2026-09-01" },
+    { "feature": "widget_restore", "status": "ga", "publicEvidence": "release notes 2.3.0 (public)", "date": "2026-09-01", "releaseNoteOnly": true },
+    { "feature": "widget archive", "status": "beta", "date": "2026-09-01" }
+  ]
+}

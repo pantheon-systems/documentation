@@ -1,0 +1,9 @@
+<!doctype html><html><head><title>Use widgetctl in a CI pipeline</title></head><body><nav><a href="/widgets">Widgetctl</a></nav><main><h1>Use widgetctl in a CI pipeline</h1>
+<p>This section shows how to authenticate widgetctl in a CI pipeline without storing a password.</p>
+<h2>Authenticate in CI</h2>
+<p>Use the example script below to sign in, cache the session, and confirm the sign-in worked.</p>
+<p>This pipeline does the following:</p>
+<ul><li>Installs the latest widgetctl release.</li><li>Restores a cached session when one exists.</li><li>Signs in with the token and caches the new session.</li><li>Confirms the sign-in with <code>widgetctl whoami</code>.</li></ul>
+<h2>Before you use this script</h2>
+<ul><li>Add a token named <code>WIDGETCTL_TOKEN</code> to your CI secrets.</li><li>Tokens expire after 90 days; rotate the secret before then.</li></ul>
+<p><a href="/widgets">Back to widgetctl</a></p></main></body></html>

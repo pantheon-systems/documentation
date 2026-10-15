@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "area": {
+    "id": "widgets",
+    "name": "Widgets",
+    "owner": "docs-team",
+    "audience": [
+      "site-manager",
+      "developer"
+    ]
+  },
+  "site": {
+    "origin": "https://docs.example.test"
+  },
+  "scope": {
+    "crawl": {
+      "include": [
+        "/widgets/**",
+        "/auth/**"
+      ],
+      "exclude": [
+        "/widgets/legacy/**"
+      ]
+    },
+    "report": {
+      "include": [
+        "/widgets/**"
+      ],
+      "exclude": [
+        "/widgets/legacy/**"
+      ]
+    },
+    "related": [
+      {
+        "id": "auth",
+        "paths": [
+          "/auth/**"
+        ],
+        "note": "tokens and sign-in live in the auth area"
+      }
+    ]
+  },
+  "sources": {
+    "local": [
+      {
+        "id": "node-repo",
+        "kind": "repo",
+        "path": "synthetic/node-repo",
+        "role": "code",
+        "public": true
+      },
+      {
+        "id": "node-changelog",
+        "kind": "changelog",
+        "path": "synthetic/node-repo/CHANGELOG.md"
+      },
+      {
+        "id": "node-changesets",
+        "kind": "changelog",
+        "path": "synthetic/node-repo/.changeset"
+      },
+      {
+        "id": "wp-plugin",
+        "kind": "repo",
+        "path": "synthetic/wp-plugin",
+        "role": "code"
+      },
+      {
+        "id": "planning",
+        "kind": "planning",
+        "path": "synthetic/planning",
+        "public": false
+      }
+    ],
+    "connectors": [
+      {
+        "id": "support-export",
+        "connector": "support-system",
+        "ref": "tag:widgets, last 90 days",
+        "stagedAs": "staging/support-export.json",
+        "purpose": "demand",
+        "public": false
+      }
+    ]
+  },
+  "vocabulary": {
+    "aliases": {
+      "share a widget": [
+        "link-based access",
+        "sharing links"
+      ]
+    },
+    "identifiers": [
+      "widget_create",
+      "widget_share",
+      "widget_restore"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "create-widget",
+      "title": "Create a widget",
+      "journey": "first-success",
+      "audience": "site-manager",
+      "terms": [
+        "create a widget",
+        "widget_create"
+      ],
+      "expectedTypes": [
+        "how-to",
+        "tutorial"
+      ],
+      "required": true
+    },
+    {
+      "id": "share-widget",
+      "title": "Share a widget with a link",
+      "journey": "configure",
+      "audience": "site-manager",
+      "terms": [
+        "share a widget",
+        "widget_share",
+        "sharing links"
+      ],
+      "expectedTypes": [
+        "how-to"
+      ]
+    },
+    {
+      "id": "recover-deleted-widget",
+      "title": "Recover a deleted widget",
+      "journey": "recover",
+      "audience": "site-manager",
+      "terms": [
+        "restore a widget",
+        "widget_restore",
+        "recover a deleted widget"
+      ],
+      "expectedTypes": [
+        "how-to"
+      ]
+    },
+    {
+      "id": "archive-widget",
+      "title": "Archive a widget",
+      "journey": "operate",
+      "audience": "site-manager",
+      "terms": [
+        "archive a widget",
+        "widget archive"
+      ],
+      "expectedTypes": [
+        "how-to"
+      ]
+    },
+    {
+      "id": "configure-webhooks",
+      "title": "Receive webhooks for widget changes",
+      "journey": "develop",
+      "audience": "developer",
+      "terms": [
+        "webhook",
+        "webhook delivery"
+      ],
+      "expectedTypes": [
+        "how-to",
+        "reference"
+      ]
+    },
+    {
+      "id": "authenticate",
+      "title": "Create an API token",
+      "journey": "first-success",
+      "audience": "developer",
+      "terms": [
+        "create an api token",
+        "api token"
+      ],
+      "expectedTypes": [
+        "how-to"
+      ]
+    },
+    {
+      "id": "rotate-token",
+      "title": "Rotate an API token",
+      "journey": "operate",
+      "audience": "developer",
+      "terms": [
+        "rotate a token",
+        "token rotation"
+      ],
+      "expectedTypes": [
+        "how-to"
+      ]
+    }
+  ],
+  "environments": {
+    "supported": [
+      "v2",
+      "v3"
+    ],
+    "platforms": [],
+    "notes": "synthetic example"
+  },
+  "release": {
+    "defaultStatus": "shipped",
+    "publicEvidenceRequired": true
+  },
+  "authority": {
+    "order": [
+      "code",
+      "tests",
+      "release-notes",
+      "docs"
+    ],
+    "freshness": {
+      "maxAgeDays": 365,
+      "byKind": {
+        "changelog": 90
+      }
+    }
+  },
+  "inputs": {
+    "demand": "inputs/demand.json",
+    "release": "inputs/release.json"
+  }
+}

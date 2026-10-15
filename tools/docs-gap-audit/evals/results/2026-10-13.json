@@ -1,0 +1,220 @@
+{
+ "date": "2026-10-13",
+ "note": "Verdicts only; raw answers stay private. Round 1 used the toolkit as first built; round 2 re-ran e04 and e05 after changes made because of round 1.",
+ "rounds": [
+  {
+   "name": "round 1",
+   "arms": "skill / base",
+   "results": {
+    "e01": {
+     "skill": [
+      "pass",
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "base": [
+      "partial",
+      "partial",
+      "pass",
+      "fail",
+      "pass"
+     ]
+    },
+    "e02": {
+     "base": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e03": {
+     "skill": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "base": [
+      "pass",
+      "pass",
+      "pass",
+      "partial"
+     ]
+    },
+    "e04": {
+     "skill": [
+      "pass",
+      "pass",
+      "pass",
+      "partial"
+     ],
+     "base": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e05": {
+     "base": [
+      "pass",
+      "partial",
+      "partial"
+     ],
+     "skill": [
+      "partial",
+      "partial",
+      "partial"
+     ]
+    },
+    "e06": {
+     "skill": [
+      "pass",
+      "partial",
+      "pass"
+     ],
+     "base": [
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e07": {
+     "base": [
+      "fail",
+      "partial",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e08": {
+     "base": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e09": {
+     "base": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e10": {
+     "base": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e11": {
+     "base": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e12": {
+     "base": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e13": {
+     "base": [
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass"
+     ]
+    },
+    "e14": {
+     "base": [
+      "pass",
+      "pass"
+     ],
+     "skill": [
+      "pass",
+      "pass"
+     ]
+    }
+   }
+  },
+  {
+   "name": "round 2 (e04, e05 only)",
+   "arms": "skill2 (updated toolkit) / base",
+   "results": {
+    "e04": {
+     "skill2": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "base": [
+      "pass",
+      "pass",
+      "pass",
+      "pass"
+     ]
+    },
+    "e05": {
+     "skill2": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "base": [
+      "pass",
+      "fail",
+      "partial"
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{ "type": "object", "properties": { "retry_limit": { "type": "integer", "default": 3, "description": "Retries for failed requests" }, "timeout_ms": { "type": "integer" } } }

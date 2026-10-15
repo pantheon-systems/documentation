@@ -1,0 +1,1 @@
+{ "name": "acme-widgets", "version": "2.3.0", "bin": { "acme-widgets": "cli.js" } }
