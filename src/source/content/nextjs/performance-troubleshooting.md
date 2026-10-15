@@ -34,7 +34,7 @@ Include the following in a support request or engineering escalation:
 - For memory or image symptoms, the affected image URL, source-image dimensions and file size, requested output size/format, concurrency or load pattern, and the corresponding runtime errors.
     
 
-Customers can collect build and runtime logs in the Pantheon Dashboard. Terminus can list recent builds and runtime logs for scripting or cross-environment comparison; see [Next.js command-line tools](https://docs.pantheon.io/nextjs/cli-tools).
+Customers can collect build and runtime logs in the Pantheon Dashboard. Terminus can list recent builds and runtime logs for scripting or cross-environment comparison; see [Next.js command-line tools](/nextjs/cli-tools).
 
 ## Symptom-based troubleshooting
 
@@ -101,9 +101,8 @@ Customers can collect build and runtime logs in the Pantheon Dashboard. Terminus
 
 **Likely causes and actions:**
 
-|   |   |   |   |
-|---|---|---|---|
 |Symptom|Likely cause|Next action|Ownership|
+|---|---|---|---|
 |Some pages update after a cache clear, but others do not|The Next.js application cache is not connected to the purge path|Install and configure the Pantheon cache handler, then retest the affected routes|Customer application|
 |WordPress or Drupal content remains stale|CMS-side cache invalidation is not active|Confirm the Pantheon Advanced Page Cache plugin/module is installed and active on the backend|Customer CMS configuration|
 |Cache handler and CMS integration are present, but publish events do not update content|Revalidation webhook or secret mismatch|Verify delivery and make the application/CMS secrets identical without exposing values|Customer integration|
@@ -204,9 +203,8 @@ A Live-only symptom is evidence about traffic, configuration, cache state, or pl
 
 ## Customer-resolvable versus Pantheon-owned work
 
-|   |   |   |
-|---|---|---|
 |Finding|Usually resolved by|What to do next|
+|---|---|---|
 |Invalid route, fetch, rendering, API, or authentication logic|Customer development team|Fix the application and validate in Multidev/Dev|
 |Missing or incorrect cache-handler configuration|Customer development team|Update the repository configuration and redeploy|
 |CMS plugin/module, webhook, secret, or revalidation configuration|Customer/CMS team|Correct the integration and retest publishing|
