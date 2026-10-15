@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "area": { "id": "widgets", "name": "Widgets", "owner": "docs-team", "audience": ["site-manager"] },
+  "site": { "origin": "https://docs.example.test" },
+  "scope": { "crawl": { "include": ["/widgets/**"] } },
+  "sources": { "local": [ { "id": "repo", "kind": "repo", "path": "src", "role": "code" } ], "connectors": [] },
+  "vocabulary": { "aliases": {}, "identifiers": ["widget_create"] },
+  "tasks": [ { "id": "create-widget", "title": "Create a widget", "journey": "first-success", "audience": "site-manager", "terms": ["create a widget", "widget_create"], "expectedTypes": ["how-to"] } ],
+  "environments": { "supported": ["v2"], "platforms": [], "notes": "" },
+  "release": { "defaultStatus": "shipped", "publicEvidenceRequired": false },
+  "authority": { "order": ["code", "docs"], "freshness": { "maxAgeDays": 365 } },
+  "inputs": {}
+}

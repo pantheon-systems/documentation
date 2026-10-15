@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "signal": "demand",
+  "provenance": {
+    "source": "synthetic support export",
+    "retrievedAt": "2026-10-01T12:00:00Z",
+    "approval": "synthetic fixture, no approval needed",
+    "timeWindow": { "from": "2026-07-01", "to": "2026-09-30" },
+    "sampling": { "method": "all threads tagged widgets", "biased": true, "notes": "only tagged threads; untagged questions are missing" }
+  },
+  "items": [
+    { "id": "t1", "sourceType": "support", "task": "recover-deleted-widget", "date": "2026-08-02", "threadId": "T-100", "requesterCount": 1, "impact": "data loss feared", "excerpt": "How do I get back a widget I deleted by mistake?" },
+    { "id": "t2", "sourceType": "support", "task": "recover-deleted-widget", "date": "2026-08-19", "threadId": "T-100", "requesterCount": 1, "excerpt": "Following up on my deleted widget question." },
+    { "id": "t3", "sourceType": "support", "task": "recover-deleted-widget", "date": "2026-09-11", "threadId": "T-214", "requesterCount": 2, "impact": "blocked a launch", "excerpt": "Where is the restore option?" }
+  ]
+}

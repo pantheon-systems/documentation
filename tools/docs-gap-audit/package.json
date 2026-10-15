@@ -1,0 +1,15 @@
+{
+  "name": "docs-gap-audit",
+  "version": "0.2.0",
+  "description": "Read-only audit of one documentation area: which reader can't do which task, and what evidence shows documentation would help.",
+  "private": true,
+  "license": "SEE LICENSE IN ../../LICENSE.md",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "lint": "node scripts/lint.cjs",
+    "check-private": "node scripts/check-private-info.cjs"
+  }
+}

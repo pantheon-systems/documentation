@@ -15,7 +15,7 @@ export default defineConfig({
     },
     environment: "jsdom",
     setupFiles: ["./setupVitest.js"],
-    exclude: [...configDefaults.exclude, "./playwright-tests/*", "./tests/playwright/**"],
+    exclude: [...configDefaults.exclude, "./playwright-tests/*", "./tests/playwright/**", "tools/**"],
     css: true,
     server: {
       deps: {

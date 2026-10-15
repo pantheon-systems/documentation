@@ -1,0 +1,1 @@
+Exported from the docs search tool. The count column is not labeled in the tool; it might be searches, sessions, or clicks. Window and sampling unknown.

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "area": { "id": "widgetctl", "name": "Widgetctl", "owner": "docs-team", "audience": ["developer"] },
+  "site": { "origin": "https://docs.example.test" },
+  "scope": { "crawl": { "include": ["/widgets/**"] } },
+  "sources": { "local": [], "connectors": [] },
+  "vocabulary": { "aliases": {}, "identifiers": [] },
+  "tasks": [ { "id": "ci", "title": "Use widgetctl in a CI pipeline", "journey": "deploy", "audience": "developer", "terms": ["ci pipeline", "continuous integration", "authenticate in ci"], "expectedTypes": ["how-to"] } ],
+  "environments": { "supported": [], "platforms": [], "notes": "" },
+  "release": { "defaultStatus": "shipped", "publicEvidenceRequired": false },
+  "authority": { "order": ["docs"], "freshness": { "maxAgeDays": 365 } },
+  "inputs": {}
+}
