@@ -18,6 +18,9 @@
     "typescript": "^5.8.3"
   },
   "overrides": {
-    "gaxios": "^7.1.4"
+    "gaxios": "^7.1.4",
+    "gray-matter": {
+      "js-yaml": "^3.15.2"
+    }
   }
 }
