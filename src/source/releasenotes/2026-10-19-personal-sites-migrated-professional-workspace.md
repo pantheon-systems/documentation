@@ -1,7 +1,7 @@
 ---
 title: Move sites from My Dashboard to a Professional Workspace
-published_date: "2026-10-08"
-published_at: "2026-10-08T17:25:13Z"
+published_date: "2026-10-19"
+published_at: "2026-10-19T20:07:55Z"
 categories: [action-required, user-interface]
 description: "Moving forward, all Pantheon sites must be owned by a Professional Workspace."
 ---
