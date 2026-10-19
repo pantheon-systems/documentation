@@ -33,7 +33,7 @@ Include the following in a support request or engineering escalation:
 
 - For memory or image symptoms, the affected image URL, source-image dimensions and file size, requested output size/format, concurrency or load pattern, and the corresponding runtime errors.
 
-Customers can collect build and runtime logs in the Pantheon site Dashboard. Terminus can list recent builds and runtime logs for scripting or cross-environment comparison; see [Next.js command-line tools](https://docs.pantheon.io/nextjs/cli-tools).
+Customers can collect build and runtime logs in the Pantheon site Dashboard. Terminus can list recent builds and runtime logs for scripting or cross-environment comparison; see [Next.js command-line tools](/nextjs/cli-tools).
 
 ## Symptom-based troubleshooting
 
@@ -140,7 +140,7 @@ Pantheon prepares Next.js by installing dependencies and running the application
 
 - Only one package-manager lockfile is present.
 
-- Yarn projects include the required `gcp-build` script as described in [Next.js compatibility and requirements](https://docs.pantheon.io/nextjs#compatibility--requirements).
+- Yarn projects include the required `gcp-build` script as described in [Next.js compatibility and requirements](/nextjs#compatibility--requirements).
 
 - The failure occurs in customer code/dependency installation, during `npm run build`, or after a successful build during deployment.
 
@@ -170,7 +170,7 @@ Reproduce the request in the affected environment, inspect repeated log patterns
 
 A stack trace or failed application API call usually requires a customer code/configuration change. A platform error, missing service, or repeated failure across unrelated routes/sites should be escalated to Pantheon Support with the evidence bundle.
 
-### CPU or memory usage spikes, or the process is killed
+### CPU/memory usage spikes, or the process is killed
 
 #### What you observe:
 
@@ -284,16 +284,16 @@ Before escalating, attach:
 - What you changed, what you tested, and the result.
 
 
-Use the [Next.js build and runtime architecture](https://docs.pantheon.io/nextjs/architecture) page for the platform request path, [Next.js overview](https://docs.pantheon.io/nextjs) for compatibility requirements, and [Test and Live environments for Next.js](https://docs.pantheon.io/nextjs/test-and-live-env) for deployment differences.
+Use the [Next.js build and runtime architecture](/nextjs/architecture) page for the platform request path, [Next.js overview](/nextjs) for compatibility requirements, and [Test and Live environments for Next.js](/nextjs/test-and-live-env) for deployment differences.
 
 ## More Resources
 
-- [Next.js Overview](https://docs.pantheon.io/nextjs)
+- [Next.js Overview](/nextjs)
 
-- [Next.js Build and Runtime Architecture on Pantheon](https://docs.pantheon.io/nextjs/architecture)
+- [Next.js Build and Runtime Architecture on Pantheon](/nextjs/architecture)
 
-- [Command Line Tools to use with Next.js on Pantheon](https://docs.pantheon.io/nextjs/cli-tools)
+- [Command Line Tools to use with Next.js on Pantheon](/nextjs/cli-tools)
 
-- [Next.js Cache Handler package release notes](https://docs.pantheon.io/release-notes/2026/02/nextjs-cache-handler)
+- [Next.js Cache Handler package release notes](/release-notes/2026/02/nextjs-cache-handler)
 
 - [Pantheon Next.js Cache Handler repository](https://github.com/pantheon-systems/nextjs-cache-handler)
