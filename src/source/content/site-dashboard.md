@@ -52,7 +52,7 @@ Monitor contains the following pages:
 * **[Traffic Patterns](guides/account-mgmt/traffic)**: Analyze request volume, traffic trends, and visitor behavior across your site. Traffic Patterns is now a dedicated page, previously found at the bottom of the Metrics page.
 * **[Edge Logs](/guides/account-mgmt/edge-logs)**: Log explorer for all HTTP traffic.
 * **Errors**: Access links to your error logs and find out how to diagnose issues on Pantheon via SFTP.
-* **[New Relic](/guides/new-relic)**: Use this server-side performance monitoring tool to identify bottlenecks and optimize your site. Only visible if your site has New Relic enabled on its plan.
+* **[New Relic](/guides/new-relic)**: Use this application performance monitoring tool to identify bottlenecks and optimize your site. Only visible if your site has New Relic enabled on its plan.
 
 
 ### Autopilot
