@@ -1,7 +1,7 @@
 ---
 title: "New default PHP version 8.3 for Drupal upstreams"
-published_date: "2026-10-07"
-published_at: "2026-10-07T00:00:00Z"
+published_date: "2026-10-20"
+published_at: "2026-10-20T19:33:26Z"
 categories: [infrastructure, drupal, action-required]
 description: "The default PHP version for Pantheon's Drupal (Composer Managed) upstream is now PHP 8.3, replacing PHP 8.2."
 ---
