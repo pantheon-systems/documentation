@@ -9,6 +9,8 @@ Pantheon has updated the default PHP version for the Drupal (Composer Managed) u
 
 New Drupal sites created from Pantheon's upstreams use PHP 8.3. Existing sites that do not set `php_version` in their own `pantheon.yml` move to PHP 8.3 when they apply this upstream update. When you apply the update, Pantheon also updates `config.platform.php` in your `composer.json` to match, if it does not already.
 
+Sites started from the Drupal 11 upstream see this update too. PHP 8.3 is the minimum version Drupal 11 supports.
+
 ## Action required
 
 Test the update before you deploy it to the Live environment. Apply it in Dev or a Multidev environment, confirm your modules and theme work on PHP 8.3, then promote it.
