@@ -15,6 +15,6 @@ Sites started from the Drupal 11 start state will see this update, but may alrea
 
 Test the update before you deploy it to the Live environment. Apply it in Dev or a Multidev environment, confirm your modules and theme work on PHP 8.3, then promote it.
 
-If your Drupal 10 site needs to stay on PHP 8.2, pin the version by setting `php_version: 8.2` in your site's `pantheon.yml` before you apply the update. For steps, see [Manage PHP Versions](/guides/php/php-versions). Drupal 11 requires PHP 8.3 or later, so Drupal 11 sites cannot pin PHP 8.2.
+If your Drupal 10 site needs to stay on PHP 8.2, pin the version by setting `php_version: 8.2` in your site's `pantheon.yml` before you apply the update. For steps, see [Manage PHP Versions](/guides/php/php-versions).
 
 If you maintain a [custom upstream](/guides/custom-upstream), this change is not reflected in your `pantheon.upstream.yml` unless you [update your fork from Pantheon's upstream](https://docs.pantheon.io/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
