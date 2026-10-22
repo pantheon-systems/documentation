@@ -286,7 +286,7 @@ Before escalating, attach:
 
 Use the [Next.js build and runtime architecture](/nextjs/architecture) page for the platform request path, [Next.js overview](/nextjs) for compatibility requirements, and [Test and Live environments for Next.js](/nextjs/test-and-live-env) for deployment differences.
 
-## More Resources
+## More resources
 
 - [Next.js Overview](/nextjs)
 
