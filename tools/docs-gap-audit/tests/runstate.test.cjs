@@ -40,7 +40,7 @@ test('startRun writes start.json once with profile hash, tool identity, and an u
   assert.equal(start.profile.hash, hash);
   assert.equal(run.profileHash, hash);
   assert.equal(start.tool.name, 'docs-gap-audit');
-  assert.equal(start.tool.version, readJ(path.join(ROOT, 'package.json')).version);
+  assert.equal(start.tool.version, fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim());
   assert.equal(start.tool.node, process.version);
   assert.deepEqual(start.tool.schemas, rs.SCHEMAS);
   assert.equal(start.command, 'audit run');

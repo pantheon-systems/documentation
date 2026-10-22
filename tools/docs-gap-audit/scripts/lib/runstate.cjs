@@ -28,7 +28,7 @@ const TOOL_ROOT = path.resolve(__dirname, '..', '..');
 function toolIdentity() {
   let version = 'unknown';
   try {
-    version = JSON.parse(fs.readFileSync(path.join(TOOL_ROOT, 'package.json'), 'utf8')).version;
+    version = fs.readFileSync(path.join(TOOL_ROOT, 'VERSION'), 'utf8').trim();
   } catch { /* keep unknown */ }
   return { name: 'docs-gap-audit', version, node: process.version, git: gitIdentity(TOOL_ROOT), schemas: SCHEMAS };
 }

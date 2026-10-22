@@ -121,4 +121,4 @@ evidence until someone stages it. Those dimensions say "not assessed" with a ret
 ## Other tools in this repository
 
 `site-audit.cjs` (crawl or saved HTML), `discover.cjs`, `coverage.cjs`, `names.cjs`, `versions.cjs` (contacts the npm registry for named packages only), `report.cjs`, `check-private-info.cjs`, `lint.cjs`.
-Run any with `--help`. Tests: `npm test`. Network and child-process use is listed in `references/network.md` and enforced by a test.
+Run any with `--help`. Tests: `node --test tests/`. Network and child-process use is listed in `references/network.md` and enforced by a test.

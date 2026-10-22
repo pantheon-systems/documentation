@@ -66,9 +66,9 @@ ln -s "$PWD/tools/docs-gap-audit" ~/.claude/skills/docs-gap-audit
 Run these from `tools/docs-gap-audit`.
 
 ```bash
-npm test               # node --test tests/
-npm run lint           # syntax and hygiene
-npm run check-private  # privacy scan of this repository
+node --test tests/                 # tests
+node scripts/lint.cjs              # syntax and hygiene
+node scripts/check-private-info.cjs  # privacy scan of this repository
 ```
 
 Fixtures are synthetic ("Acme Widgets", `example.test`). `evals/` holds skill evaluation cases with pass/fail expectations ([references/evaluations.md](references/evaluations.md)).
