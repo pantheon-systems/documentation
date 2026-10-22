@@ -104,7 +104,7 @@ We recommend the following resources for further learning:
 - [First Aid Git](https://github.com/magalhini/firstaidgit)
 - [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
 - [Git Immersion](http://gitimmersion.com/)
-- [Coddy Git Playground](https://coddy.tech/playground/git)
+- [Set up Git](https://docs.github.com/en/get-started/git-basics/set-up-git)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/)
 - [GitKraken - Git GUI Client](https://www.gitkraken.com/)
