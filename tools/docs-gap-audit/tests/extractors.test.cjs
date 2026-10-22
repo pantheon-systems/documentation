@@ -84,6 +84,10 @@ test.after(() => {
 function copyExample(name) {
   const dest = path.join(tmp(), name);
   fs.cpSync(path.join(EXAMPLES, name), dest, { recursive: true });
+  // PHP fixtures are stored as .php.txt so the docs site build doesn't detect PHP; restore the real name in the copy.
+  for (const f of fs.readdirSync(dest, { recursive: true })) {
+    if (f.endsWith('.php.txt')) fs.renameSync(path.join(dest, f), path.join(dest, f.slice(0, -4)));
+  }
   return dest;
 }
 
