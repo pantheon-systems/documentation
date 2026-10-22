@@ -26,7 +26,7 @@ test('Direct navigation to single category returns the expected value', async ({
 
 test('Direct navigation to single category returns the expected value - 2', async ({ page }) => {
   await page.goto('/release-notes/2/?category=action-required');
-  const expectedString = 'WordPress 7.0.2 Security Release now available';
+  const expectedString = 'Next-generation Advanced Global CDN: Phase 1 migrations begin September 30';
   const h2s1 = await page.locator('h2').allTextContents();
   expect(h2s1.some(text => text.includes(expectedString))).toBeTruthy();
 });
