@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "skipDirs": [".git", "node_modules", "vendor", "dist", "build", "audit-out", ".next", ".turbo", "coverage", ".claude", ".github", ".changeset", "__tests__", "__mocks__", "e2e", "fixtures", "test", "tests", "playwright-tests", "terraform", "docker"],
+  "testFilePattern": "\\.(test|spec|stories)\\.[cm]?[jt]sx?$",
+  "commonEnv": ["NODE_ENV", "CI", "HOME", "PATH", "PORT", "HOST", "DEBUG", "USER", "TZ", "PWD", "SHELL", "LANG"],
+  "internalDocPattern": "(^|\\/)(PROGRESS|PLANS?|ADR|DECISIONS?|NOTES?)\\b|\\/plans?\\/|\\d{4}-\\d{2}-\\d{2}",
+  "genericHeadings": "^(introduction|overview|installation|install|usage|getting started|requirements|license|contributing|contributors|credits|changelog|table of contents|faq|support|testing|tests|development|about|summary|background|goals?|non-goals?|notes?|todo|open questions|next steps|references?|links|prerequisites|configuration|setup|upgrading|security|release notes?|patch changes|minor changes|major changes)$",
+  "sectionLabels": "^(added|changed|fixed|removed|deprecated|security|new|improvements?|bug fixes)$",
+  "noiseItemPattern": "^(?:\\[(?:fix|chore|internal|docs?|test)\\w*\\]|updated dependencies|fix(?:ed|es)?\\b|bump\\b|chore\\b|ci\\b|test\\b|refactor\\b|deps?\\b)",
+  "limitedHintPattern": "\\b(?:feature[- ]flags?|behind a flag|flagged|off unless|experimental|alpha|beta|preview|opt[- ]in)\\b",
+  "plannedHeadingPattern": "unreleased|upcoming|planned",
+  "verbLeadPattern": "^(?:add(?:ed|s)?|new|support(?:s|ed)?(?: for)?|introduc(?:e|ed|es)|enable[ds]?|allow(?:s|ed)?|implement(?:ed|s)?|create[ds]?|fix(?:ed|es)?|improve[ds]?)\\s+",
+  "stubBodyLimit": 120
+}
