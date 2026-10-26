@@ -1,7 +1,7 @@
 ---
 title: "Upgrade to next-generation Global CDN by March 31, 2027"
 published_date: "2026-10-26"
-published_at: "2026-10-26T00:00:00Z"
+published_at: "2026-10-26T20:38:22Z"
 categories: [infrastructure, action-required]
 description: "Upgrade your sites to the next-generation Global CDN, powered by Cloudflare, by March 31, 2027. Pantheon will migrate sites that haven't upgraded by then, beginning in April 2027."
 ---
