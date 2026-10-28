@@ -51,6 +51,8 @@ After the site creation process provisions a database, code, and other resources
 
 ![The Drupal CMS installation screen](../images/drupalcms/configure-drupalcms.png)
 
+**Use SFTP mode while you install.** The Drupal CMS installer writes files into your site's code directory, so the Dev environment (or Multidev) must be in SFTP mode while you run it.
+
 ## Troubleshooting common issues with Drupal CMS
 
 In addition to Recipes, Drupal CMS elevates other new technical constructs within Drupal that can be challenging to troubleshoot or raise the importance of workflow clarity.
