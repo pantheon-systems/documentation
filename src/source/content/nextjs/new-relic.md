@@ -185,12 +185,9 @@ If the app cannot start without the instrumentation, collect the failing build/r
 
 That usually means the downstream service is not instrumented, trace context is not propagated, or the downstream system does not preserve the incoming W3C trace headers. Check propagation and the instrumentation configuration for every service in the request path.
 
-### Is this a Pantheon issue or an application issue?
-
 - **Application-owned:** instrumentation code, package compatibility, exporter credentials, provider configuration, sampling, dashboards, and downstream trace propagation.
 - **Pantheon-owned:** inability to deploy or start a valid application, missing or malformed platform runtime evidence, or a suspected platform incident affecting the environment.
 - **Shared investigation:** collect timestamps in UTC, environment name, deployment/build identifier, request path, runtime log excerpts, provider service name, and a trace or request identifier when available.
-
 When contacting Pantheon Support, do not include license keys, bearer tokens, or other secrets. Include the smallest reproducible example and identify whether the symptom occurs in one environment or across multiple environments.
 
 ## Related documentation
