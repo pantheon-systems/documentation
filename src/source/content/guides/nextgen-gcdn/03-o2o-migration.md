@@ -17,7 +17,7 @@ product: [cdn]
 integration: [cloudflare]
 ---
 
-If your domain's DNS is hosted in your own Cloudflare zone and proxied (orange-clouded), you can keep that zone in front of Pantheon's next-generation GCDN using Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration. This page walks through the migration from start to finish, including the records to add, the order to add them in, and the errors you may see along the way.
+If your domain's DNS is hosted in your own Cloudflare zone and proxied (orange-clouded), you can keep that zone in front of Pantheon's next-generation GCDN using Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration. This page walks through the migration from start to finish, including the records to add, the order to add them in, and the errors you may see along the way. To add a domain to a new site instead, see [Connect a Cloudflare-Proxied Domain to a New Site (O2O)](/guides/nextgen-gcdn/o2o-new-site).
 
 Because your DNS lives in Cloudflare, the dashboard's TXT-record verification flow doesn't apply. You start the upgrade, then get every record you need from Terminus and add them in your Cloudflare zone. Repeat the process for each domain.
 
