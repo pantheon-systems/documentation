@@ -54,7 +54,7 @@ The safest general pattern is:
 1. Give each environment a stable service name and an environment attribute so that Dev, Test, Live, and Multidev data do not mix.
 1. Start with traces and error correlation. Add metrics and logs only after confirming their cost, volume, and retention behavior with your provider.
 1. Test the setup in a non-Live environment before enabling it for production traffic.
-Instrumentation is application code. A package that works locally does not become a Pantheon-provided integration simply because the application is deployed to Pantheon.
+Instrumentation is application code. A package that works locally does not become a Pantheon-provided integration when the application is deployed to Pantheon.
 
 ## New Relic: customer-managed OTLP export
 
@@ -72,7 +72,7 @@ Use versions that are compatible with the Node.js version and Next.js version se
 npm install --save-exact @opentelemetry/api@^1.9.1 @opentelemetry/auto-instrumentations-node@^0.80.0 @opentelemetry/exporter-trace-otlp-http@^0.222.0 @opentelemetry/resources@^2.11.0 @opentelemetry/sdk-node@^0.222.0 @opentelemetry/semantic-conventions@^1.43.0
 ```
 
-### 2. Create instrumentation.ts
+### 2. Create `instrumentation.ts`
 This file makes sure the node instrumentation is only called when the `nodejs` runtime is used.
 
 ```ts
