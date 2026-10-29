@@ -438,7 +438,7 @@ Resolving this requires clearing all indexed data and performing a full reindex.
 
 1. **Verify** search functionality is working as expected.
 
-If you still see the same error after reindexing, [contact Pantheon support](/guides/support/contact-support/). Include your site name, the environment, the full error text, and the output of `terminus drush $SITE.$ENV -- search-api-pantheon:diagnose`.
+If you still see the same error after reindexing, [contact Pantheon support](/guides/support/contact-support/).
 
 #### `<lib/>` directives deprecated in Solr 9.8+
 
