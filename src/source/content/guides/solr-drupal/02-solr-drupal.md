@@ -392,7 +392,7 @@ Resolving this requires clearing all indexed data and performing a full reindex.
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
-1. **Disable and re-enable the Solr server.** Disabling the server disables every index on it and removes those indexes' content from Solr:
+1. **Disable and re-enable the Solr server.** This disables every index on it and clears their indexed data from Solr:
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:server-disable <server_id>
