@@ -11,6 +11,7 @@ Pantheon will move all sites to the next-generation Global CDN, powered by Cloud
 ## What you get
 
 The next-generation Global CDN includes [bot protection](https://pantheon.io/blog/democratizing-pantheon-global-cdn), on by default at no additional cost. Bot protection scores incoming traffic, challenges suspicious requests, and lets verified bots, such as search engine crawlers, through. The next-generation Global CDN also supports Multizone Failover, custom certificates, and platform vanity domains.
+Also new with the upgrade are [Edge Traffic Visibility](/release-notes/2026/10/edge-logs) and [Workspace Performance Insights](/release-notes/2026/10/workspace-performance-insights).
 
 ## Action required
 
@@ -39,3 +40,5 @@ After the March 31, 2027 deadline, Pantheon will migrate any remaining sites. Pa
 - Review the [next-generation Global CDN setup guide](/guides/nextgen-gcdn/setup).
 - Contact your Pantheon Customer Success Manager or account team.
 - Open a [support ticket](/guides/support/contact-support/) from the Site Dashboard.
+
+**Editor's note** (October 29, 2026): This release note was updated to add Edge Traffic Visibility and Workspace Performance Insights to the "What you get" section.
