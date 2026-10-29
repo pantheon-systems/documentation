@@ -151,18 +151,6 @@ The same application pattern can be adapted for an observability backend that ac
 - Browser/RUM setup, which is separate from Node.js instrumentation.
 - Sampling, cardinality, retention, and data-residency controls.
 
-## What is supported, practical, or experimental?
-
-|Approach|Status in this guide|What you own|
-|---|---|---|
-|Pantheon dashboard, workflow/build information, and runtime logs|Supported platform evidence|None beyond using the documented Pantheon surfaces.|
-|New Relic through customer-configured OTLP export|Practical customer-managed approach|New Relic account, credentials, instrumentation, endpoint, sampling, dashboards, and support relationship.|
-|OpenTelemetry SDK plus your own collector|Practical customer-managed option|SDK compatibility, collector operations, network path, security, routing, cost, and backend.|
-|Direct export to another OTLP-compatible provider|Potentially practical; provider-specific|Provider compatibility and all vendor configuration.|
-|Pantheon-provisioned New Relic for Next.js|Not currently available|Do not document or promise this as a current feature.|
-|Pantheon-native OpenTelemetry integration|Under evaluation; not a committed feature|Do not rely on it for current production requirements.|
-|Unpinned packages or copied examples from older Next.js/OpenTelemetry releases|Version-sensitive and experimental|Validate against the project's Node.js and Next.js versions before deployment.|
-
 ## Troubleshooting
 
 ### No traces or metrics appear
