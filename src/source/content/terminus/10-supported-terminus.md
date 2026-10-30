@@ -18,8 +18,8 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version          | Release Date       | EOL Date           |
 |------------------|--------------------|--------------------|
-| 4.3.4            | October 29, 2026   |                    |
-| 4.3.3            | August 20, 2026    | October 29, 2027   |
+| 4.3.4            | November 2, 2026   |                    |
+| 4.3.3            | August 20, 2026    | November 2, 2027   |
 | 4.3.2            | June 23, 2026      | August 20, 2027    |
 | 4.3.1            | June 02, 2026      | June 23, 2027      |
 | 4.3.0            | May 26, 2026       | June 02, 2027      |
