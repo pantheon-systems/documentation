@@ -3,7 +3,7 @@ title: "Drupal 12 beta upstream available for testing"
 published_date: "2026-10-30"
 published_at: "2026-10-30T00:00:00Z"
 categories: [drupal, new-feature]
-description: "Create a Drupal 12 (12.0.0-beta2) site on Pantheon with Terminus to test your modules and themes before the stable release."
+description: "Create a Drupal 12 (12.0.0-beta2) site on Pantheon with Terminus."
 ---
 Pantheon now provides a Drupal 12 upstream so you can test your site against [Drupal 12.0.0-beta2](https://www.drupal.org/project/drupal/releases/12.0.0-beta2). Drupal 12 requires PHP 8.5, and new sites created from this upstream use PHP 8.5 and MySQL 8.4.
 
