@@ -23,11 +23,13 @@ Drupal 12 does not appear in the dashboard's site creation flow yet, so use Term
 
 ## Known issue: error after installing
 
-After you install Drupal 12, If you encounter an issue like this from Drupal core, please clear the cache:
+After you install Drupal 12, you may see this error from Drupal core:
 
 ```text
 BadMethodCallException: The "\Drupal\standard\Controller\WelcomeController::access" method is not callable as a _custom_access callback in route "/admin/welcome"
 ```
+
+If you see it, clear the cache:
 
 ```bash
 terminus drush <site>.<env> -- cr
