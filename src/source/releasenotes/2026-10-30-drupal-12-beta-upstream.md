@@ -1,7 +1,7 @@
 ---
 title: "Drupal 12 upstream available for testing"
-published_date: "2026-11-03"
-published_at: "2026-11-03T15:00:00Z"
+published_date: "2026-10-30"
+published_at: "2026-10-30T18:23:00Z"
 categories: [drupal, new-feature]
 description: "Create a Drupal 12 (12.0.0-beta2) site on Pantheon with Terminus."
 ---
