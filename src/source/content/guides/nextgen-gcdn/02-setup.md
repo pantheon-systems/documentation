@@ -6,7 +6,7 @@ description: Learn how to migrate from Pantheon's Legacy Global CDN to our Next-
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-09-29"
+reviewed: "2026-10-29"
 permalink: docs/guides/nextgen-gcdn/setup
 contenttype: [guide]
 innav: [false]
@@ -192,7 +192,7 @@ terminus gcdn:verify my-site.live www.example.com
 
 ## Using Cloudflare in Front of Pantheon (Orange-to-Orange)
 
-If your domain is already proxied through your own Cloudflare zone (orange-clouded), the next-generation GCDN supports Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration, which keeps your Cloudflare zone in front of Pantheon's GCDN. See [Migrate a Cloudflare-Proxied Domain (O2O)](/guides/nextgen-gcdn/o2o) for the full walkthrough.
+If your domain is already proxied through your own Cloudflare zone (orange-clouded), the next-generation GCDN supports Cloudflare's [Orange-to-Orange (O2O)](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/how-it-works/) configuration, which keeps your Cloudflare zone in front of Pantheon's GCDN. To migrate an existing site, see [Migrate a Cloudflare-Proxied Domain (O2O)](/guides/nextgen-gcdn/o2o) for the full walkthrough. To add a domain to a new site, see [Connect a Cloudflare-Proxied Domain to a New Site (O2O)](/guides/nextgen-gcdn/o2o-new-site).
 
 ## Using a Third-Party CDN in Front of Pantheon
 
