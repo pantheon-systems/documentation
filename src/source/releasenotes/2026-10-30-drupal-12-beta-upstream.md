@@ -17,8 +17,6 @@ Create a site with Terminus:
 terminus site:create <site-name> "<site-label>" drupal-12-composer-managed --org=<org>
 ```
 
-You can use the upstream ID `2b5c005c-085b-4d19-992e-c36d883aba74` in place of `drupal-12-composer-managed`.
-
 Drupal 12 does not appear in the dashboard's site creation flow yet, so use Terminus.
 
 ## Known issue: error after installing
