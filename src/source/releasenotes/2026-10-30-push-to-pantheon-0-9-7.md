@@ -1,7 +1,7 @@
 ---
 title: "Push to Pantheon GitHub Action 0.9.7 update is now available"
 published_date: "2026-10-30"
-published_at: "2026-10-30T00:00:00Z"
+published_at: "2026-10-30T17:11:22Z"
 categories: [tools-apis, new-feature]
 description: "Version 0.9.7 of the Push to Pantheon GitHub Action adds inputs to control whether new Multidevs clone files and the database, and lowercases target_env instead of rejecting it."
 ---
