@@ -5,9 +5,9 @@ published_at: "2026-10-30T00:00:00Z"
 categories: [drupal, new-feature]
 description: "Create a Drupal 12 (12.0.0-beta2) site on Pantheon with Terminus."
 ---
-Pantheon now provides a Drupal 12 upstream so you can test your site against [Drupal 12.0.0-beta2](https://www.drupal.org/project/drupal/releases/12.0.0-beta2). Drupal 12 requires PHP 8.5, and new sites created from this upstream use PHP 8.5 and MySQL 8.4.
+Pantheon now provides a Drupal 12 upstream for testing. New sites created from it start on the latest Drupal 12 release, currently [12.0.0-beta2](https://www.drupal.org/project/drupal/releases/12.0.0-beta2), with PHP 8.5 and MySQL 8.4.
 
-Drupal 12 is in beta. Use it for testing, not for production sites. Drupal 12 compatibility for Pantheon's modules is in progress. According to the [Drupal core release schedule](https://www.drupal.org/about/core/policies/core-release-cycles/schedule), the first release candidate (12.0.0-rc1) is scheduled for the week of November 9, 2026, and the stable release (12.0.0) for the week of December 7, 2026.
+Drupal 12 is still in beta, so use it for testing, not for production sites. Drupal 12 compatibility for Pantheon's modules is in progress. The [Drupal core release schedule](https://www.drupal.org/about/core/policies/core-release-cycles/schedule) plans the release candidate (12.0.0-rc1) for the week of November 9, 2026, and the stable release (12.0.0) for the week of December 7, 2026.
 
 ## Create a Drupal 12 site
 
