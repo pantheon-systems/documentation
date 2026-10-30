@@ -1,5 +1,5 @@
 ---
-title: "Drupal 12 beta upstream available for testing"
+title: "Drupal 12 upstream available for testing"
 published_date: "2026-10-30"
 published_at: "2026-10-30T00:00:00Z"
 categories: [drupal, new-feature]
