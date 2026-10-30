@@ -392,7 +392,7 @@ Resolving this requires clearing all indexed data and performing a full reindex.
    terminus drush $SITE.$ENV -- search-api-pantheon:postSchema
    ```
 
-1. **Disable and re-enable the Solr server** to clear all tracked index data:
+1. **Disable and re-enable the Solr server.** This disables every index on it and clears their indexed data from Solr:
 
    ```shell{promptUser:user}
    terminus drush $SITE.$ENV -- search-api:server-disable <server_id>
@@ -407,6 +407,12 @@ Resolving this requires clearing all indexed data and performing a full reindex.
    terminus drush $SITE.$ENV -- search-api-solr:reload <server_id>
    ```
 
+   This command is provided by the `search_api_solr_admin` submodule of Search API Solr. If Drush reports that the command is not defined, enable the submodule first:
+
+   ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- pm:enable search_api_solr_admin -y
+   ```
+
 1. **Wait at least 5 minutes**, then verify the schema version has updated:
 
    ```shell{promptUser:user}
@@ -415,20 +421,24 @@ Resolving this requires clearing all indexed data and performing a full reindex.
 
    The platform checks for new schemas and issues a core reload within 1-5 minutes.
 
-1. **Re-enable all indexes** (they are automatically disabled when the server is disabled):
+1. **Re-enable the indexes.** Disabling the server disabled all of its indexes. Enable them all:
 
    ```shell{promptUser:user}
-   terminus drush $SITE.$ENV -- search-api:enable
+   terminus drush $SITE.$ENV -- search-api:enable-all
    ```
 
-1. **Reindex all content:**
+   To enable a single index instead, use `terminus drush $SITE.$ENV -- search-api:enable <index_id>`. List your index IDs with `search-api:list`.
+
+1. **Rebuild the tracker and reindex all content.** Rebuilding the tracker marks every item as needing to be indexed again, for all enabled indexes:
 
    ```shell{promptUser:user}
+   terminus drush $SITE.$ENV -- search-api:rebuild-tracker
    terminus drush $SITE.$ENV -- search-api:index
    ```
 
 1. **Verify** search functionality is working as expected.
 
+If you still see the same error after reindexing, [contact Pantheon support](/guides/support/contact-support/).
 
 #### `<lib/>` directives deprecated in Solr 9.8+
 
