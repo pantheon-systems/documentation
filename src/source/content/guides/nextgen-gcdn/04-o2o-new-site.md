@@ -6,7 +6,7 @@ description: Connect a domain that is proxied through your own Cloudflare zone t
 tags: [cache, cdn, cloudflare]
 contributors: [jazzsequence]
 showtoc: true
-reviewed: "2026-10-29"
+reviewed: "2026-11-02"
 permalink: docs/guides/nextgen-gcdn/o2o-new-site
 contenttype: [guide]
 innav: [false]

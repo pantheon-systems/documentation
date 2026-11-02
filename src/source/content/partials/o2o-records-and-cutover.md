@@ -5,7 +5,7 @@ cms: [--]
 product: [cdn]
 integration: [cloudflare]
 tags: [--]
-reviewed: "2026-10-29"
+reviewed: "2026-11-02"
 ---
 
 ## Set the SSL/TLS encryption mode
@@ -38,15 +38,7 @@ Add the ownership TXT record from the `gcdn:o2o` output:
 _cf-custom-hostname.<hostname>  TXT  <ownership_token>
 ```
 
-Leave this record in place until your site serves traffic through the GCDN. A proxied cutover works without it, but Pantheon can't show the domain as ready before cutover, and Cloudflare can't pre-validate the hostname.
-
-While Cloudflare proxies the hostname (orange cloud, the usual O2O state), it can't use this TXT. It reports `The hostname is using Cloudflare and cannot be activated with an TXT or HTTP validation token`, and activates the hostname after cutover, once the traffic CNAME points at Pantheon's edge.
-
-<Alert title="Optional: pre-validate before cutover" type="info">
-
-If the hostname's traffic record points directly to your origin, you can set it to **DNS only** (grey cloud) before cutover. Cloudflare then isn't proxying it, so it can use the TXT to validate and activate the hostname early. This doesn't work if the record points to another host that uses Cloudflare for SaaS, such as a CNAME to WP Engine. Traffic is still on Cloudflare in that case, and the error remains. If you're moving from WP Engine, remove the hostname there when you update your DNS records. That removes it from WP Engine's SaaS zone and avoids those errors.
-
-</Alert>
+Leave this record in place until `terminus gcdn:verify` reports the domain active. A proxied cutover works without it, but Pantheon can't show the domain as ready before cutover, and Cloudflare can't pre-validate the hostname.
 
 Before you add the ACME challenge CNAME, delete any existing `_acme-challenge.<hostname>` TXT records. They block certificate delegation, and Cloudflare doesn't allow a CNAME to share a name with another record. Don't remove unrelated TXT records, such as SPF, DKIM, or DMARC.
 
@@ -58,23 +50,27 @@ _acme-challenge.<hostname>  CNAME  <hostname>.<zone_dcv_id>.dcv.cloudflare.com
 
 This record issues your certificate. Leave it in place permanently and keep it grey-clouded. Removing or proxying it breaks certificate renewal, and changing it to a TXT record breaks delegation.
 
+While Cloudflare proxies the hostname (orange cloud, the usual O2O state), it can't use the ownership TXT. It reports `The hostname is using Cloudflare and cannot be activated with an TXT or HTTP validation token`, and activates the hostname after cutover, once the traffic CNAME points at Pantheon's edge.
+
+<Alert title="Optional: pre-validate before cutover" type="info">
+
+If the hostname's traffic record points directly to your origin, you can set it to **DNS only** (grey cloud) before cutover. Cloudflare then doesn't proxy it, so it can use the TXT to validate and activate the hostname early. This doesn't work if the record points to another host that uses Cloudflare for SaaS, such as a CNAME to WP Engine. Traffic still passes through Cloudflare in that case, and the error remains. If you move from WP Engine, remove the hostname there when you update your DNS records. That removes it from WP Engine's SaaS zone and avoids those errors.
+
+</Alert>
+
 ### 2. Confirm propagation and certificate issuance
 
 ```bash{promptUser: user}
 dig +short CNAME _acme-challenge.<hostname>
 ```
 
-The query returns a `dcv.cloudflare.com` target when the record is live. Then confirm that Pantheon's edge has issued a certificate for your hostname. Use the traffic CNAME target from the `gcdn:o2o` output and your hostname:
+The query returns a `dcv.cloudflare.com` target when the record is live. Then check that Pantheon has confirmed your ownership and issued the certificate:
 
 ```bash{promptUser: user}
-openssl s_client -connect fe.<zone>.edge.pantheon.io:443 -servername <hostname> 2>/dev/null </dev/null | openssl x509 -noout -subject -issuer -dates
+terminus gcdn:verify <site>.<env> <domain>
 ```
 
-Proceed once the certificate subject shows your hostname and the validity dates include today. Pantheon's edge serves the custom hostname's certificate while the hostname is still pending, so this check is the right gate before switching traffic. If it doesn't, run the command again after a minute or two. If it still doesn't match once the records above are live, [contact Pantheon Support](/guides/support/contact-support/). Don't point traffic at the GCDN before the certificate shows your hostname, or visitors reach Pantheon's edge without a valid certificate.
-
-When the GCDN Terminus plugin 0.5.0 is available, `terminus gcdn:verify <site>.<env> <domain>` can replace this check. It reports `DNS records ready (confirmed by Pantheon)`, which includes the certificate check plus Pantheon's confirmation of the ownership TXT.
-
-Don't use `terminus gcdn:dns` for this check. For a hostname that your own Cloudflare zone serves, it reports `Cloudflare ownership: not verified` until traffic points at Pantheon, even when the certificate is issued. It also lists A and AAAA records marked `[action required]`, with Cloudflare proxy IP addresses as the current values. Ignore those for O2O. Your domain uses the CNAME, which is listed as `fe.<zone>.edge.pantheon.io`.
+Proceed once the output shows `DNS records ready (confirmed by Pantheon)`. Pantheon's edge serves the custom hostname's certificate while the hostname still shows as pending, so this state tells you the cutover is safe. If the output shows `ownership not confirmed yet` or `ownership and certificate pending`, add the records it lists, wait a few minutes, and run the command again. The command rechecks the domain at most once a minute, and Pantheon sees the result within about 10 minutes. If the output doesn't change once the records above are live, [contact Pantheon Support](/guides/support/contact-support/). Don't point traffic at the GCDN before the output shows ready, or visitors reach Pantheon's edge without a valid certificate.
 
 ### 3. Route traffic to the GCDN
 
@@ -94,12 +90,14 @@ While the record is grey-clouded, visitors connect directly to Pantheon's edge, 
 
 A/AAAA records aren't compatible with O2O and can cause downtime.
 
-After you route traffic, run `terminus gcdn:verify` so Cloudflare and Pantheon detect the change sooner:
+After you route traffic, run the check again so Cloudflare and Pantheon detect the change sooner:
 
 ```bash{promptUser: user}
 terminus gcdn:verify <site>.<env> <domain>
 ```
 
+The output shows `ownership and certificate active` once the hostname becomes active.
+
 ## Re-enable your zone hold (Enterprise only)
 
-Once the custom hostname is active, switch **Zone Hold** back to **On** in **Quick Actions**. The hold stops other Cloudflare accounts from claiming your domain, so don't leave it off longer than you need to.
+Once the custom hostname becomes active, switch **Zone Hold** back to **On** in **Quick Actions**. The hold stops other Cloudflare accounts from claiming your domain, so don't leave it off longer than you need to.

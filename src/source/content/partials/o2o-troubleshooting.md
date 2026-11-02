@@ -5,7 +5,7 @@ cms: [--]
 product: [cdn]
 integration: [cloudflare]
 tags: [--]
-reviewed: "2026-10-29"
+reviewed: "2026-11-02"
 ---
 
 ## Troubleshooting
@@ -20,7 +20,7 @@ If the error persists:
 - Confirm the hostname CNAME points to `fe.<zone>.edge.pantheon.io`.
 - Confirm you followed the staged grey-cloud then orange-cloud change.
 
-If the hostname is `Blocked`, a Zone Hold was on when the hostname was created. Switch **Zone Hold** to **Off**, then run `terminus gcdn:verify <site>.<env> <domain>`. If the hold comes from another Cloudflare for SaaS provider, [contact Pantheon Support](/guides/support/contact-support/).
+If the hostname shows `Blocked`, a Zone Hold applied when Pantheon created it. Switch **Zone Hold** to **Off**, then run `terminus gcdn:verify <site>.<env> <domain>`. If the hold comes from another Cloudflare for SaaS provider, [contact Pantheon Support](/guides/support/contact-support/).
 
 [Contact Pantheon Support](/guides/support/contact-support/) if the hostname is `moved` (it stayed pending past Cloudflare's 7-day validation window). It doesn't recover on its own.
 
