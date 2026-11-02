@@ -1,7 +1,7 @@
 ---
 title: Runtime package installs are now blocked for Next.js sites
-published_date: "2026-11-09"
-published_at: "2026-11-09T15:00:00Z"
+published_date: "2026-11-03"
+published_at: "2026-11-03T15:00:00Z"
 categories: [nextjs, infrastructure]
 description: Starting November 9, 2026, Pantheon blocks package installs while Next.js applications are running, so a missing build-time dependency fails fast instead of causing repeated slow restarts.
 ---
