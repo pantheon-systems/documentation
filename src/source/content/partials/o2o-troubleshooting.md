@@ -20,7 +20,9 @@ If the error persists:
 - Confirm the hostname CNAME points to `fe.<zone>.edge.pantheon.io`.
 - Confirm you followed the staged grey-cloud then orange-cloud change.
 
-[Contact Pantheon Support](/guides/support/contact-support/) if the hostname is `Blocked` (the Zone Hold was on when you started) or `moved` (it stayed pending past Cloudflare's 7-day validation window). Neither recovers on its own.
+If the hostname is `Blocked`, a Zone Hold was on when the hostname was created. Switch **Zone Hold** to **Off**, then run `terminus gcdn:verify <site>.<env> <domain>`. If the hold comes from another Cloudflare for SaaS provider, [contact Pantheon Support](/guides/support/contact-support/).
+
+[Contact Pantheon Support](/guides/support/contact-support/) if the hostname is `moved` (it stayed pending past Cloudflare's 7-day validation window). It doesn't recover on its own.
 
 ### Too many redirects
 

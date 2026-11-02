@@ -8,8 +8,10 @@ tags: [--]
 reviewed: "2026-10-29"
 ---
 
-<Alert title="Do Not Use gcdn:verify" type="danger">
+<Alert title="Use Terminus, not the dashboard" type="danger">
 
-O2O uses the CNAME-based validation described on this page. `terminus gcdn:verify` is not built to support O2O verification. Don't run `terminus gcdn:verify`, and skip the TXT verification steps if the dashboard shows them for your domain.
+O2O is set up through the GCDN Terminus plugin, and the dashboard can contradict these steps. Ignore the DNS records and TXT verification steps the dashboard shows for these domains, and use the records from `terminus gcdn:o2o` instead.
+
+The CNAME-based validation described on this page replaces the `terminus gcdn:verify` check. Don't run `terminus gcdn:verify` to gate your cutover. After you route traffic to the GCDN, run `terminus gcdn:verify <site>.<env> <domain>` so Cloudflare and Pantheon detect the change sooner.
 
 </Alert>

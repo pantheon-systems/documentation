@@ -39,7 +39,7 @@ Be sure that you have:
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 1. Add the domain on your Pantheon environment's **Domains** tab. See [Custom Domains](/guides/domains/custom-domains) for the steps.
 
-The dashboard might show DNS records for the domain. Use the records from `terminus gcdn:o2o` in the next sections instead. Don't change the domain's traffic record yet. Your domain keeps serving from its current host until you point the traffic CNAME at the new edge.
+The dashboard might show DNS records or TXT verification steps for the domain. Ignore them. Use the records from `terminus gcdn:o2o` in the next sections instead. Don't change the domain's traffic record yet. Your domain keeps serving from its current host until you point the traffic CNAME at the new edge.
 
 <Partial file="o2o-records-and-cutover.md" />
 
