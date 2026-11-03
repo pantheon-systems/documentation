@@ -52,6 +52,7 @@ exceptions:
   - Terminus
   - Test
   - URL
+  - User-Agent
   - Varnish
   - WP-CLI
   - WordPress
