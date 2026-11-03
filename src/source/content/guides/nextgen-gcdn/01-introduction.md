@@ -66,6 +66,62 @@ Keep in mind:
 
 After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, generate a bot bypass token and add it to that service's requests as described above. If the bypass token doesn't cover your situation, contact Pantheon support to request an exception.
 
+### User-Agent Bypass
+
+Some tools can't send a custom request header, so they can't use a [bot bypass token](#bot-bypass-tokens). Hosted uptime monitors, SEO and accessibility scanners, and partner integrations often let you see or set their User-Agent but not add a header. You can exempt these tools by their exact User-Agent string, one domain at a time.
+
+Requests whose `User-Agent` header exactly matches one of a domain's entries skip the standard challenge for automated traffic on that domain. Targeted protections, rate limiting, the managed WAF, and other platform-level security rules still apply to every request.
+
+If your automation can send a request header, use a bot bypass token instead. A token is a secret; a User-Agent is not.
+
+**1. Find the exact User-Agent your tool sends.** Check the tool's documentation or settings, or ask its vendor. If the tool lets you set its User-Agent, choose a distinctive string that identifies it, for example `ExampleMonitor/2.1 (+https://example.com/monitor)`.
+
+**2. Install the plugin and add the entry to the domain the tool requests:**
+
+```bash{promptUser: user}
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+terminus gcdn:ua-bypass:add <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
+```
+
+If the plugin is already installed, update it with `terminus gcdn:update`. Use the environment the domain is connected to, usually `live`. Quote the User-Agent so your shell passes it as one value. The command prints the domain's entries after the change. Changes take effect within a few minutes.
+
+**3. List and remove entries:**
+
+```bash{promptUser: user}
+terminus gcdn:ua-bypass:list <site>.<env>
+terminus gcdn:ua-bypass:list <site>.<env> --hostname=<domain>
+terminus gcdn:ua-bypass:remove <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
+```
+
+Without `--hostname`, `list` shows the entries of every custom domain of the environment. Use `--format=json` for machine-readable output. To remove an entry, pass the stored value exactly as `list` shows it.
+
+Keep in mind:
+
+- **Matching is exact and case-sensitive**, against the full User-Agent string, including any version number. A partial string doesn't match. If a tool changes its User-Agent, for example after an upgrade, add the new string and remove the old one.
+
+- **A User-Agent is not a secret.** Any client that sends the same string also skips the challenge on that domain. Prefer a distinctive string that identifies your tool, and remove entries you no longer need.
+
+- **Entries that look like a web browser's User-Agent are refused by default**, because any bot imitating that browser would also skip the challenge. If you are sure, run the command again with `--allow-browser-ua` and confirm.
+
+- **Entries apply to one domain.** If a tool requests both `example.com` and `www.example.com`, add the entry to each. Wildcard domains are not supported.
+
+- **Each domain can have up to 8 entries.** An entry is 1 to 256 printable ASCII characters, with no double quote or backslash, and no leading or trailing space.
+
+- **The domain must be a verified custom domain served by the next-generation GCDN**, and you must have access to the site to manage its entries.
+
+- Verified bots (such as Googlebot and Bingbot) are allowed through automatically and do not need an entry.
+
+If a command fails, its message says why. The most common cases:
+
+| Message | What to do |
+| --- | --- |
+| `<domain> is not a domain of <site>.<env>` | Check the environment. Run `terminus domain:list <site>.<env>` to see its domains. |
+| `<domain> has not been verified yet` | Verify the domain with `terminus gcdn:verify <site>.<env> <domain>`, then try again. |
+| `<domain> is not served by GCDN` | The domain is not on the next-generation GCDN yet. See [Eligibility](#eligibility). |
+| `<domain> already has the maximum of 8 User-Agent bypass entries` | Remove an entry you no longer need with `terminus gcdn:ua-bypass:remove`. |
+
+If a tool is still challenged a few minutes after you add its entry, compare the entry with the User-Agent the tool sends now, including the version number and letter case, and check that the entry is on the exact domain the tool requests.
+
 ### Custom Certificates
 
 Sites using [customer-provided TLS certificates](/custom-certificates) are now supported on GCDN. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
