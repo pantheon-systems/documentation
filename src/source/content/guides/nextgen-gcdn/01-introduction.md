@@ -66,9 +66,9 @@ Keep in mind:
 
 After migrating to the next-generation GCDN, monitor your automated integrations (CI/CD tools, feed importers, monitoring services, API clients) to ensure they are not being blocked. If a service stops working, generate a bot bypass token and add it to that service's requests as described above. If the bypass token doesn't cover your situation, contact Pantheon support to request an exception.
 
-### User-Agent Bypass
+### User-Agent bypass
 
-Some tools can't send a custom request header, so they can't use a [bot bypass token](#bot-bypass-tokens). Hosted uptime monitors, SEO and accessibility scanners, and partner integrations often let you see or set their User-Agent but not add a header. You can exempt these tools by their exact User-Agent string, one domain at a time.
+Some tools can't send a custom request header, so they can't use a [bot bypass token](#bot-bypass-tokens). Hosted uptime monitors, SEO scanners, accessibility scanners, and partner integrations often let you see or set their User-Agent but not add a header. You can exempt these tools by their exact User-Agent string, one domain at a time.
 
 Requests whose `User-Agent` header exactly matches one of a domain's entries skip the standard challenge for automated traffic on that domain. Targeted protections, rate limiting, the managed WAF, and other platform-level security rules still apply to every request.
 

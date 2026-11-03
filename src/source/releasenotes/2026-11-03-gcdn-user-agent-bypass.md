@@ -8,9 +8,9 @@ description: "Use Terminus to exempt trusted tools that can't send a bot bypass 
 
 Sites on the [Next Generation GCDN](/guides/nextgen-gcdn) can now exempt trusted tools from bot protection by their User-Agent, without contacting support.
 
-[Bot bypass tokens](/release-notes/2026/09/gcdn-bot-bypass-token) cover automation you can configure to send a request header. Some tools can't do that: hosted uptime monitors, SEO and accessibility scanners, and partner integrations often let you see or set their User-Agent but not add a custom header.
+[Bot bypass tokens](/release-notes/2026/09/gcdn-bot-bypass-token) cover automation you can configure to send a request header. Some tools can't do that: hosted uptime monitors, SEO scanners, accessibility scanners, and partner integrations often let you see or set their User-Agent but not add a custom header.
 
-You can now use Terminus to add up to 8 User-Agent strings to each of your site's domains. Requests whose `User-Agent` header exactly matches one of a domain's entries skip the standard challenge for automated traffic on that domain. Targeted protections, rate limiting and the managed WAF still apply to every request.
+You can now use Terminus to add up to 8 User-Agent strings to each of your site's domains. Requests whose `User-Agent` header exactly matches one of a domain's entries skip the standard challenge for automated traffic on that domain. Targeted protections, rate limiting, and the managed WAF still apply to every request.
 
 Key details:
 
