@@ -6,7 +6,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-09-29"
+reviewed: "2026-11-03"
 permalink: docs/guides/nextgen-gcdn
 contenttype: [guide]
 innav: [false]
@@ -74,26 +74,26 @@ Requests whose `User-Agent` header exactly matches one of a domain's entries ski
 
 If your automation can send a request header, use a bot bypass token instead. A token is a secret; a User-Agent is not.
 
-**1. Find the exact User-Agent your tool sends.** Check the tool's documentation or settings, or ask its vendor. If the tool lets you set its User-Agent, choose a distinctive string that identifies it, for example `ExampleMonitor/2.1 (+https://example.com/monitor)`.
+1. **Find the exact User-Agent your tool sends.** Check the tool's documentation or settings, or ask its vendor. If the tool lets you set its User-Agent, choose a distinctive string that identifies it, for example `ExampleMonitor/2.1 (+https://example.com/monitor)`.
 
-**2. Install the plugin and add the entry to the domain the tool requests:**
+1. **Install the plugin and add the entry to the domain the tool requests:**
 
-```bash{promptUser: user}
-terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
-terminus gcdn:ua-bypass:add <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
-```
+    ```bash{promptUser: user}
+    terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+    terminus gcdn:ua-bypass:add <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
+    ```
 
-If the plugin is already installed, update it with `terminus gcdn:update`. Use the environment the domain is connected to, usually `live`. Quote the User-Agent so your shell passes it as one value. The command prints the domain's entries after the change. Changes take effect within a few minutes.
+    If the plugin is already installed, update it with `terminus gcdn:update`. Use the environment the domain is connected to, usually `live`. Quote the User-Agent so your shell passes it as one value. The command prints the domain's entries after the change. Changes take effect within a few minutes.
 
-**3. List and remove entries:**
+1. **List and remove entries:**
 
-```bash{promptUser: user}
-terminus gcdn:ua-bypass:list <site>.<env>
-terminus gcdn:ua-bypass:list <site>.<env> --hostname=<domain>
-terminus gcdn:ua-bypass:remove <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
-```
+    ```bash{promptUser: user}
+    terminus gcdn:ua-bypass:list <site>.<env>
+    terminus gcdn:ua-bypass:list <site>.<env> --hostname=<domain>
+    terminus gcdn:ua-bypass:remove <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
+    ```
 
-Without `--hostname`, `list` shows the entries of every custom domain of the environment. Use `--format=json` for machine-readable output. To remove an entry, pass the stored value exactly as `list` shows it.
+    Without `--hostname`, `list` shows the entries of every custom domain of the environment. Use `--format=json` for machine-readable output. To remove an entry, pass the stored value exactly as `list` shows it.
 
 Keep in mind:
 
