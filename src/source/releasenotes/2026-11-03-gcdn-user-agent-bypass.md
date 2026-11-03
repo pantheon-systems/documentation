@@ -1,7 +1,7 @@
 ---
 title: "Self-service User-Agent bypass for Next Generation GCDN"
 published_date: "2026-11-03"
-published_at: "2026-11-03T18:54:27Z"
+published_at: "2026-11-03T19:31:24Z"
 categories: [new-feature, tools-apis]
 description: "Use Terminus to exempt trusted tools that can't send a bot bypass token from Next Generation GCDN bot protection, by exact User-Agent, on each domain."
 ---
@@ -14,7 +14,7 @@ You can now use Terminus to add up to 8 User-Agent strings to each of your site'
 
 ## Key details:
 
-- Entries apply to a single domain. The domain must be a verified custom domain on the Next Generation GCDN, and you must have access to the site to manage its entries. To manage entries, use `terminus gcdn:ua-bypass:add`, `gcdn:ua-bypass:remove` and `gcdn:ua-bypass:list`.
+- Entries apply to a single domain. The domain must be a verified custom domain on the Next Generation GCDN, and you must have access to the site to manage its entries. If a tool requests both `example.com` and `www.example.com`, add the entry to each. Wildcard domains are not supported. To manage entries, use `terminus gcdn:ua-bypass:add`, `gcdn:ua-bypass:remove` and `gcdn:ua-bypass:list`. 
 
 - Matching is exact and case-sensitive against the full User-Agent string, including any version number. If a tool changes its User-Agent, for example after an upgrade, update the entry.
 
