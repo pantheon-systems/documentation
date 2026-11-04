@@ -1,7 +1,7 @@
 ---
 title: Drupal 7 LTS security update now available (Drupal 7.108)
 published_date: "2026-11-04"
-published_at: "2026-11-04T20:53:44Z"
+published_at: "2026-11-04T21:11:26Z"
 categories: [drupal, action-required, security]
 description: "Drupal 7.108 is now available with two security fixes: restored cache hardening from SA-CORE-2024-008 and a fix for an access bypass in external authentication."
 ---
