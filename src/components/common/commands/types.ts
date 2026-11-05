@@ -1,4 +1,4 @@
-interface CommandArgument {
+export interface CommandArgument {
   name: string;
   is_required: boolean;
   is_array: boolean;
