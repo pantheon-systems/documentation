@@ -10,10 +10,10 @@ Version 1.4.3 of the [Pantheon Content Publisher](https://wordpress.org/plugins/
 
 ## What's new?
 
-* **Fix** — Stop embedded videos reloading and flickering in the real-time preview on every live update. [#282](https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/pull/282)
-* **Fix** — Send no-cache headers on the signed preview redirect and on any URL carrying preview parameters, so CDN and page caches cannot serve an expired preview link. [#283](https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/pull/283)
-* **Fix** — Keep every Smart Component (not only Media Embed) on the page in the real-time preview after the first live update. [#284](https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/pull/284)
-* **Fix** — Show an error instead of the last-synced post when the real-time preview cannot fetch the document from Content Publisher. [#285](https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/pull/285)
+* **Smoother video previews** — Embedded videos no longer reload or flicker in the real-time preview every time you make an edit.
+* **Fresher preview links** — Preview links now always show your latest content instead of a cached, out-of-date version.
+* **More reliable Smart Components** — All Smart Components on the page, not just videos, now stay visible in the real-time preview as you keep editing.
+* **Clearer preview errors** — If the real-time preview can't load your latest edits, you'll see a clear error message instead of outdated content.
 
 Update to 1.4.3 from the WordPress dashboard under **Plugins > Installed Plugins**, or download it from the [WordPress Plugin Repository](https://wordpress.org/plugins/pantheon-content-publisher/).
 
