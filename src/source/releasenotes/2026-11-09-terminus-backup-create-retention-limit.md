@@ -15,7 +15,6 @@ If you create manual backups with Terminus, update to Terminus 4.3.5 before that
 - **Maximum retention:** Manual backups can be retained for at most 180 days. Backup requests that ask for more are rejected.
 - **`terminus backup:create` default:** Before Terminus 4.3.5, `terminus backup:create` retained backups for 365 days when you did not pass `--keep-for`. Terminus 4.3.5 changes the default to 30 days, in line with the Site Dashboard.
 - **Early validation in Terminus 4.3.5:** `terminus backup:create` now checks `--keep-for` before contacting Pantheon. A value above 180, a value below 1, or a value that is not a whole number stops immediately with a message that explains the allowed range.
-- **Direct API requests:** If you request manual backups through the Pantheon API without Terminus, requests for a retention period above 180 days are rejected, and requests that do not specify a retention period default to 180 days.
 
 Automatic backups and backups created from the Site Dashboard are not affected.
 
