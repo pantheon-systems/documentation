@@ -34,6 +34,7 @@ Scripts and CI pipelines that run `terminus backup:create` with the default argu
 2. Review any scripts or CI jobs that call `terminus backup:create`:
     - If they rely on the default retention, expect backups to be kept for 30 days instead of 365 days after you update.
     - If they pass `--keep-for` with a value above 180, lower it to 180 or less.
+
 For example, to create a database backup that is retained for 90 days:
 
 ```shell{promptUser: user}
