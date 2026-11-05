@@ -1,5 +1,5 @@
 ---
-title: "Action required: update to Terminus 4.3.5 before manual backup retention is limited to 180 days on November 16, 2026"
+title: "Action required: update to Terminus 4.3.5 before the manual backup retention limit on November 16, 2026"
 published_date: "2026-11-09"
 published_at: "2026-11-09T15:00:00Z"
 categories: [tools-apis, action-required]
@@ -15,6 +15,8 @@ If you create manual backups with Terminus, update to Terminus 4.3.5 before that
 - **Maximum retention:** Manual backups can be retained for at most 180 days. Backup requests that ask for more are rejected.
 - **`terminus backup:create` default:** Before Terminus 4.3.5, `terminus backup:create` retained backups for 365 days when you did not pass `--keep-for`. Terminus 4.3.5 changes the default to 30 days, in line with the Site Dashboard.
 - **Early validation in Terminus 4.3.5:** `terminus backup:create` now checks `--keep-for` before contacting Pantheon. A value above 180, a value below 1, or a value that is not a whole number stops immediately with a message that explains the allowed range.
+- **Other commands that create backups:** `terminus local:getLiveDB` and `terminus local:getLiveFiles` create a temporary backup without a `--keep-for` option. In Terminus 4.3.5 those backups also use the 30-day default.
+- **Direct API requests:** If you request manual backups through the Pantheon API without Terminus, requests for a retention period above 180 days are rejected, and requests that do not specify a retention period default to 180 days.
 
 Automatic backups and backups created from the Site Dashboard are not affected.
 
@@ -24,8 +26,9 @@ After November 16, 2026, older versions of Terminus still send the 365-day defau
 
 - `terminus backup:create` with no `--keep-for` option fails.
 - `terminus backup:create` with `--keep-for` set above 180 fails.
+- `terminus local:getLiveDB` and `terminus local:getLiveFiles` fail when they need to create a backup.
 
-Scripts and CI pipelines that run `backup:create` with the default arguments will fail until Terminus is updated.
+Scripts and CI pipelines that run these commands with the default arguments will fail until Terminus is updated.
 
 ## Action required
 
@@ -33,7 +36,11 @@ Scripts and CI pipelines that run `backup:create` with the default arguments wil
 2. Review any scripts or CI jobs that call `terminus backup:create`:
     - If they rely on the default retention, expect backups to be kept for 30 days instead of 365 days after you update.
     - If they pass `--keep-for` with a value above 180, lower it to 180 or less.
-3. If you need a backup for longer than 180 days, download it with `terminus backup:get` and store it outside Pantheon.
+3. If you need to keep a backup for longer than 180 days, download it and store it outside Pantheon. For example:
+
+    ```shell{promptUser: user}
+    terminus backup:get <site>.<env> --element=<element> --to=<path>
+    ```
 
 For example, to create a database backup that is retained for 90 days:
 
