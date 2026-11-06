@@ -209,6 +209,94 @@ Use of the `wikimedia/composer-merge-plugin` is deprecated within [Drupal](https
 
 When using Pantheon's Integrated Composer, this plugin often tries to run a `composer update` during the `composer install`, which is not allowed and will cause errors. We recommend removing `composer-merge-plugin` from your Composer toolchain.
 
+
+### Patch file installs locally but silently fails to apply in Pantheon environments
+
+Occasionally, patch files may fail to apply during the composer build step. This can occur when build artefacts include stale data from previous builds.
+
+Say you have a patch that should apply to a file called `file.php` inside the project `your_module` on the Multidev site `demo1`.
+
+First, verify your patch is definitely being applied locally by running a clean install of the project dependencies.
+
+1. Check out the `demo1` branch:
+
+    ```
+    git checkout demo1
+    ```
+    
+2. Remove the composer-related lock files:
+
+    ```
+    rm composer.lock
+    rm patches.lock.json
+    ```
+    
+3. Remove the composer-installed copy of `your_module` from wherever you have set modules to be installed in `composer.json`:
+
+   ```
+   rm ./web/modules/contrib/your_module
+   ```
+   
+4. Flush all Composer caches:
+
+    ```
+    composer cc && composer dump-autoload
+    ```
+    
+5. Run composer update to install + update everything:
+
+    ```
+    composer update
+    ```
+
+This will regenerate `composer.lock` and `patches.lock.json`, and should guarantee there are no local changes to your dependencies other than those introduced by the patch file.
+
+Inspect the target file in `your_module` and confirm it contains the changes introduced by the patch. If the patch has applied correctly, commit your changes and push to Pantheon.
+
+If the deployment completes and the patch still isn't applying, there may be cached build artefacts preventing the change being detected.
+
+You can target and delete these artefacts by:
+
+1. Get the remote name and copy the Pantheon remote URL:
+
+    ```
+    git remote -v
+    ```
+    
+2. Fetch the tag names:
+
+    ```
+    git ls-remote --tags <pantheon remote url> 'refs/tags/pantheon_build_artifacts_*'
+    ```
+    
+   The artefact tag will be called `refs/tags/pantheon_build_artifacts_<my-env>` (not `refs/tags/pantheon_build_artifacts_<my-env>^{}`)
+   
+5. Check out the tag locally: 
+    
+    ```
+    git fetch <pantheon remote url> refs/tags/pantheon_build_artifacts_<my-env>:refs/tags/pantheon_build_artifacts_<my-env>
+    ```
+    
+7. Inspect your file the patch should have altered: 
+
+   ```
+   git show <exact-tag>:web/modules/contrib/your_module/file.php
+   ```
+   
+   If the file isn't showing the patch changes, the build tag is stale and needs to be deleted.
+   
+10. To delete the tag: 
+
+    ```
+    git push <pantheon remote url> --delete refs/tags/pantheon_build_artifacts_<my_env>
+    ```
+    
+12. Rebuild the Pantheon environment code:
+
+    ```
+    terminus env:code-rebuild <project>.<env>
+    ```
+
 ### Patches containing binary diffs fail in Pantheon
 
 If your site contains a binary patch, such as https://www.drupal.org/files/issues/2020-06-27/2340699-110.patch, the Composer build step will fail. This is because [cweagans/composer-patches](https://github.com/cweagans/composer-patches) use the patch utility to apply patches. The most recent version of this utility does not support binary patches and fails when deployed.
