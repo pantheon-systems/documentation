@@ -74,29 +74,55 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
 ## Apply Patch Using Composer
 
-1. Add `patch` to your `composer.json` file:
+1. Add `composer-patches` to your `composer.json` file with `$ composer require cweagans/composer-patches`:
 
     ```json:title=composer.json
     {
     "require": {
-      "cweagans/composer-patches": "~1.0",
-      "drupal/core-recommended": "^8.8",
+      "cweagans/composer-patches": "^2.0",
+      "drupal/core-recommended": "^11.4",
     },
     ```
 
-1. Add a `patches` folder to the root of your `composer.json` file.
+2. Add a `patches` folder in your project root (the same place as your `composer.json` file).
 
-1. Add an `extras` section inside your `composer.json` file:
+3. Add an `extra` section inside your `composer.json` file, ensuring `enable-patching` is set to `true`:
 
     ```json:title=composer.json
     "extra": {
-      "patches-file": "local/path/to/your/composer.patches.json"
+      "enable-patching": true,
+      "patches": {}
     }
     ```
 
-1. Run `composer install`.
+4. Add entries for each project (including Drupal modules, more details below) you wish to patch, as this keeps patches cleanly separated and is easier to maintain
 
-  This removes the core version, including libraries and dependencies, before re-downloading the core (plus libraries and dependencies), and applying the patch.
+    ```json:title=composer.json
+    "extra": {
+      "enable-patching": true,
+      "patches": {
+        "author/project1": {
+          "Patch description": "./patches/project1-issue1234.patch"
+        },
+        "anotherauthor/project2": {
+          "Another patch - www.project-site.com/issue1234": "./patches/project2-issue1234.patch"
+          "Yet another patch - www.project-site.com/issue5678": "https://example.com/files/project2-issues5678.patch"
+        }
+      }
+    }
+    ```
+
+5. Run `composer install`.
+
+   This removes the core version (and any other projects listed to patch), including libraries and dependencies, before re-downloading them (plus libraries and dependencies), and applying the patches.
+
+6. Confirm the patches have applied as expected by checking the affected files locally.
+   
+7. Push your changes to your Pantheon remote with `$ git push`
+
+8. Verify the patch has applied by checking the Build logs in the Pantheon dashboard.
+
+If the patch applies locally but fails to apply on the Pantheon environment, check the [Troubleshooting section](/guides/integrated-composer/ic-troubleshooting).
 
 ## Apply and Manage Drupal Module Patches with Composer
 
