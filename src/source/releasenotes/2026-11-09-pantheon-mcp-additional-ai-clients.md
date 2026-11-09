@@ -1,6 +1,7 @@
 ---
 title: "Pantheon MCP Server: Additional AI Client Support (Beta)"
 published_date: "2026-11-09"
+published_at: "2026-11-09T16:18:20Z"
 categories: [new-feature]
 description: "The Pantheon MCP Server now works with more AI clients, including ChatGPT, Codex, GitHub Copilot, and Google Antigravity, in addition to Claude."
 ---
