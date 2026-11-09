@@ -17,11 +17,11 @@ Pantheon MCP is Pantheon's remote MCP server. It lets AI tools work with your Pa
 ## Supported Clients 
 Pantheon MCP works with these AI tools: 
 
-* Claude AI and Claude Code
-* ChatGPT
-* Codex
-* GitHub Copilot
-* Google Antigravity 
+* [Claude AI](#claude-ai) and [Claude Code](#claude-code)
+* [ChatGPT](#chatgpt)
+* [Codex](#codex)
+* [GitHub Copilot](#vs-code-with-github-copilot)
+* [Google Antigravity](#antigravity)
 
 Pantheon MCP is also listed in the Claude marketplace. Claude users can install it from the marketplace or add it manually with the server URL. 
 
