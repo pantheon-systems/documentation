@@ -18,7 +18,7 @@ The following table indicates availability of the specified Drupal versions, as 
 | Drupal version | Available | Recommended | Supported |
 | ----------- | :---------: | :---------: | :---------: |
 | Drupal CMS          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
-| 12 (beta)   | <span style="color:green">✔</span> <Popover title="Drupal 12 — Beta" content="Drupal 12 is in beta. Use it for testing, not for production sites. For more information, see the <a href='#drupal-12-on-pantheon'>section below.</a>" /> | ❌           | ❌          |
+| 12 (beta)   | <span style="color:green">✔</span> <Popover title="Drupal 12 — Beta" content="Drupal 12 is in beta. Use it for testing, not for production sites. For more information, see the <a href='#drupal-12-on-pantheon'>section below.</a>" /> | ❌           | ❌ <Popover title="Drupal 12 — Beta" content="Drupal 12 is in beta and isn't supported for production sites yet. The stable version is scheduled for release the week of December 7, 2026. For more information, see the <a href='#drupal-12-on-pantheon'>section below.</a>" /> |
 | 11          | <span style="color:green">✔</span> | <span style="color:green">✔</span>           | <span style="color:green">✔</span>
 | 10          | <span style="color:green">✔</span> <Popover title="Drupal 10 — End of Life" content="Drupal 10 reaches its end of life on December 9, 2026. After that date it no longer receives security updates from the Drupal community. We recommend upgrading to Drupal 11 before then." />        | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
 | 9           |<span style="color:green">✔</span> <Popover title="Drupal 9 — End of Life" content="Drupal 9 reached its end of life on November 1, 2023. It no longer receives security updates from the Drupal community. Existing sites continue to run on Pantheon, but we strongly recommend migrating to Drupal 10 or 11." /> | ❌           | ❌ |
@@ -56,12 +56,27 @@ Drupal 12 does not appear in the dashboard's site creation options yet, but you 
 https://dashboard.pantheon.io/workspace/<workspace-id>/site/create-site/cms/custom-upstreams/2b5c005c-085b-4d19-992e-c36d883aba74
 ```
 
+### Known issue
+After you install Drupal 12 in the browser, you may see this error from Drupal core:
+
+```text
+BadMethodCallException: The "\Drupal\standard\Controller\WelcomeController::access" method is not callable as a _custom_access callback in route "/admin/welcome"
+```
+
+If you encounter this issue, clear the cache:
+
+```bash{promptUser: user}
+terminus drush <site>.<env> -- cr
+```
+
+For more information, see [drupal.org issue #3634413](https://www.drupal.org/project/drupal/issues/3634413).
+
 ## Drupal 10 and 11 on Pantheon
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
 
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
-Drupal 10 reaches its end of life on [December 9, 2026](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Plan your upgrade to Drupal 11 before then.
+Drupal 10 is scheduled to reach its end of life on [December 9, 2026](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Plan your upgrade to Drupal 11 before then. For more information, see the [related article](https://pantheon.io/learning-center/drupal/10-end-of-life).
 
 ## Drupal 8 and 9 on Pantheon
 
