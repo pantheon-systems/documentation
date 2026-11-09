@@ -72,9 +72,9 @@ For more information, see [drupal.org issue #3634413](https://www.drupal.org/pro
 ### Module compatibility
 Drupal 12 compatibility for Pantheon's modules is in progress. These modules support Drupal 12:
 
-* Pantheon Advanced Page Cache [version 2.5.0](https://www.drupal.org/project/pantheon_advanced_page_cache/releases/2.5.0)
-* Pantheon Secrets [version 1.1.1](https://www.drupal.org/project/pantheon_secrets/releases/1.1.1)
-* Pantheon Domain Masking [version 2.3.0](https://github.com/pantheon-systems/pantheon_domain_masking/releases/tag/2.3.0)
+* Pantheon Advanced Page Cache version 2.5.0 ([release](https://www.drupal.org/project/pantheon_advanced_page_cache/releases/2.5.0))
+* Pantheon Secrets version 1.1.1 ([release](https://www.drupal.org/project/pantheon_secrets/releases/1.1.1))
+* Pantheon Domain Masking version 2.3.0 ([release](https://github.com/pantheon-systems/pantheon_domain_masking/releases/tag/2.3.0))
 
 ## Drupal 10 and 11 on Pantheon
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
