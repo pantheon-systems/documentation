@@ -42,8 +42,6 @@ Drupal 12 is available for testing. New sites created from the Pantheon Drupal 1
 
 Drupal 12 is currently in beta. The release candidate is scheduled for the week of November 9, 2026, and the stable release for the week of December 7, 2026.
 
-Drupal 12 compatibility for Pantheon's modules is in progress. Pantheon Secrets supports Drupal 12 as of [version 1.1.1](https://www.drupal.org/project/pantheon_secrets/releases/1.1.1).
-
 Create a Drupal 12 site with Terminus:
 
 ```bash{promptUser: user}
@@ -70,6 +68,9 @@ terminus drush <site>.<env> -- cr
 ```
 
 For more information, see [drupal.org issue #3634413](https://www.drupal.org/project/drupal/issues/3634413).
+
+### Module compatibility
+Drupal 12 compatibility for Pantheon's modules is in progress. Pantheon Secrets supports Drupal 12 as of [version 1.1.1](https://www.drupal.org/project/pantheon_secrets/releases/1.1.1).
 
 ## Drupal 10 and 11 on Pantheon
 Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-site) for how to create a new Drupal 10 or 11 site from the Pantheon dashboard.
