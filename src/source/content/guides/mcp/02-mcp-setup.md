@@ -43,6 +43,8 @@ Each client asks you to sign in with your Pantheon account and authorize access 
 
 Custom connectors are available on Claude Pro, Max, Team and Enterprise plans.
 
+<br/>
+
 ### Claude Code
 #### Option 1: Install from the Claude
 1. Go to: https://claude.ai/directory/pantheon-mcp
@@ -64,6 +66,8 @@ Custom connectors are available on Claude Pro, Max, Team and Enterprise plans.
     ```
 1. Start Claude Code (claude), run `/mcp`, select `pantheon-mcp` and follow the browser prompt to sign in with your Pantheon  account.
 
+<br/>
+
 ### ChatGPT
 ChatGPT adds MCP servers as custom connectors. This requires developer mode and a plan that supports custom connectors. On Business and Enterprise workspaces, an admin may need to allow custom connectors first.
 
@@ -76,11 +80,15 @@ ChatGPT adds MCP servers as custom connectors. This requires developer mode and 
 
 ChatGPT's menu names for connectors have changed over time (Connectors, Apps, Plugins). If you don't see these exact names, check [OpenAI's custom MCP server](https://developers.openai.com/api/docs/guides/custom-mcp-server) guide.
 
+<br/>
+
 ### Codex
 ```bash{promptUser: user}
 codex mcp add pantheon-mcp --url https://mcp.pantheon.io/mcp
 ```
 Codex detects OAuth support and opens your browser. Sign in with your Pantheon  account and authorize access.
+
+<br/>
 
 ### VS Code with GitHub Copilot
 1. Open the Command Palette (Cmd+Shift+P on macOS, Ctrl+Shift+P on Windows/Linux) and run **MCP: Add Server**.
@@ -94,6 +102,8 @@ Alternatively, run this from a terminal:
 ```bash{promptUser: user}
 code --add-mcp '{"name":"pantheon-mcp","type":"http","url":"https://mcp.pantheon.io/mcp"}'
 ```
+
+<br/>
 
 ### Antigravity 
 1. Open your Antigravity MCP configuration file (~/.gemini/antigravity/mcp_config.json) and add:
