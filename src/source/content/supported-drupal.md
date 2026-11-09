@@ -76,7 +76,7 @@ Refer to [Create a New CMS Site](/guides/getstarted/addsite/#create-a-new-cms-si
 
 If you already have a Drupal 10 site on Pantheon, you can upgrade your existing site to [Drupal 11 via Composer](https://www.drupal.org/docs/upgrading-drupal/upgrading-from-drupal-8-or-later/how-to-upgrade-from-drupal-10-to-drupal-11).
 
-Drupal 10 is scheduled to reach its end of life on [December 9, 2026](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Plan your upgrade to Drupal 11 before then. For more information, see the [related article](https://pantheon.io/learning-center/drupal/10-end-of-life).
+Drupal 10 will reach its end of life on [December 9, 2026](https://www.drupal.org/about/core/policies/core-release-cycles/schedule). Plan your upgrade to Drupal 11 before then. For more information, see the [related article](https://pantheon.io/learning-center/drupal/10-end-of-life).
 
 ## Drupal 8 and 9 on Pantheon
 
