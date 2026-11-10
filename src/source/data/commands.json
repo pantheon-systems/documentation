@@ -1,7 +1,7 @@
 {
   "application": {
     "name": "Terminus",
-    "version": "4.3.4"
+    "version": "4.3.5"
   },
   "commands": [
     {
@@ -1519,7 +1519,7 @@
             "accept_value": true,
             "is_value_required": false,
             "is_multiple": false,
-            "description": "Retention period, in days, to retain backup. It defaults to 365 days.",
+            "description": "Retention period, in days, to retain backup. It defaults to 30 days and can be at most 180 days.",
             "default": null
           },
           "help": {
@@ -2539,8 +2539,8 @@
       "description": "Displays the URL for the Pantheon Dashboard or opens the Dashboard in a browser.",
       "usage": [
         "dashboard:view [--print] [--] [<site>.<env>]",
-        "dashboard:view Opens browser to user's account on the Pantheon Dashboard.",
-        "dashboard:view --print Prints the URL for user's account on the Pantheon Dashboard.",
+        "dashboard:view Opens browser to your current workspace on the Pantheon Dashboard.",
+        "dashboard:view --print Prints the URL for your current workspace on the Pantheon Dashboard.",
         "dashboard:view <site> Opens browser to <site> on the Pantheon Dashboard.",
         "dashboard:view <site>.<env> Opens browser to <site>'s <env> environment on the Pantheon Dashboard.",
         "dashboard"
