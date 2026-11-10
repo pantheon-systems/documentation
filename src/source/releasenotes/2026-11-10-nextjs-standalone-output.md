@@ -33,7 +33,7 @@ If you need more time, remove `output: 'standalone'` from `next.config` and Pant
 
 ## Rollout timeline
 
-The change begins rolling out on Monday, November 16, 2026. Each environment picks up the change on its next deployment after the rollout reaches your site. Your runtime logs show `Found Next.js standalone server at ...` when the standalone server is in use.
+The change begins rolling out on Tuesday, December 1, 2026. Each environment picks up the change on its next deployment after the rollout reaches your site. Your runtime logs show `Found Next.js standalone server at ...` when the standalone server is in use.
 
 For more details about how Pantheon builds and runs Next.js sites, see our [build and runtime architecture](/nextjs/architecture).
 
