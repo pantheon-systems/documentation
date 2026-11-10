@@ -24,7 +24,7 @@ Support for Next.js is available to customers with Gold, Platinum or Diamond Wor
 * **Package managers:**
   * Pantheon will use `npm`, `yarn`, `pnpm`, or `bun` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
 * **Expected commands in `package.json`:**
-  * Pantheon assumes that a Next.js site has a `package.json` file with `build` and `start` commands. Sites using `yarn` must have a `gcp-build` script instead of, or in addition to `build`. We consider inconsistency a bug in underlying Google Cloud build processes we leverage and [will update this guidance once it is resolved](https://github.com/pantheon-systems/documentation/issues/9888).
+  * Pantheon assumes that a Next.js site has a `package.json` file with `build` and `start` commands. If your build produces [standalone output](/nextjs/standalone-output), Pantheon starts the standalone server directly and does not run `start`. Sites using `yarn` must have a `gcp-build` script instead of, or in addition to `build`. We consider inconsistency a bug in underlying Google Cloud build processes we leverage and [will update this guidance once it is resolved](https://github.com/pantheon-systems/documentation/issues/9888).
 
 * **External version control:**
   * Next.js sites require code hosted in a GitHub or GitLab repository. Bitbucket support is planned for a future release.
