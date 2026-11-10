@@ -1,7 +1,7 @@
 ---
 title: Next.js sites with standalone output now start with the standalone server
-published_date: "2026-11-16"
-published_at: "2026-11-16T15:00:00Z"
+published_date: "2026-11-10"
+published_at: "2026-11-10T15:00:00Z"
 categories: [nextjs, infrastructure]
 description: Starting November 16, 2026, Pantheon starts Next.js applications that build standalone output with node server.js instead of npm run start.
 ---
