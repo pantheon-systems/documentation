@@ -1,7 +1,7 @@
 ---
 title: "Action required: update to Terminus 4.3.5 before the manual backup retention limit on November 16, 2026"
-published_date: "2026-11-09"
-published_at: "2026-11-09T15:00:00Z"
+published_date: "2026-11-10"
+published_at: "2026-11-10T16:39:07Z"
 categories: [tools-apis, action-required]
 description: "Starting November 16, 2026, manual backups can be retained for at most 180 days. Update to Terminus 4.3.5 so terminus backup:create keeps working with its default arguments."
 ---
