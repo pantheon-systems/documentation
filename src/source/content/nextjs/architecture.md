@@ -1,7 +1,7 @@
 ---
 title: Next.js Build and Runtime Architecture on Pantheon
 description: Next.js runs in Node.js containers on Pantheon behind a CDN with static assets served from an object storage service.
-reviewed: "2026-11-16"
+reviewed: "2026-11-10"
 contenttype: [doc]
 innav: [true]
 audience: [development]
