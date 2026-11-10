@@ -1,0 +1,61 @@
+# This file is centrally managed by github-terraform. Manual changes will be overwritten.
+# To modify this configuration, update orgs/pantheon-systems/files/dependabot/
+# in https://github.com/pantheon-systems/github-terraform
+version: 2
+updates:
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "06:00"
+      timezone: "UTC"
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5
+    # Minor/patch grouped; majors match no version group → one PR each.
+    groups:
+      actions:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      actions-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels: ["dependencies", "github-actions"]
+    rebase-strategy: "auto"
+
+  # npm / Node
+  - package-ecosystem: "npm"
+    directories: ["/**"]
+    exclude-paths: ["devops/make/**", "**/devops/make/**"]  # vendored common-makefiles; synced by update-common-makefiles
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "06:00"
+      timezone: "UTC"
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5
+    # Minor/patch grouped; majors match no version group → one PR each.
+    groups:
+      npm-dev-deps:
+        applies-to: version-updates
+        dependency-type: "development"
+        update-types: ["minor", "patch"]
+      npm-prod-deps:
+        applies-to: version-updates
+        dependency-type: "production"
+        update-types: ["minor", "patch"]
+      npm-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels: ["dependencies", "npm"]
+    rebase-strategy: "auto"
