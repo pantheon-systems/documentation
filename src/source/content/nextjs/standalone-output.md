@@ -10,8 +10,6 @@ integration: [--]
 permalink: docs/nextjs/standalone-output
 ---
 
-<!-- DRAFT (SITE-6334 / SITE-6338): confirm rollout date before publishing. -->
-
 When a Next.js build produces [standalone output](https://nextjs.org/docs/app/api-reference/config/next-config-js/output), Pantheon starts your application with the standalone server (`node .next/standalone/server.js`) instead of `npm run start`. Your build is unchanged. Only the command that starts the container is different.
 
 Standalone output is created when `next.config` sets `output: 'standalone'`. Applications without standalone output continue to start with `npm run start`.

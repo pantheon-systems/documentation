@@ -6,8 +6,6 @@ categories: [nextjs, infrastructure]
 description: Starting November 16, 2026, Pantheon starts Next.js applications that build standalone output with node server.js instead of npm run start.
 ---
 
-<!-- DRAFT: tentative date. Confirm against the SITE-6334 (internal-provisioner) and SITE-6338 (buildpack-slicer) rollout before publishing. -->
-
 Starting Monday, November 16, 2026, Pantheon is changing how it starts Next.js applications that use [standalone output](https://nextjs.org/docs/app/api-reference/config/next-config-js/output). If your build produces a standalone server, Pantheon runs that server directly instead of running `npm run start`. Your build is unchanged.
 
 ## Why we're making this change
