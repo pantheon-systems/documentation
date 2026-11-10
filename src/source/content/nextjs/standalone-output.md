@@ -1,7 +1,7 @@
 ---
 title: Next.js Standalone Output on Pantheon
 description: How Pantheon starts Next.js applications built with standalone output, and how to fix applications that depend on behavior standalone mode skips.
-reviewed: "2026-11-16"
+reviewed: "2026-11-10"
 contenttype: [doc]
 innav: [true]
 audience: [development]
