@@ -56,7 +56,7 @@ If you are using Terminus in CI with GitHub Actions, we recommend using the [Ter
 
 Pantheon set the EOL schedule for Terminus several years ago, but up until now has not enforced the requirement to use supported Terminus versions. 
 Terminus runs on your computer or in your CI environment, so Pantheon can’t remove an old version. 
-Customers who continue to use EOL versions of Terminus cause friction for support, as the interaction of some older versions with the platform can be unpredictable. 
+Customers who continue to use EOL versions of Terminus cause friction for security and support, as the interaction of some older versions with the platform can be unpredictable. 
 Ensuring that Terminus clients in the field remain up to date will allow Pantheon to strengthen platform security and compliance, and evolve the platform more smoothly.
 
 ## What happens when a version is blocked?
