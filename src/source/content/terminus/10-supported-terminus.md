@@ -46,7 +46,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 - <span style="font-weight: bold">Release Date</span> — The initial release of the Terminus version.
 - <span style="font-weight: bold">EOL Date</span> — The date the Terminus release is no longer supported. Before February 15, 2027, EOL dates were not enforced. Terminus versions before 4.3.5 are supported for 1 year from the release date of the _next version_ and 6 months from the release date of the next version for versions 4.3.5+.
-- <span style="font-weight: bold">Block Date</span> — The date after which commands issued with the given Terminus release will be blocked by the platform to encourage upgrading to the latest version.
+- <span style="font-weight: bold">Block Date</span> — The date the block takes effect. Starting on this date, Pantheon blocks commands issued with this Terminus version.
 
 ### PHP Version Compatibility Matrix
 
@@ -68,8 +68,11 @@ Older versions may not display the message, so automated processes, such as CI j
 
 ### How is the Terminus end-of-life schedule determined?
 
-Prior to Terminus 4.3.5, each Terminus release (including minor point releases) was supported for a full year from the time the next version became available. 
-Pantheon supports Terminus 4.3.5 and later versions for six months after the next version is released.
+Versions before 4.3.5 reach EOL one year after the next version is released.
+
+Starting with 4.3.5, a version reaches EOL six months after the next version is released. To prevent an older version from being supported longer than a newer one, no version reaches EOL before November 9, 2027.
+
+For example, if the next version after 4.3.5 is released on January 15, 2027, six months later is July 15, 2027. That's before November 9, 2027, so 4.3.5 reaches EOL on November 9, 2027. If the next version is released on June 1, 2027, six months later is December 1, 2027, so 4.3.5 reaches EOL on December 1, 2027.
 
 ### How do I upgrade Terminus to the next version?
 
