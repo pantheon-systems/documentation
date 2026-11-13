@@ -58,7 +58,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 8.2 | <span style="color:green">✔</span> |
 | 8.1 or earlier |                 ❌                  |
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### What happens when a Terminus version is blocked?
 
