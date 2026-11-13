@@ -1,6 +1,7 @@
 ---
 title: "Pantheon MCP Server: Gemini, Devin, and Cursor Support (Beta)"
 published_date: "2026-11-16"
+published_at: "2026-11-16T00:00:00Z"
 categories: [new-feature]
 description: "The Pantheon MCP Server now works with Gemini, Devin (formerly Windsurf), and Cursor."
 ---
