@@ -13,13 +13,13 @@ showtoc: false
 reviewed: "2026-11-13"
 ---
 
-Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. Refer to the documentation on [Semantic Versioning](https://semver.org/) for more information on versioning.
+Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version for Terminus 4.3.4 and below and six months from the release of the subsequent version for 4.3.5+. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. Refer to the documentation on [Semantic Versioning](https://semver.org/) for more information on versioning.
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We recommend you update Terminus far in advance of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 
 | Version          | Release Date       | EOL Date           | Block Date         |
 |------------------|--------------------|--------------------|--------------------|
-| 4.3.5            | November 9, 2026   |                    |                    |
+| 4.3.5            | November 9, 2026   | November 9, 2027   | November 9, 2027   |
 | 4.3.4            | November 3, 2026   | November 9, 2027   | November 9, 2027   |
 | 4.3.3            | August 20, 2026    | November 3, 2027   | November 3, 2027   |
 | 4.3.2            | June 23, 2026      | August 20, 2027    | August 20, 2027    |
@@ -44,8 +44,8 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 3.6.1            | December 05, 2024  | March 03, 2026     | February 15, 2027  |
 | 3.6.0 or earlier | September 19, 2024 | December 05, 2025  | February 15, 2027  |
 
-- <span style="font-weight: bold">Release Date</span> — The initial release of the Terminus version. Terminus versions before 4.3.5 are supported for 1 year from their release date and 6 months from their release date for versions 4.3.5+.
-- <span style="font-weight: bold">EOL Date</span> — The date the Terminus release is no longer supported. Before February 15, 2027, EOL dates were not enforced.
+- <span style="font-weight: bold">Release Date</span> — The initial release of the Terminus version.
+- <span style="font-weight: bold">EOL Date</span> — The date the Terminus release is no longer supported. Before February 15, 2027, EOL dates were not enforced. Terminus versions before 4.3.5 are supported for 1 year from the release date of the _next version_ and 6 months from the release date of the next version for versions 4.3.5+.
 - <span style="font-weight: bold">Block Date</span> — The date after which commands issued with the given Terminus release will be blocked by the platform to encourage upgrading to the latest version.
 
 ### PHP Version Compatibility Matrix
@@ -68,8 +68,13 @@ Older versions may not display the message, so automated processes, such as CI j
 
 ### How is the Terminus End-of-Life schedule determined?
 
-Prior to Terminus 4.3.5, each Terminus release (including minor point releases) were supported for a full year from the time the next version became available. 
-For versions 4.3.5 and above, the End-of-Life schedule has been adjusted to six months from the time the next version is released to encourage users to upgrade to the latest version.
+Prior to Terminus 4.3.5, each Terminus release (including minor point releases) was supported for a full year from the time the next version became available. 
+Pantheon supports Terminus 4.3.5 and later versions for six months after the next version is released.
+
+### How do I upgrade Terminus to the next version?
+
+See the [Install and Upgrading Terminus guide](/terminus/install) for full instructions for upgrading via Homebrew (MacOS only) or by PHAR (MacOS, Windows, Linux).
+If you are using Terminus in CI with GitHub Actions, we recommend using the [Terminus GitHub Action](https://github.com/marketplace/actions/setup-terminus), which always installs the latest version by default.
 
 ## More Resources
 
