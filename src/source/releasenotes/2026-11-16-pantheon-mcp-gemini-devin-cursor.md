@@ -2,7 +2,7 @@
 title: "Pantheon MCP Server: Gemini, Devin, and Cursor Support (Beta)"
 published_date: "2026-11-16"
 published_at: "2026-11-16T00:00:00Z"
-categories: [new-feature]
+categories: [new-feature, tools-apis]
 description: "The Pantheon MCP Server now works with Gemini, Devin (formerly Windsurf), and Cursor."
 ---
 The Pantheon MCP Server now supports three more AI clients. You can connect them to operate on your Pantheon fleet through the same governed, user-authorized access introduced in the [Pantheon MCP Server (Beta)](/release-notes/2026/10/pantheon-mcp-beta) release and expanded in [Additional AI Client Support](/release-notes/2026/11/pantheon-mcp-additional-ai-clients).
