@@ -26,15 +26,15 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/). We extend Drupal 7 sites with [Pressflow](http://www.pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment that is automatically included in the Drupal Latest Version. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php` file.
 
-- [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf) (id: e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
-- [Drupal (Latest Version)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" /> (id: 897fdf15-992e-4fa1-beab-89e2b5027e03)
-- [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0) (id: 21e1fada-199c-492b-97bd-0b36b53a9da0)
+- [WordPress](https://dashboard.pantheon.io/create-site-from-upstream/e8fe8550-1ab9-4964-8838-2b9abdccf4bf) (id: e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
+- [Drupal (Latest Version)](https://dashboard.pantheon.io/create-site-from-upstream/897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" /> (id: 897fdf15-992e-4fa1-beab-89e2b5027e03)
+- [Drupal 7](https://dashboard.pantheon.io/create-site-from-upstream/21e1fada-199c-492b-97bd-0b36b53a9da0) (id: 21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ### Empty Upstream
 
 An empty Upstream is a Custom Upstream that does not have any content or code:
 
-- [Pantheon Empty Upstream](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65) (id: 4c7176de-e079-eed1-154d-44d5a9945b65)
+- [Pantheon Empty Upstream](https://dashboard.pantheon.io/create-site-from-upstream/4c7176de-e079-eed1-154d-44d5a9945b65) (id: 4c7176de-e079-eed1-154d-44d5a9945b65)
 
 Use an empty Upstream to [host a static site or files on Pantheon](/static-site-empty-upstream).
 
@@ -50,18 +50,18 @@ If the distribution you are using is behind on core releases or any of its inclu
 
 Use the following direct links to create a new site on Pantheon from a public distribution:
 
-- [CiviCRM Starter Kit](https://dashboard.pantheon.io/sites/create?upstream_id=3b754bc2-48f8-4388-b5b5-2631098d03de) [<Icon icon="github"/>](https://github.com/kreynen/civicrm-starterkit-drops-7)
-- [DKAN](https://dashboard.pantheon.io/sites/create?upstream_id=d7370d7e-46fb-4b10-b79f-942b5abf51de) [<Icon icon="github"/>](https://github.com/NuCivic/dkan-drops-7)
-- [Commerce Kickstart](https://dashboard.pantheon.io/sites/create?upstream_id=8a662dde-53d6-4fdb-8eac-eea9f5848d00) [<Icon icon="github"/>](https://github.com/commerceguys/kickstart-drops-7)
-- [OpenAid](https://dashboard.pantheon.io/sites/create?upstream_id=2adff196-4672-44c9-af2a-4590963b90d8) [<Icon icon="github"/>](https://bitbucket.org/joelsteidl/openaid-drops-7)
-- [Atrium](https://dashboard.pantheon.io/sites/create?upstream_id=31bc4254-be20-4e8d-afe6-6c585e58435a) [<Icon icon="github"/>](https://github.com/phase2/openatrium-drops-7)
-- [OpenIdeaL](https://dashboard.pantheon.io/sites/create?upstream_id=86112161-4cb2-410f-8bb1-8a1fb4f56dae) [<Icon icon="github"/>](https://github.com/linnovate/openideal-on-drops-7)
-- [Open Outreach](https://dashboard.pantheon.io/sites/create?upstream_id=4c17f505-05d0-4b79-b38a-0bc548405a10) [<Icon icon="github"/>](https://github.com/nedjo/openoutreach-drops-7)
-- [OpenPublic](https://dashboard.pantheon.io/sites/create?upstream_id=b459145b-8771-4597-8b84-684a3d93dce0) [<Icon icon="github"/>](https://github.com/phase2/openpublic-drops-7)
-- [Panopoly](https://dashboard.pantheon.io/sites/create?upstream_id=175cce4f-fa3f-4426-b1a6-e0fae9e19f2e) [<Icon icon="github"/>](https://github.com/populist/panopoly-drops-7)
-- [Plato Típico](https://dashboard.pantheon.io/sites/create?upstream_id=216f85b2-620b-470d-9597-f64ade76dc9a) [<Icon icon="github"/>](https://github.com/enzolutions/plato_tipico)
-- [Pushtape](https://dashboard.pantheon.io/sites/create?upstream_id=f141b5e0-a614-4294-a86c-6c24df9bf6c5) [<Icon icon="github"/>](https://github.com/zirafa/pushtape-drops-7)
-- [RedHen Raiser](https://dashboard.pantheon.io/sites/create?upstream_id=10d6937e-1dd2-4490-9950-11867ba43597) [<Icon icon="github"/>](https://github.com/thinkshout/redhenraiser-drops-7)
+- [CiviCRM Starter Kit](https://dashboard.pantheon.io/create-site-from-upstream/3b754bc2-48f8-4388-b5b5-2631098d03de) [<Icon icon="github"/>](https://github.com/kreynen/civicrm-starterkit-drops-7)
+- [DKAN](https://dashboard.pantheon.io/create-site-from-upstream/d7370d7e-46fb-4b10-b79f-942b5abf51de) [<Icon icon="github"/>](https://github.com/NuCivic/dkan-drops-7)
+- [Commerce Kickstart](https://dashboard.pantheon.io/create-site-from-upstream/8a662dde-53d6-4fdb-8eac-eea9f5848d00) [<Icon icon="github"/>](https://github.com/commerceguys/kickstart-drops-7)
+- [OpenAid](https://dashboard.pantheon.io/create-site-from-upstream/2adff196-4672-44c9-af2a-4590963b90d8) [<Icon icon="github"/>](https://bitbucket.org/joelsteidl/openaid-drops-7)
+- [Atrium](https://dashboard.pantheon.io/create-site-from-upstream/31bc4254-be20-4e8d-afe6-6c585e58435a) [<Icon icon="github"/>](https://github.com/phase2/openatrium-drops-7)
+- [OpenIdeaL](https://dashboard.pantheon.io/create-site-from-upstream/86112161-4cb2-410f-8bb1-8a1fb4f56dae) [<Icon icon="github"/>](https://github.com/linnovate/openideal-on-drops-7)
+- [Open Outreach](https://dashboard.pantheon.io/create-site-from-upstream/4c17f505-05d0-4b79-b38a-0bc548405a10) [<Icon icon="github"/>](https://github.com/nedjo/openoutreach-drops-7)
+- [OpenPublic](https://dashboard.pantheon.io/create-site-from-upstream/b459145b-8771-4597-8b84-684a3d93dce0) [<Icon icon="github"/>](https://github.com/phase2/openpublic-drops-7)
+- [Panopoly](https://dashboard.pantheon.io/create-site-from-upstream/175cce4f-fa3f-4426-b1a6-e0fae9e19f2e) [<Icon icon="github"/>](https://github.com/populist/panopoly-drops-7)
+- [Plato Típico](https://dashboard.pantheon.io/create-site-from-upstream/216f85b2-620b-470d-9597-f64ade76dc9a) [<Icon icon="github"/>](https://github.com/enzolutions/plato_tipico)
+- [Pushtape](https://dashboard.pantheon.io/create-site-from-upstream/f141b5e0-a614-4294-a86c-6c24df9bf6c5) [<Icon icon="github"/>](https://github.com/zirafa/pushtape-drops-7)
+- [RedHen Raiser](https://dashboard.pantheon.io/create-site-from-upstream/10d6937e-1dd2-4490-9950-11867ba43597) [<Icon icon="github"/>](https://github.com/thinkshout/redhenraiser-drops-7)
 
 ## Product UUID
 

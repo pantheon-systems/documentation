@@ -32,7 +32,7 @@ This section provides information on how to create a new WordPress backend proje
 
 1. Select **WordPress for Front-End** under **Create Backend CMS**.
 
-    - You can also follow the [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) link to create your site in the Site Dashboard.
+    - You can also follow the [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/create-site-from-upstream/c9f5e5c0-248f-4205-b63a-d2729572dd1f) link to create your site in the Site Dashboard.
 
     ![Select a Starter](../../../../images/decoupled-select-starter-new.png)
 

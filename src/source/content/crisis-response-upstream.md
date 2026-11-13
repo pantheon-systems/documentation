@@ -70,7 +70,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 ## How to Install
 
-1. Create a new site from this upstream from the [Pantheon Dashboard](https://dashboard.pantheon.io/sites/create?upstream_id=46fb2d82-3a81-4592-9afc-81ec57d9cf82), or using Terminus (replace `site-machine-name` and `Site Name`):
+1. Create a new site from this upstream from the [Pantheon Dashboard](https://dashboard.pantheon.io/create-site-from-upstream/46fb2d82-3a81-4592-9afc-81ec57d9cf82), or using Terminus (replace `site-machine-name` and `Site Name`):
 
     ```bash{promptUser: user}
     terminus site:create site-machine-name "Site Name"  crisis-response-wp

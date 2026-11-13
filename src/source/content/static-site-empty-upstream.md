@@ -34,7 +34,7 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
 
 - Via the Pantheon Dashboard:
 
-  - Use the [Empty Site Upstream](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65)
+  - Use the [Empty Site Upstream](https://dashboard.pantheon.io/create-site-from-upstream/4c7176de-e079-eed1-154d-44d5a9945b65)
 
 - Via Terminus:
 
@@ -52,7 +52,7 @@ Once the files have been added to the Site, [commit the code](/guides/sftp/sftp-
 
 ### Can I create a static site on Pantheon?
 
-Yes! You can start a new static site using an [empty Upstream](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65).
+Yes! You can start a new static site using an [empty Upstream](https://dashboard.pantheon.io/create-site-from-upstream/4c7176de-e079-eed1-154d-44d5a9945b65).
 
 ### Can I add static files to an existing WordPress or Drupal site?
 
