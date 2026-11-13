@@ -66,7 +66,7 @@ Commands run with a blocked Terminus version will fail to connect to Pantheon.
 Newer versions of Terminus will display a message asking you to upgrade. 
 Older versions may not display the message, so automated processes, such as CI jobs, will simply fail until Terminus is upgraded.
 
-### How is the Terminus End-of-Life schedule determined?
+### How is the Terminus end-of-life schedule determined?
 
 Prior to Terminus 4.3.5, each Terminus release (including minor point releases) was supported for a full year from the time the next version became available. 
 Pantheon supports Terminus 4.3.5 and later versions for six months after the next version is released.
