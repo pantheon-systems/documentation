@@ -10,7 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 showtoc: true
-reviewed: "2026-09-22"
+reviewed: "2026-11-13"
 ---
 
 This page provides information on how to install, authenticate, and update Terminus.
