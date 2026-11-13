@@ -54,7 +54,7 @@ Use **Build Tools** if:
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 
-    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Site Dashboard.
+    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/create-site-from-upstream/c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Site Dashboard.
 
     ![Select a Starter](../../../../images/decoupled-select-starter-new.png)
 
@@ -185,7 +185,7 @@ For information on additional options, consult the
 
 ## Update to Drupal 10
 
-Follow the following steps to update a [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) site to Drupal 10.
+Follow the following steps to update a [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/create-site-from-upstream/c76c0e51-ad85-41d7-b095-a98a75869760) site to Drupal 10.
 
 1. Clone the backend site repository.
 

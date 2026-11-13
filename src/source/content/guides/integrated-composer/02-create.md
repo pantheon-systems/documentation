@@ -31,7 +31,7 @@ There are two ways you can spin up a site using Drupal Composer Managed:
     terminus site:create --org ORG --region REGION -- <site_name> <label> drupal-11-composer-managed
     ```
 
-- Using this [site create link](https://dashboard.pantheon.io/sites/create?upstream_machine_name=drupal-11-composer-managed).
+- Using this [site create link](https://dashboard.pantheon.io/create-site-from-upstream/e8efc734-962c-44ef-ae30-9c6b1330a135).
 
 The site you create will be based on the Pantheon-maintained [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) upstream. Once this install completes, visit the Dev environment and follow the prompts to complete the CMS installation.
 
@@ -68,7 +68,7 @@ There are two ways you can spin up a site using WordPress Composer Managed:
     terminus site:create --org ORG --region REGION -- <site_name> <label> wordpress-composer-managed
     ```
 
-- Using this [site create link](https://dashboard.pantheon.io/sites/create?upstream_machine_name=wordpress-composer-managed).
+- Using this [site create link](https://dashboard.pantheon.io/create-site-from-upstream/90a683cd-4e03-4832-9b49-be97ab2a0be4).
 
 The site you create will be based on the Pantheon-maintained [WordPress Composer Managed](https://github.com/pantheon-upstreams/wordpress-composer-managed) upstream. Once this install completes, visit the Dev environment and follow the prompts to complete the CMS installation.
 
