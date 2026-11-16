@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2025-04-08"
+reviewed: "2026-11-16"
 showtoc: false
 permalink: docs/guides/getstarted/purchase
 editpath: getstarted/07-purchase.md
@@ -34,7 +34,7 @@ The free account you created allows you to create sandbox (non-production) sites
 
    ![Plans](../../../images/dashboard/new-dashboard/2025/select-plan.png)
 
-1. Select an existing card or add a new payment method.
+1. On the **Payment** step, select an existing card, or click **Add payment method** to add a new one.
 
    ![Select Add New Card](../../../images/dashboard/new-dashboard/2025/purchase-add-card-button.png)
 
@@ -42,7 +42,7 @@ The free account you created allows you to create sandbox (non-production) sites
 
    ![Card information](../../../images/dashboard/new-dashboard/2025/purchase-add-card-info.png)
 
-1. Make sure the details are correct, and click the **Confirm and pay** button.
+1. Click **View summary**. Make sure the details are correct, select the checkbox to agree to Pantheon's Master Services Agreement, and click the **Confirm and pay** button.
 
    ![Place order](../../../images/dashboard/new-dashboard/2025/purchase-place-order.png)
 

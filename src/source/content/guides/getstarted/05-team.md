@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [--]
 contributors: [wordsmither]
-reviewed: "2023-03-21"
+reviewed: "2026-11-16"
 showtoc: false
 permalink: docs/guides/getstarted/team
 editpath: getstarted/05-team.md
@@ -30,15 +30,15 @@ If you are a one-person shop, and will only ever be a one-person shop, you could
 
 To set up your team:
 
-1. If you are a Self-Serve Customer (paying via Credit Card), click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select **Create New Workspace**.  If you are an Enterprise Customer (paying via a contract), either select the Professional Workspace created when you created your account, or click **Create a New Workspace**.
+1. If you are a Self-Serve Customer (paying via Credit Card), click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select **Create a workspace**.  If you are an Enterprise Customer (paying via a contract), either select the Professional Workspace created when you created your account, or click **Create a workspace**.
 
-1. Enter the information, upload a logo (optional), and click **Continue**.
+1. Enter a workspace name, choose whether you are creating the workspace for a web agency, optionally upload a logo, and click **Continue**.
 
    ![Adding Workspace Information](../../../images/dashboard/new-dashboard/2024/create-workspace-form.png)
 
-1. Enter the email addresses and select roles for team members that need access to this Workspace. To learn about roles, select **View Role Permission Levels**.
+1. Enter the email address and select a role for each team member who needs access to this Workspace. To add another team member, click **Add another**. To learn about roles, select **View Role Permission Levels**.
 
-   Repeat this step for each team member you want to add, then click **Continue**.
+   When you finish adding team members, click **Continue**.
 
   ![Adding a team member](../../../images/dashboard/new-dashboard/2024/create-workspace-team.png)
 
