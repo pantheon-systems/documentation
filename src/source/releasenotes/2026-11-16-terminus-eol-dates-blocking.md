@@ -1,7 +1,7 @@
 ---
 title: "Terminus end-of-life dates and version blocking announced"
 published_date: "2026-11-16"
-published_at: "2026-11-16T00:00:00Z"
+published_at: "2026-11-16T19:44:50Z"
 categories: [tools-apis, action-required, deprecated]
 description: "Starting February 15, 2027, Pantheon blocks Terminus versions that have reached end of life."
 ---
