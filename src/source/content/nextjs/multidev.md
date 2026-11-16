@@ -33,6 +33,8 @@ To avoid testing stale code, use the [Terminus](/terminus) command `terminus nod
 terminus node:builds:wait <site>.<env> --commit=<commit-sha> --max=<seconds>
 ```
 
+The `--max` option sets how many seconds to wait for the build to finish. It defaults to 600.
+
 In a pull request workflow, `<env>` is `pr-<pull-request-number>` and `<commit-sha>` is `${{ github.event.pull_request.head.sha }}`. Make the test job depend on the wait step, then run your tests against the environment URL, `https://pr-<pull-request-number>-<site>.pantheonsite.io`.
 
 For an example, see how the Pantheon Docs site waits for a deployment using a [GitHub Action](https://github.com/pantheon-systems/documentation/blob/main/.github/actions/wait-for-deployment/action.yml) and then runs [BackstopJS](https://github.com/garris/BackstopJS) visual regression tests in its [pull request workflow](https://github.com/pantheon-systems/documentation/blob/main/.github/workflows/pr-e2e.yml).
