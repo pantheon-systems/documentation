@@ -25,7 +25,7 @@ All code changes must be made through Git and deployed through Pantheon's extern
 
 ## Run tests after a deployment
 
-Deployments to a Multidev environment are asynchronous. A GitHub Actions workflow that starts testing as soon as a commit is pushed can run against the previous code. This applies both when the environment is first created for a pull request and when later commits are pushed to it.
+Multidev deployments are asynchronous. A GitHub Actions workflow that starts testing as soon as you push a commit can run against the previous code. This applies both when Pantheon first creates the environment for a pull request and when you push later commits to it.
 
 To avoid testing stale code, use `terminus node:builds:wait` to wait for a specific commit to finish building and deploying before the test job starts:
 
