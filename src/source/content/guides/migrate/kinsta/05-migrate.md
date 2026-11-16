@@ -13,7 +13,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 permalink: docs/guides/kinsta/migrate
 editpath: migrate/kinsta/05-migrate.md
-reviewed: "2021-06-15"
+reviewed: "2026-09-16"
 ---
 
 Pantheon provides a Kinsta path for migrating existing sites to the platform. This process begins by clicking the **Migrate Existing Site** button on either the workspace Home Page or Sites tab.
