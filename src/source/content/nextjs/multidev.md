@@ -27,7 +27,7 @@ All code changes must be made through Git and deployed through Pantheon's extern
 
 Multidev deployments are asynchronous. A GitHub Actions workflow that starts testing as soon as you push a commit can run against the previous code. This applies both when Pantheon first creates the environment for a pull request and when you push later commits to it.
 
-To avoid testing stale code, use `terminus node:builds:wait` to wait for a specific commit to finish building and deploying before the test job starts:
+To avoid testing stale code, use the [Terminus](/terminus) command `terminus node:builds:wait` (available in [Terminus 4.2.0](/release-notes/2026/04/terminus-4-2-0) and later) to wait for a specific commit to finish building and deploying before the test job starts:
 
 ```bash{promptUser: user}
 terminus node:builds:wait <site>.<env> --commit=<commit-sha> --max=<seconds>
