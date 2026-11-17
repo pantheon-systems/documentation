@@ -57,5 +57,39 @@ By running Next.js on Pantheon, you can combine it with Drupal, WordPress or Con
 
 ## Considerations
 
-See the following page for current limitations of Next.js functionality on Pantheon:
+### Cold starts
+
+Next.js applications running on Pantheon can scale down to 0 servers and, when scaling back up, you may see long cold starts. The reason boils down to what happens when the scale-up request comes in:
+
+If the cache is still vald, for instance, the site will be served from CDN, and the cold start will be relatively short:
+
+![a flowchart explaining what happens when a Next.ks request hasn't expired in the CDN during a cold start; it is served from there and the cold start is relatively short](../../images/nextjs/001-cdn.png)
+
+If the CDN copy has expired, the request goes to origin, and a container must start if the environment has scaled to zero. If the Next.js cache has a fresh copy of the page, the application serves it without generating the page. The Pantheon cache handler stores this cache persistently, so it survives container restarts.
+
+If your app cache is valid, you'll serve from there, making a shorter but not the shortest possible response time. 
+
+![a flowchart showing the Next.js request passing the CDN cache layer, and dealing with a valid application cache; the site serves from there for a short but not shortest possible response time.](../../images/nextjs/002-app.png)
+
+If the Next.js cache has also expired, the application has to generate the page and pull from every data source the page needs. When that data is local to the application, there are no external round trips, but the page still has to render.
+
+![a flowchart showing a Next.js request on failure of app cache, when it will need to pull from external sources](../../images/nextjs/003-local.png)
+
+If the page pulls data from external sources, such as a WordPress, Drupal, or Content Publisher backend or a third-party API, three factors add to the response time:
+
+- Distance: how far away the data source is from your application.
+- Volume: how much data the page pulls.
+- Render work: how much processing the page does on that data while rendering.
+
+Combined with a cold start, these factors produce the slowest first page loads.
+
+![a flowchart showing the worst-case with high distance, volume, and render work](../../images/nextjs/004-full.png)
+
+### Reduce the impact of cold starts
+
+- Lengthen cache lifetimes. Use cacheLife profiles to keep pages fresh longer, for example one day before they go stale, and expire them after that. Longer lifetimes let the CDN hold pages longer, so fewer visitors trigger a request to a container that has scaled to zero.
+- Use the Pantheon cache handler. It keeps the Next.js cache in persistent storage shared across containers, so a container that just started can serve cached pages instead of regenerating them.
+- Reduce per-request data work. Fetch only the data a page needs, cache data fetches where you can, and keep data sources close to your application.
+
+See the following page for more limitations of Next.js functionality on Pantheon:
 * [Limitations and considerations for Next.js](/nextjs/considerations)
