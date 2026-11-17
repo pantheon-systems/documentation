@@ -22,8 +22,11 @@ Pantheon MCP works with these AI tools:
 * [Codex](#codex)
 * [GitHub Copilot](#vs-code-with-github-copilot)
 * [Google Antigravity](#antigravity)
+* [Gemini](#gemini)
+* [Cursor](#cursor)
+* [Devin (formerly Windsurf)](#devin-formerly-windsurf)
 
-Pantheon MCP is also listed in the Claude marketplace. Claude users can install it from the marketplace or add it manually with the server URL. 
+Pantheon MCP is also listed in the Claude marketplace. Claude users can install it from the marketplace or add it manually with the server URL. Gemini, Cursor, and Devin require a static client ID to connect. Scroll to their sections to find them.
 
 If there are other MCP clients you would like to use, please reach out to support and we're happy to add them. 
 
@@ -46,7 +49,7 @@ Custom connectors are available on Claude Pro, Max, Team and Enterprise plans.
 <br/>
 
 ### Claude Code
-#### Option 1: Install from the Claude
+#### Option 1: Install from the Claude marketplace
 1. Go to: https://claude.ai/directory/pantheon-mcp
 1. Click Connect, and follow the on-screen prompts: sign in with your Pantheon account and authorize access.
 1. Run MCP list in Claude Code
@@ -120,6 +123,76 @@ code --add-mcp '{"name":"pantheon-mcp","type":"http","url":"https://mcp.pantheon
 1. Click Authenticate next to `pantheon-mcp` and sign in with your Pantheon  account.
 
 In Antigravity CLI (`agy`), run `/mcp` and authenticate `pantheon-mcp` there.
+
+<br/>
+
+### Gemini
+Gemini CLI doesn't register itself automatically, so you give it Pantheon's client ID and a fixed sign-in port.
+
+1. Open your Gemini CLI settings file (`~/.gemini/settings.json`) and add:
+    ```json
+    {
+      "mcpServers": {
+        "pantheon-mcp": {
+          "httpUrl": "https://mcp.pantheon.io/mcp",
+          "oauth": {
+            "enabled": true,
+            "clientId": "tpc_4bEtxSNdjpSDwSxgPVQmkV",
+            "redirectUri": "http://localhost:7777/oauth/callback"
+          }
+        }
+      }
+    }
+    ```
+1. Start Gemini CLI (`gemini`) and run `/mcp auth pantheon-mcp`.
+1. Sign in with your Pantheon account and authorize access.
+
+Keep the `redirectUri` line exactly as shown. Without it, Gemini CLI picks a random port and sign-in fails with "Callback URL mismatch".
+
+<br/>
+
+### Cursor
+Cursor doesn't register itself automatically, so you give it Pantheon's client ID.
+
+1. Open your Cursor MCP configuration file (`~/.cursor/mcp.json`) and add:
+    ```json
+    {
+      "mcpServers": {
+        "pantheon-mcp": {
+          "url": "https://mcp.pantheon.io/mcp",
+          "auth": {
+            "CLIENT_ID": "tpc_ugVfvWczJDbJC7XzSCvhZy"
+          }
+        }
+      }
+    }
+    ```
+1. In Cursor, open the MCP settings and connect `pantheon-mcp`, then sign in with your Pantheon account.
+
+In Cursor CLI, run `agent mcp login pantheon-mcp` and sign in there.
+
+If you already have a `pantheon-mcp` entry, replace it rather than adding a second one. Check that the client ID has no extra characters, such as a trailing period. An invalid client ID shows "Oops, something went wrong" on the sign-in page.
+
+<br/>
+
+### Devin (formerly Windsurf)
+Devin doesn't register itself automatically, so you give it Pantheon's client ID.
+
+1. In a terminal, add the server:
+
+    ```bash{promptUser: user}
+    devin mcp add pantheon-mcp https://mcp.pantheon.io/mcp \
+      --scope user \
+      --oauth-client-id tpc_fNrMogZsifvrTHzKU4H8X1
+    ```
+1. Sign in:
+
+    ```bash{promptUser: user}
+    devin mcp login pantheon-mcp
+    ```
+1. Sign in with your Pantheon account and authorize access.
+
+Devin also lists MCP servers from your Cursor and Claude Code configurations, so you may see more than one Pantheon entry. Sign in to the `pantheon-mcp` entry you added above.
 
 ## Verify the installation
 Ask your AI tool "Are you connected to Pantheon MCP?" or "Show me what tools are available in Pantheon MCP".
