@@ -116,7 +116,6 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
    This removes the core version (and any other projects listed to patch), including libraries and dependencies, before re-downloading them (plus libraries and dependencies), and applying the patches.
 
 6. Confirm the patches have applied as expected by checking the affected files locally.
-   
 7. Push your changes to your Pantheon remote with `$ git push`
 
 8. Verify the patch has applied by checking the Build logs in the Pantheon dashboard.
