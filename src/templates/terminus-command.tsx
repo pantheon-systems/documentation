@@ -4,7 +4,11 @@ import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layo
 import SearchBar from "@/components/header/search-bar";
 import HeaderBody from "@/components/common/header-body";
 
-import { CommandType } from "@/components/common/commands/types";
+import {
+  CommandArgument,
+  CommandType,
+} from "@/components/common/commands/types";
+import { InlineMarkdown } from "@/components/common/commands/inline-markdown";
 import { Partial } from "@/components/common/partial-component";
 import Link from "next/link";
 import { Pre } from "@/components/ui/mdx-wrapper/pre";
@@ -58,6 +62,12 @@ export const TerminusCommandTemplate = ({
     return a[0].name.localeCompare(b[0].name);
   });
 
+  // Keep positional order (do not sort). Commands without arguments serialize
+  // `arguments` as `[]` rather than `{}`; Object.values handles both.
+  const args: CommandArgument[] = Object.values(
+    command.definition.arguments ?? {}
+  );
+
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
       <DocsSidebarLayout
@@ -94,7 +104,9 @@ export const TerminusCommandTemplate = ({
                   reviewDate={""}
                 />
                 <h2>Description</h2>
-                <p>{command.description}</p>
+                <p>
+                  <InlineMarkdown>{command.description}</InlineMarkdown>
+                </p>
 
                 <h2>Example Usage</h2>
                 <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
@@ -135,6 +147,32 @@ export const TerminusCommandTemplate = ({
                   })}
                 </div>
 
+                {args.length > 0 && (
+                  <>
+                    <h2>Arguments</h2>
+                    <div className="pds-spacing-mar-block-end-4xl">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Argument</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {args.map((arg) => (
+                            <tr key={arg.name}>
+                              <td>{arg.name}</td>
+                              <td>
+                                <InlineMarkdown>{arg.description}</InlineMarkdown>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </>
+                )}
+
                 <h2>Options</h2>
                 <div className="pds-spacing-mar-block-end-4xl">
                   <table>
@@ -150,7 +188,9 @@ export const TerminusCommandTemplate = ({
                           <tr key={`${i}-${option}`}>
                             <td key={`${option}-name`}>{option[0].name}</td>
                             <td key={`${option}-desc`}>
-                              {option[0].description}
+                              <InlineMarkdown>
+                                {option[0].description}
+                              </InlineMarkdown>
                             </td>
                           </tr>
                         );
