@@ -89,7 +89,7 @@ Cloudflare issues and renews a certificate for each custom domain once it has va
 
 ### My domain hasn't verified yet. What can I do?
 
-The platform re-checks DNS on an automatic backoff schedule: seconds apart at first, then a few minutes apart, then up to an hour apart. If your records have just propagated, or you stepped away and the next scheduled check is up to an hour out, run `terminus gcdn:verify <site>.live <domain>`, or open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. each See [Re-running Domain Verification](/guides/nextgen-gcdn/setup) in Setup for details and pre-flight tips.
+The platform re-checks DNS on an automatic backoff schedule: seconds apart at first, then a few minutes apart, then up to an hour apart. If your records have just propagated, or you stepped away and the next scheduled check is up to an hour out, run `terminus gcdn:verify <site>.live <domain>`, or open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. See [Re-running Domain Verification](/guides/nextgen-gcdn/setup) in Setup for details and pre-flight tips.
 
 ### How do I report issues or give feedback?
 
