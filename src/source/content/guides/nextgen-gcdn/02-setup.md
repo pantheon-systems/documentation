@@ -102,7 +102,7 @@ The platform retries DNS validation automatically on a backoff schedule:
 - For about the next two hours, they run a few minutes apart.
 - After that, they run up to an hour apart.
 
-**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now in the slower part of the backoff — instead of waiting up to an hour for the next scheduled attempt, you can kick off a new check right away. In Terminus, `terminus gcdn:verify` does the same.
+**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now in the slower part of the backoff — instead of waiting up to an hour for the next scheduled attempt, you can kick off a new check right away. In Terminus, `terminus gcdn:verify` also asks Cloudflare to recheck the domain right away, within the limits described below in step 4.
 
 Before you click:
 
@@ -230,7 +230,7 @@ The TXT value can change with each verification attempt, so run the command agai
 
 ### 5. Update your DNS records
 
-Once `gcdn:verify` shows the domain active or ready, point it to Pantheon with one of the options in the step 3 table of `gcdn:verify` or `gcdn:dns`:
+Once `gcdn:verify` shows the domain active or ready, point it to Pantheon with one of the options in the table of `gcdn:verify` or `gcdn:dns` from step 3:
 
 - **Option 1, the CNAME:** for subdomains, such as `www.example.com`.
 - **Option 2, the A and AAAA records:** for the apex domain, such as `example.com`.
