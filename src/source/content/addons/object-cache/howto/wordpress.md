@@ -73,7 +73,7 @@ terminus redis:enable <site>
 
     <Alert title="Note" type="info">
 
-    This workflow does not support sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab). Refer to [Sites Using an External Repository](#sites-using-an-external-repository) instead.
+    This workflow does not support sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab). Refer to [Sites using an external repository](#sites-using-an-external-repository) instead.
 
     </Alert>
 
@@ -328,7 +328,7 @@ read -r ENV;
 terminus wp "$SITE"."$ENV" -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
 ```
 
-## Sites Using an External Repository
+## Sites using an external repository
 
 The `terminus install:run <site>.<environment> ocp` workflow commits Object Cache Pro to the site's Pantheon Git repository. Sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab) do not have one, so the workflow does not run on these sites. Instead, add Object Cache Pro to your repository:
 
