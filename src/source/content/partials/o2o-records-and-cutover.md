@@ -5,7 +5,7 @@ cms: [--]
 product: [cdn]
 integration: [cloudflare]
 tags: [--]
-reviewed: "2026-11-02"
+reviewed: "2026-11-16"
 ---
 
 ## Set the SSL/TLS encryption mode
@@ -70,7 +70,7 @@ The query returns a `dcv.cloudflare.com` target when the record is live. Then ch
 terminus gcdn:verify <site>.<env> <domain>
 ```
 
-Proceed once the output shows `DNS records ready (confirmed by Pantheon)`. Pantheon's edge serves the custom hostname's certificate while the hostname still shows as pending, so this state tells you the cutover is safe. If the output shows `ownership not confirmed yet` or `ownership and certificate pending`, add the records it lists, wait a few minutes, and run the command again. The command rechecks the domain at most once a minute, and Pantheon sees the result within about 10 minutes. If the output doesn't change once the records above are live, [contact Pantheon Support](/guides/support/contact-support/). Don't point traffic at the GCDN before the output shows ready, or visitors reach Pantheon's edge without a valid certificate.
+Proceed once the output shows `DNS records ready (confirmed by Pantheon)`. Pantheon's edge serves the custom hostname's certificate while the hostname still shows as pending, so this state tells you the cutover is safe. If the output shows `ownership not confirmed yet` or `ownership and certificate pending`, add the records it lists, wait a few minutes, and run the command again. The command rechecks the domain at most every 5 minutes (`--recheck` skips the wait), and Pantheon sees the result within about 10 minutes. If the output doesn't change once the records above are live, [contact Pantheon Support](/guides/support/contact-support/). Don't point traffic at the GCDN before the output shows ready, or visitors reach Pantheon's edge without a valid certificate.
 
 ### 3. Route traffic to the GCDN
 

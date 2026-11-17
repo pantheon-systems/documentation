@@ -6,7 +6,7 @@ description: Pantheon's next-generation GCDN introduces built-in bot protection.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-11-03"
+reviewed: "2026-11-16"
 permalink: docs/guides/nextgen-gcdn
 contenttype: [guide]
 innav: [false]
@@ -83,7 +83,20 @@ If your automation can send a request header, use a bot bypass token instead. A 
     terminus gcdn:ua-bypass:add <site>.<env> <domain> "ExampleMonitor/2.1 (+https://example.com/monitor)"
     ```
 
-    If the plugin is already installed, update it with `terminus gcdn:update`. Use the environment the domain is connected to, usually `live`. Quote the User-Agent so your shell passes it as one value. The command prints the domain's entries after the change. Changes take effect within a few minutes.
+    <Alert title="Upgrading from plugin version 0.4.0 or earlier" type="warning">
+
+    `terminus gcdn:update` can't upgrade version 0.4.0 or earlier to the current version. Uninstall the plugin and install it again instead:
+
+    ```bash{promptUser: user}
+    terminus self:plugin:uninstall pantheon-systems/terminus-gcdn-plugin
+    terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+    ```
+
+    Check the installed version with `terminus self:plugin:list`.
+
+    </Alert>
+
+    If the plugin is already installed at version 0.5.0 or later, update it with `terminus gcdn:update`. Use the environment the domain is connected to, usually `live`. Quote the User-Agent so your shell passes it as one value. The command prints the domain's entries after the change. Changes take effect within a few minutes.
 
 1. **List and remove entries:**
 
