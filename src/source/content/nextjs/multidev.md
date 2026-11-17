@@ -1,7 +1,7 @@
 ---
 title: Multidev environments
 description: Pantheon builds a complete Next.js environment for each pull request and specially named Git branches.
-reviewed: "2025-10-31"
+reviewed: "2026-11-06"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -22,3 +22,19 @@ Additionally, if you want a longer lived environment, or one not tied to a pull 
 
 Unlike Dev and Multidev environments for WordPress and Drupal sites on Pantheon, Multidev environments for Next.js do not have an "SFTP mode" that allows for directly changing files.
 All code changes must be made through Git and deployed through Pantheon's external repository integration.
+
+## Run tests after a deployment
+
+Multidev deployments are asynchronous. A GitHub Actions workflow that starts testing as soon as you push a commit can run against the previous code. This applies both when Pantheon first creates the environment for a pull request and when you push later commits to it.
+
+To avoid testing stale code, use the [Terminus](/terminus) command `terminus node:builds:wait` (available in [Terminus 4.2.0](/release-notes/2026/04/terminus-4-2-0) and later) to wait for a specific commit to finish building and deploying before the test job starts:
+
+```bash{promptUser: user}
+terminus node:builds:wait <site>.<env> --commit=<commit-sha> --max=<seconds>
+```
+
+The `--max` option sets how many seconds to wait for the build to finish. It defaults to 600.
+
+In a pull request workflow, `<env>` is `pr-<pull-request-number>` and `<commit-sha>` is `${{ github.event.pull_request.head.sha }}`. Make the test job depend on the wait step, then run your tests against the environment URL, `https://pr-<pull-request-number>-<site>.pantheonsite.io`.
+
+For an example, see how the Pantheon Docs site waits for a deployment using a [GitHub Action](https://github.com/jazzsequence/pantheon-wait-for-build) and then runs [BackstopJS](https://github.com/garris/BackstopJS) visual regression tests in its [pull request workflow](https://github.com/pantheon-systems/documentation/blob/main/.github/workflows/pr-e2e.yml).
