@@ -27,7 +27,7 @@ The following table indicates availability of the specified Drupal versions, as 
 | 6           | ❌          | ❌           | ❌          |
 
 ## Drupal CMS on Pantheon
-Drupal CMS is currently available to install via [this Dashboard Link](https://dashboard.pantheon.io/sites/create?upstream_id=462d08e2-3322-48a1-b150-f12a075eaabe) or Terminus:
+Drupal CMS is currently available to install via [this Dashboard Link](https://dashboard.pantheon.io/create-site-from-upstream/462d08e2-3322-48a1-b150-f12a075eaabe) or Terminus:
 
 ```bash{promptUser: user}
 terminus site:create <site> <label> drupal-cms-composer-managed
