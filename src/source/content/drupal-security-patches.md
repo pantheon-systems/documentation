@@ -99,7 +99,6 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
 
     ```json:title=composer.json
     "extra": {
-      "enable-patching": true,
       "patches": {
         "author/project1": {
           "Patch description": "./patches/project1-issue1234.patch"
