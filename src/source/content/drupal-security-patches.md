@@ -104,7 +104,7 @@ For the steps below, replace `$PATCHNUM` with the patch number from Drupal and `
           "Patch description": "./patches/project1-issue1234.patch"
         },
         "anotherauthor/project2": {
-          "Another patch - www.project-site.com/issue1234": "./patches/project2-issue1234.patch"
+          "Another patch - www.project-site.com/issue1234": "./patches/project2-issue1234.patch",
           "Yet another patch - www.project-site.com/issue5678": "https://example.com/files/project2-issues5678.patch"
         }
       }
