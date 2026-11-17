@@ -10,9 +10,10 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [webops, workflow]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, jazzsequence]
 showtoc: true
 permalink: docs/guides/php
+reviewed: "2026-11-13"
 ---
 
 PHP is a scripting language that facilitates server-side web development. The PHP code in your Pantheon account is executed at runtime whenever a request is received from the web server the same way it is on other platforms.

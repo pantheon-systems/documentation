@@ -13,7 +13,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 permalink: docs/guides/acquia/migrate
 editpath: migrate/acquia/05-migrate.md
-reviewed: "2022-12-13"
+reviewed: "2026-09-16"
 ---
 
 Pantheon provides an Acquia path for migrating existing sites to the platform. This process begins by clicking the **Migrate Existing Site** button on either the workspace Home Page or Sites tab.
