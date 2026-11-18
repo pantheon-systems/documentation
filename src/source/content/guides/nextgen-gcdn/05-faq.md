@@ -6,7 +6,7 @@ description: Get answers to your Next-generation Global CDN questions.
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-09-29"
+reviewed: "2026-11-16"
 permalink: docs/guides/nextgen-gcdn/faq
 contenttype: [guide]
 innav: [false]
@@ -81,11 +81,15 @@ Yes. Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g.
 
 ### How are SSL/TLS certificates issued?
 
-SSL/TLS certificates are issued through DNS TXT record validation by default, which lets your certificate be issued before you update DNS. Add the TXT records provided by the dashboard or the `terminus gcdn:dns` command to your DNS provider. Once the TXT records are verified, your certificate is automatically provisioned. If you'd rather not add a second TXT record for the certificate, HTTP-01 validation is also available as an alternative setup through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin): once your one domain-ownership TXT record verifies, run `terminus gcdn:verify <site>.live <domain> --method=http` to point DNS and issue the certificate over HTTP. With HTTP-01, the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
+Cloudflare issues and renews a certificate for each custom domain once it has validated the domain. Domain ownership is a separate TXT record (`_cf-custom-hostname`), required once with every method. For the certificate:
+
+- **DCV delegation CNAME (recommended):** `terminus gcdn:dns` from the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) shows an `_acme-challenge` CNAME. Add it once and keep it: Cloudflare uses it to issue the certificate before you update DNS, and to renew it.
+- **TXT record:** the dashboard currently shows a TXT record for the certificate, and `terminus gcdn:verify <site>.live <domain> --cert-txt` shows it too. Its value can change with each verification attempt, so check the current value before you add or update the record. At renewal, Cloudflare attempts to fall back to HTTP validation, but we recommend keeping the DCV delegation CNAME in place so renewals don't depend on that fallback.
+- **HTTP-01:** run `terminus gcdn:verify <site>.live <domain> --method=http`. The certificate is issued over HTTP once DNS points to Pantheon, so it can't be issued in advance and there may be brief downtime during cutover. It's likely to fail while the domain is proxied through Cloudflare. If HTTP-01 is your best option, disable proxying (DNS only) while the challenge completes.
 
 ### My domain hasn't verified yet. What can I do?
 
-The platform re-checks DNS on an automatic backoff schedule that starts at ~60-second intervals and grows to a 4-hour cap. If your TXT records have just propagated, or you stepped away and the next scheduled check is hours out, open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. This resets the backoff and triggers an immediate validation attempt. See [Re-running Domain Verification](/guides/nextgen-gcdn/setup) in Setup for details and pre-flight tips.
+The platform re-checks DNS on an automatic backoff schedule: seconds apart at first, then a few minutes apart, then up to an hour apart. If your records have just propagated, or you stepped away and the next scheduled check is up to an hour out, run `terminus gcdn:verify <site>.live <domain>`, or open the domain on the **Domains** page and use **Force Recheck** in the troubleshooting message. See [Re-running Domain Verification](/guides/nextgen-gcdn/setup) in Setup for details and pre-flight tips.
 
 ### How do I report issues or give feedback?
 

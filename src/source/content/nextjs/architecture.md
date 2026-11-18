@@ -1,7 +1,7 @@
 ---
 title: Next.js Build and Runtime Architecture on Pantheon
 description: Next.js runs in Node.js containers on Pantheon behind a CDN with static assets served from an object storage service.
-reviewed: "2025-10-31"
+reviewed: "2026-11-10"
 contenttype: [doc]
 innav: [true]
 audience: [development]
@@ -38,7 +38,6 @@ This process includes the following steps:
   * Deploy the resulting build artifacts to Pantheon, including:
     * Uploading static assets to the shared cache.
     * Package and upload the application code and dependencies to be run in Node.js containers.
-
 The progression of these steps can be monitored using the Terminus command line interface using the `terminus node:logs:build:list site-name.env` command to list recent builds for a given site and environment.
 You will observe statuses that indicate the progress of the build and deployment process such as `BUILD_QUEUED`, `BUILD_WORKING`, `BUILD_SUCCESS`, `DEPLOYMENT_QUEUED`, `DEPLOYMENT_WORKING`, and `DEPLOYMENT_SUCCESS`.
 Failures during the build or deployment process will be indicated with `BUILD_FAILURE` or `DEPLOYMENT_FAILURE` statuses.
@@ -51,6 +50,17 @@ For environments specific to pull requests, the pattern includes the pull reques
 Deployments to Test and Live environments are triggered by Git tags. Learn more about [deploying to Test and Live environments](/nextjs/test-and-live-env).
 
 ## Runtime architecture
+
+### How your application starts
+
+Each container starts your application in one of two ways:
+
+* If your build produced [standalone output](/nextjs/standalone-output), Pantheon runs the standalone server with `node .next/standalone/server.js`. Your `start` script does not run.
+* Otherwise, Pantheon runs `npm run start`.
+
+In both cases, your [environment variables](/nextjs/environment-variables) are exported before the application starts, and the application listens on port `3000`. Learn more about [differences in standalone mode and how to test it locally](/nextjs/standalone-output).
+
+### Handling requests
 
 When a request is made to a Next.js site hosted on Pantheon, the request first hits the [Global CDN](/guides/global-cdn).
 

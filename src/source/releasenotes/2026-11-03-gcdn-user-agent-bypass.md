@@ -22,6 +22,6 @@ You can now use Terminus to add up to 8 User-Agent strings to each of your site'
 
 - Changes take effect within a few minutes. Remove entries you no longer need.
 
-Update the plugin with `terminus gcdn:update`, or install it with `terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin`. 
+Update the plugin with `terminus gcdn:update`, or install it with `terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin`. `gcdn:update` can't upgrade version 0.4.0 or earlier: run `terminus self:plugin:uninstall pantheon-systems/terminus-gcdn-plugin`, then install it again.
 
 For setup instructions, see [User-Agent Bypass](/guides/nextgen-gcdn#user-agent-bypass) in the Next Generation GCDN guide.

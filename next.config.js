@@ -11,6 +11,12 @@ const nextConfig = {
   reactStrictMode: true,
   turbopack: {}, // Allow Turbopack builds (Next.js 16 default)
   output: "standalone",
+  // Pages read Markdown, YAML, JSON and images from src/source at request time
+  // via process.cwd(). Pantheon runs .next/standalone/server.js, which chdirs to
+  // .next/standalone, so these files must be copied there with the same layout.
+  outputFileTracingIncludes: {
+    "/*": ["./src/source/**/*"],
+  },
   images: {
     remotePatterns: [
       {

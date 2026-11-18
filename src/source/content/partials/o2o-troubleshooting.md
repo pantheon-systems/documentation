@@ -5,7 +5,7 @@ cms: [--]
 product: [cdn]
 integration: [cloudflare]
 tags: [--]
-reviewed: "2026-11-02"
+reviewed: "2026-11-16"
 ---
 
 ## Troubleshooting
@@ -22,7 +22,7 @@ If the error persists:
 
 If the hostname shows `Blocked`, a Zone Hold applied when Pantheon created it. Switch **Zone Hold** to **Off**, then run `terminus gcdn:verify <site>.<env> <domain>`. If the hold comes from another Cloudflare for SaaS provider, [contact Pantheon Support](/guides/support/contact-support/).
 
-[Contact Pantheon Support](/guides/support/contact-support/) if the hostname is `moved` (it stayed pending past Cloudflare's 7-day validation window). It doesn't recover on its own.
+If the hostname shows `moved`, Cloudflare paused its checks because the domain waited about 11 days for the DNS switch. If it stays paused for 7 more days, Cloudflare marks it `deleted`. Run `terminus gcdn:verify <site>.<env> <domain>` to restart the checks. If it shows `deleted`, [contact Pantheon Support](/guides/support/contact-support/).
 
 ### Too many redirects
 

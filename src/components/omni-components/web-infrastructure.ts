@@ -187,6 +187,7 @@ const webInfrastructure = () => {
         simpleLink("/nextjs/comparison-to-cms-hosting", "Comparison to CMS Hosting"),
         simpleLink("/nextjs/architecture", "Architecture and Git Workflow", [
           simpleLink("/nextjs/architecture", "Architecture"),
+          simpleLink("/nextjs/standalone-output", "Standalone Output"),
           simpleLink("/nextjs/multidev", "Multidev environments"),
           simpleLink("/nextjs/test-and-live-env", "Test and Live Environments"),
           simpleLink("/nextjs/cli-tools", "CLI Tools"),

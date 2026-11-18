@@ -6,7 +6,7 @@ description: Learn how to migrate from Pantheon's Legacy Global CDN to our Next-
 tags: [cache, cdn, security]
 contributors: [conorbauer, jazzsequence]
 showtoc: true
-reviewed: "2026-10-29"
+reviewed: "2026-11-16"
 permalink: docs/guides/nextgen-gcdn/setup
 contenttype: [guide]
 innav: [false]
@@ -64,13 +64,19 @@ After you click upgrade, your platform hostnames (`*.pantheonsite.io`) are autom
 ### Domains and DNS
 <Alert title="Domain Verification and Certificate Issuance" type="danger">
 
-**A DNS TXT record is required once to verify domain ownership** — this record can be removed once your domain is active. By default, certificate issuance also uses DNS TXT validation, which lets your certificate be issued before you point DNS to Pantheon, avoiding downtime during cutover. If you'd rather not add that second TXT record, HTTP-01 validation is available through the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) (see the **Terminus CLI** tab): once your one domain-ownership TXT record verifies, you just point DNS at Cloudflare and the certificate is issued over HTTP on that hostname. With HTTP-01, the certificate can't be pre-provisioned, so there may be a brief window of downtime during cutover.
+**A DNS TXT record is required once to verify domain ownership.** You can remove it once your domain is active.
+
+The certificate needs its own DNS record, which lets it be issued before you point DNS to Pantheon, avoiding downtime during cutover. We recommend the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) over the dashboard for this (see the **Terminus CLI** tab). It gives you the DCV delegation CNAME (`_acme-challenge.<domain>`) for the certificate, and shows more detail than the dashboard: it checks your DNS for each record and says what to do next. Add the CNAME once and keep it in place.
+
+The dashboard currently shows a TXT record for the certificate instead. Its value can change with each verification attempt, so check the current value before you add or update the record. At renewal, Cloudflare attempts to fall back to HTTP validation, but we recommend keeping the DCV delegation CNAME in place so renewals don't depend on that fallback.
+
+HTTP-01 validation is also available through the Terminus plugin. The certificate is issued over HTTP after you point DNS to Pantheon, so it can't be issued in advance and there may be a brief window of downtime during cutover.
 
 </Alert>
 
 After activating the next-generation GCDN through the dashboard, you will need to update your DNS records to point to the new infrastructure.
 
-1. The dashboard will provide a TXT record for domain ownership verification, plus a TXT record for certificate validation. Add both to your DNS provider. **The dashboard flow uses DNS TXT record validation for both steps**, which lets your certificate be issued before you update DNS. If you'd rather skip the second TXT record, HTTP-01 is available as an alternative setup for certificate validation (the domain-ownership TXT record is still required either way) via the Terminus plugin — see the **Terminus CLI** tab.
+1. The dashboard will provide a TXT record for domain ownership verification, plus a TXT record for certificate validation. Add both to your DNS provider. **The dashboard flow uses DNS TXT record validation for both steps**, which lets your certificate be issued before you update DNS. We recommend the Terminus plugin over the dashboard: it shows more detail, checks your DNS for each record, says what to do next, and offers the DCV delegation CNAME or HTTP-01 for the certificate (the domain-ownership TXT record is still required either way) — see the **Terminus CLI** tab.
 
 1. Once domain verification completes and your SSL/TLS certificate has been issued, the dashboard will display the recommended DNS settings (CNAME targets).
 
@@ -92,11 +98,11 @@ If you've added the TXT records and a domain is still pending verification, you 
 
 The platform retries DNS validation automatically on a backoff schedule:
 
-- The first 10 attempts run roughly every 60 seconds (about 20 minutes total).
-- Attempts 10 through 39 stretch from about 4 minutes apart up to 4 hours apart.
-- Attempt 40 and beyond stay capped at 4 hours between checks.
+- For the first few minutes, checks run seconds apart.
+- For about the next two hours, they run a few minutes apart.
+- After that, they run up to an hour apart.
 
-**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now deep into the slower part of the backoff — instead of waiting hours for the next scheduled attempt, you can kick off a new check right away.
+**Force Recheck** resets that schedule and triggers an immediate validation attempt. It's useful when you added your TXT records and propagation took a while, or you stepped away during the process and the platform is now in the slower part of the backoff — instead of waiting up to an hour for the next scheduled attempt, you can kick off a new check right away. In Terminus, `terminus gcdn:verify` also asks Cloudflare to recheck the domain right away, within the limits described below in step 4.
 
 Before you click:
 
@@ -115,14 +121,33 @@ Before proceeding with Terminus commands, you must first install the GCDN Termin
 
 <Alert title="Note" type="info">
 
-DNS-01 TXT record validation is the default method for domain verification and lets your certificate be issued before you update DNS. You will need to add TXT records to your DNS provider to verify domain ownership. If you'd rather not add a second TXT record for the certificate, HTTP-01 is available as an alternative setup — pass `--method=http` to `terminus gcdn:verify` and, once your domain-ownership TXT record verifies, point DNS and the certificate issues over HTTP. With HTTP-01, the certificate can't be pre-provisioned, so there may be brief downtime during cutover.
+For each domain, you add two DNS records before you update DNS: a TXT record that proves you own the domain, and a DCV delegation CNAME (`_acme-challenge`) that lets your certificate be issued before cutover and renewed automatically. If you'd rather not add the CNAME, HTTP-01 is available with `terminus gcdn:verify --method=http`. With HTTP-01, the certificate can't be issued in advance, so there may be brief downtime during cutover.
 
 </Alert>
 
-### Install the plugin
+### Install or update the plugin
 
 ```bash{promptUser: user}
 terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+```
+
+<Alert title="Upgrading from plugin version 0.4.0 or earlier" type="warning">
+
+`terminus gcdn:update` can't upgrade version 0.4.0 or earlier to the current version. Uninstall the plugin and install it again instead:
+
+```bash{promptUser: user}
+terminus self:plugin:uninstall pantheon-systems/terminus-gcdn-plugin
+terminus self:plugin:install pantheon-systems/terminus-gcdn-plugin
+```
+
+Check the installed version with `terminus self:plugin:list`.
+
+</Alert>
+
+If the plugin is already installed at version 0.5.0 or later, update it to the latest version:
+
+```bash{promptUser: user}
+terminus gcdn:update
 ```
 
 If you have existing custom domains on your site, follow all of the steps below to upgrade and migrate your DNS.
@@ -135,39 +160,85 @@ terminus gcdn:upgrade <site>
 
 This migrates the site from Fastly to Cloudflare GCDN across all environments. Your platform hostnames (`*.pantheonsite.io`) are automatically migrated as part of this step. It is normal to see a few minutes of downtime on platform hostnames while the migration completes.
 
-### 2. Get your DNS records and TXT verification challenges
+### 2. Get your DNS records
 
 ```bash{promptUser: user}
 terminus gcdn:dns <site>.live
 ```
 
-This will show the TXT records needed for domain ownership and certificate validation.
+For each domain, this shows its status and the records it needs:
 
-### 3. Add TXT records to your DNS provider
+- **TXT `_cf-custom-hostname.<domain>`:** proves you own the domain. You can remove it once the domain is active.
+- **CNAME `_acme-challenge.<domain>`:** lets Cloudflare issue and renew the certificate (DCV delegation). If your DNS provider can proxy records, set it to DNS only (not proxied). Keep it in place permanently, even after the domain is active. It's extra assurance that renewals validate without you updating a record, and if another proxy sits in front of Pantheon, your certificate can fail to renew without it.
+- **Traffic records:** the CNAME, or the A/AAAA records, that point the domain to Pantheon. Don't add these until step 5.
 
-Add the TXT records from step 2 to your DNS provider.
+### 3. Add the TXT and `_acme-challenge` CNAME records
 
-### 4. Verify your domains
+Add them at your DNS provider. Remove any existing `_acme-challenge.<domain>` TXT records first; they conflict with the CNAME. Don't remove unrelated TXT records, such as SPF, DKIM, or DMARC.
 
-Wait a few minutes for DNS propagation, then verify each domain. Verification typically takes a few minutes to complete:
+### 4. Verify each domain
+
+Wait a few minutes for DNS propagation, then verify each domain:
 
 ```bash{promptUser: user}
 terminus gcdn:verify <site>.live example.com
 terminus gcdn:verify <site>.live www.example.com
 ```
 
-Verification uses DNS-01 challenges by default, which lets your certificate be issued before DNS cutover. If you'd rather not add a second TXT record for the certificate, use HTTP-01 instead: once your domain-ownership TXT record verifies, point DNS and the certificate is issued over HTTP. It can't pre-provision the certificate, so there may be brief downtime during cutover. To use it:
+`gcdn:verify` asks Cloudflare to check the domain again now (like **Force Recheck** in the dashboard), then shows its status. Pantheon sees the result within about 10 minutes; run the command again to see it. The command only rechecks when there's something new to check: the ownership TXT or certificate CNAME is in DNS with the value shown, or the domain points to Pantheon. It rechecks a domain at most every 5 minutes, and not at all once the domain is active. Use `--recheck` to skip both limits, or `--no-recheck` to only show the status.
+
+The output lists three steps, each red until it's done and green after:
+
+1. Ownership (TXT record)
+1. Certificate (DCV CNAME)
+1. Switch traffic to Pantheon
+
+For steps 1 and 2, `gcdn:verify` looks up the records in DNS and says whether each is found, missing, or set to a different value. For step 2, it also flags `_acme-challenge` TXT records that conflict with the CNAME. A **Next:** line says what to do now.
+
+The status is one of:
+
+| Status | What to do |
+|---|---|
+| `ownership and certificate active` | Done. Point DNS to Pantheon (step 5) if you haven't yet. |
+| `DNS records ready (confirmed by Pantheon)` | The domain is served through Cloudflare today (your own Cloudflare account or your current host), and Pantheon has confirmed you own it. Cloudflare still reports errors because it can't pre-validate a domain that's already on Cloudflare; the output explains them. Switch DNS (step 5), wait about 5 minutes, then run `gcdn:verify` again. |
+| `ownership not confirmed yet`, `ownership verified, certificate pending`, or `ownership and certificate pending` | Add the records shown, then run `gcdn:verify` again. |
+| `Action required` | Cloudflare reports a status that adding records can't fix, for example blocked or being deleted. Don't switch DNS. [Contact Pantheon Support](/guides/support/contact-support/). |
+
+If a domain waits about 11 days for the DNS switch, Cloudflare pauses its checks (status `moved`), and marks the domain `deleted` if it stays paused for 7 more days. Run `gcdn:verify` to restart the checks.
+
+`gcdn:verify` exits with `0` when every domain it reports on is active or ready, and `1` otherwise, so scripts can rely on it.
+
+#### Use HTTP-01 instead of the CNAME
+
+To switch certificate validation to HTTP as part of the recheck:
 
 ```bash{promptUser: user}
 terminus gcdn:verify <site>.live example.com --method=http
 ```
 
+The certificate is issued over HTTP once DNS points to Pantheon, so it can't be issued in advance and there may be brief downtime during cutover. HTTP-01 is likely to fail while the domain is proxied through Cloudflare, because the proxy intercepts HTTP validation. If HTTP-01 is your best option, disable proxying (set the record to DNS only) while the challenge completes.
+
+#### If you can't add the CNAME
+
+If your DNS can't take the `_acme-challenge` CNAME (for example, that name is already delegated to another provider), show the certificate's TXT record instead:
+
+```bash{promptUser: user}
+terminus gcdn:verify <site>.live example.com --cert-txt
+```
+
+The TXT value can change with each verification attempt, so run the command again and confirm the value before you add or update the record. If your domain is proxied through Cloudflare, disable proxying (set the record to DNS only) while you use the TXT record. At renewal, Cloudflare attempts to fall back to HTTP validation, but that fallback isn't guaranteed. If a renewal is pending, [contact Pantheon Support](/guides/support/contact-support/). The CNAME avoids all of this, so use it when you can.
+
 ### 5. Update your DNS records
 
-Once verification passes, add the CNAME or A/AAAA records shown in the `gcdn:dns` output to point your domains to the new GCDN edge.
+Once `gcdn:verify` shows the domain active or ready, point it to Pantheon with one of the options in the table of `gcdn:verify` or `gcdn:dns` from step 3:
+
+- **Option 1, the CNAME:** for subdomains, such as `www.example.com`.
+- **Option 2, the A and AAAA records:** for the apex domain, such as `example.com`.
+
+"In DNS now" shows what DNS returns today. If your domain is proxied by your own Cloudflare zone, follow [Migrate a Cloudflare-Proxied Domain (O2O)](/guides/nextgen-gcdn/o2o) instead.
 
 - Set your TTL as low as possible before making changes to minimize propagation delay.
-- TLS certificates are automatically provisioned once domain verification completes.
+- After you switch, run `terminus gcdn:verify` again so Cloudflare and Pantheon detect the change sooner.
 
 <Alert title="Note" type="info">
 
@@ -180,10 +251,12 @@ DNS changes may take time to propagate depending on your current TTL settings. D
 ```bash{promptUser: user}
 terminus gcdn:upgrade my-site
 terminus gcdn:dns my-site.live
-# Add TXT records to your DNS provider, wait a few minutes, then verify:
+# Add the TXT and _acme-challenge CNAME records, wait a few minutes, then verify:
 terminus gcdn:verify my-site.live example.com
 terminus gcdn:verify my-site.live www.example.com
-# Once verified, add the CNAME or A/AAAA records from gcdn:dns output
+# Once active or ready, point DNS with the CNAME or A/AAAA records from the step 3 table
+# Then verify again so the switch is detected sooner:
+terminus gcdn:verify my-site.live example.com
 ```
 
 </Tab>
