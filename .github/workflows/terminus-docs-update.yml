@@ -46,7 +46,7 @@ jobs:
 
       # Only needed so the terminus.phar installed below can execute.
       - name: Set up PHP
-        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
         with:
           php-version: "8.2"
           coverage: none
@@ -68,7 +68,7 @@ jobs:
       # Installs the pinned terminus.phar from the release above onto PATH, so
       # scripts/terminus-docs.ts doesn't need to fetch/install it itself.
       - name: Set up Terminus
-        uses: pantheon-systems/terminus-github-actions@409451ede17f75acac08f42edc823fee6c435057 # v1.2.8
+        uses: pantheon-systems/terminus-github-actions@34305c662bb28fb2935aa5556cab46643a0c5170 # v1.2.11
         with:
           terminus-version: ${{ steps.release.outputs.tag }}
           disable-cache: true
@@ -90,7 +90,7 @@ jobs:
 
       - name: Create pull request
         id: pr
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        uses: peter-evans/create-pull-request@15733dbdfeedb4f7fdb73d13c6f5ac83b710fab8 # v8.1.2
         with:
           # Deterministic per release, so a re-run updates the open PR instead of
           # opening another one.
