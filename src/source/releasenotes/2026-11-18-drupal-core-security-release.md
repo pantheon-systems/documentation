@@ -3,24 +3,25 @@ title: Drupal core security releases fix a critical remote code execution issue
 published_date: "2026-11-18"
 published_at: "2026-11-18T19:45:00Z"
 categories: [drupal, action-required, security]
-description: "Drupal 10.6.22, 11.3.22, and 11.4.13 fix two security issues in Drupal core, including a critical remote code execution issue."
+description: "Drupal 10.6.22, 11.3.22, and 11.4.13 fix two security issues in Drupal core, including a critical remote code execution issue. Pantheon also provides Drupal 7.109, which removes install.php."
 ---
 
-The Drupal Security Team released Drupal 10.6.22, 11.3.22, and 11.4.13 on November 18, 2026. These releases fix two security issues in Drupal core: [SA-CORE-2026-017](https://www.drupal.org/sa-core-2026-017) and [SA-CORE-2026-018](https://www.drupal.org/sa-core-2026-018).
+The Drupal Security Team released Drupal 10.6.22, 11.3.22, and 11.4.13 on November 18, 2026. These releases fix two security issues in Drupal core: [SA-CORE-2026-017](https://www.drupal.org/sa-core-2026-017) and [SA-CORE-2026-018](https://www.drupal.org/sa-core-2026-018). Pantheon also provides Drupal 7.109 for Drupal 7 sites through our LTS support with Tag1 Consulting.
 
 ## Action required
 
-Update Drupal 10 and Drupal 11 sites to a fixed release as soon as possible:
+Update your site to a fixed release as soon as possible:
 
+* Drupal 7: update to 7.109.
 * Drupal 10.x: update to 10.6.22.
 * Drupal 11.3.x: update to 11.3.22.
 * Drupal 11.4.x: update to 11.4.13.
 
-Pantheon doesn't ship an upstream update for Drupal 8 and later. You update core on your own site, for example with Composer.
+Drupal 10 and 11 sites update core through Composer. To apply the update, use [one-click core updates in the Pantheon dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
-Pantheon deployed protections in advance for some of the issues these releases fix. The protections do not replace the update, so update your sites as soon as possible.
+Drupal 8, Drupal 9, Drupal 10.5.x and earlier, and Drupal 11.2.x and earlier have reached End of Life (EoL) and are not patched.
 
-Drupal 11.2.x and earlier, and Drupal 10.5.x and earlier, have reached end of life and receive no fix.
+Pantheon deployed protections to all environments in advance as part of [Drupal Steward](https://new.drupal.org/steward), which mitigates SA-CORE-2026-017 (see below). We still advise you to update your sites as soon as possible.
 
 ## Issues fixed
 
@@ -30,7 +31,7 @@ Drupal rates this issue critical (18/25), and it affects Drupal 10.x before 10.6
 
 Under specific conditions, an attacker can use the Drupal installer (`install.php`) to attempt to reinstall Drupal. This can lead to site takeover or remote code execution.
 
-If you can't update immediately, follow Drupal's instructions for securing the Drupal installer. Drupal also notes that some exploit paths no longer work if the web server cannot write to or change permissions on `settings.php`.
+Pantheon's runtime now blocks the installer once the site is installed, in all environments.
 
 ### SA-CORE-2026-018: gadget chain
 
@@ -40,8 +41,6 @@ Drupal core contains a chain of methods that could be exploitable if another vul
 
 ## Drupal 7
 
-Pantheon now provides Drupal 7.109. The advisories don't state whether Drupal 7 is affected. Tag1 Consulting prepared this core update, which removes `install.php` entirely. `drush si` continues to work.
+Pantheon now provides Drupal 7.109 through our LTS support for Drupal 7 with Tag1 Consulting. This core update removes `install.php` entirely. `drush si` continues to work. You need to apply the update to your site.
 
 Apply the update from your Pantheon dashboard or with Terminus. See [related documentation for how to apply core updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
-
-For full details, see [SA-CORE-2026-017](https://www.drupal.org/sa-core-2026-017) and [SA-CORE-2026-018](https://www.drupal.org/sa-core-2026-018).
