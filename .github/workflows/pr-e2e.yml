@@ -67,7 +67,7 @@ jobs:
           export URL="https://pr-${PR_NUMBER}-${SITE_NAME}.pantheonsite.io"
           ./404finder.sh
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: sta404report
@@ -102,7 +102,7 @@ jobs:
           backstop reference --config="backstop.js"
           backstop test --config="backstop.js"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:
           name: backstop_vrt
@@ -139,7 +139,7 @@ jobs:
           cd tests/playwright
           npx playwright test --fail-on-flaky-tests
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:
           name: playwright_report
