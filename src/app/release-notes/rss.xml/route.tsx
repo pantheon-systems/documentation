@@ -29,11 +29,18 @@ function getSeededTime(title: string) {
   return `${hours}:${minutes}:${seconds}`;
 }
 
-export const GET = async () => {
+export const GET = async (request: Request) => {
+  // Optional filter: ?category=content-publisher (repeat or comma-separate for several)
+  const categories = new URL(request.url).searchParams
+    .getAll("category")
+    .flatMap((value) => value.split(","))
+    .map((value) => value.trim())
+    .filter(Boolean);
+
   const releaseNotes: (BasePageDataWithoutComponent & {
     type: "release-note";
     data: ReleaseNoteData;
-  })[] = (await processReleaseNotePages()).filter(
+  })[] = (await processReleaseNotePages(undefined, categories)).filter(
     (releaseNote) =>
       releaseNote.type === "release-note" &&
       releaseNote.data.node.frontmatter.published_date
@@ -54,11 +61,15 @@ export const GET = async () => {
   }));
 
   // convert to xml
+  const feedUrl = "https://docs.pantheon.io/release-notes/rss.xml";
   const xml = new rss({
     title: "Pantheon release notes RSS feed",
     description: "Stay updated with the latest releases and enhancements.",
     site_url: "https://docs.pantheon.io/release-notes",
-    feed_url: "https://docs.pantheon.io/release-notes/rss.xml",
+    feed_url:
+      categories.length > 0
+        ? `${feedUrl}?${new URLSearchParams(categories.map((c) => ["category", c])).toString()}`
+        : feedUrl,
   });
   output.forEach((item) => {
     xml.item({
