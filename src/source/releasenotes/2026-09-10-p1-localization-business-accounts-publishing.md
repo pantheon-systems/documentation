@@ -16,7 +16,7 @@ This release brings localization to the front end of P1, plus Business Accounts 
 * Localize your content within its entire lifecycle (and not just at the beginning): P1 offers a unique approach that lets you customize any localized content yet keep a relation with the original locale to follow its change and keep the translation and localization up to date with.
 * Navigate localization status easily: The Site Structure now shows the number of locales in which a page might have been translated to, so you can identify gaps without opening every page. A new locale selector helps you filter the site structure to a specific language.
 
-**Redirect management updates**: Redirect UI has been updated with feature fixes, making it easier to manage page redirects from the dashboard. Find it from your site's **Site Structure** page — open the redirects drawer to view, edit, or delete redirects, with a clearer layout and a new empty state for sites with none yet. Redirects are now also created automatically when you change a page's location or slug, so links keep working without an extra manual step. _(Confirm exact path before this goes out.)_
+**Redirect management updates**: Redirect UI has been updated with feature fixes, making it easier to manage page redirects from the dashboard. Find it from your site's **Site Structure** page — open the redirects drawer to view, edit, or delete redirects, with a clearer layout and a new empty state for sites with none yet. Redirects are now also created automatically when you change a page's location or slug, so links keep working without an extra manual step.
 
 ## Introducing Business Accounts
 
