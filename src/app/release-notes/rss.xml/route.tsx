@@ -40,6 +40,7 @@ export const GET = async (request: Request) => {
   const releaseNotes: (BasePageDataWithoutComponent & {
     type: "release-note";
     data: ReleaseNoteData;
+    // Filter down the notes using categories.
   })[] = (await processReleaseNotePages(undefined, categories)).filter(
     (releaseNote) =>
       releaseNote.type === "release-note" &&
