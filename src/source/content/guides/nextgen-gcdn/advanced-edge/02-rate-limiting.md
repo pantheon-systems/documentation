@@ -127,5 +127,6 @@ Applies to one site environment, across all of that environment's hostnames. Eac
 
 - [Advanced Edge](/guides/nextgen-gcdn/advanced-edge)
 - [Geolocation](/guides/nextgen-gcdn/advanced-edge/geolocation)
+- [Validate pantheon-edge.yml with the JSON Schema](/guides/nextgen-gcdn/advanced-edge#validate-the-file-before-you-push)
 - [Next-generation Global CDN](/guides/nextgen-gcdn)
 - [Bypassing Cache with HTTP Headers](/cache-control)
