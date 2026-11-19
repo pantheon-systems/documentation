@@ -18,6 +18,7 @@ export const getOmniItems = async (): Promise<OmniItem[]> => {
     goLive(),
     webInfrastructure(),
     accountManagement(),
+    simpleLink("https://docs.p1.pantheon.io/", "P1"),
     simpleLink("https://docs.content.pantheon.io/", "Content Publisher"),
     terminus(),
     support(),

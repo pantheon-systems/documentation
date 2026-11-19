@@ -131,6 +131,12 @@
       "displayName": "Content Publisher",
       "color": "color-4",
       "description": "Keeps users informed about updates to Pantheon Content Publisher"
+    },
+    {
+      "slug": "p1",
+      "displayName": "P1",
+      "color": "color-18",
+      "description": "Keeps users informed about updates to Pantheon's P1"
     }
   ]
 }
