@@ -124,8 +124,6 @@ code --add-mcp '{"name":"pantheon-mcp","type":"http","url":"https://mcp.pantheon
 
 In Antigravity CLI (`agy`), run `/mcp` and authenticate `pantheon-mcp` there.
 
-<br/>
-
 ### Gemini
 Gemini CLI doesn't register itself automatically, so you give it Pantheon's client ID and a fixed sign-in port.
 
@@ -149,8 +147,6 @@ Gemini CLI doesn't register itself automatically, so you give it Pantheon's clie
 
 Keep the `redirectUri` line exactly as shown. Without it, Gemini CLI picks a random port and sign-in fails with "Callback URL mismatch".
 
-<br/>
-
 ### Cursor
 Cursor doesn't register itself automatically, so you give it Pantheon's client ID.
 
@@ -172,8 +168,6 @@ Cursor doesn't register itself automatically, so you give it Pantheon's client I
 In Cursor CLI, run `agent mcp login pantheon-mcp` and sign in there.
 
 If you already have a `pantheon-mcp` entry, replace it rather than adding a second one. Check that the client ID has no extra characters, such as a trailing period. An invalid client ID shows "Oops, something went wrong" on the sign-in page.
-
-<br/>
 
 ### Devin (formerly Windsurf)
 Devin doesn't register itself automatically, so you give it Pantheon's client ID.
