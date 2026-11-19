@@ -67,6 +67,30 @@ export const resolveComponent = async (
       };
     }
 
+    case "vulnerability": {
+      const Vulnerability = await import(`@/templates/vulnerability`);
+      return {
+        Component: (
+          <Vulnerability.VulnerabilityTemplate node={pageData.data.node} />
+        ),
+        template: "vulnerability",
+      };
+    }
+
+    case "vulnerability-listing": {
+      const VulnerabilityListing = await import(
+        `@/templates/vulnerability-listing`
+      );
+      return {
+        Component: (
+          <VulnerabilityListing.VulnerabilityListingTemplate
+            vulnerabilities={pageData.data.vulnerabilities}
+          />
+        ),
+        template: "vulnerability-listing",
+      };
+    }
+
     case "iframe-embed": {
       const IframeEmbed = await import(`@/templates/iframe-embed`);
       return {

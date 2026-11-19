@@ -94,6 +94,14 @@ export interface ReleaseNoteListingData {
   totalPages: number;
 }
 
+export interface VulnerabilityData {
+  node: ProcessedFile;
+}
+
+export interface VulnerabilityListingData {
+  vulnerabilities: ProcessedFile[];
+}
+
 export interface IframeEmbedData {
   iframeEmbed: ProcessedFile;
 }
@@ -126,6 +134,14 @@ export type PageDataWithoutComponent =
   | (BasePageDataWithoutComponent & {
       type: "release-note-listing";
       data: ReleaseNoteListingData;
+    })
+  | (BasePageDataWithoutComponent & {
+      type: "vulnerability";
+      data: VulnerabilityData;
+    })
+  | (BasePageDataWithoutComponent & {
+      type: "vulnerability-listing";
+      data: VulnerabilityListingData;
     })
   | (BasePageDataWithoutComponent & {
       type: "iframe-embed";
@@ -463,6 +479,56 @@ export const processReleaseNotePages = async (
   return pages;
 };
 
+export const getAllVulnerabilities = () =>
+  processDirectoryForMarkDown("source/vulnerabilities", {
+    sortBy: "fileAbsolutePath",
+    sortOrder: "desc",
+  });
+
+export const processVulnerabilityPages = async (
+  uri?: string[]
+): Promise<PageDataWithoutComponent[]> => {
+  const vulnerabilities = getAllVulnerabilities();
+  const targetUri = uri?.join("/");
+  const pages: PageDataWithoutComponent[] = [];
+
+  for (const node of vulnerabilities) {
+    if (targetUri && node.fields.slug !== targetUri) {
+      continue;
+    }
+
+    pages.push({
+      uri: node.fields.slug,
+      title: node.frontmatter.title ?? "Vulnerability",
+      description:
+        node.frontmatter.description ?? "Pantheon Vulnerability Tracker entry",
+      type: "vulnerability",
+      data: { node },
+      rawFileData: node.internal.content,
+      relativeFilePath: node.relativePath,
+    });
+
+    if (targetUri) {
+      return pages;
+    }
+  }
+
+  if (!targetUri || targetUri === "vulnerability-tracker") {
+    pages.push({
+      uri: "vulnerability-tracker",
+      title: "Pantheon Vulnerability Tracker",
+      description:
+        "Pantheon's status for publicly disclosed vulnerabilities, including whether Pantheon is affected and whether you need to take action.",
+      type: "vulnerability-listing",
+      data: { vulnerabilities },
+      rawFileData: JSON.stringify(vulnerabilities),
+      relativeFilePath: "src/source/vulnerabilities/index.md",
+    });
+  }
+
+  return pages;
+};
+
 export const processIframeEmbedPages = async (
   uri?: string[]
 ): Promise<PageDataWithoutComponent[]> => {
@@ -571,6 +637,9 @@ export const getAllPages = async (
     const releaseNotePages = await processReleaseNotePages(uri, selectedCategories);
     if (releaseNotePages.length > 0) return releaseNotePages;
 
+    const vulnerabilityPages = await processVulnerabilityPages(uri);
+    if (vulnerabilityPages.length > 0) return vulnerabilityPages;
+
     const iframeEmbedPages = await processIframeEmbedPages(uri);
     if (iframeEmbedPages.length > 0) return iframeEmbedPages;
 
@@ -587,6 +656,7 @@ export const getAllPages = async (
     guidePages,
     terminusCommandPages,
     releaseNotePages,
+    vulnerabilityPages,
     iframeEmbedPages,
     landingPages,
   ] = await Promise.all([
@@ -594,6 +664,7 @@ export const getAllPages = async (
     processGuidePages(),
     processTerminusCommandPages(),
     processReleaseNotePages(),
+    processVulnerabilityPages(),
     processIframeEmbedPages(),
     processLandingPages(),
   ]);
@@ -603,6 +674,7 @@ export const getAllPages = async (
     ...guidePages,
     ...terminusCommandPages,
     ...releaseNotePages,
+    ...vulnerabilityPages,
     ...iframeEmbedPages,
     ...landingPages,
   ];
