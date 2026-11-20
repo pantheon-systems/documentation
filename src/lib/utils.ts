@@ -65,3 +65,20 @@ export const isExternalLink = (url: string) => {
     return false;
   }
 };
+
+/**
+ * Returns a slug that is safe to use in an internal href, or "" if it isn't.
+ * Content-derived slugs (from filenames) are treated as untrusted: a leading
+ * slash is dropped, absolute and protocol-relative URLs are rejected, and only
+ * alphanumerics, dashes, underscores and slashes are allowed.
+ */
+export function sanitizeSlug(slug: string): string {
+  const sanitized = slug.replace(/^\/+/, "");
+  if (/^(\w+:)?\/\//.test(sanitized)) {
+    return "";
+  }
+  if (!/^[a-zA-Z0-9/_-]+$/.test(sanitized)) {
+    return "";
+  }
+  return sanitized;
+}
