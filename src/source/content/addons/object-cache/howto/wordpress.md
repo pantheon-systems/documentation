@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-contributors: [jazzsequence, jkudish]
+contributors: [jazzsequence, AnaisPantheor, jkudish]
 showtoc: true
 ---
 
@@ -70,6 +70,12 @@ terminus redis:enable <site>
     ```bash
     terminus install:run <site>.<environment> ocp
     ```
+
+    <Alert title="Note" type="info">
+
+    This workflow does not support sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab). Refer to [Sites using an external repository](#sites-using-an-external-repository) instead.
+
+    </Alert>
 
 1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
 
@@ -321,6 +327,60 @@ read -r ENV;
 # Delete all transient options - these are now stored in Redis
 terminus wp "$SITE"."$ENV" -- db query "DELETE FROM wp_options WHERE option_name LIKE ('%\_transient\_%');"
 ```
+
+## Sites using an external repository
+
+The `terminus install:run <site>.<environment> ocp` workflow commits Object Cache Pro to the site's Pantheon Git repository. Sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab) do not have one, so the workflow does not run on these sites. If your site uses Composer, follow the **Composer-based WordPress** tab in [Installation and Configuration](#installation-and-configuration). Otherwise, add Object Cache Pro to your repository:
+
+1. Ensure that your site meets the requirements in [Before You Begin](#before-you-begin).
+
+1. If WP Redis or Redis Object Cache is installed, remove it, along with any existing `wp-content/object-cache.php` file.
+
+1. Get your Object Cache Pro license token:
+
+	```bash{promptUser: user}
+	terminus remote:wp <site>.<env> -- eval "echo getenv('OCP_LICENSE');"
+	```
+
+1. Download `https://objectcache.pro/plugin/object-cache-pro.zip?token=<LICENSE_TOKEN>` and unzip it into `wp-content/plugins/`. This creates the `wp-content/plugins/object-cache-pro` directory.
+
+1. Copy `wp-content/plugins/object-cache-pro/stubs/object-cache.php` to `wp-content/object-cache.php`.
+
+1. Create a `wp-config-ocp.php` file at the root of your code with the contents of the [`WP_REDIS_CONFIG` constant](#wp_redis_config-constant) below. The file reads the license token from the `OCP_LICENSE` environment variable, so do not add the token to your repository.
+
+1. Add the following line to `wp-config.php`, above the `/* That's all, stop editing! */` line:
+
+	```php
+	file_exists( __DIR__ . '/wp-config-ocp.php' ) && include_once( __DIR__ . '/wp-config-ocp.php' );
+	```
+
+1. Add the following to your `pantheon.yml` file, or create the file if it does not exist:
+
+	```yaml
+	api_version: 1
+	object_cache:
+	  version: 6.2
+	```
+
+1. Commit and push your changes to your repository. Pantheon builds the environment for that branch or pull request.
+
+1. Activate the plugin:
+
+	```bash{promptUser: user}
+	terminus wp -- <site>.<env> plugin activate object-cache-pro
+	```
+
+	**Note:** WordPress Multisite users will need to append the `--network` flag to network activate the plugin.
+
+1. Verify that Object Cache Pro is connected. The output should show `Status: Connected` and `Drop-in: Valid`:
+
+	```bash{promptUser: user}
+	terminus wp -- <site>.<env> redis status
+	```
+
+1. See the ["Database Cleanup" section above](#database-cleanup-required) for steps on how to truncate the existing cache tables.
+
+Once the changes are merged into your default branch, activate the plugin on each environment as described in [Additional Considerations](#additional-considerations).
 
 ## Local configuration with Lando
 Lando's [Pantheon recipe](https://docs.lando.dev/plugins/pantheon/) includes Redis in its Docker configuration. However, to get Object Cache Pro to work correctly with Lando locally, you'll need to make a few changes to your Object Cache Pro and Lando configuration.
