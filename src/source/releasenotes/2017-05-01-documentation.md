@@ -14,8 +14,8 @@ categories: [documentation]
 ### Revised Articles
 We’ve simplified and cleaned up our docs related to our Custom Upstreams feature for Enterprise, Agency, and EDU Organizations. Check it out:
 
-[Introduction to Custom Upstreams](/guides/upstream)
+[Introduction to Custom Upstreams](/guides/custom-upstream)
 
-[Create a Custom Upstream](/guides/upstream/create-upstream)
+[Create a Custom Upstream](/guides/custom-upstream/create-custom-upstream)
 
-[Best Practices for Maintaining a Custom Upstream](/guides/upstream/maintain-upstream)
+[Best Practices for Maintaining a Custom Upstream](/guides/custom-upstream/maintain-custom-upstream)

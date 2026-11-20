@@ -15,4 +15,4 @@ You can now update the credentials for a Custom Upstream directly from the Panth
 
 Changing the repository **URL** still requires creating a new Custom Upstream.
 
-For steps, see [Edit an Existing Custom Upstream](/guides/upstream/edit-upstream).
+For steps, see [Edit an Existing Custom Upstream](/guides/custom-upstream/edit-custom-upstream).

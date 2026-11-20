@@ -17,4 +17,4 @@ Test the update before you deploy it to the Live environment. Apply it in Dev or
 
 If your Drupal 10 site needs to stay on PHP 8.2, pin the version by setting `php_version: 8.2` in your site's `pantheon.yml` before you apply the update. For steps, see [Manage PHP Versions](/guides/php/php-versions).
 
-If you maintain a [custom upstream](/guides/upstream), this change is not reflected in your `pantheon.upstream.yml` unless you [update your fork from Pantheon's upstream](https://docs.pantheon.io/guides/upstream/create-upstream#pull-in-core-from-pantheons-upstream).
+If you maintain a [custom upstream](/guides/custom-upstream), this change is not reflected in your `pantheon.upstream.yml` unless you [update your fork from Pantheon's upstream](https://docs.pantheon.io/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
