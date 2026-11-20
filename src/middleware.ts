@@ -218,6 +218,11 @@ const RedirectMap: Record<string, string> = {
   "/guides/custom-upstream/switch-custom-upstream": "/guides/upstream/switch-upstream",
   "/guides/custom-upstream/test-custom-upstream": "/guides/upstream/test-upstream",
   "/guides/custom-upstream/troubleshooting": "/guides/upstream/troubleshooting",
+  "/add-site-custom-upstream": "/add-site-upstream",
+  "/guides/autopilot-custom-upstream": "/guides/autopilot-upstream",
+  "/guides/autopilot-custom-upstream/autopilot-custom-upstream-config": "/guides/autopilot-upstream/autopilot-upstream-config",
+  "/guides/autopilot-custom-upstream/wp-autopilot-custom-upstream": "/guides/autopilot-upstream/wp-autopilot-upstream",
+  "/certification/study-guide/custom-upstreams": "/certification/study-guide/upstreams",
 
   // These are redirects that were not in AGCDN but discovered in the
   // process of migrating the site to Next.js.

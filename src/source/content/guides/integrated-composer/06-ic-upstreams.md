@@ -105,7 +105,7 @@ A change to the root `composer.json` in your upstream replaces edits that indivi
 ## More Resources
 
 - [Upstreams](/guides/upstream)
-- [Autopilot for Upstreams](/guides/autopilot-custom-upstream)
+- [Autopilot for Upstreams](/guides/autopilot-upstream)
 - [Migrate an Upstream to Drupal](/guides/drupal-hosted-createcustom)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 - [Best Practices for Maintaining Upstreams](/guides/upstream/maintain-upstream)

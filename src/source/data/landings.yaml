@@ -833,7 +833,7 @@
         - text: "WordPress on Pantheon Quick Start Guide"
           url: "/guides/wordpress-pantheon"
         - text: "Autopilot for Upstreams"
-          url: "/guides/autopilot-custom-upstream"
+          url: "/guides/autopilot-upstream"
         - text: "Fastly on Pantheon Guide"
           url: "/guides/fastly-pantheon"
         - text: "Upstream Guide"

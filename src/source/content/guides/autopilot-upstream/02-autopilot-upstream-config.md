@@ -5,7 +5,7 @@ description: Learn how to configure your upstream to use Autopilot.
 tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
 showtoc: true
-permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-config
+permalink: docs/guides/autopilot-upstream/autopilot-upstream-config
 contenttype: [guide]
 innav: [false]
 categories: [automate]
@@ -40,7 +40,7 @@ Autopilot Enabled on Downstream Sites Only is the best option if you are using D
 
 ### Enable Autopilot on Downstream Sites
 
-1. [Create your Upstream](/guides/autopilot-custom-upstream) if you haven't already created it.
+1. [Create your Upstream](/guides/autopilot-upstream) if you haven't already created it.
 
 1. Follow the steps in the [Enable Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) section to enable Autopilot on your downstream sites.
 

@@ -82,7 +82,7 @@ You can use the [Autopilot Terminus plugin](https://github.com/pantheon-systems/
 ## More Resources
 
 - [Autopilot Pre-Configuration Checklist](/guides/autopilot/autopilot-preconfiguration/)
-- [Autopilot Upstream Guide](/guides/autopilot-custom-upstream)
+- [Autopilot Upstream Guide](/guides/autopilot-upstream)
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
 - [Webinar: Put CMS Updates on Cruise Control with Autopilot](https://pantheon.io/put-cms-updates-on-cruise-control-with-autopilot-webinar)
 - [Autopilot Makes Open Source CMS a Reality at Scale](https://pantheon.io/blog/open-source-cms-scale-autopilot)

@@ -28,7 +28,7 @@ const accountManagement = () => {
           getGuideDirectory("guides/upstream"),
           getGuideDirectory("guides/autopilot", "Autopilot Guide"),
           // Consider consolidating this next one with the one above
-          getGuideDirectory("guides/autopilot-custom-upstream"),
+          getGuideDirectory("guides/autopilot-upstream"),
         ]
       ),
     ],

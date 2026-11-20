@@ -64,7 +64,7 @@ By the end of this section, you should be able to:
 
 For how overwhelming it can be to approach WordPress and Drupal as decades old communities with thousands of plugins and modules, they have developed some very helpful and clear layers. There are clear lines between code maintained by core committers, code maintained in community plugins/modules, and site specific code. Large organizations frequently insert another layer in the middle. Using conventions pioneered in Drupal distributions or WordPress suites of plugins like WooCommerce a large company or university may have a shared theme and centralized common code in addition to per-site customizations.
 
-[Chapter 10](/certification/study-guide/custom-upstreams) goes into greater detail on Pantheon's upstream product that enables this layering even more effectively than traditional Multisite configurations.
+[Chapter 10](/certification/study-guide/upstreams) goes into greater detail on Pantheon's upstream product that enables this layering even more effectively than traditional Multisite configurations.
 
 This practice of layering technology platforms supports more conceptual layering of value. At Pantheon we often think about the efforts of website operations going toward one of three layers of value: Credibility, Productivity, Impact.
 
@@ -87,7 +87,7 @@ With that mindset, let's look at what lies ahead in the rest of this Study Guide
 
 ### Balancing Standardization and Independence
 
-[Chapter 10](/certification/study-guide/custom-upstreams) examines how a central web team can manage shared code using upstreams to save time for a wider organization running dozens, hundreds, or thousands of sites.
+[Chapter 10](/certification/study-guide/upstreams) examines how a central web team can manage shared code using upstreams to save time for a wider organization running dozens, hundreds, or thousands of sites.
 
 ### Automating Repetitive Tasks
 

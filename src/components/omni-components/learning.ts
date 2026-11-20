@@ -69,7 +69,7 @@ const learning = () => {
               title: 'Chapter 9: Additional Automation',
             },
             {
-              link: '/certification/study-guide/custom-upstreams',
+              link: '/certification/study-guide/upstreams',
               title: 'Chapter 10: Upstreams',
             },
           ],

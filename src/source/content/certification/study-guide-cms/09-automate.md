@@ -5,7 +5,7 @@ description: "Learn how to leverage Integrated Composer and Autopilot"
 permalink: docs/certification/study-guide/automate
 cms: [drupal, wordpress]
 previousurl: /certification/study-guide/extend
-nexturl: /certification/study-guide/custom-upstreams
+nexturl: /certification/study-guide/upstreams
 ---
 
 <Alert title="Learning objectives for this chapter:"  type="info" >

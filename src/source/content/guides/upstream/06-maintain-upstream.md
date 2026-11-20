@@ -49,4 +49,4 @@ Refer to the [WordPress Configuration](/guides/wordpress-configurations) guide f
 
 - [Troubleshoot an Upstream](/guides/upstream/troubleshooting)
 
-- [Autopilot for Upstreams](/guides/autopilot-custom-upstream)
+- [Autopilot for Upstreams](/guides/autopilot-upstream)

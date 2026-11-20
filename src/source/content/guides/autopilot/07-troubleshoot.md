@@ -386,6 +386,6 @@ You can also disable upstream updates if you do not want Autopilot to maintain u
 ## More Resources
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
-- [Autopilot Upstream Guide](/guides/autopilot-custom-upstream)
+- [Autopilot Upstream Guide](/guides/autopilot-upstream)
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)

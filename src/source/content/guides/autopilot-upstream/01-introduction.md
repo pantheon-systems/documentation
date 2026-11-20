@@ -5,7 +5,7 @@ description: Learn more using Autopilot with your upstream.
 tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
 showtoc: true
-permalink: docs/guides/autopilot-custom-upstream
+permalink: docs/guides/autopilot-upstream
 contenttype: [guide]
 innav: [true]
 categories: [automate]
@@ -51,7 +51,7 @@ Check out our [pricing page](https://pantheon.io/plans/pricing?docs) and contact
 
 <Alert title="Note: Drupal Compatibility"  type="info" >
 
-Drupal users should note that there are technical limitations when using Autopilot with upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
+Drupal users should note that there are technical limitations when using Autopilot with upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-upstream/autopilot-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
 
 </Alert>
 

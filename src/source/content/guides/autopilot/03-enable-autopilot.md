@@ -286,6 +286,6 @@ Configure email notifications for Autopilot alerts and activity digests in My Da
 
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
-- [Autopilot for Upstreams Guide](/guides/autopilot-custom-upstream)
+- [Autopilot for Upstreams Guide](/guides/autopilot-upstream)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)

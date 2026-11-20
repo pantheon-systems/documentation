@@ -95,4 +95,4 @@ Yes, Autopilot is compatible with premium and paid WordPress plugins. Refer to [
 
 - [Apply Autopilot Updates](/guides/autopilot/apply-updates)
 
-- [Autopilot Upstream Guide](/guides/autopilot-custom-upstream)
+- [Autopilot Upstream Guide](/guides/autopilot-upstream)

@@ -5,7 +5,7 @@ description: Set up your WordPress site to use upstream and Autopilot.
 tags: [autopilot, upstreams]
 contributors: [whitneymeredith]
 showtoc: true
-permalink: docs/guides/autopilot-custom-upstream/wp-autopilot-custom-upstream
+permalink: docs/guides/autopilot-upstream/wp-autopilot-upstream
 contenttype: [guide]
 innav: [false]
 categories: [automate]
