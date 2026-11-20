@@ -135,7 +135,7 @@ Apache Solr 9.10.1 support for Drupal 7 requires updates to the Pantheon Apache 
 
 1. The updated `pantheon_apachesolr` module with Solr 9 support. This is included in Drupal 7 core upstream **7.105.1** and later. Use [one-click updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) to update your site to the latest version of Drupal 7 core.
 
-   If you encounter merge conflicts while applying the upstream update, refer to this [documentation](/guides/custom-upstream/troubleshooting) for guidance on resolving them.
+   If you encounter merge conflicts while applying the upstream update, refer to this [documentation](/guides/upstream/troubleshooting) for guidance on resolving them.
 
 1. An updated search module with Solr 9 schema configs, available through [Tag1 D7ES](/supported-drupal#drupal-7-long-term-support). If you have not already configured the Tag1 D7ES module, see [Tag1 D7ES Module Usage](/supported-drupal#tag1-d7es-module-usage) for setup instructions. Once configured, apply the update via Drush, Autopilot, or SFTP:
 

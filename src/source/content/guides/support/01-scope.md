@@ -83,7 +83,7 @@ For CMS specific information, see either [Supported Drupal Versions](/supported-
 
 If you choose to use a Custom Upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
-We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [correctly maintaining the Custom Upstream](/guides/custom-upstream/maintain-custom-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
+We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [correctly maintaining the Custom Upstream](/guides/upstream/maintain-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
 

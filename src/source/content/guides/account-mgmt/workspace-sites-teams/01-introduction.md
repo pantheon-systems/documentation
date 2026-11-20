@@ -57,7 +57,7 @@ Self Serve customers are those who purchase Pantheon services online with a cred
 
 When you sign up, you will have a My Dashboard, and can create as many Professional Workspaces as you like.  All of these Professional Workspaces can contain sites and teams, and you can organize them any way you like.
 
-The most important thing to remember is an Account Plan is assigned to a specific Workspace, and only sites that have added that Workspace as a supporting organization will have access to the features of your Account Plan. For example, if you have purchased a Gold Account Plan for a given Workspace, only sites that  have that Workspace as a supporting organization will have access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot).
+The most important thing to remember is an Account Plan is assigned to a specific Workspace, and only sites that have added that Workspace as a supporting organization will have access to the features of your Account Plan. For example, if you have purchased a Gold Account Plan for a given Workspace, only sites that  have that Workspace as a supporting organization will have access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot).
 
 Here are some examples of ways you might organize your sites:
 

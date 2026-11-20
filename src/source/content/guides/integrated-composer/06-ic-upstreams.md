@@ -16,7 +16,7 @@ product: [composer]
 integration: [--]
 ---
 
-This section provides usage and maintenance information for composer-managed [Custom Upstreams](/guides/custom-upstream) on Pantheon, including steps to add upstream dependencies.
+This section provides usage and maintenance information for composer-managed [Custom Upstreams](/guides/upstream) on Pantheon, including steps to add upstream dependencies.
 
 
 ## Custom Upstreams
@@ -25,7 +25,7 @@ An Upstream refers to the source code in Git that shares a Git history with "dow
 
 ### Create Your Integrated Composer Custom Upstream
 
-Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-custom-upstream/) to create and connect a new integrated composer custom upstream. 
+Follow the steps to [Create a Custom Upstream](/guides/upstream/create-upstream/) to create and connect a new integrated composer custom upstream. 
 
 ### Custom Upstream and Site Structure
 
@@ -104,11 +104,11 @@ A change to the root `composer.json` in your Custom Upstream replaces edits that
 
 ## More Resources
 
-- [Custom Upstreams](/guides/custom-upstream)
+- [Custom Upstreams](/guides/upstream)
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 - [Migrate a Custom Upstream to Drupal](/guides/drupal-hosted-createcustom)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
-- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
+- [Best Practices for Maintaining Custom Upstreams](/guides/upstream/maintain-upstream)
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
 - [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
 - [Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed)

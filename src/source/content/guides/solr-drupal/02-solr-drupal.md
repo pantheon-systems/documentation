@@ -480,5 +480,5 @@ This message can safely be ignored. It resolves once a search index has been cre
 
 #### Fatal error: Cannot redeclare config_get_config_directory()
 
-This error occurs after installing `search_api_pantheon` for Drupal using Composer. If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed). See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
+This error occurs after installing `search_api_pantheon` for Drupal using Composer. If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed). See [Switch Your Custom Upstream](/guides/upstream/switch-upstream) for instructions on how to do this.
 

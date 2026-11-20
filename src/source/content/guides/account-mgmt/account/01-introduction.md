@@ -23,7 +23,7 @@ Every new Pantheon account starts with a full 30-day free trial of our [Silver p
 * Up to 2 sandbox sites, including Dev, Test, and Live environments
 * Additional tools like [New Relic](/guides/new-relic), [Object Cache](/object-cache), and [Pantheon Search](/pantheon-search)
 
-Advanced features, including [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), [Autopilot](/guides/autopilot), and [Custom Domains](/guides/domains/custom-domains) are available on paid plans only. 
+Advanced features, including [Multidev](/guides/multidev), [Custom Upstreams](/guides/upstream), [Autopilot](/guides/autopilot), and [Custom Domains](/guides/domains/custom-domains) are available on paid plans only. 
 
 [For additional details on free trial accounts see the following FAQ bellow.](#frequently-asked-questions)
 

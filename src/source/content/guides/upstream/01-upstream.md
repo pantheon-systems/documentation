@@ -1,10 +1,10 @@
 ---
-title: Custom Upstreams on Pantheon
+title: Upstreams on Pantheon
 subtitle: Introduction
-description: Learn how to use Custom Upstreams to free up developer time.
+description: Learn how to use upstreams to free up developer time.
 tags: [collaborate, launch, upstreams, webops, workflow, D8, D9, D10]
 showtoc: true
-permalink: docs/guides/custom-upstream
+permalink: docs/guides/upstream
 contenttype: [guide]
 innav: [true]
 categories: [custom-upstreams]
@@ -12,32 +12,32 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2027-07-31"
+reviewed: "2026-11-20"
 ---
 
-<Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />
+<Youtube src="b1lNrZL0xxM" title="Pantheon upstreams" />
 
 ## Benefits
 
 ### Standardize Design and Functionality Across Many Sites
 
-Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
+Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
 ### Efficient Update Strategy
 
-The Custom Upstream workflow frees up developer time, and establishes a sustainable and scalable process for handling updates across massive site portfolios.
+The upstream workflow frees up developer time, and establishes a sustainable and scalable process for handling updates across massive site portfolios.
 
-New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
+New features and functionality can be continuously developed in the upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-![Custom Upstream update strategy](../../../images/update-diagram.png)
+![Upstream update strategy](../../../images/update-diagram.png)
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-edu-drupal-case-study).
 
 ### Scale Client Services
 
-Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
+Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
 
 > Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
 
@@ -68,7 +68,7 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Custom upstream level](../../../images/leveltwo-icon.png)
+![Upstream level](../../../images/leveltwo-icon.png)
 
 <ul class="upstream">
 <li>Parent Theme</li>
@@ -77,13 +77,13 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 
 </div>
 <div className="upstream-content-inner-content">
-<h3>Level 2: Your Custom Upstream</h3>
+<h3>Level 2: Your Upstream</h3>
 
-The second level repository is a Custom Upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
+The second level repository is your upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), or [GitLab](https://gitlab.com/). The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+The upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), or [GitLab](https://gitlab.com/). The upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
 
-To create a Custom Upstream from another Git hosting provider (like Azure DevOps or a self-hosted Bitbucket server), [contact support](/guides/support).
+To create an upstream from another Git hosting provider (like Azure DevOps or a self-hosted Bitbucket server), [contact support](/guides/support).
 
 </div>
 </div>
@@ -101,24 +101,24 @@ To create a Custom Upstream from another Git hosting provider (like Azure DevOps
 <div className="upstream-content-inner-content">
 <h3>Level 3: Site Repository</h3>
 
-Core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
+Core updates and changes to the common codebase make their way down to the site repository for each site that uses the upstream.
 
-The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site. This facilitates rolling out updates quickly and easily.
+The site repository allows separation between common code across all sites, tracked in the upstream, and site specific customizations, tracked in each individual site. This facilitates rolling out updates quickly and easily.
 
 </div>
 </div>
 
-## Custom Upstreams for Digital Agencies and Pantheon Resellers
+## Upstreams for Digital Agencies and Pantheon Resellers
 
-Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to Custom Upstreams.
+Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to upstreams.
 
-## Custom Upstreams for Corporate and Higher Education Customers 
+## Upstreams for Corporate and Higher Education Customers 
 
-Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
+Support for upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
 
 </Alert>
 
@@ -128,11 +128,7 @@ Here are definitions for commonly used terms:
 
 ### Upstream
 
-<p>An <dfn id="upstream">upstream</dfn> is a repository that acts as a parent for another repository, like <a href="https://github.com/pantheon-systems/wordpress">Pantheon's WordPress Upstream</a>.</p>
-
-### Custom Upstream
-
-<p>A <dfn id="custom-upstream">custom upstream</dfn> is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams (<a href="https://github.com/pantheon-systems/wordpress">WordPress</a>, <a href="https://github.com/pantheon-upstreams/drupal-composer-managed">Drupal (Latest Version)</a>, <a href="https://github.com/pantheon-systems/drops-7">Drupal 7</a>) and acts as a parent for site level repositories.</p>
+<p>An <dfn id="upstream">upstream</dfn> is a repository that acts as a parent for another repository. Pantheon maintains core upstreams (<a href="https://github.com/pantheon-systems/wordpress">WordPress</a>, <a href="https://github.com/pantheon-upstreams/drupal-composer-managed">Drupal (Latest Version)</a>, <a href="https://github.com/pantheon-systems/drops-7">Drupal 7</a>). An upstream you create is restricted to members of an organization, contains a common codebase for new sites, is a child repository of one of Pantheon's core upstreams, and acts as a parent for site level repositories.</p>
 
 ### Public Upstream
 
@@ -161,7 +157,7 @@ Here are definitions for commonly used terms:
 
 ## More Resources
 
-- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
+- [Best Practices for Maintaining Upstreams](/guides/upstream/maintain-upstream)
 
 - [Static Sites and Empty Upstreams](/static-site-empty-upstream)
 

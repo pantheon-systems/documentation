@@ -15,7 +15,7 @@ product: [autopilot]
 integration: [--]
 ---
 
-This section provides information and steps to set up your WordPress site to run [Autopilot](/guides/autopilot). This allows you to perform VRT on individual sites while ensuring that your [Custom Upstream](/guides/custom-upstream) codebase remains updated and authoritative.
+This section provides information and steps to set up your WordPress site to run [Autopilot](/guides/autopilot). This allows you to perform VRT on individual sites while ensuring that your [Custom Upstream](/guides/upstream) codebase remains updated and authoritative.
 
 This setup runs Autopilot on the Custom Upstream site and on each child site. You must set the scope of the upstream to ensure that you do not create conflicts by running Autopilot at both levels. This setup also allows Autopilot to run your Custom Upstream deployments.
 
@@ -41,7 +41,7 @@ The simplest way to start your Custom Upstream journey is to create a new, vanil
 
 The WordPress site you created in the steps above will be your Custom Upstream codebase. You must store code in your your preferred Git host (for example, GitHub, Bitbucket, or Gitlab).
 
-1. Follow the steps to [Create and Host the Repository Remotely](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely).
+1. Follow the steps to [Create and Host the Repository Remotely](/guides/upstream/create-upstream#create-and-host-the-repository-remotely).
 
 1. Clone the Pantheon repository locally.
 
@@ -49,7 +49,7 @@ The WordPress site you created in the steps above will be your Custom Upstream c
 
 1. Push to the Git host.
 
-1. [Create your Custom Upstream](/guides/custom-upstream/create-custom-upstream#connect-repository-to-pantheon) on Pantheon from the Git repository you just created.
+1. [Create your Custom Upstream](/guides/upstream/create-upstream#connect-repository-to-pantheon) on Pantheon from the Git repository you just created.
 
 
 ## Using Autopilot with Your Upstream Representative Site

@@ -73,7 +73,7 @@ There are many approaches to managing portfolios of Drupal and WordPress sites. 
 
 <Alert title="Activity #10: Creating Sites with Custom Upstreams"  type="info" >
 
-In this section, we will walk you through the steps of creating a Custom Upstream repository in GitHub, connecting it to your Pantheon Dashboard, and creating sites from your Custom Upstream in the Pantheon Dashboard. If you are using a different Git host (Bitbucket, GitLab, Other), you can [follow the steps outlined on this documentation page](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely).
+In this section, we will walk you through the steps of creating a Custom Upstream repository in GitHub, connecting it to your Pantheon Dashboard, and creating sites from your Custom Upstream in the Pantheon Dashboard. If you are using a different Git host (Bitbucket, GitLab, Other), you can [follow the steps outlined on this documentation page](/guides/upstream/create-upstream#create-and-host-the-repository-remotely).
 
 First, we will create and host the repository remotely. We will then pull in Core from Pantheon's Upstream. After that, we will connect the repository to Pantheon. Once we have set up our Custom Upstream and connected it to our Professional Workspace, we will walk through the process of creating sites from your Custom Upstream in the Pantheon Dashboard.
 
@@ -83,7 +83,7 @@ Pantheon Custom Upstreams are a self-serve feature available to anyone with acce
 
 To set up a Custom Upstream, follow these steps:
 
-**Create and Host the Repository Remotely:** First we will set up a fresh repository in GitHub to host our Custom Upstream repository. To use a different Git host (Bitbucket, GitLab, Other), you can [follow the steps outlined on this documentation page](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely).
+**Create and Host the Repository Remotely:** First we will set up a fresh repository in GitHub to host our Custom Upstream repository. To use a different Git host (Bitbucket, GitLab, Other), you can [follow the steps outlined on this documentation page](/guides/upstream/create-upstream#create-and-host-the-repository-remotely).
 
 1. First, sign up for a GitHub account if you do not have one already, then log in to GitHub.
 
@@ -128,7 +128,7 @@ git merge pantheon-wordpress/master
 git push origin master
 ```
 
-11. Navigate to the Custom Upstream's root directory using the command line and add the appropriate Pantheon Upstream as a remote. Here, we will pull in Pantheon’s WordPress Core Upstream. (To pull in Drupal (latest version) or Drupal 7 instead, [you can follow these instructions](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream)):
+11. Navigate to the Custom Upstream's root directory using the command line and add the appropriate Pantheon Upstream as a remote. Here, we will pull in Pantheon’s WordPress Core Upstream. (To pull in Drupal (latest version) or Drupal 7 instead, [you can follow these instructions](/guides/upstream/create-upstream#pull-in-core-from-pantheons-upstream)):
 
 ```shell{promptUser:user}
 git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git

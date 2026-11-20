@@ -399,7 +399,7 @@ The Site Dashboard will open when the reset procedure completes.
 
 Every site has an assigned upstream to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site-level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/guides/custom-upstream).
+- Convert existing sites from a default framework to a [Custom Upstream](/guides/upstream).
 - Convert existing sites from one Custom Upstream to another, for reasons such as:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
@@ -411,7 +411,7 @@ Every site has an assigned upstream to deliver [one-click updates](/core-updates
   terminus upstream:list
   ```
 
-  If your Workspace has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
+  If your Workspace has a [Custom Upstream](/guides/upstream), you can use Terminus to switch existing sites over to the common codebase:
 
   ```bash{promptUser: user}
   terminus site:upstream:set my-site "My Custom Upstream"
@@ -451,4 +451,4 @@ terminus auth:whoami
 ## More Resources
 
 - [WordPress and Drupal Core Updates](/core-updates)
-- [Custom Upstreams](/guides/custom-upstream)
+- [Custom Upstreams](/guides/upstream)

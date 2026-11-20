@@ -100,7 +100,7 @@ To perform a manual update procedure, take the following steps:
 
 ### Automatic Updates
 
-Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Custom Upstreams](/guides/custom-upstream) that include favored plugins, custom plugins, a base theme, etc. This allows you to update the shared codebase and then all of the sites that are based on that Upstream will receive updates automatically.
+Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Custom Upstreams](/guides/upstream) that include favored plugins, custom plugins, a base theme, etc. This allows you to update the shared codebase and then all of the sites that are based on that Upstream will receive updates automatically.
 
 While Custom Upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go.
 

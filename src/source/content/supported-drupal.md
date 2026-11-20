@@ -111,7 +111,7 @@ Also included is continued support for Drupal 7-compatible runtime environments 
 ##### Requirements
 * Drupal 7 core LTS available to all site plans and workspace tiers.
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
-  * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
+  * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/upstream/create-upstream#pull-in-core-from-pantheons-upstream).
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
 
 To verify your current Drupal core version, you can check the [Status report tab](/drupal-launch-check#status-report) in the Pantheon site dashboard or you can use Terminus: 
@@ -134,7 +134,7 @@ This includes security patches and compatibility updates to community-contribute
 ##### Requirements
 * D7 contrib module LTS available to all non-Sandbox site plans, or sites associated with a Gold, Diamond, or Platinum [workspace account tier](/guides/account-mgmt/plans/workspace-plans).
 * Sites must use the [Pantheon Drupal 7 Upstream](https://github.com/pantheon-systems/drops-7).
-  * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
+  * Or a Custom Upstream based on the Pantheon Drupal 7 Upstream with the [latest updates pulled in](/guides/upstream/create-upstream#pull-in-core-from-pantheons-upstream).
 * Sites must be updated to the [latest release](https://github.com/pantheon-systems/drops-7/tags) of Drupal core.
 * (Recommended) Not a requirement, but we strongly recommend updating all contrib modules to their latest versions as well. 
 

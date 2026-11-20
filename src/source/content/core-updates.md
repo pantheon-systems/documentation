@@ -36,7 +36,7 @@ As of Drupal 8.8, you are required to use Composer to manage your dependencies i
 
 ## Non-Composer-Managed WordPress and Drupal Sites
 
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream), become available downstream as a one-click update.
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/upstream/maintain-upstream), become available downstream as a one-click update.
 
 You can apply one-click updates to individual site repositories through:
 
@@ -487,4 +487,4 @@ You must update the core versions from the upstream version. However, older vers
 
 - [Git on Pantheon Guide](/guides/git)
 - [SFTP on Pantheon](/guides/sftp)
-- [Custom Upstreams](/guides/custom-upstream)
+- [Custom Upstreams](/guides/upstream)

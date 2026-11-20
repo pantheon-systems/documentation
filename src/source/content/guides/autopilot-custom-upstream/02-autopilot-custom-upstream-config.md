@@ -64,7 +64,7 @@ This use case requires you to set up your Custom Upstream as a Pantheon site and
 
 ### Enable Autopilot on Your Custom Upstream and Downstream Sites
 
-1. [Create your Custom Upstream](/guides/custom-upstream/create-custom-upstream) if you haven't already created it.
+1. [Create your Custom Upstream](/guides/upstream/create-upstream) if you haven't already created it.
 
 1. Follow the steps in the [Enable Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) section to enable Autopilot on your Custom Upstream and downstream sites.
 
@@ -91,7 +91,7 @@ This use case requires you to set up your Custom Upstream as a Pantheon site wit
 
 ### Enable Autopilot on Your Custom Upstream
 
-1. [Create your Custom Upstream](/guides/custom-upstream/create-custom-upstream) if you haven't already created it.
+1. [Create your Custom Upstream](/guides/upstream/create-upstream) if you haven't already created it.
 
 1. Follow the steps in the [Enable Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) section to enable Autopilot on your Custom Upstream.
 
@@ -106,4 +106,4 @@ This use case requires you to set up your Custom Upstream as a Pantheon site wit
 
 - [Autopilot FAQs](/guides/autopilot/apply-updates/)
 
-- [Custom Upstream Guide](/guides/custom-upstream)
+- [Custom Upstream Guide](/guides/upstream)

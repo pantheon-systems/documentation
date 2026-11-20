@@ -17,7 +17,7 @@ We've compiled some great tips for agencies working on Pantheon. They are loosel
 
 ## Join the Agency Partner Program
 
-Joining the Agency Partner Program gives your agency access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), [Autopilot](/guides/autopilot), commission incentives, co-marketing resources, and a listing in the [Agency Partner Directory](https://directory.pantheon.io/agencies?docs). Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) to learn more and apply.
+Joining the Agency Partner Program gives your agency access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/upstream), [Autopilot](/guides/autopilot), commission incentives, co-marketing resources, and a listing in the [Agency Partner Directory](https://directory.pantheon.io/agencies?docs). Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) to learn more and apply.
 
 ## Learn Pantheon through Product Trainings, Resources, and Guides
 [Get hands on training](https://pantheon.io/learn-pantheon?docs) from knowledgeable experts at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
@@ -97,7 +97,7 @@ Pantheon does not provide a way to set custom scheduling for cron jobs. For deta
 ## Advanced Workflows
 
 ### Custom Upstreams
-In addition to the [frameworks offered by Pantheon during the site creation process](/start-state), Custom Upstreams add a private installation option for all team members of an Workspace. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/guides/custom-upstream). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
+In addition to the [frameworks offered by Pantheon during the site creation process](/start-state), Custom Upstreams add a private installation option for all team members of an Workspace. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/guides/upstream). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
 
 ### Build Steps
 
