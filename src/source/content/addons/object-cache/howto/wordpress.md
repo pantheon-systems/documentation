@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-contributors: [jazzsequence, jkudish]
+contributors: [jazzsequence, AnaisPantheor, jkudish]
 showtoc: true
 ---
 
