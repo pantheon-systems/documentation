@@ -208,6 +208,7 @@ Applies to one site environment. Each environment uses the `pantheon-edge.yml` i
 
 - [Advanced Edge](/guides/nextgen-gcdn/advanced-edge)
 - [Rate Limiting](/guides/nextgen-gcdn/advanced-edge/rate-limiting)
+- [Validate pantheon-edge.yml with the JSON Schema](/guides/nextgen-gcdn/advanced-edge#validate-the-file-before-you-push)
 - [Cookies](/cookies#cache-varying-cookies)
 - [Bypassing Cache with HTTP Headers](/cache-control)
 - [Advanced Global CDN](/guides/agcdn)

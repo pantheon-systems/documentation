@@ -196,3 +196,13 @@ rate_limit:
   tier: standard
   fingerprint_missing_policy: fallback_ip
 ```
+
+### Validate the file before you push
+
+Pantheon checks `pantheon-edge.yml` against a [JSON Schema](https://github.com/pantheon-systems/advanced-edge-schema) when you push. The same schema is public, so your editor or a command-line tool can run the same check first and point at the exact line.
+
+Schema URL:
+
+```none
+https://raw.githubusercontent.com/pantheon-systems/advanced-edge-schema/main/v1.json
+```
