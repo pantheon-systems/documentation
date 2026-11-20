@@ -330,7 +330,7 @@ terminus wp "$SITE"."$ENV" -- db query "DELETE FROM wp_options WHERE option_name
 
 ## Sites using an external repository
 
-The `terminus install:run <site>.<environment> ocp` workflow commits Object Cache Pro to the site's Pantheon Git repository. Sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab) do not have one, so the workflow does not run on these sites. Instead, add Object Cache Pro to your repository:
+The `terminus install:run <site>.<environment> ocp` workflow commits Object Cache Pro to the site's Pantheon Git repository. Sites that use an [external repository](/guides/external-repositories) (GitHub or GitLab) do not have one, so the workflow does not run on these sites. If your site uses Composer, follow the **Composer-based WordPress** tab in [Installation and Configuration](#installation-and-configuration). Otherwise, add Object Cache Pro to your repository:
 
 1. Ensure that your site meets the requirements in [Before You Begin](#before-you-begin).
 
