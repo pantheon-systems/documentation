@@ -85,6 +85,7 @@ export const resolveComponent = async (
         Component: (
           <VulnerabilityListing.VulnerabilityListingTemplate
             vulnerabilities={pageData.data.vulnerabilities}
+            intro={pageData.data.intro}
           />
         ),
         template: "vulnerability-listing",

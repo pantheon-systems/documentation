@@ -1,11 +1,30 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
-import { getAllVulnerabilities } from "@/lib/page-utils";
+import {
+  getAllVulnerabilities,
+  getVulnerabilityTrackerIntro,
+} from "@/lib/page-utils";
 import { VULNERABILITY_STATUSES } from "@/lib/vulnerability-statuses";
 
 // Entries are hand-written markdown files, so catch authoring mistakes here
 // rather than on the live site.
 const entries = getAllVulnerabilities();
+
+describe("vulnerability tracker intro", () => {
+  const intro = getVulnerabilityTrackerIntro();
+
+  it("has a title and description", () => {
+    expect(intro.frontmatter.title).toBeTruthy();
+    expect(intro.frontmatter.description).toBeTruthy();
+  });
+
+  it("explains every status in the key", () => {
+    const meanings = intro.frontmatter.status_meanings ?? {};
+    expect(Object.keys(meanings).sort()).toEqual(
+      Object.keys(VULNERABILITY_STATUSES).sort()
+    );
+  });
+});
 
 describe("vulnerability tracker entries", () => {
   it("finds entries", () => {

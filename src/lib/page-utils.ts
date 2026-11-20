@@ -100,6 +100,7 @@ export interface VulnerabilityData {
 
 export interface VulnerabilityListingData {
   vulnerabilities: ProcessedFile[];
+  intro: ProcessedFile;
 }
 
 export interface IframeEmbedData {
@@ -485,6 +486,16 @@ export const getAllVulnerabilities = () =>
     sortOrder: "desc",
   });
 
+// The tracker's own intro copy and status-key wording, kept as markdown outside
+// the entries directory so it isn't treated as a vulnerability entry.
+export const getVulnerabilityTrackerIntro = (): ProcessedFile => {
+  const [intro] = processDirectoryForMarkDown("source/vulnerability-tracker");
+  if (!intro) {
+    throw new Error("Missing src/source/vulnerability-tracker/index.md");
+  }
+  return intro;
+};
+
 export const processVulnerabilityPages = async (
   uri?: string[]
 ): Promise<PageDataWithoutComponent[]> => {
@@ -514,15 +525,15 @@ export const processVulnerabilityPages = async (
   }
 
   if (!targetUri || targetUri === "vulnerability-tracker") {
+    const intro = getVulnerabilityTrackerIntro();
     pages.push({
       uri: "vulnerability-tracker",
-      title: "Pantheon Vulnerability Tracker",
-      description:
-        "Pantheon's status for publicly disclosed vulnerabilities, including whether Pantheon is affected and whether you need to take action.",
+      title: intro.frontmatter.title ?? "Pantheon vulnerability tracker",
+      description: intro.frontmatter.description ?? "",
       type: "vulnerability-listing",
-      data: { vulnerabilities },
+      data: { vulnerabilities, intro },
       rawFileData: JSON.stringify(vulnerabilities),
-      relativeFilePath: "src/source/vulnerabilities/index.md",
+      relativeFilePath: "src/source/vulnerability-tracker/index.md",
     });
   }
 
