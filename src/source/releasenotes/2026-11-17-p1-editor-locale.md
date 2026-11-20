@@ -18,12 +18,8 @@ This release improves the Business Account dashboard, editing and localization w
 ## Editor, Workstreams, and localization
 
 * **More accurate locale metadata:** A localized page’s `og:locale` now reflects that page’s own locale. A page also cannot be assigned a locale already used by a linked page.
-
-
 * **Locale-aware Site Structure:** The locale filter shows each translation’s URL, with translations grouped under a locale badge.  
-    
 * **MCP locale support:** MCP clients can read and set a page’s locale.
-
 * **Manage inherited redirects:** Workstreams can now list, read, and edit redirects inherited from Live, even if those redirects were not created on the Workstream.
 
 ## Developer updates
