@@ -1,7 +1,7 @@
 ---
-title: Autopilot for Custom Upstreams
+title: Autopilot for Upstreams
 subtitle: Introduction
-description: Learn more using Autopilot with your Custom Upstream.
+description: Learn more using Autopilot with your upstream.
 tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
 showtoc: true
@@ -16,7 +16,7 @@ integration: [--]
 reviewed: "2027-07-31"
 ---
 
-Combining [Autopilot](/guides/autopilot) with [Custom Upstreams](/guides/upstream) is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
+Combining [Autopilot](/guides/autopilot) with [Upstreams](/guides/upstream) is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and upstreams to automate routine maintenance for upstream and downstream sites.
 
 ## Autopilot
 
@@ -47,34 +47,34 @@ Check out our [pricing page](https://pantheon.io/plans/pricing?docs) and contact
 
 <Partial file="autopilot/autopilot-compatibility.md" />
 
-## Custom Upstream
+## Upstream
 
 <Alert title="Note: Drupal Compatibility"  type="info" >
 
-Drupal users should note that there are technical limitations when using Autopilot with Custom Upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
+Drupal users should note that there are technical limitations when using Autopilot with upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
 
 </Alert>
 
 
 
-Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects quickly.
+Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects quickly.
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-The Custom Upstream workflow frees up developer time, and establishes a sustainable and scalable process for handling updates across massive site portfolios.
+The upstream workflow frees up developer time, and establishes a sustainable and scalable process for handling updates across massive site portfolios.
 
-New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
+New features and functionality can be continuously developed in the upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-### Custom Upstreams for Digital Agencies and Pantheon Resellers
+### Upstreams for Digital Agencies and Pantheon Resellers
 
-Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to Custom Upstreams.
+Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to upstreams.
 
-### Custom Upstreams for Corporate and Higher Education Customers
+### Upstreams for Corporate and Higher Education Customers
 
-Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer-based workflow.
+Support for upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer-based workflow.
 
 </Alert>
 
@@ -84,8 +84,8 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 
 - [Autopilot Guide](/guides/autopilot/)
 
-- [Custom Upstreams Product Page](https://pantheon.io/upstreams)
+- [Upstreams Product Page](https://pantheon.io/upstreams)
 
-- [Custom Upstreams Guide](/guides/upstream)
+- [Upstreams Guide](/guides/upstream)
 
 - [Multidev](/guides/multidev)

@@ -57,7 +57,7 @@ Self Serve customers are those who purchase Pantheon services online with a cred
 
 When you sign up, you will have a My Dashboard, and can create as many Professional Workspaces as you like.  All of these Professional Workspaces can contain sites and teams, and you can organize them any way you like.
 
-The most important thing to remember is an Account Plan is assigned to a specific Workspace, and only sites that have added that Workspace as a supporting organization will have access to the features of your Account Plan. For example, if you have purchased a Gold Account Plan for a given Workspace, only sites that  have that Workspace as a supporting organization will have access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot).
+The most important thing to remember is an Account Plan is assigned to a specific Workspace, and only sites that have added that Workspace as a supporting organization will have access to the features of your Account Plan. For example, if you have purchased a Gold Account Plan for a given Workspace, only sites that  have that Workspace as a supporting organization will have access to [Multidev](/guides/multidev), [Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot).
 
 Here are some examples of ways you might organize your sites:
 
@@ -75,11 +75,11 @@ Here are some examples of ways you might organize your sites:
     | **Sites Tab** | Sites you have access to | Sites built using WordPress | Sites built using Drupal. |
     | **Teams Tab** | n/a | WordPress Developers | Drupal Developers  |
 
-1. Create one Professional Workspace with a Gold Account plan for sites that require Autopilot and Custom Upstreams (among other features), and another Professional Workspace with a Silver Account plan for those sites that don't.
+1. Create one Professional Workspace with a Gold Account plan for sites that require Autopilot and upstreams (among other features), and another Professional Workspace with a Silver Account plan for those sites that don't.
 
     |   | My Dashboard | Silver Account Workspace | Gold Account Workspace |
     |---|---|---|---|
-    | **Sites Tab** | Sites you have access to | Sites with basic functionality | Sites with access to Autopilot, Custom Upstreams, or Multidev. |
+    | **Sites Tab** | Sites you have access to | Sites with basic functionality | Sites with access to Autopilot, upstreams, or Multidev. |
     | **Teams Tab** | n/a | Team members that can work on these sites | Team members that can work on these sites  |
 
 1. Create a Workspace for each department which contains the site(s) that department maintains, and invite any department staff that should have access to the site to the team.

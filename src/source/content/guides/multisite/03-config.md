@@ -32,7 +32,7 @@ Choose the best option below to install WordPress multisite based on your site s
 
 <Tab title="Install Multisite via the GUI" id="wpms-gui-install">
 
-Complete the steps below after spinning up a new WPMS site from the correct Custom Upstream in your workspace.
+Complete the steps below after spinning up a new WPMS site from the correct upstream in your workspace.
 
 1. Navigate to the WordPress Admin dashboard, select **Tools**, and then select **Network Setup**.
 

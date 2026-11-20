@@ -20,7 +20,7 @@ We can't provide specific recommendations for your sites. However, we can provid
 ### What Works on Pantheon
 
 - Separate installs with [redirection to a subdomain](/guides/domains)
-- Features-based installs with [Custom Upstreams](/guides/upstream) and [redirection to a subdomain](/guides/domains)
+- Features-based installs with [Upstreams](/guides/upstream) and [redirection to a subdomain](/guides/domains)
 - Domain access on a single site install. For a Drupal site, try the [Subfolders Domain (sub domains)](https://www.drupal.org/project/subfolders_domain) module but there is no guarantee it will work.
 - [Organic Groups](https://www.drupal.org/project/og)  
 

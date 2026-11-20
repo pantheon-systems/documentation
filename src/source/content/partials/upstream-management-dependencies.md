@@ -10,9 +10,9 @@ reviewed: ""
 
 ## Add Dependencies to Your Upstream
 
-1. Clone the Git repository for your Custom Upstream.
+1. Clone the Git repository for your upstream.
 
-1. Require the Custom Upstream management package if you have not already:
+1. Require the upstream management package if you have not already:
 
     ```bash{promptUser: user}
     composer require pantheon-systems/upstream-management
@@ -26,19 +26,19 @@ reviewed: ""
 
 1. Commit and push your changes to your `composer.json` file. **Remember to *not* commit the `composer.lock` file.**
 
-   The `composer.lock` file should not be added to your `.gitignore` file, since it must still be committed for individual sites created from your Custom Upstream. Instead, run the following command to prevent yourself from accidentally committing it while working directly in the Custom Upstream repository:
+   The `composer.lock` file should not be added to your `.gitignore` file, since it must still be committed for individual sites created from your upstream. Instead, run the following command to prevent yourself from accidentally committing it while working directly in the upstream repository:
 
 ```bash{promptUser: user}
     echo /composer.lock >> .git/info/exclude
 ```
 
-    This has the same effect as a `.gitignore` entry, but the exclusion isn't tracked in the repository itself. You'll need to re-run this command each time you make a new local clone of your Custom Upstream.
+    This has the same effect as a `.gitignore` entry, but the exclusion isn't tracked in the repository itself. You'll need to re-run this command each time you make a new local clone of your upstream.
 
 ## Update Dependencies in Your Upstream
 
-You may need to pin specific versions of your dependencies in your Custom Upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the Custom Upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.
+You may need to pin specific versions of your dependencies in your upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.
 
-1. Run `composer update-upstream-dependencies` in your custom upstream repository. The `upstream:update-dependencies` command will:
+1. Run `composer update-upstream-dependencies` in your upstream repository. The `upstream:update-dependencies` command will:
 
     - Create or update a `upstream-configuration/composer.lock` file.
 
@@ -46,4 +46,4 @@ You may need to pin specific versions of your dependencies in your Custom Upstre
 
     - Update the top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously).
 
-1. Commit the changes and begin using the pinned versions in your downstream sites. This allows you to make sure that you use specific versions for the packages in your Custom Upstream.
+1. Commit the changes and begin using the pinned versions in your downstream sites. This allows you to make sure that you use specific versions for the packages in your upstream.

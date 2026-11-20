@@ -118,7 +118,7 @@ Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite
 
 <Alert title="Note" type="info">
 
-Support for upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
+Support for upstreams requires that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#upstreams). Refer to [Composer Fundamentals and Workflows](/guides/composer) if you are considering a Composer based workflow.
 
 </Alert>
 
@@ -163,4 +163,4 @@ Here are definitions for commonly used terms:
 
 - [WordPress and Drupal Core Updates](/core-updates)
 
-- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
+- [Autopilot for Upstreams](/guides/autopilot-custom-upstream)

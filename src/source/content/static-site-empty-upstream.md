@@ -100,4 +100,4 @@ For other Decoupled configurations, please refer to our [Front-End Sites](/guide
 
 - [Choosing Your Start State](/start-state)
 - [Switch Upstreams](/terminus/examples#switch-upstreams)
-- [Introduction to Custom Upstreams](/guides/upstream)
+- [Introduction to Upstreams](/guides/upstream)

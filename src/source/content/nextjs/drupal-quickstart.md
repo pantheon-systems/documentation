@@ -16,7 +16,7 @@ This guide gets a decoupled Drupal 11 backend and a Next.js 16 front end running
 
 This guide walks you through:
 
-* Creating a Drupal backend from the `demo-nextjs-drupal-backend` Custom Upstream
+* Creating a Drupal backend from the `demo-nextjs-drupal-backend` upstream
 * Creating a Next.js site from the `demo-nextjs-drupal-frontend` repository
 * Connecting the two with the Drupal `next_site` entity and Pantheon Secrets
 * Verifying that content flows from Drupal to Next.js
@@ -37,7 +37,7 @@ The two halves deploy through **different** Pantheon models. Keep them straight:
 
 | Part | Repository | Pantheon model | Deploys by |
 |---|---|---|---|
-| Drupal 11 backend | [`pantheon-upstreams/demo-nextjs-drupal-backend`](https://github.com/pantheon-upstreams/demo-nextjs-drupal-backend) | Custom Upstream (Integrated Composer) | `terminus upstream:updates:apply` |
+| Drupal 11 backend | [`pantheon-upstreams/demo-nextjs-drupal-backend`](https://github.com/pantheon-upstreams/demo-nextjs-drupal-backend) | Upstream (Integrated Composer) | `terminus upstream:updates:apply` |
 | Next.js 16 front end | [`pantheon-upstreams/demo-nextjs-drupal-frontend`](https://github.com/pantheon-upstreams/demo-nextjs-drupal-frontend) | Next.js site | Git push to the connected repository |
 
 Content flows one direction — Drupal to Next.js — over three channels:
@@ -54,14 +54,14 @@ If you are following an older Drupal + Next.js guide under [Front-End Sites](/gu
 
 ## Create the Drupal backend
 
-The backend ships as a Pantheon Custom Upstream following the [`drupal-composer-managed`](/drupal-composer-managed) pattern. Its content model and demo content install from two Drupal recipes:
+The backend ships as a Pantheon upstream following the [`drupal-composer-managed`](/drupal-composer-managed) pattern. Its content model and demo content install from two Drupal recipes:
 
 | Recipe | Type | Provides |
 |---|---|---|
 | `pantheon-systems-ps/pantheon_nextjs_demo` | Site | JSON:API, OAuth, the `next` / `decoupled_router` / `consumers` / `simple_oauth` / `pathauto` modules, the Page / Article / Event content types, the `nextjs` menu, the `next_site` connection, preview and cache-tag revalidation for each content type, and the `nextjs_preview` role and OAuth scope |
 | `pantheon-systems-ps/pantheon_nextjs_demo_content` | Content | Demo Articles, Events, Pages, Tags, images, and menu links |
 
-1. Add the repository as a Custom Upstream in your Pantheon workspace. See [Custom Upstream Usage](/guides/integrated-composer/ic-upstreams).
+1. Add the repository as an upstream in your Pantheon workspace. See [Upstream Usage](/guides/integrated-composer/ic-upstreams).
 
 1. Create a site from that upstream. See [Create a Composer-managed CMS site](/guides/integrated-composer/create). Integrated Composer installs Drupal core, the contrib modules, and the recipe packages.
 

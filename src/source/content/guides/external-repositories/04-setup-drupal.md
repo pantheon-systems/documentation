@@ -165,12 +165,12 @@ The `pantheon-systems/drupal-integrations` package is the key bridge between Dru
 
 ## upstream-configuration Directory (Optional)
 
-The `upstream-configuration/` directory is used for Pantheon's custom upstream feature. It contains:
+The `upstream-configuration/` directory is used for Pantheon's upstream feature. It contains:
 
 - An empty `composer.json` where you can add shared dependencies
 - A `ComposerScripts.php` that automatically aligns `config.platform.php` with your Pantheon PHP version
 
-This is optional unless you are using a custom upstream. Use the [`pantheon-systems/upstream-management`](https://packagist.org/packages/pantheon-systems/upstream-management) package to manage upstream dependencies separately from your site-specific dependencies. 
+This is optional unless you maintain your own upstream. Use the [`pantheon-systems/upstream-management`](https://packagist.org/packages/pantheon-systems/upstream-management) package to manage upstream dependencies separately from your site-specific dependencies. 
 
 The `ComposerScripts.php` ensures that the PHP version used for dependency resolution always matches the runtime PHP version defined in `pantheon.upstream.yml`, preventing incompatible packages from being installed.
 

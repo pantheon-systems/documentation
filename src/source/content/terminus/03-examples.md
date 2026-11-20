@@ -399,9 +399,9 @@ The Site Dashboard will open when the reset procedure completes.
 
 Every site has an assigned upstream to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site-level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/guides/upstream).
-- Convert existing sites from one Custom Upstream to another, for reasons such as:
-  - Repository has been migrated from Bitbucket to Github, or vice versa.
+- Convert existing sites from a default framework to an [Upstream](/guides/upstream).
+- Convert existing sites from one upstream to another, for reasons such as:
+  - Repository has been migrated from Bitbucket to GitHub, or vice versa.
   - Code has been refactored and moved to a new repository.
 - Set an empty upstream to disable one-click updates for sites managed by Composer.
 
@@ -411,13 +411,13 @@ Every site has an assigned upstream to deliver [one-click updates](/core-updates
   terminus upstream:list
   ```
 
-  If your Workspace has a [Custom Upstream](/guides/upstream), you can use Terminus to switch existing sites over to the common codebase:
+  If your Workspace has an [Upstream](/guides/upstream), you can use Terminus to switch existing sites over to the common codebase:
 
   ```bash{promptUser: user}
-  terminus site:upstream:set my-site "My Custom Upstream"
+  terminus site:upstream:set my-site "My Upstream"
   ```
 
-1. Use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above.
+1. Use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Upstream" is used above.
 
   As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
 
@@ -451,4 +451,4 @@ terminus auth:whoami
 ## More Resources
 
 - [WordPress and Drupal Core Updates](/core-updates)
-- [Custom Upstreams](/guides/upstream)
+- [Upstreams](/guides/upstream)

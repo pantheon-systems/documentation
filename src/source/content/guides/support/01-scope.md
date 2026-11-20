@@ -25,7 +25,7 @@ Pantheon offers a range of support options for mission-critical sites, such as 2
 
 | Account Tier                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
-| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic Custom Upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Custom Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Diamond Support <Popover title="Scope of Support" content="Bespoke site debugging" /> |
+| **Scope**                                                 | Platform <Popover title="Scope of Support" content="<ul><li>Dashboard</li><li>Dev/Test/Live Workflow</li><li>Git/SFTP Mode</li><li>Self-service documentation</li></ul>" /> | Technical <Popover title="Scope of Support" content="<ul><li>Autopilot</li><li>Drupal & WordPress</li><li>Identifying problematic modules and plugins</li><li>Identifying application or site issues</li><li>DNS</li><li>Multidev</li><li>Basic CDN</li><li>Basic Terminus</li><li>Basic Localdev</li><li>Basic upstreams</li></ul>" /> | Performance <Popover title="Scope of Support" content="<ul><li>New Relic</li><li>Caching</li><li>Cloud Integrations</li><li>Upstreams</li><li>Advanced Workflows</li><li>Advanced CDN</li><li>Advanced Terminus" /> | Diamond Support <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | **Live chat**                       | ❌ | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
 | [**General support ticket**](/guides/support/contact-support/#general-support-ticket)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
 | **Emergency ticket**                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
@@ -43,12 +43,12 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Identifying application-level (Drupal or WordPress) versus platform-level issues
    - Identifying problematic modules and plugins
    - Multidev
-   - Assistance with basic caching issues, Terminus, and Custom Upstreams
+   - Assistance with basic caching issues, Terminus, and upstreams
 - **Performance**:
    - New Relic
    - Caching
    - Cloud Integrations
-   - Custom Upstreams
+   - Upstreams
    - Advanced Workflows
    - Complex Caching Use Cases
    - Terminus
@@ -79,11 +79,11 @@ We can offer Diamond Account customers advice on best practices and debugging as
 
 For CMS specific information, see either [Supported Drupal Versions](/supported-drupal) or [Supported WordPress Versions](/supported-wp)
 
-### Custom Upstreams
+### Upstreams
 
-If you choose to use a Custom Upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
+If you choose to use an upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
-We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [correctly maintaining the Custom Upstream](/guides/upstream/maintain-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
+We are unable to debug issues with the content or structure of the upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [correctly maintaining the Upstream](/guides/upstream/maintain-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
 

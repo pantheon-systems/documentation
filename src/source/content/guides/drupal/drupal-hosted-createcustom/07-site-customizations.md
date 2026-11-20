@@ -1,5 +1,5 @@
 ---
-title: Upgrade a Custom Upstream to the Latest Version of Drupal
+title: Upgrade an Upstream to the Latest Version of Drupal
 subtitle: Test Sites and Apply Customizations
 description: 
 tags: [code, launch, migrate, site, updates]
@@ -32,7 +32,7 @@ Go through the following steps for each child site you wish to test, or that has
   cd $SITE
   ```
 
-1. Add your custom upstream as a second remote called `upstream` and fetch. You can find the Custom Upstream's Git URL on the repository dashboard:
+1. Add your upstream as a second remote called `upstream` and fetch. You can find the upstream's Git URL on the repository dashboard:
 
   ```bash{promptUser:user}
   git remote add upstream <UPSTREAM'S GIT URL> && git fetch upstream
@@ -58,7 +58,7 @@ Go through the following steps for each child site you wish to test, or that has
 
 1. Again, add, commit, and push any code customizations that were specific or unique to this site.
 
-   Compare the site's `master` branch to your Custom Upstream's `master` branch using the following commands:
+   Compare the site's `master` branch to your upstream's `master` branch using the following commands:
 
    To assess files which have been changed:
 
@@ -74,4 +74,4 @@ Go through the following steps for each child site you wish to test, or that has
 
 1. View and test the Multidev environment.
 
-  ![Example of Custom Upstream Git URL](../../../../images/custom-upstream-git-url.png)
+  ![Example of Upstream Git URL](../../../../images/custom-upstream-git-url.png)

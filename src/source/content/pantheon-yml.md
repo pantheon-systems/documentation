@@ -301,7 +301,7 @@ Pantheon provides a [cloud-based filesystem](/guides/filesystem) to store user-g
 
 <Alert title="Warning" type="danger">
 
-We recommend _only_ changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your code base.
+We recommend _only_ changing this setting when needed for [Upstream Configurations](#upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your code base.
 
 </Alert>
 
@@ -335,11 +335,11 @@ Use the `pantheon.yml` file to define scripts you want executed automatically wh
 
 For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/guides/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
 
-## Custom Upstream Configurations
+## Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your Workspace's [Custom Upstream](/guides/upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your Workspace's [Upstream](/guides/upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
 
-This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
+This file should only be edited in the upstream repository where it is defined. Similarly, the upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
 When the same configuration value is defined in both files, the value from `pantheon.yml` will override the value from `pantheon.upstream.yml` at the site-level.
 

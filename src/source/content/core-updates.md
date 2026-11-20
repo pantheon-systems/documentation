@@ -1,6 +1,6 @@
 ---
 title: WordPress and Drupal Core Updates
-description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
+description: Detailed information on applying and debugging upstream updates from Pantheon or an upstream.
 tags: [dashboard, git, terminus, updates, D8, D9, D10]
 reviewed: "2022-12-07"
 contenttype: [doc]
@@ -36,7 +36,7 @@ As of Drupal 8.8, you are required to use Composer to manage your dependencies i
 
 ## Non-Composer-Managed WordPress and Drupal Sites
 
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/upstream/maintain-upstream), become available downstream as a one-click update.
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Upstreams](/guides/upstream/maintain-upstream), become available downstream as a one-click update.
 
 You can apply one-click updates to individual site repositories through:
 
@@ -239,9 +239,9 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="Custom Upstream" id="custom-1conflict">
+  <Tab title="Upstream" id="custom-1conflict">
 
-  Replace the remote name (`custom-upstream-example`) and repository URL (`https://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
+  Replace the remote name (`custom-upstream-example`) and repository URL (`https://github.com/example-org/custom-upsream-example.git`) with values specific to your existing upstream:
 
   ```bash{promptUser: user}
   git remote add  custom-upstream-example https://github.com/example-org/custom-upsream-example.git
@@ -282,7 +282,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="Custom Upstream" id="custom-2conflict">
+  <Tab title="Upstream" id="custom-2conflict">
 
   Replace the remote name (`custom-upstream-example`):
 
@@ -319,7 +319,7 @@ This process lets you manually resolve the conflict using the command line and a
 
     1. Open `wp-admin/about.php` in your preferred text editor.
 
-    1. Look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
+    1. Look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
 
     1. Delete the conflict markers and double-check the changes.
 
@@ -398,17 +398,17 @@ Squashing and rewriting history may cause one-click updates to break. This means
 
 If you are in a situation where you've altered the commit history in such a way that the dashboard is no longer able to determine if your site is up to date with the upstream, the simplest course of corrective action is to use `git reset --hard` to reset the site repository to the last known good commit before the squash/rebase/revert was applied. This *will* result in losing *all* changes that have happened since this commit. You will need to re-apply all custom/contributed code updates that occurred in the interim, so make sure to take stock of these changes first and develop a plan to reapply them with the fixed Git history.
 
-### One-Click Update Not Appearing for Sites Using a Custom Upstream
+### One-Click Update Not Appearing for Sites Using an Upstream
 
-Core updates for Custom Upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
+Core updates for upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
 
 It's important to relay the need for updating core to maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your repository and reach out to a maintainer. Even better - submit a pull request for the update.
 
 After you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
 
-### Custom Upstream Updates Not Available
+### Upstream Updates Not Available
 
-If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click **Check now**:
+If you know your site's upstream has updated code, but it's not visible on your Site Dashboard, click **Check now**:
 
 ![Check Now](../images/dashboard/new-dashboard/2024/_check-for-updates.png)
 
@@ -487,4 +487,4 @@ You must update the core versions from the upstream version. However, older vers
 
 - [Git on Pantheon Guide](/guides/git)
 - [SFTP on Pantheon](/guides/sftp)
-- [Custom Upstreams](/guides/upstream)
+- [Upstreams](/guides/upstream)

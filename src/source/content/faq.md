@@ -75,11 +75,11 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/git/collaborative-development).
 
-[Agency Partners](https://pantheon.io/partners?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/guides/upstream).
+[Agency Partners](https://pantheon.io/partners?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up an [Upstream](/guides/upstream).
 
 ### Does Pantheon support Drupal Multisite?
 
-No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Custom Upstreams](/guides/upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multisite setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
+No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Upstreams](/guides/upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multisite setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 

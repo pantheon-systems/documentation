@@ -25,7 +25,7 @@ Workspaces bring together users and sites so that administrators can effectively
 
 - All sites must belong to a workspace.
 - You may be a member of more than one workspace, and can switch between them at any time.
-- When you first create a workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform. To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
+- When you first create a workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform. To take advantage of features such as [Multidev](/guides/multidev), [Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
 - Supporting Workspaces are workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site. Refer to [Add a Supporting Workspace to a Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
 
 <Alert title="Important" type="danger" >
@@ -50,7 +50,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
-- **Custom Upstreams*:** Create a new workspace-specific [Custom Upstream](/guides/upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
+- **Upstreams*:** Create a new workspace-specific [Upstream](/guides/upstream) using a GitHub or Bitbucket repository. Upstreams allow you to use an external repository as a template for your site.
 
 - **Settings:** Modify the workspace name, logo, billing information, and if your Workspace is configured for it, billing terms and instructions for your team.
 

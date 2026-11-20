@@ -32,7 +32,7 @@ code/
 
 When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file, and commits it back to the site’s code repository. To avoid potential merge conflicts after applying an upstream update, do **not** commit the `composer.lock` file from your upstream root to the upstream repository.
 
-The `composer.lock` file should not be listed in your `.gitignore` file because it must be committed for individual sites created from your custom upstream. Use the command below to avoid accidentally committing a `composer.lock` file when working directly with your custom upstream.
+The `composer.lock` file should not be listed in your `.gitignore` file because it must be committed for individual sites created from your upstream. Use the command below to avoid accidentally committing a `composer.lock` file when working directly with your upstream.
 
        echo /composer.lock >> .git/info/exclude
 

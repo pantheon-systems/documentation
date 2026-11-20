@@ -81,7 +81,7 @@ Do not edit the `pantheon_apachesolr` module within your Drupal site installatio
 
 If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/guides/sftp/rsync-and-sftp).
 
-Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/guides/upstream).
+Agencies that frequently deploy sites using a common set of themes and plugins should consider creating an [Upstream](/guides/upstream).
 
 ## More Resources
 

@@ -54,7 +54,7 @@ Review [Switch Your Upstream](/guides/upstream/switch-upstream) before switching
 You will need to switch each site to the new upstream individually with [Terminus](/terminus):
 
 ```bash{promptUser: user}
-terminus site:upstream:set my-site "My New Custom Upstream"
+terminus site:upstream:set my-site "My New Upstream"
 ```
 
 You must merge changes as a one-click update after a site's upstream is changed. Review [Example Usage](/terminus/examples/#switch-upstreams) for more details.

@@ -61,13 +61,13 @@ Workspaces bring together sites, teams and features, simplifying the management 
 
 * Every Pantheon user is assigned one My Dashboard.
 * All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in My Dashboard.
-* Collaboration features such as Multidev and Custom Upstreams are not available in My Dashboard. To access these features, you need a Professional Workspace.
+* Collaboration features such as Multidev and upstreams are not available in My Dashboard. To access these features, you need a Professional Workspace.
 
 **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
 
 * You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
 * When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform. 
-* To take advantage of features such as Multidev, Custom Upstreams, and Autopilot, you'll want to upgrade the Workspace to a Gold plan.
+* To take advantage of features such as Multidev, upstreams, and Autopilot, you'll want to upgrade the Workspace to a Gold plan.
 
 ### My Dashboard
 
@@ -91,7 +91,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 * **Team:** If you belong to a Workspace, you’ll see it listed here. Click the Workspace name to view the Workspace's dashboard.
 * **Autopilot:** Autopilot is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
 * **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
-* **Custom Upstreams: **Create a new Workspace-specific Custom Upstream using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
+* **Upstreams: **Create a new Workspace-specific upstream using a GitHub or Bitbucket repository. Upstreams allow you to use an external repository as a template for your site.
 
 **Settings:** Modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
 
@@ -112,7 +112,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 * **Autopilot: **Autopilot is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
 * **Edge: **Advanced Global CDN offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime.
 * **Support: **View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
-* **Custom Upstreams*:** Create a new workspace-specific Custom Upstream using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site. (*This tab is exclusively available through the Professional Workspace )
+* **Upstreams*:** Create a new workspace-specific upstream using a GitHub or Bitbucket repository. Upstreams allow you to use an external repository as a template for your site. (*This tab is exclusively available through the Professional Workspace )
 * **Settings:** Modify the workspace name, logo, billing information, and if your Workspace is configured for it, billing terms and instructions for your team.
 
 

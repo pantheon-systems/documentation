@@ -36,7 +36,7 @@ Premium Migrations are designed for larger and more complex sites - and include 
 
 - An extra 10 hours of troubleshooting/solutioning
 
-- A Custom Upstream
+- An upstream
 
 - For older WP Network sites, conversion from `blogs.dir` to `wp-content/uploads` format
 
@@ -160,7 +160,7 @@ During the Migration project kick-off, the team will review which of the followi
 
 You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migrations Team to complete additional work, which can include:
 
-- Creating a Custom Upstream for you
+- Creating an upstream for you
 
 - Creating cron-related custom modules
 

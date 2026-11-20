@@ -183,4 +183,4 @@ Updates will become available to sites downstream as one-click updates within an
 
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
-- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
+- [Autopilot for Upstreams](/guides/autopilot-custom-upstream)

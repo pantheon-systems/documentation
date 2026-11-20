@@ -70,7 +70,7 @@ const learning = () => {
             },
             {
               link: '/certification/study-guide/custom-upstreams',
-              title: 'Chapter 10: Custom Upstreams',
+              title: 'Chapter 10: Upstreams',
             },
           ],
         },

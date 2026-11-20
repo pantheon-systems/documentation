@@ -89,7 +89,7 @@ const support = () => {
 
         getGuideDirectory(
           "guides/drupal/drupal-hosted-createcustom",
-          "Custom Upstreams"
+          "Upstreams"
         ),
         getGuideDirectory(
           "guides/drupal/drupal-hosted-btworkflow",

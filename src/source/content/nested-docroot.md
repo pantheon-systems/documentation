@@ -13,7 +13,7 @@ product: [--]
 integration: [--]
 ---
 
-The [docroot](/nested-docroot#enable-nested-docroot) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (for example `code/web`).
+The [docroot](/nested-docroot#enable-nested-docroot) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (for example `code/web`).
 
 <Alert title="Warning" type="danger">
 
@@ -21,8 +21,8 @@ The [docroot](/nested-docroot#enable-nested-docroot) is the directory from which
 Using Pantheon's one-click Dashboard updates feature depends on a correctly set the `web_docroot` property.
 
 - Composer-managed sites, including [Integrated Composer](/guides/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
-- Sites that use a [Custom Upstream](/guides/upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
-- Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
+- Sites that use an [Upstream](/guides/upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
+- Sites that do not use Composer and do not use an upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
 
 </Alert>
 
@@ -81,7 +81,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 
 ### Create a New Site
 
-Your site should use a [Custom Upstream](/guides/upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
+Your site should use an [Upstream](/guides/upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory. If not, create a new site using the steps below.
 
 ### Convert an Existing Site
 

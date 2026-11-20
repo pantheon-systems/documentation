@@ -19,7 +19,7 @@ Pantheon upstreams are a self-serve feature available to anyone with access to t
 
 <Alert title="Note" type="info">
 
-Be aware that support for upstreams is limited to verification that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams).
+Be aware that support for upstreams is limited to verification that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#upstreams).
 
 </Alert>
 

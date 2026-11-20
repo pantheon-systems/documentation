@@ -90,7 +90,7 @@ You can accept the changes page by page or accept all changes for all pages an o
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
 
-- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+- [Autopilot Upstream Guide](/guides/autopilot-custom-upstream)
 
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
