@@ -98,7 +98,7 @@ Attempts to remotely access services (such as MySQL or SFTP connections) will fa
 
 ### The Pantheon.yml File
 
-While most of Pantheon’s container configurations are managed by Pantheon in order to standardize and automate guardrails and best practices across the platform, many of Pantheon’s container configurations are managed by code for individual sites. Pantheon exposes a subset of controls that a customer can modify, which are stored in a YAML file that lives in the root of every site. For customers implementing a common codebase for a portfolio of sites, [default configurations can be implemented in a pantheon.upstream.yml](/pantheon-yml#custom-upstream-configurations), and then overridden at an individual site level.
+While most of Pantheon’s container configurations are managed by Pantheon in order to standardize and automate guardrails and best practices across the platform, many of Pantheon’s container configurations are managed by code for individual sites. Pantheon exposes a subset of controls that a customer can modify, which are stored in a YAML file that lives in the root of every site. For customers implementing a common codebase for a portfolio of sites, [default configurations can be implemented in a pantheon.upstream.yml](/pantheon-yml#upstream-configurations), and then overridden at an individual site level.
 
 The `pantheon.yml` file provides a way to version-controllable means to configure platform options for any project. Some of the configurable items include PHP version, Drush version, protected paths, nested docroot, and Quicksilver platform hooks.
 

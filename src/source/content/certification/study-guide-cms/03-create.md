@@ -19,7 +19,7 @@ nexturl: /certification/study-guide/cdn
 In making a new site on Pantheon, you have a few options:
 * Selecting the CMS (Drupal or WordPress) you will be using
 * Backend (CMS) site vs. Front End Site
-* Starting with a fresh CMS install or starting from a Custom Upstream
+* Starting with a fresh CMS install or starting from an upstream
 
 At the end of this section, you will be able to create a new CMS Site through the Pantheon Dashboard.
 

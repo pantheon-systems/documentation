@@ -47,7 +47,7 @@ Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Dr
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
 
-- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+- [Autopilot Upstream Guide](/guides/autopilot-upstream)
 
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 

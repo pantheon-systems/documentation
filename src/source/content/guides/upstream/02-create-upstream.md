@@ -1,10 +1,10 @@
 ---
-title: Custom Upstreams on Pantheon
-subtitle: Create a Custom Upstream
+title: Upstreams on Pantheon
+subtitle: Create an Upstream
 description: Connect a remote repository to your Pantheon account and use it as a starting point for new sites.
 tags: [upstreams, workflow, webops, D8, D9, D10]
 showtoc: true
-permalink: docs/guides/custom-upstream/create-custom-upstream
+permalink: docs/guides/upstream/create-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]
@@ -12,20 +12,20 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2022-12-13"
+reviewed: "2026-11-20"
 ---
 
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Workspace members will be able to create new sites from a set common codebase after an Workspace Administrator creates a Custom Upstream. The Custom Upstream must be created within each Workspace if you want to use a specific Custom Upstream for multiple Workspaces.
+Creating an upstream is a self-serve feature available to anyone with access to the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Workspace members will be able to create new sites from a set common codebase after a Workspace Administrator creates an upstream. The upstream must be created within each Workspace if you want to use a specific upstream for multiple Workspaces.
 
 <Alert title="Note" type="info">
 
-Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#custom-upstreams).
+Be aware that support for upstreams is limited to verification that the externally hosted upstream repository is connected to the platform correctly. For details, see [Get Support](/guides/support/#upstreams).
 
 </Alert>
 
-## Create and Host the Repository Remotely
+## Create and host the repository remotely
 
-This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
+This remote repository serves as the central location for the development and maintenance of your upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
 Follow the steps for your preferred Git host below to create your repository.
 
@@ -53,7 +53,7 @@ Follow the steps for your preferred Git host below to create your repository.
 
   As of October 1st, 2020, all new repositories on GitHub are initialized with the default branch name `main`.
 
-  As a company, Pantheon is trying to use [more inclusive language in our repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs). While our team works to make Custom Upstreams less reliant on older naming conventions, new Custom Upstreams currently default to using the `master` branch name.
+  As a company, Pantheon is trying to use [more inclusive language in our repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs). While our team works to make upstreams less reliant on older naming conventions, new upstreams currently default to using the `master` branch name.
 
   </Alert>
 
@@ -102,7 +102,7 @@ Follow the steps for your preferred Git host below to create your repository.
   Pantheon intends to remove harmful language from our code and documentation. Please refer to our documentation on [more inclusive language in our
   repositories](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon?docs) for more information.
 
-  As we strive to make Custom Upstreams less reliant on older naming conventions, new Custom Upstreams currently default to using the `master` branch name.
+  As we strive to make upstreams less reliant on older naming conventions, new upstreams currently default to using the `master` branch name.
 
   Please note that Git's default naming convention differs from GitHub's. If you do not initialize the repository on Bitbucket, Git will assign the default branch name as `master` when you clone the repository locally.
 
@@ -154,7 +154,7 @@ You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a s
 
 Other Git hosting providers (like Azure DevOps or a self-hosted Bitbucket server) can be used, but we cannot detail specific instructions for every provider. You must create a new project in that system.
 
-As detailed below, [Pantheon Support](/guides/support/contact-support/) must add this Custom Upstream for you from a support ticket.
+As detailed below, [Pantheon Support](/guides/support/contact-support/) must add this upstream for you from a support ticket.
 
 </Tab>
 
@@ -162,9 +162,9 @@ As detailed below, [Pantheon Support](/guides/support/contact-support/) must add
 
 ## Pull in Core from Pantheon's Upstream
 
-You must track Pantheon's corresponding upstream repository within the Custom Upstream to avoid incompatibilities.
+You must track Pantheon's corresponding upstream repository within your upstream to avoid incompatibilities.
 
-1. Navigate to the Custom Upstream's root directory using the command line and add the appropriate Pantheon Upstream as a [remote](https://git-scm.com/docs/git-remote):
+1. Navigate to the upstream's root directory using the command line and add the appropriate Pantheon Upstream as a [remote](https://git-scm.com/docs/git-remote):
 
     <TabList>
 
@@ -191,7 +191,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     <Alert title="Note" type="info" >
 
-    This repository is a "start state" upstream, and should only be used during the initial clone when creating your Custom Upstream. If you have already created your Custom Upstream, use the repository below to merge in any updates from Pantheon:
+    This repository is a "start state" upstream, and should only be used during the initial clone when creating your upstream. If you have already created your upstream, use the repository below to merge in any updates from Pantheon:
 
     ```bash{promptUser: user}
     git remote add pantheon-updates https://github.com/pantheon-upstreams/drupal-composer-managed.git
@@ -211,7 +211,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </TabList>
 
-1. Run the appropriate command below now that the Custom Upstream repository is tracking the corresponding Pantheon core upstream.
+1. Run the appropriate command below now that the upstream repository is tracking the corresponding Pantheon core upstream.
 
     <TabList>
 
@@ -281,7 +281,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </TabList>
 
-## Connect Repository to Pantheon
+## Connect repository to Pantheon
 
 <TabList>
 
@@ -293,7 +293,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 1. Click the **<Icon icon="plus" /> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
 
-1. Enter the following information about the Custom Upstream:
+1. Enter the following information about the upstream:
 
    - **Name**
    - **Upstream Repository URL**:
@@ -312,7 +312,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
       1. Confirm your password if prompted.
 
-      1. Enter a token description, such as "pantheon read my Custom Upstream"
+      1. Enter a token description, such as "pantheon read my upstream"
 
       1. Select "repo" as the scope:
 
@@ -320,13 +320,13 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
       1. Click **Generate token** and copy the new token to your clipboard.
 
-1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the Custom Upstream.
+1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the upstream.
 
 1. Paste your new GitHub access token.
 
    - **Framework**: Drupal 7, Drupal (Latest), or WordPress
 
-   - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+   - **Description**: (Optional) Less than 200 characters. Plain text and markdown supported.
 
 4. Click **Create**.
 
@@ -340,7 +340,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 1. Click the **<Icon icon="plus" /> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
 
-1. Enter the following information about the Custom Upstream:
+1. Enter the following information about the upstream:
 
    - **Name**
    - **Upstream Repository URL**:
@@ -348,26 +348,26 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
        ![Bitbucket HTTPS Repo URL](../../../images/bitbucket-https-url.png)
 
    - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
-      ![BitBucket Upstream Authentication](../../../images/dashboard/create-upstream-auth-bb.png)
+      ![Bitbucket Upstream Authentication](../../../images/dashboard/create-upstream-auth-bb.png)
       If your repository is publicly accessible, you can skip this step.
         1. In your Bitbucket repository, go to **Repository settings** > **Access tokens**.
         1. Click **Create Repository Access Token**.
         1. Enter a name and select the **Read** permission under **Repositories**.
         1. Click **Create** and copy the generated token.
-        1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the Custom Upstream.
+        1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the upstream.
         1. Paste the token into the **Repository Access Token** field.
 
       Learn more about [creating repository access tokens](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).
    - **Upstream Repository Branch**: Enter the name of your primary Bitbucket branch.
    - **Framework**: Drupal 7, Drupal (Latest), or WordPress
-   - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+   - **Description**: (Optional) Less than 200 characters. Plain text and markdown supported.
 1. Click **Create**.
 
 </Tab>
 
 <Tab title="GitLab" id="gitlab-auth">
 
-A Custom Upstream from a GitLab repository must be set up for you by Pantheon Support.
+An upstream from a GitLab repository must be set up for you by Pantheon Support.
 
 1. Navigate to the repository, click <Icon icon="gear" /> **Settings**, and then select **Repository**.
 
@@ -382,9 +382,9 @@ A Custom Upstream from a GitLab repository must be set up for you by Pantheon Su
 
 1. Click **Create deploy token** and save the token immediately to provide to Pantheon Support. GitLab will not show it again.
 
-1. [Contact support](/guides/support/contact-support/) to add the Custom Upstream to your org. You must provide:
+1. [Contact support](/guides/support/contact-support/) to add the upstream to your org. You must provide:
 
-   - A name for the Custom Upstream,
+   - A name for the upstream,
    - The `https` clone URL (ending in `.git`),
    - The Username and Access Token for the deploy token.
 
@@ -392,7 +392,7 @@ A Custom Upstream from a GitLab repository must be set up for you by Pantheon Su
 
 <Tab title="Other" id="other-auth">
 
-Custom Upstreams from other repository hosts must be created for you by Pantheon Support.
+Upstreams from other repository hosts must be created for you by Pantheon Support.
 
 Common steps needed for most Git Providers are provided below.
 
@@ -400,9 +400,9 @@ Common steps needed for most Git Providers are provided below.
 
    - This new account will need to be accessible via API for Pantheon, it must also have access to the repository created in the earlier step.
 
-1. [Contact support](/guides/support/contact-support/) to add the Custom Upstream to your org. You must provide:
+1. [Contact support](/guides/support/contact-support/) to add the upstream to your org. You must provide:
 
-    - A name for the Custom Upstream
+    - A name for the upstream
 
     - The CMS within (WordPress, Drupal)
 
@@ -416,11 +416,11 @@ Common steps needed for most Git Providers are provided below.
 
 </TabList>
 
-### Initial Connection Mode
+### Initial connection mode
 
-The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal. The latest version of Drupal defaults to SFTP connection mode.
+The default connection mode for new sites created from an upstream is Git for WordPress and Drupal. The latest version of Drupal defaults to SFTP connection mode.
 
-Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
+Configure this setting after connecting your upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 
 1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations" )** tab within the Pantheon Dashboard and select your organization.
 
@@ -430,17 +430,17 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
     - Enter a username and a password or token if prompted to authenticate your repository (this only applies to privately hosted repositories). Access tokens must be alpha-numeric and cannot contain symbols.
 
-1. Select if **Git** or **SFTP** mode should be enabled by default and then click **Update**. New sites created from this Custom Upstream will use this connection mode by default going forward.
+1. Select if **Git** or **SFTP** mode should be enabled by default and then click **Update**. New sites created from this upstream will use this connection mode by default going forward.
 
   ![Modify initial connection mode](../../../images/dashboard/initial-connection-mode.png)
 
 
-## More Resources
+## More resources
 
 - [How to Add Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams)
 
 - [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
 
-- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
+- [Best Practices for Maintaining Upstreams](/guides/upstream/maintain-upstream)
 
-- [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
+- [Troubleshoot an Upstream](/guides/upstream/troubleshooting)

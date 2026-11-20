@@ -138,8 +138,8 @@ The following directions and instructions were captured by a user on a MacOS dev
 *   Describe the opinionated workflow of WebOps on Pantheon, including how code changes make their way from feature branch development to production deployment
 *   Describe the WebOps Workflow on Pantheon as it relates to Code, Files, and Databases.
 *   Implement Pantheon's Dashboard Security Tool as a way to lock down access to development progress on Multidev environments.
-*   Describe the advantages of using Custom Upstreams to manage and maintain portfolios of Drupal and WordPress sites.
-*   Describe the advantages and disadvantages of using a Custom Upstreams approach vs. a Drupal Multisite approach to managing and maintaining a portfolio of Drupal sites.
+*   Describe the advantages of using upstreams to manage and maintain portfolios of Drupal and WordPress sites.
+*   Describe the advantages and disadvantages of using an upstream approach vs. a Drupal Multisite approach to managing and maintaining a portfolio of Drupal sites.
 
 ### Email
 
@@ -193,10 +193,10 @@ The following directions and instructions were captured by a user on a MacOS dev
 *   Describe the limits of access SSH keys provide
 *   List the resources SSH keys provide access to on Pantheon
 
-### Custom Upstreams
+### Upstreams
 
-*   Describe the advantages of using Custom Upstreams to manage and maintain portfolios of Drupal and WordPress sites.
-*   Describe the advantages and disadvantages of using a Custom Upstreams approach vs. a Drupal Multisite approach to managing and maintaining a portfolio of Drupal sites.
+*   Describe the advantages of using upstreams to manage and maintain portfolios of Drupal and WordPress sites.
+*   Describe the advantages and disadvantages of using an upstream approach vs. a Drupal Multisite approach to managing and maintaining a portfolio of Drupal sites.
 
 ### Role-based Access Control
 
@@ -208,10 +208,10 @@ The following directions and instructions were captured by a user on a MacOS dev
 *   Create a new site on Pantheon programmatically using Terminus
 *   List the different starting states from which you are able to spin up a new site on Pantheon.
 
-### Custom Upstreams/WebOps Workflow
+### Upstreams and WebOps workflow
 
 *   List and Describe the three methods for applying one-click updates to individual child sites on the Pantheon Dashboard
-*   List and Describe some best practices to follow that will help avoid merge conflicts when using Custom Upstreams
+*   List and Describe some best practices to follow that will help avoid merge conflicts when using upstreams
 
 ### Object Cache
 

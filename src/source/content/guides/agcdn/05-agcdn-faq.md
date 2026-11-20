@@ -33,9 +33,9 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
 [Contact us](https://pantheon.io/contact?docs) to learn how Advanced Global CDN can help your organization. Our Professional Services team will talk through your needs and help determine the best configuration for you.
 
-### Is AGCDN compatible with Custom Upstream and Autopilot?
+### Is AGCDN compatible with Upstream and Autopilot?
 
-Yes. AGCDN is compatible with [Custom Upstream](/guides/custom-upstream) and [Autopilot](/guides/autopilot).
+Yes. AGCDN is compatible with [Upstream](/guides/upstream) and [Autopilot](/guides/autopilot).
 
 ### Does AGCDN include Edge caching?
 

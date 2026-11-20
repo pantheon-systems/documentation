@@ -1,10 +1,10 @@
 ---
-title: Custom Upstreams on Pantheon
-subtitle: Troubleshoot a Custom Upstream
-description: Learn more about troubleshooting your Custom Upstream.
+title: Upstreams on Pantheon
+subtitle: Troubleshoot an Upstream
+description: Learn more about troubleshooting your upstream.
 tags: [git, upstreams, workflow, D8, D9, D10]
 showtoc: true
-permalink: docs/guides/custom-upstream/troubleshooting
+permalink: docs/guides/upstream/troubleshooting
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]
@@ -12,18 +12,18 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2022-12-12"
+reviewed: "2026-11-20"
 ---
 
-This section provides troubleshooting solutions for Custom Upstreams.
+This section provides troubleshooting solutions for upstreams.
 
-## Resolve Conflicts
+## Resolve conflicts
 
-### Automatically Resolve from the Command Line
+### Automatically resolve from the command line
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (for example, problems with `.gitignore`).
 
-1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
+1. Navigate to the upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
   <TabList>
 
@@ -89,12 +89,12 @@ If you receive the error that you have conflicts while updating core, the fastes
 1. Double-check the conflicted files before moving forward to make sure no bugs were introduced.
 
 
-### Manually Resolve from the Command Line
+### Manually resolve from the command line
 
 You must manually resolve the conflict using the command line and a text editor if attempts to automatically resolve conflicts fail, or if you want your changes to persist instead of the upstream's changes.
 
 
-1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
+1. Navigate to the upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
   <TabList>
 
@@ -182,7 +182,7 @@ You must manually resolve the conflict using the command line and a text editor 
   
    1. Open `wp-admin/about.php` in your preferred text editor.
   
-   1. Locate the conflict markers starting with `<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>> Adjust rendering of version release notes`).
+   1. Locate the conflict markers starting with `<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<< HEAD` and `=======`) and changes made downstream in your upstream repository (shown second between `=======` and `>>>>>> Adjust rendering of version release notes`).
 
    1. Delete the conflict markers and double-check the changes.
 
@@ -193,23 +193,23 @@ You must manually resolve the conflict using the command line and a text editor 
   git merge --continue
   ```
 
-## One-Click Updates Do Not Appear After Rewriting Git History
+## One-click updates do not appear after rewriting Git history
 
 Squashing and rewriting history may cause one-click updates to break. Updates will no longer appear on your Site Dashboard when they become available in this case. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashboard and prevents conflicts with our one-click updates.
 
 If you are in a situation where you've altered the commit history in such a way that the dashboard is no longer able to determine if your site is up to date with the upstream, the simplest course of corrective action is to use `git reset --hard` to reset the site repository to the last known good commit before the squash/rebase/revert was applied. This *will* result in losing *all* changes that have happened since this commit. You will need to re-apply all custom/contributed code updates that occurred in the interim. Be sure to take note of these changes first and develop a plan to reapply them with the corrected Git history.
 
-## One-Click Update Not Appearing for Sites Using a Custom Upstream
+## One-click update not appearing for sites using an upstream
 
-Core updates for Custom Upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
+Core updates for upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
 
 It's important that you relay the need for updating core to maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your repository and reach out to a maintainer. Even better - submit a pull request for the update.
 
 You can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) after you have communicated the issue.
 
-## Custom Upstream Updates Not Available
+## Upstream updates not available
 
-Click **Check now** in the Site Dashboard if you know your site's Custom Upstream has updated code that is not visible in the dashboard.
+Click **Check now** in the Site Dashboard if you know your site's upstream has updated code that is not visible in the dashboard.
 
 ![Check Now](../../../images/dashboard/new-dashboard/2024/_check-for-updates.png)
 
@@ -217,12 +217,12 @@ This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fet
 
 It might be necessary to reset the site's upstream via [Terminus](/terminus/examples/#switch-upstreams) if updates are still not showing on the site. Please note that only the Site Owner or owning Organization Administrators can change a site's upstream.
 
-## Unsupported PHP Versions in a Custom Upstream
+## Unsupported PHP Versions in an Upstream
 
-As PHP versions are moved to "End of Sale", existing sites will continue to run, but new sites will error during the creation step if the `php_version` value in `pantheon.upstream.yml` is no longer supported. In order to create new sites from your Custom Upstream,  update your upstream's PHP version to a supported version of PHP. For details on what PHP versions Pantheon currently supports and recommended, see [the PHP documentation](/guides/php#supported-php-versions).
+As PHP versions are moved to "End of Sale", existing sites will continue to run, but new sites will error during the creation step if the `php_version` value in `pantheon.upstream.yml` is no longer supported. In order to create new sites from your upstream,  update your upstream's PHP version to a supported version of PHP. For details on what PHP versions Pantheon currently supports and recommended, see [the PHP documentation](/guides/php#supported-php-versions).
 
-## More Resources
+## More resources
 
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
-- [Test Custom Upstream Changes](/guides/custom-upstream/test-custom-upstream)
+- [Test Upstream Changes](/guides/upstream/test-upstream)

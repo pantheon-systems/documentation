@@ -47,7 +47,7 @@ Yes. Always commit `composer.lock` to your site repository. When you push code t
 
 If `composer.lock` is absent, Composer resolves dependencies to their latest compatible versions rather than your pinned versions, then commits the generated `composer.lock` back to your repository. That extra commit triggers a second `sync_code` workflow, causing Quicksilver hooks to fire twice for a single push. When you later pull those changes, you may also encounter merge conflicts if your local copy diverges from the file Pantheon committed, or if `composer.lock` was previously removed from your repository's git history.
 
-**Note:** It is **not** recommended to commit your `composer.lock` file to _upstream_ repositories. A `composer.lock` file in an upstream repository can lead to merge conflicts on downstream sites. For more information, see our documentation about [custom upstream usage](/guides/integrated-composer/ic-upstreams).
+**Note:** It is **not** recommended to commit your `composer.lock` file to _upstream_ repositories. A `composer.lock` file in an upstream repository can lead to merge conflicts on downstream sites. For more information, see our documentation about [Upstream usage](/guides/integrated-composer/ic-upstreams).
 ### What Composer commands does Pantheon run?
 
 All Composer commands are available through the **Commit Log** in the Site Dashboard's development environment.

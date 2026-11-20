@@ -1,5 +1,5 @@
 ---
-title: Upgrade a Custom Upstream to the Latest Version of Drupal
+title: Upgrade an Upstream to the Latest Version of Drupal
 subtitle: Deploy to Dev
 description: 
 tags: [code, launch, migrate, site, updates]
@@ -18,7 +18,7 @@ integration: [--]
 
 Merge the code and files from the Multidev environment to the Dev environment.
 
-1. Merge the `composerify` branch on the Custom Upstream into the `master` branch and push:
+1. Merge the `composerify` branch on the upstream into the `master` branch and push:
 
     ```bash{promptUser:user}
     git checkout master

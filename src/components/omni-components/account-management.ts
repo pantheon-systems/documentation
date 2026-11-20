@@ -25,10 +25,10 @@ const accountManagement = () => {
         "Portfolio Governance",
         [
           getGuideDirectory("guides/account-mgmt/workspace-sites-teams"),
-          getGuideDirectory("guides/custom-upstream"),
+          getGuideDirectory("guides/upstream"),
           getGuideDirectory("guides/autopilot", "Autopilot Guide"),
           // Consider consolidating this next one with the one above
-          getGuideDirectory("guides/autopilot-custom-upstream"),
+          getGuideDirectory("guides/autopilot-upstream"),
         ]
       ),
     ],

@@ -100,9 +100,9 @@ To perform a manual update procedure, take the following steps:
 
 ### Automatic Updates
 
-Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Custom Upstreams](/guides/custom-upstream) that include favored plugins, custom plugins, a base theme, etc. This allows you to update the shared codebase and then all of the sites that are based on that Upstream will receive updates automatically.
+Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Upstreams](/guides/upstream) that include favored plugins, custom plugins, a base theme, etc. This allows you to update the shared codebase and then all of the sites that are based on that Upstream will receive updates automatically.
 
-While Custom Upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go.
+While upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go.
 
 Our [Terminus command line tool](/terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/guides/wp-cli/) and add in our [Quicksilver hooks](/guides/quicksilver) to trigger testing, and you're on your way.
 

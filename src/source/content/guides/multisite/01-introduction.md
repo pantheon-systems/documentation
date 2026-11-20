@@ -36,12 +36,12 @@ We do not support uses of WordPress Multisite that run functionally-different or
 - Software as a service (SAAS) products
 - Agencies using one WordPress installation to support several customers
 - A network of one or more multisites on a single instance, commonly achieved via plugins like [WordPress Multi-Network](https://wordpress.org/plugins/wp-multi-network/).
-  - The supported alternative for this use case is to maintain a Custom Upstream that is based on Pantheon's WordPress Multisite framework, see the following section.
+  - The supported alternative for this use case is to maintain an upstream that is based on Pantheon's WordPress Multisite framework, see the following section.
 
 ## Request a WordPress Multisite
 WordPress Multisite requires a special configuration that is only available to select customers. Access to WordPress Multisite requires a Gold, Platinum, or Diamond level [Workspace plan](https://pantheon.io/plans/pricing).
 
-Pantheon employees must enable a WordPress Multisite custom upstream on your behalf so your team can create new Multisites self-serve in your professional workspace. This is because WordPress Multisites use the `wordpress_network` [framework](/glossary/#framework), which includes Multisite specific Nginx configurations and differs from the default `wordpress` framework. Gold, Platinum, and Diamond plans include WordPress Multisite access. If you are on one of these plans, please contact Support to enable this feature for your site.
+Pantheon employees must enable a WordPress Multisite upstream on your behalf so your team can create new Multisites self-serve in your professional workspace. This is because WordPress Multisites use the `wordpress_network` [framework](/glossary/#framework), which includes Multisite specific Nginx configurations and differs from the default `wordpress` framework. Gold, Platinum, and Diamond plans include WordPress Multisite access. If you are on one of these plans, please contact Support to enable this feature for your site.
 
 
 Existing WordPress sites cannot be converted to WordPress Multisites (since they are different frameworks), however you can spin up a new WordPress Multisite and then [manually migrate](/migrate-manual) the code, database and files from your existing site. 

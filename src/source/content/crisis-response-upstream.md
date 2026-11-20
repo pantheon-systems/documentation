@@ -25,7 +25,7 @@ While the upstream and code remains available, it is no longer actively develope
 
 ## Overview
 
-The **Pantheon Crisis Response WordPress Upstream** is a specialized WordPress [custom upstream](/guides/custom-upstream), created in response to COVID-19, to enable organizations on the front line to quickly create a production-ready website to provide timely information during a crisis.
+The **Pantheon Crisis Response WordPress Upstream** is a specialized WordPress [Upstream](/guides/upstream), created in response to COVID-19, to enable organizations on the front line to quickly create a production-ready website to provide timely information during a crisis.
 
 ![Crisis Response WP home page](../images/covid-response-home.png)
 
@@ -127,5 +127,5 @@ From here, you can update the existing demo content, or delete it and create new
 
 ## More Resources
 
-- [Introduction to Custom Upstreams](/guides/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
+- [Introduction to Upstreams](/guides/upstream) - Learn about the benefits of Pantheon upstreams.
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert teams can provide.

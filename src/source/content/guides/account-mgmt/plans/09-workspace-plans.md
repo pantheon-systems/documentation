@@ -25,7 +25,7 @@ New Professional Workspaces start with a Silver Account Plan by default. The Sil
 
 ## Gold Account Plan 
 
-Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
+Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
 
 To upgrade your Professional Workspace Account Plan to Gold:
 
@@ -56,7 +56,7 @@ The [Agency Partner Program](https://pantheon.io/partners) is open to web agenci
 
 Pantheon provides one governed platform across WordPress, Drupal, Next.js, and other framework paths - so partners can move fast, stay in control, and choose the right approach for each client.
 
-All Agency Partners access the same full Pantheon platform regardless of tier, including [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot). Tier affects program economics, support, and go-to-market benefits.
+All Agency Partners access the same full Pantheon platform regardless of tier, including [Multidev](/guides/multidev), [Upstreams](/guides/upstream), and [Autopilot](/guides/autopilot). Tier affects program economics, support, and go-to-market benefits.
 
 Tiers are based on lifetime sourced and influenced revenue. Tiering criteria may change in future program periods; refer to the current program terms for the latest details.
 

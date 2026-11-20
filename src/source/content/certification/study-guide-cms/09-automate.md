@@ -5,7 +5,7 @@ description: "Learn how to leverage Integrated Composer and Autopilot"
 permalink: docs/certification/study-guide/automate
 cms: [drupal, wordpress]
 previousurl: /certification/study-guide/extend
-nexturl: /certification/study-guide/custom-upstreams
+nexturl: /certification/study-guide/upstreams
 ---
 
 <Alert title="Learning objectives for this chapter:"  type="info" >
@@ -139,7 +139,7 @@ Your site must be on Pantheon and meet the criteria below to be eligible for Aut
   * or for Drupal 7 or 8 sites that are not using Integrated Composer, Drush 8 must be in use to be compatible with Autopilot.
 * WordPress sites that are not using WordPress Multisite (wordpress_network).
 * Sites that are not using Build Tools.
-* While Autopilot can be used on sites leveraging custom upstreams, special consideration is called for in these use cases as the scope of what Autopilot will update potentially include everything from the Custom Upstream.
+* While Autopilot can be used on sites leveraging upstreams, special consideration is called for in these use cases as the scope of what Autopilot will update potentially include everything from the upstream.
 
 ### Some other things to note about Autopilot:
 * Sites that use external build tools are not compatible with Autopilot.

@@ -1,5 +1,5 @@
 ---
-title: Upgrade a Custom Upstream to the Latest Version of Drupal
+title: Upgrade an Upstream to the Latest Version of Drupal
 subtitle: Create a New Branch with Integrated Composer Code
 description: 
 tags: [code, launch, migrate, site, updates]
@@ -18,7 +18,7 @@ integration: [--]
 
 The first step in the migration process is to create a new branch with Integrated Composer.
 
-1. Create a local clone of the Custom Upstream repository using the SSH URL and change the directory into the cloned repository:
+1. Create a local clone of the upstream repository using the SSH URL and change the directory into the cloned repository:
 
   ```bash{promptUser:user}
   git clone $SSH_URL

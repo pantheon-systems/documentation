@@ -1,6 +1,6 @@
 ---
 title: Integrated Composer
-subtitle: Custom Upstream Usage
+subtitle: Upstream Usage
 description: Learn how to use an Upstream with Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert, jazzsequence]
@@ -16,18 +16,18 @@ product: [composer]
 integration: [--]
 ---
 
-This section provides usage and maintenance information for composer-managed [Custom Upstreams](/guides/custom-upstream) on Pantheon, including steps to add upstream dependencies.
+This section provides usage and maintenance information for composer-managed [Upstreams](/guides/upstream) on Pantheon, including steps to add upstream dependencies.
 
 
-## Custom Upstreams
+## Upstreams
 
 An Upstream refers to the source code in Git that shares a Git history with "downstream" individual sites made from it. Upstreams includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-composer-managed), and some customizations for the Pantheon platform.
 
-### Create Your Integrated Composer Custom Upstream
+### Create your Integrated Composer upstream
 
-Follow the steps to [Create a Custom Upstream](/guides/custom-upstream/create-custom-upstream/) to create and connect a new integrated composer custom upstream. 
+Follow the steps to [Create an Upstream](/guides/upstream/create-upstream/) to create and connect a new integrated composer upstream. 
 
-### Custom Upstream and Site Structure
+### Upstream and site structure
 
 <Partial file="ic-upstream-structure.md" />
 
@@ -45,7 +45,7 @@ Add the plugin to your upstream in one release, then run an upstream update on a
 
 </Alert>
 
-1. In the root `composer.json` of your Custom Upstream, require the plugin and add it to the `allow-plugins` list:
+1. In the root `composer.json` of your upstream, require the plugin and add it to the `allow-plugins` list:
 
     ```json:title=composer.json
     "require": {
@@ -58,7 +58,7 @@ Add the plugin to your upstream in one release, then run an upstream update on a
     }
     ```
 
-1. Commit and push this release to your Custom Upstream, then [apply the upstream update](/core-updates) to each site and let the build finish.
+1. Commit and push this release to your upstream, then [apply the upstream update](/core-updates) to each site and let the build finish.
 
 1. Confirm that the plugin is installed before you rely on it. Connect to an environment over [SFTP](/guides/sftp) and list the vendor directory:
 
@@ -88,11 +88,11 @@ Add the plugin to your upstream in one release, then run an upstream update on a
 
 <Alert title="Warning" type="danger">
 
-A change to the root `composer.json` in your Custom Upstream replaces edits that individual sites have made to their own root `composer.json`. This happens without a merge conflict and without failing the build. Review your sites for local changes before you push. For more information, see [Changes Lost During Upstream Updates](/guides/integrated-composer/ic-troubleshooting#changes-lost-during-upstream-updates).
+A change to the root `composer.json` in your upstream replaces edits that individual sites have made to their own root `composer.json`. This happens without a merge conflict and without failing the build. Review your sites for local changes before you push. For more information, see [Changes Lost During Upstream Updates](/guides/integrated-composer/ic-troubleshooting#changes-lost-during-upstream-updates).
 
 </Alert>
 
-## Maintain Your Integrated Composer Custom Upstream
+## Maintain your Integrated Composer upstream
 
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
 
@@ -104,11 +104,11 @@ A change to the root `composer.json` in your Custom Upstream replaces edits that
 
 ## More Resources
 
-- [Custom Upstreams](/guides/custom-upstream)
-- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
-- [Migrate a Custom Upstream to Drupal](/guides/drupal-hosted-createcustom)
+- [Upstreams](/guides/upstream)
+- [Autopilot for Upstreams](/guides/autopilot-upstream)
+- [Migrate an Upstream to Drupal](/guides/drupal-hosted-createcustom)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
-- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
+- [Best Practices for Maintaining Upstreams](/guides/upstream/maintain-upstream)
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
 - [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
 - [Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed)

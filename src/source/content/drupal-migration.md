@@ -18,7 +18,7 @@ You can upgrade your Pantheon site to the latest Drupal version. The starting po
 
 - **Site Creation Method**
     - Build Tools
-    - Custom Upstream
+    - Upstream
     - Empty Upstream
     - Pantheon Dashboard
 - **Additional Requirements** <Popover title="Additional Requirements" content="Any other features that are required, or that are desired." />
@@ -41,9 +41,9 @@ Use [Upgrade a Site That Needs a Build Tools Workflow to the Latest Version of D
 
 ### I created my site with an Upstream
 
-#### Custom Upstream
+#### Upstream
 
-Use [Upgrade a Custom Upstream to the Latest Version of Drupal](/guides/drupal-hosted-createcustom) to start your upgrade if you used Custom Upstream to create your Drupal site.
+Use [Upgrade an Upstream to the Latest Version of Drupal](/guides/drupal-hosted-createcustom) to start your upgrade if you used an upstream you maintain to create your Drupal site.
 
 #### Empty Upstream + Multidev
 

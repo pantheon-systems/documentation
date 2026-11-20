@@ -48,6 +48,6 @@ Use **one** of the deactivation methods below to deactivate Autopilot on an indi
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
 
-- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+- [Autopilot Upstream Guide](/guides/autopilot-upstream)
 
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)

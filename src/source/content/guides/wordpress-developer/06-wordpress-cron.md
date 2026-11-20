@@ -148,7 +148,7 @@ You can use external crons if you want more control over your site's cron jobs, 
 
 Pantheon's WordPress upstream disables WP-Cron by default.
 
-Add the following code to your `wp-config.php` file to ensure WP-Cron is disabled if you are on a Custom Upstream that does not have this setting, or the site is a WordPress Multisite. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
+Add the following code to your `wp-config.php` file to ensure WP-Cron is disabled if you are on an upstream that does not have this setting, or the site is a WordPress Multisite. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', true);

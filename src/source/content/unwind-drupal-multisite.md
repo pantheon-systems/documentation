@@ -12,7 +12,7 @@ integration: [multisite]
 reviewed: "2026-07-31"
 ---
 
-Pantheon only supports one application codebase and one database per site. We do not recommend using database prefixes or offer support for Drupal Multisite implementations. If you are currently struggling with a Drupal Multisite and want to use Pantheon, you'll need to "unwind" the implementation, separating it into individual sites. You may also create a Custom Upstream if appropriate for your use-case.
+Pantheon only supports one application codebase and one database per site. We do not recommend using database prefixes or offer support for Drupal Multisite implementations. If you are currently struggling with a Drupal Multisite and want to use Pantheon, you'll need to "unwind" the implementation, separating it into individual sites. You may also create an upstream if appropriate for your use-case.
 
 ## Migrate One Site Out of a Multisite to Pantheon
 
@@ -41,9 +41,9 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 ## Maintain a Single Codebase for Multiple Sites
 
-This method uses a [Custom Upstream](/guides/custom-upstream), a feature available to EDUs, Enterprises, and [Agency Partners](https://pantheon.io/partners?docs).
+This method uses your own [upstream](/guides/upstream), a feature available to EDUs, Enterprises, and [Agency Partners](https://pantheon.io/partners?docs).
 
-1. Create a [Custom Upstream](/guides/custom-upstream) based on the multisite configuration.
+1. Create an [Upstream](/guides/upstream) based on the multisite configuration.
 
 2. Archive each of your sites using `drush ard`.
 

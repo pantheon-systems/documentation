@@ -36,7 +36,7 @@ Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and
 
 ### Portfolio Upstreams
 
-Managed Updates for Portfolio Upstreams provides core, plugin, and module updates for customers managing site collections using [Custom Upstreams](/guides/custom-upstream).
+Managed Updates for Portfolio Upstreams provides core, plugin, and module updates for customers managing site collections using [Upstreams](/guides/upstream).
 
 #### Requirements
 
@@ -66,5 +66,5 @@ Managed Updates for Portfolio Upstreams provides core, plugin, and module update
 
 ## More Resources
 - [Serving Sites from the Web Subdirectory](/nested-docroot)
-- [Custom Upstreams](/guides/custom-upstream)
+- [Upstreams](/guides/upstream)
 - [Professional Services](/guides/professional-services)

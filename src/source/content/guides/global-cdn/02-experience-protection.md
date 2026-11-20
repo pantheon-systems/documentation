@@ -45,9 +45,9 @@ Your site’s CMS page-level caching must be correctly configured to take advant
 
 You can adjust the length of time before the site's cached content is considered stale by adjusting the max age. Set the cache max age to a value equal to or higher than 3700 seconds for best results:
 
-- [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
+- [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your CDN edge settings to serve stale content for a specific amount of time.
 
-- [WordPress](/guides/wordpress-configurations/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
+- [WordPress](/guides/wordpress-configurations/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your CDN edge settings to serve stale content for a specific amount of time.
 
 ### Session-Style Cookies or `NO_CACHE` Cookies
 

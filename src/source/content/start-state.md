@@ -20,7 +20,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 </Alert>
 
-[Custom Upstreams](/guides/custom-upstream) are available to team members when the Workspace is associated during site creation.
+[Upstreams you create](/guides/upstream) are available to team members when the Workspace is associated during site creation.
 
 ## Pantheon Upstreams
 
@@ -32,7 +32,7 @@ We base our Drupal repositories on the canonical source from [Drupal.org](https:
 
 ### Empty Upstream
 
-An empty Upstream is a Custom Upstream that does not have any content or code:
+An empty Upstream is an upstream that does not have any content or code:
 
 - [Pantheon Empty Upstream](https://dashboard.pantheon.io/create-site-from-upstream/4c7176de-e079-eed1-154d-44d5a9945b65) (id: 4c7176de-e079-eed1-154d-44d5a9945b65)
 

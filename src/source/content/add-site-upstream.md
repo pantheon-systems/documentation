@@ -1,5 +1,5 @@
 ---
-title: Create a Site Using a Custom Upstream
+title: Create a Site Using an Upstream
 description: Build a new site using a template.
 contributors: [wordsmither]
 contenttype: [doc]
@@ -13,19 +13,19 @@ tags: [--]
 reviewed: 2026-09-16
 ---
 
-Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
+Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-## Create the Dev Environment
+## Create the Dev environment
 
-To create a site using a Custom Upstream:
+To create a site using an upstream:
 
-1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) that contains the Custom Upstream, and select the **Create New Site** button:
+1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) that contains the upstream, and select the **Create New Site** button:
 
    ![Create new site button](../images/dashboard/create-new-site-button.png)
 
-1. Select **Custom Upstream**.
+1. Select **Upstream**.
 1. Select the upstream you wish to use.
 1. Enter the name and select a region for this site, then click **Continue**. It can take several minutes to create a new site on Pantheon.
 

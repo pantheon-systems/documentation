@@ -1,10 +1,10 @@
 ---
-title: Custom Upstreams on Pantheon
-subtitle: Test Custom Upstream Changes Before Release
-description: Create a test version of your Custom Upstream to review changes.
+title: Upstreams on Pantheon
+subtitle: Test Upstream Changes Before Release
+description: Create a test version of your upstream to review changes.
 tags: [upstreams, workflow, webops, D8, D9, D10]
 showtoc: true
-permalink: docs/guides/custom-upstream/test-custom-upstream
+permalink: docs/guides/upstream/test-upstream
 contributors: [--]
 contenttype: [guide]
 innav: [false]
@@ -13,10 +13,10 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2022-12-09"
+reviewed: "2026-11-20"
 ---
 
-Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend using the workflow example below to test and update core.
+Maintainers of [Upstreams](/guides/upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend using the workflow example below to test and update core.
 
 <Alert title="Note" type="info">
 
@@ -24,31 +24,31 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 
 </Alert>
 
-### Use the Pantheon Workflow
+### Use the Pantheon workflow
 
 Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments, and fully test core updates. Checkout [our guide](/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
-### Sample a Few Sites
+### Sample a few sites
 
 We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/guides/multidev) environment or agencies that manage large portfolios. Release the update when things look good on these sites.
 
-## Before You Begin
+## Before you begin
 
-Follow the procedure to [create a custom upstream](/guides/custom-upstream/create-custom-upstream) and confirm that you have:
+Follow the procedure to [create an Upstream](/guides/upstream/create-upstream) and confirm that you have:
 
-- A repository for your Custom Upstream hosted with your preferred provider (GitLab, Bitbucket, etc.)
+- A repository for your upstream hosted with your preferred provider (GitLab, Bitbucket, etc.)
 
 - A local clone of that repository, which tracks Pantheon's upstream as a remote
 
-- Pantheon's core code merged into your Custom Upstream repository
+- Pantheon's core code merged into your upstream repository
 
-- Your Custom Upstream repository connected to Pantheon
+- Your upstream repository connected to Pantheon
 
 - [Terminus](/terminus)
 
 ## Create a Test Site on Pantheon
 
-This test site will be used later for evaluating Custom Upstream changes.
+This test site will be used later for evaluating upstream changes.
 
 1. [Go to your ](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) > click **Create New Site**.
 
@@ -58,7 +58,7 @@ This test site will be used later for evaluating Custom Upstream changes.
 
 1. Click **Create Site**.
 
-1. Select the desired repository from the Custom Upstream options.
+1. Select the desired repository from the upstream options.
 
 1. Click **Visit your Pantheon Dashboard**.
 
@@ -66,13 +66,13 @@ This test site will be used later for evaluating Custom Upstream changes.
 
 <Alert title="Warning" type="danger">
 
-Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
+Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
 
 </Alert>
 
-## Test and Release Pantheon Core Updates
+## Test and release Pantheon core updates
 
-1. Navigate to the local clone of your Custom Upstream repository > add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to the local clone of your upstream repository > add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
   <TabList>
 
@@ -102,7 +102,7 @@ git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-c
 
   </TabList>
 
-2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
+2. Add the test site you created above as a remote to your upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
 
    ```bash
    terminus connection:info <site>.dev --field=git_url
@@ -173,14 +173,14 @@ git merge --no-ff core-update
 git push origin master
 ```
 
-The example command above assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
+The example command above assumes you are using the default remote destination (`origin`) for your upstream repository that's hosted with your preferred provider.
 
-Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
+Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
 
-## More Resources
+## More resources
 
 - [WordPress and Drupal Core Updates](/core-updates)
 
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
-- [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
+- [Autopilot for Upstreams](/guides/autopilot-upstream)
