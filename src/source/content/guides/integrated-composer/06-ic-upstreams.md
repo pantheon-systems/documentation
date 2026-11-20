@@ -23,11 +23,11 @@ This section provides usage and maintenance information for composer-managed [Up
 
 An Upstream refers to the source code in Git that shares a Git history with "downstream" individual sites made from it. Upstreams includes the core code for [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed), [WordPress](https://github.com/pantheon-upstreams/wordpress-composer-managed), and some customizations for the Pantheon platform.
 
-### Create Your Integrated Composer Upstream
+### Create your Integrated Composer upstream
 
 Follow the steps to [Create an Upstream](/guides/upstream/create-upstream/) to create and connect a new integrated composer upstream. 
 
-### Upstream and Site Structure
+### Upstream and site structure
 
 <Partial file="ic-upstream-structure.md" />
 
@@ -92,7 +92,7 @@ A change to the root `composer.json` in your upstream replaces edits that indivi
 
 </Alert>
 
-## Maintain Your Integrated Composer Upstream
+## Maintain your Integrated Composer upstream
 
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
 

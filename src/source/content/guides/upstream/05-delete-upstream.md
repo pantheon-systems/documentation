@@ -28,7 +28,7 @@ Follow these steps to delete your upstream.
   ![Delete Upstream Button](../../../images/dashboard/delete-upstream.png)
 
 
-## More Resources
+## More resources
 
 - [Switch an Existing Site to Upstream](/guides/upstream/switch-upstream)
 

@@ -25,7 +25,7 @@ The destination upstream must **share Git history** with the one the site curren
 
 </Alert>
 
-## Switch Your Upstream
+## Switch your upstream
 
 Review the [Terminus Switch Upstream example](/terminus/examples#switch-upstreams) before following the steps below to switch your upstream.
 
@@ -41,6 +41,6 @@ Review the [Terminus Switch Upstream example](/terminus/examples#switch-upstream
     terminus site:upstream:set $site $upstream_id
     ```
 
-## More Resources
+## More resources
 
 - [Terminus Set Upstream Steps](/terminus/commands/site-upstream-set#terminus-error-permission-to-change-the-upstream-of-this-site) 

@@ -208,7 +208,7 @@ The following directions and instructions were captured by a user on a MacOS dev
 *   Create a new site on Pantheon programmatically using Terminus
 *   List the different starting states from which you are able to spin up a new site on Pantheon.
 
-### Upstreams/WebOps Workflow
+### Upstreams and WebOps workflow
 
 *   List and Describe the three methods for applying one-click updates to individual child sites on the Pantheon Dashboard
 *   List and Describe some best practices to follow that will help avoid merge conflicts when using upstreams

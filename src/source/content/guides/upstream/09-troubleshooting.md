@@ -17,9 +17,9 @@ reviewed: "2026-11-20"
 
 This section provides troubleshooting solutions for upstreams.
 
-## Resolve Conflicts
+## Resolve conflicts
 
-### Automatically Resolve from the Command Line
+### Automatically resolve from the command line
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (for example, problems with `.gitignore`).
 
@@ -89,7 +89,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 1. Double-check the conflicted files before moving forward to make sure no bugs were introduced.
 
 
-### Manually Resolve from the Command Line
+### Manually resolve from the command line
 
 You must manually resolve the conflict using the command line and a text editor if attempts to automatically resolve conflicts fail, or if you want your changes to persist instead of the upstream's changes.
 
@@ -193,13 +193,13 @@ You must manually resolve the conflict using the command line and a text editor 
   git merge --continue
   ```
 
-## One-Click Updates Do Not Appear After Rewriting Git History
+## One-click updates do not appear after rewriting Git history
 
 Squashing and rewriting history may cause one-click updates to break. Updates will no longer appear on your Site Dashboard when they become available in this case. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashboard and prevents conflicts with our one-click updates.
 
 If you are in a situation where you've altered the commit history in such a way that the dashboard is no longer able to determine if your site is up to date with the upstream, the simplest course of corrective action is to use `git reset --hard` to reset the site repository to the last known good commit before the squash/rebase/revert was applied. This *will* result in losing *all* changes that have happened since this commit. You will need to re-apply all custom/contributed code updates that occurred in the interim. Be sure to take note of these changes first and develop a plan to reapply them with the corrected Git history.
 
-## One-Click Update Not Appearing for Sites Using an Upstream
+## One-click update not appearing for sites using an upstream
 
 Core updates for upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
 
@@ -207,7 +207,7 @@ It's important that you relay the need for updating core to maintainers, even if
 
 You can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) after you have communicated the issue.
 
-## Upstream Updates Not Available
+## Upstream updates not available
 
 Click **Check now** in the Site Dashboard if you know your site's upstream has updated code that is not visible in the dashboard.
 
@@ -221,7 +221,7 @@ It might be necessary to reset the site's upstream via [Terminus](/terminus/exam
 
 As PHP versions are moved to "End of Sale", existing sites will continue to run, but new sites will error during the creation step if the `php_version` value in `pantheon.upstream.yml` is no longer supported. In order to create new sites from your upstream,  update your upstream's PHP version to a supported version of PHP. For details on what PHP versions Pantheon currently supports and recommended, see [the PHP documentation](/guides/php#supported-php-versions).
 
-## More Resources
+## More resources
 
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 

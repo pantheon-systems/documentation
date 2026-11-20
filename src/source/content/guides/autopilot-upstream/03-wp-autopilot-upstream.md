@@ -20,7 +20,7 @@ This section provides information and steps to set up your WordPress site to run
 This setup runs Autopilot on the upstream site and on each child site. You must set the scope of the upstream to ensure that you do not create conflicts by running Autopilot at both levels. This setup also allows Autopilot to run your upstream deployments.
 
 
-## Create an Upstream WordPress Site and Enable Autopilot
+## Create an upstream WordPress site and enable Autopilot
 
 The simplest way to start your upstream journey is to create a new, vanilla WordPress site. The new site’s repository will be the starting point for your upstream codebase, and will be the only place Autopilot actually affects your upstream code.
 
@@ -52,11 +52,11 @@ The WordPress site you created in the steps above will be your upstream codebase
 1. [Create your Upstream](/guides/upstream/create-upstream#connect-repository-to-pantheon) on Pantheon from the Git repository you just created.
 
 
-## Using Autopilot with Your Upstream Representative Site
+## Using Autopilot with your upstream representative site
 
 Autopilot will merge code into the master branch on your Pantheon repository when it runs. However, you still need this code to be pushed to your external repository. This is an area where you probably have some specific workflow requirements. There are two simple ways to handle this scenario.
 
-### Push Updates with Quicksilver sync_code
+### Push updates with Quicksilver sync_code
 
 You can use the [sync_code Quicksilver hook](/guides/quicksilver/hooks) to push updates to your remote repository.
 
@@ -64,13 +64,13 @@ This workflow ensures all developer work on your upstream remote repository is r
 
 Any new sites you create from your upstream will have up-to-date code as the starting point. Additionally, any site you create from this upstream can use Autopilot to apply your upstream updates on a regular basis.
 
-### Push Updates Manually
+### Push updates manually
 
 You can manually pull in code from the Pantheon repository and push to your remote repository.
 
 This method works in much the same way as the [sync_code Quicksilver hook](/guides/quicksilver/hooks) option, but relies on you to remember to pull code from your Pantheon repository and push it to your remote repository every time you make a change.
 
-## More Resources
+## More resources
 
 - [Automate and Integrate your WebOps Workflow with Quicksilver](/guides/quicksilver)
 

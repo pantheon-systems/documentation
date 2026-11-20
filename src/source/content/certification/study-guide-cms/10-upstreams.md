@@ -46,7 +46,7 @@ An upstream you create is a centralized codebase that lives in an external repos
 
 Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed. Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality in a single source.
 
-## Three Levels of Git Repositories
+## Three levels of Git repositories
 
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another (see fig. 10.1):
 
@@ -58,11 +58,11 @@ There are three levels of repositories in play here, and updates flow "downstrea
 
  </figure>
 
-As you can see in the diagram above, updates flow down from the top level repository, a Pantheon-managed core of Drupal (Latest or Drupal 7) or WordPress. When core updates are available, Pantheon applies the updates to the core upstream, and those updates are now available for the upstream to pull down. Any modifications to the common codebase are pushed up to the upstream repository, which lives in GitHub, Bitbucket, or GitLab. Any code pushes made to the upstream repository are then available to all of the Individual Site repositories. Each individual site can now apply the updates from the upstream, or override and customize the codebase for that individual site.
+As you can see in the diagram above, updates flow down from the top level repository, a Pantheon-managed core of Drupal (Latest or Drupal 7) or WordPress. When core updates are available, Pantheon applies the updates to the core upstream, and those updates are now available for the upstream to pull down. Any modifications to the common codebase are pushed up to the upstream repository, which lives in GitHub, Bitbucket, or GitLab. Any code pushes made to the upstream repository are then available to all of the Individual Site repositories. Each individual site can now apply the updates from the upstream or override and customize the codebase for that individual site.
 
 This inheritance workflow allows teams to scale the maintenance of all sites in the portfolio without having to also scale up the number of people on the team.
 
-## Upstreams vs. Drupal Multisite
+## Upstreams vs. Drupal multisite
 
 There are many approaches to managing portfolios of Drupal and WordPress sites. In this section, we will talk about the advantages and disadvantages of upstreams versus the other approaches.
 
@@ -79,7 +79,7 @@ First, we will create and host the repository remotely. We will then pull in Cor
 
 </Alert>
 
-Pantheon upstreams are a self-serve feature available to anyone with access to the Workspace with an eligible plan. Workspace members will be able to create new sites from a set common codebase after a Workspace Administrator creates an upstream. The upstream must be created within each Workspace if you want to use a specific upstream for multiple Workspaces.
+Creating an upstream is a self-serve feature available to anyone with access to the Workspace with an eligible plan. Workspace members will be able to create new sites from a set common codebase after a Workspace Administrator creates an upstream. The upstream must be created within each Workspace if you want to use a specific upstream for multiple Workspaces.
 
 To set up an upstream, follow these steps:
 
@@ -174,7 +174,7 @@ As a company, Pantheon is trying to use more inclusive language in our repositor
 
 17. Click Generate token and copy the new token to your clipboard.
 
-18. Return to the Workspace where you are creating the upstream. Paste your access token in the field, and click “Connect to Github”. You should see the following confirmation that your upstream repository is connected to your Pantheon Workspace:
+18. Return to the Workspace where you are creating the upstream. Paste your access token in the field, and click “Connect to GitHub”. You should see the following confirmation that your upstream repository is connected to your Pantheon Workspace:
 
     <figure>
 
@@ -236,7 +236,7 @@ potential issues or conflicts early, before affecting all your sites. It minimiz
 broad site disruption and ensures controlled, reliable updates, enhancing the stability
 and performance of your online properties.
 
-## Creating and Updating Child Sites
+## Creating and updating child sites
 
 <Alert title="Activity #11: Apply Updates Through the Site Dashboard" type="info">
 
@@ -283,7 +283,7 @@ Sometimes you will run into merge conflicts between your upstream repository
 and your individual site repository on Pantheon. To apply updates manually from the
 command line, to resolve conflicts, [follow these steps](/core-updates#apply-upstream-updates-via-terminus)
 
-## Avoiding Merge Conflicts
+## Avoiding merge conflicts
 
 <Alert title="Resolving Merge Conflicts" type="info">
 
@@ -317,6 +317,6 @@ here before rolling out to other sites.
 * **Resolve Conflicts Immediately:** If a merge conflict does occur, resolve it as quickly as
 possible to prevent it from affecting other developers' work.
 
-## More Resources
+## More resources
 - [WebOps Certification: About the program](/certification/about)
 - [WebOps Certification: Exam Overview](/certification/exam)

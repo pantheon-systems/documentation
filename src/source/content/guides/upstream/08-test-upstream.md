@@ -24,15 +24,15 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 
 </Alert>
 
-### Use the Pantheon Workflow
+### Use the Pantheon workflow
 
 Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments, and fully test core updates. Checkout [our guide](/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
-### Sample a Few Sites
+### Sample a few sites
 
 We suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/guides/multidev) environment or agencies that manage large portfolios. Release the update when things look good on these sites.
 
-## Before You Begin
+## Before you begin
 
 Follow the procedure to [create an Upstream](/guides/upstream/create-upstream) and confirm that you have:
 
@@ -70,7 +70,7 @@ Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`. Panthe
 
 </Alert>
 
-## Test and Release Pantheon Core Updates
+## Test and release Pantheon core updates
 
 1. Navigate to the local clone of your upstream repository > add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
@@ -177,7 +177,7 @@ The example command above assumes you are using the default remote destination (
 
 Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
 
-## More Resources
+## More resources
 
 - [WordPress and Drupal Core Updates](/core-updates)
 

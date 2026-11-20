@@ -17,7 +17,7 @@ reviewed: "2026-11-20"
 
 This section provides information to help you manage and maintain your upstream.
 
-## Upstream Configuration File
+## Upstream configuration file
 
 Use the `pantheon.upstream.yml` file when working with upstreams to set default values for advanced site configurations to be used downstream. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation for details.
 
@@ -37,13 +37,13 @@ Remember that this file is not included in the upstream and must exist uniquely 
 
 WordPress sites can also store redirects in an [MU-Plugin](/guides/wordpress-configurations/mu-plugin).
 
-## WordPress MU-Plugins
+## WordPress mu-plugins
 
 Be sure to include and update the [MU-Plugins](https://github.com/pantheon-systems/WordPress/tree/6.2/wp-content/mu-plugins/pantheon-mu-plugin) if you are using WordPress.
 
 Refer to the [WordPress Configuration](/guides/wordpress-configurations) guide for more information about [MU-Plugins on the platform](/guides/wordpress-configurations/mu-plugin).
 
-## More Resources
+## More resources
 
 - [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 

@@ -20,7 +20,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 </Alert>
 
-[Upstreams](/guides/upstream) are available to team members when the Workspace is associated during site creation.
+[Upstreams you create](/guides/upstream) are available to team members when the Workspace is associated during site creation.
 
 ## Pantheon Upstreams
 

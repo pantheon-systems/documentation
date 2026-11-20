@@ -20,7 +20,7 @@ This section provides information on how to manage dependencies for an existing 
 
 <Partial file="upstream-management-dependencies.md" />
 
-## More Resources
+## More resources
 
 - [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
 

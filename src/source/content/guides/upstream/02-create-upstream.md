@@ -15,7 +15,7 @@ integration: [--]
 reviewed: "2026-11-20"
 ---
 
-Pantheon upstreams are a self-serve feature available to anyone with access to the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Workspace members will be able to create new sites from a set common codebase after an Workspace Administrator creates an upstream. The upstream must be created within each Workspace if you want to use a specific upstream for multiple Workspaces.
+Creating an upstream is a self-serve feature available to anyone with access to the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Workspace members will be able to create new sites from a set common codebase after a Workspace Administrator creates an upstream. The upstream must be created within each Workspace if you want to use a specific upstream for multiple Workspaces.
 
 <Alert title="Note" type="info">
 
@@ -23,7 +23,7 @@ Be aware that support for upstreams is limited to verification that the external
 
 </Alert>
 
-## Create and Host the Repository Remotely
+## Create and host the repository remotely
 
 This remote repository serves as the central location for the development and maintenance of your upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
@@ -281,7 +281,7 @@ You must track Pantheon's corresponding upstream repository within your upstream
 
     </TabList>
 
-## Connect Repository to Pantheon
+## Connect repository to Pantheon
 
 <TabList>
 
@@ -326,7 +326,7 @@ You must track Pantheon's corresponding upstream repository within your upstream
 
    - **Framework**: Drupal 7, Drupal (Latest), or WordPress
 
-   - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+   - **Description**: (Optional) Less than 200 characters. Plain text and markdown supported.
 
 4. Click **Create**.
 
@@ -360,7 +360,7 @@ You must track Pantheon's corresponding upstream repository within your upstream
       Learn more about [creating repository access tokens](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).
    - **Upstream Repository Branch**: Enter the name of your primary Bitbucket branch.
    - **Framework**: Drupal 7, Drupal (Latest), or WordPress
-   - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+   - **Description**: (Optional) Less than 200 characters. Plain text and markdown supported.
 1. Click **Create**.
 
 </Tab>
@@ -416,7 +416,7 @@ Common steps needed for most Git Providers are provided below.
 
 </TabList>
 
-### Initial Connection Mode
+### Initial connection mode
 
 The default connection mode for new sites created from an upstream is Git for WordPress and Drupal. The latest version of Drupal defaults to SFTP connection mode.
 
@@ -435,7 +435,7 @@ Configure this setting after connecting your upstream to Pantheon if new sites n
   ![Modify initial connection mode](../../../images/dashboard/initial-connection-mode.png)
 
 
-## More Resources
+## More resources
 
 - [How to Add Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams)
 

@@ -18,7 +18,7 @@ You can create a new site from your homepage by clicking **+ Create New Site**, 
 
    <Alert title="Note" type="info">
 
-   Eligible workspaces can add their own sites to this list! We call these [Upstreams](/guides/upstream), and they function as common start states. Workspaces use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+   Eligible workspaces can add their own sites to this list. We call these [Upstreams](/guides/upstream), and they function as common start states. Workspaces use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
 
    </Alert>
 

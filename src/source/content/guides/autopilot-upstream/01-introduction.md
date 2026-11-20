@@ -43,7 +43,7 @@ Autopilot is available for the following accounts:
 
 Check out our [pricing page](https://pantheon.io/plans/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales?docs) to discuss which plan is best for your needs.
 
-### Autopilot Site Compatibility
+### Autopilot site compatibility
 
 <Partial file="autopilot/autopilot-compatibility.md" />
 
@@ -64,13 +64,13 @@ The upstream workflow frees up developer time, and establishes a sustainable and
 
 New features and functionality can be continuously developed in the upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-### Upstreams for Digital Agencies and Pantheon Resellers
+### Upstreams for digital agencies and Pantheon resellers
 
-Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to upstreams.
+Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners can create their own upstreams.
 
-### Upstreams for Corporate and Higher Education Customers
+### Upstreams for corporate and higher education customers
 
-Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Creating your own upstream is included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
@@ -78,7 +78,7 @@ Support for upstreams requires that the externally hosted upstream repository is
 
 </Alert>
 
-## More Resources
+## More resources
 
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
 

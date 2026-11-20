@@ -17,7 +17,7 @@ Upstreams act as a scaffold for new sites, allowing developers and site owners o
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-## Create the Dev Environment
+## Create the Dev environment
 
 To create a site using an upstream:
 
@@ -25,7 +25,7 @@ To create a site using an upstream:
 
    ![Create new site button](../images/dashboard/create-new-site-button.png)
 
-1. Select **Custom Upstream**.
+1. Select **Upstream**.
 1. Select the upstream you wish to use.
 1. Enter the name and select a region for this site, then click **Continue**. It can take several minutes to create a new site on Pantheon.
 

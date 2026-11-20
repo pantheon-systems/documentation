@@ -398,7 +398,7 @@ Squashing and rewriting history may cause one-click updates to break. This means
 
 If you are in a situation where you've altered the commit history in such a way that the dashboard is no longer able to determine if your site is up to date with the upstream, the simplest course of corrective action is to use `git reset --hard` to reset the site repository to the last known good commit before the squash/rebase/revert was applied. This *will* result in losing *all* changes that have happened since this commit. You will need to re-apply all custom/contributed code updates that occurred in the interim, so make sure to take stock of these changes first and develop a plan to reapply them with the fixed Git history.
 
-### One-Click Update Not Appearing for Sites Using an Upstream
+### One-click update not appearing for sites using an upstream
 
 Core updates for upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
 
@@ -406,7 +406,7 @@ It's important to relay the need for updating core to maintainers, even if you p
 
 After you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
 
-### Upstream Updates Not Available
+### Upstream updates not available
 
 If you know your site's upstream has updated code, but it's not visible on your Site Dashboard, click **Check now**:
 

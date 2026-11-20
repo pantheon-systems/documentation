@@ -335,7 +335,9 @@ Use the `pantheon.yml` file to define scripts you want executed automatically wh
 
 For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/guides/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
 
-## Upstream Configurations
+<a id="custom-upstream-configurations"></a>
+
+## Upstream configurations
 
 Add a `pantheon.upstream.yml` file to your Workspace's [Upstream](/guides/upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
 

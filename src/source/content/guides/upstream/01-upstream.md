@@ -19,13 +19,13 @@ reviewed: "2026-11-20"
 
 ## Benefits
 
-### Standardize Design and Functionality Across Many Sites
+### Standardize design and functionality across many sites
 
 Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-### Efficient Update Strategy
+### Efficient update strategy
 
 The upstream workflow frees up developer time, and establishes a sustainable and scalable process for handling updates across massive site portfolios.
 
@@ -35,13 +35,13 @@ New features and functionality can be continuously developed in the upstream rep
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-edu-drupal-case-study).
 
-### Scale Client Services
+### Scale client services
 
 Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
 
 > Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
 
-## Workflow Overview
+## Workflow overview
 
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
 
@@ -79,7 +79,7 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div className="upstream-content-inner-content">
 <h3>Level 2: Your Upstream</h3>
 
-The second level repository is your upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
+The second level repository is your upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (for example, parent theme and plugin/module version updates).
 
 The upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), or [GitLab](https://gitlab.com/). The upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
 
@@ -99,7 +99,7 @@ To create an upstream from another Git hosting provider (like Azure DevOps or a 
 </ul>
 </div>
 <div className="upstream-content-inner-content">
-<h3>Level 3: Site Repository</h3>
+<h3>Level 3: Site repository</h3>
 
 Core updates and changes to the common codebase make their way down to the site repository for each site that uses the upstream.
 
@@ -108,13 +108,13 @@ The site repository allows separation between common code across all sites, trac
 </div>
 </div>
 
-## Upstreams for Digital Agencies and Pantheon Resellers
+## Upstreams for digital agencies and Pantheon resellers
 
-Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners have access to upstreams.
+Visit the [Agency Partner Program page](https://pantheon.io/partners?docs) or download the [Agency Partner Program Guide](https://pantheon.io/resources/guide/pantheon-partner-program-guide?docs) to learn more about becoming an Agency Partner. All agency partners can create their own upstreams.
 
-## Upstreams for Corporate and Higher Education Customers 
+## Upstreams for corporate and higher education customers 
 
-Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Creating your own upstream is included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
@@ -139,15 +139,15 @@ Here are definitions for commonly used terms:
 <p>A<dfn id="repository">repository</dfn> is a collection of files packaged in a single directory under version control.</p>
 
 
-### Remote Repository
+### Remote repository
 
 <p>A <dfn id="remote-repository">remote repository</dfn> is the central version control location, such as a repository residing on GitHub, Bitbucket, or GitLab.</p>
 
-### Upstream Updates
+### Upstream updates
 
 <p><dfn id="upstream-updates"> Upstream Updates</dfn> are code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.</p>
 
-### Site Repository
+### Site repository
 
 <p>A <dfn id="site-repository">site repository</dfn> is a child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.</p>
 
@@ -155,7 +155,7 @@ Here are definitions for commonly used terms:
 
 <p>The <dfn id="framework">framework</dfn> determines the server configuration for a given CMS. It includes things like Nginx configuration, the relevant CLI tool to install (Drush or WP-CLI), etc. This setting is visible to users via Terminus and in the Site Settings. Once a framework has been set, it cannot be changed at the site level through the UI or Terminus. If you need to change your upstream's framework, you would need to contact Support.</p>
 
-## More Resources
+## More resources
 
 - [Best Practices for Maintaining Upstreams](/guides/upstream/maintain-upstream)
 
