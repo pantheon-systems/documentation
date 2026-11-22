@@ -68,7 +68,7 @@ jobs:
       # Installs the pinned terminus.phar from the release above onto PATH, so
       # scripts/terminus-docs.ts doesn't need to fetch/install it itself.
       - name: Set up Terminus
-        uses: pantheon-systems/terminus-github-actions@34305c662bb28fb2935aa5556cab46643a0c5170 # v1.2.11
+        uses: pantheon-systems/terminus-github-actions@26fc7c754c80fd1c9fe2d6d3ae77528a15033b6f # v1.2.13
         with:
           terminus-version: ${{ steps.release.outputs.tag }}
           disable-cache: true
@@ -90,7 +90,7 @@ jobs:
 
       - name: Create pull request
         id: pr
-        uses: peter-evans/create-pull-request@15733dbdfeedb4f7fdb73d13c6f5ac83b710fab8 # v8.1.2
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         with:
           # Deterministic per release, so a re-run updates the open PR instead of
           # opening another one.
