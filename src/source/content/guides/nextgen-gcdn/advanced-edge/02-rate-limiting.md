@@ -44,10 +44,10 @@ Add a `rate_limit` section to `pantheon-edge.yml`. Your workspace's plan must in
 
 | Tier | Limit | Average rate | Default penalty |
 | --- | --- | --- | --- |
-| `relaxed` | 2,500 requests per 60 seconds | About 42 requests per second | 120 seconds |
-| `standard` | 500 requests per 10 seconds | 50 requests per second | 120 seconds |
-| `strict` | 1,000 requests per 10 seconds | 100 requests per second | 120 seconds |
-| `extreme` | 300 requests per 10 seconds | 30 requests per second | 60 seconds |
+| `relaxed` | `2,500` requests per second rate over `60` seconds period | `2,500` requests per second | 120 seconds |
+| `standard` | `500` requests per second rate over `10` seconds period | `500` requests per second | 120 seconds |
+| `strict` | `100` requests per second rate over `10` seconds period | `100` requests per second | 120 seconds |
+| `extreme` | `30` requests per second rate over `10` seconds period | `30` requests per second | 60 seconds |
 | `noop` | No limit | None | None |
 
 ## Examples
