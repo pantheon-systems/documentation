@@ -185,6 +185,7 @@ const webInfrastructure = () => {
       simpleLink("/nextjs", "Next.js", [
         simpleLink("/nextjs", "Next.js Overview"),
         simpleLink("/nextjs/comparison-to-cms-hosting", "Comparison to CMS Hosting"),
+        simpleLink("/nextjs/nextjs-15-EOL", "Next.js 15 EOL"),
         simpleLink("/nextjs/architecture", "Architecture and Git Workflow", [
           simpleLink("/nextjs/architecture", "Architecture"),
           simpleLink("/nextjs/standalone-output", "Standalone Output"),
