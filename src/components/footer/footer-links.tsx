@@ -11,14 +11,19 @@ type HeadingLevel = "h2" | "h3" | "h4";
 
 export const FooterHeading = ({
   headingText,
+  headingId,
   headingLevel: Heading = "h2",
   className,
 }: {
   headingText: string;
+  headingId?: string;
   headingLevel?: HeadingLevel;
   className?: string;
 }) => (
-  <Heading className={`pds-heading-m ${styles.heading} ${className ?? ""}`}>
+  <Heading
+    id={headingId}
+    className={`pds-heading-m ${styles.heading} ${className ?? ""}`}
+  >
     {headingText}
   </Heading>
 );
@@ -28,23 +33,29 @@ export const FooterLinks = ({
   headingLevel,
   linkItems,
   className,
-  slot,
 }: {
   headingText: string;
   headingLevel?: HeadingLevel;
   linkItems: React.ReactNode[];
   className?: string;
-  slot?: string;
-}) => (
-  <div className={className} slot={slot}>
-    <FooterHeading headingText={headingText} headingLevel={headingLevel} />
-    <ul className={styles.links}>
-      {linkItems.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  </div>
-);
+}) => {
+  const headingId = `footer-${headingText.toLowerCase().replace(/\W+/g, "-")}`;
+
+  return (
+    <nav className={className} aria-labelledby={headingId}>
+      <FooterHeading
+        headingText={headingText}
+        headingId={headingId}
+        headingLevel={headingLevel}
+      />
+      <ul className={styles.links}>
+        {linkItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 const socialLinks: { href: string; label: string; icon: PDSIcon }[] = [
   { href: "https://www.facebook.com/getpantheon", label: "Pantheon on Facebook", icon: "facebook" },

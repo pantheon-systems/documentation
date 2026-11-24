@@ -1,24 +1,53 @@
-.footerFormIntro {
-  margin-top: -0.375rem;
-}
-
-.ccLicense {
-  align-items: center;
-  column-gap: var(--pds-spacing-l);
-  display: flex;
-}
-
-.ccLicenseLogoImage {
-  min-width: 8rem;
-  width: 8rem;
-  height: auto;
-}
-
-.ccLicenseLogoText {
-  line-height: var(--pds-typography-lh-m);
-  padding-block-start: 0.5rem;
-}
-
 .withBorder {
   border-top: 1px solid var(--pds-color-border-default);
+}
+
+/* Brand column, three link groups and the connect column. */
+.footer {
+  display: grid;
+  gap: var(--pds-spacing-2xl);
+  grid-template-columns: 1.3fr repeat(3, 1fr) 1.5fr;
+  padding-block: var(--pds-spacing-2xl);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-m);
+}
+
+.license {
+  line-height: var(--pds-typography-lh-m);
+  margin: 0;
+}
+
+.licenseLogo {
+  height: auto;
+  width: 5.5rem;
+}
+
+.connect {
+  min-width: 0;
+}
+
+.connectIntro {
+  line-height: var(--pds-typography-lh-m);
+  margin-block: 0 var(--pds-spacing-m);
+}
+
+@media (max-width: 1100px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand,
+  .connect {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }

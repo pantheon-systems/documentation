@@ -2,7 +2,7 @@
 import style from "./style.module.css";
 
 import React from "react";
-import { SiteFooter, ThreeItemLayout } from "@/components/ui/pds-re-export";
+import { PantheonLogo, SiteFooter } from "@/components/ui/pds-re-export";
 import { FooterHeading, FooterLinks, SocialLinks } from "./footer-links";
 import Link from "next/link";
 
@@ -11,37 +11,34 @@ import CCLogo from "@/source/images/CC-BY-SA_icon.png";
 import { cn } from "@/lib/utils";
 
 const topicLinks = [
-  <Link href="/get-started/">Get Started</Link>,
+  <Link href="/get-started/">Get started</Link>,
   <Link href="/develop/">Develop</Link>,
-  <Link href="/go-live/">Go Live</Link>,
-  <Link href="/platform/">Explore Platform Architecture</Link>,
-  <Link href="/automate/">Automate & Integrate</Link>,
-  <Link href="/performance/">Optimize Performance</Link>,
-  <Link href="/manage/">Manage Teams & Organizations</Link>,
+  <Link href="/go-live/">Go live</Link>,
+  <Link href="/platform/">Explore platform architecture</Link>,
+  <Link href="/automate/">Automate & integrate</Link>,
+  <Link href="/performance/">Optimize performance</Link>,
+  <Link href="/manage/">Manage teams & organizations</Link>,
   <Link href="/troubleshoot/">Troubleshoot</Link>,
 ];
 
 const helpLinks = [
-  <a href="https://pantheon.io/contact-us" className="cta docs-cta">
-    Contact
-  </a>,
-  <a
-    href="https://directory.pantheon.io/agencies?docs"
-    className="cta docs-cta"
-  >
-    Hire an Agency
-  </a>,
+  <a href="https://pantheon.io/contact-us">Contact</a>,
+  <a href="https://pantheon.io/developers/office-hours?docs">Office Hours</a>,
+  <a href="https://pantheon.io/learn-pantheon?docs">Learn Pantheon</a>,
+  <a href="https://directory.pantheon.io/agencies?docs">Hire an agency</a>,
   <a href="https://status.pantheon.io/">Status</a>,
   <Link href="/guides/support/">Support</Link>,
 ];
 
 const communityLinks = [
-  <Link href="/code-of-conduct/">Code of Conduct</Link>,
+  <Link href="/code-of-conduct/">Code of conduct</Link>,
   <Link href="/contributors/">Contributors</Link>,
   <Link href="/pantheon-community/">Community & Power Users Group</Link>,
-  <Link href="/contribute/">Learn to Contribute</Link>,
+  <Link href="/contribute/">Learn to contribute</Link>,
 ];
 
+// The layout follows the PDS docs site prototype: a brand column with the
+// license, three link groups, and a connect column.
 export const Footer = ({
   className,
   withBorder = true,
@@ -52,53 +49,46 @@ export const Footer = ({
   return (
     <SiteFooter
       legalLinks={[
-        'privacy',
-        'dataSubjectRequest',
-        'cookiePolicy',
-        <button id='ot-sdk-btn' className='ot-sdk-show-settings'  />,
-        'termsOfUse',
-        'acceptableUse',
-        'accessibilityStatement',
+        "privacy",
+        "dataSubjectRequest",
+        "cookiePolicy",
+        <button id="ot-sdk-btn" className="ot-sdk-show-settings" />,
+        "termsOfUse",
+        "acceptableUse",
+        "accessibilityStatement",
       ]}
-      containerWidth="standard"
+      containerWidth="x-wide"
       className={cn(
         className,
         "pds-site-footer",
         withBorder && style.withBorder
       )}
     >
-      <div className="pds-footer__links-area pds-grid pds-grid--gap-3xl">
-        <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
-          <ThreeItemLayout>
-            <FooterLinks
-              slot="first-item"
-              headingText="Topics"
-              headingLevel="h2"
-              linkItems={topicLinks}
-            />
-            <FooterLinks
-              slot="second-item"
-              headingText="Help"
-              headingLevel="h2"
-              linkItems={helpLinks}
-              className="pds-mar-block-start-xl@sm"
-            />
-            <FooterLinks
-              slot="third-item"
-              headingText="Community"
-              headingLevel="h2"
-              linkItems={communityLinks}
-              className="pds-mar-block-start-xl@sm"
-            />
-          </ThreeItemLayout>
-        </div>
-        <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
-          <FooterHeading
-            headingText="Connect"
-            headingLevel="h2"
-            className="pds-pad-block-start-xl pds-pad-block-start-none@lg"
+      <div className={style.footer}>
+        <div className={style.brand}>
+          <PantheonLogo linkContent={<Link href="/">Pantheon Docs</Link>} />
+          <p className={cn(style.license, "pds-ts-s")}>
+            Our documentation is licensed under a{" "}
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>
+            . Code snippets are additionally licensed under{" "}
+            <a href="https://opensource.org/license/mit">The MIT License</a>.
+          </p>
+          <img
+            className={style.licenseLogo}
+            src={CCLogo.src}
+            alt="Creative Commons Attribution-ShareAlike Logo"
           />
-          <p className={cn(style.footerFormIntro, "pds-ts-s")}>
+        </div>
+
+        <FooterLinks headingText="Topics" linkItems={topicLinks} />
+        <FooterLinks headingText="Help" linkItems={helpLinks} />
+        <FooterLinks headingText="Community" linkItems={communityLinks} />
+
+        <section className={style.connect} aria-labelledby="footer-connect">
+          <FooterHeading headingText="Connect" headingId="footer-connect" />
+          <p className={cn(style.connectIntro, "pds-ts-s")}>
             Awesome development news, tutorials, and tips. Plus get three free
             downloads, just for signing up. If you don't love it, unsubscribe
             with just a click.
@@ -111,23 +101,8 @@ export const Footer = ({
               formName="mktoForm_2014"
             />
           </div>
-          <SocialLinks className="pds-mar-block-start-xl" />
-        </div>
-      </div>
-
-      <div className={cn(style.ccLicense, "pds-mar-block-start-5xl")}>
-        <div className={style.ccLicenseLogoImage}>
-          <img
-            className={style.ccLicenseLogoImage}
-            src={CCLogo.src}
-            alt="Creative Commons Attribution-ShareAlike Logo"
-          />
-        </div>
-        <p className={cn(style.ccLicenseLogoText, "pds-ts-s")}>
-          Our Documentation is licensed under a Creative Commons
-          Attribution-ShareAlike 4.0 International License. Code snippets are
-          additionally licensed under The MIT License.
-        </p>
+          <SocialLinks />
+        </section>
       </div>
     </SiteFooter>
   );
