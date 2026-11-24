@@ -86,7 +86,7 @@
 
 .addsearch-pagination {
   align-items: center;
-  color: var(--pds-color-text-default);
+  color: var(--pds-color-foreground-default);
   column-gap: var(--pds-spacing-3xs);
   display: flex;
   font-family: var(--pds-typography-ff-default);
@@ -98,7 +98,7 @@
 .addsearch-pagination button {
   align-items: center;
   border-radius: var(--pds-border-radius-default);
-  color: var(--pds-color-text-default);
+  color: var(--pds-color-foreground-default);
   display: flex;
   font-weight: var(--pds-typography-fw-semibold);
   justify-content: center;
@@ -106,7 +106,7 @@
   min-width: var(--pds-spacing-2xl);
   padding: var(--pds-spacing-2xs) 0;
   text-decoration: none;
-  transition: var(--pds-animation-button-transition);
+  transition: var(--pds-animation-transition-button);
 }
 
 .addsearch-pagination button:hover {

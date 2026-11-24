@@ -143,7 +143,7 @@ a.docs-header-anchor {
   margin-inline-start: var(--pds-spacing-xs);
 }
 a.docs-header-anchor svg {
-  fill: var(--pds-color-text-default-secondary);
+  fill: var(--pds-color-foreground-default-secondary);
   height: var(--pds-spacing-l);
 }
 a.docs-header-anchor:hover svg {
@@ -152,7 +152,7 @@ a.docs-header-anchor:hover svg {
 
 /* Changelog styles */
 a.individual-changelog-link {
-  color: var(--pds-color-text-default);
+  color: var(--pds-color-foreground-default);
   display: block;
 
   text-decoration: none;
@@ -206,13 +206,13 @@ a.individual-changelog-link:hover {
   font-weight: var(--pds-typography-fw-semibold) !important;
   height: 2.25rem;
   letter-spacing: var(--pds-typography-ls-m);
-  transition: var(--pds-animation-button-transition);
+  transition: var(--pds-animation-transition-button);
 }
 
 .mktoButtonRow .mktoButtonWrap button.mktoButton:hover {
   background-color: var(--pds-color-button-primary-background-hover) !important;
   border-color: var(--pds-color-button-primary-background-hover) !important;
-  transition: var(--pds-animation-button-transition);
+  transition: var(--pds-animation-transition-button);
 }
 
 .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
@@ -261,7 +261,7 @@ a.individual-changelog-link:hover {
   border: 1px solid var(--pds-color-foreground-default);
   -webkit-box-shadow: var(--pds-elevation-overlay);
   box-shadow: var(--pds-elevation-overlay);
-  color: var(--pds-color-text-reverse);
+  color: var(--pds-color-foreground-reverse);
   text-shadow: none;
 }
 .mktoForm .mktoError {
@@ -3173,7 +3173,7 @@ button.pds-side-nav-compact__toggle .pds-icon {
 }
 
 .docs-contributor-link a {
-  color: var(--pds-color-text-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
 }
 
 .docs-contributor-link a:hover {
@@ -3301,7 +3301,7 @@ mark.release-note-search-highlight {
 }
 
 .rn-search-result-count {
-  color: var(--pds-color-fg-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
   font-size: var(--pds-typography-size-s);
   margin-block-end: var(--pds-spacing-l);
 }
@@ -3329,7 +3329,7 @@ mark.release-note-search-highlight {
 }
 
 .rn-search-result__title {
-  color: var(--pds-color-text-default);
+  color: var(--pds-color-foreground-default);
   font-size: var(--pds-typography-size-l);
   font-weight: 700;
   text-decoration: none;

@@ -7,7 +7,7 @@
 }
 
 .githubLink {
-  color: var(--pds-color-text-default);
+  color: var(--pds-color-foreground-default);
   column-gap: var(--pds-spacing-2xs);
   display: flex;
   font-size: var(--pds-typography-size-s);

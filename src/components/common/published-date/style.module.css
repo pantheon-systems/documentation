@@ -1,5 +1,5 @@
 .docsPublishedDate {
   font-size: var(--pds-typography-size-m);
   font-weight: var(--pds-typography-fw-semibold);
-  color: var(--pds-color-text-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
 }
