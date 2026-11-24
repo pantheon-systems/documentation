@@ -141,7 +141,7 @@ const ReleaseNotePopoverCategorySelector = ({
       <Button
         label="Clear all filters"
         variant="subtle"
-        size="sm"
+        size="s"
         onClick={handleClearCategoriesFilters}
       />
     </>
@@ -150,7 +150,7 @@ const ReleaseNotePopoverCategorySelector = ({
   const popoverTrigger = (
     <Button
       label="Filter by category"
-      size="md"
+      size="m"
       variant="secondary"
       iconName={popoverTriggerIcon}
       displayType="icon-end"

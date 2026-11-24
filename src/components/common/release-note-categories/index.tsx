@@ -1,5 +1,5 @@
 import React from "react";
-import { Tag } from "@/components/ui/pds-re-export";
+import { Tag, type TagColor } from "@/components/ui/pds-re-export";
 import Link from "next/link";
 import styles from "./style.module.css";
 import { cn } from "@/lib/utils";
@@ -12,7 +12,7 @@ const releaseNoteCategoryLoader = async (
   const categoriesObject: {
     slug: string;
     displayName: string;
-    color: string;
+    color: TagColor;
   }[] = categories[0].content.categories;
 
   for (let i = 0; i < categoriesObject.length; i++) {
@@ -23,7 +23,7 @@ const releaseNoteCategoryLoader = async (
 
   return {
     displayName: categorySlug,
-    color: "blue",
+    color: "info" as TagColor,
   };
 };
 
