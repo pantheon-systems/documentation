@@ -21,6 +21,11 @@
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
 
+.contributors-list {
+  list-style: none;
+  padding: 0;
+}
+
 /* Revert custom font's bullet rendering styles */
 li::before {
   font-family: auto;
