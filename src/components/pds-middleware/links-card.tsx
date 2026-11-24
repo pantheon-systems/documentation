@@ -3,6 +3,8 @@ import React from "react";
 
 import { Card } from "@/components/ui/pds-re-export";
 
+import styles from "./links-card.module.css";
+
 // PDS V2 removed LinksCard. This is a deliberately small stand-in built on
 // Card so it is easy to swap for the toolkit's Links Card pattern later.
 
@@ -19,8 +21,8 @@ export function LinksCard({
 }) {
   return (
     <Card className={className}>
-      <Heading className="pds-heading-l">{headingText}</Heading>
-      <ul className="pds-mar-block-start-m">
+      <Heading className={`pds-heading-l ${styles.heading}`}>{headingText}</Heading>
+      <ul className={styles.links}>
         {linkItems.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
