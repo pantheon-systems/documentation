@@ -31,6 +31,9 @@
 .docs-table-scroll {
   max-width: 100%;
   overflow-x: auto;
+  /* Positioned, so absolutely positioned cell content (such as the visually
+     hidden text in a popover trigger) is clipped here and can't widen the page. */
+  position: relative;
 }
 
 /* Revert custom font's bullet rendering styles */
@@ -345,13 +348,6 @@ article {
   *:has(+ ul) {
     margin-bottom: 0;
   }
-}
-
-.sticky-wrapper {
-  position: sticky;
-  top: var(--pds-spacing-xl);
-  height: calc(100vh - var(--pds-spacing-4xl));
-  overflow-y: auto;
 }
 
 /* Temporary global styles that should be incorporated back into PDS */
@@ -3160,6 +3156,11 @@ code {
   padding: var(--pds-spacing-5xs) var(--pds-spacing-4xs);
 }
 
+/* Let long inline code (paths, URLs) wrap instead of widening the page. */
+:not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
 pre > code {
   background-color: inherit;
   color: #ffffff;
@@ -3382,11 +3383,3 @@ mark.release-note-search-highlight {
   color: var(--pds-color-foreground-default);
   margin-block-start: var(--pds-spacing-m);
 }
-  /* Positioned, so absolutely positioned cell content (such as the visually
-     hidden text in a popover trigger) is clipped here and can't widen the page. */
-  position: relative;
-/* Let long inline code (paths, URLs) wrap instead of widening the page. */
-:not(pre) > code {
-  overflow-wrap: anywhere;
-}
-

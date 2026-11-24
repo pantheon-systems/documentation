@@ -3,7 +3,6 @@
 @import "@pantheon-systems/pds-toolkit-react/css/pds-core.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-components.css";
-@import "tocbot/dist/tocbot.css";
 
 /* custom typefaces */
 @import "prismjs/themes/prism-okaidia.css";
@@ -126,94 +125,6 @@ a.pds-skiplink:focus {
   align-items: center;
   justify-content: center;
   padding: 0;
-}
-
-@media screen and (max-width: 900px) {
-  .pds-sidebar-layout__content
-    #docs-main
-    .pds-sidebar-layout
-    .pds-sidebar-layout__side:has(.toc-placeholder) {
-    display: none;
-  }
-}
-
-.toc-placeholder {
-  margin-block-end: var(--pds-spacing-4xs);
-}
-
-.toc-container {
-  border-left: 1px solid var(--pds-color-border-default);
-  font-family: var(--pds-typography-ff-default);
-  font-weight: var(--pds-typography-fw-regular);
-  margin-block-start: var(--pds-spacing-xl);
-  overflow: auto;
-  position: sticky;
-  position: -webkit-sticky;
-  top: var(--pds-spacing-m);
-  /* width: 100%; */
-}
-
-.toc-container a {
-  color: var(--pds-color-foreground-default);
-  font-size: var(--pds-typography-size-s);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--pds-color-interactive-link-hover);
-    text-decoration: underline;
-  }
-}
-
-#toc-nav {
-  font-size: 1.44rem;
-  font-weight: var(--pds-typography-fw-semibold);
-  margin-block-end: var(--pds-spacing-l);
-  padding-inline-start: var(--pds-spacing-xl);
-}
-
-ul.toc-list {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding-inline-start: var(--pds-spacing-s);
-  padding-inline-end: var(--pds-spacing-2xs);
-  padding-block-end: var(--pds-spacing-s);
-  row-gap: var(--pds-spacing-xs);
-}
-
-ul.toc-list .is-collapsible {
-  max-height: none;
-}
-
-/* Nested lists. Tocbot adds is-collapsed to every nested list, even though the
-   rule above keeps them open, so zeroing the padding on .is-collapsed removed
-   the gap between a heading and its first sub-heading. Give nested lists the
-   same gap as sibling items (the parent's row-gap) and no bottom padding, so
-   every step in the TOC is evenly spaced. */
-ul.toc-list ul {
-  padding-block-start: var(--pds-spacing-xs);
-  padding-block-end: 0;
-}
-
-ul.toc-list ul li {
-  list-style-type: none;
-}
-
-.toc-link.is-active-link {
-  color: var(--pds-color-interactive-link-active);
-}
-
-.toc-list .is-active-link::before,
-.toc-link::before {
-  display: none;
-}
-
-.tocify-item {
-  line-height: var(--pds-typography-lh-s);
-}
-
-.tocify-item.is-active-li a {
-  font-weight: var(--pds-typography-fw-regular);
 }
 
 pre {

@@ -76,7 +76,6 @@
     "string-width": "^7.2.0",
     "swr": "^2.3.4",
     "tailwind-merge": "^2.6.0",
-    "tocbot": "^4.36.4",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
     "uuid": "^11.1.0"

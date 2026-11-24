@@ -3,10 +3,7 @@ import { GuideItem } from "@/components/common/guide-item";
 import { IntegrationGuideItem } from "@/components/common/integration-guide-item";
 import { SubTopicGroup } from "@/components/common/subtopic-group";
 import { Youtube } from "@/components/common/youtube";
-import SearchBar from "@/components/header/search-bar";
-import Layout from "@/components/layout";
-import { OmniSidebarNav } from "@/components/omniSideBarNav";
-import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layout";
+import { DocsPage } from "@/components/docs-page";
 import { Container } from "@/components/ui/pds-re-export";
 import { LinksCard } from "@/components/pds-middleware/links-card";
 import Link from "next/link";
@@ -82,187 +79,170 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
     groupLength === 2 || groupLength === 4 ? "two" : "three";
 
   return (
-    <Layout containerWidth="standard" excludeSearch={true}>
-      <DocsSidebarLayout
-        sidebarWidth="narrow"
-        gridGap="narrow"
-        sidebarLocation="left"
-        className="pds-container pds-container--x-wide"
-      >
-        <div slot="sidebar" className="guide-sidebar">
-          <OmniSidebarNav
-            activePage={topic.path}
-          />
+    <DocsPage activePage={topic.path}>
+      <Container width={containerWidth} className="landing-page__header">
+        <div className="landing-page-heading pds-pad-block-m">
+          <h1 className="pds-heading-4xl pds-mar-block-end-m">
+            {topic.title}
+          </h1>
+          {topic.subtitle && (
+            <div className="docs-lead-text docs-lead-text--sm pds-mar-block-end-6xs">
+              {topic.subtitle}
+            </div>
+          )}
         </div>
-        <main id="docs-main" slot="content" tabIndex={-1}>
-          <Container width={containerWidth}>
-            <SearchBar />
+      </Container>
+      {/* Video */}
+      {topic.video_id && (
+        <div className="landing-page__video-background">
+          <Container
+            width={containerWidth}
+            className="video-container pds-mar-block-start-xl pds-mar-block-end-4xl"
+          >
+            <Youtube src={topic.video_id} title={topic.title} />
           </Container>
-          <Container width={containerWidth} className="landing-page__header">
-            <div className="landing-page-heading pds-pad-block-m">
-              <h1 className="pds-heading-4xl pds-mar-block-end-m">
-                {topic.title}
-              </h1>
-              {topic.subtitle && (
-                <div className="docs-lead-text docs-lead-text--sm pds-mar-block-end-6xs">
-                  {topic.subtitle}
-                </div>
+        </div>
+      )}
+
+      {/* Topic guides */}
+      {topic.guides &&
+        topic.guides.map((guide, idx) => (
+          <Container
+            key={`${guide.title}-${idx}`}
+            width={containerWidth}
+            className="landing-page__guides pds-mar-block-end-2xl"
+          >
+            <hr className="landing-page__guides-separator" />
+            {guide.title ? (
+              <h2 className="text-3xl font-bold landing-page__guides-title">
+                {guide.title}
+              </h2>
+            ) : (
+              <h2 className="text-3xl font-bold landing-page__guides-title">
+                Popular guides
+              </h2>
+            )}
+
+            <div className="landing-page__guide-items">
+              {guide.links &&
+                guide.links.map((link, idx) =>
+                  guide.type === "normal" ? (
+                    <GuideItem
+                      key={`${link.text}-${idx}`}
+                      url={link.url}
+                      image={link.image}
+                      text={link.text}
+                    />
+                  ) : (
+                    <IntegrationGuideItem
+                      key={`${link.text}-${idx}`}
+                      url={link.url}
+                      image={link.image || ""}
+                    />
+                  ),
+                )}
+            </div>
+          </Container>
+        ))}
+
+      {/* Subtopics */}
+      {topic.subtopics && (
+        <div
+          className="pds-pad-block-start-5xl"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--pds-spacing-3xl)",
+          }}
+        >
+          {topic.subtopics &&
+            topic.subtopics.map((subtopic, idx) => (
+              <div
+                key={`${subtopic.title}-${idx}`}
+                className="landing-page__subtopics"
+              >
+                <SubTopicGroup
+                  key={subtopic.title}
+                  title={subtopic.title}
+                  subTitle={subtopic.subtitle}
+                  topics={subtopic.subtopic_lists}
+                />
+              </div>
+            ))}
+        </div>
+      )}
+
+      {/* Topic groups */}
+      {topic.topics_groups && (
+        <div className="pds-pad-block-5xl">
+          <Container
+            width={containerWidth}
+            className="landing-page__topics pds-grid"
+          >
+            {topic.topics_groups &&
+              topic.topics_groups.map((group, key) => (
+                <LinksCard
+                  className={
+                    topicGroupsColumns === "two"
+                      ? twoColumnClasses
+                      : threeColumnClasses
+                  }
+                  key={group.title}
+                  headingLevel="h2"
+                  headingText={group.title}
+                  linkItems={group.links.map((link, index) => (
+                    <Link
+                      key={index}
+                      style={{
+                        color: "var(--pds-color-interactive-link-default)",
+                        fontWeight: "var(--pds-typography-fw-regular)",
+                      }}
+                      href={link.url ?? "#"}
+                    >
+                      {link.text}
+                    </Link>
+                  ))}
+                />
+              ))}
+          </Container>
+        </div>
+      )}
+
+      {/* Related resources */}
+      {(topic.cta || topic.cta_alt) && (
+        <div className="landing-page__related pds-pad-block-start-4xl pds-pad-block-end-5xl">
+          <Container width={containerWidth}>
+            <h2 className="landing-page__section-heading text-3xl font-bold">
+              Related Resources
+            </h2>
+            <div
+              style={{
+                display: "flex",
+                gap: "var(--pds-spacing-2xl)",
+              }}
+            >
+              {topic.cta && (
+                <CallToAction
+                  title={topic.cta.title}
+                  type={topic.cta.type}
+                  subTitle={topic.cta.subtitle}
+                  url={topic.cta.url}
+                  dark={false}
+                />
+              )}
+              {topic.cta_alt && (
+                <CallToAction
+                  title={topic.cta_alt.title}
+                  type={topic.cta_alt.type}
+                  subTitle={topic.cta_alt.subtitle}
+                  url={topic.cta_alt.url}
+                  dark
+                />
               )}
             </div>
           </Container>
-          {/* Video */}
-          {topic.video_id && (
-            <div className="landing-page__video-background">
-              <Container
-                width={containerWidth}
-                className="video-container pds-mar-block-start-xl pds-mar-block-end-4xl"
-              >
-                <Youtube src={topic.video_id} title={topic.title} />
-              </Container>
-            </div>
-          )}
-
-          {/* Topic guides */}
-          {topic.guides &&
-            topic.guides.map((guide, idx) => (
-              <Container
-                key={`${guide.title}-${idx}`}
-                width={containerWidth}
-                className="landing-page__guides pds-mar-block-end-2xl"
-              >
-                <hr className="landing-page__guides-separator" />
-                {guide.title ? (
-                  <h2 className="text-3xl font-bold landing-page__guides-title">
-                    {guide.title}
-                  </h2>
-                ) : (
-                  <h2 className="text-3xl font-bold landing-page__guides-title">
-                    Popular guides
-                  </h2>
-                )}
-
-                <div className="landing-page__guide-items">
-                  {guide.links &&
-                    guide.links.map((link, idx) =>
-                      guide.type === "normal" ? (
-                        <GuideItem
-                          key={`${link.text}-${idx}`}
-                          url={link.url}
-                          image={link.image}
-                          text={link.text}
-                        />
-                      ) : (
-                        <IntegrationGuideItem
-                          key={`${link.text}-${idx}`}
-                          url={link.url}
-                          image={link.image || ""}
-                        />
-                      ),
-                    )}
-                </div>
-              </Container>
-            ))}
-
-          {/* Subtopics */}
-          {topic.subtopics && (
-            <div
-              className="pds-pad-block-start-5xl"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "var(--pds-spacing-3xl)",
-              }}
-            >
-              {topic.subtopics &&
-                topic.subtopics.map((subtopic, idx) => (
-                  <div
-                    key={`${subtopic.title}-${idx}`}
-                    className="landing-page__subtopics"
-                  >
-                    <SubTopicGroup
-                      key={subtopic.title}
-                      title={subtopic.title}
-                      subTitle={subtopic.subtitle}
-                      topics={subtopic.subtopic_lists}
-                    />
-                  </div>
-                ))}
-            </div>
-          )}
-
-          {/* Topic groups */}
-          {topic.topics_groups && (
-            <div className="pds-pad-block-5xl">
-              <Container
-                width={containerWidth}
-                className="landing-page__topics pds-grid"
-              >
-                {topic.topics_groups &&
-                  topic.topics_groups.map((group, key) => (
-                    <LinksCard
-                      className={
-                        topicGroupsColumns === "two"
-                          ? twoColumnClasses
-                          : threeColumnClasses
-                      }
-                      key={group.title}
-                      headingLevel="h2"
-                      headingText={group.title}
-                      linkItems={group.links.map((link, index) => (
-                        <Link
-                          key={index}
-                          style={{
-                            color: "var(--pds-color-interactive-link-default)",
-                            fontWeight: "var(--pds-typography-fw-regular)",
-                          }}
-                          href={link.url ?? "#"}
-                        >
-                          {link.text}
-                        </Link>
-                      ))}
-                    />
-                  ))}
-              </Container>
-            </div>
-          )}
-
-          {/* Related resources */}
-          {(topic.cta || topic.cta_alt) && (
-            <div className="landing-page__related pds-pad-block-start-4xl pds-pad-block-end-5xl">
-              <Container width={containerWidth}>
-                <h2 className="landing-page__section-heading text-3xl font-bold">
-                  Related Resources
-                </h2>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "var(--pds-spacing-2xl)",
-                  }}
-                >
-                  {topic.cta && (
-                    <CallToAction
-                      title={topic.cta.title}
-                      type={topic.cta.type}
-                      subTitle={topic.cta.subtitle}
-                      url={topic.cta.url}
-                      dark={false}
-                    />
-                  )}
-                  {topic.cta_alt && (
-                    <CallToAction
-                      title={topic.cta_alt.title}
-                      type={topic.cta_alt.type}
-                      subTitle={topic.cta_alt.subtitle}
-                      url={topic.cta_alt.url}
-                      dark
-                    />
-                  )}
-                </div>
-              </Container>
-            </div>
-          )}
-        </main>
-      </DocsSidebarLayout>
-    </Layout>
+        </div>
+      )}
+    </DocsPage>
   );
 };
