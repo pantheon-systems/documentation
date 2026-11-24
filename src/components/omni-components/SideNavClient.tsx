@@ -49,6 +49,7 @@ export const SideNavClient = ({
 
   return (
     <TreeNav
+      hasMobileDrilldown
       className="sidenav-compact"
       ariaLabel={headingText}
       headingText={headingText}
