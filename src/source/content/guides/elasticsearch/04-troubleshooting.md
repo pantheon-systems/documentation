@@ -55,7 +55,7 @@ The Instant Results feature requires a stored search template on ElasticPress.io
 
 A query that returns an HTTP 403 with `current license is non-compliant for [feature]` uses an Elasticsearch feature that requires an Enterprise license, such as Reciprocal Rank Fusion (RRF) or the linear retriever.
 
-Pantheon offers Elasticsearch through ElasticPress.io on the Basic license tier. There is no Enterprise tier or upgrade path. Use a query that doesn't depend on the Enterprise-only feature, or bring your own Elasticsearch cluster. See [Do I get all the features of ElasticPress?](#do-i-get-all-the-features-of-elasticpress).
+Pantheon offers Elasticsearch powered by ElasticPress.io on the Basic license tier. There is no Enterprise tier or upgrade path. Use a query that doesn't depend on the Enterprise-only feature, or bring your own Elasticsearch cluster. See [Do I get all the features of ElasticPress?](#do-i-get-all-the-features-of-elasticpress).
 
 ## Frequently Asked Questions
 
@@ -81,7 +81,7 @@ Pantheon uses shared Elasticsearch clusters.
 
 ### Do I get all the features of ElasticPress?
 
-Most ElasticPress features work on Pantheon. Pantheon offers Elasticsearch through [ElasticPress.io](https://www.elasticpress.io/), a hosted Elasticsearch service, on the Basic license tier. Features that require an Elasticsearch Enterprise license, such as Reciprocal Rank Fusion (RRF) and the linear retriever, are not available.
+Most ElasticPress features work on Pantheon. Pantheon offers Elasticsearch powered by [ElasticPress.io](https://www.elasticpress.io/), a hosted search service, on the Basic license tier. Features that require an Elasticsearch Enterprise license, such as Reciprocal Rank Fusion (RRF) and the linear retriever, are not available.
 
 Pantheon does not offer an Elasticsearch Enterprise tier or an upgrade path to one. To use Enterprise-only features, you must bring your own Elasticsearch cluster, which requires configuring the ElasticPress plugin to connect to it instead of the Pantheon-provided ElasticPress.io host.
 
