@@ -47,8 +47,6 @@ export const ClientHeader: React.FC<{
             </a>
           ),
         },
-      ]}
-      mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
-    />
+      ]} />
   );
 };
