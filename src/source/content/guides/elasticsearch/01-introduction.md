@@ -2,7 +2,7 @@
 title: Pantheon Search
 subtitle: Pantheon Search powered by Elasticsearch
 navtitle: Introduction
-description: Elasticsearch for WordPress sites on Pantheon, powered by ElasticPress.io, a hosted and managed search service.
+description: Detailed information on using Elasticsearch offered through ElasticPress.io with your Pantheon WordPress site.
 tags: [elasticsearch,search]
 reviewed: "2026-11-24"
 contenttype: [doc]
@@ -18,7 +18,7 @@ contributors: [jazzsequence]
 showtoc: true
 ---
 
-Pantheon offers Elasticsearch for WordPress, powered by ElasticPress.io, a hosted search service. It gives WordPress teams fast, relevant search with no search infrastructure to manage. It offloads database queries, handles traffic spikes, and adds features like fuzzy matching and autosuggest.
+Elasticsearch powered by ElasticPress.io on Pantheon gives WordPress teams a fully managed search service that goes beyond basic site search — offloading database queries, handling traffic spikes, and delivering features like fuzzy matching and autosuggest without the overhead of managing an external provider.
 
 <Youtube src="SKu-NY5lQ50" title="Getting Started with Elasticsearch on Pantheon" />
 
@@ -34,9 +34,9 @@ Three parts work together:
 
 Pantheon does not offer an Elasticsearch Enterprise tier. To use Enterprise-only Elasticsearch features, bring your own self-hosted Elasticsearch cluster, which requires extra configuration.
 
-### Which Plans Can Use Elasticsearch?
+### Which Plans Can Use Elasticsearch Powered by ElasticPress.io?
 
-Elasticsearch is available for WordPress sites on **Performance** and **Elite** site plans. Every environment on your site (Dev, Test, Live, and Multidevs) receives its own Elasticsearch endpoint. Elasticsearch is not available on Sandbox sites.
+Elasticsearch powered by ElasticPress.io is available for WordPress sites on **Performance** and **Elite** site plans. Every environment on your site (Dev, Test, Live, and Multidevs) receives its own Elasticsearch endpoint. Elasticsearch is not available on Sandbox sites.
 
 ### Elasticsearch and Solr
 

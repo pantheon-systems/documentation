@@ -1,6 +1,6 @@
 ---
 title: Pantheon Search powered by Solr
-description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
+description: Detailed information on using Pantheon Search with your Pantheon Drupal site.
 tags: [solr,search]
 reviewed: "2026-11-24"
 contenttype: [doc]
@@ -51,9 +51,9 @@ All plans except for a Basic plan can use search with Pantheon Search with Solr.
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
-## Using Solr with WordPress or Drupal
+## Using Solr with Drupal
 
-For installation instructions and additional details, refer to [Enabling Solr for WordPress](/guides/wordpress-developer/wordpress-solr) or [Enabling Solr with Drupal](/guides/solr-drupal).
+For installation instructions and additional details, refer to [Enabling Solr with Drupal](/guides/solr-drupal).
 
 
 ## Known Limitations of Pantheon Search powered by Solr
@@ -181,4 +181,3 @@ The following Apache Solr search components are supported:
 ## More Resources
 
 - [Pantheon Solr Search for Drupal](/guides/solr-drupal)
-- [Enable Solr for WordPress](/guides/wordpress-developer/wordpress-solr)
