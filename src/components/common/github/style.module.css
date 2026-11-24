@@ -16,6 +16,6 @@
 }
 
 .githubLink:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
   text-decoration: underline;
 }

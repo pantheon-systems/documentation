@@ -2,9 +2,9 @@
 }
 
 .toc__menu-item a {
-  background-color: var(--pds-color-menu-item-background-default);
+  background-color: var(--pds-color-surface-default);
   border-radius: var(--pds-border-radius-default);
-  color: var(--pds-color-menu-item-foreground);
+  color: var(--pds-color-foreground-default);
   cursor: pointer;
   font-size: var(--pds-typography-size-m);
   line-height: var(--pds-typography-lh-s);
@@ -19,5 +19,5 @@
 .toc__menu-item a:hover,
 .toc__menu-item a.active-trail {
   background-color: var(--pds-color-button-secondary-background-hover);
-  color: var(--pds-color-link-active);
+  color: var(--pds-color-interactive-link-active);
 }

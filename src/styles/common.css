@@ -64,7 +64,6 @@ li::before {
 
 .pds-header-logo {
   --pds-color-foreground-default: #000;
-  --pds-color-brand-secondary-default: #000;
 }
 
 /* Temporary hacks for marketo forms */
@@ -147,7 +146,7 @@ a.docs-header-anchor svg {
   height: var(--pds-spacing-l);
 }
 a.docs-header-anchor:hover svg {
-  fill: var(--pds-color-link-hover);
+  fill: var(--pds-color-interactive-link-hover);
 }
 
 /* Changelog styles */
@@ -163,7 +162,7 @@ a.individual-changelog-link:not(:first-child) {
 }
 
 a.individual-changelog-link:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
   text-decoration: underline;
 }
 
@@ -200,7 +199,7 @@ a.individual-changelog-link:hover {
   border: 1px solid var(--pds-color-button-primary-background-default) !important;
   border-radius: var(--pds-border-radius-default);
   box-shadow: none !important;
-  color: var(--pds-color-button-primary-foreground-default) !important;
+  color: var(--pds-color-button-primary-foreground) !important;
   font-family: var(--pds-typography-ff-default) !important;
   font-size: 1rem !important;
   font-weight: var(--pds-typography-fw-semibold) !important;
@@ -229,8 +228,8 @@ a.individual-changelog-link:hover {
 .mktoForm input[type="date"],
 .mktoForm select.mktoField,
 .mktoForm textarea.mktoField {
-  background-color: var(--pds-color-background-default);
-  border: 1px solid var(--pds-color-input-border-default);
+  background-color: var(--pds-color-surface-default);
+  border: 1px solid var(--pds-color-border-input);
   border-radius: var(--pds-border-radius-default);
   box-shadow: none !important;
   color: var(--pds-color-foreground-default);
@@ -276,7 +275,7 @@ a.individual-changelog-link:hover {
 .mktoForm textarea.mktoField.mktoInvalid,
 .mktoForm select.mktoField.mktoInvalid,
 .mktoForm .mktoLogicalField.mktoInvalid {
-  border: 1px solid var(--pds-color-input-border-critical);
+  border: 1px solid var(--pds-color-status-critical-border);
 }
 
 #mktoForm_2014 {
@@ -3104,11 +3103,11 @@ span.span-block-hidden {
 }
 
 .gatsby-remark-code-title {
-  background-color: var(--pds-color-brand-primary-default);
+  background-color: var(--pds-color-surface-default-tertiary);
 
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
-  color: white;
+  color: var(--pds-color-foreground-default);
   display: inline;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
     "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
@@ -3128,8 +3127,8 @@ span.line-numbers-rows {
 code {
   background-color: #f0ecff;
   font-weight: var(--pds-typography-fw-semibold);
-  margin-inline: var(--pds-spacing-6xs);
-  padding: var(--pds-spacing-6xs) var(--pds-spacing-4xs);
+  margin-inline: var(--pds-spacing-5xs);
+  padding: var(--pds-spacing-5xs) var(--pds-spacing-4xs);
 }
 
 pre > code {
@@ -3177,7 +3176,7 @@ button.pds-side-nav-compact__toggle .pds-icon {
 }
 
 .docs-contributor-link a:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
 }
 
 .rn-popover-content {
@@ -3243,7 +3242,7 @@ button.pds-side-nav-compact__toggle .pds-icon {
 .rn-pagination-controls button {
   padding: 6px 11px;
   background-color: transparent;
-  color: var(--pds-color-text-paragraph);
+  color: var(--pds-color-foreground-default);
   border: 0;
   font-weight: 600;
   cursor: pointer;
@@ -3251,7 +3250,7 @@ button.pds-side-nav-compact__toggle .pds-icon {
 
 .rn-pagination-controls button.active {
   background-color: var(--pds-color-button-secondary-background-hover);
-  color: var(--pds-color-brand-primary-default);
+  color: var(--pds-color-interactive-link-default);
   border-radius: 3px;
 }
 
@@ -3287,12 +3286,12 @@ mark.release-note-search-highlight {
 }
 
 .rn-search-empty-state {
-  color: var(--pds-color-text-paragraph);
+  color: var(--pds-color-foreground-default);
   padding-block: var(--pds-spacing-xl);
 }
 
 .rn-search-status {
-  color: var(--pds-color-text-paragraph);
+  color: var(--pds-color-foreground-default);
   padding-block: var(--pds-spacing-m);
 }
 
@@ -3336,7 +3335,7 @@ mark.release-note-search-highlight {
 }
 
 .rn-search-result__title:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
   text-decoration: underline;
 }
 
@@ -3351,6 +3350,6 @@ mark.release-note-search-highlight {
 }
 
 .rn-search-result__snippet {
-  color: var(--pds-color-text-paragraph);
+  color: var(--pds-color-foreground-default);
   margin-block-start: var(--pds-spacing-m);
 }

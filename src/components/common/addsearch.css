@@ -30,9 +30,9 @@
 }
 
 .search-results__items .hit .category {
-  background-color: var(--pds-color-tag-4-background) !important;
+  background-color: var(--pds-color-tag-magenta-background) !important;
   border-radius: var(--pds-border-radius-default) !important;
-  color: var(--pds-color-tag-4-foreground);
+  color: var(--pds-color-tag-magenta-foreground);
   display: inline-flex;
   font-size: var(--pds-typography-size-s) !important;
   font-weight: var(--pds-typography-fw-semibold);
@@ -110,7 +110,7 @@
 }
 
 .addsearch-pagination button:hover {
-  background-color: var(--pds-color-pager-background-hover);
+  background-color: var(--pds-color-interactive-background-hover);
 }
 
 .addsearch-pagination button:focus-visible {
@@ -118,8 +118,8 @@
 }
 
 .addsearch-pagination button[aria-current="true"] {
-  background-color: var(--pds-color-pager-background-active);
-  color: var(--pds-color-pager-foreground-active);
+  background-color: var(--pds-color-interactive-background-current);
+  color: var(--pds-color-interactive-background-current-foreground);
 }
 
 /* Hack to add previous/next icons from PDS.  */

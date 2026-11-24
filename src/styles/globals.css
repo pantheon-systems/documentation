@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--pds-color-text-headings);
+  color: var(--pds-color-foreground-default);
   font-family: var(--pds-typography-ff-default);
   font-weight: 700;
   letter-spacing: normal;
@@ -51,7 +51,7 @@ h6 {
 }
 
 .docs-contributor-link a:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
 }
 
 .rss-feed-link {
@@ -77,7 +77,7 @@ header + .docs-alert {
 a.pds-skiplink {
   background-color: var(--pds-color-button-primary-background-default);
   border-bottom-right-radius: var(--pds-border-radius-container);
-  color: var(--pds-color-button-primary-foreground-active);
+  color: var(--pds-color-button-primary-foreground);
   display: inline-block;
   left: 0;
   overflow: hidden;
@@ -91,7 +91,7 @@ a.pds-skiplink {
 
 a.pds-skiplink:hover {
   background-color: var(--pds-color-button-primary-background-hover);
-  color: var(--pds-color-button-primary-foreground-active);
+  color: var(--pds-color-button-primary-foreground);
 }
 
 a.pds-skiplink:focus {
@@ -105,7 +105,7 @@ a.pds-skiplink:focus {
 }
 
 .pantheon-icon-success {
-  color: var(--pds-color-input-foreground-success);
+  color: var(--pds-color-status-success-foreground);
 }
 
 .platform-integration__container .pds-panel__content {
@@ -146,7 +146,7 @@ a.pds-skiplink:focus {
   text-decoration: none;
 
   &:hover {
-    color: var(--pds-color-link-hover);
+    color: var(--pds-color-interactive-link-hover);
     text-decoration: underline;
   }
 }
@@ -185,7 +185,7 @@ ul.toc-list ul li {
 }
 
 .toc-link.is-active-link {
-  color: var(--pds-color-link-active);
+  color: var(--pds-color-interactive-link-active);
 }
 
 .toc-list .is-active-link::before,
@@ -287,7 +287,7 @@ a.glossary__term-link {
 
 a.glossary__letter-link:hover,
 a.glossary__term-link:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
 }
 
 a.glossary__letter-link {
