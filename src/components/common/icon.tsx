@@ -57,7 +57,7 @@ export const Icon = ({
       <strong>
         <PDSIcon
           iconName={icon}
-          iconSize={size ? size : "md"}
+          size={size ? size : "md"}
           // FIXME: No types exist for style prop @aniketbiprojit
           // style={{ paddingInline: ".125rem" }}
         />{" "}
