@@ -1,7 +1,7 @@
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import { visit } from "unist-util-visit";
+import { SKIP, visit } from "unist-util-visit";
 import type { Root, Element, ElementContent } from "hast";
 import type { Plugin } from "unified";
 
@@ -111,6 +111,30 @@ export const rehypeSpanSectionRows: Plugin<[], Root> = () => {
   };
 };
 
+/**
+ * Wrap every table in a container that scrolls sideways. A wide table (the PHP
+ * versions table has six columns) otherwise widens the whole page on a phone
+ * instead of scrolling inside its own box.
+ */
+export const rehypeScrollableTables: Plugin<[], Root> = () => {
+  return (tree: Root) => {
+    visit(tree, "element", (node: Element, index, parent) => {
+      if (node.tagName !== "table" || !parent || index === undefined) return;
+
+      const wrapper: Element = {
+        type: "element",
+        tagName: "div",
+        properties: { className: ["docs-table-scroll"] },
+        children: [node],
+      };
+      parent.children[index] = wrapper;
+
+      // Skip the wrapped table so it isn't wrapped again.
+      return [SKIP, index + 1];
+    });
+  };
+};
+
 const removalFrom = [
   "partial",
   "download",
@@ -203,6 +227,7 @@ const rehypeRemovePWithPartialComponent: Plugin<[], Root> = () => {
 export const rehypePlugins: NonNullable<PluggableList> = [
   rehypeRaw,
   rehypeSpanSectionRows,
+  rehypeScrollableTables,
   rehypeSlug,
   [
     rehypeAutolinkHeadings,

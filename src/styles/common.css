@@ -26,6 +26,13 @@
   padding: 0;
 }
 
+/* Tables scroll inside their own box on narrow screens (see
+   rehypeScrollableTables) instead of widening the page. */
+.docs-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 /* Revert custom font's bullet rendering styles */
 li::before {
   font-family: auto;

@@ -5,7 +5,10 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
-import { rehypeSpanSectionRows } from "@/components/ui/mdx-wrapper/rehype-plugins";
+import {
+  rehypeScrollableTables,
+  rehypeSpanSectionRows,
+} from "@/components/ui/mdx-wrapper/rehype-plugins";
 
 const render = async (markdown: string) =>
   String(
@@ -65,5 +68,24 @@ describe("rehypeSpanSectionRows", () => {
 `);
 
     expect(html).not.toContain("colspan");
+  });
+});
+
+describe("rehypeScrollableTables", () => {
+  it("wraps each table in a scroll container exactly once", async () => {
+    const html = String(
+      await unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkRehype, { allowDangerousHtml: true })
+        .use(rehypeRaw)
+        .use(rehypeScrollableTables)
+        .use(rehypeStringify)
+        .process("| A | B |\n| --- | --- |\n| 1 | 2 |\n\n| C |\n| --- |\n| 3 |\n")
+    );
+
+    expect(html.match(/docs-table-scroll/g)?.length).toBe(2);
+    expect(html.match(/<table>/g)?.length).toBe(2);
+    expect(html).toContain('<div class="docs-table-scroll"><table>');
   });
 });
