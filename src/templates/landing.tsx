@@ -7,7 +7,8 @@ import SearchBar from "@/components/header/search-bar";
 import Layout from "@/components/layout";
 import { OmniSidebarNav } from "@/components/omniSideBarNav";
 import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layout";
-import { Container, LinksCard } from "@/components/ui/pds-re-export";
+import { Container } from "@/components/ui/pds-re-export";
+import { LinksCard } from "@/components/pds-middleware/links-card";
 import Link from "next/link";
 import React from "react";
 
