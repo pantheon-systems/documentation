@@ -40,7 +40,7 @@ export const ReleaseNoteTemplate = async ({
           width={"standard"}
           className="pds-spacing-mar-block-start-3xl"
         >
-          <div className="pds-overline-text pds-overline-text--lg pds-spacing-mar-block-end-xs">
+          <div className="pds-overline-m pds-overline-l pds-spacing-mar-block-end-xs">
 
             <Link href="/release-notes" className="pds-spacing-mar-block-end-m">
               Pantheon Release Notes

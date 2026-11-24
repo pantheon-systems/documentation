@@ -48,7 +48,7 @@ const HeaderBody = ({
         </p> */}
         {subtitle ? (
           <>
-            <p className="pds-overline-text">{title}</p>
+            <p className="pds-overline-m">{title}</p>
             <h1>{subtitle}</h1>
           </>
         ) : (

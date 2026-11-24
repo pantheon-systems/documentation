@@ -80,7 +80,7 @@ export const TerminusCommandTemplate = ({
             </div>
             <main id="docs-main" slot="content" tabIndex={-1}>
               <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
-                <div className="pds-overline-text pds-spacing-pad-block-xs">
+                <div className="pds-overline-m pds-spacing-pad-block-xs">
                   Command
                 </div>
                 <HeaderBody
