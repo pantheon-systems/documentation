@@ -23,7 +23,7 @@ const releaseNoteCategoryLoader = async (
 
   return {
     displayName: categorySlug,
-    color: "info" as TagColor,
+    color: "slate" as TagColor,
   };
 };
 

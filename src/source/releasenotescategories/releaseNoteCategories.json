@@ -3,139 +3,139 @@
     {
       "slug": "account-management",
       "displayName": "Account management",
-      "color": "hypnos",
+      "color": "gold",
       "description": "Highlights updates related to account permissions, user roles, and any changes that impact how users manage and interact with their accounts"
     },
     {
       "slug": "action-required",
       "displayName": "Action required",
-      "color": "iris",
+      "color": "red",
       "description": "Requires customer to act in order to avoid disruption"
     },
     {
       "slug": "billing",
       "displayName": "Billing & Finance",
-      "color": "aether",
+      "color": "lime",
       "description": "Covers finance and billing-related updates, allowing billing and finance managers to track changes affecting their financial aspects"
     },
     {
       "slug": "deprecated",
       "displayName": "Deprecated",
-      "color": "success",
+      "color": "slate",
       "description": "Reserved for updates indicating the phasing out or discontinuation of specific features or functionalities"
     },
     {
       "slug": "documentation",
       "displayName": "Pantheon Docs",
-      "color": "slate",
+      "color": "gold-solid",
       "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users"
     },
     {
       "slug": "drupal",
       "displayName": "Drupal",
-      "color": "warning",
+      "color": "mint",
       "description": "Tailored for updates specific to the Drupal content management system, helping Drupal users stay informed about platform changes that directly impact their workflows"
     },
     {
       "slug": "nextjs",
       "displayName": "Next.js",
-      "color": "apollo",
+      "color": "purple",
       "description": "Information about Pantheon's support for Next.js, the leading React framework for building web applications"
     },
     {
       "slug": "events",
       "displayName": "Events",
-      "color": "gaia",
+      "color": "magenta",
       "description": "Highlights updates related to special events, promotions, or limited-time occurrences on the Pantheon platform, keeping users informed about time-sensitive opportunities"
     },
     {
       "slug": "front-end-sites",
       "displayName": "Front-End Sites",
-      "color": "orange",
+      "color": "sky-solid",
       "description": "Focuses on updates related to Front-End Site (FES) enhancements, ensuring that developers and designers stay informed about changes affecting how they use the product"
     },
     {
       "slug": "general",
       "displayName": "General",
-      "color": "success",
+      "color": "slate",
       "description": "Serves as a catch-all for updates that don't neatly fit into specific categories, offering a broad overview of general changes on the Pantheon platform"
     },
     {
       "slug": "infrastructure",
       "displayName": "Infrastructure",
-      "color": "info",
+      "color": "sky",
       "description": "Details changes related to the underlying technology and architecture of the Pantheon platform, providing insights into changes that may impact performance and reliability"
     },
     {
       "slug": "migration",
       "displayName": "Migration",
-      "color": "success",
+      "color": "slate",
       "description": "Reserved for updates related to migrations, ensuring users are informed about changes affecting the movement of data and content within the Pantheon platform"
     },
     {
       "slug": "new-feature",
       "displayName": "New feature",
-      "color": "sand",
+      "color": "lime-solid",
       "description": "Consolidates information about both new features and improvements, providing users with insights into enhancements that contribute to a better overall experience"
     },
     {
       "slug": "performance",
       "displayName": "Performance",
-      "color": "indigo",
+      "color": "orange-solid",
       "description": "Highlights updates focused on optimizing the speed, efficiency, and overall performance of the Pantheon platform, giving users insights into improvements that enhance user experience"
     },
     {
       "slug": "policy",
       "displayName": "Policy",
-      "color": "critical",
+      "color": "orange",
       "description": "Communicates updates related to platform policies, ensuring users are aware of any changes in rules or guidelines that may impact their usage"
     },
     {
       "slug": "security",
       "displayName": "Security",
-      "color": "sky",
+      "color": "critical-solid",
       "description": "Addresses security-related updates, emphasizing the importance of staying informed about changes aimed at maintaining a secure and protected environment for users"
     },
     {
       "slug": "tools-apis",
       "displayName": "Tools & APIs",
-      "color": "apollo",
+      "color": "purple",
       "description": "Keeps users informed about updates related to tools and APIs, helping developers understand changes that may impact their workflows and integrations"
     },
     {
       "slug": "user-interface",
       "displayName": "User interface",
-      "color": "amber",
+      "color": "teal-solid",
       "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
     },
     {
       "slug": "wordpress",
       "displayName": "WordPress",
-      "color": "discovery",
+      "color": "indigo",
       "description": "Tailored for updates specific to the WordPress content management system, helping WordPress users stay informed about platform changes that directly impact their workflows"
     },
     {
       "slug": "plugins",
       "displayName": "Plugins",
-      "color": "discovery",
+      "color": "indigo",
       "description": "Keeps users informed about updates to WordPress plugins that we maintain."
     },
     {
       "slug": "modules",
       "displayName": "Modules",
-      "color": "warning",
+      "color": "mint",
       "description": "Keeps users informed about updates to Drupal modules that we maintain."
     },
     {
       "slug": "content-publisher",
       "displayName": "Content Publisher",
-      "color": "gaia",
+      "color": "magenta",
       "description": "Keeps users informed about updates to Pantheon Content Publisher"
     },
     {
       "slug": "p1",
       "displayName": "P1",
-      "color": "slate",
+      "color": "gold-solid",
       "description": "Keeps users informed about updates to Pantheon's P1"
     }
   ]
