@@ -10,10 +10,10 @@ cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, jazzsequence]
 showtoc: true
 permalink: docs/guides/php/php-versions
-reviewed: "2022-12-13"
+reviewed: "2026-11-24"
 ---
 
 This section provides information on how to upgrade to [a supported version of PHP](/guides/php##supported-php-versions).
