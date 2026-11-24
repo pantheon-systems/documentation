@@ -17,8 +17,10 @@ export default function Layout({
   containerWidth = "standard",
   withBorder = true,
 }: Props) {
+  // relative: the Navbar parks its closed mobile menu off-screen with absolute
+  // positioning, which overflow-x-hidden only clips when this is positioned.
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden min-w-screen max-w-screen">
+    <div className="relative flex flex-col min-h-screen overflow-x-hidden min-w-screen max-w-screen">
       <Header />
       {!excludeSearch && (
         <Container width={"standard"} className={`p-default`}>
