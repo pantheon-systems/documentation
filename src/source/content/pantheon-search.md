@@ -20,9 +20,9 @@ reviewed: "2026-11-24"
 
 Pantheon offers integrated search services to improve site performance and deliver better search experiences for your visitors. Rather than relying on your database to handle every query, Pantheon's search services offload that work to dedicated search infrastructure — reducing database load and speeding up response times across your site.
 
-<Alert type="warning" title="WordPress sites: move from Solr to ElasticPress.io">
+<Alert type="warning" title="WordPress sites: move from Solr to Elasticsearch">
 
-Pantheon will remove Solr support for WordPress on **January 11, 2027**. Solr 9 will not be available for WordPress. Migrate to [Elasticsearch through ElasticPress.io](/guides/pantheon-search/elasticsearch) before that date. Drupal sites should move to Solr 9. See the [Solr removal dates](/pantheon-search/solr).
+Pantheon will remove Solr support for WordPress on **January 11, 2027**. Solr 9 will not be available for WordPress. Migrate to [Elasticsearch powered by ElasticPress.io](/guides/pantheon-search/elasticsearch) before that date. Drupal sites should move to Solr 9. See the [Solr removal dates](/pantheon-search/solr).
 
 </Alert>
 
