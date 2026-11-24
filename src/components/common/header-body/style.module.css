@@ -16,3 +16,11 @@
   column-gap: var(--pds-spacing-l);
   display: flex;
 }
+
+/* PDS draws StatusBadge as a full pill. PDS is moving away from heavily rounded
+   corners, and this badge is effectively only used on the docs site, so it was
+   not part of that discussion. Use the default small radius until PDS decides
+   what the badge should look like. */
+.reviewedBadge {
+  border-radius: var(--pds-border-radius-default);
+}

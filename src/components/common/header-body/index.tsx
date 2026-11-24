@@ -38,7 +38,7 @@ const HeaderBody = ({
             hasStatusIndicator={false}
             label={lastReviewed}
             color="neutral"
-            className="pds-mar-block-end-m"
+            className={`pds-mar-block-end-m ${styles.reviewedBadge}`}
           />
         )}
         {/* <p className="review-date">
