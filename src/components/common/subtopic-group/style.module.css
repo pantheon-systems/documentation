@@ -30,3 +30,8 @@
 .subtopic__icon {
   margin-inline-end: var(--pds-spacing-2xs);
 }
+
+/* V2 resets heading margins, so give each group's heading room above its links. */
+.subtopic__list-group h3 {
+  margin-block-end: var(--pds-spacing-m);
+}
