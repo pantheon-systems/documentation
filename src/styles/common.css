@@ -3144,11 +3144,6 @@ span.span-block-hidden {
   z-index: 0;
 }
 
-span.line-numbers-rows {
-  padding-left: 1em;
-  padding-top: 1em;
-}
-
 code {
   background-color: #f0ecff;
   font-weight: var(--pds-typography-fw-semibold);
@@ -3163,7 +3158,7 @@ code {
 
 pre > code {
   background-color: inherit;
-  color: #ffffff;
+  color: inherit;
   font-weight: var(--pds-typography-fw-regular);
 }
 

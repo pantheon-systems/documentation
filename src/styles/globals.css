@@ -1,13 +1,10 @@
 @import url("./webstyles.css");
 @import url("./common.css");
+@import url("./code-blocks.css");
 @import "@pantheon-systems/pds-toolkit-react/css/pds-core.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-components.css";
 
-/* custom typefaces */
-@import "prismjs/themes/prism-okaidia.css";
-/* Code block line numbering */
-@import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 /* Point the V2 font tokens at the fonts self-hosted by next/font in layout.tsx.
    Unlayered, so this beats the token values in pds-core.css. The named
