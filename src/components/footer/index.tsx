@@ -2,13 +2,8 @@
 import style from "./style.module.css";
 
 import React from "react";
-import {
-  FooterLinks,
-  FooterHeading,
-  SiteFooter,
-  SocialLinks,
-  ThreeItemLayout,
-} from "@/components/ui/pds-re-export";
+import { SiteFooter, ThreeItemLayout } from "@/components/ui/pds-re-export";
+import { FooterHeading, FooterLinks } from "./footer-links";
 import Link from "next/link";
 
 import { MarketoForm } from "../common/marketo-form";
@@ -116,7 +111,6 @@ export const Footer = ({
               formName="mktoForm_2014"
             />
           </div>
-          <SocialLinks className="pds-spacing-mar-block-start-xl" />
         </div>
       </div>
 
