@@ -99,12 +99,12 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
             <SearchBar />
           </Container>
           <Container width={containerWidth} className="landing-page__header">
-            <div className="landing-page-heading pds-spacing-pad-block-m">
-              <h1 className="pds-heading-xl text-4xl font-bold pds-spacing-mar-block-end-m">
+            <div className="landing-page-heading pds-pad-block-m">
+              <h1 className="pds-heading-xl text-4xl font-bold pds-mar-block-end-m">
                 {topic.title}
               </h1>
               {topic.subtitle && (
-                <div className="docs-lead-text docs-lead-text--sm pds-spacing-mar-block-end-6xs">
+                <div className="docs-lead-text docs-lead-text--sm pds-mar-block-end-6xs">
                   {topic.subtitle}
                 </div>
               )}
@@ -115,7 +115,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
             <div className="landing-page__video-background">
               <Container
                 width={containerWidth}
-                className="video-container pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
+                className="video-container pds-mar-block-start-xl pds-mar-block-end-4xl"
               >
                 <Youtube src={topic.video_id} title={topic.title} />
               </Container>
@@ -128,7 +128,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
               <Container
                 key={`${guide.title}-${idx}`}
                 width={containerWidth}
-                className="landing-page__guides pds-spacing-mar-block-end-2xl"
+                className="landing-page__guides pds-mar-block-end-2xl"
               >
                 <hr className="landing-page__guides-separator" />
                 {guide.title ? (
@@ -166,7 +166,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
           {/* Subtopics */}
           {topic.subtopics && (
             <div
-              className="pds-spacing-pad-block-start-5xl"
+              className="pds-pad-block-start-5xl"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -192,7 +192,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
 
           {/* Topic groups */}
           {topic.topics_groups && (
-            <div className="pds-spacing-pad-block-5xl">
+            <div className="pds-pad-block-5xl">
               <Container
                 width={containerWidth}
                 className="landing-page__topics pds-grid"
@@ -228,7 +228,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
 
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
-            <div className="landing-page__related pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
+            <div className="landing-page__related pds-pad-block-start-4xl pds-pad-block-end-5xl">
               <Container width={containerWidth}>
                 <h2 className="landing-page__section-heading text-3xl font-bold">
                   Related Resources

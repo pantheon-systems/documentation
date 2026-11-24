@@ -94,7 +94,7 @@ const ReleaseNotePopoverCategorySelector = ({
           // Iterate over each column
           <div
             key={columnIndex}
-            className="rn-popover-content-inner pds-spacing-pad-block-start-s@md"
+            className="rn-popover-content-inner pds-pad-block-start-s@md"
           >
             {/* For each column, render items within the specified range based on `itemsPerColumn`
             and slice `activeCategories` to get the items for the current column. */}
@@ -113,7 +113,7 @@ const ReleaseNotePopoverCategorySelector = ({
                   <div
                     key={item.slug}
                     style={{ display: "flex", gap: "8px" }}
-                    className="pds-spacing-pad-block-end-m category-checkbox-group"
+                    className="pds-pad-block-end-m category-checkbox-group"
                   >
                     <input
                       type="checkbox"
@@ -124,7 +124,7 @@ const ReleaseNotePopoverCategorySelector = ({
                     />
                     <label
                       htmlFor={item.displayName}
-                      className="pds-spacing-mar-block-end-none"
+                      className="pds-mar-block-end-none"
                       style={{
                         fontWeight: 400,
                         fontSize: "var(--pds-typography-size-s)",

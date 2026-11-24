@@ -75,7 +75,7 @@ export const DocTemplate = ({
               <SearchBar />
             </div>
             <main id="docs-main" slot="content" tabIndex={-1}>
-              <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
+              <article className="doc guide-doc-body pds-pad-block-end-2xl">
                 <div>
                   <HeaderBody
                     title={doc.frontmatter.title ?? ""}

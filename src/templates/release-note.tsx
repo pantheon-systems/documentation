@@ -38,33 +38,33 @@ export const ReleaseNoteTemplate = async ({
       <main id="docs-main" tabIndex={-1}>
         <Container
           width={"standard"}
-          className="pds-spacing-mar-block-start-3xl"
+          className="pds-mar-block-start-3xl"
         >
-          <div className="pds-overline-l pds-spacing-mar-block-end-xs">
+          <div className="pds-overline-l pds-mar-block-end-xs">
 
-            <Link href="/release-notes" className="pds-spacing-mar-block-end-m">
+            <Link href="/release-notes" className="pds-mar-block-end-m">
               Pantheon Release Notes
             </Link>
           </div>
-          <h1 className="pds-spacing-mar-block-end-l">
+          <h1 className="pds-mar-block-end-l">
             {node.frontmatter.title}
           </h1>
 
           <ReleaseNoteCategories
             categories={node.frontmatter.categories || []}
             displayType="page"
-            className="pds-spacing-mar-block-end-xl"
+            className="pds-mar-block-end-xl"
             allCategoriesData={allCategoriesData}
           />
 
-          <article className="pds-spacing-pad-block-end-xl">
+          <article className="pds-pad-block-end-xl">
 
 
             <div id="doc" className="doc changelog__content">
-              <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+              <div className="pds-mar-block-start-s pds-mar-block-end-2xl">
                 <PublishedDate
                   dateString={node.frontmatter.published_date}
-                  className="pds-spacing-mar-block-end-m"
+                  className="pds-mar-block-end-m"
                 />
                 {/* <MdxWrapper
                   mdx={node.body}
@@ -82,7 +82,7 @@ export const ReleaseNoteTemplate = async ({
               </div>
             </div>
 
-            <div className="pds-spacing-mar-block-4xl">
+            <div className="pds-mar-block-4xl">
               <a
                 href="/release-notes/rss.xml"
                 target="_blank"

@@ -100,7 +100,7 @@ const Card = ({
           <Icon
             iconName="externalLink"
             size="m"
-            className="pds-spacing-pad-inline-start-5xs"
+            className="pds-pad-inline-start-5xs"
           />
         </a>
       </div>

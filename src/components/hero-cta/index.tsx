@@ -39,7 +39,7 @@ export function HeroCTA(props: Props) {
         <p className="docs-lead-text">{subTitle}</p>
         <Link
           href={url}
-          className="pds-button pds-button--lg pds-spacing-mar-block-start-m"
+          className="pds-button pds-button--lg pds-mar-block-start-m"
         >
           {linkText}
           <Icon iconName="arrowRight" size="xl" />

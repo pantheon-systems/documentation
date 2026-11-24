@@ -7,11 +7,11 @@ import styles from "./not-found.module.css";
 export default function NotFound() {
   return (
     <Layout>
-      <div className="pds-container pds-spacing-pad-block-start-2xl pds-spacing-pad-block-end-4xl">
+      <div className="pds-container pds-pad-block-start-2xl pds-pad-block-end-4xl">
         <div style={{ textAlign: "center" }}>
           <main id="docs-main" tabIndex={-1}>
             <div>
-              <h1 className="pds-spacing-mar-block-end-3xl">
+              <h1 className="pds-mar-block-end-3xl">
                 Sorry, there's no page at that URL.
               </h1>
               <img

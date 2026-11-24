@@ -26,7 +26,7 @@ export function LinksList(props: {
   ));
 
   return (
-    <ul className={cn(style.linksList, "pds-spacing-mar-block-end-6xl")}>
+    <ul className={cn(style.linksList, "pds-mar-block-end-6xl")}>
       {processedLinks}
     </ul>
   );

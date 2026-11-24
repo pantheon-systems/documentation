@@ -308,7 +308,7 @@ export const ReleaseNoteSearchInput = () => {
 
   return (
     <>
-      <div className="pds-input-field pds-input-field--text pds-spacing-mar-block-end-xl rn-search-input">
+      <div className="pds-input-field pds-input-field--text pds-mar-block-end-xl rn-search-input">
         <TextInput
           type="search"
           searchIcon="filter"

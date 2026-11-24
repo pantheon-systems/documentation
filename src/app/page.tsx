@@ -37,22 +37,22 @@ export default async function Home() {
           linkText={homeYaml?.call_to_action?.linkText || ""}
         />
 
-        <h2 className="pds-spacing-mar-block-xl">{homeYaml.topics.title}</h2>
+        <h2 className="pds-mar-block-xl">{homeYaml.topics.title}</h2>
         <TopicsGrid topics={homeYaml.topics.tiles} />
 
         <TwoItemLayout
           layoutVariant="equal"
-          className="pds-spacing-mar-block-start-6xl"
+          className="pds-mar-block-start-6xl"
         >
           <div slot="first-item">
-            <h2 className="pds-spacing-mar-block-end-2xl">
+            <h2 className="pds-mar-block-end-2xl">
               {homeYaml.three_column_links.title}
             </h2>
             <LinksList title="" links={homeYaml.three_column_links.links} />
           </div>
 
           <div slot="second-item">
-            <h2 className="pds-spacing-mar-block-end-2xl">
+            <h2 className="pds-mar-block-end-2xl">
               {homeYaml.changelog_preview.title}
             </h2>
             <ChangelogList

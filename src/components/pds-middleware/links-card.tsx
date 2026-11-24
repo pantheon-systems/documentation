@@ -20,7 +20,7 @@ export function LinksCard({
   return (
     <Card className={className}>
       <Heading className="pds-heading-l">{headingText}</Heading>
-      <ul className="pds-spacing-mar-block-start-m">
+      <ul className="pds-mar-block-start-m">
         {linkItems.map((item, index) => (
           <li key={index}>{item}</li>
         ))}

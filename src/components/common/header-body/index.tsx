@@ -38,7 +38,7 @@ const HeaderBody = ({
             hasStatusIndicator={false}
             label={lastReviewed}
             color="transparent"
-            className="pds-spacing-mar-block-end-m"
+            className="pds-mar-block-end-m"
           />
         )}
         {/* <p className="review-date">
@@ -55,7 +55,7 @@ const HeaderBody = ({
           <h1 className="docs-title">{title}</h1>
         )}
 
-        <p className="docs-lead-text docs-lead-text--sm pds-spacing-mar-block-end-xl">
+        <p className="docs-lead-text docs-lead-text--sm pds-mar-block-end-xl">
           {description}
         </p>
 

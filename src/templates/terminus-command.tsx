@@ -79,8 +79,8 @@ export const TerminusCommandTemplate = ({
               <SearchBar />
             </div>
             <main id="docs-main" slot="content" tabIndex={-1}>
-              <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
-                <div className="pds-overline-m pds-spacing-pad-block-xs">
+              <article className="doc guide-doc-body pds-pad-block-end-2xl">
+                <div className="pds-overline-m pds-pad-block-xs">
                   Command
                 </div>
                 <HeaderBody
@@ -97,7 +97,7 @@ export const TerminusCommandTemplate = ({
                 <p>{command.description}</p>
 
                 <h2>Example Usage</h2>
-                <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
+                <div className="pds-mar-block-start-l pds-mar-block-end-4xl">
                   {/* <pre className="language-bash">
                     <code className="language-bash">
                       terminus {command.usage[0].replace(/\[|\]/g, "")}
@@ -110,7 +110,7 @@ export const TerminusCommandTemplate = ({
                   </Pre>
                 </div>
 
-                <div className="pds-spacing-mar-block-end-4xl">
+                <div className="pds-mar-block-end-4xl">
                   {command.usage.map((usage, i) => {
                     if (i !== 0) {
                       return (
@@ -118,7 +118,7 @@ export const TerminusCommandTemplate = ({
                           <p key={i}>
                             <code
                               key={`${i}-pre`}
-                              className="pds-spacing-mar-inline-end-2xs"
+                              className="pds-mar-inline-end-2xs"
                             >
                               {usage
                                 .replace(/\[|\]/g, "")
@@ -136,7 +136,7 @@ export const TerminusCommandTemplate = ({
                 </div>
 
                 <h2>Options</h2>
-                <div className="pds-spacing-mar-block-end-4xl">
+                <div className="pds-mar-block-end-4xl">
                   <table>
                     <thead>
                       <tr>

@@ -18,7 +18,7 @@ export default async function GlossaryPage() {
 
   return (
     <Layout containerWidth="standard">
-      <Container width={"standard"} className="pds-spacing-pad-block-end-4xl">
+      <Container width={"standard"} className="pds-pad-block-end-4xl">
         <DocsSidebarLayout
           gridGap="standard"
           mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
@@ -37,7 +37,7 @@ export default async function GlossaryPage() {
               editPath={""}
               reviewDate={""}
             ></HeaderBody>
-            <div className="pds-spacing-mar-block-start-m pds-spacing-mar-block-end-4xl">
+            <div className="pds-mar-block-start-m pds-mar-block-end-4xl">
               <p>
                 This page dynamically displays all defined terms in the Pantheon
                 Documentation project.

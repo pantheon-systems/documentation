@@ -94,7 +94,7 @@ export const ReleaseNoteListingTemplate = async ({
       <main id="docs-main" tabIndex={-1}>
         <Container
           width={"standard"}
-          className="pds-spacing-mar-block-start-3xl"
+          className="pds-mar-block-start-3xl"
         >
           <h1>Pantheon release notes</h1>
           <div className="docs-lead-text docs-lead-text--sm">
@@ -119,7 +119,7 @@ export const ReleaseNoteListingTemplate = async ({
               pageNumber={pageNumber}
             />
 
-            <div className="pds-spacing-mar-block-end-2xl pds-spacing-mar-block-start-2xl">
+            <div className="pds-mar-block-end-2xl pds-mar-block-start-2xl">
               <ReleaseNoteSearchResults>
                 {releaseNotes.map(({ node }, idx) => (
                   <div key={`${node.id}-${idx}`}>
@@ -132,9 +132,9 @@ export const ReleaseNoteListingTemplate = async ({
                     >
                       <Link
                         href={`/${sanitizeSlug(node.fields.slug)}`}
-                        className="pds-spacing-mar-block-end-l individual-changelog-link"
+                        className="pds-mar-block-end-l individual-changelog-link"
                       >
-                        <h2 className="pds-spacing-mar-block-end-l">
+                        <h2 className="pds-mar-block-end-l">
                           {node.frontmatter.title}
                         </h2>
                       </Link>
@@ -142,17 +142,17 @@ export const ReleaseNoteListingTemplate = async ({
                       <ReleaseNoteCategories
                         categories={node.frontmatter.categories || []}
                         displayType="page"
-                        className="pds-spacing-mar-block-end-xl"
+                        className="pds-mar-block-end-xl"
                         allCategoriesData={allCategoriesData}
                       />
                     </div>
 
-                    <article className="pds-spacing-pad-block-end-xl">
+                    <article className="pds-pad-block-end-xl">
                       <div id="doc" className="doc changelog__content">
-                        <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                        <div className="pds-mar-block-start-s pds-mar-block-end-2xl">
                           <PublishedDate
                             dateString={node.frontmatter.published_date}
-                            className="pds-spacing-mar-block-end-m"
+                            className="pds-mar-block-end-m"
                           />
 
                           <MdxWrapper

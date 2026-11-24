@@ -81,14 +81,14 @@ export const Footer = ({
               headingText="Help"
               headingLevel="h2"
               linkItems={helpLinks}
-              className="pds-spacing-mar-block-start-xl@sm"
+              className="pds-mar-block-start-xl@sm"
             />
             <FooterLinks
               slot="third-item"
               headingText="Community"
               headingLevel="h2"
               linkItems={communityLinks}
-              className="pds-spacing-mar-block-start-xl@sm"
+              className="pds-mar-block-start-xl@sm"
             />
           </ThreeItemLayout>
         </div>
@@ -96,14 +96,14 @@ export const Footer = ({
           <FooterHeading
             headingText="Connect"
             headingLevel="h2"
-            className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
+            className="pds-pad-block-start-xl pds-pad-block-start-none@lg"
           />
           <p className={cn(style.footerFormIntro, "pds-ts-s")}>
             Awesome development news, tutorials, and tips. Plus get three free
             downloads, just for signing up. If you don't love it, unsubscribe
             with just a click.
           </p>
-          <div className="pds-spacing-mar-block-xl">
+          <div className="pds-mar-block-xl">
             <MarketoForm
               baseUrl="https://app-ab05.marketo.com"
               munchkinId="316-GSV-089"
@@ -114,7 +114,7 @@ export const Footer = ({
         </div>
       </div>
 
-      <div className={cn(style.ccLicense, "pds-spacing-mar-block-start-5xl")}>
+      <div className={cn(style.ccLicense, "pds-mar-block-start-5xl")}>
         <div className={style.ccLicenseLogoImage}>
           <img
             className={style.ccLicenseLogoImage}

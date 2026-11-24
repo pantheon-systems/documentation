@@ -28,7 +28,7 @@ export const Product = ({
           <Icon
             iconName="arrowRight"
             size="m"
-            className="pds-spacing-pad-inline-start-5xs"
+            className="pds-pad-inline-start-5xs"
           />
         </a>
       </div>
