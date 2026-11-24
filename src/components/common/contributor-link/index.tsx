@@ -14,7 +14,7 @@ export const ContributorLink = ({
   return (
     <div className="docs-contributor-link">
       <a aria-hidden="true" href={url} target="_blank">
-        <Icon iconName={icon} iconSize="2xl" />
+        <Icon iconName={icon} size="4xl" />
       </a>
     </div>
   );

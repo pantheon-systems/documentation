@@ -26,7 +26,7 @@ export const Icon = ({
 }: {
   icon: IconProps["iconName"];
   text: string;
-  size: IconProps["iconSize"];
+  size: IconProps["size"];
 }) => {
   return legacyIcons.includes(icon) ? (
     <span
@@ -57,7 +57,7 @@ export const Icon = ({
       <strong>
         <PDSIcon
           iconName={icon}
-          size={size ? size : "md"}
+          size={size ? size : "m"}
           // FIXME: No types exist for style prop @aniketbiprojit
           // style={{ paddingInline: ".125rem" }}
         />{" "}

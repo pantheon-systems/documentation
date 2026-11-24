@@ -46,7 +46,7 @@ export function SubTopicGroup(props: {
                         {link.icon && (
                           <Icon
                             iconName={link.icon as PDSIcon}
-                            iconSize="lg"
+                            size="xl"
                             className={styles.subtopic__icon}
                           />
                         )}

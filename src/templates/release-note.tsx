@@ -91,7 +91,7 @@ export const ReleaseNoteTemplate = async ({
                 <Icon
                   className="rss-feed-link-icon"
                   iconName="rss"
-                  iconSize="lg"
+                  size="xl"
                 />
                 <span>Subscribe to RSS feed</span>
               </a>

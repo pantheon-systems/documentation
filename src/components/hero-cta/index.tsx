@@ -42,7 +42,7 @@ export function HeroCTA(props: Props) {
           className="pds-button pds-button--lg pds-spacing-mar-block-start-m"
         >
           {linkText}
-          <Icon iconName="arrowRight" iconSize="lg" />
+          <Icon iconName="arrowRight" size="xl" />
         </Link>
       </div>
     </div>

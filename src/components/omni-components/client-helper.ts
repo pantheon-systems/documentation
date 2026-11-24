@@ -20,7 +20,7 @@ export const turnItemsIntoLinks = (
       null,
       item.title,
       " ",
-      React.createElement(Icon, { iconName: "externalLink", iconSize: "sm" })
+      React.createElement(Icon, { iconName: "externalLink", size: "xs" })
     );
   }
 

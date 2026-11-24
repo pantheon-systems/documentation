@@ -11,7 +11,7 @@ export const Download = ({ file }: { file: string }) => {
     <div className={cn("script-file-download", styles.scriptFileDownload)}>
       <a href={downloadPath} download={file} className="pds-button">
         {file}
-        <Icon iconName="download" iconSize="lg" />
+        <Icon iconName="download" size="xl" />
       </a>
     </div>
   );

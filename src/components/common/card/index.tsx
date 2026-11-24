@@ -99,7 +99,7 @@ const Card = ({
           Get plugin
           <Icon
             iconName="externalLink"
-            iconSize="md"
+            size="m"
             className="pds-spacing-pad-inline-start-5xs"
           />
         </a>
