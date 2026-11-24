@@ -97,7 +97,7 @@ export const ReleaseNoteListingTemplate = async ({
           className="pds-spacing-mar-block-start-3xl"
         >
           <h1>Pantheon release notes</h1>
-          <div className="pds-lead-text pds-lead-text--sm">
+          <div className="docs-lead-text docs-lead-text--sm">
             {landing?.introText ??
               "Your destination for staying informed about our latest innovations and product updates."}
           </div>

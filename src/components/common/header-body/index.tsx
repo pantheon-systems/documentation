@@ -55,7 +55,7 @@ const HeaderBody = ({
           <h1 className="docs-title">{title}</h1>
         )}
 
-        <p className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xl">
+        <p className="docs-lead-text docs-lead-text--sm pds-spacing-mar-block-end-xl">
           {description}
         </p>
 

@@ -29,7 +29,7 @@ export function SubTopicGroup(props: {
           {title}
         </h2>
         {subTitle && (
-          <p className="pds-lead-text pds-lead-text--sm">{subTitle}</p>
+          <p className="docs-lead-text docs-lead-text--sm">{subTitle}</p>
         )}
         <hr />
         {topics &&

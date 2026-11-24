@@ -2,6 +2,18 @@
   font-family: var(--pds-typography-ff-default);
 }
 
+/* PDS V2 removed pds-lead-text, so this carries its token-based replacement. */
+.docs-lead-text {
+  color: var(--pds-color-foreground-default-secondary);
+  font-family: var(--pds-typography-ff-secondary);
+  font-size: var(--pds-typography-size-2xl);
+  line-height: var(--pds-typography-lh-m);
+}
+
+.docs-lead-text--sm {
+  font-size: var(--pds-typography-size-xl);
+}
+
 /* Revert custom font's bullet rendering styles */
 li::before {
   font-family: auto;

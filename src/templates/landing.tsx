@@ -104,7 +104,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                 {topic.title}
               </h1>
               {topic.subtitle && (
-                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-6xs">
+                <div className="docs-lead-text docs-lead-text--sm pds-spacing-mar-block-end-6xs">
                   {topic.subtitle}
                 </div>
               )}
