@@ -1,26 +1,15 @@
-import { Poppins, Aleo, Source_Code_Pro } from "next/font/google";
 import Script from "next/script";
 import * as React from "react";
 import { Suspense } from "react";
 
 import "@/styles/globals.css";
 import { PropsWithChildren } from "react";
+import { GlobalWrapper } from "@/components/ui/pds-re-export";
 import { AnalyticsGTM } from "./analytics-gtm";
 import SegmentAnalytics from "./analytics-segment";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const aleo = Aleo({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-const sourceCodePro = Source_Code_Pro({
-  subsets: ["latin"],
-  weight: ["600"],
-});
+// Fonts (Inter, Inter Tight, IBM Plex Serif, Source Code Pro) load from
+// pds-core.css, so there is no next/font setup here.
 
 function MyApp({ children }: PropsWithChildren) {
   const enableAnalytics = process.env.NODE_ENV !== "development";
@@ -59,11 +48,10 @@ function MyApp({ children }: PropsWithChildren) {
         <AnalyticsGTM />
       )}
 
-      <body
-        className={`${poppins.className} ${aleo.className} ${sourceCodePro.className}`}
-      >
-        {children}
-
+      <body>
+        {/* The V2 header needs about 1260px, so the nav collapses below 1280px.
+            Page layouts keep the default 767px mobile breakpoint. */}
+        <GlobalWrapper navMobileMaxWidth={1279}>{children}</GlobalWrapper>
       </body>
       <Suspense>
         <SegmentAnalytics />

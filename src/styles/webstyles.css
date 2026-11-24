@@ -40,7 +40,7 @@
 /* Pull quote webstyle */
 p.pull-quote,
 p:has(span.pull-quote) {
-  font-family: Aleo, serif;
+  font-family: var(--pds-typography-ff-secondary);
   font-style: italic;
   font-size: 1.875rem;
   color: theme("colors.neutral.800");
@@ -60,7 +60,7 @@ p:has(span.pull-quote) {
   border-radius: 16px;
   width: 100%;
   color: theme("colors.neutral.800");
-  font-family: Poppins, sans-serif;
+  font-family: var(--pds-typography-ff-default);
   font-size: 1rem;
   font-weight: 400;
   box-sizing: border-box;
@@ -87,7 +87,7 @@ p:has(span.pull-quote) {
 
 /* Inline code webstyle */
 .inline-code {
-  font-family: "Source Code Pro", monospace;
+  font-family: var(--pds-typography-ff-code);
   font-size: 14px;
   line-height: 1.6;
   color: theme("colors.neutral.800") !important;

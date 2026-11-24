@@ -1,5 +1,5 @@
 *:not(pre, code):not(pre *) {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--pds-typography-ff-default);
 }
 
 /* Revert custom font's bullet rendering styles */

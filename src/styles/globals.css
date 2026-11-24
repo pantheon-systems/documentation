@@ -34,7 +34,7 @@ h4,
 h5,
 h6 {
   color: var(--pds-color-text-headings);
-  font-family: Poppins, sans-serif;
+  font-family: var(--pds-typography-ff-default);
   font-weight: 700;
   letter-spacing: normal;
   line-height: 120%;
@@ -202,7 +202,7 @@ ul.toc-list ul li {
 }
 
 pre {
-  font-family: "Source Code Pro", "Source Code Pro Fallback" !important;
+  font-family: var(--pds-typography-ff-code) !important;
 }
 
 .certification.styleExample::after {
