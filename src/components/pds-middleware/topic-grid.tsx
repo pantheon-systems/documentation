@@ -18,7 +18,7 @@ export function TopicsGrid(props: {
   const { topics } = props;
 
   return (
-    <div className="pds-tile-grid">
+    <div className="docs-tile-grid">
       {topics &&
         topics.map((topic, index) => (
           <Tile
@@ -27,14 +27,7 @@ export function TopicsGrid(props: {
             icon={topic.icon}
             headingText={topic.headingText}
             summary={topic.summary}
-            linkContent={
-              <Link href={topic.url}>
-                Learn more
-                <span className="visually-hidden">
-                  about {topic.headingText}
-                </span>
-              </Link>
-            }
+            linkContent={<Link href={topic.url} />}
           />
         ))}
     </div>

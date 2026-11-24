@@ -14,6 +14,13 @@
   font-size: var(--pds-typography-size-xl);
 }
 
+/* PDS V2 dropped pds-tile-grid, so lay the home page topic tiles out locally. */
+.docs-tile-grid {
+  display: grid;
+  gap: var(--pds-spacing-xl);
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
 /* Revert custom font's bullet rendering styles */
 li::before {
   font-family: auto;
