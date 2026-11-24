@@ -185,12 +185,14 @@ ul.toc-list .is-collapsible {
   max-height: none;
 }
 
+/* Nested lists. Tocbot adds is-collapsed to every nested list, even though the
+   rule above keeps them open, so zeroing the padding on .is-collapsed removed
+   the gap between a heading and its first sub-heading. Give nested lists the
+   same gap as sibling items (the parent's row-gap) and no bottom padding, so
+   every step in the TOC is evenly spaced. */
 ul.toc-list ul {
-  padding-block-start: var(--pds-spacing-s);
-}
-
-ul.toc-list ul.is-collapsed {
-  padding-block-start: 0;
+  padding-block-start: var(--pds-spacing-xs);
+  padding-block-end: 0;
 }
 
 ul.toc-list ul li {
