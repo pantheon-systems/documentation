@@ -1,3 +1,8 @@
+"use client";
+
+// A client component on purpose: the menu items hold Link elements, and passing
+// elements from a server component to the PDS client components fails during
+// the production prerender (it works in dev).
 import Link from "next/link";
 import React from "react";
 import {
