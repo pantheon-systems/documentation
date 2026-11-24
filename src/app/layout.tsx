@@ -1,3 +1,9 @@
+import {
+  IBM_Plex_Serif,
+  Inter,
+  Inter_Tight,
+  Source_Code_Pro,
+} from "next/font/google";
 import Script from "next/script";
 import * as React from "react";
 import { Suspense } from "react";
@@ -8,8 +14,44 @@ import { GlobalWrapper } from "@/components/ui/pds-re-export";
 import { AnalyticsGTM } from "./analytics-gtm";
 import SegmentAnalytics from "./analytics-segment";
 
-// Fonts (Inter, Inter Tight, IBM Plex Serif, Source Code Pro) load from
-// pds-core.css, so there is no next/font setup here.
+// The V2 fonts. pds-core.css also loads them, but through an @import that ends
+// up mid-file once the bundler concatenates the CSS, where browsers ignore it,
+// so nothing loaded and every font fell back to the system sans. Self-host
+// them here and point the --pds-typography-ff-* tokens at them (see
+// globals.css).
+const inter = Inter({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter-tight",
+});
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-ibm-plex-serif",
+});
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-source-code-pro",
+});
+
+const fontVariables = [
+  inter.variable,
+  interTight.variable,
+  ibmPlexSerif.variable,
+  sourceCodePro.variable,
+].join(" ");
 
 function MyApp({ children }: PropsWithChildren) {
   const enableAnalytics = process.env.NODE_ENV !== "development";
@@ -18,7 +60,7 @@ function MyApp({ children }: PropsWithChildren) {
     enableAnalytics && process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
-    <html lang="en">
+    <html lang="en" className={fontVariables}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 

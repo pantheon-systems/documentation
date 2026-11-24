@@ -10,6 +10,16 @@
 /* Code block line numbering */
 @import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
+/* Point the V2 font tokens at the fonts self-hosted by next/font in layout.tsx.
+   Unlayered, so this beats the token values in pds-core.css. The named
+   fallbacks match V2's own stacks. */
+:root {
+  --pds-typography-ff-default: var(--font-inter), "Inter", sans-serif;
+  --pds-typography-ff-compact: var(--font-inter-tight), "Inter Tight", sans-serif;
+  --pds-typography-ff-secondary: var(--font-ibm-plex-serif), "IBM Plex Serif", serif;
+  --pds-typography-ff-code: var(--font-source-code-pro), "Source Code Pro", monospace;
+}
+
 /* Default menu */
 @media (min-width: 641px) {
   .sidenav-compact {
