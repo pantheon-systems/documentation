@@ -792,30 +792,25 @@ Pantheon
 
 ## Redirects
 
-Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users to do not receive a 404. Always add the Redirect label to the PR that includes a redirect.  This allows us to find these changes later if we need to reference why a page was moved or deleted.
+Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users do not receive a 404. Always add the Redirect label to the PR that includes a redirect. This allows us to find these changes later if we need to reference why a page was moved or deleted.
 
-When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
+Redirects are defined in the `RedirectMap` object in `src/middleware.ts`. Add them in the same pull request that moves or removes the page, and list them in the pull request description so reviewers can check them. Each entry maps the old path to the new path and is served as a permanent (301) redirect.
 
-<Example>
+Follow these rules for each entry:
 
-| Redirect from | to |
-|---|---|
-| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
-| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
-| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
-| docs.pantheon.io/drupal-commandline        | sc=301\|t=https://docs.pantheon.io/drupal-commandline |
+- Use the path only, starting with `/`. Don't include the domain.
+- Don't add a trailing slash to the old path.
+- Point to the final destination. If an existing entry already redirects to the page you're moving, update it to the new location so users never follow a chain of redirects.
+- To send users to a heading, add the anchor to the new path, such as `/pantheon-workflow#your-site-code-on-pantheon`. Query strings (`?`) aren't supported.
+- Add an entry for every page that moves, including each page of a renamed guide.
 
-<hr className="source-code" /> <br/>
-
-```markdown
-| Redirect from | to |
-|---|---|
-| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
-| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
-| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
-| docs.pantheon.io/drupal-commandline        | sc=301\|t=https://docs.pantheon.io/drupal-commandline |
+```ts
+const RedirectMap: Record<string, string> = {
+  "/guides/custom-upstream": "/guides/upstream",
+  "/guides/custom-upstream/create-custom-upstream": "/guides/upstream/create-upstream",
+  "/code": "/pantheon-workflow#your-site-code-on-pantheon",
+};
 ```
-</Example>
 
 ## Reusable Content/Partials
 
