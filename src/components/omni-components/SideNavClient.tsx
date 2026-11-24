@@ -27,6 +27,8 @@ const convertToMenuItems = (items: NavItemData[]): any[] => {
     }
 
     return {
+      // TreeNav requires path on any item that has children.
+      path: item.link,
       isActive: item.isActive,
       links: item.children && item.children.length > 0
         ? convertToMenuItems(item.children)
