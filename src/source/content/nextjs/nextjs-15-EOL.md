@@ -1,6 +1,6 @@
 ---
 title: Next.js Build and Runtime Architecture on Pantheon
-description: Information about Next.js 15 EOL and upgrading to Next.js 16
+description: Information about Next.js 15 End of Life and upgrading to Next.js 16
 reviewed: "2026-11-24"
 contenttype: [doc]
 innav: [true]
