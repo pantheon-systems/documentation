@@ -210,6 +210,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                       headingText={group.title}
                       linkItems={group.links.map((link, index) => (
                         <Link
+                          key={index}
                           style={{
                             color: "var(--pds-color-interactive-link-default)",
                             fontWeight: "var(--pds-typography-fw-regular)",
