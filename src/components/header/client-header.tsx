@@ -1,6 +1,5 @@
 "use client";
 
-import { MOBILE_MENU_BREAKPOINT } from "@/constants";
 import {
   SiteMenu as PDSNavMenu,
 } from "@pantheon-systems/pds-toolkit-react";
@@ -47,6 +46,7 @@ export const ClientHeader: React.FC<{
             </a>
           ),
         },
-      ]} />
+      ]}
+    />
   );
 };
