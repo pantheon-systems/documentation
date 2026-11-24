@@ -1,4 +1,6 @@
 .docsReleaseNotesTags {
   column-gap: var(--pds-spacing-s);
   display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--pds-spacing-xs);
 }

@@ -71,14 +71,16 @@ export const ReleaseNoteTemplate = async ({
                   customShortcodes={customShortcodes}
                 /> */}
 
-                <MdxWrapper
-                  article={{ content: node.content }}
-                  componentMap={{
-                    h1: headline2,
-                    h2: headline3,
-                    h3: headline4,
-                  }}
-                />
+                <div className="pds-prose">
+                  <MdxWrapper
+                    article={{ content: node.content }}
+                    componentMap={{
+                      h1: headline2,
+                      h2: headline3,
+                      h3: headline4,
+                    }}
+                  />
+                </div>
               </div>
             </div>
 

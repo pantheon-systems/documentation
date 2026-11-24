@@ -93,72 +93,74 @@ export const TerminusCommandTemplate = ({
                   editPath={""}
                   reviewDate={""}
                 />
-                <h2>Description</h2>
-                <p>{command.description}</p>
+                <div className="pds-prose">
+                  <h2>Description</h2>
+                  <p>{command.description}</p>
 
-                <h2>Example Usage</h2>
-                <div className="pds-mar-block-start-l pds-mar-block-end-4xl">
-                  {/* <pre className="language-bash">
-                    <code className="language-bash">
-                      terminus {command.usage[0].replace(/\[|\]/g, "")}
-                    </code>
-                  </pre> */}
-                  <Pre className="language-bash">
-                    <code className="language-bash">
-                      terminus {command.usage[0].replace(/\[|\]/g, "")}
-                    </code>
-                  </Pre>
-                </div>
+                  <h2>Example Usage</h2>
+                  <div className="pds-mar-block-start-l pds-mar-block-end-4xl">
+                    {/* <pre className="language-bash">
+                      <code className="language-bash">
+                        terminus {command.usage[0].replace(/\[|\]/g, "")}
+                      </code>
+                    </pre> */}
+                    <Pre className="language-bash">
+                      <code className="language-bash">
+                        terminus {command.usage[0].replace(/\[|\]/g, "")}
+                      </code>
+                    </Pre>
+                  </div>
 
-                <div className="pds-mar-block-end-4xl">
-                  {command.usage.map((usage, i) => {
-                    if (i !== 0) {
-                      return (
-                        <span key={i}>
-                          <p key={i}>
-                            <code
-                              key={`${i}-pre`}
-                              className="pds-mar-inline-end-2xs"
-                            >
+                  <div className="pds-mar-block-end-4xl">
+                    {command.usage.map((usage, i) => {
+                      if (i !== 0) {
+                        return (
+                          <span key={i}>
+                            <p key={i}>
+                              <code
+                                key={`${i}-pre`}
+                                className="pds-mar-inline-end-2xs"
+                              >
+                                {usage
+                                  .replace(/\[|\]/g, "")
+                                  .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
+                              </code>{" "}
                               {usage
                                 .replace(/\[|\]/g, "")
-                                .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
-                            </code>{" "}
-                            {usage
-                              .replace(/\[|\]/g, "")
-                              .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
-                          </p>
-                          <hr className="commandHr" />
-                        </span>
-                      );
-                    }
-                  })}
-                </div>
-
-                <h2>Options</h2>
-                <div className="pds-mar-block-end-4xl">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Option</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {options.map((option: any, i: number) => {
-                        return (
-                          <tr key={`${i}-${option}`}>
-                            <td key={`${option}-name`}>{option[0].name}</td>
-                            <td key={`${option}-desc`}>
-                              {option[0].description}
-                            </td>
-                          </tr>
+                                .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
+                            </p>
+                            <hr className="commandHr" />
+                          </span>
                         );
-                      })}
-                    </tbody>
-                  </table>
+                      }
+                    })}
+                  </div>
+
+                  <h2>Options</h2>
+                  <div className="pds-mar-block-end-4xl">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Option</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {options.map((option: any, i: number) => {
+                          return (
+                            <tr key={`${i}-${option}`}>
+                              <td key={`${option}-name`}>{option[0].name}</td>
+                              <td key={`${option}-desc`}>
+                                {option[0].description}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <Partial file={`terminus/${slug}.md`} />
                 </div>
-                <Partial file={`terminus/${slug}.md`} />
                 <Link href="/terminus/commands">Back to all commands</Link>
               </article>
             </main>

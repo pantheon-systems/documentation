@@ -13,7 +13,9 @@ export const IframeEmbedTemplate = ({
         <article className="pds-pad-block-end-xl">
           <div id="doc" className="doc changelog__content">
             <div className="pds-mar-block-start-s pds-mar-block-end-2xl">
-              <MdxWrapper article={iframeEmbed} />
+              <div className="pds-prose">
+                <MdxWrapper article={iframeEmbed} />
+              </div>
             </div>
           </div>
         </article>
