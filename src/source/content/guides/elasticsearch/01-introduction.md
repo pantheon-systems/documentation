@@ -18,6 +18,12 @@ contributors: [jazzsequence]
 showtoc: true
 ---
 
+<Alert type="warning" title="Solr is no longer available for WordPress">
+
+Pantheon no longer offers Solr for WordPress sites. Use Elasticsearch powered by ElasticPress.io for search on your WordPress site.
+
+</Alert>
+
 Elasticsearch on Pantheon gives WordPress teams a fully managed search service that goes beyond basic site search — offloading database queries, handling traffic spikes, and delivering features like fuzzy matching and autosuggest without the overhead of managing an external provider.
 
 <Youtube src="SKu-NY5lQ50" title="Getting Started with Elasticsearch on Pantheon" />

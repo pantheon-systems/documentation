@@ -48,7 +48,7 @@ Steps marked with an asterisk character * indicate the task is required and cann
 | | Todo         | Context |
 |---| ------------- | -------------------------------------- |
 |  <input type="checkbox" /> | Enable Object Cache Pro | Achieve faster page loads by caching queries to the database after a page is loaded for the first time:<ul><li>[Enable Object Cache for Drupal](/object-cache/drupal)</li><li>[Enable Object Cache Pro for WordPress](/object-cache/wordpress)</li></ul> |
-|  <input type="checkbox" /> | Enable Solr | Swap out the default search mechanism for a more performant alternative: <ul><li>[Enabling Solr with Drupal](/guides/solr-drupal)</li><li>[Enabling Solr for WordPress](/guides/wordpress-developer/wordpress-solr)</li></ul>|
+|  <input type="checkbox" /> | Enable Solr | Swap out the default search mechanism for a more performant alternative: <ul><li>[Enabling Solr with Drupal](/guides/solr-drupal)</li></ul>|
 |  <input type="checkbox" /> | Enable New Relic | Start collecting and monitoring performance data for your site by enabling New Relic from the site dashboard.<br/><br/>[Learn more](/guides/new-relic/activate-new-relic) |
 
 

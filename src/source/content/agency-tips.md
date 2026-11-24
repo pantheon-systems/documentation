@@ -47,7 +47,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Pantheon Search
-All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/guides/wordpress-developer/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
+All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Object Cache
 All paid plans, except for the Basic plan, can use Object Cache.
