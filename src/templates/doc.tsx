@@ -88,10 +88,12 @@ export const DocTemplate = ({
                     reviewDate={doc.frontmatter.reviewed}
                     // isoDate={guide.frontmatter.reviewed}
                   />
-                  <MdxWrapper
-                    article={{ content: doc.content }}
-                    componentMap={{}}
-                  />
+                  <div className="pds-prose">
+                    <MdxWrapper
+                      article={{ content: doc.content }}
+                      componentMap={{}}
+                    />
+                  </div>
                   {(prevUrl || nextUrl) && (
                     <NavButtons prev={prevUrl} next={nextUrl} />
                   )}

@@ -108,7 +108,7 @@ export const AddSearchClientComponent: React.FC = () => {
   return (
     <Container width="standard" className="search-results">
       <div className="search-results__heading">
-        <h1>Search Results</h1>
+        <h1 className="pds-heading-4xl">Search Results</h1>
       </div>
 
         <TextInput

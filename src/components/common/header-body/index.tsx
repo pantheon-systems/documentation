@@ -37,7 +37,7 @@ const HeaderBody = ({
           <StatusBadge
             hasStatusIndicator={false}
             label={lastReviewed}
-            color="transparent"
+            color="neutral"
             className="pds-mar-block-end-m"
           />
         )}
@@ -49,10 +49,10 @@ const HeaderBody = ({
         {subtitle ? (
           <>
             <p className="pds-overline-m">{title}</p>
-            <h1>{subtitle}</h1>
+            <h1 className="pds-heading-4xl">{subtitle}</h1>
           </>
         ) : (
-          <h1 className="docs-title">{title}</h1>
+          <h1 className="docs-title pds-heading-4xl">{title}</h1>
         )}
 
         <p className="docs-lead-text docs-lead-text--sm pds-mar-block-end-xl">

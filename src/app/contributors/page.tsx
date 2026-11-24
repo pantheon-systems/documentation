@@ -13,7 +13,7 @@ export default async function Contributors() {
   return (
     <Layout>
       <Container width={"standard"}>
-        <h1 className="title">Contributors</h1>
+        <h1 className="title pds-heading-4xl">Contributors</h1>
         <ul className="contributors-list pds-grid">
           {contributors.map((contributor: ContributorType) => (
             <li

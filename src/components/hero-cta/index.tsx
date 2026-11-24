@@ -35,7 +35,7 @@ export function HeroCTA(props: Props) {
         className="pds-grid-item pds-grid-item--lg-6 hero-cta-text"
         slot="second-item"
       >
-        <h1 className={styles.heroTitle}>{title}</h1>
+        <h1 className={`pds-heading-4xl ${styles.heroTitle}`}>{title}</h1>
         <p className="docs-lead-text">{subTitle}</p>
         <Link
           href={url}

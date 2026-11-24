@@ -27,19 +27,22 @@
   transition: all 0.3s ease-in-out;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--pds-color-foreground-default);
-  font-family: var(--pds-typography-ff-default);
-  font-weight: 700;
-  letter-spacing: normal;
-  line-height: 120%;
-  margin-block-end: 0.8rem;
-  margin-block-start: 0;
+/* V1 gave bare headings a bottom margin; V2 sets type styles but no spacing.
+   Keep the spacing. It lives in V2's pds-v1 layer on purpose: unlayered CSS
+   beats layered CSS, so an unlayered rule here would override V2 component
+   classes. pds-v1 ranks below pds-v2, so this only applies where V2 has no
+   opinion. Page titles take a pds-heading-* class for their size, since V2's
+   bare h1 default is small. */
+@layer pds-v1 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-end: 0.8rem;
+    margin-block-start: 0;
+  }
 }
 
 .platform-integration__link:hover .pds-panel {

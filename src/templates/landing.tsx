@@ -100,7 +100,7 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
           </Container>
           <Container width={containerWidth} className="landing-page__header">
             <div className="landing-page-heading pds-pad-block-m">
-              <h1 className="pds-heading-xl text-4xl font-bold pds-mar-block-end-m">
+              <h1 className="pds-heading-4xl pds-mar-block-end-m">
                 {topic.title}
               </h1>
               {topic.subtitle && (

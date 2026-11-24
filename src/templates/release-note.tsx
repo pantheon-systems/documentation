@@ -46,7 +46,7 @@ export const ReleaseNoteTemplate = async ({
               Pantheon Release Notes
             </Link>
           </div>
-          <h1 className="pds-mar-block-end-l">
+          <h1 className="pds-heading-4xl pds-mar-block-end-l">
             {node.frontmatter.title}
           </h1>
 
