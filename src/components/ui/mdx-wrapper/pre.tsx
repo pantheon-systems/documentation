@@ -85,9 +85,11 @@ export const Pre = ({ children, node, ...props }: PropsWithChildren & any) => {
 
     spanBlocks.forEach((spanBlock: HTMLSpanElement, index: number) => {
       if (outputLines) {
-        // 0 is base but we refer counts = 1
-        // 1 is always the command for bash
-        if (index + 2 < outputLines.start || index + 2 > outputLines.end) {
+        // index is 0-based and outputLines is a 1-based, inclusive range, where
+        // line 1 is the command for bash. Hide only lines past the end of the
+        // range: `index + 1 > end`. (This used `index + 2`, which also hid
+        // the last line of the range itself.)
+        if (index + 2 < outputLines.start || index + 1 > outputLines.end) {
           spanBlock.classList.add("gatsby-hide-code-line");
         }
       }
