@@ -44,6 +44,10 @@ export const getOmniItems = async (): Promise<OmniItem[]> => {
       label: "Manage accounts and workspaces",
     }),
     withHeader(security(), { group: "Run" }),
+    withHeader(simpleLink("/vulnerability-tracker", "Vulnerability Tracker"), {
+      group: "Run",
+      label: "Vulnerability tracker",
+    }),
     withHeader(support(), {
       group: "Run",
       label: "Support and troubleshooting",

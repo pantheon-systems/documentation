@@ -15,7 +15,7 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/troubleshooting
 editpath: search/04-troubleshooting.md
-reviewed: "2026-06-16"
+reviewed: "2026-11-24"
 ---
 
 ## Troubleshooting
@@ -51,6 +51,12 @@ The Instant Results feature requires a stored search template on ElasticPress.io
 - Ensure you are running a supported version of WordPress and PHP.
 - Deactivate other search plugins that may conflict with ElasticPress.
 
+### Query returns "current license is non-compliant"
+
+A query that returns an HTTP 403 with `current license is non-compliant for [feature]` uses an Elasticsearch feature that requires an Enterprise license, such as Reciprocal Rank Fusion (RRF) or the linear retriever.
+
+Pantheon offers Elasticsearch powered by ElasticPress.io on the Basic license tier. There is no Enterprise tier or upgrade path. Use a query that doesn't depend on the Enterprise-only feature, or bring your own Elasticsearch cluster. See [Do I get all the features of ElasticPress?](#do-i-get-all-the-features-of-elasticpress).
+
 ## Frequently Asked Questions
 
 ### Do I have to pay extra for Elasticsearch?
@@ -75,7 +81,13 @@ Pantheon uses shared Elasticsearch clusters.
 
 ### Do I get all the features of ElasticPress?
 
-Yes. All features available in the ElasticPress plugin are supported on Pantheon's Elasticsearch integration, including features that are specific to ElasticPress.io.
+Most ElasticPress features work on Pantheon. Pantheon offers Elasticsearch powered by [ElasticPress.io](https://www.elasticpress.io/), a hosted search service, on the Basic license tier. Features that require an Elasticsearch Enterprise license, such as Reciprocal Rank Fusion (RRF) and the linear retriever, are not available.
+
+Pantheon does not offer an Elasticsearch Enterprise tier or an upgrade path to one. To use Enterprise-only features, you must bring your own Elasticsearch cluster, which requires configuring the ElasticPress plugin to connect to it instead of the Pantheon-provided ElasticPress.io host.
+
+### Does Pantheon support Reciprocal Rank Fusion (RRF) or the linear retriever?
+
+No. Both features require an Elasticsearch Enterprise license, and Pantheon's Elasticsearch service runs on the Basic license tier. Pantheon does not offer an Elasticsearch Enterprise tier or an upgrade path, and there are no plans to add one at this time. If you need these features, bring your own Elasticsearch cluster and configure ElasticPress to use it.
 
 ### Can I use ElasticPress AI features?
 

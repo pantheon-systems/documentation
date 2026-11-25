@@ -113,6 +113,14 @@ const generateFields = (
     fields.slug = `release-notes/${split[0]}/${split[1]}/${remainingSlug}`; // and return a slug of releasenotes/YYYY/MM/slug
   }
 
+  if (filePath.includes("/vulnerabilities/")) {
+    // Same YYYY-MM-DD-slug naming as release notes, served under the tracker:
+    // 2026-11-18-wordpress-7-1-5.md -> vulnerability-tracker/2026/11/wordpress-7-1-5
+    const split = fileName.split("-");
+    const remainingSlug = split.slice(3).join("-");
+    fields.slug = `vulnerability-tracker/${split[0]}/${split[1]}/${remainingSlug}`;
+  }
+
   if (filePath.includes("/iframeembeds/")) {
     fields.iframeembed = true;
     const relativeDir = path.dirname(
