@@ -10,7 +10,7 @@
  * are left out until the switcher is added.
  */
 
-/* Page frame. Pages on a secondary surface add `pan-docs--secondary`. */
+/* Page frame. */
 .pan-docs {
   /* Reading width for article and list columns. */
   --pan-docs-content-width: 56rem;
@@ -20,10 +20,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.pan-docs--secondary {
-  background-color: var(--pds-color-surface-default-secondary);
 }
 
 .pan-docs__main {
@@ -40,7 +36,7 @@
   color: var(--pds-color-foreground-default-secondary);
 }
 
-/* Site Footer has no background of its own; keep it white on secondary pages. */
+/* Site Footer has no background of its own; keep it white. */
 .pan-docs .pds-site-footer {
   background-color: var(--pds-color-surface-default);
 }

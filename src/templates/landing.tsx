@@ -113,7 +113,6 @@ export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
     <DocsPage
       activePage={topic.path}
       title={title}
-      isTwoTone
       header={
         <>
           <h1 className="pan-docs-page-header__title">{title}</h1>
