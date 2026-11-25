@@ -11,6 +11,7 @@ import { Suspense } from "react";
 import "@/styles/globals.css";
 import { PropsWithChildren } from "react";
 import { GlobalWrapper } from "@/components/ui/pds-re-export";
+import { NAV_MOBILE_MAX_WIDTH } from "@/constants";
 import { AnalyticsGTM } from "./analytics-gtm";
 import SegmentAnalytics from "./analytics-segment";
 
@@ -91,9 +92,9 @@ function MyApp({ children }: PropsWithChildren) {
       )}
 
       <body>
-        {/* The V2 header needs about 1260px, so the nav collapses below 1280px.
-            Page layouts keep the default 767px mobile breakpoint. */}
-        <GlobalWrapper navMobileMaxWidth={1279}>{children}</GlobalWrapper>
+        <GlobalWrapper navMobileMaxWidth={NAV_MOBILE_MAX_WIDTH}>
+          {children}
+        </GlobalWrapper>
       </body>
       <Suspense>
         <SegmentAnalytics />
