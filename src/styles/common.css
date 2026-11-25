@@ -36,6 +36,14 @@
   position: relative;
 }
 
+/* PDS draws Tag as a full pill, but the brand design uses a small corner radius
+   for tags (about 2.5px in the brand prototype). Tags are only used on the
+   release notes pages, so apply the default small radius here until the
+   toolkit's Tag changes. */
+.pds-tag {
+  border-radius: var(--pds-border-radius-default);
+}
+
 /* Revert custom font's bullet rendering styles */
 li::before {
   font-family: auto;
