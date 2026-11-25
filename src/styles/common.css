@@ -104,10 +104,6 @@ li::before {
   margin: 0;
 }
 
-.pds-header-logo {
-  --pds-color-foreground-default: #000;
-}
-
 /* Temporary hacks for marketo forms */
 
 #docs-main:focus {
@@ -360,22 +356,12 @@ article {
 
 /* Temporary global styles that should be incorporated back into PDS */
 
-/* Set explicit image width/height for tile images. */
-.pds-tile__image img {
-  width: 5rem;
-  height: 5rem;
-}
-
 strong {
   font-weight: var(--pds-typography-fw-semibold);
 }
 
 .pds-tag {
   white-space: nowrap;
-}
-
-.pds-input-field__decorators {
-  padding-inline: var(--pds-spacing-5xs);
 }
 
 .pds-card {
@@ -396,12 +382,6 @@ strong {
     gap: var(--pds-spacing-l);
     grid-template-columns: repeat(12, 1fr);
   }
-  .pds-grid--narrow {
-    gap: var(--pds-spacing-xl);
-  }
-  .pds-grid--wide {
-    gap: var(--pds-spacing-2xl);
-  }
 }
 
 /* Large and x-large viewport grid container. */
@@ -409,12 +389,6 @@ strong {
   .pds-grid {
     gap: var(--pds-spacing-xl);
     grid-template-columns: repeat(12, 1fr);
-  }
-  .pds-grid--narrow {
-    gap: var(--pds-spacing-2xl);
-  }
-  .pds-grid--wide {
-    gap: var(--pds-spacing-3xl);
   }
 }
 
@@ -3184,26 +3158,6 @@ div.gatsby-remark-code-title::before {
   content: "File: ";
 }
 
-.guide-sidebar {
-  height: 100%;
-  padding-block-end: var(--pds-spacing-2xl);
-}
-
-@media (min-width: 900px) {
-  .guide-sidebar {
-    border-right: 1px solid var(--pds-color-border-default);
-    padding-block-end: 0;
-  }
-}
-
-button.pds-side-nav-compact__toggle {
-  padding: 0 4px;
-}
-
-button.pds-side-nav-compact__toggle .pds-icon {
-  margin-top: -4px;
-}
-
 .docs-contributor-link a {
   color: var(--pds-color-foreground-default-secondary);
 }
@@ -3254,11 +3208,6 @@ button.pds-side-nav-compact__toggle .pds-icon {
 .rn-popover-categories .pds-popover__title {
   font-size: 16px;
   margin-bottom: 26px;
-}
-
-.rn-popover-categories .pds-popover__close {
-  top: -20px;
-  right: -10px;
 }
 
 .rn-popover-categories .pds-popover__trigger-text {

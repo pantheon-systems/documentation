@@ -28,11 +28,6 @@
   z-index: 50;
 }
 
-.pds-side-nav-compact__menu,
-.pds-side-nav-compact__menu--expanded {
-  transition: all 0.3s ease-in-out;
-}
-
 /* V1 gave bare headings a bottom margin; V2 sets type styles but no spacing.
    Keep the spacing. It lives in V2's pds-v1 layer on purpose: unlayered CSS
    beats layered CSS, so an unlayered rule here would override V2 component
