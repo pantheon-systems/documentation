@@ -36,12 +36,12 @@
   position: relative;
 }
 
-/* PDS draws Tag as a full pill, but the brand design uses a small corner radius
-   for tags (about 2.5px in the brand prototype). Tags are only used on the
-   release notes pages, so apply the default small radius here until the
-   toolkit's Tag changes. */
-.pds-tag {
-  border-radius: var(--pds-border-radius-default);
+/* Beta 23 draws buttons and tags as full pills (3.5rem). The brand design uses a
+   small corner radius (4px for buttons, about 2.5px for tags in the brand
+   prototype). Buttons and tags share this one token, so override it here
+   instead of restyling each component; the brand release replaces the value. */
+:root {
+  --pds-border-radius-button: var(--pds-border-radius-default);
 }
 
 /* Revert custom font's bullet rendering styles */
