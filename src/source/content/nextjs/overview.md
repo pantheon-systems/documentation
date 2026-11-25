@@ -21,6 +21,8 @@ Support for Next.js is available to customers with Gold, Platinum or Diamond Wor
 ### Compatibility & Requirements
 * **Node versions:**
   * Pantheon provides the latest 3 LTS versions of Node.js. Pantheon derives which one to use by looking at the engines property in `package.json`, so ensure this is set in your project’s configuration.
+* **Next.js versions:**
+  * Pantheon recommends you use Next.js 16 or newer, as 15 will be reaching end-of-life in January 2027.
 * **Package managers:**
   * Pantheon will use `npm`, `yarn`, `pnpm`, or `bun` depending on which lock file you have present in your repository. Having a lock file for more than one package manager can create unpredictable behavior.
 * **Expected commands in `package.json`:**
