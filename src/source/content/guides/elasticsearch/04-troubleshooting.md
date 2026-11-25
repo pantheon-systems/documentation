@@ -46,6 +46,21 @@ The Instant Results feature requires a stored search template on ElasticPress.io
 - **If `put-search-template` reports success but `get-search-template` still returns `null`:** The **Search** feature ("Post Search & Filter") is likely not active. Instant Results depends on it to generate the template. Enable it first: `terminus wp <site>.<env> -- elasticpress activate-feature search`, then retry `put-search-template`.
 - **The template is automatically pushed** at the end of `sync` and `sync --setup`, but only if both the **Instant Results** and **Search** features are active. If the Search feature is inactive, the template body will be empty and the push will silently fail.
 
+### Document sync fails with "pipeline does not exist"
+
+When you sync a file with the Documents feature, you may see an error such as `pipeline with id [...] does not exist`. ElasticPress creates the ingest pipeline once, when you activate the Documents feature. If that request fails, the feature stays active without the pipeline, and every file sync after that fails.
+
+- **Recreate the pipeline:** Turn the feature off and on again, then sync your files. You do not need to reindex your whole site.
+
+  ```bash
+  terminus wp <site>.<env> -- elasticpress deactivate-feature documents
+  terminus wp <site>.<env> -- elasticpress activate-feature documents
+  terminus wp <site>.<env> -- elasticpress sync --post-type=attachment --show-errors
+  ```
+
+- **Check whether the pipeline exists:** Get your index name with `elasticpress get-indices`, then run `terminus wp <site>.<env> -- elasticpress request "_ingest/pipeline/<index-name>-attachment" --pretty`. A result of `{}` means the pipeline is missing.
+- **Check `wp-config.php`:** Remove any `EP_HOST`, `EP_INDEX_PREFIX`, or `EP_CREDENTIALS` definitions. When Elasticsearch is active, Pantheon defines these before `wp-config.php` loads, so a second definition only logs an "already defined" warning. If Elasticsearch is not active on the environment, your definitions apply. They can point ElasticPress at a different ElasticPress.io subscription that rejects requests. After you remove them, re-enable Elasticsearch by following the [setup steps](/guides/pantheon-search/elasticsearch/setup-config).
+
 ### Plugin activation errors
 
 - Ensure you are running a supported version of WordPress and PHP.
@@ -96,4 +111,14 @@ Yes, you can use ElasticPress AI features with your own API keys. Pantheon does 
 ### Does each environment get its own Elasticsearch endpoint?
 
 Yes. Every environment on your site — Dev, Test, Live, and Multidevs — receives its own Elasticsearch endpoint. This ensures that indexing and searching in one environment does not affect another.
+
+### Can I query the Elasticsearch API directly?
+
+No. Pantheon does not provide direct access to the Elasticsearch endpoint or cluster, and there is no dashboard for browsing indexed documents. Use ElasticPress WP-CLI commands and the ElasticPress Debugging Add-On instead. See [Inspect Your Index](/guides/pantheon-search/elasticsearch/query-optimization#inspect-your-index).
+
+### Where are the Elasticsearch endpoints hosted?
+
+Pantheon's ElasticPress.io clusters are in the US only. Sites that serve traffic from other regions, such as Europe, can see about 50 to 100 ms of additional latency on search requests. Pantheon does not offer a European cluster at this time. Supporting one would require a new cluster and region-based provisioning, and there is no timeline.
+
+If latency is a concern, you can configure the ElasticPress plugin to connect to your own Elasticsearch cluster instead of the Pantheon-provided host.
 

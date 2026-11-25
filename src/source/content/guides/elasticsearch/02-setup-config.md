@@ -14,7 +14,7 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/setup-config
 editpath: search/02-setup-config.md
-reviewed: "2026-06-16"
+reviewed: "2026-11-25"
 ---
 
 Getting Elasticsearch running on your Pantheon WordPress site involves activating the service on the platform and then installing and configuring the ElasticPress plugin within WordPress.
@@ -98,6 +98,31 @@ Navigate to **ElasticPress > Features** in your WordPress admin to enable and co
 <Alert type="warning" title="Important: Feature Dependencies">
 
 **Instant Results** and **Autosuggest** require the **Search** feature to be active. If Search is not enabled, these features will not function correctly. Always enable Search first before enabling Instant Results or Autosuggest.
+
+</Alert>
+
+### Index PDFs and Other Documents
+
+The **Documents** feature extracts text from files that WordPress stores as attachments, such as PDFs and Word documents, and adds it to your search index. ElasticPress uses an Elasticsearch ingest pipeline to extract the text. ElasticPress creates the pipeline for your site when you activate the feature.
+
+To enable the feature and index your existing files:
+
+```bash
+terminus wp <site>.<env> -- elasticpress activate-feature documents
+terminus wp <site>.<env> -- elasticpress sync --post-type=attachment --show-errors
+```
+
+To check that a file was indexed, get its indexed document and look for the extracted text in `attachments.attachment.content`:
+
+```bash
+terminus wp <site>.<env> -- elasticpress get post <attachment-id> --pretty
+```
+
+If the sync fails with `pipeline with id [...] does not exist`, see [Document sync fails with "pipeline does not exist"](/guides/pantheon-search/elasticsearch/troubleshooting#document-sync-fails-with-pipeline-does-not-exist).
+
+<Alert type="warning" title="Do Not Define ElasticPress Connection Constants">
+
+When Elasticsearch is active, Pantheon defines `EP_HOST`, `EP_INDEX_PREFIX`, and `EP_CREDENTIALS` for you before `wp-config.php` loads. Do not define them again in `wp-config.php`. PHP ignores the second definition and logs an "already defined" warning, and frameworks such as Bedrock can turn that warning into an exception. While Elasticsearch is active, the Pantheon values stay in effect.
 
 </Alert>
 

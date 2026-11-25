@@ -15,7 +15,7 @@ contributors: [jazzsequence, carolynshannon]
 showtoc: true
 permalink: docs/guides/pantheon-search/elasticsearch/query-optimization
 editpath: search/03-query-optimization.md
-reviewed: "2026-06-16"
+reviewed: "2026-11-25"
 ---
 
 One of the most powerful aspects of Elasticsearch on Pantheon is its ability to offload `WP_Query` requests from your database. The ElasticPress plugin integrates with WordPress at the query level, routing eligible queries to Elasticsearch instead of MySQL.
@@ -106,3 +106,18 @@ For large sites, consider running the sync with the `--per-page` flag to manage 
 ```bash
 terminus wp <site>.<env> -- elasticpress sync --per-page=200
 ```
+
+### Inspect Your Index
+
+Pantheon does not provide direct access to the Elasticsearch cluster or a dashboard for browsing indexed documents. Use these ElasticPress tools instead:
+
+- **List your index names:** `terminus wp <site>.<env> -- elasticpress get-indices`
+- **View field mappings:** `terminus wp <site>.<env> -- elasticpress get-mapping --pretty`
+- **View one indexed document:** `terminus wp <site>.<env> -- elasticpress get post <post-id> --pretty`
+- **Browse documents in WordPress admin:** Install the [ElasticPress Debugging Add-On](https://www.elasticpress.io/resources/articles/using-the-elasticpress-debugging-add-on-plugin/). Open a post, open the **EP Panel**, and click **Reload and retrieve raw ES document**. The document appears under **Query Result**.
+
+### Large Sites and Index Size
+
+- **Rate limits:** Indexing has no rate limit. A timeout usually comes from the web server or the ElasticPress.io service, not from a limit on your plan.
+- **Batch size:** ElasticPress loads each batch of posts into memory, so avoid very large batches. Change the number of posts per cycle under **ElasticPress > Settings**, or use `--per-page`. For sites with many posts, sync with WP-CLI.
+- **Index size:** There is no fixed limit on index size. An index that grows past about 30 GB or 250,000 documents may need to move to a dedicated ElasticPress cluster. Contact Pantheon Support before you index at that scale.
