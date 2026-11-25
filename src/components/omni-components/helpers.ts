@@ -1,9 +1,28 @@
 import { processDirectoryForMarkDown } from "@/server/processor/mdx";
 
+/**
+ * Where an omni item shows up in the header menu. The omni list is the one place
+ * that defines the site's navigation, so the header reads this instead of
+ * keeping its own list.
+ */
+export type OmniHeader = {
+  /**
+   * "top" is a link in the menu bar, "guides" lists it in the Guides dropdown
+   * (the default, so a new section appears with no extra work), "cli" turns the
+   * item into the CLI dropdown, and "none" leaves it out.
+   */
+  menu?: "top" | "guides" | "cli" | "none";
+  /** Heading to list the item under inside a dropdown. */
+  group?: string;
+  /** Menu label, when it should differ from the title. */
+  label?: string;
+};
+
 export type OmniItem = {
   link: string;
   title: string;
   children?: OmniItem[];
+  header?: OmniHeader;
 };
 
 export const simpleLink = (link: string, title = "", children: any[] = []) => {
