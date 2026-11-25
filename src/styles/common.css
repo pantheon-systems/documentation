@@ -3378,3 +3378,70 @@ mark.release-note-search-highlight {
 .docs-nowrap {
   white-space: nowrap;
 }
+
+/* The filter row under the search box, like the release notes one: the filter
+   button and its removable tags, with a rule below. */
+.rn-filter-bar {
+  border-block-end: 1px solid var(--pds-color-border-default);
+  padding-block: var(--pds-spacing-m) var(--pds-spacing-3xl);
+}
+
+/* A table that becomes a list of stacked cards on small screens: the header row
+   is hidden, and cells with a data-label show it above their value. */
+@media (max-width: 767px) {
+  .docs-table-stack thead {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .docs-table-stack,
+  .docs-table-stack tbody,
+  .docs-table-stack tr,
+  .docs-table-stack td {
+    display: block;
+  }
+
+  .docs-table-stack tr {
+    border-block-end: 1px solid var(--pds-color-border-default);
+    display: flex;
+    flex-direction: column;
+    gap: var(--pds-spacing-2xs);
+    padding-block: var(--pds-spacing-m);
+  }
+
+  .docs-table-stack td {
+    border: 0;
+    padding: 0;
+  }
+
+  /* Title first, then the status, then the details. */
+  .docs-table-stack .docs-table-stack__title {
+    font-weight: var(--pds-typography-fw-medium);
+    order: -2;
+  }
+
+  .docs-table-stack .docs-table-stack__status {
+    order: -1;
+  }
+
+  .docs-table-stack td[data-label]::before {
+    color: var(--pds-color-foreground-default-secondary);
+    content: attr(data-label);
+    display: block;
+    font-size: var(--pds-typography-size-xs);
+    font-weight: var(--pds-typography-fw-medium);
+  }
+}
+
+/* Where a keyword matched, shown under a row's title when it isn't in the title. */
+.docs-table-snippet {
+  color: var(--pds-color-foreground-default-secondary);
+  font-size: var(--pds-typography-size-s);
+  margin-block-start: var(--pds-spacing-2xs);
+}
