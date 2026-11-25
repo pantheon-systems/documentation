@@ -149,7 +149,7 @@ While you can use those core APIs directly to move load files as late as possibl
 
 For JavaScript, we suggest deferring as much as possible so rendering isn't blocked. Scripts with the `defer` attribute download in parallel with HTML parsing and run in document order after parsing finishes, before the `DOMContentLoaded` event. They don't wait for the `onload` event. Whatever script cannot be deferred should be loaded asynchronously so the page rendering continues without interruption.
 
-For more details on using `async` and `defer` attributes within a `<script>` tag, see [this article by Daniel Imms](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html) and [this guide to script execution order with `defer` and `async`](https://frontendatlas.com/javascript/trivia/js-deferred-scripts).
+For more details on using `async` and `defer` attributes within a `<script>` tag, see [this article by Daniel Imms](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
 
 ### Load the Critical Pieces as Early as Possible
 
