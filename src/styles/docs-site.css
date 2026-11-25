@@ -269,10 +269,10 @@
   margin-block-start: auto;
 }
 
-/* Article. */
+/* Article. The recipe centers this column; here it starts at the same left edge
+   as every other page, so the title doesn't shift when moving between pages. */
 .pan-docs-article,
 .pan-docs-article-header {
-  margin-inline: auto;
   max-width: var(--pan-docs-content-width);
 }
 
@@ -471,7 +471,6 @@
   padding-block: var(--pds-spacing-2xl) var(--pds-spacing-5xl);
 
   .pan-docs-page-header {
-    margin-inline: auto;
     max-width: var(--note-width);
     padding-block-end: 0;
   }
@@ -482,7 +481,6 @@
   display: grid;
   gap: var(--pds-spacing-3xl);
   grid-template-columns: minmax(0, var(--pan-docs-content-width)) 16rem;
-  justify-content: center;
 }
 
 .pan-docs-note__body {
