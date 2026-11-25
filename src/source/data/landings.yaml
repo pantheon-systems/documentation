@@ -219,8 +219,8 @@
           url: "/guides/environment-configuration/environment-indicator"
         - text: "Content Staging"
           url: "/content-staging"
-    - title: ""
-      subtitle: ""
+    - title: "Development Best Practices"
+      subtitle: "Recommended practices for developing and configuring Drupal and WordPress sites on Pantheon."
       links:
         - text: "Environment-Specific Configurations for Drupal"
           url: "/guides/environment-configuration/environment-specific-config-drupal"
@@ -469,8 +469,8 @@
     subtitle: "Self-paced courses and virtual instructor-led training."
     url: "https://learning.pantheon.io/?docs"
   topics-groups:
-    - title: ""
-      subtitle: ""
+    - title: "Integrations"
+      subtitle: "Connect Pantheon with third-party tools and services."
       links:
         - text: "Pantheon Autopilot Visual Regression Testing for Your WordPress or Drupal Site"
           url: "/guides/autopilot"
@@ -502,9 +502,6 @@
         - text: "Using WP SAML Auth with Google Apps"
           url: "/guides/wordpress-google-sso"
           icon: "book"
-    - title: ""
-      subtitle: ""
-      links:
         - text: "Drupal Commerce"
           url: "/guides/drupal-commerce"
           icons: "fa fa-book"
@@ -530,8 +527,6 @@
           url: "/modules"
         - text: "Using SimpleSAMLphp with Shibboleth SSO"
           url: "/guides/sso/shibboleth-sso"
-        - text: "Enabling Solr on Drupal"
-          url: "/guides/solr-drupal"
         - text: "AWS S3 Setup for WordPress"
           url: "/guides/wordpress-developer/wordpress-s3"
   subtopics:
