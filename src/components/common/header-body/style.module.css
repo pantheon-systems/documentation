@@ -13,8 +13,7 @@
   margin-block-start: var(--pds-spacing-l);
 }
 
-.docContentHeaderDiscuss,
-.docContentHeaderGithub {
+.docContentHeaderDiscuss {
   column-gap: var(--pds-spacing-l);
   display: flex;
 }

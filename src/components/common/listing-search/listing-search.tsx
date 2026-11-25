@@ -310,22 +310,18 @@ export const ListingSearchInput = ({
 };
 
 /**
- * Renders either the site-wide search results (when a search is active) or
- * `children`, the normal server-rendered listing, otherwise. Each result's
- * contents come from `renderResult`.
+ * Renders either the search results (when a search is active) or `children`,
+ * the normal server-rendered listing, otherwise. Each listing renders its own
+ * results with `renderResults`, in the same format as its listing.
  */
 export function ListingSearchResults<T extends ListingSearchEntry>({
   children,
   containerClassName,
-  renderResult,
   renderResults,
 }: {
   children: ReactNode;
   containerClassName?: string;
-  /** Contents of one result in the default list. */
-  renderResult?: (result: ScoredEntry<T>, query: string) => ReactNode;
-  /** Replaces the default list, for a listing that shows results in its own format (a table). */
-  renderResults?: (results: ScoredEntry<T>[], query: string) => ReactNode;
+  renderResults: (results: ScoredEntry<T>[], query: string) => ReactNode;
 }) {
   const {
     config,
@@ -377,17 +373,7 @@ export function ListingSearchResults<T extends ListingSearchEntry>({
                     : config.nounPlural
                 } match "${trimmedQuery}"${filterLabel}`}
           </p>
-          {renderResults ? (
-            renderResults(results, trimmedQuery)
-          ) : (
-            <ul className="rn-search-results">
-              {results.map((result) => (
-                <li key={result.slug} className="rn-search-result">
-                  {renderResult?.(result, trimmedQuery)}
-                </li>
-              ))}
-            </ul>
-          )}
+          {renderResults(results, trimmedQuery)}
         </>
       )}
     </div>

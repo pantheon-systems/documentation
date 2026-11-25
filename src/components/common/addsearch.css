@@ -1,7 +1,8 @@
 /* The search suggestions the AddSearch widget shows under the header search box.
    The results page has its own UI (components/search). */
 .addsWg--highlight em {
-  background-color: #fff1a9;
+  background-color: var(--pds-color-highlight-background);
+  color: var(--pds-color-highlight-foreground);
   font-weight: var(--pds-typography-fw-semibold) !important;
   padding-inline: var(--pds-spacing-4xs);
   font-style: normal;
