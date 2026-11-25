@@ -23,7 +23,7 @@ This section provides answers to frequently asked questions about our Next Gener
 
 ### How do I know if my site is eligible?
 
-Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may use Front-End Sites (FES), which isn't eligible. [Advanced Global CDN (AGCDN)](/guides/agcdn) sites also won't show the upgrade button until you've spoken with Pantheon. See [I use AGCDN. What should I do?](#i-use-agcdn-what-should-i-do). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may use Front-End Sites (FES), which the upgrade excludes. [Advanced Global CDN (AGCDN)](/guides/agcdn) sites also won't show the upgrade button until you've spoken with Pantheon. See [I use AGCDN. What should I do?](#i-use-agcdn-what-should-i-do). If you aren't sure about your eligibility, please reach out to Pantheon Support.
 
 ### How do I upgrade to the next-generation GCDN?
 
