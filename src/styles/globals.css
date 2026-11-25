@@ -225,31 +225,6 @@ a.glossary__term-link {
   margin-block-end: var(--pds-spacing-xl);
 }
 
-.pre-without-rehype pre {
-  margin: 1.5em 0;
-  padding: 1em;
-  background-color: rgb(39, 40, 34);
-  border-radius: var(--borderRadius);
-}
-
-.pre-without-rehype pre code {
-  color: white;
-  display: block;
-  background-color: rgb(39, 40, 34) !important;
-}
-.pre-without-rehype pre code p {
-  margin: 0;
-}
-
-.header-reset-for-content span {
-  font-weight: inherit !important;
-}
-
-.individual-changelog-link h2 {
-  padding: 0;
-  margin: 0;
-}
-
 .toc-ignore > .docs-header-anchor {
   display: none;
 }
@@ -259,12 +234,6 @@ a.glossary__term-link {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.responsive-iframe-container.bordered {
-  border-radius: 12px;
-  border-style: solid;
-  border-width: 2px;
 }
 
 .responsive-iframe {
