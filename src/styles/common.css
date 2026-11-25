@@ -3480,3 +3480,56 @@ mark.release-note-search-highlight {
 .docs-note-meta .rss-feed-link {
   margin-block-end: 0;
 }
+
+/* Search results (PDS docs site Search Results prototype). */
+
+.docs-search-header__count {
+  color: var(--pds-color-foreground-default-secondary);
+  font-size: var(--pds-typography-size-s);
+  margin-block: var(--pds-spacing-m) 0;
+}
+
+.docs-search-filters {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-xl);
+}
+
+.docs-search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-search-result {
+  padding-block: var(--pds-spacing-l);
+}
+
+.docs-search-result__path {
+  color: var(--pds-color-foreground-default-secondary);
+  font-size: var(--pds-typography-size-xs);
+  margin: 0 0 var(--pds-spacing-2xs);
+}
+
+.docs-search-result__title {
+  font-size: var(--pds-typography-size-xl);
+  font-weight: var(--pds-typography-fw-semibold);
+  line-height: var(--pds-typography-lh-s);
+  margin: 0 0 var(--pds-spacing-xs);
+}
+
+.docs-search-result__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.docs-search-result__title a:hover {
+  text-decoration: underline;
+}
+
+.docs-search-result__snippet {
+  font-size: var(--pds-typography-size-s);
+  line-height: var(--pds-typography-lh-m);
+  margin: 0;
+}

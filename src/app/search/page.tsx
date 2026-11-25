@@ -1,21 +1,28 @@
-import Layout from "@/components/layout";
-import { AddSearchClientComponent } from "@/components/common/addsearch-pagebody";
 import { Suspense } from "react";
-const SearchWrapper = () => {
+import { DocsPage } from "@/components/docs-page";
+import { SearchProvider } from "@/components/search/search-provider";
+import {
+  SearchFilters,
+  SearchHeader,
+  SearchResultsList,
+} from "@/components/search/search-ui";
+
+export default function SearchPage() {
   return (
-    <Layout excludeSearch={true}>
-
-      <div className="pds-container pds-mar-block-start-3xl" style={{
-        borderBottom: "1px solid var(--pds-color-border-default)",
-        paddingBlockEnd: "var(--pds-spacing-3xl)",
-        paddingBlockStart: "var(--pds-spacing-m)"
-      }}>
-        <Suspense>
-          <AddSearchClientComponent />
-        </Suspense>
-      </div>
-
-    </Layout>
+    // useSearchParams needs a Suspense boundary.
+    <Suspense>
+      <SearchProvider>
+        <DocsPage
+          activePage="/search"
+          sidebar={<SearchFilters />}
+          sidebarLabel="Filter results"
+          hasBreadcrumb={false}
+          hasSiteSearch={false}
+          header={<SearchHeader />}
+        >
+          <SearchResultsList />
+        </DocsPage>
+      </SearchProvider>
+    </Suspense>
   );
 }
-export default SearchWrapper;
