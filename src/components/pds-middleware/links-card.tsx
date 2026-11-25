@@ -21,7 +21,13 @@ export function LinksCard({
 }) {
   return (
     <Card className={className}>
-      <Heading className={`pds-heading-l ${styles.heading}`}>{headingText}</Heading>
+      {/* Some landing groups have no title. Skip the heading so there is no
+          empty heading element and no stray rule above the links. */}
+      {headingText && (
+        <Heading className={`pds-heading-l ${styles.heading}`}>
+          {headingText}
+        </Heading>
+      )}
       <ul className={styles.links}>
         {linkItems.map((item, index) => (
           <li key={index}>{item}</li>
