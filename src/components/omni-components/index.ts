@@ -28,13 +28,13 @@ export const getOmniItems = async (): Promise<OmniItem[]> => {
     withHeader(getStarted(), { menu: "top", label: "Get started" }),
     withHeader(workflows(), { group: "Build", label: "Development workflows" }),
     withHeader(goLive(), { group: "Build", label: "Going live" }),
+    withHeader(simpleLink("https://docs.p1.pantheon.io/", "P1"), {
+      group: "Build",
+    }),
     withHeader(
       simpleLink("https://docs.content.pantheon.io/", "Content Publisher"),
       { group: "Build" }
     ),
-    withHeader(simpleLink("https://docs.p1.pantheon.io/", "P1"), {
-      group: "Build",
-    }),
     withHeader(webInfrastructure(), {
       group: "Run",
       label: "Web infrastructure",
