@@ -9,6 +9,8 @@ const ReleaseNotePopoverCategorySelector = ({
   isDisabled,
   allCategories,
   categories,
+  buttonLabel = "Filter by category",
+  popoverTitle = "Categories",
 }: {
   allCategories: {
     slug: string;
@@ -24,20 +26,23 @@ const ReleaseNotePopoverCategorySelector = ({
       categories: { slug: string; displayName?: string }[];
     }>
   >;
-  setCurrentPage: (page: number) => void;
+  /** Moves a pager back to the first page. Listings without paging omit it. */
+  setCurrentPage?: (page: number) => void;
   isDisabled: boolean;
-  categories: {
+  categories?: {
     node: {
       frontmatter: {
         categories: string[];
       };
     };
   }[];
+  /** Also used by the vulnerability tracker, which filters by status. */
+  buttonLabel?: string;
+  popoverTitle?: string;
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const activeCategories = allCategories;
-
 
   const handleCheckbox = (cat: { slug: string }) => {
     // Find the index of the category in the filters.categories array by matching the slug
@@ -65,14 +70,14 @@ const ReleaseNotePopoverCategorySelector = ({
     }
 
     // Move pager to the first page
-    setCurrentPage(1);
+    setCurrentPage?.(1);
   };
 
   const handleClearCategoriesFilters = () => {
     setFilters((prevState) => ({ ...prevState, categories: [] }));
 
     // Move pager to the first page
-    setCurrentPage(1);
+    setCurrentPage?.(1);
   };
 
   const handlePopoverClose = () => {
@@ -80,7 +85,9 @@ const ReleaseNotePopoverCategorySelector = ({
   };
 
   // Set the icon based on the popover state: 'angleUp' if open, 'angleDown' if closed
-  const popoverTriggerIcon = isPopoverOpen ? ("angleUp" as const) : ("angleDown" as const);
+  const popoverTriggerIcon = isPopoverOpen
+    ? ("angleUp" as const)
+    : ("angleDown" as const);
   // Popover columns config
   const itemsPerColumn = 7;
   const totalItems = activeCategories.length;
@@ -149,7 +156,7 @@ const ReleaseNotePopoverCategorySelector = ({
 
   const popoverTrigger = (
     <Button
-      label="Filter by category"
+      label={buttonLabel}
       size="m"
       variant="secondary"
       iconName={popoverTriggerIcon}
@@ -163,7 +170,7 @@ const ReleaseNotePopoverCategorySelector = ({
     <>
       <Popover
         customTrigger={popoverTrigger}
-        title={"Categories"}
+        title={popoverTitle}
         content={popoverContent}
         hasCloseButton={true}
         className={"rn-popover-categories"}
