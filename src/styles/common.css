@@ -3533,3 +3533,15 @@ mark.release-note-search-highlight {
   line-height: var(--pds-typography-lh-m);
   margin: 0;
 }
+
+/* The 404's search field: a readable width under the message. */
+.docs-not-found-search {
+  margin-inline: auto;
+  width: min(24rem, calc(100vw - 2 * var(--pds-spacing-xl)));
+}
+
+.docs-not-found-search .pds-input,
+.docs-not-found-search .pds-text-input,
+.docs-not-found-search .pds-text-input__input-wrapper {
+  width: 100%;
+}

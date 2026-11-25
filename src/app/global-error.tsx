@@ -5,8 +5,7 @@ import Link from "next/link";
 import { Footer } from "@/components/footer";
 import SearchBar from "@/components/header/search-bar";
 import SiteHeader from "@/components/header/site-header";
-import { Container } from "@/components/ui/pds-re-export";
-import { Button } from "@/components/ui/button";
+import { ButtonLink, Container } from "@/components/ui/pds-re-export";
 import styles from "./not-found.module.css";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -59,14 +58,18 @@ export default function GlobalError({
               </p>
             </div>
             <div className={styles.buttonContainer}>
-              <Link href="/">
-                <Button size="large">Go to Documentation</Button>
-              </Link>
-              <Link href="https://pantheon.io/support">
-                <Button variant="secondary" size="large">
-                  Contact support
-                </Button>
-              </Link>
+              <ButtonLink
+                variant="primary"
+                size="l"
+                linkContent={<Link href="/">Go to Documentation</Link>}
+              />
+              <ButtonLink
+                variant="secondary"
+                size="l"
+                linkContent={
+                  <a href="https://pantheon.io/support">Contact support</a>
+                }
+              />
             </div>
           </div>
           <div className={styles.imageContainer}>
