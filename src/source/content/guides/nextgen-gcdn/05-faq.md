@@ -45,7 +45,7 @@ Pantheon Support will open a support ticket and email you by December 15, 2026 t
 
 Your current AGCDN configuration continues to work in the meantime.
 
-If you've already started the upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps.
+If you started a self-service upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps. If you already started your AGCDN migration with Pantheon, continue with that process.
 
 ### What is the timeline for AGCDN to be supported?
 
