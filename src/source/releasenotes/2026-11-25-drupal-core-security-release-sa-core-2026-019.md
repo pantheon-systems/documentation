@@ -8,7 +8,7 @@ description: "Drupal 10.6.23, 11.3.23, and 11.4.14 fix a highly critical access 
 
 The Drupal Security Team released Drupal 10.6.23, 11.3.23, and 11.4.14 on November 25, 2026. These releases fix [SA-CORE-2026-019](https://www.drupal.org/sa-core-2026-019), a highly critical access bypass in the Drupal installer.
 
-Pantheon's edge protection already blocks the known attack path, so your site has platform-level protection. We still advise Drupal 10 and 11 sites to update core.
+Pantheon's edge protection already blocks the known attack path, so your site has platform-level protection. Pantheon's runtime now also blocks the installer on sites where an earlier installation did not finish, which is the case this advisory addresses. We still advise Drupal 10 and 11 sites to update core.
 
 ## Action required
 
