@@ -25,7 +25,7 @@ Because your DNS lives in Cloudflare, the dashboard's TXT-record verification fl
 
 Be sure that you have:
 
-- A site on Pantheon that is eligible for the next-generation GCDN. If the site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), don't start until Pantheon Support or your Account Team confirms it's compatible.
+- A site on Pantheon that is eligible for the next-generation GCDN. If the site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), Pantheon coordinates the upgrade with you. Contact Pantheon Support or your Account Team before you start.
 - [Terminus](/terminus) and the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin) installed on your local computer.
 - Access to the Cloudflare account that hosts the zone, with permission to edit DNS records and SSL/TLS settings.
 - The domain added to your Pantheon environment's **Domains** tab.
