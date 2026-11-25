@@ -1,9 +1,6 @@
 "use client";
 
-import { Tag } from "@pantheon-systems/pds-toolkit-react";
-import Link from "next/link";
 import { ReactNode } from "react";
-import PublishedDate from "@/components/common/published-date";
 import {
   ListingSearchConfig,
   ListingSearchInput,
@@ -12,6 +9,7 @@ import {
 } from "@/components/common/listing-search/listing-search";
 import { highlightText } from "@/components/common/listing-search/text";
 import { releaseNoteCategoryLoader } from "./release-note-categories";
+import { ReleaseNoteList } from "./release-note-entry";
 
 export type ReleaseNoteSearchEntry = {
   slug: string;
@@ -75,35 +73,16 @@ export const ReleaseNoteSearchResults = ({
 }) => (
   <ListingSearchResults<ReleaseNoteSearchEntry>
     containerClassName={containerClassName}
-    renderResult={(result, query) => (
-      <>
-        <div className="rn-search-result__header">
-          <Link href={`/${result.slug}`} className="rn-search-result__title">
-            {highlightText(result.title, query)}
-          </Link>
-          <div className="rn-search-result__categories">
-            {result.categories.map((categorySlug) => {
-              const category = releaseNoteCategoryLoader(categorySlug);
-              return (
-                <Tag
-                  key={categorySlug}
-                  tagLabel={category?.displayName ?? categorySlug}
-                  tagColor={category?.color}
-                />
-              );
-            })}
-          </div>
-        </div>
-        {result.publishedDate && (
-          <PublishedDate
-            dateString={result.publishedDate}
-            className="rn-search-result__date"
-          />
-        )}
-        <p className="rn-search-result__snippet">
-          {highlightText(result.snippet, query)}
-        </p>
-      </>
+    renderResults={(results, query) => (
+      <ReleaseNoteList
+        entries={results.map((result) => ({
+          slug: result.slug,
+          title: highlightText(result.title, query),
+          publishedDate: result.publishedDate,
+          summary: highlightText(result.snippet, query),
+          categories: result.categories,
+        }))}
+      />
     )}
   >
     {children}

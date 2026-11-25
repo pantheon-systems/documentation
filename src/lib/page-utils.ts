@@ -92,6 +92,8 @@ export interface ReleaseNoteListingData {
     };
   }[];
   totalPages: number;
+  totalItems: number;
+  itemsPerPage: number;
 }
 
 export interface VulnerabilityData {
@@ -465,6 +467,8 @@ export const processReleaseNotePages = async (
         releaseNotes,
         categories,
         totalPages: releaseNotesNumPages,
+        totalItems: filteredReleaseNotes.length,
+        itemsPerPage: releaseNotesPostsPerPage,
         pageNumber: i + 1,
       },
       rawFileData: JSON.stringify(releaseNotes),

@@ -3211,38 +3211,6 @@ div.gatsby-remark-code-title::before {
   border-bottom: 0;
 }
 
-.rn-pagination-controls {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin-bottom: 40px;
-}
-
-.rn-pagination-controls button {
-  padding: 6px 11px;
-  background-color: transparent;
-  color: var(--pds-color-foreground-default);
-  border: 0;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.rn-pagination-controls button.active {
-  background-color: var(--pds-color-button-secondary-background-hover);
-  color: var(--pds-color-interactive-link-default);
-  border-radius: 3px;
-}
-
-.rn-pagination-controls button.arrowIcon {
-  display: flex;
-  align-items: center;
-}
-
-.rn-pagination-controls button:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
 .rss-feed-link {
   display: flex;
   align-items: center;
@@ -3403,4 +3371,112 @@ mark.release-note-search-highlight {
   color: var(--pds-color-foreground-default-secondary);
   font-size: var(--pds-typography-size-s);
   margin-block-start: var(--pds-spacing-2xs);
+}
+
+/* Release notes (PDS docs site Release Notes and Release Note prototypes). */
+
+.docs-note-page-header .rss-feed-link {
+  margin-block-end: var(--pds-spacing-l);
+}
+
+/* The filter sidebar: the category checkboxes and "Clear all". */
+.docs-note-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-l);
+  align-items: flex-start;
+}
+
+.docs-note-list {
+  border-block-start: 1px solid var(--pds-color-border-default);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-note {
+  border-block-end: 1px solid var(--pds-color-border-default);
+  padding-block: var(--pds-spacing-xl);
+}
+
+.docs-note .docs-note__date {
+  color: var(--pds-color-foreground-default);
+  font-size: var(--pds-typography-size-s);
+  font-weight: var(--pds-typography-fw-regular);
+  margin: 0 0 var(--pds-spacing-s);
+}
+
+.docs-note__title {
+  font-size: var(--pds-typography-size-2xl);
+  font-weight: var(--pds-typography-fw-semibold);
+  line-height: var(--pds-typography-lh-s);
+  margin: 0 0 var(--pds-spacing-m);
+}
+
+.docs-note__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.docs-note__title a:hover {
+  text-decoration: underline;
+}
+
+.docs-note__summary {
+  color: var(--pds-color-foreground-default-secondary);
+  margin: 0 0 var(--pds-spacing-m);
+}
+
+.docs-note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-xs);
+}
+
+.docs-note-pagination {
+  margin-block: var(--pds-spacing-2xl);
+}
+
+/* A single release note: the body, and a panel with its date and categories. */
+.docs-note-layout {
+  display: grid;
+  gap: var(--pds-spacing-2xl);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* On a narrow screen the panel comes first, under the title. */
+.docs-note-meta {
+  order: -1;
+}
+
+@media (min-width: 1025px) {
+  .docs-note-layout {
+    grid-template-columns: minmax(0, 1fr) 18rem;
+  }
+
+  .docs-note-meta {
+    order: 0;
+  }
+}
+
+.docs-note-meta .docs-note-meta__label {
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-fw-semibold);
+  margin: 0 0 var(--pds-spacing-xs);
+}
+
+.docs-note-meta .docs-note-meta__date {
+  color: var(--pds-color-foreground-default);
+  font-weight: var(--pds-typography-fw-regular);
+  margin: 0 0 var(--pds-spacing-l);
+}
+
+.docs-note-meta__rule {
+  border: 0;
+  border-block-start: 1px solid var(--pds-color-border-default);
+  margin-block: var(--pds-spacing-l);
+}
+
+.docs-note-meta .rss-feed-link {
+  margin-block-end: 0;
 }

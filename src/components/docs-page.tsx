@@ -23,6 +23,10 @@ export const DocsPage = async ({
   title,
   header,
   hasTOC = false,
+  sidebar,
+  sidebarLabel = "Section navigation",
+  hasBreadcrumb = true,
+  hasSiteSearch = true,
   children,
 }: {
   activePage: string;
@@ -30,6 +34,12 @@ export const DocsPage = async ({
   title?: string;
   header?: React.ReactNode;
   hasTOC?: boolean;
+  /** Replaces the section navigation, for a page with its own sidebar (filters). */
+  sidebar?: React.ReactNode;
+  /** Names the sidebar, and the collapsible band it becomes on mobile. */
+  sidebarLabel?: string;
+  hasBreadcrumb?: boolean;
+  hasSiteSearch?: boolean;
   children: React.ReactNode;
 }) => {
   // Only render the sidebar for pages that belong to a section. An empty
@@ -40,15 +50,19 @@ export const DocsPage = async ({
 
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
-      <DocsLayout hasCollapsibleSidebar sidebarLabel="Section navigation">
-        {section && (
-          <div slot="sidebar">
-            <OmniSidebarNav activePage={activePage} />
-          </div>
+      <DocsLayout hasCollapsibleSidebar sidebarLabel={sidebarLabel}>
+        {sidebar ? (
+          <div slot="sidebar">{sidebar}</div>
+        ) : (
+          section && (
+            <div slot="sidebar">
+              <OmniSidebarNav activePage={activePage} />
+            </div>
+          )
         )}
         <div slot="header">
-          <SearchBar />
-          <PageBreadcrumbs crumbs={crumbs} />
+          {hasSiteSearch && <SearchBar />}
+          {hasBreadcrumb && <PageBreadcrumbs crumbs={crumbs} />}
           {header}
         </div>
         <div>

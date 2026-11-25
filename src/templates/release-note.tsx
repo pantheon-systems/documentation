@@ -1,17 +1,16 @@
 "use server";
 import Layout from "@/components/layout";
 import { ProcessedFile } from "@/server/processor/mdx";
-import { Container, Icon } from "@/components/ui/pds-re-export";
-import Link from "next/link";
-import ReleaseNoteCategories from "@/components/common/release-note-categories";
+import { Container, Icon, Panel } from "@/components/ui/pds-re-export";
 import PublishedDate from "@/components/common/published-date";
+import { PageBreadcrumbs } from "@/components/common/page-breadcrumbs";
 import { MdxWrapper } from "@/components/ui/mdx-wrapper";
 import {
   headline2,
   headline3,
   headline4,
 } from "@/components/common/release-headlines";
-import { processDirectoryForJson } from "@/server/processor/json";
+import { ReleaseNoteTags } from "@/templates/release-note-listing/release-note-tags";
 
 export const ReleaseNoteTemplate = async ({
   releaseNote,
@@ -23,82 +22,65 @@ export const ReleaseNoteTemplate = async ({
   };
 }) => {
   const node = releaseNote.node;
-  const excerptRaw = releaseNote.node.excerpt;
-  const excerpt =
-    excerptRaw.substring(0, 200).trim() ||
-    "A summary of changes to the Pantheon Platform";
-
-  const allCategoriesData = await processDirectoryForJson(
-    "source/releasenotescategories",
-    "releaseNoteCategories.json"
-  );
+  const categories: string[] = node.frontmatter.categories ?? [];
 
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
       <div>
-        <Container
-          width={"standard"}
-          className="pds-mar-block-start-3xl"
-        >
-          <div className="pds-overline-l pds-mar-block-end-xs">
-
-            <Link href="/release-notes" className="pds-mar-block-end-m">
-              Pantheon Release Notes
-            </Link>
-          </div>
-          <h1 className="pds-heading-4xl pds-mar-block-end-l">
+        <Container width="wide" className="pds-mar-block-start-xl">
+          <PageBreadcrumbs
+            crumbs={[
+              { label: "Pantheon release notes", href: "/release-notes" },
+            ]}
+          />
+          <h1 className="pds-heading-4xl pds-mar-block-end-xl">
             {node.frontmatter.title}
           </h1>
 
-          <ReleaseNoteCategories
-            categories={node.frontmatter.categories || []}
-            displayType="page"
-            className="pds-mar-block-end-xl"
-            allCategoriesData={allCategoriesData}
-          />
+          <div className="docs-note-layout pds-pad-block-end-4xl">
+            <article id="doc" className="pds-prose docs-note-body">
+              <MdxWrapper
+                article={{ content: node.content }}
+                componentMap={{
+                  h1: headline2,
+                  h2: headline3,
+                  h3: headline4,
+                }}
+              />
+            </article>
 
-          <article className="pds-pad-block-end-xl">
-
-
-            <div id="doc" className="doc changelog__content">
-              <div className="pds-mar-block-start-s pds-mar-block-end-2xl">
+            <aside
+              className="docs-note-meta"
+              aria-label="About this release note"
+            >
+              <Panel>
+                <h2 className="docs-note-meta__label">Published</h2>
                 <PublishedDate
                   dateString={node.frontmatter.published_date}
-                  className="pds-mar-block-end-m"
+                  className="docs-note-meta__date"
                 />
-                {/* <MdxWrapper
-                  mdx={node.body}
-                  customShortcodes={customShortcodes}
-                /> */}
-
-                <div className="pds-prose">
-                  <MdxWrapper
-                    article={{ content: node.content }}
-                    componentMap={{
-                      h1: headline2,
-                      h2: headline3,
-                      h3: headline4,
-                    }}
+                {categories.length > 0 && (
+                  <>
+                    <h2 className="docs-note-meta__label">Categories</h2>
+                    <ReleaseNoteTags categories={categories} />
+                  </>
+                )}
+                <hr className="docs-note-meta__rule" />
+                <a
+                  href="/release-notes/rss.xml"
+                  target="_blank"
+                  className="rss-feed-link"
+                >
+                  <Icon
+                    className="rss-feed-link-icon"
+                    iconName="rss"
+                    size="m"
                   />
-                </div>
-              </div>
-            </div>
-
-            <div className="pds-mar-block-4xl">
-              <a
-                href="/release-notes/rss.xml"
-                target="_blank"
-                className="rss-feed-link"
-              >
-                <Icon
-                  className="rss-feed-link-icon"
-                  iconName="rss"
-                  size="xl"
-                />
-                <span>Subscribe to RSS feed</span>
-              </a>
-            </div>
-          </article>
+                  <span>Subscribe to RSS feed</span>
+                </a>
+              </Panel>
+            </aside>
+          </div>
         </Container>
       </div>
     </Layout>

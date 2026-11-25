@@ -1,189 +1,94 @@
 "use server";
-import Layout from "@/components/layout";
-import { Container, Icon } from "@/components/ui/pds-re-export";
-import ReleaseNoteCategories from "@/components/common/release-note-categories";
-import PublishedDate from "@/components/common/published-date";
-import { MdxWrapper } from "@/components/ui/mdx-wrapper";
-import {
-  headline2,
-  headline3,
-  headline4,
-} from "@/components/common/release-headlines";
+import { DocsPage } from "@/components/docs-page";
+import { Icon } from "@/components/ui/pds-re-export";
+import { releaseNoteSummary } from "@/lib/release-note-summary";
 import { ProcessedFile } from "@/server/processor/mdx";
-import { ReleaseNoteListingClientComponent } from "./client-component";
+import { processDirectoryForJson } from "@/server/processor/json";
+import { ReleaseNoteFilters } from "./release-note-filters";
+import { ReleaseNoteList } from "./release-note-entry";
+import { ReleaseNotesPagination } from "./release-notes-pagination";
 import {
-  ReleaseNoteSearchProvider,
   ReleaseNoteSearchInput,
+  ReleaseNoteSearchProvider,
   ReleaseNoteSearchResults,
 } from "./release-note-search";
-import ReleaseNotesPager from "./release-note-pager";
-import { processDirectoryForJson } from "@/server/processor/json";
-import Link from "next/link";
 
-// Helper to sanitize slugs for internal navigation
-function sanitizeSlug(slug: string): string {
-  // Remove any leading slashes
-  let sanitized = slug.replace(/^\/+/, "");
-  // Disallow protocol-relative or absolute URLs
-  if (/^(\w+:)?\/\//.test(sanitized)) {
-    return "";
-  }
-  // Only allow alphanumerics, dashes, underscores, and slashes
-  if (!/^[a-zA-Z0-9/_-]+$/.test(sanitized)) {
-    return "";
-  }
-  return sanitized;
-}
+const INTRO =
+  "Your destination for staying informed about our latest innovations and product updates.";
 
 export const ReleaseNoteListingTemplate = async ({
   releaseNotes,
   landing,
-  categories,
-  totalPages,
+  totalItems,
+  itemsPerPage,
   pageNumber,
-  selectedCategories,
 }: {
   pageNumber: number;
   selectedCategories?: string | string[];
   landing?: {
     introText: string;
   };
-  categories: {
-    node: {
-      frontmatter: {
-        categories: string[];
-      };
-    };
-  }[];
+  categories: unknown;
   releaseNotes: {
-    prev: {
-      fields: {
-        slug: string;
-      };
-    } | null;
+    prev: { fields: { slug: string } } | null;
     node: ProcessedFile;
-    next: {
-      fields: {
-        slug: string;
-      };
-    } | null;
+    next: { fields: { slug: string } } | null;
   }[];
   totalPages: number;
+  totalItems: number;
+  itemsPerPage: number;
 }) => {
   const allCategoriesData = await processDirectoryForJson(
     "source/releasenotescategories",
     "releaseNoteCategories.json"
   );
-
-  // This handles cases where it's a single string, undefined, or already an array.
-  const selectedCategoriesArray = Array.isArray(selectedCategories)
-    ? selectedCategories
-    : selectedCategories
-      ? [selectedCategories] // Convert single string (e.g., "action-need") into an array
-      : []; // Use an empty array if it's undefined/null
-
-
-  // Join the parameters with an ampersand, but do not start the string with one.
-  const queryStrings = selectedCategoriesArray && selectedCategoriesArray.length > 0 ? selectedCategoriesArray
-        .map((category) => `category=${category}`)
-        .join("&")
-      : "";
+  const categories: { slug: string; displayName: string }[] = [
+    ...allCategoriesData[0].content.categories,
+  ].sort((a, b) => a.displayName.localeCompare(b.displayName));
 
   return (
-    <Layout containerWidth="standard" excludeSearch={true}>
-      <div>
-        <Container
-          width={"standard"}
-          className="pds-mar-block-start-3xl"
-        >
-          <h1 className="pds-heading-4xl">Pantheon release notes</h1>
-          <div className="docs-lead-text docs-lead-text--sm">
-            {landing?.introText ??
-              "Your destination for staying informed about our latest innovations and product updates."}
-          </div>
-          <a
-            href="/release-notes/rss.xml"
-            target="_blank"
-            className="rss-feed-link"
-          >
-            <Icon className="rss-feed-link-icon" iconName="rss" size="xl" />
-            <span>Subscribe to RSS feed</span>
-          </a>
-
-          <ReleaseNoteSearchProvider>
+    <ReleaseNoteSearchProvider>
+      <DocsPage
+        activePage="/release-notes"
+        sidebar={<ReleaseNoteFilters categories={categories} />}
+        sidebarLabel="Filter by category"
+        hasBreadcrumb={false}
+        hasSiteSearch={false}
+        header={
+          <div className="docs-note-page-header">
+            <h1 className="pds-heading-4xl">Pantheon release notes</h1>
+            <p className="docs-lead-text docs-lead-text--sm">
+              {landing?.introText ?? INTRO}
+            </p>
+            <a
+              href="/release-notes/rss.xml"
+              target="_blank"
+              className="rss-feed-link"
+            >
+              <Icon className="rss-feed-link-icon" iconName="rss" size="xl" />
+              <span>Subscribe to RSS feed</span>
+            </a>
             <ReleaseNoteSearchInput />
-
-            <ReleaseNoteListingClientComponent
-              allCategories={allCategoriesData[0].content.categories}
-              categories={categories}
-              pageNumber={pageNumber}
-            />
-
-            <div className="pds-mar-block-end-2xl pds-mar-block-start-2xl">
-              <ReleaseNoteSearchResults>
-                {releaseNotes.map(({ node }, idx) => (
-                  <div key={`${node.id}-${idx}`}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        // Let the tags drop below a long title on narrow screens.
-                        flexWrap: "wrap",
-                        columnGap: "var(--pds-spacing-m)",
-                      }}
-                    >
-                      <Link
-                        href={`/${sanitizeSlug(node.fields.slug)}`}
-                        className="pds-mar-block-end-l individual-changelog-link"
-                      >
-                        <h2 className="pds-mar-block-end-l">
-                          {node.frontmatter.title}
-                        </h2>
-                      </Link>
-
-                      <ReleaseNoteCategories
-                        categories={node.frontmatter.categories || []}
-                        displayType="page"
-                        className="pds-mar-block-end-xl"
-                        allCategoriesData={allCategoriesData}
-                      />
-                    </div>
-
-                    <article className="pds-pad-block-end-xl">
-                      <div id="doc" className="doc changelog__content">
-                        <div className="pds-mar-block-start-s pds-mar-block-end-2xl">
-                          <PublishedDate
-                            dateString={node.frontmatter.published_date}
-                            className="pds-mar-block-end-m"
-                          />
-
-                          <div className="pds-prose">
-                            <MdxWrapper
-                              article={{ content: node.content }}
-                              componentMap={{
-                                h1: headline2,
-                                h2: headline3,
-                                h3: headline4,
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                ))}
-
-                <ReleaseNotesPager
-                  currentPage={pageNumber}
-                  totalPages={totalPages}
-                  queryStrings={queryStrings}
-                />
-              </ReleaseNoteSearchResults>
-            </div>
-          </ReleaseNoteSearchProvider>
-        </Container>
-      </div>
-    </Layout>
+          </div>
+        }
+      >
+        <ReleaseNoteSearchResults>
+          <ReleaseNoteList
+            entries={releaseNotes.map(({ node }) => ({
+              slug: node.fields.slug,
+              title: node.frontmatter.title,
+              publishedDate: node.frontmatter.published_date,
+              summary: releaseNoteSummary(node),
+              categories: node.frontmatter.categories ?? [],
+            }))}
+          />
+          <ReleaseNotesPagination
+            currentPage={pageNumber}
+            totalItemCount={totalItems}
+            itemsPerPage={itemsPerPage}
+          />
+        </ReleaseNoteSearchResults>
+      </DocsPage>
+    </ReleaseNoteSearchProvider>
   );
 };
