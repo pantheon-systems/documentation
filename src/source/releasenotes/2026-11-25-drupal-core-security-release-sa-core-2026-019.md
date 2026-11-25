@@ -1,7 +1,7 @@
 ---
 title: Drupal core security release fixes a highly critical installer access bypass
 published_date: "2026-11-25"
-published_at: "2026-11-25T00:00:00Z"
+published_at: "2026-11-25T20:03:44Z"
 categories: [drupal, action-required, security]
 description: "Drupal 10.6.23, 11.3.23, and 11.4.14 fix a highly critical access bypass in the Drupal installer. Pantheon's edge protection already blocks the known attack path."
 ---
