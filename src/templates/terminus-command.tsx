@@ -13,19 +13,9 @@ export const TerminusCommandTemplate = ({
   command: CommandType;
   slug: string;
 }) => {
-  const options: any = Object.keys(command.definition.options).map(
-    function (key) {
-      return [String(key), command.definition.options[key]];
-    },
+  const options = Object.values(command.definition.options).sort((a, b) =>
+    a.name.localeCompare(b.name)
   );
-  options.forEach((option: any) => {
-    option.shift();
-  });
-
-  options.sort((a: any, b: any) => (a[0].name > b[0].name ? 1 : -1));
-  options.sort(function (a: any, b: any) {
-    return a[0].name.localeCompare(b[0].name);
-  });
 
   return (
     <DocsPage
@@ -98,14 +88,12 @@ export const TerminusCommandTemplate = ({
                 </tr>
               </thead>
               <tbody>
-                {options.map((option: any, i: number) => {
-                  return (
-                    <tr key={`${i}-${option}`}>
-                      <td key={`${option}-name`}>{option[0].name}</td>
-                      <td key={`${option}-desc`}>{option[0].description}</td>
-                    </tr>
-                  );
-                })}
+                {options.map((option) => (
+                  <tr key={option.name}>
+                    <td>{option.name}</td>
+                    <td>{option.description}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
