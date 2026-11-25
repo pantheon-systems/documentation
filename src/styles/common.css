@@ -3163,54 +3163,6 @@ div.gatsby-remark-code-title::before {
   color: var(--pds-color-interactive-link-hover);
 }
 
-.rn-popover-content {
-  gap: 74px;
-  display: flex;
-}
-
-.rn-popover-content-inner {
-  margin-bottom: 10px;
-}
-
-@media (max-width: 640px) {
-  .rn-popover-content {
-    gap: 0;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-
-  .rn-popover-content-inner {
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-  }
-}
-
-.pds-popover__container.rn-popover-categories {
-  max-width: 100%;
-  padding: 40px;
-  z-index: 100;
-}
-
-.rn-popover-categories {
-  margin-block-end: var(--pds-spacing-xl);
-}
-
-.rn-tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--pds-spacing-m);
-}
-
-.rn-popover-categories .pds-popover__title {
-  font-size: 16px;
-  margin-bottom: 26px;
-}
-
-.rn-popover-categories .pds-popover__trigger-text {
-  border-bottom: 0;
-}
-
 .rss-feed-link {
   display: flex;
   align-items: center;
@@ -3304,13 +3256,6 @@ mark.release-note-search-highlight {
 /* Keep short values such as dates on one line in table cells. */
 .docs-nowrap {
   white-space: nowrap;
-}
-
-/* The filter row under the search box, like the release notes one: the filter
-   button and its removable tags, with a rule below. */
-.rn-filter-bar {
-  border-block-end: 1px solid var(--pds-color-border-default);
-  padding-block: var(--pds-spacing-m) var(--pds-spacing-3xl);
 }
 
 /* A table that becomes a list of stacked cards on small screens: the header row
@@ -3465,7 +3410,7 @@ mark.release-note-search-highlight {
   margin: 0 0 var(--pds-spacing-xs);
 }
 
-.docs-note-meta .docs-note-meta__date {
+.docs-note-meta .docs-note-meta__value {
   color: var(--pds-color-foreground-default);
   font-weight: var(--pds-typography-fw-regular);
   margin: 0 0 var(--pds-spacing-l);

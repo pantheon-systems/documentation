@@ -57,7 +57,7 @@ export const ReleaseNoteTemplate = async ({
                 <h2 className="docs-note-meta__label">Published</h2>
                 <PublishedDate
                   dateString={node.frontmatter.published_date}
-                  className="docs-note-meta__date"
+                  className="docs-note-meta__value"
                 />
                 {categories.length > 0 && (
                   <>
