@@ -18,11 +18,13 @@ export default async function Contributors() {
           {contributors.map((contributor: ContributorType) => (
             <li
               key={contributor.id}
-              className="pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4"
+              className="contributor pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4"
             >
               <a
                 href={`https:${contributor.github}`}
-                title={contributor.id}
+                className="contributor__avatar"
+                aria-hidden="true"
+                tabIndex={-1}
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -33,9 +35,18 @@ export default async function Contributors() {
                   height={64}
                   loading="lazy"
                 />
-                <strong>{contributor.name}</strong>
               </a>
-              <p>{contributor.bio}</p>
+              <div className="contributor__details">
+                <a
+                  href={`https:${contributor.github}`}
+                  title={contributor.id}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {contributor.name}
+                </a>
+                <p>{contributor.bio}</p>
+              </div>
             </li>
           ))}
         </ul>

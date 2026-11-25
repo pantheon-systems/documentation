@@ -26,6 +26,29 @@
   padding: 0;
 }
 
+.contributor {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--pds-spacing-m);
+}
+
+.contributor__avatar img {
+  border-radius: var(--pds-border-radius-default);
+  flex-shrink: 0;
+  height: 4rem;
+  object-fit: cover;
+  width: 4rem;
+}
+
+.contributor__details a {
+  font-weight: var(--pds-typography-fw-semibold);
+}
+
+.contributor__details p {
+  font-size: var(--pds-typography-size-s);
+  margin: var(--pds-spacing-4xs) 0 0;
+}
+
 /* Tables scroll inside their own box on narrow screens (see
    rehypeScrollableTables) instead of widening the page. */
 .docs-table-scroll {
