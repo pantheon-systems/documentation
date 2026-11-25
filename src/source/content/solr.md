@@ -20,9 +20,9 @@ Pantheon provides Solr-based search as a service for most plans including Sandbo
 
 Pantheon is removing older Solr versions. Sites that use a removed version lose search.
 
-- **WordPress:** Solr support, including the Solr Power plugin, ends **January 11, 2027**. Solr 9 will not be available for WordPress. Migrate to [Elasticsearch powered by ElasticPress.io](/guides/pantheon-search/elasticsearch).
-- **Drupal, Solr 3:** removed **February 9, 2027**. Migrate to Solr 9.
-- **Drupal, Solr 8:** removed **July 11, 2027**. Migrate to Solr 9.
+- **WordPress:** Solr support for WordPress, including the Solr Power plugin, ends **January 11, 2027**. Solr 9 will not be available for WordPress. Migrate to [Elasticsearch powered by ElasticPress.io](/guides/pantheon-search/elasticsearch).
+- **Drupal, Solr 3:** removed **February 9, 2027**. [Migrate to Solr 9](/guides/pantheon-search/solr-drupal/solr-drupal#upgrading-from-solr-8-to-solr-9).
+- **Drupal, Solr 8:** removed **July 11, 2027**. [Migrate to Solr 9](/guides/pantheon-search/solr-drupal/solr-drupal#upgrading-from-solr-8-to-solr-9).
 
 See the [removal schedule announcement](/release-notes/2026/05/solr-9-ga-solr-3-8-removal-dates).
 
