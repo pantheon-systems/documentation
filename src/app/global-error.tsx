@@ -3,9 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
-import SearchBar from "@/components/header/search-bar";
 import SiteHeader from "@/components/header/site-header";
-import { ButtonLink, Container } from "@/components/ui/pds-re-export";
+import { ButtonLink } from "@/components/ui/pds-re-export";
 import styles from "./not-found.module.css";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -43,9 +42,6 @@ export default function GlobalError({
   return (
     <div className="relative flex flex-col min-h-screen overflow-x-hidden">
       <SiteHeader menu={[]} />
-      <Container width="standard" className="p-default">
-        <SearchBar />
-      </Container>
       <main className="mb-auto" tabIndex={-1} id="docs-main">
         <div className={styles.container}>
           <div className={styles.content}>

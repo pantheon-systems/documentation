@@ -350,20 +350,25 @@ a.individual-changelog-link:hover {
   border: 1px solid var(--pds-color-status-critical-border);
 }
 
+/* The newsletter form in the footer. Marketo gives the form and its input fixed
+   widths, which together with the button were wider than the Connect column
+   between about 1280 and 1340px and pushed the page sideways. Let the form fill
+   the column and the input take whatever room the button leaves. */
 #mktoForm_2014 {
   display: flex;
+  width: 100% !important;
+}
+
+#mktoForm_2014 .mktoFormRow {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 #mktoForm_2014 input {
-  min-width: 12rem;
   border: 1px solid var(--pds-color-border-input);
   height: 36px;
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-  #mktoForm_2014 input {
-    min-width: 10rem;
-  }
+  min-width: 0;
+  width: 100% !important;
 }
 
 #mktoForm_2014 .mktoButtonWrap.mktoInset {
@@ -3489,4 +3494,32 @@ mark.release-note-search-highlight {
 .docs-not-found-search .pds-text-input,
 .docs-not-found-search .pds-text-input__input-wrapper {
   width: 100%;
+}
+
+/* "Questions about this page?" under the table of contents. */
+.docs-toc-footer__title {
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-fw-semibold);
+  margin: 0 0 var(--pds-spacing-s);
+}
+
+.docs-toc-footer__links {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--pds-typography-size-s);
+  gap: var(--pds-spacing-s);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-toc-footer__links a {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--pds-spacing-xs);
+  text-decoration: none;
+}
+
+.docs-toc-footer__links a:hover {
+  text-decoration: underline;
 }

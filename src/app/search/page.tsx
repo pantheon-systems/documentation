@@ -17,7 +17,6 @@ export default function SearchPage() {
           sidebar={<SearchFilters />}
           sidebarLabel="Filter results"
           hasBreadcrumb={false}
-          hasSiteSearch={false}
           header={<SearchHeader />}
         >
           <SearchResultsList />

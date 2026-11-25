@@ -18,6 +18,7 @@ import type {
   HeaderMenuLink,
 } from "@/components/omni-components/header-menu";
 import { navButtons } from "./common";
+import { NavbarSearch } from "./navbar-search";
 
 const isExternal = (href: string) => /^https?:\/\//.test(href);
 
@@ -74,6 +75,7 @@ export default function SiteHeader({ menu }: { menu: HeaderMenuEntry[] }) {
           ariaLabel="Main navigation"
           menuItems={menuItems}
         />
+        <NavbarSearch slot="search" />
         {navButtons.map((button) => (
           <ButtonLink
             key={button.href}

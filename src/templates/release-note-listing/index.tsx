@@ -53,7 +53,6 @@ export const ReleaseNoteListingTemplate = async ({
         sidebar={<ReleaseNoteFilters categories={categories} />}
         sidebarLabel="Filter by category"
         hasBreadcrumb={false}
-        hasSiteSearch={false}
         header={
           <div className="docs-note-page-header">
             <h1 className="pds-heading-4xl">Pantheon release notes</h1>

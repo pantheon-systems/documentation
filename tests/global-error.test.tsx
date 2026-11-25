@@ -10,7 +10,6 @@ vi.mock("next/image", () => ({
   default: ({ alt }: { alt: string }) => <span role="img" aria-label={alt} />,
 }));
 vi.mock("@/components/footer", () => ({ Footer: () => <footer /> }));
-vi.mock("@/components/header/search-bar", () => ({ default: () => <div /> }));
 vi.mock("@/components/header/site-header", () => ({
   default: () => <header />,
 }));

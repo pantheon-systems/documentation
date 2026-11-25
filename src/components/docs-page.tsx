@@ -7,8 +7,11 @@ import {
   getOmniSidebarActiveSection,
 } from "@/components/omni-components/helpers";
 import { PageBreadcrumbs } from "@/components/common/page-breadcrumbs";
-import SearchBar from "@/components/header/search-bar";
-import { DocsLayout, TableOfContents } from "@/components/ui/pds-re-export";
+import {
+  DocsLayout,
+  Icon,
+  TableOfContents,
+} from "@/components/ui/pds-re-export";
 
 /**
  * The shared shell for docs pages, built on the PDS DocsLayout: section
@@ -26,7 +29,6 @@ export const DocsPage = async ({
   sidebar,
   sidebarLabel = "Section navigation",
   hasBreadcrumb = true,
-  hasSiteSearch = true,
   children,
 }: {
   activePage: string;
@@ -39,7 +41,6 @@ export const DocsPage = async ({
   /** Names the sidebar, and the collapsible band it becomes on mobile. */
   sidebarLabel?: string;
   hasBreadcrumb?: boolean;
-  hasSiteSearch?: boolean;
   children: React.ReactNode;
 }) => {
   // Only render the sidebar for pages that belong to a section. An empty
@@ -49,8 +50,12 @@ export const DocsPage = async ({
   const crumbs = getOmniBreadcrumbs(activePage, omniItems, title);
 
   return (
-    <Layout containerWidth="standard" excludeSearch={true}>
-      <DocsLayout hasCollapsibleSidebar sidebarLabel={sidebarLabel}>
+    <Layout containerWidth="standard">
+      <DocsLayout
+        hasCollapsibleSidebar
+        sidebarLabel={sidebarLabel}
+        tocFooterLabel="Questions about this page"
+      >
         {sidebar ? (
           <div slot="sidebar">{sidebar}</div>
         ) : (
@@ -61,7 +66,6 @@ export const DocsPage = async ({
           )
         )}
         <div slot="header">
-          {hasSiteSearch && <SearchBar />}
           {hasBreadcrumb && <PageBreadcrumbs crumbs={crumbs} />}
           {header}
         </div>
@@ -76,6 +80,27 @@ export const DocsPage = async ({
               headingText="On this page"
               showHeading
             />
+          </div>
+        )}
+        {hasTOC && (
+          <div slot="toc-footer" className="docs-toc-footer">
+            <h2 className="docs-toc-footer__title">
+              Questions about this page?
+            </h2>
+            <ul className="docs-toc-footer__links">
+              <li>
+                <a href="https://pantheon.io/developers/office-hours?docs">
+                  <Icon iconName="video" size="s" />
+                  Ask at Office Hours
+                </a>
+              </li>
+              <li>
+                <a href="https://pantheon.io/learn-pantheon?docs">
+                  <Icon iconName="graduationCap" size="s" />
+                  Learn Pantheon
+                </a>
+              </li>
+            </ul>
           </div>
         )}
       </DocsLayout>

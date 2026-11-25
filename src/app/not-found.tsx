@@ -6,7 +6,7 @@ import { Container, VerticalEmptyState } from "@/components/ui/pds-re-export";
 // illustration, a line of copy and a search field.
 export default function NotFound() {
   return (
-    <Layout excludeSearch={true}>
+    <Layout>
       <Container width="standard" className="pds-pad-block-4xl">
         <VerticalEmptyState
           heading="Sorry, there’s no page at that URL."
