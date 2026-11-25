@@ -49,6 +49,8 @@ Allow two business days for your Account Team to load the certificate.
 
 [Next Gen GCDN with Bot Protection](/guides/nextgen-gcdn) supports custom certificates, including **wildcard certificates** (for example, `*.example.com`) that cover multiple subdomains.
 
+If your organization has the custom certificate add-on, you can generate the CSR and upload the signed certificate yourself with Terminus. See [Custom certificates](/guides/nextgen-gcdn/custom-certificates). The steps below describe the process through Pantheon Support.
+
 ### Before You Begin
 
 Your domain must already be added to your environment and serving traffic through GCDN with Bot Protection. Domains are initially secured with an automatically issued Let's Encrypt certificate, which your custom certificate then replaces.
