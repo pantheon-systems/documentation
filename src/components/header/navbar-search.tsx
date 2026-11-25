@@ -46,7 +46,12 @@ export const NavbarSearch = (_props: { slot?: string }) => {
   };
 
   return (
-    <form ref={container} role="search" onSubmit={submit}>
+    <form
+      ref={container}
+      role="search"
+      onSubmit={submit}
+      className="pan-docs-header-search"
+    >
       <TextInput
         id="search"
         type="search"
@@ -54,6 +59,7 @@ export const NavbarSearch = (_props: { slot?: string }) => {
         showLabel={false}
         placeholder="Search docs"
         hasSearchShortcut
+        size="s"
         data-addsearch-id="search"
       />
       <Script id="addsearch-settings">

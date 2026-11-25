@@ -1,5 +1,6 @@
 @import url("./webstyles.css");
 @import url("./common.css");
+@import url("./docs-site.css");
 @import url("./code-blocks.css");
 @import "@pantheon-systems/pds-toolkit-react/css/pds-core.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
@@ -56,17 +57,6 @@
 
 .docs-contributor-link a:hover {
   color: var(--pds-color-interactive-link-hover);
-}
-
-.rss-feed-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.rss-feed-link-icon {
-  color: var(--pds-color-social-rss);
 }
 
 .docs-alert {

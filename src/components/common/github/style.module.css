@@ -1,8 +1,0 @@
-.githubGroup {
-  align-items: center;
-  column-gap: var(--pds-spacing-l);
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: var(--pds-spacing-m);
-}
-

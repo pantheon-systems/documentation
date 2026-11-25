@@ -16,7 +16,7 @@ export const TerminusCommandTemplate = ({
   const options: any = Object.keys(command.definition.options).map(
     function (key) {
       return [String(key), command.definition.options[key]];
-    }
+    },
   );
   options.forEach((option: any) => {
     option.shift();
@@ -29,6 +29,7 @@ export const TerminusCommandTemplate = ({
 
   return (
     <DocsPage
+      isArticle
       activePage={"/terminus/commands"}
       header={
         <>
@@ -71,10 +72,7 @@ export const TerminusCommandTemplate = ({
                 return (
                   <span key={i}>
                     <p key={i}>
-                      <code
-                        key={`${i}-pre`}
-                        className="pds-mar-inline-end-2xs"
-                      >
+                      <code key={`${i}-pre`} className="pds-mar-inline-end-2xs">
                         {usage
                           .replace(/\[|\]/g, "")
                           .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
@@ -104,9 +102,7 @@ export const TerminusCommandTemplate = ({
                   return (
                     <tr key={`${i}-${option}`}>
                       <td key={`${option}-name`}>{option[0].name}</td>
-                      <td key={`${option}-desc`}>
-                        {option[0].description}
-                      </td>
+                      <td key={`${option}-desc`}>{option[0].description}</td>
                     </tr>
                   );
                 })}

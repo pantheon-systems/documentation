@@ -2,14 +2,39 @@
 import React from "react";
 
 import { Contributors } from "../contributors";
-import { Github } from "../github";
-import { Slack } from "../slack";
 import { ContributorGuest } from "../contributor-guest";
-import { StatusBadge } from "@pantheon-systems/pds-toolkit-react";
+import {
+  ButtonLink,
+  StatusBadge,
+  type PDSIcon,
+} from "@pantheon-systems/pds-toolkit-react";
 
 import { formatLongDate } from "@/lib/format-date";
-import styles from "./style.module.css";
 
+type MetaLink = { icon: PDSIcon; label: string; href: string; external?: boolean };
+
+const issueUrl = (title: string, slug: string) => {
+  const body = [
+    `Re: [${title}](https://docs.pantheon.io/${slug})`,
+    "",
+    "Priority: Low/Medium/High (choose one, remove the other options)",
+    "",
+    "## Issue Description:",
+    "",
+    "## Suggested Resolution",
+  ].join("\n");
+  const params = new URLSearchParams({
+    title: `${title} Doc Update `,
+    body,
+  });
+  return `https://github.com/pantheon-systems/documentation/issues/new?${params}`;
+};
+
+/**
+ * The title, lede and meta row of a docs page: the page header block of the PDS
+ * docs site recipes. `DocsPage` puts it inside `pan-docs-page-header`, after the
+ * breadcrumb.
+ */
 const HeaderBody = ({
   title,
   subtitle,
@@ -24,6 +49,7 @@ const HeaderBody = ({
   subtitle: string;
   description: string;
   slug: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   contributors: any[];
   featured: boolean;
   editPath: string;
@@ -34,46 +60,74 @@ const HeaderBody = ({
   const lastReviewed = reviewDate
     ? `Last reviewed ${formatLongDate(reviewDate)}`
     : null;
+
+  const links: MetaLink[] = [
+    {
+      icon: "slack",
+      label: "Discuss in Slack",
+      href: "https://pantheon.io/customer-community",
+    },
+    ...(editPath
+      ? [
+          {
+            icon: "github" as const,
+            label: "Edit this page on GitHub",
+            href: `https://github.com/pantheon-systems/documentation/edit/main/${editPath}`,
+            external: true,
+          },
+          {
+            icon: "circleExclamation" as const,
+            label: "Report an issue with this doc",
+            href: issueUrl(title, slug),
+            external: true,
+          },
+        ]
+      : []),
+  ];
+
   return (
     <>
-      <header className={styles.docContentHeader}>
-        {subtitle ? (
-          <>
-            <p className="pds-overline-m">{title}</p>
-            <h1 className="pds-heading-4xl">{subtitle}</h1>
-          </>
-        ) : (
-          <h1 className="docs-title pds-heading-4xl">{title}</h1>
-        )}
+      {subtitle && <p className="pds-overline-m">{title}</p>}
+      <h1 className="pan-docs-page-header__title">{subtitle || title}</h1>
+      {description && (
+        <p className="pan-docs-page-header__lede">{description}</p>
+      )}
 
-        <p className="docs-lead-text docs-lead-text--sm pds-mar-block-end-xl">
-          {description}
-        </p>
+      {!!featured && <Contributors contributors={contributors} />}
 
-        {!!featured && <Contributors contributors={contributors} />}
-        <div className={styles.docContentHeaderActions}>
-          {lastReviewed && (
-            <StatusBadge
-              hasStatusIndicator={false}
-              label={lastReviewed}
-              color="neutral"
-              className={styles.reviewedBadge}
-            />
-          )}
-          <div className={styles.docContentHeaderDiscuss}>
-            <Slack />
-          </div>
-          <Github
-            // REVIEW: className is not defined in the component @aniketbiprojit
-            // className="doc-content-header__github"
-            pageTitle={title}
-            path={slug}
-            editPath={editPath}
+      <div className="pan-docs-article-meta">
+        {lastReviewed && (
+          <StatusBadge
+            hasStatusIndicator={false}
+            label={lastReviewed}
+            color="neutral"
           />
-        </div>
+        )}
+        <ul className="pan-docs-article-meta__links">
+          {links.map((link) => (
+            <li key={link.href}>
+              <ButtonLink
+                displayType="icon-start"
+                iconName={link.icon}
+                linkContent={
+                  <a
+                    href={link.href}
+                    {...(link.external
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
+                  >
+                    {link.label}
+                  </a>
+                }
+                size="s"
+                variant="link"
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        {featured && <ContributorGuest contributor={contributor} />}
-      </header>
+      {featured && <ContributorGuest contributor={contributor} />}
     </>
   );
 };

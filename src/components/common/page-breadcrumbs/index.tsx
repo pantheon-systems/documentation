@@ -13,7 +13,6 @@ export const PageBreadcrumbs = ({ crumbs }: { crumbs: OmniCrumb[] }) => {
 
   return (
     <Breadcrumb
-      className="pds-mar-block-end-m"
       // A page's trail usually ends on its parent, so don't mark the last
       // crumb as the current page unless it is.
       hasCurrentPage={!!crumbs[crumbs.length - 1]?.isCurrent}

@@ -282,9 +282,21 @@ a.docs-header-anchor:hover svg {
   width: 100% !important;
 }
 
+/* Only the row with the email field grows. The form also holds a row of hidden
+   inputs, which took an equal share of the free space and left a gap before the
+   button. */
 #mktoForm_2014 .mktoFormRow {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-width: 0;
+}
+
+#mktoForm_2014 .mktoFormRow:has(.mktoEmailField) {
+  flex: 1 1 auto;
+}
+
+#mktoForm_2014 .mktoFieldDescriptor,
+#mktoForm_2014 .mktoFieldWrap {
+  width: 100% !important;
 }
 
 #mktoForm_2014 input {
@@ -624,21 +636,6 @@ div.gatsby-remark-code-title::before {
   content: "File: ";
 }
 
-.rss-feed-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.rss-feed-link-icon {
-  color: var(--pds-color-social-rss);
-}
-
-.rn-search-input {
-  width: 100%;
-}
-
 mark.release-note-search-highlight {
   background-color: var(--pds-color-highlight-background);
   color: var(--pds-color-highlight-foreground);
@@ -732,10 +729,6 @@ mark.release-note-search-highlight {
 }
 
 /* Release notes (PDS docs site Release Notes and Release Note prototypes). */
-
-.docs-note-page-header .rss-feed-link {
-  margin-block-end: var(--pds-spacing-l);
-}
 
 /* The filter sidebar: the category checkboxes and "Clear all". */
 .docs-note-filters {
@@ -835,10 +828,6 @@ mark.release-note-search-highlight {
   margin-block: var(--pds-spacing-l);
 }
 
-.docs-note-meta .rss-feed-link {
-  margin-block-end: 0;
-}
-
 /* Search results (PDS docs site Search Results prototype). */
 
 .docs-search-header__count {
@@ -904,30 +893,12 @@ mark.release-note-search-highlight {
   width: 100%;
 }
 
-/* "Questions about this page?" under the table of contents. */
-.docs-toc-footer__title {
-  font-size: var(--pds-typography-size-m);
-  font-weight: var(--pds-typography-fw-semibold);
-  margin: 0 0 var(--pds-spacing-s);
-}
-
-.docs-toc-footer__links {
-  display: flex;
-  flex-direction: column;
-  font-size: var(--pds-typography-size-s);
-  gap: var(--pds-spacing-s);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.docs-toc-footer__links a {
-  align-items: center;
-  display: inline-flex;
-  gap: var(--pds-spacing-xs);
-  text-decoration: none;
-}
-
-.docs-toc-footer__links a:hover {
-  text-decoration: underline;
+/* The recipe fixes the header search at 20rem, which needs about 1260px of header.
+   Ours has one more menu link (Vulnerability tracker), so below 1440px the field
+   is narrower, which keeps the account buttons on screen until the nav collapses
+   to the mobile menu. */
+@media (max-width: 1439px) {
+  :root:not([data-pds-nav-mobile]) .pan-docs .pan-docs-header-search {
+    width: 10rem;
+  }
 }

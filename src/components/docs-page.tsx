@@ -8,10 +8,23 @@ import {
 } from "@/components/omni-components/helpers";
 import { PageBreadcrumbs } from "@/components/common/page-breadcrumbs";
 import {
+  ButtonLink,
   DocsLayout,
-  Icon,
   TableOfContents,
 } from "@/components/ui/pds-re-export";
+
+const helpLinks = [
+  {
+    icon: "video",
+    label: "Ask at Office Hours",
+    href: "https://pantheon.io/developers/office-hours?docs",
+  },
+  {
+    icon: "graduationCap",
+    label: "Learn Pantheon",
+    href: "https://pantheon.io/learn-pantheon?docs",
+  },
+] as const;
 
 /**
  * The shared shell for docs pages, built on the PDS DocsLayout: section
@@ -29,6 +42,7 @@ export const DocsPage = async ({
   sidebar,
   sidebarLabel = "Section navigation",
   hasBreadcrumb = true,
+  isArticle = false,
   children,
 }: {
   activePage: string;
@@ -41,6 +55,8 @@ export const DocsPage = async ({
   /** Names the sidebar, and the collapsible band it becomes on mobile. */
   sidebarLabel?: string;
   hasBreadcrumb?: boolean;
+  /** An article: header and body are capped at the reading width and centered. */
+  isArticle?: boolean;
   children: React.ReactNode;
 }) => {
   // Only render the sidebar for pages that belong to a section. An empty
@@ -50,11 +66,16 @@ export const DocsPage = async ({
   const crumbs = getOmniBreadcrumbs(activePage, omniItems, title);
 
   return (
-    <Layout>
+    <Layout activePage={activePage}>
       <DocsLayout
         hasCollapsibleSidebar
         sidebarLabel={sidebarLabel}
-        tocFooterLabel="Questions about this page"
+        sidebarToggleLabel={
+          sidebar
+            ? sidebarLabel
+            : section?.header?.label ?? section?.title ?? sidebarLabel
+        }
+        tocFooterLabel="Help for this page"
       >
         {sidebar ? (
           <div slot="sidebar">{sidebar}</div>
@@ -66,10 +87,16 @@ export const DocsPage = async ({
           )
         )}
         <div slot="header">
-          {hasBreadcrumb && <PageBreadcrumbs crumbs={crumbs} />}
-          {header}
+          <div
+            className={`pan-docs-page-header${
+              isArticle ? " pan-docs-article-header" : ""
+            }`}
+          >
+            {hasBreadcrumb && <PageBreadcrumbs crumbs={crumbs} />}
+            {header}
+          </div>
         </div>
-        <div>
+        <div className={isArticle ? "pan-docs-article" : undefined}>
           <div id="docs-content">{children}</div>
         </div>
         {hasTOC && (
@@ -83,23 +110,20 @@ export const DocsPage = async ({
           </div>
         )}
         {hasTOC && (
-          <div slot="toc-footer" className="docs-toc-footer">
-            <h2 className="docs-toc-footer__title">
-              Questions about this page?
-            </h2>
-            <ul className="docs-toc-footer__links">
-              <li>
-                <a href="https://pantheon.io/developers/office-hours?docs">
-                  <Icon iconName="video" size="s" />
-                  Ask at Office Hours
-                </a>
-              </li>
-              <li>
-                <a href="https://pantheon.io/learn-pantheon?docs">
-                  <Icon iconName="graduationCap" size="s" />
-                  Learn Pantheon
-                </a>
-              </li>
+          <div className="pan-docs-rail__help" slot="toc-footer">
+            <h2 className="pds-ts-l">Questions about this page?</h2>
+            <ul className="pan-docs-rail__links">
+              {helpLinks.map((link) => (
+                <li key={link.href}>
+                  <ButtonLink
+                    displayType="icon-start"
+                    iconName={link.icon}
+                    linkContent={<a href={link.href}>{link.label}</a>}
+                    size="s"
+                    variant="link"
+                  />
+                </li>
+              ))}
             </ul>
           </div>
         )}

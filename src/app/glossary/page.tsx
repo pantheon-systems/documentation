@@ -14,6 +14,7 @@ export default async function GlossaryPage() {
 
   return (
     <DocsPage
+      isArticle
       activePage="/glossary"
       title="Glossary"
       hasTOC
