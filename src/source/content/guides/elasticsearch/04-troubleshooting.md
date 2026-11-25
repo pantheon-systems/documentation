@@ -59,7 +59,7 @@ When you sync a file with the Documents feature, you may see an error such as `p
   ```
 
 - **Check whether the pipeline exists:** Get your index name with `elasticpress get-indices`, then run `terminus wp <site>.<env> -- elasticpress request "_ingest/pipeline/<index-name>-attachment" --pretty`. A result of `{}` means the pipeline is missing.
-- **Check `wp-config.php`:** Remove any `EP_HOST`, `EP_INDEX_PREFIX`, or `EP_CREDENTIALS` definitions. Pantheon sets these values for you. If yours point to a different ElasticPress.io subscription, requests fail and conflict with Pantheon Search. After you remove them, re-enable Elasticsearch by following the [setup steps](/guides/pantheon-search/elasticsearch/setup-config).
+- **Check `wp-config.php`:** Remove any `EP_HOST`, `EP_INDEX_PREFIX`, or `EP_CREDENTIALS` definitions. When Elasticsearch is active, Pantheon defines these before `wp-config.php` loads, so a second definition only logs an "already defined" warning. If Elasticsearch is not active on the environment, your definitions apply. They can point ElasticPress at a different ElasticPress.io subscription that rejects requests. After you remove them, re-enable Elasticsearch by following the [setup steps](/guides/pantheon-search/elasticsearch/setup-config).
 
 ### Plugin activation errors
 
@@ -103,4 +103,10 @@ Yes. Every environment on your site — Dev, Test, Live, and Multidevs — recei
 ### Can I query the Elasticsearch API directly?
 
 No. Pantheon does not provide direct access to the Elasticsearch endpoint or cluster, and there is no dashboard for browsing indexed documents. Use ElasticPress WP-CLI commands and the ElasticPress Debugging Add-On instead. See [Inspect Your Index](/guides/pantheon-search/elasticsearch/query-optimization#inspect-your-index).
+
+### Where are the Elasticsearch endpoints hosted?
+
+Pantheon's ElasticPress.io clusters are in the US only. Sites that serve traffic from other regions, such as Europe, can see about 50 to 100 ms of additional latency on search requests. Pantheon does not offer a European cluster at this time. Supporting one would require a new cluster and region-based provisioning, and there is no timeline.
+
+If latency is a concern, you can configure the ElasticPress plugin to connect to your own Elasticsearch cluster instead of the Pantheon-provided host.
 

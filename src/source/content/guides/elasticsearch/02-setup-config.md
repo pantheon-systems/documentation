@@ -122,7 +122,7 @@ If the sync fails with `pipeline with id [...] does not exist`, see [Document sy
 
 <Alert type="warning" title="Do Not Define ElasticPress Connection Constants">
 
-Pantheon sets `EP_HOST`, `EP_INDEX_PREFIX`, and `EP_CREDENTIALS` for you when you activate Elasticsearch. Do not define them in `wp-config.php`. Your values override the Pantheon values and point ElasticPress at a different service, which causes connection and sync errors.
+When Elasticsearch is active, Pantheon defines `EP_HOST`, `EP_INDEX_PREFIX`, and `EP_CREDENTIALS` for you before `wp-config.php` loads. Do not define them again in `wp-config.php`. PHP ignores the second definition and logs an "already defined" warning, and frameworks such as Bedrock can turn that warning into an exception. While Elasticsearch is active, the Pantheon values stay in effect.
 
 </Alert>
 
