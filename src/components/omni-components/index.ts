@@ -44,10 +44,6 @@ export const getOmniItems = async (): Promise<OmniItem[]> => {
       label: "Manage accounts and workspaces",
     }),
     withHeader(security(), { group: "Run" }),
-    withHeader(simpleLink("/vulnerability-tracker", "Vulnerability Tracker"), {
-      group: "Run",
-      label: "Vulnerability tracker",
-    }),
     withHeader(support(), {
       group: "Run",
       label: "Support and troubleshooting",
@@ -62,6 +58,11 @@ export const getOmniItems = async (): Promise<OmniItem[]> => {
     withHeader(simpleLink("/release-notes", "Release Notes"), {
       menu: "top",
       label: "Release notes",
+    }),
+    // Next to Release notes: both are feeds of dated updates, not guides.
+    withHeader(simpleLink("/vulnerability-tracker", "Vulnerability Tracker"), {
+      menu: "top",
+      label: "Vulnerability tracker",
     }),
     // pagesToDelete(),
   ];
