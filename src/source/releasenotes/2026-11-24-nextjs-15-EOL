@@ -8,4 +8,4 @@ description: "Next.js 15 reaches will stop recieiving security releases on Janua
 
 Next.js 15 will stop receiving security releases on January 31, 2027. The Next.js team extended its Maintenance Long-Term Support (LTS) period beyond the original end date to give teams more time to upgrade. After the deadline, Next.js 15 will no longer receive upstream security fixes from the Next.js development team. See the [Next.js Support Policy](https://nextjs.org/support-policy) for details.
 
-We recommend upgrading applications running Next.js 15 or earlier to Next.js 16 or later before January 31, 2027.
+We recommend upgrading applications running Next.js 15 or earlier to Next.js 16 or later before January 31, 2027. However, Pantheon will continue to support Next.js 15 sites after the EOL; but there will be no upstream security patches for it.
