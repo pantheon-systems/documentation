@@ -1,8 +1,8 @@
 ---
 title: Pantheon Search powered by Solr
-description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
+description: Detailed information on using Pantheon Search with your Pantheon Drupal site.
 tags: [solr,search]
-reviewed: "2026-02-10"
+reviewed: "2026-11-24"
 contenttype: [doc]
 innav: [true]
 categories: [search]
@@ -15,6 +15,18 @@ permalink: docs/pantheon-search/solr
 ---
 
 Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments.
+
+<Alert type="warning" title="Solr removal dates">
+
+Pantheon is removing older Solr versions. Sites that use a removed version lose search.
+
+- **WordPress:** Solr support for WordPress, including the Solr Power plugin, ends **January 11, 2027**. Solr 9 will not be available for WordPress. Migrate to [Elasticsearch powered by ElasticPress.io](/guides/pantheon-search/elasticsearch).
+- **Drupal, Solr 3:** removed **February 9, 2027**. [Migrate to Solr 9](/guides/pantheon-search/solr-drupal/solr-drupal#upgrading-from-solr-8-to-solr-9).
+- **Drupal, Solr 8:** removed **July 11, 2027**. [Migrate to Solr 9](/guides/pantheon-search/solr-drupal/solr-drupal#upgrading-from-solr-8-to-solr-9).
+
+See the [removal schedule announcement](/release-notes/2026/05/solr-9-ga-solr-3-8-removal-dates).
+
+</Alert>
 
 <Partial file="solr-version.md" />
 
@@ -39,9 +51,9 @@ All plans except for a Basic plan can use search with Pantheon Search with Solr.
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
-## Using Solr with WordPress or Drupal
+## Using Solr with Drupal
 
-For installation instructions and additional details, refer to [Enabling Solr for WordPress](/guides/wordpress-developer/wordpress-solr) or [Enabling Solr with Drupal](/guides/solr-drupal).
+For installation instructions and additional details, refer to [Enabling Solr with Drupal](/guides/solr-drupal).
 
 
 ## Known Limitations of Pantheon Search powered by Solr
@@ -169,4 +181,3 @@ The following Apache Solr search components are supported:
 ## More Resources
 
 - [Pantheon Solr Search for Drupal](/guides/solr-drupal)
-- [Enable Solr for WordPress](/guides/wordpress-developer/wordpress-solr)

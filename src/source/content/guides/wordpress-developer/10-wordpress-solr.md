@@ -13,8 +13,16 @@ tags: [solr, plugins]
 contributors: [cityofoaksdesign, ccharlton]
 showtoc: true
 permalink: docs/guides/pantheon-search/solr/wordpress-solr
-reviewed: "2026-02-18"
+reviewed: "2026-11-24"
 ---
+
+<Alert type="warning" title="Solr support for WordPress ends January 11, 2027">
+
+Pantheon will remove Solr support for WordPress on **January 11, 2027**. This includes the Solr Power plugin. Solr 9 will not be available for WordPress.
+
+After that date, WordPress sites that use Solr lose search. Migrate to [Elasticsearch powered by ElasticPress.io](/guides/pantheon-search/elasticsearch) before then. See the [end-of-life announcement](/release-notes/2026/04/solr-3-end-of-life).
+
+</Alert>
 
 This section provides information on how to use Apache Solr with your WordPress Pantheon site.
 
