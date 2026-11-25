@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Container, TextInput } from "@pantheon-systems/pds-toolkit-react";
+import { TextInput } from "@pantheon-systems/pds-toolkit-react";
 
 // Define the expected global properties for TypeScript compatibility
 declare global {
@@ -106,7 +106,7 @@ export const AddSearchClientComponent: React.FC = () => {
   }, [searchParams]);
 
   return (
-    <Container width="standard" className="search-results">
+    <div className="search-results">
       <div className="search-results__heading">
         <h1 className="pds-heading-4xl">Search Results</h1>
       </div>
@@ -123,6 +123,6 @@ export const AddSearchClientComponent: React.FC = () => {
 
       <div className="addsearch search-results__items" id="results"></div>
       <div className="search-results__pager" id="pagination"></div>
-    </Container>
+    </div>
   );
 };
