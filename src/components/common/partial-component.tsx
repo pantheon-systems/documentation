@@ -18,7 +18,7 @@ export const Partial = async (props: { file: string }) => {
         const relativePath = file.split("source/content/partials/")[1];
         return relativePath === props.file;
       },
-    }
+    },
   )?.[0]?.content;
 
   if (!mdx) {
@@ -28,8 +28,11 @@ export const Partial = async (props: { file: string }) => {
 
   mdx = normalizeAllCustomTags(mdx);
 
+  // A fragment, not a wrapper element: the PDS prose spacing uses direct-child
+  // selectors (`.pds-prose > * + h2`), so headings and paragraphs inside a
+  // wrapper got no space between them.
   return (
-    <span className="pds-partial-component">
+    <>
       <MarkdownAsync
         components={{
           ...defaultComponentMap,
@@ -40,6 +43,6 @@ export const Partial = async (props: { file: string }) => {
       >
         {mdx}
       </MarkdownAsync>
-    </span>
+    </>
   );
 };
