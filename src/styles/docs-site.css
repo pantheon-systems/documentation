@@ -170,6 +170,12 @@
   margin-block-end: var(--pds-spacing-2xl);
 }
 
+/* The eyebrow above an article title is the section name. The recipe has none,
+   so it is a size down from the overline default with space before the title. */
+.pan-docs-page-header__eyebrow {
+  margin-block: 0 var(--pds-spacing-s);
+}
+
 .pan-docs-page-header__lede {
   color: var(--pds-color-foreground-default-secondary);
   font-size: var(--pds-typography-size-l);

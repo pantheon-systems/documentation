@@ -11,7 +11,12 @@ import {
 
 import { formatLongDate } from "@/lib/format-date";
 
-type MetaLink = { icon: PDSIcon; label: string; href: string; external?: boolean };
+type MetaLink = {
+  icon: PDSIcon;
+  label: string;
+  href: string;
+  external?: boolean;
+};
 
 const issueUrl = (title: string, slug: string) => {
   const body = [
@@ -87,7 +92,9 @@ const HeaderBody = ({
 
   return (
     <>
-      {subtitle && <p className="pds-overline-m">{title}</p>}
+      {subtitle && (
+        <p className="pds-overline-s pan-docs-page-header__eyebrow">{title}</p>
+      )}
       <h1 className="pan-docs-page-header__title">{subtitle || title}</h1>
       {description && (
         <p className="pan-docs-page-header__lede">{description}</p>

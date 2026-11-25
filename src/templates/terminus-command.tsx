@@ -14,7 +14,7 @@ export const TerminusCommandTemplate = ({
   slug: string;
 }) => {
   const options = Object.values(command.definition.options).sort((a, b) =>
-    a.name.localeCompare(b.name)
+    a.name.localeCompare(b.name),
   );
 
   return (
@@ -23,7 +23,9 @@ export const TerminusCommandTemplate = ({
       activePage={"/terminus/commands"}
       header={
         <>
-          <div className="pds-overline-m pds-pad-block-xs">Command</div>
+          <p className="pds-overline-s pan-docs-page-header__eyebrow">
+            Command
+          </p>
           <HeaderBody
             title="Terminus Command Reference"
             subtitle={`terminus ${command.name}`}
