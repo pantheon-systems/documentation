@@ -2,10 +2,6 @@
   margin-block-end: var(--pds-spacing-xl);
 }
 
-.docCommandsSearch {
-  margin-block: var(--pds-spacing-xl) var(--pds-spacing-m);
-}
-
 /*
  * Command directory: hairline rules between rows, no vertical borders and no
  * zebra striping, so the eye can track a command across to its usage string.
@@ -71,7 +67,8 @@
 
 /* Marks the portion of a command name that matches the current search term. */
 .highlight {
-  background-color: #fff1a9;
+  background-color: var(--pds-color-highlight-background);
+  color: var(--pds-color-highlight-foreground);
   border-radius: 2px;
 }
 

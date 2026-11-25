@@ -1,6 +1,6 @@
 .guest-contributor {
   margin: 20px 0px 20px 0px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--pds-color-border-default);
 }
 .preview-info__img img {
   margin: 20px;

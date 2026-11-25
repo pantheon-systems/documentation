@@ -46,7 +46,7 @@ export const CommandsClientComponent = ({
         placeholder="Search Terminus Commands"
         onChange={(e) => setSearch(e.target.value)}
         value={search}
-        className="pds-spacing-mar-block-end-xl"
+        className="pds-mar-block-end-xl"
         label={""}
       />
       <div className={cn("table-responsive", styles.tableResponsive)}>

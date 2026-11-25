@@ -1,35 +1,51 @@
 import Layout from "@/components/layout";
 import { processDirectoryForYaml } from "@/server/processor/yaml";
 import { HeroCTA } from "@/components/hero-cta";
-import { Container, TwoItemLayout } from "@/components/ui/pds-re-export";
+import { Container } from "@/components/ui/pds-re-export";
 import { TopicsGrid } from "@/components/pds-middleware/topic-grid";
 import { LinksList } from "@/components/pds-middleware/links-list";
-import ChangelogList from "@/components/pds-middleware/change-log-list";
+import {
+  LatestReleaseNotes,
+  type LatestReleaseNote,
+} from "@/components/pds-middleware/latest-release-notes";
+import { releaseNoteCategoryLoader } from "@/templates/release-note-listing/release-note-categories";
+import { formatLongDate } from "@/lib/format-date";
+import { sanitizeSlug } from "@/lib/utils";
 import { processDirectoryForMarkDown } from "@/server/processor/mdx";
 import { generateMetadataFromUri } from "@/lib/site-metadata";
-const containerWidth = "standard";
 
 export default async function Home() {
   const homeYaml = processDirectoryForYaml("source/data", {
     filter: (filePath) => filePath.includes("home.yaml"),
   })[0].content[0];
 
-  const allReleaseNotesFiles = processDirectoryForMarkDown(
-    "source/releasenotes"
-  );
-
-  const allReleaseNotes = allReleaseNotesFiles
-    .slice(-4)
-    .map((e) => ({
-      title: e.frontmatter.title ?? "",
-      slug: e.fields.slug ?? "",
-      id: e.id,
-    }))
-    .reverse();
+  // Newest first: the files are in date order, oldest first.
+  const latestNotes: LatestReleaseNote[] = processDirectoryForMarkDown(
+    "source/releasenotes",
+  )
+    .slice(-3)
+    .reverse()
+    .map((note) => ({
+      id: note.id,
+      href: `/${sanitizeSlug(note.fields.slug ?? "")}`,
+      title: note.frontmatter.title ?? "",
+      date: note.frontmatter.published_date
+        ? formatLongDate(note.frontmatter.published_date)
+        : "",
+      categories: ((note.frontmatter.categories ?? []) as string[])
+        .sort()
+        .map((slug) => {
+          const category = releaseNoteCategoryLoader(slug);
+          return {
+            label: category?.displayName ?? slug,
+            color: category?.color,
+          };
+        }),
+    }));
 
   return (
-    <Layout containerWidth={containerWidth} hasCta={true}>
-      <Container width={containerWidth}>
+    <Layout activePage="/">
+      <Container width="wide">
         <HeroCTA
           title={homeYaml?.title || ""}
           subTitle={homeYaml?.call_to_action?.subtitle || ""}
@@ -37,31 +53,27 @@ export default async function Home() {
           linkText={homeYaml?.call_to_action?.linkText || ""}
         />
 
-        <h2 className="pds-spacing-mar-block-xl">{homeYaml.topics.title}</h2>
-        <TopicsGrid topics={homeYaml.topics.tiles} />
+        <div className="pan-docs-home__body">
+          <section aria-labelledby="docs-topics-heading">
+            <h2 className="pan-docs-section-title" id="docs-topics-heading">
+              {homeYaml.topics.title}
+            </h2>
+            <TopicsGrid topics={homeYaml.topics.tiles} />
+          </section>
 
-        <TwoItemLayout
-          layoutVariant="equal"
-          className="pds-spacing-mar-block-start-6xl"
-        >
-          <div slot="first-item">
-            <h2 className="pds-spacing-mar-block-end-2xl">
+          <section aria-labelledby="docs-popular-heading">
+            <h2 className="pan-docs-section-title" id="docs-popular-heading">
               {homeYaml.three_column_links.title}
             </h2>
             <LinksList title="" links={homeYaml.three_column_links.links} />
-          </div>
+          </section>
 
-          <div slot="second-item">
-            <h2 className="pds-spacing-mar-block-end-2xl">
-              {homeYaml.changelog_preview.title}
-            </h2>
-            <ChangelogList
-              title={homeYaml.changelog_preview.title}
-              url={homeYaml.changelog_preview.url}
-              changelogs={allReleaseNotes}
-            />
-          </div>
-        </TwoItemLayout>
+          <LatestReleaseNotes
+            title="Latest release notes"
+            allUrl={homeYaml.changelog_preview.url}
+            notes={latestNotes}
+          />
+        </div>
       </Container>
     </Layout>
   );

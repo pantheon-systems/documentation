@@ -107,7 +107,7 @@ describe("ReleaseNoteSearch", () => {
     renderWithCurrentPageItem();
 
     expect(screen.getByTestId("current-page-content")).toBeTruthy();
-    expect(document.querySelector(".rn-search-results")).toBeNull();
+    expect(document.querySelector(".pan-docs-note-list")).toBeNull();
   });
 
   it("finds release notes from other pages, not just the current page's content", async () => {
@@ -183,14 +183,14 @@ describe("ReleaseNoteSearch", () => {
 
     fireEvent.change(input, { target: { value: "php" } });
     await waitFor(() => {
-      expect(document.querySelector(".rn-search-results")).not.toBeNull();
+      expect(document.querySelector(".pan-docs-note-list")).not.toBeNull();
     });
 
     fireEvent.change(input, { target: { value: "" } });
 
     await waitFor(() => {
       expect(screen.getByTestId("current-page-content")).toBeTruthy();
-      expect(document.querySelector(".rn-search-results")).toBeNull();
+      expect(document.querySelector(".pan-docs-note-list")).toBeNull();
     });
   });
 

@@ -1,41 +1,10 @@
-import Layout from "@/components/layout";
-import { OmniSidebarNav } from "@/components/omniSideBarNav";
-import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layout";
-import SearchBar from "@/components/header/search-bar";
+import { DocsPage } from "@/components/docs-page";
 import HeaderBody from "@/components/common/header-body";
 
 import { CommandType } from "@/components/common/commands/types";
 import { Partial } from "@/components/common/partial-component";
 import Link from "next/link";
 import { Pre } from "@/components/ui/mdx-wrapper/pre";
-
-const ContainerDiv = ({ children }: { children: React.ReactNode }) => (
-  <div className="content-wrapper">{children}</div>
-);
-
-const ContentLayoutType = ({
-  children,
-  hasTOC,
-}: {
-  children: React.ReactNode;
-  hasTOC: boolean;
-}) => {
-  if (hasTOC) {
-    return (
-      <DocsSidebarLayout
-        mobileMenuMaxWidth={900}
-        sidebarLocation="right"
-        sidebarWidth="narrow"
-        gridGap="narrow"
-        sidebarMobileLocation="after"
-      >
-        {children}
-      </DocsSidebarLayout>
-    );
-  }
-
-  return <ContainerDiv>{children}</ContainerDiv>;
-};
 
 export const TerminusCommandTemplate = ({
   command,
@@ -44,127 +13,96 @@ export const TerminusCommandTemplate = ({
   command: CommandType;
   slug: string;
 }) => {
-  const options: any = Object.keys(command.definition.options).map(
-    function (key) {
-      return [String(key), command.definition.options[key]];
-    }
+  const options = Object.values(command.definition.options).sort((a, b) =>
+    a.name.localeCompare(b.name),
   );
-  options.forEach((option: any) => {
-    option.shift();
-  });
-
-  options.sort((a: any, b: any) => (a[0].name > b[0].name ? 1 : -1));
-  options.sort(function (a: any, b: any) {
-    return a[0].name.localeCompare(b[0].name);
-  });
 
   return (
-    <Layout containerWidth="standard" excludeSearch={true}>
-      <DocsSidebarLayout
-        sidebarWidth="narrow"
-        gridGap="narrow"
-        sidebarLocation="left"
-        mobileMenuMaxWidth={1025}
-        className="pds-container pds-container--x-wide"
-      >
-        <div slot="sidebar" className="guide-sidebar">
-          <OmniSidebarNav
-            activePage={"/terminus/commands"}
+    <DocsPage
+      isArticle
+      activePage={"/terminus/commands"}
+      header={
+        <>
+          <p className="pds-overline-s pan-docs-page-header__eyebrow">
+            Command
+          </p>
+          <HeaderBody
+            title="Terminus Command Reference"
+            subtitle={`terminus ${command.name}`}
+            description=""
+            slug={slug}
+            contributors={[]}
+            featured={false}
+            editPath={""}
+            reviewDate={""}
           />
+        </>
+      }
+    >
+      <article className="doc guide-doc-body pds-pad-block-end-2xl">
+        <div className="pds-prose">
+          <h2>Description</h2>
+          <p>{command.description}</p>
+
+          <h2>Example Usage</h2>
+          <div className="pds-mar-block-start-l pds-mar-block-end-4xl">
+            {/* <pre className="language-bash">
+              <code className="language-bash">
+                terminus {command.usage[0].replace(/\[|\]/g, "")}
+              </code>
+            </pre> */}
+            <Pre className="language-bash">
+              <code className="language-bash">
+                terminus {command.usage[0].replace(/\[|\]/g, "")}
+              </code>
+            </Pre>
+          </div>
+
+          <div className="pds-mar-block-end-4xl">
+            {command.usage.map((usage, i) => {
+              if (i !== 0) {
+                return (
+                  <span key={i}>
+                    <p key={i}>
+                      <code key={`${i}-pre`} className="pds-mar-inline-end-2xs">
+                        {usage
+                          .replace(/\[|\]/g, "")
+                          .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
+                      </code>{" "}
+                      {usage
+                        .replace(/\[|\]/g, "")
+                        .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
+                    </p>
+                    <hr className="commandHr" />
+                  </span>
+                );
+              }
+            })}
+          </div>
+
+          <h2>Options</h2>
+          <div className="pds-mar-block-end-4xl">
+            <table>
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                {options.map((option) => (
+                  <tr key={option.name}>
+                    <td>{option.name}</td>
+                    <td>{option.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <Partial file={`terminus/${slug}.md`} />
         </div>
-
-        <div id="docs-main" slot="content" tabIndex={-1}>
-          <ContentLayoutType hasTOC={false}>
-            <div slot="content">
-              <SearchBar />
-            </div>
-            <main id="docs-main" slot="content" tabIndex={-1}>
-              <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
-                <div className="pds-overline-text pds-spacing-pad-block-xs">
-                  Command
-                </div>
-                <HeaderBody
-                  title="Terminus Command Reference"
-                  subtitle={`terminus ${command.name}`}
-                  description=""
-                  slug={slug}
-                  contributors={[]}
-                  featured={false}
-                  editPath={""}
-                  reviewDate={""}
-                />
-                <h2>Description</h2>
-                <p>{command.description}</p>
-
-                <h2>Example Usage</h2>
-                <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
-                  {/* <pre className="language-bash">
-                    <code className="language-bash">
-                      terminus {command.usage[0].replace(/\[|\]/g, "")}
-                    </code>
-                  </pre> */}
-                  <Pre className="language-bash">
-                    <code className="language-bash">
-                      terminus {command.usage[0].replace(/\[|\]/g, "")}
-                    </code>
-                  </Pre>
-                </div>
-
-                <div className="pds-spacing-mar-block-end-4xl">
-                  {command.usage.map((usage, i) => {
-                    if (i !== 0) {
-                      return (
-                        <span key={i}>
-                          <p key={i}>
-                            <code
-                              key={`${i}-pre`}
-                              className="pds-spacing-mar-inline-end-2xs"
-                            >
-                              {usage
-                                .replace(/\[|\]/g, "")
-                                .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
-                            </code>{" "}
-                            {usage
-                              .replace(/\[|\]/g, "")
-                              .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
-                          </p>
-                          <hr className="commandHr" />
-                        </span>
-                      );
-                    }
-                  })}
-                </div>
-
-                <h2>Options</h2>
-                <div className="pds-spacing-mar-block-end-4xl">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Option</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {options.map((option: any, i: number) => {
-                        return (
-                          <tr key={`${i}-${option}`}>
-                            <td key={`${option}-name`}>{option[0].name}</td>
-                            <td key={`${option}-desc`}>
-                              {option[0].description}
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-                <Partial file={`terminus/${slug}.md`} />
-                <Link href="/terminus/commands">Back to all commands</Link>
-              </article>
-            </main>
-          </ContentLayoutType>
-        </div>
-      </DocsSidebarLayout>
-    </Layout>
+        <Link href="/terminus/commands">Back to all commands</Link>
+      </article>
+    </DocsPage>
   );
 };

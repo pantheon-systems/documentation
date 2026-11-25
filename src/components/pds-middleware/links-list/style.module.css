@@ -1,9 +1,11 @@
+/* Columns of links, so eleven short links don't make a long single column. */
 .linksList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: var(--pds-spacing-m) var(--pds-spacing-2xl);
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   list-style-type: none;
+  margin: 0;
   padding: 0;
-  row-gap: var(--pds-spacing-m);
 }
 
 .linksListAnchor {

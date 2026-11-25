@@ -1,6 +1,10 @@
+"use client";
+
+// A client component: the link is a next/link element, which a server component
+// can't pass to the PDS client components.
 import React from "react";
 import Link from "next/link";
-import { Icon } from "@/components/ui/pds-re-export";
+import { ButtonLink } from "@/components/ui/pds-re-export";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import heroImage from "@/source/images/homepage.png";
@@ -35,15 +39,17 @@ export function HeroCTA(props: Props) {
         className="pds-grid-item pds-grid-item--lg-6 hero-cta-text"
         slot="second-item"
       >
-        <h1 className={styles.heroTitle}>{title}</h1>
-        <p className="pds-lead-text">{subTitle}</p>
-        <Link
-          href={url}
-          className="pds-button pds-button--lg pds-spacing-mar-block-start-m"
-        >
-          {linkText}
-          <Icon iconName="arrowRight" iconSize="lg" />
-        </Link>
+        <h1 className={`pds-heading-4xl ${styles.heroTitle}`}>{title}</h1>
+        <p className="docs-lead-text">{subTitle}</p>
+        <div className="pds-mar-block-start-m">
+          <ButtonLink
+            displayType="icon-end"
+            iconName="arrowRight"
+            linkContent={<Link href={url}>{linkText}</Link>}
+            size="m"
+            variant="primary"
+          />
+        </div>
       </div>
     </div>
   );

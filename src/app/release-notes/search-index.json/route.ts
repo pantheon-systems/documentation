@@ -1,4 +1,5 @@
 import { getAllReleaseNotes } from "@/lib/page-utils";
+import { stripMarkdown } from "@/lib/strip-markdown";
 
 // Release note content rarely changes more than a few times a day, so the
 // index is safe to cache for a while rather than re-reading and
@@ -12,25 +13,6 @@ export type ReleaseNoteSearchEntry = {
   categories: string[];
   text: string;
 };
-
-/**
- * Reduce a release note's markdown body to plain text suitable for
- * searching and building highlighted snippets from. This intentionally
- * favors simplicity over perfect fidelity - it's used for matching and
- * display in search results, not for rendering.
- */
-function stripMarkdown(markdown: string): string {
-  return markdown
-    .replace(/^---[\s\S]*?---\n*/, "") // any leading frontmatter, defensively
-    .replace(/```[\s\S]*?```/g, " ") // fenced code blocks
-    .replace(/`([^`]+)`/g, "$1") // inline code
-    .replace(/!\[.*?\]\(.*?\)/g, "") // images
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // links -> link text
-    .replace(/<\/?[a-zA-Z][^>]*>/g, " ") // HTML/JSX tags (e.g. <Alert>, <Callout>)
-    .replace(/[#>*_~`]/g, "") // remaining markdown symbols
-    .replace(/\s+/g, " ") // collapse all whitespace
-    .trim();
-}
 
 export async function GET() {
   const releaseNotes = getAllReleaseNotes();

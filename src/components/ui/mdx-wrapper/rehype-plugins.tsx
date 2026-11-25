@@ -1,8 +1,8 @@
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import { visit } from "unist-util-visit";
-import type { Root, Element } from "hast";
+import { SKIP, visit } from "unist-util-visit";
+import type { Root, Element, ElementContent } from "hast";
 import type { Plugin } from "unified";
 
 import ReactMarkdown from "react-markdown";
@@ -52,6 +52,85 @@ const rehypeNormalizeCodeClass: Plugin<[], Root> = () => {
         parent.properties = parent.properties || {};
         parent.properties.className = updated;
       }
+    });
+  };
+};
+
+const isCell = (node: ElementContent): node is Element =>
+  node.type === "element" && (node.tagName === "td" || node.tagName === "th");
+
+const hasText = (node: ElementContent): boolean =>
+  node.type === "text"
+    ? node.value.trim().length > 0
+    : node.type === "element" && node.children.some(hasText);
+
+const hasElement = (node: Element): boolean =>
+  node.children.some((child) => child.type === "element");
+
+const isBold = (node: ElementContent): boolean => {
+  if (node.type !== "element") return false;
+  if (node.tagName === "strong" || node.tagName === "b") return true;
+  const style = String(node.properties?.style ?? "");
+  if (/font-weight:\s*(bold|[6-9]00)/i.test(style)) return true;
+  return node.children.some(isBold);
+};
+
+/**
+ * Markdown tables cannot span columns, so section labels (such as "Fully
+ * Supported" in the PHP versions table) are written as a row whose first cell
+ * holds the label and whose other cells are empty. That squeezes the label into
+ * the first column. Make the label cell span the full width of the table.
+ *
+ * This only applies when the first cell has bold content and every other cell
+ * is empty, so ordinary rows with blank cells are left alone.
+ */
+export const rehypeSpanSectionRows: Plugin<[], Root> = () => {
+  return (tree: Root) => {
+    visit(tree, "element", (row: Element) => {
+      if (row.tagName !== "tr") return;
+
+      const cells = row.children.filter(isCell);
+      if (cells.length < 2 || cells[0].tagName !== "td") return;
+
+      const [first, ...rest] = cells;
+      if (!hasText(first) || !isBold(first)) return;
+      if (rest.some((cell) => hasText(cell) || hasElement(cell))) return;
+
+      first.properties = {
+        ...first.properties,
+        colSpan: cells.length,
+        className: [
+          ...((first.properties?.className as string[] | undefined) ?? []),
+          "docs-table-section",
+        ],
+      };
+      row.children = row.children.filter(
+        (child) => child === first || !isCell(child)
+      );
+    });
+  };
+};
+
+/**
+ * Wrap every table in a container that scrolls sideways. A wide table (the PHP
+ * versions table has six columns) otherwise widens the whole page on a phone
+ * instead of scrolling inside its own box.
+ */
+export const rehypeScrollableTables: Plugin<[], Root> = () => {
+  return (tree: Root) => {
+    visit(tree, "element", (node: Element, index, parent) => {
+      if (node.tagName !== "table" || !parent || index === undefined) return;
+
+      const wrapper: Element = {
+        type: "element",
+        tagName: "div",
+        properties: { className: ["docs-table-scroll"] },
+        children: [node],
+      };
+      parent.children[index] = wrapper;
+
+      // Skip the wrapped table so it isn't wrapped again.
+      return [SKIP, index + 1];
     });
   };
 };
@@ -147,6 +226,8 @@ const rehypeRemovePWithPartialComponent: Plugin<[], Root> = () => {
 
 export const rehypePlugins: NonNullable<PluggableList> = [
   rehypeRaw,
+  rehypeSpanSectionRows,
+  rehypeScrollableTables,
   rehypeSlug,
   [
     rehypeAutolinkHeadings,

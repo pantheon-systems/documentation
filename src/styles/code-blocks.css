@@ -1,0 +1,91 @@
+/*
+ * Code blocks use the PDS code block theme. The Prism token classes that
+ * rehype-prism-plus emits are mapped onto the same --pds-color-code-block-*
+ * tokens that the PDS CodeBlock component uses (its pds theme), so code blocks
+ * match the design system and follow light and dark mode when theme switching
+ * is turned on. This replaces the fixed-color prism-okaidia theme.
+ */
+
+pre.code-highlight {
+  background-color: var(--pds-color-code-block-background);
+  border-radius: var(--pds-border-radius-container);
+  color: var(--pds-color-code-block-foreground);
+  font-family: var(--pds-typography-ff-code);
+  font-size: var(--pds-typography-size-s);
+  line-height: var(--pds-typography-lh-m);
+  margin: 0;
+  overflow: auto;
+  padding: var(--pds-spacing-l) var(--pds-spacing-xl);
+  tab-size: 2;
+  text-align: start;
+  white-space: pre;
+  word-break: normal;
+}
+
+pre.code-highlight > code {
+  background: none;
+  color: inherit;
+  font: inherit;
+  white-space: inherit;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--pds-color-code-block-line-prefix);
+  font-style: italic;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.punctuation {
+  color: var(--pds-color-code-block-syntax-punctuation);
+}
+
+.token.attr-name,
+.token.url,
+.token.number {
+  color: var(--pds-color-code-block-foreground);
+}
+
+.token.builtin,
+.token.char,
+.token.constant,
+.token.function,
+.token.class-name,
+.token.rule,
+.token.variable {
+  color: var(--pds-color-code-block-syntax-function);
+}
+
+.token.coord,
+.token.operator,
+.token.keyword,
+.token.property {
+  color: var(--pds-color-code-block-syntax-keyword);
+}
+
+.token.string,
+.token.attr-value {
+  color: var(--pds-color-code-block-syntax-string);
+}
+
+.token.boolean,
+.token.selector {
+  color: var(--pds-color-code-block-syntax-boolean);
+}
+
+.token.tag {
+  color: var(--pds-color-code-block-syntax-tag);
+}
+
+.token.deleted {
+  color: var(--pds-color-code-block-syntax-deleted);
+}
+
+.token.inserted {
+  color: var(--pds-color-code-block-syntax-inserted);
+}

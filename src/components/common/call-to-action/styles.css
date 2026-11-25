@@ -5,7 +5,7 @@
   flex-direction: column;
   padding: var(--pds-spacing-l);
   row-gap: var(--pds-spacing-2xs);
-  background-color: var(--pds-color-background-default);
+  background-color: var(--pds-color-surface-default);
 }
 
 @media (min-width: 641px) {

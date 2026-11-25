@@ -1,138 +1,198 @@
 "use client";
-import style from "./style.module.css";
-
 import React from "react";
 import {
-  FooterLinks,
-  FooterHeading,
+  Icon,
+  PantheonLogo,
   SiteFooter,
-  SocialLinks,
-  ThreeItemLayout,
+  type PDSIcon,
 } from "@/components/ui/pds-re-export";
 import Link from "next/link";
 
 import { MarketoForm } from "../common/marketo-form";
 import CCLogo from "@/source/images/CC-BY-SA_icon.png";
-import { cn } from "@/lib/utils";
 
-const topicLinks = [
-  <Link href="/get-started/">Get Started</Link>,
-  <Link href="/develop/">Develop</Link>,
-  <Link href="/go-live/">Go Live</Link>,
-  <Link href="/platform/">Explore Platform Architecture</Link>,
-  <Link href="/automate/">Automate & Integrate</Link>,
-  <Link href="/performance/">Optimize Performance</Link>,
-  <Link href="/manage/">Manage Teams & Organizations</Link>,
-  <Link href="/troubleshoot/">Troubleshoot</Link>,
+const linkGroups = [
+  {
+    heading: "Topics",
+    links: [
+      { href: "/get-started/", label: "Get started" },
+      { href: "/develop/", label: "Develop" },
+      { href: "/go-live/", label: "Go live" },
+      { href: "/platform/", label: "Explore platform architecture" },
+      { href: "/automate/", label: "Automate & integrate" },
+      { href: "/performance/", label: "Optimize performance" },
+      { href: "/manage/", label: "Manage teams & organizations" },
+      { href: "/troubleshoot/", label: "Troubleshoot" },
+    ],
+  },
+  {
+    heading: "Help",
+    links: [
+      { href: "https://pantheon.io/contact-us", label: "Contact" },
+      {
+        href: "https://pantheon.io/developers/office-hours?docs",
+        label: "Office Hours",
+      },
+      {
+        href: "https://pantheon.io/learn-pantheon?docs",
+        label: "Learn Pantheon",
+      },
+      {
+        href: "https://directory.pantheon.io/agencies?docs",
+        label: "Hire an agency",
+      },
+      { href: "https://status.pantheon.io/", label: "Status" },
+      { href: "/guides/support/", label: "Support" },
+    ],
+  },
+  {
+    heading: "Community",
+    links: [
+      { href: "/code-of-conduct/", label: "Code of conduct" },
+      { href: "/contributors/", label: "Contributors" },
+      {
+        href: "/pantheon-community/",
+        label: "Community & Power Users Group",
+      },
+      { href: "/contribute/", label: "Learn to contribute" },
+    ],
+  },
 ];
 
-const helpLinks = [
-  <a href="https://pantheon.io/contact-us" className="cta docs-cta">
-    Contact
-  </a>,
-  <a
-    href="https://directory.pantheon.io/agencies?docs"
-    className="cta docs-cta"
-  >
-    Hire an Agency
-  </a>,
-  <a href="https://status.pantheon.io/">Status</a>,
-  <Link href="/guides/support/">Support</Link>,
+const socialLinks: { href: string; label: string; icon: PDSIcon }[] = [
+  {
+    href: "https://www.facebook.com/getpantheon",
+    label: "Pantheon on Facebook",
+    icon: "facebook",
+  },
+  {
+    href: "https://x.com/getpantheon",
+    label: "Pantheon on X",
+    icon: "xTwitter",
+  },
+  {
+    href: "https://bsky.app/profile/pantheon.io",
+    label: "Pantheon on BlueSky",
+    icon: "bluesky",
+  },
+  {
+    href: "https://www.linkedin.com/company/getpantheon",
+    label: "Pantheon on LinkedIn",
+    icon: "linkedin",
+  },
+  {
+    href: "https://www.youtube.com/user/GetPantheon",
+    label: "Pantheon on YouTube",
+    icon: "youtube",
+  },
+  {
+    href: "https://www.instagram.com/getpantheon",
+    label: "Pantheon on Instagram",
+    icon: "instagram",
+  },
 ];
 
-const communityLinks = [
-  <Link href="/code-of-conduct/">Code of Conduct</Link>,
-  <Link href="/contributors/">Contributors</Link>,
-  <Link href="/pantheon-community/">Community & Power Users Group</Link>,
-  <Link href="/contribute/">Learn to Contribute</Link>,
-];
-
+// The footer from the PDS docs site Global recipe: a brand column with the
+// license, three link groups and a connect column, in a grid that follows its
+// own width (five columns, three, then two on phones; see docs-site.css).
 export const Footer = ({
   className,
   withBorder = true,
 }: {
-  className: string;
+  className?: string;
   withBorder?: boolean;
 }) => {
   return (
     <SiteFooter
       legalLinks={[
-        'privacy',
-        'dataSubjectRequest',
-        'cookiePolicy',
-        <button id='ot-sdk-btn' className='ot-sdk-show-settings'  />,
-        'termsOfUse',
-        'acceptableUse',
-        'accessibilityStatement',
+        "privacy",
+        "dataSubjectRequest",
+        "cookiePolicy",
+        <button
+          key="cookie-settings"
+          id="ot-sdk-btn"
+          className="ot-sdk-show-settings"
+        />,
+        "termsOfUse",
+        "acceptableUse",
+        "accessibilityStatement",
       ]}
-      containerWidth="standard"
-      className={cn(
-        className,
-        "pds-site-footer",
-        withBorder && style.withBorder
-      )}
+      containerWidth="x-wide"
+      hasTopBorder={withBorder}
+      className={className}
     >
-      <div className="pds-footer__links-area pds-grid pds-grid--wide">
-        <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
-          <ThreeItemLayout>
-            <FooterLinks
-              slot="first-item"
-              headingText="Topics"
-              headingLevel="h2"
-              linkItems={topicLinks}
-            />
-            <FooterLinks
-              slot="second-item"
-              headingText="Help"
-              headingLevel="h2"
-              linkItems={helpLinks}
-              className="pds-spacing-mar-block-start-xl@sm"
-            />
-            <FooterLinks
-              slot="third-item"
-              headingText="Community"
-              headingLevel="h2"
-              linkItems={communityLinks}
-              className="pds-spacing-mar-block-start-xl@sm"
-            />
-          </ThreeItemLayout>
-        </div>
-        <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
-          <FooterHeading
-            headingText="Connect"
-            headingLevel="h2"
-            className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
-          />
-          <p className={cn(style.footerFormIntro, "pds-ts-s")}>
-            Awesome development news, tutorials, and tips. Plus get three free
-            downloads, just for signing up. If you don't love it, unsubscribe
-            with just a click.
-          </p>
-          <div className="pds-spacing-mar-block-xl">
+      <div className="pan-docs-footer-wrap">
+        <div className="pan-docs-footer">
+          <div className="pan-docs-footer__brand">
+            <PantheonLogo linkContent={<Link href="/">Pantheon Docs</Link>} />
+            <p className="pan-docs-muted pds-ts-xs">
+              Our documentation is licensed under a{" "}
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+                Creative Commons Attribution-ShareAlike 4.0 International
+                License
+              </a>
+              . Code snippets are additionally licensed under{" "}
+              <a href="https://opensource.org/license/mit">The MIT License</a>.
+            </p>
+            <a
+              className="pan-docs-footer__cc"
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
+            >
+              <img
+                src={CCLogo.src}
+                alt="Creative Commons Attribution-ShareAlike 4.0 International License"
+              />
+            </a>
+          </div>
+
+          {linkGroups.map((group) => (
+            <nav
+              key={group.heading}
+              aria-label={group.heading}
+              className="pan-docs-footer__group"
+            >
+              <h2>{group.heading}</h2>
+              <ul>
+                {group.links.map((link) => (
+                  <li key={link.href}>
+                    {link.href.startsWith("/") ? (
+                      <Link href={link.href}>{link.label}</Link>
+                    ) : (
+                      <a href={link.href}>{link.label}</a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+
+          <section
+            aria-labelledby="docs-footer-connect"
+            className="pan-docs-footer__connect"
+          >
+            <h2 id="docs-footer-connect">Connect</h2>
+            <p className="pds-ts-s">
+              Awesome development news, tutorials, and tips. Plus get three free
+              downloads, just for signing up. If you don&apos;t love it,
+              unsubscribe with just a click.
+            </p>
             <MarketoForm
               baseUrl="https://app-ab05.marketo.com"
               munchkinId="316-GSV-089"
               formId={2014}
               formName="mktoForm_2014"
             />
-          </div>
-          <SocialLinks className="pds-spacing-mar-block-start-xl" />
+            <ul className="pan-docs-footer__social">
+              {socialLinks.map(({ href, label, icon }) => (
+                <li key={href}>
+                  <a href={href} aria-label={label}>
+                    <Icon iconName={icon} size="l" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
-      </div>
-
-      <div className={cn(style.ccLicense, "pds-spacing-mar-block-start-5xl")}>
-        <div className={style.ccLicenseLogoImage}>
-          <img
-            className={style.ccLicenseLogoImage}
-            src={CCLogo.src}
-            alt="Creative Commons Attribution-ShareAlike Logo"
-          />
-        </div>
-        <p className={cn(style.ccLicenseLogoText, "pds-ts-s")}>
-          Our Documentation is licensed under a Creative Commons
-          Attribution-ShareAlike 4.0 International License. Code snippets are
-          additionally licensed under The MIT License.
-        </p>
       </div>
     </SiteFooter>
   );

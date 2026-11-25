@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { SideNavCompact, Icon } from "@/components/ui/pds-re-export";
-import { MOBILE_MENU_BREAKPOINT } from "@/constants";
+import { TreeNav, Icon } from "@/components/ui/pds-re-export";
 
 // Plain data structure (no React elements)
 export interface NavItemData {
@@ -12,7 +11,7 @@ export interface NavItemData {
   children?: NavItemData[];
 }
 
-// Convert plain data to the format SideNavCompact expects (with React elements)
+// Convert plain data to the format TreeNav expects (with React elements)
 const convertToMenuItems = (items: NavItemData[]): any[] => {
   return items.map((item) => {
     let linkText: React.ReactNode = item.title;
@@ -22,12 +21,14 @@ const convertToMenuItems = (items: NavItemData[]): any[] => {
       linkText = (
         <>
           {item.title}{" "}
-          <Icon iconName="externalLink" iconSize="sm" />
+          <Icon iconName="externalLink" size="xs" />
         </>
       );
     }
 
     return {
+      // TreeNav requires path on any item that has children.
+      path: item.link,
       isActive: item.isActive,
       links: item.children && item.children.length > 0
         ? convertToMenuItems(item.children)
@@ -47,8 +48,8 @@ export const SideNavClient = ({
   const menuItems = convertToMenuItems(menuItemsData);
 
   return (
-    <SideNavCompact
-      mobileMenuMaxWidth={MOBILE_MENU_BREAKPOINT}
+    <TreeNav
+      hasMobileDrilldown
       className="sidenav-compact"
       ariaLabel={headingText}
       headingText={headingText}

@@ -1,13 +1,15 @@
 import { CallToAction } from "@/components/common/call-to-action";
 import { GuideItem } from "@/components/common/guide-item";
 import { IntegrationGuideItem } from "@/components/common/integration-guide-item";
-import { SubTopicGroup } from "@/components/common/subtopic-group";
+import {
+  SectionGroups,
+  type SectionGroup,
+  type SectionGroupLink,
+} from "@/components/common/section-groups";
 import { Youtube } from "@/components/common/youtube";
-import SearchBar from "@/components/header/search-bar";
-import Layout from "@/components/layout";
-import { OmniSidebarNav } from "@/components/omniSideBarNav";
-import { DocsSidebarLayout } from "@/components/pds-middleware/docs-sidebar-layout";
-import { Container, LinksCard } from "@/components/ui/pds-re-export";
+import { DocsPage } from "@/components/docs-page";
+import { getOmniItems } from "@/components/omni-components";
+import { getOmniSidebarActiveSection } from "@/components/omni-components/helpers";
 import Link from "next/link";
 import React from "react";
 
@@ -63,204 +65,139 @@ export interface Landing {
 }
 
 export type Landings = Landing[];
-const containerWidth = "full";
 
-const twoColumnClasses =
-  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6";
+// A card shows each link once, even when it is listed under several sub-lists,
+// and skips an entry with no text or URL rather than drawing an empty item.
+const uniqueLinks = (links: SectionGroupLink[]) => {
+  const usable = links.filter((link) => link.text?.trim() && link.url);
+  return usable.filter(
+    (link, index) =>
+      usable.findIndex((other) => other.url === link.url) === index,
+  );
+};
 
-const threeColumnClasses =
-  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4";
+// The section's cards: the subtopics, then the other topic groups, in the order
+// the data lists them. A subtopic's sub-lists are flattened into one list.
+const toSectionGroups = (topic: Landing): SectionGroup[] => [
+  ...(topic.subtopics ?? []).map((subtopic) => ({
+    title: subtopic.title,
+    description: subtopic.subtitle,
+    links: uniqueLinks(
+      (subtopic.subtopic_lists ?? []).flatMap((list) => list.links ?? []),
+    ),
+  })),
+  ...(topic.topics_groups ?? []).map((group) => ({
+    title: group.title,
+    description: group.subtitle,
+    links: uniqueLinks(group.links ?? []),
+  })),
+];
 
-export const LandingTemplate = ({ topic }: { topic: Landing }) => {
+export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
   if (!topic) {
     return null;
   }
 
-  const groupLength = topic.topics_groups ? topic.topics_groups.length : null;
-  const topicGroupsColumns =
-    groupLength === 2 || groupLength === 4 ? "two" : "three";
+  // The section's own index page is named like its menu item (the PDS
+  // prototype's "Development workflows"), so the title, breadcrumb and header
+  // menu agree. A page inside a section keeps its own title and gets the
+  // section as an extra breadcrumb.
+  const section = getOmniSidebarActiveSection(topic.path, await getOmniItems());
+  const isSectionIndex = !!section && section.link === `/${topic.path}`;
+  const title = isSectionIndex
+    ? section.header?.label ?? topic.title
+    : topic.title;
+  const groups = toSectionGroups(topic);
 
   return (
-    <Layout containerWidth="standard" excludeSearch={true}>
-      <DocsSidebarLayout
-        sidebarWidth="narrow"
-        gridGap="narrow"
-        sidebarLocation="left"
-        className="pds-container pds-container--x-wide"
-      >
-        <div slot="sidebar" className="guide-sidebar">
-          <OmniSidebarNav
-            activePage={topic.path}
-          />
-        </div>
-        <main id="docs-main" slot="content" tabIndex={-1}>
-          <Container width={containerWidth}>
-            <SearchBar />
-          </Container>
-          <Container width={containerWidth} className="landing-page__header">
-            <div className="landing-page-heading pds-spacing-pad-block-m">
-              <h1 className="pds-heading-xl text-4xl font-bold pds-spacing-mar-block-end-m">
-                {topic.title}
-              </h1>
-              {topic.subtitle && (
-                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-6xs">
-                  {topic.subtitle}
-                </div>
+    <DocsPage
+      activePage={topic.path}
+      title={title}
+      header={
+        <>
+          <h1 className="pan-docs-page-header__title">{title}</h1>
+          {topic.subtitle && (
+            <p className="pan-docs-page-header__lede">{topic.subtitle}</p>
+          )}
+        </>
+      }
+    >
+      <div className="pan-docs-section">
+        {topic.video_id && (
+          <div className="pan-docs-video">
+            <Youtube src={topic.video_id} title={title} />
+          </div>
+        )}
+
+        {/* Topic guides */}
+        {topic.guides?.map((guide, idx) => (
+          <section
+            key={`${guide.title}-${idx}`}
+            aria-labelledby={`docs-guides-${idx}`}
+          >
+            <h2 className="pan-docs-section-title" id={`docs-guides-${idx}`}>
+              {guide.title || "Popular guides"}
+            </h2>
+            <div className="landing-page__guide-items">
+              {guide.links?.map((link, linkIdx) =>
+                guide.type === "normal" ? (
+                  <GuideItem
+                    key={`${link.text}-${linkIdx}`}
+                    url={link.url}
+                    image={link.image}
+                    text={link.text}
+                  />
+                ) : (
+                  <IntegrationGuideItem
+                    key={`${link.text}-${linkIdx}`}
+                    url={link.url}
+                    image={link.image || ""}
+                  />
+                ),
               )}
             </div>
-          </Container>
-          {/* Video */}
-          {topic.video_id && (
-            <div className="landing-page__video-background">
-              <Container
-                width={containerWidth}
-                className="video-container pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
-              >
-                <Youtube src={topic.video_id} title={topic.title} />
-              </Container>
+          </section>
+        ))}
+
+        {/* The section's cards */}
+        {groups.length > 0 && (
+          <section aria-labelledby="docs-in-section-heading">
+            <h2 className="pan-docs-section-title" id="docs-in-section-heading">
+              In this section
+            </h2>
+            <SectionGroups groups={groups} />
+          </section>
+        )}
+
+        {/* Related resources */}
+        {(topic.cta || topic.cta_alt) && (
+          <section aria-labelledby="docs-related-heading">
+            <h2 className="pan-docs-section-title" id="docs-related-heading">
+              Related resources
+            </h2>
+            <div className="pan-docs-cards pan-docs-cards--2">
+              {topic.cta && (
+                <CallToAction
+                  title={topic.cta.title}
+                  type={topic.cta.type}
+                  subTitle={topic.cta.subtitle}
+                  url={topic.cta.url}
+                  dark={false}
+                />
+              )}
+              {topic.cta_alt && (
+                <CallToAction
+                  title={topic.cta_alt.title}
+                  type={topic.cta_alt.type}
+                  subTitle={topic.cta_alt.subtitle}
+                  url={topic.cta_alt.url}
+                  dark
+                />
+              )}
             </div>
-          )}
-
-          {/* Topic guides */}
-          {topic.guides &&
-            topic.guides.map((guide, idx) => (
-              <Container
-                key={`${guide.title}-${idx}`}
-                width={containerWidth}
-                className="landing-page__guides pds-spacing-mar-block-end-2xl"
-              >
-                <hr className="landing-page__guides-separator" />
-                {guide.title ? (
-                  <h2 className="text-3xl font-bold landing-page__guides-title">
-                    {guide.title}
-                  </h2>
-                ) : (
-                  <h2 className="text-3xl font-bold landing-page__guides-title">
-                    Popular guides
-                  </h2>
-                )}
-
-                <div className="landing-page__guide-items">
-                  {guide.links &&
-                    guide.links.map((link, idx) =>
-                      guide.type === "normal" ? (
-                        <GuideItem
-                          key={`${link.text}-${idx}`}
-                          url={link.url}
-                          image={link.image}
-                          text={link.text}
-                        />
-                      ) : (
-                        <IntegrationGuideItem
-                          key={`${link.text}-${idx}`}
-                          url={link.url}
-                          image={link.image || ""}
-                        />
-                      ),
-                    )}
-                </div>
-              </Container>
-            ))}
-
-          {/* Subtopics */}
-          {topic.subtopics && (
-            <div
-              className="pds-spacing-pad-block-start-5xl"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "var(--pds-spacing-3xl)",
-              }}
-            >
-              {topic.subtopics &&
-                topic.subtopics.map((subtopic, idx) => (
-                  <div
-                    key={`${subtopic.title}-${idx}`}
-                    className="landing-page__subtopics"
-                  >
-                    <SubTopicGroup
-                      key={subtopic.title}
-                      title={subtopic.title}
-                      subTitle={subtopic.subtitle}
-                      topics={subtopic.subtopic_lists}
-                    />
-                  </div>
-                ))}
-            </div>
-          )}
-
-          {/* Topic groups */}
-          {topic.topics_groups && (
-            <div className="pds-spacing-pad-block-5xl">
-              <Container
-                width={containerWidth}
-                className="landing-page__topics pds-grid"
-              >
-                {topic.topics_groups &&
-                  topic.topics_groups.map((group, key) => (
-                    <LinksCard
-                      className={
-                        topicGroupsColumns === "two"
-                          ? twoColumnClasses
-                          : threeColumnClasses
-                      }
-                      key={group.title}
-                      headingLevel="h2"
-                      headingText={group.title}
-                      linkItems={group.links.map((link, index) => (
-                        <Link
-                          style={{
-                            color: "var(--pds-color-interactive-link-default)",
-                            fontWeight: "var(--pds-typography-fw-regular)",
-                          }}
-                          href={link.url ?? "#"}
-                        >
-                          {link.text}
-                        </Link>
-                      ))}
-                    />
-                  ))}
-              </Container>
-            </div>
-          )}
-
-          {/* Related resources */}
-          {(topic.cta || topic.cta_alt) && (
-            <div className="landing-page__related pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
-              <Container width={containerWidth}>
-                <h2 className="landing-page__section-heading text-3xl font-bold">
-                  Related Resources
-                </h2>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "var(--pds-spacing-2xl)",
-                  }}
-                >
-                  {topic.cta && (
-                    <CallToAction
-                      title={topic.cta.title}
-                      type={topic.cta.type}
-                      subTitle={topic.cta.subtitle}
-                      url={topic.cta.url}
-                      dark={false}
-                    />
-                  )}
-                  {topic.cta_alt && (
-                    <CallToAction
-                      title={topic.cta_alt.title}
-                      type={topic.cta_alt.type}
-                      subTitle={topic.cta_alt.subtitle}
-                      url={topic.cta_alt.url}
-                      dark
-                    />
-                  )}
-                </div>
-              </Container>
-            </div>
-          )}
-        </main>
-      </DocsSidebarLayout>
-    </Layout>
+          </section>
+        )}
+      </div>
+    </DocsPage>
   );
 };

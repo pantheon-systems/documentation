@@ -17,7 +17,6 @@ const Enablement = ({
 
   return (
     <Callout title={title} type="info" className="docs-alert">
-      <h4>{title}</h4>
       {children}{" "}
       <a href={link} >
         Learn more

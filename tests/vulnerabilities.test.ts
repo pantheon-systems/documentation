@@ -4,6 +4,7 @@ import {
   getAllVulnerabilities,
   getVulnerabilityTrackerIntro,
 } from "@/lib/page-utils";
+import { tagColors, tagSolidColors } from "@pantheon-systems/pds-toolkit-react";
 import { VULNERABILITY_STATUSES } from "@/lib/vulnerability-statuses";
 
 // Entries are hand-written markdown files, so catch authoring mistakes here
@@ -24,6 +25,19 @@ describe("vulnerability tracker intro", () => {
       Object.keys(VULNERABILITY_STATUSES).sort()
     );
   });
+});
+
+// An unknown color makes the PDS Tag pick a random one, so check the status
+// colors are ones it accepts.
+describe("vulnerability statuses", () => {
+  const valid: string[] = [...tagColors, ...tagSolidColors];
+
+  it.each(Object.entries(VULNERABILITY_STATUSES))(
+    "%s uses a valid PDS tag color",
+    (_slug, status) => {
+      expect(valid).toContain(status.color);
+    }
+  );
 });
 
 describe("vulnerability tracker entries", () => {

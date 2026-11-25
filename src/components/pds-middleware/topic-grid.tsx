@@ -2,13 +2,14 @@
 import React from "react";
 import Link from "next/link";
 
-import { Tile } from "@pantheon-systems/pds-toolkit-react";
+import { Tile, type PDSIcon } from "@pantheon-systems/pds-toolkit-react";
 
 // This component translates the yaml data into something useful for PDS implementation of tiles.
+// V2 tiles show an icon instead of an illustration, so each topic names a PDS icon.
 
 export function TopicsGrid(props: {
   topics: {
-    imageSrc: string;
+    icon: PDSIcon;
     headingText: string;
     summary: string;
     url: string;
@@ -17,23 +18,16 @@ export function TopicsGrid(props: {
   const { topics } = props;
 
   return (
-    <div className="pds-tile-grid">
+    <div className="pan-docs-cards">
       {topics &&
         topics.map((topic, index) => (
           <Tile
             key={index}
-            imageSrc={topic.imageSrc}
             headingLevel="h3"
+            icon={topic.icon}
             headingText={topic.headingText}
             summary={topic.summary}
-            linkContent={
-              <Link href={topic.url}>
-                Learn more
-                <span className="visually-hidden">
-                  about {topic.headingText}
-                </span>
-              </Link>
-            }
+            linkContent={<Link href={topic.url} />}
           />
         ))}
     </div>

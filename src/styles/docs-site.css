@@ -1,0 +1,714 @@
+/*
+ * The PDS Docs Site recipes (Storybook: Patterns / Docs Site, toolkit 2.0.0-beta.24).
+ * The patterns are built from custom CSS around toolkit components, and the
+ * recipes on their docs pages are the markup and CSS to copy. They carry the
+ * responsive behavior too: the card grids and the single release note follow
+ * the width of their container (container queries), the footer goes from five
+ * columns to three to two, and the compact DocsLayout has its own rules.
+ *
+ * Kept as published so a new recipe can be pasted over it. Theme switcher rules
+ * are left out until the switcher is added.
+ */
+
+/* Page frame. */
+.pan-docs {
+  /* Reading width for article and list columns. */
+  --pan-docs-content-width: 56rem;
+
+  background-color: var(--pds-color-surface-default);
+  color: var(--pds-color-foreground-default);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pan-docs__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  > * {
+    width: 100%;
+  }
+}
+
+.pan-docs-muted {
+  color: var(--pds-color-foreground-default-secondary);
+}
+
+/* Site Footer has no background of its own; keep it white. */
+.pan-docs .pds-site-footer {
+  background-color: var(--pds-color-surface-default);
+}
+
+/* Header search, fixed width on the desktop Navbar. */
+:root:not([data-pds-nav-mobile]) .pan-docs-header-search {
+  width: 20rem;
+}
+
+[data-pds-nav-mobile] .pan-docs .pds-navbar__mobile .pds-button-group {
+  margin-block-start: var(--pds-spacing-m);
+}
+
+/* Footer: five columns wide, three in the middle, two on phones. The wrapper
+   is the query container, so the columns follow the footer's own width. */
+.pan-docs-footer-wrap {
+  container-type: inline-size;
+}
+
+.pan-docs-footer {
+  display: grid;
+  gap: var(--pds-spacing-2xl) var(--pds-spacing-3xl);
+  grid-template-columns: 1.25fr repeat(3, 1fr) 1.75fr;
+  /* No bottom padding: Site Footer's content wrapper already adds it. */
+  padding-block: var(--pds-spacing-2xl) 0;
+
+  h2 {
+    font-family: var(--pds-typography-ff-default);
+    font-size: var(--pds-typography-size-s);
+    font-weight: var(--pds-typography-fw-bold);
+    letter-spacing: var(--pds-typography-ls-xl);
+    line-height: var(--pds-typography-lh-xs);
+    margin-block: 0 var(--pds-spacing-m);
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pan-docs-footer__brand p {
+  margin-block: var(--pds-spacing-l) 0;
+  max-width: 22rem;
+}
+
+.pan-docs-footer__cc {
+  display: inline-flex;
+  margin-block-start: var(--pds-spacing-m);
+
+  img {
+    display: block;
+    height: 1.9375rem;
+    width: auto;
+  }
+}
+
+.pan-docs-footer__group li {
+  margin-block: 0 var(--pds-spacing-s);
+}
+
+.pan-docs-footer__connect {
+  max-width: 26rem;
+
+  p {
+    margin-block: 0 var(--pds-spacing-s);
+  }
+}
+
+.pan-docs-footer .pan-docs-footer__social {
+  display: flex;
+  gap: var(--pds-spacing-m);
+  margin-block-start: var(--pds-spacing-l);
+
+  a {
+    color: var(--pds-color-foreground-default);
+    display: inline-flex;
+  }
+
+  a:hover {
+    color: var(--pds-color-foreground-default-secondary);
+  }
+}
+
+@container (width < 70rem) {
+  .pan-docs-footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pan-docs-footer__brand,
+  .pan-docs-footer__connect {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Phones: two columns, and a larger, centered row of social icons. */
+@container (width < 36rem) {
+  .pan-docs-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pan-docs-footer .pan-docs-footer__social {
+    gap: var(--pds-spacing-xl);
+    justify-content: center;
+    margin-block-start: var(--pds-spacing-2xl);
+
+    .pds-icon {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
+
+.pan-docs-page-header {
+  padding-block-end: var(--pds-spacing-l);
+}
+
+.pan-docs-page-header__title {
+  font-family: var(--pds-typography-ff-compact);
+  font-size: var(--pds-typography-size-5xl);
+  font-weight: var(--pds-typography-fw-semibold);
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Space between the breadcrumb and the title. */
+.pan-docs-page-header > .pds-breadcrumb {
+  margin-block-end: var(--pds-spacing-2xl);
+}
+
+/* The eyebrow above an article title is the section name. The recipe has none,
+   so it is a size down from the overline default with space before the title. */
+.pan-docs-page-header__eyebrow {
+  margin-block: 0 var(--pds-spacing-s);
+}
+
+.pan-docs-page-header__lede {
+  color: var(--pds-color-foreground-default-secondary);
+  font-size: var(--pds-typography-size-l);
+  margin-block: var(--pds-spacing-s) 0;
+}
+
+/* Section: wrapper and containers for the card and group grids. */
+.pan-docs-section {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-4xl);
+}
+
+.pan-docs-video {
+  max-width: 60rem;
+}
+
+/* "Start here" cards use two columns. */
+.pan-docs-cards--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Subsection groups: two columns, one on phones. */
+.pan-docs-groups {
+  display: grid;
+  gap: var(--pds-spacing-l);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@container (width < 56rem) {
+  .pan-docs-cards,
+  .pan-docs-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container (width < 36rem) {
+  .pan-docs-cards,
+  .pan-docs-cards--2,
+  .pan-docs-groups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.pan-docs-group {
+  h3 {
+    margin: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* One link per line (the recipe wraps them in a row): short page names run
+   together into one phrase when they sit side by side. */
+.pan-docs-group__links {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-2xs);
+  list-style: none;
+  margin-block-start: var(--pds-spacing-m);
+  margin-inline: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+}
+
+/* Pins "View all" to the panel bottom so it lines up across a row. */
+.pan-docs-group > .pds-panel__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.pan-docs-group__links:has(+ .pan-docs-group__all) {
+  margin-block-end: var(--pds-spacing-xl);
+}
+
+.pan-docs-group__all {
+  align-self: flex-start;
+  margin-block-start: auto;
+}
+
+/* Article. The recipe centers this column; here it starts at the same left edge
+   as every other page, so the title doesn't shift when moving between pages. */
+.pan-docs-article,
+.pan-docs-article-header {
+  max-width: var(--pan-docs-content-width);
+}
+
+.pan-docs-article-meta {
+  align-items: center;
+  border-block-end: var(--pds-border-width-default) solid
+    var(--pds-color-border-default);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-xs) var(--pds-spacing-l);
+  margin-block-start: var(--pds-spacing-2xl);
+  padding-block-end: var(--pds-spacing-m);
+}
+
+.pan-docs-article-meta__links,
+.pan-docs-rail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-2xs) var(--pds-spacing-l);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+}
+
+.pan-docs-rail__links {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.pan-docs-article__pager {
+  margin-block-start: var(--pds-spacing-4xl);
+}
+
+/* Help block: a divider under the table of contents on desktop. */
+.pan-docs-rail__help {
+  border-block-start: var(--pds-border-width-default) solid
+    var(--pds-color-border-default);
+  padding-block-start: var(--pds-spacing-l);
+
+  h2 {
+    font-weight: var(--pds-typography-fw-semibold);
+    margin-block: 0 var(--pds-spacing-m);
+  }
+}
+
+/* Below the desktop breakpoint Docs Layout adds `pds-docs-layout--compact`.
+   The meta row sits closer to the lede, the layout's row gap separates the
+   header from the table of contents, the dropdown gets a divider, and the help
+   block closes the page as a panel. */
+.pds-docs-layout--compact {
+  .pan-docs-page-header:has(.pan-docs-article-meta) {
+    padding-block-end: 0;
+  }
+
+  .pan-docs-article-meta {
+    margin-block-start: var(--pds-spacing-l);
+  }
+
+  .pds-toc--mobile {
+    border-block-end: var(--pds-border-width-default) solid
+      var(--pds-color-border-default);
+    padding-block-end: var(--pds-spacing-xl);
+  }
+
+  .pan-docs-rail__help {
+    background-color: var(--pds-color-surface-default);
+    border: var(--pds-border-width-default) solid
+      var(--pds-color-border-default);
+    border-radius: var(--pds-border-radius-panel);
+    padding: var(--pds-spacing-l);
+  }
+}
+
+/* The collapsed sidebar band is already labeled with the section name, so the
+   tree's own heading would repeat it on phones. The nav keeps its aria-label. */
+.pds-docs-layout--compact .pds-tree-nav--mobile .pds-tree-nav__heading {
+  display: none;
+}
+
+/* The layout already pads the top of the sidebar, so the tree's own top padding
+   only doubles the space above its heading. */
+.pds-docs-layout__sidebar .pds-tree-nav {
+  padding-block-start: 0;
+}
+
+/* Filters in the sidebar slot. */
+.pan-docs-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-2xl);
+
+  .pds-input-label--heading {
+    font-size: var(--pds-typography-size-l);
+    margin-block-end: var(--pds-spacing-xs);
+    padding-inline-end: 0;
+  }
+}
+
+.pan-docs-filters__clear {
+  margin-block-start: var(--pds-spacing-m);
+}
+
+.pan-docs-page-header__rss {
+  margin-block: var(--pds-spacing-xl) 0;
+}
+
+/* The recipe leaves this line unstyled; space it from the search field. */
+.pan-docs-page-header__meta {
+  margin-block: var(--pds-spacing-s) 0;
+}
+
+.pan-docs-page-search {
+  margin-block-start: var(--pds-spacing-l);
+  max-width: 38rem;
+}
+
+/* Less space under a header that ends with a search field. */
+.pan-docs-page-header:has(.pan-docs-page-search) {
+  padding-block-end: 0;
+}
+
+.pan-docs-icon-link {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--pds-spacing-2xs);
+}
+
+/* Content column shared by release notes and search results. */
+.pan-docs-list-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-2xl);
+  max-width: var(--pan-docs-content-width);
+}
+
+/* Category tags, also used on the single release note page. */
+.pan-docs-tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-2xs);
+}
+
+.pan-docs-note-list {
+  border-block-start: var(--pds-border-width-default) solid
+    var(--pds-color-border-default);
+  list-style: none;
+  margin: var(--pds-spacing-s) 0 0;
+  padding: 0;
+
+  li {
+    border-block-end: var(--pds-border-width-default) solid
+      var(--pds-color-border-default);
+    margin: 0;
+    padding-block: var(--pds-spacing-xl);
+  }
+
+  /* Not pds-heading-2xl: its !important line height is too tight above the link underline. */
+  h2 {
+    font-family: var(--pds-typography-ff-compact);
+    font-size: var(--pds-typography-size-2xl);
+    font-weight: var(--pds-typography-fw-semibold);
+    line-height: var(--pds-typography-lh-m);
+    margin-block: var(--pds-spacing-xs) var(--pds-spacing-m);
+  }
+
+  p {
+    color: var(--pds-color-foreground-default-secondary);
+    font-size: var(--pds-typography-size-m);
+    line-height: var(--pds-typography-lh-m);
+    margin: 0;
+  }
+
+  .pan-docs-note-date {
+    font-size: var(--pds-typography-size-s);
+    font-weight: var(--pds-typography-fw-medium);
+  }
+
+  .pan-docs-tags {
+    margin-block-start: var(--pds-spacing-l);
+  }
+}
+
+/* Single release note: the body with a side panel for the date, categories,
+   and RSS link. Narrower, the panel drops and its parts fold into the column. */
+.pan-docs-note {
+  --note-width: calc(
+    var(--pan-docs-content-width) + 16rem + var(--pds-spacing-3xl)
+  );
+
+  container-type: inline-size;
+  padding-block: var(--pds-spacing-2xl) var(--pds-spacing-5xl);
+
+  .pan-docs-page-header {
+    max-width: var(--note-width);
+    padding-block-end: 0;
+  }
+}
+
+.pan-docs-note__layout {
+  align-items: start;
+  display: grid;
+  gap: var(--pds-spacing-3xl);
+  grid-template-columns: minmax(0, var(--pan-docs-content-width)) 16rem;
+}
+
+.pan-docs-note__body {
+  margin-block-start: var(--pds-spacing-xl);
+}
+
+.pan-docs-note__aside {
+  margin-block-start: var(--pds-spacing-xl);
+  position: sticky;
+  top: var(--pds-spacing-2xl);
+}
+
+.pan-docs-note__details {
+  display: grid;
+  gap: var(--pds-spacing-2xs);
+  margin: 0;
+
+  dt {
+    font-size: var(--pds-typography-size-m);
+    font-weight: var(--pds-typography-fw-semibold);
+    line-height: var(--pds-typography-lh-s);
+    margin-block-start: var(--pds-spacing-m);
+  }
+
+  dt:first-child {
+    margin-block-start: 0;
+  }
+
+  dd {
+    color: var(--pds-color-foreground-default-secondary);
+    font-size: var(--pds-typography-size-m);
+    margin: 0;
+  }
+}
+
+/* Divider runs edge to edge: offsets the Panel's content padding. */
+.pan-docs-note__subscribe {
+  border-block-start: var(--pds-border-width-default) solid
+    var(--pds-color-border-default);
+  margin-block-start: var(--pds-spacing-l);
+  margin-inline: calc(var(--content-padding) * -1);
+  padding: var(--pds-spacing-l) var(--content-padding) 0;
+}
+
+.pan-docs-note__meta,
+.pan-docs-note__footer {
+  display: none;
+}
+
+@container (width < 64rem) {
+  .pan-docs-note__layout {
+    display: block;
+  }
+
+  .pan-docs-note__aside {
+    display: none;
+  }
+
+  .pan-docs-note__meta {
+    display: block;
+    margin-block-start: var(--pds-spacing-xl);
+
+    .pan-docs-tags {
+      margin-block-start: var(--pds-spacing-s);
+    }
+  }
+
+  .pan-docs-note__date {
+    color: var(--pds-color-foreground-default-secondary);
+    font-size: var(--pds-typography-size-m);
+    font-weight: var(--pds-typography-fw-medium);
+    margin: 0;
+  }
+
+  .pan-docs-note__body {
+    margin-block-start: var(--pds-spacing-2xl);
+  }
+
+  .pan-docs-note__footer {
+    border-block-start: var(--pds-border-width-default) solid
+      var(--pds-color-border-default);
+    display: block;
+    margin-block-start: var(--pds-spacing-2xl);
+    padding-block-start: var(--pds-spacing-l);
+  }
+}
+
+/* Result list; the rest of this page's CSS is on the Release notes page. */
+.pan-docs-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-2xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+
+  h2 {
+    margin-block: var(--pds-spacing-3xs) var(--pds-spacing-2xs);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Hero. */
+.pan-docs-hero__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--pds-spacing-5xl) var(--pds-spacing-4xl);
+  text-align: center;
+}
+
+.pan-docs-hero__title {
+  font-family: var(--pds-typography-ff-compact);
+  font-size: var(--pds-typography-size-6xl);
+  font-weight: var(--pds-typography-fw-semibold);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.pan-docs-hero__lede {
+  font-size: var(--pds-typography-size-l);
+  margin-block: var(--pds-spacing-m) 0;
+  max-width: 38rem;
+  text-wrap: balance;
+
+  span {
+    display: block;
+  }
+}
+
+.pan-docs-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-s);
+  justify-content: center;
+  margin-block-start: var(--pds-spacing-2xl);
+}
+
+.pan-docs-hero__search {
+  margin-block-start: var(--pds-spacing-2xl);
+  max-width: 38rem;
+  width: 100%;
+}
+
+.pan-docs-hero__popular {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--pds-typography-size-s);
+  gap: var(--pds-spacing-2xs) var(--pds-spacing-l);
+  justify-content: center;
+  margin: var(--pds-spacing-2xl) 0 0;
+}
+
+/* Body: sections stack, and the container drives the card columns. */
+.pan-docs-home__body {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-5xl);
+  padding-block-end: var(--pds-spacing-4xl);
+}
+
+.pan-docs-section-title {
+  font-family: var(--pds-typography-ff-compact);
+  font-size: var(--pds-typography-size-2xl);
+  font-weight: var(--pds-typography-fw-semibold);
+  margin-block: 0 var(--pds-spacing-m);
+}
+
+.pan-docs-section-head {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pds-spacing-s) var(--pds-spacing-l);
+  justify-content: space-between;
+}
+
+/* Card grid: three columns, two when narrow, one on phones. */
+.pan-docs-cards {
+  display: grid;
+  gap: var(--pds-spacing-l);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@container (width < 56rem) {
+  .pan-docs-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container (width < 36rem) {
+  .pan-docs-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Release note card: categories sit at the bottom of the card. */
+.pan-docs-note-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-spacing-xs);
+  height: 100%;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+/* On a home page release note card, the tags sit at the bottom of the card. */
+.pan-docs-note-card .pan-docs-tags {
+  margin-block-start: auto;
+  padding-block-start: var(--pds-spacing-s);
+}
+
+.pds-vertical-empty-state.pan-docs-not-found {
+  padding-block: var(--pds-spacing-5xl);
+
+  /* The empty state centers its children, which shrinks the CTA region to its
+     content. Give it a width so the search field can grow. */
+  .pds-vertical-empty-state__cta {
+    max-width: 22.5rem;
+    width: 100%;
+  }
+}

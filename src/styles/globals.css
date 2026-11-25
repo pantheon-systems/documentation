@@ -1,17 +1,21 @@
 @import url("./webstyles.css");
 @import url("./common.css");
-/* Preparring for v2 migration
-/* https://pds-react.pantheon.io/v2.0/?path=/docs/documentation-v2-migration-gradual-migration--docs 
-/*@import 'npm:@pantheon-systems/pds-toolkit-react-v2/dist/css/pds-core.css';*/
+@import url("./docs-site.css");
+@import url("./code-blocks.css");
 @import "@pantheon-systems/pds-toolkit-react/css/pds-core.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-layouts.css";
 @import "@pantheon-systems/pds-toolkit-react/css/pds-components.css";
-@import "tocbot/dist/tocbot.css";
 
-/* custom typefaces */
-@import "prismjs/themes/prism-okaidia.css";
-/* Code block line numbering */
-@import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+
+/* Point the V2 font tokens at the fonts self-hosted by next/font in layout.tsx.
+   Unlayered, so this beats the token values in pds-core.css. The named
+   fallbacks match V2's own stacks. */
+:root {
+  --pds-typography-ff-default: var(--font-inter), "Inter", sans-serif;
+  --pds-typography-ff-compact: var(--font-inter-tight), "Inter Tight", sans-serif;
+  --pds-typography-ff-secondary: var(--font-ibm-plex-serif), "IBM Plex Serif", serif;
+  --pds-typography-ff-code: var(--font-source-code-pro), "Source Code Pro", monospace;
+}
 
 /* Default menu */
 @media (min-width: 641px) {
@@ -25,24 +29,22 @@
   z-index: 50;
 }
 
-.pds-side-nav-compact__menu,
-.pds-side-nav-compact__menu--expanded {
-  transition: all 0.3s ease-in-out;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--pds-color-text-headings);
-  font-family: Poppins, sans-serif;
-  font-weight: 700;
-  letter-spacing: normal;
-  line-height: 120%;
-  margin-block-end: 0.8rem;
-  margin-block-start: 0;
+/* V1 gave bare headings a bottom margin; V2 sets type styles but no spacing.
+   Keep the spacing. It lives in V2's pds-v1 layer on purpose: unlayered CSS
+   beats layered CSS, so an unlayered rule here would override V2 component
+   classes. pds-v1 ranks below pds-v2, so this only applies where V2 has no
+   opinion. Page titles take a pds-heading-* class for their size, since V2's
+   bare h1 default is small. */
+@layer pds-v1 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-end: 0.8rem;
+    margin-block-start: 0;
+  }
 }
 
 .platform-integration__link:hover .pds-panel {
@@ -50,22 +52,11 @@ h6 {
 }
 
 .docs-contributor-link a {
-  color: var(--pds-color-text-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
 }
 
 .docs-contributor-link a:hover {
-  color: var(--pds-color-link-hover);
-}
-
-.rss-feed-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.rss-feed-link-icon {
-  color: var(--pds-color-social-rss);
+  color: var(--pds-color-interactive-link-hover);
 }
 
 .docs-alert {
@@ -80,7 +71,7 @@ header + .docs-alert {
 a.pds-skiplink {
   background-color: var(--pds-color-button-primary-background-default);
   border-bottom-right-radius: var(--pds-border-radius-container);
-  color: var(--pds-color-button-primary-foreground-active);
+  color: var(--pds-color-button-primary-foreground);
   display: inline-block;
   left: 0;
   overflow: hidden;
@@ -88,13 +79,13 @@ a.pds-skiplink {
   position: absolute;
   text-decoration: underline;
   top: -200px;
-  transition: var(--pds-animation-button-transition);
+  transition: var(--pds-animation-transition-button);
   z-index: 100;
 }
 
 a.pds-skiplink:hover {
   background-color: var(--pds-color-button-primary-background-hover);
-  color: var(--pds-color-button-primary-foreground-active);
+  color: var(--pds-color-button-primary-foreground);
 }
 
 a.pds-skiplink:focus {
@@ -103,12 +94,12 @@ a.pds-skiplink:focus {
   outline-color: transparent;
   position: absolute;
   top: 0;
-  transition: var(--pds-animation-button-transition);
+  transition: var(--pds-animation-transition-button);
   width: auto;
 }
 
 .pantheon-icon-success {
-  color: var(--pds-color-input-foreground-success);
+  color: var(--pds-color-status-success-foreground);
 }
 
 .platform-integration__container .pds-panel__content {
@@ -118,94 +109,8 @@ a.pds-skiplink:focus {
   padding: 0;
 }
 
-@media screen and (max-width: 900px) {
-  .pds-sidebar-layout__content
-    #docs-main
-    .pds-sidebar-layout
-    .pds-sidebar-layout__side:has(.toc-placeholder) {
-    display: none;
-  }
-}
-
-.toc-placeholder {
-  margin-block-end: var(--pds-spacing-4xs);
-}
-
-.toc-container {
-  border-left: 1px solid var(--pds-color-border-default);
-  font-family: var(--pds-typography-ff-default);
-  font-weight: var(--pds-typography-fw-regular);
-  margin-block-start: var(--pds-spacing-xl);
-  overflow: auto;
-  position: sticky;
-  position: -webkit-sticky;
-  top: var(--pds-spacing-m);
-  /* width: 100%; */
-}
-
-.toc-container a {
-  color: var(--pds-color-text-default);
-  font-size: var(--pds-typography-size-s);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--pds-color-link-hover);
-    text-decoration: underline;
-  }
-}
-
-#toc-nav {
-  font-size: 1.44rem;
-  font-weight: var(--pds-typography-fw-semibold);
-  margin-block-end: var(--pds-spacing-l);
-  padding-inline-start: var(--pds-spacing-xl);
-}
-
-ul.toc-list {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding-inline-start: var(--pds-spacing-s);
-  padding-inline-end: var(--pds-spacing-2xs);
-  padding-block-end: var(--pds-spacing-s);
-  row-gap: var(--pds-spacing-xs);
-}
-
-ul.toc-list .is-collapsible {
-  max-height: none;
-}
-
-ul.toc-list ul {
-  padding-block-start: var(--pds-spacing-s);
-}
-
-ul.toc-list ul.is-collapsed {
-  padding-block-start: 0;
-}
-
-ul.toc-list ul li {
-  list-style-type: none;
-}
-
-.toc-link.is-active-link {
-  color: var(--pds-color-link-active);
-}
-
-.toc-list .is-active-link::before,
-.toc-link::before {
-  display: none;
-}
-
-.tocify-item {
-  line-height: var(--pds-typography-lh-s);
-}
-
-.tocify-item.is-active-li a {
-  font-weight: var(--pds-typography-fw-regular);
-}
-
 pre {
-  font-family: "Source Code Pro", "Source Code Pro Fallback" !important;
+  font-family: var(--pds-typography-ff-code) !important;
 }
 
 .certification.styleExample::after {
@@ -227,7 +132,7 @@ pre {
 
 .styleExample::after,
 .source-code::after {
-  color: var(--pds-color-text-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
   font-size: var(--pds-typography-size-s);
   font-weight: var(--pds-typography-fw-bold);
   letter-spacing: var(--pds-typography-ls-s);
@@ -284,13 +189,13 @@ pre {
 a.glossary__letter-link,
 a.glossary__term-link {
   text-decoration: none;
-  color: var(--pds-color-text-default);
+  color: var(--pds-color-foreground-default);
   display: block;
 }
 
 a.glossary__letter-link:hover,
 a.glossary__term-link:hover {
-  color: var(--pds-color-link-hover);
+  color: var(--pds-color-interactive-link-hover);
 }
 
 a.glossary__letter-link {
@@ -310,31 +215,6 @@ a.glossary__term-link {
   margin-block-end: var(--pds-spacing-xl);
 }
 
-.pre-without-rehype pre {
-  margin: 1.5em 0;
-  padding: 1em;
-  background-color: rgb(39, 40, 34);
-  border-radius: var(--borderRadius);
-}
-
-.pre-without-rehype pre code {
-  color: white;
-  display: block;
-  background-color: rgb(39, 40, 34) !important;
-}
-.pre-without-rehype pre code p {
-  margin: 0;
-}
-
-.header-reset-for-content span {
-  font-weight: inherit !important;
-}
-
-.individual-changelog-link h2 {
-  padding: 0;
-  margin: 0;
-}
-
 .toc-ignore > .docs-header-anchor {
   display: none;
 }
@@ -344,12 +224,6 @@ a.glossary__term-link {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.responsive-iframe-container.bordered {
-  border-radius: 12px;
-  border-style: solid;
-  border-width: 2px;
 }
 
 .responsive-iframe {
@@ -369,7 +243,7 @@ a.glossary__term-link {
 
 
 .pds-site-footer__legal a, .pds-site-footer__legal button {
-  color: var(--pds-color-fg-default) !important;
+  color: var(--pds-color-foreground-default) !important;
   cursor: pointer !important;
   font: inherit !important;
   background: 0 0 !important;

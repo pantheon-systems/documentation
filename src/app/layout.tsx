@@ -1,26 +1,58 @@
-import { Poppins, Aleo, Source_Code_Pro } from "next/font/google";
+import {
+  IBM_Plex_Serif,
+  Inter,
+  Inter_Tight,
+  Source_Code_Pro,
+} from "next/font/google";
 import Script from "next/script";
 import * as React from "react";
 import { Suspense } from "react";
 
 import "@/styles/globals.css";
 import { PropsWithChildren } from "react";
+import { GlobalWrapper } from "@/components/ui/pds-re-export";
+import { NAV_MOBILE_MAX_WIDTH } from "@/constants";
 import { AnalyticsGTM } from "./analytics-gtm";
 import SegmentAnalytics from "./analytics-segment";
 
-const poppins = Poppins({
+// The V2 fonts. pds-core.css also loads them, but through an @import that ends
+// up mid-file once the bundler concatenates the CSS, where browsers ignore it,
+// so nothing loaded and every font fell back to the system sans. Self-host
+// them here and point the --pds-typography-ff-* tokens at them (see
+// globals.css).
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  axes: ["opsz"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
-const aleo = Aleo({
+const interTight = Inter_Tight({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-inter-tight",
 });
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-ibm-plex-serif",
+});
+
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
-  weight: ["600"],
+  display: "swap",
+  variable: "--font-source-code-pro",
 });
+
+const fontVariables = [
+  inter.variable,
+  interTight.variable,
+  ibmPlexSerif.variable,
+  sourceCodePro.variable,
+].join(" ");
 
 function MyApp({ children }: PropsWithChildren) {
   const enableAnalytics = process.env.NODE_ENV !== "development";
@@ -29,7 +61,7 @@ function MyApp({ children }: PropsWithChildren) {
     enableAnalytics && process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
-    <html lang="en">
+    <html lang="en" className={fontVariables}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
@@ -59,11 +91,10 @@ function MyApp({ children }: PropsWithChildren) {
         <AnalyticsGTM />
       )}
 
-      <body
-        className={`${poppins.className} ${aleo.className} ${sourceCodePro.className}`}
-      >
-        {children}
-
+      <body>
+        <GlobalWrapper navMobileMaxWidth={NAV_MOBILE_MAX_WIDTH}>
+          {children}
+        </GlobalWrapper>
       </body>
       <Suspense>
         <SegmentAnalytics />

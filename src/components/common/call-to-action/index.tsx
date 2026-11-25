@@ -22,7 +22,7 @@ export function CallToAction(props: {
 
   return (
     <div className={`call-to-action ${dark && "call-to-action--alt"}`}>
-      <div className="pds-overline-text pds-overline-text--sm">{type}</div>
+      <div className="pds-overline-s">{type}</div>
       <CTALink linkContent={linkContent} />
       <p className="call-to-action__subtitle">{subTitle}</p>
     </div>

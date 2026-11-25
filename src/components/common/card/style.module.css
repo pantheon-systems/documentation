@@ -21,7 +21,7 @@
 .pluginCardTitleWrapper {
   display: flex;
   flex-direction: column;
-  row-gap: var(--pds-spacing-6xs);
+  row-gap: var(--pds-spacing-5xs);
 }
 
 .pluginCardTitle {
@@ -31,7 +31,7 @@
 
 .pluginCardPantheonOfficial {
   font-size: var(--pds-typography-size-s);
-  color: var(--pds-color-text-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
 }
 
 .pluginCardText p {

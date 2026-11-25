@@ -1,59 +1,17 @@
-"use server";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import PantheonLogo from "@/assets/logos/pantheon-full-logo.svg";
-import { Button } from "../ui/button";
-import NavMenu from "./nav";
-// import SearchBar from "./search-bar";
-import { ClientHeader } from "./client-header";
-import { navButtons } from "./common";
+import { getOmniItems } from "@/components/omni-components";
+import { getOmniSidebarActiveSection } from "@/components/omni-components/helpers";
+import { buildHeaderMenu } from "@/components/omni-components/header-menu";
+import SiteHeader from "./site-header";
 
-import styles from "./index.module.css";
-import { Container } from "../ui/pds-re-export";
-import { getOmniItems } from "../omni-components";
+// The menu comes from the omni list, the same source as the sidebar, so a new
+// section shows up here without editing the header. `activePage` is the page's
+// path; the menu item of the section it belongs to is marked as the active trail.
+export default async function Header({ activePage }: { activePage?: string }) {
+  const items = await getOmniItems();
+  const menu = buildHeaderMenu(items);
+  const activeHref = activePage
+    ? getOmniSidebarActiveSection(activePage, items)?.link
+    : undefined;
 
-export default async function Header() {
-  const omniLinks = await getOmniItems();
-  return (
-    <header className={styles.pdsTailwind}>
-      <a id="skip-to-main" className="pds-skiplink" href="#docs-main">
-        Skip to main content
-      </a>
-
-      <Container width={"x-wide"} className={styles.headerContainer}>
-        <div>
-          <nav className={styles.navContainer}>
-            <Link href="/">
-              <Image
-                src={PantheonLogo}
-                alt="Pantheon Logo"
-                width={160}
-                height={48}
-              />
-            </Link>
-            <div className={styles.desktopNav}>
-              <ClientHeader omniLinks={omniLinks} />
-            </div>
-          </nav>
-        </div>
-
-        <div className={styles.rightSection}>
-          <nav className={styles.desktopButtons}>
-            {navButtons.map((button) => (
-              <Link href={button.href} key={button.href}>
-                <Button variant={button.variant} size="full">
-                  {button.label}
-                </Button>
-              </Link>
-            ))}
-          </nav>
-
-          <div className={styles.mobileMenu}>
-            <NavMenu omniLinks={omniLinks} />
-          </div>
-        </div>
-      </Container>
-    </header>
-  );
+  return <SiteHeader menu={menu} activeHref={activeHref} />;
 }

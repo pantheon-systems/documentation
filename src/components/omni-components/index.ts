@@ -1,5 +1,5 @@
 import getStarted from "./get-started";
-import { OmniItem, simpleLink } from "./helpers";
+import { OmniHeader, OmniItem, simpleLink } from "./helpers";
 import workflows from "./workflows";
 import goLive from "./go-live";
 import webInfrastructure from "./web-infrastructure";
@@ -10,23 +10,60 @@ import security from "./security";
 import learning from "./learning";
 import about from "./about";
 
+// The one list of the site's sections. The sidebar reads it, and so does the
+// header menu: `header` says where an item shows up there. An item with no
+// `header` is listed under Guides, so a new section is in the menu as soon as it
+// is added here.
+const withHeader = (item: OmniItem, header: OmniHeader): OmniItem => ({
+  ...item,
+  header,
+});
+
+// Menu labels are sentence case to match the PDS docs site prototype; the
+// sidebar keeps the longer titles. The order here is the order in the menu.
 export const getOmniItems = async (): Promise<OmniItem[]> => {
-  const OmniItems = [
-    simpleLink("/", "Docs Home"),
-    getStarted(),
-    workflows(),
-    goLive(),
-    webInfrastructure(),
-    accountManagement(),
-    simpleLink("https://docs.p1.pantheon.io/", "P1"),
-    simpleLink("https://docs.content.pantheon.io/", "Content Publisher"),
-    terminus(),
-    support(),
-    security(),
-    learning(),
-    about(),
-    simpleLink("/release-notes", "Release Notes"),
-    simpleLink("/vulnerability-tracker", "Vulnerability Tracker"),
+  const OmniItems: OmniItem[] = [
+    // The logo links home, so Docs Home stays out of the menu.
+    withHeader(simpleLink("/", "Docs Home"), { menu: "none" }),
+    withHeader(getStarted(), { menu: "top", label: "Get started" }),
+    withHeader(workflows(), { group: "Build", label: "Development workflows" }),
+    withHeader(goLive(), { group: "Build", label: "Going live" }),
+    withHeader(simpleLink("https://docs.p1.pantheon.io/", "P1"), {
+      group: "Build",
+    }),
+    withHeader(
+      simpleLink("https://docs.content.pantheon.io/", "Content Publisher"),
+      { group: "Build" }
+    ),
+    withHeader(webInfrastructure(), {
+      group: "Run",
+      label: "Web infrastructure",
+    }),
+    withHeader(accountManagement(), {
+      group: "Run",
+      label: "Manage accounts and workspaces",
+    }),
+    withHeader(security(), { group: "Run" }),
+    withHeader(support(), {
+      group: "Run",
+      label: "Support and troubleshooting",
+    }),
+    withHeader(learning(), {
+      group: "Learn",
+      label: "Learning and certification",
+    }),
+    withHeader(about(), { group: "Learn", label: "About our docs" }),
+    // The pages listed in the CLI menu are marked in terminus.ts.
+    withHeader(terminus(), { menu: "cli", label: "CLI" }),
+    withHeader(simpleLink("/release-notes", "Release Notes"), {
+      menu: "top",
+      label: "Release notes",
+    }),
+    // Next to Release notes: both are feeds of dated updates, not guides.
+    withHeader(simpleLink("/vulnerability-tracker", "Vulnerability Tracker"), {
+      menu: "top",
+      label: "Vulnerability tracker",
+    }),
     // pagesToDelete(),
   ];
   return OmniItems;

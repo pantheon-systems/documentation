@@ -1,45 +1,32 @@
-import React from "react";
+"use client";
+
+// A client component, like the header: the links are next/link elements, and
+// passing elements from a server component to the PDS client components fails
+// during the production prerender. The server passes plain data.
 import Link from "next/link";
+import { PaginationChapter } from "@/components/ui/pds-re-export";
 
-import { Icon } from "@/components/ui/pds-re-export";
+export type PagerLink = { url: string; title: string };
 
-import styles from "./style.module.css";
+const toLink = (page: PagerLink | null | undefined, rel: "next" | "prev") =>
+  page
+    ? { linkContent: <Link href={page.url} rel={rel} />, title: page.title }
+    : undefined;
 
+/** Previous and next page links under an article (PDS Pagination Chapter). */
 const NavButtons = ({
   prev,
   next,
-  prevTitle = "Previous",
-  nextTitle = "Continue",
 }: {
-  prev: string;
-  next: string;
-  prevTitle?: string;
-  nextTitle?: string;
-}) => {
-  return (
-    <div>
-      <ul
-        className={`${styles.pagination} pager-guides pds-spacing-mar-block-end-2xl pds-spacing-mar-block-start-3xl`}
-      >
-        {prev && (
-          <li className={styles.paginationPrev}>
-            <Link href={prev} rel="prev" className="pds-button">
-              <Icon iconName="angleLeft"></Icon>
-              {prevTitle}
-            </Link>
-          </li>
-        )}
-        {next && (
-          <li className={styles.paginationNext}>
-            <Link href={next} rel="next" className="pds-button">
-              {nextTitle}
-              <Icon iconName="angleRight"></Icon>
-            </Link>
-          </li>
-        )}
-      </ul>
-    </div>
-  );
-};
+  prev?: PagerLink | null;
+  next?: PagerLink | null;
+}) => (
+  <PaginationChapter
+    className="pan-docs-article__pager"
+    headingText="Previous and next pages"
+    next={toLink(next, "next")}
+    previous={toLink(prev, "prev")}
+  />
+);
 
 export default NavButtons;

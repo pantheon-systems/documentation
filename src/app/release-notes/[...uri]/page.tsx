@@ -34,6 +34,8 @@ const getPage = async (uri: string[], category?: string[]) => {
           releaseNotes={page.data.releaseNotes}
           categories={page.data.categories}
           totalPages={page.data.totalPages}
+          totalItems={page.data.totalItems}
+          itemsPerPage={page.data.itemsPerPage}
           selectedCategories={category}
         />
       ),

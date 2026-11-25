@@ -1,30 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
 import Layout from "@/components/layout";
-import { Button } from "@/components/ui/button";
-import styles from "./not-found.module.css";
+import { NotFoundSearch } from "@/components/search/not-found-search";
+import { VerticalEmptyState } from "@/components/ui/pds-re-export";
 
+// The PDS docs site Not Found recipe: a centered empty state that fills the
+// page, with an illustration, a line of copy and a search field.
 export default function NotFound() {
   return (
     <Layout>
-      <div className="pds-container pds-spacing-pad-block-start-2xl pds-spacing-pad-block-end-4xl">
-        <div style={{ textAlign: "center" }}>
-          <main id="docs-main" tabIndex={-1}>
-            <div>
-              <h1 className="pds-spacing-mar-block-end-3xl">
-                Sorry, there's no page at that URL.
-              </h1>
-              <img
-                className="notfound"
-                style={{
-                  maxWidth: "400px",
-                }}
-                src="/images/not-found.svg"
-              ></img>
-            </div>
-          </main>
-        </div>
-      </div>{" "}
+      <VerticalEmptyState
+        fillHeight
+        className="pan-docs-not-found"
+        heading="Sorry, there’s no page at that URL."
+        headingLevel="h1"
+        illustration="underConstruction"
+        message="Try searching the docs for what you were looking for."
+        ctaRegion={<NotFoundSearch />}
+      />
     </Layout>
   );
 }

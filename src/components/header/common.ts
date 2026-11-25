@@ -7,6 +7,6 @@ export const navButtons = [
   {
     href: "https://pantheon.io/register",
     label: "Get free account",
-    variant: "primary",
+    variant: "brand",
   },
 ] as const;

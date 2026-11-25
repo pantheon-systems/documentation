@@ -4,8 +4,6 @@ import Link from "next/link";
 
 import { CTALink } from "@/components/ui/pds-re-export";
 
-import { cn } from "@/lib/utils";
-
 export function LinksList(props: {
   title: string;
   links: { url: string; text: string }[];
@@ -25,9 +23,5 @@ export function LinksList(props: {
     </li>
   ));
 
-  return (
-    <ul className={cn(style.linksList, "pds-spacing-mar-block-end-6xl")}>
-      {processedLinks}
-    </ul>
-  );
+  return <ul className={style.linksList}>{processedLinks}</ul>;
 }

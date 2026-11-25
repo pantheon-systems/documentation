@@ -27,6 +27,14 @@ const nextConfig = {
     ],
   },
   async headers() {
+    // Long-lived caching is only safe for production builds, where chunk file
+    // names change with every build. In dev the chunk URLs are reused as the
+    // code changes, so this header made browsers serve stale JS and CSS for up
+    // to a year (Next.js warns about this on every `next dev` start).
+    if (process.env.NODE_ENV !== "production") {
+      return [];
+    }
+
     return [
       {
         // Match _next/static files (JS chunks, CSS, etc)

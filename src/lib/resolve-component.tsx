@@ -61,6 +61,8 @@ export const resolveComponent = async (
             releaseNotes={pageData.data.releaseNotes}
             categories={pageData.data.categories}
             totalPages={pageData.data.totalPages}
+            totalItems={pageData.data.totalItems}
+            itemsPerPage={pageData.data.itemsPerPage}
           />
         ),
         template: "release-note-listing",

@@ -8,7 +8,7 @@
 
 .styleExample::after,
 .source-code::after {
-  color: var(--pds-color-text-default-secondary);
+  color: var(--pds-color-foreground-default-secondary);
   font-size: var(--pds-typography-size-s);
   font-weight: var(--pds-typography-fw-bold);
   letter-spacing: var(--pds-typography-ls-s);
