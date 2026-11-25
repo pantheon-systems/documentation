@@ -2,7 +2,7 @@ import { simpleLink, getGuideDirectory } from "./helpers";
 
 // Pages that set `header.group` are listed in the header's CLI menu under that
 // heading. Everything else in this section is only in the sidebar.
-const terminusMenu = { group: "Terminus" };
+const terminusMenu = (label: string) => ({ group: "Terminus", label });
 const otherCliMenu = { group: "Other CLIs" };
 
 const terminus = () => {
@@ -15,17 +15,17 @@ const terminus = () => {
           simpleLink("/terminus", "Introduction"),
           {
             ...simpleLink("/terminus/install", "Install and Update Terminus"),
-            header: terminusMenu,
+            header: terminusMenu("Install and update Terminus"),
           },
           simpleLink("/terminus/examples", "Get Started"),
           {
             ...simpleLink("/terminus/commands", "Command Directory"),
-            header: terminusMenu,
+            header: terminusMenu("Command directory"),
           },
           simpleLink("/terminus/scripting", "Scripting with Terminus"),
           {
             ...simpleLink("/terminus/plugins", "Install Plugins"),
-            header: terminusMenu,
+            header: terminusMenu("Install plugins"),
           },
           simpleLink("/terminus/directory", "Plugin Directory"),
           simpleLink("/terminus/create", "Create Terminus Plugins"),
@@ -35,14 +35,14 @@ const terminus = () => {
               "/terminus/supported-terminus",
               "Supported Terminus and PHP Versions"
             ),
-            header: terminusMenu,
+            header: terminusMenu("Supported Terminus and PHP versions"),
           },
           simpleLink("/terminus/updates", "Terminus Changelog", [
             simpleLink("/terminus/terminus-4-0", "Terminus 4"),
             simpleLink("/terminus/terminus-3-0", "Terminus 3"),
           ]),
         ]),
-        header: terminusMenu,
+        header: terminusMenu("Terminus user manual"),
       },
       simpleLink("/personal-access-tokens", "Authentication", [
         simpleLink(

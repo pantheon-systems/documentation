@@ -19,29 +19,46 @@ const withHeader = (item: OmniItem, header: OmniHeader): OmniItem => ({
   header,
 });
 
+// Menu labels are sentence case to match the PDS docs site prototype; the
+// sidebar keeps the longer titles. The order here is the order in the menu.
 export const getOmniItems = async (): Promise<OmniItem[]> => {
   const OmniItems: OmniItem[] = [
     // The logo links home, so Docs Home stays out of the menu.
     withHeader(simpleLink("/", "Docs Home"), { menu: "none" }),
-    withHeader(getStarted(), { menu: "top" }),
-    withHeader(workflows(), { group: "Build" }),
-    withHeader(goLive(), { group: "Build" }),
-    withHeader(webInfrastructure(), { group: "Run" }),
-    withHeader(accountManagement(), { group: "Run" }),
-    withHeader(simpleLink("https://docs.p1.pantheon.io/", "P1"), {
-      group: "Build",
-    }),
+    withHeader(getStarted(), { menu: "top", label: "Get started" }),
+    withHeader(workflows(), { group: "Build", label: "Development workflows" }),
+    withHeader(goLive(), { group: "Build", label: "Going live" }),
     withHeader(
       simpleLink("https://docs.content.pantheon.io/", "Content Publisher"),
       { group: "Build" }
     ),
+    withHeader(simpleLink("https://docs.p1.pantheon.io/", "P1"), {
+      group: "Build",
+    }),
+    withHeader(webInfrastructure(), {
+      group: "Run",
+      label: "Web infrastructure",
+    }),
+    withHeader(accountManagement(), {
+      group: "Run",
+      label: "Manage accounts and workspaces",
+    }),
+    withHeader(security(), { group: "Run" }),
+    withHeader(support(), {
+      group: "Run",
+      label: "Support and troubleshooting",
+    }),
+    withHeader(learning(), {
+      group: "Learn",
+      label: "Learning and certification",
+    }),
+    withHeader(about(), { group: "Learn", label: "About our docs" }),
     // The pages listed in the CLI menu are marked in terminus.ts.
     withHeader(terminus(), { menu: "cli", label: "CLI" }),
-    withHeader(support(), { group: "Run" }),
-    withHeader(security(), { group: "Run" }),
-    withHeader(learning(), { group: "Learn" }),
-    withHeader(about(), { group: "Learn" }),
-    withHeader(simpleLink("/release-notes", "Release Notes"), { menu: "top" }),
+    withHeader(simpleLink("/release-notes", "Release Notes"), {
+      menu: "top",
+      label: "Release notes",
+    }),
     // pagesToDelete(),
   ];
   return OmniItems;
