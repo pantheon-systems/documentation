@@ -41,9 +41,9 @@ export const DocsPage = async ({
           <SearchBar />
           {header}
         </div>
-        <main id="docs-main" tabIndex={-1}>
+        <div>
           <div id="docs-content">{children}</div>
-        </main>
+        </div>
         {hasTOC && (
           <div slot="toc">
             <TableOfContents

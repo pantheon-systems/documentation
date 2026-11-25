@@ -9,7 +9,7 @@ export default function NotFound() {
     <Layout>
       <div className="pds-container pds-pad-block-start-2xl pds-pad-block-end-4xl">
         <div style={{ textAlign: "center" }}>
-          <main id="docs-main" tabIndex={-1}>
+          <div>
             <div>
               <h1 className="pds-heading-4xl pds-mar-block-end-3xl">
                 Sorry, there's no page at that URL.
@@ -22,7 +22,7 @@ export default function NotFound() {
                 src="/images/not-found.svg"
               ></img>
             </div>
-          </main>
+          </div>
         </div>
       </div>{" "}
     </Layout>

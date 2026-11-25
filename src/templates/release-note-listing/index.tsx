@@ -91,7 +91,7 @@ export const ReleaseNoteListingTemplate = async ({
 
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
-      <main id="docs-main" tabIndex={-1}>
+      <div>
         <Container
           width={"standard"}
           className="pds-mar-block-start-3xl"
@@ -183,7 +183,7 @@ export const ReleaseNoteListingTemplate = async ({
             </div>
           </ReleaseNoteSearchProvider>
         </Container>
-      </main>
+      </div>
     </Layout>
   );
 };
