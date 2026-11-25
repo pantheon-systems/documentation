@@ -29,7 +29,7 @@ const SectionGroupCard = ({ group }: { group: SectionGroup }) => {
 
   return (
     <Panel className={styles.group}>
-      {group.title && <h3 className={styles.title}>{group.title}</h3>}
+      {group.title?.trim() && <h3 className={styles.title}>{group.title}</h3>}
       {group.description && (
         <p className={styles.description}>{group.description}</p>
       )}

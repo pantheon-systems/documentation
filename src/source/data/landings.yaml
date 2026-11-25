@@ -251,7 +251,6 @@
     - title: "Security"
       subtitle: "Enable HTTPS and learn about various authentication methods."
       links:
-        - tile: ""
         - text: "Pantheon Secrets"
           url: "/guides/secrets"
           icon: "book"
@@ -835,10 +834,6 @@
           url: "/guides/upstream"
         - text: "Git on Pantheon Guide"
           url: "/guides/git"
-    - title: " "
-      links:
-        - text: "Create a WordPress Site From the Command Line Using Terminus and WP-CLI"
-          url: "/guides/wp-cli"
         - text: "Create a WordPress Site From the Command Line Using Terminus and WP-CLI"
           url: "/guides/wp-cli"
         - text: "Install and Configure Lando"

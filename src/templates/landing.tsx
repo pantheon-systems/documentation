@@ -68,12 +68,15 @@ export interface Landing {
 export type Landings = Landing[];
 const containerWidth = "full";
 
-// A card shows each link once, even when it is listed under several sub-lists.
-const uniqueLinks = (links: SectionGroupLink[]) =>
-  links.filter(
+// A card shows each link once, even when it is listed under several sub-lists,
+// and skips an entry with no text or URL rather than drawing an empty item.
+const uniqueLinks = (links: SectionGroupLink[]) => {
+  const usable = links.filter((link) => link.text?.trim() && link.url);
+  return usable.filter(
     (link, index) =>
-      links.findIndex((other) => other.url === link.url) === index
+      usable.findIndex((other) => other.url === link.url) === index
   );
+};
 
 // The section's cards: the subtopics, then the other topic groups, in the order
 // the data lists them. A subtopic's sub-lists are flattened into one list.
