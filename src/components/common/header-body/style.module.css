@@ -4,11 +4,13 @@
   padding-block-end: var(--pds-spacing-m);
 }
 
+/* The last-reviewed badge and the page actions share one row. */
 .docContentHeaderActions {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--pds-spacing-xl);
-  margin-block-start: var(--pds-spacing-2xl);
+  gap: var(--pds-spacing-m) var(--pds-spacing-xl);
+  margin-block-start: var(--pds-spacing-l);
 }
 
 .docContentHeaderDiscuss,

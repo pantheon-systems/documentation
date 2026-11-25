@@ -15,6 +15,7 @@ export default async function GlossaryPage() {
   return (
     <DocsPage
       activePage="/glossary"
+      title="Glossary"
       hasTOC
       header={
         <HeaderBody

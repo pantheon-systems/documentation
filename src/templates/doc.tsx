@@ -25,6 +25,7 @@ export const DocTemplate = ({
   return (
     <DocsPage
       activePage={doc.fields.slug}
+      title={doc.frontmatter.title}
       hasTOC={hasTOC}
       header={
         <HeaderBody

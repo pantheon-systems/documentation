@@ -9,6 +9,17 @@ import { StatusBadge } from "@pantheon-systems/pds-toolkit-react";
 
 import styles from "./style.module.css";
 
+// 2026-07-06 -> July 6, 2026, without going through a Date's timezone.
+const formatReviewDate = (dateString: string) => {
+  const [year, month, day] = dateString.split("-");
+  if (!year || !month || !day) return dateString;
+  const monthName = new Date(
+    parseInt(year),
+    parseInt(month) - 1
+  ).toLocaleString("en-US", { month: "long" });
+  return `${monthName} ${parseInt(day)}, ${year}`;
+};
+
 const HeaderBody = ({
   title,
   subtitle,
@@ -29,23 +40,12 @@ const HeaderBody = ({
   reviewDate: string;
 }) => {
   const contributor = contributors ? contributors[0] : null;
-  const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null;
+  const lastReviewed = reviewDate
+    ? `Last reviewed ${formatReviewDate(reviewDate)}`
+    : null;
   return (
     <>
       <header className={styles.docContentHeader}>
-        {lastReviewed && (
-          <StatusBadge
-            hasStatusIndicator={false}
-            label={lastReviewed}
-            color="neutral"
-            className={`pds-mar-block-end-m ${styles.reviewedBadge}`}
-          />
-        )}
-        {/* <p className="review-date">
-          <time dateTime={isoDate} pubdate="pubdate">
-            {lastReviewed}
-          </time>
-        </p> */}
         {subtitle ? (
           <>
             <p className="pds-overline-m">{title}</p>
@@ -61,6 +61,14 @@ const HeaderBody = ({
 
         {!!featured && <Contributors contributors={contributors} />}
         <div className={styles.docContentHeaderActions}>
+          {lastReviewed && (
+            <StatusBadge
+              hasStatusIndicator={false}
+              label={lastReviewed}
+              color="neutral"
+              className={styles.reviewedBadge}
+            />
+          )}
           <div className={styles.docContentHeaderDiscuss}>
             <Slack />
           </div>
@@ -74,7 +82,6 @@ const HeaderBody = ({
         </div>
 
         {featured && <ContributorGuest contributor={contributor} />}
-        <br />
       </header>
     </>
   );

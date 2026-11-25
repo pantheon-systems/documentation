@@ -2,7 +2,11 @@ import React from "react";
 import Layout from "@/components/layout";
 import { OmniSidebarNav } from "@/components/omniSideBarNav";
 import { getOmniItems } from "@/components/omni-components";
-import { getOmniSidebarActiveSection } from "@/components/omni-components/helpers";
+import {
+  getOmniBreadcrumbs,
+  getOmniSidebarActiveSection,
+} from "@/components/omni-components/helpers";
+import { PageBreadcrumbs } from "@/components/common/page-breadcrumbs";
 import SearchBar from "@/components/header/search-bar";
 import { DocsLayout, TableOfContents } from "@/components/ui/pds-re-export";
 
@@ -16,18 +20,23 @@ import { DocsLayout, TableOfContents } from "@/components/ui/pds-re-export";
  */
 export const DocsPage = async ({
   activePage,
+  title,
   header,
   hasTOC = false,
   children,
 }: {
   activePage: string;
+  /** The page's own title, for the breadcrumb of a page that isn't in the menu. */
+  title?: string;
   header?: React.ReactNode;
   hasTOC?: boolean;
   children: React.ReactNode;
 }) => {
   // Only render the sidebar for pages that belong to a section. An empty
   // sidebar would still reserve a blank column.
-  const section = getOmniSidebarActiveSection(activePage, await getOmniItems());
+  const omniItems = await getOmniItems();
+  const section = getOmniSidebarActiveSection(activePage, omniItems);
+  const crumbs = getOmniBreadcrumbs(activePage, omniItems, title);
 
   return (
     <Layout containerWidth="standard" excludeSearch={true}>
@@ -39,6 +48,7 @@ export const DocsPage = async ({
         )}
         <div slot="header">
           <SearchBar />
+          <PageBreadcrumbs crumbs={crumbs} />
           {header}
         </div>
         <div>

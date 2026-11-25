@@ -107,3 +107,65 @@ export const findSubMenuItemsToUse = function (
   }
   return undefined;
 };
+
+export type OmniCrumb = { label: string; href: string };
+
+const labelOf = (item: OmniItem) => item.header?.label ?? item.title;
+
+// The chain of omni items from the top level down to the one for `activePage`.
+// A group often shares its link with its first page (App Configuration and
+// pantheon.yml), so take the deepest match: the breadcrumb then ends at the
+// group, not above it.
+const findOmniTrail = (
+  activePage: string,
+  items: OmniItem[],
+  parents: OmniItem[] = []
+): OmniItem[] | null => {
+  let deepest: OmniItem[] | null = null;
+
+  for (const item of items) {
+    const here = [...parents, item];
+    const found =
+      item.children && item.children.length > 0
+        ? findOmniTrail(activePage, item.children, here)
+        : null;
+    const candidate =
+      found ??
+      (item.link === activePage || item.link === "/" + activePage
+        ? here
+        : null);
+
+    if (candidate && (!deepest || candidate.length > deepest.length)) {
+      deepest = candidate;
+    }
+  }
+
+  return deepest;
+};
+
+/**
+ * The breadcrumb for a page, after "Docs home", following the PDS docs site
+ * prototype: a section's own page ends with the section, and any other page
+ * ends with its parent (the page's title is the heading right below). A page
+ * that isn't in the omni list gets its section, when it has one, and then its
+ * own title.
+ */
+export const getOmniBreadcrumbs = (
+  activePage: string,
+  items: OmniItem[],
+  currentTitle?: string
+): OmniCrumb[] => {
+  const trail = findOmniTrail(activePage, items);
+
+  if (trail) {
+    const shown = trail.length === 1 ? trail : trail.slice(0, -1);
+    return shown.map((item) => ({ label: labelOf(item), href: item.link }));
+  }
+
+  const section = getOmniSidebarActiveSection(activePage, items);
+  const crumbs: OmniCrumb[] = section
+    ? [{ label: labelOf(section), href: section.link }]
+    : [];
+  if (currentTitle) crumbs.push({ label: currentTitle, href: activePage });
+  return crumbs;
+};
