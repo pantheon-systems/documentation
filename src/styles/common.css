@@ -3075,74 +3075,25 @@ strong {
   }
 }
 
-.command-line-prompt {
-  display: block;
-  float: left;
-  font-size: 100%;
-  letter-spacing: -5px;
-  margin-right: 0em;
-  pointer-events: none;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.command-line-prompt > span:before {
-  color: #999;
-  content: " ";
-  display: block;
-  padding-right: 0.8em;
-}
-
-.command-line-prompt > span[data-user]:before {
-  content: "$";
-}
-
-.command-line-prompt > span[data-user="root"]:before {
-  content: "#";
-}
-
-.command-line-prompt > span[data-user="winshell"]::before {
-  color: #efcf1b;
-  content: "C:\\Users\\user>";
-  letter-spacing: -2px;
-}
-
-.command-line-prompt > span[data-user="sql"]:before {
-  content: ">";
-}
-
-.command-line-prompt > span[data-user="sftp"]::before {
-  content: "sftp> ";
-  letter-spacing: -2px;
-}
-
-.command-line-prompt > span[data-prompt]:before {
-  content: attr(data-prompt);
-}
-
-.highlight {
-  background: yellow;
-}
-
 span.span-block-hidden {
   display: none;
 }
 
+/* A line the reader should focus on (//highlight-line, //highlight-start).
+   PDS has no highlighted-line token, so tint with the code block's own
+   foreground color and mark the edge with its accent. Both come from the code
+   block theme, so the highlight follows light and dark with the block. */
 .gatsby-highlight-code-line {
-  background-color: #efcf1b;
-  border-left: 0.25em solid #f99;
-  margin-left: -1em;
-  margin-right: -1em;
-  padding-left: 0.75em;
-  padding-right: 1em;
-}
-
-.gatsby-highlight-code-line,
-.gatsby-highlight-code-line .token {
-  color: #181d21 !important;
+  background-color: color-mix(
+    in srgb,
+    var(--pds-color-code-block-foreground) 16%,
+    transparent
+  );
+  border-inline-start: 0.25em solid var(--pds-color-code-block-focus);
+  display: inline-block;
+  margin-inline: calc(-1 * var(--pds-spacing-xl));
+  min-width: calc(100% + 2 * var(--pds-spacing-xl));
+  padding-inline: calc(var(--pds-spacing-xl) - 0.25em) var(--pds-spacing-xl);
 }
 
 .gatsby-remark-code-title {
@@ -3152,10 +3103,7 @@ span.span-block-hidden {
   border-top-right-radius: 0.3em;
   color: var(--pds-color-foreground-default);
   display: inline;
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
-    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
-    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
-    monospace;
+  font-family: var(--pds-typography-ff-code);
   font-weight: bolder !important;
   margin-bottom: -0.6rem;
   padding: 0.5em 1em;
@@ -3163,7 +3111,10 @@ span.span-block-hidden {
 }
 
 code {
-  background-color: #f0ecff;
+  background-color: var(--pds-color-code-inline-background);
+  border: 1px solid var(--pds-color-code-inline-border);
+  border-radius: var(--pds-border-radius-default);
+  color: var(--pds-color-code-inline-text);
   font-weight: var(--pds-typography-fw-semibold);
   margin-inline: var(--pds-spacing-5xs);
   padding: var(--pds-spacing-5xs) var(--pds-spacing-4xs);
