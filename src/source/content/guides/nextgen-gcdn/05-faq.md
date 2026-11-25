@@ -23,7 +23,11 @@ This section provides answers to frequently asked questions about our Next Gener
 
 ### How do I know if my site is eligible?
 
-Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may fall into one of the excluded categories (AGCDN or FES). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+Eligible sites will see a next-generation GCDN banner on the site dashboard. If you don't see the banner, your site may use Front-End Sites (FES), which the upgrade excludes. [Advanced Global CDN (AGCDN)](/guides/agcdn) sites also won't show the upgrade button until you've spoken with Pantheon. See [I use AGCDN. What should I do?](#i-use-agcdn-what-should-i-do). If you aren't sure about your eligibility, please reach out to Pantheon Support.
+
+### How do I upgrade to the next-generation GCDN?
+
+Start the upgrade from the site dashboard or with the [GCDN Terminus plugin](https://github.com/pantheon-systems/terminus-gcdn-plugin), then update your DNS records. See [Upgrade to next-generation GCDN](/guides/nextgen-gcdn/setup) for the full steps. If your site uses AGCDN, Pantheon coordinates the upgrade with you instead. See [I use AGCDN. What should I do?](#i-use-agcdn-what-should-i-do).
 
 ### Are new sites created on the next-generation GCDN by default?
 
@@ -35,15 +39,17 @@ Yes. Sites using [customer-provided TLS certificates](/custom-certificates) are 
 
 ### I use AGCDN. What should I do?
 
-Do not upgrade your site to the next-generation GCDN yet. AGCDN compatibility is being rolled out in waves, so don't start this work on your own. Wait to hear from Pantheon Support or your Account Team, and we'll reach out when your site is ready.
+Pantheon coordinates the upgrade for AGCDN sites. You can't start it on your own. The upgrade button doesn't appear on the site dashboard until you've spoken with Pantheon, and you shouldn't run `terminus gcdn:upgrade` either, because Pantheon needs to upload your AGCDN configuration first.
+
+Pantheon Support will open a support ticket and email you by December 15, 2026 to schedule the upgrade. You can also [contact Pantheon Support](/guides/support/contact-support/) or your Account Team at any time to get started sooner.
 
 Your current AGCDN configuration continues to work in the meantime.
 
-If you've already started the upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps.
+If you started a self-service upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps. If you already started your AGCDN migration with Pantheon, continue with that process.
 
 ### What is the timeline for AGCDN to be supported?
 
-AGCDN compatibility is rolling out in waves. Pantheon Support or your Account Team will contact you when your site is ready to upgrade.
+Pantheon Support will contact AGCDN customers by December 15, 2026 with a support ticket and an email to coordinate the upgrade. You don't need to wait for that message to ask about your site. [Contact Pantheon Support](/guides/support/contact-support/) or your Account Team.
 
 ### What changes when I migrate?
 

@@ -19,11 +19,11 @@ integration: [--]
 
 ## Setup
 
-<Alert title="Do Not Upgrade Sites That Use AGCDN" type="danger">
+<Alert title="Special instructions for Advanced Global CDN (AGCDN) sites" type="info">
 
-The next-generation GCDN is becoming compatible with [Advanced Global CDN (AGCDN)](/guides/agcdn) sites in waves. If your site uses AGCDN, do not start the upgrade from the dashboard or with `terminus gcdn:upgrade` until Pantheon Support or your Account Team confirms your site is compatible. Starting the upgrade automatically moves your site's platform hostnames (`*.pantheonsite.io`) to the next-generation GCDN.
+If your site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), Pantheon coordinates the upgrade with you. The upgrade button doesn't appear on the site dashboard until you've spoken with Pantheon, and you shouldn't run `terminus gcdn:upgrade` on your own. Pantheon needs to upload your AGCDN configuration before the upgrade starts, and starting it automatically moves your site's platform hostnames (`*.pantheonsite.io`) to the next-generation GCDN.
 
-If you've already started the upgrade on an AGCDN site, do not change your DNS records. [Contact Pantheon Support](/guides/support/contact-support/) for next steps.
+Pantheon Support will open a support ticket and email you by December 15, 2026. You can also [contact Pantheon Support](/guides/support/contact-support/) or your Account Team to get started sooner. If you started a self-service upgrade on an AGCDN site, do not change your DNS records. Contact Pantheon Support for next steps. If you already started your AGCDN migration with Pantheon, continue with that process.
 
 </Alert>
 

@@ -19,9 +19,9 @@ integration: [--]
 
 Pantheon's next-generation GCDN provides the same caching and content delivery you rely on today, plus new security features built into the CDN layer.
 
-<Alert title="Advanced Global CDN (AGCDN) Sites: Do Not Upgrade Yet" type="danger">
+<Alert title="Special instructions for Advanced Global CDN (AGCDN) sites" type="info">
 
-If your site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), do not upgrade to the next-generation GCDN yet. AGCDN compatibility with the next-generation GCDN is rolling out in waves. Don't start any upgrade work until you hear from Pantheon Support or your Account Team confirming your site is compatible. We'll reach out directly once your site is ready.
+If your site uses [Advanced Global CDN (AGCDN)](/guides/agcdn), Pantheon coordinates the upgrade with you. Don't start it yourself from the dashboard or with Terminus, because Pantheon needs to upload your AGCDN configuration first. Pantheon Support will open a support ticket and email you by December 15, 2026. You can also [contact Pantheon Support](/guides/support/contact-support/) or your Account Team to get started sooner.
 
 </Alert>
 
@@ -173,7 +173,7 @@ Caching behavior is the same as the legacy GCDN. Your existing caching configura
 
 ### Eligibility
 
-Next-gen GCDN is available to all sites on the platform except those currently using [Advanced Global CDN (AGCDN)](/guides/agcdn). AGCDN sites are being made compatible in waves. Until Pantheon confirms your site is ready, do not start the upgrade on an AGCDN site from the dashboard or with Terminus. We'll contact you as soon as your site is ready to upgrade.
+Next-gen GCDN is available to all sites on the platform. Sites that use [Advanced Global CDN (AGCDN)](/guides/agcdn) have special instructions: Pantheon coordinates the upgrade with you, so don't start it from the dashboard or with Terminus on your own. Pantheon Support will open a support ticket and email you by December 15, 2026 to schedule the upgrade.
 
 ## Known Limitations
 
