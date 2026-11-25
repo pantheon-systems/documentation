@@ -1,11 +1,16 @@
 import { CallToAction } from "@/components/common/call-to-action";
 import { GuideItem } from "@/components/common/guide-item";
 import { IntegrationGuideItem } from "@/components/common/integration-guide-item";
-import { SubTopicGroup } from "@/components/common/subtopic-group";
+import {
+  SectionGroups,
+  type SectionGroup,
+  type SectionGroupLink,
+} from "@/components/common/section-groups";
 import { Youtube } from "@/components/common/youtube";
 import { DocsPage } from "@/components/docs-page";
 import { Container } from "@/components/ui/pds-re-export";
-import { LinksCard } from "@/components/pds-middleware/links-card";
+import { getOmniItems } from "@/components/omni-components";
+import { getOmniSidebarActiveSection } from "@/components/omni-components/helpers";
 import Link from "next/link";
 import React from "react";
 
@@ -63,28 +68,51 @@ export interface Landing {
 export type Landings = Landing[];
 const containerWidth = "full";
 
-const twoColumnClasses =
-  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6";
+// A card shows each link once, even when it is listed under several sub-lists.
+const uniqueLinks = (links: SectionGroupLink[]) =>
+  links.filter(
+    (link, index) =>
+      links.findIndex((other) => other.url === link.url) === index
+  );
 
-const threeColumnClasses =
-  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4";
+// The section's cards: the subtopics, then the other topic groups, in the order
+// the data lists them. A subtopic's sub-lists are flattened into one list.
+const toSectionGroups = (topic: Landing): SectionGroup[] => [
+  ...(topic.subtopics ?? []).map((subtopic) => ({
+    title: subtopic.title,
+    description: subtopic.subtitle,
+    links: uniqueLinks(
+      (subtopic.subtopic_lists ?? []).flatMap((list) => list.links ?? [])
+    ),
+  })),
+  ...(topic.topics_groups ?? []).map((group) => ({
+    title: group.title,
+    description: group.subtitle,
+    links: uniqueLinks(group.links ?? []),
+  })),
+];
 
-export const LandingTemplate = ({ topic }: { topic: Landing }) => {
+export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
   if (!topic) {
     return null;
   }
 
-  const groupLength = topic.topics_groups ? topic.topics_groups.length : null;
-  const topicGroupsColumns =
-    groupLength === 2 || groupLength === 4 ? "two" : "three";
+  // The section's own index page is named like its menu item (the PDS
+  // prototype's "Development workflows"), so the title, breadcrumb and header
+  // menu agree. A page inside a section keeps its own title and gets the
+  // section as an extra breadcrumb.
+  const section = getOmniSidebarActiveSection(topic.path, await getOmniItems());
+  const isSectionIndex = !!section && section.link === `/${topic.path}`;
+  const title = isSectionIndex
+    ? section.header?.label ?? topic.title
+    : topic.title;
+  const groups = toSectionGroups(topic);
 
   return (
-    <DocsPage activePage={topic.path}>
+    <DocsPage activePage={topic.path} title={title}>
       <Container width={containerWidth} className="landing-page__header">
         <div className="landing-page-heading pds-pad-block-m">
-          <h1 className="pds-heading-4xl pds-mar-block-end-m">
-            {topic.title}
-          </h1>
+          <h1 className="pds-heading-4xl pds-mar-block-end-m">{title}</h1>
           {topic.subtitle && (
             <div className="docs-lead-text docs-lead-text--sm pds-mar-block-end-6xs">
               {topic.subtitle}
@@ -94,14 +122,12 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
       </Container>
       {/* Video */}
       {topic.video_id && (
-        <div className="landing-page__video-background">
-          <Container
-            width={containerWidth}
-            className="video-container pds-mar-block-start-xl pds-mar-block-end-4xl"
-          >
-            <Youtube src={topic.video_id} title={topic.title} />
-          </Container>
-        </div>
+        <Container
+          width={containerWidth}
+          className="landing-page__video pds-mar-block-start-xl pds-mar-block-end-3xl"
+        >
+          <Youtube src={topic.video_id} title={title} />
+        </Container>
       )}
 
       {/* Topic guides */}
@@ -139,73 +165,23 @@ export const LandingTemplate = ({ topic }: { topic: Landing }) => {
                       url={link.url}
                       image={link.image || ""}
                     />
-                  ),
+                  )
                 )}
             </div>
           </Container>
         ))}
 
-      {/* Subtopics */}
-      {topic.subtopics && (
-        <div
-          className="pds-pad-block-start-5xl"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "var(--pds-spacing-3xl)",
-          }}
+      {/* The section's cards */}
+      {groups.length > 0 && (
+        <Container
+          width={containerWidth}
+          className="landing-page__section pds-pad-block-end-4xl"
         >
-          {topic.subtopics &&
-            topic.subtopics.map((subtopic, idx) => (
-              <div
-                key={`${subtopic.title}-${idx}`}
-                className="landing-page__subtopics"
-              >
-                <SubTopicGroup
-                  key={subtopic.title}
-                  title={subtopic.title}
-                  subTitle={subtopic.subtitle}
-                  topics={subtopic.subtopic_lists}
-                />
-              </div>
-            ))}
-        </div>
-      )}
-
-      {/* Topic groups */}
-      {topic.topics_groups && (
-        <div className="pds-pad-block-5xl">
-          <Container
-            width={containerWidth}
-            className="landing-page__topics pds-grid"
-          >
-            {topic.topics_groups &&
-              topic.topics_groups.map((group, key) => (
-                <LinksCard
-                  className={
-                    topicGroupsColumns === "two"
-                      ? twoColumnClasses
-                      : threeColumnClasses
-                  }
-                  key={group.title}
-                  headingLevel="h2"
-                  headingText={group.title}
-                  linkItems={group.links.map((link, index) => (
-                    <Link
-                      key={index}
-                      style={{
-                        color: "var(--pds-color-interactive-link-default)",
-                        fontWeight: "var(--pds-typography-fw-regular)",
-                      }}
-                      href={link.url ?? "#"}
-                    >
-                      {link.text}
-                    </Link>
-                  ))}
-                />
-              ))}
-          </Container>
-        </div>
+          <h2 className="landing-page__section-heading pds-heading-2xl pds-mar-block-end-l">
+            In this section
+          </h2>
+          <SectionGroups groups={groups} />
+        </Container>
       )}
 
       {/* Related resources */}

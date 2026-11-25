@@ -165,12 +165,10 @@ h2.landing-page__section-heading {
   margin-block-start: 0 !important;
 }
 
-/* V1 put the video on a tinted gradient band built from a button hover color.
-   In V2 that token is gray and the design places the video on the page surface,
-   so the band is gone. */
-.landing-page__video-background {
-  padding-block: var(--pds-spacing-4xs);
-  padding-inline: 0;
+/* The section video sits in the content column at a readable width, not
+   edge to edge (the PDS docs site Section prototype). */
+.landing-page__video > * {
+  max-width: 56rem;
 }
 
 .docs-video .gatsby-resp-iframe-wrapper,

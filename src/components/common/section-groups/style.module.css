@@ -1,0 +1,77 @@
+.groups {
+  display: grid;
+  gap: var(--pds-spacing-xl);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+  .groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Cards in a row share a height, with "View all" at the bottom of each. */
+.group {
+  height: 100%;
+}
+
+.group > :global(.pds-panel__content) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  font-size: var(--pds-typography-size-l);
+  font-weight: var(--pds-typography-fw-semibold);
+  line-height: var(--pds-typography-lh-s);
+  margin: 0 0 var(--pds-spacing-xs);
+}
+
+.description {
+  color: var(--pds-color-foreground-default-secondary);
+  font-size: var(--pds-typography-size-s);
+  line-height: var(--pds-typography-lh-m);
+  margin: 0 0 var(--pds-spacing-m);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--pds-typography-size-s);
+  gap: var(--pds-spacing-xs) var(--pds-spacing-l);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--pds-spacing-2xs);
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.viewAll {
+  align-items: center;
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  color: var(--pds-color-foreground-default);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: var(--pds-typography-size-s);
+  font-weight: var(--pds-typography-fw-medium);
+  gap: var(--pds-spacing-2xs);
+  margin-block-start: auto;
+  padding: var(--pds-spacing-m) 0 0;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
