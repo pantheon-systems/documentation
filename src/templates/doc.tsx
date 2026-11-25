@@ -3,21 +3,42 @@ import { ProcessedFile } from "@/server/processor/mdx";
 import { MdxWrapper } from "@/components/ui/mdx-wrapper";
 import HeaderBody from "@/components/common/header-body";
 import NavButtons from "@/components/common/nav-buttons";
+import { getOmniItems } from "@/components/omni-components";
+import { getOmniTitle } from "@/components/omni-components/helpers";
+import type { AdjacentPage } from "@/lib/page-utils";
 
-export const DocTemplate = ({
+export const DocTemplate = async ({
   doc,
   prev,
   next,
   tocDefault = true,
 }: {
   doc: ProcessedFile;
-  prev?: { fields: { slug: string } } | null;
-  next?: { fields: { slug: string } } | null;
+  prev?: AdjacentPage | null;
+  next?: AdjacentPage | null;
   tocDefault?: boolean;
 }) => {
-  // Use props if provided, otherwise fall back to frontmatter
-  const prevUrl = prev?.fields.slug ?? doc.frontmatter.previousurl ?? "";
-  const nextUrl = next?.fields.slug ?? doc.frontmatter.nexturl ?? "";
+  // Use props if provided, otherwise fall back to frontmatter. Frontmatter links
+  // (the certification study guides) carry no title, so ask the omni list.
+  const omniItems = await getOmniItems();
+  const toPagerLink = (
+    page: AdjacentPage | null | undefined,
+    frontmatterUrl: string | undefined,
+    fallbackTitle: string,
+  ) => {
+    const url = page?.fields.slug ?? frontmatterUrl;
+    if (!url) return null;
+    return {
+      url,
+      title: page?.title || getOmniTitle(url, omniItems) || fallbackTitle,
+    };
+  };
+  const prevLink = toPagerLink(
+    prev,
+    doc.frontmatter.previousurl,
+    "Previous page",
+  );
+  const nextLink = toPagerLink(next, doc.frontmatter.nexturl, "Next page");
 
   // Use frontmatter if set, otherwise use the default for this content type
   const hasTOC = doc.frontmatter.showtoc ?? tocDefault;
@@ -28,6 +49,9 @@ export const DocTemplate = ({
       activePage={doc.fields.slug}
       title={doc.frontmatter.title}
       hasTOC={hasTOC}
+      pager={
+        (prevLink || nextLink) && <NavButtons prev={prevLink} next={nextLink} />
+      }
       header={
         <HeaderBody
           title={doc.frontmatter.title ?? ""}
@@ -45,7 +69,6 @@ export const DocTemplate = ({
         <div className="pds-prose">
           <MdxWrapper article={{ content: doc.content }} componentMap={{}} />
         </div>
-        {(prevUrl || nextUrl) && <NavButtons prev={prevUrl} next={nextUrl} />}
       </article>
     </DocsPage>
   );

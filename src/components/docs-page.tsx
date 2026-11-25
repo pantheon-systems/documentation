@@ -43,6 +43,8 @@ export const DocsPage = async ({
   sidebarLabel = "Section navigation",
   hasBreadcrumb = true,
   isArticle = false,
+  isTwoTone = false,
+  pager,
   children,
 }: {
   activePage: string;
@@ -57,6 +59,10 @@ export const DocsPage = async ({
   hasBreadcrumb?: boolean;
   /** An article: header and body are capped at the reading width and centered. */
   isArticle?: boolean;
+  /** Section pages: a tinted main area beside a white sidebar, so cards stand out. */
+  isTwoTone?: boolean;
+  /** Previous and next links after the content. Outside #docs-content, so the table of contents skips its heading. */
+  pager?: React.ReactNode;
   children: React.ReactNode;
 }) => {
   // Only render the sidebar for pages that belong to a section. An empty
@@ -74,6 +80,12 @@ export const DocsPage = async ({
           sidebar
             ? sidebarLabel
             : section?.header?.label ?? section?.title ?? sidebarLabel
+        }
+        mainBackground={
+          isTwoTone ? "var(--pds-color-surface-default-secondary)" : undefined
+        }
+        sidebarBackground={
+          isTwoTone ? "var(--pds-color-surface-default)" : undefined
         }
         tocFooterLabel="Help for this page"
       >
@@ -98,6 +110,7 @@ export const DocsPage = async ({
         </div>
         <div className={isArticle ? "pan-docs-article" : undefined}>
           <div id="docs-content">{children}</div>
+          {pager}
         </div>
         {hasTOC && (
           <div slot="toc">

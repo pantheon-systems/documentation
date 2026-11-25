@@ -60,11 +60,18 @@ const filterMdxFiles = (
   });
 };
 
+// The neighbouring pages of a guide or release note: the slug to link to and
+// the title to show in the pager.
+export type AdjacentPage = { fields: { slug: string }; title?: string };
+type AdjacentGuide = AdjacentPage & {
+  fields: { slug: string; guide_directory: string };
+};
+
 // Type definitions for different page data structures
 export interface GuideData {
   guide: ProcessedFile;
-  prev: { fields: { slug: string; guide_directory: string } } | null;
-  next: { fields: { slug: string; guide_directory: string } } | null;
+  prev: AdjacentGuide | null;
+  next: AdjacentGuide | null;
 }
 
 export interface DocData {
@@ -76,9 +83,9 @@ export interface TerminusCommandData extends CommandType {
 }
 
 export interface ReleaseNoteData {
-  prev: { fields: { slug: string } } | null;
+  prev: AdjacentPage | null;
   node: ProcessedFile;
-  next: { fields: { slug: string } } | null;
+  next: AdjacentPage | null;
 }
 
 export interface ReleaseNoteListingData {
@@ -240,6 +247,7 @@ export const processGuidePages = async (
                       slug: guides[index - 1].fields.slug,
                       guide_directory: guides[index - 1].fields.guide_directory,
                     },
+                    title: guides[index - 1].frontmatter.title ?? "",
                   }
               : null,
           next:
@@ -252,6 +260,7 @@ export const processGuidePages = async (
                       slug: guides[index + 1].fields.slug,
                       guide_directory: guides[index + 1].fields.guide_directory,
                     },
+                    title: guides[index + 1].frontmatter.title ?? "",
                   }
               : null,
           guide,
@@ -260,8 +269,8 @@ export const processGuidePages = async (
     },
     [] as {
       guide: ProcessedFile;
-      prev: { fields: { slug: string; guide_directory: string } } | null;
-      next: { fields: { slug: string; guide_directory: string } } | null;
+      prev: AdjacentGuide | null;
+      next: AdjacentGuide | null;
     }[]
   );
 
@@ -374,6 +383,7 @@ export const processReleaseNotePages = async (
                   fields: {
                     slug: releaseNotes[acc.length - 1].fields.slug,
                   },
+                  title: releaseNotes[acc.length - 1].frontmatter.title ?? "",
                 }
               : null,
           node: releaseNote,
@@ -383,15 +393,16 @@ export const processReleaseNotePages = async (
                   fields: {
                     slug: releaseNotes[acc.length + 1].fields.slug,
                   },
+                  title: releaseNotes[acc.length + 1].frontmatter.title ?? "",
                 }
               : null,
         },
       ];
     },
     [] as {
-      prev: { fields: { slug: string } } | null;
+      prev: AdjacentPage | null;
       node: ProcessedFile;
-      next: { fields: { slug: string } } | null;
+      next: AdjacentPage | null;
     }[]
   );
 

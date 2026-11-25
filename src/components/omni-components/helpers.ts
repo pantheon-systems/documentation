@@ -73,7 +73,7 @@ const containsActiveLink = (item: any, activePage: string) => {
   if (item.link === "/" + activePage || item.link === activePage) {
     return true;
   } else if (item.children && item.children.length > 0) {
-    for (let child of item.children) {
+    for (const child of item.children) {
       if (containsActiveLink(child, activePage)) {
         return true;
       }
@@ -87,7 +87,7 @@ export const getOmniSidebarActiveSection = (
   OmniItems: OmniItem[]
 ) => {
   if (OmniItems) {
-    for (let item of OmniItems) {
+    for (const item of OmniItems) {
       if (containsActiveLink(item, activePage)) {
         return item;
       }
@@ -100,7 +100,7 @@ export const findSubMenuItemsToUse = function (
   topLevelParentPath: string,
   NestedItems: OmniItem[]
 ) {
-  for (let item of NestedItems) {
+  for (const item of NestedItems) {
     if (item.link === topLevelParentPath) {
       return item;
     }
@@ -146,6 +146,12 @@ const findOmniTrail = (
   }
 
   return deepest;
+};
+
+/** The title the omni list gives a page, for a link that carries no title. */
+export const getOmniTitle = (page: string, items: OmniItem[]) => {
+  const trail = findOmniTrail(page, items);
+  return trail ? trail[trail.length - 1].title : undefined;
 };
 
 /**
