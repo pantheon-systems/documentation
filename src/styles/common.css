@@ -3373,3 +3373,8 @@ mark.release-note-search-highlight {
   color: var(--pds-color-foreground-default);
   margin-block-start: var(--pds-spacing-m);
 }
+
+/* Keep short values such as dates on one line in table cells. */
+.docs-nowrap {
+  white-space: nowrap;
+}
