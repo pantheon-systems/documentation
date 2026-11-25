@@ -74,7 +74,7 @@ const uniqueLinks = (links: SectionGroupLink[]) => {
   const usable = links.filter((link) => link.text?.trim() && link.url);
   return usable.filter(
     (link, index) =>
-      usable.findIndex((other) => other.url === link.url) === index
+      usable.findIndex((other) => other.url === link.url) === index,
   );
 };
 
@@ -85,7 +85,7 @@ const toSectionGroups = (topic: Landing): SectionGroup[] => [
     title: subtopic.title,
     description: subtopic.subtitle,
     links: uniqueLinks(
-      (subtopic.subtopic_lists ?? []).flatMap((list) => list.links ?? [])
+      (subtopic.subtopic_lists ?? []).flatMap((list) => list.links ?? []),
     ),
   })),
   ...(topic.topics_groups ?? []).map((group) => ({
@@ -112,22 +112,23 @@ export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
   const groups = toSectionGroups(topic);
 
   return (
-    <DocsPage activePage={topic.path} title={title}>
-      <Container width={containerWidth} className="landing-page__header">
-        <div className="landing-page-heading pds-pad-block-m">
-          <h1 className="pds-heading-4xl pds-mar-block-end-m">{title}</h1>
+    <DocsPage
+      activePage={topic.path}
+      title={title}
+      header={
+        <>
+          <h1 className="pan-docs-page-header__title">{title}</h1>
           {topic.subtitle && (
-            <div className="docs-lead-text docs-lead-text--sm pds-mar-block-end-6xs">
-              {topic.subtitle}
-            </div>
+            <p className="pan-docs-page-header__lede">{topic.subtitle}</p>
           )}
-        </div>
-      </Container>
+        </>
+      }
+    >
       {/* Video */}
       {topic.video_id && (
         <Container
           width={containerWidth}
-          className="landing-page__video pds-mar-block-start-xl pds-mar-block-end-3xl"
+          className="landing-page__video pds-mar-block-end-3xl"
         >
           <Youtube src={topic.video_id} title={title} />
         </Container>
@@ -168,7 +169,7 @@ export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
                       url={link.url}
                       image={link.image || ""}
                     />
-                  )
+                  ),
                 )}
             </div>
           </Container>

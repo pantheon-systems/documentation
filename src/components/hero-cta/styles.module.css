@@ -1,6 +1,7 @@
 .heroCta {
   align-items: center;
-  margin-block-end: var(--pds-spacing-4xl);
+  /* Room above the illustration, so it doesn't touch the header. */
+  margin-block: var(--pds-spacing-3xl) var(--pds-spacing-4xl);
 }
 
 .heroCtaImage img {

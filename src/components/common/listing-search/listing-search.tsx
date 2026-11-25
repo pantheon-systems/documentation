@@ -62,7 +62,7 @@ function searchIndex<T extends ListingSearchEntry>(
   index: T[],
   query: string,
   selected: string[],
-  entryFilterValues: (entry: T) => string[]
+  entryFilterValues: (entry: T) => string[],
 ): ScoredEntry<T>[] {
   const trimmed = query.trim().toLowerCase();
   if (!trimmed) return [];
@@ -90,7 +90,7 @@ function searchIndex<T extends ListingSearchEntry>(
   });
 
   matches.sort(
-    (a, b) => b.score - a.score || a.originalIndex - b.originalIndex
+    (a, b) => b.score - a.score || a.originalIndex - b.originalIndex,
   );
 
   return matches;
@@ -120,7 +120,7 @@ function useListingSearchContext(): ContextValue {
   const context = useContext(ListingSearchContext);
   if (!context) {
     throw new Error(
-      "ListingSearchInput and ListingSearchResults must be rendered inside a ListingSearchProvider"
+      "ListingSearchInput and ListingSearchResults must be rendered inside a ListingSearchProvider",
     );
   }
   return context;
@@ -151,7 +151,7 @@ export function ListingSearchProvider<T extends ListingSearchEntry>({
   const searchParams = useSearchParams();
   const selectedFilters = useMemo(
     () => searchParams?.getAll(config.filterParam) ?? [],
-    [searchParams, config.filterParam]
+    [searchParams, config.filterParam],
   );
 
   // The full index is only needed once someone actually searches, so it's
@@ -177,7 +177,7 @@ export function ListingSearchProvider<T extends ListingSearchEntry>({
 
   const debouncedSetQuery = useMemo(
     () => debounce((value: string) => setDebouncedQuery(value), 150),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -195,7 +195,7 @@ export function ListingSearchProvider<T extends ListingSearchEntry>({
       }
       debouncedSetQuery(value);
     },
-    [debouncedSetQuery, ensureIndexLoaded]
+    [debouncedSetQuery, ensureIndexLoaded],
   );
 
   const handleClear = useCallback(() => {
@@ -213,7 +213,7 @@ export function ListingSearchProvider<T extends ListingSearchEntry>({
       index,
       trimmedQuery,
       selectedFilters,
-      config.entryFilterValues
+      config.entryFilterValues,
     );
   }, [index, isSearching, trimmedQuery, selectedFilters, config]);
 
@@ -245,7 +245,7 @@ export function ListingSearchProvider<T extends ListingSearchEntry>({
       selectedFilters,
       handleChange,
       handleClear,
-    ]
+    ],
   );
 
   return (
@@ -281,7 +281,11 @@ export const ListingSearchInput = ({
 
   return (
     <>
-      <div className="pds-input-field pds-input-field--text pds-mar-block-end-xl rn-search-input">
+      <form
+        className="pan-docs-page-search"
+        role="search"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <TextInput
           type="search"
           searchIcon="filter"
@@ -291,11 +295,10 @@ export const ListingSearchInput = ({
           hasClearButton
           onClear={handleClear}
           id={id}
-          className="pds-input-field__input"
           onChange={handleChange}
           label=""
         />
-      </div>
+      </form>
 
       {/* Announces result counts to screen reader users as they type. */}
       <p className="visually-hidden" role="status" aria-live="polite">

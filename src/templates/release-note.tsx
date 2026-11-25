@@ -1,7 +1,8 @@
 "use server";
+import { RssLink } from "@/components/common/rss-link";
 import Layout from "@/components/layout";
 import { ProcessedFile } from "@/server/processor/mdx";
-import { Container, Icon, Panel } from "@/components/ui/pds-re-export";
+import { Container, Panel } from "@/components/ui/pds-re-export";
 import PublishedDate from "@/components/common/published-date";
 import { PageBreadcrumbs } from "@/components/common/page-breadcrumbs";
 import { MdxWrapper } from "@/components/ui/mdx-wrapper";
@@ -66,18 +67,7 @@ export const ReleaseNoteTemplate = async ({
                   </>
                 )}
                 <hr className="docs-note-meta__rule" />
-                <a
-                  href="/release-notes/rss.xml"
-                  target="_blank"
-                  className="rss-feed-link"
-                >
-                  <Icon
-                    className="rss-feed-link-icon"
-                    iconName="rss"
-                    size="m"
-                  />
-                  <span>Subscribe to RSS feed</span>
-                </a>
+                <RssLink href="/release-notes/rss.xml" />
               </Panel>
             </aside>
           </div>

@@ -1,6 +1,6 @@
 "use server";
+import { RssLink } from "@/components/common/rss-link";
 import { DocsPage } from "@/components/docs-page";
-import { Icon } from "@/components/ui/pds-re-export";
 import { releaseNoteSummary } from "@/lib/release-note-summary";
 import { ProcessedFile } from "@/server/processor/mdx";
 import { processDirectoryForJson } from "@/server/processor/json";
@@ -40,7 +40,7 @@ export const ReleaseNoteListingTemplate = async ({
 }) => {
   const allCategoriesData = await processDirectoryForJson(
     "source/releasenotescategories",
-    "releaseNoteCategories.json"
+    "releaseNoteCategories.json",
   );
   const categories: { slug: string; displayName: string }[] = [
     ...allCategoriesData[0].content.categories,
@@ -54,21 +54,18 @@ export const ReleaseNoteListingTemplate = async ({
         sidebarLabel="Filter by category"
         hasBreadcrumb={false}
         header={
-          <div className="docs-note-page-header">
-            <h1 className="pds-heading-4xl">Pantheon release notes</h1>
-            <p className="docs-lead-text docs-lead-text--sm">
+          <>
+            <h1 className="pan-docs-page-header__title">
+              Pantheon release notes
+            </h1>
+            <p className="pan-docs-page-header__lede">
               {landing?.introText ?? INTRO}
             </p>
-            <a
-              href="/release-notes/rss.xml"
-              target="_blank"
-              className="rss-feed-link"
-            >
-              <Icon className="rss-feed-link-icon" iconName="rss" size="xl" />
-              <span>Subscribe to RSS feed</span>
-            </a>
+            <div className="pan-docs-page-header__rss">
+              <RssLink href="/release-notes/rss.xml" />
+            </div>
             <ReleaseNoteSearchInput />
-          </div>
+          </>
         }
       >
         <ReleaseNoteSearchResults>
