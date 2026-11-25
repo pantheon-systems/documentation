@@ -170,7 +170,7 @@ const ReleaseNotePopoverCategorySelector = ({
         classNameContainer={"rn-popover-categories"}
         placement="bottom-start"
         onClose={handlePopoverClose}
-        offsetValue={18}
+        offsetValue={4}
       />
     </>
   );
