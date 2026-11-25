@@ -26,6 +26,7 @@ export const getOmniItems = async (): Promise<OmniItem[]> => {
     learning(),
     about(),
     simpleLink("/release-notes", "Release Notes"),
+    simpleLink("/vulnerability-tracker", "Vulnerability Tracker"),
     // pagesToDelete(),
   ];
   return OmniItems;
