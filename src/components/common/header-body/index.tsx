@@ -7,18 +7,8 @@ import { Slack } from "../slack";
 import { ContributorGuest } from "../contributor-guest";
 import { StatusBadge } from "@pantheon-systems/pds-toolkit-react";
 
+import { formatLongDate } from "@/lib/format-date";
 import styles from "./style.module.css";
-
-// 2026-07-06 -> July 6, 2026, without going through a Date's timezone.
-const formatReviewDate = (dateString: string) => {
-  const [year, month, day] = dateString.split("-");
-  if (!year || !month || !day) return dateString;
-  const monthName = new Date(
-    parseInt(year),
-    parseInt(month) - 1
-  ).toLocaleString("en-US", { month: "long" });
-  return `${monthName} ${parseInt(day)}, ${year}`;
-};
 
 const HeaderBody = ({
   title,
@@ -37,11 +27,12 @@ const HeaderBody = ({
   contributors: any[];
   featured: boolean;
   editPath: string;
-  reviewDate: string;
+  /** A string, or a Date when the frontmatter date is not quoted. */
+  reviewDate: string | Date;
 }) => {
   const contributor = contributors ? contributors[0] : null;
   const lastReviewed = reviewDate
-    ? `Last reviewed ${formatReviewDate(reviewDate)}`
+    ? `Last reviewed ${formatLongDate(reviewDate)}`
     : null;
   return (
     <>
