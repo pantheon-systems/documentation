@@ -3174,6 +3174,16 @@ code {
   overflow-wrap: anywhere;
 }
 
+/* ...but not in a table's first column. Breaking there shrinks the column's
+   minimum width to one character, so it gets squeezed and a value such as
+   transitional+subdomains wraps mid-word. Keep it whole, so the column takes
+   the width of its content and the other columns share the rest. A table too
+   wide for the page scrolls inside .docs-table-scroll. */
+table td:first-child code,
+table th:first-child code {
+  overflow-wrap: normal;
+}
+
 pre > code {
   background-color: inherit;
   color: inherit;
