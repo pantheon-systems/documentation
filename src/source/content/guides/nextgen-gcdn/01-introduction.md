@@ -139,6 +139,8 @@ If a tool is still challenged a few minutes after you add its entry, compare the
 
 Sites using [customer-provided TLS certificates](/custom-certificates) are now supported on GCDN. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
 
+Organizations with the custom certificate add-on can generate CSRs and upload signed certificates themselves with Terminus. See [Custom certificates](/guides/nextgen-gcdn/custom-certificates).
+
 ### Platform vanity domains
 
 Organization-owned [vanity hostnames](/guides/domains/vanity-domains) (e.g., `live-mysite.example-agency.com`) are fully supported. Migration for these sites is owned by our Professional Services team and coordinated through support — [open a support ticket](/guides/support/contact-support/) to get started.
