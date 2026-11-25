@@ -156,8 +156,6 @@
           url: "/solr"
         - text: "Enabling Pantheon Search for Drupal"
           url: "/guides/solr-drupal"
-        - text: "Enabling Pantheon Search for WordPress"
-          url: "/guides/wordpress-developer/wordpress-solr"
     - title: "Composer"
       subtitle: "Use Composer to manage some or all of your dependencies."
       links:
@@ -917,8 +915,6 @@
           url: "/guides/wordpress-developer/wordpress-s3"
         - text: "Cron for WordPress"
           url: "/guides/wordpress-developer/wordpress-cron"
-        - text: "Enabling Solr for WordPress"
-          url: "/guides/wordpress-developer/wordpress-solr"
         - text: "Scaling WordPress with MySQL Replicas and HyperDB"
           url: "/guides/mariadb-mysql/hyperdb"
         - text: "Testing WordPress Core Development Versions"
@@ -1244,8 +1240,6 @@
       links:
         - text: "Solr Overview"
           url: "/solr"
-        - text: "Enable Solr for WordPress"
-          url: "/guides/wordpress-developer/wordpress-solr"
         - text: "Enable Solr for Drupal"
           url: "/guides/solr-drupal"
 
