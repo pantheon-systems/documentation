@@ -67,6 +67,21 @@
   --pds-border-radius-button: var(--pds-border-radius-default);
 }
 
+/* On a phone the table of contents is a dropdown whose button already reads
+   "On this page" (then the current section), so the heading above it repeats
+   the label. Hide it visually but keep it for screen readers. */
+.pds-toc--mobile .pds-dropdown-menu__heading {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* Revert custom font's bullet rendering styles */
 li::before {
   font-family: auto;
