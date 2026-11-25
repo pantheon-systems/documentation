@@ -46,13 +46,13 @@ describe("getOmniBreadcrumbs", () => {
 
   it("ends a section's own page with the section, by its menu label", () => {
     expect(getOmniBreadcrumbs("/develop", items)).toEqual([
-      { label: "Development workflows", href: "/develop" },
+      { label: "Development workflows", href: "/develop", isCurrent: true },
     ]);
   });
 
   it("gives a page outside the list its title, after its section when it has one", () => {
     expect(getOmniBreadcrumbs("/glossary", items, "Glossary")).toEqual([
-      { label: "Glossary", href: "/glossary" },
+      { label: "Glossary", href: "/glossary", isCurrent: true },
     ]);
   });
 

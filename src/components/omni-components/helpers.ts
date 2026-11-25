@@ -108,7 +108,12 @@ export const findSubMenuItemsToUse = function (
   return undefined;
 };
 
-export type OmniCrumb = { label: string; href: string };
+export type OmniCrumb = {
+  label: string;
+  href: string;
+  /** The page itself, as opposed to a parent of it. */
+  isCurrent?: boolean;
+};
 
 const labelOf = (item: OmniItem) => item.header?.label ?? item.title;
 
@@ -158,14 +163,21 @@ export const getOmniBreadcrumbs = (
   const trail = findOmniTrail(activePage, items);
 
   if (trail) {
-    const shown = trail.length === 1 ? trail : trail.slice(0, -1);
-    return shown.map((item) => ({ label: labelOf(item), href: item.link }));
+    const endsOnPage = trail.length === 1;
+    const shown = endsOnPage ? trail : trail.slice(0, -1);
+    return shown.map((item, index) => ({
+      label: labelOf(item),
+      href: item.link,
+      ...(endsOnPage && index === shown.length - 1 ? { isCurrent: true } : {}),
+    }));
   }
 
   const section = getOmniSidebarActiveSection(activePage, items);
   const crumbs: OmniCrumb[] = section
     ? [{ label: labelOf(section), href: section.link }]
     : [];
-  if (currentTitle) crumbs.push({ label: currentTitle, href: activePage });
+  if (currentTitle) {
+    crumbs.push({ label: currentTitle, href: activePage, isCurrent: true });
+  }
   return crumbs;
 };
