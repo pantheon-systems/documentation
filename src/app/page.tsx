@@ -28,7 +28,7 @@ export default async function Home() {
     .reverse();
 
   return (
-    <Layout containerWidth={containerWidth}>
+    <Layout>
       <Container width={containerWidth}>
         <HeroCTA
           title={homeYaml?.title || ""}

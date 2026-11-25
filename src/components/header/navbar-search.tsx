@@ -9,6 +9,8 @@ import AddSearchWidget from "@/components/common/addsearch";
 // The search field in the Navbar's `search` slot (the PDS docs site prototype).
 // The AddSearch widget attaches its suggestions dropdown to the input through
 // data-addsearch-id; submitting goes to the search results page.
+// `slot` is read by the Navbar, which places this component in its search slot.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const NavbarSearch = (_props: { slot?: string }) => {
   const router = useRouter();
   const container = useRef<HTMLFormElement>(null);
@@ -54,10 +56,8 @@ export const NavbarSearch = (_props: { slot?: string }) => {
         hasSearchShortcut
         data-addsearch-id="search"
       />
-      <Script
-        id="addsearch-settings"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <Script id="addsearch-settings">
+        {`
             window.addsearch_settings = {
               "search": {
                 "placeholder": "Search docs",
@@ -74,9 +74,8 @@ export const NavbarSearch = (_props: { slot?: string }) => {
                 "automatic_filter_results_by_site_language": false,
                 "analytics_enabled": true
               }
-            }`,
-        }}
-      />
+            }`}
+      </Script>
       <AddSearchWidget />
     </form>
   );

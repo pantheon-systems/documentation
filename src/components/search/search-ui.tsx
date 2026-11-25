@@ -10,55 +10,76 @@ import {
 } from "@/components/ui/pds-re-export";
 import { RESULTS_PER_PAGE, useSearch } from "./search-provider";
 
-const decode = (text: string) =>
-  text
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#0?39;/g, "'");
-
 /**
- * AddSearch marks the matches with <em>. Render them as <mark> from the text
- * itself instead of injecting its HTML, and drop any other tag.
+ * AddSearch marks the matches with <em>. Parse its HTML into an inert document
+ * and rebuild it as React text and <mark>, so no tag or entity is handled with
+ * a regular expression and none of its markup is injected into the page.
  */
-const renderHighlight = (highlight: string): ReactNode =>
-  highlight.split(/(<\/?em>)/).reduce<{ nodes: ReactNode[]; inMatch: boolean }>(
-    (acc, part, index) => {
-      if (part === "<em>") return { ...acc, inMatch: true };
-      if (part === "</em>") return { ...acc, inMatch: false };
-      const text = decode(part.replace(/<[^>]+>/g, ""));
-      if (!text) return acc;
-      acc.nodes.push(
-        acc.inMatch ? (
-          <mark key={index} className="release-note-search-highlight">
-            {text}
-          </mark>
-        ) : (
-          <span key={index}>{text}</span>
-        )
-      );
-      return acc;
-    },
-    { nodes: [], inMatch: false }
-  ).nodes;
+export const renderHighlight = (highlight: string): ReactNode => {
+  const doc = new DOMParser().parseFromString(highlight, "text/html");
+  const nodes: ReactNode[] = [];
+
+  const walk = (parent: Node, inMatch: boolean) => {
+    parent.childNodes.forEach((child) => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        const text = child.textContent ?? "";
+        if (!text) return;
+        nodes.push(
+          inMatch ? (
+            <mark key={nodes.length} className="release-note-search-highlight">
+              {text}
+            </mark>
+          ) : (
+            <span key={nodes.length}>{text}</span>
+          )
+        );
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+        const element = child as Element;
+        // Text inside a script or style is code, not content.
+        if (element.tagName === "SCRIPT" || element.tagName === "STYLE") return;
+        walk(element, inMatch || element.tagName === "EM");
+      }
+    });
+  };
+
+  walk(doc.body, false);
+  return nodes;
+};
 
 /** The page heading, the search box and the result count. */
 export const SearchHeader = () => {
   const { query, status, filtered, hits, totalHits, setQuery } = useSearch();
   const [value, setValue] = useState(query);
+  const [shownQuery, setShownQuery] = useState(query);
+  const [sentQuery, setSentQuery] = useState(query);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const latestSetQuery = useRef(setQuery);
-  latestSetQuery.current = setQuery;
 
-  // Follow the URL, for the back button and links with a term.
-  useEffect(() => setValue(query), [query]);
+  useEffect(() => {
+    latestSetQuery.current = setQuery;
+  });
   useEffect(() => () => clearTimeout(timer.current), []);
+
+  // Follow the URL when it changes under the box (the back button, a link with
+  // a term), but not for the change the box itself just made: the URL then only
+  // trails what the reader typed.
+  if (query !== shownQuery) {
+    setShownQuery(query);
+    if (query !== sentQuery) {
+      setSentQuery(query);
+      setValue(query);
+    }
+  }
+
+  const send = (next: string) => {
+    setSentQuery(next.trim());
+    latestSetQuery.current(next);
+  };
 
   const change = (next: string) => {
     setValue(next);
     clearTimeout(timer.current);
-    timer.current = setTimeout(() => latestSetQuery.current(next), 500);
+    timer.current = setTimeout(() => send(next), 500);
   };
 
   let message = "Enter a search term to find pages in the documentation.";
@@ -84,7 +105,7 @@ export const SearchHeader = () => {
         onSubmit={(event) => {
           event.preventDefault();
           clearTimeout(timer.current);
-          setQuery(value);
+          send(value);
         }}
       >
         <TextInput

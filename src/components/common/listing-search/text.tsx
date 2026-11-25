@@ -2,32 +2,39 @@ import { Fragment, ReactNode } from "react";
 
 export const SNIPPET_RADIUS = 90;
 
-export function escapeRegExp(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
 /**
- * Splits `text` on every case-insensitive occurrence of `query` and wraps
- * the matches in <mark>, returning renderable React children.
+ * Wraps every case-insensitive occurrence of `query` in `text` in <mark>,
+ * returning renderable React children. Finds the matches with indexOf, so the
+ * query is never turned into a regular expression.
  */
 export function highlightText(text: string, query: string): ReactNode {
-  const trimmed = query.trim();
-  if (!trimmed) return text;
+  const needle = query.trim().toLowerCase();
+  if (!needle) return text;
 
-  const parts = text.split(new RegExp(`(${escapeRegExp(trimmed)})`, "gi"));
-  if (parts.length === 1) return text;
+  const haystack = text.toLowerCase();
+  const parts: ReactNode[] = [];
+  let from = 0;
+  let match = haystack.indexOf(needle, from);
+  if (match === -1) return text;
 
-  // String#split with a single capturing group alternates
-  // [non-match, match, non-match, match, ...], so odd indices are matches.
-  return parts.map((part, index) =>
-    index % 2 === 1 ? (
-      <mark key={index} className="release-note-search-highlight">
-        {part}
+  while (match !== -1) {
+    if (match > from) {
+      parts.push(
+        <Fragment key={`t${from}`}>{text.slice(from, match)}</Fragment>
+      );
+    }
+    parts.push(
+      <mark key={`m${match}`} className="release-note-search-highlight">
+        {text.slice(match, match + needle.length)}
       </mark>
-    ) : (
-      <Fragment key={index}>{part}</Fragment>
-    )
-  );
+    );
+    from = match + needle.length;
+    match = haystack.indexOf(needle, from);
+  }
+  if (from < text.length) {
+    parts.push(<Fragment key={`t${from}`}>{text.slice(from)}</Fragment>);
+  }
+  return parts;
 }
 
 /** Builds a short excerpt of `text` centered on the first match of `query`. */

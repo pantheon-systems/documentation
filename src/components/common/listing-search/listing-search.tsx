@@ -96,6 +96,9 @@ function searchIndex<T extends ListingSearchEntry>(
   return matches;
 }
 
+// The context holds one listing's search at a time, so its entry type is erased
+// here and put back by the typed components that read it.
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type ContextValue = {
   config: ListingSearchConfig<any>;
   query: string;
@@ -105,6 +108,7 @@ type ContextValue = {
   indexError: boolean;
   index: ListingSearchEntry[] | null;
   allMatches: ScoredEntry<any>[];
+  /* eslint-enable @typescript-eslint/no-explicit-any */
   selectedFilters: string[];
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
   handleClear: () => void;

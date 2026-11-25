@@ -50,7 +50,7 @@ export const DocsPage = async ({
   const crumbs = getOmniBreadcrumbs(activePage, omniItems, title);
 
   return (
-    <Layout containerWidth="standard">
+    <Layout>
       <DocsLayout
         hasCollapsibleSidebar
         sidebarLabel={sidebarLabel}

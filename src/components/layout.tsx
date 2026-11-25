@@ -1,19 +1,13 @@
 import React from "react";
 import { Footer } from "./footer";
 import Header from "./header";
-import { Container } from "@/components/ui/pds-re-export";
 
 interface Props {
   children: React.ReactNode;
-  containerWidth?: "standard" | "wide";
   withBorder?: boolean;
 }
 
-export default function Layout({
-  children,
-  containerWidth = "standard",
-  withBorder = true,
-}: Props) {
+export default function Layout({ children, withBorder = true }: Props) {
   // relative: the Navbar parks its closed mobile menu off-screen with absolute
   // positioning, which overflow-x-hidden only clips when this is positioned.
   return (

@@ -97,7 +97,13 @@ export const toHit = (
 
   return {
     id: raw.id,
-    href: isInternal ? `${url.pathname}${url.hash}` : raw.url,
+    // Another site's page links out as it is, but only over http(s): never a
+    // javascript: or data: URL from the index.
+    href: isInternal
+      ? `${url.pathname}${url.hash}`
+      : url.protocol === "https:" || url.protocol === "http:"
+        ? url.href
+        : "#",
     isInternal,
     title: raw.title,
     highlight:
@@ -147,9 +153,27 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
     [searchParams]
   );
 
-  const [status, setStatus] = useState<Status>("idle");
-  const [raw, setRaw] = useState<RawHit[]>([]);
-  const [totalHits, setTotalHits] = useState(0);
+  // What was fetched, and for which term. The status follows from comparing it
+  // with the current term, so the effect below only sets state once a request
+  // has finished.
+  const [result, setResult] = useState<{
+    query: string;
+    hits: RawHit[];
+    total: number;
+  } | null>(null);
+  const [failedQuery, setFailedQuery] = useState<string | null>(null);
+  const status: Status = !query
+    ? "idle"
+    : result?.query === query
+      ? "done"
+      : failedQuery === query
+        ? "error"
+        : "loading";
+  const raw = useMemo(
+    () => (result?.query === query ? result.hits : []),
+    [result, query]
+  );
+  const totalHits = result?.query === query ? result.total : 0;
   const [sections, setSections] = useState<Record<string, SearchSection>>({});
 
   // Where each page sits in the menu: loaded once.
@@ -162,15 +186,9 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
 
   // Fetch the matches whenever the term changes (not for filters or paging).
   useEffect(() => {
-    if (!query) {
-      setStatus("idle");
-      setRaw([]);
-      setTotalHits(0);
-      return;
-    }
+    if (!query) return;
 
     let cancelled = false;
-    setStatus("loading");
 
     (async () => {
       try {
@@ -185,11 +203,13 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
           )
         );
         if (cancelled) return;
-        setRaw([first, ...rest].flatMap((result) => result.hits));
-        setTotalHits(first.total_hits);
-        setStatus("done");
+        setResult({
+          query,
+          hits: [first, ...rest].flatMap((page) => page.hits),
+          total: first.total_hits,
+        });
       } catch {
-        if (!cancelled) setStatus("error");
+        if (!cancelled) setFailedQuery(query);
       }
     })();
 

@@ -25,7 +25,7 @@ export const ReleaseNoteTemplate = async ({
   const categories: string[] = node.frontmatter.categories ?? [];
 
   return (
-    <Layout containerWidth="standard">
+    <Layout>
       <div>
         <Container width="wide" className="pds-mar-block-start-xl">
           <PageBreadcrumbs

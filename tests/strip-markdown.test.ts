@@ -9,3 +9,11 @@ describe("stripMarkdown", () => {
     expect(text).toBe("Heading See the docs and inline code. Careful");
   });
 });
+
+describe("stripMarkdown tags", () => {
+  it("leaves no tag behind when tags are nested to dodge a single pass", () => {
+    expect(stripMarkdown("a <<b>script>alert(1)<</b>/script> b")).not.toMatch(
+      /<\/?script/i
+    );
+  });
+});
