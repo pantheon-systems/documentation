@@ -18,7 +18,7 @@ export function TopicsGrid(props: {
   const { topics } = props;
 
   return (
-    <div className="docs-tile-grid">
+    <div className="pan-docs-cards">
       {topics &&
         topics.map((topic, index) => (
           <Tile

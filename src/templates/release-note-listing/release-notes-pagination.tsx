@@ -27,7 +27,6 @@ export const ReleaseNotesPagination = ({
 
   return (
     <Pagination
-      className="docs-note-pagination"
       currentPage={currentPage}
       totalItemCount={totalItemCount}
       itemsPerPage={itemsPerPage}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import PublishedDate from "@/components/common/published-date";
+import { formatLongDate } from "@/lib/format-date";
 import { sanitizeSlug } from "@/lib/utils";
 import { ReleaseNoteTags } from "./release-note-tags";
 
@@ -22,19 +22,18 @@ export const ReleaseNoteList = ({
 }: {
   entries: ReleaseNoteEntryData[];
 }) => (
-  <ul className="docs-note-list">
+  <ul className="pan-docs-note-list">
     {entries.map((entry) => (
-      <li key={entry.slug} className="docs-note">
+      <li key={entry.slug}>
         {entry.publishedDate && (
-          <PublishedDate
-            dateString={entry.publishedDate}
-            className="docs-note__date"
-          />
+          <p className="pan-docs-note-date">
+            {formatLongDate(entry.publishedDate)}
+          </p>
         )}
-        <h2 className="docs-note__title">
+        <h2>
           <Link href={`/${sanitizeSlug(entry.slug)}`}>{entry.title}</Link>
         </h2>
-        {entry.summary && <p className="docs-note__summary">{entry.summary}</p>}
+        {entry.summary && <p>{entry.summary}</p>}
         <ReleaseNoteTags categories={entry.categories} />
       </li>
     ))}

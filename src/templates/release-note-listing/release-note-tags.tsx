@@ -6,7 +6,7 @@ export const ReleaseNoteTags = ({ categories }: { categories: string[] }) => {
   if (!categories || categories.length === 0) return null;
 
   return (
-    <div className="docs-note-tags">
+    <span className="pan-docs-tags">
       {[...categories].sort().map((slug) => {
         const category = releaseNoteCategoryLoader(slug);
         return (
@@ -18,6 +18,6 @@ export const ReleaseNoteTags = ({ categories }: { categories: string[] }) => {
           />
         );
       })}
-    </div>
+    </span>
   );
 };

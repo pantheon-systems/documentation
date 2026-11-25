@@ -16,7 +16,7 @@ export const NotFoundSearch = () => {
   };
 
   return (
-    <form role="search" onSubmit={submit} className="docs-not-found-search">
+    <form role="search" onSubmit={submit}>
       <TextInput
         id="not-found-search"
         type="search"

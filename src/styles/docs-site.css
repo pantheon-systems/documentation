@@ -234,10 +234,13 @@
   }
 }
 
+/* One link per line (the recipe wraps them in a row): short page names run
+   together into one phrase when they sit side by side. */
 .pan-docs-group__links {
+  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--pds-spacing-2xs) var(--pds-spacing-l);
+  flex-direction: column;
+  gap: var(--pds-spacing-2xs);
   list-style: none;
   margin-block-start: var(--pds-spacing-m);
   margin-inline: 0;
@@ -376,6 +379,11 @@
 
 .pan-docs-page-header__rss {
   margin-block: var(--pds-spacing-xl) 0;
+}
+
+/* The recipe leaves this line unstyled; space it from the search field. */
+.pan-docs-page-header__meta {
+  margin-block: var(--pds-spacing-s) 0;
 }
 
 .pan-docs-page-search {

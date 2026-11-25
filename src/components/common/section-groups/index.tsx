@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useId, useState } from "react";
-import { Icon, Panel } from "@/components/ui/pds-re-export";
-import styles from "./style.module.css";
+import { Button, ButtonLink, Panel } from "@/components/ui/pds-re-export";
 
 export type SectionGroupLink = { text: string; url: string; icon?: string };
 
@@ -28,34 +27,43 @@ const SectionGroupCard = ({ group }: { group: SectionGroup }) => {
   const links = isExpanded ? group.links : group.links.slice(0, VISIBLE_LINKS);
 
   return (
-    <Panel className={styles.group}>
-      {group.title?.trim() && <h3 className={styles.title}>{group.title}</h3>}
+    <Panel className="pan-docs-group" padding="condensed">
+      {group.title?.trim() && <h3>{group.title}</h3>}
       {group.description && (
-        <p className={styles.description}>{group.description}</p>
+        <p className="pan-docs-muted">{group.description}</p>
       )}
-      <ul id={listId} className={styles.links}>
-        {links.map((link, index) => {
-          return (
-            <li key={`${link.url}-${index}`}>
-              <Link href={link.url ?? "#"}>
-                {isVideo(link) && <Icon iconName="play" size="s" />}
-                {link.text}
-              </Link>
-            </li>
-          );
-        })}
+      <ul id={listId} className="pan-docs-group__links">
+        {links.map((link, index) => (
+          <li key={`${link.url}-${index}`}>
+            <ButtonLink
+              displayType={isVideo(link) ? "icon-start" : undefined}
+              iconName={isVideo(link) ? "play" : undefined}
+              linkContent={
+                <Link href={link.url ?? "#"}>
+                  {link.text}
+                  {isVideo(link) && (
+                    <span className="visually-hidden"> (video)</span>
+                  )}
+                </Link>
+              }
+              size="s"
+              variant="link"
+            />
+          </li>
+        ))}
       </ul>
       {total > VISIBLE_LINKS && (
-        <button
-          type="button"
-          className={styles.viewAll}
-          aria-expanded={isExpanded}
+        <Button
           aria-controls={listId}
+          aria-expanded={isExpanded}
+          className="pan-docs-group__all"
+          displayType="icon-end"
+          iconName={isExpanded ? "angleUp" : "arrowRight"}
+          label={isExpanded ? "Show fewer" : `View all ${total}`}
           onClick={() => setIsExpanded((expanded) => !expanded)}
-        >
-          {isExpanded ? "Show fewer" : `View all ${total}`}
-          <Icon iconName={isExpanded ? "angleUp" : "arrowRight"} size="s" />
-        </button>
+          size="s"
+          variant="link"
+        />
       )}
     </Panel>
   );
@@ -63,7 +71,7 @@ const SectionGroupCard = ({ group }: { group: SectionGroup }) => {
 
 /** The "In this section" grid of link cards on a section index page. */
 export const SectionGroups = ({ groups }: { groups: SectionGroup[] }) => (
-  <div className={styles.groups}>
+  <div className="pan-docs-groups">
     {groups.map((group, index) => (
       <SectionGroupCard key={`${group.title}-${index}`} group={group} />
     ))}

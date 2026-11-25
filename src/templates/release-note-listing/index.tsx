@@ -68,21 +68,23 @@ export const ReleaseNoteListingTemplate = async ({
           </>
         }
       >
-        <ReleaseNoteSearchResults>
-          <ReleaseNoteList
-            entries={releaseNotes.map(({ node }) => ({
-              slug: node.fields.slug,
-              title: node.frontmatter.title,
-              publishedDate: node.frontmatter.published_date,
-              summary: releaseNoteSummary(node),
-              categories: node.frontmatter.categories ?? [],
-            }))}
-          />
-          <ReleaseNotesPagination
-            currentPage={pageNumber}
-            totalItemCount={totalItems}
-            itemsPerPage={itemsPerPage}
-          />
+        <ReleaseNoteSearchResults containerClassName="pan-docs-list-page">
+          <div className="pan-docs-list-page">
+            <ReleaseNoteList
+              entries={releaseNotes.map(({ node }) => ({
+                slug: node.fields.slug,
+                title: node.frontmatter.title,
+                publishedDate: node.frontmatter.published_date,
+                summary: releaseNoteSummary(node),
+                categories: node.frontmatter.categories ?? [],
+              }))}
+            />
+            <ReleaseNotesPagination
+              currentPage={pageNumber}
+              totalItemCount={totalItems}
+              itemsPerPage={itemsPerPage}
+            />
+          </div>
         </ReleaseNoteSearchResults>
       </DocsPage>
     </ReleaseNoteSearchProvider>

@@ -31,7 +31,7 @@ export const renderHighlight = (highlight: string): ReactNode => {
             </mark>
           ) : (
             <span key={nodes.length}>{text}</span>
-          )
+          ),
         );
       } else if (child.nodeType === Node.ELEMENT_NODE) {
         const element = child as Element;
@@ -98,9 +98,10 @@ export const SearchHeader = () => {
   }
 
   return (
-    <div className="docs-search-header">
-      <h1 className="pds-heading-4xl">Search results</h1>
+    <>
+      <h1 className="pan-docs-page-header__title">Search results</h1>
       <form
+        className="pan-docs-page-search"
         role="search"
         onSubmit={(event) => {
           event.preventDefault();
@@ -120,10 +121,14 @@ export const SearchHeader = () => {
           onChange={(event) => change(event.target.value)}
         />
       </form>
-      <p className="docs-search-header__count" role="status" aria-live="polite">
+      <p
+        className="pan-docs-muted pds-ts-s pan-docs-page-header__meta"
+        role="status"
+        aria-live="polite"
+      >
         {message}
       </p>
-    </div>
+    </>
   );
 };
 
@@ -144,51 +149,54 @@ export const SearchFilters = () => {
   const hasFilters = filters.content.length + filters.section.length > 0;
 
   return (
-    <div className="docs-search-filters">
-      {/* Keyed on the selection so the checkboxes follow the URL. */}
-      <CheckboxGroup
-        key={`content-${filters.content.join("|")}`}
-        id="search-content"
-        label="Content"
-        labelVariant="heading"
-        options={[
-          {
-            id: "search-content-guides",
-            label: `Guides and references (${contentCounts.guides})`,
-            value: "guides",
-            checked: filters.content.includes("guides"),
-          },
-          {
-            id: "search-content-release-notes",
-            label: `Release notes (${contentCounts["release-notes"]})`,
-            value: "release-notes",
-            checked: filters.content.includes("release-notes"),
-          },
-        ]}
-        onValueChange={(values) => setFilter("content", values)}
-      />
-      {sectionCounts.length > 0 && (
+    <div className="pan-docs-filters">
+      <div>
+        {/* Keyed on the selection so the checkboxes follow the URL. */}
         <CheckboxGroup
-          key={`section-${filters.section.join("|")}`}
-          id="search-section"
-          label="Section"
+          key={`content-${filters.content.join("|")}`}
+          id="search-content"
+          label="Content"
           labelVariant="heading"
-          options={sectionCounts.map((section) => ({
-            id: `search-section-${section.slug}`,
-            label: `${section.label} (${section.count})`,
-            value: section.slug,
-            checked: filters.section.includes(section.slug),
-          }))}
-          onValueChange={(values) => setFilter("section", values)}
+          options={[
+            {
+              id: "search-content-guides",
+              label: `Guides and references (${contentCounts.guides})`,
+              value: "guides",
+              checked: filters.content.includes("guides"),
+            },
+            {
+              id: "search-content-release-notes",
+              label: `Release notes (${contentCounts["release-notes"]})`,
+              value: "release-notes",
+              checked: filters.content.includes("release-notes"),
+            },
+          ]}
+          onValueChange={(values) => setFilter("content", values)}
         />
-      )}
-      <Button
-        label="Clear all"
-        variant="subtle"
-        size="s"
-        onClick={clearFilters}
-        disabled={!hasFilters}
-      />
+        {sectionCounts.length > 0 && (
+          <CheckboxGroup
+            key={`section-${filters.section.join("|")}`}
+            id="search-section"
+            label="Section"
+            labelVariant="heading"
+            options={sectionCounts.map((section) => ({
+              id: `search-section-${section.slug}`,
+              label: `${section.label} (${section.count})`,
+              value: section.slug,
+              checked: filters.section.includes(section.slug),
+            }))}
+            onValueChange={(values) => setFilter("section", values)}
+          />
+        )}
+        <Button
+          className="pan-docs-filters__clear"
+          label="Clear all"
+          variant="subtle"
+          size="s"
+          onClick={clearFilters}
+          disabled={!hasFilters}
+        />
+      </div>
     </div>
   );
 };
@@ -200,31 +208,26 @@ export const SearchResultsList = () => {
   if (status !== "done" || filtered.length === 0) return null;
 
   return (
-    <>
-      <ol className="docs-search-results">
+    <div className="pan-docs-list-page">
+      <ol className="pan-docs-results">
         {pageHits.map((hit) => (
-          <li key={hit.id} className="docs-search-result">
-            <p className="docs-search-result__path">
+          <li key={hit.id}>
+            <span className="pan-docs-muted pds-ts-s">
               {hit.isReleaseNote ? "Release notes" : hit.trail.join(" › ")}
-            </p>
-            <h2 className="docs-search-result__title">
+            </span>
+            <h2 className="pds-heading-l">
               {hit.isInternal ? (
                 <Link href={hit.href}>{hit.title}</Link>
               ) : (
                 <a href={hit.href}>{hit.title}</a>
               )}
             </h2>
-            {hit.highlight && (
-              <p className="docs-search-result__snippet">
-                {renderHighlight(hit.highlight)}
-              </p>
-            )}
+            {hit.highlight && <p>{renderHighlight(hit.highlight)}</p>}
           </li>
         ))}
       </ol>
       {filtered.length > RESULTS_PER_PAGE && (
         <Pagination
-          className="docs-note-pagination"
           currentPage={page}
           totalItemCount={filtered.length}
           itemsPerPage={RESULTS_PER_PAGE}
@@ -232,6 +235,6 @@ export const SearchResultsList = () => {
           onPageChange={setPage}
         />
       )}
-    </>
+    </div>
   );
 };

@@ -35,29 +35,32 @@ export const ListingFilters = ({
   };
 
   return (
-    <div className="docs-note-filters">
-      {/* Keyed on the selection so the checkboxes follow the URL, including
+    <div className="pan-docs-filters">
+      <div>
+        {/* Keyed on the selection so the checkboxes follow the URL, including
           after "Clear all" or the browser's back button. */}
-      <CheckboxGroup
-        key={selected.join("|")}
-        id={idPrefix}
-        label={label}
-        labelVariant="heading"
-        options={options.map((option) => ({
-          id: `${idPrefix}-${option.value}`,
-          label: option.label,
-          value: option.value,
-          checked: selected.includes(option.value),
-        }))}
-        onValueChange={select}
-      />
-      <Button
-        label="Clear all"
-        variant="subtle"
-        size="s"
-        onClick={() => select([])}
-        disabled={selected.length === 0}
-      />
+        <CheckboxGroup
+          key={selected.join("|")}
+          id={idPrefix}
+          label={label}
+          labelVariant="heading"
+          options={options.map((option) => ({
+            id: `${idPrefix}-${option.value}`,
+            label: option.label,
+            value: option.value,
+            checked: selected.includes(option.value),
+          }))}
+          onValueChange={select}
+        />
+        <Button
+          className="pan-docs-filters__clear"
+          label="Clear all"
+          variant="subtle"
+          size="s"
+          onClick={() => select([])}
+          disabled={selected.length === 0}
+        />
+      </div>
     </div>
   );
 };

@@ -14,13 +14,6 @@
   font-size: var(--pds-typography-size-xl);
 }
 
-/* PDS V2 dropped pds-tile-grid, so lay the home page topic tiles out locally. */
-.docs-tile-grid {
-  display: grid;
-  gap: var(--pds-spacing-xl);
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-}
-
 .contributors-list {
   list-style: none;
   padding: 0;
@@ -121,30 +114,8 @@ mark {
   color: var(--pds-color-highlight-foreground);
 }
 
-h2.landing-page__section-heading {
-  margin-block-start: 0 !important;
-}
-
-/* The section video sits in the content column at a readable width, not
-   edge to edge (the PDS docs site Section prototype). */
-.landing-page__video > * {
-  max-width: 56rem;
-}
-
 .wistia_embed {
   box-shadow: var(--pds-elevation-raised);
-}
-
-hr.landing-page__guides-separator {
-  height: 1px;
-  background: var(--pds-color-border-default);
-  border: 0;
-}
-
-.landing-page__guides-title {
-  font-size: var(--pds-typography-size-l);
-  font-weight: var(--pds-typography-fw-semibold);
-  padding-block-start: var(--pds-spacing-xl);
 }
 
 .landing-page__guide-items {
@@ -160,11 +131,6 @@ hr.landing-page__guides-separator {
     flex-direction: row;
     flex-wrap: wrap;
   }
-}
-
-.landing-page__related h2 {
-  margin-block-end: var(--pds-spacing-3xl);
-  margin-block-start: var(--pds-spacing-4xl);
 }
 
 /* In-document anchor links. */
@@ -726,171 +692,6 @@ mark.release-note-search-highlight {
   color: var(--pds-color-foreground-default-secondary);
   font-size: var(--pds-typography-size-s);
   margin-block-start: var(--pds-spacing-2xs);
-}
-
-/* Release notes (PDS docs site Release Notes and Release Note prototypes). */
-
-/* The filter sidebar: the category checkboxes and "Clear all". */
-.docs-note-filters {
-  display: flex;
-  flex-direction: column;
-  gap: var(--pds-spacing-l);
-  align-items: flex-start;
-}
-
-.docs-note-list {
-  border-block-start: 1px solid var(--pds-color-border-default);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.docs-note {
-  border-block-end: 1px solid var(--pds-color-border-default);
-  padding-block: var(--pds-spacing-xl);
-}
-
-.docs-note .docs-note__date {
-  color: var(--pds-color-foreground-default);
-  font-size: var(--pds-typography-size-s);
-  font-weight: var(--pds-typography-fw-regular);
-  margin: 0 0 var(--pds-spacing-s);
-}
-
-.docs-note__title {
-  font-size: var(--pds-typography-size-2xl);
-  font-weight: var(--pds-typography-fw-semibold);
-  line-height: var(--pds-typography-lh-s);
-  margin: 0 0 var(--pds-spacing-m);
-}
-
-.docs-note__title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.docs-note__title a:hover {
-  text-decoration: underline;
-}
-
-.docs-note__summary {
-  color: var(--pds-color-foreground-default-secondary);
-  margin: 0 0 var(--pds-spacing-m);
-}
-
-.docs-note-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--pds-spacing-xs);
-}
-
-.docs-note-pagination {
-  margin-block: var(--pds-spacing-2xl);
-}
-
-/* A single release note: the body, and a panel with its date and categories. */
-.docs-note-layout {
-  display: grid;
-  gap: var(--pds-spacing-2xl);
-  grid-template-columns: minmax(0, 1fr);
-}
-
-/* On a narrow screen the panel comes first, under the title. */
-.docs-note-meta {
-  order: -1;
-}
-
-@media (min-width: 1025px) {
-  .docs-note-layout {
-    grid-template-columns: minmax(0, 1fr) 18rem;
-  }
-
-  .docs-note-meta {
-    order: 0;
-  }
-}
-
-.docs-note-meta .docs-note-meta__label {
-  font-size: var(--pds-typography-size-m);
-  font-weight: var(--pds-typography-fw-semibold);
-  margin: 0 0 var(--pds-spacing-xs);
-}
-
-.docs-note-meta .docs-note-meta__value {
-  color: var(--pds-color-foreground-default);
-  font-weight: var(--pds-typography-fw-regular);
-  margin: 0 0 var(--pds-spacing-l);
-}
-
-.docs-note-meta__rule {
-  border: 0;
-  border-block-start: 1px solid var(--pds-color-border-default);
-  margin-block: var(--pds-spacing-l);
-}
-
-/* Search results (PDS docs site Search Results prototype). */
-
-.docs-search-header__count {
-  color: var(--pds-color-foreground-default-secondary);
-  font-size: var(--pds-typography-size-s);
-  margin-block: var(--pds-spacing-m) 0;
-}
-
-.docs-search-filters {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: var(--pds-spacing-xl);
-}
-
-.docs-search-results {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.docs-search-result {
-  padding-block: var(--pds-spacing-l);
-}
-
-.docs-search-result__path {
-  color: var(--pds-color-foreground-default-secondary);
-  font-size: var(--pds-typography-size-xs);
-  margin: 0 0 var(--pds-spacing-2xs);
-}
-
-.docs-search-result__title {
-  font-size: var(--pds-typography-size-xl);
-  font-weight: var(--pds-typography-fw-semibold);
-  line-height: var(--pds-typography-lh-s);
-  margin: 0 0 var(--pds-spacing-xs);
-}
-
-.docs-search-result__title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.docs-search-result__title a:hover {
-  text-decoration: underline;
-}
-
-.docs-search-result__snippet {
-  font-size: var(--pds-typography-size-s);
-  line-height: var(--pds-typography-lh-m);
-  margin: 0;
-}
-
-/* The 404's search field: a readable width under the message. */
-.docs-not-found-search {
-  margin-inline: auto;
-  width: min(24rem, calc(100vw - 2 * var(--pds-spacing-xl)));
-}
-
-.docs-not-found-search .pds-input,
-.docs-not-found-search .pds-text-input,
-.docs-not-found-search .pds-text-input__input-wrapper {
-  width: 100%;
 }
 
 /* The recipe fixes the header search at 20rem, which needs about 1260px of header.

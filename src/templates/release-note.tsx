@@ -1,10 +1,6 @@
 "use server";
-import { RssLink } from "@/components/common/rss-link";
-import Layout from "@/components/layout";
+import { NotePage } from "@/components/common/note-page";
 import { ProcessedFile } from "@/server/processor/mdx";
-import { Container, Panel } from "@/components/ui/pds-re-export";
-import PublishedDate from "@/components/common/published-date";
-import { PageBreadcrumbs } from "@/components/common/page-breadcrumbs";
 import { MdxWrapper } from "@/components/ui/mdx-wrapper";
 import {
   headline2,
@@ -12,67 +8,64 @@ import {
   headline4,
 } from "@/components/common/release-headlines";
 import { ReleaseNoteTags } from "@/templates/release-note-listing/release-note-tags";
+import { formatLongDate } from "@/lib/format-date";
+import { sanitizeSlug } from "@/lib/utils";
+import type { AdjacentPage } from "@/lib/page-utils";
+
+const toPagerLink = (page: AdjacentPage | null) =>
+  page
+    ? {
+        url: `/${sanitizeSlug(page.fields.slug)}`,
+        title: page.title || "Release note",
+      }
+    : null;
 
 export const ReleaseNoteTemplate = async ({
   releaseNote,
 }: {
   releaseNote: {
-    prev: { fields: { slug: string } } | null;
+    prev: AdjacentPage | null;
     node: ProcessedFile;
-    next: { fields: { slug: string } } | null;
+    next: AdjacentPage | null;
   };
 }) => {
   const node = releaseNote.node;
   const categories: string[] = node.frontmatter.categories ?? [];
+  const published = node.frontmatter.published_date
+    ? formatLongDate(node.frontmatter.published_date)
+    : null;
+  const tags = <ReleaseNoteTags categories={categories} />;
 
   return (
-    <Layout>
-      <div>
-        <Container width="wide" className="pds-mar-block-start-xl">
-          <PageBreadcrumbs
-            crumbs={[
-              { label: "Pantheon release notes", href: "/release-notes" },
-            ]}
-          />
-          <h1 className="pds-heading-4xl pds-mar-block-end-xl">
-            {node.frontmatter.title}
-          </h1>
-
-          <div className="docs-note-layout pds-pad-block-end-4xl">
-            <article id="doc" className="pds-prose docs-note-body">
-              <MdxWrapper
-                article={{ content: node.content }}
-                componentMap={{
-                  h1: headline2,
-                  h2: headline3,
-                  h3: headline4,
-                }}
-              />
-            </article>
-
-            <aside
-              className="docs-note-meta"
-              aria-label="About this release note"
-            >
-              <Panel>
-                <h2 className="docs-note-meta__label">Published</h2>
-                <PublishedDate
-                  dateString={node.frontmatter.published_date}
-                  className="docs-note-meta__value"
-                />
-                {categories.length > 0 && (
-                  <>
-                    <h2 className="docs-note-meta__label">Categories</h2>
-                    <ReleaseNoteTags categories={categories} />
-                  </>
-                )}
-                <hr className="docs-note-meta__rule" />
-                <RssLink href="/release-notes/rss.xml" />
-              </Panel>
-            </aside>
-          </div>
-        </Container>
-      </div>
-    </Layout>
+    <NotePage
+      activePage="/release-notes"
+      parent={{ label: "Pantheon release notes", href: "/release-notes" }}
+      title={node.frontmatter.title ?? ""}
+      asideLabel="About this release note"
+      rssHref="/release-notes/rss.xml"
+      details={[
+        ...(published ? [{ label: "Published", value: published }] : []),
+        ...(categories.length > 0
+          ? [{ label: "Categories", value: tags }]
+          : []),
+      ]}
+      narrowMeta={
+        <>
+          {published && <p className="pan-docs-note__date">{published}</p>}
+          {tags}
+        </>
+      }
+      prev={toPagerLink(releaseNote.prev)}
+      next={toPagerLink(releaseNote.next)}
+    >
+      <MdxWrapper
+        article={{ content: node.content }}
+        componentMap={{
+          h1: headline2,
+          h2: headline3,
+          h3: headline4,
+        }}
+      />
+    </NotePage>
   );
 };

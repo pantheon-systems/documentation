@@ -8,7 +8,6 @@ import {
 } from "@/components/common/section-groups";
 import { Youtube } from "@/components/common/youtube";
 import { DocsPage } from "@/components/docs-page";
-import { Container } from "@/components/ui/pds-re-export";
 import { getOmniItems } from "@/components/omni-components";
 import { getOmniSidebarActiveSection } from "@/components/omni-components/helpers";
 import Link from "next/link";
@@ -66,7 +65,6 @@ export interface Landing {
 }
 
 export type Landings = Landing[];
-const containerWidth = "full";
 
 // A card shows each link once, even when it is listed under several sub-lists,
 // and skips an entry with no text or URL rather than drawing an empty item.
@@ -115,6 +113,7 @@ export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
     <DocsPage
       activePage={topic.path}
       title={title}
+      isTwoTone
       header={
         <>
           <h1 className="pan-docs-page-header__title">{title}</h1>
@@ -124,83 +123,60 @@ export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
         </>
       }
     >
-      {/* Video */}
-      {topic.video_id && (
-        <Container
-          width={containerWidth}
-          className="landing-page__video pds-mar-block-end-3xl"
-        >
-          <Youtube src={topic.video_id} title={title} />
-        </Container>
-      )}
+      <div className="pan-docs-section">
+        {topic.video_id && (
+          <div className="pan-docs-video">
+            <Youtube src={topic.video_id} title={title} />
+          </div>
+        )}
 
-      {/* Topic guides */}
-      {topic.guides &&
-        topic.guides.map((guide, idx) => (
-          <Container
+        {/* Topic guides */}
+        {topic.guides?.map((guide, idx) => (
+          <section
             key={`${guide.title}-${idx}`}
-            width={containerWidth}
-            className="landing-page__guides pds-mar-block-end-2xl"
+            aria-labelledby={`docs-guides-${idx}`}
           >
-            <hr className="landing-page__guides-separator" />
-            {guide.title ? (
-              <h2 className="text-3xl font-bold landing-page__guides-title">
-                {guide.title}
-              </h2>
-            ) : (
-              <h2 className="text-3xl font-bold landing-page__guides-title">
-                Popular guides
-              </h2>
-            )}
-
+            <h2 className="pan-docs-section-title" id={`docs-guides-${idx}`}>
+              {guide.title || "Popular guides"}
+            </h2>
             <div className="landing-page__guide-items">
-              {guide.links &&
-                guide.links.map((link, idx) =>
-                  guide.type === "normal" ? (
-                    <GuideItem
-                      key={`${link.text}-${idx}`}
-                      url={link.url}
-                      image={link.image}
-                      text={link.text}
-                    />
-                  ) : (
-                    <IntegrationGuideItem
-                      key={`${link.text}-${idx}`}
-                      url={link.url}
-                      image={link.image || ""}
-                    />
-                  ),
-                )}
+              {guide.links?.map((link, linkIdx) =>
+                guide.type === "normal" ? (
+                  <GuideItem
+                    key={`${link.text}-${linkIdx}`}
+                    url={link.url}
+                    image={link.image}
+                    text={link.text}
+                  />
+                ) : (
+                  <IntegrationGuideItem
+                    key={`${link.text}-${linkIdx}`}
+                    url={link.url}
+                    image={link.image || ""}
+                  />
+                ),
+              )}
             </div>
-          </Container>
+          </section>
         ))}
 
-      {/* The section's cards */}
-      {groups.length > 0 && (
-        <Container
-          width={containerWidth}
-          className="landing-page__section pds-pad-block-end-4xl"
-        >
-          <h2 className="landing-page__section-heading pds-heading-2xl pds-mar-block-end-l">
-            In this section
-          </h2>
-          <SectionGroups groups={groups} />
-        </Container>
-      )}
-
-      {/* Related resources */}
-      {(topic.cta || topic.cta_alt) && (
-        <div className="landing-page__related pds-pad-block-start-4xl pds-pad-block-end-5xl">
-          <Container width={containerWidth}>
-            <h2 className="landing-page__section-heading text-3xl font-bold">
-              Related Resources
+        {/* The section's cards */}
+        {groups.length > 0 && (
+          <section aria-labelledby="docs-in-section-heading">
+            <h2 className="pan-docs-section-title" id="docs-in-section-heading">
+              In this section
             </h2>
-            <div
-              style={{
-                display: "flex",
-                gap: "var(--pds-spacing-2xl)",
-              }}
-            >
+            <SectionGroups groups={groups} />
+          </section>
+        )}
+
+        {/* Related resources */}
+        {(topic.cta || topic.cta_alt) && (
+          <section aria-labelledby="docs-related-heading">
+            <h2 className="pan-docs-section-title" id="docs-related-heading">
+              Related resources
+            </h2>
+            <div className="pan-docs-cards pan-docs-cards--2">
               {topic.cta && (
                 <CallToAction
                   title={topic.cta.title}
@@ -220,9 +196,9 @@ export const LandingTemplate = async ({ topic }: { topic: Landing }) => {
                 />
               )}
             </div>
-          </Container>
-        </div>
-      )}
+          </section>
+        )}
+      </div>
     </DocsPage>
   );
 };

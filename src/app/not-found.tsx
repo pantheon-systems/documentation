@@ -1,21 +1,21 @@
 import Layout from "@/components/layout";
 import { NotFoundSearch } from "@/components/search/not-found-search";
-import { Container, VerticalEmptyState } from "@/components/ui/pds-re-export";
+import { VerticalEmptyState } from "@/components/ui/pds-re-export";
 
-// The PDS docs site Not Found prototype: a centered empty state with an
-// illustration, a line of copy and a search field.
+// The PDS docs site Not Found recipe: a centered empty state that fills the
+// page, with an illustration, a line of copy and a search field.
 export default function NotFound() {
   return (
     <Layout>
-      <Container width="standard" className="pds-pad-block-4xl">
-        <VerticalEmptyState
-          heading="Sorry, there’s no page at that URL."
-          headingLevel="h1"
-          illustration="underConstruction"
-          message="Try searching the docs for what you were looking for."
-          ctaRegion={<NotFoundSearch />}
-        />
-      </Container>
+      <VerticalEmptyState
+        fillHeight
+        className="pan-docs-not-found"
+        heading="Sorry, there’s no page at that URL."
+        headingLevel="h1"
+        illustration="underConstruction"
+        message="Try searching the docs for what you were looking for."
+        ctaRegion={<NotFoundSearch />}
+      />
     </Layout>
   );
 }
