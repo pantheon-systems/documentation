@@ -28,10 +28,17 @@ const webInfrastructure = () => {
           "/application-containers",
           "All About Application Containers"
         ),
-        simpleLink(
-          "/php-runtime-generation-2",
-          "PHP Runtime Generation 2"
-        ),
+        simpleLink("/php-runtime-generation", "PHP Runtime Generations", [
+          simpleLink("/php-runtime-generation", "PHP Runtime Generations"),
+          simpleLink(
+            "/php-runtime-generation-3",
+            "PHP Runtime Generation 3"
+          ),
+          simpleLink(
+            "/php-runtime-generation-2",
+            "PHP Runtime Generation 2"
+          ),
+        ]),
         simpleLink("/horizontal-scalability", "Horizontal Scalability"),
         // This page is oddly short.
         simpleLink("/single-application-sites", "One app per site"),

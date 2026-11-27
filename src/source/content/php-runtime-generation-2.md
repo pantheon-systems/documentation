@@ -13,9 +13,11 @@ integration: [--]
 
 ## Overview
 
-The latest generation of Pantheon's serverless PHP runtime represents our commitment to providing a modern, secure, and efficient PHP runtime for your websites.
+PHP Runtime Generation 2 runs your site's PHP on Debian 12. It is the default generation for all sites. Debian 12 reached the end of its regular security support on July 11, 2026 and now has only limited Long Term Support (LTS) until June 30, 2028.
 
-The previous generation was removed in April 2026.
+[PHP Runtime Generation 3](/php-runtime-generation-3) (Debian 13) is available now. It becomes the default for new sites in January 2027, and existing sites are upgraded in March 2027. See [PHP Runtime Generations](/php-runtime-generation) for every generation and how to choose one.
+
+The previous generation (Generation 1) was removed in April 2026.
 
 ## What's included?
 
@@ -31,22 +33,7 @@ The previous generation was removed in April 2026.
 | **Beta** | May - September 16, 2025 | Environments could be opted-in. All other environments remained on the previous generation. |
 | **New Sites** | September 17, 2025 | New sites created on the platform use PHP Runtime Generation 2. |
 | **Gen 2 Rollout** | September 24 - November 20, 2025 | A 60-day rollout gradually upgraded sites to PHP Runtime Generation 2. An opt-out is available. |
-| **Gen 1 Removal** | April 6 - 17, 2026  | PHP Runtime Generation 1 is no longer be available. All remaining sites are auto-upgraded. |
-
-### Current Phase Details 
-
-We are currently upgrading any opted-out sites to PHP Runtime Generation 2.
-
-| Start Date for Auto-Upgrades | Site Plans | Environments |
-|-----------|------------------|--------------|
-| April 6, 2026 | All Plans | Dev/Multidevs |
-| April 13, 2026 | All Plans | Test/Live |
-
-<Alert type="info" title="Deploying code will upgrade test/live environments">
-
-Once the Dev environment for a site has been upgraded to Generation 2, deploying commits from Dev to Test will automatically upgrade the Test environment to Generation 2 as well. Following this pattern, an upgrade to the Live environment takes place once commits are deployed from the Test to Live environment.
-
-</Alert>
+| **Gen 1 Removal** | April 6 - 17, 2026  | PHP Runtime Generation 1 is no longer available. All remaining sites were auto-upgraded. |
 
 
 ## Known Changes and Requirements
@@ -96,13 +83,8 @@ Once the Dev environment for a site has been upgraded to Generation 2, deploying
 
 ### Q: How can I determine which PHP runtime a site environment is using?
 
-The PHP runtime is set at the environment-level. You can find out which generation an environment with the following methods:
+See [Check an Environment's Generation](/php-runtime-generation#check-an-environments-generation).
 
-* Use the [Terminus](/terminus) command  `terminus env:info <site>.<env>`. This requires Terminus 4.0.2+
-* Use the Terminus command `env:list <site> --fields=id,php_runtime_generation,php_version`. This requires Terminus 4.1.0+
-* View your site on the Pantheon Dashboard, navigate to the environment's Status page, then review the Software Versions block
+### Q: Can I stay on Generation 2 after the Generation 3 rollout?
 
-
-### Q: Can I be excluded from the removal of PHP Runtime Generation 1?
-
-All sites on Generation 1 will be auto-upgraded to Generation 2 starting April 6, 2026, if they haven't already. The rollout will not have an exclusion policy for the auto-upgrades.
+No. All sites are upgraded to Generation 3 by March 31, 2027. See [Can my site be excluded from the rollout?](/php-runtime-generation-3#q-can-my-site-be-excluded-from-the-rollout)
