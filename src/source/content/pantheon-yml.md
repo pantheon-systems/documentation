@@ -163,6 +163,19 @@ php_version: 8.5
 - From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 - You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
+### PHP Runtime Generation
+
+Choose the operating system generation your site's PHP runs on with the `php_runtime_generation` property. Valid values are `2` (Debian 12) and `3` (Debian 13). If it is not set, the platform default is used.
+
+```yaml:title=pantheon.yml
+php_runtime_generation: 3
+```
+
+#### Considerations
+
+- Test the change on Dev or a Multidev environment before deploying it to Test and Live.
+- Refer to [PHP Runtime Generations](/php-runtime-generation) for the available generations and their changes.
+
 ### PHP JIT
 
 Enable PHP's JIT (Just-In-Time) compiler with the `php_jit` property. JIT compiles PHP bytecode into native machine code at runtime, which can improve performance for CPU-intensive workloads.
