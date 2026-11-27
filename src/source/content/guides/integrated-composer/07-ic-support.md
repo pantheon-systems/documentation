@@ -48,6 +48,15 @@ Yes. Always commit `composer.lock` to your site repository. When you push code t
 If `composer.lock` is absent, Composer resolves dependencies to their latest compatible versions rather than your pinned versions, then commits the generated `composer.lock` back to your repository. That extra commit triggers a second `sync_code` workflow, causing Quicksilver hooks to fire twice for a single push. When you later pull those changes, you may also encounter merge conflicts if your local copy diverges from the file Pantheon committed, or if `composer.lock` was previously removed from your repository's git history.
 
 **Note:** It is **not** recommended to commit your `composer.lock` file to _upstream_ repositories. A `composer.lock` file in an upstream repository can lead to merge conflicts on downstream sites. For more information, see our documentation about [Upstream usage](/guides/integrated-composer/ic-upstreams).
+
+### Should I commit `patches.lock.json`?
+
+Yes, if you use `cweagans/composer-patches` version 2 or later. The plugin creates `patches.lock.json` on the first `composer install` and records the exact patches that are applied. Commit it to your site repository alongside `composer.json` and `composer.lock`, and commit any changes when you change your patch definitions.
+
+If `patches.lock.json` is missing or changed after a build, Integrated Composer commits it back to your repository in a separate commit, the same way it does for `composer.lock`. To keep the file out of your repository, remove it from the repository and add it to your site's `.gitignore` file. This also removes the integrity check the lock file provides.
+
+**Note:** It is **not** recommended to commit your `patches.lock.json` file to _upstream_ repositories, or to list it in an upstream's `.gitignore` file. For more information, see our documentation about [Upstream usage](/guides/integrated-composer/ic-upstreams).
+
 ### What Composer commands does Pantheon run?
 
 All Composer commands are available through the **Commit Log** in the Site Dashboard's development environment.
