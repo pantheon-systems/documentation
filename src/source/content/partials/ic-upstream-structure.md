@@ -38,6 +38,18 @@ The `composer.lock` file should not be listed in your `.gitignore` file because 
 
 The command has the same effect as ignoring the file in the top-level `.gitignore` file, except that the `exclude` file is not saved in the repository when you push changes back to the remote origin. You must re-run this command every time you make a new local clone of your upstream if you would like to protect against inadvertently committing a `composer.lock` file.
 
+If your upstream uses [`cweagans/composer-patches`](https://docs.cweagans.net/composer-patches/) version 2 or later, Composer also creates a `patches.lock.json` file. Like `composer.lock`, it is specific to each site: it records the exact patches for the site, including patches that individual sites add on top of the upstream's. When a site builds, Pantheon commits the `patches.lock.json` file back to the site's code repository. To avoid potential merge conflicts after applying an upstream update, do **not** commit the `patches.lock.json` file from your upstream root to the upstream repository.
+
+The `patches.lock.json` file should not be listed in your upstream's `.gitignore` file. Sites created from your upstream inherit the `.gitignore` file, so ignoring it there stops Pantheon from committing the file to those sites and removes the integrity check the lock file provides. Use the command below to avoid accidentally committing a `patches.lock.json` file when working directly with your custom upstream.
+
+```bash{promptUser: user}
+echo /patches.lock.json >> .git/info/exclude
+```
+
+As with `composer.lock`, you must re-run this command every time you make a new local clone of your upstream.
+
+Patch definitions in the upstream's `composer.json` are inherited by sites as usual. Because each site's `patches.lock.json` records a checksum for every patch file, do not edit a patch file that your upstream already ships. Add a new patch file instead, otherwise builds on sites that have already committed their `patches.lock.json` fail with a hash mismatch error until the file is regenerated.
+
 Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNAME`, where `$BRANCHNAME` is the name of the environment or Multidev feature branch.
 
 It is a requirement that all build artifacts should be ignored in the `.gitignore` file. Ensure you add entries to the `.gitignore` any time you modify the build to move installation files to a new locations.
